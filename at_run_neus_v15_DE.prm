@@ -87,7 +87,10 @@ init_scalar       62
 #G.Fay, 29 Apr 2014, added trackAtomicRatio to turn off P:N:C tracking, as per https://wiki.csiro.au/display/Atlantis/2013/04/23/New+Phosphorus+tracking
 trackAtomicRatio 0
 
-
+#S Gaichas added to fix mysterious crash jan 12 2015
+track_rugosity_arag 0
+track_pH 0
+mirror_invalid 0
 
 ################################################
 # List of group numbers for use with which_check
