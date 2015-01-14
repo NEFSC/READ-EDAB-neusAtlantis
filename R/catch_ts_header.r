@@ -50,6 +50,7 @@ for (group in groups)
     write.table(temp.chunk,file=outfile,quote=FALSE,col.names=FALSE,
                 row.names=FALSE,sep=" ",append=TRUE)
   }
-
+write("##",file=outfile,append=TRUE)
 #close function
 }
+write_catch_ts_header()
