@@ -641,6 +641,17 @@ WHB_habdepend    0         baleen whales dependent on demersal habitat: 0 = no, 
 WHT_habdepend    0         toothed whales dependent on demersal habitat: 0 = no, 1 = yes       0
 WHS_habdepend    0         small toothed whales dependent on demersal habitat: 0 = no, 1 = yes 0
 
+#Gavin @UMassD 15 Jan 2015
+BFS_habdepend    0
+BFF_habdepend    0
+BG_habdepend    0
+BD_habdepend    0
+BML_habdepend    0
+BMS_habdepend    0
+BC_habdepend    0
+BO_habdepend    0
+
+
 # Vertebrate density dependent movement related flags
 flagtempdepend   0         0 = off, 1 = temperature preferences used
 FPS_ddepend_move 0         0 = off, 1 = sedentary, 2 = on, 3 = sticky                          0
