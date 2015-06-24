@@ -1,0 +1,90 @@
+Code,Index,IsTurnedOn,Name,Long Name,NumCohorts,VerticallyMigrates,HorizontallyMigrates,IsFished,IsImpacted,IsTAC,InvertType,IsPredator,IsCover,IsSiliconDep,IsAssessed,IsCatchGrazer,IsOverWinter
+MAK,0,1,Mackerel,Atlantic mackerel,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+HER,1,1,Herring,Atlantic herring,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+WHK,2,1,White_Hake,White hake,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+BLF,3,1,Bluefish,Bluefish,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+WPF,4,1,Windowpane,Windowpane flounder,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+SUF,5,1,Summerflounder,Summer flounder,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+WIF,6,1,Winterflounder,Winter flounder,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+WTF,7,1,Witchflounder,Witch flounder,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+FOU,8,1,Fourspotflounder,Fourspot Flounder,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+HAL,9,1,Halibut,Atlantic halibut,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+PLA,10,1,Plaice,American plaice,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+FLA,11,1,Other_Flatfish,Other flatfish,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+BFT,12,1,BluefinTuna,Atlantic bluefin tuna,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+TUN,13,1,Tunas,Other tunas,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+BIL,14,1,Billfish,Billfish,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+MPF,15,1,Mesopelagic_Mig_Fish,Migratory mesopelagic fish ,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+BUT,16,1,Butterfish,Butterfish,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+BPF,17,1,Benthopelagic_Fish,Other benthopelagic fish,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+ANC,18,1,Anchovies,Anchovies,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+GOO,19,1,Monkfish,Monkfish,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+MEN,20,1,Menhaden,Atlantic menhaden,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+FDE,21,1,Shallow_Demersal_Fish,Shallow demersal fish,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+COD,22,1,Cod,Atlantic cod,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+SHK,23,1,Silver_Hake,Silver hake,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+OHK,24,1,Offshore_Hake,Offshore hake,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+POL,25,1,Pollock,Pollock,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+RHK,26,1,Red_Hake,Red hake,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+BSB,27,1,Black_Sea_Bass,Black sea bass,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+SCU,28,1,Scup,Scup,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+TYL,29,1,Tilefish,Tilefish,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+RED,30,1,Redfish,Acadian redfish,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+OPT,31,1,Ocean_Pout,Ocean pout,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+SAL,32,1,Atlantic_Salmon,Atlantic salmon,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+DRM,33,1,Drums_Croakers,Drums and croakers,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+STB,34,1,Striped_Bass,Striped Bass,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+TAU,35,1,Tautog,Tautog,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+WOL,36,1,Wolffish,Wolffish,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+SDF,37,1,Atlantic_States_Demersals,Atlantic states demersal fish,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+FDF,38,1,Misc_Demersal_Fish,Miscellaneous demersal fish,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+HAD,39,1,Haddock,Haddock,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+YTF,40,1,Yellowtail_Flounder,Yellowtail flounder,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+DOG,41,1,Spiny_Dogfish,Spiny dogfish,10,1,1,1,1,1,SHARK,1,0,0,1,0,0
+SMO,42,1,Smooth_Dogfish,Smooth dogfish,10,1,1,1,1,1,SHARK,1,0,0,1,0,0
+SSH,43,1,Sandbar_Shark,Sandbar shark,10,1,1,1,1,1,SHARK,1,0,0,1,0,0
+DSH,44,1,Demersal_Shark,Other demersal sharks,10,1,1,1,1,1,SHARK,1,0,0,1,0,0
+BLS,45,1,Blue_Shark,Blue shark,10,1,1,1,1,1,SHARK,1,0,0,1,0,0
+POR,46,1,Porbeagle_Shark,Porbeagle shark,10,1,1,1,1,1,SHARK,1,0,0,1,0,0
+PSH,47,1,Pelagic_Shark,Other pelagic sharks,10,1,1,1,1,1,SHARK,1,0,0,1,0,0
+WSK,48,1,Winter_Skate,Winter skate,10,1,1,1,1,1,SHARK,1,0,0,1,0,0
+LSK,49,1,Little_Skate,Little skate,10,1,1,1,1,1,SHARK,1,0,0,1,0,0
+SK,50,1,Skate,Northeast skate complex,10,1,1,1,1,1,SHARK,1,0,0,1,0,0
+SB,51,1,Seabird,Seabirds,10,1,1,1,1,1,BIRD,1,0,0,1,0,0
+PIN,52,1,Pinniped,Pinnipeds,10,1,1,1,1,1,MAMMAL,1,0,0,1,0,0
+REP,53,1,Turtle,Marine turtles,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+RWH,54,1,Right_Whale,Right whales,10,1,1,1,1,1,MAMMAL,1,0,0,1,0,0
+BWH,55,1,Baleen_Whale,Baleen whales,10,1,1,1,1,1,MAMMAL,1,0,0,1,0,0
+SWH,56,1,Small_Whale,Small toothed whales,10,1,1,1,1,1,MAMMAL,1,0,0,1,0,0
+TWH,57,1,Tooth_Whale,Toothed whales ,10,1,1,1,1,1,MAMMAL,1,0,0,1,0,0
+INV,58,1,Invasive_Species,Invasive vertebrate species,10,1,1,1,1,1,FISH,1,0,0,1,0,0
+LSQ,59,1,Loligo_Squid,Loligo squid,1,1,1,1,1,1,CEP,1,0,0,1,0,0
+ISQ,60,1,Illex_Squid,Illex squid,1,1,1,1,1,1,CEP,1,0,0,1,0,0
+SCA,61,1,Scallop,Sea scallop,1,0,0,1,1,1,SED_EP_FF,1,1,0,1,0,0
+QHG,62,1,Quahog,Ocean quahog,1,0,0,1,1,1,SED_EP_FF,1,1,0,1,0,0
+CLA,63,1,Surf_Clam,Atlantic surf clam,1,0,0,1,1,1,SED_EP_FF,1,1,0,1,0,0
+BFF,64,1,Filter_Other,Other benthic filter feeder,1,0,0,1,1,1,SED_EP_FF,1,1,0,1,0,0
+BG,65,1,Benthic_grazer,Benthic grazer,1,0,0,1,1,1,SED_EP_OTHER,1,0,0,1,0,0
+LOB,66,1,Lobster,Lobster,1,1,1,1,1,1,MOB_EP_OTHER,1,0,0,1,0,0
+RCB,67,1,Red_Crab,Red deep-sea crab,1,0,0,1,1,1,MOB_EP_OTHER,1,0,0,1,0,0
+BMS,68,1,Macrobenth_Shallow,Shallow macrozoobenthos,1,0,0,1,1,1,MOB_EP_OTHER,1,0,0,1,0,0
+NSH,69,1,Northern_Shrimp,Northern shrimp other pandalids,1,1,1,1,1,1,PWN,1,0,0,1,0,0
+OSH,70,1,Other_Shrimp,Other shrimps,1,1,1,1,1,1,PWN,1,0,0,1,0,0
+ZL,71,1,Carniv_Zoo,Carnivorous zooplankton,1,1,1,1,1,1,LG_ZOO,1,0,0,1,0,0
+BD,72,1,Deposit_Feeder,Deposit Feeder,1,0,0,1,1,1,LG_INF,1,0,0,1,0,0
+MA,73,1,Macroalgae,Macroalgae,1,0,0,1,1,1,PHYTOBEN,0,1,0,1,0,0
+MB,74,1,MicroPB,Microphtybenthos,1,0,0,0,1,1,MICROPHTYBENTHOS,0,1,1,1,0,0
+SG,75,1,Seagrass,Seagrass,1,0,0,0,1,1,SEAGRASS,0,1,0,1,0,0
+BC,76,1,Benthic_Carniv,Benthic Carnivore,1,0,0,0,1,1,LG_INF,1,0,0,1,0,0
+ZG,77,1,Gelat_Zoo,Gelatinous zooplankton,1,1,0,0,1,1,LG_ZOO,1,0,0,1,0,0
+PL,78,1,Diatom,Diatom,1,0,0,0,0,0,LG_PHY,0,0,1,1,0,0
+DF,79,1,DinoFlag,Dinoflagellates,1,0,0,0,0,0,DINOFLAG,1,0,0,1,0,0
+PS,80,1,PicoPhytopl,Pico-phytoplankton,1,0,0,0,0,0,SM_PHY,0,0,0,1,0,0
+ZM,81,1,Zoo,Mesozooplankton,1,1,0,0,0,0,MED_ZOO,1,0,0,1,0,0
+ZS,82,1,MicroZoo,Microzooplankton,1,1,0,0,0,0,SM_ZOO,1,0,0,1,0,0
+PB,83,1,Pelag_Bact,Pelagic Bacteria,1,0,0,0,0,0,PL_BACT,0,0,0,0,0,0
+BB,84,1,Sed_Bact,Sediment Bacteria,1,0,0,0,0,0,SED_BACT,0,0,0,0,0,0
+BO,85,1,Meiobenth,Meiobenthos,1,0,0,0,0,0,SM_INF,1,0,0,0,0,0
+DL,86,1,Lab_Det,Labile detritus,1,0,0,0,0,0,LAB_DET,0,0,0,1,0,0
+DR,87,1,Ref_Det,Refractory detritus,1,0,0,0,0,0,REF_DET,0,0,0,1,0,0
+DC,88,1,Carrion,Carrion3,1,0,0,0,0,0,CARRION,0,0,0,1,0,0
