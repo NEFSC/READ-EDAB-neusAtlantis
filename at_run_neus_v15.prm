@@ -176,7 +176,18 @@ init_scalar       89
 
 trackAtomicRatio 0
 
+#S Gaichas added to fix mysterious crash jan 12 2015
+track_rugosity_arag 0
+track_pH 0
+mirror_invalid 0
 
+# @gavinfay 22 Jan 2016
+flagAllowLand 0
+flag_replicated_old 1
+track_contaminants 0
+
+#G.Fay, 20 Sep 2016
+check_dups 0
 
 
 
