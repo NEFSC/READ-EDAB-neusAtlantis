@@ -18202,3 +18202,44 @@ jack_b_INV 1.45e+09
 #gfay@umassd 2015/06/24  added, new parameter (or one that got missed in conversion)
 UseHardFeedingWindow  1
 
+# @gavinfay 22 Jan 2016
+flagmodelArag 0
+flagpHchange 0
+
+#flag indicating which refugia model to use
+# refuge_model option: 0 = none, 1 = original, 2 is rugosity related
+flag_refuge_model 0
+
+#flag indicating which rugosity model to use
+# rugosity_model option: 0 = none, 1 = mechanistic, 2 is an empirical relationship from Blackwood 
+flag_rugosity_model 0
+
+RugCover_Coefft    1.4613
+RugCover_Const     0.0475
+RugCover_Cap       4
+
+min_rugosity 1
+max_rugosity 5
+
+flag_georugosity 0
+
+# Bozec model for rugosity
+rugosity_const 1.2    # was 0.88 from Bozec et al 2014 but to allow for box wide effects this has been retuned here.
+
+
+flag_do_var_express 0
+flag_evolvar_capped 0
+
+
+## Evolution related parameters
+flag_do_evolution     0        Whether do evolution (1) or not (0)                                      0
+flag_mult_grow_curves 0        Whether using mutiple growth curves not evolution per se (1) or not (0)  0        
+flag_bound_change     0        Whether evolution is effecting bound (1) or impact (0)                   0
+evol_stdev_range      2.0      Range of genotypes in terms of stdev                                     1-2
+max_rate_evol         0.0      Maximum evolutionary shift at any one point in time
+flag_inheritance      1        Flag indicating whether complex (0), simple (1) or straight (2) inheritance model used (1)
+
+
+flag_move_habdepend    1  setting it to 0 means that habitat is not considered when doing movement, it will still be considering in feeding etc
+
+

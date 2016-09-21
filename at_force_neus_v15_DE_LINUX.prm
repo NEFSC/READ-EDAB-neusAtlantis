@@ -86,3 +86,13 @@ typeDiscardts 0
 # Residual lists
 nResidualsts 0
 typeResidualsts 0
+
+## @gavinfay Jan 22 2016
+temp_rewind 1
+salt_rewind 1
+
+use_phFiles 0 
+
+## G.Fay added 09/20/16
+# Frequency of inputs.ts and exports.ts output - write out each dt.
+inputs_tout 43200 seconds
