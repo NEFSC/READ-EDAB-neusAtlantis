@@ -70,6 +70,9 @@ ts_on_hydro_time 1
 # Recruitment_enviro_forcing (scales recruitment)
 Recruitment_enviro_forcing tsfiles/recruitscalar.ts
 
+# G. Fay added 09/21/2016
+use_larvalfiles 0 # 1 = use larval files, 0 = don't use larval files.
+
 #############################################
 # Historical catch lists - nCatchts is the number of time series to be loaded and
 # typeCatchts is whether or not the data is to be interpolated (0) by the model
@@ -96,3 +99,6 @@ use_phFiles 0
 ## G.Fay added 09/20/16
 # Frequency of inputs.ts and exports.ts output - write out each dt.
 inputs_tout 43200 seconds
+
+## G.Fay added 09/20/16
+use_external_scaling 0
