@@ -223,9 +223,9 @@ flagNSH         1
 flagOSH         1
 flagZL         1
 flagBD         1
-flagMA         0
-flagMB         0
-flagSG         0
+flagMA         1
+flagMB         1
+flagSG         1
 flagBC         1
 flagZG         1
 flagPL         1
@@ -1419,7 +1419,7 @@ flagBOday 2
 Enviro_turb      0.000002  Background level of bioturbation (physcial mixing)                  0.000002
 K_TUR            116.0     Half saturation of bioturbation                                     116.0
 KTUR_BC          0.5       Bioturbation contribution by infaunal carnivores                    0.5
-KTUR_BD          1.0       Bioturbation contribution by deposit feeders                        1.0 
+KTUR_BD          0.5       Bioturbation contribution by deposit feeders                        1.0 
 KTUR_BMS         0.5       Bioturbation contribution by shallow macrozoobenthos                0.5
 KTUR_RCB         0.5       Bioturbation contribution by shallow macrozoobenthos                0.5
 #KTUR_BML         0.5       Bioturbation contribution by megazoobenthos                         0.5
@@ -1434,9 +1434,9 @@ KTUR_SCA 0.5
 KTUR_CLA 0.5
 KTUR_QHG 0.5
 KTUR_BFF 0.5
-KTUR_MA 0.5
-KTUR_SG 0.5
-KTUR_MB 0.5
+KTUR_MA 0.01
+KTUR_SG 0.01
+KTUR_MB 0.001
 
 
 # Bioirrigation  
