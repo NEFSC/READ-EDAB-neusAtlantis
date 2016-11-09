@@ -109,21 +109,21 @@
 #                                                                                             
 ## Flags and switches      
 # Those determining set-up and recording
-ecotest          4         Messages: 0=no, 1=part, 2=more, 3=all, 4=fluxs, 5= do 1 iter only  2
+ecotest          3         Messages: 0=no, 1=part, 2=more, 3=all, 4=fluxs, 5= do 1 iter only  2
 availflag    1    Switch to filter flows based on active groups                      1
 flagrandom       0         Flag indicating whether add random wobble in aging/spawning dates (0=no, 1=yes)
 
 readin_popratio  0         Switch to indicate whether loading pre-existing age distributions or not 0
 
 # If fish respiration is off then the fish model is essentially/very similar to a Deriso-Schnute
-flagresp         0         Switch to turn fish respiration on/off: off=0, on=1                 1
-flagavgmig       0         Switch to turn averaging of migrant sizes on/off: off=0, on=1       1
+flagresp         1         Switch to turn fish respiration on/off: off=0, on=1                 1
+flagavgmig       1         Switch to turn averaging of migrant sizes on/off: off=0, on=1       1
 flagkdrop        0         Switch to turn cubic bacterial growth on/off: off=0, on=1           0
 flagbactstim     0         Switch to turn stimulation of bacterial growth on/off: off=0, on=1  0
-flagBOlim        1         Switch to turn OB population limitation on/off: off=0, on=1         0
-flagBDlim        1         Switch to turn BD population limitation on/off: off=0, on=1         0
-flagBGlim        1         Switch to turn BG population limitation on/off: off=0, on=1 (1)     0
-flagBFlim        1         Switch to identify filter feeding crowding used: simple=0, ERSEM=1  0
+flagBOlim        0         Switch to turn OB population limitation on/off: off=0, on=1         0
+flagBDlim        0         Switch to turn BD population limitation on/off: off=0, on=1         0
+flagBGlim        0         Switch to turn BG population limitation on/off: off=0, on=1 (1)     0
+flagBFlim        0         Switch to identify filter feeding crowding used: simple=0, ERSEM=1  0
 
 # Those determining which environmental 
 # interaction formulations used      
@@ -849,6 +849,69 @@ flagq10effSWH 0
 flagq10effTWH 0
 flagq10effINV 0
 
+# Added 2016/11/03 RM - flagq10receff ; was not in file previously but run crashed with error due to missing prm
+# Switch indicating recruitment temperature dependency
+# 0 = no (same efficiency regardless), 1 = poorer when cooler, 2 = poorer when warmer 
+flagq10receffMAK 0
+flagq10receffHER 0
+flagq10receffWHK 0
+flagq10receffBLF 0
+flagq10receffWPF 0
+flagq10receffSUF 0
+flagq10receffWIF 0
+flagq10receffWTF 0
+flagq10receffHAL 0
+flagq10receffPLA 0
+flagq10receffFOU 0
+flagq10receffFLA 0
+flagq10receffBFT 0
+flagq10receffTUN 0
+flagq10receffBIL 0
+flagq10receffMPF 0
+flagq10receffBUT 0
+flagq10receffANC 0
+flagq10receffBPF 0
+flagq10receffGOO 0
+flagq10receffMEN 0
+flagq10receffFDE 0
+flagq10receffCOD 0
+flagq10receffSHK 0
+flagq10receffOHK 0
+flagq10receffPOL 0
+flagq10receffRHK 0
+flagq10receffBSB 0
+flagq10receffSCU 0
+flagq10receffTYL 0
+flagq10receffRED 0
+flagq10receffOPT 0
+flagq10receffSAL 0
+flagq10receffDRM 0
+flagq10receffSTB 0
+flagq10receffTAU 0
+flagq10receffWOL 0
+flagq10receffSDF 0
+flagq10receffFDF 0
+flagq10receffHAD 0
+flagq10receffYTF 0
+flagq10receffDOG 0
+flagq10receffSMO 0
+flagq10receffSSH 0
+flagq10receffDSH 0
+flagq10receffBLS 0
+flagq10receffPOR 0
+flagq10receffPSH 0
+flagq10receffWSK 0
+flagq10receffLSK 0
+flagq10receffSK 0
+flagq10receffSB 0
+flagq10receffPIN 0
+flagq10receffREP 0
+flagq10receffRWH 0
+flagq10receffBWH 0
+flagq10receffSWH 0
+flagq10receffTWH 0
+flagq10receffINV 0
+
 # Temperature sensitivty of vertebrates and CEP, PWN: 0 = no, 1 = yes   
 flagtempsensitiveMAK 0
 flagtempsensitiveHER 0
@@ -1532,7 +1595,7 @@ XBB_DR           0.008     Maximum ratio of BB to DR biomass                    
 k_PB             3.0       Shape of PB growth eq'n, 1 = linear, 3 = drop before max, 5 = drop at max 3.0
 k_BB             3.0       Shape of BB growth eq'n, 1 = linear, 3 = drop before max, 5 = drop at max     3.0
 
-BBthresh         10.0      Threshold BB flux level where damping starts      mg N m-2 s-1      0.1
+BBthresh         0.1      Threshold BB flux level where damping starts      mg N m-2 s-1      0.1
 BBdamp           0.85      Damping coefficient for BB fluxes                                   0.75
 
 # Space restrictions for basal (epibenthic and some infauna) groups     
@@ -14984,7 +15047,7 @@ FPB_DON          0.05      DON contrib from pelagic bacteria                    
 FBB_DON          0.05      DON contrib from sediment bacteria                                  0.05
 
 # Fraction of infaunal NH involved in denitrificatio
-Fben_den         0.95      Fraction of NH release from OB and BD used in nitrif etc calcs      0.5 - 0.7
+Fben_den         0.5      Fraction of NH release from OB and BD used in nitrif etc calcs      0.5 - 0.7
 
 ## Vertebrate age structure parameters
 # Age class size 
@@ -18539,6 +18602,9 @@ jack_b_INV 1.45e+09
 
 #gfay@umassd 2015/06/24  added, new parameter (or one that got missed in conversion)
 UseHardFeedingWindow  1
+
+#RM 2016/11/03 added, parameter called in code, not found in this file
+UseBiLogisticFeedingWindow 0
 
 # @gavinfay 22 Jan 2016
 flagmodelArag 0

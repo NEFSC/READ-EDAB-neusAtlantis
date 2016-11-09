@@ -10,7 +10,7 @@
 
 # Run parameters
 
-verbose       0       # Detailed logged output
+verbose       1       # Detailed logged output
 
 
 
@@ -22,13 +22,13 @@ flag_skip_biol     0   # Flag showing whether want biological model run (1) or n
 
 flag_skip_phys     0   # Flag showing whether want biological model run (0) or not (1 - only used when debugging fisheries)
 
-flagannual_Met     
+flagannual_Met     0
 
 
 
-checkbox      11       # Give detailed logged output for this box
+checkbox      1       # Give detailed logged output for this box
 
-checkstart    10000 day    # Start detailed logged output after this date
+checkstart    0 day    # Start detailed logged output after this date
 
 checkstop     366666660 day    # Stop detailed logged output after this date
 
@@ -42,11 +42,11 @@ flagagecheck  1        # Periodically list age structure per cohort (tuning diag
 
 flagdietcheck 1        # Periodically list realised diet matchups (tuning diagnostic)
 
-checkNH       0        # Give detailed logged output for NH in checkbox
+checkNH       1        # Give detailed logged output for NH in checkbox
 
-checkDL       0        # Give detailed logged output for DL in checkbox
+checkDL       1        # Give detailed logged output for DL in checkbox
 
-checkDR       0        # Give detailed logged output for DR in checkbox
+checkDR       1        # Give detailed logged output for DR in checkbox
 
 checkbiom     0        # Give detailed logged output for biomasses in checkbox
 
