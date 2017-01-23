@@ -26,9 +26,9 @@ flagannual_Met     0
 
 
 
-checkbox      1       # Give detailed logged output for this box
+checkbox      13       # Give detailed logged output for this box
 
-checkstart    0 day    # Start detailed logged output after this date
+checkstart    1000 day    # Start detailed logged output after this date
 
 checkstop     18260 day    # Stop detailed logged output after this date
 
@@ -42,17 +42,17 @@ flagagecheck  0        # Periodically list age structure per cohort (tuning diag
 
 flagdietcheck 0        # Periodically list realised diet matchups (tuning diagnostic)
 
-checkNH       1        # Give detailed logged output for NH in checkbox
+checkNH       0        # Give detailed logged output for NH in checkbox
 
-checkDL       1        # Give detailed logged output for DL in checkbox
+checkDL       0        # Give detailed logged output for DL in checkbox
 
-checkDR       1        # Give detailed logged output for DR in checkbox
+checkDR       0        # Give detailed logged output for DR in checkbox
 
-checkbiom     1        # Give detailed logged output for biomasses in checkbox
+checkbiom     0        # Give detailed logged output for biomasses in checkbox
 
-which_fleet   16       # ID number of fleet to track (if don't want to track anything set to 33 (for other fleets see list below)
+which_fleet   33       # ID number of fleet to track (if don't want to track anything set to 33 (for other fleets see list below)
 
-which_check   0       # ID number of group to track (if don't want to track anything set to 80 (for other groups see list below)
+which_check   80       # ID number of group to track (if don't want to track anything set to 80 (for other groups see list below)
 
 habitat_check 0
 
@@ -158,7 +158,7 @@ flaghemisphere    1  # Flag for hemisphere model is in (0 = southern; 1 = northe
 
 # GFay Nov 13 2012, check these.
 
-flagscaleinit     0  # Flag to indicate whether scaling initial vertebrate densities (1=yes, 0=no)
+flagscaleinit     1  # Flag to indicate whether scaling initial vertebrate densities (1=yes, 0=no)
 
 
 # RM 20161122 changed 0 to 1 for species at end (mostly benthic and inverts) Need to modify cdf file still
