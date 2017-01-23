@@ -11,6 +11,8 @@ nface 152
 # to be this as far as model is concerned         
 maxwcbotz	-500                 
 
+projection +proj=tmerc +lat_0=40.5 +lon_0=-70.5 +ellps=WGS84 +datum=WGS84 +units=m +no_defs +x_0=1000000 +y_0=3000000 +k=1
+
 # Vertices of boundary (start with edge box 0 and go clockwise)
 bnd_vert 511054.0643 2614286.765                
 bnd_vert 510867.3862 2615011.804                
@@ -2002,4 +2004,5 @@ face151.length	7975.698147
 face151.cs	0.989831718 0.142243347   
 face151.lr	18 24   
 
-projection proj=utm zone=17 ellps=WGS84 datum=WGS84 lat_0=41. lon_0=-70. x_0=75000 y_0=-1550000 units=m no_defs 
+#projection proj=utm zone=17 ellps=WGS84 datum=WGS84 lat_0=41. lon_0=-70. x_0=75000 y_0=-1550000 units=m no_defs 
+#projection proj=tmerc zone=17 ellps=WGS84 datum=WGS84 lat_0=40.5 lon_0=-70.5 x_0=1000000 y_0=-3000000 units=m no_defs
