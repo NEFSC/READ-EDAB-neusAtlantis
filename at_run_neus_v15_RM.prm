@@ -57,7 +57,7 @@ which_check   80       # ID number of group to track (if don't want to track any
 
 habitat_check 0
 
-move_check    67       # ID number of group where tracking movements  (if don't want to track anything set it to 67, for other groups see list below)
+move_check    92       # ID number of group where tracking movements  (if don't want to track anything set it to 67, for other groups see list below)
 
 fishmove      1        # Set to 0 to turn vertebrate movement off for debugging purposes
 
