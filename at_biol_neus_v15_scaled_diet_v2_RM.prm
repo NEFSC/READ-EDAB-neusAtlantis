@@ -1540,12 +1540,12 @@ min_dens         0.0001    Minimum density of top predators and fish            
 ## Biological parameters
 # Primary producer growth 
 ## may need to come back here and look at this for NEUS, OK for now
-mum_PL_T15       1.0      Maximum growth rate, large phytoplankton (was 0.85) d-1          1.0 - 1.7
+mum_PL_T15       1.75      Maximum growth rate, large phytoplankton (was 0.85) d-1          1.0 - 1.7
 mum_PS_T15       1.0      Maximum growth rate, small (pico) phytoplankton (was 0.5 then 0.25)  d-1   1.0 - 1.24
 mum_DF_T15       1.0      Maximum growth rate, dinoflagellates (was 0.51)   d-1            1.0 - 1.24
-mum_MA_T15       0.1       Maximum growth rate, macroalgae                   d-1               0.1
+mum_MA_T15       2.9       Maximum growth rate, macroalgae                   d-1               0.1
 mum_SG_T15       0.07      Maximum growth rate, seagrass                     d-1  (0.07)       0.05
-mum_MB_T15       0.35      Maximum growth rate, microphytobenthos            d-1  (0.2)        0.35
+mum_MB_T15       3.75      Maximum growth rate, microphytobenthos            d-1  (0.2)        0.35
 
 MB_wc            1.0       Scalar for microphytoben. growth in wc (reduced as not on substrate) 0.1
 
@@ -1560,13 +1560,13 @@ KI_MB_T15        3         Light saturation, microphytobenthos               W m
 eddy_scale       1.0       Coefficient scaling eddy strength impact on phytoplankton growth    1.0
 # Primary producer nutrient requirements 
 KN_PL            10        Half-sat const for PL growth on DIN (15)          mg N m-3          10
-KN_PS            4         Half-sat const for PS growth on DIN (13)          mg N m-3          4
-KN_DF            4         Half-sat const for DF growth on DIN (13)          mg N m-3          4
-KN_MA            20        Half-sat const for MA growth on DIN (20)          mg N m-3          20
+KN_PS            8         Half-sat const for PS growth on DIN (13)          mg N m-3          4
+KN_DF            20         Half-sat const for DF growth on DIN (13)          mg N m-3          4
+KN_MA            10        Half-sat const for MA growth on DIN (20)          mg N m-3          20
 KN_SG            5         Half-sat const for SG growth on DIN (12)          mg N m-3          5
-KN_MB            200       Half-sat const for MB growth on DIN (200)         mg N m-3          200
+KN_MB            20       Half-sat const for MB growth on DIN (200)         mg N m-3          200
 
-KS_PL            20        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
+KS_PL            10        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
 KS_PS            0         Half-sat const for PS growth on a second nutrient mg nutrient m-3   0 
 KS_DF            0         Half-sat const for DF growth on a second nutrient mg nutrient m-3   0 
 KS_MB            80        Half-sat const for MB growth on Si                mg Si m-3         100
@@ -11463,11 +11463,11 @@ C_RCB_T15 5e-05
 C_BMS_T15 5e-05    
 C_NSH_T15 0.0015   
 C_OSH_T15 0.0015   
-C_ZL_T15  0.02     
+C_ZL_T15  0.1     
 C_BD_T15  5e-04    
-C_ZG_T15  0.003    
+C_ZG_T15  0.03    
 C_DF_T15  0.01     
-C_ZM_T15  0.008    
+C_ZM_T15  0.08    
 C_ZS_T15  0.15     
 C_PB_T15  0        
 C_BB_T15  0        
