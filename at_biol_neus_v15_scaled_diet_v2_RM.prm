@@ -1460,7 +1460,7 @@ FDON_D           0.05      Fraction od DON breakdown that becomes detritus      
 
 # Nitrification and denitrification 
 R_0_T15          200       Minimum rate of sediment respiration that supports nitrification    200 - 250
-R_D_T15          10        Peak of nitrification-denitrification curve                         10 - 20
+R_D_T15          15        Peak of nitrification-denitrification curve                         10 - 20
 
 Dmax             0.25      Maximum rate of denitrification                                     0.25
 
@@ -1586,7 +1586,7 @@ KF_SG            0
 KN_BB            5         Half-sat const for sediment bacteria NH uptake    mg N m-3        0 - 10       
 
 # Bacterial population parameters (how much bacterial biomass detritus can support)
-XPB_DL           0.27      Maximum ratio of PB to DL biomass                                0.3 - 0.4
+XPB_DL           0.3      Maximum ratio of PB to DL biomass                                0.3 - 0.4
 XBB_DL           0.18      Maximum ratio of BB to DL biomass                                0.15 - 0.2
  
 XPB_DR           0.012     Maximum ratio of PB to DR biomass                               0.01 - 0.015
