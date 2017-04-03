@@ -18,19 +18,19 @@ npointss 6
 pss0.name GeorgesBank
 pss0.location 1234274.466 3098307.516 -40
 #pss0.data tsfiles/banksupwelling.ts
-pss0.data tsfiles/banksupwelling_div_1000.ts
+pss0.data tsfiles/banksupwelling_div_1000_v2.ts
 pss0.rewind 1
 
 pss1.name GulfStreamTrap
 pss1.location 1239774.298 3024140.334 -130
 #pss1.data tsfiles/banksupwelling.ts
-pss1.data tsfiles/banksupwelling_div_1000.ts
+pss1.data tsfiles/banksupwelling_div_1000_v2.ts
 pss1.rewind 1
 
 pss2.name Basin16
 pss2.location 1102189.803 3299498.894 -150
 #pss2.data tsfiles/basindeep.ts
-pss2.data tsfiles/basindeep_div_1000.ts
+pss2.data tsfiles/basindeep_div_1000_v2.ts
 pss2.rewind 1
 
 pss3.name Basin20
@@ -48,7 +48,7 @@ pss4.rewind 1
 pss5.name Boston
 pss5.location 1016047.729 3243653.893 -15
 # pss5.data tsfiles/bostonharbornuts.ts
-pss5.data tsfiles/bostonharbor_div_1000.ts
+pss5.data tsfiles/bostonharbor_div_1000_v2.ts
 pss5.rewind 1
 
 ##########################################

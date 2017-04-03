@@ -28,7 +28,7 @@ flagannual_Met     0
 
 checkbox      4       # Give detailed logged output for this box
 
-checkstart    100 day    # Start detailed logged output after this date
+checkstart    1 day    # Start detailed logged output after this date
 
 checkstop     9130 day    # Stop detailed logged output after this date
 
@@ -42,13 +42,13 @@ flagagecheck  0        # Periodically list age structure per cohort (tuning diag
 
 flagdietcheck 0        # Periodically list realised diet matchups (tuning diagnostic)
 
-checkNH       0        # Give detailed logged output for NH in checkbox
+checkNH       1        # Give detailed logged output for NH in checkbox
 
-checkDL       0        # Give detailed logged output for DL in checkbox
+checkDL       1        # Give detailed logged output for DL in checkbox
 
 checkDR       0        # Give detailed logged output for DR in checkbox
 
-checkbiom     0        # Give detailed logged output for biomasses in checkbox
+checkbiom     1        # Give detailed logged output for biomasses in checkbox
 
 which_fleet   33       # ID number of fleet to track (if don't want to track anything set to 33 (for other fleets see list below)
 
@@ -78,7 +78,7 @@ title      test version, DynEffort NEUS v1.5 with Atlantis2 codebase
 
 dt         24 hour     # 12 hour time step
 
-tstop      5000 day   # Stop time after the given period (18260)18260  , 4000   2191
+tstop      1250 day   # Stop time after the given period (18260)18260  , 4000   2191
 
 toutstart  0 day       # Output start time
 
