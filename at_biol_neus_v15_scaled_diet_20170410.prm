@@ -1583,17 +1583,17 @@ KF_MA            0
 KF_SG            0
 
 # Bacterial nutrient requirements 
-KN_BB            5         Half-sat const for sediment bacteria NH uptake    mg N m-3        0 - 10       
+KN_BB            1         Half-sat const for sediment bacteria NH uptake    mg N m-3        0 - 10       
 
 # Bacterial population parameters (how much bacterial biomass detritus can support)
-XPB_DL           0.3      Maximum ratio of PB to DL biomass                                0.3 - 0.4
-XBB_DL           0.18      Maximum ratio of BB to DL biomass                                0.15 - 0.2
+XPB_DL           0.2      Maximum ratio of PB to DL biomass                                0.3 - 0.4
+XBB_DL           0.2      Maximum ratio of BB to DL biomass                                0.15 - 0.2
  
 XPB_DR           0.012     Maximum ratio of PB to DR biomass                               0.01 - 0.015
 XBB_DR           0.008     Maximum ratio of BB to DR biomass                               0.005 - 0.01
  
-k_PB             3.0       Shape of PB growth eq'n, 1 = linear, 3 = drop before max, 5 = drop at max 3.0
-k_BB             3.0       Shape of BB growth eq'n, 1 = linear, 3 = drop before max, 5 = drop at max     3.0
+k_PB             1.0       Shape of PB growth eq'n, 1 = linear, 3 = drop before max, 5 = drop at max 3.0
+k_BB             1.0       Shape of BB growth eq'n, 1 = linear, 3 = drop before max, 5 = drop at max     3.0
 
 BBthresh         0.1      Threshold BB flux level where damping starts      mg N m-2 s-1      0.1
 BBdamp           0.85      Damping coefficient for BB fluxes                                   0.75
@@ -11243,8 +11243,8 @@ PropCatch_TWH 33
 # Availability of bacteria being cleaned from ingested detritus #
 p_BBfish         0.3       Prop. of sed. bacteria taken when detrit eaten by verts.   0.3 - 1.0
 p_BBben          0.6       Prop. of sed. bacteria taken when detrit eaten by benthos  0.6 - 1.0
-p_PBwc           0.9       Prop. of pelag. bacteria taken when detrit eaten in wc     0.6 - 1.0
-p_PBben          0.95      Prop. of pelag. bact. taken when detrit eaten by benthos   0.6 - 1.0
+p_PBwc           0.6       Prop. of pelag. bacteria taken when detrit eaten in wc     0.6 - 1.0
+p_PBben          0.7      Prop. of pelag. bact. taken when detrit eaten by benthos   0.6 - 1.0
 
 
 ## Take a closer look at these for NEUS, OK for now
@@ -14383,17 +14383,17 @@ mO_BO 1e-04
 #mO_BFF           0.00001   Oxygen dependent mort. for other filter feeder    d-1               0.1
 #mO_BFD           0.0001    Oxygen dependent mort. for deep filter feeder     d-1               0.1
 
-KO2_SCA 3
-KO2_QHG 3
-KO2_CLA 3
-KO2_BFF 3
-KO2_BG 5
-KO2_LOB 5
-KO2_RCB 5
-KO2_BMS 5
+KO2_SCA 2
+KO2_QHG 2
+KO2_CLA 2
+KO2_BFF 2
+KO2_BG 3
+KO2_LOB 3
+KO2_RCB 3
+KO2_BMS 3
 KO2_BD 1
 KO2_BC 1
-KO2_PB 1
+KO2_PB 0
 KO2_BB 0
 KO2_BO 1
 #KO2_BB          0
@@ -14401,27 +14401,28 @@ KO2_BO 1
 #KO2_BO           1.0       Lethal oxygen level for meiobenthos               mg O2 m-3         0.0
 #KO2_BD           1.0       Lethal oxygen level for deposit feeder            mg O2 m-3         0.0
 #KO2_BC           1.0       Lethal oxygen level for infaunal carnivore        mg O2 m-3         0.0
-#KO2_BMS          5.0       Lethal oxygen level for shallow macrozoobenthos   mg O2 m-3         0.0
-#KO2_BML          5.0       Lethal oxygen level for megazoobenthos            mg O2 m-3         0.0
+#KO2_BMS          3.0       Lethal oxygen level for shallow macrozoobenthos   mg O2 m-3         0.0
+#KO2_BML          3.0       Lethal oxygen level for megazoobenthos            mg O2 m-3         0.0
 #KO2_BMD          3.0       Lethal oxygen level for deep macrozoobenthos      mg O2 m-3         0.0
-#KO2_BG           5.0       Lethal oxygen level for benthic grazer            mg O2 m-3         0.0
+#KO2_BG           3.0       Lethal oxygen level for benthic grazer            mg O2 m-3         0.0
 #KO2_BFS          3.0       Lethal oxygen level for shallow filter feeder     mg O2 m-3         0.0
 #KO2_BFF          3.0       Lethal oxygen level for other filter feeder       mg O2 m-3         0.0
 #KO2_BFD          3.0       Lethal oxygen level for deep filter feeder        mg O2 m-3         0.0
 
-KO2LIM_SCA 50
-KO2LIM_QHG 50
-KO2LIM_CLA 50
-KO2LIM_BFF 50
-KO2LIM_BG 50
-KO2LIM_LOB 50
-KO2LIM_RCB 50
-KO2LIM_BMS 50
-KO2LIM_BD 10
-KO2LIM_BC 10
+# RM lowered these by one order of magnitude 4/10/2017
+KO2LIM_SCA 5
+KO2LIM_QHG 5
+KO2LIM_CLA 5
+KO2LIM_BFF 5
+KO2LIM_BG 5
+KO2LIM_LOB 5
+KO2LIM_RCB 5
+KO2LIM_BMS 5
+KO2LIM_BD 1
+KO2LIM_BC 1
 KO2LIM_PB 0
 KO2LIM_BB 0
-KO2LIM_BO 10
+KO2LIM_BO 1
 #KO2LIM_PB         0
 #KO2LIM_BB         0
 #KO2LIM_BO        10.0      Limiting oxygen level for meiobenthos             mg O2 m-3         0.0
@@ -14950,95 +14951,96 @@ FDGDR_BO  0.2
  
 # Fraction of mortality products lost to detritus 
 ###FDM_ZG           0.3       Detrit contrib from mortality of gelatinous zooplankton            0.3
-FDM_MAK 0.3    
-FDM_HER 0.3    
-FDM_WHK 0.375  
-FDM_BLF 0.375  
-FDM_WPF 0.375  
-FDM_SUF 0.375  
-FDM_WIF 0.375  
-FDM_WTF 0.375  
-FDM_HAL 0.375  
-FDM_PLA 0.375  
-FDM_FOU 0.375  
-FDM_FLA 0.375  
-FDM_BFT 0.375  
-FDM_TUN 0.375  
-FDM_BIL 0.375  
-FDM_MPF 0.3    
-FDM_BUT 0.3    
-FDM_ANC 0.3    
-FDM_BPF 0.3    
-FDM_GOO 0.35   
-FDM_MEN 0.35   
-FDM_FDE 0.35   
-FDM_COD 0.35   
-FDM_SHK 0.35   
-FDM_OHK 0.35   
-FDM_POL 0.35   
-FDM_RHK 0.35   
-FDM_BSB 0.35   
-FDM_SCU 0.35   
-FDM_TYL 0.35   
-FDM_RED 0.35   
-FDM_OPT 0.35   
-FDM_SAL 0.35   
-FDM_DRM 0.35   
-FDM_STB 0.35   
-FDM_TAU 0.35   
-FDM_WOL 0.35   
-FDM_SDF 0.35   
-FDM_FDF 0.35   
-FDM_HAD 0.35   
-FDM_YTF 0.35   
-FDM_DOG 0.35   
-FDM_SMO 0.35   
-FDM_SSH 0.35   
-FDM_DSH 0.35   
-FDM_BLS 0.35   
-FDM_POR 0.35   
-FDM_PSH 0.35   
-FDM_WSK 0.35   
-FDM_LSK 0.35   
-FDM_SK  0.35   
-FDM_SB  0.3    
-FDM_PIN 0.35   
-FDM_REP 0.35   
-FDM_RWH 0.35   
-FDM_BWH 0.35   
-FDM_SWH 0.35   
-FDM_TWH 0.35   
-FDM_INV 0.35   
-FDM_LSQ 0.3    
-FDM_ISQ 0.3    
-FDM_SCA 0.25   
-FDM_QHG 0.25   
-FDM_CLA 0.25   
-FDM_BFF 0.25   
-FDM_BG  0.25   
-FDM_LOB 0.35   
-FDM_RCB 0.35   
-FDM_BMS 0.35   
-FDM_NSH 0.35   
-FDM_OSH 0.35   
-FDM_ZL  0.3    
-FDM_BD  0.35   
-FDM_BC  0.2    
-FDM_ZG  0.3    
-FDM_ZM  0.25   
-FDM_ZS  0.25   
-FDM_PB  0.2    
-FDM_BB  0.2    
-FDM_BO  0.25   
+# RM lowered these by about half to try and reduce detritus issue
+FDM_MAK 0.15    
+FDM_HER 0.15    
+FDM_WHK 0.1  
+FDM_BLF 0.1  
+FDM_WPF 0.1  
+FDM_SUF 0.1  
+FDM_WIF 0.1  
+FDM_WTF 0.1  
+FDM_HAL 0.1  
+FDM_PLA 0.1  
+FDM_FOU 0.1  
+FDM_FLA 0.1  
+FDM_BFT 0.1  
+FDM_TUN 0.1  
+FDM_BIL 0.1  
+FDM_MPF 0.15    
+FDM_BUT 0.15    
+FDM_ANC 0.15    
+FDM_BPF 0.15    
+FDM_GOO 0.1   
+FDM_MEN 0.1   
+FDM_FDE 0.1   
+FDM_COD 0.1   
+FDM_SHK 0.1   
+FDM_OHK 0.1   
+FDM_POL 0.1   
+FDM_RHK 0.1   
+FDM_BSB 0.1   
+FDM_SCU 0.1   
+FDM_TYL 0.1   
+FDM_RED 0.1   
+FDM_OPT 0.1   
+FDM_SAL 0.1   
+FDM_DRM 0.1   
+FDM_STB 0.1   
+FDM_TAU 0.1   
+FDM_WOL 0.1   
+FDM_SDF 0.1   
+FDM_FDF 0.1   
+FDM_HAD 0.1   
+FDM_YTF 0.1   
+FDM_DOG 0.1   
+FDM_SMO 0.1   
+FDM_SSH 0.1   
+FDM_DSH 0.1   
+FDM_BLS 0.1   
+FDM_POR 0.1   
+FDM_PSH 0.1   
+FDM_WSK 0.1   
+FDM_LSK 0.1   
+FDM_SK  0.1   
+FDM_SB  0.15    
+FDM_PIN 0.1   
+FDM_REP 0.1   
+FDM_RWH 0.1   
+FDM_BWH 0.1   
+FDM_SWH 0.1   
+FDM_TWH 0.1   
+FDM_INV 0.1   
+FDM_LSQ 0.15    
+FDM_ISQ 0.15    
+FDM_SCA 0.15   
+FDM_QHG 0.15   
+FDM_CLA 0.15   
+FDM_BFF 0.15   
+FDM_BG  0.15   
+FDM_LOB 0.1   
+FDM_RCB 0.1   
+FDM_BMS 0.1   
+FDM_NSH 0.1   
+FDM_OSH 0.1   
+FDM_ZL  0.15    
+FDM_BD  0.1   
+FDM_BC  0.1    
+FDM_ZG  0.15    
+FDM_ZM  0.15   
+FDM_ZS  0.15   
+FDM_PB  0.1    
+FDM_BB  0.1    
+FDM_BO  0.15 
 
 # Split up of losses to detritus between labile and refractory detritus 
-FDL_fish         0.3       Split between DL and DR for fish                                   0.0 - 1.0
+FDL_fish         0.2       Split between DL and DR for fish                                   0.0 - 1.0
 FDL_benth        0.2       Split between DL and DR for benthos                                0.0 - 1.0
-FDL_top          0.3       Split between DL and DR for top predators                          0.0 - 1.0
-FDL_wc           1.0       Split between DL and DR for pelagic invertebrates                  0.0 - 1.0
+FDL_top          0.2       Split between DL and DR for top predators                          0.0 - 1.0
+FDL_wc           0.2       Split between DL and DR for pelagic invertebrates                  0.0 - 1.0
 
 # Fraction of bacterial losses sent to refractory detritus 
-FPB_DR           0.2       Detrit contrib from pelagic bacteria                               0.2
+FPB_DR           0.1       Detrit contrib from pelagic bacteria                               0.2
 FBB_DR           0.2       Detrit contrib from sediment bacteria                              0.2
  
 # Fraction of bacterial losses sent to DON
