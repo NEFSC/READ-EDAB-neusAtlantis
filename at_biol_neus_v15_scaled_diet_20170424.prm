@@ -1539,13 +1539,13 @@ min_dens         0.0001    Minimum density of top predators and fish            
 
 ## Biological parameters
 # Primary producer growth 
-## may need to come back here and look at this for NEUS, OK for now
-mum_PL_T15       1.75      Maximum growth rate, large phytoplankton (was 0.85) d-1          1.0 - 1.7
-mum_PS_T15       1.0      Maximum growth rate, small (pico) phytoplankton (was 0.5 then 0.25)  d-1   1.0 - 1.24
-mum_DF_T15       1.0      Maximum growth rate, dinoflagellates (was 0.51)   d-1            1.0 - 1.24
-mum_MA_T15       2.9       Maximum growth rate, macroalgae                   d-1               0.1
-mum_SG_T15       0.07      Maximum growth rate, seagrass                     d-1  (0.07)       0.05
-mum_MB_T15       3.75      Maximum growth rate, microphytobenthos            d-1  (0.2)        0.35
+## these are already listed below with other mum_ values RM: 4/2017
+# mum_PL_T15       1.75      Maximum growth rate, large phytoplankton (was 0.85) d-1          1.0 - 1.7
+# mum_PS_T15       1.0      Maximum growth rate, small (pico) phytoplankton (was 0.5 then 0.25)  d-1   1.0 - 1.24
+# mum_DF_T15       1.0      Maximum growth rate, dinoflagellates (was 0.51)   d-1            1.0 - 1.24
+# mum_MA_T15       2.9       Maximum growth rate, macroalgae                   d-1               0.1
+# mum_SG_T15       0.07      Maximum growth rate, seagrass                     d-1  (0.07)       0.05
+# mum_MB_T15       3.75      Maximum growth rate, microphytobenthos            d-1  (0.2)        0.35
 
 MB_wc            1.0       Scalar for microphytoben. growth in wc (reduced as not on substrate) 0.1
 
@@ -9100,6 +9100,7 @@ pPREYZM 92
                                                                                            
 pPREYZS 92                                                                                          
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.115 0 0.75 0 0.115 0.05 0 0 0.08 0.05 0 0 0 0
+
 ## Ontogenetic diet preferences - one entry per age class. 
 p_split_SCA 0
 p_split_QHG 0
@@ -14325,7 +14326,7 @@ mStarve_SWH 1e-04
 mStarve_TWH 1e-04
 mStarve_INV 1e-04
 #mStarve          0.0001    Starvation mortality of fish                      d-1               0.005
-Kthreshm         0.5       Threshold starvation level when mort starts                         0.7
+Kthreshm         0.7       Threshold starvation level when mort starts                         0.7
 
 # Oxygen mortality (based on depth and the oxygen horizon) 
 mD_SCA 0.001
