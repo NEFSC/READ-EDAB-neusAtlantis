@@ -109,7 +109,7 @@
 #                                                                                             
 ## Flags and switches      
 # Those determining set-up and recording
-ecotest          0         Messages: 0=no, 1=part, 2=more, 3=all, 4=fluxs, 5= do 1 iter only  2
+ecotest          1         Messages: 0=no, 1=part, 2=more, 3=all, 4=fluxs, 5= do 1 iter only  2
 availflag    1    Switch to filter flows based on active groups                      1
 flagrandom       0         Flag indicating whether add random wobble in aging/spawning dates (0=no, 1=yes)
 
@@ -1540,10 +1540,10 @@ min_dens         0.0001    Minimum density of top predators and fish            
 ## Biological parameters
 # Primary producer growth 
 ## may need to come back here and look at this for NEUS, OK for now
-mum_PL_T15       1.5      Maximum growth rate, large phytoplankton (was 0.85) d-1          1.0 - 1.7
-mum_PS_T15       1.25      Maximum growth rate, small (pico) phytoplankton (was 0.5 then 0.25)  d-1   1.0 - 1.24
-mum_DF_T15       1.00      Maximum growth rate, dinoflagellates (was 0.51)   d-1            1.0 - 1.24
-mum_MA_T15       0.5       Maximum growth rate, macroalgae                   d-1               0.1
+mum_PL_T15       0.85      Maximum growth rate, large phytoplankton (was 0.85) d-1          1.0 - 1.7
+mum_PS_T15       0.25      Maximum growth rate, small (pico) phytoplankton (was 0.5 then 0.25)  d-1   1.0 - 1.24
+mum_DF_T15       0.51      Maximum growth rate, dinoflagellates (was 0.51)   d-1            1.0 - 1.24
+mum_MA_T15       0.1       Maximum growth rate, macroalgae                   d-1               0.1
 mum_SG_T15       0.07      Maximum growth rate, seagrass                     d-1  (0.07)       0.05
 mum_MB_T15       0.35      Maximum growth rate, microphytobenthos            d-1  (0.2)        0.35
 
@@ -1559,9 +1559,9 @@ KI_MB_T15        3         Light saturation, microphytobenthos               W m
 
 eddy_scale       1.0       Coefficient scaling eddy strength impact on phytoplankton growth    1.0
 # Primary producer nutrient requirements 
-KN_PL            10        Half-sat const for PL growth on DIN (15)          mg N m-3          10
-KN_PS            4         Half-sat const for PS growth on DIN (13)          mg N m-3          4
-KN_DF            6         Half-sat const for DF growth on DIN (13)          mg N m-3          4
+KN_PL            15        Half-sat const for PL growth on DIN (15)          mg N m-3          10
+KN_PS            6         Half-sat const for PS growth on DIN (13)          mg N m-3          4
+KN_DF            8         Half-sat const for DF growth on DIN (13)          mg N m-3          4
 KN_MA            20        Half-sat const for MA growth on DIN (20)          mg N m-3          20
 KN_SG            12        Half-sat const for SG growth on DIN (12)          mg N m-3          5
 KN_MB            200       Half-sat const for MB growth on DIN (200)         mg N m-3          200
@@ -13480,7 +13480,7 @@ BC_mL 2
 8e-05 8e-05
 ZG_mL 2  
 3e-06 3e-06
-PL_mL 2  0.0015
+PL_mL 2  0.00015
 DF_mL 2  5e-04
 PS_mL 2  0.016
 ZM_mL 2  1e-04
@@ -19574,6 +19574,5 @@ ht_BWH 50
 ht_SWH 250    
 ht_TWH 250    
 ht_INV 150    
-
 li_a_invert 0.01
 li_b_invert 3.0

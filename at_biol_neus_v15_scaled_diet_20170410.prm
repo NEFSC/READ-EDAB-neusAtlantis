@@ -11690,7 +11690,7 @@ mum_BB_T15  1.5
 mum_BO_T15  0.04       
 
 # Vertebrate growth rates for each "group," per age class mg N d-1
-# See flagfishrates above to see whether clearance and growth rates 
+# See flag fishrates above to see whether clearance and growth rates 
 # are chosen as absolute (=0), or as proportion of body mass (=1)  
 mum_MAK 10
 0.680750487 0.687231969 4.8226121 16.880116959 18.3232699805 20.3682017544 20.38265107 20.39 20.398235867 20.3994

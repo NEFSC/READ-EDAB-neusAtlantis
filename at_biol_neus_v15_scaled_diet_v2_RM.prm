@@ -14325,7 +14325,7 @@ mStarve_BWH 1e-04
 mStarve_SWH 1e-04
 mStarve_TWH 1e-04
 mStarve_INV 1e-04
-mStarve          0.0001    Starvation mortality of fish                      d-1               0.005
+#mStarve          0.0001    Starvation mortality of fish                      d-1               0.005
 Kthreshm         0.5       Threshold starvation level when mort starts                         0.7
 
 # Oxygen mortality (based on depth and the oxygen horizon) 

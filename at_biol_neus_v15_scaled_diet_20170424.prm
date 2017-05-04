@@ -9100,6 +9100,7 @@ pPREYZM 92
                                                                                            
 pPREYZS 92                                                                                          
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.115 0 0.75 0 0.115 0.05 0 0 0.08 0.05 0 0 0 0
+
 ## Ontogenetic diet preferences - one entry per age class. 
 p_split_SCA 0
 p_split_QHG 0
@@ -14325,7 +14326,7 @@ mStarve_SWH 1e-04
 mStarve_TWH 1e-04
 mStarve_INV 1e-04
 #mStarve          0.0001    Starvation mortality of fish                      d-1               0.005
-Kthreshm         0.5       Threshold starvation level when mort starts                         0.7
+Kthreshm         0.7       Threshold starvation level when mort starts                         0.7
 
 # Oxygen mortality (based on depth and the oxygen horizon) 
 mD_SCA 0.001
