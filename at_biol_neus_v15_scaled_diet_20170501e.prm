@@ -13600,19 +13600,19 @@ BO_mL 4e-07
 #mL_BB_T15        0.00001   Linear mortality rate of sediment bact, 15 deg C  d-1 (0.0001)     0.0 - 0.1
 
 # Invertebrates with age structure
-#LSQ_mL 2
-#1e-06 1e-06 
-#ISQ_mL 2
-#1e-06 1e-06 
-#NSH_mL 2
-#6.75e-06 6.75e-06 
-#OSH_mL 2
-#6.75e-06 6.75e-06 
+LSQ_mL 2
+1e-06 1e-06 
+ISQ_mL 2
+1e-06 1e-06 
+NSH_mL 2
+6.75e-06 6.75e-06 
+OSH_mL 2
+6.75e-06 6.75e-06 
 
-LSQ_mL 1e-06
-ISQ_mL 1e-06
-NSH_mL 6.75e-06
-OSH_mL 6.75e-06
+#LSQ_mL 1e-06
+#ISQ_mL 1e-06
+#NSH_mL 6.75e-06
+#OSH_mL 6.75e-06
 
 
 
@@ -14116,20 +14116,20 @@ INV_mQ	2
 #mQ_BG_T15        0.0       Quad. mortality rate of benth. grazers, 15 deg C  d-1              0.0 - 0.00001
 
 # Invertebrates with age structure
-#LSQ_mQ 2 
-#0.00147 0.00176
-#ISQ_mQ 2 
-#0.00147 0.00176
-#NSH_mQ 2
-#0.00177 0.00177
-#OSH_mQ 2
-#0.00177 0.00177
+LSQ_mQ 2 
+0.00147 0.00176
+ISQ_mQ 2 
+0.00147 0.00176
+NSH_mQ 2
+0.00177 0.00177
+OSH_mQ 2
+0.00177 0.00177
 
 
-LSQ_mQ 0.00176
-ISQ_mQ 0.00176
-NSH_mQ 0.00177
-OSH_mQ 0.00177
+#LSQ_mQ 0.00176
+#ISQ_mQ 0.00176
+#NSH_mQ 0.00177
+#OSH_mQ 0.00177
 #mQ_jLSQ_T15 0.00147
 #mQ_jISQ_T15 0.00147
 #mQ_jNSH_T15 0.00177
