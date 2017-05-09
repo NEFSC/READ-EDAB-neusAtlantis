@@ -34,15 +34,15 @@ checkstop     9130 day    # Stop detailed logged output after this date
 
 fishtest      0        # Count up total population for each vertebrate after each main subroutine: 0=no, 1=yes
 
-flaggape      1        # Periodically list prey vs gape statistics (tuning diagnostic)
+flaggape      0        # Periodically list prey vs gape statistics (tuning diagnostic)
 
-flagchecksize 1        # Periodically list relative size (tuning diagnostic)
+flagchecksize 0        # Periodically list relative size (tuning diagnostic)
 
 flagagecheck  0        # Periodically list age structure per cohort (tuning diagnostic)
 
 flagdietcheck 0        # Periodically list realised diet matchups (tuning diagnostic)
 
-checkNH       1        # Give detailed logged output for NH in checkbox
+checkNH       0        # Give detailed logged output for NH in checkbox
 
 checkDL       0        # Give detailed logged output for DL in checkbox
 
@@ -56,7 +56,7 @@ which_check   81       # ID number of group to track (if don't want to track any
 
 habitat_check 0
 
-move_check    67       # ID number of group where tracking movements  (if don't want to track anything set it to 67, for other groups see list below)
+move_check    92       # ID number of group where tracking movements  (if don't want to track anything set it to 67, for other groups see list below)
 
 fishmove      1        # Set to 0 to turn vertebrate movement off for debugging purposes
 
@@ -163,8 +163,6 @@ flagscaleinit     1  # Flag to indicate whether scaling initial vertebrate densi
 
 # RM 20161122 changed 0 to 1 for species at end (mostly benthic and inverts) Need to modify cdf file still
 # Multiplicative scalar for vertebrate initial densities (as read-in from cdf file)
-
-
 init_scalar       89
 1.221984487 2.963898111 1.044135703 0.321154235 0.072384268 0.072384268 0.072384268 0.072384268 0.072384268 0.072384268 0.072384268 0.008874397 0.104186981 1.041869809 1.041869809 0.315101561 0.024096365 0.024096365 0.024096365 7.393938844 1.024718466 1.024718466 0.250117053 0.012941131 0.047266186 0.047266186 0.047266186 0.047266186 0.047266186 0.047266186 0.047266186 0.047266186 0.004726619 0.047266186 0.047266186 0.047266186 0.047266186 0.047266186 0.047266186 0.376103977 1.034027989 0.026073574 0.573161706 0.573161706 0.573161706 0.626085481 0.626085481 6.26085481 0.177892565 0.177892565 0.177892565 0.0195517 0.228310812 8.786460907 0.004377142 0.004377142 0.015185204 0.015185204 0.004726619 1.999999777 1.999999777 0.999998555 33.33871315 33.33871315 33.51305546 99.9884808 1 47.73323574 0.499999971 0.49999774 0.49999774 0.999999849 9999.999999 1 1 1 9999.999934 0.999999911 29.99999988 9.998353345 0.999999968 29.99999889 29.9999998 0.999998244 9999.999973 9999.99999 1 1 1
 
@@ -183,7 +181,7 @@ mirror_invalid 0
 
 # @gavinfay 22 Jan 2016
 flagAllowLand 0
-flag_replicated_old 0
+flag_replicated_old 1
 track_contaminants 0
 
 #G.Fay, 20 Sep 2016
