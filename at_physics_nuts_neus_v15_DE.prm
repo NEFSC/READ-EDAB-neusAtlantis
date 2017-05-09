@@ -272,7 +272,8 @@ mix_deep 1
 
 mix_deep_depth -1200
 
-
+# Deep mixing of oxygen added 5/9/17 RM
+mix_deep_O2 0
 
 # Switch to indicate whether or not the injection of materials from
 

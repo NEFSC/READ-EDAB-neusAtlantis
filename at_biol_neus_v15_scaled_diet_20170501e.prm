@@ -972,6 +972,33 @@ flagtempsensitiveBWH 0
 flagtempsensitiveSWH 0
 flagtempsensitiveTWH 0
 flagtempsensitiveINV 0
+flagtempsensitiveLSQ 0
+flagtempsensitiveISQ 0
+flagtempsensitiveSCA 0
+flagtempsensitiveQHG 0
+flagtempsensitiveCLA 0
+flagtempsensitiveBFF 0
+flagtempsensitiveBG 0
+flagtempsensitiveLOB 0
+flagtempsensitiveRCB 0
+flagtempsensitiveBMS 0
+flagtempsensitiveNSH 0
+flagtempsensitiveOSH 0
+flagtempsensitiveZL 0
+flagtempsensitiveBD 0
+flagtempsensitiveMA 0
+flagtempsensitiveMB 0
+flagtempsensitiveSG 0
+flagtempsensitiveBC 0
+flagtempsensitiveZG 0
+flagtempsensitivePL 0
+flagtempsensitiveDF 0
+flagtempsensitivePS 0
+flagtempsensitiveZM 0
+flagtempsensitiveZS 0
+flagtempsensitivePB 0
+flagtempsensitiveBB 0
+flagtempsensitiveBO 0
 
 ### 11 Jan 2015  Gavin Fay @UMassD INVERTEBRATES NOT DONE
 flagtempsensitiveCEP   1                                                                             3
@@ -1616,7 +1643,8 @@ BCmax             0
 ##gfay @UMassD 06/24/15 added, not sure why these are needed
 LOBmax            0
 RCBmax            0
-
+# RM added 20170509
+flagconstrain_epiwander 0
 
 # If flagBFlim is set to one then the following params are used for spatial crowding of filter feeders
 # (from ERSEM formulations)
@@ -4941,6 +4969,33 @@ BWH_min_move_temp 4
 SWH_min_move_temp 4
 TWH_min_move_temp 4
 INV_min_move_temp 4
+LSQ_min_move_temp 4
+ISQ_min_move_temp 4
+SCA_min_move_temp 4
+LOB_min_move_temp 4
+QHG_min_move_temp 4
+CLA_min_move_temp 4
+BFF_min_move_temp 4
+BG_min_move_temp 4
+RCB_min_move_temp 4
+BMS_min_move_temp 4
+NSH_min_move_temp 4
+OSH_min_move_temp 4
+ZL_min_move_temp 4
+BD_min_move_temp 4
+MA_min_move_temp 4
+MB_min_move_temp 4
+SG_min_move_temp 4
+BC_min_move_temp 4
+ZG_min_move_temp 4
+PL_min_move_temp 4
+DF_min_move_temp 4
+PS_min_move_temp 4
+ZM_min_move_temp 4
+ZS_min_move_temp 4
+BO_min_move_temp 4
+PB_min_move_temp 4
+BB_min_move_temp 4
 
 MAK_max_move_temp 30
 HER_max_move_temp 30
@@ -5001,7 +5056,33 @@ BWH_max_move_temp 30
 SWH_max_move_temp 30
 TWH_max_move_temp 30
 INV_max_move_temp 30
-
+LSQ_max_move_temp 30
+ISQ_max_move_temp 30
+SCA_max_move_temp 30
+LOB_max_move_temp 30
+QHG_max_move_temp 30
+CLA_max_move_temp 30
+BFF_max_move_temp 30
+BG_max_move_temp 30
+RCB_max_move_temp 30
+BMS_max_move_temp 30
+NSH_max_move_temp 30
+OSH_max_move_temp 30
+ZL_max_move_temp 30
+BD_max_move_temp 30
+MA_max_move_temp 30
+MB_max_move_temp 30
+SG_max_move_temp 30
+BC_max_move_temp 30
+ZG_max_move_temp 30
+PL_max_move_temp 30
+DF_max_move_temp 30
+PS_max_move_temp 30
+ZM_max_move_temp 30
+ZS_max_move_temp 30
+BO_max_move_temp 30
+PB_max_move_temp 30
+BB_max_move_temp 30
 #### GAV GOT HERE JAN 15 2015
 
 
@@ -18132,7 +18213,34 @@ BWH_min_move_salt 0
 SWH_min_move_salt 0                
 TWH_min_move_salt 0                
 INV_min_move_salt 0                
- 
+LSQ_min_move_salt 0
+ISQ_min_move_salt 0
+SCA_min_move_salt 0
+QHG_min_move_salt 0
+CLA_min_move_salt 0
+LOB_min_move_salt 0
+BFF_min_move_salt 0
+BG_min_move_salt 0
+RCB_min_move_salt 0
+BMS_min_move_salt 0
+OSH_min_move_salt 0
+NSH_min_move_salt 0
+ZL_min_move_salt 0
+BD_min_move_salt 0
+MA_min_move_salt 0
+MB_min_move_salt 0
+SG_min_move_salt 0
+BC_min_move_salt 0
+ZG_min_move_salt 0
+PL_min_move_salt 0
+DF_min_move_salt 0
+PS_min_move_salt 0
+ZM_min_move_salt 0
+ZS_min_move_salt 0
+BO_min_move_salt 0
+PB_min_move_salt 0
+BB_min_move_salt 0
+
 MAK_max_move_salt 40               
 HER_max_move_salt 40               
 WHK_max_move_salt 40               
@@ -18191,7 +18299,34 @@ RWH_max_move_salt 40
 BWH_max_move_salt 40               
 SWH_max_move_salt 40               
 TWH_max_move_salt 40               
-INV_max_move_salt 40               
+INV_max_move_salt 40
+LSQ_max_move_salt 40
+ISQ_max_move_salt 40               
+SCA_max_move_salt 40
+QHG_max_move_salt 40
+CLA_max_move_salt 40
+LOB_max_move_salt 40
+BFF_max_move_salt 40
+BG_max_move_salt 40
+RCB_max_move_salt 40
+BMS_max_move_salt 40
+NSH_max_move_salt 40
+OSH_max_move_salt 40
+ZL_max_move_salt 40
+BD_max_move_salt 40
+MA_max_move_salt 40
+MB_max_move_salt 40
+SG_max_move_salt 40
+BC_max_move_salt 40
+ZG_max_move_salt 40
+PL_max_move_salt 40
+DF_max_move_salt 40
+PS_max_move_salt 40
+ZM_max_move_salt 40
+ZS_max_move_salt 40
+BO_max_move_salt 40
+PB_max_move_salt 40
+BB_max_move_salt 40
 
 # Minimum and maximum spawning salinities
 MAK_min_spawn_salt 0                 
@@ -18253,6 +18388,9 @@ BWH_min_spawn_salt 0
 SWH_min_spawn_salt 0                 
 TWH_min_spawn_salt 0                 
 INV_min_spawn_salt 0                 
+LSQ_min_spawn_salt 0
+ISQ_min_spawn_salt 0
+
 MAK_max_spawn_salt 40                
 HER_max_spawn_salt 40                
 WHK_max_spawn_salt 40                
@@ -18312,7 +18450,8 @@ BWH_max_spawn_salt 40
 SWH_max_spawn_salt 40                
 TWH_max_spawn_salt 40                
 INV_max_spawn_salt 40                
-
+LSQ_min_spawn_salt 40
+ISQ_min_spawn_salt 40
 
 
 # Minimum tolerated oxygen level for age structured groups (typically vertebrates)
@@ -18393,6 +18532,11 @@ BB_remin_contrib  1
 flagmodelpH 0
 flag_macro_model 0
 swr_scalar 0.45
+
+# RM added 20170509
+swr_const 1367.0
+swr_cos_coefft 0.034
+swr_cos_offset 0.0
 
 #Added by Gavin Fay @nmfs 29 April 2014
 flag_benthos_sediment_link 0
