@@ -22,7 +22,7 @@ flag_skip_biol     0   # Flag showing whether want biological model run (1) or n
 
 flag_skip_phys     0   # Flag showing whether want biological model run (0) or not (1 - only used when debugging fisheries)
 
-flagannual_Mest    0	#Whether to write out estimates of mortality per predator annually (1) or not (0)
+flagannual_Mest    1	#Whether to write out estimates of mortality per predator annually (1) or not (0)
 
 
 
@@ -89,8 +89,6 @@ toutfinc   30 day      # Write fisheries output with this periodicity
 
 
 tsumout    30 day     # Write stock state summary with this periodicity
-
-flagannual_Mest 1      # Writ out mortality per predator annually (1) or not (0)
 
 fishout    0           # Switch to turn fisheries output on = 1, off = 0
 
@@ -160,21 +158,13 @@ flaghemisphere    1  # Flag for hemisphere model is in (0 = southern; 1 = northe
 
 flagscaleinit     1  # Flag to indicate whether scaling initial vertebrate densities (1=yes, 0=no)
 
-
 # RM 20161122 changed 0 to 1 for species at end (mostly benthic and inverts) Need to modify cdf file still
 # Multiplicative scalar for vertebrate initial densities (as read-in from cdf file)
 
-
 init_scalar       89
-1.2219844869	2.963898111	1.0441357029	0.321154235	0.0723842681	0.0723842681	0.0723842681	0.0723842681	0.0723842681	0.0723842681	0.0723842681	0.0088743966	0.1041869809	1.0418698085	1.0418698085	0.3151015613	0.024096365	0.024096365	0.024096365	7.393938844	1.0247184659	1.0247184659	0.2501170526	0.0129411305	0.0472661856	0.0472661856	0.0472661856	0.0472661856	0.0472661856	0.0472661856	0.0472661856	0.0472661856	0.0047266186	0.0472661856	0.0472661856	0.0472661856	0.0472661856	0.0472661856	0.0472661856	0.3761039766	1.0340279893	0.0260735742	0.5731617062	0.5731617062	0.5731617062	0.6260854811	0.6260854811	6.2608548104	0.1778925652	0.1778925652	0.1778925652	0.0195516998	0.2283108121	8.7864609074	0.0043771424	0.0043771424	0.0151852038	0.0151852038	0.0047266186	1.9999997774	1.9999997774	0.9999985552	33.338713151	33.338713151	33.5130554615	99.9884808013	1	47.7332357388	0.4999999707	0.4999977401	0.4999977401	0.9999998494	9999.999999467	1	1	1	9999.9999336104	0.999999911	29.9999998837	9.9983533446	0.9999999678	29.9999988877	29.9999998047	0.9999982438	9999.9999734442	9999.9999900416	1	1	1
-
-
-###110 1 750 0.35 1 11 0.55 35 1 0.6 1 0.65 12 40 0.6 1 1 1 0.76 0.66 2.5 0.3 1.7 1 18.8 1 0.3 0.2 1 2.3 8.8 0.1 1 0.15 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-
-
+1.222	2.964	1.044	0.321	0.072	0.072	0.072	0.072	0.072	0.072	0.072	0.009	0.104	1.042	1.042	0.315	0.024	0.024	0.024	7.394	1.025	1.025	0.250	0.013	0.047	0.047	0.047	0.047	0.047	0.047	0.047	0.047	0.005	0.047	0.047	0.047	0.047	0.047	0.047	0.376	1.034	0.026	0.573	0.573	0.573	0.626	0.626	6.261	0.178	0.178	0.178	0.020	0.228	8.786	0.004	0.004	0.015	0.015	0.005	2.000	2.000	1.000	33.339	33.339	33.513	99.988	1.000	47.733	0.500	0.500	0.500	1.000	10000.000	1.000	1.000	1.000	10000.000	1.000	30.000	9.998	1.000	30.000	30.000	1.000	10000.000	10000.000	1.000	1.000	1.000
 
 #G.Fay, 29 Apr 2014, added trackAtomicRatio to turn off P:N:C tracking, as per https://wiki.csiro.au/display/Atlantis/2013/04/23/New+Phosphorus+tracking
-
 trackAtomicRatio 0
 
 #S Gaichas added to fix mysterious crash jan 12 2015
@@ -193,6 +183,176 @@ check_dups 0
 
 
 
+
+################################################
+
+# List of group numbers for use with which_check
+
+# Group ID number
+
+# FPL 0
+
+# FPO 1
+
+# FPS 2
+
+# FVD 3
+
+# FVV 4
+
+# FVS 5
+
+# FVB 6
+
+# FVT 7
+
+# FVO 8
+
+# FMM 9
+
+# FMN 10
+
+# FBP 11
+
+# FDD 12
+
+# FDE 13
+
+# FDS 14
+
+# FDM 15
+
+# FDP 16
+
+# FDB 17
+
+# FDC 18
+
+# FDO 19
+
+# FDF 20
+
+# SHB 21
+
+# SHD 22
+
+# SHC 23
+
+# SHP 24
+
+# SHR 25
+
+# SSK 26
+
+# SB  27
+
+# SP  28
+
+# PIN 29
+
+# REP 30
+
+# WHB 31
+
+# WHS 32
+
+# WHT 33
+
+# WDG 34
+
+# CEP 35
+
+# BFS 36
+
+# BFF 37
+
+# BFD 38
+
+# BG  39
+
+# BMD 40
+
+# BML 41
+
+# BMS 42
+
+# PWN 43
+
+# ZL  44
+
+# BD  45
+
+# MA  46
+
+# MB  47
+
+# SG  48
+
+# BC  49
+
+# ZG  50
+
+# PL  51
+
+# DF  52
+
+# PS  53
+
+# ZM  54
+
+# ZS  55
+
+# PB  56
+
+# BB  57
+
+# BO  58
+
+# DL  59
+
+# DR  60
+
+# DC  61
+
+# DLsed 62
+
+# DRsed 63
+
+# DCsed 64
+
+# jCEP 65
+
+# jPWN 66
+
+# NHwc 67
+
+# NOwc 68
+
+# Siwc 69
+
+# Fewc 70
+
+# O2 71
+
+# DSi 72
+
+# NHsed 73
+
+# NOsed 74
+
+# Sised 75
+
+# Fesed 76
+
+# DON 77
+
+# O2sed 78
+
+# DSised 79
+
+#
+
+#
 
 ################################################
 
