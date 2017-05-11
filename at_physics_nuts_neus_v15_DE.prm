@@ -242,12 +242,6 @@ temp_ampltiude 5.0
 
 
 
-# Base line temperature for the q10 and seasonal temperature calculations
-
-baseline_temp 15.0
-
-
-
 # Injection rate for vertical upwelling of water column tracers
 
 # This value is scaled by the a box specific upwelling scalar.
@@ -270,10 +264,14 @@ mix_deep 1
 
 # Depth for marking deep ocean (boxes deeper than this will get deep ocean mixing)
 
-mix_deep_depth -1200
+mix_deep_depth -200
+
+
 
 # Deep mixing of oxygen added 5/9/17 RM
 mix_deep_O2 0
+
+
 
 # Switch to indicate whether or not the injection of materials from
 
@@ -319,7 +317,7 @@ bioturbation 1
 
 # added to the transport model is used. Yes = 1, No =0.
 
-horiz_diffusion 0
+horiz_diffusion 1
 
 
 
@@ -327,7 +325,7 @@ horiz_diffusion 0
 
 # added to the transport model is used. Yes = 1, No =0.
 
-vert_diffusion 0
+vert_diffusion 1
 
 
 
@@ -351,7 +349,7 @@ advect_diffusion 1
 
 # is used. Yes = 1, No =0.
 
-resuspension 0
+resuspension 1
 
 
 
@@ -379,7 +377,7 @@ decay_sed_scale 1.0
 
 # Switch to indicate whether or not to scale exchanges. No =0, Yes = 1, Area_corrected = 2.
 
-scale_transport 1
+scale_transport 0
 
 
 
