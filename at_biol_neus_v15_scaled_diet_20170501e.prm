@@ -1487,7 +1487,7 @@ FDON_D           0.05      Fraction od DON breakdown that becomes detritus      
 
 # Nitrification and denitrification 
 R_0_T15          200       Minimum rate of sediment respiration that supports nitrification    200 - 250
-R_D_T15          15        Peak of nitrification-denitrification curve                         10 - 20
+R_D_T15          20        Peak of nitrification-denitrification curve                         10 - 20
 
 Dmax             0.25      Maximum rate of denitrification                                     0.25
 
@@ -1501,7 +1501,7 @@ p_NH_anad        3.0       Proportion of NH4 adsorped to NH4 dissolved          
 X_ON             16.0      Redfield ratio of O:N                                               16.0
 X_CN             5.7       Redfield ratio of C:N                                               5.7
 X_CHLN           7.0       Ratio of chla to N                                                  7.0
-X_SiN            3.0       Redfield ratio of Si:N                                              3.0
+X_SiN            1.0       Redfield ratio of Si:N                                              3.0
 X_FeN            30000.0   Redfield ratio of Fe:N                                              30000.0
 
 #AFDW to wet weight  
@@ -1584,16 +1584,16 @@ KI_MA_T15        5         Light saturation, macroalgae                      W m
 KI_SG_T15        65        Light saturation, seagrass                        W m-2             65
 KI_MB_T15        3         Light saturation, microphytobenthos               W m-2             3
 
-eddy_scale       1.0       Coefficient scaling eddy strength impact on phytoplankton growth    1.0
+eddy_scale       2.0       Coefficient scaling eddy strength impact on phytoplankton growth    1.0
 # Primary producer nutrient requirements 
-KN_PL            10        Half-sat const for PL growth on DIN (15)          mg N m-3          10
-KN_PS            8         Half-sat const for PS growth on DIN (13)          mg N m-3          4
-KN_DF            20         Half-sat const for DF growth on DIN (13)          mg N m-3          4
+KN_PL            1        Half-sat const for PL growth on DIN (15)          mg N m-3          10
+KN_PS            0.25     Half-sat const for PS growth on DIN (13)          mg N m-3          4
+KN_DF            1         Half-sat const for DF growth on DIN (13)          mg N m-3          4
 KN_MA            10        Half-sat const for MA growth on DIN (20)          mg N m-3          20
 KN_SG            5         Half-sat const for SG growth on DIN (12)          mg N m-3          5
 KN_MB            20       Half-sat const for MB growth on DIN (200)         mg N m-3          200
 
-KS_PL            10        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
+KS_PL            20        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
 KS_PS            0         Half-sat const for PS growth on a second nutrient mg nutrient m-3   0 
 KS_DF            0         Half-sat const for DF growth on a second nutrient mg nutrient m-3   0 
 KS_MB            80        Half-sat const for MB growth on Si                mg Si m-3         100
@@ -1601,7 +1601,7 @@ KS_MB            80        Half-sat const for MB growth on Si                mg 
 KS_MA            0
 KS_SG            0
 
-KF_PL            0         Half-sat const for PL growth on Micro-nutrient    mg Fe m-3         20 
+KF_PL            10         Half-sat const for PL growth on Micro-nutrient    mg Fe m-3         20 
 KF_PS            0         Half-sat const for PS growth on Micro-nutrient    mg Fe m-3         0 
 KF_DF            0         Half-sat const for DF growth on Micro-nutrient    mg Fe m-3         0 
 KF_MB            0         Half-sat const for MB growth on Micro-nutrient    mg Fe m-3         100
