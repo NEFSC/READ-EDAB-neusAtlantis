@@ -13529,29 +13529,53 @@ mS_SG_T15        0.00002   Excessive DIN seagrass  mortality                 d-1
 
 ## Linear mortality 
 # Invertebrates
-SCA_mL 3e-07
-QHG_mL 5e-07
-CLA_mL 5e-07
-BFF_mL 5e-07
-BG_mL 1e-06
-LOB_mL 2e-06
-RCB_mL 3e-06
-BMS_mL 3e-06
-ZL_mL 5e-06
-BD_mL 1e-07
-MA_mL 3.25e-05
-MB_mL 0.005
-SG_mL 2e-05
-BC_mL 8e-05
-ZG_mL 3e-06
-PL_mL 0.00015
-DF_mL 5e-06
-PS_mL 0.00016
-ZM_mL 1e-05
-ZS_mL 8e-05
-PB_mL 1e-04
-BB_mL 1e-05
-BO_mL 4e-07
+SCA_mL 2
+3e-07 3e-07
+QHG_mL 2
+5e-07 5e-07
+CLA_mL 2
+5e-07 5e-07
+BFF_mL 2
+5e-07 5e-07
+
+BG_mL 2  
+1e-06 1e-06
+LOB_mL 2  
+2e-06 2e-06
+RCB_mL 2  
+3e-06 3e-06
+BMS_mL 2  
+3e-06 3e-06
+ZL_mL 2  
+5e-06 5e-06
+BD_mL 2  
+1e-07 1e-07
+MA_mL 2  
+3.25e-05 3.25e-05
+MB_mL 2  
+0.005 0.005
+SG_mL 2  
+2e-05 2e-05
+BC_mL 2  
+8e-05 8e-05
+ZG_mL 2  
+3e-06 3e-06
+PL_mL 2  
+0.00015 0.00015
+DF_mL 2
+5e-06 5e-06
+PS_mL 2  
+0.0016 0.0016
+ZM_mL 2  
+1e-04 1e-04
+ZS_mL 2  
+8e-05 8e-05
+PB_mL 2  
+1e-04 1e-04
+BB_mL 2  
+1e-05 1e-05
+BO_mL 2  
+4e-07 4e-07
 
 
 #mL_SCA_T15 3e-07
@@ -13601,19 +13625,19 @@ BO_mL 4e-07
 #mL_BB_T15        0.00001   Linear mortality rate of sediment bact, 15 deg C  d-1 (0.0001)     0.0 - 0.1
 
 # Invertebrates with age structure
-LSQ_mL 2
-1e-06 1e-06 
-ISQ_mL 2
-1e-06 1e-06 
-NSH_mL 2
-6.75e-06 6.75e-06 
-OSH_mL 2
-6.75e-06 6.75e-06 
+#LSQ_mL 2
+#1e-06 1e-06 
+#ISQ_mL 2
+#1e-06 1e-06 
+#NSH_mL 2
+#6.75e-06 6.75e-06 
+#OSH_mL 2
+#6.75e-06 6.75e-06 
 
-#LSQ_mL 1e-06
-#ISQ_mL 1e-06
-#NSH_mL 6.75e-06
-#OSH_mL 6.75e-06
+LSQ_mL 1e-06
+ISQ_mL 1e-06
+NSH_mL 6.75e-06
+OSH_mL 6.75e-06
 
 
 
@@ -13963,7 +13987,6 @@ ZS_mQ 2
 4e-05 4e-05
 BO_mQ 2  
 1e-07 1e-07
-
 #Vertebrates
 MAK_mQ	2
 1E-014	2.5E-012
@@ -14117,20 +14140,20 @@ INV_mQ	2
 #mQ_BG_T15        0.0       Quad. mortality rate of benth. grazers, 15 deg C  d-1              0.0 - 0.00001
 
 # Invertebrates with age structure
-LSQ_mQ 2 
-0.00147 0.00176
-ISQ_mQ 2 
-0.00147 0.00176
-NSH_mQ 2
-0.00177 0.00177
-OSH_mQ 2
-0.00177 0.00177
+#LSQ_mQ 2 
+#0.00147 0.00176
+#ISQ_mQ 2 
+#0.00147 0.00176
+#NSH_mQ 2
+#0.00177 0.00177
+#OSH_mQ 2
+#0.00177 0.00177
 
 
-#LSQ_mQ 0.00176
-#ISQ_mQ 0.00176
-#NSH_mQ 0.00177
-#OSH_mQ 0.00177
+LSQ_mQ 0.00176
+ISQ_mQ 0.00176
+NSH_mQ 0.00177
+OSH_mQ 0.00177
 #mQ_jLSQ_T15 0.00147
 #mQ_jISQ_T15 0.00147
 #mQ_jNSH_T15 0.00177

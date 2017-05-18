@@ -61,6 +61,16 @@ use_saltfiles 1
 nsaltfiles 1
 Salinity0.name tsfiles\Salt_neus.nc
 
+#RM added 20170517 based on warnings
+use_pHfiles 0
+use_force_tracers 0
+#BottomStress 0
+#pCO2_forcing 0
+#FSPBChange 0
+#Precipitation 0
+#Evaporation 0
+#Recruitment_time_series 0
+
 ts_on_hydro_time 1
 
 
