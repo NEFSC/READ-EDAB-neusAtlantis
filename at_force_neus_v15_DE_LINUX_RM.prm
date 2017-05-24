@@ -96,7 +96,7 @@ temp_rewind 1
 salt_rewind 1
 
 #RM added 20170517 based on warnings
-use_pHfiles 0
+use_phFiles 0
 use_force_tracers 0
 #BottomStress 0
 #pCO2_forcing 0
