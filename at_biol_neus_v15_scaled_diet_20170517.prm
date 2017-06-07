@@ -123,7 +123,12 @@ flagbactstim     1         Switch to turn stimulation of bacterial growth on/off
 flagBOlim        0         Switch to turn OB population limitation on/off: off=0, on=1         0
 flagBDlim        0         Switch to turn BD population limitation on/off: off=0, on=1         0
 flagBGlim        0         Switch to turn BG population limitation on/off: off=0, on=1 (1)     0
-flagBFlim        0         Switch to identify filter feeding crowding used: simple=0, ERSEM=1  0
+flagBFFlim        0         Switch to identify filter feeding crowding used: simple=0, ERSEM=1  0
+flagSCAlim 0         
+flagQHGlim 0         
+flagCLAlim 0         
+#flagBFlim 0         
+flagBClim 0
 
 # Those determining which environmental 
 # interaction formulations used      
@@ -11747,26 +11752,26 @@ mum_SCA_T15 5.0
 mum_QHG_T15 3.5     
 mum_CLA_T15 3.5     
 mum_BFF_T15 3.5     
-mum_BG_T15  2      
+mum_BG_T15  2.0      
 mum_LOB_T15 1.2    
 mum_RCB_T15 1.0      
-mum_BMS_T15 0.1     
+mum_BMS_T15 1.0     
 mum_NSH_T15 3.043   
 mum_OSH_T15 3.043   
-mum_ZL_T15  3.5        
+mum_ZL_T15  5.5        
 mum_BD_T15  4.0      
 mum_MA_T15  1.0        
 mum_MB_T15  1.8       
 mum_SG_T15  0.7       
 mum_BC_T15  0.8     
-mum_ZG_T15  1.7      
-mum_PL_T15  2.0        
-mum_DF_T15  1.0       
-mum_PS_T15  1.5       
-mum_ZM_T15  3.8       
+mum_ZG_T15  2.7      
+mum_PL_T15  3.0        
+mum_DF_T15  2.0       
+mum_PS_T15  2.5       
+mum_ZM_T15  5.8       
 mum_ZS_T15  5.5       
-mum_PB_T15  1.5        
-mum_BB_T15  1.5        
+mum_PB_T15  3.5        
+mum_BB_T15  3.5        
 mum_BO_T15  4.0 
 
 # Vertebrate growth rates for each "group," per age class mg N d-1
@@ -17748,12 +17753,13 @@ InvaderIndex            0   invading species guild index, which you get from the
 minInvaderAge           0    minimum cohort entering as invading species - 0 for urchins as only have one cohort
 maxInvaderAge           0    maximum cohort entering as invading species - again I guess 0 is most appropriate here
 InvaderEntryBox         0    box ID for first box invading species arrives in
-InvaderMinDepth         2700 minimum depth invading species tolerates
-InvaderMaxDepth         2700 maximum depth invading species tolerates
-InvaderStartDay         3666666666666666000   day invading species enters the system
-InvaderEndDay           3666666666666666000   day invading species stops entering the system
+InvaderMinDepth         50 minimum depth invading species tolerates
+InvaderMaxDepth         500 maximum depth invading species tolerates
+InvaderStartDay         3660   day invading species enters the system
+InvaderEndDay           36600   day invading species stops entering the system
 InvaderScalar           1.0  increase per year of invading species - so what to scale original biomass by to represent invading species entering
 InvaderSpeed            0.0  speed of spread of invading species
+
 #Flag to indicate that the group uses age structured prey.
 age_structured_prey_MAK 0                      
 age_structured_prey_HER 0                      
@@ -17814,19 +17820,12 @@ age_structured_prey_BWH 0
 age_structured_prey_SWH 0                      
 age_structured_prey_TWH 0                      
 age_structured_prey_INV 1                      
+
 #Added by Bec Gorton 17/12/2010
 BMDmax 0
 BMLmax 0
 BMSmax 0
-###flagBFSlim  1 Switch to identify filter feeding crowding used: simple=0, ERSEM=1 0 
-flagSCAlim 1         
-flagQHGlim 1         
-flagCLAlim 1         
-flagBFFlim 1         
-flagBGlim  1         
-flagBDlim  1         
-flagBClim  0         
-flagBOlim  1         
+
 
 
 #Added by Bec Gorton 24th October 2012
@@ -18474,8 +18473,8 @@ BWH_max_spawn_salt 40
 SWH_max_spawn_salt 40                
 TWH_max_spawn_salt 40                
 INV_max_spawn_salt 40                
-LSQ_min_spawn_salt 40
-ISQ_min_spawn_salt 40
+LSQ_max_spawn_salt 40
+ISQ_max_spawn_salt 40
 
 
 # Minimum tolerated oxygen level for age structured groups (typically vertebrates)

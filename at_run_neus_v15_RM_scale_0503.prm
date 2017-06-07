@@ -28,19 +28,19 @@ flagannual_Mest    1	#Whether to write out estimates of mortality per predator a
 
 checkbox      13       # Give detailed logged output for this box
 
-checkstart    9120 day    # Start detailed logged output after this date
+checkstart    1 day    # Start detailed logged output after this date
 
 checkstop     9130 day    # Stop detailed logged output after this date
 
 fishtest      0        # Count up total population for each vertebrate after each main subroutine: 0=no, 1=yes
 
-flaggape      0        # Periodically list prey vs gape statistics (tuning diagnostic)
+flaggape      1        # Periodically list prey vs gape statistics (tuning diagnostic)
 
-flagchecksize 0        # Periodically list relative size (tuning diagnostic)
+flagchecksize 1        # Periodically list relative size (tuning diagnostic)
 
 flagagecheck  0        # Periodically list age structure per cohort (tuning diagnostic)
 
-flagdietcheck 0        # Periodically list realised diet matchups (tuning diagnostic)
+flagdietcheck 1        # Periodically list realised diet matchups (tuning diagnostic)
 
 checkNH       0        # Give detailed logged output for NH in checkbox
 
@@ -56,7 +56,7 @@ which_check   81       # ID number of group to track (if don't want to track any
 
 habitat_check 0			# water column 0, sed 1, epibenthic 2, land 3, ice 4
 
-move_check    0       # ID number of group where tracking movements
+move_check    20       # ID number of group where tracking movements
 
 fishmove      1        # Set to 0 to turn vertebrate movement off for debugging purposes
 
@@ -78,17 +78,17 @@ title      test version, DynEffort NEUS v1.5 with Atlantis2 codebase
 
 dt         24 hour     # 12 hour time step
 
-tstop      12000 day   # Stop time after the given period (18260)18260  , 4000   2191
+tstop      366 day   # Stop time after the given period (18260)18260  , 4000   2191
 
 toutstart  0 day       # Output start time
 
-toutinc    30 day      # Write output with this periodicity
+toutinc    1 day      # Write output with this periodicity
 
-toutfinc   30 day      # Write fisheries output with this periodicity
+toutfinc   10 day      # Write fisheries output with this periodicity
 
 
 
-tsumout    30 day     # Write stock state summary with this periodicity
+tsumout    10 day     # Write stock state summary with this periodicity
 
 fishout    0           # Switch to turn fisheries output on = 1, off = 0
 
