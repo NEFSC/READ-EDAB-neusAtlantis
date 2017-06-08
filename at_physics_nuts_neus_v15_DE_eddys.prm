@@ -261,7 +261,7 @@ mix_deep 1
 
 # Depth for marking deep ocean (boxes deeper than this will get deep ocean mixing)
 
-mix_deep_depth -150
+mix_deep_depth -1500
 
 # Deep mixing of oxygen added 5/9/17 RM
 mix_deep_O2 0
@@ -320,7 +320,7 @@ horiz_diffusion 0
 
 # added to the transport model is used. Yes = 1, No =0.
 
-vert_diffusion 1
+vert_diffusion 0
 
 
 
@@ -439,7 +439,7 @@ eddy_S4   30
 
 # Eddy scaling of vertical mixing
 
-eddy_vertmix 1
+eddy_vertmix 0
 
 
 
