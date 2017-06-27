@@ -372,7 +372,7 @@ decay_sed_scale 1.0
 
 # Switch to indicate whether or not to scale exchanges. No =0, Yes = 1, Area_corrected = 2.
 
-scale_transport 1
+scale_transport 0
 
 
 
@@ -439,7 +439,7 @@ eddy_S4   30
 
 # Eddy scaling of vertical mixing
 
-eddy_vertmix 0
+eddy_vertmix 1
 
 
 

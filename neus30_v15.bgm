@@ -240,7 +240,7 @@ box4.ibox	1 5 5 5 6 7
 box4.botz	-20.5     
 box4.area	3676946495
 box4.vertmix	0.000001     
-box4.horizmix	100000.0               
+box4.horizmix	1000.0               
 box4.vert 701275.4194 2968929.221    
 box4.vert 705479.4142 3012270.356    
 box4.vert 831913.3366 3038963.728    
@@ -310,7 +310,7 @@ box7.ibox	4 6 6 6 6 9 9 9 9 8 23 23 23 23 8
 box7.botz	-33.8              
 box7.area	10363076990
 box7.vertmix	0.000001              
-box7.horizmix	100000.0               
+box7.horizmix	1000.0               
 box7.vert 830833.5537 3027105.203             
 box7.vert 831910.2072 3038927.448             
 box7.vert 914086.2569 3076053.286             
@@ -822,7 +822,7 @@ box25.ibox	18 18 18 19 22 22 22 22 22 22 22 22 22 22
 box25.botz	-100             
 box25.area	30440867891
 box25.vertmix	0.000001             
-box25.horizmix	10000.0               
+box25.horizmix	1000.0               
 box25.vert 1284239.411 3487052.292            
 box25.vert 1443797.548 3639847.661            
 box25.vert 1425818.637 3547469.033            
