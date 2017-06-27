@@ -50,7 +50,6 @@ pss5.rewind 1
 
 # Solar time series data file
 Solar_radiation /tsfiles/solar.ts
-#Solar_radiation ../../tsfiles/Gavsolar.ts
 Solar_radiation_rewind 1
 
 # Temperature time series data file
@@ -58,14 +57,12 @@ use_tempfiles 1
 ntempfiles 1
 Temperature0.name /tsfiles/RM_Temp_neus.nc
 temp_rewind 1
-#Temperature0.name tsfiles/Temp_neus.nc
 
 # Salinity time series data file
 use_saltfiles 1
 nsaltfiles 1
 Salinity0.name /tsfiles/RM_salt2.nc
 salt_rewind 1
-#Salinity0.name tsfiles/Salt_neus.nc
 
 ts_on_hydro_time 1
 

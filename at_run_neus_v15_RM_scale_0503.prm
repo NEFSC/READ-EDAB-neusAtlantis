@@ -28,7 +28,7 @@ flagannual_Mest    1	#Whether to write out estimates of mortality per predator a
 
 checkbox      13       # Give detailed logged output for this box
 
-checkstart    9120 day    # Start detailed logged output after this date
+checkstart    1 day    # Start detailed logged output after this date
 
 checkstop     9130 day    # Stop detailed logged output after this date
 
@@ -56,7 +56,7 @@ which_check   81       # ID number of group to track (if don't want to track any
 
 habitat_check 0			# water column 0, sed 1, epibenthic 2, land 3, ice 4
 
-move_check    0       # ID number of group where tracking movements
+move_check    20       # ID number of group where tracking movements
 
 fishmove      1        # Set to 0 to turn vertebrate movement off for debugging purposes
 
@@ -76,19 +76,17 @@ debug_it      0
 
 title      test version, DynEffort NEUS v1.5 with Atlantis2 codebase
 
-dt         24 hour     # 12 hour time step
+dt         12 hour     # 12 hour time step
 
-tstop      12000 day   # Stop time after the given period (18260)18260  , 4000   2191
+tstop      9130 day   # Stop time after the given period (18260)18260  , 4000   2191
 
-toutstart  0 day       # Output start time
+toutstart  1 day       # Output start time
 
-toutinc    30 day      # Write output with this periodicity
+toutinc    1 day      # Write output with this periodicity
 
-toutfinc   30 day      # Write fisheries output with this periodicity
+toutfinc   10 day      # Write fisheries output with this periodicity
 
-
-
-tsumout    30 day     # Write stock state summary with this periodicity
+tsumout    10 day     # Write stock state summary with this periodicity
 
 fishout    0           # Switch to turn fisheries output on = 1, off = 0
 
@@ -149,11 +147,8 @@ K_num_catchqueue  7    # Length (in days) of list of catches used in running ave
 flaghemisphere    1  # Flag for hemisphere model is in (0 = southern; 1 = northern)
 
 
-
 # Parameters for rescalingin inital vertebrate densities - only for use in emergencies,
-
 # should really update the cdf file instead
-
 # GFay Nov 13 2012, check these.
 
 flagscaleinit     1  # Flag to indicate whether scaling initial vertebrate densities (1=yes, 0=no)
@@ -162,7 +157,7 @@ flagscaleinit     1  # Flag to indicate whether scaling initial vertebrate densi
 # Multiplicative scalar for vertebrate initial densities (as read-in from cdf file)
 
 init_scalar       89
-1.222	2.964	1.044	0.321	0.072	0.072	0.072	0.072	0.072	0.072	0.072	0.009	0.104	1.042	1.042	0.315	0.024	0.024	0.024	7.394	1.025	1.025	0.250	0.013	0.047	0.047	0.047	0.047	0.047	0.047	0.047	0.047	0.005	0.047	0.047	0.047	0.047	0.047	0.047	0.376	1.034	0.026	0.573	0.573	0.573	0.626	0.626	6.261	0.178	0.178	0.178	0.020	0.228	8.786	0.004	0.004	0.015	0.015	0.005	2.000	2.000	1.000	33.339	33.339	33.513	99.988	1.000	47.733	0.500	0.500	0.500	1.000	10000.000	1.000	1.000	1.000	10000.000	1.000	30.000	9.998	1.000	30.000	30.000	1.000	10000.000	10000.000	1.000	1.000	1.000
+1.2219844869	2.7359402884	2.5928547425	0.321154235	0.0754194426	0.0238709508	0.2192384827	0.1308575284	0.0495092832	0.0222721003	0.237336691	0.0006000121	1.0314511132	1.4690364297	0.625121885	0.147201966	0.0922200067	0.2033220956	0.0380913017	12.5932602641	1.0247184661	1.5355643943	1.6771280165	1.0877128311	0.0018479007	0.715482524	0.199041848	0.0024824346	0.0234141034	0.0013498138	0.5913911481	0.1972830313	7.56258970042667E-05	0.0012844846	0.0059008734	0.001114508	0.0179052219	0.0018459108	0.8325492675	2.4958572129	3.0445772346	0.8787245577	1.5765221602	0.3189259359	0.1147377114	7.5130257814	3.7565128907	8.1439167753	0.4943676802	0.5024821396	0.6992050298	0.1955169979	2.2831081211	8.7864609063	0.0175085697	0.0700342789	0.0911112227	0.0607408151	0.0075625897	2.3999997329	1.5999998219	0.0825991058	0.0121270341	333.4438073219	2863.9637205911	9997.6482183637	0.9999705994	0.0407794225	0.4499999737	0.0437216067	0.0774437974	0.1678276506	99999999.99467	1	1	1	99999999.3361037	0.1678276609	6.5960543032	2.1978830641	0.2198684705	5.0348300891	5.034830243	0.9999982438	99999999.7344415	99999999.9004156	1	1	1
 
 #G.Fay, 29 Apr 2014, added trackAtomicRatio to turn off P:N:C tracking, as per https://wiki.csiro.au/display/Atlantis/2013/04/23/New+Phosphorus+tracking
 trackAtomicRatio 0

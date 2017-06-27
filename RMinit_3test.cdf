@@ -35309,7 +35309,7 @@ variables:
 
 // global attributes:
 		:title = "Baseline run" ;
-		:geometry = "neus30_v15_notsohighvertmix.bgm" ;
+		:geometry = "neus30_v15.bgm" ;
 		:parameters = "" ;
 		:wcnz = 4 ;
 		:sednz = 1 ;
@@ -95462,7 +95462,7 @@ data:
 
  numlayers =
   2, 1, 1, 3, 1, 2, 2, 1, 2, 2, 2, 3, 2, 1, 3, 2, 3, 2, 2, 3, 3, 3, 2, _, _, 
-    2, 3, 4, 4, 2 ;
+    2, 3, 4, 4, 4 ;
 
  porosity =
   _, _, _, _, 0.3,
