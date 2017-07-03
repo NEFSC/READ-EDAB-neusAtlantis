@@ -76,7 +76,7 @@ debug_it      0
 
 title      test version, DynEffort NEUS v1.5 with Atlantis2 codebase
 
-dt         12 hour     # 12 hour time step
+dt         24 hour     # 12 hour time step
 
 tstop      9130 day   # Stop time after the given period (18260)18260  , 4000   2191
 

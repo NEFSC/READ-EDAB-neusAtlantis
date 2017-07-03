@@ -261,7 +261,7 @@ box5.iface	20 22 23 24 25 29 28 27 26 19 18 12
 box5.ibox	1 4 4 4 6 28 28 28 28 29 3 2
 box5.botz	-106           
 box5.area	11085441644
-box5.vertmix	0.05           
+box5.vertmix	0.01
 box5.horizmix	1000.0               
 box5.vert 714969.6533 2950381.816          
 box5.vert 717009.5354 2968323.378          
@@ -286,7 +286,7 @@ box6.iface	25 32 34 35 36 37 38 31 30
 box6.ibox	5 4 7 7 7 7 9 28 28
 box6.botz	-109.9        
 box6.area	19468592595
-box6.vertmix	0.05        
+box6.vertmix	0.01
 box6.horizmix	1000.0               
 box6.vert 767036.4002 2994942.093       
 box6.vert 830833.5537 3027105.203       
@@ -529,7 +529,7 @@ box14.iface	64 95 96 97 98 99 100 102 103 104
 box14.ibox	9 13 13 13 13 13 13 28 27 15
 box14.botz	-138.8         
 box14.area	12703070733
-box14.vertmix	0.05         
+box14.vertmix	0.01
 box14.horizmix	1000.0               
 box14.vert 1136907.462 3016407.121        
 box14.vert 1166775.978 3017206.226   
@@ -629,7 +629,7 @@ box18.iface	69 131 130 129 128 132 133 134 146 147 148 149 150 151
 box18.ibox	17 19 19 19 19 25 25 25 24 24 24 24 24 24
 box18.botz	-86.4             
 box18.area	4830554502
-box18.vertmix	0.05             
+box18.vertmix	0.01
 box18.horizmix	1000.0               
 box18.vert 1156497.427 3368652.824            
 box18.vert 1153635.488 3431239.344

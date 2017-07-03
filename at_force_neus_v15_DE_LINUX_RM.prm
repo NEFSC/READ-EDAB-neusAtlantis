@@ -1,11 +1,11 @@
 # Linux Version (created by Beth Fulton and Adam Davidson)
 # modded by gfay@nmfs June 2014
 #
-# Hydrodynamic files - this is for 1991 to 1994, but 1991 and 1992 are
-# faked from 1993 data.
+# Hydrodynamic files - files modified to 644 days to reduce odd fluctuations
+# present in both salt and temp files, hydro also processed - RM 6/2017
 # input directories  
 nhdfiles 1
-hd0.name /tsfiles/Hydro_neus.nc
+hd0.name /tsfiles/Hydro_neus_RM_shortened.nc
 
 
 # Bottom stress
@@ -55,13 +55,13 @@ Solar_radiation_rewind 1
 # Temperature time series data file
 use_tempfiles 1
 ntempfiles 1
-Temperature0.name /tsfiles/RM_Temp_neus.nc
+Temperature0.name /tsfiles/Temp_neus_RM_shortened.nc
 temp_rewind 1
 
 # Salinity time series data file
 use_saltfiles 1
 nsaltfiles 1
-Salinity0.name /tsfiles/RM_salt2.nc
+Salinity0.name /tsfiles/Salt_neus_RM_shortened.nc
 salt_rewind 1
 
 ts_on_hydro_time 1
