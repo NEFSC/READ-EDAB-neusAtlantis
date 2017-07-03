@@ -4,7 +4,7 @@
 # faked from 1993 data.
 # input directories  
 nhdfiles 1
-hd0.name tsfiles\Hydro_neus.nc
+hd0.name \tsfiles\Hydro_neus.nc
 
 # Bottom stress
 
@@ -54,15 +54,19 @@ Solar_radiation_rewind 1
 # Temperature time series data file
 use_tempfiles 1
 ntempfiles 1
-Temperature0.name \tsfiles\Temp_neus.nc
+Temperature0.name \tsfiles\RM_Temp_neus.nc
+temp_rewind 1
+#Temperature0.name \tsfiles\Temp_neus.nc
 
 # Salinity time series data file
 use_saltfiles 1
 nsaltfiles 1
-Salinity0.name \tsfiles\Salt_neus.nc
+Salinity0.name \tsfiles\RM_salt2.nc
+salt_rewind 1
+#Salinity0.name \tsfiles\Salt_neus.nc
 
 #RM added 20170517 based on warnings
-use_pHfiles 0
+use_phFiles 0
 use_force_tracers 0
 #BottomStress 0
 #pCO2_forcing 0
