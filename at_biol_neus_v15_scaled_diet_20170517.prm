@@ -1497,7 +1497,7 @@ R_D_T15          20        Peak of nitrification-denitrification curve          
 Dmax             0.25      Maximum rate of denitrification                                     0.25
 
 K_nit_T15        0.01      Rate of nitrification by free bacteria                              0.01
-K_conc           2000.0    Half concentration level for nitrification by PFB mg N m-3          2000.0
+K_conc           100.0    Half concentration level for nitrification by PFB mg N m-3          2000.0
 
 # Adsorption
 p_NH_anad        3.0       Proportion of NH4 adsorped to NH4 dissolved                         3.0
@@ -1583,22 +1583,22 @@ MB_wc            1.0       Scalar for microphytoben. growth in wc (reduced as no
 
 # Primary producer light requirements 
 KI_PL_T15        10        Light saturation, large phytoplankton             W m-2          10 - 20
-KI_PS_T15        10        Light saturation, small phytoplankton             W m-2          10 - 20
-KI_DF_T15        10        Light saturation, dinoflagellates                 W m-2          10 - 20
+KI_PS_T15        5        Light saturation, small phytoplankton             W m-2          10 - 20
+KI_DF_T15        5        Light saturation, dinoflagellates                 W m-2          10 - 20
 KI_MA_T15        5         Light saturation, macroalgae                      W m-2             5
 KI_SG_T15        65        Light saturation, seagrass                        W m-2             65
 KI_MB_T15        3         Light saturation, microphytobenthos               W m-2             3
 
-eddy_scale       1.5       Coefficient scaling eddy strength impact on phytoplankton growth    1.0
+eddy_scale       10.0       Coefficient scaling eddy strength impact on phytoplankton growth    1.0
 # Primary producer nutrient requirements 
 KN_PL            10        Half-sat const for PL growth on DIN (15)          mg N m-3          10
-KN_PS            4     Half-sat const for PS growth on DIN (13)          mg N m-3          4
-KN_DF            8         Half-sat const for DF growth on DIN (13)          mg N m-3          4
+KN_PS            5     Half-sat const for PS growth on DIN (13)          mg N m-3          4
+KN_DF            15         Half-sat const for DF growth on DIN (13)          mg N m-3          4
 KN_MA            10        Half-sat const for MA growth on DIN (20)          mg N m-3          20
 KN_SG            5         Half-sat const for SG growth on DIN (12)          mg N m-3          5
 KN_MB            20       Half-sat const for MB growth on DIN (200)         mg N m-3          200
 
-KS_PL            10        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
+KS_PL            0.5        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
 KS_PS            0         Half-sat const for PS growth on a second nutrient mg nutrient m-3   0 
 KS_DF            0         Half-sat const for DF growth on a second nutrient mg nutrient m-3   0 
 KS_MB            80        Half-sat const for MB growth on Si                mg Si m-3         100
@@ -1615,7 +1615,7 @@ KF_MA            0
 KF_SG            0
 
 # Bacterial nutrient requirements 
-KN_BB            1         Half-sat const for sediment bacteria NH uptake    mg N m-3        0 - 10       
+KN_BB            5         Half-sat const for sediment bacteria NH uptake    mg N m-3        0 - 10       
 
 # Bacterial population parameters (how much bacterial biomass detritus can support)
 XPB_DL           0.2      Maximum ratio of PB to DL biomass                                0.3 - 0.4
@@ -1624,8 +1624,8 @@ XBB_DL           0.2      Maximum ratio of BB to DL biomass                     
 XPB_DR           0.012     Maximum ratio of PB to DR biomass                               0.01 - 0.015
 XBB_DR           0.008     Maximum ratio of BB to DR biomass                               0.005 - 0.01
  
-k_PB             1.0       Shape of PB growth eq'n, 1 = linear, 3 = drop before max, 5 = drop at max 3.0
-k_BB             1.0       Shape of BB growth eq'n, 1 = linear, 3 = drop before max, 5 = drop at max     3.0
+k_PB             1       Shape of PB growth eq'n, 1 = linear, 3 = drop before max, 5 = drop at max 3.0
+k_BB             1       Shape of BB growth eq'n, 1 = linear, 3 = drop before max, 5 = drop at max     3.0
 
 BBthresh         0.1      Threshold BB flux level where damping starts      mg N m-2 s-1      0.1
 BBdamp           0.85      Damping coefficient for BB fluxes                                   0.75
@@ -11552,12 +11552,12 @@ C_RCB_T15 5e-05
 C_BMS_T15 5e-05    
 C_NSH_T15 0.0015   
 C_OSH_T15 0.0015   
-C_ZL_T15  0.1     
+C_ZL_T15  0.01     
 C_BD_T15  5e-04    
 C_ZG_T15  0.03    
 C_DF_T15  0.01     
 C_ZM_T15  0.08    
-C_ZS_T15  0.15     
+C_ZS_T15  0.015     
 C_PB_T15  0        
 C_BB_T15  0        
 C_BO_T15  0.001    
@@ -11743,36 +11743,35 @@ C_TWH 10
 C_INV 10
 1 5 15 25 45 45 45 45 50 50 
 
-## Double check for NEUS, but OK for now
 # Consumer growth - this is used by Holling type feeding (predcase 0, 1, 2)
 ##mum_ZG_T15       0.017     Growth rate of gelatinous zooplankton              mg N d-1      0.02 - 0.35
-mum_LSQ_T15 1.4     
-mum_ISQ_T15 1.4      
-mum_SCA_T15 1.0       
-mum_QHG_T15 1.5     
-mum_CLA_T15 1.5     
-mum_BFF_T15 1.5     
-mum_BG_T15  1.0      
-mum_LOB_T15 1.2    
-mum_RCB_T15 1.0      
-mum_BMS_T15 1.0     
-mum_NSH_T15 1.043   
-mum_OSH_T15 1.043   
-mum_ZL_T15  1.5        
-mum_BD_T15  1.0      
-mum_MA_T15  1.0        
-mum_MB_T15  1.8       
-mum_SG_T15  0.7       
-mum_BC_T15  0.8     
-mum_ZG_T15  1.7      
-mum_PL_T15  1.0        
-mum_DF_T15  1.0       
-mum_PS_T15  0.3       
-mum_ZM_T15  1.8       
-mum_ZS_T15  1.5       
-mum_PB_T15  0.2        
-mum_BB_T15  0.2        
-mum_BO_T15  1.6 
+mum_LSQ_T15 0.14     
+mum_ISQ_T15 0.14      
+mum_SCA_T15 0.10       
+mum_QHG_T15 0.15     
+mum_CLA_T15 0.15     
+mum_BFF_T15 0.15     
+mum_BG_T15  0.1      
+mum_LOB_T15 0.12    
+mum_RCB_T15 0.1      
+mum_BMS_T15 0.1     
+mum_NSH_T15 0.043   
+mum_OSH_T15 0.043   
+mum_ZL_T15  0.15        
+mum_BD_T15  0.10      
+mum_MA_T15  0.10        
+mum_MB_T15  0.18       
+mum_SG_T15  0.07       
+mum_BC_T15  0.08     
+mum_ZG_T15  0.17      
+mum_PL_T15  0.2        
+mum_DF_T15  0.1       
+mum_PS_T15  0.03       
+mum_ZM_T15  0.18       
+mum_ZS_T15  0.15       
+mum_PB_T15  0.02        
+mum_BB_T15  0.02        
+mum_BO_T15  0.16 
 
 # Vertebrate growth rates for each "group," per age class mg N d-1
 # See flagfishrates above to see whether clearance and growth rates 
@@ -13533,53 +13532,53 @@ mS_SG_T15        0.00002   Excessive DIN seagrass  mortality                 d-1
 
 ## Linear mortality 
 # Invertebrates
-SCA_mL 2
-3e-07 3e-07
-QHG_mL 2
-5e-07 5e-07
-CLA_mL 2
-5e-07 5e-07
-BFF_mL 2
-5e-07 5e-07
+SCA_mL	2
+0.00E+00	0.00E+00
+QHG_mL	2
+0.00E+00	0.00E+00
+CLA_mL	2
+0.00E+00	0.00E+00
+BFF_mL	2
+0.00E+00	0.00E+00
+BG_mL	2
+0.00E+00	0.00E+00
+LOB_mL	2
+0.00E+00	0.00E+00
+RCB_mL	2
+0.00E+00	0.00E+00
+BMS_mL	2
+0.00E+00	0.00E+00
+ZL_mL	2
+0.00E+00	0.00E+00
+BD_mL	2
+0.00E+00	0.00E+00
+MA_mL	2
+0.00E+00	0.00E+00
+MB_mL	2
+0.00E+00	0.00E+00
+SG_mL	2
+0.00E+00	0.00E+00
+BC_mL	2
+0.00E+00	0.00E+00
+ZG_mL	2
+0.00E+00	0.00E+00
+PL_mL	2
+0.00E+00	0.00E+00
+DF_mL	2
+0.00E+00	0.00E+00
+PS_mL	2
+0.00E+00	0.00E+00
+ZM_mL	2
+0.00E+00	0.00E+00
+ZS_mL	2
+0.00E+00	0.00E+00
+PB_mL	2
+0.00E+00	0.00E+00
+BB_mL	2
+0.00E+00	0.00E+00
+BO_mL	2
+0.00E+00	0.00E+00
 
-BG_mL 2  
-1e-06 1e-06
-LOB_mL 2  
-2e-06 2e-06
-RCB_mL 2  
-3e-06 3e-06
-BMS_mL 2  
-3e-06 3e-06
-ZL_mL 2  
-5e-06 5e-06
-BD_mL 2  
-1e-07 1e-07
-MA_mL 2  
-3.25e-05 3.25e-05
-MB_mL 2  
-0.005 0.005
-SG_mL 2  
-2e-05 2e-05
-BC_mL 2  
-8e-05 8e-05
-ZG_mL 2  
-3e-06 3e-06
-PL_mL 2  
-0.00015 0.00015
-DF_mL 2
-5e-06 5e-06
-PS_mL 2  
-0.0016 0.0016
-ZM_mL 2  
-1e-04 1e-04
-ZS_mL 2  
-8e-05 8e-05
-PB_mL 2  
-1e-04 1e-04
-BB_mL 2  
-1e-05 1e-05
-BO_mL 2  
-4e-07 4e-07
 
 
 #mL_SCA_T15 3e-07
@@ -13638,10 +13637,10 @@ BO_mL 2
 #OSH_mL 2
 #6.75e-06 6.75e-06 
 
-LSQ_mL 1e-06
-ISQ_mL 1e-06
-NSH_mL 6.75e-06
-OSH_mL 6.75e-06
+LSQ_mL 0.0
+ISQ_mL 0.0
+NSH_mL 0.0
+OSH_mL 0.0
 
 
 
@@ -13962,35 +13961,36 @@ INV_mL 2
 ## Quadratic mortality 
 # Invertebrates
 SCA_mQ 2  
-0 0
+0.00E+00	0.00E+00
 QHG_mQ 2
-0 0
+0.00E+00	0.00E+00
 CLA_mQ 2
-0 0
+0.00E+00	0.00E+00
 BFF_mQ 2
-0 0
+0.00E+00	0.00E+00
 BG_mQ 2
-0 0
+0.00E+00	0.00E+00
 LOB_mQ 2
-0 0
+0.00E+00	0.00E+00
 RCB_mQ 2
-0 0
+0.00E+00	0.00E+00
 BMS_mQ 2
-0 0
+0.00E+00	0.00E+00
 ZL_mQ 2
-1e-05 1e-05
+0.00E+00	0.00E+00
 BD_mQ 2
-0 0
+0.00E+00	0.00E+00
 BC_mQ 2  
-4e-06 4e-06
+0.00E+00	0.00E+00
 ZG_mQ 2  
-5e-06 5e-06
+0.00E+00	0.00E+00
 ZM_mQ 2  
-1e-06 1e-06
+0.00E+00	0.00E+00
 ZS_mQ 2  
-4e-05 4e-05
+0.00E+00	0.00E+00
 BO_mQ 2  
-1e-07 1e-07
+0.00E+00	0.00E+00
+
 #Vertebrates
 MAK_mQ	2
 1E-014	2.5E-012
@@ -14154,10 +14154,10 @@ INV_mQ	2
 #0.00177 0.00177
 
 
-LSQ_mQ 0.00176
-ISQ_mQ 0.00176
-NSH_mQ 0.00177
-OSH_mQ 0.00177
+LSQ_mQ 0.0
+ISQ_mQ 0.0
+NSH_mQ 0.0
+OSH_mQ 0.0
 #mQ_jLSQ_T15 0.00147
 #mQ_jISQ_T15 0.00147
 #mQ_jNSH_T15 0.00177
