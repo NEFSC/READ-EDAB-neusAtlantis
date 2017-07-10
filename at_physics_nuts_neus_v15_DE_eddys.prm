@@ -261,7 +261,7 @@ mix_deep 1
 
 # Depth for marking deep ocean (boxes deeper than this will get deep ocean mixing)
 
-mix_deep_depth -150
+mix_deep_depth -500
 
 # Deep mixing of oxygen added 5/9/17 RM
 mix_deep_O2 0
@@ -272,7 +272,7 @@ mix_deep_O2 0
 
 # point sources is used. Yes = 1, No =0.
 
-injection 1
+injection 0
 
 
 
@@ -280,7 +280,7 @@ injection 1
 
 # the atmosphere is used. Yes = 1, No =0.
 
-atmospherics 1
+atmospherics 0
 
 
 
@@ -396,7 +396,7 @@ ka_exchange 1000
 
 # Switch to indicate whether or not to have cascading flows (exchanges). No =0, Yes = 1
 
-cascade_flows 1
+cascade_flows 0
 
 
 

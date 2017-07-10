@@ -26,11 +26,11 @@ flagannual_Mest    1	#Whether to write out estimates of mortality per predator a
 
 
 
-checkbox      13       # Give detailed logged output for this box
+checkbox      11       # Give detailed logged output for this box
 
 checkstart    1 day    # Start detailed logged output after this date
 
-checkstop     9130 day    # Stop detailed logged output after this date
+checkstop     565 day    # Stop detailed logged output after this date
 
 fishtest      0        # Count up total population for each vertebrate after each main subroutine: 0=no, 1=yes
 
@@ -78,7 +78,7 @@ title      test version, DynEffort NEUS v1.5 with Atlantis2 codebase
 
 dt         24 hour     # 12 hour time step
 
-tstop      9130 day   # Stop time after the given period (18260)18260  , 4000   2191
+tstop      4565 day   # Stop time after the given period (18260)18260  , 4000   2191
 
 toutstart  1 day       # Output start time
 

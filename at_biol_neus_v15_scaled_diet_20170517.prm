@@ -134,9 +134,9 @@ flagBClim 0
 # interaction formulations used      
 flagtrackpops    1         Flag to indicate whether yearly stock value required             1
 flagseason       1         Flag of seasonal change, 0 for no, 1 yes                            1
-flaglight        1         Light adaptation: 1 = on, 0 = off                                   1
+flaglight        0         Light adaptation: 1 = on, 0 = off                                   1
 flagIsEstuary    0
-flaglightopt     3         Light model: 0=midwater proxy used, 1=bottom, 2=top, 3=middle of layer                     3
+flaglightopt     0         Light model: 0=midwater proxy used, 1=bottom, 2=top, 3=middle of layer                     3
 flagmodeltemp    0         Temperature model used: 1 = regression, 0 = from data
 flagq10          1         Q10 corrections used in the model: 1 = yes, 0 = no                  1
 O2case           3         Oxygen limitation used: 0 = ambient O2, 1 = based on depth, 2 = IGBEM, 3 = quadratic lim   3
@@ -1598,10 +1598,10 @@ KN_MA            10        Half-sat const for MA growth on DIN (20)          mg 
 KN_SG            5         Half-sat const for SG growth on DIN (12)          mg N m-3          5
 KN_MB            20       Half-sat const for MB growth on DIN (200)         mg N m-3          200
 
-KS_PL            0.5        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
+KS_PL            10        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
 KS_PS            0         Half-sat const for PS growth on a second nutrient mg nutrient m-3   0 
 KS_DF            0         Half-sat const for DF growth on a second nutrient mg nutrient m-3   0 
-KS_MB            80        Half-sat const for MB growth on Si                mg Si m-3         100
+KS_MB            20        Half-sat const for MB growth on Si                mg Si m-3         100
 #gfay@umassd 06/24/15  added KS_MA to suppress error, setting to zero CHECK
 KS_MA            0
 KS_SG            0
@@ -1644,10 +1644,10 @@ BFFmax           8000      Maximum other filter feeder biomass               mg 
 QHGmax           8000      Maximum other filter feeder biomass               mg N m-2         3000
 CLAmax           8000      Maximum other filter feeder biomass               mg N m-2         3000
 BFDmax           8000      Maximum deep filter feeder biomass                mg N m-2         1000
-BCmax             0
+BCmax             1000
 ##gfay @UMassD 06/24/15 added, not sure why these are needed
-LOBmax            0
-RCBmax            0
+LOBmax            1000
+RCBmax            1000
 
 # RM added 20170509
 flagconstrain_epiwander 0

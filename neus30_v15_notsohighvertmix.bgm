@@ -141,7 +141,7 @@ box0.ibox	1 1 2 2 3
 box0.botz	-100               
 box0.area	12615790945
 box0.vertmix	0.001               
-box0.horizmix	1000.0               
+box0.horizmix	1.0               
 box0.vert 460937.8753 2493125.909              
 box0.vert 511054.0643 2614286.765              
 box0.vert 541909.0496 2494449.147              
@@ -163,7 +163,7 @@ box1.ibox	0 0 2 2 2 2 2 2 2 5 4
 box1.botz	-17.6          
 box1.area	12352862582
 box1.vertmix	0.001          
-box1.horizmix	1000.0               
+box1.horizmix	1.0               
 box1.vert 511054.0643 2614286.765         
 box1.vert 510867.3862 2615011.804         
 box1.vert 604633.2629 2778346.386
@@ -193,7 +193,7 @@ box2.ibox	1 1 1 1 1 1 1 5 3 3 3 0 0
 box2.botz	-36.5            
 box2.area	29964601483
 box2.vertmix	0.01            
-box2.horizmix	1000.0               
+box2.horizmix	1.0               
 box2.vert 571362.2127 2453385.77           
 box2.vert 568058.3503 2492183.054           
 box2.vert 535803.6134 2590829.34           
@@ -220,7 +220,7 @@ box3.ibox	0 2 2 2 5 29 29
 box3.botz	-128.5      
 box3.area	13920711174
 box3.vertmix	0.01      
-box3.horizmix	1000.0               
+box3.horizmix	1.0               
 box3.vert 602777.6401 2455292.17     
 box3.vert 594064.6273 2472109.888     
 box3.vert 627907.66 2673361.412     
@@ -240,7 +240,7 @@ box4.ibox	1 5 5 5 6 7
 box4.botz	-20.5     
 box4.area	3676946495
 box4.vertmix	0.001     
-box4.horizmix	1000.0               
+box4.horizmix	1.0               
 box4.vert 701275.4194 2968929.221    
 box4.vert 705479.4142 3012270.356    
 box4.vert 831913.3366 3038963.728    
@@ -262,7 +262,7 @@ box5.ibox	1 4 4 4 6 28 28 28 28 29 3 2
 box5.botz	-106           
 box5.area	11085441644
 box5.vertmix	0.01
-box5.horizmix	1000.0               
+box5.horizmix	1.0               
 box5.vert 714969.6533 2950381.816          
 box5.vert 717009.5354 2968323.378          
 box5.vert 717721.359 2996966.519          
@@ -287,7 +287,7 @@ box6.ibox	5 4 7 7 7 7 9 28 28
 box6.botz	-109.9        
 box6.area	19468592595
 box6.vertmix	0.01
-box6.horizmix	1000.0               
+box6.horizmix	1.0               
 box6.vert 767036.4002 2994942.093       
 box6.vert 830833.5537 3027105.203       
 box6.vert 849941.0315 3003025.324       
@@ -310,7 +310,7 @@ box7.ibox	4 6 6 6 6 9 9 9 9 8 23 23 23 23 8
 box7.botz	-33.8              
 box7.area	10363076990
 box7.vertmix	0.001              
-box7.horizmix	1000.0               
+box7.horizmix	1.0               
 box7.vert 830833.5537 3027105.203             
 box7.vert 831910.2072 3038927.448             
 box7.vert 914086.2569 3076053.286             
@@ -342,7 +342,7 @@ box8.ibox	11 11 11 11 11 11 12 13 9 9 9 9 7 23 7
 box8.botz	-52.0              
 box8.area	6455559428
 box8.vertmix	0.01              
-box8.horizmix	1000.0               
+box8.horizmix	1.0               
 box8.vert 1042732.042 3125984.473             
 box8.vert 1050165.433 3132978.393             
 box8.vert 1042547.768 3169458.177             
@@ -374,7 +374,7 @@ box9.ibox	8 8 8 8 13 14 28 28 6 7 7 7 7
 box9.botz	-85.3                 
 box9.area	17308896405
 box9.vertmix	0.01                 
-box9.horizmix	1000.0               
+box9.horizmix	1.0               
 box9.vert 1006531.304 2943823.159                
 box9.vert 980267.0392 3037090.271                
 box9.vert 970032.2778 3078570.522                
@@ -401,7 +401,7 @@ box10.ibox	11 16 17
 box10.botz	-75.3                 
 box10.area	11219585917
 box10.vertmix	0.01 
-box10.horizmix	1000.0               
+box10.horizmix	1.0               
 box10.vert 1016865.351 3134797.097
 box10.vert 996898.3672 3145637.284
 box10.vert 995431.3734 3161433.856
@@ -446,7 +446,7 @@ box11.ibox	16 16 16 16 20 12 8 8 8 8 8 8 10
 box11.botz	-185.6            
 box11.area	15998216129
 box11.vertmix	0.005            
-box11.horizmix	1000.0               
+box11.horizmix	1.0               
 box11.vert 1042605.734 3169472.322           
 box11.vert 1041091.216 3170579.01           
 box11.vert 1041048.201 3177357.289
@@ -477,7 +477,7 @@ box12.ibox	8 11 20 20 20 20 21 13 13 13 13 13
 box12.botz	-109.8           
 box12.area	4307417670
 box12.vertmix	0.005           
-box12.horizmix	1000.0               
+box12.horizmix	1.0               
 box12.vert 1129576.585 3083506.594          
 box12.vert 1162089.652 3120816.526          
 box12.vert 1170866.778 3130888.598          
@@ -502,7 +502,7 @@ box13.ibox	12 12 12 12 12 15 14 14 14 14 14 14 9 8
 box13.botz	-48.9             
 box13.area	14142042553
 box13.vertmix	0.005             
-box13.horizmix	1000.0               
+box13.horizmix	1.0               
 box13.vert 1130650.3 3054996.088            
 box13.vert 1130751.559 3054994.749            
 box13.vert 1130670.02 3056973.364            
@@ -530,7 +530,7 @@ box14.ibox	9 13 13 13 13 13 13 28 27 15
 box14.botz	-138.8         
 box14.area	12703070733
 box14.vertmix	0.01
-box14.horizmix	1000.0               
+box14.horizmix	1.0               
 box14.vert 1136907.462 3016407.121        
 box14.vert 1166775.978 3017206.226   
 box14.vert 1194857.471 3036658.021   
@@ -553,7 +553,7 @@ box15.ibox	13 21 21 26 26 27 14
 box15.botz	-101.8     
 box15.area	9165294614
 box15.vertmix	0.01      
-box15.horizmix	1000.0               
+box15.horizmix	1.0               
 box15.vert 1289775.548 3180207.466     
 box15.vert 1379358.603 3186429.795     
 box15.vert 1398780.765 3167279.21     
@@ -573,7 +573,7 @@ box16.ibox	10 17 17 17 17 17 17 17 17 19 11 11 11 11
 box16.botz	-156.0             
 box16.area	11323737209
 box16.vertmix	0.01             
-box16.horizmix	1000.0               
+box16.horizmix	1.0               
 box16.vert 1040309.575 3323831.073            
 box16.vert 1053793.519 3330489.147            
 box16.vert 1060186.387 3339431.66            
@@ -600,7 +600,7 @@ box17.ibox	10 16 16 16 16 16 16 16 16 18
 box17.botz	-81.9         
 box17.area	5031657500
 box17.vertmix	0.01 
-box17.horizmix	1000.0               
+box17.horizmix	1.0               
 box17.vert 1040193.181 3323953.645
 box17.vert 1040602.39 3369251.367
 box17.vert 1049289.517 3356131.954
@@ -630,7 +630,7 @@ box18.ibox	17 19 19 19 19 25 25 25 24 24 24 24 24 24
 box18.botz	-86.4             
 box18.area	4830554502
 box18.vertmix	0.01
-box18.horizmix	1000.0               
+box18.horizmix	1.0               
 box18.vert 1156497.427 3368652.824            
 box18.vert 1153635.488 3431239.344
 box18.vert 1160451.907 3440887.861
@@ -670,7 +670,7 @@ box19.ibox	18 18 18 18 25 22 22 22 22 22 22 22 22 22 22 20 16
 box19.botz	-199.1                
 box19.area	17736767097
 box19.vertmix	0.01                
-box19.horizmix	1000.0               
+box19.horizmix	1.0               
 box19.vert 1156497.427 3368652.824               
 box19.vert 1169246.48 3373906.017               
 box19.vert 1182309.365 3393030.584               
@@ -700,7 +700,7 @@ box20.ibox	19 22 21 12 12 12 12 11
 box20.botz	-230.2 
 box20.area	9945917093
 box20.vertmix	0.01 
-box20.horizmix	1000.0               
+box20.horizmix	1.0               
 box20.vert 1282678.411 3262014.284
 box20.vert 1282780.345 3261747.093
 box20.vert 1286434.771 3252168.039
@@ -725,7 +725,7 @@ box21.ibox	22 22 26 26 15 15 12 20
 box21.botz	-186.3       
 box21.area	6101009492
 box21.vertmix	0.01       
-box21.horizmix	1000.0               
+box21.horizmix	1.0               
 box21.vert 1285996.148 3252258.97      
 box21.vert 1286434.771 3252168.039      
 box21.vert 1352387.422 3238495.377      
@@ -746,7 +746,7 @@ box22.ibox	25 25 25 25 25 25 25 25 25 25 26 26 21 21 20 19 19 19 19 19 19 19 19 
 box22.botz	-119.6                        
 box22.area	17154064183
 box22.vertmix	0.01                        
-box22.horizmix	1000.0               
+box22.horizmix	1.0               
 box22.vert 1259223.142 3415882.636                       
 box22.vert 1303428.151 3398475.7
 box22.vert 1303274.338 3417274.633
@@ -785,7 +785,7 @@ box23.ibox	7 7 7 8 7
 box23.botz	0    
 box23.area	173026048.2
 box23.vertmix	0.001    
-box23.horizmix	1000.0               
+box23.horizmix	1.0               
 box23.vert 1023664.684 3091380.182   
 box23.vert 1035571.284 3091428.743   
 box23.vert 1042471.328 3097908.885   
@@ -803,7 +803,7 @@ box24.ibox	8 8 8 8 13 14 28 28 6 7 7 7 7
 box24.botz	0            
 box24.area	294595422
 box24.vertmix	0.001            
-box24.horizmix	1000.0               
+box24.horizmix	1.0               
 box24.vert 1171686.133 3439264.784           
 box24.vert 1179580.732 3440399.274           
 box24.vert 1185522.251 3430681.038           
@@ -822,7 +822,7 @@ box25.ibox	18 18 18 19 22 22 22 22 22 22 22 22 22 22
 box25.botz	-100             
 box25.area	30440867891
 box25.vertmix	0.001             
-box25.horizmix	1000.0               
+box25.horizmix	1.0               
 box25.vert 1284239.411 3487052.292            
 box25.vert 1443797.548 3639847.661            
 box25.vert 1425818.637 3547469.033            
@@ -859,7 +859,7 @@ box26.ibox	22 22 21 21 15
 box26.botz	-150    
 box26.area	22644748814
 box26.vertmix	0.001    
-box26.horizmix	1000.0               
+box26.horizmix	1.0               
 box26.vert 1440636.989 3221723.495   
 box26.vert 1509500.613 3366530.798   
 box26.vert 1537631.697 3260712.726   
@@ -882,7 +882,7 @@ box27.ibox	15 14
 box27.botz	-500    
 box27.area	25944358870
 box27.vertmix	0.001    
-box27.horizmix	1000.0               
+box27.horizmix	1.0               
 box27.vert 1279464.399 3001592.26   
 box27.vert 1357170.851 3083305.011   
 box27.vert 1398092.466 3159072.069   
@@ -902,7 +902,7 @@ box28.ibox	5 5 5 5 6 6 9 9 14
 box28.botz	-500        
 box28.area	40230494304
 box28.vertmix	0.001        
-box28.horizmix	1000.0               
+box28.horizmix	1.0               
 box28.vert 873029.1626 2901983.497       
 box28.vert 897925.9226 2929165.629       
 box28.vert 1006680.716 2943290.807       
@@ -931,7 +931,7 @@ box29.ibox	3 3 5
 box29.botz	-500    
 box29.area	36669090970
 box29.vertmix	0.001    
-box29.horizmix	1000.0               
+box29.horizmix	1.0               
 box29.vert 602576.3538 2375942.515   
 box29.vert 611777.1726 2452528.108   
 box29.vert 651300.8911 2667403.018   

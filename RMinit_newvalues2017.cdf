@@ -35309,7 +35309,7 @@ variables:
 
 // global attributes:
 		:title = "Baseline run" ;
-		:geometry = "neus30_v15.bgm" ;
+		:geometry = "neus30_v15_notsohighvertmix.bgm" ;
 		:parameters = "" ;
 		:wcnz = 4 ;
 		:sednz = 1 ;

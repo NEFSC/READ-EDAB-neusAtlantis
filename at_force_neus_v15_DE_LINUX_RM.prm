@@ -64,7 +64,7 @@ nsaltfiles 1
 Salinity0.name /tsfiles/Salt_neus_RM_shortened.nc
 salt_rewind 1
 
-ts_on_hydro_time 1
+ts_on_hydro_time 0
 
 # Recruitment_time_series (actual recruit time series)
 # Recruitment_enviro_forcing (scales recruitment)
