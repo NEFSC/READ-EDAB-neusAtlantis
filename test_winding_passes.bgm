@@ -12,7 +12,6 @@ nface 152
 # to be this as far as model is concerned         
 maxwcbotz	-500                 
 
-#projection proj=utm zone=17 ellps=WGS84 datum=WGS84 lat_0=41. lon_0=-70. x_0=75000 y_0=-1550000 units=m no_defs #old wrong
 projection +proj=tmerc +lat_0=40.5 +lon_0=-70.5 +ellps=WGS84 +datum=WGS84 +units=m +no_defs +x_0=1000000 +y_0=3000000 +k=1
 
 # Vertices of boundary (start with edge box 0 and go clockwise)
