@@ -1,0 +1,61 @@
+
+_______________________________________________________________________________________________
+
+
+
+#loop to rename time dimension for all nc files (not yet working properly) -need to force overwrite of files
+for fl in ls *.nc; do 
+ncrename --ovr, -d t1,t $fl $fl
+ncks --mk_rec_dmn t $fl $fl
+done
+
+____________________________________________________________________________________
+# THIS IS WORKING, testing decimation levels for hydro 10m vs 25m resulted in exchanges in deep water below bottom... odd depths for S and T (both 25m and 10m)
+
+# concatenate
+ncrcat -h NEUS_saln*.nc salt.nc
+ncrcat -h NEUS_temp*.nc temp.nc
+ncrcat -h RM_NEUS_hydro*.nc hydro.nc
+
+#rename time dim
+ncrename -d t1,t hydro.nc hydro2.nc
+ncrename -d t1,t temp.nc temp2.nc
+ncrename -d t1,t salt.nc salt2.nc
+
+#change destination layer 1-4 to 0-3
+ncap2 -O -s 'dest_k-=1' hydro2.nc hydroF.nc
+
+#fix time after concatenation
+ncap2 -s 't=array(86400, 86400, $t)' hydroF.nc hydro3.nc
+ncap2 -s 't=array(86400, 86400, $t)' temp2.nc temp3.nc
+ncap2 -s 't=array(86400, 86400, $t)' salt2.nc salt3.nc
+________________________________________________________________________
+### OR PASTE INTO CMD LINE 4 lines:
+ncrcat -h NEUS_saln*.nc salt.nc && ncrcat -h NEUS_temp*.nc temp.nc && ncrcat -h RM_NEUS_hydro*.nc hydro.nc
+ncrename -d t1,t hydro.nc hydro2.nc && ncrename -d t1,t temp.nc temp2.nc && ncrename -d t1,t salt.nc salt2.nc
+ncap2 -O -s 'dest_k-=1' hydro2.nc hydroF.nc
+ncap2 -s 't=array(86400, 86400, $t)' hydroF.nc hydro3.nc && ncap2 -s 't=array(86400, 86400, $t)' temp2.nc temp3.nc && ncap2 -s 't=array(86400, 86400, $t)' salt2.nc salt3.nc
+
+### Copy and paste all together or run as script ###
+ncrcat -h NEUS_saln*.nc salt.nc \
+&& ncrcat -h NEUS_temp*.nc temp.nc \
+&& ncrcat -h RM_NEUS_hydro*.nc hydro.nc \
+&& ncrename -d t1,t hydro.nc hydro2.nc \
+&& ncrename -d t1,t temp.nc temp2.nc \
+&& ncrename -d t1,t salt.nc salt2.nc \
+&& ncap2 -O -s 'dest_k-=1' hydro2.nc hydroF.nc \
+&& ncap2 -s 't=array(86400, 86400, $t)' hydroF.nc hydro3.nc \
+&& ncap2 -s 't=array(86400, 86400, $t)' temp2.nc temp3.nc \
+&& ncap2 -s 't=array(86400, 86400, $t)' salt2.nc salt3.nc
+___________________________________________________________________________________
+
+#book keeping
+ncdump salt3.nc > salt3.cdf
+ncdump temp2.nc > temp2.cdf
+ncdump hydroF.nc > hydroF.cdf
+
+ncgen -b hydroF.cdf
+ncgen -b salt2.cdf
+ncgen -b temp2.cdf
+
+ncap2 -O -s 'dest_k=dest_k-1' hydro2.nc hydroF.nc
