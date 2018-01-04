@@ -59,3 +59,64 @@ ncgen -b salt2.cdf
 ncgen -b temp2.cdf
 
 ncap2 -O -s 'dest_k=dest_k-1' hydro2.nc hydroF.nc
+_________________________________________________________________________________-
+### roms doppio for 2008 files downloaded:  set record 'time', concatenate files
+cd /media/ryan/TOSHIBA EXT/1 RM/10 ATLANTIS transfer/Hydro work 20170711/2018
+
+for idx in 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35; do
+ncecat -O -u time roms2008_00${idx}.nc roms2008t_00${idx}.nc
+done
+for idx in 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35; do
+
+ncrcat roms2008t_*.nc roms2008all.nc
+
+### UPDATED
+#get all files by individual day for 2008 (record length needs to be same for concatenation):
+for /l %x in (365,1,731) do (
+echo %x
+ncks -d ocean_time,%x,%x  -v ocean_time,u,v,salt,temp,lat_rho,lon_rho,lat_u,lon_u,lat_v,lon_v,angle,Cs_r,h,zeta,s_rho,hc http://tds.marine.rutgers.edu/thredds/dodsC/roms/doppio/hidden/2007-2016/avg roms%x.nc
+)
+
+#windows
+for idx in (365,1,731); do
+ncecat -O -u time roms${idx}.nc roms2008_${idx}.nc
+done
+
+# bash
+#for ix in {627..731}; do echo $ix; ncecat -O -u time roms$ix.nc roms2008_$ix.nc; done
+
+### make record dimension ocean_time then concatenate
+# bash
+for ix in {365..731}; do echo $ix; ncks --mk_rec_dmn ocean_time roms$ix.nc roms2008_$ix.nc; done
+
+## testing ... works
+for ix in {365..367}; do echo $ix; ncks --mk_rec_dmn ocean_time roms$ix.nc roms2008_$ix.nc; done
+ncrcat roms2008_36*.nc roms2008all_test.nc
+
+
+ncrcat roms2008_*.nc roms2008all.nc
+
+#!/bin/bash
+for ix in {627..731}; do
+echo $ix
+ncks -d ocean_time,$ix,$ix  -v ocean_time,u,v,salt,temp,lat_rho,lon_rho,lat_u,lon_u,lat_v,lon_v,angle,Cs_r,h,zeta,s_rho,hc http://tds.marine.rutgers.edu/thredds/dodsC/ros/doppio/hidden/2007-2016/avg roms$ix.nc
+done
+
+ncks -d ocean_time,627,627  -v ocean_time,u,v,salt,temp,lat_rho,lon_rho,lat_u,lon_u,lat_v,lon_v,angle,Cs_r,h,zeta,s_rho,hc http://tds.marine.rutgers.edu/thredds/dodsC/rs/doppio/hidden/2007-2016/avg roms627.nc
+
+
+______________________________________________________________________________
+### FINAL VERSION - 20180103
+### Get all files by individual day for 2008 (record length needs to be same for concatenation): windows
+for /l %x in (365,1,731) do (
+echo %x
+ncks -d ocean_time,%x,%x  -v ocean_time,u,v,w,u_eastward,v_northward,salt,temp,lat_rho,lon_rho,lat_u,lon_u,lat_v,lon_v,angle,Cs_r,h,zeta,s_rho,hc http://tds.marine.rutgers.edu/thredds/dodsC/roms/doppio/hidden/2007-2016/avg roms%x.nc
+)
+
+### make record dimension ocean_time then concatenate
+# bash
+for ix in {365..729}; do echo $ix; ncks --mk_rec_dmn ocean_time roms$ix.nc roms2008_$ix.nc; done
+
+### concatenate to single file
+ncrcat roms2008_*.nc roms2008all.nc
+

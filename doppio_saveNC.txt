@@ -1,0 +1,4 @@
+# This is the command to download ROMS data used for Atlantis processing in angstroms RM 2017/2018
+ncks -d ocean_time,365,375  -v ocean_time,u,v,w,u_eastward,v_northward,salt,temp,lat_rho,lon_rho,lat_u,lon_u,lat_v,lon_v,angle,Cs_r,h,zeta,s_rho,hc http://tds.marine.rutgers.edu/thredds/dodsC/roms/doppio/hidden/2007-2016/avg roms2008.nc
+
+ncks -d ocean_time,376,386  -v ocean_time,u,v,w,u_eastward,v_northward,salt,temp,lat_rho,lon_rho,lat_u,lon_u,lat_v,lon_v,angle,Cs_r,h,zeta,s_rho,hc http://tds.marine.rutgers.edu/thredds/dodsC/roms/doppio/hidden/2007-2016/avg roms2008_2.nc
