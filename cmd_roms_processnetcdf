@@ -108,15 +108,24 @@ ncks -d ocean_time,627,627  -v ocean_time,u,v,salt,temp,lat_rho,lon_rho,lat_u,lo
 ______________________________________________________________________________
 ### FINAL VERSION - 20180103
 ### Get all files by individual day for 2008 (record length needs to be same for concatenation): windows
-for /l %x in (365,1,731) do (
+
+#2008
+for /l %x in (365,1,729) do (
 echo %x
 ncks -d ocean_time,%x,%x  -v ocean_time,u,v,w,u_eastward,v_northward,salt,temp,lat_rho,lon_rho,lat_u,lon_u,lat_v,lon_v,angle,Cs_r,h,zeta,s_rho,hc http://tds.marine.rutgers.edu/thredds/dodsC/roms/doppio/hidden/2007-2016/avg roms%x.nc
 )
 
+#2009
+for /l %x in (730,1,1094) do (
+echo %x
+ncks -d ocean_time,%x,%x  -v ocean_time,u,v,w,u_eastward,v_northward,salt,temp,lat_rho,lon_rho,lat_u,lon_u,lat_v,lon_v,angle,Cs_r,h,zeta,s_rho,hc http://tds.marine.rutgers.edu/thredds/dodsC/roms/doppio/hidden/2007-2016/avg roms%x.nc
+)
 ### make record dimension ocean_time then concatenate
 # bash
 for ix in {365..729}; do echo $ix; ncks --mk_rec_dmn ocean_time roms$ix.nc roms2008_$ix.nc; done
 
 ### concatenate to single file
 ncrcat roms2008_*.nc roms2008all.nc
+
+## process in R with angstroms for year, then concatenate results to join years together (either before or after hydroconstruct _probably after?)
 
