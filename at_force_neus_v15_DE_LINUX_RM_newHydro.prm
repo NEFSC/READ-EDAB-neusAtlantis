@@ -1,0 +1,107 @@
+# Linux Version (created by Beth Fulton and Adam Davidson)
+# modded by gfay@nmfs June 2014
+#
+# Hydrodynamic files - new hydro from roms doppio
+# this is 2008 365 days
+nhdfiles 1
+hd0.name /tsfiles/hydroRM/flowOut.nc
+
+# Bottom stress
+
+#############################################
+# Point source/sink lists
+npointss 6
+
+## nutrient forcing             
+pss0.name GeorgesBank
+pss0.location 1234274.466 3098307.516 -40
+pss0.data /tsfiles/banksupwelling_div_1000_v2.ts
+pss0.rewind 1
+
+pss1.name GulfStreamTrap
+pss1.location 1239774.298 3024140.334 -130
+pss1.data /tsfiles/banksupwelling_div_1000_v2.ts
+pss1.rewind 1
+
+pss2.name Basin16
+pss2.location 1102189.803 3299498.894 -150
+pss2.data /tsfiles/basindeep_div_1000_v2.ts
+pss2.rewind 1
+
+pss3.name Basin20
+pss3.location 1223937.669 3213347.009 -220
+pss3.data /tsfiles/basindeep_div_1000_v2.ts
+pss3.rewind 1
+
+pss4.name Basin11
+pss4.location 1100958.262 3181632.652 -170
+pss4.data /tsfiles/basindeep_div_1000_v2.ts
+pss4.rewind 1
+
+pss5.name Boston
+pss5.location 1016047.729 3243653.893 -15
+pss5.data /tsfiles/bostonharbor_div_1000_v2.ts
+pss5.rewind 1
+
+##########################################
+# Rain and evaporation
+
+# Solar time series data file
+Solar_radiation /tsfiles/solar.ts
+Solar_radiation_rewind 1
+
+# Temperature time series data file
+use_tempfiles 1
+ntempfiles 1
+Temperature0.name /tsfiles/hydroRM/tempOut.nc
+temp_rewind 1
+
+# Salinity time series data file
+use_saltfiles 1
+nsaltfiles 1
+Salinity0.name /tsfiles/hydroRM/saltOut.nc
+salt_rewind 1
+
+ts_on_hydro_time 0
+
+# Recruitment_time_series (actual recruit time series)
+# Recruitment_enviro_forcing (scales recruitment)
+# Recruitment_enviro_forcing /tsfiles/recruitscalar.ts # RM - file needs to be remade for NEUS v1.5
+
+# G. Fay added 09/21/2016
+use_larvalfiles 0 # 1 = use larval files, 0 = don't use larval files.
+
+#############################################
+# Historical catch lists - nCatchts is the number of time series to be loaded and
+# typeCatchts is whether or not the data is to be interpolated (0) by the model
+# or just use previous record (1)
+nCatchts 0
+typeCatchts 0
+
+#############################################
+# Historical discard lists
+nDiscardts 0
+typeDiscardts 0
+
+#############################################
+# Residual lists
+nResidualsts 0
+typeResidualsts 0
+
+#RM added 20170517 based on warnings
+use_phFiles 0
+use_force_tracers 0
+#BottomStress 0
+#pCO2_forcing 0
+#FSPBChange 0
+#Precipitation 0
+#Evaporation 0
+#Recruitment_time_series 0
+
+
+## G.Fay added 09/20/16
+# Frequency of inputs.ts and exports.ts output - write out each dt.
+inputs_tout 43200 seconds
+
+## G.Fay added 09/20/16
+use_external_scaling 0
