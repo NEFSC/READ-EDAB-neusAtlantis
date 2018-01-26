@@ -22,7 +22,7 @@ flag_skip_biol     0   # Flag showing whether want biological model run (1) or n
 
 flag_skip_phys     0   # Flag showing whether want biological model run (0) or not (1 - only used when debugging fisheries)
 
-flagannual_Mest    1	#Whether to write out estimates of mortality per predator annually (1) or not (0)
+flagannual_Mest    0	#Whether to write out estimates of mortality per predator annually (1) or not (0)
 
 
 
@@ -78,7 +78,7 @@ title      test version, DynEffort NEUS v1.5 with Atlantis2 codebase
 
 dt         24 hour     # 12 hour time step
 
-tstop      4565 day   # Stop time after the given period (18260)18260  , 4000   2191
+tstop      7300 day   # Stop time after the given period (18260)18260  , 4000   2191
 
 toutstart  1 day       # Output start time
 

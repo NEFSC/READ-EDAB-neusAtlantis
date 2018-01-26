@@ -2,9 +2,9 @@
 # modded by gfay@nmfs June 2014
 #
 # Hydrodynamic files - new hydro from roms doppio
-# this is 2008 365 days
+# this is created from 2008-2010 daily files
 nhdfiles 1
-hd0.name /tsfiles/hydroRM/flowOut.nc
+hd0.name /tsfiles/RMdoppioHydro.nc
 
 # Bottom stress
 
@@ -53,13 +53,13 @@ Solar_radiation_rewind 1
 # Temperature time series data file
 use_tempfiles 1
 ntempfiles 1
-Temperature0.name /tsfiles/hydroRM/tempOut.nc
+Temperature0.name /tsfiles/RMdoppioTemp.nc
 temp_rewind 1
 
 # Salinity time series data file
 use_saltfiles 1
 nsaltfiles 1
-Salinity0.name /tsfiles/hydroRM/saltOut.nc
+Salinity0.name /tsfiles/RMdoppioSalt.nc
 salt_rewind 1
 
 ts_on_hydro_time 0

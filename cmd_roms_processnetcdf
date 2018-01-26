@@ -122,10 +122,12 @@ ncks -d ocean_time,%x,%x  -v ocean_time,u,v,w,u_eastward,v_northward,salt,temp,l
 )
 ### make record dimension ocean_time then concatenate
 # bash
-for ix in {365..729}; do echo $ix; ncks --mk_rec_dmn ocean_time roms$ix.nc roms2008_$ix.nc; done
+#for ix in {365..729}; do echo $ix; ncks --mk_rec_dmn ocean_time roms$ix.nc roms2008_$ix.nc; done
+for ix in {730..1095}; do echo $ix; printf -v ij "%05d" $ix; echo $ij; ncks --mk_rec_dmn ocean_time roms$ix.nc roms2008_$ij.nc; done
 
 ### concatenate to single file
 ncrcat roms2008_*.nc roms2008all.nc
 
 ## process in R with angstroms for year, then concatenate results to join years together (either before or after hydroconstruct _probably after?)
+ncrcat flowOut*.nc RMdoppioHydro.nc
 
