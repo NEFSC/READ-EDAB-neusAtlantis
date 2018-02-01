@@ -1579,7 +1579,7 @@ min_dens         0.0001    Minimum density of top predators and fish            
 # mum_SG_T15       0.07      Maximum growth rate, seagrass                     d-1  (0.07)       0.05
 # mum_MB_T15       3.75      Maximum growth rate, microphytobenthos            d-1  (0.2)        0.35
 
-MB_wc            1.0       Scalar for microphytoben. growth in wc (reduced as not on substrate) 0.1
+MB_wc            0.1       Scalar for microphytoben. growth in wc (reduced as not on substrate) 0.1
 
 # Primary producer light requirements 
 KI_PL_T15        10        Light saturation, large phytoplankton             W m-2          10 - 20
@@ -1596,12 +1596,12 @@ KN_PS            5     Half-sat const for PS growth on DIN (13)          mg N m-
 KN_DF            15         Half-sat const for DF growth on DIN (13)          mg N m-3          4
 KN_MA            10        Half-sat const for MA growth on DIN (20)          mg N m-3          20
 KN_SG            5         Half-sat const for SG growth on DIN (12)          mg N m-3          5
-KN_MB            20       Half-sat const for MB growth on DIN (200)         mg N m-3          200
+KN_MB            200       Half-sat const for MB growth on DIN (200)         mg N m-3          200
 
 KS_PL            10        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
 KS_PS            0         Half-sat const for PS growth on a second nutrient mg nutrient m-3   0 
 KS_DF            0         Half-sat const for DF growth on a second nutrient mg nutrient m-3   0 
-KS_MB            20        Half-sat const for MB growth on Si                mg Si m-3         100
+KS_MB            200        Half-sat const for MB growth on Si                mg Si m-3         100
 #gfay@umassd 06/24/15  added KS_MA to suppress error, setting to zero CHECK
 KS_MA            0
 KS_SG            0
@@ -11412,7 +11412,7 @@ KLP_OSH 1e-07
 KLP_ZL  1e-07       
 KLP_BD  1e-07       
 KLP_MA  0      
-KLP_MB  1e-07       
+KLP_MB  0       
 KLP_SG  0      
 KLP_BC  1e-07       
 KLP_ZG  1e-07  
@@ -11499,7 +11499,7 @@ KUP_OSH 0.4
 KUP_ZL  0.3      
 KUP_BD  0.1      
 KUP_MA  0      
-KUP_MB  0.1      
+KUP_MB  0      
 KUP_SG  0      
 KUP_BC  0      
 KUP_ZG  0.6    
@@ -12843,14 +12843,14 @@ EDL_NSH 0.1
 EDL_OSH 0.1
 EDL_ZL 0.1
 EDL_BD 0.15
-EDL_MA 0
-EDL_MB 0.3
-EDL_SG 0
+EDL_MA 0.0
+EDL_MB 0.0
+EDL_SG 0.0
 EDL_BC 0.1
 EDL_ZG 0.1
-EDL_PL 0
+EDL_PL 0.0
 EDL_DF 0.2
-EDL_PS 0
+EDL_PS 0.0
 EDL_ZM 0.2
 EDL_ZS 0.3
 EDL_PB 0.5
