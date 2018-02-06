@@ -565,6 +565,6 @@ fill_zero_exchange 0
 
 flush_threshold 1
 
-include_atmosphere 1
+include_atmosphere 0
 
 
