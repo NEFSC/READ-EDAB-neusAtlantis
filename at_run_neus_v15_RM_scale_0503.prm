@@ -28,7 +28,7 @@ flagannual_Mest    0	#Whether to write out estimates of mortality per predator a
 
 checkbox      11       # Give detailed logged output for this box
 
-checkstart    365 day    # Start detailed logged output after this date
+checkstart    30 day    # Start detailed logged output after this date
 
 checkstop     3650 day    # Stop detailed logged output after this date
 
@@ -78,7 +78,7 @@ title      test version, DynEffort NEUS v1.5 with Atlantis2 codebase
 
 dt         24 hour     # 12 hour time step
 
-tstop      7300 day   # Stop time after the given period (18260)18260  , 4000   2191
+tstop      1825 day   # Stop time after the given period (18260)18260  , 4000   2191
 
 toutstart  1 day       # Output start time
 
