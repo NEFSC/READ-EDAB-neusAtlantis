@@ -57,7 +57,7 @@ pss3.rewind 1
 # Rain and evaporation
 
 # Solar time series data file
-Solar_radiation /tsfiles/solar.ts
+Solar_radiation /tsfiles/RMirradiance.ts
 Solar_radiation_rewind 1
 
 # Temperature time series data file
