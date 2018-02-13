@@ -10,7 +10,7 @@ hd0.name /tsfiles/RMdoppioHydro.nc
 
 #############################################
 # Point source/sink lists
-npointss 4
+npointss 6
 
 ## nutrient forcing             
 pss0.name GeorgesBank
@@ -48,10 +48,15 @@ pss3.rewind 1
 # pss4.data /tsfiles/basindeep.ts
 # pss4.rewind 0
 
-# pss5.name Boston
-# pss5.location 1016047.729 3243653.893 -15
-# pss5.data /tsfiles/bostonharbornuts.ts
-# pss5.rewind 0
+pss4.name Narragansett Bay
+pss4.location 937500 3100000 -20
+pss4.data /tsfiles/banksupwelling_div_1000_v5.ts
+pss4.rewind 1
+
+pss5.name Boston
+pss5.location 1016047.729 3243653.893 -15
+pss5.data /tsfiles/banksupwelling_div_1000_v5.ts
+pss5.rewind 1
 
 ##########################################
 # Rain and evaporation

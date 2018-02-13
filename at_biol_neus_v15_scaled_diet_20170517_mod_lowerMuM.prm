@@ -18691,7 +18691,10 @@ jack_b_TWH 1000
 jack_b_INV 1.45e+09  
 
 #gfay@umassd 2015/06/24  added, new parameter (or one that got missed in conversion)
-UseHardFeedingWindow  1
+UseHardFeedingWindow  0
+
+#RM added 20180209, also need Kmax_coefft_XXX for all species to use this... (not added yet)
+#UseHumpedFeedingWindow=0
 
 #RM 2016/11/03 added, parameter called in code, not found in this file
 UseBiLogisticFeedingWindow 0
