@@ -59,7 +59,7 @@ pss5.data /tsfiles/banksupwelling_div_1000_v5.ts
 pss5.rewind 1
 
 pss6.name CascoBayAndPenobscott
-pss6.location 1098345.3045816745, 3367268.9230297254 -15
+pss6.location 1098345.3045816745 3367268.9230297254 -15
 pss6.data /tsfiles/banksupwelling_div_1000_v5.ts
 pss6.rewind 1
 
