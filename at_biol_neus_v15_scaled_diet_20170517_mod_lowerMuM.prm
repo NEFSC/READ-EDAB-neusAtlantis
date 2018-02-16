@@ -116,10 +116,10 @@ flagrandom       0         Flag indicating whether add random wobble in aging/sp
 readin_popratio  0         Switch to indicate whether loading pre-existing age distributions or not 0
 
 # If fish respiration is off then the fish model is essentially/very similar to a Deriso-Schnute
-flagresp         1         Switch to turn fish respiration on/off: off=0, on=1                 1
+flagresp         0         Switch to turn fish respiration on/off: off=0, on=1                 1
 flagavgmig       1         Switch to turn averaging of migrant sizes on/off: off=0, on=1       1
 flagkdrop        1         Switch to turn cubic bacterial growth on/off: off=0, on=1           0
-flagbactstim     0         Switch to turn stimulation of bacterial growth on/off: off=0, on=1  0
+flagbactstim     1         Switch to turn stimulation of bacterial growth on/off: off=0, on=1  0
 flagBOlim        0         Switch to turn OB population limitation on/off: off=0, on=1         0
 flagBDlim        0         Switch to turn BD population limitation on/off: off=0, on=1         0
 flagBGlim        0         Switch to turn BG population limitation on/off: off=0, on=1 (1)     0
@@ -151,7 +151,7 @@ flagroc          0         Density dependent drop off option: 0 = none, 1 = rati
 # gfay @nmfs 17 July 2014, following entry should probably change for base.
 flaghomog_sp     0         Body condition homogenised across the entire area: 0 = no, 1 = yes  0
 flagagestruct    1         Age structure option: 0 = homogeneous cohorts, 1 = track cohorts    0
-flagsenesce      1         Oldest sub-part of final age group senesces, 1 = yes, 0 = no        0
+flagsenesce      0         Oldest sub-part of final age group senesces, 1 = yes, 0 = no        0
 flagtsforcerecruit 0       Force recruitment of 1+ groups with environmental forcing           0
 
 # Groups functioning 
@@ -1513,8 +1513,8 @@ X_FeN            30000.0   Redfield ratio of Fe:N                               
 k_wetdry         20.0      Ratio of Wet weight to AFDW                                         20.0                                  
 
 # Light penetration through the water column 
-k_w_depth        55.0      Bottom depth marking estuarine vs oceanic water (for light absorp) m  55.0
-k_w_cdepth       205.0     Bottom depth marking coastal from oceanic water (for light absorp) m  205.0
+k_w_depth        25.0      Bottom depth marking estuarine vs oceanic water (for light absorp) m  55.0
+k_w_cdepth       100.0     Bottom depth marking coastal from oceanic water (for light absorp) m  205.0
 
 k_w_deep         0.005     Coefficient of background light absorption due to oceanic water     0.005 - 0.016
 k_w_shallow      0.05      Coefficient of background light absorption due to coastal water     0.016 - 0.078
@@ -1591,14 +1591,14 @@ KI_MB_T15        3         Light saturation, microphytobenthos               W m
 
 eddy_scale       10.0       Coefficient scaling eddy strength impact on phytoplankton growth    1.0
 # Primary producer nutrient requirements 
-KN_PL            10        Half-sat const for PL growth on DIN (15)          mg N m-3          10
+KN_PL            25        Half-sat const for PL growth on DIN (15)          mg N m-3          10
 KN_PS            5    Half-sat const for PS growth on DIN (13)          mg N m-3          4
-KN_DF            15         Half-sat const for DF growth on DIN (13)          mg N m-3          4
-KN_MA            20        Half-sat const for MA growth on DIN (20)          mg N m-3          20
-KN_SG            5         Half-sat const for SG growth on DIN (12)          mg N m-3          5
+KN_DF            50         Half-sat const for DF growth on DIN (13)          mg N m-3          4
+KN_MA            200        Half-sat const for MA growth on DIN (20)          mg N m-3          20
+KN_SG            50         Half-sat const for SG growth on DIN (12)          mg N m-3          5
 KN_MB            200       Half-sat const for MB growth on DIN (200)         mg N m-3          200
 
-KS_PL            20        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
+KS_PL            25        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
 KS_PS            0         Half-sat const for PS growth on a second nutrient mg nutrient m-3   0 
 KS_DF            0         Half-sat const for DF growth on a second nutrient mg nutrient m-3   0 
 KS_MB            200        Half-sat const for MB growth on Si                mg Si m-3         100
@@ -1619,7 +1619,7 @@ KN_BB            0         Half-sat const for sediment bacteria NH uptake    mg 
 KN_PB            0         Half-sat const for pelagic bacteria NH uptake    mg N m-3        0 - 10       
 
 # Bacterial population parameters (how much bacterial biomass detritus can support)
-XPB_DL           0.27      Maximum ratio of PB to DL biomass                                0.3 - 0.4
+XPB_DL           0.4      Maximum ratio of PB to DL biomass                                0.3 - 0.4
 XBB_DL           0.18      Maximum ratio of BB to DL biomass                                0.15 - 0.2
  
 XPB_DR           0.012     Maximum ratio of PB to DR biomass                               0.01 - 0.015
@@ -12749,26 +12749,26 @@ KDEP_BB 0
 KDEP_BO 0.03
 
 # Assimilation efficiency of invertebrate consumers on live food and carrion
-E_LSQ 0.4
-E_ISQ 0.4
+E_LSQ 0.6
+E_ISQ 0.6
 E_SCA 0.4
 E_QHG 0.4
 E_CLA 0.4
 E_BFF 0.4
-E_BG 0.3
+E_BG 0.5
 E_LOB 0.5
 E_RCB 0.5
 E_BMS 0.5
 E_NSH 0.5
 E_OSH 0.5
-E_ZL 0.45
-E_BD 0.3
+E_ZL 0.5
+E_BD 0.5
 E_BC 0.5
-E_ZG 0.45
+E_ZG 0.5
 E_DF 0.5
-E_ZM 0.45
-E_ZS 0.55
-E_BO 0.35
+E_ZM 0.5
+E_ZS 0.5
+E_BO 0.5
 ##E_ZG             0.45      Assimilation efficiency of gelatinous zooplankton (0.4)          0.25 - 0.5
 ##E_ZL             0.45      Assimilation efficiency of large zooplankton (0.4)               0.25 - 0.5
 ##E_ZM             0.45      Assimilation efficiency of meso-zooplankton                      0.3 - 0.5
@@ -12790,10 +12790,10 @@ E_BO 0.35
 # Assimilation efficiency of invertebrate consumers on plants
 EPlant_LSQ 0.4
 EPlant_ISQ 0.4
-EPlant_SCA 0.4
-EPlant_QHG 0.4
-EPlant_CLA 0.4
-EPlant_BFF 0.4
+EPlant_SCA 0.6
+EPlant_QHG 0.6
+EPlant_CLA 0.6
+EPlant_BFF 0.5
 EPlant_BG 0.5
 EPlant_LOB 0.1
 EPlant_RCB 0.5
@@ -12805,8 +12805,8 @@ EPlant_BD 0.01
 EPlant_BC 0.5
 EPlant_ZG 0.45
 EPlant_DF 0.15
-EPlant_ZM 0.45
-EPlant_ZS 0.55
+EPlant_ZM 0.7
+EPlant_ZS 0.7
 EPlant_BO 0
 #EPlant_ZG             0.45      Assimilation efficiency of gelatinous zooplankton (0.4)          0.25 - 0.5
 #EPlant_ZL             0.45      Assimilation efficiency of large zooplankton (0.4)               0.25 - 0.5

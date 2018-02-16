@@ -7756,7 +7756,7 @@ variables:
 		Diatom_N:decay = 0. ;
 		Diatom_N:partic = 1 ;
 		Diatom_N:passive = 1 ;
-		Diatom_N:svel = -2.893e-005 ;
+		Diatom_N:svel = -2.893e-004 ;
 		Diatom_N:xvel = 0. ;
 		Diatom_N:psize = 1.e-005 ;
 		Diatom_N:b_dens = 1000000000. ;
@@ -7775,7 +7775,7 @@ variables:
 		Diatom_S:decay = 0. ;
 		Diatom_S:partic = 1 ;
 		Diatom_S:passive = 1 ;
-		Diatom_S:svel = -2.893e-005 ;
+		Diatom_S:svel = -2.893e-004 ;
 		Diatom_S:xvel = 0. ;
 		Diatom_S:psize = 1.e-005 ;
 		Diatom_S:b_dens = 1000000000. ;
@@ -7796,7 +7796,7 @@ variables:
 		DinoFlag_N:passive = 1 ;
 		DinoFlag_N:svel = -2.893e-005 ;
 		DinoFlag_N:xvel = 0. ;
-		DinoFlag_N:psize = 1.e-005 ;
+		DinoFlag_N:psize = 1.16e-004 ;
 		DinoFlag_N:b_dens = 1000000000. ;
 		DinoFlag_N:i_conc = 200000000. ;
 		DinoFlag_N:f_conc = 200000000. ;
@@ -11357,7 +11357,7 @@ variables:
 		Lab_Det_N:decay = 0. ;
 		Lab_Det_N:partic = 1 ;
 		Lab_Det_N:passive = 1 ;
-		Lab_Det_N:svel = -3.472e-005 ;
+		Lab_Det_N:svel = -5.78e-004 ;
 		Lab_Det_N:xvel = 0. ;
 		Lab_Det_N:psize = 1.e-005 ;
 		Lab_Det_N:b_dens = 1000000000. ;
@@ -15068,7 +15068,7 @@ variables:
 		NH3:insed = 1 ;
 		NH3:dissol = 1 ;
 		NH3:partic = 0 ;
-		NH3:decay = 0. ;
+		NH3:decay = 1.e-007 ;
 		NH3:_FillValue = 0. ;
 	double NO3(t, b, z) ;
 		NO3:bmtype = "tracer" ;
@@ -15080,7 +15080,7 @@ variables:
 		NO3:insed = 1 ;
 		NO3:dissol = 1 ;
 		NO3:partic = 0 ;
-		NO3:decay = 0. ;
+		NO3:decay = 1.e-009 ;
 		NO3:_FillValue = 0. ;
 	double Nitrification(t, b, z) ;
 		Nitrification:bmtype = "tracer" ;
@@ -21035,7 +21035,7 @@ variables:
 		Ref_Det_N:decay = 1.e-007 ;
 		Ref_Det_N:partic = 1 ;
 		Ref_Det_N:passive = 1 ;
-		Ref_Det_N:svel = -2.314e-005 ;
+		Ref_Det_N:svel = -2.314e-004 ;
 		Ref_Det_N:xvel = 0. ;
 		Ref_Det_N:psize = 1.e-005 ;
 		Ref_Det_N:b_dens = 1000000000. ;
@@ -35309,7 +35309,7 @@ variables:
 
 // global attributes:
 		:title = "Baseline run" ;
-		:geometry = "neus30_v15_notsohighvertmix.bgm" ;
+		:geometry = "neus_tmerc_RM.bgm" ;
 		:parameters = "" ;
 		:wcnz = 4 ;
 		:sednz = 1 ;
