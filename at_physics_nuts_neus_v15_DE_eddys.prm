@@ -352,7 +352,7 @@ resuspension 0
 
 # is used in the water column. Yes = 1, No =0.
 
-decay_wc 0
+decay_wc 1
 
 
 
