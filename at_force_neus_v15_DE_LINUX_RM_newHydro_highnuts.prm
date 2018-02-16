@@ -10,7 +10,7 @@ hd0.name /tsfiles/RMdoppioHydro.nc
 
 #############################################
 # Point source/sink lists
-npointss 6
+npointss 8
 
 ## nutrient forcing             
 pss0.name GeorgesBank
@@ -48,7 +48,7 @@ pss3.rewind 1
 # pss4.data /tsfiles/basindeep.ts
 # pss4.rewind 0
 
-pss4.name Narragansett Bay
+pss4.name NarragansettBay
 pss4.location 937500 3100000 -20
 pss4.data /tsfiles/banksupwelling_div_1000_v5.ts
 pss4.rewind 1
@@ -58,6 +58,15 @@ pss5.location 1016047.729 3243653.893 -15
 pss5.data /tsfiles/banksupwelling_div_1000_v5.ts
 pss5.rewind 1
 
+pss6.name CascoBayAndPenobscott
+pss6.location 1098345.3045816745 3367268.9230297254 -15
+pss6.data /tsfiles/banksupwelling_div_1000_v5.ts
+pss6.rewind 1
+
+pss7.name PenobscottNorth
+pss7.location 1220475.7351718375 3429637.9873865936 -15
+pss7.data /tsfiles/banksupwelling_div_1000_v5.ts
+pss7.rewind 1
 ##########################################
 # Rain and evaporation
 

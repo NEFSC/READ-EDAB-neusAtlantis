@@ -28,7 +28,7 @@ flagannual_Mest    0	#Whether to write out estimates of mortality per predator a
 
 checkbox      11       # Give detailed logged output for this box
 
-checkstart    0 day    # Start detailed logged output after this date
+checkstart    360000000 day    # Start detailed logged output after this date
 
 checkstop     720 day    # Stop detailed logged output after this date
 
@@ -78,21 +78,21 @@ title      test version, DynEffort NEUS v1.5 with Atlantis2 codebase
 
 dt         24 hour     # 12 hour time step
 
-tstop      1825 day   # Stop time after the given period (18260)18260  , 4000   2191
+tstop      730 day   # Stop time after the given period (18260)18260  , 4000   2191
 
 toutstart  0 day       # Output start time
 
 toutinc    1 day      # Write output with this periodicity
 
-toutfinc   10 day      # Write fisheries output with this periodicity
+toutfinc   1 day      # Write fisheries output with this periodicity
 
-tsumout    10 day     # Write stock state summary with this periodicity
+tsumout    1 day     # Write stock state summary with this periodicity
 
 fishout    0           # Switch to turn fisheries output on = 1, off = 0
 
 flagreusefile 2        # Switch to show want to append output file no = 0, yes = 1, replace = 2
 
-tburnday 30
+tburnday 0
 
 flagIsEstuary 0
 
@@ -182,173 +182,6 @@ check_dups 0
 
 ################################################
 
-# List of group numbers for use with which_check
-
-# Group ID number
-
-# FPL 0
-
-# FPO 1
-
-# FPS 2
-
-# FVD 3
-
-# FVV 4
-
-# FVS 5
-
-# FVB 6
-
-# FVT 7
-
-# FVO 8
-
-# FMM 9
-
-# FMN 10
-
-# FBP 11
-
-# FDD 12
-
-# FDE 13
-
-# FDS 14
-
-# FDM 15
-
-# FDP 16
-
-# FDB 17
-
-# FDC 18
-
-# FDO 19
-
-# FDF 20
-
-# SHB 21
-
-# SHD 22
-
-# SHC 23
-
-# SHP 24
-
-# SHR 25
-
-# SSK 26
-
-# SB  27
-
-# SP  28
-
-# PIN 29
-
-# REP 30
-
-# WHB 31
-
-# WHS 32
-
-# WHT 33
-
-# WDG 34
-
-# CEP 35
-
-# BFS 36
-
-# BFF 37
-
-# BFD 38
-
-# BG  39
-
-# BMD 40
-
-# BML 41
-
-# BMS 42
-
-# PWN 43
-
-# ZL  44
-
-# BD  45
-
-# MA  46
-
-# MB  47
-
-# SG  48
-
-# BC  49
-
-# ZG  50
-
-# PL  51
-
-# DF  52
-
-# PS  53
-
-# ZM  54
-
-# ZS  55
-
-# PB  56
-
-# BB  57
-
-# BO  58
-
-# DL  59
-
-# DR  60
-
-# DC  61
-
-# DLsed 62
-
-# DRsed 63
-
-# DCsed 64
-
-# jCEP 65
-
-# jPWN 66
-
-# NHwc 67
-
-# NOwc 68
-
-# Siwc 69
-
-# Fewc 70
-
-# O2 71
-
-# DSi 72
-
-# NHsed 73
-
-# NOsed 74
-
-# Sised 75
-
-# Fesed 76
-
-# DON 77
-
-# O2sed 78
-
-# DSised 79
-
-#
-
-#
 
 ################################################
 
