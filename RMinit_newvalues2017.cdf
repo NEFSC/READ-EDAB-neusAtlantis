@@ -10744,25 +10744,44 @@ variables:
 		Herring_N:partic = 0 ;
 		Herring_N:decay = 0. ;
 		Herring_N:_FillValue = 0. ;
-	double Illex_Squid_N(t, b, z) ;
-		Illex_Squid_N:bmtype = "tracer" ;
-		Illex_Squid_N:units = "mg N m-3" ;
-		Illex_Squid_N:long_name = "Illex_Squid Adult Nitrogen" ;
-		Illex_Squid_N:dtype = 0 ;
-		Illex_Squid_N:sumtype = 1 ;
-		Illex_Squid_N:inwc = 1 ;
-		Illex_Squid_N:insed = 0 ;
-		Illex_Squid_N:dissol = 0 ;
-		Illex_Squid_N:decay = 0. ;
-		Illex_Squid_N:partic = 1 ;
-		Illex_Squid_N:passive = 0 ;
-		Illex_Squid_N:svel = 0. ;
-		Illex_Squid_N:xvel = 0. ;
-		Illex_Squid_N:psize = 10. ;
-		Illex_Squid_N:b_dens = 1000000000. ;
-		Illex_Squid_N:i_conc = 200000000. ;
-		Illex_Squid_N:f_conc = 200000000. ;
-		Illex_Squid_N:_FillValue = 0.05 ;
+	double Illex_Squid_N1(t, b, z) ;
+		Illex_Squid_N1:bmtype = "tracer" ;
+		Illex_Squid_N1:units = "mg N m-3" ;
+		Illex_Squid_N1:long_name = "Illex Squid Juvenile Nitrogen" ;
+		Illex_Squid_N1:dtype = 0 ;
+		Illex_Squid_N1:sumtype = 1 ;
+		Illex_Squid_N1:inwc = 1 ;
+		Illex_Squid_N1:insed = 0 ;
+		Illex_Squid_N1:dissol = 0 ;
+		Illex_Squid_N1:decay = 0. ;
+		Illex_Squid_N1:partic = 1 ;
+		Illex_Squid_N1:passive = 0 ;
+		Illex_Squid_N1:svel = 0. ;
+		Illex_Squid_N1:xvel = 0. ;
+		Illex_Squid_N1:psize = 10. ;
+		Illex_Squid_N1:b_dens = 1000000000. ;
+		Illex_Squid_N1:i_conc = 200000000. ;
+		Illex_Squid_N1:f_conc = 200000000. ;
+		Illex_Squid_N1:_FillValue = 0.05 ;
+	double Illex_Squid_N2(t, b, z) ;
+		Illex_Squid_N2:bmtype = "tracer" ;
+		Illex_Squid_N2:units = "mg N m-3" ;
+		Illex_Squid_N2:long_name = "Illex Squid Adult Nitrogen" ;
+		Illex_Squid_N2:dtype = 0 ;
+		Illex_Squid_N2:sumtype = 1 ;
+		Illex_Squid_N2:inwc = 1 ;
+		Illex_Squid_N2:insed = 0 ;
+		Illex_Squid_N2:dissol = 0 ;
+		Illex_Squid_N2:decay = 0. ;
+		Illex_Squid_N2:partic = 1 ;
+		Illex_Squid_N2:passive = 0 ;
+		Illex_Squid_N2:svel = 0. ;
+		Illex_Squid_N2:xvel = 0. ;
+		Illex_Squid_N2:psize = 10. ;
+		Illex_Squid_N2:b_dens = 1000000000. ;
+		Illex_Squid_N2:i_conc = 200000000. ;
+		Illex_Squid_N2:f_conc = 200000000. ;
+		Illex_Squid_N2:_FillValue = 0.05 ;
 	double Invasive_Species10_Nums(t, b, z) ;
 		Invasive_Species10_Nums:bmtype = "tracer" ;
 		Invasive_Species10_Nums:units = "1" ;
@@ -12013,25 +12032,44 @@ variables:
 		Lobster_N:dtype = 0 ;
 		Lobster_N:sumtype = 1 ;
 		Lobster_N:_FillValue = 0. ;
-	double Loligo_Squid_N(t, b, z) ;
-		Loligo_Squid_N:bmtype = "tracer" ;
-		Loligo_Squid_N:units = "mg N2 m-3" ;
-		Loligo_Squid_N:long_name = "Loligo_Squid Adult Nitrogen" ;
-		Loligo_Squid_N:dtype = 0 ;
-		Loligo_Squid_N:sumtype = 1 ;
-		Loligo_Squid_N:inwc = 1 ;
-		Loligo_Squid_N:insed = 0 ;
-		Loligo_Squid_N:dissol = 0 ;
-		Loligo_Squid_N:decay = 0. ;
-		Loligo_Squid_N:partic = 1 ;
-		Loligo_Squid_N:passive = 0 ;
-		Loligo_Squid_N:svel = 0. ;
-		Loligo_Squid_N:xvel = 0. ;
-		Loligo_Squid_N:psize = 10. ;
-		Loligo_Squid_N:b_dens = 1000000000. ;
-		Loligo_Squid_N:i_conc = 200000000. ;
-		Loligo_Squid_N:f_conc = 200000000. ;
-		Loligo_Squid_N:_FillValue = 0.05 ;
+	double Loligo_Squid_N1(t, b, z) ;
+		Loligo_Squid_N1:bmtype = "tracer" ;
+		Loligo_Squid_N1:units = "mg N m-3" ;
+		Loligo_Squid_N1:long_name = "Loligo Squid Juvenile Nitrogen" ;
+		Loligo_Squid_N1:dtype = 0 ;
+		Loligo_Squid_N1:sumtype = 1 ;
+		Loligo_Squid_N1:inwc = 1 ;
+		Loligo_Squid_N1:insed = 0 ;
+		Loligo_Squid_N1:dissol = 0 ;
+		Loligo_Squid_N1:decay = 0. ;
+		Loligo_Squid_N1:partic = 1 ;
+		Loligo_Squid_N1:passive = 0 ;
+		Loligo_Squid_N1:svel = 0. ;
+		Loligo_Squid_N1:xvel = 0. ;
+		Loligo_Squid_N1:psize = 10. ;
+		Loligo_Squid_N1:b_dens = 1000000000. ;
+		Loligo_Squid_N1:i_conc = 200000000. ;
+		Loligo_Squid_N1:f_conc = 200000000. ;
+		Loligo_Squid_N1:_FillValue = 0.05 ;
+	double Loligo_Squid_N2(t, b, z) ;
+		Loligo_Squid_N2:bmtype = "tracer" ;
+		Loligo_Squid_N2:units = "mg N m-3" ;
+		Loligo_Squid_N2:long_name = "Loligo Squid Adult Nitrogen" ;
+		Loligo_Squid_N2:dtype = 0 ;
+		Loligo_Squid_N2:sumtype = 1 ;
+		Loligo_Squid_N2:inwc = 1 ;
+		Loligo_Squid_N2:insed = 0 ;
+		Loligo_Squid_N2:dissol = 0 ;
+		Loligo_Squid_N2:decay = 0. ;
+		Loligo_Squid_N2:partic = 1 ;
+		Loligo_Squid_N2:passive = 0 ;
+		Loligo_Squid_N2:svel = 0. ;
+		Loligo_Squid_N2:xvel = 0. ;
+		Loligo_Squid_N2:psize = 10. ;
+		Loligo_Squid_N2:b_dens = 1000000000. ;
+		Loligo_Squid_N2:i_conc = 200000000. ;
+		Loligo_Squid_N2:f_conc = 200000000. ;
+		Loligo_Squid_N2:_FillValue = 0.05 ;
 	double Mackerel10_Nums(t, b, z) ;
 		Mackerel10_Nums:bmtype = "tracer" ;
 		Mackerel10_Nums:units = "1" ;
@@ -15094,25 +15132,44 @@ variables:
 		Nitrification:partic = 0 ;
 		Nitrification:decay = 0. ;
 		Nitrification:_FillValue = 0. ;
-	double Northern_Shrimp_N(t, b, z) ;
-		Northern_Shrimp_N:bmtype = "tracer" ;
-		Northern_Shrimp_N:units = "mg N2 m-3" ;
-		Northern_Shrimp_N:long_name = "Northern_Shrimp Nitrogen" ;
-		Northern_Shrimp_N:dtype = 0 ;
-		Northern_Shrimp_N:sumtype = 1 ;
-		Northern_Shrimp_N:inwc = 1 ;
-		Northern_Shrimp_N:insed = 0 ;
-		Northern_Shrimp_N:dissol = 0 ;
-		Northern_Shrimp_N:decay = 0. ;
-		Northern_Shrimp_N:partic = 1 ;
-		Northern_Shrimp_N:passive = 0 ;
-		Northern_Shrimp_N:svel = 0. ;
-		Northern_Shrimp_N:xvel = 0. ;
-		Northern_Shrimp_N:psize = 10. ;
-		Northern_Shrimp_N:b_dens = 1000000000. ;
-		Northern_Shrimp_N:i_conc = 200000000. ;
-		Northern_Shrimp_N:f_conc = 200000000. ;
-		Northern_Shrimp_N:_FillValue = 0.015 ;
+	double Northern_Shrimp_N1(t, b, z) ;
+		Northern_Shrimp_N1:bmtype = "tracer" ;
+		Northern_Shrimp_N1:units = "mg N m-3" ;
+		Northern_Shrimp_N1:long_name = "Northern_Shrimp Juvenile Nitrogen" ;
+		Northern_Shrimp_N1:dtype = 0 ;
+		Northern_Shrimp_N1:sumtype = 1 ;
+		Northern_Shrimp_N1:inwc = 1 ;
+		Northern_Shrimp_N1:insed = 0 ;
+		Northern_Shrimp_N1:dissol = 0 ;
+		Northern_Shrimp_N1:decay = 0. ;
+		Northern_Shrimp_N1:partic = 1 ;
+		Northern_Shrimp_N1:passive = 0 ;
+		Northern_Shrimp_N1:svel = 0. ;
+		Northern_Shrimp_N1:xvel = 0. ;
+		Northern_Shrimp_N1:psize = 10. ;
+		Northern_Shrimp_N1:b_dens = 1000000000. ;
+		Northern_Shrimp_N1:i_conc = 200000000. ;
+		Northern_Shrimp_N1:f_conc = 200000000. ;
+		Northern_Shrimp_N1:_FillValue = 0.015 ;
+	double Northern_Shrimp_N2(t, b, z) ;
+		Northern_Shrimp_N2:bmtype = "tracer" ;
+		Northern_Shrimp_N2:units = "mg N m-3" ;
+		Northern_Shrimp_N2:long_name = "Northern_Shrimp Adult Nitrogen" ;
+		Northern_Shrimp_N2:dtype = 0 ;
+		Northern_Shrimp_N2:sumtype = 1 ;
+		Northern_Shrimp_N2:inwc = 1 ;
+		Northern_Shrimp_N2:insed = 0 ;
+		Northern_Shrimp_N2:dissol = 0 ;
+		Northern_Shrimp_N2:decay = 0. ;
+		Northern_Shrimp_N2:partic = 1 ;
+		Northern_Shrimp_N2:passive = 0 ;
+		Northern_Shrimp_N2:svel = 0. ;
+		Northern_Shrimp_N2:xvel = 0. ;
+		Northern_Shrimp_N2:psize = 10. ;
+		Northern_Shrimp_N2:b_dens = 1000000000. ;
+		Northern_Shrimp_N2:i_conc = 200000000. ;
+		Northern_Shrimp_N2:f_conc = 200000000. ;
+		Northern_Shrimp_N2:_FillValue = 0.015 ;
 	double Ocean_Pout10_Nums(t, b, z) ;
 		Ocean_Pout10_Nums:bmtype = "tracer" ;
 		Ocean_Pout10_Nums:units = "1" ;
@@ -16859,25 +16916,44 @@ variables:
 		Other_Flatfish_N:partic = 0 ;
 		Other_Flatfish_N:decay = 0. ;
 		Other_Flatfish_N:_FillValue = 0. ;
-	double Other_Shrimp_N(t, b, z) ;
-		Other_Shrimp_N:bmtype = "tracer" ;
-		Other_Shrimp_N:units = "mg N2 m-3" ;
-		Other_Shrimp_N:long_name = "Other_Shrimp Nitrogen" ;
-		Other_Shrimp_N:dtype = 0 ;
-		Other_Shrimp_N:sumtype = 1 ;
-		Other_Shrimp_N:inwc = 1 ;
-		Other_Shrimp_N:insed = 0 ;
-		Other_Shrimp_N:dissol = 0 ;
-		Other_Shrimp_N:decay = 0. ;
-		Other_Shrimp_N:partic = 1 ;
-		Other_Shrimp_N:passive = 0 ;
-		Other_Shrimp_N:svel = 0. ;
-		Other_Shrimp_N:xvel = 0. ;
-		Other_Shrimp_N:psize = 10. ;
-		Other_Shrimp_N:b_dens = 1000000000. ;
-		Other_Shrimp_N:i_conc = 200000000. ;
-		Other_Shrimp_N:f_conc = 200000000. ;
-		Other_Shrimp_N:_FillValue = 0.015 ;
+	double Other_Shrimp_N1(t, b, z) ;
+		Other_Shrimp_N1:bmtype = "tracer" ;
+		Other_Shrimp_N1:units = "mg N m-3" ;
+		Other_Shrimp_N1:long_name = "Other_Shrimp Adult Nitrogen" ;
+		Other_Shrimp_N1:dtype = 0 ;
+		Other_Shrimp_N1:sumtype = 1 ;
+		Other_Shrimp_N1:inwc = 1 ;
+		Other_Shrimp_N1:insed = 0 ;
+		Other_Shrimp_N1:dissol = 0 ;
+		Other_Shrimp_N1:decay = 0. ;
+		Other_Shrimp_N1:partic = 1 ;
+		Other_Shrimp_N1:passive = 0 ;
+		Other_Shrimp_N1:svel = 0. ;
+		Other_Shrimp_N1:xvel = 0. ;
+		Other_Shrimp_N1:psize = 10. ;
+		Other_Shrimp_N1:b_dens = 1000000000. ;
+		Other_Shrimp_N1:i_conc = 200000000. ;
+		Other_Shrimp_N1:f_conc = 200000000. ;
+		Other_Shrimp_N1:_FillValue = 0.015 ;
+	double Other_Shrimp_N2(t, b, z) ;
+		Other_Shrimp_N2:bmtype = "tracer" ;
+		Other_Shrimp_N2:units = "mg N2 m-3" ;
+		Other_Shrimp_N2:long_name = "Other_Shrimp Juvenile Nitrogen" ;
+		Other_Shrimp_N2:dtype = 0 ;
+		Other_Shrimp_N2:sumtype = 1 ;
+		Other_Shrimp_N2:inwc = 1 ;
+		Other_Shrimp_N2:insed = 0 ;
+		Other_Shrimp_N2:dissol = 0 ;
+		Other_Shrimp_N2:decay = 0. ;
+		Other_Shrimp_N2:partic = 1 ;
+		Other_Shrimp_N2:passive = 0 ;
+		Other_Shrimp_N2:svel = 0. ;
+		Other_Shrimp_N2:xvel = 0. ;
+		Other_Shrimp_N2:psize = 10. ;
+		Other_Shrimp_N2:b_dens = 1000000000. ;
+		Other_Shrimp_N2:i_conc = 200000000. ;
+		Other_Shrimp_N2:f_conc = 200000000. ;
+		Other_Shrimp_N2:_FillValue = 0.015 ;
 	double Oxygen(t, b, z) ;
 		Oxygen:bmtype = "tracer" ;
 		Oxygen:units = "mg O2 m-3" ;
@@ -53670,7 +53746,7 @@ data:
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Illex_Squid_N =
+ Illex_Squid_N1 =
   0.032, 0.032, _, _, 0.032,
   0.0295021, _, _, _, 0.0295021,
   0.0456455968, _, _, _, 0.0456455968,
@@ -53701,6 +53777,39 @@ data:
   0.004, 0.004, 0.004, 0.004, 0.004,
   0.008, 0.008, 0.008, 0.008, 0.008,
   0.016, 0.016, 0.016, 0.016, 0.016 ;
+
+ Illex_Squid_N2 =
+  0.032, 0.032, _, _, 0.032,
+  0.0295021, _, _, _, 0.0295021,
+  0.0456455968, _, _, _, 0.0456455968,
+  0.0221814992, 0.0221814992, 0.0221814992, _, 0.0221814992,
+  0.0187676912, _, _, _, 0.0187676912,
+  0.013906516, 0.013906516, _, _, 0.013906516,
+  0.014307304, 0.014307304, _, _, 0.014307304,
+  0.042745036, _, _, _, 0.042745036,
+  0.0159534384, 0.0159534384, _, _, 0.0159534384,
+  0.0159019896, 0.0159019896, _, _, 0.0159019896,
+  0.0063926376, 0.0063926376, _, _, 0.0063926376,
+  0.0013157544, 0.0013157544, 0.0013157544, _, 0.0013157544,
+  0.0092739264, 0.0092739264, _, _, 0.0092739264,
+  0.013226912, _, _, _, 0.013226912,
+  0.0046199912, 0.0046199912, 0.0046199912, _, 0.0046199912,
+  0.004411784, 0.004411784, _, _, 0.004411784,
+  0.0008579656, 0.0008579656, 0.0008579656, _, 0.0008579656,
+  0.0117434456, 0.0117434456, _, _, 0.0117434456,
+  0.062251436, 0.062251436, _, _, 0.062251436,
+  0.000473696, 0.000473696, 0.000473696, _, 0.000473696,
+  0.0004475816, 0.0004475816, 0.0004475816, _, 0.0004475816,
+  0.000955096, 0.000955096, 0.000955096, _, 0.000955096,
+  0.0007412216, 0.0007412216, _, _, 0.0007412216,
+  0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0,
+  0.0007412216, 0.0007412216, _, _, 0.0007412216,
+  0.000955096, 0.000955096, 0.000955096, _, 0.000955096,
+  0.004, 0.004, 0.004, 0.004, 0.004,
+  0.008, 0.008, 0.008, 0.008, 0.008,
+  0.016, 0.016, 0.016, 0.016, 0.016 ;
+
 
  Invasive_Species10_Nums =
   _, _, _, _, _,
@@ -55885,7 +55994,39 @@ data:
     0.167982456, 0.756929825, 0.921666667, 0.277807018, 0.6052632, 
     1.365263158, 0.30789474, _, _, _, _, _, _, _ ;
 
- Loligo_Squid_N =
+ Loligo_Squid_N1 =
+  0.048, 0.048, _, _, 0.048,
+  0.04425315, _, _, _, 0.04425315,
+  0.0684683952, _, _, _, 0.0684683952,
+  0.0332722488, 0.0332722488, 0.0332722488, _, 0.0332722488,
+  0.0281515368, _, _, _, 0.0281515368,
+  0.020859774, 0.020859774, _, _, 0.020859774,
+  0.021460956, 0.021460956, _, _, 0.021460956,
+  0.064117554, _, _, _, 0.064117554,
+  0.0239301576, 0.0239301576, _, _, 0.0239301576,
+  0.0238529844, 0.0238529844, _, _, 0.0238529844,
+  0.0095889564, 0.0095889564, _, _, 0.0095889564,
+  0.0019736316, 0.0019736316, 0.0019736316, _, 0.0019736316,
+  0.0139108896, 0.0139108896, _, _, 0.0139108896,
+  0.019840368, _, _, _, 0.019840368,
+  0.0069299868, 0.0069299868, 0.0069299868, _, 0.0069299868,
+  0.006617676, 0.006617676, _, _, 0.006617676,
+  0.0012869484, 0.0012869484, 0.0012869484, _, 0.0012869484,
+  0.0176151684, 0.0176151684, _, _, 0.0176151684,
+  0.093377154, 0.093377154, _, _, 0.093377154,
+  0.000710544, 0.000710544, 0.000710544, _, 0.000710544,
+  0.0006713724, 0.0006713724, 0.0006713724, _, 0.0006713724,
+  0.001432644, 0.001432644, 0.001432644, _, 0.001432644,
+  0.0011118324, 0.0011118324, _, _, 0.0011118324,
+  0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0,
+  0.0011118324, 0.0011118324, _, _, 0.0011118324,
+  0.001432644, 0.001432644, 0.001432644, _, 0.001432644,
+  0.006, 0.006, 0.006, 0.006, 0.006,
+  0.012, 0.012, 0.012, 0.012, 0.012,
+  0.024, 0.024, 0.024, 0.024, 0.024 ;
+
+ Loligo_Squid_N2 =
   0.048, 0.048, _, _, 0.048,
   0.04425315, _, _, _, 0.04425315,
   0.0684683952, _, _, _, 0.0684683952,
@@ -61152,7 +61293,39 @@ data:
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Northern_Shrimp_N =
+ Northern_Shrimp_N1 =
+  2.98e-008, 2.98e-008, _, _, 2.98484e-005,
+  _, _, _, 2.16508e-005, _,
+  _, _, 1.23e-005, 1.23e-005, 1.23e-005,
+  _, _, _, _, _,
+  1.7379e-005, 1.7379e-005, _, _, 7.18e-006,
+  7.18e-006, _, _, 2.33836e-005, _,
+  _, _, 0.000126438, 0.000126438, _,
+  _, 1.85e-005, 1.85e-005, _, _,
+  0.004702182, 0.004702182, _, _, 0.000674891,
+  0.000674891, 0.000674891, _, 0.000196454, 0.000196454,
+  _, _, 1.62e-005, _, _,
+  _, 1.52e-005, 1.52e-005, 1.52e-005, _,
+  1.29312e-005, 1.29312e-005, _, _, 0.005776756,
+  0.005776756, 0.005776756, _, 0.001037509, 0.001037509,
+  _, _, 0.001552572, 0.001552572, _,
+  _, 0.000252444, 0.000252444, 0.000252444, _,
+  0.000173789, 0.000173789, 0.000173789, _, 5.36676e-005,
+  5.36676e-005, 5.36676e-005, _, 8.36296e-005, 8.36296e-005,
+  _, _, 0, 0, 0,
+  0, 0, 0, 0, 0,
+  8.36e-011, 8.36e-011, _, _, 5.37e-011,
+  5.37e-011, 5.37e-011, _, 1.52e-010, 1.52e-010,
+  1.52e-010, 1.52e-010, 1.52e-010, 1.52e-010, 1.52e-010,
+  1.52e-010, 1.52e-010, 1.52e-010, 1.52e-010, 1.52e-010,
+  2.98e-008, 2.98e-008, _, _, 2.98484e-005,
+  _, _, _, 2.16508e-005, _,
+  _, _, 1.23e-005, 1.23e-005, 1.23e-005,
+  _, _, _, _, _,
+  1.7379e-005, 1.7379e-005, _, _, 7.18e-006,
+  7.18e-006, _, _, 2.33836e-005, _ ;
+
+ Northern_Shrimp_N2 =
   2.98e-008, 2.98e-008, _, _, 2.98484e-005,
   _, _, _, 2.16508e-005, _,
   _, _, 1.23e-005, 1.23e-005, 1.23e-005,
@@ -64160,7 +64333,39 @@ data:
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Other_Shrimp_N =
+ Other_Shrimp_N1 =
+  2.98e-008, 2.98e-008, _, _, 2.98484e-005,
+  _, _, _, 2.16508e-005, _,
+  _, _, 1.23e-005, 1.23e-005, 1.23e-005,
+  _, _, _, _, _,
+  1.7379e-005, 1.7379e-005, _, _, 7.18e-006,
+  7.18e-006, _, _, 2.33836e-005, _,
+  _, _, 0.000126438, 0.000126438, _,
+  _, 1.85e-005, 1.85e-005, _, _,
+  0.004702182, 0.004702182, _, _, 0.000674891,
+  0.000674891, 0.000674891, _, 0.000196454, 0.000196454,
+  _, _, 1.62e-005, _, _,
+  _, 1.52e-005, 1.52e-005, 1.52e-005, _,
+  1.29312e-005, 1.29312e-005, _, _, 0.005776756,
+  0.005776756, 0.005776756, _, 0.001037509, 0.001037509,
+  _, _, 0.001552572, 0.001552572, _,
+  _, 0.000252444, 0.000252444, 0.000252444, _,
+  0.000173789, 0.000173789, 0.000173789, _, 5.36676e-005,
+  5.36676e-005, 5.36676e-005, _, 8.36296e-005, 8.36296e-005,
+  _, _, 0, 0, 0,
+  0, 0, 0, 0, 0,
+  8.36e-011, 8.36e-011, _, _, 5.37e-011,
+  5.37e-011, 5.37e-011, _, 1.52e-010, 1.52e-010,
+  1.52e-010, 1.52e-010, 1.52e-010, 1.52e-010, 1.52e-010,
+  1.52e-010, 1.52e-010, 1.52e-010, 1.52e-010, 1.52e-010,
+  2.98e-008, 2.98e-008, _, _, 2.98484e-005,
+  _, _, _, 2.16508e-005, _,
+  _, _, 1.23e-005, 1.23e-005, 1.23e-005,
+  _, _, _, _, _,
+  1.7379e-005, 1.7379e-005, _, _, 7.18e-006,
+  7.18e-006, _, _, 2.33836e-005, _ ;
+
+ Other_Shrimp_N2 =
   2.98e-008, 2.98e-008, _, _, 2.98484e-005,
   _, _, _, 2.16508e-005, _,
   _, _, 1.23e-005, 1.23e-005, 1.23e-005,

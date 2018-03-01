@@ -327,11 +327,17 @@ flagtrecruitdistrib 1      0=humped recruit arrival distrib, 1=flat distrib of r
 # spawning, 13=forced timeseries of recruitment   
 
 ######### 11 Jan 2015  Gavin FAy @UmassD flagrecruit/separate for inverts not done
-##
-flagrecruitCEP   1                                                                             3
-flagseperateCEP  1         CEP, CEPj are: 1 = seperate groups (or single pool), 0 = age structured single group
-flagrecruitPWN   1                                                                             3
-flagseperatePWN  1         PWN, PWNj are: 1 = seperate groups (or single pool), 0 = age structured single group
+## RM fixed inverts 20180228
+flagrecruitLSQ   1                                                                             3
+flagrecruitISQ   1                                                                             3
+flagrecruitNSH   1                                                                             3
+flagrecruitOSH   1                                                                             3
+flagseperateLSQ  1         CEP, CEPj are: 1 = seperate groups (or single pool), 0 = age structured single group
+flagseperateISQ  1         CEP, CEPj are: 1 = seperate groups (or single pool), 0 = age structured single group
+flagseperateNSH  1         CEP, CEPj are: 1 = seperate groups (or single pool), 0 = age structured single group
+flagseperateOSH  1         CEP, CEPj are: 1 = seperate groups (or single pool), 0 = age structured single group
+#flagrecruitPWN   1                                                                             3
+#flagseperatePWN  1         PWN, PWNj are: 1 = seperate groups (or single pool), 0 = age structured single group
 
 flagrecruitMAK 10
 flagrecruitHER 10
@@ -584,6 +590,8 @@ flaglocalrecruitTWH 1
 flaglocalrecruitINV 0
 flaglocalrecruitISQ 1
 flaglocalrecruitLSQ 1
+flaglocalrecruitOSH 1
+flaglocalrecruitNSH 1
 
 # Flag indicating whether the vertebrate group bearslive young (0 = no, 1 = yes)
 flagbearliveMAK 0
@@ -1756,7 +1764,18 @@ habitat_BO 11
 #habitat_DC 11
 #NA NA NA NA NA NA NA NA NA NA NA
 
+juv_habitat_LSQ 11
+1 1 1 1 1 1 1 1 1 1 1
  
+juv_habitat_ISQ 11
+1 1 1 1 1 1 1 1 1 1 1 
+
+juv_habitat_OSH 11
+1 1 1 1 1 1 1 1 1 1 1
+ 
+juv_habitat_NSH 11
+1 1 1 1 1 1 1 1 1 1 1 
+
 juv_habitat_MAK 11
 1 1 1 1 1 1 1 1 1 1 1
  
@@ -13697,19 +13716,20 @@ BO_mL 2  4e-07
 #mL_BB_T15        0.00001   Linear mortality rate of sediment bact, 15 deg C  d-1 (0.0001)     0.0 - 0.1
 
 # Invertebrates with age structure
-#LSQ_mL 2
-#1e-06 1e-06 
-#ISQ_mL 2
-#1e-06 1e-06 
-#NSH_mL 2
-#6.75e-06 6.75e-06 
-#OSH_mL 2
-#6.75e-06 6.75e-06 
+### unmuted 20180228 RM
+LSQ_mL 2
+1e-06 1e-06 
+ISQ_mL 2
+1e-06 1e-06 
+NSH_mL 2
+6.75e-06 6.75e-06 
+OSH_mL 2
+6.75e-06 6.75e-06 
 
-LSQ_mL 1e-06
-ISQ_mL 1e-06
-NSH_mL 6.75e-06
-OSH_mL 6.75e-06
+#LSQ_mL 1e-06
+#ISQ_mL 1e-06
+#NSH_mL 6.75e-06
+#OSH_mL 6.75e-06
 
 
 
@@ -14213,20 +14233,27 @@ INV_mQ	2
 #mQ_BG_T15        0.0       Quad. mortality rate of benth. grazers, 15 deg C  d-1              0.0 - 0.00001
 
 # Invertebrates with age structure
-#LSQ_mQ 2 
-#0.00147 0.00176
-#ISQ_mQ 2 
-#0.00147 0.00176
-#NSH_mQ 2
-#0.00177 0.00177
-#OSH_mQ 2
-#0.00177 0.00177
+### unmuted 20180228 RM
+LSQ_mQ 2 
+0.00147 0.00176
+ISQ_mQ 2 
+0.00147 0.00176
+NSH_mQ 2
+0.00177 0.00177
+OSH_mQ 2
+0.00177 0.00177
 
+#Terminal (senescence mortality) for biomass pools (proportion of terminal age group dying)
+### param added from SETAS based on warning, RM 20180228
+mT_LSQ 1.0
+mT_ISQ 1.0
+mT_NSH 1.0
+mT_OSH 1.0
 
-LSQ_mQ 0.0
-ISQ_mQ 0.0
-NSH_mQ 0.0
-OSH_mQ 0.0
+#LSQ_mQ 0.0
+#ISQ_mQ 0.0
+#NSH_mQ 0.0
+#OSH_mQ 0.0
 #mQ_jLSQ_T15 0.00147
 #mQ_jISQ_T15 0.00147
 #mQ_jNSH_T15 0.00177
@@ -15552,8 +15579,13 @@ RWH_Recruit_Time 360
 BWH_Recruit_Time 360             
 SWH_Recruit_Time 360             
 TWH_Recruit_Time 360             
-INV_Recruit_Time 30              
+INV_Recruit_Time 30
+LSQ_Recruit_Time 30             
+ISQ_Recruit_Time 30             
+NSH_Recruit_Time 30             
+OSH_Recruit_Time 30             
 
+### added inverts RM 20180228
 # Recruitment window  
 ###Recruit_Period_FPL 60      Length of time recruits arrive over for large planktiv  d          15 - 90
 Recruit_Period_MAK 60                
@@ -15614,7 +15646,11 @@ Recruit_Period_RWH 40
 Recruit_Period_BWH 40                
 Recruit_Period_SWH 30                
 Recruit_Period_TWH 30                
-Recruit_Period_INV 90                
+Recruit_Period_INV 90
+Recruit_Period_LSQ 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                
+Recruit_Period_ISQ 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                
+Recruit_Period_OSH 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                
+Recruit_Period_NSH 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                
 
 # Spawn production  
 ####KSPA_FPL         31.93     Constant in spawning formulation for large planktivores            31.93
@@ -15739,6 +15775,18 @@ FSP_SWH 0.16
 FSP_TWH 0.16   
 FSP_INV 0.276  
 
+### added the following from SETAS 20180228 RM
+FSP_ISQ          1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
+FSP_LSQ          1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
+FSP_NSH          1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
+FSP_OSH          1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
+#FSP_CEP          0.5       Fraction of biomass contributing to spawn for cephalopods          1.0  
+## Proportion of the biomass of age structured biomass pool lost to spawning (i.e. what proportion of the spawning adult biomass is lost via gamete release)
+## Simplest case is to set to 0.0, this is effectively what it was in the original Atlantis code
+prop_spawn_lost_ISQ  0.0
+prop_spawn_lost_LSQ  0.0
+prop_spawn_lost_OSH  0.0
+prop_spawn_lost_NSH  0.0
 
 ## Proportion of the population (per age) spawning 
  
@@ -15918,7 +15966,18 @@ FSPB_TWH 10
  
 FSPB_INV 10
 0.2 0.9 1 1 1 1 1 1 1 1
+
+FSPB_OSH        2
+0.1 1.0
+
+FSPB_NSH        2
+0.1 1.0
+
+FSPB_LSQ        2
+0.1 1.0 
  
+FSPB_ISQ        2
+0.1 1.0
 
 # Recruit location spatial distributions
 ### 20180228 RM added values for ISQ, LSQ, OSH, NSH based on period 1 horizontal distribution (check these)
@@ -16494,18 +16553,18 @@ KDENR_INV 1
 
 ## G.Fay 6 Apr 2015, KDENR_ is different for inverts.
 ## Average biomass (in mg m-3) spawned in each cell  
-
-KDENR_LSQ 1
-0.05
+### RM added  second value 20180228
+KDENR_LSQ 2
+0.05 0.05
  
-KDENR_ISQ 1
-0.05
+KDENR_ISQ 2
+0.05 0.05
  
-KDENR_NSH 1
-0.05
+KDENR_NSH 2
+0.05 0.05
  
-KDENR_OSH 1
-0.05
+KDENR_OSH 2
+0.05 0.05
  
 
 #25/10/2012 - CHANGE - PLEASE CHECK
@@ -18673,6 +18732,7 @@ flag_report_water_detritus 0
 # Added by Gavin Fay @nmfs 29 April 2014
 # jack-knife recruitment (entries make no sense, copied vector from BH recruitment parameters)
 # blog entry describing jack-knife recruitment (recruitment option 15) https://wiki.csiro.au/display/Atlantis/2013/04/23/Jackknife+recruitment
+### added LSQ, ISQ, OSH, NSH RM 20180228
 jack_a_MAK 3.55e+09  
 jack_a_HER 7.55e+09  
 jack_a_WHK 1.7e+07   
@@ -18731,7 +18791,14 @@ jack_a_RWH 7
 jack_a_BWH 7         
 jack_a_SWH 1000      
 jack_a_TWH 1000      
-jack_a_INV 1.45e+09  
+jack_a_INV 1.45e+09
+jack_a_LSQ 1.45e+09
+jack_a_ISQ 1.45e+09
+jack_a_NSH 1.45e+09
+jack_a_OSH 1.45e+09
+
+
+  
 jack_b_MAK 3.55e+09  
 jack_b_HER 7.55e+09  
 jack_b_WHK 1.7e+07   
@@ -18791,6 +18858,11 @@ jack_b_BWH 7
 jack_b_SWH 1000      
 jack_b_TWH 1000      
 jack_b_INV 1.45e+09  
+jack_b_INV 1.45e+09
+jack_b_LSQ 1.45e+09
+jack_b_ISQ 1.45e+09
+jack_b_NSH 1.45e+09
+jack_b_OSH 1.45e+09
 
 #gfay@umassd 2015/06/24  added, new parameter (or one that got missed in conversion)
 UseHardFeedingWindow  0
@@ -19695,7 +19767,11 @@ RWH_rec_HabDepend 0
 BWH_rec_HabDepend 0  
 SWH_rec_HabDepend 0  
 TWH_rec_HabDepend 0  
-INV_rec_HabDepend 0 
+INV_rec_HabDepend 0
+LSQ_rec_HabDepend 0
+ISQ_rec_HabDepend 0
+NSH_rec_HabDepend 0
+OSH_rec_HabDepend 0
 
 flag_satiation 0 
 flag_shrinkfat 1

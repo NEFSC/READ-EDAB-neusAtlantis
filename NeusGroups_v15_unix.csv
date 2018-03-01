@@ -58,8 +58,8 @@ BWH,55,1,Baleen_Whale,Baleen whales,10,1,2,1,9,1,1,1,1,1,1,MAMMAL,1,0,0,1,0,0,0,
 SWH,56,1,Small_Whale,Small toothed whales,10,1,2,1,7,1,1,1,1,1,1,MAMMAL,1,0,0,1,0,0,0,0,4
 TWH,57,1,Tooth_Whale,Toothed whales ,10,1,2,1,7,1,1,1,1,1,1,MAMMAL,1,0,0,1,0,0,0,0,4
 INV,58,1,Invasive_Species,Invasive vertebrate species,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4
-LSQ,59,1,Loligo_Squid,Loligo squid,1,1,2,1,1,1,1,1,1,1,1,CEP,1,0,0,1,0,0,0,0,4
-ISQ,60,1,Illex_Squid,Illex squid,1,1,2,1,1,1,1,1,1,1,1,CEP,1,0,0,1,0,0,0,0,4
+LSQ,59,1,Loligo_Squid,Loligo squid,2,1,2,1,1,1,1,1,1,1,1,CEP,1,0,0,1,0,0,0,0,4
+ISQ,60,1,Illex_Squid,Illex squid,2,1,2,1,1,1,1,1,1,1,1,CEP,1,0,0,1,0,0,0,0,4
 SCA,61,1,Scallop,Sea scallop,1,1,1,1,1,1,0,0,1,1,1,SED_EP_FF,1,1,0,1,0,0,0,0,4
 QHG,62,1,Quahog,Ocean quahog,1,1,1,1,1,1,0,0,1,1,1,SED_EP_FF,1,1,0,1,0,0,0,0,4
 CLA,63,1,Surf_Clam,Atlantic surf clam,1,1,1,1,1,1,0,0,1,1,1,SED_EP_FF,1,1,0,1,0,0,0,0,4
@@ -68,8 +68,8 @@ BG,65,1,Benthic_grazer,Benthic grazer,1,1,1,1,1,1,0,0,1,1,1,SED_EP_OTHER,1,0,0,1
 LOB,66,1,Lobster,Lobster,1,1,1,1,1,1,1,1,1,1,1,MOB_EP_OTHER,1,0,0,1,0,0,0,0,4
 RCB,67,1,Red_Crab,Red deep-sea crab,1,1,1,1,1,1,0,0,1,1,1,MOB_EP_OTHER,1,0,0,1,0,0,0,0,4
 BMS,68,1,Macrobenth_Shallow,Shallow macrozoobenthos,1,1,1,1,1,1,0,0,1,1,1,MOB_EP_OTHER,1,0,0,1,0,0,0,0,4
-NSH,69,1,Northern_Shrimp,Northern shrimp other pandalids,1,1,2,1,1,1,1,1,1,1,1,PWN,1,0,0,1,0,0,0,0,4
-OSH,70,1,Other_Shrimp,Other shrimps,1,1,2,1,1,1,1,1,1,1,1,PWN,1,0,0,1,0,0,0,0,4
+NSH,69,1,Northern_Shrimp,Northern shrimp other pandalids,2,1,2,1,1,1,1,1,1,1,1,PWN,1,0,0,1,0,0,0,0,4
+OSH,70,1,Other_Shrimp,Other shrimps,2,1,2,1,1,1,1,1,1,1,1,PWN,1,0,0,1,0,0,0,0,4
 ZL,71,1,Carniv_Zoo,Carnivorous zooplankton,1,1,1,1,1,1,1,1,1,1,1,LG_ZOO,1,0,0,1,0,0,0,0,4
 BD,72,1,Deposit_Feeder,Deposit Feeder,1,1,1,1,1,1,0,0,1,1,1,LG_INF,1,0,0,1,0,0,0,0,4
 MA,73,1,Macroalgae,Macroalgae,1,1,1,1,1,1,0,0,1,1,1,PHYTOBEN,0,1,0,1,0,0,0,0,4
