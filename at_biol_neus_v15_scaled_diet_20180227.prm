@@ -154,96 +154,6 @@ flagagestruct    1         Age structure option: 0 = homogeneous cohorts, 1 = tr
 flagsenesce      0         Oldest sub-part of final age group senesces, 1 = yes, 0 = no        0
 flagtsforcerecruit 0       Force recruitment of 1+ groups with environmental forcing           0
 
-# Groups functioning 
-flagMAK         1
-flagHER         1
-flagWHK         1
-flagBLF         1
-flagWPF         1
-flagSUF         1
-flagWIF         1
-flagWTF         1
-flagHAL         1
-flagPLA         1
-flagFOU         1
-flagFLA         1
-flagBFT         1
-flagTUN         1
-flagBIL         1
-flagMPF         1
-flagBUT         1
-flagANC         1
-flagBPF         1
-flagGOO         1
-flagMEN         1
-flagFDE         1
-flagCOD         1
-flagSHK         1
-flagOHK         1
-flagPOL         1
-flagRHK         1
-flagBSB         1
-flagSCU         1
-flagTYL         1
-flagRED         1
-flagOPT         1
-flagSAL         1
-flagDRM         1
-flagSTB         1
-flagTAU         1
-flagWOL         1
-flagSDF         1
-flagFDF         1
-flagHAD         1
-flagYTF         1
-flagDOG         1
-flagSMO         1
-flagSSH         1
-flagDSH         1
-flagBLS         1
-flagPOR         1
-flagPSH         1
-flagWSK         1
-flagLSK         1
-flagSK         1
-flagSB         1
-flagPIN         1
-flagREP         1
-flagRWH         1
-flagBWH         1
-flagSWH         1
-flagTWH         1
-flagINV         1
-flagLSQ         1
-flagISQ         1
-flagSCA         1
-flagQHG         1
-flagCLA         1
-flagBFF         1
-flagBG         1
-flagLOB         1
-flagRCB         1
-flagBMS         1
-flagNSH         1
-flagOSH         1
-flagZL         1
-flagBD         1
-flagMA         1
-flagMB         1
-flagSG         1
-flagBC         1
-flagZG         1
-flagPL         1
-flagDF         1
-flagPS         1
-flagZM         1
-flagZS         1
-flagPB         1
-flagBB         1
-flagBO         1
-flagDL         1
-flagDR         1
-flagDC         1
  
 # Preferred location trend (whether to weight vertical distributions towards surface or bottom
 # layers when in depths where there were less than complete set of depth layers)
@@ -307,7 +217,9 @@ flagdemSWH 0
 flagdemTWH 0
 flagdemINV 1
 flagdemLSQ 0
+flagdemjLSQ 0
 flagdemISQ 0
+flagdemjISQ 0
 flagdemSCA 1
 flagdemQHG 1
 flagdemCLA 1
@@ -317,7 +229,9 @@ flagdemLOB 1
 flagdemRCB 1
 flagdemBMS 1
 flagdemNSH 1
+flagdemjNSH 1
 flagdemOSH 1
+flagdemjOSH 1
 flagdemZL 0
 flagdemBD 1
 flagdemMA 1
@@ -399,19 +313,18 @@ flagplankfishTWH 0
 flagplankfishINV 0
 
 # Identifier indicating whether vertebrate group is parameterised as a bird (1 = yes, 0 = no)
-
-
 # Identifier indicating whether vertebrate group is parameterised as a shark (1 = yes, 0 = no)
-
 # Identifier indicating whether vertebrate group is parameterised as a mammal (1 = yes, 0 = no)
 
 # Vertebrate reproduction related flags. 
 flagtrecruitdistrib 1      0=humped recruit arrival distrib, 1=flat distrib of recruits        1
 
-# The flagrecruit entries refer to the recruitment function used.
-# 1=const, 2=dependent on prim producers (Chla), 3=Beverton-Holt, 4=lognormal, 5=dependent on all plankton
-# groups not just Chla, 6=Bev-Holt with lognormal variation added, 7=Bev-Holt with "encourage recovery"   
-# 8=Bev-Holt with perscribed "recovery", 9=Ricker, 10=Standard Bev-Holt (no explict use of spawn included)   
+# Vertebrate reproduction related flags. The flagrecruit entries refer to the recruitment function used.             
+# 1=const, 2=dependent on prim producers (Chla), 3=Beverton-Holt, 4=lognormal, 5=dependent on all plankton              
+# groups not just Chla, 6=Bev-Holt with lognormal variation added, 7=Bev-Holt with encourage recovery              
+# 8=Bev-Holt with perscribed recovery, 9=Ricker, 10=Standard Bev-Holt (no explict use of spawn included)             
+# 11=pupping/calving linearly dependent on maternal condition, 12=pupping/calving a fixed number per adult              
+# spawning, 13=forced timeseries of recruitment   
 
 ######### 11 Jan 2015  Gavin FAy @UmassD flagrecruit/separate for inverts not done
 ##
@@ -479,6 +392,72 @@ flagrecruitBWH 10
 flagrecruitSWH 10
 flagrecruitTWH 10
 flagrecruitINV 10
+
+# External reproduction - spawn is based on adult population within model domain, but actual reproduction           
+# occurs outside model domain (0 = no, 1 = yes) ADDED 20180228 RM
+flagext_reprodMAK 0
+flagext_reprodHER 0
+flagext_reprodWHK 0
+flagext_reprodBLF 0
+flagext_reprodWPF 0
+flagext_reprodSUF 0
+flagext_reprodWIF 0
+flagext_reprodWTF 0
+flagext_reprodHAL 0
+flagext_reprodPLA 0
+flagext_reprodFOU 0
+flagext_reprodFLA 0
+flagext_reprodBFT 0
+flagext_reprodTUN 0
+flagext_reprodBIL 0
+flagext_reprodMPF 0
+flagext_reprodBUT 0
+flagext_reprodANC 0
+flagext_reprodBPF 0
+flagext_reprodGOO 0
+flagext_reprodMEN 0
+flagext_reprodFDE 0
+flagext_reprodCOD 0
+flagext_reprodSHK 0
+flagext_reprodOHK 0
+flagext_reprodPOL 0
+flagext_reprodRHK 0
+flagext_reprodBSB 0
+flagext_reprodSCU 0
+flagext_reprodTYL 0
+flagext_reprodRED 0
+flagext_reprodOPT 0
+flagext_reprodSAL 0
+flagext_reprodDRM 0
+flagext_reprodSTB 0
+flagext_reprodTAU 0
+flagext_reprodWOL 0
+flagext_reprodSDF 0
+flagext_reprodFDF 0
+flagext_reprodHAD 0
+flagext_reprodYTF 0
+flagext_reprodDOG 0
+flagext_reprodSMO 0
+flagext_reprodSSH 0
+flagext_reprodDSH 0
+flagext_reprodBLS 0
+flagext_reprodPOR 0
+flagext_reprodPSH 0
+flagext_reprodWSK 0
+flagext_reprodLSK 0
+flagext_reprodSK 0
+flagext_reprodSB 0
+flagext_reprodPIN 0
+flagext_reprodREP 0
+flagext_reprodRWH 0
+flagext_reprodBWH 0
+flagext_reprodSWH 0
+flagext_reprodTWH 0
+flagext_reprodINV 0
+flagext_reprodISQ 0
+flagext_reprodLSQ 0
+flagext_reprodOSH 0
+flagext_reprodNSH 0
 
 # Vertebrate reproduction strength flags (1=very strong year classes possible, relative strength 
 # set using recruitRange and 0=only moderate variation in year class strength possible, mainly
@@ -603,7 +582,9 @@ flaglocalrecruitBWH 1
 flaglocalrecruitSWH 1
 flaglocalrecruitTWH 1
 flaglocalrecruitINV 0
- 
+flaglocalrecruitISQ 1
+flaglocalrecruitLSQ 1
+
 # Flag indicating whether the vertebrate group bearslive young (0 = no, 1 = yes)
 flagbearliveMAK 0
 flagbearliveHER 0
@@ -788,9 +769,14 @@ feed_while_spawnSWH 1
 feed_while_spawnTWH 1
 feed_while_spawnINV 1
 
-#### 11 Jan 2015 Gavin @UmassD, Invertebrates not changed.
-feed_while_spawnCEP   1                                                                        1
-feed_while_spawnPWN   1                                                                        1
+#### RM 20180228
+#feed_while_spawnCEP   1                                                                        1
+#feed_while_spawnPWN   1                                                                        1
+feed_while_spawnISQ 1
+feed_while_spawnLSQ 1
+feed_while_spawnOSH 1
+feed_while_spawnNSH 1
+
  
 # Switch indicating whether or not efficiency of assimilation is temperature dependent
 # 0 = no (same efficiency regardless), 1 = poorer when cooler, 2 = poorer when warmer 
@@ -1005,9 +991,9 @@ flagtempsensitivePB 0
 flagtempsensitiveBB 0
 flagtempsensitiveBO 0
 
-### 11 Jan 2015  Gavin Fay @UMassD INVERTEBRATES NOT DONE
-flagtempsensitiveCEP   1                                                                             3
-flagtempsensitivePWN   0                                                                             3
+### 11 Jan 2015  Gavin Fay @UMassD INVERTEBRATES NOT DONE (muted 20180228 RM)
+#flagtempsensitiveCEP   1                                                                             3
+#flagtempsensitivePWN   0                                                                             3
 
 # Habitat dependency
 flaghabdepend    0         general vertebrate demersal habitat dependency: 0 = no, 1 = yes     0
@@ -1143,19 +1129,14 @@ PSH_ddepend_move 0
 WSK_ddepend_move 0
 LSK_ddepend_move 0
 SK_ddepend_move 0
-SB_ddepend_move 0
+SB_ddepend_move 2
 PIN_ddepend_move 0
 REP_ddepend_move 2
-RWH_ddepend_move 0
-BWH_ddepend_move 0
+RWH_ddepend_move 2
+BWH_ddepend_move 2
 SWH_ddepend_move 2
 TWH_ddepend_move 2
 INV_ddepend_move 0
-### Jan 2015, Gavin Fay @UmassD, Invertebrate entries not done (other invert groups)
-#CEP_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky, 4 = no explicit movement 4
-#PWN_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
-#BML_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
-#ZL_ddepend_move  4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
 
 ### June 24 2015, Gavin Fay @UmassD, Invertebrate entries copied from v1
 LSQ_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky, 4 = no explicit movement 4
@@ -1166,23 +1147,19 @@ LOB_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no ex
 ZL_ddepend_move  4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
 
 
-# Flags for invertebrate migration out of model domain (enter juveniles and adults
+# Flags for invertebrate migration out of model domain (enter juveniles and adults              
 # separately for CEP and PWN - as may be separate groups, rather than age groups)
-### Jan 2015, Gavin Fay @UmassD, Invertebrate entries not done (other invert groups)
-
-flagZLMigrate    0         0=always remain within the model domain, 1+=migrate in/out of the model 0
-#flagBMLMigrate   0         0=always remain within the model domain, 1+=migrate in/out of the model 0
-#flagjCEPMigrate  0         0=always remain within the model domain, 1+=migrate in/out of the model 0
-#flagCEPMigrate   0         0=always remain within the model domain, 1+=migrate in/out of the model 0
-#flagjPWNMigrate  0         0=always remain within the model domain, 1+=migrate in/out of the model 0
-#flagPWNMigrate   0         0=always remain within the model domain, 1+=migrate in/out of the model 0
-
-flagLOBMigrate   0         0=always remain within the model domain, 1+=migrate in/out of the model 0
-flagLSQMigrate   0         0=always remain within the model domain, 1+=migrate in/out of the model 0
-flagISQMigrate   0         0=always remain within the model domain, 1+=migrate in/out of the model 0
-flagNSHMigrate   0         0=always remain within the model domain, 1+=migrate in/out of the model 0
-flagOSHMigrate   0         0=always remain within the model domain, 1+=migrate in/out of the model 0
-
+### added 20180228 RM based on SETAS           
+flagZLMigrate  0  0=always remain within the model domain, 1+=migrate in/out of the model              
+flagLOBMigrate  0  0=always remain within the model domain, 1+=migrate in/out of the model              
+flagjISQMigrate 0  0=always remain within the model domain, 1+=migrate in/out of the model              
+flagISQMigrate 0  0=always remain within the model domain, 1+=migrate in/out of the model              
+flagjLSQMigrate 0  0=always remain within the model domain, 1+=migrate in/out of the model              
+flagLSQMigrate  0  0=always remain within the model domain, 1+=migrate in/out of the model              
+flagjOSHMigrate 0  0=always remain within the model domain, 1+=migrate in/out of the model              
+flagOSHMigrate  0  0=always remain within the model domain, 1+=migrate in/out of the model 
+flagjNSHMigrate 0  0=always remain within the model domain, 1+=migrate in/out of the model              
+flagNSHMigrate  0  0=always remain within the model domain, 1+=migrate in/out of the model 
 
 
 # Flags for migration out of model domain (maximum number of times juvenile OR 
@@ -1415,7 +1392,9 @@ flagSWHday 2
 flagTWHday 2
 flagINVday 2
 flagLSQday 0
+flagjLSQday 0
 flagISQday 0
+flagjISQday 0
 flagSCAday 2
 flagQHGday 2
 flagCLAday 2
@@ -1425,7 +1404,9 @@ flagLOBday 2
 flagRCBday 2
 flagBMSday 2
 flagNSHday 0
+flagjNSHday 0
 flagOSHday 0
+flagjOSHday 0
 flagZLday 2
 flagBDday 2
 #flagMAday NA
@@ -3544,7 +3525,20 @@ FTWH_S1juv 30
  
 FINV_S1juv 30
 0 0.047 0.03 0.05 0.01 0.052 0.025 0.025 0.03 0.015 0.017 0.039 0.064 0.046 0.026 0.02 0.113 0.122 0.044 0.031 0.099 0.086 0.009 0 0 0 0 0 0 0
-                              
+
+FLSQ_S1juv 30
+0 0.083 0.083 0.083 0.083 0.083 0.095 0.083 0.083 0.11 0.03 0.03 0.03 0.03 0.03 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0 0 0 0 0 0 0
+ 
+FISQ_S1juv 30
+0 0.083 0.083 0.083 0.083 0.083 0.095 0.083 0.083 0.11 0.03 0.03 0.03 0.03 0.03 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0 0 0 0 0 0 0
+
+FNSH_S1juv 30
+0 0.000300752 0.000451128 0.000902256 0 0.001052632 0.000451128 0.000451128 0.003759398 0.000902256 0.202255638 0.071578947 0.012330827 0.000451128 0.001203008 0.00075188 0.514887216 0.048571429 0.076691729 0.028721805 0.022857143 0.005714286 0.005714286 0 0 0 0 0 0 0
+ 
+FOSH_S1juv 30
+0 0.000300752 0.000451128 0.000902256 0 0.001052632 0.000451128 0.000451128 0.003759398 0.000902256 0.202255638 0.071578947 0.012330827 0.000451128 0.001203008 0.00075188 0.514887216 0.048571429 0.076691729 0.028721805 0.022857143 0.005714286 0.005714286 0 0 0 0 0 0 0
+
+
 # April - June                           
 
 FMAK_S2juv 30
@@ -3724,6 +3718,18 @@ FTWH_S2juv 30
 FINV_S2juv 30
 0 0.047 0.03 0.05 0.01 0.052 0.025 0.025 0.03 0.015 0.017 0.039 0.064 0.046 0.026 0.02 0.113 0.122 0.044 0.031 0.099 0.086 0.009 0 0 0 0 0 0 0
 
+FLSQ_S2juv 30
+0 0.071 0.072 0.072 0.072 0.072 0.083 0.072 0.072 0.1 0.05 0.05 0.05 0.05 0.05 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0 0 0 0 0 0 0
+ 
+FISQ_S2juv 30
+0 0.071 0.072 0.072 0.072 0.072 0.083 0.072 0.072 0.1 0.05 0.05 0.05 0.05 0.05 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0 0 0 0 0 0 0
+
+FNSH_S2juv 30
+0 0.000300752 0.000451128 0.000902256 0 0.001052632 0.000451128 0.000451128 0.003759398 0.000902256 0.202255638 0.071578947 0.012330827 0.000451128 0.001203008 0.00075188 0.514887216 0.048571429 0.076691729 0.028721805 0.022857143 0.005714286 0.005714286 0 0 0 0 0 0 0
+ 
+FOSH_S2juv 30
+0 0.000300752 0.000451128 0.000902256 0 0.001052632 0.000451128 0.000451128 0.003759398 0.000902256 0.202255638 0.071578947 0.012330827 0.000451128 0.001203008 0.00075188 0.514887216 0.048571429 0.076691729 0.028721805 0.022857143 0.005714286 0.005714286 0 0 0 0 0 0 0
+
 # July - September                           
  
 FMAK_S3juv 30
@@ -3902,8 +3908,19 @@ FTWH_S3juv 30
  
 FINV_S3juv 30
 0 0.047 0.03 0.05 0.01 0.052 0.025 0.025 0.03 0.015 0.017 0.039 0.064 0.046 0.026 0.02 0.113 0.122 0.044 0.031 0.099 0.086 0.009 0 0 0 0 0 0 0
+
+FLSQ_S3juv 30
+0 0.071 0.072 0.072 0.072 0.072 0.083 0.072 0.072 0.1 0.05 0.05 0.05 0.05 0.05 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0 0 0 0 0 0 0
  
-                              
+FISQ_S3juv 30
+0 0.071 0.072 0.072 0.072 0.072 0.083 0.072 0.072 0.1 0.05 0.05 0.05 0.05 0.05 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0 0 0 0 0 0 0
+
+FNSH_S3juv 30
+0 0.000300752 0.000451128 0.000902256 0 0.001052632 0.000451128 0.000451128 0.003759398 0.000902256 0.202255638 0.071578947 0.012330827 0.000451128 0.001203008 0.00075188 0.514887216 0.048571429 0.076691729 0.028721805 0.022857143 0.005714286 0.005714286 0 0 0 0 0 0 0
+ 
+FOSH_S3juv 30
+0 0.000300752 0.000451128 0.000902256 0 0.001052632 0.000451128 0.000451128 0.003759398 0.000902256 0.202255638 0.071578947 0.012330827 0.000451128 0.001203008 0.00075188 0.514887216 0.048571429 0.076691729 0.028721805 0.022857143 0.005714286 0.005714286 0 0 0 0 0 0 0
+
 # October - December                           
  
 FMAK_S4juv 30
@@ -4082,6 +4099,18 @@ FTWH_S4juv 30
  
 FINV_S4juv 30
 0 0.047 0.03 0.05 0.01 0.052 0.025 0.025 0.03 0.015 0.017 0.039 0.064 0.046 0.026 0.02 0.113 0.122 0.044 0.031 0.099 0.086 0.009 0 0 0 0 0 0 0
+
+FLSQ_S4juv 30
+0 0.083 0.083 0.083 0.083 0.083 0.095 0.083 0.083 0.11 0.03 0.03 0.03 0.03 0.03 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0 0 0 0 0 0 0
+ 
+FISQ_S4juv 30
+0 0.083 0.083 0.083 0.083 0.083 0.095 0.083 0.083 0.11 0.03 0.03 0.03 0.03 0.03 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0 0 0 0 0 0 0
+
+FNSH_S4juv 30
+0 0.000300752 0.000451128 0.000902256 0 0.001052632 0.000451128 0.000451128 0.003759398 0.000902256 0.202255638 0.071578947 0.012330827 0.000451128 0.001203008 0.00075188 0.514887216 0.048571429 0.076691729 0.028721805 0.022857143 0.005714286 0.005714286 0 0 0 0 0 0 0
+ 
+FOSH_S4juv 30
+0 0.000300752 0.000451128 0.000902256 0 0.001052632 0.000451128 0.000451128 0.003759398 0.000902256 0.202255638 0.071578947 0.012330827 0.000451128 0.001203008 0.00075188 0.514887216 0.048571429 0.076691729 0.028721805 0.022857143 0.005714286 0.005714286 0 0 0 0 0 0 0
 
 # Vertical distribution for invertebrate consumers (proportion in each
 # water column layer in day and night). First entry for each vector refers to water
@@ -7825,34 +7854,35 @@ MigIOBox_OSHad 30
 # Numbers and weights of each group that begin outside the model domain and must migrate in during the first year.      
 # Treat it these as part of the initial conditions when setting up initial stock sizes (i.e. adjust numbers inside       
 # the model domain accordingly). There is one entry per cohort and the sn and rn entries are the structural and      
-# reserve weight values for those to migrate in.                  
+# reserve weight values for those to migrate in.  
+# RM changed these from 10 vals to /numcohorts  20180228              
  
-KMIGa_INVERT_LSQ 10
-0 0 0 0 0 0 0 0 0 0
+KMIGa_INVERT_LSQ 2
+0 0
  
-KMIGa_INVERT_ISQ 10
-0 0 0 0 0 0 0 0 0 0
+KMIGa_INVERT_ISQ 2
+0 0
  
-KMIGa_INVERT_LOB 10
-0 0 0 0 0 0 0 0 0 0
+KMIGa_INVERT_LOB 1
+0
  
-KMIGa_INVERT_NSH 10
-0 0 0 0 0 0 0 0 0 0
+KMIGa_INVERT_NSH 2
+0 0
  
-KMIGa_INVERT_OSH 10
-0 0 0 0 0 0 0 0 0 0
+KMIGa_INVERT_OSH 2
+0 0
  
-KMIGa_INVERT_ZL 10
-0 0 0 0 0 0 0 0 0 0
+KMIGa_INVERT_ZL 1
+0
  
-KMIGa_INVERT_ZG 10
-0 0 0 0 0 0 0 0 0 0
+KMIGa_INVERT_ZG 1
+0
  
-KMIGa_INVERT_ZM 10
-0 0 0 0 0 0 0 0 0 0
+KMIGa_INVERT_ZM 1
+0
  
-KMIGa_INVERT_ZS 10
-0 0 0 0 0 0 0 0 0 0
+KMIGa_INVERT_ZS 1
+0
  
 
 # Numbers and weights of each group that begin outside the model domain and must migrate in during the first year. 
@@ -11546,14 +11576,19 @@ KUP_BB  0
 KUP_BO  0      
  
 
-##### Ref. AFDW for invert consumers so can determine avail fish groups 
-LSQ_sn 2375  
-ISQ_sn 2375  
+##### Ref. AFDW for invert consumers so can determine avail fish groups
+## 20180228 RM added juvenile groups based on SETAS
+LSQ_sn 2375
+jLSQ_sn 355  
+ISQ_sn 2375
+jISQ_sn 355
 LOB_sn 20263 
 RCB_sn 3290  
 BMS_sn 3290  
 NSH_sn 90    
+jNSH_sn 10
 OSH_sn 90    
+jOSH_sn 10
 ZG_sn  2375  
 
 # Detritus handother deep dem. parameters
@@ -11568,13 +11603,15 @@ k_refsDL      10000.0      Reference labile detrit. level in sediments (if highe
 
 
 ## Take a closer look at these for NEUS, OK for now
-
+### 20180228 RM added C for juvenile inverts based on SETAS and NEUS adult values
 # Clearance rates for consumers - this is used by Holling type feeding (predcase 0, 1, 2)
 ##C_ZG_T15         0.003     Clearance rate of gelatinous zooplankton (0.008)    mg3(mg N)-1 d-1  0.02 - 0.08
 ##C_jCEP_T15       0.01455   Clearance rate of juvenile cephalopods (0.08)       mg3(mg N)-1 d-1  0.1 - 0.2
 ##C_jPWN_T15       0.0015    Clearance rate of juvenile prawns (0.0008)          mg3(mg N)-1 d-1  0.0002 - 0.004
 C_LSQ_T15 0.01455  
+C_jLSQ_T15 0.01
 C_ISQ_T15 0.01455  
+C_jISQ_T15 0.01
 C_SCA_T15 0.02     
 C_QHG_T15 2e-05    
 C_CLA_T15 2e-05    
@@ -11584,7 +11621,9 @@ C_LOB_T15 6.5e-05
 C_RCB_T15 5e-05    
 C_BMS_T15 5e-05    
 C_NSH_T15 0.0015   
+C_jNSH_T15 0.01
 C_OSH_T15 0.0015   
+C_jOSH_T15 0.01
 C_ZL_T15  0.08     
 C_BD_T15  5e-04    
 C_ZG_T15  0.03    
@@ -11777,9 +11816,12 @@ C_INV 10
 1 5 15 25 45 45 45 45 50 50 
 
 # Consumer growth - this is used by Holling type feeding (predcase 0, 1, 2)
+### 20180228 RM added values for juvenile groups based on SETAS and adult NEUS vals
 ##mum_ZG_T15       0.017     Growth rate of gelatinous zooplankton              mg N d-1      0.02 - 0.35
 mum_LSQ_T15 0.0444     
+mum_jLSQ_T15 0.04
 mum_ISQ_T15 0.0444     
+mum_jISQ_T15 0.04
 mum_SCA_T15 0.05       
 mum_QHG_T15 0.0035     
 mum_CLA_T15 0.0035     
@@ -11789,7 +11831,9 @@ mum_LOB_T15 0.00012
 mum_RCB_T15 1e-04      
 mum_BMS_T15 1e-04      
 mum_NSH_T15 0.003043   
+mum_jNSH_T15 0.003
 mum_OSH_T15 0.003043   
+mum_jOSH_T15 0.003
 mum_ZL_T15  0.1        
 mum_BD_T15  0.004      
 mum_MA_T15  0.1        
@@ -15877,6 +15921,8 @@ FSPB_INV 10
  
 
 # Recruit location spatial distributions
+### 20180228 RM added values for ISQ, LSQ, OSH, NSH based on period 1 horizontal distribution (check these)
+
 MAK_recruit_hdistrib 30
 0 0 0 0 0 0 0 0.011111111 0.222222222 0.055555556 0.055555556 0.055555556 0.222222222 0.111111111 0.055555556 0.055555556 0 0 0 0.044444444 0.055555556 0.055555556 0 0 0 0 0 0 0 0
  
@@ -16054,7 +16100,20 @@ TWH_recruit_hdistrib 30
 INV_recruit_hdistrib 30
 0 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0 0 0 0 0 0 0
 
+LSQ_recruit_hdistrib 30
+0 0.083 0.083 0.083 0.083 0.083 0.095 0.083 0.083 0.11 0.03 0.03 0.03 0.03 0.03 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0 0 0 0 0 0 0
+ 
+ISQ_recruit_hdistrib 30
+0 0.083 0.083 0.083 0.083 0.083 0.095 0.083 0.083 0.11 0.03 0.03 0.03 0.03 0.03 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0 0 0 0 0 0 0
+
+NSH_recruit_hdistrib 30
+0 0.000300752 0.000451128 0.000902256 0 0.001052632 0.000451128 0.000451128 0.003759398 0.000902256 0.202255638 0.071578947 0.012330827 0.000451128 0.001203008 0.00075188 0.514887216 0.048571429 0.076691729 0.028721805 0.022857143 0.005714286 0.005714286 0 0 0 0 0 0 0
+ 
+OSH_recruit_hdistrib 30
+0 0.000300752 0.000451128 0.000902256 0 0.001052632 0.000451128 0.000451128 0.003759398 0.000902256 0.202255638 0.071578947 0.012330827 0.000451128 0.001203008 0.00075188 0.514887216 0.048571429 0.076691729 0.028721805 0.022857143 0.005714286 0.005714286 0 0 0 0 0 0 0
+
 # Recruit location vertical distibutions
+### 20180228 RM added values for ISQ, LSQ, OSH, NSH
  
 MAK_recruit_vdistrib 4
 0 0 0 1
@@ -16233,6 +16292,17 @@ TWH_recruit_vdistrib 4
 INV_recruit_vdistrib 4
 0.5 0.5 0 0
  
+LSQ_recruit_vdistrib 4
+0.5 0.5 0 0
+
+ISQ_recruit_vdistrib 4
+0.5 0.5 0 0
+
+OSH_recruit_vdistrib 4
+0.5 0.5 0 0
+
+NSH_recruit_vdistrib 4
+0.5 0.5 0 0
 
 # Distribution of recruits within recruitment period
 rec_m            1.0
