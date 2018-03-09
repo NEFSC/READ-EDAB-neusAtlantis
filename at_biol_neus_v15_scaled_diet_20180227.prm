@@ -116,7 +116,7 @@ flagrandom       0         Flag indicating whether add random wobble in aging/sp
 readin_popratio  0         Switch to indicate whether loading pre-existing age distributions or not 0
 
 # If fish respiration is off then the fish model is essentially/very similar to a Deriso-Schnute
-flagresp         0         Switch to turn fish respiration on/off: off=0, on=1                 1
+flagresp         1         Switch to turn fish respiration on/off: off=0, on=1                 1
 flagavgmig       1         Switch to turn averaging of migrant sizes on/off: off=0, on=1       1
 flagkdrop        1         Switch to turn cubic bacterial growth on/off: off=0, on=1           0
 flagbactstim     1         Switch to turn stimulation of bacterial growth on/off: off=0, on=1  0
@@ -1084,8 +1084,11 @@ MB_habdepend    0
 
 
 
-# Vertebrate density dependent movement related flags
+# movement related flags
 flagtempdepend   0         0 = off, 1 = temperature preferences used
+flagsaltdepend   0
+flagO2depend    0
+# Vertebrate density dependent movement related flags 0=off, 1=sedentary, 2=on, 3=sticky, 4=no explicit mvmt
 MAK_ddepend_move 0
 HER_ddepend_move 0
 WHK_ddepend_move 0
@@ -1137,13 +1140,13 @@ PSH_ddepend_move 0
 WSK_ddepend_move 0
 LSK_ddepend_move 0
 SK_ddepend_move 0
-SB_ddepend_move 2
+SB_ddepend_move 0
 PIN_ddepend_move 0
-REP_ddepend_move 2
-RWH_ddepend_move 2
-BWH_ddepend_move 2
-SWH_ddepend_move 2
-TWH_ddepend_move 2
+REP_ddepend_move 0
+RWH_ddepend_move 0
+BWH_ddepend_move 0
+SWH_ddepend_move 0
+TWH_ddepend_move 0
 INV_ddepend_move 0
 
 ### June 24 2015, Gavin Fay @UmassD, Invertebrate entries copied from v1
@@ -1573,21 +1576,21 @@ MB_wc            0.1       Scalar for microphytoben. growth in wc (reduced as no
 # Primary producer light requirements 
 KI_PL_T15        10        Light saturation, large phytoplankton             W m-2          10 - 20
 KI_PS_T15        5        Light saturation, small phytoplankton             W m-2          10 - 20
-KI_DF_T15        5        Light saturation, dinoflagellates                 W m-2          10 - 20
+KI_DF_T15        10        Light saturation, dinoflagellates                 W m-2          10 - 20
 KI_MA_T15        5         Light saturation, macroalgae                      W m-2             5
 KI_SG_T15        65        Light saturation, seagrass                        W m-2             65
 KI_MB_T15        3         Light saturation, microphytobenthos               W m-2             3
 
 eddy_scale       10.0       Coefficient scaling eddy strength impact on phytoplankton growth    1.0
 # Primary producer nutrient requirements 
-KN_PL            25        Half-sat const for PL growth on DIN (15)          mg N m-3          10
+KN_PL            20        Half-sat const for PL growth on DIN (15)          mg N m-3          10
 KN_PS            5    Half-sat const for PS growth on DIN (13)          mg N m-3          4
 KN_DF            50         Half-sat const for DF growth on DIN (13)          mg N m-3          4
 KN_MA            200        Half-sat const for MA growth on DIN (20)          mg N m-3          20
 KN_SG            50         Half-sat const for SG growth on DIN (12)          mg N m-3          5
 KN_MB            200       Half-sat const for MB growth on DIN (200)         mg N m-3          200
 
-KS_PL            25        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
+KS_PL            20        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
 KS_PS            0         Half-sat const for PS growth on a second nutrient mg nutrient m-3   0 
 KS_DF            0         Half-sat const for DF growth on a second nutrient mg nutrient m-3   0 
 KS_MB            200        Half-sat const for MB growth on Si                mg Si m-3         100
@@ -1604,11 +1607,11 @@ KF_MA            0
 KF_SG            0
 
 # Bacterial nutrient requirements 
-KN_BB            0         Half-sat const for sediment bacteria NH uptake    mg N m-3        0 - 10       
-KN_PB            0         Half-sat const for pelagic bacteria NH uptake    mg N m-3        0 - 10       
+KN_BB            0.5         Half-sat const for sediment bacteria NH uptake    mg N m-3        0 - 10       
+KN_PB            0.5         Half-sat const for pelagic bacteria NH uptake    mg N m-3        0 - 10       
 
 # Bacterial population parameters (how much bacterial biomass detritus can support)
-XPB_DL           0.4      Maximum ratio of PB to DL biomass                                0.3 - 0.4
+XPB_DL           0.5      Maximum ratio of PB to DL biomass                                0.3 - 0.4
 XBB_DL           0.18      Maximum ratio of BB to DL biomass                                0.15 - 0.2
  
 XPB_DR           0.012     Maximum ratio of PB to DR biomass                               0.01 - 0.015
@@ -1623,10 +1626,10 @@ BBdamp           0.85      Damping coefficient for BB fluxes                    
 # Space restrictions for basal (epibenthic and some infauna) groups     
 MAmax            10000     Maximum macroalgal biomass                        mg N m-2         10000
 SGmax            8000      Maximum seagrass biomass                          mg N m-2         2000
-MBmax            30000     Maximum microphytobenthos biomass on sediment     mg N m-2         1000
+MBmax            1000     Maximum microphytobenthos biomass on sediment     mg N m-2         1000
 # These MBmax is used only as a relative measure for habitat calculations it does not constrain MB growth for now
 BGmax            1000      Maximum benthic grazer biomass                    mg N m-2         1000
-BDmax            20000     Maximum deposit feeder biomass                    mg N m-2         500000
+BDmax            200000     Maximum deposit feeder biomass                    mg N m-2         500000
 BOmax            40000     Maximum meiobenthos biomass                       mg N m-2         50600
 #BFSmax           5000      Maximum shallow filter feeder biomass             mg N m-2         2000
 SCAmax           5000      Maximum shallow filter feeder biomass             mg N m-2         2000
@@ -1636,8 +1639,8 @@ CLAmax           8000      Maximum other filter feeder biomass               mg 
 BFDmax           8000      Maximum deep filter feeder biomass                mg N m-2         1000
 BCmax             1000
 ##gfay @UMassD 06/24/15 added, not sure why these are needed
-LOBmax            1000
-RCBmax            1000
+LOBmax            10000
+RCBmax            10000
 
 # RM added 20170509
 flagconstrain_epiwander 0
@@ -11837,37 +11840,37 @@ C_INV 10
 # Consumer growth - this is used by Holling type feeding (predcase 0, 1, 2)
 ### 20180228 RM added values for juvenile groups based on SETAS and adult NEUS vals
 ##mum_ZG_T15       0.017     Growth rate of gelatinous zooplankton              mg N d-1      0.02 - 0.35
-mum_LSQ_T15 0.0444     
-mum_jLSQ_T15 0.04
-mum_ISQ_T15 0.0444     
-mum_jISQ_T15 0.04
-mum_SCA_T15 0.05       
-mum_QHG_T15 0.0035     
-mum_CLA_T15 0.0035     
-mum_BFF_T15 0.0035     
-mum_BG_T15  0.002      
-mum_LOB_T15 0.00012    
-mum_RCB_T15 1e-04      
-mum_BMS_T15 1e-04      
-mum_NSH_T15 0.003043   
-mum_jNSH_T15 0.003
-mum_OSH_T15 0.003043   
-mum_jOSH_T15 0.003
+mum_LSQ_T15 0.144     
+mum_jLSQ_T15 0.14
+mum_ISQ_T15 0.1444     
+mum_jISQ_T15 0.14
+mum_SCA_T15 0.15       
+mum_QHG_T15 0.135     
+mum_CLA_T15 0.135     
+mum_BFF_T15 0.135     
+mum_BG_T15  0.12      
+mum_LOB_T15 0.012    
+mum_RCB_T15 1e-02      
+mum_BMS_T15 1e-02      
+mum_NSH_T15 0.03043   
+mum_jNSH_T15 0.03
+mum_OSH_T15 0.03043   
+mum_jOSH_T15 0.03
 mum_ZL_T15  0.1        
-mum_BD_T15  0.004      
+mum_BD_T15  0.14      
 mum_MA_T15  0.1        
 mum_MB_T15  0.18       
 mum_SG_T15  0.07       
-mum_BC_T15  8e-04      
-mum_ZG_T15  0.017      
-mum_PL_T15  0.4        
+mum_BC_T15  8e-01      
+mum_ZG_T15  0.17      
+mum_PL_T15  0.1        
 mum_DF_T15  0.09       
 mum_PS_T15  0.05       
 mum_ZM_T15  0.18       
-mum_ZS_T15  0.55       
-mum_PB_T15  1.5        
-mum_BB_T15  1.5        
-mum_BO_T15  0.04       
+mum_ZS_T15  0.25       
+mum_PB_T15  0.15        
+mum_BB_T15  0.015        
+mum_BO_T15  0.1       
 
 # Vertebrate growth rates for each "group," per age class mg N d-1
 # See _flag.fish.rates above to see whether clearance and growth rates 
@@ -18698,8 +18701,6 @@ SWH_min_O2 0
 TWH_min_O2 0         
 INV_min_O2 0         
 
-flagsaltdepend   0
-flagO2depend    0
 
 
 k_SED            0.05      Coefficient of light absoption due to sediment. Only used if flagIsEstuary is on. 
