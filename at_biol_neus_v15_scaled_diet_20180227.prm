@@ -116,7 +116,7 @@ flagrandom       0         Flag indicating whether add random wobble in aging/sp
 readin_popratio  0         Switch to indicate whether loading pre-existing age distributions or not 0
 
 # If fish respiration is off then the fish model is essentially/very similar to a Deriso-Schnute
-flagresp         1         Switch to turn fish respiration on/off: off=0, on=1                 1
+flagresp         0         Switch to turn fish respiration on/off: off=0, on=1                 1
 flagavgmig       1         Switch to turn averaging of migrant sizes on/off: off=0, on=1       1
 flagkdrop        1         Switch to turn cubic bacterial growth on/off: off=0, on=1           0
 flagbactstim     1         Switch to turn stimulation of bacterial growth on/off: off=0, on=1  0
@@ -1583,14 +1583,14 @@ KI_MB_T15        3         Light saturation, microphytobenthos               W m
 
 eddy_scale       10.0       Coefficient scaling eddy strength impact on phytoplankton growth    1.0
 # Primary producer nutrient requirements 
-KN_PL            20        Half-sat const for PL growth on DIN (15)          mg N m-3          10
+KN_PL            15        Half-sat const for PL growth on DIN (15)          mg N m-3          10
 KN_PS            5    Half-sat const for PS growth on DIN (13)          mg N m-3          4
-KN_DF            50         Half-sat const for DF growth on DIN (13)          mg N m-3          4
-KN_MA            200        Half-sat const for MA growth on DIN (20)          mg N m-3          20
-KN_SG            50         Half-sat const for SG growth on DIN (12)          mg N m-3          5
+KN_DF            20         Half-sat const for DF growth on DIN (13)          mg N m-3          4
+KN_MA            20        Half-sat const for MA growth on DIN (20)          mg N m-3          20
+KN_SG            12         Half-sat const for SG growth on DIN (12)          mg N m-3          5
 KN_MB            200       Half-sat const for MB growth on DIN (200)         mg N m-3          200
 
-KS_PL            20        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
+KS_PL            5        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
 KS_PS            0         Half-sat const for PS growth on a second nutrient mg nutrient m-3   0 
 KS_DF            0         Half-sat const for DF growth on a second nutrient mg nutrient m-3   0 
 KS_MB            200        Half-sat const for MB growth on Si                mg Si m-3         100
@@ -1607,21 +1607,21 @@ KF_MA            0
 KF_SG            0
 
 # Bacterial nutrient requirements 
-KN_BB            0.5         Half-sat const for sediment bacteria NH uptake    mg N m-3        0 - 10       
-KN_PB            0.5         Half-sat const for pelagic bacteria NH uptake    mg N m-3        0 - 10       
+KN_BB            0.1         Half-sat const for sediment bacteria NH uptake    mg N m-3        0 - 10       
+KN_PB            0.1         Half-sat const for pelagic bacteria NH uptake    mg N m-3        0 - 10       
 
 # Bacterial population parameters (how much bacterial biomass detritus can support)
-XPB_DL           0.5      Maximum ratio of PB to DL biomass                                0.3 - 0.4
-XBB_DL           0.18      Maximum ratio of BB to DL biomass                                0.15 - 0.2
+XPB_DL           0.4      Maximum ratio of PB to DL biomass                                0.3 - 0.4
+XBB_DL           0.2      Maximum ratio of BB to DL biomass                                0.15 - 0.2
  
-XPB_DR           0.012     Maximum ratio of PB to DR biomass                               0.01 - 0.015
-XBB_DR           0.008     Maximum ratio of BB to DR biomass                               0.005 - 0.01
+XPB_DR           0.015     Maximum ratio of PB to DR biomass                               0.01 - 0.015
+XBB_DR           0.01     Maximum ratio of BB to DR biomass                               0.005 - 0.01
  
 k_PB             3       Shape of PB growth eq'n, 1 = linear, 3 = drop before max, 5 = drop at max 3.0
 k_BB             3       Shape of BB growth eq'n, 1 = linear, 3 = drop before max, 5 = drop at max     3.0
 
 BBthresh         0.1      Threshold BB flux level where damping starts      mg N m-2 s-1      0.1
-BBdamp           0.85      Damping coefficient for BB fluxes                                   0.75
+BBdamp           0.75      Damping coefficient for BB fluxes                                   0.75
 
 # Space restrictions for basal (epibenthic and some infauna) groups     
 MAmax            10000     Maximum macroalgal biomass                        mg N m-2         10000
@@ -11635,12 +11635,12 @@ C_jLSQ_T15 0.01
 C_ISQ_T15 0.01455  
 C_jISQ_T15 0.01
 C_SCA_T15 0.02     
-C_QHG_T15 2e-05    
-C_CLA_T15 2e-05    
-C_BFF_T15 2e-05    
-C_BG_T15  7.5e-05  
-C_LOB_T15 6.5e-05  
-C_RCB_T15 5e-05    
+C_QHG_T15 0.02    
+C_CLA_T15 0.02    
+C_BFF_T15 7e-04    
+C_BG_T15  5e-03  
+C_LOB_T15 6.5e-03 
+C_RCB_T15 5e-03    
 C_BMS_T15 5e-05    
 C_NSH_T15 0.0015   
 C_jNSH_T15 0.01
@@ -11654,7 +11654,7 @@ C_ZM_T15  0.08
 C_ZS_T15  0.05     
 C_PB_T15  0        
 C_BB_T15  0        
-C_BO_T15  0.001    
+C_BO_T15  0.004    
 C_BC_T15  0.006
 
 # Clearance rate of each vertebrate group, per age class                mg3(mg N)-1 d-1
@@ -11840,15 +11840,15 @@ C_INV 10
 # Consumer growth - this is used by Holling type feeding (predcase 0, 1, 2)
 ### 20180228 RM added values for juvenile groups based on SETAS and adult NEUS vals
 ##mum_ZG_T15       0.017     Growth rate of gelatinous zooplankton              mg N d-1      0.02 - 0.35
-mum_LSQ_T15 0.144     
-mum_jLSQ_T15 0.14
-mum_ISQ_T15 0.1444     
-mum_jISQ_T15 0.14
-mum_SCA_T15 0.15       
-mum_QHG_T15 0.135     
-mum_CLA_T15 0.135     
-mum_BFF_T15 0.135     
-mum_BG_T15  0.12      
+mum_LSQ_T15 0.044     
+mum_jLSQ_T15 0.04
+mum_ISQ_T15 0.0444     
+mum_jISQ_T15 0.04
+mum_SCA_T15 0.05       
+mum_QHG_T15 0.08     
+mum_CLA_T15 0.08     
+mum_BFF_T15 0.035     
+mum_BG_T15  0.02      
 mum_LOB_T15 0.012    
 mum_RCB_T15 1e-02      
 mum_BMS_T15 1e-02      
@@ -11856,21 +11856,21 @@ mum_NSH_T15 0.03043
 mum_jNSH_T15 0.03
 mum_OSH_T15 0.03043   
 mum_jOSH_T15 0.03
-mum_ZL_T15  0.1        
-mum_BD_T15  0.14      
-mum_MA_T15  0.1        
-mum_MB_T15  0.18       
+mum_ZL_T15  0.01        
+mum_BD_T15  0.014      
+mum_MA_T15  0.01        
+mum_MB_T15  0.018       
 mum_SG_T15  0.07       
-mum_BC_T15  8e-01      
-mum_ZG_T15  0.17      
+mum_BC_T15  0.08      
+mum_ZG_T15  0.07      
 mum_PL_T15  0.1        
 mum_DF_T15  0.09       
 mum_PS_T15  0.05       
-mum_ZM_T15  0.18       
-mum_ZS_T15  0.25       
+mum_ZM_T15  0.08       
+mum_ZS_T15  0.05       
 mum_PB_T15  0.15        
-mum_BB_T15  0.015        
-mum_BO_T15  0.1       
+mum_BB_T15  0.15        
+mum_BO_T15  0.01       
 
 # Vertebrate growth rates for each "group," per age class mg N d-1
 # See _flag.fish.rates above to see whether clearance and growth rates 
