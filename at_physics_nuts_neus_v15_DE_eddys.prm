@@ -264,7 +264,7 @@ mix_deep 0
 mix_deep_depth -500
 
 # Deep mixing of oxygen added 5/9/17 RM
-mix_deep_O2 1
+mix_deep_O2 0
 
 
 
@@ -344,7 +344,7 @@ advect_diffusion 1
 
 # is used. Yes = 1, No =0.
 
-resuspension 1
+resuspension 0
 
 
 
