@@ -249,7 +249,7 @@ mix_injection 1e-3
 
 # Scaling coefficient to capture increased mixing rate in winter
 
-mix_season_kz 10.0
+mix_season_kz 5.0
 
 
 
@@ -264,7 +264,7 @@ mix_deep 0
 mix_deep_depth -500
 
 # Deep mixing of oxygen added 5/9/17 RM
-mix_deep_O2 0
+mix_deep_O2 1
 
 
 
@@ -296,7 +296,7 @@ settling 1
 
 # added to the transport model is used. Yes = 1, No =0.
 
-bioirrigation 1
+bioirrigation 0
 
 
 
@@ -304,7 +304,7 @@ bioirrigation 1
 
 # added to the transport model is used. Yes = 1, No =0.
 
-bioturbation 1
+bioturbation 0
 
 
 
@@ -328,7 +328,7 @@ vert_diffusion 1
 
 # added to the transport model is used. Yes = 1, No =0.
 
-vert_mix 1
+vert_mix 0
 
 
 
@@ -344,7 +344,7 @@ advect_diffusion 1
 
 # is used. Yes = 1, No =0.
 
-resuspension 0
+resuspension 1
 
 
 
@@ -560,8 +560,8 @@ atmospheric_Si 0.0
 atmospheric_O2   198.9
 
 
-
-fill_zero_exchange 0
+### force mixing between adjacent boxes and layers with no fluxes after threshold number of days
+fill_zero_exchange 1
 
 flush_threshold 1
 
