@@ -25,12 +25,12 @@ pss1.rewind 1
 
 pss2.name ChesapeakeBay
 pss2.location 531250 2625000 -16
-pss2.data /tsfiles/CBAYlow.ts
+pss2.data /tsfiles/CBAY.ts
 pss2.rewind 1
 
 pss3.name HudsonRiver
 pss3.location 710000 3000000 -20
-pss3.data /tsfiles/HUDSONlow.ts
+pss3.data /tsfiles/HUDSON.ts
 pss3.rewind 1
 
 # pss2.name Basin16
@@ -50,7 +50,7 @@ pss3.rewind 1
 
 pss4.name NarragansettBay
 pss4.location 937500 3100000 -20
-pss4.data /tsfiles/NBAYlow.ts
+pss4.data /tsfiles/NBAY.ts
 pss4.rewind 1
 
 pss5.name Boston
