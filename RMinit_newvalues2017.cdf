@@ -35298,6 +35298,18 @@ variables:
 		salt:partic = 0 ;
 		salt:decay = 0. ;
 		salt:_FillValue = 0. ;
+	double SED(t, b, z) ;
+		salt:bmtype = "tracer" ;
+		salt:units = "mg m-3" ;
+		salt:long_name = "Sediment" ;
+		salt:dtype = 0 ;
+		salt:sumtype = 0 ;
+		salt:inwc = 1 ;
+		salt:insed = 1 ;
+		salt:dissol = 0 ;
+		salt:partic = 1 ;
+		salt:decay = 0. ;
+		salt:_FillValue = 0. ;
 	double sedbiodens(t, b) ;
 		sedbiodens:bmtype = "phys" ;
 		sedbiodens:units = "Animals per m2" ;
@@ -95737,6 +95749,38 @@ data:
   35, 35, 34.5, 34.5, 35,
   35, 35, 34.5, 34.5, 35,
   35, 35, 34.5, 34.5, 35 ;
+
+ SED =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
 
  sedbiodens =
   _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, 
