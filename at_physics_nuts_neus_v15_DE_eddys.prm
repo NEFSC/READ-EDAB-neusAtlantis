@@ -360,7 +360,7 @@ decay_wc 1
 
 # is used in the sediment. Yes = 1, No =0.
 
-decay_sed 1
+decay_sed 0
 
  
 
@@ -561,7 +561,9 @@ atmospheric_O2   198.9
 
 
 ### force mixing between adjacent boxes and layers with no fluxes after threshold number of days
-fill_zero_exchange 1
+fill_zero_exchange 0
+
+use_fill_horizmix 0
 
 flush_threshold 1
 
