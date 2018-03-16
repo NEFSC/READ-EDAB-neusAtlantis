@@ -7758,7 +7758,7 @@ variables:
 		Diatom_N:passive = 1 ;
 		Diatom_N:svel = -2.893e-004 ;
 		Diatom_N:xvel = 0. ;
-		Diatom_N:psize = 1.e-005 ;
+		Diatom_N:psize = 1.e-004 ;
 		Diatom_N:b_dens = 1000000000. ;
 		Diatom_N:i_conc = 200000000. ;
 		Diatom_N:f_conc = 200000000. ;
@@ -7777,7 +7777,7 @@ variables:
 		Diatom_S:passive = 1 ;
 		Diatom_S:svel = -2.893e-004 ;
 		Diatom_S:xvel = 0. ;
-		Diatom_S:psize = 1.e-005 ;
+		Diatom_S:psize = 1.e-004 ;
 		Diatom_S:b_dens = 1000000000. ;
 		Diatom_S:i_conc = 200000000. ;
 		Diatom_S:f_conc = 200000000. ;
@@ -7796,7 +7796,7 @@ variables:
 		DinoFlag_N:passive = 1 ;
 		DinoFlag_N:svel = -2.893e-005 ;
 		DinoFlag_N:xvel = 0. ;
-		DinoFlag_N:psize = 1.16e-004 ;
+		DinoFlag_N:psize = 7.5e-005 ;
 		DinoFlag_N:b_dens = 1000000000. ;
 		DinoFlag_N:i_conc = 200000000. ;
 		DinoFlag_N:f_conc = 200000000. ;
@@ -35298,6 +35298,25 @@ variables:
 		salt:partic = 0 ;
 		salt:decay = 0. ;
 		salt:_FillValue = 0. ;
+	double SED(t, b, z) ;
+		SED:bmtype = "tracer" ;
+		SED:units = "mg m-3" ;
+		SED:long_name = "Sediment" ;
+		SED:dtype = 0 ;
+		SED:sumtype = 0 ;
+		SED:inwc = 1 ;
+		SED:insed = 1 ;
+		SED:dissol = 0 ;
+		SED:partic = 1 ;
+		SED:decay = 0. ;
+		SED:_FillValue = 0. ;
+		SED:passive = 1 ;
+		SED:svel = 0. ;
+		SED:xvel = 0. ;
+		SED:psize = 0.000001 ;
+		SED:b_dens = 1000000000. ;
+		SED:i_conc = 200000000. ;
+		SED:f_conc = 200000000. ;
 	double sedbiodens(t, b) ;
 		sedbiodens:bmtype = "phys" ;
 		sedbiodens:units = "Animals per m2" ;
@@ -95737,6 +95756,38 @@ data:
   35, 35, 34.5, 34.5, 35,
   35, 35, 34.5, 34.5, 35,
   35, 35, 34.5, 34.5, 35 ;
+
+ SED =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
 
  sedbiodens =
   _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, 

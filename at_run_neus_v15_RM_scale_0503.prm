@@ -34,7 +34,7 @@ checkstop     720 day    # Stop detailed logged output after this date
 
 fishtest      0        # Count up total population for each vertebrate after each main subroutine: 0=no, 1=yes
 
-flaggape      1        # Periodically list prey vs gape statistics (tuning diagnostic)
+flaggape      0        # Periodically list prey vs gape statistics (tuning diagnostic)
 
 flagchecksize 0        # Periodically list relative size (tuning diagnostic)
 
@@ -78,15 +78,15 @@ title      test version, DynEffort NEUS v1.5 with Atlantis2 codebase
 
 dt         24 hour     # 12 hour time step
 
-tstop      730 day   # Stop time after the given period (18260)18260  , 4000   2191
+tstop      3651 day   # Stop time after the given period (18260)18260  , 4000   2191
 
 toutstart  0 day       # Output start time
 
-toutinc    1 day      # Write output with this periodicity
+toutinc    30 day      # Write output with this periodicity
 
-toutfinc   1 day      # Write fisheries output with this periodicity
+toutfinc   30 day      # Write fisheries output with this periodicity
 
-tsumout    1 day     # Write stock state summary with this periodicity
+tsumout    30 day     # Write stock state summary with this periodicity
 
 fishout    0           # Switch to turn fisheries output on = 1, off = 0
 
