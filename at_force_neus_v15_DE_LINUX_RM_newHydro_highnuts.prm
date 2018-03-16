@@ -122,6 +122,9 @@ use_force_tracers 0
 #Evaporation 0
 #Recruitment_time_series 0
 
+### 20180302 added based on warning
+use_VertMixFiles 0
+
 
 ## G.Fay added 09/20/16
 # Frequency of inputs.ts and exports.ts output - write out each dt.

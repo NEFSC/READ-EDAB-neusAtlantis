@@ -176,6 +176,11 @@ track_contaminants 0
 #G.Fay, 20 Sep 2016
 check_dups 0
 
+# RM 20180202 added these Per Beth - set both to 1 to replicate old code
+# time calc is now different to allow for multiple spawns per year
+flag_old_embryo_init 0
+flag_replicate_old_calendar 0
+
 
 
 
