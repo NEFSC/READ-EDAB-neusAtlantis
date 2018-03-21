@@ -118,7 +118,7 @@ readin_popratio  0         Switch to indicate whether loading pre-existing age d
 # If fish respiration is off then the fish model is essentially/very similar to a Deriso-Schnute
 flagresp         0         Switch to turn fish respiration on/off: off=0, on=1                 1
 flagavgmig       1         Switch to turn averaging of migrant sizes on/off: off=0, on=1       1
-flagkdrop        1         Switch to turn cubic bacterial growth on/off: off=0, on=1           0
+flagkdrop        0         Switch to turn cubic bacterial growth on/off: off=0, on=1           0
 flagbactstim     1         Switch to turn stimulation of bacterial growth on/off: off=0, on=1  0
 flagBOlim        0         Switch to turn OB population limitation on/off: off=0, on=1         0
 flagBDlim        0         Switch to turn BD population limitation on/off: off=0, on=1         0
@@ -134,9 +134,9 @@ flagBClim 0
 # interaction formulations used      
 flagtrackpops    1         Flag to indicate whether yearly stock value required             1
 flagseason       1         Flag of seasonal change, 0 for no, 1 yes                            1
-flaglight        0         Light adaptation: 1 = on, 0 = off                                   1
-flagIsEstuary    0
-flaglightopt     0         Light model: 0=midwater proxy used, 1=bottom, 2=top, 3=middle of layer                     3
+flaglight        1         Light adaptation: 1 = on, 0 = off                                   1
+flagIsEstuary    1
+flaglightopt     3         Light model: 0=midwater proxy used, 1=bottom, 2=top, 3=middle of layer                     3
 flagmodeltemp    0         Temperature model used: 1 = regression, 0 = from data
 flagq10          1         Q10 corrections used in the model: 1 = yes, 0 = no                  1
 O2case           3         Oxygen limitation used: 0 = ambient O2, 1 = based on depth, 2 = IGBEM, 3 = quadratic lim   3
@@ -1575,7 +1575,7 @@ MB_wc            0.1       Scalar for microphytoben. growth in wc (reduced as no
 
 # Primary producer light requirements 
 KI_PL_T15        10        Light saturation, large phytoplankton             W m-2          10 - 20
-KI_PS_T15        5        Light saturation, small phytoplankton             W m-2          10 - 20
+KI_PS_T15        10        Light saturation, small phytoplankton             W m-2          10 - 20
 KI_DF_T15        10        Light saturation, dinoflagellates                 W m-2          10 - 20
 KI_MA_T15        5         Light saturation, macroalgae                      W m-2             5
 KI_SG_T15        65        Light saturation, seagrass                        W m-2             65
@@ -1583,17 +1583,17 @@ KI_MB_T15        3         Light saturation, microphytobenthos               W m
 
 eddy_scale       10.0       Coefficient scaling eddy strength impact on phytoplankton growth    1.0
 # Primary producer nutrient requirements 
-KN_PL            15        Half-sat const for PL growth on DIN (15)          mg N m-3          10
+KN_PL            10        Half-sat const for PL growth on DIN (15)          mg N m-3          10
 KN_PS            5    Half-sat const for PS growth on DIN (13)          mg N m-3          4
 KN_DF            20         Half-sat const for DF growth on DIN (13)          mg N m-3          4
 KN_MA            20        Half-sat const for MA growth on DIN (20)          mg N m-3          20
 KN_SG            12         Half-sat const for SG growth on DIN (12)          mg N m-3          5
 KN_MB            200       Half-sat const for MB growth on DIN (200)         mg N m-3          200
 
-KS_PL            5        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
+KS_PL            10        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
 KS_PS            0         Half-sat const for PS growth on a second nutrient mg nutrient m-3   0 
 KS_DF            0         Half-sat const for DF growth on a second nutrient mg nutrient m-3   0 
-KS_MB            200        Half-sat const for MB growth on Si                mg Si m-3         100
+KS_MB            100        Half-sat const for MB growth on Si                mg Si m-3         100
 #gfay@umassd 06/24/15  added KS_MA to suppress error, setting to zero CHECK
 KS_MA            0
 KS_SG            0
