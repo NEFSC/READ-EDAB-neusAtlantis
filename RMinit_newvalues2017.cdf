@@ -35300,10 +35300,10 @@ variables:
 		salt:_FillValue = 0. ;
 	double SED(t, b, z) ;
 		SED:bmtype = "tracer" ;
-		SED:units = "mg m-3" ;
+		SED:units = "mg N m-3" ;
 		SED:long_name = "Sediment" ;
 		SED:dtype = 0 ;
-		SED:sumtype = 0 ;
+		SED:sumtype = 1 ;
 		SED:inwc = 1 ;
 		SED:insed = 1 ;
 		SED:dissol = 0 ;
@@ -35313,6 +35313,7 @@ variables:
 		SED:passive = 1 ;
 		SED:svel = 0. ;
 		SED:xvel = 0. ;
+		SED:isabs = 0 ;
 		SED:psize = 0.000001 ;
 		SED:b_dens = 1000000000. ;
 		SED:i_conc = 200000000. ;

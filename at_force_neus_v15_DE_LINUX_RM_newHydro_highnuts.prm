@@ -25,12 +25,12 @@ pss1.rewind 1
 
 pss2.name ChesapeakeBay
 pss2.location 531250 2625000 -16
-pss2.data /tsfiles/CBAY2.ts
+pss2.data /tsfiles/CBAYlow.ts
 pss2.rewind 1
 
 pss3.name HudsonRiver
 pss3.location 710000 3000000 -20
-pss3.data /tsfiles/HUDSON.ts
+pss3.data /tsfiles/CBAYlow.ts
 pss3.rewind 1
 
 # pss2.name Basin16
@@ -50,7 +50,7 @@ pss3.rewind 1
 
 pss4.name NarragansettBay
 pss4.location 937500 3100000 -20
-pss4.data /tsfiles/NBAY.ts
+pss4.data /tsfiles/NBAYlow.ts
 pss4.rewind 1
 
 pss5.name Boston
@@ -114,8 +114,14 @@ typeResidualsts 0
 
 #RM added 20170517 based on warnings
 use_phFiles 0
+
+# RM adding Sedimnent tracer 20180316 (not implemented yet, need nc file, try input in .ts file instead)
 use_force_tracers 0
-#BottomStress 0
+#nforceTracers 1
+#tracerNames
+#SED
+
+#BottomStress <filename> #RM this only works if filename is supplied here
 #pCO2_forcing 0
 #FSPBChange 0
 #Precipitation 0
@@ -123,9 +129,9 @@ use_force_tracers 0
 #Recruitment_time_series 0
 
 
-## G.Fay added 09/20/16
+## G.Fay added 09/20/16, RM changed to 86400 from 43200
 # Frequency of inputs.ts and exports.ts output - write out each dt.
-inputs_tout 43200 seconds
+inputs_tout 86400 seconds
 
 ## G.Fay added 09/20/16
 use_external_scaling 0
