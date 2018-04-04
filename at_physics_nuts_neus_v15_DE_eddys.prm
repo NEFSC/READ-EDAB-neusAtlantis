@@ -249,7 +249,7 @@ mix_injection 1e-3
 
 # Scaling coefficient to capture increased mixing rate in winter
 
-mix_season_kz 5.0
+mix_season_kz 3.0
 
 
 

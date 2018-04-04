@@ -11859,17 +11859,17 @@ mum_jOSH_T15 0.03
 mum_ZL_T15  0.01        
 mum_BD_T15  0.014      
 mum_MA_T15  0.01        
-mum_MB_T15  0.018       
+mum_MB_T15  0.18       
 mum_SG_T15  0.07       
 mum_BC_T15  0.08      
 mum_ZG_T15  0.07      
-mum_PL_T15  0.1        
+mum_PL_T15  1.0        
 mum_DF_T15  0.09       
-mum_PS_T15  0.05       
-mum_ZM_T15  0.08       
-mum_ZS_T15  0.05       
-mum_PB_T15  0.15        
-mum_BB_T15  0.15        
+mum_PS_T15  0.2       
+mum_ZM_T15  0.1       
+mum_ZS_T15  0.9       
+mum_PB_T15  1.2        
+mum_BB_T15  1.5        
 mum_BO_T15  0.01       
 
 # Vertebrate growth rates for each "group," per age class mg N d-1
@@ -13629,72 +13629,32 @@ KLYS_SG 0
 mS_MA_T15        180.0     Scour (bottom stress) macroalgae mortality        d-1             120 - 180
 mS_SG_T15        0.00002   Excessive DIN seagrass  mortality                 d-1             0.0 - 0.0002
 
-## Linear mortality 
+## Linear mortality modified 20180404 RM, drop mL_XXX_T15 and change to zero for tuning
 # Invertebrates
-SCA_mL 2
-3e-07 3e-07
-QHG_mL 2
-5e-07 5e-07
-CLA_mL 2
-5e-07 5e-07
-BFF_mL 2
-5e-07 5e-07
 
-BG_mL 2  
-1e-06 1e-06
-LOB_mL 2  
-2e-06 2e-06
-RCB_mL 2  
-3e-06 3e-06
-BMS_mL 2  
-3e-06 3e-06
-ZL_mL 2  
-5e-06 5e-06
-BD_mL 2  
-1e-07 1e-07
-MA_mL 2  
-3.25e-05 3.25e-05
-MB_mL 2  
-0.005 0.005
-SG_mL 2  
-2e-05 2e-05
-BC_mL 2  
-8e-05 8e-05
-ZG_mL 2  
-3e-06 3e-06
-PL_mL 2  0.0015
-DF_mL 2  5e-04
-PS_mL 2  0.016
-ZM_mL 2  1e-04
-ZS_mL 2  8e-05
-PB_mL 2  1e-04
-BB_mL 2  1e-05
-BO_mL 2  4e-07
-
-
-#mL_SCA_T15 3e-07
-#mL_QHG_T15 5e-07
-#mL_CLA_T15 5e-07
-#mL_BFF_T15 5e-07
-#mL_BG_T15 1e-06
-#mL_LOB_T15 2e-06
-#mL_RCB_T15 3e-06
-#mL_BMS_T15 3e-06
-#mL_ZL_T15 5e-06
-#mL_BD_T15 1e-07
-#mL_MA_T15 3.25e-05
-#mL_MB_T15 0.005
-#mL_SG_T15 2e-05
-#mL_BC_T15 8e-05
-#mL_ZG_T15 3e-06
-#mL_PL_T15 0.0015
-#mL_DF_T15 5e-04
-#mL_PS_T15 0.016
-#mL_ZM_T15 1e-04
-#mL_ZS_T15 8e-05
-#mL_PB_T15 1e-04
-#mL_BB_T15 1e-05
-#mL_BO_T15 4e-07
+mL_SCA 0 #3e-07
+mL_QHG 0 #5e-07
+mL_CLA 0 #5e-07
+mL_BFF 0 #5e-07
+mL_BG 0 #1e-06
+mL_LOB 0 #2e-06
+mL_RCB 0 #3e-06
+mL_BMS 0 #3e-06
+mL_ZL 0 #5e-06
+mL_BD 0 #1e-07
+mL_MA 0 #3.25e-05
+mL_MB 0 #0.005
+mL_SG 0 #2e-05
+mL_BC 0 #8e-05
+mL_ZG 0 #3e-06
+mL_PL 0 #0.0015
+mL_DF 0 #5e-04
+mL_PS 0 #0.016
+mL_ZM 0 #1e-04
+mL_ZS 0 #8e-05
+mL_PB 0 #1e-04
+mL_BB 0 #1e-05
+mL_BO 0 #4e-07
 #mL_PL_T15        0.0015    Linear mortality rate of lg phytopl, 15 deg C     d-1 (0.15)       0.14
 #mL_PS_T15        0.016     Linear mortality rate of picophytopl, 15 deg C    d-1 (0.1)        0.14
 #mL_DF_T15        0.0005    Linear mortality rate of dinoflag, 15 deg C       d-1 (0.1)        0.14
@@ -13721,13 +13681,13 @@ BO_mL 2  4e-07
 # Invertebrates with age structure
 ### unmuted 20180228 RM
 LSQ_mL 2
-1e-06 1e-06 
+0 0 
 ISQ_mL 2
-1e-06 1e-06 
+0 0 
 NSH_mL 2
-6.75e-06 6.75e-06 
+0 0
 OSH_mL 2
-6.75e-06 6.75e-06 
+0 0 
 
 #LSQ_mL 1e-06
 #ISQ_mL 1e-06
@@ -14052,36 +14012,32 @@ INV_mL 2
 
 ## Quadratic mortality 
 # Invertebrates
-SCA_mQ 2  
-0.00E+00	0.00E+00
-QHG_mQ 2
-0.00E+00	0.00E+00
-CLA_mQ 2
-0.00E+00	0.00E+00
-BFF_mQ 2
-0.00E+00	0.00E+00
-BG_mQ 2
-0.00E+00	0.00E+00
-LOB_mQ 2
-0.00E+00	0.00E+00
-RCB_mQ 2
-0.00E+00	0.00E+00
-BMS_mQ 2
-0.00E+00	0.00E+00
-ZL_mQ 2
-0.00E+00	0.00E+00
-BD_mQ 2
-0.00E+00	0.00E+00
-BC_mQ 2  
-0.00E+00	0.00E+00
-ZG_mQ 2  
-0.00E+00	0.00E+00
-ZM_mQ 2  
-0.00E+00	0.00E+00
-ZS_mQ 2  
-0.00E+00	0.00E+00
-BO_mQ 2  
-0.00E+00	0.00E+00
+SCA_mQ 0
+QHG_mQ 0
+CLA_mQ 0
+BFF_mQ 0
+BG_mQ 0
+LOB_mQ 0
+RCB_mQ 0
+BMS_mQ 0
+ZL_mQ 0
+BD_mQ 0
+BC_mQ 0
+ZG_mQ 0
+ZM_mQ 0
+ZS_mQ 0
+BO_mQ 0
+
+# Invertebrates with age structure
+### added 20180404 RM
+LSQ_mQ 2
+0 0 
+ISQ_mQ 2
+0 0 
+NSH_mQ 2
+0 0
+OSH_mQ 2
+0 0 
 
 #Vertebrates
 MAK_mQ	2
@@ -14236,15 +14192,15 @@ INV_mQ	2
 #mQ_BG_T15        0.0       Quad. mortality rate of benth. grazers, 15 deg C  d-1              0.0 - 0.00001
 
 # Invertebrates with age structure
-### unmuted 20180228 RM
-LSQ_mQ 2 
-0.00147 0.00176
-ISQ_mQ 2 
-0.00147 0.00176
-NSH_mQ 2
-0.00177 0.00177
-OSH_mQ 2
-0.00177 0.00177
+### muted 20180404 RM replaced with zeros
+#LSQ_mQ 2 
+#0.00147 0.00176
+#ISQ_mQ 2 
+#0.00147 0.00176
+#NSH_mQ 2
+#0.00177 0.00177
+#OSH_mQ 2
+#0.00177 0.00177
 
 #Terminal (senescence mortality) for biomass pools (proportion of terminal age group dying)
 ### param added from SETAS based on warning, RM 20180228
