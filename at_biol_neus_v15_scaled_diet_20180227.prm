@@ -13632,29 +13632,29 @@ mS_SG_T15        0.00002   Excessive DIN seagrass  mortality                 d-1
 ## Linear mortality modified 20180404 RM, drop mL_XXX_T15 and change to zero for tuning
 # Invertebrates
 
-mL_SCA 0 #3e-07
-mL_QHG 0 #5e-07
-mL_CLA 0 #5e-07
-mL_BFF 0 #5e-07
-mL_BG 0 #1e-06
-mL_LOB 0 #2e-06
-mL_RCB 0 #3e-06
-mL_BMS 0 #3e-06
-mL_ZL 0 #5e-06
-mL_BD 0 #1e-07
-mL_MA 0 #3.25e-05
-mL_MB 0 #0.005
-mL_SG 0 #2e-05
-mL_BC 0 #8e-05
-mL_ZG 0 #3e-06
-mL_PL 0 #0.0015
-mL_DF 0 #5e-04
-mL_PS 0 #0.016
-mL_ZM 0 #1e-04
-mL_ZS 0 #8e-05
-mL_PB 0 #1e-04
-mL_BB 0 #1e-05
-mL_BO 0 #4e-07
+SCA_mL 0 #3e-07
+QHG_mL 0 #5e-07
+CLA_mL 0 #5e-07
+BFF_mL 0 #5e-07
+BG_mL 0 #1e-06
+LOB_mL 0 #2e-06
+RCB_mL 0 #3e-06
+BMS_mL 0 #3e-06
+ZL_mL 0 #5e-06
+BD_mL 0 #1e-07
+MA_mL 0 #3.25e-05
+MB_mL 0 #0.005
+SG_mL 0 #2e-05
+BC_mL 0 #8e-05
+ZG_mL 0 #3e-06
+PL_mL 0 #0.0015
+DF_mL 0 #5e-04
+PS_mL 0 #0.016
+ZM_mL 0 #1e-04
+ZS_mL 0 #8e-05
+PB_mL 0 #1e-04
+BB_mL 0 #1e-05
+BO_mL 0 #4e-07
 #mL_PL_T15        0.0015    Linear mortality rate of lg phytopl, 15 deg C     d-1 (0.15)       0.14
 #mL_PS_T15        0.016     Linear mortality rate of picophytopl, 15 deg C    d-1 (0.1)        0.14
 #mL_DF_T15        0.0005    Linear mortality rate of dinoflag, 15 deg C       d-1 (0.1)        0.14
