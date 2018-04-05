@@ -78,9 +78,9 @@ title      test version, DynEffort NEUS v1.5 with Atlantis2 codebase
 
 dt         24 hour     # 12 hour time step
 
-tstop      731 day   # Stop time after the given period (18260)18260  , 4000   2191
+tstop      18260 day   # Stop time after the given period (18260)18260  , 4000   2191
 
-toutstart  0 day       # Output start time
+toutstart  1 day       # Output start time
 
 toutinc    10 day      # Write output with this periodicity
 
