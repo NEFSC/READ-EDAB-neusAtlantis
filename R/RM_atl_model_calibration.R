@@ -1,0 +1,242 @@
+# Using Atlantistools to create plots for model calibration and comparison, 
+# code devloped from the vignette - load preprocessed data then make plots/pdfs
+# RM 20170328
+
+
+library("atlantistools")
+library("ggplot2")
+library("gridExtra")
+
+# Windows
+setwd(choose.dir(default=getwd())) # where run data are saved
+d2=getwd()
+d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
+
+#linux
+d1='/home/ryan/Git/atneus_RM'
+d2='/home/ryan/AtlRuns/20170503b'
+#d2='/media/ryan/TOSHIBA EXT/1 RM/10 ATLANTIS transfer/20170413'
+setwd(d2)
+
+filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
+
+# USE TO LOAD Result from atlantistools preprocess (created in 'RM_preprocess_v2.R')
+loadRData <- function(fileName){
+  #loads an RData file, and returns it
+  load(fileName)
+  get(ls()[ls() != "fileName"])
+}
+prepr=list.files(d2, pattern=".rdata") # get name
+result<- loadRData(prepr) # load
+
+
+fig_height2 <- 11
+gen_labels <- list(x = "Time [years]", y = "Biomass [t]")
+
+files=list.files(path=d2, pattern='.nc')
+nc.str=strsplit(files, '.nc')
+lncstr=nchar(nc.str)
+ncbase=nc.str[which(lncstr==min(lncstr))] #get base nc file name
+# nc_gen    <- file.path(d2, paste(ncbase, '.nc', sep=""))
+# nc_prod   <- file.path(d2, paste(ncbase, 'PROD.nc', sep=""))
+# dietcheck <- file.path(d2, paste(ncbase, 'DietCheck.txt', sep=""))
+# yoy       <- file.path(d2, paste(ncbase, 'YOY.txt', sep=""))
+# ssb       <- file.path(d2, paste(ncbase, 'SSB.txt', sep=""))
+
+# External recruitment data
+# ex_rec_ssb <- read.csv(file.path(d, "setas-ssb-rec.csv"), stringsAsFactors = FALSE)
+# ex_rec_ssb <- read.csv(ssb, stringsAsFactors = F)
+
+# External biomass data
+# ex_bio <- read.csv(file.path(d, "setas-bench.csv"), stringsAsFactors = FALSE)
+
+# bgm file
+bgm       <- file.path(d1, "neus_tmerc_RM.bgm") #30_v15.bgm")
+
+####__________Overall Biomass_____________
+df_bio <- combine_groups(result$biomass, group_col = "species", combine_thresh = 10)
+plot <- plot_bar(df_bio)
+update_labels(plot, labels = gen_labels)
+ggsave(paste(filename," overall biomass.png", sep=''), width=7, height=4, scale=1, dpi=96)
+
+###_________ Biomass timeseries#_______________________
+# pdf(file=paste(filename, '_biomassTS.pdf', sep='')) # does not work as configured
+plot <- plot_line(result$biomass)
+update_labels(plot, labels = gen_labels)
+ggsave(paste(filename," biomass timeseries2.png", sep=''), width=20, height=17, dpi=96)
+
+# dev.off()
+### Biomass at age timeseries#________________________
+plot <- plot_line(result$biomass_age, col = "agecl")
+update_labels(p = plot, labels = c(gen_labels, list(colour = "Ageclass")))
+ggsave(paste(filename," biomass at age timeseries.png", sep=''), width=20, height=17, dpi=96)
+
+
+###_________Number timeseries#________________________
+plot <- plot_line(result$nums)
+update_labels(p = plot, labels = list(x = "Time [years]", y = "Numbers"))
+ggsave(paste(filename," numbers timeseries.png", sep=''), width=20, height=17, dpi=96)
+
+### Numbers at age timeseries#________________________
+plot <- plot_line(result$nums_age, col = "agecl")
+update_labels(p = plot, labels = list(x = "Time [years]", y = "Numbers", colour = "Ageclass"))
+ggsave(paste(filename," numbers at age timeseries.png", sep=''), width=20, height=17, dpi=96)
+###____________SSB and recruitment
+plot_rec(result$ssb_rec, ex_data = ex_rec_ssb)
+
+###____________PHYSICS____________________________
+plot <- plot_line(result$physics, wrap = NULL)
+custom_grid(plot, grid_x = "polygon", grid_y = "variable")
+ggsave(paste(filename," physics snapshot.png", sep=''), width=10, height=7, dpi=96)
+
+physics <- result$physics %>%
+  flip_layers() %>%
+  split(., .$variable)
+
+plots <- lapply(physics, plot_line, wrap = NULL) %>% 
+  lapply(., custom_grid, grid_x = "polygon", grid_y = "layer")
+
+for (i in seq_along(plots)) {
+  cat(paste0("## ", names(plots)[i]), sep = "\n")
+  plot <- update_labels(plots[[i]], labels = list(y = names(plots)[i]))
+  print(plot)
+  cat("\n\n")
+  ggsave(paste(filename,' ',names(plots)[i]," physics.png", sep=''), width=10, height=7, dpi=96)
+}
+### Fluxes 1
+plot <- flip_layers(result$flux) %>% 
+  plot_line(wrap = NULL, col = "variable")
+custom_grid(plot, grid_x = "polygon", grid_y = "layer")
+ggsave(paste(filename," fluxes 1.png", sep=''), width=10, height=7, dpi=96)
+
+### Fluxes 2
+plot <- flip_layers(result$sink) %>% 
+  plot_line(wrap = NULL, col = "variable")
+custom_grid(plot, grid_x = "polygon", grid_y = "layer")
+ggsave(paste(filename," fluxes 2.png", sep=''), width=10, height=7, dpi=96)
+
+### Change in wc height relative to nominal dz
+check_dz <- result$dz %>% 
+  dplyr::left_join(result$nominal_dz, by = c("polygon", "layer")) %>% 
+  dplyr::mutate(check_dz = atoutput.x / atoutput.y) %>% 
+  dplyr::filter(!is.na(check_dz)) # remove sediment layer
+
+plot <- plot_line(check_dz, x = "time", y = "check_dz", wrap = "polygon", col = "layer")
+update_labels(plot, list(x = "Time [years]", y = expression(dz/nominal_dz)))
+ggsave(paste(filename," change in wc height.png", sep=''), width=10, height=7, dpi=96)
+
+
+###____________________CALIBRATION PLOTS_____________________________
+
+### SN
+df_rel <- convert_relative_initial(result$structn_age)
+plot <- plot_line(df_rel, col = "agecl")
+plot <- update_labels(plot, list(x = "Time [years]", y = expression(SN/SN[init])))
+plot_add_box(plot)
+ggsave(paste(filename," SN_SN init.png", sep=''), width=20, height=17, dpi=96)
+
+### RN
+df_rel <- convert_relative_initial(result$resn_age)
+plot <- plot_line(df_rel, col = "agecl")
+plot <- update_labels(plot, list(x = "Time [years]", y = expression(RN/RN[init])))
+plot_add_box(plot)
+ggsave(paste(filename," RN_RN init.png", sep=''), width=20, height=17, dpi=96)
+
+### Biomass per ageclass
+df_rel <- convert_relative_initial(result$biomass_age)
+plot <- plot_line(df_rel, col = "agecl")
+plot <- update_labels(plot, list(x = "Time [years]", y = expression(Biomass/Biomass[init])))
+plot_add_box(plot)
+ggsave(paste(filename," Biomass at age_Bio age init.png", sep=''), width=20, height=17, dpi=96)
+
+### Eat per ageclass
+df_rel <- convert_relative_initial(result$eat_age)
+plot <- plot_line(df_rel, col = "agecl")
+plot <- update_labels(plot, list(x = "Time [years]", y = expression(Cons./Cons.[init])))
+plot_add_box(plot)
+ggsave(paste(filename," Consumption at age_Cons init.png", sep=''), width=20, height=17, dpi=96)
+
+### Growth per ageclass
+df_rel <- convert_relative_initial(result$growth_age)
+plot <- plot_line(df_rel, col = "agecl")
+plot <- update_labels(plot, list(x = "Time [years]", y = expression(Growth/Growth[init])))
+plot_add_box(plot)
+ggsave(paste(filename," Growth at age_growth init.png", sep=''), width=20, height=17, dpi=96)
+
+### Growth relative to initial conditions
+plot <- plot_line(result$growth_rel_init, y = "gr_rel", col = "agecl")
+update_labels(plot, list(y = expression((Growth - Growth[req])/Growth[req])))
+
+### Numbers per ageclass
+df_rel <- convert_relative_initial(result$nums_age)
+plot <- plot_line(df_rel, col = "agecl")
+plot <- update_labels(plot, list(x = "Time [years]", y = expression(Numbers/Numbers[init])))
+plot_add_box(plot)
+ggsave(paste(filename," Numbers at age_Num init.png", sep=''), width=20, height=17, dpi=96)
+
+### Biomass
+df_rel <- convert_relative_initial(result$biomass)
+plot <- plot_line(df_rel)
+plot <- update_labels(plot, list(x = "Time [years]", y = expression(Biomass/Biomass[init])))
+plot_add_box(plot)
+ggsave(paste(filename," Biomass_Bio init.png", sep=''), width=20, height=17, dpi=96)
+
+####__________ SPATIAL DISTRIBUTION PLOTS____________________________________
+### Numbers at age
+df <- agg_perc(result$nums_age, groups = c("time", "species"))
+plot <- plot_bar(df, fill = "agecl", wrap = "species")
+update_labels(plot, labels = list(x = "Time [years]", y = "Numbers [%]"))
+ggsave(paste(filename," Numbers at age percent.png", sep=''), width=20, height=17, dpi=96)
+
+### Biomass at age
+df <- agg_perc(result$biomass_age, groups = c("time", "species"))
+plot <- plot_bar(df, fill = "agecl", wrap = "species")
+update_labels(plot, labels = list(x = "Time [years]", y = "Biomass [%]"))
+ggsave(paste(filename," Biomass at age percent.png", sep=''), width=20, height=17, dpi=96)
+
+### DIET PLOTS
+# DO THIS FIRST...
+trace('get_colpal', edit=T) # Manually add more colors to make this work...
+# #  get_colpal <-function ()
+{
+  greys <- c(51, 128, 204, 71, 148, 224, 91, 168, 244, 58,
+             122, 209, 79, 140, 45, 136, 71, 247, 250, 250,
+             250, 250, 250, 250, 250, 250, 250, 250, 250, 250)
+  greys <- grDevices::rgb(cbind(greys, greys, greys), maxColorValue = 255)
+  col_pal <- c(RColorBrewer::brewer.pal(n = 12, name = "Paired"),
+               greys)
+  return(col_pal)
+}
+
+plots <- plot_diet(result$biomass_consumed, wrap_col = "agecl", combine_thresh = 3)
+pdf(file=paste(filename, '_diet_proportions.pdf', sep=''),paper='A4r',width=11, height=8)
+for (i in seq_along(plots)) {
+  cat(paste0("## Diet plot ", i, ": ", names(plots)[i]), sep = "\n")
+  gridExtra::grid.arrange(plots[[i]])
+  cat("\n\n")
+}
+dev.off()
+
+### Spatial Plots 1
+plots <- plot_spatial_box(result$biomass_spatial_stanza, bgm_as_df = convert_bgm(bgm = bgm), timesteps = 7)
+pdf(file=paste(filename, '_spatial biomass box distribution.pdf', sep=''), paper='A4r', width=11, height=8)
+for (i in seq_along(plots)) {
+  cat(paste0("## Spatial Plot ", i, ": ", names(plots)[i]), sep = "\n")
+  gridExtra::grid.arrange(plots[[i]])
+  cat("\n\n")
+}
+dev.off()
+
+### Spatial Plots 2
+plots <- plot_spatial_ts(result$biomass_spatial_stanza, bgm_as_df = convert_bgm(bgm = bgm), vol = result$vol)
+pdf(file=paste(filename, '_spatial biomass distribution timeseries.pdf', sep=''),paper='A4r', width=11, height=8)
+for (i in seq_along(plots)) {
+  cat(paste0("## Spatial Plot ", i, ": ", names(plots)[i]), sep = "\n")
+  gridExtra::grid.arrange(plots[[i]])
+  cat("\n\n")
+}
+dev.off()
+#_______________________________________________________________
+
+
+
