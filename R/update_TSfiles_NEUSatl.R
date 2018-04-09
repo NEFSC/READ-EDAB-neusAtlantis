@@ -36,6 +36,7 @@
 ## COLUMN6.units mg s-1
 
 # time, NH3, NO3, Lab_Det, Si, Det_Si
+d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM/tsfiles'
 d1="/home/ryan/Git/atneus_RM/tsfiles"
 setwd(d1)
 
@@ -276,3 +277,85 @@ DB=read_excel('/home/ryan/Downloads/delawarebay.xlsx', col_names = T) # not much
 names=unique(DB$`Parameter Long Name`)
 test=DB[which(DB$`Parameter Long Name`==names[4])]
 plot(test$`Result Value`*1000~test$`Start Date`, type='p')
+
+
+### read in finished data files
+v5=read.table(paste(d1,'/banksupwelling_div_1000_v5.ts', sep=''))
+CBlo=read.table(paste(d1,'/CBAYlow.ts', sep=''))
+NBlo=read.table(paste(d1,'/NBAYlow.ts', sep=''))
+
+## repeat 1 year, 3 years total to match hydro time
+library(dplyr)
+v5.3=bind_rows(replicate(3, v5, simplify = FALSE))
+CBlo.3=bind_rows(replicate(3, CBlo, simplify = FALSE))
+NBlo.3=bind_rows(replicate(3, NBlo, simplify = FALSE))
+
+summary(v5)
+summary(CBlo)
+summary(NBlo)
+
+x=apply(CBlo, 2, max)/86400
+x=apply(CBlo, 2, mean)/86400
+options(scipen=999)
+plot(CBlo$V6/86400, type='l')
+
+### fit harmonic to seasonal pattern to replicate 1 year over N years with smooth transitions
+## RM 20180409
+fitharmonic=function(xx, N){
+ssp=spectrum(xx)
+per <- 1/ssp$freq[ssp$spec==max(ssp$spec)]
+t=1:365
+reslm <- lm(xx ~ sin(2*pi/per*t)+cos(2*pi/per*t))
+summary(reslm)
+plot(xx~t)
+lines(reslm$fitted,col=2)
+test=rep(reslm$fitted, 3)
+plot(test)
+### pass through once more
+ssp=spectrum(test)
+per <- 1/ssp$freq[ssp$spec==max(ssp$spec)]
+t=1:(365*N)
+reslm <- lm(test ~ sin(2*pi/per*t)+cos(2*pi/per*t))
+plot(reslm$fitted.values)
+lines(test, col='red')
+reslm$fitted.values[reslm$fitted.values<0.05]=0.05 #limit to real values
+plot(reslm$fitted.values)
+lines(test, col='red')
+return(reslm$fitted.values)
+}
+
+### fit N year harmonic nutrient cycles
+CBlo.3$V2=fitharmonic(CBlo$V2,3)
+CBlo.3$V3=fitharmonic(CBlo$V3,3)
+NBlo.3$V2=fitharmonic(NBlo$V2,3)
+NBlo.3$V3=fitharmonic(NBlo$V3,3)
+
+v5.3$V2=fitharmonic(v5$V2, 3)
+v5.3$V3=fitharmonic(v5$V3, 3)
+v5.3$V4=fitharmonic(v5$V4, 3)
+v5.3$V5=fitharmonic(v5$V5, 3)
+v5.3$V6=fitharmonic(v5$V6, 3)
+
+CBlo.3[,c('V4', 'V5', 'V6')]=v5.3[,c('V4', 'V5', 'V6')] # copy Lab_det_N, Si, Det_Si to NBAY and CBAY
+
+NBlo.3[,1]=1:1095
+CBlo.3[,1]=1:1095
+v5.3[,1]=1:1095
+
+
+write.table(v5.3, file='v5_3yr.ts', col.names= F, row.names= F, sep=' ')
+write.table(NBlo.3, file='NBAYlo3yr.ts', col.names= F, row.names= F, sep=' ')
+write.table(CBlo.3, file='CBAYlo3yr.ts', col.names= F, row.names= F, sep=' ')
+
+### Now fix irradiance file
+irr=read.table(paste(d1,'/RMirradiance.ts', sep=''))
+test=bind_rows(replicate(3, irr, simplify = FALSE))
+plot(test$V2, type='l')
+test2=test
+test2$V2=fitharmonic(irr$V2,3)
+test2$V1=1:1095
+write.table(test2, file='RMirradiance_smooth_3yr.ts', col.names= F, row.names= F, sep=' ')
+write.table(test, file='RMirradiance_raw_3yr.ts', col.names= F, row.names= F, sep=' ')
+
+
+
