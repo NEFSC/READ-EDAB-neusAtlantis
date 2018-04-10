@@ -336,8 +336,23 @@ v5.3$V4=fitharmonic(v5$V4, 3)
 v5.3$V5=fitharmonic(v5$V5, 3)
 v5.3$V6=fitharmonic(v5$V6, 3)
 
-CBlo.3[,c('V4', 'V5', 'V6')]=v5.3[,c('V4', 'V5', 'V6')] # copy Lab_det_N, Si, Det_Si to NBAY and CBAY
+#### plot Si, DN, DSi and reduce where necessary before copying to NB and CB files:
+### silicate
+plot(v5.3$V5/86400/28) # grams per mole 28, max 3 uM Si
+### Lab_det_N
+plot(v5.3$V4/86400/14)
+### Detrital Silica
+plot(v5.3$V6/86400/28)
+### reduce NH4 and NO3 and Det_Si in v5.3 file:
+v5.3$V2=v5.3$V2/5 #set to max 0.4 uM N
+v5.3$V3=v5.3$V3/10 #set to max 2 uM N
+v5.3$V6=v5.3$V6/8 #set to max 1.2 uM Si
 
+### Copy Lab_det_N, Si, Det_Si to NBAY and CBAY
+CBlo.3[,c('V4', 'V5', 'V6')]=v5.3[,c('V4', 'V5', 'V6')]
+NBlo.3[,c('V4', 'V5', 'V6')]=v5.3[,c('V4', 'V5', 'V6')]
+
+### set date from 1 to 1095 (3 year file)
 NBlo.3[,1]=1:1095
 CBlo.3[,1]=1:1095
 v5.3[,1]=1:1095
