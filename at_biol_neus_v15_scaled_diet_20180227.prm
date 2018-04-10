@@ -7877,34 +7877,34 @@ MigIOBox_OSHad 30
 # Treat it these as part of the initial conditions when setting up initial stock sizes (i.e. adjust numbers inside       
 # the model domain accordingly). There is one entry per cohort and the sn and rn entries are the structural and      
 # reserve weight values for those to migrate in.  
-# RM changed these from 10 vals to /numcohorts  20180228              
+# RM changed these from 10 vals to /numcohorts  20180228 changed back 20180405 based on warnings              
  
-KMIGa_INVERT_LSQ 2
-0 0
+KMIGa_INVERT_LSQ 10
+0 0 0 0 0 0 0 0 0 0
  
-KMIGa_INVERT_ISQ 2
-0 0
+KMIGa_INVERT_ISQ 10
+0 0 0 0 0 0 0 0 0 0
  
-KMIGa_INVERT_LOB 1
-0
+KMIGa_INVERT_LOB 10
+0 0 0 0 0 0 0 0 0 0
  
-KMIGa_INVERT_NSH 2
-0 0
+KMIGa_INVERT_NSH 10
+0 0 0 0 0 0 0 0 0 0
  
-KMIGa_INVERT_OSH 2
-0 0
+KMIGa_INVERT_OSH 10
+0 0 0 0 0 0 0 0 0 0
  
-KMIGa_INVERT_ZL 1
-0
+KMIGa_INVERT_ZL 10
+0 0 0 0 0 0 0 0 0 0
  
-KMIGa_INVERT_ZG 1
-0
+KMIGa_INVERT_ZG 10
+0 0 0 0 0 0 0 0 0 0
  
-KMIGa_INVERT_ZM 1
-0
+KMIGa_INVERT_ZM 10
+0 0 0 0 0 0 0 0 0 0
  
-KMIGa_INVERT_ZS 1
-0
+KMIGa_INVERT_ZS 10
+0 0 0 0 0 0 0 0 0 0
  
 
 # Numbers and weights of each group that begin outside the model domain and must migrate in during the first year. 
