@@ -11856,21 +11856,21 @@ mum_NSH_T15 0.03043
 mum_jNSH_T15 0.03
 mum_OSH_T15 0.03043   
 mum_jOSH_T15 0.03
-mum_ZL_T15  0.01        
+mum_ZL_T15  0.05        
 mum_BD_T15  0.014      
 mum_MA_T15  0.01        
 mum_MB_T15  0.18       
 mum_SG_T15  0.07       
 mum_BC_T15  0.08      
 mum_ZG_T15  0.07      
-mum_PL_T15  1.0        
-mum_DF_T15  0.09       
+mum_PL_T15  1.5        
+mum_DF_T15  0.01       
 mum_PS_T15  0.2       
 mum_ZM_T15  0.1       
 mum_ZS_T15  0.9       
 mum_PB_T15  1.2        
 mum_BB_T15  1.5        
-mum_BO_T15  0.01       
+mum_BO_T15  0.1       
 
 # Vertebrate growth rates for each "group," per age class mg N d-1
 # See _flag.fish.rates above to see whether clearance and growth rates 
