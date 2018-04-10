@@ -298,6 +298,7 @@ x=apply(CBlo, 2, max)/86400
 x=apply(CBlo, 2, mean)/86400
 options(scipen=999)
 plot(CBlo$V6/86400, type='l')
+apply(v5, 2, mean)/86400/14
 
 ### fit harmonic to seasonal pattern to replicate 1 year over N years with smooth transitions
 ## RM 20180409
@@ -360,7 +361,11 @@ v5.3[,1]=1:1095
 
 write.table(v5.3, file='v5_3yr.ts', col.names= F, row.names= F, sep=' ')
 write.table(NBlo.3, file='NBAYlo3yr.ts', col.names= F, row.names= F, sep=' ')
-write.table(CBlo.3, file='CBAYlo3yr.ts', col.names= F, row.names= F, sep=' ')
+write.table(CBlo.3, file='CBAYlo3yrSED.ts', col.names= F, row.names= F, sep=' ')
+### drop SED for Hudson River box based on CBAY:
+test=CBlo.3
+test[,7]=NULL
+write.table(test, file='CBAYlo3yr.ts', col.names= F, row.names= F, sep=' ')
 
 ### Now fix irradiance file
 irr=read.table(paste(d1,'/RMirradiance.ts', sep=''))
