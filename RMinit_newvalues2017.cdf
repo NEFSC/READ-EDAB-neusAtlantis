@@ -7756,13 +7756,13 @@ variables:
 		Diatom_N:decay = 0. ;
 		Diatom_N:partic = 1 ;
 		Diatom_N:passive = 1 ;
-		Diatom_N:svel = -2.893e-004 ;
+		Diatom_N:svel = -2.893e-005 ;
 		Diatom_N:xvel = 0. ;
 		Diatom_N:psize = 1.e-004 ;
 		Diatom_N:b_dens = 1000000000. ;
 		Diatom_N:i_conc = 200000000. ;
 		Diatom_N:f_conc = 200000000. ;
-		Diatom_N:_FillValue = 0.05 ;
+		Diatom_N:_FillValue = 0.15 ;
 	double Diatom_S(t, b, z) ;
 		Diatom_S:bmtype = "tracer" ;
 		Diatom_S:units = "mg Si m-3" ;
@@ -7775,7 +7775,7 @@ variables:
 		Diatom_S:decay = 0. ;
 		Diatom_S:partic = 1 ;
 		Diatom_S:passive = 1 ;
-		Diatom_S:svel = -2.893e-004 ;
+		Diatom_S:svel = -2.893e-005 ;
 		Diatom_S:xvel = 0. ;
 		Diatom_S:psize = 1.e-004 ;
 		Diatom_S:b_dens = 1000000000. ;

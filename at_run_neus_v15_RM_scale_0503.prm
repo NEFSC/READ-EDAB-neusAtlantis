@@ -82,11 +82,11 @@ tstop      3660 day   # Stop time after the given period (18260)18260  , 4000   
 
 toutstart  1 day       # Output start time
 
-toutinc    10 day      # Write output with this periodicity
+toutinc    25 day      # Write output with this periodicity
 
-toutfinc   10 day      # Write fisheries output with this periodicity
+toutfinc   25 day      # Write fisheries output with this periodicity
 
-tsumout    10 day     # Write stock state summary with this periodicity
+tsumout    25 day     # Write stock state summary with this periodicity
 
 fishout    0           # Switch to turn fisheries output on = 1, off = 0
 
