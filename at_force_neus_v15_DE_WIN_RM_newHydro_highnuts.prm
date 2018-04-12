@@ -4,13 +4,13 @@
 # this is created from 2008-2010 daily files
 
 nhdfiles 1
-hd0.name \tsfiles\RMdoppioHydro.nc
+hd0.name \tsfiles\flowOutAll_fix_20180402.nc
 
 # Bottom stress
 
 #############################################
 # Point source\sink lists
-npointss 0
+npointss 8
 
 ## nutrient forcing             
 pss0.name GeorgesBank
@@ -30,7 +30,7 @@ pss2.rewind 1
 
 pss3.name HudsonRiver
 pss3.location 710000 3000000 -20
-pss3.data \tsfiles\CBAYlo3yrSED.ts
+pss3.data \tsfiles\CBAYlo3yr.ts
 pss3.rewind 1
 
 # pss2.name Basin16
@@ -71,19 +71,19 @@ pss7.rewind 1
 # Rain and evaporation
 
 # Solar time series data file
-Solar_radiation \tsfiles\RMirradiance.ts
+Solar_radiation \tsfiles\RMirradiance_smooth_3yr.ts
 Solar_radiation_rewind 1
 
 # Temperature time series data file
 use_tempfiles 1
 ntempfiles 1
-Temperature0.name \tsfiles\RMdoppioTemp.nc
+Temperature0.name \tsfiles\tempOutAll_fix_20180402.nc
 temp_rewind 1
 
 # Salinity time series data file
 use_saltfiles 1
 nsaltfiles 1
-Salinity0.name \tsfiles\RMdoppioSalt.nc
+Salinity0.name \tsfiles\saltOutAll_fix_20180402.nc
 salt_rewind 1
 
 ts_on_hydro_time 1
