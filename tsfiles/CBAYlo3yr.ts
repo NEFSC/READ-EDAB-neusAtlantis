@@ -5,7 +5,7 @@
 # RM 20180308
 # yearly cycle repeated using harmonic fitting to length of forcing hydro file, reduced Det_Si to max 1.2 uM Si 
 #
-## COLUMNS 7
+## COLUMNS 6
 ##
 ## COLUMN1.name Time
 ## COLUMN1.long_name Time
@@ -36,11 +36,6 @@
 ## COLUMN6.long_name Detrital Silica
 ## COLUMN6.units mg s-1
 ## COLUMN6.missing_value -999
-##
-## COLUMN7.name SED
-## COLUMN7.long_name Sediment
-## COLUMN7.units mg s-1
-## COLUMN7.missing_value -999
 ##
 1 148731.466971837 136317.898813625 130895.396594093 1341466.77965274 490857.560697256
 2 147396.650044403 137140.873582682 137843.667303998 1412675.75354368 516913.578599234
