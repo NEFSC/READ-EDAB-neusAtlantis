@@ -78,15 +78,15 @@ title      test version, DynEffort NEUS v1.5 with Atlantis2 codebase
 
 dt         24 hour     # 12 hour time step
 
-tstop      3651 day   # Stop time after the given period (18260)18260  , 4000   2191
+tstop      3660 day   # Stop time after the given period (18260)18260  , 4000   2191
 
-toutstart  0 day       # Output start time
+toutstart  1 day       # Output start time
 
-toutinc    30 day      # Write output with this periodicity
+toutinc    25 day      # Write output with this periodicity
 
-toutfinc   30 day      # Write fisheries output with this periodicity
+toutfinc   25 day      # Write fisheries output with this periodicity
 
-tsumout    30 day     # Write stock state summary with this periodicity
+tsumout    25 day     # Write stock state summary with this periodicity
 
 fishout    0           # Switch to turn fisheries output on = 1, off = 0
 
@@ -94,7 +94,7 @@ flagreusefile 2        # Switch to show want to append output file no = 0, yes =
 
 tburnday 0
 
-flagIsEstuary 0
+flagIsEstuary 1
 
 flag_age_output 1
 
@@ -154,7 +154,7 @@ flaghemisphere    1  # Flag for hemisphere model is in (0 = southern; 1 = northe
 
 flagscaleinit     1  # Flag to indicate whether scaling initial vertebrate densities (1=yes, 0=no)
 
-# RM 20161122 changed 0 to 1 for species at end (mostly benthic and inverts) Need to modify cdf file still
+# RM 20161122 changed 0 to 1 for species at end (mostly benthic and inverts) Need to modify cdf file still (only works for vertebrates)
 # Multiplicative scalar for vertebrate initial densities (as read-in from cdf file)
 
 init_scalar       89

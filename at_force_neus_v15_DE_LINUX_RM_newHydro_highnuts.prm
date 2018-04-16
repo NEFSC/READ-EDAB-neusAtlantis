@@ -4,8 +4,7 @@
 # Hydrodynamic files - new hydro from roms doppio
 # this is created from 2008-2010 daily files
 nhdfiles 1
-hd0.name /tsfiles/RMdoppioHydro.nc
-
+hd0.name /tsfiles/flowOutAll_fix_20180402.nc
 # Bottom stress
 
 #############################################
@@ -15,22 +14,22 @@ npointss 8
 ## nutrient forcing             
 pss0.name GeorgesBank
 pss0.location 1234274.466 3098307.516 -40
-pss0.data /tsfiles/banksupwelling_div_1000_v5.ts
+pss0.data /tsfiles/v5_3yr.ts
 pss0.rewind 1
 
 pss1.name GulfStreamTrap
 pss1.location 1239774.298 3024140.334 -130
-pss1.data /tsfiles/banksupwelling_div_1000_v5.ts
+pss1.data /tsfiles/v5_3yr.ts
 pss1.rewind 1
 
 pss2.name ChesapeakeBay
 pss2.location 531250 2625000 -16
-pss2.data /tsfiles/CBAY2.ts
+pss2.data /tsfiles/CBAYlo3yrSED.ts
 pss2.rewind 1
 
 pss3.name HudsonRiver
 pss3.location 710000 3000000 -20
-pss3.data /tsfiles/HUDSON.ts
+pss3.data /tsfiles/CBAYlo3yr.ts
 pss3.rewind 1
 
 # pss2.name Basin16
@@ -50,40 +49,40 @@ pss3.rewind 1
 
 pss4.name NarragansettBay
 pss4.location 937500 3100000 -20
-pss4.data /tsfiles/NBAY.ts
+pss4.data /tsfiles/NBAYlow3yr.ts
 pss4.rewind 1
 
 pss5.name Boston
 pss5.location 1016047.729 3243653.893 -15
-pss5.data /tsfiles/banksupwelling_div_1000_v5.ts
+pss5.data /tsfiles/v5_3yr.ts
 pss5.rewind 1
 
 pss6.name CascoBayAndPenobscott
 pss6.location 1098345.3045816745 3367268.9230297254 -15
-pss6.data /tsfiles/banksupwelling_div_1000_v5.ts
+pss6.data /tsfiles/v5_3yr.ts
 pss6.rewind 1
 
 pss7.name PenobscottNorth
 pss7.location 1220475.7351718375 3429637.9873865936 -15
-pss7.data /tsfiles/banksupwelling_div_1000_v5.ts
+pss7.data /tsfiles/v5_3yr.ts
 pss7.rewind 1
 ##########################################
 # Rain and evaporation
 
 # Solar time series data file
-Solar_radiation /tsfiles/RMirradiance.ts
+Solar_radiation /tsfiles/RMirradiance_smooth_3yr.ts
 Solar_radiation_rewind 1
 
 # Temperature time series data file
 use_tempfiles 1
 ntempfiles 1
-Temperature0.name /tsfiles/RMdoppioTemp.nc
+Temperature0.name /tsfiles/tempOutAll_fix_20180402.nc
 temp_rewind 1
 
 # Salinity time series data file
 use_saltfiles 1
 nsaltfiles 1
-Salinity0.name /tsfiles/RMdoppioSalt.nc
+Salinity0.name /tsfiles/saltOutAll_fix_20180402.nc
 salt_rewind 1
 
 ts_on_hydro_time 1
@@ -114,8 +113,14 @@ typeResidualsts 0
 
 #RM added 20170517 based on warnings
 use_phFiles 0
+
+# RM adding Sedimnent tracer 20180316 (not implemented yet, need nc file, try input in .ts file instead)
 use_force_tracers 0
-#BottomStress 0
+#nforceTracers 1
+#tracerNames
+#SED
+
+#BottomStress <filename> #RM this only works if filename is supplied here
 #pCO2_forcing 0
 #FSPBChange 0
 #Precipitation 0
@@ -126,9 +131,9 @@ use_force_tracers 0
 use_VertMixFiles 0
 
 
-## G.Fay added 09/20/16
+## G.Fay added 09/20/16, RM changed to 86400 from 43200
 # Frequency of inputs.ts and exports.ts output - write out each dt.
-inputs_tout 43200 seconds
+inputs_tout 86400 seconds
 
 ## G.Fay added 09/20/16
 use_external_scaling 0

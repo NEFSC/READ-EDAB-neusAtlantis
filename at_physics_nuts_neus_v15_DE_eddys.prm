@@ -249,7 +249,7 @@ mix_injection 1e-3
 
 # Scaling coefficient to capture increased mixing rate in winter
 
-mix_season_kz 5.0
+mix_season_kz 3.0
 
 
 
@@ -312,7 +312,7 @@ bioturbation 0
 
 # added to the transport model is used. Yes = 1, No =0.
 
-horiz_diffusion 1
+horiz_diffusion 0
 
 
 
@@ -320,7 +320,7 @@ horiz_diffusion 1
 
 # added to the transport model is used. Yes = 1, No =0.
 
-vert_diffusion 1
+vert_diffusion 0
 
 
 
@@ -328,7 +328,7 @@ vert_diffusion 1
 
 # added to the transport model is used. Yes = 1, No =0.
 
-vert_mix 0
+vert_mix 1
 
 
 
@@ -420,21 +420,21 @@ edge_type 30
 
 eddy_S1   30
 
-1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.5 1.5 1.0 1.0 1.5 1.5 1.5 1.5 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 
 eddy_S2   30
 
-1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 2.0 2.0 1.0 1.0 2.0 2.0 2.0 2.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 
 
 eddy_S3   30
 
-1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.5 1.5 1.0 1.0 1.5 1.5 1.5 1.5 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 
 
 eddy_S4   30
 
-1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.5 1.5 1.0 1.0 1.5 1.5 1.5 1.5 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 
 
 # Eddy scaling of vertical mixing
@@ -445,7 +445,7 @@ eddy_vertmix 1
 
 # Coefficient used in scaling of vertical exchanges by eddies
 
-eddy_mixscale 2.0
+eddy_mixscale 1.0
 
 
 
@@ -469,9 +469,9 @@ nutrientchange 0
 
 # file
 
-psschange      6
+psschange      8
 
-0 0 0 0 0 0
+0 0 0 0 0 0 0 0
 
 
 
