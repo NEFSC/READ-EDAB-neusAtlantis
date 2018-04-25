@@ -18,6 +18,21 @@ d2='/home/ryan/AtlRuns/20170503b'
 #d2='/media/ryan/TOSHIBA EXT/1 RM/10 ATLANTIS transfer/20170413'
 setwd(d2)
 
+
+### DIET PLOTS
+# DO THIS FIRST...
+trace('get_colpal', edit=T) # Manually add more colors to make this work...
+# #  get_colpal <-function ()
+{
+  greys <- c(51, 128, 204, 71, 148, 224, 91, 168, 244, 58,
+             122, 209, 79, 140, 45, 136, 71, 247, 250, 250,
+             250, 250, 250, 250, 250, 250, 250, 250, 250, 250)
+  greys <- grDevices::rgb(cbind(greys, greys, greys), maxColorValue = 255)
+  col_pal <- c(RColorBrewer::brewer.pal(n = 12, name = "Paired"),
+               greys)
+  return(col_pal)
+}
+
 filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
 
 # USE TO LOAD Result from atlantistools preprocess (created in 'RM_preprocess_v2.R')
@@ -47,7 +62,7 @@ ncbase=nc.str[which(lncstr==min(lncstr))] #get base nc file name
 # ex_rec_ssb <- read.csv(file.path(d, "setas-ssb-rec.csv"), stringsAsFactors = FALSE)
 # ex_rec_ssb <- read.csv(ssb, stringsAsFactors = F)
 
-# External biomass data
+# External biomass data NOT CURRENTLY USED
 # ex_bio <- read.csv(file.path(d, "setas-bench.csv"), stringsAsFactors = FALSE)
 
 # bgm file
@@ -81,7 +96,7 @@ ggsave(paste(filename," numbers timeseries.png", sep=''), width=20, height=17, d
 plot <- plot_line(result$nums_age, col = "agecl")
 update_labels(p = plot, labels = list(x = "Time [years]", y = "Numbers", colour = "Ageclass"))
 ggsave(paste(filename," numbers at age timeseries.png", sep=''), width=20, height=17, dpi=96)
-###____________SSB and recruitment
+###____________SSB and recruitment NEED External Data input for this to work
 plot_rec(result$ssb_rec, ex_data = ex_rec_ssb)
 
 ###____________PHYSICS____________________________
@@ -194,19 +209,19 @@ plot <- plot_bar(df, fill = "agecl", wrap = "species")
 update_labels(plot, labels = list(x = "Time [years]", y = "Biomass [%]"))
 ggsave(paste(filename," Biomass at age percent.png", sep=''), width=20, height=17, dpi=96)
 
-### DIET PLOTS
-# DO THIS FIRST...
-trace('get_colpal', edit=T) # Manually add more colors to make this work...
-# #  get_colpal <-function ()
-{
-  greys <- c(51, 128, 204, 71, 148, 224, 91, 168, 244, 58,
-             122, 209, 79, 140, 45, 136, 71, 247, 250, 250,
-             250, 250, 250, 250, 250, 250, 250, 250, 250, 250)
-  greys <- grDevices::rgb(cbind(greys, greys, greys), maxColorValue = 255)
-  col_pal <- c(RColorBrewer::brewer.pal(n = 12, name = "Paired"),
-               greys)
-  return(col_pal)
-}
+# ### DIET PLOTS
+# # DO THIS FIRST...
+# trace('get_colpal', edit=T) # Manually add more colors to make this work...
+# # #  get_colpal <-function ()
+# {
+#   greys <- c(51, 128, 204, 71, 148, 224, 91, 168, 244, 58,
+#              122, 209, 79, 140, 45, 136, 71, 247, 250, 250,
+#              250, 250, 250, 250, 250, 250, 250, 250, 250, 250)
+#   greys <- grDevices::rgb(cbind(greys, greys, greys), maxColorValue = 255)
+#   col_pal <- c(RColorBrewer::brewer.pal(n = 12, name = "Paired"),
+#                greys)
+#   return(col_pal)
+# }
 
 plots <- plot_diet(result$biomass_consumed, wrap_col = "agecl", combine_thresh = 3)
 pdf(file=paste(filename, '_diet_proportions.pdf', sep=''),paper='A4r',width=11, height=8)

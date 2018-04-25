@@ -280,7 +280,7 @@ injection 1
 
 # the atmosphere is used. Yes = 1, No =0.
 
-atmospherics 1
+atmospherics 0
 
 
 
@@ -352,7 +352,7 @@ resuspension 0
 
 # is used in the water column. Yes = 1, No =0.
 
-decay_wc 0
+decay_wc 1
 
 
 
@@ -360,7 +360,7 @@ decay_wc 0
 
 # is used in the sediment. Yes = 1, No =0.
 
-decay_sed 0
+decay_sed 1
 
  
 
@@ -567,6 +567,6 @@ use_fill_horizmix 0
 
 flush_threshold 1
 
-include_atmosphere 1
+include_atmosphere 0
 
 

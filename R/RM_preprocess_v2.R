@@ -11,7 +11,7 @@ d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data
 
 #linux
 d1='/home/ryan/Git/atneus_RM'
-d2='/home/ryan/AtlRuns/20170424'
+d2='/home/ryan/AtlRuns/20180423b'
 setwd(d2)
 
 
@@ -49,7 +49,7 @@ init.file=test[[1]][3]
 init = file.path(d1, init.file)
 init # make sure
 # init      <- file.path(d1, 'RMinit_notsohighvertmix.nc')# "RMinit_newvalues2017.nc")
-init="C:/Users/ryan.morse/Documents/GitHub/atneus_RM/RMinit_2018.nc" # dropped _FillValue to make init_growth work 20180412
+init=paste(d1,'/RMinit_2018.nc', sep='') # dropped _FillValue to make init_growth work 20180412
 #__________________________________
 bboxes <- get_boundary(boxinfo = load_box(bgm))
 bps <- load_bps(fgs, init)
@@ -147,7 +147,8 @@ bio_cons <- calculate_consumed_biomass(eat = dfs_prod[[1]], grazing = dfs_prod[[
 # 100% data is lost due to missing eat data despite available diet data.
 
 # Calculate spatial overlap
-sp_overlap <- calculate_spatial_overlap(biomass_spatial = bio_sp, dietmatrix = dietmatrix, agemat = df_agemat)
+sp_overlap=NA
+# sp_overlap <- calculate_spatial_overlap(biomass_spatial = bio_sp, dietmatrix = dietmatrix, agemat = df_agemat)
 
 # Growth relative to initial conditions
 rec_weight <- prm_to_df(prm_biol = prm_biol, fgs = fgs, 

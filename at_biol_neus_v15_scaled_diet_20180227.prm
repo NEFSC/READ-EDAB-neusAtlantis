@@ -119,7 +119,7 @@ readin_popratio  0         Switch to indicate whether loading pre-existing age d
 flagresp         0         Switch to turn fish respiration on/off: off=0, on=1                 1
 flagavgmig       1         Switch to turn averaging of migrant sizes on/off: off=0, on=1       1
 flagkdrop        0         Switch to turn cubic bacterial growth on/off: off=0, on=1           0
-flagbactstim     1         Switch to turn stimulation of bacterial growth on/off: off=0, on=1  0
+flagbactstim     0         Switch to turn stimulation of bacterial growth on/off: off=0, on=1  0
 flagBOlim        0         Switch to turn OB population limitation on/off: off=0, on=1         0
 flagBDlim        0         Switch to turn BD population limitation on/off: off=0, on=1         0
 flagBGlim        0         Switch to turn BG population limitation on/off: off=0, on=1 (1)     0
@@ -11868,8 +11868,8 @@ mum_DF_T15  0.01
 mum_PS_T15  0.2       
 mum_ZM_T15  0.1       
 mum_ZS_T15  0.9       
-mum_PB_T15  1.2        
-mum_BB_T15  1.5        
+mum_PB_T15  0.15        
+mum_BB_T15  0.15        
 mum_BO_T15  0.1       
 
 # Vertebrate growth rates for each "group," per age class mg N d-1
