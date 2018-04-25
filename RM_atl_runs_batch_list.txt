@@ -437,12 +437,31 @@ atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208
 
 20180416 atmospheric injection on, decay wc off, increased eddy influence on box 1 and 3, biorrigation on
 atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180227.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180416a 1>1a.junk 2>2a.junk
-
-RESULTS-> oxygen went to zero, light to zero nuts high, eutrophied system.... turn decay in wc back on (only affects NO3, NH3 and ref_det), turn include_atmosphere on (may not have had any influence from atmosphere in last run)
+	RESULTS-> oxygen went to zero, light to zero nuts high, eutrophied system.... turn decay in wc and seds back on (only affects NO3, NH3 and ref_det), turn include_atmosphere on (may not have had any influence from atmosphere in last run).
 SED only ends up in CHes box now (=the origin box, fixed the direction of currents, now looks great).
+CHANGED init file - NH3 and NO3 were in uM changed to mg/m3
 
+20180417a
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180227.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180417a 1>1a.junk 2>2a.junk
+	RES -> oxy still to zero, much of biomass in seds and sed bacteria, turn off nutrient injection?
 
+20180418a
+turn on check NH, turn atmospherics off, modify nut inputs-> off not yet; reduce mum 10x for bacteria, turn off bact_stim, 20 year run so no ecotest yet (not to blow up hard drive as unsupervised)
+	RES-> labile detritus blows up, NH3 blows up, sed bact still dominate system as highest. Compare to NEUS 1.0 runs (pdf files of N) these are many orders of magnitude greater - fish generally ~ 1000, inverts in the 10-50 range, some fish in the 1e5 range -> reduce mum and C 10x for invert species and drop nutrient additions? add mortality back in? Fish mums are similar, except the groups that were broken out from a parent group all have the same mum values, which should not be (billfish, tunas, etc..., maybe tweak based on proportional body mass at adult age? C for vert species is abou 100x larger for new vs old, can mod these
 
+NEW biol file 20180419:
+-mum for inverts to match NEUS 1.0 (generally ~ 10x less than 20180228, ZM is higher
+-C for inverts to match NEUS 1.0, generally about 10x less, some are same
+-C for verts left same for now hard to compare on plane... mackerel and herring should be 10x less to match
+
+( NOT SURE WHAT UNITS THESE ARE IN - THE OLIVE VERSION OF THIS DATA IS SIMILAR TO THE CURRENT RUN, except the benthics are much higher in 1.5)
+
+Try new biol file with lower mum and lower C for inverts as one run, try one without nutrient inputs as another.
+
+### run 1 with lower mum and lower C
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180419.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180423a 1>1a.junk 2>2a.junk
+
+20180423b - same thing, no nutrients point sources =0
 
 
 
