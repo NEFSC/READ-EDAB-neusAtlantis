@@ -11,7 +11,7 @@ d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data
 
 #linux
 d1='/home/ryan/Git/atneus_RM'
-d2='/home/ryan/AtlRuns/20180423b'
+d2='/home/ryan/AtlRuns/20180425a'
 setwd(d2)
 
 
