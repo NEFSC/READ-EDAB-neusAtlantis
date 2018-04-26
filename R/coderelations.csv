@@ -1,0 +1,90 @@
+Child,Index,Parent,Change,Name,Long Name,,IsVertebrate
+MAK,0,FPL,0,Mackerel,Atlantic mackerel,,1
+HER,1,FPS,0,Herring,Atlantic herring,,1
+WHK,2,FVD,0,White_Hake,White hake,,1
+BLF,3,FVS,0,Bluefish,Bluefish,,1
+WPF,4,FVB,1,Windowpane,Windowpane flounder,,1
+SUF,5,FVB,1,Summerflounder,Summer flounder,,1
+WIF,6,FVB,1,Winterflounder,Winter flounder,,1
+WTF,7,FVB,1,Witchflounder,Witch flounder,,1
+HAL,8,FVB,1,Halibut,Atlantic halibut,,1
+PLA,9,FVB,1,Plaice,American plaice,,1
+FOU,10,FVB,1,Fourspotflounder,Fourspot flounder,,1
+FLA,11,FVB,1,Other flatfish,Other flatfish,,1
+BFT,12,FVT,1,BluefinTuna,Atlantic bluefin tuna,,1
+TUN,13,FVT,1,Tunas,Other tunas,,1
+BIL,14,FVT,1,Billfish,Billfish,,1
+MPF,15,FMM,0,Mesopel_M_Fish,Migratory mesopelagic fish ,,1
+BUT,16,FBP,1,Butterfish,Butterfish,,1
+ANC,17,FBP,1,Anchovies,Anchovies,,1
+BPF,18,FBP,1,Benthopel_Fish,Other benthopelagic fish,,1
+GOO,19,FDD,0,Monkfish,Monkfish,,1
+MEN,20,FDE,1,Menhaden,Atlantic menhaden,,1
+FDE,21,FDE,1,Demersal_E_Fish,Shallow demersal fish,,1
+COD,22,FDS,0,Cod,Atlantic cod,,1
+SHK,23,FDB,0,Silver_Hake,Silver hake,,1
+OHK,24,FDC,1,Offshore_Hake,Offshore hake,,1
+POL,25,FDC,1,Pollock,Pollock,,1
+RHK,26,FDC,1,Red_Hake,Red hake,,1
+BSB,27,FDC,1,Black_Sea_Bass,Black sea bass,,1
+SCU,28,FDC,1,Scup,Scup,,1
+TYL,29,FDC,1,Tilefish,Tilefish,,1
+RED,30,FDC,1,Redfish,Acadian redfish,,1
+OPT,31,FDC,1,Ocean_Pout,Ocean pout,,1
+SAL,32,FDC,1,Atlantic_Salmon,Atlantic salmon,,1
+DRM,33,FDC,1,Drums_Croakers,Drums and croakers,,1
+STB,34,FDC,1,Striped_Bass,Striped bass,,1
+TAU,35,FDC,1,Tautog,Tautog,,1
+WOL,36,FDC,1,Wolffish,Wolffish,,1
+SDF,37,FDC,1,Atlantic_States_Demersals,Atlantic states demersal fish,,1
+FDF,38,FDC,0,Demersal_DC_Fish,Miscellaneous demersal fish,,1
+HAD,39,FDO,0,Haddock,Haddock,,1
+YTF,40,FDF,0,Yellowtail_Flounder,Yellowtail flounder,,1
+DOG,41,SHB,0,Spiny_Dogfish,Spiny dogfish,,1
+SMO,42,SHD,1,Smooth_Dogfish,Smooth dogfish,,1
+SSH,43,SHD,1,Sandbar_Shark,Sandbar shark,,1
+DSH,44,SHD,0,Demersal_Shark,Other demersal sharks,,1
+BLS,45,SHP,1,Blue_Shark,Blue shark,,1
+POR,46,SHP,1,Porbeagle_Shark,Porbeagle shark,,1
+PSH,47,SHP,0,Pelagic_Shark,Other pelagic sharks,,1
+WSK,48,SSK,1,Winter_Skate,Winter skate,,1
+LSK,49,SSK,1,Little_Skate,Little skate,,1
+SK,50,SSK,0,Skate,Northeast skate complex,,1
+SB,51,SB,0,Seabird,Seabirds,,1
+PIN,52,PIN,0,Pinniped,Pinnipeds,,1
+REP,53,REP,0,Turtle,Marine turtles,,1
+RWH,54,WHB,1,Right_Whale,Right whales,,1
+BWH,55,WHB,1,Baleen_Whale,Baleen whales,,1
+SWH,56,WHT,1,Small_Whale,Small toothed whales,,1
+TWH,57,WHT,1,Tooth_Whale,Toothed whales ,,1
+INV,58,FDC,1,Invasive_Species,Invasive vertebrate species,,1
+LSQ,59,CEP,1,Loligo_Squid,Loligo squid,,0
+ISQ,60,CEP,1,Illex_Squid,Illex squid,,0
+SCA,61,BFS,0,Scallop,Sea scallop,,0
+QHG,62,BFF,1,Quahog,Ocean quahog,,0
+CLA,63,BFF,1,Surf_Clam,Atlantic surf clam,,0
+BFF,64,BFF,1,Filter_Other,Other benthic filter feeder,,0
+BG,65,BG,0,Benthic_grazer,Benthic grazer,,0
+LOB,66,BML,0,Lobster,Lobster,,0
+RCB,67,BMS,1,Red_Crab,Red deep-sea crab,,0
+BMS,68,BMS,0,Macrobenth_Shallow,Shallow macrozoobenthos,,0
+NSH,69,PWN,1,Northern_Shrimp,Northern shrimp other pandalids,,0
+OSH,70,PWN,1,Other_Shrimp,Other shrimps,,0
+ZL,71,ZL,0,Carniv_Zoo,Carnivorous zooplankton,,0
+BD,72,BD,0,Deposit_Feeder,Deposit Feeder,,0
+MA,73,MA,0,Macroalgae,Macroalgae,,0
+MB,74,MB,0,MicroPB,Microphtybenthos,,0
+SG,75,SG,0,Seagrass,Seagrass,,0
+BC,76,BC,0,Benthic_Carniv,Benthic Carnivore,,0
+ZG,77,ZG,0,Gelat_Zoo,Gelatinous zooplankton,,0
+PL,78,PL,0,Diatom,Diatom,,0
+DF,79,DF,0,DinoFlag,Dinoflagellates,,0
+PS,80,PS,0,PicoPhytopl,Pico-phytoplankton,,0
+ZM,81,ZM,0,Zoo,Mesozooplankton,,0
+ZS,82,ZS,0,MicroZoo,Microzooplankton,,0
+PB,83,PB,0,Pelag_Bact,Pelagic Bacteria,,0
+BB,84,BB,0,Sed_Bact,Sediment Bacteria,,0
+BO,85,BO,0,Meiobenth,Meiobenthos,,0
+DL,86,DL,0,Lab_Det,Labile detritus,,0
+DR,87,DR,0,Ref_Det,Refractory detritus,,0
+DC,88,DC,0,Carrion,Carrion3,,0

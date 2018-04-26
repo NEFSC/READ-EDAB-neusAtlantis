@@ -6,8 +6,10 @@ library(raster)
 library(ncdf4)
 library(rbgm)
 
-load("H:/1 RM/0 R workspaces/Atlantis - Sean Lucey fish biomass 20170606.RData")
-load("/media/ryan/TOSHIBA EXT/1 RM/0 R workspaces/Atlantis - Sean Lucey fish biomass 20170606.RData") # linux
+# load("I:/1 RM/0 R workspaces/Atlantis - Sean Lucey fish biomass 20170606.RData")
+# load("/media/ryan/TOSHIBA EXT/1 RM/0 R workspaces/Atlantis - Sean Lucey fish biomass 20170606.RData") # linux
+load("I:/1 RM/0 R workspaces/20170629_HERMESchlorophyll_updated_1998_2016_bottomNO3_ZooBiomass.RData") # toshiba
+
 
 # box geomery file
 wd2='C:/Users/ryan.morse/Documents/GitHub/atneus_RM'
@@ -35,6 +37,7 @@ setwd("G:/1 RM/KINGSTON/transfer/shapefiles/epu_shapes")
 
 ### Note: dataframe 't' - from Sean Lucey is trawl survey biomass, q-corrected, in tonnes
 # atl.biomass atl.discards and atl.landings in KG; t was calculated from atl.biomass
+t=atl.biomass/1000
 t5=colMeans(t[1:5,], na.rm=T) #5-year initial timepoint mean
 tall=colMeans(t, na.rm=T) # all years mean
 
@@ -52,10 +55,10 @@ tall=colMeans(t, na.rm=T) # all years mean
 # dev.off()
 
 ### plot biomass time series of non-Q corrected to decide what to include for intial 'virgin' biomass in NEUS v1.5
-# t.nq=(tot.biomass.kg.not.Qcorrected/1000) # not q corrected, more species present
-# t.nq$Year=tot.biomass.kg.not.Qcorrected$Year # replace year
-# t.nq5=colMeans(t.nq[1:5,], na.rm=T)
-# t.nqall=colMeans(t.nq, na.rm=T)
+t.nq=(tot.biomass.kg.not.Qcorrected/1000) # not q corrected, more species present
+t.nq$Year=tot.biomass.kg.not.Qcorrected$Year # replace year
+t.nq5=colMeans(t.nq[1:5,], na.rm=T)
+t.nqall=colMeans(t.nq, na.rm=T)
 # wd2="H:/1 RM/10 ATLANTIS transfer"
 # fname='NEUS v1.5 Trawl Survey biomass NOT_Q_corrected.pdf'
 # mypath=file.path(wd2, fname)
@@ -67,6 +70,20 @@ tall=colMeans(t, na.rm=T) # all years mean
 #   legend('topright', lty=c(3,1), legend=c(paste('1964-1969 mean:',round(t.nq5[i], digits=1)), paste('TS mean:',round(t.nqall[i], digits=1))), bty='n')
 # }
 # dev.off()
+write.table(t.nq, file='ATL_biomass_tonnes_NotQCorr.csv', sep=', ',col.names = T, row.names=F)
+write.table(t, file='ATL_biomass_tonnes_Qcorr.csv', sep=', ',col.names = T, row.names=F)
+atl.discards.t=atl.discards
+atl.discards.t[,2:356]=atl.discards.t[,2:356]*0.001
+atl.landings.t=atl.landings
+atl.landings.t[,2:480]=atl.landings.t[,2:480]*0.001
+write.table(atl.discards.t, file='ATL_discardes_tonnes.csv', sep=', ',col.names = T, row.names=F)
+write.table(atl.landings.t, file='ATL_landings_tonnes.csv', sep=', ',col.names = T, row.names=F)
+
+### plot total biomass time series of all Q-corrected species in tonnes
+MyCol <- topo.colors(38)
+barplot(as.matrix(t(t[,2:39])), names.arg=t$Year, col=MyCol)
+legend("top",legend.text,fill=MyCol,ncol=7, bty='n')
+
 
 
 wd=getwd()
@@ -157,7 +174,9 @@ NEUS.zoo.bio=data.frame(t(base[,2:13])) #transpose)
 colnames(NEUS.zoo.bio)=c(seq(from=0, to=29, by=1))
 rownames(NEUS.zoo.bio)=c(seq(from=1, to=12, by=1))
 NEUS.zoo.bio$`col.mn`=rowMeans(NEUS.zoo.bio, na.rm=T) # this may not work... 
-barplot(NEUS.zoo.bio$'col.mn', main='NEUS Mean Monthly Zooplankton Biomass (Mg C/m3)', xlab='month')
+NEUS.zoo.bio$`col.sum.N`=rowSums(NEUS.zoo.bio, na.rm=T)/5.6 # this may not work... 
+
+barplot(NEUS.zoo.bio$'col.sum.N', main='NEUS Mean Monthly Zooplankton Biomass (Mg N/m3)', xlab='month')
 barplot(colMeans(NEUS.zoo.bio[1:30], na.rm=T), main='NEUS Mean Annual Zooplankton Biomass (Mg C/m3)', xlab='box')
 
 
@@ -483,7 +502,7 @@ plot(colMeans(m, na.rm=T)~year, type='l', col='blue', ylim=c(0,8), lwd=2)
 par(new=F)
 
 #__________________________________________________________________________________________________
-#### bottom NO3 climatology from Nathan Rebuck 20170613 units are uM (uM == mg/m3)
+#### bottom NO3 climatology from Nathan Rebuck 20170613 units are uM (uM * 14 = mg/m3)
 library(R.matlab)
 setwd('C:/Users/ryan.morse/Downloads')
 no3=readMat('bottomnitrate.mat')
@@ -527,18 +546,18 @@ Dec.no3=extractMonths(NO3[[12]], neus.shp)
 
 NO3.box=data.frame(c(seq(from=0,to=29,by=1)))
 colnames(NO3.box)='box'
-NO3.box$'1'=Jan.no3
-NO3.box$'2'=Feb.no3
-NO3.box$'3'=Mar.no3
-NO3.box$'4'=Apr.no3
-NO3.box$'5'=May.no3
-NO3.box$'6'=Jun.no3
-NO3.box$'7'=Jul.no3
-NO3.box$'8'=Aug.no3
-NO3.box$'9'=Sep.no3
-NO3.box$'10'=Oct.no3
-NO3.box$'11'=Nov.no3
-NO3.box$'12'=Dec.no3
+NO3.box$'1'=Jan.no3 *14
+NO3.box$'2'=Feb.no3*14
+NO3.box$'3'=Mar.no3*14
+NO3.box$'4'=Apr.no3*14
+NO3.box$'5'=May.no3*14
+NO3.box$'6'=Jun.no3*14
+NO3.box$'7'=Jul.no3*14
+NO3.box$'8'=Aug.no3*14
+NO3.box$'9'=Sep.no3*14
+NO3.box$'10'=Oct.no3*14
+NO3.box$'11'=Nov.no3*14
+NO3.box$'12'=Dec.no3*14
 
 NO3.box$mean=rowMeans(NO3.box[,2:13], na.rm=T)
 NO3.box=as.matrix(NO3.box)
@@ -575,13 +594,18 @@ bot.NO3=rowMeans(NO3.box[,2:13])
 tt=round(matrix((bot.NO3)),digits=3) # NO3
 bNO3=FILL.init.nuts(tt,bgm.z)
 setwd('C:/Users/ryan.morse/Desktop/NEUS Atl files/RM_initial_conditions')
-write.table(bNO3, file='NO3.csv', sep=', ',col.names = F, row.names=F)
+write.table(bNO3, file='NO3_mgM3.csv', sep=', ',col.names = F, row.names=F)
+
+write.table(NO3.box, file='NO3_BoxMean_monthly_mgM3.csv', sep=', ',col.names = T, row.names=F)
+NH3.box=NO3.box
+NH3.box[,2:12]=NO3.box[,2:12]*.35
+write.table(NH3.box, file='NH3_BoxMean_monthly_mgM3.csv', sep=', ',col.names = T, row.names=F) ## note this is derived from NO3*0.35
 
 # Estimate NH3 as half of nitrate values
 tt=round(matrix((bot.NO3/2)),digits=3) # NH3
 bNH3=FILL.init.nuts(tt,bgm.z)
 setwd('C:/Users/ryan.morse/Desktop/NEUS Atl files/RM_initial_conditions')
-write.table(bNH3, file='NH3.csv', sep=', ',col.names = F, row.names=F)
+write.table(bNH3, file='NH3_mgM3.csv', sep=', ',col.names = F, row.names=F)
 
 
 
@@ -594,7 +618,7 @@ arg=seq(from=0,to=30,by=1)
 plot(s[[i]], col=cl)
 
 for(i in 1:12){
-  plot(s[[i]], col=cl,breaks=seq(0, 30, 1))
+  plot(s[[i]], col=cl,breaks=seq(0, 30, 1), main=paste('month=',i))
 }
 
 
