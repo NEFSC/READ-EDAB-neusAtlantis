@@ -21,17 +21,21 @@ setwd(d2)
 
 ### DIET PLOTS
 # DO THIS FIRST...
+# MyCol=topo.colors(30)
 trace('get_colpal', edit=T) # Manually add more colors to make this work...
 # #  get_colpal <-function ()
 {
+  MyCol=topo.colors(30)
   greys <- c(51, 128, 204, 71, 148, 224, 91, 168, 244, 58,
              122, 209, 79, 140, 45, 136, 71, 247, 250, 250,
              250, 250, 250, 250, 250, 250, 250, 250, 250, 250)
   greys <- grDevices::rgb(cbind(greys, greys, greys), maxColorValue = 255)
-  col_pal <- c(RColorBrewer::brewer.pal(n = 12, name = "Paired"),
+  # col_pal = c(MyCol, greys)
+  col_pal <- c(RColorBrewer::brewer.pal(n = 12, name = "Paired"), RColorBrewer::brewer.pal(n = 12, name = "Paired"),
                greys)
   return(col_pal)
 }
+
 
 filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
 
@@ -72,7 +76,7 @@ bgm       <- file.path(d1, "neus_tmerc_RM.bgm") #30_v15.bgm")
 df_bio <- combine_groups(result$biomass, group_col = "species", combine_thresh = 10)
 plot <- plot_bar(df_bio)
 update_labels(plot, labels = gen_labels)
-ggsave(paste(filename," overall biomass.png", sep=''), width=7, height=4, scale=1, dpi=96)
+ggsave(paste(filename," overall biomass2.png", sep=''), width=7, height=4, scale=1, dpi=96)
 
 ###_________ Biomass timeseries#_______________________
 # pdf(file=paste(filename, '_biomassTS.pdf', sep='')) # does not work as configured
