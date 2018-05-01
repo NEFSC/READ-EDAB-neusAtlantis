@@ -120,15 +120,7 @@ flagresp         0         Switch to turn fish respiration on/off: off=0, on=1  
 flagavgmig       1         Switch to turn averaging of migrant sizes on/off: off=0, on=1       1
 flagkdrop        0         Switch to turn cubic bacterial growth on/off: off=0, on=1           0
 flagbactstim     0         Switch to turn stimulation of bacterial growth on/off: off=0, on=1  0
-flagBOlim        0         Switch to turn OB population limitation on/off: off=0, on=1         0
-flagBDlim        0         Switch to turn BD population limitation on/off: off=0, on=1         0
-flagBGlim        0         Switch to turn BG population limitation on/off: off=0, on=1 (1)     0
-flagBFFlim        0         Switch to identify filter feeding crowding used: simple=0, ERSEM=1  0
-flagSCAlim 0         
-flagQHGlim 0         
-flagCLAlim 0         
-#flagBFlim 0         
-flagBClim 0
+#flagBFFlim        0         ALL DONE BELOW Switch to identify filter feeding crowding used: simple=0, ERSEM=1  0
 
 # Those determining which environmental 
 # interaction formulations used      
@@ -154,14 +146,7 @@ flagagestruct    1         Age structure option: 0 = homogeneous cohorts, 1 = tr
 flagsenesce      0         Oldest sub-part of final age group senesces, 1 = yes, 0 = no        0
 flagtsforcerecruit 0       Force recruitment of 1+ groups with environmental forcing           0
 
-# RM 20180302 added these based on codebase update from Sep 2017
-norm_larval_distrib 1		normalise the larval distribution
-larvae_connect_only 0		use the larval connectivity matrix only or scale recruit_hdistrib	
-enviro_independ_larvae 1	whether larvae are independent of environmental conditions
-flag_recruit_effect 1		0=effects calc at the time of spawn, 1=calc at start of recruitment period
-flag_dynamicXRS 0		0=use fixed value, 1=dynamic value for ratio between reserve and structural mass
-InvadersEntering 0		invaders entering from outside the model
-
+ 
 # Preferred location trend (whether to weight vertical distributions towards surface or bottom
 # layers when in depths where there were less than complete set of depth layers)
 flagdemMAK 0
@@ -11637,31 +11622,31 @@ k_refsDL      10000.0      Reference labile detrit. level in sediments (if highe
 ##C_ZG_T15         0.003     Clearance rate of gelatinous zooplankton (0.008)    mg3(mg N)-1 d-1  0.02 - 0.08
 ##C_jCEP_T15       0.01455   Clearance rate of juvenile cephalopods (0.08)       mg3(mg N)-1 d-1  0.1 - 0.2
 ##C_jPWN_T15       0.0015    Clearance rate of juvenile prawns (0.0008)          mg3(mg N)-1 d-1  0.0002 - 0.004
-C_LSQ_T15 0.01455  
-C_jLSQ_T15 0.01
-C_ISQ_T15 0.01455  
-C_jISQ_T15 0.01
+C_LSQ_T15 0.001455  
+C_jLSQ_T15 0.001
+C_ISQ_T15 0.001455  
+C_jISQ_T15 0.001
 C_SCA_T15 0.02     
 C_QHG_T15 0.02    
 C_CLA_T15 0.02    
-C_BFF_T15 7e-04    
-C_BG_T15  5e-03  
-C_LOB_T15 6.5e-03 
+C_BFF_T15 7e-05    
+C_BG_T15  5e-05  
+C_LOB_T15 6.5e-05 
 C_RCB_T15 5e-03    
 C_BMS_T15 5e-05    
 C_NSH_T15 0.0015   
-C_jNSH_T15 0.01
+C_jNSH_T15 0.001
 C_OSH_T15 0.0015   
-C_jOSH_T15 0.01
-C_ZL_T15  0.08     
+C_jOSH_T15 0.001
+C_ZL_T15  0.002     
 C_BD_T15  5e-04    
-C_ZG_T15  0.03    
+C_ZG_T15  0.003    
 C_DF_T15  0.01     
-C_ZM_T15  0.08    
-C_ZS_T15  0.05     
+C_ZM_T15  0.008    
+C_ZS_T15  0.15     
 C_PB_T15  0        
 C_BB_T15  0        
-C_BO_T15  0.004    
+C_BO_T15  0.0001    
 C_BC_T15  0.006
 
 # Clearance rate of each vertebrate group, per age class                mg3(mg N)-1 d-1
@@ -11847,37 +11832,37 @@ C_INV 10
 # Consumer growth - this is used by Holling type feeding (predcase 0, 1, 2)
 ### 20180228 RM added values for juvenile groups based on SETAS and adult NEUS vals
 ##mum_ZG_T15       0.017     Growth rate of gelatinous zooplankton              mg N d-1      0.02 - 0.35
-mum_LSQ_T15 0.044     
-mum_jLSQ_T15 0.04
-mum_ISQ_T15 0.0444     
-mum_jISQ_T15 0.04
+mum_LSQ_T15 0.0044     
+mum_jLSQ_T15 0.004
+mum_ISQ_T15 0.00444     
+mum_jISQ_T15 0.004
 mum_SCA_T15 0.05       
-mum_QHG_T15 0.08     
-mum_CLA_T15 0.08     
-mum_BFF_T15 0.035     
-mum_BG_T15  0.02      
-mum_LOB_T15 0.012    
-mum_RCB_T15 1e-02      
-mum_BMS_T15 1e-02      
-mum_NSH_T15 0.03043   
-mum_jNSH_T15 0.03
-mum_OSH_T15 0.03043   
-mum_jOSH_T15 0.03
+mum_QHG_T15 0.05     
+mum_CLA_T15 0.05     
+mum_BFF_T15 0.0035     
+mum_BG_T15  0.002      
+mum_LOB_T15 0.0012    
+mum_RCB_T15 1e-03      
+mum_BMS_T15 1e-03      
+mum_NSH_T15 0.003043   
+mum_jNSH_T15 0.003
+mum_OSH_T15 0.003043   
+mum_jOSH_T15 0.003
 mum_ZL_T15  0.05        
 mum_BD_T15  0.014      
 mum_MA_T15  0.01        
-mum_MB_T15  0.18       
+mum_MB_T15  0.018       
 mum_SG_T15  0.07       
 mum_BC_T15  0.08      
-mum_ZG_T15  0.07      
-mum_PL_T15  1.5        
+mum_ZG_T15  0.017      
+mum_PL_T15  0.4        
 mum_DF_T15  0.01       
-mum_PS_T15  0.2       
-mum_ZM_T15  0.1       
-mum_ZS_T15  0.9       
-mum_PB_T15  0.15        
-mum_BB_T15  0.15        
-mum_BO_T15  0.1       
+mum_PS_T15  0.05       
+mum_ZM_T15  0.18       
+mum_ZS_T15  0.55       
+mum_PB_T15  0.05        
+mum_BB_T15  0.02        
+mum_BO_T15  0.01       
 
 # Vertebrate growth rates for each "group," per age class mg N d-1
 # See _flag.fish.rates above to see whether clearance and growth rates 
@@ -17952,6 +17937,7 @@ flagBGlim  1
 flagBDlim  1         
 flagBClim  0         
 flagBOlim  1         
+
 
 
 #Added by Bec Gorton 24th October 2012

@@ -9,7 +9,7 @@ hd0.name /tsfiles/flowOutAll_fix_20180402.nc
 
 #############################################
 # Point source/sink lists
-npointss 8
+npointss 0
 
 ## nutrient forcing             
 pss0.name GeorgesBank
@@ -49,7 +49,7 @@ pss3.rewind 1
 
 pss4.name NarragansettBay
 pss4.location 937500 3100000 -20
-pss4.data /tsfiles/NBAYlow3yr.ts
+pss4.data /tsfiles/NBAYlo3yr.ts
 pss4.rewind 1
 
 pss5.name Boston

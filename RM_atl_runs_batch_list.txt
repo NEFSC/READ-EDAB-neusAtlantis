@@ -1,0 +1,469 @@
+atlantisMerged -i RMinit_2.nc 0 -o atneus_v15_new_Init_.nc -r at_run_neus_v15_RM.prm -f at_force_neus_v15_DE_LINUX.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_RM.PRM -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 2017NA 1>1.junk 2>2.junk # failed
+
+atlantisMerged -i RMinit_2.nc 0 -o atneus_v15_new_Init_.nc -r at_run_neus_v15_RM.prm -f at_force_neus_v15_DE_LINUX.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_working_RM.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 2017NA 1>1.junk 2>2.junk #worked
+
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_.nc -r at_run_neus_v15_RM.prm -f at_force_neus_v15_DE_LINUX.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_working_RM.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 2017NA 1>1.junk 2>2.junk # worked -> .PRM vs .prm
+
+updated...
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_.nc -r at_run_neus_v15_RM.prm -f at_force_neus_v15_DE_LINUX.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_RM.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170313 1>1.junk 2>2.junk
+
+#20170323
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_.nc -r at_run_neus_v15_RM.prm -f at_force_neus_v15_DE_LINUX.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_v2_RM.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170323 1>1.junk 2>2.junk
+
+#20170324 scale 1 to 10 (thought it was lower trophic but included sharks and tunas)
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_.nc -r at_run_neus_v15_RM_scale10.prm -f at_force_neus_v15_DE_LINUX.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_v2_RM.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170324 1>1.junk 2>2.junk
+
+#20170325 (scaled many ~ 10x)scaling found in 'scaling init biomass run prm.ods'
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_.nc -r at_run_neus_v15_RM_scale_all10.prm -f at_force_neus_v15_DE_LINUX.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_v2_RM.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170325 1>1.junk 2>2.junk
+
+#20170326 scaling found in 'scaling init biomass run prm.ods by date'
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_.nc -r at_run_neus_v15_RM_scale_20170326.prm -f at_force_neus_v15_DE_LINUX.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_v2_RM.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170326 1>1.junk 2>2.junk
+
+#20170327 scaling found in 'scaling init biomass run prm.ods by date' increase zooplankton to 100x
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_.nc -r at_run_neus_v15_RM_scale_20170326.prm -f at_force_neus_v15_DE_LINUX.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_v2_RM.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170327 1>1.junk 2>2.junk
+
+#20170329 scaling basic 10x; new N forcing files reduced 1000x concentrations for point sources
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_.nc -r at_run_neus_v15_RM_scale10.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_v2_RM.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170329 1>1.junk 2>2.junk
+
+#20170330 scaling basic 10x; new N forcing files reduced 1000x concentrations, lab_det reduced 10x further for point sources
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_.nc -r at_run_neus_v15_RM_scale10.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_v2_RM.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170330 1>1.junk 2>2.junk
+
+
+#20170331 scaling basic 10x; new N forcing files reduced 1000x concentrations, lab_det reduced 10x further for point sources
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_.nc -r at_run_neus_v15_RM_scale10.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170331.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170331 1>1.junk 2>2.junk
+
+#20170403 check DL NH biomass box 4 scaling basic 10x; new N forcing files reduced 1000x concentrations, lab_det reduced 10x further for point sources
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_.nc -r at_run_neus_v15_RM_scale10.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170331.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170403 1>1.junk 2>2.junk
+
+#20170405 check DL NH biomass box 4 scaling to NEUS 1.0 (many reduced to below zero); new N forcing files reduced 1000x concentrations, lab_det reduced 10x further for point sources
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_.nc -r at_run_neus_v15_RM_scale_0405.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170331.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170403 1>1.junk 2>2.junk
+
+#20170406 check DL NH biomass box 4 scaling to NEUS 1.0 (many reduced to below zero); new N forcing files reduced 1000x concentrations, lab_det reduced 10x further for point sources; pprey scaled to rowsum of 1 or less
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_.nc -r at_run_neus_v15_RM_scale_0405.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170406.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170406 1>1.junk 2>2.junk
+
+#20170409 check DL NH biomass box 4, scaling biomass to NEUS 1.0 (many reduced to below zero); using old (high) N values in force file; pprey scaled to rowsum of 1 or less
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_.nc -r at_run_neus_v15_RM_scale_0405.prm -f at_force_neus_v15_DE_LINUX.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170406.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170409 1>1.junk 2>2.junk
+
+#20170410 check DL NH biomass box 4, scaling biomass to NEUS 1.0 (many reduced to below zero); using low N values in force file; pprey scaled to rowsum of 1 or less, changed breakdown rates of labile detritus, bacteria, oxygen mortality levels all in biol file, saved new file
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_.nc -r at_run_neus_v15_RM_scale_0405.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170410.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170410 1>1.junk 2>2.junk
+
+#20170413 desktop; check DL, NH, biomass box 4, scaling biomass to NEUS 1.0; using realistic low N values in force file; pprey from 3/31 biol file, detritral and bacterial changes from 4/10. mum_ scaled up 10x for all. Test higher max growth rates.
+atlantismain_RM -i RMinit_3test.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0405.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170412.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t C:\Users\ryan.morse\Documents\GitHub\atneus_RM -d 20170413 1>1.junk 2>2.junk
+# try again onlinux
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0405.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170412.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM-d 20170413 1>1.junk 2>2.junk
+#
+#20170413 check DL, NH, biomass box 4, scaling biomass to NEUS 1.0; using realistic low N values in force file; pprey from 3/31 biol file, detritral and bacterial changes from 4/10. mum_ scaled up 10x for all. Test higher max growth rates.
+<get inputs from linux machine file>
+
+#20170413dt desktop; scaling biomass to NEUS 1.0; using realistic low N values in force file; pprey from 3/31 biol file, detritral and bacterial changes from 4/10. mum_ scaled up 10x for all. Test higher max growth rates.
+atlantismain_RM -i RMinit_3test.nc 0 -o atneus_v15_new_Init.nc -r at_run_neus_v15_RM.prm -f at_force_neus_v15_DE_LINUX.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170412dt.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t C:\Users\ryan.morse\Documents\GitHub\atneus_RM -d 20170413dt 1>1.junk 2>2.junk
+
+
+
+
+
+
+
+=======
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_.nc -r at_run_neus_v15_RM.prm -f at_force_neus_v15_DE_LINUX.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_RM.PRM -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170413 1>1.junk 2>2.junk
+#
+**** To clarify 4/13 runs - ALL 3 runs have MUM values 10x higher than previous runs; linux run 20170413 had pPrey rowmax scaled to 0.3 if less than 0.3, not scaled if greater than 0.3; desktop run 1 20170413dt had pPrey rowmax scaled if less than 0.6; dt run 2 had pPrey scaled if rowmax < 0.9 ***
+
+#20170419 repeat run from 4/13 linux but change flag_shrinkfat 1 and flaghomog_sp 0 to keep boxes different - test starvation issues while working on new diet matrix
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0405.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170412.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170419 1>1.junk 2>2.junk
+
+#20170424 new pPrey from Jason based on v1.0 (higher than from Rob), flag_shrinkfat 1 and flaghomog_sp 0 to keep boxes different - test starvation issues while working on new diet matrix (not much of a difference). check flagercruit for inverts may need to add more - changed _CEP to _LSQ/ISQ etc. New pPrey include 2 life stage classes for shrimp and cephalopods, dinos eat small flagellates (not true, crashed, needs tweaking still and changed back to run). spInvertEatXMLFunction - pPREYISQ1 - Found a value for a juv cohort but ISQ has less cohorts than stages has higher MUM values may crash...
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0405.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170424.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170424 1>1.junk 2>2.junk
+
+
+#20170427 like 4/24 but 10x C to match higher mums... still using JLink pPrey (not optimal yet, still tweaking).
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0405.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170424.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170427 1>1.junk 2>2.junk
+
+#20170427a like 4/24 but 10x C to match higher mums... still using pPrey from 4/12
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0405.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170427a.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170427a 1>1a.junk 2>2a.junk
+
+
+#20170501 like 4/27 but 100x mum 10x C... still using pPrey from 4/12
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0405.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170427a.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170501 1>1.junk 2>2.junk
+
+#20170501a like 4/27 but 100x mum 1x C... still using pPrey from 4/12
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0405.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170501.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170501a 1>1a.junk 2>2a.junk
+
+#20170501b like 20170501a but edited kup_ and klp_ for lower trophic levels (was zero for kup!)
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0405.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170501.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170501b 1>1b.junk 2>2b.junk
+
+#20170501c like 20170501b but 10-100x higher mum for inverts
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0405.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170501.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170501c 1>1c.junk 2>2c.junk
+
+#20170501d like 20170501c linear mortality for inverts may have been set wrong - 2 stages, but atlantis may have been reading xxx 2 0.0015 as a lm of 2, fixed in prm file
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0405.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170501.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170501d 1>1d.junk 2>2d.junk
+
+#20170501e like 20170501d linear mortality for inverts may have been set wrong - 2 stages, but atlantis may have been reading xxx 2 0.0015 as a lm of 2, fixed in prm file, testing format of ml for inverts, saved new biol file
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0405.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170501e.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170501e 1>1e.junk 2>2e.junk
+ 
+#20170502 like 20170501e linear mortality for inverts WAS set wrong - 2 stages, but atlantis may have been reading xxx 2 0.0015 as a lm of 2, fixed in prm file, testing format of ml for inverts, now running with old nutrient files as nutrients and Chl collapse in surface water in last run
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0405.prm -f at_force_neus_v15_DE_LINUX.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170501e.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170503 1>1.junk 2>2.junk
+
+## Changed efficiencies (increased for all), testing nutrient load properly...
+#20170504a test nutrient file - no differernce in above, removed commented out line from RM nutrient file, flaggape flagNH
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170501e.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170504a 1>1a.junk 2>2a.junk
+
+#20170504b test nutrient file - as above but full nutrient load, removed commented out line from RM nutrient file, flaggape flagNH
+atlantisMerged -i RMinit_3test.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170501e.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170504b 1>1b.junk 2>2b.junk
+
+### above 2 runs both crashed with *** stack smashing detected *** also at day 300; googled -> reading something longer than 10 bytes into an array?
+
+#20170505 changed MUM back to reasonable levels, 10x normal, C 1x, turn off old code compatibility in run file, efficiencies are higher, higher nuts in init file.
+atlantisMerged -i RMinit4.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0405.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170501e.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170505 1>1.junk 2>2.junk
+
+# previous run quit *** stack smashing detected *** atlantis aborted at day 300 , exactly 10% of way through run (3000 days). This may or may not be an accurate indicator of when things go south if it is based on length read may have been an issue with the run file - changed on desktop and laptop
+
+#20170508 changed MUM back to reasonable levels, 10x normal, C 1x, turn off old code compatibility in run file, efficiencies are higher, higher nuts in init file.
+atlantisMerged -i RMinit4.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170501e.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170508 1>1.junk 2>2.junk
+
+#20170509 desktop - udated code base to 6197 trunk, had to include new parameters in the biol.prm file and physics.prm file
+atlantismain_6197 -i RMinit4.nc 0 -o atneus_v15_trunk6197.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170501e.prm -h at_harvest_neus_v15_working.prm  -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t C:\Users\ryan.morse\Documents\GitHub\atneus_RM -d 20170509dt 1>1.junk 2>2.junk
+
+#20170516 like 5/8 but longer, low half saturation values for plankton, changed vflux params in force file.
+atlantisMerged -i RMinit4.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170501e.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170516 1>1.junk 2>2.junk
+
+### note RMinit4.nc works on linux but not PC init5 works on desktop.... no f me. nevermind
+SHIT. did not work. trying unix/dos issues.... even old files not working on unix. Seems to be issue with biology file... made some changes in spacing using Meld
+
+# 20170516 try again with old biol file (just for shits and giggles)
+atlantisMerged -i RMinit4.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170410.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170516 1>1.junk 2>2.junk
+
+# 20170517 - Retry last nights failed run with edited biol file
+atlantisMerged -i RMinit4.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170501e.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170517 1>1a.junk 2>2a.junk
+
+# try again, added eddy vert_mix and seasonal scaling, biol file hybrid between 20170501e and 20170501 -> 20170517 (may need to remove more updated code items)
+atlantisMerged -i RMinit4.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170517 1>1a.junk 2>2a.junk
+
+# 20170518 eddy mixing seemed to do very little if any, diatoms did better in 5/16 run with old biol file; change vertmix in bgm file, removed 3 orders of magnitude from all boxes (cant find where to state which bgm to use so just copied into atlruns dir and removed old one up one level
+atlantisMerged -i RMinit4.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170518 1>1.junk 2>2.junk
+
+# 20170519 eddy mixing seemed to do very little if any, diatoms did better in 5/16 run with old biol file; change vertmix in bgm file, removed 3 orders of magnitude from all boxes (cant find where to state which bgm to use so just copied into atlruns dir and removed old one up one level ---> in init file! try again
+atlantisMerged -i RMinit_highvertmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170519 1>1.junk 2>2.junk
+
+#20170523 adjust vertmix in bgm similar to run from 20170519 (max vertmix 0.05) nutrient sourece files changed '/tsfiles' from 'tsfiles' possible reason it was not read in previously. NH3 was SUPER high in previous run. Also diet does not sum to 1 for all predators...
+atlantisMerged -i RMinit_highvertmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170523 1>1.junk 2>2.junk
+
+#20170523a NH3 was SUPER high in previous run (didnt finish due to crash) try old init file withouth high bgm mixing to see if nuts work now
+atlantisMerged -i RMinit4.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170523a 1>1.junk 2>2.junk
+
+#20170525dt no eddys, horiz and vert diffusion on, 3 orders of mag higher vertmix in BGM than original file
+atlantismain_6197 -i RMinit_notsohighvertmix.nc 0 -o atneus_v15_trunk6197.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t C:\Users\ryan.morse\Documents\GitHub\atneus_RM -d 20170524dt 1>1.junk 2>2.junk
+
+#20170525 try original mod of bgm (3 OM diff) with horiz_diff off and vertical diff turned on, eddys on, ppoint source injection on
+atlantisMerged -i RMinit_notsohighvertmix.nc 0 -o atneus_v15_vertmixtest1.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170525 1>1.junk 2>2.junk
+
+#20170525nonuts try original mod of bgm (3 OM diff) with horiz_diff off and vertical diff turned on, eddys on, ppoint source injection off
+atlantisMerged -i RMinit_notsohighvertmix.nc 0 -o atneus_v15_vertmixtest2.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170525nonuts 1>1a.junk 2>2a.junk
+
+#20170529 original bgm with vertdiff on
+atlantisMerged -i RMinit4.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170529 1>1.junk 2>2.junk
+
+#20170529dc duplicate check not a real run....
+atlantisMerged -i RMinit4.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170529dup 1>1.junk 2>2.junk
+
+#20170529testnuts change directory location of point source files, changed init file box 29 numlayers 2-> 4 layers
+atlantisMerged -i RMinitb29_v15_origmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170529testnuts 1>1.junk 2>2.junk 
+
+#20170531 physics tests- changed init file box 29 numlayers 2-> 4 layers, changed eddys box specific to those near shelf and GBK, eddyscale, deep mix <150m, cascade flows off; nutrient locations back where they were, previously correct. may need to add a source at ChesBay
+atlantisMerged -i RMinitb29_v15_origmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_some_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170531phys 1>1.junk 2>2.junk
+
+#20170531b physics test 2- same as above, but using enhanced mixing in bgm file
+atlantisMerged -i RMinitb29_v15_notsohighvertmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_some_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170531physB 1>1a.junk 2>2a.junk
+
+
+#20170531c based on physics test 2 above from today, using new MuM high for LTL 10x original for verts and C is 0.1xMUM, ehanced mixing in bgm file; changed linear and quadratic mortality to 0 for all taxa;
+atlantisMerged -i RMinitb29_v15_origmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_some_eddys.prm -b at_biol_neus_v15_scaled_diet_20170531.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170531mumtest 1>1.junk 2>2.junk
+
+#20170531d as above but notsohighmix.nc, fixed C for inverts so C=0.1*mum (previous run would crash b/c invert mum was too high decreased in both for working runs;
+atlantisMerged -i RMinitb29_v15_notsohighvertmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_some_eddys.prm -b at_biol_neus_v15_scaled_diet_20170531.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170531mumtestB 1>1a.junk 2>2a.junk
+
+#20170601a as above but eddy mix 2->1, mix_deep 150 -> 180 in physics (both above runs crashed with high N fluxes in boxes 3 or 5 in first 2 years, N accumulating in many boxes)
+atlantisMerged -i RMinitb29_v15_notsohighvertmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_some_eddys.prm -b at_biol_neus_v15_scaled_diet_20170531.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170601a 1>1.junk 2>2.junk
+
+#20170601b as above (crashed nearly same place as before), mum and C each divided by 10 for verts (MUM as original from Gavin), mum:C ratio is same. (redo -overwrite)
+atlantisMerged -i RMinitb29_v15_notsohighvertmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_some_eddys.prm -b at_biol_neus_v15_scaled_diet_20170601.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170601a 1>1a.junk 2>2a.junk
+
+# tried to add usehardfeedingwindow 0 but there is a missing parameter for all species and no time to add it at the present: Failed to find species parameter Kmax_coefft_ in file at_biol_neus_v15_scaled_diet_20170601.prm for group MAK
+# 20170601c above run overwrote previous and crashed in same spot and time as previous. N flux too high. deep mix to 200 and eddys reduced to only GBK
+atlantisMerged -i RMinitb29_v15_notsohighvertmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_few_eddys.prm -b at_biol_neus_v15_scaled_diet_20170601.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170601b 1>1.junk 2>2.junk
+
+# no luck, trying JLink pprey matrix now from 4/24
+# 20170601c above run overwrote previous and crashed in same spot and time as previous. N flux too high. deep mix to 200 and eddys reduced to only GBK
+atlantisMerged -i RMinitb29_v15_notsohighvertmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_few_eddys.prm -b at_biol_neus_v15_scaled_diet_20170601.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170601c 1>1a.junk 2>2a.junk
+# quick error fix: pPREYISQ1 - Found a value for a juv cohort but ISQ has less cohorts than stages -> deleting '1' and '2', keeping only '2' entries, same for LSQ, NSH, OSH
+# not stable, crash after 600 ~days
+
+## 20170601d deep mix to 200 and eddys reduced to only GBK, using biol file from 20170517 but add JLink pprey
+atlantisMerged -i RMinitb29_v15_notsohighvertmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_few_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517_0601mod.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170601d 1>1d.junk 2>2d.junk
+
+## 20170602a changed run file - using biol file from 20170517 but add JLink pprey shorter output to see what happens to biomass 120-d run daily output
+atlantisMerged -i RMinitb29_v15_notsohighvertmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_few_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517_0601mod.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170602a 1>1a.junk 2>2a.junk
+
+## 20170602b changed run file - using biol file from 20170601 shorter output to see what happens to biomass 120-d run daily output
+atlantisMerged -i RMinitb29_v15_notsohighvertmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_few_eddys.prm -b at_biol_neus_v15_scaled_diet_20170531.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170602b 1>1b.junk 2>2b.junk
+
+## 20170602c like above but 1 year and KN raised to realistic levels for phtyo
+atlantisMerged -i RMinitb29_v15_notsohighvertmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_few_eddys.prm -b at_biol_neus_v15_scaled_diet_20170531.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170602c 1>1c.junk 2>2c.junk
+-> stack smashing probably related to changing biol file KN_ values and deleting an extra space?
+
+#20170607a trying to tweak run from 20170529 - 730 day, original eddies (all equal in a season), mix_deep 200, change horizmix to all 1000 (reduced in boxes 4,7,25), vertmix not so high.
+atlantisMerged -i RMinitb29_v15_notsohighvertmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170607 1>1.junk 2>2.junk
+#run crashed, high N flux box 19. nutrients too high, change vertmix back to low values of original bgm?
+
+#20170607b as above but change mixdeep to 500 to try to reduce nutrients
+atlantisMerged -i RMinitb29_v15_notsohighvertmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170607b 1>1b.junk 2>2b.junk
+#run crashed, high N flux box 19. nutrients too high, change vertmix back to low values of original bgm?
+
+< ran 2 other iterations that ended up breaking the system, stack smashing detected, had to run fsck -y /dev/sda1 when restarted into busybox >
+
+# deep mix 500, eddy vertmix is 0
+atlantisMerged -i RMinitb29_v15_notsohighvertmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170607d 1>1d.junk 2>2d.junk
+
+ran above with biol from 5/31 (both or one resulted in errors on disk and computer crashed) > 20170607e
+looking into this with eclipse to run in debug mode - appears to be an issue with spacing and overwrite or read from memory as it happens around 200 days into simulation. may be related to integers versus non integers in prm file?
+
+
+### new groups with only plankton turned on
+#20170609
+atlantisMerged -i RMinitb29_v15_notsohighvertmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_LTLonly.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170609 1>1.junk 2>2.junk
+
+#longer run 9130 d
+atlantisMerged -i RMinitb29_v15_notsohighvertmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_LTLonly.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170609a 1>1a.junk 2>2a.junk
+
+#20170612 original bgm file (no vertical mixing in bgm), reduced horizontal mix in 4 boxes (all boxes at 1000), reduce growth rates and increase N uptake for picoplankton
+atlantisMerged -i RMinitb29_v15_originalmix.nc 0 -o atneus_v15_new_Init_10xMUM.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_LTLonly.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170609a 1>1a.junk 2>2a.junk (overwrote previous run, damn... or maybe this one never worked, init file was incorrect)
+
+#20170626 original bgm file (no vertical mixing in bgm), reduced horizontal mix in 4 boxes (all boxes at 1000), reduce growth rates and increase N uptake for picophyton, reduced mum for all inverts, reduced N uptake (higher half-saturation), changed scaling of biomass in run prm to new values from Sean Lucey and calculated from Chl and zooplankton biomass (RM), eddy scale phyto 1.5 (from 1);
+atlantisMerged -i RMinitb29_v15_origmix.nc 0 -o atneus_v15_newscale.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_LTLonly.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170626 1>1.junk 2>2.junk
+
+#try above with notsohighvertmix (I think this is causing th nutrients to soar)
+atlantisMerged -i RMinitb29_v15_notsohighvertmix.nc 0 -o atneus_v15_newscale.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_LTLonly.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170626notsohighmix 1>1a.junk 2>2a.junk
+
+#adjusted _vertmix in notsohighvertmix.bgm down in boxes 5,6,14, changed S, T, and Hydro files to remove wonky oscillations at end of 2 year time series, now goes 644 days before looping, may need to reduce back to 365 days to avoid strange jumps. updated filenames in force.prm
+atlantisMerged -i RMinitb29_v15_notsohighvertmix.nc 0 -o atneus_v15_newscale.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_LTLonly.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170628 1>1.junk 2>2.junk
+
+# biomass not scaled for inverts, need to adjust initial conditions file
+# fixed zoo, phyto, nuts, shrimp -test (new NC based on notsohighvertmix.nc)
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newscale.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_LTLonly.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170703 1>1.junk 2>2.junk
+
+# increase horizmix in boxes 8, 12, 16, 18 by 10x (no eflux present in these boxes) in neus30_v15.bgm. lower KN and raise mum for PL.
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newscale.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_LTLonly.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170705 1>1.junk 2>2.junk
+
+#decrease MUM for inverts 10x, lower C for zoo 10x, increase eddy effect on phyto to 10x.
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newscale.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_LTLonly.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170705a 1>1.junk 2>2.junk
+
+# try again, KN back to reasonable levels, add mixing vert and horiz in physics file, mix deep to 150m to try and bring more nutrients in.
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newscale.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_LTLonly.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170705b 1>1.junk 2>2.junk
+
+# reduced mortality to zero for all invers mL and mQ, otherwise as above
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newscale.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_LTLonly.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170705c 1>1c.junk 2>2c.junk
+
+#changed init to call notsohighvermix.bgm
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newscale.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_LTLonly.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170706 1>1.junk 2>2.junk
+
+# remove nutrient deepmix effect, set mixdeep to 500 m
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newscale.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_LTLonly.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170706b 1>1b.junk 2>2b.junk
+
+# atmospherics off, point source injection off, light adaptation off
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newscale.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_LTLonly.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170707 1>1.junk 2>2.junk
+
+# horizmix 1000>1.0 for all boxes. (no point source, ZERO difference to model???), run length reduced to 4565 days
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newscale.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_LTLonly.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170707a 1>1a.junk 2>2a.junk
+
+# horz and vert diffusion on, ts on hydro time OFF, nut inputs ON
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newscale.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_LTLonly.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20170707b 1>1b.junk 2>2b.junk
+
+#_________________________________________________________________
+# Trying NEUS v1.0 with new codebase for ICES
+atlantisMerged -i inneus_2012.nc 0 -o atneus_v10_newcodebase.nc -r at_run_neus_v15_DE.prm -f at_force_neus_v15_DE_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_DE.prm -h at_harvest_neus_v15.prm -e at_economics_neus_DE_New.prm -s NeusGroups.csv -q NeusFisheries_v15.csv -t home/ryan/Git/atneus-737e3dffb77baa72fb1159d5d312f322ea500662 -d 20170914 1>1.junk 2>2.junk
+
+atlantisMerged -i inneus_2012.nc 0 -o atneus_v10_newcodebase.nc -r at_run_neus_v15_DE.prm -f at_force_neus_v15_DE_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_DE.prm -h at_harvest_neus_v15.prm -e at_economics_neus_DE_New.prm -s NeusGroups.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus-737e3d -d 20170914 1>1.junk 2>2.junk
+
+## this one runs, still need to update biol.prm file, last error code was on _mL (linear mortality for all taxa)
+atlantisMerged -i inneus_2012.nc 0 -o atneus_v10_newcodebase.nc -r at_run_neus_v15_DE.prm -f at_force_neus_v15_DE_RM.prm -p at_physics_nuts_neus_v15_DE.prm -b at_biol_neus_v15_DE.prm -h at_harvest_neus_v15.prm -e at_economics_neus_DE_New.prm -s NeusGroups.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus737e3d -d 20170914 1>1.junk 2>2.junk
+
+#________________________________________________________________________
+#### 20180103 new hydro from rutgers doppio roms - 2008 (365 days) as initial test, just lower trophic levels to start
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_LTLonly.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180105 1>1a.junk 2>2a.junk
+
+#### 20180125 new hydro from rutgers doppio roms - 2008-2010 (1095 days) as initial test, just lower trophic levels to start, nutrient injection on, no seasonal eddys
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_LTLonly.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180125 1>1a.junk 2>2a.junk
+
+#### 20180126 new hydro from rutgers doppio roms - 2008-2010 (1095 days) as initial test, just lower trophic levels to start, nutrient injection on, no seasonal eddys, try with high nutrients ---> no discernable difference from previous run!!!!
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_LTLonly.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180126 1>1b.junk 2>2b.junk
+
+### 20180130 try with all groups to get better data (no errors) for atlantistools... changed nutrient ts for banksupwelling to hydro time (86400)
+# turned on atmospheric inputs decayWC and resuspension ERROR -> bottomStress needed for resuspension... work on later...
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180130 1>1c.junk 2>2c.junk
+
+
+### 20180130a as above, changed MB values lower (super high growth in box 11), last run went ~ 150d before crash
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180130a 1>1c.junk 2>2c.junk
+
+
+### 20180201 as above, using old hydro to see if it goes longer... crashed on 0 roc for SB
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180201 1>1a.junk 2>2a.junk
+
+### 20180201 as above, using old hydro to see if it goes longer... crashed on 0 roc for SB, TURNED ATMOS OFF in physics file
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_RM.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180201b 1>1b.junk 2>2b.junk
+
+### 20180201 turn off SB in group file... previous attempts did not work: not hydro, not atmosphere...
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_noSB.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180201ca 1>1c.junk 2>2c.junk
+
+### 20180205 quick test of 100x nutrients plus CBay and Hudson as above but increased nuts for 2 point source in GOM and add 2 Bays (same file), shorten run, nuts ts in seconds since XXX, ts_on_hydro_time 1
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_noSB.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180205a 1>1a.junk 2>2a.junk
+
+### 20180205 as above but nuts ts in DAYS since XXX, ts_on_hydro_time 1
+# ---> is exactly the same as previous
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_noSB.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180205b 1>1b.junk 2>2b.junk
+
+
+### 20180206 as above but new (old) biol file 0531 with different mum values
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170531.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_noSB.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180206a 1>1a.junk 2>2a.junk
+
+# 20180207 fixed C for BWH RHW MPF, also mums for cohort 1-2s (set lower than for older cohorts). trying to get RWH to stop crashing, new solar file
+# C_xxx are orders of magnitude higher than in v1.0 file, revisit C_ and mum_ later...
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_noSB.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180207a 1>1a.junk 2>2a.junk
+
+# 20180208 fixed C for BWH RHW MPF, also mums for cohort 1-2s (set lower than for older cohorts). trying to get RWH to stop crashing, new solar file
+# mum values reduced back to original values (about 10x less, new prm file), Efficiency also back to original vals, changed KUP and KLM vals for inverts, mod uptake vals and Oxygen mort vals.
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517_mod_lowerMuM.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_noSB.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180208a 1>1a.junk 2>2a.junk
+
+# 20180209 as above, turned on checks in run file, SB back on
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517_mod_lowerMuM.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180209a 1>1a.junk 2>2a.junk
+
+#20180213a Error with roc for SB or RHW - turn off density dependent movement for large verts and SB (was 2, changed e.g. BWH_ddepend_move 0), added Kmax_coefft for smooth feeding window (turned off knife edge).
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517_mod_lowerMuM.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180213a 1>1a.junk 2>2a.junk
+
+(270 days)
+*** stack smashing detected ***: atlantisMerged terminated
+Aborted
+
+#20180216a turn off diet check and other logs, mod biol file - higher KN values, 2 new nutrient sources in ME, higher pPrey for ZM, ZS, BC, BD; run file has output equal for all files (for atlantistools output). Still need to increase pPrey for benthic groups to feed on benthos! fixed init file to add sinking to PL and DF
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20170517_mod_lowerMuM.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180216a 1>1a.junk 2>2a.junk
+
+(367 days)
+*** stack smashing detected ***: atlantisMerged terminated
+Aborted
+
+#20180227 as 20180216 but new pprey (20180227) in new biol file, new box specific nutrients (NO3, NH3) for CBay, NBay, Hudson R., 
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180227.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180276a 1>1a.junk 2>2a.junk
+
+*** did not work ***
+#20180228 as above (did not work - could not find 'juv' in biol file) - added age structured vals to biol file
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180227.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180228a 1>1a.junk 2>2a.junk
+
+## 20180301 ran same code as above, fixed all parameters for seperate groups for ISQ LSQ NSH OSH, added 2 stages to initial conditions ###
+# Init file was saved as same name, biol file same name, commited to github March 1 2018, can use stored version to get old version without age structured CEP and PWN groups
+
+# trouble shoot crashes - open in eclipse and run with break point set just before crash - gapecheck is culprit
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180227.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180305
+
+# 20180309a still crashing at 368 days, not sure why yet. reduced NH4 and NO3 nutrients for CBAY and HUDSON by a factor of 20. gape check off.
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180227.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180309a 1>1a.junk 2>2a.junk
+
+# 20180309b as above, NH3 and NO3 nuts reduced by 200 Hudson, CBay, NBay
+
+# 20180309c as above, reduced mum for inverts 10x
+
+# 20180309d, mum for inverts increased back, and then some... changed ddepend for whales to off (causing roc error)-> (complete run) but oxygen drops to zero...
+
+# 20180309e, inverts mum 10x of '___d',fish resp on, nuts reduced 2000x from original in HUD and CBAY and NBAY -> wc labile Det N blows up
+**** respiration seems to be problem - not used in v1.0 from files I have....
+
+# 20180309f, as '____e' but no respiration... (unstable nuts, ran only 90 days, need to dcrease mum again)
+-> also, need to reduc nuts in coastal boxes and increase KN values to get diatoms to grow again. Need better detrital N loops, usage, consumption, production, etc.
+look at edffiencies
+
+### NOTES: stack smashing a result of turning gape check on. Positive growth seems majorly affected by respiration (early in biol file, flag_resp - leave off, was off in both SETAS and V1.0, had been turned on since early 2017 in v1.5). Need to check ratios of mum:C, done for inverts, need to check verts. First positive growth was from file run on 2/16/2018 using v5 level nutrients. Added specific nutrient sources by values are much too high ~1e11, rather than ~1e6 in v5 file.
+
+# 20180314 reduced mum again for inverts, changed C for some taxa (see commit) to be in better ratio of mum/C, recalc nuts to be mg/m3 x 86400 (no area used); 10 year run, 30 day output;
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180227.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180314a 1>1a.junk 2>2a.junk
+
+-> got 10 years through, light goes to zero in the coastal boxes where nuts are added after about half of a year, no more diatoms, picoplankton bloom though, not annually but every 2 years... strange. Still no benthic growth despits build up of labile-N in seds. No scallops, quohogs, benthic carnivores or benthic grazers
+
+
+# added SED as a passive tracker, currently have chesapeake box as input, constant 10000 input value, see where it goes after 1 year run...
+20180316 2 year, 10 days output 
+-> shows up in export.ts file, but not in olive results. Export.ts shows high losses of many variables, is this the 'transport: negative XXX in box X' problem? Check with older results prior to new hydro to see if problem persists.
+-> NO... old files have same error (old hydro) but less removal in export.ts file (transport across boundary boxes).
+
+# 20180321 trying to fix light issue, goes to zero in coastal boxes with nutrients -> picoplankton to blame? changed light requirements for picos to same as PL, light adaptation on. May need another pass at pPrey to see who eats pico plankton. Also, reduce nutrients in coastal boxes (data/10)*86400 to be in line with concentrations outside of coastal boxes
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_newhydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180227.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180321a 1>1a.junk 2>2a.junk
+
+-> reduce coastal nutrients further, too much, O2 goes to zero, picoplankton dominate
+
+20180321b - nutrient vals are now  (measured vals * 86400 /10) for NH4 and NO3 - using same CBAY file for HUDSON and CBAY so SED inputs are coming from both... Fixed SED sumtype, should now show in olive.
+-> nuts look better except for Casco Bay area, where O2 drops. Sed is now functional, looks like flow from CBAY and DBAY/Hudson is backwards, ends up in the GOM... flows N instead of S... need to double check hydro conventions...
+
+20180330 - updated hydro, one year (2008) much lower flows (1-10 m3) except for constant high removal at depth (8631 and multiples). Flow direction is better though, can tweak flows in force file if needed(?)
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180227.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180330a 1>1a.junk 2>2a.junk
+Flows (& S, T) used in this run:
+/home/ryan/Git/atneus_RM/tsfiles/flowOut2008_fix_0330fluxtime2_a.nc
+had higher flows 10000ish, look good but still very high exports into boundary boxes, so flushing might be an issue
+
+20180403 - remade hydro with flux (not fluxtime) for 3 years, try same run as above, change name of flow files in force file
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180227.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180403a 1>1a.junk 2>2a.junk
+
+b - hydro using fluxtime now (better even flows), small changes to biol file (bacteria, DL params, light).
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180227.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180403b 1>1b.junk 2>2b.junk
+Time: 2.000000e+00 The UNstable vari. 805 is NH3 in wc (offset: 0 NH3 in wc), its  Pool = 6050.77, Netflux = 5.47791e+16 on day: 2.000000e+00 in box: 2 layer 0
+
+switched the hydro back to the usual and still getting error on fluxes WTF...
+used git stash to revert to saved files, but using new hydro; can use git apply to get mods back to see where problem arose file by file (4 files changed, with minor changes, could be mixing params or biol (guess)).
+
+20180404 - noticed the vertical mixing param in the bgm file is 0.001 for all boxes, try setting this lowere SETAS has 0.000001 (this is a relic from the old hydro when I added increased mixing to make up for zero in old hydro, just never reverted it).
+changed all values for vertmix to 0.00001, changed mix_season_kz in phys file to 3.0 from 5.0 (10 in SETAS)
+-> no real effect 20180404a
+
+Change biol params:
+- increase mum for inverts based on SETAS
+- decrease mL and mQ (and reformat so only 1 entry for non age-struc inverts) to zero
+commit biol changes 20180404
+run 10 years with new biol, new hydro.
+20180404b...
+
+ERROR: Failed to find species parameter _mL in file at_biol_neus_v15_scaled_diet_20180227.prm for group SCA, cohort juv
+RM-but there is only 1 cohort for SCA(?) fixed (had ml_XX instead of XX_mL)
+
+20180404c
+set up 50 year run... changed ts_on_hydro_time to 0 (messed up light, probably nutrients as well, anything with ts....)
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180227.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180404c 1>1c.junk 2>2c.junk
+
+20180416 atmospheric injection on, decay wc off, increased eddy influence on box 1 and 3, biorrigation on
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180227.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180416a 1>1a.junk 2>2a.junk
+	RESULTS-> oxygen went to zero, light to zero nuts high, eutrophied system.... turn decay in wc and seds back on (only affects NO3, NH3 and ref_det), turn include_atmosphere on (may not have had any influence from atmosphere in last run).
+SED only ends up in CHes box now (=the origin box, fixed the direction of currents, now looks great).
+CHANGED init file - NH3 and NO3 were in uM changed to mg/m3
+
+20180417a
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180227.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180417a 1>1a.junk 2>2a.junk
+	RES -> oxy still to zero, much of biomass in seds and sed bacteria, turn off nutrient injection?
+
+20180418a
+turn on check NH, turn atmospherics off, modify nut inputs-> off not yet; reduce mum 10x for bacteria, turn off bact_stim, 20 year run so no ecotest yet (not to blow up hard drive as unsupervised)
+	RES-> labile detritus blows up, NH3 blows up, sed bact still dominate system as highest. Compare to NEUS 1.0 runs (pdf files of N) these are many orders of magnitude greater - fish generally ~ 1000, inverts in the 10-50 range, some fish in the 1e5 range -> reduce mum and C 10x for invert species and drop nutrient additions? add mortality back in? Fish mums are similar, except the groups that were broken out from a parent group all have the same mum values, which should not be (billfish, tunas, etc..., maybe tweak based on proportional body mass at adult age? C for vert species is abou 100x larger for new vs old, can mod these
+
+NEW biol file 20180419:
+-mum for inverts to match NEUS 1.0 (generally ~ 10x less than 20180228, ZM is higher
+-C for inverts to match NEUS 1.0, generally about 10x less, some are same
+-C for verts left same for now hard to compare on plane... mackerel and herring should be 10x less to match
+
+( NOT SURE WHAT UNITS THESE ARE IN - THE OLIVE VERSION OF THIS DATA IS SIMILAR TO THE CURRENT RUN, except the benthics are much higher in 1.5)
+
+Try new biol file with lower mum and lower C for inverts as one run, try one without nutrient inputs as another.
+
+### run 1 with lower mum and lower C
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180419.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180423a 1>1a.junk 2>2a.junk
+
+20180423b - same thing, no nutrients point sources =0
+
+
+20180425a - reduced mum and C for inverts that blow up (All squid,BO, PL, PS, ZL, BB) - no nuts again as above.
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180419.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180425a 1>1a.junk 2>2a.junk
+
