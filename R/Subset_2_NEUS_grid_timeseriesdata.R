@@ -170,20 +170,21 @@ base=merge(base, zoo.11, by=c('V1'), all=T)
 base=merge(base, zoo.12, by=c('V1'), all=T)
 
 #rename (units still mg C/m3 zooplankton biomass)
-NEUS.zoo.bio=data.frame(t(base[,2:13])) #transpose)
-colnames(NEUS.zoo.bio)=c(seq(from=0, to=29, by=1))
-rownames(NEUS.zoo.bio)=c(seq(from=1, to=12, by=1))
+NEUS.zoo.bio=data.frame((base[,2:13])) #transpose)
+rownames(NEUS.zoo.bio)=c(seq(from=0, to=29, by=1))
+colnames(NEUS.zoo.bio)=c(seq(from=1, to=12, by=1))
 NEUS.zoo.bio$`col.mn`=rowMeans(NEUS.zoo.bio, na.rm=T) # this may not work... 
-NEUS.zoo.bio$`col.sum.N`=rowSums(NEUS.zoo.bio, na.rm=T)/5.6 # this may not work... 
+NEUS.zoo.bio$`col.sum.N`=rowSums(NEUS.zoo.bio, na.rm=T)/5.7 # this may not work... 
 
-barplot(NEUS.zoo.bio$'col.sum.N', main='NEUS Mean Monthly Zooplankton Biomass (Mg N/m3)', xlab='month')
-barplot(colMeans(NEUS.zoo.bio[1:30], na.rm=T), main='NEUS Mean Annual Zooplankton Biomass (Mg C/m3)', xlab='box')
+barplot(NEUS.zoo.bio$'col.sum.N', main='NEUS Monthly Zooplankton Biomass Sums (Mg N/m3)', xlab='month')
+barplot(NEUS.zoo.bio$`col.mn`, na.rm=T, main='NEUS Mean Annual Zooplankton Biomass (Mg C/m3)', xlab='box')
+barplot(NEUS.zoo.bio$`col.mn`/5.7, na.rm=T, main='NEUS Mean Annual Zooplankton Biomass (Mg N/m3)', xlab='box')
 
 
 # Break up total zoo N biomass into NEUS groups based on NEUS 1.0 partition of biomass
 # ---> use these for each depth layer in initial conditions file (RM 6/2017)
 # Because these are mg C/m3 and from oblique tows (top to bottom) -> divide by Redfield, 
-barplot((NEUS.zoo.bio$'col.mn'/5.6), main='Mean Annual Zooplankton Biomass (Mg N/m3)', xlab='box')
+barplot((NEUS.zoo.bio$'col.mn'/5.7), main='Mean Annual Zooplankton Biomass (Mg N/m3)', xlab='box')
 
 # use to fill initial condition values -> same values througout water column
 FILL.init=function(tt, bgm.z){
@@ -205,13 +206,14 @@ tt2[is.na(tt2)]='_'
 return(tt2)
 }
 
-tt=round(matrix(NEUS.zoo.bio['col.mn',]/5.6*0.214),digits=3) # ZG mg N m
+
+tt=round(matrix(NEUS.zoo.bio$'col.mn'/5.7*0.214),digits=3) # ZG mg N m
 ZG=FILL.init(tt,bgm.z)
-tt=round(matrix(NEUS.zoo.bio['col.mn',]/5.6*0.125),digits=3) # ZL
+tt=round(matrix(NEUS.zoo.bio['col.mn',]/5.7*0.125),digits=3) # ZL
 ZL=FILL.init(tt,bgm.z)
-tt=round(matrix(NEUS.zoo.bio['col.mn',]/5.6*0.134),digits=3) # ZM
+tt=round(matrix(NEUS.zoo.bio['col.mn',]/5.7*0.134),digits=3) # ZM
 ZM=FILL.init(tt,bgm.z)
-tt=round(matrix(NEUS.zoo.bio['col.mn',]/5.6*0.528),digits=3) # ZS
+tt=round(matrix(NEUS.zoo.bio['col.mn',]/5.7*0.528),digits=3) # ZS
 ZS=FILL.init(tt,bgm.z)
 
 setwd('C:/Users/ryan.morse/Desktop/NEUS Atl files/RM_initial_conditions')
@@ -221,19 +223,33 @@ write.table(ZM, file='ZM2.csv', sep=', ',col.names = F, row.names=F)
 write.table(ZS, file='ZS2.csv', sep=', ',col.names = F, row.names=F)
 
   
-### Aggregate mean biomass to box area and depth and sum for totat NEUS biomass in tonnes for scaling initial biomass
-NEUS.zoo.box.t=(t(NEUS.zoo.bio))
-NEUS.zoo.box.t[is.na(NEUS.zoo.box.t)]=0 # drop NA's to allow multiplications
-bgm.z$box.botz=bgm.z$box.botz*-1
-NEUS.zoo.box.t=NEUS.zoo.box.t*bgm.z$box.botz*bgm.z$area /1000*1e-6
+### Aggregate mean biomass to box area and depth and sum for total NEUS biomass in tonnes for scaling initial biomass
+NEUS.zoo.box.t=((NEUS.zoo.bio[,1:12]))
+# NEUS.zoo.box.t[is.na(NEUS.zoo.box.t)]=0 # drop NA's to allow multiplications
+# bgm.z$box.botz=bgm.z$box.botz*-1
+xxt=bgm.z$box.botz*bgm.z$area*1e-9 ## conversion of mg N to tonnes
+NEUS.zoo.box.t[1:30,]=NEUS.zoo.box.t[1:30,]*xxt ## Total Zoo tonnes per box
+# NEUS.zoo.box.t[which(NEUS.zoo.box.t==0)]=NA # return NAs
+
+### NOW Convert to kg N
+NEUS.zoo.box.N=NEUS.zoo.box.t/5.7
+ZG=xx*0.214
+ZL=xx*.125
+ZM=xx*.135
+ZS=xx*.528
+plankton=data.frame(ZL, ZM, ZS, ZG)
+test=do.call("rbind", replicate(20, plankton, simplify = FALSE)) # repeat yearly pattern N times to match to atlantis
+test$Time=seq(from=0, to=30*length((test[,1]))-1, by=30) # set time point for output 30d, 365d, etc...
+write.table(test, file='Zooplankton_total_biomass_tonnes_N_20yrs.csv', col.names = T, row.names=F, sep=',')
+
 
 # NEUS biomass by month - use as virgin biomass for scaling
-colSums(NEUS.zoo.box.t, na.rm=T)
-barplot(colSums(NEUS.zoo.box.t), main='NEUS Zooplankton monthly biomass (t)')
+xx=colSums(NEUS.zoo.box.N, na.rm=T)
+barplot(xx, main='NEUS Zooplankton monthly biomass (t)')
 
 # NEUSyearly mean biomass by box - use as in init file
-rowSums(NEUS.zoo.box.t, na.rm=T)
-barplot(rowSums(NEUS.zoo.box.t), main='NEUS Zooplankton box biomass (t)')
+xx=rowSums(NEUS.zoo.box.t, na.rm=T)
+barplot(xx, main='NEUS Zooplankton box biomass (t)')
 
 
 #_______________________________________________________________________________________________________
@@ -267,6 +283,7 @@ barplot(rowSums(NEUS.zoo.box.t), main='NEUS Zooplankton box biomass (t)')
 #20170610 - added new data from HERMES GlobColour, now all monthly from 1998-2016 included
 # load("G:/1 RM/3 gridded data/HERMES merged CHL 25km/monthly_chl_hermes_merged_gsm_25km.rdata")
 setwd('G:/1 RM/3 gridded data/HERMES merged CHL 25km/1998_2016')
+setwd('C:/Users/ryan.morse/Desktop/Iomega Drive Backup 20171012/1 RM/3 gridded data/HERMES merged CHL 25km/1998_2016')
 wd=getwd()
 files.AV=list.files(wd, pattern=('_AV-'))
 files.GSM=list.files(wd, pattern=('_GSM-'))
@@ -354,7 +371,7 @@ extractMonths=function(x, shp){
   return(m)
 }
 
-### returns Mean Chl per box (0-29, rows), by year from 1998-2016 (columns) for month indicated
+### returns Mean Chl per box (0-29, rows), by year from 1998-2016 (columns) for month indicated (mg chl a /m3)
 Jan.chl=extractMonths(r1, neus.shp)
 Feb.chl=extractMonths(r2, neus.shp)
 Mar.chl=extractMonths(r3, neus.shp)
@@ -368,6 +385,42 @@ Oct.chl=extractMonths(r10, neus.shp)
 Nov.chl=extractMonths(r11, neus.shp)
 Dec.chl=extractMonths(r12, neus.shp)
 
+All.chl=nc2raster(files.GSM)
+Chl.time=seq(ISOdate(1998,1,15), ISOdate(2016,12,15), "month") # monthly mean values 1998-2016
+# dimnames(All.chl[,,3])=Chl.time
+
+NEUSplotChlRaster=function(data, i, maxV){
+  rasterX=data[[i]]
+  col5=colorRampPalette(c('blue','white','red'))
+  max_abolute_value=maxV #what is the maximum absolute value of raster?
+  color_levels=20
+  br <- seq(0, max_abolute_value, length.out=color_levels+1) 
+  rng2=cellStats(rasterX, range)
+  rng=c(0, maxV, rng2[2])
+  arg=list(at=rng, labels=round(rng,2))
+  plot(rasterX, col=col5(length(br) - 1), breaks=br,axis.args=arg, xlim=c(-77,-64),ylim=c(35,45),
+       las=1, legend=F, main=Chl.time[[i]])
+  map("worldHires", xlim=c(-77,-64),ylim=c(35,45), fill=T,border=0,col="gray", add=T)
+  plot(rasterX, legend.only=T, col=col5(length(br) - 1),breaks=br,axis.args=arg, legend.shrink=0.5,
+       smallplot=c(0.19,0.21, 0.6,0.80) )
+}
+NEUSplotChlRaster(All.chl, 10, 4) # data, choose date (1-228), max value
+
+### Mg Chl a /m3 -> Mg Chl a per box (take mg chla/m3 * box area * chl depth (max 50m))
+ts1=Jan.chl*bgm.z$chlZ*bgm.z$area
+ts2=Feb.chl*bgm.z$chlZ*bgm.z$area
+ts3=Mar.chl*bgm.z$chlZ*bgm.z$area
+ts4=Apr.chl*bgm.z$chlZ*bgm.z$area
+ts5=May.chl*bgm.z$chlZ*bgm.z$area
+ts6=Jun.chl*bgm.z$chlZ*bgm.z$area
+ts7=Jul.chl*bgm.z$chlZ*bgm.z$area
+ts8=Aug.chl*bgm.z$chlZ*bgm.z$area
+ts9=Sep.chl*bgm.z$chlZ*bgm.z$area
+ts10=Oct.chl*bgm.z$chlZ*bgm.z$area
+ts11=Nov.chl*bgm.z$chlZ*bgm.z$area
+ts12=Dec.chl*bgm.z$chlZ*bgm.z$area
+
+
 ### Create 3D array of mean chl per box by year, (array is [month, box, year] ie: [1:12,1:30,1:19])
 library(abind)
 BoxChl.array=abind(Jan.chl, Feb.chl, Mar.chl, Apr.chl, May.chl, Jun.chl, Jul.chl, Aug.chl,
@@ -376,6 +429,41 @@ BoxChl.array=abind(Jan.chl, Feb.chl, Mar.chl, Apr.chl, May.chl, Jun.chl, Jul.chl
 box.mon=apply(BoxChl.array, c(1,2), mean, na.rm=T) # monthly means over all years for each box
 box.yr=apply(BoxChl.array, c(2,3), mean, na.rm=T) # yearly means over all months for each box
 box.NES=apply(BoxChl.array, c(1,3), mean, na.rm=T) # NEUS (all boxes) monthly means in each year
+
+#limit to boxes 1-22 (no boundary boxes or islands)
+BoxChl.array.NES=abind(Jan.chl[2:23,], Feb.chl[2:23,], Mar.chl[2:23,], Apr.chl[2:23,], May.chl[2:23,], 
+                       Jun.chl[2:23,], Jul.chl[2:23,], Aug.chl[2:23,], Sep.chl[2:23,], Oct.chl[2:23,], 
+                       Nov.chl[2:23,], Dec.chl[2:23,], along=0)
+
+### SUM all boxes for NEUS total biomass time series: 
+# NEUSchlTS=apply(BoxChl.array.NES, c(1,3), sum, na.rm=T) # NEUS (all boxes) monthly means in each year
+# test=as.data.frame(NEUSchlTS)
+# colnames(test)=seq(from=1998, to=2016, by=1)
+# NEUSchlTS.vec=unlist(as.data.frame(NEUSchlTS))
+# final.chl.ts=NEUSchlTS.vec*7*20*5.7*1e-9 #(=mg chl * x_CHLN * wetdry * X_CN * convert to tonnes)
+
+### NOW as above but with area and chlorophyll depth applied to each box:
+BoxChl.array.NES=abind(ts1[2:23,], ts2[2:23,], ts3[2:23,], ts4[2:23,],ts5[2:23,], 
+                       ts6[2:23,], ts7[2:23,], ts8[2:23,], ts9[2:23,], ts10[2:23,], 
+                       ts11[2:23,], ts12[2:23,], along=0)
+NEUSchlTS=apply(BoxChl.array.NES, c(1,3), sum, na.rm=T) # NEUS (all boxes) monthly means in each year
+test=as.data.frame(NEUSchlTS)
+colnames(test)=seq(from=1998, to=2016, by=1)
+NEUSchlTS.vec=unlist(as.data.frame(NEUSchlTS))
+final.chl.ts=NEUSchlTS.vec*7*20*5.7*1e-9 #(=mg chl * x_CHLN * wetdry * X_CN * convert to tonnes)
+
+### partition Chl time series into 3 groups based on initial conditions ratio:
+PL.ts=final.chl.ts*0.6
+PS.ts=final.chl.ts*0.18
+DF.ts=final.chl.ts*0.22
+phyto=data.frame(PL.ts, PS.ts, DF.ts)
+phyto$time=rep(seq(from=1, to=length(phyto$PL), by=1))
+phyto$month=rep(seq(from=1, to=12, by=1))
+phyto$days=30*phyto$time
+phyto$time=NULL
+write.table(phyto, file='phytoplankton_timeseries.csv', col.names=T, row.names = F, sep=',')
+plot(final.chl.ts, type='l')
+plot(PL.ts~phyto$days, type='l')
 
 
 ### Transpose 3D array into timeseries by box (1:30) for all years
@@ -419,20 +507,20 @@ write.table(PS, file='PS.csv', sep=', ',col.names = F, row.names=F)
 write.table(DF, file='DF.csv', sep=', ',col.names = F, row.names=F)
 
 
-# Convert Chl a (mg Chl/m3) to mg N per Box -> mg chl/m3 * depth (m) * box area (m^2) for box up to 50m * 1 mg N/7 mg chl a
+# Convert Chl a (mg Chl/m3) to mg N per Box -> mg chl/m3 * depth (m) * box area (m^2) for box up to 50m * 7 mg N/1 mg chl a
 # then convert mg N  biomass (tonnes) (*wetdry*redfield*1g/1000mg) *(1kg/1000g *1 tonne/1000 kg)
-Jan.biomassChl=Jan.chl*bgm.z$chlZ *bgm.z$area/7*20*5.7/1000*1e-6
-Feb.biomassChl=Feb.chl*bgm.z$chlZ *bgm.z$area/7*20*5.7/1000*1e-6
-Mar.biomassChl=Mar.chl*bgm.z$chlZ *bgm.z$area/7*20*5.7/1000*1e-6
-Apr.biomassChl=Apr.chl*bgm.z$chlZ *bgm.z$area/7*20*5.7/1000*1e-6
-May.biomassChl=May.chl*bgm.z$chlZ *bgm.z$area/7*20*5.7/1000*1e-6
-Jun.biomassChl=Jun.chl*bgm.z$chlZ *bgm.z$area/7*20*5.7/1000*1e-6
-Jul.biomassChl=Jul.chl*bgm.z$chlZ *bgm.z$area/7*20*5.7/1000*1e-6
-Aug.biomassChl=Aug.chl*bgm.z$chlZ *bgm.z$area/7*20*5.7/1000*1e-6
-Sep.biomassChl=Sep.chl*bgm.z$chlZ *bgm.z$area/7*20*5.7/1000*1e-6
-Oct.biomassChl=Oct.chl*bgm.z$chlZ *bgm.z$area/7*20*5.7/1000*1e-6
-Nov.biomassChl=Nov.chl*bgm.z$chlZ *bgm.z$area/7*20*5.7/1000*1e-6
-Dec.biomassChl=Dec.chl*bgm.z$chlZ *bgm.z$area/7*20*5.7/1000*1e-6
+Jan.biomassChl=Jan.chl*bgm.z$chlZ *bgm.z$area*7*20*5.7/1000*1e-6
+Feb.biomassChl=Feb.chl*bgm.z$chlZ *bgm.z$area*7*20*5.7/1000*1e-6
+Mar.biomassChl=Mar.chl*bgm.z$chlZ *bgm.z$area*7*20*5.7/1000*1e-6
+Apr.biomassChl=Apr.chl*bgm.z$chlZ *bgm.z$area*7*20*5.7/1000*1e-6
+May.biomassChl=May.chl*bgm.z$chlZ *bgm.z$area*7*20*5.7/1000*1e-6
+Jun.biomassChl=Jun.chl*bgm.z$chlZ *bgm.z$area*7*20*5.7/1000*1e-6
+Jul.biomassChl=Jul.chl*bgm.z$chlZ *bgm.z$area*7*20*5.7/1000*1e-6
+Aug.biomassChl=Aug.chl*bgm.z$chlZ *bgm.z$area*7*20*5.7/1000*1e-6
+Sep.biomassChl=Sep.chl*bgm.z$chlZ *bgm.z$area*7*20*5.7/1000*1e-6
+Oct.biomassChl=Oct.chl*bgm.z$chlZ *bgm.z$area*7*20*5.7/1000*1e-6
+Nov.biomassChl=Nov.chl*bgm.z$chlZ *bgm.z$area*7*20*5.7/1000*1e-6
+Dec.biomassChl=Dec.chl*bgm.z$chlZ *bgm.z$area*7*20*5.7/1000*1e-6
 
 # System-wide Biomass of Primary Producers (PL + PS) (satellite-derived Chl) in tonnes of C by month from 1998-2016
 Chl.bio.t=colSums(Jan.biomassChl, na.rm=T)
@@ -515,7 +603,7 @@ for (i in 1:12){
   m=nit.1
   m2=t(m)
   m2=rotate_counter_clockwise(m2)
-  test=raster(m2)
+  test=raster(m2)*14
   bb <- extent(min(no3$xi), max(no3$xi), min(no3$yi), max(no3$yi))
   extent(test)=bb
   # plot(test)
@@ -530,6 +618,26 @@ for(i in 1:12){
   plot(NO3[[i]], main=paste('Month:',i, 'Bottom NO3 (mg/m3)'))
 }
 dev.off()
+
+NEUSplotN=function(data, i, maxV){
+  rasterX=data[[i]]
+  col5=colorRampPalette(c('blue','white','red'))
+  max_abolute_value=maxV #what is the maximum absolute value of raster?
+  color_levels=20
+  br <- seq(0, max_abolute_value, length.out=color_levels+1) 
+  rng2=cellStats(rasterX, range)
+  rng=c(0, maxV, rng2[2])
+  arg=list(at=rng, labels=round(rng,2))
+  plot(rasterX, col=col5(length(br) - 1), breaks=br,axis.args=arg, xlim=c(-77,-64),ylim=c(35,45),
+       las=1, legend=F, main=paste('Month:',i, 'Bottom NO3 (mg/m3)'))
+  map("worldHires", xlim=c(-77,-64),ylim=c(35,45), fill=T,border=0,col="gray", add=T)
+  plot(rasterX, legend.only=T, col=col5(length(br) - 1),breaks=br,axis.args=arg, legend.shrink=0.5,
+       smallplot=c(0.19,0.21, 0.6,0.80) )
+}
+for(i in 1:12){
+NEUSplotN(NO3, i, 500) # data, choose date (1-228), max value
+}
+
 
 Jan.no3=extractMonths(NO3[[1]], neus.shp)
 Feb.no3=extractMonths(NO3[[2]], neus.shp)
