@@ -11862,7 +11862,7 @@ mum_ZM_T15  0.18
 mum_ZS_T15  0.55       
 mum_PB_T15  0.05        
 mum_BB_T15  0.02        
-mum_BO_T15  0.01       
+mum_BO_T15  0.001       
 
 # Vertebrate growth rates for each "group," per age class mg N d-1
 # See _flag.fish.rates above to see whether clearance and growth rates 
@@ -12861,7 +12861,7 @@ E_ZG 0.5
 E_DF 0.5
 E_ZM 0.5
 E_ZS 0.5
-E_BO 0.5
+E_BO 0.35
 ##E_ZG             0.45      Assimilation efficiency of gelatinous zooplankton (0.4)          0.25 - 0.5
 ##E_ZL             0.45      Assimilation efficiency of large zooplankton (0.4)               0.25 - 0.5
 ##E_ZM             0.45      Assimilation efficiency of meso-zooplankton                      0.3 - 0.5
@@ -12889,18 +12889,18 @@ EPlant_CLA 0.6
 EPlant_BFF 0.5
 EPlant_BG 0.5
 EPlant_LOB 0.1
-EPlant_RCB 0.5
+EPlant_RCB 0.35
 EPlant_BMS 0.5
 EPlant_NSH 0.5
 EPlant_OSH 0.5
 EPlant_ZL 0.45
 EPlant_BD 0.01
-EPlant_BC 0.5
+EPlant_BC 0.0
 EPlant_ZG 0.45
 EPlant_DF 0.15
 EPlant_ZM 0.7
 EPlant_ZS 0.7
-EPlant_BO 0
+EPlant_BO 0.0
 #EPlant_ZG             0.45      Assimilation efficiency of gelatinous zooplankton (0.4)          0.25 - 0.5
 #EPlant_ZL             0.45      Assimilation efficiency of large zooplankton (0.4)               0.25 - 0.5
 #EPlant_ZM             0.45      Assimilation efficiency of meso-zooplankton                      0.3 - 0.5
@@ -12999,7 +12999,7 @@ EDR_ZM 0.03
 EDR_ZS 0.05
 EDR_PB 0.25
 EDR_BB 0.25
-EDR_BO 0.08
+EDR_BO 0.0
 #EDR_ZS           0.05      Assim efficiency of microzooplankton on refractory detritus      0.001 - 0.1
 #EDR_ZM           0.03      Assim efficiency of meso-zooplankton on refractory detritus      0.001 - 0.1
 #EDR_ZL           0.02      Assim efficiency of large zooplankton on refractory detritus     0.001 - 0.1     
@@ -13639,14 +13639,14 @@ MB_mL 0 #0.005
 SG_mL 0 #2e-05
 BC_mL 0 #8e-05
 ZG_mL 0 #3e-06
-PL_mL 0 #0.0015
+PL_mL 0.0015
 DF_mL 0 #5e-04
 PS_mL 0 #0.016
 ZM_mL 0 #1e-04
 ZS_mL 0 #8e-05
-PB_mL 0 #1e-04
-BB_mL 0 #1e-05
-BO_mL 0 #4e-07
+PB_mL 1e-04
+BB_mL 1e-05
+BO_mL 4e-07
 #mL_PL_T15        0.0015    Linear mortality rate of lg phytopl, 15 deg C     d-1 (0.15)       0.14
 #mL_PS_T15        0.016     Linear mortality rate of picophytopl, 15 deg C    d-1 (0.1)        0.14
 #mL_DF_T15        0.0005    Linear mortality rate of dinoflag, 15 deg C       d-1 (0.1)        0.14
@@ -13673,13 +13673,13 @@ BO_mL 0 #4e-07
 # Invertebrates with age structure
 ### unmuted 20180228 RM
 LSQ_mL 2
-0 0 
+1e-06 1e-06 
 ISQ_mL 2
-0 0 
+1e-6 1e-06
 NSH_mL 2
-0 0
+6.75e-06 6.75e-06
 OSH_mL 2
-0 0 
+6.75e-06 6.75e-06 
 
 #LSQ_mL 1e-06
 #ISQ_mL 1e-06

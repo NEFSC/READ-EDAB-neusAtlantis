@@ -10,8 +10,9 @@ d2=getwd()
 d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
 
 #linux
+d1='/home/ryan/Git/atneus737e3d' # for NEUS 1.0 on new code base RM
 d1='/home/ryan/Git/atneus_RM'
-d2='/home/ryan/AtlRuns/20180425a'
+d2='/home/ryan/AtlRuns/20180430'
 setwd(d2)
 
 
@@ -34,7 +35,7 @@ prm_biol #make sure
 
 fgs       <- file.path(d1, paste(xml.str[[3]], '.csv',sep='')) #file.path(d1, "NeusGroups_v15_LTLonly.csv") #unix.csv")
 fgs #make sure
-bgm.files=list.files(path=d2, pattern='.bgm')
+bgm.files=list.files(path=d1, pattern='.bgm')
 bgm.files="neus_tmerc_RM.bgm"
 bgm       <- file.path(d1, bgm.files) #"neus_tmerc_RM.bgm")
 
@@ -169,8 +170,9 @@ pd <- do.call(rbind, pd)
 pd$growth_req <- pd$wdiff / (365 * pd$ageclasssize)
 if (any(pd$growth_req < 0)) {
   warning("Required growth negative for some groups. Please check your initial conditions files.")
+  print(unique(pd$species[which(pd$growth_req<0)]))
 }
-
+unique(pd$species[which(pd$growth_req<0)])
 gr_req <- pd %>%
   select(species, agecl, growth_req)
 

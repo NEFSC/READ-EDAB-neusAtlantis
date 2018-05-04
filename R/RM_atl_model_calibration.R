@@ -78,6 +78,10 @@ plot <- plot_bar(df_bio)
 update_labels(plot, labels = gen_labels)
 ggsave(paste(filename," overall biomass2.png", sep=''), width=7, height=4, scale=1, dpi=96)
 
+df_bio <- combine_groups(result$biomass, group_col = "species", combine_thresh = 20)
+plot <- plot_bar(df_bio)
+update_labels(plot, labels = gen_labels)
+ggsave(paste(filename," overall biomass2.png", sep=''), width=20, height=11, scale=1, dpi=96)
 ###_________ Biomass timeseries#_______________________
 # pdf(file=paste(filename, '_biomassTS.pdf', sep='')) # does not work as configured
 plot <- plot_line(result$biomass)
@@ -258,4 +262,69 @@ dev.off()
 #_______________________________________________________________
 
 
+biom=read.table('/home/ryan/AtlRuns/20170914a/atneus_v10_newcodebaseAgeBiomIndx.txt', header=T) # v1.0 on new codebase
+bio1=read.table('/home/ryan/AtlRuns/NEUS v1/Base Effort/rm/neusDynEffort_Base_Effort_BiomIndx.txt', header=T) # v1.0 on old codebase
+bio2=read.table('/home/ryan/AtlRuns/20180430/atneus_v15_test2008hydro_20180208BiomIndx.txt', header=T) # v1.5 
+phyto=read.table('/media/ryan/Samsung USB/atlantisCal/biomass/phytoplankton_timeseries_biomass_tonnes_1998_2016.csv', header=T, sep=',')
+zoo=read.table('/media/ryan/Samsung USB/atlantisCal/biomass/Zooplankton_total_biomass_tonnes_N_20yrs.csv', header =T, sep=',')
 
+# #diatom
+# plot(biom$PL~biom$Time, type='l') # v1.0 new code
+# lines(bio1$PL~bio1$Time, type='l', col='red') # v1.0 old code
+# lines(bio2$PL~bio2$Time, type='l', col='blue') #v1.5
+# lines(phyto$PL.ts~phyto$days, type='l', col='green') # measured
+# 
+# #pico
+# plot(biom$PS~biom$Time, type='l') # v1.0 new code
+# lines(bio1$PS~bio1$Time, type='l', col='red') # v1.0 old code
+# lines(bio2$PS~bio2$Time, type='l', col='blue') #v1.5
+# lines(phyto$PS.ts~phyto$days, type='l', col='green') # measured
+# 
+#picoplankton (v1.5 first)
+plot(bio2$PS~bio2$Time, type='l')
+lines(phyto$PS.ts~phyto$days, type='l', col='red')
+lines(bio1$PS~bio1$Time, type='l', col='blue')
+lines(biom$PS.0~biom$Time, type='l', col='green')
+legend('topleft', legend = c('v1.5', 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+
+#diatom (v1.5 first)
+plot(bio2$PL~bio2$Time, type='l')
+lines(phyto$PL.ts~phyto$days, type='l', col='red')
+lines(bio1$PL~bio1$Time, type='l', col='blue')
+lines(biom$PL.0~biom$Time, type='l', col='green')
+legend('topright', legend = c('v1.5', 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+
+#dinoflag (v1.5 first)
+plot(bio2$DF~bio2$Time, type='l')
+lines(phyto$DF.ts~phyto$days, type='l', col='red')
+lines(bio1$DF~bio1$Time, type='l', col='blue')
+lines(biom$DF.0~biom$Time, type='l', col='green')
+legend('topright', legend = c('v1.5', 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+
+#Carn Zoo (v1.5 first)
+plot(bio2$ZL~bio2$Time, type='l')
+lines(zoo$ZL~zoo$Time, type='l', col='red')
+lines(bio1$ZL~bio1$Time, type='l', col='blue')
+lines(biom$ZL.0~biom$Time, type='l', col='green')
+legend('topright', legend = c('v1.5', 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+
+#Copepod (v1.5 first)
+plot(bio2$ZM~bio2$Time, type='l')
+lines(zoo$ZM~zoo$Time, type='l', col='red')
+lines(bio1$ZM~bio1$Time, type='l', col='blue')
+lines(biom$ZM.0~biom$Time, type='l', col='green')
+legend('topleftt', legend = c('v1.5', 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+
+#Small Zoo (v1.5 first)
+plot(bio2$ZS~bio2$Time, type='l')
+lines(zoo$ZS~zoo$Time, type='l', col='red')
+lines(bio1$ZS~bio1$Time, type='l', col='blue')
+lines(biom$ZS.0~biom$Time, type='l', col='green')
+legend('topright', legend = c('v1.5', 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+
+#GelatZoo (v1.5 first)
+plot(bio2$ZG~bio2$Time, type='l')
+lines(zoo$ZG~zoo$Time, type='l', col='red')
+lines(bio1$ZG~bio1$Time, type='l', col='blue')
+lines(biom$ZG.0~biom$Time, type='l', col='green')
+legend('topright', legend = c('v1.5', 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
