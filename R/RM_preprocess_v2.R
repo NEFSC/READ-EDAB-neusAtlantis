@@ -12,7 +12,7 @@ d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data
 #linux
 d1='/home/ryan/Git/atneus737e3d' # for NEUS 1.0 on new code base RM
 d1='/home/ryan/Git/atneus_RM'
-d2='/home/ryan/AtlRuns/20180430'
+d2='/home/ryan/AtlRuns/20180507'
 setwd(d2)
 
 
