@@ -11373,7 +11373,7 @@ variables:
 		Lab_Det_N:inwc = 1 ;
 		Lab_Det_N:insed = 1 ;
 		Lab_Det_N:dissol = 0 ;
-		Lab_Det_N:decay = 0. ;
+		Lab_Det_N:decay = 1.e-005 ;
 		Lab_Det_N:partic = 1 ;
 		Lab_Det_N:passive = 1 ;
 		Lab_Det_N:svel = -5.78e-004 ;
