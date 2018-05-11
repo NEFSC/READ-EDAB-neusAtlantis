@@ -146,7 +146,10 @@ flagagestruct    1         Age structure option: 0 = homogeneous cohorts, 1 = tr
 flagsenesce      0         Oldest sub-part of final age group senesces, 1 = yes, 0 = no        0
 flagtsforcerecruit 0       Force recruitment of 1+ groups with environmental forcing           0
 
- 
+# Flag indicating whether to normalise the larval distribution, added 20180509
+norm_larval_distrib 1
+larvae_connect_only 0
+
 # Preferred location trend (whether to weight vertical distributions towards surface or bottom
 # layers when in depths where there were less than complete set of depth layers)
 flagdemMAK 0
@@ -1555,14 +1558,6 @@ min_dens         0.0001    Minimum density of top predators and fish            
 
 ## Biological parameters
 # Primary producer growth 
-## may need to come back here and look at this for NEUS, OK for now
-# mum_PL_T15       1.75      Maximum growth rate, large phytoplankton (was 0.85) d-1          1.0 - 1.7
-# mum_PS_T15       1.0      Maximum growth rate, small (pico) phytoplankton (was 0.5 then 0.25)  d-1   1.0 - 1.24
-# mum_DF_T15       1.0      Maximum growth rate, dinoflagellates (was 0.51)   d-1            1.0 - 1.24
-# mum_MA_T15       2.9       Maximum growth rate, macroalgae                   d-1               0.1
-# mum_SG_T15       0.07      Maximum growth rate, seagrass                     d-1  (0.07)       0.05
-# mum_MB_T15       3.75      Maximum growth rate, microphytobenthos            d-1  (0.2)        0.35
-
 MB_wc            0.1       Scalar for microphytoben. growth in wc (reduced as not on substrate) 0.1
 
 # Primary producer light requirements 
@@ -11622,32 +11617,32 @@ k_refsDL      10000.0      Reference labile detrit. level in sediments (if highe
 ##C_ZG_T15         0.003     Clearance rate of gelatinous zooplankton (0.008)    mg3(mg N)-1 d-1  0.02 - 0.08
 ##C_jCEP_T15       0.01455   Clearance rate of juvenile cephalopods (0.08)       mg3(mg N)-1 d-1  0.1 - 0.2
 ##C_jPWN_T15       0.0015    Clearance rate of juvenile prawns (0.0008)          mg3(mg N)-1 d-1  0.0002 - 0.004
-C_LSQ_T15 0.001455  
-C_jLSQ_T15 0.001
-C_ISQ_T15 0.001455  
-C_jISQ_T15 0.001
-C_SCA_T15 0.02     
-C_QHG_T15 0.02    
-C_CLA_T15 0.02    
+C_LSQ_T15 0.0001455  
+C_jLSQ_T15 0.0001
+C_ISQ_T15 0.0001455  
+C_jISQ_T15 0.0001
+C_SCA_T15 0.0002     
+C_QHG_T15 0.0002    
+C_CLA_T15 0.0002    
 C_BFF_T15 7e-05    
-C_BG_T15  5e-05  
+C_BG_T15  5e-06  
 C_LOB_T15 6.5e-05 
-C_RCB_T15 5e-03    
-C_BMS_T15 5e-05    
-C_NSH_T15 0.0015   
-C_jNSH_T15 0.001
-C_OSH_T15 0.0015   
-C_jOSH_T15 0.001
-C_ZL_T15  0.002     
-C_BD_T15  5e-04    
-C_ZG_T15  0.003    
-C_DF_T15  0.01     
-C_ZM_T15  0.008    
-C_ZS_T15  0.15     
+C_RCB_T15 5e-04    
+C_BMS_T15 5e-06    
+C_NSH_T15 0.00015   
+C_jNSH_T15 0.0001
+C_OSH_T15 0.00015   
+C_jOSH_T15 0.0001
+C_ZL_T15  0.0002     
+C_BD_T15  5e-05    
+C_ZG_T15  0.0003    
+C_DF_T15  0.0001     
+C_ZM_T15  0.0008    
+C_ZS_T15  0.0015     
 C_PB_T15  0        
 C_BB_T15  0        
-C_BO_T15  0.0001    
-C_BC_T15  0.006
+C_BO_T15  0.00001    
+C_BC_T15  0.0006
 
 # Clearance rate of each vertebrate group, per age class                mg3(mg N)-1 d-1
 flagfishrates    0         Switch to show whether clearance and growth rates are absolute=0, or as proportion of body mass=1  
@@ -11836,11 +11831,11 @@ mum_LSQ_T15 0.0044
 mum_jLSQ_T15 0.004
 mum_ISQ_T15 0.00444     
 mum_jISQ_T15 0.004
-mum_SCA_T15 0.05       
-mum_QHG_T15 0.05     
-mum_CLA_T15 0.05     
+mum_SCA_T15 0.005       
+mum_QHG_T15 0.005     
+mum_CLA_T15 0.005     
 mum_BFF_T15 0.0035     
-mum_BG_T15  0.002      
+mum_BG_T15  0.0002      
 mum_LOB_T15 0.0012    
 mum_RCB_T15 1e-03      
 mum_BMS_T15 1e-03      
@@ -11848,21 +11843,21 @@ mum_NSH_T15 0.003043
 mum_jNSH_T15 0.003
 mum_OSH_T15 0.003043   
 mum_jOSH_T15 0.003
-mum_ZL_T15  0.05        
-mum_BD_T15  0.014      
-mum_MA_T15  0.01        
+mum_ZL_T15  0.005        
+mum_BD_T15  0.0014      
+mum_MA_T15  0.001        
 mum_MB_T15  0.018       
 mum_SG_T15  0.07       
-mum_BC_T15  0.08      
-mum_ZG_T15  0.017      
-mum_PL_T15  0.4        
-mum_DF_T15  0.01       
+mum_BC_T15  0.008      
+mum_ZG_T15  0.0017      
+mum_PL_T15  0.1        
+mum_DF_T15  0.001       
 mum_PS_T15  0.05       
-mum_ZM_T15  0.18       
-mum_ZS_T15  0.55       
-mum_PB_T15  0.05        
-mum_BB_T15  0.02        
-mum_BO_T15  0.001       
+mum_ZM_T15  0.0018       
+mum_ZS_T15  0.0055       
+mum_PB_T15  0.0005        
+mum_BB_T15  0.0002        
+mum_BO_T15  0.0001       
 
 # Vertebrate growth rates for each "group," per age class mg N d-1
 # See _flag.fish.rates above to see whether clearance and growth rates 
