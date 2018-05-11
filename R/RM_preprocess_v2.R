@@ -51,6 +51,11 @@ init = file.path(d1, init.file)
 init # make sure
 # init      <- file.path(d1, 'RMinit_notsohighvertmix.nc')# "RMinit_newvalues2017.nc")
 init=paste(d1,'/RMinit_2018.nc', sep='') # dropped _FillValue to make init_growth work 20180412
+
+
+data1 <- sc_init(init, prm_biol, fgs, bboxes)
+
+
 #__________________________________
 bboxes <- get_boundary(boxinfo = load_box(bgm))
 bps <- load_bps(fgs, init)

@@ -328,3 +328,7 @@ lines(zoo$ZG~zoo$Time, type='l', col='red')
 lines(bio1$ZG~bio1$Time, type='l', col='blue')
 lines(biom$ZG.0~biom$Time, type='l', col='green')
 legend('topright', legend = c('v1.5', 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+
+plot(bio2$DIN~bio2$Time, type='l')
+lines(bio1$DIN~bio1$Time, col='blue')
+legend('topright', legend = c('v1.5', 'v1.0 old'), lty=c(1,1),col=c('black', 'blue'), bty='n')

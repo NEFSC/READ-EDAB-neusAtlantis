@@ -670,8 +670,31 @@ NO3.box$'12'=Dec.no3*14
 NO3.box$mean=rowMeans(NO3.box[,2:13], na.rm=T)
 NO3.box=as.matrix(NO3.box)
 
+### aggregate to total 'biomass' time series for NEUS boxes
+NO3.box.biom=NO3.box[2:23,2:13]
+
+### function to estimate nutrient concentrations through the water column based on values
+### at depth given value and number of layers (e.g. in Atlantis)
+reduceN=function(x, n){
+  if (n=1){
+    v2=x
+  } else if (n==2){
+    v2=(x + x*0.1)/2
+  } else if (n==3){
+    v2=(x + x*0.1 + x*0.01)/3
+  } else if (n==4){
+    v2=(x + x*0.1 + x*0.01 +x*0.001)/4
+  }
+  return(v2)
+}
+
+NO3.box.biom=NO3.box.biom*bgm.z$area
+
+
+
 i=11 # set box number to plot
 barplot(NO3.box[i+1,c(2:13)], main=paste('box',i, 'monthly bottom NO3 mg/m3'))
+
 
 
 # use to fill initial condition values from bottom up (value highest at bottom, same at sediment,
