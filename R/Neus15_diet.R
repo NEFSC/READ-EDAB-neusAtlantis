@@ -1,8 +1,11 @@
 library(readxl)
 library(gplots)
-setwd("/media/ryan/TOSHIBA EXT/1 RM/10 ATLANTIS transfer/") # linux
-setwd("I:/1 RM/10 ATLANTIS transfer/") #win
-d1=getwd()
+# setwd("/media/ryan/TOSHIBA EXT/1 RM/10 ATLANTIS transfer/") # linux
+# setwd("I:/1 RM/10 ATLANTIS transfer/") #win
+d1='/home/ryan/Git/atneus_RM/R'
+d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM/R' #where (PRM, bgm, group data) are saved
+setwd(d1)
+# d1=getwd()
 
 # Read original pPrey data from Gavin
 # diet=read.csv('atneus_diet_RM.csv', header = F)
@@ -231,6 +234,43 @@ table(d2.min)
 table(d2.max)
 # d2.rng=apply(d2, 1, range)
 # table(d2.rng[2,]) #max value
+
+
+library(stringr)
+test=gsub("(.{5})", "\\1 ", pnms[,1]) #split after 5 chars (drop pPREY)
+test2=strsplit(test, ' ') #split on space
+r=sapply(test2, "[[", 2) #keep second group to drop pPREY
+pnms$nm=r
+pnms$name=(str_extract(pnms$nm, "[aA-zz]+")) # just names, drop numbers
+pnms$type=as.numeric(gsub("[^0-9]", "", pnms$nm))  #just numbers, drop letters
+
+# now order by name and type (1xxx1, 1xxx2, 2xxx1, 2xxx2)
+ordrd.data=p.neus.data[order(pnms$name, pnms$type, na.last=T),]
+ordrd.nms=pnms[order(pnms$name, pnms$type, na.last=T),]
+ordrd.nms$intx=NA
+ordrd.nms$intx[which(ordrd.nms$type==11)]='Juv Pred - Juv Prey'
+ordrd.nms$intx[which(ordrd.nms$type==12)]='Juv Pred - Adt Prey'
+ordrd.nms$intx[which(ordrd.nms$type==21)]='Adt Pred - Juv Prey'
+ordrd.nms$intx[which(ordrd.nms$type==22)]='Adt Pred - Adt Prey'
+ordrd.nms$intx[which(is.na(ordrd.nms$type))]='Invert Pred'
+
+
+### NOW plot ordered diet contribution; highlight inverts in red
+d=as.data.frame(ordrd.data)
+wd3='C:/Users/ryan.morse/Desktop/NEUS Atl files'
+filename=paste('pPrey_VAlues_20180515',".pdf", sep="")
+mypath=file.path(wd3, filename)
+pdf(file=mypath)
+for(i in 1:length(ordrd.nms$name)){
+  barplot(as.numeric(d[i,which(d[i,]>0)]), names.arg=colnames(d[i,which(d[i,]>0)]), main=paste(ordrd.nms[i,c('name', 'intx')]), las=2,
+          col=ifelse(is.na(ordrd.nms$type[match(colnames(d[i,which(d[i,]>0)]), ordrd.nms$name)]), 'red', 'gray'))
+}
+dev.off()
+
+
+colnames(d[i,which(d[i,]>0)])
+any(is.na(pnms$type[which(pnms$name=='BC')]))
+is.na(ordrd.nms$type[match(colnames(d[i,which(d[i,]>0)]), ordrd.nms$name)])
 
 ### CREATE VERSIONS OF pPREY MATRIX TO TEST EFFECTS ON GROWTH 20180213 ###
 d2[(d2<0.01)&(d2>0)]=0.01 ### make lowest value (where entered) = Xxx
