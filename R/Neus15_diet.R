@@ -339,6 +339,8 @@ write.csv(ordrd.data, file='pPrey_ordrd_data_20180516.csv', row.names = F, col.n
 write.csv(ordrd.nms, file='pPrey_ordrd_nms_20180516.csv', row.names = F, col.names = T)
 
 
+
+
 ### CREATE VERSIONS OF pPREY MATRIX TO TEST EFFECTS ON GROWTH 20180213 ###
 d2[(d2<0.01)&(d2>0)]=0.01 ### make lowest value (where entered) = Xxx
 ### multiply values to increase values for different scenarios, keep max entry per row to < 1
