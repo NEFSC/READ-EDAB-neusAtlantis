@@ -337,8 +337,14 @@ dev.off()
 
 write.csv(ordrd.data, file='pPrey_ordrd_data_20180516.csv', row.names = F, col.names = T)
 write.csv(ordrd.nms, file='pPrey_ordrd_nms_20180516.csv', row.names = F, col.names = T)
+### read in saved data
+ordrd.data=read.csv('pPrey_ordrd_data_20180516.csv')
+ordrd.nms=read.csv('pPrey_ordrd_nms_20180516.csv')
 
 
+### read in code relations file
+cnvrt=read_excel('coderelations.xls', col_names = T, trim_ws = T, col_types = 'numeric')
+cnvrt=read.csv('coderelations.csv')
 
 
 ### CREATE VERSIONS OF pPREY MATRIX TO TEST EFFECTS ON GROWTH 20180213 ###
