@@ -152,7 +152,7 @@ roms_ll_rho<- romscoords(roms_file, transpose = TRUE, spatial = c("lon_rho", "la
 # points(roms_ll_u[45,36], col='green')
 
 
-### this is working now!! just being an idiot earlier... see below for iterative approach
+### this is working now, see below for iterative approach
 # map("worldHires", xlim=c(-77,-65),ylim=c(35,45), fill=T,border=0,col="gray70")
 # map.axes(las=1)
 # roms_face_u@lines$`7`@Lines$`7`@coords #point 1 for face 0

@@ -241,10 +241,11 @@ dev.off()
 # any(is.na(pnms$type[which(pnms$name=='BC')]))
 # is.na(ordrd.nms$type[match(colnames(d[i,which(d[i,]>0)]), ordrd.nms$name)])
 
-write.csv(v1.ordrd.data, file='pPrey_v1_ordrd_data_20180516.csv', row.names = F, col.names = T)
+write.csv(d, file='pPrey_v1_ordrd_data_20180516.csv', row.names = F, col.names = T)
 write.csv(v1.ordrd.nms, file='pPrey_v1_ordrd_nms_20180516.csv', row.names = F, col.names = T)
 
-
+v1.ordrd.data=read.csv('pPrey_v1_ordrd_data_20180516.csv')
+v1.ordrd.nms=read.csv('pPrey_v1_ordrd_nms_20180516.csv')
 
 ###________________________________________________________________________________________
 # read in original, non-scaled
@@ -343,8 +344,22 @@ ordrd.nms=read.csv('pPrey_ordrd_nms_20180516.csv')
 
 
 ### read in code relations file
-cnvrt=read_excel('coderelations.xls', col_names = T, trim_ws = T, col_types = 'numeric')
+# cnvrt=read_excel('coderelations.xls', col_names = T, trim_ws = T, col_types = 'numeric')
 cnvrt=read.csv('coderelations.csv')
+xx=cnvrt$Parent[order(cnvrt$Parent_index)] # factor
+xx=as.vector(cnvrt$Parent[order(cnvrt$Parent_index)]) #vector
+
+yy=as.vector(ordrd.nms$name)
+# yy=as.vector(v1.ordrd.nms$name)
+
+### this works
+map=setNames(as.vector(cnvrt$Parent), as.vector(cnvrt$Child))
+yy3=map[yy]
+test=data.frame(yy3, yy)
+
+
+
+
 
 
 ### CREATE VERSIONS OF pPREY MATRIX TO TEST EFFECTS ON GROWTH 20180213 ###
