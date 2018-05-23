@@ -357,6 +357,8 @@ map=setNames(as.vector(cnvrt$Parent), as.vector(cnvrt$Child))
 yy3=map[yy]
 test=data.frame(yy3, yy)
 
+test$v15_intx=ordrd.nms$intx
+test$v15_type=ordrd.nms$type
 
 
 
