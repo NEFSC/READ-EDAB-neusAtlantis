@@ -10,7 +10,7 @@ setwd(d1)
 
 # Read original pPrey data from Gavin
 # diet=read.csv('atneus_diet_RM.csv', header = F)
-diet=read.csv('atneus_diet_RM_edited.csv', header = F) # 20170424 added stages to shrimps and squid
+diet=read.csv('C:/Users/ryan.morse/Desktop/NEUS Atl files/10 Atlantis transfer files/atneus_diet_RM_edited.csv', header = F) # 20170424 added stages to shrimps and squid
 diet2=diet[complete.cases(diet[,2]),] # drops blank rows between entries
 diet.nms=diet2[!complete.cases(diet2[,3]),] # drops data
 diet.data=diet2[complete.cases(diet2),]
@@ -18,8 +18,7 @@ d=diet.data
 table(floor(log10(d[,2])))
 d[,1]=as.numeric(as.character(d[,1]))
 d2=as.matrix(d)
-
-
+'C:/Users/ryan.morse/Desktop/NEUS Atl files/0 Atlantis transfer files'
 
 #plot min and max
 heatmap.2(d2, Rowv=NULL, Colv = NULL, dendrogram = 'none', trace='none', keysize=0.75,
@@ -247,6 +246,19 @@ write.csv(v1.ordrd.nms, file='pPrey_v1_ordrd_nms_20180516.csv', row.names = F, c
 v1.ordrd.data=read.csv('pPrey_v1_ordrd_data_20180516.csv')
 v1.ordrd.nms=read.csv('pPrey_v1_ordrd_nms_20180516.csv')
 
+
+
+nmsX=as.character(p.neus[,1])
+sizeX=as.numeric(diet.nms2[,2])
+# diet3=as.data.frame(matrix(NA,nrow=768, ncol=92))
+diet3=as.data.frame(matrix(NA,nrow=779, ncol=92))
+
+diet3[rownames(diet.nms),1]=nms
+diet3[rownames(diet.nms),2]=size
+diet3[rownames(d),]=P
+write.table(diet3, file='20170424_from_JLink_pPrey_RM.csv',row.names=F, col.names=F, sep=",")
+
+
 ###________________________________________________________________________________________
 # read in original, non-scaled
 # sorted v1.0 and v1.5 pPrey spreadsheets for better comparison of lifestage with heatmaps
@@ -274,12 +286,10 @@ heatmap.2(v15mat, Rowv=NULL, Colv = NULL, dendrogram = 'none', trace='none', key
 ### note this file only has 1 entry for 1 stage (of 2) for ISQ LSQ NSH OSH
 p.neus.num=read_excel('pPrey_workbook.xlsx', sheet='20170517prm_20180213', col_names = T, trim_ws = T, col_types = 'numeric')
 p.neus.data=p.neus.num[complete.cases(p.neus.num[,3]),] #data only
-
 p.neus=read_excel('pPrey_workbook.xlsx', sheet='20170517prm_20180213', col_names = T, trim_ws = T) # keep character 1st col
 p.neus2=p.neus[complete.cases(p.neus[,2]),] # drops blank rows between entries
 p.neus.nms=p.neus2[which(is.na(p.neus2[,3])),1:2] # drops data, keeps names
 pnms=data.frame(p.neus.nms)
-
 cnames=read_excel('pPrey_workbook.xlsx', sheet='colnames', col_names = F) # get column names for pPrey matrix
 cnames=data.frame(cnames)
 
@@ -359,11 +369,63 @@ test=data.frame(yy3, yy)
 
 test$v15_intx=ordrd.nms$intx
 test$v15_type=ordrd.nms$type
+#__________________________________________________________________________________________________________
+#### UPDATE 5/24/2018 newest biol file pPREY matrix with mods for labile detritus and LTL
+#### read in most recent diet copied from biol file 20180524
+#### READ in pPrey from at_biol_...20180419.prm with 2 entries for inverts with multiple stages
+p.neus.num=read_excel('pPrey_workbook.xlsx', sheet='at_biol_20180419', col_names = T, trim_ws = T, col_types = 'numeric')
+p.neus.data=p.neus.num[complete.cases(p.neus.num[,3]),] #data only
+p.neus=read_excel('pPrey_workbook.xlsx', sheet='at_biol_20180419', col_names = T, trim_ws = T) # keep character 1st col
+p.neus2=p.neus[complete.cases(p.neus[,2]),] # drops blank rows between entries
+p.neus.nms=p.neus2[which(is.na(p.neus2[,3])),] # drops data, keeps names
+
+pnms=data.frame(p.neus.nms)
+cnames=read_excel('pPrey_workbook.xlsx', sheet='colnames', col_names = F) # get column names for pPrey matrix
+cnames=data.frame(cnames)
+test=gsub("(.{5})", "\\1 ", pnms[,1]) #split after 5 chars (drop pPREY)
+test2=strsplit(test, ' ') #split on space
+r=sapply(test2, "[[", 2) #keep second group to drop pPREY
+pnms$nm=r
+pnms$name=(str_extract(pnms$nm, "[aA-zz]+")) # just names, drop numbers
+pnms$type=as.numeric(gsub("[^0-9]", "", pnms$nm))  #just numbers, drop letters
+
+# now order by name and type (1xxx1, 1xxx2, 2xxx1, 2xxx2)
+ordrd.data=p.neus.data[order(pnms$name, pnms$type, na.last=T),]
+ordrd.nms=pnms[order(pnms$name, pnms$type, na.last=T),]
+ordrd.nms$intx=NA
+ordrd.nms$intx[which(ordrd.nms$type==11)]='Juv Pred - Juv Prey'
+ordrd.nms$intx[which(ordrd.nms$type==12)]='Juv Pred - Adt Prey'
+ordrd.nms$intx[which(ordrd.nms$type==21)]='Adt Pred - Juv Prey'
+ordrd.nms$intx[which(ordrd.nms$type==22)]='Adt Pred - Adt Prey'
+ordrd.nms$intx[which(is.na(ordrd.nms$type))]='Invert Pred'
+
+
+### NOW plot ordered diet contribution; highlight inverts in red
+d=as.data.frame(ordrd.data)
+wd3='C:/Users/ryan.morse/Desktop/NEUS Atl files'
+filename=paste('pPrey_VAlues_20180515',".pdf", sep="")
+mypath=file.path(wd3, filename)
+pdf(file=mypath)
+for(i in 1:length(ordrd.nms$name)){
+  barplot(as.numeric(d[i,which(d[i,]>0)]), names.arg=colnames(d[i,which(d[i,]>0)]), main=paste(ordrd.nms[i,c('name', 'intx')]), las=2,
+          col=ifelse(is.na(ordrd.nms$type[match(colnames(d[i,which(d[i,]>0)]), ordrd.nms$name)]), 'red', 'gray'))
+}
+dev.off()
+
+
+### NOW put back into original format to allow pasting into biology prm file ###
+test <- as.matrix(ordrd.data)
+ind <- (1:nrow(test)*3 - 1) # - 1 b/c you want to insert rows after, not before, existing rows
+test_new <- matrix(rep(NA, (nrow(test)*3*ncol(test))), ncol=ncol(test))
+test_new[ind,] <- test
+ind2=seq(from=1, to=nrow(test_new),by=3)
+test_new[ind2,1:2]=as.matrix(ordrd.nms[1:2])
+write.table(test_new, file='20180419_diet_ordered.csv',row.names=F, col.names=F, sep=",")
 
 
 
 
-
+### (OLD) _______________________________________________________________________________________________________
 ### CREATE VERSIONS OF pPREY MATRIX TO TEST EFFECTS ON GROWTH 20180213 ###
 d2[(d2<0.01)&(d2>0)]=0.01 ### make lowest value (where entered) = Xxx
 ### multiply values to increase values for different scenarios, keep max entry per row to < 1
@@ -395,6 +457,7 @@ table(floor(log10(d[,2])))
 d[,1]=as.numeric(as.character(d[,1]))
 d2=as.matrix(d)
 d6=read.csv(file.path(d1, data))
+
 nms=as.character(diet.nms[,1])
 size=as.numeric(diet.nms[,2])
 diet3=as.data.frame(matrix(NA,nrow=768, ncol=92))
