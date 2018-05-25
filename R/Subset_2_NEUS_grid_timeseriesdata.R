@@ -111,9 +111,10 @@ wd2='/home/ryan/Git/atneus_RM'
 
 # NEUS.ll=readShapeSpatial(file.path(wd2,'NEUS_LL.shp')) # this is in bgm format
 neus.shp=readShapeSpatial(file.path(wd2,'NEUS_Long_Lat.shp')) # this one is in (long, lat format)
+neus.shp=readShapeSpatial(file.path(wd2,'Neus_ll_0p01.shp')) # this one is in (long, lat format)
+
 # plot(NEUS.ll, add=T)
 plot(neus.shp)
-
 
 neus.shp@polygons[[2]]@Polygons[[1]]@coords
 
@@ -670,8 +671,31 @@ NO3.box$'12'=Dec.no3*14
 NO3.box$mean=rowMeans(NO3.box[,2:13], na.rm=T)
 NO3.box=as.matrix(NO3.box)
 
+### aggregate to total 'biomass' time series for NEUS boxes
+NO3.box.biom=NO3.box[2:23,2:13]
+
+### function to estimate nutrient concentrations through the water column based on values
+### at depth given value and number of layers (e.g. in Atlantis)
+reduceN=function(x, n){
+  if (n=1){
+    v2=x
+  } else if (n==2){
+    v2=(x + x*0.1)/2
+  } else if (n==3){
+    v2=(x + x*0.1 + x*0.01)/3
+  } else if (n==4){
+    v2=(x + x*0.1 + x*0.01 +x*0.001)/4
+  }
+  return(v2)
+}
+
+NO3.box.biom=NO3.box.biom*bgm.z$area
+
+
+
 i=11 # set box number to plot
 barplot(NO3.box[i+1,c(2:13)], main=paste('box',i, 'monthly bottom NO3 mg/m3'))
+
 
 
 # use to fill initial condition values from bottom up (value highest at bottom, same at sediment,
@@ -748,6 +772,7 @@ m1=nc2raster(m)
 # CHLA IS FLUOROMETRIC CHLOROPHYLL A (UG/L) == (mg m^-3)
 # PHAE IS FLUOROMETRIC PHAEOPHYTIN A (UG/L)
 setwd('G:/1 RM')
+setwd('C:/Users/ryan.morse/Desktop/Iomega Drive Backup 20171012/1 RM')
 MM.chl=read.csv('MARMAPchlorophyll.csv', skip=74)
 colnames(MM.chl)=c('CRUISE', 'STA', 'YEAR', 'MON',	'DAY', 'HR',	'MIN',	'LATD',	'LOND',	'DEPTH',	'CHLA',	'PHAE')
 
@@ -822,5 +847,34 @@ my_palette <- colorRampPalette(c("white", "red"))(n = 6)
 mm.mon.anom=heatmap.2(as.matrix(mm.anom), breaks=c(-3,-2,-1,0,1,2,3),Rowv=F, Colv=F, dendrogram = 'none', na.color='gray',
                       labCol = mm.t, labRow = MM.boxes.mon[,1], col=my_palette,
                       tracecol = 'black', main='MARMAP Mean Chl 1977-1987')
+
+
+#### MARMAP size fractionated Chlorophyll from Kim Hyde
+MM.chl.sz=read.csv('C:/Users/ryan.morse/Downloads/MARMAP-SIZE_FRACTION-CHL-SURFACE_FOR_RMORSE.csv')
+MM.chl.sz.z=read.csv('C:/Users/ryan.morse/Downloads/MARMAP-SIZE_FRACTION-CHL-PROFILES-FOR_RMORSE.csv')
+
+
+MM.surf=MM.chl.sz[which(MM.chl.sz.z$DEPTH<15),] # limit depth to: surface - 15 m
+MM.surf$YEAR=as.numeric(substr(MM.surf$DATE,1,5))*1000 ## coax year out of DATE string
+MM.surf$MON=as.numeric(substr(MM.surf$DATE,6,7)) ## coax Month from DATE
+
+
+# MM.chl2=MM.chl[complete.cases(MM.chl),]
+MM.chl2=MM.surf[complete.cases(MM.surf$LON),]
+
+coordinates(MM.chl2)=~LON+LAT #transform to Spatialpointsdataframe
+pointsin=over(MM.chl2, neus.shp) #find which boxes samples belong to
+MM.boxbio=data.frame(MM.chl2, pointsin)
+
+### compute yearly mean Chl per box
+MM.boxes=aggregate(MM.boxbio$NANO_CHL,list('box'=MM.boxbio$BOX_ID, 'Y'=MM.boxbio$YEAR), mean)
+MM.boxes=reshape(MM.boxes, idvar='box', timevar = 'Y', direction = 'wide')
+MM.boxes=MM.boxes[order(MM.boxes['box']),]
+mm.t=seq(from=1977, to=1987, by=1)
+
+### compute monthly means per box
+MM.boxes.mon=aggregate(MM.boxbio$NANO_CHL,list('box'=MM.boxbio$BOX_ID, 'M'= MM.boxbio$MON), mean)
+MM.boxes.mon=reshape(MM.boxes.mon, idvar='box', timevar = 'M', direction = 'wide')
+MM.boxes.mon=MM.boxes.mon[order(MM.boxes.mon['box']),]
 
 

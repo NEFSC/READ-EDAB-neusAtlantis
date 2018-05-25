@@ -1,12 +1,16 @@
 library(readxl)
 library(gplots)
-setwd("/media/ryan/TOSHIBA EXT/1 RM/10 ATLANTIS transfer/") # linux
-setwd("I:/1 RM/10 ATLANTIS transfer/") #win
-d1=getwd()
+library(stringr)
+# setwd("/media/ryan/TOSHIBA EXT/1 RM/10 ATLANTIS transfer/") # linux
+# setwd("I:/1 RM/10 ATLANTIS transfer/") #win
+d1='/home/ryan/Git/atneus_RM/R'
+d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM/R' #where (PRM, bgm, group data) are saved
+setwd(d1)
+# d1=getwd()
 
 # Read original pPrey data from Gavin
 # diet=read.csv('atneus_diet_RM.csv', header = F)
-diet=read.csv('atneus_diet_RM_edited.csv', header = F) # 20170424 added stages to shrimps and squid
+diet=read.csv('C:/Users/ryan.morse/Desktop/NEUS Atl files/10 Atlantis transfer files/atneus_diet_RM_edited.csv', header = F) # 20170424 added stages to shrimps and squid
 diet2=diet[complete.cases(diet[,2]),] # drops blank rows between entries
 diet.nms=diet2[!complete.cases(diet2[,3]),] # drops data
 diet.data=diet2[complete.cases(diet2),]
@@ -14,8 +18,7 @@ d=diet.data
 table(floor(log10(d[,2])))
 d[,1]=as.numeric(as.character(d[,1]))
 d2=as.matrix(d)
-
-
+'C:/Users/ryan.morse/Desktop/NEUS Atl files/0 Atlantis transfer files'
 
 #plot min and max
 heatmap.2(d2, Rowv=NULL, Colv = NULL, dendrogram = 'none', trace='none', keysize=0.75,
@@ -161,7 +164,7 @@ diet3[rownames(d),]=d
 
 ### _________________________
 # NEUS v1.0
-diet_v1.0=read.csv('atneus_diet_v1_0_gamble.csv', header=F)
+diet_v1.0=read.csv('I:/1 RM/10 ATLANTIS transfer/atneus_diet_v1_0_gamble.csv', header=F)
 diet_v1.0_2=diet_v1.0[complete.cases(diet_v1.0[,2]),] # drops blank rows between entries
 diet_v1.nms=diet_v1.0_2[!complete.cases(diet_v1.0_2[,3]),] # drops data
 diet_v1.data=diet_v1.0_2[complete.cases(diet_v1.0_2),]
@@ -178,6 +181,82 @@ hist(as.matrix(d1.0), ylim=c(0,500), xlim=c(0,1),main='original v 1.0')
 d1.0.mat=as.matrix(d1.0)
 heatmap.2(d1.0.mat, Rowv=NULL, Colv = NULL, dendrogram = 'none', trace='none', keysize=0.75,
           key.title = NA)
+
+
+#### mod V1 treatment 20180516
+# p.neus.num=read_excel('pPrey_workbook.xlsx', sheet='20170517prm_20180213', col_names = T, trim_ws = T, col_types = 'numeric')
+v1.num=read_excel('atneus_diet_v1_0_gamble.xlsx', sheet='atneus_diet_v1_0_gamble', col_names = T, trim_ws = T, col_types = 'numeric')
+# p.neus.data=p.neus.num[complete.cases(p.neus.num[,3]),] #data only
+v1.data=v1.num[complete.cases(v1.num[,3]),] # drops blank rows between entries
+# p.neus=read_excel('pPrey_workbook.xlsx', sheet='20170517prm_20180213', col_names = T, trim_ws = T) # keep character 1st col
+v1.neus=read_excel('atneus_diet_v1_0_gamble.xlsx', sheet='atneus_diet_v1_0_gamble', col_names = T, trim_ws = T)
+# p.neus2=p.neus[complete.cases(p.neus[,2]),] # drops blank rows between entries
+v1.neus2=v1.neus[complete.cases(v1.neus[,2]),]
+# p.neus.nms=p.neus2[which(is.na(p.neus2[,3])),1:2] # drops data, keeps names
+v1.nms=v1.neus2[which(is.na(v1.neus2[,3])),1:2]
+# pnms=data.frame(p.neus.nms)
+v1.nms=data.frame(v1.nms)
+
+### Split names and reorder...
+test=gsub("(.{5})", "\\1 ", v1.nms[,1]) #split after 5 chars (drop pPREY)
+test2=strsplit(test, ' ') #split on space
+r=sapply(test2, "[[", 2) #keep second group to drop pPREY
+v1.nms$nm=r
+v1.nms$name=(str_extract(v1.nms$nm, "[aA-zz]+")) # just names, drop numbers
+v1.nms$type=as.numeric(gsub("[^0-9]", "", v1.nms$nm))  #just numbers, drop letters
+
+#### now order by name and type (1xxx1, 1xxx2, 2xxx1, 2xxx2)
+v1.ordrd.data=v1.data[order(v1.nms$name, v1.nms$type, na.last=T),]
+v1.ordrd.nms=v1.nms[order(v1.nms$name, v1.nms$type, na.last=T),]
+v1.ordrd.nms$intx=NA
+v1.ordrd.nms$intx[which(v1.ordrd.nms$type==11)]='Juv Pred - Juv Prey'
+v1.ordrd.nms$intx[which(v1.ordrd.nms$type==12)]='Juv Pred - Adt Prey'
+v1.ordrd.nms$intx[which(v1.ordrd.nms$type==21)]='Adt Pred - Juv Prey'
+v1.ordrd.nms$intx[which(v1.ordrd.nms$type==22)]='Adt Pred - Adt Prey'
+v1.ordrd.nms$intx[which(is.na(v1.ordrd.nms$type))]='Invert Pred'
+
+d=as.data.frame(v1.ordrd.data)
+colnames(d)=c('FPL','FPO','FPS','FVD','FVV','FVS','FVB','FVT','FVO','FMM','FMN','FBP','FDD',
+              'FDE','FDS','FDM','FDP','FDB','FDC','FDO','FDF','SHB','SHD','SHC','SHP','SHR',
+              'SSK','SB','SP','PIN','REP','WHB','WHS','WHT','WDG','CEP','BFS','BFF','BFD','BG',
+              'BMD','BML','BMS','PWN','ZL','BD','MA','MB','SG','BC','ZG','PL','DF','PS','ZM','ZS',
+              'PB','BB','BO','DL','DR','DC','Dlsed','Drsed','Dcsed','jCEP','jPWN')
+
+wd3='C:/Users/ryan.morse/Desktop/NEUS Atl files'
+filename=paste('pPrey_v1_values_20180515',".pdf", sep="")
+mypath=file.path(wd3, filename)
+pdf(file=mypath)
+for(i in 1:length(v1.ordrd.nms$name)){
+  if(length(as.numeric(d[i,which(d[i,]>0)]))==0){
+    next
+  }
+  barplot(as.numeric(d[i,which(d[i,]>0)]), names.arg=colnames(d[i,which(d[i,]>0)]), main=paste(v1.ordrd.nms[i,c('name', 'intx')]), las=2,
+          col=ifelse(is.na(v1.ordrd.nms$type[match(colnames(d[i,which(d[i,]>0)]), v1.ordrd.nms$name)]), 'red', 'gray'))
+}
+dev.off()
+
+
+# colnames(d[i,which(d[i,]>0)])
+# any(is.na(pnms$type[which(pnms$name=='BC')]))
+# is.na(ordrd.nms$type[match(colnames(d[i,which(d[i,]>0)]), ordrd.nms$name)])
+
+write.csv(d, file='pPrey_v1_ordrd_data_20180516.csv', row.names = F, col.names = T)
+write.csv(v1.ordrd.nms, file='pPrey_v1_ordrd_nms_20180516.csv', row.names = F, col.names = T)
+
+v1.ordrd.data=read.csv('pPrey_v1_ordrd_data_20180516.csv')
+v1.ordrd.nms=read.csv('pPrey_v1_ordrd_nms_20180516.csv')
+
+
+
+nmsX=as.character(p.neus[,1])
+sizeX=as.numeric(diet.nms2[,2])
+# diet3=as.data.frame(matrix(NA,nrow=768, ncol=92))
+diet3=as.data.frame(matrix(NA,nrow=779, ncol=92))
+
+diet3[rownames(diet.nms),1]=nms
+diet3[rownames(diet.nms),2]=size
+diet3[rownames(d),]=P
+write.table(diet3, file='20170424_from_JLink_pPrey_RM.csv',row.names=F, col.names=F, sep=",")
 
 
 ###________________________________________________________________________________________
@@ -207,12 +286,10 @@ heatmap.2(v15mat, Rowv=NULL, Colv = NULL, dendrogram = 'none', trace='none', key
 ### note this file only has 1 entry for 1 stage (of 2) for ISQ LSQ NSH OSH
 p.neus.num=read_excel('pPrey_workbook.xlsx', sheet='20170517prm_20180213', col_names = T, trim_ws = T, col_types = 'numeric')
 p.neus.data=p.neus.num[complete.cases(p.neus.num[,3]),] #data only
-
 p.neus=read_excel('pPrey_workbook.xlsx', sheet='20170517prm_20180213', col_names = T, trim_ws = T) # keep character 1st col
 p.neus2=p.neus[complete.cases(p.neus[,2]),] # drops blank rows between entries
 p.neus.nms=p.neus2[which(is.na(p.neus2[,3])),1:2] # drops data, keeps names
 pnms=data.frame(p.neus.nms)
-
 cnames=read_excel('pPrey_workbook.xlsx', sheet='colnames', col_names = F) # get column names for pPrey matrix
 cnames=data.frame(cnames)
 
@@ -232,6 +309,123 @@ table(d2.max)
 # d2.rng=apply(d2, 1, range)
 # table(d2.rng[2,]) #max value
 
+
+### Split names and reorder...
+test=gsub("(.{5})", "\\1 ", pnms[,1]) #split after 5 chars (drop pPREY)
+test2=strsplit(test, ' ') #split on space
+r=sapply(test2, "[[", 2) #keep second group to drop pPREY
+pnms$nm=r
+pnms$name=(str_extract(pnms$nm, "[aA-zz]+")) # just names, drop numbers
+pnms$type=as.numeric(gsub("[^0-9]", "", pnms$nm))  #just numbers, drop letters
+
+# now order by name and type (1xxx1, 1xxx2, 2xxx1, 2xxx2)
+ordrd.data=p.neus.data[order(pnms$name, pnms$type, na.last=T),]
+ordrd.nms=pnms[order(pnms$name, pnms$type, na.last=T),]
+ordrd.nms$intx=NA
+ordrd.nms$intx[which(ordrd.nms$type==11)]='Juv Pred - Juv Prey'
+ordrd.nms$intx[which(ordrd.nms$type==12)]='Juv Pred - Adt Prey'
+ordrd.nms$intx[which(ordrd.nms$type==21)]='Adt Pred - Juv Prey'
+ordrd.nms$intx[which(ordrd.nms$type==22)]='Adt Pred - Adt Prey'
+ordrd.nms$intx[which(is.na(ordrd.nms$type))]='Invert Pred'
+
+
+### NOW plot ordered diet contribution; highlight inverts in red
+d=as.data.frame(ordrd.data)
+wd3='C:/Users/ryan.morse/Desktop/NEUS Atl files'
+filename=paste('pPrey_VAlues_20180515',".pdf", sep="")
+mypath=file.path(wd3, filename)
+pdf(file=mypath)
+for(i in 1:length(ordrd.nms$name)){
+  barplot(as.numeric(d[i,which(d[i,]>0)]), names.arg=colnames(d[i,which(d[i,]>0)]), main=paste(ordrd.nms[i,c('name', 'intx')]), las=2,
+          col=ifelse(is.na(ordrd.nms$type[match(colnames(d[i,which(d[i,]>0)]), ordrd.nms$name)]), 'red', 'gray'))
+}
+dev.off()
+
+
+# colnames(d[i,which(d[i,]>0)])
+# any(is.na(pnms$type[which(pnms$name=='BC')]))
+# is.na(ordrd.nms$type[match(colnames(d[i,which(d[i,]>0)]), ordrd.nms$name)])
+
+write.csv(ordrd.data, file='pPrey_ordrd_data_20180516.csv', row.names = F, col.names = T)
+write.csv(ordrd.nms, file='pPrey_ordrd_nms_20180516.csv', row.names = F, col.names = T)
+### read in saved data
+ordrd.data=read.csv('pPrey_ordrd_data_20180516.csv')
+ordrd.nms=read.csv('pPrey_ordrd_nms_20180516.csv')
+
+
+### read in code relations file
+# cnvrt=read_excel('coderelations.xls', col_names = T, trim_ws = T, col_types = 'numeric')
+cnvrt=read.csv('coderelations.csv')
+xx=cnvrt$Parent[order(cnvrt$Parent_index)] # factor
+xx=as.vector(cnvrt$Parent[order(cnvrt$Parent_index)]) #vector
+
+yy=as.vector(ordrd.nms$name)
+# yy=as.vector(v1.ordrd.nms$name)
+
+### this works
+map=setNames(as.vector(cnvrt$Parent), as.vector(cnvrt$Child))
+yy3=map[yy]
+test=data.frame(yy3, yy)
+
+test$v15_intx=ordrd.nms$intx
+test$v15_type=ordrd.nms$type
+#__________________________________________________________________________________________________________
+#### UPDATE 5/24/2018 newest biol file pPREY matrix with mods for labile detritus and LTL
+#### read in most recent diet copied from biol file 20180524
+#### READ in pPrey from at_biol_...20180419.prm with 2 entries for inverts with multiple stages
+p.neus.num=read_excel('pPrey_workbook.xlsx', sheet='at_biol_20180419', col_names = T, trim_ws = T, col_types = 'numeric')
+p.neus.data=p.neus.num[complete.cases(p.neus.num[,3]),] #data only
+p.neus=read_excel('pPrey_workbook.xlsx', sheet='at_biol_20180419', col_names = T, trim_ws = T) # keep character 1st col
+p.neus2=p.neus[complete.cases(p.neus[,2]),] # drops blank rows between entries
+p.neus.nms=p.neus2[which(is.na(p.neus2[,3])),] # drops data, keeps names
+
+pnms=data.frame(p.neus.nms)
+cnames=read_excel('pPrey_workbook.xlsx', sheet='colnames', col_names = F) # get column names for pPrey matrix
+cnames=data.frame(cnames)
+test=gsub("(.{5})", "\\1 ", pnms[,1]) #split after 5 chars (drop pPREY)
+test2=strsplit(test, ' ') #split on space
+r=sapply(test2, "[[", 2) #keep second group to drop pPREY
+pnms$nm=r
+pnms$name=(str_extract(pnms$nm, "[aA-zz]+")) # just names, drop numbers
+pnms$type=as.numeric(gsub("[^0-9]", "", pnms$nm))  #just numbers, drop letters
+
+# now order by name and type (1xxx1, 1xxx2, 2xxx1, 2xxx2)
+ordrd.data=p.neus.data[order(pnms$name, pnms$type, na.last=T),]
+ordrd.nms=pnms[order(pnms$name, pnms$type, na.last=T),]
+ordrd.nms$intx=NA
+ordrd.nms$intx[which(ordrd.nms$type==11)]='Juv Pred - Juv Prey'
+ordrd.nms$intx[which(ordrd.nms$type==12)]='Juv Pred - Adt Prey'
+ordrd.nms$intx[which(ordrd.nms$type==21)]='Adt Pred - Juv Prey'
+ordrd.nms$intx[which(ordrd.nms$type==22)]='Adt Pred - Adt Prey'
+ordrd.nms$intx[which(is.na(ordrd.nms$type))]='Invert Pred'
+
+
+### NOW plot ordered diet contribution; highlight inverts in red
+d=as.data.frame(ordrd.data)
+wd3='C:/Users/ryan.morse/Desktop/NEUS Atl files'
+filename=paste('pPrey_VAlues_20180515',".pdf", sep="")
+mypath=file.path(wd3, filename)
+pdf(file=mypath)
+for(i in 1:length(ordrd.nms$name)){
+  barplot(as.numeric(d[i,which(d[i,]>0)]), names.arg=colnames(d[i,which(d[i,]>0)]), main=paste(ordrd.nms[i,c('name', 'intx')]), las=2,
+          col=ifelse(is.na(ordrd.nms$type[match(colnames(d[i,which(d[i,]>0)]), ordrd.nms$name)]), 'red', 'gray'))
+}
+dev.off()
+
+
+### NOW put back into original format to allow pasting into biology prm file ###
+test <- as.matrix(ordrd.data)
+ind <- (1:nrow(test)*3 - 1) # - 1 b/c you want to insert rows after, not before, existing rows
+test_new <- matrix(rep(NA, (nrow(test)*3*ncol(test))), ncol=ncol(test))
+test_new[ind,] <- test
+ind2=seq(from=1, to=nrow(test_new),by=3)
+test_new[ind2,1:2]=as.matrix(ordrd.nms[1:2])
+write.table(test_new, file='20180419_diet_ordered.csv',row.names=F, col.names=F, sep=",")
+
+
+
+
+### (OLD) _______________________________________________________________________________________________________
 ### CREATE VERSIONS OF pPREY MATRIX TO TEST EFFECTS ON GROWTH 20180213 ###
 d2[(d2<0.01)&(d2>0)]=0.01 ### make lowest value (where entered) = Xxx
 ### multiply values to increase values for different scenarios, keep max entry per row to < 1
@@ -263,6 +457,7 @@ table(floor(log10(d[,2])))
 d[,1]=as.numeric(as.character(d[,1]))
 d2=as.matrix(d)
 d6=read.csv(file.path(d1, data))
+
 nms=as.character(diet.nms[,1])
 size=as.numeric(diet.nms[,2])
 diet3=as.data.frame(matrix(NA,nrow=768, ncol=92))

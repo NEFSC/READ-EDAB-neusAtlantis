@@ -12,7 +12,7 @@ d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data
 #linux
 d1='/home/ryan/Git/atneus737e3d' # for NEUS 1.0 on new code base RM
 d1='/home/ryan/Git/atneus_RM'
-d2='/home/ryan/AtlRuns/20180507'
+d2='/home/ryan/AtlRuns/20180510a'
 setwd(d2)
 
 
@@ -50,7 +50,12 @@ init.file=test[[1]][3]
 init = file.path(d1, init.file)
 init # make sure
 # init      <- file.path(d1, 'RMinit_notsohighvertmix.nc')# "RMinit_newvalues2017.nc")
-init=paste(d1,'/RMinit_2018.nc', sep='') # dropped _FillValue to make init_growth work 20180412
+init=paste(d1,'/RMinit_2018.nc', sep='') # dropped _FillValue to make init_growth work 20180412 (see history in cdf version for command)
+
+### SANITY CHECK ON INITIAL CONDITIONS
+# data1 <- sc_init(init, prm_biol, fgs, bboxes)
+
+
 #__________________________________
 bboxes <- get_boundary(boxinfo = load_box(bgm))
 bps <- load_bps(fgs, init)

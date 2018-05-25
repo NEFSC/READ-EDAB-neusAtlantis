@@ -421,6 +421,15 @@ sh.init(NEUS_10_init)
 sh.init(SETAS_init)
 sh.init(NEUS_15_RM3init)
 sh.init(NEUS_15_newestinit)
+
+
+grp.file=paste(wd2, '/NeusGroups_v15_unix.csv', sep='')
+bgm.file=paste(wd2, '/neus_tmerc_RM.bgm', sep='')
+cum.depths=c(0,50,120,300,500)
+csv.name='RMinit_template.csv'
+make.init.csv(grp.file, bgm.file, cum.depths, csv.name)
+
+
 #________________
 
 

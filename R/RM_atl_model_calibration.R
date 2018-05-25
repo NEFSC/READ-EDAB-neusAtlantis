@@ -262,11 +262,12 @@ dev.off()
 #_______________________________________________________________
 
 
-biom=read.table('/home/ryan/AtlRuns/20170914a/atneus_v10_newcodebaseAgeBiomIndx.txt', header=T) # v1.0 on new codebase
-bio1=read.table('/home/ryan/AtlRuns/NEUS v1/Base Effort/rm/neusDynEffort_Base_Effort_BiomIndx.txt', header=T) # v1.0 on old codebase
-bio2=read.table('/home/ryan/AtlRuns/20180430/atneus_v15_test2008hydro_20180208BiomIndx.txt', header=T) # v1.5 
-phyto=read.table('/media/ryan/Samsung USB/atlantisCal/biomass/phytoplankton_timeseries_biomass_tonnes_1998_2016.csv', header=T, sep=',')
-zoo=read.table('/media/ryan/Samsung USB/atlantisCal/biomass/Zooplankton_total_biomass_tonnes_N_20yrs.csv', header =T, sep=',')
+#biom=read.table('/home/ryan/AtlRuns/20170914a/atneus_v10_newcodebaseAgeBiomIndx.txt', header=T) # v1.0 on new codebase
+biom=read.table(paste(d1, '/R/atneus_v10_newcodebaseBiomIndx.txt', sep=''), header=T) # v1.0 on new codebase
+bio1=read.table(paste(d1, '/R/neusDynEffort_Base_Effort_BiomIndx.txt', sep=''), header=T) # v1.0 on old codebase
+bio2=read.table(paste(d2, '/atneus_v15_test2008hydro_20180208BiomIndx.txt', sep=''), header=T) # v1.5 run
+phyto=read.table(paste(d1, '/phytoplankton_timeseries_biomass_tonnes_1998_2016.csv', sep=''),header=T, sep=',')
+zoo=read.table(paste(d1, '/Zooplankton_total_biomass_tonnes_N_20yrs.csv', sep=''), header =T, sep=',')
 
 # #diatom
 # plot(biom$PL~biom$Time, type='l') # v1.0 new code
@@ -328,3 +329,7 @@ lines(zoo$ZG~zoo$Time, type='l', col='red')
 lines(bio1$ZG~bio1$Time, type='l', col='blue')
 lines(biom$ZG.0~biom$Time, type='l', col='green')
 legend('topright', legend = c('v1.5', 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+
+plot(bio2$DIN~bio2$Time, type='l')
+lines(bio1$DIN~bio1$Time, col='blue')
+legend('topright', legend = c('v1.5', 'v1.0 old'), lty=c(1,1),col=c('black', 'blue'), bty='n')

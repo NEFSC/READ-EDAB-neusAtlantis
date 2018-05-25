@@ -1,5 +1,5 @@
 Code,Index,IsTurnedOn,Name,Long Name,NumCohorts,NumGeneTypes,NumStages,NumSpawns,NumAgeClassSize,NumStocks,VerticallyMigrates,HorizontallyMigrates,isFished,IsImpacted,isTAC,GroupType,isPredator,IsCover,isSiliconDep,isAssessed,IsCatchGrazer,OverWinters,isCultured,isHabDepend,numMoveSeasons
-MAK,0,1,Mackerel,Atlantic mackerel,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4
+MAK,0,1,Mackerel,Mackerel,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4
 HER,1,1,Herring,Atlantic herring,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4
 WHK,2,1,White_Hake,White hake,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4
 BLF,3,1,Bluefish,Bluefish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4
@@ -87,4 +87,4 @@ BB,84,1,Sed_Bact,Sediment Bacteria,1,1,1,1,1,1,0,0,0,0,0,SED_BACT,0,0,0,0,0,0,0,
 BO,85,1,Meiobenth,Meiobenthos,1,1,1,1,1,1,0,0,0,0,0,SM_INF,1,0,0,0,0,0,0,0,4
 DL,86,1,Lab_Det,Labile detritus,1,1,1,1,1,1,0,0,0,0,0,LAB_DET,0,0,0,1,0,0,0,0,4
 DR,87,1,Ref_Det,Refractory detritus,1,1,1,1,1,1,0,0,0,0,0,REF_DET,0,0,0,1,0,0,0,0,4
-DC,88,1,Carrion,Carrion3,1,1,1,1,1,1,0,0,0,0,0,CARRION,0,0,0,1,0,0,0,0,4
+DC,88,1,Carrion,Carrion,1,1,1,1,1,1,0,0,0,0,0,CARRION,0,0,0,1,0,0,0,0,4
