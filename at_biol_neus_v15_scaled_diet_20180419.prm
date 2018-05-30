@@ -11617,31 +11617,31 @@ k_refsDL      10000.0      Reference labile detrit. level in sediments (if highe
 ##C_ZG_T15         0.003     Clearance rate of gelatinous zooplankton (0.008)    mg3(mg N)-1 d-1  0.02 - 0.08
 ##C_jCEP_T15       0.01455   Clearance rate of juvenile cephalopods (0.08)       mg3(mg N)-1 d-1  0.1 - 0.2
 ##C_jPWN_T15       0.0015    Clearance rate of juvenile prawns (0.0008)          mg3(mg N)-1 d-1  0.0002 - 0.004
-C_LSQ_T15 0.0001455  
-C_jLSQ_T15 0.0001
-C_ISQ_T15 0.0001455  
-C_jISQ_T15 0.0001
-C_SCA_T15 0.0002     
-C_QHG_T15 0.0002    
-C_CLA_T15 0.0002    
-C_BFF_T15 7e-05    
-C_BG_T15  5e-06  
-C_LOB_T15 6.5e-05 
+C_LSQ_T15 0.001455  
+C_jLSQ_T15 0.001
+C_ISQ_T15 0.001455  
+C_jISQ_T15 0.001
+C_SCA_T15 0.002     
+C_QHG_T15 0.002    
+C_CLA_T15 0.002    
+C_BFF_T15 7e-04    
+C_BG_T15  5e-04  
+C_LOB_T15 6.5e-04 
 C_RCB_T15 5e-04    
 C_BMS_T15 5e-06    
 C_NSH_T15 0.00015   
 C_jNSH_T15 0.0001
 C_OSH_T15 0.00015   
 C_jOSH_T15 0.0001
-C_ZL_T15  0.0002     
-C_BD_T15  5e-05    
+C_ZL_T15  0.002     
+C_BD_T15  5e-04    
 C_ZG_T15  0.0003    
 C_DF_T15  0.0001     
-C_ZM_T15  0.0008    
+C_ZM_T15  0.008    
 C_ZS_T15  0.0015     
 C_PB_T15  0        
 C_BB_T15  0        
-C_BO_T15  0.00001    
+C_BO_T15  0.0001    
 C_BC_T15  0.0006
 
 # Clearance rate of each vertebrate group, per age class                mg3(mg N)-1 d-1
@@ -11827,36 +11827,36 @@ C_INV 10
 # Consumer growth - this is used by Holling type feeding (predcase 0, 1, 2)
 ### 20180228 RM added values for juvenile groups based on SETAS and adult NEUS vals
 ##mum_ZG_T15       0.017     Growth rate of gelatinous zooplankton              mg N d-1      0.02 - 0.35
-mum_LSQ_T15 0.0044     
-mum_jLSQ_T15 0.004
-mum_ISQ_T15 0.00444     
-mum_jISQ_T15 0.004
-mum_SCA_T15 0.005       
-mum_QHG_T15 0.005     
-mum_CLA_T15 0.005     
+mum_LSQ_T15 0.044     
+mum_jLSQ_T15 0.04
+mum_ISQ_T15 0.0444     
+mum_jISQ_T15 0.04
+mum_SCA_T15 0.05       
+mum_QHG_T15 0.05     
+mum_CLA_T15 0.05     
 mum_BFF_T15 0.0035     
 mum_BG_T15  0.0002      
-mum_LOB_T15 0.0012    
-mum_RCB_T15 1e-03      
+mum_LOB_T15 0.012    
+mum_RCB_T15 1e-02      
 mum_BMS_T15 1e-03      
 mum_NSH_T15 0.003043   
 mum_jNSH_T15 0.003
 mum_OSH_T15 0.003043   
 mum_jOSH_T15 0.003
-mum_ZL_T15  0.005        
+mum_ZL_T15  0.05        
 mum_BD_T15  0.0014      
 mum_MA_T15  0.001        
 mum_MB_T15  0.018       
 mum_SG_T15  0.07       
 mum_BC_T15  0.008      
-mum_ZG_T15  0.0017      
-mum_PL_T15  0.1        
+mum_ZG_T15  0.17      
+mum_PL_T15  0.4        
 mum_DF_T15  0.001       
 mum_PS_T15  0.05       
-mum_ZM_T15  0.0018       
-mum_ZS_T15  0.0055       
-mum_PB_T15  0.0005        
-mum_BB_T15  0.0002        
+mum_ZM_T15  0.018       
+mum_ZS_T15  0.055       
+mum_PB_T15  0.05        
+mum_BB_T15  0.02        
 mum_BO_T15  0.0001       
 
 # Vertebrate growth rates for each "group," per age class mg N d-1
@@ -13211,6 +13211,7 @@ EPlant_INV 0
 #EPlant_WHT       0.0       Assimilation efficiency of toothed whales on plant matter        0.0 - 0.7
 #EPlant_WHS       0.0       Assimilation efficiency of small toothed whales on plants        0.001 - 0.2    
 
+# This includes DC for species that eat carrion RM 20180530
 EDL_MAK 0.05
 EDL_HER 0.05
 EDL_WHK 0
@@ -13252,15 +13253,15 @@ EDL_SDF 0.05
 EDL_FDF 0.05
 EDL_HAD 0.05
 EDL_YTF 0.05
-EDL_DOG 0
-EDL_SMO 0
-EDL_SSH 0
-EDL_DSH 0
-EDL_BLS 0
-EDL_POR 0
-EDL_PSH 0
-EDL_WSK 0
-EDL_LSK 0
+EDL_DOG 0.6
+EDL_SMO 0.4
+EDL_SSH 0.4
+EDL_DSH 0.6
+EDL_BLS 0.6
+EDL_POR 0.6
+EDL_PSH 0.6
+EDL_WSK 0.4
+EDL_LSK 0.4
 EDL_SK 0
 EDL_SB 0
 EDL_PIN 0
