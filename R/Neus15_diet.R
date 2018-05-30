@@ -372,7 +372,7 @@ test$v15_type=ordrd.nms$type
 #__________________________________________________________________________________________________________
 #### UPDATE 5/24/2018 newest biol file pPREY matrix with mods for labile detritus and LTL
 #### read in most recent diet copied from biol file 20180524
-#### READ in pPrey from at_biol_...20180419.prm with 2 entries for inverts with multiple stages
+#### READ in pPrey from at_biol_...20180419.prm with 4 entries for inverts with multiple stages 1xxx1, 1xxx2, 2xxx1, 2xxx2
 p.neus.num=read_excel('pPrey_workbook.xlsx', sheet='at_biol_20180419', col_names = T, trim_ws = T, col_types = 'numeric')
 p.neus.data=p.neus.num[complete.cases(p.neus.num[,3]),] #data only
 p.neus=read_excel('pPrey_workbook.xlsx', sheet='at_biol_20180419', col_names = T, trim_ws = T) # keep character 1st col
