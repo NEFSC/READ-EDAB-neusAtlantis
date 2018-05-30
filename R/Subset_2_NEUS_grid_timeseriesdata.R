@@ -451,7 +451,7 @@ NEUSchlTS=apply(BoxChl.array.NES, c(1,3), sum, na.rm=T) # NEUS (all boxes) month
 test=as.data.frame(NEUSchlTS)
 colnames(test)=seq(from=1998, to=2016, by=1)
 NEUSchlTS.vec=unlist(as.data.frame(NEUSchlTS))
-final.chl.ts=NEUSchlTS.vec*7*20*5.7*1e-9 #(=mg chl * x_CHLN * wetdry * X_CN * convert to tonnes)
+final.chl.ts=NEUSchlTS.vec*7*20*5.7*1e-9 #(=mg chl * x_CHLN * wetdry * X_CN * convert to tonnes) SHOULD BE DIVIDED BY 7?
 
 ### partition Chl time series into 3 groups based on initial conditions ratio:
 PL.ts=final.chl.ts*0.6
@@ -853,6 +853,8 @@ mm.mon.anom=heatmap.2(as.matrix(mm.anom), breaks=c(-3,-2,-1,0,1,2,3),Rowv=F, Col
 MM.chl.sz=read.csv('C:/Users/ryan.morse/Downloads/MARMAP-SIZE_FRACTION-CHL-SURFACE_FOR_RMORSE.csv')
 MM.chl.sz.z=read.csv('C:/Users/ryan.morse/Downloads/MARMAP-SIZE_FRACTION-CHL-PROFILES-FOR_RMORSE.csv')
 
+MM.chl.sz.z=read.csv('/home/ryan/Downloads/MARMAP-SIZE_FRACTION-CHL-PROFILES-FOR_RMORSE.csv')
+MM.chl.sz=read.csv('/home/ryan/Downloads/MARMAP-SIZE_FRACTION-CHL-SURFACE_FOR_RMORSE.csv')
 
 MM.surf=MM.chl.sz[which(MM.chl.sz.z$DEPTH<15),] # limit depth to: surface - 15 m
 MM.surf$YEAR=as.numeric(substr(MM.surf$DATE,1,5))*1000 ## coax year out of DATE string
@@ -867,10 +869,38 @@ pointsin=over(MM.chl2, neus.shp) #find which boxes samples belong to
 MM.boxbio=data.frame(MM.chl2, pointsin)
 
 ### compute yearly mean Chl per box
-MM.boxes=aggregate(MM.boxbio$NANO_CHL,list('box'=MM.boxbio$BOX_ID, 'Y'=MM.boxbio$YEAR), mean)
-MM.boxes=reshape(MM.boxes, idvar='box', timevar = 'Y', direction = 'wide')
-MM.boxes=MM.boxes[order(MM.boxes['box']),]
-mm.t=seq(from=1977, to=1987, by=1)
+MM.boxes.nano=aggregate(MM.boxbio$NANO_CHL,list('box'=MM.boxbio$BOX_ID, 'Y'=MM.boxbio$YEAR), mean)
+MM.boxes.net=aggregate(MM.boxbio$NET_CHL,list('box'=MM.boxbio$BOX_ID, 'Y'=MM.boxbio$YEAR), mean)
+
+MM.boxes.nano=reshape(MM.boxes.nano, idvar='box', timevar = 'Y', direction = 'wide')
+MM.boxes.nano=MM.boxes[order(MM.boxes.nano['box']),]
+# mm.t=seq(from=1977, to=1987, by=1)
+MM.boxes.nano$box=as.numeric(MM.boxes.nano$box)
+MM.boxes.nano$means=rowMeans(MM.boxes.nano[,2:13], na.rm=T) # mean by box for time series (all months)
+
+MM.boxes.net=reshape(MM.boxes.net, idvar='box', timevar = 'Y', direction = 'wide')
+MM.boxes.net=MM.boxes[order(MM.boxes.net['box']),]
+# mm.t=seq(from=1977, to=1987, by=1)
+MM.boxes.net$box=as.numeric(MM.boxes.net$box)
+MM.boxes.net$means=rowMeans(MM.boxes.net[,2:13], na.rm=T) # mean by box for time series (all months)
+
+# Annual Mean of Chl by box -> partition into phytoplankton based on NEUS 1.0 virgin biomass proportion:
+# *** USE THESE FOR INITIAL CONDTIONS FILE for phytoplankton ***
+## UPDATE - now using MARMAP nanoplankton and netplankton (>20 um) 20180525
+
+tt=round(matrix((MM.boxes.nano$mean/7)),digits=3) # PS
+PS=FILL.init(tt,bgm.z)
+tt=round(matrix((MM.boxes.net$mean/7)*0.75),digits=3) # PL
+PL=FILL.init(tt,bgm.z)
+tt=round(matrix((MM.boxes.net$mean/7)*0.25),digits=3) # DF
+DF=FILL.init(tt,bgm.z)
+
+setwd('C:/Users/ryan.morse/Desktop/NEUS Atl files/RM_initial_conditions')
+write.table(PL, file='PL_2.csv', sep=', ',col.names = F, row.names=F)
+write.table(PS, file='PS_2.csv', sep=', ',col.names = F, row.names=F)
+write.table(DF, file='DF_2.csv', sep=', ',col.names = F, row.names=F)
+
+
 
 ### compute monthly means per box
 MM.boxes.mon=aggregate(MM.boxbio$NANO_CHL,list('box'=MM.boxbio$BOX_ID, 'M'= MM.boxbio$MON), mean)
