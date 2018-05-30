@@ -14190,7 +14190,7 @@ INV_mQ	2
 #0.00177 0.00177
 
 #Terminal (senescence mortality) for biomass pools (proportion of terminal age group dying)
-### param added from SETAS based on warning, RM 20180228
+### param added from SETAS based on warning, RM 20180228 These could be higher - 10%
 mT_LSQ 1.0
 mT_ISQ 1.0
 mT_NSH 1.0
@@ -14833,7 +14833,7 @@ FSBDR_INV 0
 # Demersal fish sloppy feeding   
 FFDDR            0.95      Proportion of static demersal fish's planktivore prey that's lost
 
-# Fraction of non-assimilate lost to detritus 
+# Fraction of animal and plant food non-assimilate (feces) lost to detritus by consumer XXX
 ####FDG_ZG           0.3       Detrit contrib from unassim material ingested by gelatinous zoopl   0.25 - 0.5
 ####FDG_FPL          0.3       Detrit contrib from unassim material ingested by large planktivores 0.1 - 0.3 
 FDG_MAK 0.3    
