@@ -484,6 +484,20 @@ atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208
 ### nutrients and phyto look excellent in water column, fish starting to die from not eating (?) but labile detritus explodes in sediments still. Getting closer to better tuning...
 changed initial conditions file to fix NO3 and NH4 (higher now, mg/m3 corrected 20180511), also changed decay rate for labile detritus.
 
-### desktop new atlantis version 6338 trying new pPrey matrix based on v1.0 from Rob Gamble (pPrey_workbook.xlsx in Git/R folder), daughter species repeated from parent, increased mum for inverts from last run
+# Run with decreased svel and decreased psize for PL, increased mum from previous run (this is run 0, run 1 is on desktop 20180530, still working on 3, 4)
+0. Current pPrey matrix but with:
+- decreased settling velocity of diatoms, dinos
+- decreased particle size of diatoms and dinos plankton (should reduce build up of diatoms in sediments) -> at_biol...20180419_old.prm
+
+1. modified v1 pPrey (replicate v1 parent species values for v15 daughter species)
+
+2. Tuned version of 1. incorporating changes I made to LTL
+
+3. Modified version of current matrix with juvenile values derived from v1 as in 1.
+
+### 0
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180419_old.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180531a 1>1a.junk 2>2a.junk
+
+### 1 desktop new atlantis version 6338 trying new pPrey matrix based on v1.0 from Rob Gamble (pPrey_workbook.xlsx in Git/R folder), daughter species repeated from parent, increased mum for inverts from last run
 atlantismain6338 -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_WIN_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180419.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180530dta 1>1a.junk 2>2a.junk
 (didnt work, set back to v 6197 to run overnight)
