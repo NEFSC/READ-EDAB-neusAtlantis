@@ -176,9 +176,10 @@ track_contaminants 0
 #G.Fay, 20 Sep 2016
 check_dups 0
 
-
-
-
+# RM 20180530
+flagpassivetracer 0
+flag_old_embryo_init 0
+flag_replicate_old_calendar 0
 
 ################################################
 
