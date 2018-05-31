@@ -419,7 +419,7 @@ ordrd.data=read_excel('pPrey_workbook.xlsx', sheet='20180419_@Gamble_final', col
 
 
 ### NOW put back into original format to allow pasting into biology prm file ###
-test <- as.matrix(ordrd.data)
+test <- as.matrix(ordrd.data[,2:93])
 ind <- (1:nrow(test)*3 - 1) # - 1 b/c you want to insert rows after, not before, existing rows
 test_new <- matrix(rep(NA, (nrow(test)*3*ncol(test))), ncol=ncol(test))
 test_new[ind,] <- test
