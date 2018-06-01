@@ -150,6 +150,20 @@ flagtsforcerecruit 0       Force recruitment of 1+ groups with environmental for
 norm_larval_distrib 1
 larvae_connect_only 0
 
+#RM added 4 following parameters 20180530 based on new code _6338
+# whether larvae are independent of environmental conditions (do not reset recruit_hdistrib based on environmental conditions like temperature)
+enviro_independ_larvae 1
+
+# Flag indicating the rough age of larvae effected by environmental conditions (i.e. when to reset recruit_hdistrib based on environmental conditions like temperature). This is only important if enviro_independ_larvae is set to 0
+# 0=effects are calculated at the time of spawning; 1=effects are calculated at the start of the recruitment period 
+flag_recruit_effect 1
+
+# whether to use a dynamically changing ratio between reserve and structural mass or only a fixed value (as in the standard Atlantis code), 0=static, 1=dynamic
+flag_dynamicXRS 0
+
+InvadersEntering 0
+
+
 # Preferred location trend (whether to weight vertical distributions towards surface or bottom
 # layers when in depths where there were less than complete set of depth layers)
 flagdemMAK 0
@@ -17417,6 +17431,11 @@ BWH_min_spawn_temp 4
 SWH_min_spawn_temp 4                 
 TWH_min_spawn_temp 4                 
 INV_min_spawn_temp 4                 
+ISQ_min_spawn_temp 4
+LSQ_min_spawn_temp 4
+NSH_min_spawn_temp 4
+OSH_min_spawn_temp 4
+
  
 MAK_max_spawn_temp 25                
 HER_max_spawn_temp 25                
@@ -17477,6 +17496,10 @@ BWH_max_spawn_temp 25
 SWH_max_spawn_temp 25                
 TWH_max_spawn_temp 25                
 INV_max_spawn_temp 25                
+ISQ_max_spawn_temp 25
+LSQ_max_spawn_temp 25
+NSH_max_spawn_temp 25
+OSH_max_spawn_temp 25
  
 ## Stock structure
 # Horizontal stock structure
@@ -18521,6 +18544,8 @@ TWH_min_spawn_salt 0
 INV_min_spawn_salt 0                 
 LSQ_min_spawn_salt 0
 ISQ_min_spawn_salt 0
+NSH_min_spawn_salt 0
+OSH_min_spawn_salt 0
 
 MAK_max_spawn_salt 40                
 HER_max_spawn_salt 40                
@@ -18583,7 +18608,8 @@ TWH_max_spawn_salt 40
 INV_max_spawn_salt 40                
 LSQ_max_spawn_salt 40
 ISQ_max_spawn_salt 40
-
+OSH_max_spawn_salt 40
+NSH_max_spawn_salt 40
 
 # Minimum tolerated oxygen level for age structured groups (typically vertebrates)
 MAK_min_O2 0         

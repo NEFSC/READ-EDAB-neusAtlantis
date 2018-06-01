@@ -120,6 +120,9 @@ use_force_tracers 0
 #tracerNames
 #SED
 
+# RM 20180530
+use_VertMixFiles 0
+
 #BottomStress <filename> #RM this only works if filename is supplied here
 #pCO2_forcing 0
 #FSPBChange 0
