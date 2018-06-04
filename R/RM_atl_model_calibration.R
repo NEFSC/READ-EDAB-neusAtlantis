@@ -75,8 +75,8 @@ bgm       <- file.path(d1, "neus_tmerc_RM.bgm") #30_v15.bgm")
 
 ### select box plot time series of benthic 
 tb=21 # choose box
-ll=0 # choose layer (4 is bottom for NEUS)
-test=bio_sp[which(bio_sp$layer==ll & bio_sp$polygon==tb),]
+ll=4 # choose layer (4 is bottom for NEUS)
+test=result$biomass_spatial_stanza[which(result$biomass_spatial_stanza$layer==ll & result$biomass_spatial_stanza$polygon==tb),]
 ii=unique(test$species)
 pdf(file=paste(filename,'Box21_bottom.pdf', sep=''))
 for (x in 1:length(ii)){

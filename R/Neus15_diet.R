@@ -284,9 +284,11 @@ heatmap.2(v15mat, Rowv=NULL, Colv = NULL, dendrogram = 'none', trace='none', key
 
 #### READ in pPrey from at_biol_...20170517_lowMUM.prm (mod 2018/2/13)
 ### note this file only has 1 entry for 1 stage (of 2) for ISQ LSQ NSH OSH
-p.neus.num=read_excel('pPrey_workbook.xlsx', sheet='20170517prm_20180213', col_names = T, trim_ws = T, col_types = 'numeric')
+# p.neus.num=read_excel('pPrey_workbook.xlsx', sheet='20170517prm_20180213', col_names = T, trim_ws = T, col_types = 'numeric')
+p.neus.num=read_excel('pPrey_workbook.xlsx', sheet='at_biol_20180419', col_names = T, trim_ws = T, col_types = 'numeric') #updated for inverts w/ age
 p.neus.data=p.neus.num[complete.cases(p.neus.num[,3]),] #data only
-p.neus=read_excel('pPrey_workbook.xlsx', sheet='20170517prm_20180213', col_names = T, trim_ws = T) # keep character 1st col
+# p.neus=read_excel('pPrey_workbook.xlsx', sheet='20170517prm_20180213', col_names = T, trim_ws = T) # keep character 1st col
+p.neus=read_excel('pPrey_workbook.xlsx', sheet='at_biol_20180419', col_names = T, trim_ws = T) # updated for inverts with age structure
 p.neus2=p.neus[complete.cases(p.neus[,2]),] # drops blank rows between entries
 p.neus.nms=p.neus2[which(is.na(p.neus2[,3])),1:2] # drops data, keeps names
 pnms=data.frame(p.neus.nms)
@@ -352,6 +354,43 @@ write.csv(ordrd.nms, file='pPrey_ordrd_nms_20180516.csv', row.names = F, col.nam
 ordrd.data=read.csv('pPrey_ordrd_data_20180516.csv')
 ordrd.nms=read.csv('pPrey_ordrd_nms_20180516.csv')
 
+
+
+### read in v15 pPrey edited @ NEUS v1 Gamble version
+gamble.p.neus.num=read_excel('pPrey_workbook.xlsx', sheet='20180419_@Gamble_final', col_names = T, trim_ws = T, col_types = 'numeric')
+gamble.p.neus.data=gamble.p.neus.num[complete.cases(gamble.p.neus.num[,3]),] #data only
+gamble.p.neus=read_excel('pPrey_workbook.xlsx', sheet='20180419_@Gamble_final', col_names = T, trim_ws = T) # keep character 1st col
+gamble.p.neus2=gamble.p.neus[complete.cases(gamble.p.neus[,2]),] # drops blank rows between entries
+gamble.p.neus.nms=gamble.p.neus2[which(is.na(gamble.p.neus2[,3])),1:2] # drops data, keeps names
+pnms=data.frame(gamble.p.neus.nms)
+
+g.ordrd.data=gamble.p.neus.data[order(pnms$name, pnms$type, na.last=T),]
+g.ordrd.nms=pnms[order(pnms$name, pnms$type, na.last=T),]
+g.ordrd.nms$intx=NA
+g.ordrd.nms$intx[which(g.ordrd.nms$type==11)]='Juv Pred - Juv Prey'
+g.ordrd.nms$intx[which(g.ordrd.nms$type==12)]='Juv Pred - Adt Prey'
+g.ordrd.nms$intx[which(g.ordrd.nms$type==21)]='Adt Pred - Juv Prey'
+g.ordrd.nms$intx[which(g.ordrd.nms$type==22)]='Adt Pred - Adt Prey'
+g.ordrd.nms$intx[which(is.na(g.ordrd.nms$type))]='Invert Pred'
+
+
+
+
+# A=as.matrix(gamble.p.neus.data[,2:93])
+A=as.matrix(g.ordrd.data[,2:93]) #20180419@Gamble ordered
+B=as.matrix(ordrd.data[,1:92]) #20180419
+C=pmax(A,B) # select largest value from Gamble/v15 20180419 pPrey
+
+setwd('C:/Users/ryan.morse/Documents')
+png(filename='NEUS_v15_edited_At_Gamble.png', width=1440, height=960)
+heatmap.2(A, Rowv=NULL, Colv = NULL, dendrogram = 'none', trace='none', keysize=0.75, key.title = NA) # Gamble v1 -> v15
+dev.off()
+png(filename='NEUS_v15_20180419.png', width=1440, height=960)
+heatmap.2(B, Rowv=NULL, Colv = NULL, dendrogram = 'none', trace='none', keysize=0.75, key.title = NA) # v15
+dev.off()
+png(filename='NEUS_v15_merged_Gamble20180419.png', width=1440, height=960)
+heatmap.2(C, Rowv=NULL, Colv = NULL, dendrogram = 'none', trace='none', keysize=0.75, key.title = NA) # merge on max (v15, Gamble)
+dev.off()
 
 ### read in code relations file
 # cnvrt=read_excel('coderelations.xls', col_names = T, trim_ws = T, col_types = 'numeric')
