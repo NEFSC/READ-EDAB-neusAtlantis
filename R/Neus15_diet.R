@@ -364,6 +364,8 @@ gamble.p.neus2=gamble.p.neus[complete.cases(gamble.p.neus[,2]),] # drops blank r
 gamble.p.neus.nms=gamble.p.neus2[which(is.na(gamble.p.neus2[,3])),1:2] # drops data, keeps names
 pnms=data.frame(gamble.p.neus.nms)
 
+tt=gamble.p.neus[,1]==ordrd.nms[,1]
+
 g.ordrd.data=gamble.p.neus.data[order(pnms$name, pnms$type, na.last=T),]
 g.ordrd.nms=pnms[order(pnms$name, pnms$type, na.last=T),]
 g.ordrd.nms$intx=NA
@@ -376,8 +378,8 @@ g.ordrd.nms$intx[which(is.na(g.ordrd.nms$type))]='Invert Pred'
 
 
 
-# A=as.matrix(gamble.p.neus.data[,2:93])
-A=as.matrix(g.ordrd.data[,2:93]) #20180419@Gamble ordered
+A=as.matrix(gamble.p.neus.data[,2:93])
+# A=as.matrix(g.ordrd.data[,2:93]) #20180419@Gamble ordered
 B=as.matrix(ordrd.data[,1:92]) #20180419
 C=pmax(A,B) # select largest value from Gamble/v15 20180419 pPrey
 
@@ -391,6 +393,11 @@ dev.off()
 png(filename='NEUS_v15_merged_Gamble20180419.png', width=1440, height=960)
 heatmap.2(C, Rowv=NULL, Colv = NULL, dendrogram = 'none', trace='none', keysize=0.75, key.title = NA) # merge on max (v15, Gamble)
 dev.off()
+
+setwd(d1)
+write.csv(C, file='pPrey_ordrd_data_20180516_Gamble_merge.csv', row.names = F, col.names = T)
+
+
 
 ### read in code relations file
 # cnvrt=read_excel('coderelations.xls', col_names = T, trim_ws = T, col_types = 'numeric')
