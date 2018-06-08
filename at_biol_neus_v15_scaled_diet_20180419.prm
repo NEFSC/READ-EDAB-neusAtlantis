@@ -18839,102 +18839,106 @@ jack_b_ISQ 1.45e+09
 jack_b_NSH 1.45e+09
 jack_b_OSH 1.45e+09
 
-#gfay@umassd 2015/06/24  added, new parameter (or one that got missed in conversion)
+
+##RM added 20180209 Choose shape of feeding window: knife edge, humped original, smooth (all SN size based), or bilogistic (LENGTH based)
+# use for knife-edge size selectivity of prey (1)
 UseHardFeedingWindow  0
 
-#RM added 20180209, also need Kmax_coefft_XXX for all species to use this RM
-# see manual for suggestions (1-5)
-Kmax_coefft_MAK 2    
-Kmax_coefft_HER 2    
-Kmax_coefft_WHK 2    
-Kmax_coefft_BLF 2    
-Kmax_coefft_WPF 2    
-Kmax_coefft_SUF 2    
-Kmax_coefft_WIF 2    
-Kmax_coefft_WTF 2    
-Kmax_coefft_HAL 2    
-Kmax_coefft_PLA 2    
-Kmax_coefft_FOU 2    
-Kmax_coefft_FLA 2    
-Kmax_coefft_BFT 2    
-Kmax_coefft_TUN 2    
-Kmax_coefft_BIL 2    
-Kmax_coefft_MPF 2    
-Kmax_coefft_BUT 2    
-Kmax_coefft_ANC 2    
-Kmax_coefft_BPF 2    
-Kmax_coefft_GOO 2  
-Kmax_coefft_MEN 2    
-Kmax_coefft_FDE 2    
-Kmax_coefft_COD 2    
-Kmax_coefft_SHK 2    
-Kmax_coefft_OHK 2    
-Kmax_coefft_POL 2    
-Kmax_coefft_RHK 2    
-Kmax_coefft_BSB 2    
-Kmax_coefft_SCU 2    
-Kmax_coefft_TYL 2    
-Kmax_coefft_RED 2    
-Kmax_coefft_OPT 2    
-Kmax_coefft_SAL 2    
-Kmax_coefft_DRM 2    
-Kmax_coefft_STB 2    
-Kmax_coefft_TAU 2    
-Kmax_coefft_WOL 2    
-Kmax_coefft_SDF 2    
-Kmax_coefft_FDF 2    
-Kmax_coefft_HAD 2    
-Kmax_coefft_YTF 2    
-Kmax_coefft_DOG 2    
-Kmax_coefft_SMO 2    
-Kmax_coefft_SSH 2    
-Kmax_coefft_DSH 2    
-Kmax_coefft_BLS 2    
-Kmax_coefft_POR 2    
-Kmax_coefft_PSH 2    
-Kmax_coefft_WSK 2    
-Kmax_coefft_LSK 2    
-Kmax_coefft_SK  2    
-Kmax_coefft_SB  2  
-Kmax_coefft_PIN 2  
-Kmax_coefft_REP 2    
-Kmax_coefft_RWH 2  
-Kmax_coefft_BWH 2  
-Kmax_coefft_SWH 2  
-Kmax_coefft_TWH 2  
-Kmax_coefft_INV 2    
-Kmax_coefft_LSQ 2  
-Kmax_coefft_ISQ 2  
-Kmax_coefft_SCA 2     
-Kmax_coefft_QHG 2     
-Kmax_coefft_CLA 2     
-Kmax_coefft_BFF 2     
-Kmax_coefft_BG  2     
-Kmax_coefft_LOB 2  
-Kmax_coefft_RCB 2  
-Kmax_coefft_BMS 2  
-Kmax_coefft_NSH 2  
-Kmax_coefft_OSH 2  
-Kmax_coefft_ZL  2     
-Kmax_coefft_BD  2     
-Kmax_coefft_MA  2     
-Kmax_coefft_MB  2     
-Kmax_coefft_SG  2     
-Kmax_coefft_BC  2     
-Kmax_coefft_ZG  2  
-Kmax_coefft_PL  2     
-Kmax_coefft_DF  2     
-Kmax_coefft_PS  2     
-Kmax_coefft_ZM  2     
-Kmax_coefft_ZS  2     
-Kmax_coefft_PB  2     
-Kmax_coefft_BB  2     
-Kmax_coefft_BO  2
+# for original implementation of smooth feeding window set to 1; or 0 for new implementation of smooth window using Kmax coefft below to shape curve:
+UseHumpedFeedingWindow 0
 
-#UseHumpedFeedingWindow=0
-
-#RM 2016/11/03 added, parameter called in code, not found in this file
+# use for logistic shaped feeding curve based on total LENGTH not SN; use Kmax  to shape curve: 1 looks most like knife edge, <1 is wider, less stringent
 UseBiLogisticFeedingWindow 0
+
+# Set shape of feeding window with this param; 1 for normal window, >1 to prefer small over large prey, or <1 if bilogistic curve selected
+# see manual for suggestions (1-5) higher numbers set availability of small prey much higher than large prey exponentially for smooth curve
+Kmax_coefft_MAK 1    
+Kmax_coefft_HER 1    
+Kmax_coefft_WHK 1    
+Kmax_coefft_BLF 1    
+Kmax_coefft_WPF 1    
+Kmax_coefft_SUF 1    
+Kmax_coefft_WIF 1    
+Kmax_coefft_WTF 1    
+Kmax_coefft_HAL 1    
+Kmax_coefft_PLA 1    
+Kmax_coefft_FOU 1    
+Kmax_coefft_FLA 1    
+Kmax_coefft_BFT 1    
+Kmax_coefft_TUN 1    
+Kmax_coefft_BIL 1    
+Kmax_coefft_MPF 1    
+Kmax_coefft_BUT 1    
+Kmax_coefft_ANC 1    
+Kmax_coefft_BPF 1    
+Kmax_coefft_GOO 1  
+Kmax_coefft_MEN 1    
+Kmax_coefft_FDE 1    
+Kmax_coefft_COD 1    
+Kmax_coefft_SHK 1    
+Kmax_coefft_OHK 1    
+Kmax_coefft_POL 1    
+Kmax_coefft_RHK 1    
+Kmax_coefft_BSB 1    
+Kmax_coefft_SCU 1    
+Kmax_coefft_TYL 1    
+Kmax_coefft_RED 1    
+Kmax_coefft_OPT 1    
+Kmax_coefft_SAL 1    
+Kmax_coefft_DRM 1    
+Kmax_coefft_STB 1    
+Kmax_coefft_TAU 1    
+Kmax_coefft_WOL 1    
+Kmax_coefft_SDF 1    
+Kmax_coefft_FDF 1    
+Kmax_coefft_HAD 1    
+Kmax_coefft_YTF 1    
+Kmax_coefft_DOG 1    
+Kmax_coefft_SMO 1    
+Kmax_coefft_SSH 1    
+Kmax_coefft_DSH 1    
+Kmax_coefft_BLS 1    
+Kmax_coefft_POR 1    
+Kmax_coefft_PSH 1    
+Kmax_coefft_WSK 1    
+Kmax_coefft_LSK 1    
+Kmax_coefft_SK  1    
+Kmax_coefft_SB  1  
+Kmax_coefft_PIN 1  
+Kmax_coefft_REP 1    
+Kmax_coefft_RWH 1  
+Kmax_coefft_BWH 1  
+Kmax_coefft_SWH 1  
+Kmax_coefft_TWH 1  
+Kmax_coefft_INV 1    
+Kmax_coefft_LSQ 1  
+Kmax_coefft_ISQ 1  
+Kmax_coefft_SCA 1     
+Kmax_coefft_QHG 1     
+Kmax_coefft_CLA 1     
+Kmax_coefft_BFF 1     
+Kmax_coefft_BG  1     
+Kmax_coefft_LOB 1  
+Kmax_coefft_RCB 1  
+Kmax_coefft_BMS 1  
+Kmax_coefft_NSH 1  
+Kmax_coefft_OSH 1  
+Kmax_coefft_ZL  1     
+Kmax_coefft_BD  1     
+Kmax_coefft_MA  1     
+Kmax_coefft_MB  1     
+Kmax_coefft_SG  1     
+Kmax_coefft_BC  1     
+Kmax_coefft_ZG  1  
+Kmax_coefft_PL  1     
+Kmax_coefft_DF  1     
+Kmax_coefft_PS  1     
+Kmax_coefft_ZM  1     
+Kmax_coefft_ZS  1     
+Kmax_coefft_PB  1     
+Kmax_coefft_BB  1     
+Kmax_coefft_BO  1
+
 
 # @gavinfay 22 Jan 2016
 flagmodelArag 0

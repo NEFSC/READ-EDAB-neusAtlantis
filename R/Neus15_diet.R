@@ -462,6 +462,8 @@ dev.off()
 
 ### use this to read in modified versions to paste into shape for at_biology prm file (do all above, then read this, then continue)
 ordrd.data=read_excel('pPrey_workbook.xlsx', sheet='20180419_@Gamble_final', col_names = T, trim_ws = T, col_types = 'numeric') # 20180419 with v1 replacements (same for all children)
+ordrd.data=read_excel('pPrey_ordrd_data_20180516_Gamble_merge.xlsx', sheet='Read', col_names = T, trim_ws = T, col_types = 'numeric') # 20180606 merged and edited product (gamble, v15_20180419)
+# ordrd.data[is.na(ordrd.data),2:93]=0 # remove NAs if missed in excel
 
 
 ### NOW put back into original format to allow pasting into biology prm file ###
@@ -471,7 +473,7 @@ test_new <- matrix(rep(NA, (nrow(test)*3*ncol(test))), ncol=ncol(test))
 test_new[ind,] <- test
 ind2=seq(from=1, to=nrow(test_new),by=3)
 test_new[ind2,1:2]=as.matrix(ordrd.nms[1:2])
-write.table(test_new, file='20180419_@Gamble.csv',row.names=F, col.names=F, sep=" ", na="")
+write.table(test_new, file='Merged_edited_v15_20180419_v1Gamble.csv',row.names=F, col.names=F, sep=" ", na="")
 
 
 
