@@ -1,52 +1,52 @@
-# Using Atlantistools to create plots for model calibration and comparison, 
-# code devloped from the vignette - load preprocessed data then make plots/pdfs
-# RM 20170328
-
-
-library("atlantistools")
-library("ggplot2")
-library("gridExtra")
-
-# Windows
-setwd(choose.dir(default=getwd())) # where run data are saved
-d2=getwd()
-d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
-
-#linux
-d1='/home/ryan/Git/atneus_RM'
-d2='/home/ryan/AtlRuns/20170503b'
-#d2='/media/ryan/TOSHIBA EXT/1 RM/10 ATLANTIS transfer/20170413'
-setwd(d2)
-
-
-### DIET PLOTS
-# DO THIS FIRST...
-# MyCol=topo.colors(30)
-trace('get_colpal', edit=T) # Manually add more colors to make this work...
-# #  get_colpal <-function ()
-{
-  MyCol=topo.colors(30)
-  greys <- c(51, 128, 204, 71, 148, 224, 91, 168, 244, 58,
-             122, 209, 79, 140, 45, 136, 71, 247, 250, 250,
-             250, 250, 250, 250, 250, 250, 250, 250, 250, 250)
-  greys <- grDevices::rgb(cbind(greys, greys, greys), maxColorValue = 255)
-  # col_pal = c(MyCol, greys)
-  col_pal <- c(RColorBrewer::brewer.pal(n = 12, name = "Paired"), RColorBrewer::brewer.pal(n = 12, name = "Paired"),
-               greys)
-  return(col_pal)
-}
-
-
-filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
-
-# USE TO LOAD Result from atlantistools preprocess (created in 'RM_preprocess_v2.R')
-loadRData <- function(fileName){
-  #loads an RData file, and returns it
-  load(fileName)
-  get(ls()[ls() != "fileName"])
-}
-prepr=list.files(d2, pattern=".rdata") # get name
-result<- loadRData(prepr) # load
+# # Using Atlantistools to create plots for model calibration and comparison, 
+# # code devloped from the vignette - load preprocessed data then make plots/pdfs
+# # RM 20170328
+# 
+# 
+# library("atlantistools")
+# library("ggplot2")
+# library("gridExtra")
+# 
+# # Windows
+# setwd(choose.dir(default=getwd())) # where run data are saved
+# d2=getwd()
+# d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
+# 
+# #linux
+# d1='/home/ryan/Git/atneus_RM'
+# d2='/home/ryan/AtlRuns/20170503b'
+# #d2='/media/ryan/TOSHIBA EXT/1 RM/10 ATLANTIS transfer/20170413'
+# setwd(d2)
+# 
+# 
+# ### DIET PLOTS
+# # DO THIS FIRST...
+# # MyCol=topo.colors(30)
+# trace('get_colpal', edit=T) # Manually add more colors to make this work...
+# # #  get_colpal <-function ()
+# {
+#   MyCol=topo.colors(30)
+#   greys <- c(51, 128, 204, 71, 148, 224, 91, 168, 244, 58,
+#              122, 209, 79, 140, 45, 136, 71, 247, 250, 250,
+#              250, 250, 250, 250, 250, 250, 250, 250, 250, 250)
+#   greys <- grDevices::rgb(cbind(greys, greys, greys), maxColorValue = 255)
+#   # col_pal = c(MyCol, greys)
+#   col_pal <- c(RColorBrewer::brewer.pal(n = 12, name = "Paired"), RColorBrewer::brewer.pal(n = 12, name = "Paired"),
+#                greys)
+#   return(col_pal)
+# }
+# 
+# 
+# filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
+# 
+# # USE TO LOAD Result from atlantistools preprocess (created in 'RM_preprocess_v2.R')
+# loadRData <- function(fileName){
+#   #loads an RData file, and returns it
+#   load(fileName)
+#   get(ls()[ls() != "fileName"])
+# }
+# prepr=list.files(d2, pattern=".rdata") # get name
+# result<- loadRData(prepr) # load
 
 
 fig_height2 <- 11
@@ -119,9 +119,9 @@ plot <- plot_line(result$nums_age, col = "agecl")
 update_labels(p = plot, labels = list(x = "Time [years]", y = "Numbers", colour = "Ageclass"))
 ggsave(paste(filename," numbers at age timeseries.png", sep=''), width=20, height=17, dpi=96)
 ###____________SSB and recruitment NEED External Data input for this to work
-plot_rec(result$ssb_rec, ex_data = ex_rec_ssb)
+# plot_rec(result$ssb_rec, ex_data = ex_rec_ssb)
 
-###____________PHYSICS____________________________
+##____________PHYSICS____________________________
 plot <- plot_line(result$physics, wrap = NULL)
 custom_grid(plot, grid_x = "polygon", grid_y = "variable")
 ggsave(paste(filename," physics snapshot.png", sep=''), width=10, height=7, dpi=96)
@@ -360,6 +360,6 @@ legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1
 dev.off()
 
 #DIN
-plot(bio2$DIN~bio2$Time, type='l')
-lines(bio1$DIN~bio1$Time, col='blue')
-legend('topright', legend = c('v1.5', 'v1.0 old'), lty=c(1,1),col=c('black', 'blue'), bty='n')
+# plot(bio2$DIN~bio2$Time, type='l')
+# lines(bio1$DIN~bio1$Time, col='blue')
+# legend('topright', legend = c('v1.5', 'v1.0 old'), lty=c(1,1),col=c('black', 'blue'), bty='n')

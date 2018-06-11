@@ -244,9 +244,9 @@ save(result, file=paste(filename, '_prepro.rdata',sep=''))
 # save(result, file=paste(filename, '_prepro.rdata',sep=''))
 
 # USE TO LOAD Result for other fn calls in atlantistools
-loadRData <- function(fileName){
-  #loads an RData file, and returns it
-  load(fileName)
-  get(ls()[ls() != "fileName"])
-}
-d <- loadRData("~/blah/ricardo.RData")
+# loadRData <- function(fileName){
+#   #loads an RData file, and returns it
+#   load(fileName)
+#   get(ls()[ls() != "fileName"])
+# }
+# d <- loadRData("~/blah/ricardo.RData")
