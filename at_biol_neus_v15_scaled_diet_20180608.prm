@@ -120,7 +120,6 @@ flagresp         0         Switch to turn fish respiration on/off: off=0, on=1  
 flagavgmig       1         Switch to turn averaging of migrant sizes on/off: off=0, on=1       1
 flagkdrop        0         Switch to turn cubic bacterial growth on/off: off=0, on=1           0
 flagbactstim     0         Switch to turn stimulation of bacterial growth on/off: off=0, on=1  0
-#flagBFFlim        0         ALL DONE BELOW Switch to identify filter feeding crowding used: simple=0, ERSEM=1  0
 
 # Those determining which environmental 
 # interaction formulations used      
@@ -146,7 +145,7 @@ flagagestruct    1         Age structure option: 0 = homogeneous cohorts, 1 = tr
 flagsenesce      0         Oldest sub-part of final age group senesces, 1 = yes, 0 = no        0
 flagtsforcerecruit 0       Force recruitment of 1+ groups with environmental forcing           0
 
-# Flag indicating whether to normalise the larval distribution, added 20180509
+# Flag indicating whether to normalize the larval distribution, added 20180509
 norm_larval_distrib 1
 larvae_connect_only 0
 
@@ -12852,7 +12851,7 @@ KDEP_PB 0
 KDEP_BB 0
 KDEP_BO 0.03
 
-# Assimilation efficiency of invertebrate consumers on live food and carrion
+# Assimilation efficiency of invertebrate consumers on live food
 E_LSQ 0.6
 E_ISQ 0.6
 E_SCA 0.4
@@ -12930,7 +12929,7 @@ EPlant_BO 0.0
 #EPlant_CEP            0.4       Assimilation efficiency of cephalopods                           0.25 - 0.5
 #EPlant_PWN            0.5       Assimilation efficiency of prawns                                  0.5
 
-# Assimilation efficiency of invertebrate consumers on labile detritus 
+# Assimilation efficiency of invertebrate consumers on labile detritus AND CARRION
 EDL_LSQ 0
 EDL_ISQ 0
 EDL_SCA 0.2
@@ -13227,7 +13226,7 @@ EPlant_INV 0
 #EPlant_WHT       0.0       Assimilation efficiency of toothed whales on plant matter        0.0 - 0.7
 #EPlant_WHS       0.0       Assimilation efficiency of small toothed whales on plants        0.001 - 0.2    
 
-# This includes DC for species that eat carrion RM 20180530
+# Efficiency includes CARRION for species that eat DC, DCsed RM 20180530
 EDL_MAK 0.05
 EDL_HER 0.05
 EDL_WHK 0
