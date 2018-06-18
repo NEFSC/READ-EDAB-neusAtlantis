@@ -21,7 +21,7 @@
 # 
 # ### DIET PLOTS
 # # DO THIS FIRST...
-# # MyCol=topo.colors(30)
+# MyCol=topo.colors(30)
 # trace('get_colpal', edit=T) # Manually add more colors to make this work...
 # # #  get_colpal <-function ()
 # {
@@ -35,7 +35,7 @@
 #                greys)
 #   return(col_pal)
 # }
-# 
+
 # 
 # filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
 # 
