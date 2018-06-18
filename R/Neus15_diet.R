@@ -463,6 +463,9 @@ dev.off()
 ### use this to read in modified versions to paste into shape for at_biology prm file (do all above, then read this, then continue)
 ordrd.data=read_excel('pPrey_workbook.xlsx', sheet='20180419_@Gamble_final', col_names = T, trim_ws = T, col_types = 'numeric') # 20180419 with v1 replacements (same for all children)
 ordrd.data=read_excel('pPrey_ordrd_data_20180516_Gamble_merge.xlsx', sheet='Read', col_names = T, trim_ws = T, col_types = 'numeric') # 20180606 merged and edited product (gamble, v15_20180419)
+t=is.na(ordrd.data[,2:93])
+sum(t)
+t2=which(t != 0, arr.ind=T) #ordrd.data[is.na(ordrd.data),2:93] # remove NAs if missed in excel
 # ordrd.data[is.na(ordrd.data),2:93]=0 # remove NAs if missed in excel
 
 
