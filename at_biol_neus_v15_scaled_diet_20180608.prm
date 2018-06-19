@@ -11619,9 +11619,7 @@ ZL_sn           1.0        Ref. AFDW for large zooplankton so can determine avai
 ZM_sn           1.0        Ref. AFDW for mesozooplankton so can determine avail fish groups (=10cm prawn)
 ZS_sn           1.0        Ref. AFDW for small zooplankton so can determine avail fish groups (=10cm prawn)
 DF_sn           1.0        Ref. AFDW for dinoflagellates so can determine avail fish groups (=10cm prawn)
-BFS_sn          90.0       Ref. AFDW for shallow filter feeders so can determine avail fish groups (=10cm prawn)
 BFF_sn          90.0       Ref. AFDW for other filter feeders so can determine avail fish groups (=10cm prawn)
-BFD_sn          90.0       Ref. AFDW for deep filter feeders so can determine avail fish groups (=10cm prawn)
 BG_sn           50.0       Ref. AFDW for benthic grazers so can determine avail fish groups (=10cm prawn)
 BO_sn           1.0        Ref. AFDW for meiobenthos so can determine avail fish groups (=10cm prawn)
 BD_sn           10.0       Ref. AFDW for deposit feeders so can determine avail fish groups (=10cm prawn)
@@ -11682,7 +11680,7 @@ C_HER 10
 1.5 4.0 12 15 15 17 17 17 17 17
  
 C_WHK 10
-30 150 400 600 600 600 600 650 650 950
+1 5 15 25 45 45 45 45 50 50
  
 C_BLF 10
 30 60 105 180 250 250 815 815 815 815
@@ -11793,7 +11791,7 @@ C_FDF 10
 1 5 15 25 45 45 45 45 50 50
  
 C_HAD 10
-5 15 25 70 105 105 105 105 150 150
+1 5 15 25 45 45 45 45 50 50
  
 C_YTF 10
 2.5 7.5 15 17.8 18.8 19.8 20.8 21.8 22 22
@@ -11802,7 +11800,7 @@ C_DOG 10
 5 7.5 20 45 50 80 130 180 210 210
  
 C_SMO 10
-5 20 40 50 50 70 70 70 100 100
+5 7.5 20 45 50 80 130 180 210 210
  
 C_SSH 10
 5 20 40 50 50 70 70 70 100 100
@@ -11897,7 +11895,7 @@ mum_HER 10
 3.374269 3.0323587 3.6023392 4.853801 5.3460039 5.4259259 6.46 6.4655214425 6.466381579 6.47
  
 mum_WHK 10
-2.0122319688 5.441033138 18.64327485 27.78216374 75.58479532 138.21832359 228.25536062 308.06367771 457.33024691 569
+0.730019493 3.902777778 5.880969786 8.412768031 12.31920078 18.033869396 21.9 20.949317739 20.5 20
  
 mum_BLF 10
 3.022904483 45.73927875 80.3079922 195.18810916 195.84161793 195.67300195 195.01803119 195.02339181 195.216374269 205
@@ -12008,7 +12006,7 @@ mum_FDF 10
 0.730019493 3.902777778 5.880969786 8.412768031 12.31920078 18.033869396 21.9 20.949317739 20.5 20
  
 mum_HAD 10
-2.100146199 20.11208577 28.615984405 48.252802144 55.844176413 60.490862573 61.625852827 61.017300195 61 61.9
+0.730019493 3.902777778 5.880969786 8.412768031 12.31920078 18.033869396 21.9 20.949317739 20.5 20
  
 mum_YTF 10
 0.754386 2.863060429 5.584307992 7.75 11.23245614 15.656432749 15.391812865 15.324561404 15.762670565 15.5
@@ -12017,7 +12015,7 @@ mum_DOG 10
 0.5 10.5 25.5 80.5 270.5 320.5 460.5 520.5 520.5 520.5
  
 mum_SMO 10
-1 9 10 15 15 20 20 20 20 20
+0.5 10.5 25.5 80.5 270.5 320.5 460.5 520.5 520.5 520.5
  
 mum_SSH 10
 1 9 10 15 15 20 20 20 20 20

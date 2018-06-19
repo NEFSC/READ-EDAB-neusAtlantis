@@ -15,42 +15,42 @@ d1='/home/ryan/Git/atneus_RM'
 d2='/home/ryan/AtlRuns/20180510a'
 setwd(d2)
 # 
-# 
-# files=list.files(path=d2, pattern='.nc')
-# nc.str=strsplit(files, '.nc')
-# lncstr=nchar(nc.str)
-# ncbase=nc.str[which(lncstr==min(lncstr))] #get base nc file name
-# nc_gen    <- file.path(d2, paste(ncbase, '.nc', sep=""))
-# nc_prod   <- file.path(d2, paste(ncbase, 'PROD.nc', sep=""))
-# dietcheck <- file.path(d2, paste(ncbase, 'DietCheck.txt', sep=""))
-# yoy       <- file.path(d2, paste(ncbase, 'YOY.txt', sep=""))
-# ssb       <- file.path(d2, paste(ncbase, 'SSB.txt', sep=""))
-# 
-# xml.files=list.files(path=d2, pattern='.xml')
-# xml.str=strsplit(xml.files, '.xml')
-# prm_run <- file.path(d1, paste(xml.str[[2]], '.prm',sep=''))
-# prm_run #make sure
-# prm_biol <- file.path(d1, paste(xml.str[[1]], '.prm',sep=''))
-# prm_biol #make sure
-# 
-# fgs       <- file.path(d1, paste(xml.str[[3]], '.csv',sep='')) #file.path(d1, "NeusGroups_v15_LTLonly.csv") #unix.csv")
-# fgs #make sure
-# bgm.files=list.files(path=d1, pattern='.bgm')
-# bgm.files="neus_tmerc_RM.bgm"
-# bgm       <- file.path(d1, bgm.files) #"neus_tmerc_RM.bgm")
-# 
-# ## read log file to get input command for Atlantis run
-# con <- file("log.txt","r")
-# logfile_lines <- readLines(con,n=15)
-# close(con)
-# run.cmd=logfile_lines[14]
-# run.cmd #print to make sure
-# test=strsplit(run.cmd, split = ' ')
-# init.file=test[[1]][3]
-# init = file.path(d1, init.file)
-# init # make sure
-# # init      <- file.path(d1, 'RMinit_notsohighvertmix.nc')# "RMinit_newvalues2017.nc")
-# init=paste(d1,'/RMinit_2018.nc', sep='') # dropped _FillValue to make init_growth work 20180412 (see history in cdf version for command)
+
+files=list.files(path=d2, pattern='.nc')
+nc.str=strsplit(files, '.nc')
+lncstr=nchar(nc.str)
+ncbase=nc.str[which(lncstr==min(lncstr))] #get base nc file name
+nc_gen    <- file.path(d2, paste(ncbase, '.nc', sep=""))
+nc_prod   <- file.path(d2, paste(ncbase, 'PROD.nc', sep=""))
+dietcheck <- file.path(d2, paste(ncbase, 'DietCheck.txt', sep=""))
+yoy       <- file.path(d2, paste(ncbase, 'YOY.txt', sep=""))
+ssb       <- file.path(d2, paste(ncbase, 'SSB.txt', sep=""))
+
+xml.files=list.files(path=d2, pattern='.xml')
+xml.str=strsplit(xml.files, '.xml')
+prm_run <- file.path(d1, paste(xml.str[[2]], '.prm',sep=''))
+prm_run #make sure
+prm_biol <- file.path(d1, paste(xml.str[[1]], '.prm',sep=''))
+prm_biol #make sure
+
+fgs       <- file.path(d1, paste(xml.str[[3]], '.csv',sep='')) #file.path(d1, "NeusGroups_v15_LTLonly.csv") #unix.csv")
+fgs #make sure
+bgm.files=list.files(path=d1, pattern='.bgm')
+bgm.files="neus_tmerc_RM.bgm"
+bgm       <- file.path(d1, bgm.files) #"neus_tmerc_RM.bgm")
+
+## read log file to get input command for Atlantis run
+con <- file("log.txt","r")
+logfile_lines <- readLines(con,n=15)
+close(con)
+run.cmd=logfile_lines[14]
+run.cmd #print to make sure
+test=strsplit(run.cmd, split = ' ')
+init.file=test[[1]][3]
+init = file.path(d1, init.file)
+init # make sure
+# init      <- file.path(d1, 'RMinit_notsohighvertmix.nc')# "RMinit_newvalues2017.nc")
+init=paste(d1,'/RMinit_2018.nc', sep='') # dropped _FillValue to make init_growth work 20180412 (see history in cdf version for command)
 # 
 # ### SANITY CHECK ON INITIAL CONDITIONS
 # # data1 <- sc_init(init, prm_biol, fgs, bboxes)
