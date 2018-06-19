@@ -476,7 +476,7 @@ test_new <- matrix(rep(NA, (nrow(test)*3*ncol(test))), ncol=ncol(test))
 test_new[ind,] <- test
 ind2=seq(from=1, to=nrow(test_new),by=3)
 test_new[ind2,1:2]=as.matrix(ordrd.nms[1:2])
-write.table(test_new, file='Merged_edited_v15_20180419_v1Gamble_20180613.csv',row.names=F, col.names=F, sep=" ", na="")
+write.table(test_new, file='Merged_edited_v15_20180419_v1Gamble_20180618.csv',row.names=F, col.names=F, sep=" ", na="")
 
 
 
