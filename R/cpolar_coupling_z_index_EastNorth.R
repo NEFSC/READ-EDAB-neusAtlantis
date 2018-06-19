@@ -521,12 +521,12 @@ box_props[is.na(box_props$vertflux),c('temp', 'salt', 'vertflux')]=-999 # change
 
 ## relative angle between face and current velocity - theta to use in cosine function to scale flux
 ### example below:
-# a=130 *pi/180 ### current angle in radians
-# b=30 *pi/180 ### face angle in radians
-# c=a-b
-# d=(c+180) %% 360 - 180 
-# theta=d+(pi/2) # THIS IS THETA, use in cosine to adjust flux across face relative to angled flows, 90 degrees added to normalize to N/S
-# THETAscale=cos(theta) # is the scalar for fluxes, 
+a=130 *pi/180 ### current angle in radians
+b=30 *pi/180 ### face angle in radians
+c=a-b
+d=(c+180) %% 360 - 180
+theta=d+(pi/2) # THIS IS THETA, use in cosine to adjust flux across face relative to angled flows, 90 degrees added to normalize to N/S
+THETAscale=cos(theta) # is the scalar for fluxes,
 ### NOTE positive cos(theta) indicates flows from left to right; negative cos(theta) is flow from right to left -> destination box
 ### may be hemispere local... this is for northern hemisphere
 
