@@ -12590,8 +12590,11 @@ pR_SWH 3.5
 pR_TWH 3.5   
 pR_INV 2     
  
-
+# RM modified length - weight params based on max fish length and weight 20180619
 # Length - weight parameters 
+li_a_invert 0.01
+li_b_invert 3.0
+
 li_a_MAK	0.0129
 li_a_HER	0.0125
 li_a_WHK	0.015
@@ -12642,8 +12645,8 @@ li_a_POR	0.0054
 li_a_PSH	0.00524
 li_a_WSK	0.0127
 li_a_LSK	0.0127
-li_a_SK	0.0127
-li_a_SB	0.02
+li_a_SK		0.0127
+li_a_SB		0.02
 li_a_PIN	0.035
 li_a_REP	0.00396
 li_a_RWH	0.2
@@ -12702,8 +12705,8 @@ li_b_POR	3
 li_b_PSH	3.141
 li_b_WSK	3.1
 li_b_LSK	3.1
-li_b_SK	3.1
-li_b_SB	3
+li_b_SK		3.1
+li_b_SB		3
 li_b_PIN	2.9
 li_b_REP	3.004
 li_b_RWH	3
@@ -19922,6 +19925,3 @@ ht_BWH 50
 ht_SWH 250    
 ht_TWH 250    
 ht_INV 150    
-
-li_a_invert 0.01
-li_b_invert 3.0

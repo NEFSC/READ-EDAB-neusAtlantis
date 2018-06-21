@@ -422,6 +422,13 @@ sh.init(SETAS_init)
 sh.init(NEUS_15_RM3init)
 sh.init(NEUS_15_newestinit)
 
+tt1=NEUS_10_init$df.nitrogen # check RN SN values for length weight relationships
+tt15=NEUS_15_init$df.nitrogen # check RN SN values for length weight relationships
+tts=SETAS_init$df.nitrogen # check RN SN values for length weight relationships
+
+write.table(tts, file='SETAS_N.csv', col.names=T, row.names=F, sep=',')
+
+
 
 grp.file=paste(wd2, '/NeusGroups_v15_unix.csv', sep='')
 bgm.file=paste(wd2, '/neus_tmerc_RM.bgm', sep='')
