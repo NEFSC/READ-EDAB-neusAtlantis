@@ -46,11 +46,31 @@ tt=read.table('length_weight_v15.csv', header = T, sep=',')
 ## missing entries for MPF, BPF, FDE, FDF... look into this.
 
 
+# Read in new updated values 20180709
+x=read_xlsx('C:/Users/ryan.morse/Documents/GitHub/atneus_RM/R/length_weight_v15.xlsx', sheet='length_weight_v15_data')
+
+# library(makecdfenv)
+# cdf=read.cdffile('RMinit_newvalues2017.cdf',compress=F)
+
+library(ncdf4)
+cdf=nc_open('RMinit_newvalues2017.nc', write=T)
+a=data.frame(attributes(cdf$var))
+aa=attributes(cdf$var)
+
+print(paste("The file has",cdf$nvars,"variables,",cdf$ndims,"dimensions and",cdf$natts,"NetCDF attributes"))
+
+## this looks promising...
+# ncvar_change_missval( nc, varid, missval )
+aa$names[1]
+# aaR=aa$names[which("_ResN" %in% aa$names)] 
+ncvar_change_missval( cdf, avarid, missval )
 
 
+library(stringr)
+str_locate_all(aa$names[2], "_ResN")
 
+grep("_ResN", aa$names[2])
+grep("_StructN", aa$names[2])
+aaR=data.frame(nm=a$names[grep("_ResN", a$names)]) # split names with ResN
 
-
-
-
-
+# aaR=aa$names[which(grep("_ResN", aa$names)==1)]
