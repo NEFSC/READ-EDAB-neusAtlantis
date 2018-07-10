@@ -58,7 +58,7 @@ xS=data.frame(Variables=x$Sname,SN=x$SN_mg) # this is the new calculated structu
 ### open initial conditions nc
 library(ncdf4)
 nc=nc_open('RMinit_newvalues2017.nc', write=T)
-a=data.frame(attributes(nc$var)) # dataframe
+a=data.frame(attributes(nc$var), stringsAsFactors = F) # dataframe
 aa=attributes(nc$var) #list
 print(paste("The nc has",nc$nvars,"variables,",nc$ndims,"dimensions and",nc$natts,"Netnc attributes"))
 
@@ -98,18 +98,26 @@ if (length(test) ==1){
 }
 test2=grep("_ResN", nc$var[[i]]$name) # search for RN
 if (length(test2) == 1) {
-  # print(nc$var[[i]]$missval) #=xR$RN[which(xR$Variables==nc$var[[i]]$name)]
+  # print(nc$var[[i]]$missval)
   # print(xR$RN[which(xR$Variables==nc$var[[i]]$name)])
-  nc$var[[i]]$missval=xR$RN[which(xR$Variables==nc$var[[i]]$name)]
-  # print(nc$var[[i]]$missval) #=xR$RN[which(xR$Variables==nc$var[[i]]$name)]
+  # nc$var[[i]]$missval=xR$RN[which(xR$Variables==nc$var[[i]]$name)]
+  # ncvar_change_missval(nc, a[i,1],xR$RN[which(xR$Variables==nc$var[[i]]$name)]) #nc$var[[i]]$name)]) 
+  ncatt_put(nc,a[i,1],"_FillValue", xR$RN[which(xR$Variables==nc$var[[i]]$name)])
+  # print(nc$var[[i]]$missval) 
   
 } else if (length(test2) != 1) {
   # print(nc$var[[i]]$missval)
   # print(xS$SN[which(xS$Variables==nc$var[[i]]$name)])
-  nc$var[[i]]$missval=xS$SN[which(xS$Variables==nc$var[[i]]$name)]
-  # print(nc$var[[i]]$missval) #=xR$RN[which(xR$Variables==nc$var[[i]]$name)]
+  # nc$var[[i]]$missval=xS$SN[which(xS$Variables==nc$var[[i]]$name)]
+  # ncvar_change_missval(nc, a[i,1],xS$SN[which(xS$Variables==nc$var[[i]]$name)]) 
+  ncatt_put(nc,a[i,1],"_FillValue", xS$SN[which(xS$Variables==nc$var[[i]]$name)])
+  # print(nc$var[[i]]$missval) #
   
 }
+nc_sync(nc)
 }
 nc_sync(nc)
 nc_close(nc)
+
+
+fillvalue <- ncatt_get(nc,a[3,1],"_FillValue")
