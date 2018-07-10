@@ -4,6 +4,8 @@ library(dplyr)
 setwd(choose.dir(default=getwd())) # where run data are saved
 d2=getwd()
 d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM/R' #where (PRM, bgm, group data) are saved
+d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
+
 setwd(d1)
 
 # 
@@ -26,7 +28,7 @@ tt2=merge(tt, v, by='Code')
 
 tt2$length=(tt2$`weight (g)`/tt2$li_a)^(1/tt2$li_b)
 tt3=tt2[with(tt2, order(Code, Cohort)),]
-write.csv(tt3, nc='length_weight_v15.csv', col.names = T, row.names = F, sep=',')
+write.csv(tt3, file='length_weight_v15.csv', col.names = T, row.names = F, sep=',')
 
 spp=unique(tt3$Species)
 pdf(nc='length_weight.pdf',paper='A4r',width=11, height=8)
@@ -49,9 +51,9 @@ tt=read.table('length_weight_v15.csv', header = T, sep=',')
 ## Read in RN and SN values, xlsx updated 20180709, '____data' tab has values copied from '___calc_doc' tab, which has documentation and calculations
 ## (von Bertalanffy model, Atlantis calcs for RN SN weight conversions, length_weight relationships, etc.)
 x=read_xlsx('C:/Users/ryan.morse/Documents/GitHub/atneus_RM/R/length_weight_v15.xlsx', sheet='length_weight_v15_data')
-x$Rname=paste(x$Species, x$Cohort, "_ResN", sep="") #make name same as variable name in netcdf nc
-x$Sname=paste(x$Species, x$Cohort, "_StructN", sep="") #make name same as variable name in netcdf nc
-## Subset above to use for replacement in initial conditions netcdf nc
+x$Rname=paste(x$Species, x$Cohort, "_ResN", sep="") #make name same as variable name in netcdf file
+x$Sname=paste(x$Species, x$Cohort, "_StructN", sep="") #make name same as variable name in netcdf file
+## Subset above to use for replacement in initial conditions netcdf file
 xR=data.frame(Variables=x$Rname,RN=x$RN_mg) # this is the new calculated reserve nitrogen value
 xS=data.frame(Variables=x$Sname,SN=x$SN_mg) # this is the new calculated structural nitrogen value
 
@@ -60,7 +62,7 @@ library(ncdf4)
 nc=nc_open('RMinit_newvalues2017.nc', write=T)
 a=data.frame(attributes(nc$var), stringsAsFactors = F) # dataframe
 aa=attributes(nc$var) #list
-print(paste("The nc has",nc$nvars,"variables,",nc$ndims,"dimensions and",nc$natts,"Netnc attributes"))
+print(paste("The file has",nc$nvars,"variables,",nc$ndims,"dimensions and",nc$natts,"Netnc attributes"))
 
 ## this looks promising...
 # ncvar_change_missval( nc, varid, missval )
@@ -89,7 +91,8 @@ aaS=data.frame(nm=a$names[grep("_StructN", a$names)]) # split names with SN
 # nc$var[[i]]$missval=xR$RN[which(xR$Variables==nc$var[[i]]$name)]
 # nc$var[[i]]$missval=xS$SN[which(xS$Variables==nc$var[[i]]$name)]
 
-## reassign missing values for RN and SN
+## reassign missing values for RN and SN, this works now, but need to replace values for all non vert entries below yellowtail flounder
+## as this routine causes the _FillValue to be replaced with " " (copy and paste old vals from cdf file, then do ncgen...)
 for (i in 1:dim(a)[1]){ #1:10){
 # print(nc$var[[i]]$name) # use to match aaR/aaS
 test=grep("_Nums", nc$var[[i]]$name) # search for Nums, skip to next
@@ -120,4 +123,23 @@ nc_sync(nc)
 nc_close(nc)
 
 
-fillvalue <- ncatt_get(nc,a[3,1],"_FillValue")
+# fillvalue <- ncatt_get(nc,a[3,1],"_FillValue")
+
+### check new values in RM_NEUS.r initial conditions
+library(shinyrAtlantis)
+library(tidyverse)
+library(stringr)
+library(rbgm)
+library(bgmfiles)
+wd2='C:/Users/ryan.morse/Documents/GitHub/atneus_RM'
+setwd(wd2)
+bgm.file <- ("neus_tmerc_RM.bgm")
+NEUS_15_init=make.sh.init.object(bgm.file, '20180710init.nc') #'RMinit_newvalues2017.nc')
+
+newN=NEUS_15_init$df.nitrogen
+write.csv(t, file='benthic_species_N.csv', sep=',', col.names = T, row.names = F)
+
+# t2=NEUS_15_init$species.3.data
+# t=t(t2)
+# colnames(t)=NEUS_15_init$species.2.names.full
+# write.csv(t, file='benthic_species_N.csv', sep=',', col.names = T, row.names = F)
