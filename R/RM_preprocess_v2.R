@@ -49,7 +49,8 @@ init.file=test[[1]][3]
 init = file.path(d1, init.file)
 init # make sure
 # init      <- file.path(d1, 'RMinit_notsohighvertmix.nc')# "RMinit_newvalues2017.nc")
-init=paste(d1,'/RMinit_2018.nc', sep='') # dropped _FillValue to make init_growth work 20180412 (see history in cdf version for command)
+init=paste(d1,'/20180710_initnofill.nc', sep='') # dropped _FillValue to make init_growth work 20180412 (see history in cdf version for command)
+# ran this command: ncatted -O -a _FillValue,,d,, RMinit_newvalues2017.nc RMinit_2018.nc
 
 # ### SANITY CHECK ON INITIAL CONDITIONS
 # # data1 <- sc_init(init, prm_biol, fgs, bboxes)
