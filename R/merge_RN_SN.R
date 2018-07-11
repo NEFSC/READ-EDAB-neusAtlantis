@@ -53,77 +53,148 @@ tt=read.table('length_weight_v15.csv', header = T, sep=',')
 x=read_xlsx('C:/Users/ryan.morse/Documents/GitHub/atneus_RM/R/length_weight_v15.xlsx', sheet='length_weight_v15_data')
 x$Rname=paste(x$Species, x$Cohort, "_ResN", sep="") #make name same as variable name in netcdf file
 x$Sname=paste(x$Species, x$Cohort, "_StructN", sep="") #make name same as variable name in netcdf file
+# ## Subset above to use for replacement in initial conditions netcdf file
+# xR=data.frame(Variables=x$Rname,RN=x$RN_mg) # this is the new calculated reserve nitrogen value
+# xS=data.frame(Variables=x$Sname,SN=x$SN_mg) # this is the new calculated structural nitrogen value
+
+### edit RN and SN values to compensate for long-lived species being at old age for cohort 1 (e.g. whales, sharks, etc)
+newX=x
+newX[,c('SN', 'RN', 'weight_g')]=NULL
+newX[,c('weight_kg', 'weight_t', 'weight_lbs', 'length_cm')]=NULL
+newX$newage=newX$age-(newX$numyrs-1) # use this for von Bertalannfy calculations, li_a li_b (offsets values to start at 1)
+newX$vbert_cm2=newX$Linf*(1-exp(-newX$K*(newX$newage-newX$To)))
+newX$grams2=newX$li_a*(newX$vbert_cm2^newX$li_b)
+newX$inches=newX$vbert_cm2*0.393701
+newX$lbs=newX$grams2*0.00220462
+
+## plot length vs weight to make sure thinks look OK
+nmc=unique(newX$Code)
+pdf(file='weight_length_US.pdf')
+for(i in 1:length(nmc)){
+  ii=nmc[i]
+plot(newX$inches[newX$Code==ii]~newX$lbs[newX$Code==ii], ylab='inches', xlab='lbs', main=ii)
+}
+dev.off()
+##
+
+### USE THESE VALUES TO REPLACE RN AND SN IN INITIAL CONDITIONS FILE ### updated 20180711
+newX$SN_2=newX$grams2/20/5.7/3.65*1000 # convert grams wet weight to mg SN
+newX$RN_2=newX$SN_2*2.65 # convert SN to RN (mg)
 ## Subset above to use for replacement in initial conditions netcdf file
-xR=data.frame(Variables=x$Rname,RN=x$RN_mg) # this is the new calculated reserve nitrogen value
-xS=data.frame(Variables=x$Sname,SN=x$SN_mg) # this is the new calculated structural nitrogen value
+xR=data.frame(Variables=newX$Rname,RN=newX$RN_2) # this is the new calculated reserve nitrogen value
+xS=data.frame(Variables=newX$Sname,SN=newX$SN_2) # this is the new calculated structural nitrogen value
+
+
 
 ### open initial conditions nc
-library(ncdf4)
-nc=nc_open('RMinit_newvalues2017.nc', write=T)
-a=data.frame(attributes(nc$var), stringsAsFactors = F) # dataframe
-aa=attributes(nc$var) #list
-print(paste("The file has",nc$nvars,"variables,",nc$ndims,"dimensions and",nc$natts,"Netnc attributes"))
-
-## this looks promising...
-# ncvar_change_missval( nc, varid, missval )
-# aa$names[1]
-# aaR=aa$names[which("_ResN" %in% aa$names)] 
-# ncvar_change_missval( nc, avarid, missval )
-
-
-# library(stringr)
-# str_locate_all(aa$names[2], "_ResN")
-
-# grep("_ResN", aa$names[2]) # search 
-# grep("_StructN", aa$names[2])
-aaR=data.frame(nm=a$names[grep("_ResN", a$names)]) # split names with ResN
-aaS=data.frame(nm=a$names[grep("_StructN", a$names)]) # split names with SN
-# aaR=aa$names[which(grep("_ResN", aa$names)==1)]
-
-## can manually edit the initial conditions nc like this...
-# nc$var$Anchovies10_ResN$missval=x$RN_mg[10]
-## and with indexing like this...
-# nc$var[[2]]$missval # second variable entry of 1917
-# nc$var[[2]]$name # use to match aaR/aaS
-
-# grep("_ResN", nc$var[[2]]$name) # search 
+# library(ncdf4)
+# nc=nc_open('RMinit_newvalues2017.nc', write=T) # old init, old _FillValues, (used to create file below)
+# nc=nc_open('20180710init.nc', write=T) # edited 20180710, new _FillValues, need to update data with _FillValues
 # 
-# nc$var[[i]]$missval=xR$RN[which(xR$Variables==nc$var[[i]]$name)]
-# nc$var[[i]]$missval=xS$SN[which(xS$Variables==nc$var[[i]]$name)]
+# a=data.frame(attributes(nc$var), stringsAsFactors = F) # dataframe
+# aa=attributes(nc$var) #list
+# print(paste("The file has",nc$nvars,"variables,",nc$ndims,"dimensions and",nc$natts,"Netcdf attributes"))
+# 
+# ## this looks promising...
+# # ncvar_change_missval( nc, varid, missval )
+# # aa$names[1]
+# # aaR=aa$names[which("_ResN" %in% aa$names)] 
+# # ncvar_change_missval( nc, avarid, missval )
+# 
+# 
+# # library(stringr)
+# # str_locate_all(aa$names[2], "_ResN")
+# 
+# # grep("_ResN", aa$names[2]) # search 
+# # grep("_StructN", aa$names[2])
+# aaR=data.frame(nm=a$names[grep("_ResN", a$names)]) # split names with ResN
+# aaS=data.frame(nm=a$names[grep("_StructN", a$names)]) # split names with SN
+# # aaR=aa$names[which(grep("_ResN", aa$names)==1)]
+# 
+# aaR=data.frame(nm=a$names[grep("_ResN", a$names)]) # split names with ResN
+# aaS=data.frame(nm=a$names[grep("_StructN", a$names)]) # split names with SN
+# 
+# aaRS=rbind(aaR, aaS)
+# b=which(a$names %in% aaRS$nm)
+# c=a[b,1]
+# ## can manually edit the initial conditions nc like this...
+# # nc$var$Anchovies10_ResN$missval=x$RN_mg[10]
+# ## and with indexing like this...
+# # nc$var[[2]]$missval # second variable entry of 1917
+# # nc$var[[2]]$name # use to match aaR/aaS
+# 
+# # grep("_ResN", nc$var[[2]]$name) # search 
+# # 
+# # nc$var[[i]]$missval=xR$RN[which(xR$Variables==nc$var[[i]]$name)]
+# # nc$var[[i]]$missval=xS$SN[which(xS$Variables==nc$var[[i]]$name)]
+# 
+# ## reassign missing values for RN and SN, this works now, but need to replace values for all non vert entries below yellowtail flounder
+# ## as this routine causes the _FillValue to be replaced with " " (copy and paste old vals from cdf file, then do ncgen...)
+# for (i in 1:dim(a)[1]){ #1:10){
+#   # print(nc$var[[i]]$name) # use to match aaR/aaS
+#   testNum=grep("_Nums", nc$var[[i]]$name) # search for Nums, skip to next
+#   testN=grep("_N", nc$var[[i]]$name)
+#   test2=grep("_ResN", nc$var[[i]]$name) # search for RN
+#   if (length(testNum) ==1){
+#     next
+#   } else if (length(testN) ==1){
+#     next
+#   }  else if (length(test2) == 1) {
+#     # print(nc$var[[i]]$missval)
+#     # print(xR$RN[which(xR$Variables==nc$var[[i]]$name)])
+#     # nc$var[[i]]$missval=xR$RN[which(xR$Variables==nc$var[[i]]$name)]
+#     # ncvar_change_missval(nc, a[i,1],xR$RN[which(xR$Variables==nc$var[[i]]$name)]) #nc$var[[i]]$name)])
+#     ncatt_put(nc,a[i,1],"_FillValue", xR$RN[which(xR$Variables==nc$var[[i]]$name)])
+#     ncvar_put(nc,a[i,1], rep(xR$RN[which(xR$Variables==nc$var[[i]]$name)],150)) # replicate 5x30
+#     # print(nc$var[[i]]$missval) 
+#   } else if (length(test2) != 1) {
+#     # print(nc$var[[i]]$missval)
+#     # print(xS$SN[which(xS$Variables==nc$var[[i]]$name)])
+#     # nc$var[[i]]$missval=xS$SN[which(xS$Variables==nc$var[[i]]$name)]
+#     # ncvar_change_missval(nc, a[i,1],xS$SN[which(xS$Variables==nc$var[[i]]$name)])
+#     ncatt_put(nc,a[i,1],"_FillValue", xS$SN[which(xS$Variables==nc$var[[i]]$name)])
+#     # print(nc$var[[i]]$missval) #
+#     ncvar_put(nc,a[i,1], rep(xS$SN[which(xS$Variables==nc$var[[i]]$name)],150))
+#     
+#   }
+#   nc_sync(nc)
+# }
+# nc_sync(nc)
+# nc_close(nc)
 
-## reassign missing values for RN and SN, this works now, but need to replace values for all non vert entries below yellowtail flounder
-## as this routine causes the _FillValue to be replaced with " " (copy and paste old vals from cdf file, then do ncgen...)
-for (i in 1:dim(a)[1]){ #1:10){
-# print(nc$var[[i]]$name) # use to match aaR/aaS
-test=grep("_Nums", nc$var[[i]]$name) # search for Nums, skip to next
-if (length(test) ==1){
-  next
-}
-test2=grep("_ResN", nc$var[[i]]$name) # search for RN
-if (length(test2) == 1) {
-  # print(nc$var[[i]]$missval)
-  # print(xR$RN[which(xR$Variables==nc$var[[i]]$name)])
-  # nc$var[[i]]$missval=xR$RN[which(xR$Variables==nc$var[[i]]$name)]
-  # ncvar_change_missval(nc, a[i,1],xR$RN[which(xR$Variables==nc$var[[i]]$name)]) #nc$var[[i]]$name)]) 
-  ncatt_put(nc,a[i,1],"_FillValue", xR$RN[which(xR$Variables==nc$var[[i]]$name)])
-  # print(nc$var[[i]]$missval) 
+
+#### 20180711 update - used this to write data to variables for ResN and StructN
+nc=nc_open('RMinit_2018.nc', write=T) # 
+a=data.frame(attributes(nc$var), stringsAsFactors = F) # dataframe
+
+aaR=data.frame(nm=a$names[grep("_ResN", a$names)], stringsAsFactors = F) # split names with ResN
+aaS=data.frame(nm=a$names[grep("_StructN", a$names)], stringsAsFactors = F) # split names with SN
+
+aaRS=rbind(aaR, aaS, stringsasFactors=F)
+b=which(a$names %in% aaRS$nm)
+c=a[b,1]
+
+for (i in 1:length(b)){
+  vv=as.numeric(b[i]) # index of ResN and StructN in entire list `a` of nc file
+  testSN=grep("_StructN", a[vv,1]) 
+  testRN=grep("_ResN", a[vv,1])
   
-} else if (length(test2) != 1) {
-  # print(nc$var[[i]]$missval)
-  # print(xS$SN[which(xS$Variables==nc$var[[i]]$name)])
-  # nc$var[[i]]$missval=xS$SN[which(xS$Variables==nc$var[[i]]$name)]
-  # ncvar_change_missval(nc, a[i,1],xS$SN[which(xS$Variables==nc$var[[i]]$name)]) 
-  ncatt_put(nc,a[i,1],"_FillValue", xS$SN[which(xS$Variables==nc$var[[i]]$name)])
-  # print(nc$var[[i]]$missval) #
-  
-}
-nc_sync(nc)
+  if (length(testRN) ==1){
+    ncatt_put(nc,a[vv,1],"_FillValue", xR$RN[which(xR$Variables==a[vv,1])])
+    ncvar_put(nc,a[vv,1], rep(xR$RN[which(xR$Variables==a[vv,1])],150)) # replicate 5x30
+  } else if (length(testSN) ==1){
+    ncatt_put(nc,a[vv,1],"_FillValue", xS$SN[which(xS$Variables==a[vv,1])])
+    ncvar_put(nc,a[vv,1], rep(xS$SN[which(xS$Variables==a[vv,1])],150))
+  }
+  nc_sync(nc)
 }
 nc_sync(nc)
 nc_close(nc)
 
+# then in terminal:
+# ncatted -O -a _FillValue,,d,, 20180710init.nc 20180710_initnofill.nc
 
-# fillvalue <- ncatt_get(nc,a[3,1],"_FillValue")
+
 
 ### check new values in RM_NEUS.r initial conditions
 library(shinyrAtlantis)
@@ -134,8 +205,8 @@ library(bgmfiles)
 wd2='C:/Users/ryan.morse/Documents/GitHub/atneus_RM'
 setwd(wd2)
 bgm.file <- ("neus_tmerc_RM.bgm")
-NEUS_15_init=make.sh.init.object(bgm.file, '20180710init.nc') #'RMinit_newvalues2017.nc')
-
+NEUS_15_init=make.sh.init.object(bgm.file, '20180710init2.nc') #'RMinit_newvalues2017.nc')
+sh.init(NEUS_15_init)
 newN=NEUS_15_init$df.nitrogen
 write.csv(t, file='benthic_species_N.csv', sep=',', col.names = T, row.names = F)
 
