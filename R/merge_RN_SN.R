@@ -205,7 +205,8 @@ library(bgmfiles)
 wd2='C:/Users/ryan.morse/Documents/GitHub/atneus_RM'
 setwd(wd2)
 bgm.file <- ("neus_tmerc_RM.bgm")
-NEUS_15_init=make.sh.init.object(bgm.file, '20180710init2.nc') #'RMinit_newvalues2017.nc')
+# NEUS_15_init=make.sh.init.object(bgm.file, '20180710init2.nc') #'RMinit_newvalues2017.nc')
+NEUS_15_init=make.sh.init.object(bgm.file, 'RMinit_2018.nc') #'RMinit_newvalues2017.nc')
 sh.init(NEUS_15_init)
 newN=NEUS_15_init$df.nitrogen
 write.csv(t, file='benthic_species_N.csv', sep=',', col.names = T, row.names = F)
