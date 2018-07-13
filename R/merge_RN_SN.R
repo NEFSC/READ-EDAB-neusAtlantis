@@ -50,7 +50,8 @@ tt=read.table('length_weight_v15.csv', header = T, sep=',')
 
 ## Read in RN and SN values, xlsx updated 20180709, '____data' tab has values copied from '___calc_doc' tab, which has documentation and calculations
 ## (von Bertalanffy model, Atlantis calcs for RN SN weight conversions, length_weight relationships, etc.)
-x=read_xlsx('C:/Users/ryan.morse/Documents/GitHub/atneus_RM/R/length_weight_v15.xlsx', sheet='length_weight_v15_data')
+# x=read_xlsx('C:/Users/ryan.morse/Documents/GitHub/atneus_RM/R/length_weight_v15.xlsx', sheet='length_weight_v15_data')
+x=read_xlsx(paste(d1, '/R/length_weight_v15.xlsx', sep=''), sheet='length_weight_v15_data')
 x$Rname=paste(x$Species, x$Cohort, "_ResN", sep="") #make name same as variable name in netcdf file
 x$Sname=paste(x$Species, x$Cohort, "_StructN", sep="") #make name same as variable name in netcdf file
 # ## Subset above to use for replacement in initial conditions netcdf file
@@ -61,11 +62,17 @@ x$Sname=paste(x$Species, x$Cohort, "_StructN", sep="") #make name same as variab
 newX=x
 newX[,c('SN', 'RN', 'weight_g')]=NULL
 newX[,c('weight_kg', 'weight_t', 'weight_lbs', 'length_cm')]=NULL
-newX$newage=newX$age-(newX$numyrs-1) # use this for von Bertalannfy calculations, li_a li_b (offsets values to start at 1)
+### weight of inidividual fish in a cohort should be mean size (age 1.5 in cohort 1 of a fish that spends 2 years in a cohort)
+### The recruit weight is then that of an age 1 fish
+newX$interval=apply(newX[,'numyrs'], 1, function(x) median(seq(1:x))) # use to get mean age of cohort
+newX$newage=newX$age*newX$interval # this is updated mean age of cohort to use in von Bert calcs instead of below
+# newX$newage=newX$age-(newX$numyrs-1) # use this for von Bertalannfy calculations, li_a li_b (offsets values to start at 1)
 newX$vbert_cm2=newX$Linf*(1-exp(-newX$K*(newX$newage-newX$To)))
 newX$grams2=newX$li_a*(newX$vbert_cm2^newX$li_b)
 newX$inches=newX$vbert_cm2*0.393701
 newX$lbs=newX$grams2*0.00220462
+newX$recruit_cm=newX$Linf*(1-exp(-newX$K*(1-newX$To))) # age 1 fish
+newX$recruit_grams=newX$li_a*(newX$recruit_cm^newX$li_b)
 
 ## plot length vs weight to make sure thinks look OK
 nmc=unique(newX$Code)
@@ -80,6 +87,10 @@ dev.off()
 ### USE THESE VALUES TO REPLACE RN AND SN IN INITIAL CONDITIONS FILE ### updated 20180711
 newX$SN_2=newX$grams2/20/5.7/3.65*1000 # convert grams wet weight to mg SN
 newX$RN_2=newX$SN_2*2.65 # convert SN to RN (mg)
+### for recruits, use in KWRR_xxx KWSS_xxx in biol file
+newX$recruitSN=newX$recruit_grams /20/5.7/3.65*1000 
+newX$recruitRN=newX$recruitSN *2.65 
+
 ## Subset above to use for replacement in initial conditions netcdf file
 xR=data.frame(Variables=newX$Rname,RN=newX$RN_2) # this is the new calculated reserve nitrogen value
 xS=data.frame(Variables=newX$Sname,SN=newX$SN_2) # this is the new calculated structural nitrogen value
@@ -192,7 +203,7 @@ nc_sync(nc)
 nc_close(nc)
 
 # then in terminal:
-# ncatted -O -a _FillValue,,d,, 20180710init.nc 20180710_initnofill.nc
+# ncatted -O -a _FillValue,,d,, RMinit_2018 RMinitnofill_2018.nc
 
 
 
