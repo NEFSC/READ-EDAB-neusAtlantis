@@ -34,7 +34,7 @@ prm_biol #make sure
 
 fgs       <- file.path(d1, paste(xml.str[[3]], '.csv',sep='')) #file.path(d1, "NeusGroups_v15_LTLonly.csv") #unix.csv")
 fgs #make sure
-bgm.files=list.files(path=d1, pattern='.bgm')
+# bgm.files=list.files(path=d1, pattern='.bgm')
 bgm.files="neus_tmerc_RM.bgm"
 bgm       <- file.path(d1, bgm.files) #"neus_tmerc_RM.bgm")
 
