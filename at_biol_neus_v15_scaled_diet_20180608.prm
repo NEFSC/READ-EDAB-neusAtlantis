@@ -397,13 +397,13 @@ flagrecruitPSH 10
 flagrecruitWSK 10
 flagrecruitLSK 10
 flagrecruitSK 10
-flagrecruitSB 1
-flagrecruitPIN 10
-flagrecruitREP 10
+flagrecruitSB 12
+flagrecruitPIN 12
+flagrecruitREP 12
 flagrecruitRWH 10
-flagrecruitBWH 10
-flagrecruitSWH 10
-flagrecruitTWH 10
+flagrecruitBWH 12
+flagrecruitSWH 12
+flagrecruitTWH 12
 flagrecruitINV 10
 
 # External reproduction - spawn is based on adult population within model domain, but actual reproduction           
