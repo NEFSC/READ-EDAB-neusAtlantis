@@ -203,7 +203,7 @@ nc_sync(nc)
 nc_close(nc)
 
 # then in terminal:
-# ncatted -O -a _FillValue,,d,, RMinit_2018 RMinitnofill_2018.nc
+# ncatted -O -a _FillValue,,d,, RMinit_2018.nc RMinitnofill_2018.nc
 
 
 
