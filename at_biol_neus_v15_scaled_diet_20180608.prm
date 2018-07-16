@@ -11876,8 +11876,8 @@ mum_MA_T15  0.001
 mum_MB_T15  0.018       
 mum_SG_T15  0.07       
 mum_BC_T15  0.08      
-mum_ZG_T15  0.05      
-mum_PL_T15  0.05        
+mum_ZG_T15  0.025      
+mum_PL_T15  0.025        
 mum_DF_T15  0.001       
 mum_PS_T15  0.01       
 mum_ZM_T15  0.018       
@@ -16510,25 +16510,25 @@ KDENR_SK 1
 41152175
  
 KDENR_SB 1
-152170
+3
  
 KDENR_PIN 1
-36727
+0.2
  
 KDENR_REP 1
-4378
+0.8
  
 KDENR_RWH 1
-95
+0.05
  
 KDENR_BWH 1
-95
+0.05
  
 KDENR_SWH 1
-2033
+0.2
  
 KDENR_TWH 1
-2033
+0.2
  
 KDENR_INV 1
 26588351.9
