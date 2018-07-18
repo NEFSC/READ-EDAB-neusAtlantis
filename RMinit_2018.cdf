@@ -2350,7 +2350,7 @@ variables:
 		Benthic_Carniv_N:b_dens = 1000000000. ;
 		Benthic_Carniv_N:i_conc = 200000000. ;
 		Benthic_Carniv_N:f_conc = 200000000. ;
-		Benthic_Carniv_N:_FillValue = 0.02 ;
+		Benthic_Carniv_N:_FillValue = 20. ;
 	double Benthic_grazer_N(t, b) ;
 		Benthic_grazer_N:bmtype = "epibenthos" ;
 		Benthic_grazer_N:units = "mg N m-2" ;
@@ -23492,7 +23492,7 @@ variables:
 		Sed_Bact_N:b_dens = 1000000000. ;
 		Sed_Bact_N:i_conc = 200000000. ;
 		Sed_Bact_N:f_conc = 200000000. ;
-		Sed_Bact_N:_FillValue = 0.05 ;
+		Sed_Bact_N:_FillValue = 0.5 ;
 	double Shallow_Demersal_Fish10_Nums(t, b, z) ;
 		Shallow_Demersal_Fish10_Nums:bmtype = "tracer" ;
 		Shallow_Demersal_Fish10_Nums:units = "1" ;
