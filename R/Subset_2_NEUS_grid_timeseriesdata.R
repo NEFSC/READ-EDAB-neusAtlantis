@@ -451,7 +451,9 @@ NEUSchlTS=apply(BoxChl.array.NES, c(1,3), sum, na.rm=T) # NEUS (all boxes) month
 test=as.data.frame(NEUSchlTS)
 colnames(test)=seq(from=1998, to=2016, by=1)
 NEUSchlTS.vec=unlist(as.data.frame(NEUSchlTS))
-final.chl.ts=NEUSchlTS.vec*7*20*5.7*1e-9 #(=mg chl * x_CHLN * wetdry * X_CN * convert to tonnes) SHOULD BE DIVIDED BY 7?
+### update 20180718 revised N values of plankton
+final.chl.ts=NEUSchlTS.vec /7 *20 *5.7 *1e-9 #(=mg chl / x_CHLN * wetdry * X_CN * convert to tonnes)
+## average weight of plankton (in mg N m^-3) is Chl a (mg m^-3) * 1/7 * proportion of total chla 
 
 ### partition Chl time series into 3 groups based on initial conditions ratio:
 PL.ts=final.chl.ts*0.6

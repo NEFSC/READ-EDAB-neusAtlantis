@@ -98,7 +98,7 @@ xS=data.frame(Variables=newX$Sname,SN=newX$SN_2) # this is the new calculated st
 
 
 ### open initial conditions nc
-# library(ncdf4)
+library(ncdf4)
 # nc=nc_open('RMinit_newvalues2017.nc', write=T) # old init, old _FillValues, (used to create file below)
 # nc=nc_open('20180710init.nc', write=T) # edited 20180710, new _FillValues, need to update data with _FillValues
 # 
@@ -180,6 +180,10 @@ a=data.frame(attributes(nc$var), stringsAsFactors = F) # dataframe
 
 aaR=data.frame(nm=a$names[grep("_ResN", a$names)], stringsAsFactors = F) # split names with ResN
 aaS=data.frame(nm=a$names[grep("_StructN", a$names)], stringsAsFactors = F) # split names with SN
+aaNum=data.frame(nm=a$names[grep("_Nums$", a$names)], stringsAsFactors = F) # split names with Nums
+aaN=data.frame(nm=a$names[grep("_N$", a$names)], stringsAsFactors = F) # split names with _N
+aaN1=data.frame(nm=a$names[grep("_N1", a$names)], stringsAsFactors = F) # split names with _N
+aaN2=data.frame(nm=a$names[grep("_N2", a$names)], stringsAsFactors = F) # split names with _N
 
 aaRS=rbind(aaR, aaS, stringsasFactors=F)
 b=which(a$names %in% aaRS$nm)
