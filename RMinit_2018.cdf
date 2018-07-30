@@ -7781,7 +7781,7 @@ variables:
 		Diatom_S:b_dens = 1000000000. ;
 		Diatom_S:i_conc = 200000000. ;
 		Diatom_S:f_conc = 200000000. ;
-		Diatom_S:_FillValue = 0.15 ;
+		Diatom_S:_FillValue = 0. ;
 	double DinoFlag_N(t, b, z) ;
 		DinoFlag_N:bmtype = "tracer" ;
 		DinoFlag_N:units = "mg N m-3" ;
