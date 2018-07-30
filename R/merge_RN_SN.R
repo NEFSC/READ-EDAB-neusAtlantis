@@ -3,7 +3,7 @@ library(dplyr)
 
 setwd(choose.dir(default=getwd())) # where run data are saved
 d2=getwd()
-d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM/R' #where (PRM, bgm, group data) are saved
+# d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM/R' #where (PRM, bgm, group data) are saved
 d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
 
 setwd(d1)
@@ -95,6 +95,19 @@ newX$recruitRN=newX$recruitSN *2.65
 xR=data.frame(Variables=newX$Rname,RN=newX$RN_2) # this is the new calculated reserve nitrogen value
 xS=data.frame(Variables=newX$Sname,SN=newX$SN_2) # this is the new calculated structural nitrogen value
 
+### reshape and cast long to wide to get individual vertebrate weight by cohort (grams)
+library(reshape)
+t=newX[,c("Code", "RN_2", "SN_2", "grams2", "Cohort")]
+t2=melt.data.frame(t, id.vars=c('Code', 'Cohort'), measure.vars = 'grams2')
+t3=cast(t2, Code ~ Cohort)
+write.table(t3, file='vertebrate_weights_grams.csv', sep=',', col.names = T, row.names = F)
+
+### get C biomass (mg C per individual), RN+SN, convert to C; used for tuning mum and C
+t=newX[,c("Code", "Cohort")]
+t$biomass=(newX$RN_2 + newX$SN_2)*20*5.7
+t2=melt.data.frame(t, id.vars=c('Code', 'Cohort'), measure.vars = 'biomass')
+t3=cast(t2, Code ~ Cohort)
+write.table(t3, file='vertebrate_biomass_mgC.csv', sep=',', col.names = T, row.names = F)
 
 
 ### open initial conditions nc

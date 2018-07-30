@@ -662,7 +662,7 @@ flagbearliveTWH 1
 flagbearliveINV 0
 
 # Flag indicating whether the vertebrate group provides parental care for young until maturity 
-# (0 = no, 1 = yes)
+# (0 = no, 1 = yes, -1 = semelparous so die after reproduction)       
 flagmotherMAK 0
 flagmotherHER 0
 flagmotherWHK 0
