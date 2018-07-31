@@ -97,10 +97,20 @@ xS=data.frame(Variables=newX$Sname,SN=newX$SN_2) # this is the new calculated st
 
 ### reshape and cast long to wide to get individual vertebrate weight by cohort (grams)
 library(reshape)
-t=newX[,c("Code", "RN_2", "SN_2", "grams2", "Cohort")]
+t=newX[,c("Code", "grams2", "Cohort")]
 t2=melt.data.frame(t, id.vars=c('Code', 'Cohort'), measure.vars = 'grams2')
 t3=cast(t2, Code ~ Cohort)
 write.table(t3, file='vertebrate_weights_grams.csv', sep=',', col.names = T, row.names = F)
+
+t=newX[,c("Code", "Cohort")]
+t$RNSN=newX$RN_2 + newX$SN_2
+# t2=melt.data.frame(t, id.vars=c("Code", "Cohort")) #, measure.vars = c('RN_2', 'SN_2'))
+t3=cast(t, Code ~ Cohort)
+write.table(t3, file='vertebrate_sumRNSN.csv', sep=',', col.names = T, row.names = F)
+
+t=newX[,c("Code", "Cohort", "RN_2")]
+t3=cast(t, Code ~ Cohort)
+write.table(t3, file='vertebrate_sumRNSN.csv', sep=',', col.names = T, row.names = F)
 
 ### get C biomass (mg C per individual), RN+SN, convert to C; used for tuning mum and C
 t=newX[,c("Code", "Cohort")]
