@@ -23,7 +23,7 @@
 # # DO THIS FIRST...
 # MyCol=topo.colors(30)
 # trace('get_colpal', edit=T) # Manually add more colors to make this work...
-# # #  get_colpal <-function ()
+# # # #  get_colpal <-function ()
 # {
 #   MyCol=topo.colors(30)
 #   greys <- c(51, 128, 204, 71, 148, 224, 91, 168, 244, 58,
