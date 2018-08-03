@@ -50,8 +50,8 @@
 
 # 
 # filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
-# 
-# # USE TO LOAD Result from atlantistools preprocess (created in 'RM_preprocess_v2.R')
+# # 
+# # # USE TO LOAD Result from atlantistools preprocess (created in 'RM_preprocess_v2.R')
 # loadRData <- function(fileName){
 #   #loads an RData file, and returns it
 #   load(fileName)
