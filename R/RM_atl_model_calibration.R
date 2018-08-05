@@ -19,11 +19,11 @@
 # setwd(d2)
 # 
 # 
-# ### DIET PLOTS
+# ### DIET PLOTS  NO LONGER NECESSARY on desktop, see workaround below
 # # DO THIS FIRST...
 # MyCol=topo.colors(30)
 # trace('get_colpal', edit=T) # Manually add more colors to make this work...
-# # #  get_colpal <-function ()
+# # # #  get_colpal <-function ()
 # {
 #   MyCol=topo.colors(30)
 #   greys <- c(51, 128, 204, 71, 148, 224, 91, 168, 244, 58,
@@ -36,10 +36,22 @@
 #   return(col_pal)
 # }
 
+### copy this into 'get_colpal.r' and commit change, then reinstall atlantistools from local repo
+## modify function on disk, then reinstall atlantistools from local repp
+# devtools::install_git("C://Users/ryan.morse/Documents/GitHub/atlantistools/.git")
+# get_colpal <-function (){
+#   greys <- c(51, 128, 204, 71, 148, 224, 91, 168, 244)
+#   greys <- grDevices::rgb(cbind(greys, greys, greys), maxColorValue = 255)
+#   col_pal <- c(RColorBrewer::brewer.pal(n = 12, name = "Paired"), RColorBrewer::brewer.pal(n = 12, name = "Paired"),
+#                greys, greys)
+#   return(col_pal)
+# }
+
+
 # 
 # filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
-# 
-# # USE TO LOAD Result from atlantistools preprocess (created in 'RM_preprocess_v2.R')
+# # 
+# # # USE TO LOAD Result from atlantistools preprocess (created in 'RM_preprocess_v2.R')
 # loadRData <- function(fileName){
 #   #loads an RData file, and returns it
 #   load(fileName)

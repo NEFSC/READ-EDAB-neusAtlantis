@@ -108,9 +108,10 @@ t$RNSN=newX$RN_2 + newX$SN_2
 t3=cast(t, Code ~ Cohort)
 write.table(t3, file='vertebrate_sumRNSN.csv', sep=',', col.names = T, row.names = F)
 
-t=newX[,c("Code", "Cohort", "RN_2")]
+## write out RN and SN by cohort
+t=newX[,c("Code", "Cohort", "SN_2")]
 t3=cast(t, Code ~ Cohort)
-write.table(t3, file='vertebrate_sumRNSN.csv', sep=',', col.names = T, row.names = F)
+write.table(t3, file='vertebrate_SN.csv', sep=',', col.names = T, row.names = F)
 
 ### get C biomass (mg C per individual), RN+SN, convert to C; used for tuning mum and C
 t=newX[,c("Code", "Cohort")]
