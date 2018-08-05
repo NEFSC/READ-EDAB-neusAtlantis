@@ -55,7 +55,7 @@ init=paste(d1,'/RMinitnofill_2018.nc', sep='') # dropped _FillValue to make init
 # ran this command: ncatted -O -a _FillValue,,d,, RMinit_2018.nc RMinitnofill_2018.nc
 
 # ### SANITY CHECK ON INITIAL CONDITIONS
-# # data1 <- sc_init(init, prm_biol, fgs, bboxes)
+# data1 <- sc_init(init, prm_biol, fgs, bboxes)
 
 
 #__________________________________
