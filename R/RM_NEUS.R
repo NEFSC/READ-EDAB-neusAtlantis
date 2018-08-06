@@ -422,6 +422,13 @@ sh.init(SETAS_init)
 sh.init(NEUS_15_RM3init)
 sh.init(NEUS_15_newestinit)
 
+tt1=NEUS_10_init$df.nitrogen # check RN SN values for length weight relationships
+tt15=NEUS_15_init$df.nitrogen # check RN SN values for length weight relationships
+tts=SETAS_init$df.nitrogen # check RN SN values for length weight relationships
+
+write.table(tts, file='SETAS_N.csv', col.names=T, row.names=F, sep=',')
+
+
 
 grp.file=paste(wd2, '/NeusGroups_v15_unix.csv', sep='')
 bgm.file=paste(wd2, '/neus_tmerc_RM.bgm', sep='')
@@ -447,7 +454,7 @@ setwd(wd2)
 grp.file <- ('NeusGroups_v15_unix.csv') # ALL GROUPS
 grp.file <- ('NeusGroups_v15_LTLonly.csv') # JUST LTL
 bgm.file <- ("neus_tmerc_RM.bgm")
-prm.file=('at_biol_neus_v15_scaled_diet_20180227.prm')#/home/ryan/Git/atneus_RM/at_biol_neus_v15_scaled_diet_20180227.prm
+prm.file=('at_biol_neus_v15_scaled_diet_20180608.prm')#/home/ryan/Git/atneus_RM/at_biol_neus_v15_scaled_diet_20180227.prm
 NEUS_15_prm <- make.sh.prm.object(bgm.file, grp.file, prm.file)
 sh.prm(NEUS_15_prm)
 # NEUS_10 prm file

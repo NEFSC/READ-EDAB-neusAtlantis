@@ -152,7 +152,7 @@ roms_ll_rho<- romscoords(roms_file, transpose = TRUE, spatial = c("lon_rho", "la
 # points(roms_ll_u[45,36], col='green')
 
 
-### this is working now, see below for iterative approach
+### this is working now!! just being an idiot earlier... see below for iterative approach
 # map("worldHires", xlim=c(-77,-65),ylim=c(35,45), fill=T,border=0,col="gray70")
 # map.axes(las=1)
 # roms_face_u@lines$`7`@Lines$`7`@coords #point 1 for face 0
@@ -521,12 +521,12 @@ box_props[is.na(box_props$vertflux),c('temp', 'salt', 'vertflux')]=-999 # change
 
 ## relative angle between face and current velocity - theta to use in cosine function to scale flux
 ### example below:
-a=130 *pi/180 ### current angle in radians
-b=30 *pi/180 ### face angle in radians
-c=a-b
-d=(c+180) %% 360 - 180
-theta=d+(pi/2) # THIS IS THETA, use in cosine to adjust flux across face relative to angled flows, 90 degrees added to normalize to N/S
-THETAscale=cos(theta) # is the scalar for fluxes,
+# a=130 *pi/180 ### current angle in radians
+# b=30 *pi/180 ### face angle in radians
+# c=a-b
+# d=(c+180) %% 360 - 180 
+# theta=d+(pi/2) # THIS IS THETA, use in cosine to adjust flux across face relative to angled flows, 90 degrees added to normalize to N/S
+# THETAscale=cos(theta) # is the scalar for fluxes, 
 ### NOTE positive cos(theta) indicates flows from left to right; negative cos(theta) is flow from right to left -> destination box
 ### may be hemispere local... this is for northern hemisphere
 
@@ -967,7 +967,7 @@ for (i in 1:length(face_props2$flux)){
   j=face_props2$band_level[i] #time
   k=face_props2$.fx0[i]+1 ### Face NOTE added 1 because index cannot be 0, must remove later (maybe not?)
   l=face_props2$atlantis_level[i]# depth
-  transport[l,k,j]=face_props2$flux[i] # time now added back in (flux per day in seconds)
+  transport[l,k,j]=face_props2$fluxtime[i] # time now added back in (flux per day in seconds)
 }
 
 ### create vars for box structure data
@@ -989,7 +989,7 @@ for (i in 1:length(box_props$temp)){
 library(ncdf4)
 
 ### FOR TRANSPORT NC FILE
-filename="RM_NEUS_transport_2010_20180330_flux_fix.nc"
+filename="RM_NEUS_transport_2010_20180403_fluxtime_fix.nc"
 
 #define dimensions
 timedim=ncdim_def("time", "", 1:length(t_tot), unlim=T, create_dimvar = F) #as.double(t_tot)

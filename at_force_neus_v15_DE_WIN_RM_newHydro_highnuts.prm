@@ -10,7 +10,7 @@ hd0.name \tsfiles\flowOutAll_fix_20180402.nc
 
 #############################################
 # Point source\sink lists
-npointss 8
+npointss 0
 
 ## nutrient forcing             
 pss0.name GeorgesBank
@@ -122,6 +122,8 @@ use_force_tracers 0
 #Evaporation 0
 #Recruitment_time_series 0
 
+# RM 20180530
+use_VertMixFiles 0
 
 ## G.Fay added 09\20\16
 # Frequency of inputs.ts and exports.ts output - write out each dt.

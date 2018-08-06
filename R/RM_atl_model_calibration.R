@@ -1,52 +1,64 @@
-# Using Atlantistools to create plots for model calibration and comparison, 
-# code devloped from the vignette - load preprocessed data then make plots/pdfs
-# RM 20170328
-
-
-library("atlantistools")
-library("ggplot2")
-library("gridExtra")
-
-# Windows
-setwd(choose.dir(default=getwd())) # where run data are saved
-d2=getwd()
-d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
-
-#linux
-d1='/home/ryan/Git/atneus_RM'
-d2='/home/ryan/AtlRuns/20170503b'
-#d2='/media/ryan/TOSHIBA EXT/1 RM/10 ATLANTIS transfer/20170413'
-setwd(d2)
-
-
-### DIET PLOTS
-# DO THIS FIRST...
+# # Using Atlantistools to create plots for model calibration and comparison, 
+# # code devloped from the vignette - load preprocessed data then make plots/pdfs
+# # RM 20170328
+# 
+# 
+# library("atlantistools")
+# library("ggplot2")
+# library("gridExtra")
+# 
+# # Windows
+# setwd(choose.dir(default=getwd())) # where run data are saved
+# d2=getwd()
+# d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
+# 
+# #linux
+# d1='/home/ryan/Git/atneus_RM'
+# d2='/home/ryan/AtlRuns/20170503b'
+# #d2='/media/ryan/TOSHIBA EXT/1 RM/10 ATLANTIS transfer/20170413'
+# setwd(d2)
+# 
+# 
+# ### DIET PLOTS  NO LONGER NECESSARY on desktop, see workaround below
+# # DO THIS FIRST...
 # MyCol=topo.colors(30)
-trace('get_colpal', edit=T) # Manually add more colors to make this work...
-# #  get_colpal <-function ()
-{
-  MyCol=topo.colors(30)
-  greys <- c(51, 128, 204, 71, 148, 224, 91, 168, 244, 58,
-             122, 209, 79, 140, 45, 136, 71, 247, 250, 250,
-             250, 250, 250, 250, 250, 250, 250, 250, 250, 250)
-  greys <- grDevices::rgb(cbind(greys, greys, greys), maxColorValue = 255)
-  # col_pal = c(MyCol, greys)
-  col_pal <- c(RColorBrewer::brewer.pal(n = 12, name = "Paired"), RColorBrewer::brewer.pal(n = 12, name = "Paired"),
-               greys)
-  return(col_pal)
-}
+# trace('get_colpal', edit=T) # Manually add more colors to make this work...
+# # # #  get_colpal <-function ()
+# {
+#   MyCol=topo.colors(30)
+#   greys <- c(51, 128, 204, 71, 148, 224, 91, 168, 244, 58,
+#              122, 209, 79, 140, 45, 136, 71, 247, 250, 250,
+#              250, 250, 250, 250, 250, 250, 250, 250, 250, 250)
+#   greys <- grDevices::rgb(cbind(greys, greys, greys), maxColorValue = 255)
+#   # col_pal = c(MyCol, greys)
+#   col_pal <- c(RColorBrewer::brewer.pal(n = 12, name = "Paired"), RColorBrewer::brewer.pal(n = 12, name = "Paired"),
+#                greys)
+#   return(col_pal)
+# }
+
+### copy this into 'get_colpal.r' and commit change, then reinstall atlantistools from local repo
+## modify function on disk, then reinstall atlantistools from local repp
+# devtools::install_git("C://Users/ryan.morse/Documents/GitHub/atlantistools/.git")
+# get_colpal <-function (){
+#   greys <- c(51, 128, 204, 71, 148, 224, 91, 168, 244)
+#   greys <- grDevices::rgb(cbind(greys, greys, greys), maxColorValue = 255)
+#   col_pal <- c(RColorBrewer::brewer.pal(n = 12, name = "Paired"), RColorBrewer::brewer.pal(n = 12, name = "Paired"),
+#                greys, greys)
+#   return(col_pal)
+# }
 
 
-filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
-
-# USE TO LOAD Result from atlantistools preprocess (created in 'RM_preprocess_v2.R')
-loadRData <- function(fileName){
-  #loads an RData file, and returns it
-  load(fileName)
-  get(ls()[ls() != "fileName"])
-}
-prepr=list.files(d2, pattern=".rdata") # get name
-result<- loadRData(prepr) # load
+# 
+# filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
+# # 
+# # # USE TO LOAD Result from atlantistools preprocess (created in 'RM_preprocess_v2.R')
+# loadRData <- function(fileName){
+#   #loads an RData file, and returns it
+#   load(fileName)
+#   get(ls()[ls() != "fileName"])
+# }
+# prepr=list.files(d2, pattern=".rdata") # get name
+# result<- loadRData(prepr) # load
 
 
 fig_height2 <- 11
@@ -72,11 +84,25 @@ ncbase=nc.str[which(lncstr==min(lncstr))] #get base nc file name
 # bgm file
 bgm       <- file.path(d1, "neus_tmerc_RM.bgm") #30_v15.bgm")
 
+
+### select box plot time series of benthic 
+tb=21 # choose box
+ll=4 # choose layer (4 is bottom for NEUS)
+test=result$biomass_spatial_stanza[which(result$biomass_spatial_stanza$layer==ll & result$biomass_spatial_stanza$polygon==tb),]
+ii=unique(test$species)
+pdf(file=paste(filename,'Box21_bottom.pdf', sep=''))
+for (x in 1:length(ii)){
+  iii=ii[x]
+plot(test$atoutput[which(test$species==iii)]~test$time[which(test$species==iii)], 
+     type='l',main=ii[x], ylab='atoutput', xlab='time')
+}
+dev.off()
+
 ####__________Overall Biomass_____________
 df_bio <- combine_groups(result$biomass, group_col = "species", combine_thresh = 10)
 plot <- plot_bar(df_bio)
 update_labels(plot, labels = gen_labels)
-ggsave(paste(filename," overall biomass2.png", sep=''), width=7, height=4, scale=1, dpi=96)
+ggsave(paste(filename," overall biomass.png", sep=''), width=7, height=4, scale=1, dpi=96)
 
 df_bio <- combine_groups(result$biomass, group_col = "species", combine_thresh = 20)
 plot <- plot_bar(df_bio)
@@ -105,9 +131,9 @@ plot <- plot_line(result$nums_age, col = "agecl")
 update_labels(p = plot, labels = list(x = "Time [years]", y = "Numbers", colour = "Ageclass"))
 ggsave(paste(filename," numbers at age timeseries.png", sep=''), width=20, height=17, dpi=96)
 ###____________SSB and recruitment NEED External Data input for this to work
-plot_rec(result$ssb_rec, ex_data = ex_rec_ssb)
+# plot_rec(result$ssb_rec, ex_data = ex_rec_ssb)
 
-###____________PHYSICS____________________________
+##____________PHYSICS____________________________
 plot <- plot_line(result$physics, wrap = NULL)
 custom_grid(plot, grid_x = "polygon", grid_y = "variable")
 ggsave(paste(filename," physics snapshot.png", sep=''), width=10, height=7, dpi=96)
@@ -259,6 +285,17 @@ for (i in seq_along(plots)) {
   cat("\n\n")
 }
 dev.off()
+
+### Plot Spatial Overlap Schoener Index of diet matchups STILL WORKING ON THIS
+# jl=length(sp_overlap)
+# plots <- plot_spatial_overlap(sp_overlap)
+# pdf(file=paste(filename, '_spatial overlap of predator and prey.pdf', sep=''),paper='A4r', width=11, height=8)
+# for (i in 1:length(sp_overlap)) {
+#   plot_spatial_overlap(sp_overlap[i])
+# }
+# dev.off()
+
+
 #_______________________________________________________________
 
 
@@ -266,8 +303,8 @@ dev.off()
 biom=read.table(paste(d1, '/R/atneus_v10_newcodebaseBiomIndx.txt', sep=''), header=T) # v1.0 on new codebase
 bio1=read.table(paste(d1, '/R/neusDynEffort_Base_Effort_BiomIndx.txt', sep=''), header=T) # v1.0 on old codebase
 bio2=read.table(paste(d2, '/atneus_v15_test2008hydro_20180208BiomIndx.txt', sep=''), header=T) # v1.5 run
-phyto=read.table(paste(d1, '/phytoplankton_timeseries_biomass_tonnes_1998_2016.csv', sep=''),header=T, sep=',')
-zoo=read.table(paste(d1, '/Zooplankton_total_biomass_tonnes_N_20yrs.csv', sep=''), header =T, sep=',')
+phyto=read.table(paste(d1, '/R/phytoplankton_timeseries_biomass_tonnes_1998_2016.csv', sep=''),header=T, sep=',')
+zoo=read.table(paste(d1, '/R/Zooplankton_total_biomass_tonnes_N_20yrs.csv', sep=''), header =T, sep=',')
 
 # #diatom
 # plot(biom$PL~biom$Time, type='l') # v1.0 new code
@@ -282,54 +319,70 @@ zoo=read.table(paste(d1, '/Zooplankton_total_biomass_tonnes_N_20yrs.csv', sep=''
 # lines(phyto$PS.ts~phyto$days, type='l', col='green') # measured
 # 
 #picoplankton (v1.5 first)
-plot(bio2$PS~bio2$Time, type='l')
+png(filename=paste(filename,'PS.png', sep=''))
+mmax=max(c(bio2$PS, phyto$PS))
+plot(bio2$PS~bio2$Time, type='l', ylim=c(0,max(c(bio2$PS, phyto$PS))))
 lines(phyto$PS.ts~phyto$days, type='l', col='red')
 lines(bio1$PS~bio1$Time, type='l', col='blue')
-lines(biom$PS.0~biom$Time, type='l', col='green')
-legend('topleft', legend = c('v1.5', 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+lines(biom$PS~biom$Time, type='l', col='green')
+legend('topleft', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+dev.off()
 
 #diatom (v1.5 first)
-plot(bio2$PL~bio2$Time, type='l')
+png(filename=paste(filename,'PL.png', sep=''))
+plot(bio2$PL~bio2$Time, type='l', ylim=c(0,max(c(bio2$PL, phyto$PL))))
 lines(phyto$PL.ts~phyto$days, type='l', col='red')
 lines(bio1$PL~bio1$Time, type='l', col='blue')
-lines(biom$PL.0~biom$Time, type='l', col='green')
-legend('topright', legend = c('v1.5', 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+lines(biom$PL~biom$Time, type='l', col='green')
+legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+dev.off()
 
 #dinoflag (v1.5 first)
-plot(bio2$DF~bio2$Time, type='l')
+png(filename=paste(filename,'DF.png', sep=''))
+plot(bio2$DF~bio2$Time, type='l', ylim=c(0,max(c(bio2$DF, phyto$DF))))
 lines(phyto$DF.ts~phyto$days, type='l', col='red')
 lines(bio1$DF~bio1$Time, type='l', col='blue')
-lines(biom$DF.0~biom$Time, type='l', col='green')
-legend('topright', legend = c('v1.5', 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+lines(biom$DF~biom$Time, type='l', col='green')
+legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+dev.off()
 
 #Carn Zoo (v1.5 first)
-plot(bio2$ZL~bio2$Time, type='l')
+png(filename=paste(filename,'ZL.png', sep=''))
+plot(bio2$ZL~bio2$Time, type='l', ylim=c(0,max(c(bio2$ZL, phyto$ZL))))
 lines(zoo$ZL~zoo$Time, type='l', col='red')
 lines(bio1$ZL~bio1$Time, type='l', col='blue')
-lines(biom$ZL.0~biom$Time, type='l', col='green')
-legend('topright', legend = c('v1.5', 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+lines(biom$ZL~biom$Time, type='l', col='green')
+legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+dev.off()
 
 #Copepod (v1.5 first)
-plot(bio2$ZM~bio2$Time, type='l')
+png(filename=paste(filename,'ZM.png', sep=''))
+plot(bio2$ZM~bio2$Time, type='l', ylim=c(0,max(c(bio2$ZM, phyto$ZM))))
 lines(zoo$ZM~zoo$Time, type='l', col='red')
 lines(bio1$ZM~bio1$Time, type='l', col='blue')
-lines(biom$ZM.0~biom$Time, type='l', col='green')
-legend('topleftt', legend = c('v1.5', 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+lines(biom$ZM~biom$Time, type='l', col='green')
+legend('topleft', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+dev.off()
 
 #Small Zoo (v1.5 first)
-plot(bio2$ZS~bio2$Time, type='l')
+png(filename=paste(filename,'ZS.png', sep=''))
+plot(bio2$ZS~bio2$Time, type='l', ylim=c(0,max(c(bio2$ZS, phyto$ZS))))
 lines(zoo$ZS~zoo$Time, type='l', col='red')
 lines(bio1$ZS~bio1$Time, type='l', col='blue')
-lines(biom$ZS.0~biom$Time, type='l', col='green')
-legend('topright', legend = c('v1.5', 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+lines(biom$ZS~biom$Time, type='l', col='green')
+legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+dev.off()
 
 #GelatZoo (v1.5 first)
-plot(bio2$ZG~bio2$Time, type='l')
+png(filename=paste(filename,'ZG.png', sep=''))
+plot(bio2$ZG~bio2$Time, type='l', ylim=c(0,max(c(bio2$ZG, phyto$ZG))))
 lines(zoo$ZG~zoo$Time, type='l', col='red')
 lines(bio1$ZG~bio1$Time, type='l', col='blue')
-lines(biom$ZG.0~biom$Time, type='l', col='green')
-legend('topright', legend = c('v1.5', 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+lines(biom$ZG~biom$Time, type='l', col='green')
+legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+dev.off()
 
-plot(bio2$DIN~bio2$Time, type='l')
-lines(bio1$DIN~bio1$Time, col='blue')
-legend('topright', legend = c('v1.5', 'v1.0 old'), lty=c(1,1),col=c('black', 'blue'), bty='n')
+#DIN
+# plot(bio2$DIN~bio2$Time, type='l')
+# lines(bio1$DIN~bio1$Time, col='blue')
+# legend('topright', legend = c('v1.5', 'v1.0 old'), lty=c(1,1),col=c('black', 'blue'), bty='n')

@@ -284,9 +284,11 @@ heatmap.2(v15mat, Rowv=NULL, Colv = NULL, dendrogram = 'none', trace='none', key
 
 #### READ in pPrey from at_biol_...20170517_lowMUM.prm (mod 2018/2/13)
 ### note this file only has 1 entry for 1 stage (of 2) for ISQ LSQ NSH OSH
-p.neus.num=read_excel('pPrey_workbook.xlsx', sheet='20170517prm_20180213', col_names = T, trim_ws = T, col_types = 'numeric')
+# p.neus.num=read_excel('pPrey_workbook.xlsx', sheet='20170517prm_20180213', col_names = T, trim_ws = T, col_types = 'numeric')
+p.neus.num=read_excel('pPrey_workbook.xlsx', sheet='at_biol_20180419', col_names = T, trim_ws = T, col_types = 'numeric') #updated for inverts w/ age
 p.neus.data=p.neus.num[complete.cases(p.neus.num[,3]),] #data only
-p.neus=read_excel('pPrey_workbook.xlsx', sheet='20170517prm_20180213', col_names = T, trim_ws = T) # keep character 1st col
+# p.neus=read_excel('pPrey_workbook.xlsx', sheet='20170517prm_20180213', col_names = T, trim_ws = T) # keep character 1st col
+p.neus=read_excel('pPrey_workbook.xlsx', sheet='at_biol_20180419', col_names = T, trim_ws = T) # updated for inverts with age structure
 p.neus2=p.neus[complete.cases(p.neus[,2]),] # drops blank rows between entries
 p.neus.nms=p.neus2[which(is.na(p.neus2[,3])),1:2] # drops data, keeps names
 pnms=data.frame(p.neus.nms)
@@ -353,6 +355,50 @@ ordrd.data=read.csv('pPrey_ordrd_data_20180516.csv')
 ordrd.nms=read.csv('pPrey_ordrd_nms_20180516.csv')
 
 
+
+### read in v15 pPrey edited @ NEUS v1 Gamble version
+gamble.p.neus.num=read_excel('pPrey_workbook.xlsx', sheet='20180419_@Gamble_final', col_names = T, trim_ws = T, col_types = 'numeric')
+gamble.p.neus.data=gamble.p.neus.num[complete.cases(gamble.p.neus.num[,3]),] #data only
+gamble.p.neus=read_excel('pPrey_workbook.xlsx', sheet='20180419_@Gamble_final', col_names = T, trim_ws = T) # keep character 1st col
+gamble.p.neus2=gamble.p.neus[complete.cases(gamble.p.neus[,2]),] # drops blank rows between entries
+gamble.p.neus.nms=gamble.p.neus2[which(is.na(gamble.p.neus2[,3])),1:2] # drops data, keeps names
+pnms=data.frame(gamble.p.neus.nms)
+
+tt=gamble.p.neus[,1]==ordrd.nms[,1]
+
+g.ordrd.data=gamble.p.neus.data[order(pnms$name, pnms$type, na.last=T),]
+g.ordrd.nms=pnms[order(pnms$name, pnms$type, na.last=T),]
+g.ordrd.nms$intx=NA
+g.ordrd.nms$intx[which(g.ordrd.nms$type==11)]='Juv Pred - Juv Prey'
+g.ordrd.nms$intx[which(g.ordrd.nms$type==12)]='Juv Pred - Adt Prey'
+g.ordrd.nms$intx[which(g.ordrd.nms$type==21)]='Adt Pred - Juv Prey'
+g.ordrd.nms$intx[which(g.ordrd.nms$type==22)]='Adt Pred - Adt Prey'
+g.ordrd.nms$intx[which(is.na(g.ordrd.nms$type))]='Invert Pred'
+
+
+
+
+A=as.matrix(gamble.p.neus.data[,2:93])
+# A=as.matrix(g.ordrd.data[,2:93]) #20180419@Gamble ordered
+B=as.matrix(ordrd.data[,1:92]) #20180419
+C=pmax(A,B) # select largest value from Gamble/v15 20180419 pPrey
+
+setwd('C:/Users/ryan.morse/Documents')
+png(filename='NEUS_v15_edited_At_Gamble.png', width=1440, height=960)
+heatmap.2(A, Rowv=NULL, Colv = NULL, dendrogram = 'none', trace='none', keysize=0.75, key.title = NA) # Gamble v1 -> v15
+dev.off()
+png(filename='NEUS_v15_20180419.png', width=1440, height=960)
+heatmap.2(B, Rowv=NULL, Colv = NULL, dendrogram = 'none', trace='none', keysize=0.75, key.title = NA) # v15
+dev.off()
+png(filename='NEUS_v15_merged_Gamble20180419.png', width=1440, height=960)
+heatmap.2(C, Rowv=NULL, Colv = NULL, dendrogram = 'none', trace='none', keysize=0.75, key.title = NA) # merge on max (v15, Gamble)
+dev.off()
+
+setwd(d1)
+write.csv(C, file='pPrey_ordrd_data_20180516_Gamble_merge.csv', row.names = F, col.names = T)
+
+
+
 ### read in code relations file
 # cnvrt=read_excel('coderelations.xls', col_names = T, trim_ws = T, col_types = 'numeric')
 cnvrt=read.csv('coderelations.csv')
@@ -372,10 +418,11 @@ test$v15_type=ordrd.nms$type
 #__________________________________________________________________________________________________________
 #### UPDATE 5/24/2018 newest biol file pPREY matrix with mods for labile detritus and LTL
 #### read in most recent diet copied from biol file 20180524
-#### READ in pPrey from at_biol_...20180419.prm with 2 entries for inverts with multiple stages
+#### READ in pPrey from at_biol_...20180419.prm with 4 entries for inverts with multiple stages 1xxx1, 1xxx2, 2xxx1, 2xxx2
 p.neus.num=read_excel('pPrey_workbook.xlsx', sheet='at_biol_20180419', col_names = T, trim_ws = T, col_types = 'numeric')
 p.neus.data=p.neus.num[complete.cases(p.neus.num[,3]),] #data only
 p.neus=read_excel('pPrey_workbook.xlsx', sheet='at_biol_20180419', col_names = T, trim_ws = T) # keep character 1st col
+
 p.neus2=p.neus[complete.cases(p.neus[,2]),] # drops blank rows between entries
 p.neus.nms=p.neus2[which(is.na(p.neus2[,3])),] # drops data, keeps names
 
@@ -413,14 +460,23 @@ for(i in 1:length(ordrd.nms$name)){
 dev.off()
 
 
+### use this to read in modified versions to paste into shape for at_biology prm file (do all above, then read this, then continue)
+ordrd.data=read_excel('pPrey_workbook.xlsx', sheet='20180419_@Gamble_final', col_names = T, trim_ws = T, col_types = 'numeric') # 20180419 with v1 replacements (same for all children)
+ordrd.data=read_excel('pPrey_ordrd_data_20180516_Gamble_merge.xlsx', sheet='Read', col_names = T, trim_ws = T, col_types = 'numeric') # 20180606 merged and edited product (gamble, v15_20180419)
+t=is.na(ordrd.data[,2:93])
+sum(t)
+t2=which(t != 0, arr.ind=T) #ordrd.data[is.na(ordrd.data),2:93] # remove NAs if missed in excel
+# ordrd.data[is.na(ordrd.data),2:93]=0 # remove NAs if missed in excel
+
+
 ### NOW put back into original format to allow pasting into biology prm file ###
-test <- as.matrix(ordrd.data)
+test <- as.matrix(ordrd.data[,2:93])
 ind <- (1:nrow(test)*3 - 1) # - 1 b/c you want to insert rows after, not before, existing rows
 test_new <- matrix(rep(NA, (nrow(test)*3*ncol(test))), ncol=ncol(test))
 test_new[ind,] <- test
 ind2=seq(from=1, to=nrow(test_new),by=3)
 test_new[ind2,1:2]=as.matrix(ordrd.nms[1:2])
-write.table(test_new, file='20180419_diet_ordered.csv',row.names=F, col.names=F, sep=",")
+write.table(test_new, file='Merged_edited_v15_20180419_v1Gamble_20180618.csv',row.names=F, col.names=F, sep=" ", na="")
 
 
 

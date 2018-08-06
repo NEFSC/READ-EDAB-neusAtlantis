@@ -483,3 +483,75 @@ atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208
 
 ### nutrients and phyto look excellent in water column, fish starting to die from not eating (?) but labile detritus explodes in sediments still. Getting closer to better tuning...
 changed initial conditions file to fix NO3 and NH4 (higher now, mg/m3 corrected 20180511), also changed decay rate for labile detritus.
+
+# Run with decreased svel and decreased psize for PL, increased mum from previous run (this is run 0, run 1 is on desktop 20180530, still working on 3, 4)
+0. Current pPrey matrix but with:
+- decreased settling velocity of diatoms, dinos
+- decreased particle size of diatoms and dinos plankton (should reduce build up of diatoms in sediments) -> at_biol...20180419_old.prm
+
+1. modified v1 pPrey (replicate v1 parent species values for v15 daughter species)
+
+2. Tuned version of 1. incorporating changes I made to LTL
+
+3. Modified version of current matrix with juvenile values derived from v1 as in 1.
+
+### 0 try runnung new code v6338 first...
+Atlantis_6338 -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180419_old.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180531a 1>1a.junk 2>2a.junk
+didn't work ->
+"atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180419_old.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180531a"
+
+### 1 desktop new atlantis version 6338 trying new pPrey matrix based on v1.0 from Rob Gamble (pPrey_workbook.xlsx in Git/R folder), daughter species repeated from parent, increased mum for inverts from last run
+atlantismain6338 -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_WIN_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180419.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180530dta 1>1a.junk 2>2a.junk
+(didnt work, set back to v 6197 to run overnight)
+
+"atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180419_old.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180531a"
+
+# 20180608 new pPREY matrix derived from merge of v15_20180419 and v15@Gamble - parent copied for each daughter, then max of @Gamble or 20180419 selected for each cell, # to get ontogentic differences (not contained in 20180419) then heavily edited to remove incorrect diet associations (based on fishbase, web search, local knowledge).
+# Also modded kMax coefft for smooth feeding window to 1 (was 2, which selects disproportionate amt of smaller prey)
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180608.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180609a
+
+
+#20180613 edited many of pPREY values down and/or removed bad combinations for items not normally eaten by predator
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180608.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180613a  1>1a.junk 2>2a.junk
+
+# Now test different C/mum combinations to try and get ratio around 10...
+
+#20180618 DESKTOP RUN mod C and mum for invert groups that biomass stays below starting biomass, modified pPREY for some species (BWH, HER, MEN)
+atlantismain_6197 -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_WIN_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180419_old.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t C:\Users\ryan.morse\Documents\GitHub\atneus_RM -d 20180618dta 1>1a.junk 2>2a.junk
+
+#20180618 changed mum and C for verts - smooth dog, haddock, white hake
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180608.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180618a  1>1a.junk 2>2a.junk
+
+#20180619dta desktop (rerun from last night, wrong biol file)
+
+# 20180619 linux - mod li_a and li_b params for allometric length weight conversion, turned on gape check, check size, some mum changes. NEXT check is change fish mum/C based on proportion to size/weight params
+atlantisMerged -i RMinit_newvalues2017.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180608.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180619b  1>1a.junk 2>2a.junk
+ -> RUN PARAMS FLAG GAPE AND/OR FLAG CHECKSIZE CAUSE STACK SMASHING AND RUN TO ABORT
+
+
+# 20180710 new initial conditions file created with calibrated SN and RN _FillValues, completely different from previous. Also adjusted length_weight relationship values li_a and li_b. Changes will affect predator/prey dynamics, size, etc.
+atlantisMerged -i 20180710init.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180608.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180710a  1>1a.junk 2>2a.junk
+
+### for whatever reason, the _FillValue is changed in the initial conditions file, but the values read in by Atlantis and ShinyRatlantis remained the same...
+fixed the initial conditions file (verified N different in shinyRatlantis, run again. Also updated length-weight relationships based on calculated length and weight at age 20180711. Can delete run from 20180710.
+atlantisMerged -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180608.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180711a  1>1a.junk 2>2a.junk
+
+
+### 20180715 modified recruit weights KWSR_XXX KWRR_XXX based on new initial condition weights, changed recruitment option flagrecruit_XXX for SB, REP, and mammals; number of recruits KDENR_XXX for those groups; still need to check on beverton-holt alpha and beta (same for all daughter taxa).
+atlantisMerged -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180608.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180715a  1>1a.junk 2>2a.junk
+
+## 20180716a last run had very little diatom growth in surface waters, growth in bottom better. increased mum for PL back to 0.05, turned light adaptation off
+atlantisMerged -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180608.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180716a  1>1a.junk 2>2a.junk
+
+
+### last run diatoms and biogeochemistry look excellent. Fish still not growing like they should, also diatoms in the sediments are crazy high. Updated the phytoplankton timeseries to calibrate to, removed mortality for all groups, updated intial conditions for some inverts (more needs to be done, looking at biomass distribution maps from Kevin for some taxa, use subset_2_NEUS to get values (in progress). May need to update mum/C for verts now with new RN/SN values.
+atlantisMerged -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180608.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180719a  1>1a.junk 2>2a.junk
+
+### the previous 2 runs are the best to date in terms of biogeochemistry and fish populations. Need to tweak the mum and/or C for some fish taxa (large verts). Also still need to update all invert biomass values. Removed init values for all but surface for pico, PL, and DF, trying to limit explosion of growth in the sediments. New init file.
+atlantisMerged -i RMinit_surfOnlyPhyto_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180608.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180721a  1>1a.junk 2>2a.junk
+
+## diatoms are initially not in seds, then just like before. Reduced svel 10x, reduced i_conc, f_conc, b_dens (these may not affect anything... but svel will)
+atlantisMerged -i RMinit_surfOnlyPhyto_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180608.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180731a  1>1a.junk 2>2a.junk
+# used wrong init file yesterday, rerun -> error deposit: Bottom water column layer filled with sediment, box 1, t = 0 had to change values back and set insed to 0 for diatoms
+atlantisMerged -i surfOnly.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180608.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20180801a  1>1a.junk 2>2a.junk
+
