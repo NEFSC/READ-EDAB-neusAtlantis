@@ -7756,7 +7756,7 @@ variables:
 		Diatom_N:decay = 0. ;
 		Diatom_N:partic = 1 ;
 		Diatom_N:passive = 1 ;
-		Diatom_N:svel = -2.893e-006 ;
+		Diatom_N:svel = -2.893e-005 ;
 		Diatom_N:xvel = 0. ;
 		Diatom_N:psize = 0.0001 ;
 		Diatom_N:b_dens = 1000000000. ;
@@ -7775,7 +7775,7 @@ variables:
 		Diatom_S:decay = 0. ;
 		Diatom_S:partic = 1 ;
 		Diatom_S:passive = 1 ;
-		Diatom_S:svel = -2.893e-006 ;
+		Diatom_S:svel = -2.893e-005 ;
 		Diatom_S:xvel = 0. ;
 		Diatom_S:psize = 0.0001 ;
 		Diatom_S:b_dens = 1000000000. ;
