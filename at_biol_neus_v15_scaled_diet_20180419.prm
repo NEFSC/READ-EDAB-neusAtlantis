@@ -146,9 +146,16 @@ flagagestruct    1         Age structure option: 0 = homogeneous cohorts, 1 = tr
 flagsenesce      0         Oldest sub-part of final age group senesces, 1 = yes, 0 = no        0
 flagtsforcerecruit 0       Force recruitment of 1+ groups with environmental forcing           0
 
-# Flag indicating whether to normalise the larval distribution, added 20180509
+
+# RM add 20180509 based on warnings and atlantisboxmodel.h to catch up to current code
 norm_larval_distrib 1
 larvae_connect_only 0
+enviro_independ_larvae 0
+flag_recruit_effect 0
+#Use a dynamically changing ratio between reserve and structural mass or fixed value(0)
+flag_dynamicXRS 0
+InvadersEntering 0 
+
 
 #RM added 4 following parameters 20180530 based on new code _6338
 # whether larvae are independent of environmental conditions (do not reset recruit_hdistrib based on environmental conditions like temperature)

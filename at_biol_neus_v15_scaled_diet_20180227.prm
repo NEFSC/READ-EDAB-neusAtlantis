@@ -154,7 +154,14 @@ flagagestruct    1         Age structure option: 0 = homogeneous cohorts, 1 = tr
 flagsenesce      0         Oldest sub-part of final age group senesces, 1 = yes, 0 = no        0
 flagtsforcerecruit 0       Force recruitment of 1+ groups with environmental forcing           0
 
- 
+# RM 20180302 added these based on codebase update from Sep 2017
+norm_larval_distrib 1		normalise the larval distribution
+larvae_connect_only 0		use the larval connectivity matrix only or scale recruit_hdistrib	
+enviro_independ_larvae 1	whether larvae are independent of environmental conditions
+flag_recruit_effect 1		0=effects calc at the time of spawn, 1=calc at start of recruitment period
+flag_dynamicXRS 0		0=use fixed value, 1=dynamic value for ratio between reserve and structural mass
+InvadersEntering 0		invaders entering from outside the model
+
 # Preferred location trend (whether to weight vertical distributions towards surface or bottom
 # layers when in depths where there were less than complete set of depth layers)
 flagdemMAK 0
