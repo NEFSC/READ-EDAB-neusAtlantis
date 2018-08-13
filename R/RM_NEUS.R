@@ -396,9 +396,14 @@ NEUS_15_gav_init <- make.sh.init.object("neus30_v15.bgm", "new_init.nc")
 NEUS_15_init <- make.sh.init.object("neus30_v15.bgm", "RMinit_2.nc") #changed sed deposit feed, bact, meiobenthos
 NEUS_15_RM3init=make.sh.init.object('C:/Users/ryan.morse/Documents/GitHub/atneus_RM/neus30_v15.bgm', 'C:/Users/ryan.morse/Documents/GitHub/atneus_RM/RMinit_3test.nc')
 NEUS_15_newestinit=make.sh.init.object(
-  'C:/Users/ryan.morse/Documents/GitHub/atneus_RM/neus30_v15_notsohighvertmix.bgm',
-  'C:/Users/ryan.morse/Documents/GitHub/atneus_RM/RMinit_newvalues2017.nc'
-  )
+  'C:/Users/ryan.morse/Documents/GitHub/atneus_RM/neus_tmerc_RM.bgm',
+  # 'C:/Users/ryan.morse/Documents/GitHub/atneus_RM/RMinit_newvalues2017.nc'
+  'C:/Users/ryan.morse/Documents/GitHub/atneus_RM/RMinit_2018.nc'
+)
+
+# 20180620
+bgm.file <- ("neus_tmerc_RM.bgm")
+NEUS_15_init=make.sh.init.object(bgm.file, '20180710init.nc') #'RMinit_newvalues2017.nc')
 
 
 wd3='C:/Users/ryan.morse/Atlantis-NEUS-1_0/SETAS'

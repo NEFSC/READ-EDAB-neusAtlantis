@@ -11840,7 +11840,7 @@ C_TWH 10
 C_INV 10
 1 5 15 25 45 45 45 45 50 50 
 
-# Consumer growth - this is used by Holling type feeding (predcase 0, 1, 2)
+# Consumer growth - this is used by Holling type feeding (predcase#0, 1, 2)
 ### 20180228 RM added values for juvenile groups based on SETAS and adult NEUS vals (mgN mgN-1 day-1) for biomass pools
 mum_LSQ_T15 0.044     
 mum_jLSQ_T15 0.04
@@ -12138,7 +12138,7 @@ KL_ZS  5
 KL_BO  0.18  
  
 
-# Saturation levels for consumer food intake. This is used by min-max feeding (predcase 4)
+# Saturation levels for consumer food intake. This is used by min-max feeding (predcase#4)
 #e.g. KU_ZG            65.0      Half saturation for uptake by gelatinous zoopl    mg N m-3     30.0 - 65.0
 KU_MAK 50    
 KU_HER 50    
@@ -12222,7 +12222,7 @@ KU_BO  18.8
  
 
 ## Double check for NEUS, but OK for now
-# Search volume - used by size specific Holother deep dem. type III (predcase 5)
+# Search volume - used by size specific Holother deep dem. type III (predcase#5)
 #e.g. vl_ZG            0.04      Search volume for gelatinous zooplankton          m3 d-1           0.04
 vl_LSQ  0.04   
 vl_ISQ  0.04   
@@ -12369,7 +12369,7 @@ vlb_TWH 0.25
 vlb_INV 0.2    
  
 
-# Handling time - used by size specific Holling type III (predcase 5)
+# Handling time - used by size specific Holling type III (predcase#5)
 #ht_ZG            4.5       Handling time for gelatinous zooplankton           d               4.5
 ht_LSQ 4     
 ht_ISQ 4     
@@ -16816,7 +16816,7 @@ NSH_log_mult 1.82e+10
 OSH_log_mult 1.82e+10    
 
 # Size of recruits 
-###KWSR_XXX Structural weight of XXX recruits   mg N m-3 updated 20180713 RM as age 1 fish
+###KWSR_XXX Structural weight of XXX recruits   mg N m-3 updated 20180713 RM as age 1 (i.e. 1-yr old, not cohort 1) fish
 KWSR_ANC	5.9132888378
 KWSR_BFT	11593.2940990598
 KWSR_BIL	26194.320153325
@@ -16878,7 +16878,7 @@ KWSR_WTF	5.348038549
 KWSR_YTF	53.7052221752
     
 
-###KWRR_XXX Reserve weight of XXX recruits mg N m-3 updated 20180713 RM as age 1 fish
+###KWRR_XXX Reserve weight of XXX recruits mg N m-3 updated 20180713 RM as age 1 (1-yr old, not cohort 1) fish
 KWRR_ANC	15.6702154201
 KWRR_BFT	30722.2293625085
 KWRR_BIL	69414.9484063112
