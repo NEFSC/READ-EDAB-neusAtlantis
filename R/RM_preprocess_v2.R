@@ -189,7 +189,7 @@ gr_rel_init <- growth_age %>%
 
 
 
-# Aggregate volume vertically.
+# Aggregate volume vertically. bio_cons
 vol_ts <- agg_data(vol, groups = c("time", "polygon"), fun = sum, out = "volume")
 result <- list(
   "biomass"                = biomass,       #1
