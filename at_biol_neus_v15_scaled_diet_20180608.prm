@@ -1246,96 +1246,87 @@ flagTWHMigrate 1
 flagINVMigrate 0
 
 # Predation formulation switches. 0=Holling type II, 1=Holling type I, 2=Holling type III, 
-# 3=ECOSIM (currently disabled), 4=min-max, 5=Size specific Holling type III
-predcase_MAK 0
-predcase_HER 0
-predcase_WHK 0
-predcase_BLF 0
-predcase_WPF 0
-predcase_SUF 0
-predcase_WIF 0
-predcase_WTF 0
-predcase_HAL 0
-predcase_PLA 0
-predcase_FOU 0
-predcase_FLA 0
-predcase_BFT 0
-predcase_TUN 0
-predcase_BIL 0
-predcase_MPF 0
-predcase_BUT 0
-predcase_ANC 0
-predcase_BPF 0
-predcase_GOO 0
-predcase_MEN 0
-predcase_FDE 0
-predcase_COD 0
-predcase_SHK 0
-predcase_OHK 0
-predcase_POL 0
-predcase_RHK 0
-predcase_BSB 0
-predcase_SCU 0
-predcase_TYL 0
-predcase_RED 0
-predcase_OPT 0
-predcase_SAL 0
-predcase_DRM 0
-predcase_STB 0
-predcase_TAU 0
-predcase_WOL 0
-predcase_SDF 0
-predcase_FDF 0
-predcase_HAD 0
-predcase_YTF 0
-predcase_DOG 0
-predcase_SMO 0
-predcase_SSH 0
-predcase_DSH 0
-predcase_BLS 0
-predcase_POR 0
-predcase_PSH 0
-predcase_WSK 0
-predcase_LSK 0
-predcase_SK 0
-predcase_SB 2
-predcase_PIN 2
-predcase_REP 0
-predcase_RWH 2
-predcase_BWH 2
-predcase_SWH 2
-predcase_TWH 2
-predcase_INV 0
-predcase_LSQ 0
-predcase_ISQ 0
-predcase_SCA 0
-predcase_QHG 0
-predcase_CLA 0
-predcase_BFF 0
-predcase_BG 0
-predcase_LOB 0
-predcase_RCB 0
-predcase_BMS 0
-predcase_NSH 0
-predcase_OSH 0
-predcase_ZL 0
-predcase_BD 0
-#predcase_MA NA
-#predcase_MB NA
-#predcase_SG NA
-predcase_BC 0
-predcase_ZG 0
-#predcase_PL NA
-predcase_DF 0
-#predcase_PS NA
-predcase_ZM 0
-predcase_ZS 0
-#predcase_PB NA
-#predcase_BB NA
-predcase_BO 0
-#predcase_DL NA
-#predcase_DR NA
-#predcase_DC NA
+# 3=ECOSIM (currently disabled), 4=min-max, 5=Size specific Holling type III, 8 Standard Holling Type II,
+# 9 Standard Holling Type III
+predcase_MAK 8
+predcase_HER 8
+predcase_WHK 8
+predcase_BLF 8
+predcase_WPF 8
+predcase_SUF 8
+predcase_WIF 8
+predcase_WTF 8
+predcase_HAL 8
+predcase_PLA 8
+predcase_FOU 8
+predcase_FLA 8
+predcase_BFT 8
+predcase_TUN 8
+predcase_BIL 8
+predcase_MPF 8
+predcase_BUT 8
+predcase_ANC 8
+predcase_BPF 8
+predcase_GOO 8
+predcase_MEN 8
+predcase_FDE 8
+predcase_COD 8
+predcase_SHK 8
+predcase_OHK 8
+predcase_POL 8
+predcase_RHK 8
+predcase_BSB 8
+predcase_SCU 8
+predcase_TYL 8
+predcase_RED 8
+predcase_OPT 8
+predcase_SAL 8
+predcase_DRM 8
+predcase_STB 8
+predcase_TAU 8
+predcase_WOL 8
+predcase_SDF 8
+predcase_FDF 8
+predcase_HAD 8
+predcase_YTF 8
+predcase_DOG 8
+predcase_SMO 8
+predcase_SSH 8
+predcase_DSH 8
+predcase_BLS 8
+predcase_POR 8
+predcase_PSH 8
+predcase_WSK 8
+predcase_LSK 8
+predcase_SK 8
+predcase_SB 9
+predcase_PIN 9
+predcase_REP 8
+predcase_RWH 9
+predcase_BWH 9
+predcase_SWH 9
+predcase_TWH 9
+predcase_INV 8
+predcase_LSQ 8
+predcase_ISQ 8
+predcase_SCA 8
+predcase_QHG 8
+predcase_CLA 8
+predcase_BFF 8
+predcase_BG 8
+predcase_LOB 8
+predcase_RCB 8
+predcase_BMS 8
+predcase_NSH 8
+predcase_OSH 8
+predcase_ZL 8
+predcase_BD 8
+predcase_BC 8
+predcase_ZG 8
+predcase_DF 8
+predcase_ZM 8
+predcase_ZS 8
+predcase_BO 8
 
 
 # Flags indicating whether large mammals steal from fisheries catches
@@ -11638,12 +11629,9 @@ k_refDR          20.0      Reference refract. detrit. level in water column (if 
 k_refsDL      10000.0      Reference labile detrit. level in sediments (if higher availability to omnivores reduced)
 
 
-## Take a closer look at these for NEUS, OK for now
-### 20180228 RM added C for juvenile inverts based on SETAS and NEUS adult values
-# Clearance rates for consumers - this is used by Holling type feeding (predcase 0, 1, 2)
-##C_ZG_T15         0.003     Clearance rate of gelatinous zooplankton (0.008)    mg3(mg N)-1 d-1  0.02 - 0.08
-##C_jCEP_T15       0.01455   Clearance rate of juvenile cephalopods (0.08)       mg3(mg N)-1 d-1  0.1 - 0.2
-##C_jPWN_T15       0.0015    Clearance rate of juvenile prawns (0.0008)          mg3(mg N)-1 d-1  0.0002 - 0.004
+
+### 20180228 RM added C for juvenile inverts based on SETAS and NEUS adult values (m3 mgN-1 day-1)
+# Clearance rates for biomass pool consumers - this is used by Holling type feeding
 C_LSQ_T15 0.001455  
 C_jLSQ_T15 0.001
 C_ISQ_T15 0.001455  
@@ -11671,9 +11659,10 @@ C_BB_T15  0
 C_BO_T15  0.0001    
 C_BC_T15  0.006
 
-# Clearance rate of each vertebrate group, per age class                mg3(mg N)-1 d-1
+
 flagfishrates    0         Switch to show whether clearance and growth rates are absolute=0, or as proportion of body mass=1  
- 
+
+# Clearance rate of each vertebrate group, per age class       (m3 Ind-1 day-1)
 C_MAK 10
 1.0 1.5 2.0 3.0 3.0 3.0 3 3 3 3
  
@@ -11851,9 +11840,8 @@ C_TWH 10
 C_INV 10
 1 5 15 25 45 45 45 45 50 50 
 
-# Consumer growth - this is used by Holling type feeding (predcase 0, 1, 2)
-### 20180228 RM added values for juvenile groups based on SETAS and adult NEUS vals
-##mum_ZG_T15       0.017     Growth rate of gelatinous zooplankton              mg N d-1      0.02 - 0.35
+# Consumer growth - this is used by Holling type feeding (predcase#0, 1, 2)
+### 20180228 RM added values for juvenile groups based on SETAS and adult NEUS vals (mgN mgN-1 day-1) for biomass pools
 mum_LSQ_T15 0.044     
 mum_jLSQ_T15 0.04
 mum_ISQ_T15 0.0444     
@@ -11886,7 +11874,7 @@ mum_PB_T15  0.05
 mum_BB_T15  0.02        
 mum_BO_T15  0.001       
 
-# Vertebrate growth rates for each "group," per age class mg N d-1
+# Vertebrate growth rates for each "group," per age class (mg N Ind-1 day-1)
 # See _flag.fish.rates above to see whether clearance and growth rates 
 # are chosen as absolute (=0), or as proportion of body mass (=1)  
 mum_MAK 10
@@ -12150,7 +12138,7 @@ KL_ZS  5
 KL_BO  0.18  
  
 
-# Saturation levels for consumer food intake. This is used by min-max feeding (predcase 4)
+# Saturation levels for consumer food intake. This is used by min-max feeding (predcase#4)
 #e.g. KU_ZG            65.0      Half saturation for uptake by gelatinous zoopl    mg N m-3     30.0 - 65.0
 KU_MAK 50    
 KU_HER 50    
@@ -12234,7 +12222,7 @@ KU_BO  18.8
  
 
 ## Double check for NEUS, but OK for now
-# Search volume - used by size specific Holother deep dem. type III (predcase 5)
+# Search volume - used by size specific Holother deep dem. type III (predcase#5)
 #e.g. vl_ZG            0.04      Search volume for gelatinous zooplankton          m3 d-1           0.04
 vl_LSQ  0.04   
 vl_ISQ  0.04   
@@ -12381,7 +12369,7 @@ vlb_TWH 0.25
 vlb_INV 0.2    
  
 
-# Handling time - used by size specific Holling type III (predcase 5)
+# Handling time - used by size specific Holling type III (predcase#5)
 #ht_ZG            4.5       Handling time for gelatinous zooplankton           d               4.5
 ht_LSQ 4     
 ht_ISQ 4     
@@ -13639,7 +13627,7 @@ Ktmp_bird        0.08      Factor relating temperature to respiration for seabir
 Ktmp_mammal      0.08      Factor relating temperature to respiration for mammals             0.08 
  
 # Lysis rate of microalgaes  
-KLYS_PL          0.0003    Lysis rate of diatoms                             d-1 (0.05 )      0.0001
+KLYS_PL          0.0001    Lysis rate of diatoms                             d-1 (0.05 )      0.0001
 KLYS_PS          0.01      Lysis rate of picophytoplankton                   d-1 (0.01)       0.01
 KLYS_DF          0.0005    Lysis rate of dinoflagellates                     d-1              0.01
 KLYS_MB          0.005     Lysis rate of microphytobenthos (0.005)           d-1               0.005
@@ -16828,7 +16816,7 @@ NSH_log_mult 1.82e+10
 OSH_log_mult 1.82e+10    
 
 # Size of recruits 
-###KWSR_XXX Structural weight of XXX recruits   mg N m-3 updated 20180713 RM as age 1 fish
+###KWSR_XXX Structural weight of XXX recruits   mg N m-3 updated 20180713 RM as age 1 (i.e. 1-yr old, not cohort 1) fish
 KWSR_ANC	5.9132888378
 KWSR_BFT	11593.2940990598
 KWSR_BIL	26194.320153325
@@ -16890,7 +16878,7 @@ KWSR_WTF	5.348038549
 KWSR_YTF	53.7052221752
     
 
-###KWRR_XXX Reserve weight of XXX recruits mg N m-3 updated 20180713 RM as age 1 fish
+###KWRR_XXX Reserve weight of XXX recruits mg N m-3 updated 20180713 RM as age 1 (1-yr old, not cohort 1) fish
 KWRR_ANC	15.6702154201
 KWRR_BFT	30722.2293625085
 KWRR_BIL	69414.9484063112
