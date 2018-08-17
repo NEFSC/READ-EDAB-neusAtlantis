@@ -121,6 +121,29 @@ t3=cast(t2, Code ~ Cohort)
 write.table(t3, file='vertebrate_biomass_mgC.csv', sep=',', col.names = T, row.names = F)
 
 
+
+## read in initiall conditions numbers (saved as output from shinyrAtlantis, nums.df)
+n=read.csv(file.path(paste(d1,'/init_nums.csv', sep="")), stringsAsFactors = F)
+num=reshape(n,idvar = 'Species', timevar = 'Cohort', direction = 'wide' )
+# n2=melt.data.frame(n, id.vars = c("Species", "Cohort"))
+# nn=cast(n2, "Species" ~ "Cohort")
+
+# copy scaling factor from run file, drop inverts:
+# updated 20180816
+#init_scalar       89
+scl=c(0.205275,1.597980,3.061782,0.449815,0.110567,0.003238,0.062150,0.153040,0.113941,0.000245,0.172427,0.016489,0.100860,
+  1.379642,0.058535,0.097947,0.038402,0.056091,0.220816,6.451870,1.174644,0.152468,0.773771,1.291924,0.001254,0.030864,
+  0.048406,0.000504,0.011100,0.000072,1.412003,0.037380,0.000002,0.000309,0.000437,0.000280,0.003929,0.000052,0.699984,
+  1.829899,3.618399,0.159980,0.385529,0.018171,0.000515,0.727557,0.232208,0.168540,0.047367,0.241343,0.050138,2.172812,
+  0.434166,0.349456,0.180294,0.881796,1.130103,0.012676,0.002091)
+
+names=read_xlsx('C:/Users/ryan.morse/Documents/GitHub/atneus_RM/R/Scaling_biomass_logfile_output.xlsx', sheet='desiredBiomass')
+nm=order(names$Name[1:59])
+names2=names$Name[nm]
+test=names2 %in% num$Species # skate is not included here???? not sure why
+names2[which(test!=1)]
+
+
 ### open initial conditions nc
 library(ncdf4)
 # nc=nc_open('RMinit_newvalues2017.nc', write=T) # old init, old _FillValues, (used to create file below)
@@ -245,7 +268,7 @@ wd2='C:/Users/ryan.morse/Documents/GitHub/atneus_RM'
 setwd(wd2)
 bgm.file <- ("neus_tmerc_RM.bgm")
 # NEUS_15_init=make.sh.init.object(bgm.file, '20180710init2.nc') #'RMinit_newvalues2017.nc')
-NEUS_15_init=make.sh.init.object(bgm.file, 'RMinit_2018.nc') #'RMinit_newvalues2017.nc')
+NEUS_15_init=make.sh.init.object(bgm.file, 'surfOnly.nc') #'RMinit_newvalues2017.nc')
 sh.init(NEUS_15_init)
 newN=NEUS_15_init$df.nitrogen
 write.csv(t, file='benthic_species_N.csv', sep=',', col.names = T, row.names = F)
