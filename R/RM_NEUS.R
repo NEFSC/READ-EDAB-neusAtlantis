@@ -434,7 +434,9 @@ tts=SETAS_init$df.nitrogen # check RN SN values for length weight relationships
 
 write.table(tts, file='SETAS_N.csv', col.names=T, row.names=F, sep=',')
 
-
+box.info=NEUS_15_newestinit$box.info
+innverts=NEUS_15_newestinit$species.2.data
+innverts.name=NEUS_15_newestinit$species.2.att
 
 grp.file=paste(wd2, '/NeusGroups_v15_unix.csv', sep='')
 bgm.file=paste(wd2, '/neus_tmerc_RM.bgm', sep='')
