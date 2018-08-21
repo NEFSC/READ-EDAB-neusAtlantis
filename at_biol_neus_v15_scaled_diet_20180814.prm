@@ -18182,8 +18182,8 @@ TWH_max_spawn_salt 40
 INV_max_spawn_salt 40                
 LSQ_max_spawn_salt 40
 ISQ_max_spawn_salt 40
-OSH_max_spawn_salt 0
-NSH_max_spawn_salt 0
+OSH_max_spawn_salt 40
+NSH_max_spawn_salt 40
 
 
 # Minimum tolerated oxygen level for age structured groups (typically vertebrates)
@@ -18250,6 +18250,8 @@ INV_min_O2 0
 
 
 min_channel_depth 0.001  Minimum depth of estuarine channels
+
+# Read in for the SM_INF groups. If true group releaseNH contributes to ReminNet.
 BD_remin_contrib  1
 BC_remin_contrib  0
 BO_remin_contrib  1
@@ -19322,7 +19324,7 @@ ISQ_rec_HabDepend 0
 NSH_rec_HabDepend 0
 OSH_rec_HabDepend 0
 
-flag_satiation 0 
+flag_satiation 1 
 flag_shrinkfat 1
 
 MAK_maxtotdepth  100000 
