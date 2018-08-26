@@ -2350,7 +2350,7 @@ variables:
 		Benthic_Carniv_N:b_dens = 1000000000. ;
 		Benthic_Carniv_N:i_conc = 200000000. ;
 		Benthic_Carniv_N:f_conc = 200000000. ;
-		Benthic_Carniv_N:_FillValue = 15. ;
+		Benthic_Carniv_N:_FillValue = 40. ;
 	double Benthic_grazer_N(t, b) ;
 		Benthic_grazer_N:bmtype = "epibenthos" ;
 		Benthic_grazer_N:units = "mg N m-2" ;
@@ -12691,7 +12691,7 @@ variables:
 		Meiobenth_N:b_dens = 1000000000. ;
 		Meiobenth_N:i_conc = 200000000. ;
 		Meiobenth_N:f_conc = 200000000. ;
-		Meiobenth_N:_FillValue = 0.5 ;
+		Meiobenth_N:_FillValue = 10.5 ;
 	double Menhaden10_Nums(t, b, z) ;
 		Menhaden10_Nums:bmtype = "tracer" ;
 		Menhaden10_Nums:units = "1" ;
