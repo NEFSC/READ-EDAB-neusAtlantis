@@ -855,8 +855,8 @@ mm.mon.anom=heatmap.2(as.matrix(mm.anom), breaks=c(-3,-2,-1,0,1,2,3),Rowv=F, Col
 
 
 #### MARMAP size fractionated Chlorophyll from Kim Hyde
-MM.chl.sz=read.csv('C:/Users/ryan.morse/Downloads/MARMAP-SIZE_FRACTION-CHL-SURFACE_FOR_RMORSE.csv')
-MM.chl.sz.z=read.csv('C:/Users/ryan.morse/Downloads/MARMAP-SIZE_FRACTION-CHL-PROFILES-FOR_RMORSE.csv')
+MM.chl.sz=read.csv('C:/Users/ryan.morse/Downloads/MARMAP-SIZE_FRACTION-CHL-SURFACE_FOR_RMORSE.csv', stringsAsFactors = F)
+MM.chl.sz.z=read.csv('C:/Users/ryan.morse/Downloads/MARMAP-SIZE_FRACTION-CHL-PROFILES-FOR_RMORSE.csv', stringsAsFactors = F)
 
 MM.chl.sz.z=read.csv('/home/ryan/Downloads/MARMAP-SIZE_FRACTION-CHL-PROFILES-FOR_RMORSE.csv')
 MM.chl.sz=read.csv('/home/ryan/Downloads/MARMAP-SIZE_FRACTION-CHL-SURFACE_FOR_RMORSE.csv')
@@ -874,18 +874,20 @@ pointsin=over(MM.chl2, neus.shp) #find which boxes samples belong to
 MM.boxbio=data.frame(MM.chl2, pointsin)
 
 ### compute yearly mean Chl per box
-MM.boxes.nano=aggregate(MM.boxbio$NANO_CHL,list('box'=as.integer(MM.boxbio$BOX_ID), 'Y'=MM.boxbio$YEAR, 'M'=MM.boxbio$MON), mean)
-MM.boxes.net=aggregate(MM.boxbio$NET_CHL,list('box'=as.integer(MM.boxbio$BOX_ID), 'Y'=MM.boxbio$YEAR, 'M'=MM.boxbio$MON), mean)
+# MM.boxes.nano=aggregate(MM.boxbio$NANO_CHL,list('box'=as.integer(MM.boxbio$BOX_ID), 'Y'=MM.boxbio$YEAR, 'M'=MM.boxbio$MON), mean)
+# MM.boxes.net=aggregate(MM.boxbio$NET_CHL,list('box'=as.integer(MM.boxbio$BOX_ID), 'Y'=MM.boxbio$YEAR, 'M'=MM.boxbio$MON), mean)
+MM.boxes.nano=aggregate(MM.boxbio$NANO_CHL,list('box'=as.integer(MM.boxbio$BOX_ID), 'Y'=MM.boxbio$YEAR), mean)
+MM.boxes.net=aggregate(MM.boxbio$NET_CHL,list('box'=as.integer(MM.boxbio$BOX_ID), 'Y'=MM.boxbio$YEAR), mean)
 
 
 MM.boxes.nano=reshape(MM.boxes.nano, idvar='box', timevar = 'Y', direction = 'wide')
-MM.boxes.nano=MM.boxes[order(MM.boxes.nano['box']),]
+MM.boxes.nano=MM.boxes.nano[order(MM.boxes.nano['box']),]
 # mm.t=seq(from=1977, to=1987, by=1)
 MM.boxes.nano$box=as.numeric(MM.boxes.nano$box)
 MM.boxes.nano$means=rowMeans(MM.boxes.nano[,2:13], na.rm=T) # mean by box for time series (all months)
 
 MM.boxes.net=reshape(MM.boxes.net, idvar='box', timevar = 'Y', direction = 'wide')
-MM.boxes.net=MM.boxes[order(MM.boxes.net['box']),]
+MM.boxes.net=MM.boxes.net[order(MM.boxes.net['box']),]
 # mm.t=seq(from=1977, to=1987, by=1)
 MM.boxes.net$box=as.numeric(MM.boxes.net$box)
 MM.boxes.net$means=rowMeans(MM.boxes.net[,2:13], na.rm=T) # mean by box for time series (all months)
