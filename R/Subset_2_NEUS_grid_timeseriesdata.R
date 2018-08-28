@@ -15,8 +15,8 @@ load("I:/1 RM/0 R workspaces/20170629_HERMESchlorophyll_updated_1998_2016_bottom
 wd2='C:/Users/ryan.morse/Documents/GitHub/atneus_RM'
 wd2='/home/ryan/Git/atneus_RM'
 setwd(wd2)
-bgm.file <- ("neus30_v15.bgm")
-bgm.file <- ("test_winding_passes.bgm")
+# bgm.file <- ("neus30_v15.bgm")
+# bgm.file <- ("test_winding_passes.bgm")
 bgm.file <- ("neus_tmerc_RM.bgm")
 
 neus <- bgmfile(bgm.file)
@@ -100,6 +100,7 @@ NES.shp=gUnion(mab.gbk.shp, gom.scs.shp, byid=F, id=NULL)
 
 #Load zooplankton biomass data from Todd O'Brian Copepod site
 wd=('H:/1 RM/copepod-2012__biomass-fields/data')
+wd=('C:/Users/ryan.morse/Desktop/NEUS Atl files/RM_initial_conditions/copepod-2012__biomass-fields/data')
 setwd(wd)
 files=list.files(wd, pattern=('_cmass-'))
 zoovol=lapply(files, function(x) read.csv(x))
@@ -111,8 +112,7 @@ wd2='/home/ryan/Git/atneus_RM'
 
 # NEUS.ll=readShapeSpatial(file.path(wd2,'NEUS_LL.shp')) # this is in bgm format
 # neus.shp=readShapeSpatial(file.path(wd2,'NEUS_Long_Lat.shp')) # this one is in (long, lat format)
-neus.shp=readShapeSpatial(file.path(wd2,'Neus_ll_0p01.shp')) # this one is in (long, lat format)
-
+neus.shp=readShapeSpatial(file.path(wd2,'Neus_ll_0p01.shp')) # newest, from Bec Gorton DEC 2017
 # plot(NEUS.ll, add=T)
 plot(neus.shp)
 
@@ -135,7 +135,7 @@ for (i in 2:13){
   coordinates(c0.neus)=~Longitude+Latitude #transform to Spatialpointsdataframe
   pointsin=over(c0.neus, neus.shp) #find which boxes samples belong to
   c0.neus2 <- data.frame(c0.neus, pointsin)
-  boxbio=aggregate(formula=Total.Carbon.Mass..mg.C.m3.~box_id, data=c0.neus2, FUN=mean)
+  boxbio=aggregate(formula=Total.Carbon.Mass..mg.C.m3.~BOX_ID, data=c0.neus2, FUN=mean)
   box.zoo.biomass[i-1]=list(boxbio)
 }
 
@@ -155,7 +155,7 @@ zoo.10=matrix(unlist(box.zoo.biomass[[10]]),ncol=2)
 zoo.11=matrix(unlist(box.zoo.biomass[[11]]),ncol=2)
 zoo.12=matrix(unlist(box.zoo.biomass[[12]]),ncol=2)
 
-base=data.frame(c(seq(from=0,to=29,by=1)))
+base=data.frame(c(seq(from=1,to=30,by=1)))
 colnames(base)='V1'
 base=merge(base, zoo.1, by=c('V1'), all=T)
 base=merge(base, zoo.2, by=c('V1'), all=T)
@@ -170,14 +170,15 @@ base=merge(base, zoo.10, by=c('V1'), all=T)
 base=merge(base, zoo.11, by=c('V1'), all=T)
 base=merge(base, zoo.12, by=c('V1'), all=T)
 
+
 #rename (units still mg C/m3 zooplankton biomass)
 NEUS.zoo.bio=data.frame((base[,2:13])) #transpose)
 rownames(NEUS.zoo.bio)=c(seq(from=0, to=29, by=1))
 colnames(NEUS.zoo.bio)=c(seq(from=1, to=12, by=1))
 NEUS.zoo.bio$`col.mn`=rowMeans(NEUS.zoo.bio, na.rm=T) # this may not work... 
-NEUS.zoo.bio$`col.sum.N`=rowSums(NEUS.zoo.bio, na.rm=T)/5.7 # this may not work... 
+# NEUS.zoo.bio$`col.sum.N`=rowSums(NEUS.zoo.bio, na.rm=T)/5.7 # this may not work...
 
-barplot(NEUS.zoo.bio$'col.sum.N', main='NEUS Monthly Zooplankton Biomass Sums (Mg N/m3)', xlab='month')
+# barplot(NEUS.zoo.bio$'col.sum.N', main='NEUS Monthly Zooplankton Biomass Sums (Mg N/m3)', xlab='month')
 barplot(NEUS.zoo.bio$`col.mn`, na.rm=T, main='NEUS Mean Annual Zooplankton Biomass (Mg C/m3)', xlab='box')
 barplot(NEUS.zoo.bio$`col.mn`/5.7, na.rm=T, main='NEUS Mean Annual Zooplankton Biomass (Mg N/m3)', xlab='box')
 

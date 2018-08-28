@@ -12,7 +12,7 @@
 
 verbose       0       # Detailed logged output
 
-
+flag_sanity_check 1		#switch to check for overlapping recruitment events due to one set being calculated before the last set was completely exhausted allowing for artificial boosts in long-lived species (bug)
 
 flagecon_on        0   # Flag showing whether want economics loaded and submodel run (1) or not (0)
 
