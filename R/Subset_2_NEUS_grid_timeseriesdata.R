@@ -872,6 +872,9 @@ MM.chl2=MM.surf[complete.cases(MM.surf$LON),]
 coordinates(MM.chl2)=~LON+LAT #transform to Spatialpointsdataframe
 pointsin=over(MM.chl2, neus.shp) #find which boxes samples belong to
 MM.boxbio=data.frame(MM.chl2, pointsin)
+test=as.character(MM.boxbio$BOX_ID)
+test2=as.numeric(test)
+MM.boxbio$BOX_ID=test2
 
 ### compute yearly mean Chl per box
 # MM.boxes.nano=aggregate(MM.boxbio$NANO_CHL,list('box'=as.integer(MM.boxbio$BOX_ID), 'Y'=MM.boxbio$YEAR, 'M'=MM.boxbio$MON), mean)
