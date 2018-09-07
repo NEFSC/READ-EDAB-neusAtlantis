@@ -136,7 +136,7 @@ flagmicro        0         Nutrient lim by micronutrient: 0 = no, 1 = yes       
 # gfay @nmfs 17 July 2014, following entries should probably change for base.
 flagtempchange   0         Mean temperature changes: 0 = no,  1 = yes                          0
 flagsaltchange   0         Mean salinity changes: 0 = no,  1 = yes                             0
-flagstarve       0         Give starvation notices: 0 = no, 1 = yes                            0  
+flagstarve       1         Give starvation notices: 0 = no, 1 = yes                            0  
 flagdegrade      0         Degrade coastal habitats (effects growth of MA, SG and BFS)         0
 flagroc          0         Density dependent drop off option: 0 = none, 1 = ratio drop off, 2 = exponential decline   0
 # gfay @nmfs 17 July 2014, following entry should probably change for base.
