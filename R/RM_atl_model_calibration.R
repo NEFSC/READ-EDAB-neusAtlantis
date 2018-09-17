@@ -18,7 +18,7 @@
 # #d2='/media/ryan/TOSHIBA EXT/1 RM/10 ATLANTIS transfer/20170413'
 # setwd(d2)
 # 
-# 
+# devtools::install('~/Git/atlantistools') #local repo
 # ### DIET PLOTS  NO LONGER NECESSARY on desktop, see workaround below
 # # DO THIS FIRST...
 # MyCol=topo.colors(30)
