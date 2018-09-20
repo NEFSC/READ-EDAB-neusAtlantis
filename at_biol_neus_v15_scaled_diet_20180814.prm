@@ -6487,10 +6487,10 @@ jREP_ReturnStock 1
 0
  
 jRWH_ReturnStock 1
-4
+0
  
 jBWH_ReturnStock 1
-4
+0
  
 jSWH_ReturnStock 1
 0
@@ -6849,10 +6849,10 @@ jREP_FSM 1
 1
  
 jRWH_FSM 1
-1.05
+1
  
 jBWH_FSM 1
-1.05
+1
  
 jSWH_FSM 1
 1
@@ -7002,7 +7002,7 @@ YTF_FSM 1
 1
  
 DOG_FSM 1
-0.94
+1
  
 SMO_FSM 1
 1
@@ -7014,13 +7014,13 @@ DSH_FSM 1
 1
  
 BLS_FSM 1
-0.98
+1
  
 POR_FSM 1
-0.98
+1
  
 PSH_FSM 1
-0.98
+1
  
 WSK_FSM 1
 1
@@ -7032,25 +7032,25 @@ SK_FSM 1
 1
  
 SB_FSM 1
-1.05
+1
  
 PIN_FSM 1
 1
  
 REP_FSM 1
-0.9998
+1
  
 RWH_FSM 1
-0.99998
+1
  
 BWH_FSM 1
-0.99998
+1
  
 SWH_FSM 1
-0.99
+1
  
 TWH_FSM 1
-0.99
+1
  
 INV_FSM 1
 1
