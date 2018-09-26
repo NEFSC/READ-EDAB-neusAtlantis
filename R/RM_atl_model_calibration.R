@@ -50,7 +50,7 @@
 
 # 
 # filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
-# # 
+# #
 # # # USE TO LOAD Result from atlantistools preprocess (created in 'RM_preprocess_v2.R')
 # loadRData <- function(fileName){
 #   #loads an RData file, and returns it
@@ -382,7 +382,13 @@ lines(biom$ZG~biom$Time, type='l', col='green')
 legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
 dev.off()
 
-#DIN
-# plot(bio2$DIN~bio2$Time, type='l')
-# lines(bio1$DIN~bio1$Time, col='blue')
-# legend('topright', legend = c('v1.5', 'v1.0 old'), lty=c(1,1),col=c('black', 'blue'), bty='n')
+# plots <- plot_spatial_overlap(result$spatial_overlap)
+# pdf(file=paste(filename, '_spatial_overlap.pdf', sep=''),paper='A4r', width=11, height=8)
+# for (i in seq_along(plots)) {
+#   cat(paste0("## Spatial Plot ", i, ": ", names(plots)[i]), sep = "\n")
+#   gridExtra::grid.arrange(plots[[i]])
+#   cat("\n\n")
+# }
+# dev.off()
+
+d
