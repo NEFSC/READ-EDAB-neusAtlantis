@@ -10,7 +10,8 @@ setwd(choose.dir(default=getwd())) # where run data are saved
 setwd('E:/AtlantisRun/20161103/tes/20180926dta')
 d2=getwd()
 d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
-# 
+# d1="C:/Users/ryan.morse/Documents/GitHub/atneus_RM_20180827"
+
 # #linux
 d1='/home/ryan/Git/atneus737e3d' # for NEUS 1.0 on new code base RM
 d1='/home/ryan/Git/atneus_RM'
