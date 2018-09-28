@@ -287,11 +287,10 @@ for (i in seq_along(plots)) {
 dev.off()
 
 ### Plot Spatial Overlap Schoener Index of diet matchups STILL WORKING ON THIS
-# jl=length(sp_overlap)
-# plots <- plot_spatial_overlap(sp_overlap)
+# 386:length(sp_overlap) 20180927dta not complete
 # pdf(file=paste(filename, '_spatial overlap of predator and prey.pdf', sep=''),paper='A4r', width=11, height=8)
 # for (i in 1:length(sp_overlap)) {
-#   plot_spatial_overlap(sp_overlap[i])
+#   print(plot_spatial_overlap(sp_overlap[i]))
 # }
 # dev.off()
 

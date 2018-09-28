@@ -606,3 +606,6 @@ atlantisMerged -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at
 
 # desktop, mum and C back to vals from 8/31/18 commit, predcase to 2 for inverts
 atlantismain6357 -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_WIN_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180814.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t C:\Users\ryan.morse\Documents\GitHub\atneus_RM -d 20180927dta 1>1a.junk 2>2a.junk
+
+# new biol file _20180928 based on merge of biol files using new mum and C from _20180814 from 9/20/18 and predcase from _20180608 from 8/6/18.
+atlantismain6357 -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_WIN_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180928.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t C:\Users\ryan.morse\Documents\GitHub\atneus_RM -d 20180928dta 1>1a.junk 2>2a.junk
