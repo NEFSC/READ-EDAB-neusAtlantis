@@ -218,6 +218,8 @@ result <- list(
 )
 filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
 save(result, file=paste(filename, '_prepro.rdata',sep=''))
+source('~/GitHub/atneus_RM/R/RM_atl_model_calibration.R')
+
 
 # result <- list(
 #   "biomass"                = biomass,       #1

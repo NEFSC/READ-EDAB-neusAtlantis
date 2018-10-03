@@ -268,10 +268,20 @@ wd2='C:/Users/ryan.morse/Documents/GitHub/atneus_RM'
 setwd(wd2)
 bgm.file <- ("neus_tmerc_RM.bgm")
 # NEUS_15_init=make.sh.init.object(bgm.file, '20180710init2.nc') #'RMinit_newvalues2017.nc')
-NEUS_15_init=make.sh.init.object(bgm.file, 'surfOnly.nc') #'RMinit_newvalues2017.nc')
+NEUS_15_init=make.sh.init.object(bgm.file, 'RMinit_2018.nc') #surfOnly.nc') #'RMinit_newvalues2017.nc')
 sh.init(NEUS_15_init)
 newN=NEUS_15_init$df.nitrogen
 write.csv(t, file='benthic_species_N.csv', sep=',', col.names = T, row.names = F)
+
+
+### View and CHANGE spatial distributions 
+wd2='C:/Users/ryan.morse/Documents/GitHub/atneus_RM'
+setwd(wd2)
+bgm.file <- ("neus_tmerc_RM.bgm") #neus30_v15_notsohighvertmix.bgm")
+NEUS_15_dist <- make.sh.dist.object(bgm.file)
+sh.dist(NEUS_15_dist)
+
+
 
 # t2=NEUS_15_init$species.3.data
 # t=t(t2)
