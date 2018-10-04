@@ -2538,9 +2538,9 @@ SOFTchange_mult   1
 Box_degraded      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 
-## Vertebrate movement options
-roc_wgt          10000.0   Wgt factor for density dependent fish move                            10000.0
-k_roc_food       0.5       Percent of body mass needed as food before disperse (ddepend move on) 0.5
+## Vertebrate movement options changed 20181004 RM from defaults on right
+roc_wgt          100.0   Wgt factor for density dependent fish move                            10000.0
+k_roc_food       1.5       Percent of body mass needed as food before disperse (ddepend move on) 0.5
 
 #GAV GOT TO HERE
 
@@ -15726,28 +15726,28 @@ BLF_recruit_vdistrib 4
 0 0 0 1
  
 WPF_recruit_vdistrib 4
-0 0 0 1
+0.5 0.5 0 0
  
 SUF_recruit_vdistrib 4
-0 0 0 1
+0.5 0.5 0 0
  
 WIF_recruit_vdistrib 4
-0 0 0 1
+0.5 0.5 0 0
  
 WTF_recruit_vdistrib 4
-0 0 0 1
+0.5 0.5 0 0
  
 HAL_recruit_vdistrib 4
-0 0 0 1
+0.5 0.5 0 0
  
 PLA_recruit_vdistrib 4
-0 0 0 1
+0.5 0.5 0 0
  
 FOU_recruit_vdistrib 4
-0 0 0 1
+0.5 0.5 0 0
  
 FLA_recruit_vdistrib 4
-0 0 0 1
+0.5 0.5 0 0
  
 BFT_recruit_vdistrib 4
 0 0 0 1
@@ -15768,7 +15768,7 @@ ANC_recruit_vdistrib 4
 0 0 0 1
  
 BPF_recruit_vdistrib 4
-0 0 0 1
+0.5 0.5 0 0
  
 GOO_recruit_vdistrib 4
 0.7 0.3 0 0
