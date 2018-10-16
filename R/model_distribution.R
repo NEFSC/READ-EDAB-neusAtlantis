@@ -189,3 +189,134 @@ box.zoo.biomass[i-1]=list(boxbio)
 setwd('C:/Users/ryan.morse/Desktop/NEUS Atl files/RM_initial_conditions')
 write.table(ZG, file='ZG2.csv', sep=', ',col.names = F, row.names=F)
 
+
+
+
+library(ks)
+# source("G:/1 RM/8 R Functions/KDE_funcs.R")
+source("C:/Users/ryan.morse/Desktop/Iomega Drive Backup 20171012/1 RM/8 R Functions/KDE_funcs.R")
+biomass.wt.kde.input=function(sdat2, minyr, maxyr){
+  clons1 = sdat2$LON[(sdat2$YEAR>=minyr & sdat2$YEAR<=maxyr & sdat2$LOGBIO ==1)]
+  clons2 = sdat2$LON[(sdat2$YEAR>=minyr & sdat2$YEAR<=maxyr & sdat2$LOGBIO ==2)]
+  clons3 = sdat2$LON[(sdat2$YEAR>=minyr & sdat2$YEAR<=maxyr & sdat2$LOGBIO ==3)]
+  clons4 = sdat2$LON[(sdat2$YEAR>=minyr & sdat2$YEAR<=maxyr & sdat2$LOGBIO ==4)]
+  clons5 = sdat2$LON[(sdat2$YEAR>=minyr & sdat2$YEAR<=maxyr & sdat2$LOGBIO ==5)]
+  clons1 <- na.omit(clons1) # get rid of missings, KS does not like
+  clons2 <- na.omit(clons2)
+  clons3 <- na.omit(clons3)
+  clons4 <- na.omit(clons4)
+  clons5 <- na.omit(clons5)
+  clons=c(clons1,clons2,clons2,clons3,clons3,clons3,clons4,clons4,clons4,clons4, clons5, clons5, clons5, clons5, clons5)
+  clats1 = sdat2$LAT[(sdat2$YEAR>=minyr & sdat2$YEAR<=maxyr & sdat2$LOGBIO ==1)]
+  clats2 = sdat2$LAT[(sdat2$YEAR>=minyr & sdat2$YEAR<=maxyr & sdat2$LOGBIO ==2)]
+  clats3 = sdat2$LAT[(sdat2$YEAR>=minyr & sdat2$YEAR<=maxyr & sdat2$LOGBIO ==3)]
+  clats4 = sdat2$LAT[(sdat2$YEAR>=minyr & sdat2$YEAR<=maxyr & sdat2$LOGBIO ==4)]
+  clats5 = sdat2$LAT[(sdat2$YEAR>=minyr & sdat2$YEAR<=maxyr & sdat2$LOGBIO ==5)]
+  clats1 <- na.omit(clats1)
+  clats2 <- na.omit(clats2)
+  clats3 <- na.omit(clats3)
+  clats4 <- na.omit(clats4)
+  clats5 <- na.omit(clats5)
+  clats=c(clats1,clats2,clats2,clats3,clats3,clats3,clats4,clats4,clats4,clats4, clats5, clats5, clats5, clats5, clats5)
+  x=cbind(clons,clats) # combine lons and lats
+  return(x)
+}
+
+# subset sdat to 10 years
+sdat2=sdat[which(sdat$YEAR<1979),]
+
+for (i in c(9,10,11,13,20)){
+  sdat2=sdat2[which(sdat$SVSPP==i),]
+  kde.list=list()
+  lat=sdat2$LAT
+  lon=sdat2$LON
+  year=sdat2$YEAR #yr
+  # epu=sdat$epu #EPU
+  # sdat=data.frame(lat, lon, year)
+  # zoodns=as.numeric(unlist(sdat[i]))
+  spp=as.character(sps$SPNAME[which(i==sps$SVSPP)])
+  # LOGBIO=floor(log10(zoodns+1))
+  # sdat$LOGBIO=LOGBIO
+  # sdat$zoodns=zoodns
+  # yrlist=data.frame(yrlist1, yrlist1) #only for zooplankton only full time series
+  
+  ### USE THIS to match zoop time series to different length data sets; yearly, (e.g. 1987-2011)
+  ## MUST LOAD TIME SERIES DATA SET (below) FIRST TO GET year.val !!!
+  yrlist1=unique(sdat2$YEAR)
+  # yy1=unique(year.val)
+  # yy2=yrlist1[yrlist1 %in% yy1]
+  # yrlist=data.frame(yy2, yy2)
+    # minyr=yrlist[1,1]; maxyr=yrlist[1,2]
+  minyr=min(yrlist1, na.rm=T)
+  maxyr=max(yrlist1, na.rm=T)
+  
+  x=biomass.wt.kde.input(sdat2, minyr, maxyr)
+  # fhat.pi1 <- kde(x, compute.cont=T, binned=F, xmin=c(-80, 32), xmax=c(-60, 48)) # specify grid to match raster stack of fronts... etc.
+  fhat.pi1 <- kde(x, compute.cont=T, binned=T, xmin=c(-76, 35), xmax=c(-64, 45)) # specify grid to match raster stack of OISST... etc.
+  kde.list[[1]]=fhat.pi1
+  lon2=unlist(fhat.pi1[[2]][1])
+  lat2=unlist(fhat.pi1[[2]][2])
+  test2=as.matrix(fhat.pi1[[3]])
+  rownames(test2)=lon2
+  colnames(test2)=lat2
+  bb <- extent(min(lon2), max(lon2), min(lat2), max(lat2))
+  m2=t(test2)[ncol(test2):1,]
+  kd.stack=raster(m2)
+  extent(kd.stack)=bb
+  # Continue raster stack for time series
+  # for (j in 2:length(yrlist[,1])){
+  #   minyr=yrlist[j,1]; maxyr=yrlist[j,2]
+  #   x=biomass.wt.kde.input(sdat, minyr, maxyr)
+  #   #   fhat.pi1 <- kde(x, compute.cont=T, binned=F,xmin=c(-80, 32), xmax=c(-60, 48)) # for fronts
+  #   fhat.pi1 <- kde(x, compute.cont=T, binned=T, xmin=c(-76, 35), xmax=c(-64, 45)) # specify grid to match raster stack of OISST... etc.
+  #   kde.list[[j]]=fhat.pi1
+  #   lon2=unlist(fhat.pi1[[2]][1])
+  #   lat2=unlist(fhat.pi1[[2]][2])
+  #   test2=as.matrix(fhat.pi1[[3]])
+  #   rownames(test2)=lon2
+  #   colnames(test2)=lat2
+  #   bb <- extent(min(lon2), max(lon2), min(lat2), max(lat2))
+  #   #   bb <- extent(-80, -60, 32, 48)
+  #   m2=t(test2)[ncol(test2):1,]
+  #   test2=raster(m2)
+  #   extent(test2)=bb  
+  #   kd.stack=stack(kd.stack, test2)
+  # }
+  # if(datalab=='Wind'){
+  #   kd.stack=dropLayer(kd.stack, 2) #drop 1988
+  #   kd.stack=dropLayer(kd.stack, 1) #drop 1987
+  #   kde.list[[2]]=NULL
+  #   kde.list[[1]]=NULL
+  # }
+  # 
+  # kd.stack2=mask(kd.stack, NES.shp)
+  # small=extent(-76,-64,35,45)
+  # kd.stack3=crop(kd.stack2, small)
+  # if (dim(kd.stack3)[3]==19){
+  #   # kd.stack3=dropLayer(kd.stack3, 1) # drop 1997 for spring chlorophyll data
+  #   kd.stack3=dropLayer(kd.stack3, 19) # drop 2015 for fall chlorophyll data
+  # }
+  # # wd3= "G:/1 RM/2 Plankton Spatial Plots/data"
+  # wd3='G:/1 RM/2 Plankton Spatial Plots/data/1982_2015/Zoo/1998_2015'
+  # filename=paste(SEASON, spp, yrlist[1,1],yrlist[length(yrlist[,1]),1],"kd.stack.rdata", sep="_")
+  # mypath=file.path(wd3, filename)
+  # save(kd.stack3, file=mypath)
+  # filename=paste(SEASON, spp, yrlist[1,1],yrlist[length(yrlist[,1]),1],"kde.list.rdata", sep="_")
+  # mypath=file.path(wd3, filename)
+  # save(kde.list, file=mypath)
+}
+
+plot(kd.stack)
+map("worldHires", xlim=c(-76,-66),ylim=c(36,44.5), fill=T,border=0,col="gray60", add=T)
+
+wd2='C:/Users/ryan.morse/Documents/GitHub/atneus_RM'
+wd2='/home/ryan/Git/atneus_RM'
+neus.shp=readShapeSpatial(file.path(wd2,'Neus_ll_0p01.shp')) # newest, from Bec Gorton DEC 2017
+# plot(NEUS.ll, add=T)
+plot(neus.shp)
+
+neus.shp@polygons[[2]]@Polygons[[1]]@coords
+
+test=gConvexHull(neus.shp) # creates conves hull of basic NEUS shape for exclusion of data
+test.mat=as.matrix(test@polygons[[1]]@Polygons[[1]]@coords)
+NES.mat=as.matrix(NES.shp@polygons[[1]]@Polygons[[1]]@coords)

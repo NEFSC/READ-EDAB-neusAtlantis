@@ -152,7 +152,7 @@ flaghemisphere    1  # Flag for hemisphere model is in (0 = southern; 1 = northe
 # should really update the cdf file instead
 # GFay Nov 13 2012, check these.
 
-flagscaleinit     1  # Flag to indicate whether scaling initial vertebrate densities (1=yes, 0=no)
+flagscaleinit     0  # Flag to indicate whether scaling initial vertebrate densities (1=yes, 0=no)
 
 # RM 20161122 changed 0 to 1 for species at end (mostly benthic and inverts) Need to modify cdf file still (only works for vertebrates)
 # Multiplicative scalar for vertebrate initial densities (as read-in from cdf file)
