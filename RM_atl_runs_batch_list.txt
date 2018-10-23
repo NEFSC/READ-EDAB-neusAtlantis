@@ -618,3 +618,6 @@ atlantismain6357 -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r 
 
 # test run with new init file, changed distributions, values, scaling. updated seasonal distributiions in biol file.
 atlantismain6357 -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_WIN_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180928.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t C:\Users\ryan.morse\Documents\GitHub\atneus_RM -d 20181019dta 1>1a.junk 2>2a.junk
+
+# changed mStarve to 1e-3 for all from 1e-4, kthreshm to 0.7 from 0.5 - investigating starvation (no notices given in log file, RN drops for some species even though nums go up)
+atlantismain6357 -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_WIN_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180928.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t C:\Users\ryan.morse\Documents\GitHub\atneus_RM -d 20181023dta 1>1a.junk 2>2a.junk
