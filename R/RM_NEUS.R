@@ -404,7 +404,7 @@ NEUS_15_newestinit=make.sh.init.object( 'neus_tmerc_RM.bgm','RMinit_2018.nc')
 
 # 20180620
 bgm.file <- ("neus_tmerc_RM.bgm")
-NEUS_15_init=make.sh.init.object(bgm.file, '20180710init.nc') #'RMinit_newvalues2017.nc')
+NEUS_15_init=make.sh.init.object(bgm.file, 'RMinit_2018.nc') #20180710init.nc') #'RMinit_newvalues2017.nc')
 
 
 wd3='C:/Users/ryan.morse/Atlantis-NEUS-1_0/SETAS'
@@ -467,7 +467,7 @@ setwd(wd2)
 grp.file <- ('NeusGroups_v15_unix.csv') # ALL GROUPS
 grp.file <- ('NeusGroups_v15_LTLonly.csv') # JUST LTL
 bgm.file <- ("neus_tmerc_RM.bgm")
-prm.file=('at_biol_neus_v15_scaled_diet_20180608.prm')#/home/ryan/Git/atneus_RM/at_biol_neus_v15_scaled_diet_20180227.prm
+prm.file=('at_biol_neus_v15_scaled_diet_20180928.prm')#/home/ryan/Git/atneus_RM/at_biol_neus_v15_scaled_diet_20180227.prm
 NEUS_15_prm <- make.sh.prm.object(bgm.file, grp.file, prm.file)
 sh.prm(NEUS_15_prm)
 # NEUS_10 prm file
