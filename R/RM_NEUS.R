@@ -488,6 +488,14 @@ prm.file=('VMPA_setas_biol_fishing_Trunk.prm')
 SETAS_prm <- make.sh.prm.object(bgm.file, grp.file, prm.file)
 sh.prm(SETAS_prm)
 
+
+C=NEUS_15_prm$clearance.data
+C=C[1:59,]
+C=C[order(C$Code),]
+mum=NEUS_15_prm$grp.growth
+mum=mum[1:59,]
+Mum=mum[order(mum$Code),]
+mdc=Mum[,6:15]/C[,6:15]
 #________________
 
 

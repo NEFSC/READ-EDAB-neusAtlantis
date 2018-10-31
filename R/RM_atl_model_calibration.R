@@ -381,11 +381,11 @@ lines(biom$ZG~biom$Time, type='l', col='green')
 legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
 dev.off()
 
-# plots <- plot_spatial_overlap(result$spatial_overlap)
-# pdf(file=paste(filename, '_spatial_overlap.pdf', sep=''),paper='A4r', width=11, height=8)
-# for (i in seq_along(plots)) {
-#   cat(paste0("## Spatial Plot ", i, ": ", names(plots)[i]), sep = "\n")
-#   gridExtra::grid.arrange(plots[[i]])
-#   cat("\n\n")
-# }
-# dev.off()
+plots <- plot_spatial_overlap(result$spatial_overlap)
+pdf(file=paste(filename, '_spatial_overlap.pdf', sep=''),paper='A4r', width=11, height=8)
+for (i in seq_along(plots)) {
+  cat(paste0("## Spatial Plot ", i, ": ", names(plots)[i]), sep = "\n")
+  gridExtra::grid.arrange(plots[[i]])
+  cat("\n\n")
+}
+dev.off()
