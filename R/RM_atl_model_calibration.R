@@ -49,7 +49,7 @@
 
 
 # 
-# filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
+filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
 # #
 # # # USE TO LOAD Result from atlantistools preprocess (created in 'RM_preprocess_v2.R')
 # loadRData <- function(fileName){
@@ -119,6 +119,19 @@ ggsave(paste(filename," biomass timeseries2.png", sep=''), width=20, height=17, 
 plot <- plot_line(result$biomass_age, col = "agecl")
 update_labels(p = plot, labels = c(gen_labels, list(colour = "Ageclass")))
 ggsave(paste(filename," biomass at age timeseries.png", sep=''), width=20, height=17, dpi=96)
+
+# plot length at age - may need to call: result$biomass_age2 added 20181102
+ii=unique(biomass_age2$species)
+pdf(file=paste(filename,'length_age.pdf', sep=''))
+for (x in 1:length(ii)){
+  iii=ii[x]
+  test=biomass_age2 %>% filter(species == iii)
+  boxplot(test$length_age ~ test$agecl, ylab='cm', xlab='cohort', main=iii)
+  
+}
+dev.off()
+
+
 
 
 ###_________Number timeseries#________________________

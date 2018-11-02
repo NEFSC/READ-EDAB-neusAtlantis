@@ -1,15 +1,15 @@
-library("atlantistools")
-library("ggplot2")
-library("gridExtra")
-library("dplyr")
-
-# # 
-# # #_____________________________
-# ## WINDOWS
-# setwd(choose.dir(default=getwd())) # where run data are saved
-setwd('E:/AtlantisRun/20161103/tes/20181029dta')
-d2=getwd()
-d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
+# library("atlantistools")
+# library("ggplot2")
+# library("gridExtra")
+# library("dplyr")
+# 
+# # # 
+# # # #_____________________________
+# # ## WINDOWS
+# # setwd(choose.dir(default=getwd())) # where run data are saved
+# setwd('E:/AtlantisRun/20161103/tes/20181029dta')
+# d2=getwd()
+# d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
 # # d1="C:/Users/ryan.morse/Documents/GitHub/atneus_RM_20180827"
 # 
 # # #linux
@@ -132,6 +132,32 @@ biomass_age <- bio_sp %>%
   filter(agecl > 2) %>%
   agg_data(groups = c("species", "agecl", "time"), fun = sum)
 
+# only vertebrates - convert to weight in grams, use for length at age plots
+biomass_age2 <- bio_sp %>%
+  filter(species %in% df_agemat$species) %>%
+  agg_data(groups = c("species", "agecl", "time"), fun = sum)
+
+# connvert tonnes to mg N by age then to wgt=(rn+sn)*wetdry*X_CN/1000 (C weight in grams)
+biomass_age2$mgN=biomass_age2$atoutput/bio_conv/nums_age$atoutput/100
+# now read in length-weight relationships from biol file
+bfile <- read.table(prm_biol,col.names=1:100,comment.char="",fill=TRUE,header=FALSE)
+#find the length-weight parameters from the old prm file, store them
+pick <- grep("li_a_",bfile[,1])
+xx <- bfile[pick,1:20]
+tempmat <- matrix(NA,nrow=nrow(xx),ncol=3)
+for (igroup in 1:nrow(tempmat)) tempmat[igroup,1] <- strsplit(as.character(xx[igroup,1]),"li_a_")[[1]][2]
+tempmat[,2] <- as.numeric(as.character(xx[,2]))
+pick <- grep("li_b_",bfile[,1])
+tempmat[,3] <- as.numeric(as.character(bfile[pick,2]))
+fgs2 <- load_fgs(fgs)
+fgs2=fgs2[,c('Code', 'LongName')]
+tempmat2=as.data.frame(tempmat[2:60,])
+colnames(tempmat2)=c('Code', 'li_a', 'li_b')
+tempmat3=left_join(tempmat2, fgs2, by='Code')
+biomass_age2=left_join(biomass_age2, tempmat3[,2:4], by=c('species'='LongName'))
+biomass_age2$length_age=(as.numeric(biomass_age2$mgN)/as.numeric(biomass_age2$li_a))*exp(1/as.numeric(biomass_age2$li_b))
+
+
 # Aggregate Numbers! This is done seperately since numbers need to be summed!
 nums     <- agg_data(data = dfs_gen[[1]], groups = c("species", "time"), fun = sum)
 nums_age <- agg_data(data = dfs_gen[[1]], groups = c("species", "agecl", "time"), fun = sum)
@@ -195,6 +221,7 @@ vol_ts <- agg_data(vol, groups = c("time", "polygon"), fun = sum, out = "volume"
 result <- list(
   "biomass"                = biomass,       #1
   "biomass_age"            = biomass_age,
+  "biomass_age2"           = biomass_age2,
   "biomass_consumed"       = bio_cons,
   "biomass_spatial_stanza" = bio_sp_stanza,
   "diet"                   = df_dm,         #5 
