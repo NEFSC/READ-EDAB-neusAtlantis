@@ -139,6 +139,18 @@ plot <- plot_line(result$nums)
 update_labels(p = plot, labels = list(x = "Time [years]", y = "Numbers"))
 ggsave(paste(filename," numbers timeseries.png", sep=''), width=20, height=17, dpi=96)
 
+### _______ Number of recruits #__________________________
+plot <- plot_line(result$ssb_rec, y='rec')
+update_labels(p = plot, labels = list(x = "Time [days]", y = "Numbers"))
+ggsave(paste(filename," recruits timeseries.png", sep=''), width=20, height=17, dpi=96)
+
+### _______ Number of recruits #__________________________
+plot <- plot_line(result$ssb_rec, y='ssb')
+update_labels(p = plot, labels = list(x = "Time [days]", y = "Numbers"))
+ggsave(paste(filename," ssb timeseries.png", sep=''), width=20, height=17, dpi=96)
+
+
+
 ### Numbers at age timeseries#________________________
 plot <- plot_line(result$nums_age, col = "agecl")
 update_labels(p = plot, labels = list(x = "Time [years]", y = "Numbers", colour = "Ageclass"))
