@@ -146,6 +146,7 @@ nums_box <- agg_data(data = dfs_gen[[1]], groups = c("species", "polygon", "time
 # connvert tonnes to mg N by age then to grams N to use in von Bertalanffy params to get length in cm
 biomass_age2$RNSN_ind=biomass_age2$atoutput/nums_age$atoutput/bio_conv
 biomass_age2$grams_N_Ind=biomass_age2$RNSN_ind*1e-3
+biomass_age2$wgt=biomass_age2$atoutput/nums_age$atoutput*1e6
 # now read in length-weight relationships from biol file
 bfile <- read.table(prm_biol,col.names=1:100,comment.char="",fill=TRUE,header=FALSE)
 #find the length-weight parameters from the old prm file, store them
@@ -162,7 +163,8 @@ tempmat2=as.data.frame(tempmat[2:60,])
 colnames(tempmat2)=c('Code', 'li_a', 'li_b')
 tempmat3=left_join(tempmat2, fgs2, by='Code')
 biomass_age2=left_join(biomass_age2, tempmat3[,2:4], by=c('species'='LongName'))
-biomass_age2$length_age=(as.numeric(as.character(biomass_age2$grams_N_Ind))/as.numeric(as.character(biomass_age2$li_a)))^(1/as.numeric(as.character(biomass_age2$li_b)))
+# biomass_age2$length_age=(as.numeric(as.character(biomass_age2$grams_N_Ind))/as.numeric(as.character(biomass_age2$li_a)))^(1/as.numeric(as.character(biomass_age2$li_b)))
+biomass_age2$length_age=(as.numeric(as.character(biomass_age2$wgt))/as.numeric(as.character(biomass_age2$li_a)))^(1/as.numeric(as.character(biomass_age2$li_b)))
 
 
 # Aggregate the rest of the dataframes by mean!
