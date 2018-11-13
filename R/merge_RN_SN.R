@@ -86,9 +86,11 @@ dev.off()
 ## plot length vs weight to make sure things look OK - metric
 nmc=unique(newX$Code)
 pdf(file='weight_length_metric.pdf')
+cohort=seq(1,10,1)
 for(i in 1:length(nmc)){
   ii=nmc[i]
-  plot(newX$vbert_cm2[newX$Code==ii]~newX$grams2[newX$Code==ii], ylab='cm', xlab='grams', main=ii)
+  # plot(newX$vbert_cm2[newX$Code==ii]~newX$grams2[newX$Code==ii], ylab='cm', xlab='grams', main=ii)
+  plot(newX$vbert_cm2[newX$Code==ii]~cohort, ylab='cm', xlab='cohort', main=ii)
 }
 dev.off()
 

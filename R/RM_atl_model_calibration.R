@@ -127,8 +127,7 @@ for (x in 1:length(ii)){
   iii=ii[x]
   test=result$biomass_age2 %>% filter(species == iii, time > 0)
   boxplot(test$length_age ~ test$agecl, ylab='cm', xlab='cohort', main=iii)
-  
-}
+  }
 dev.off()
 
 

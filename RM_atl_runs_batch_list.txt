@@ -640,5 +640,19 @@ atlantisMerged -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at
 # reduce efficiency by half for vertebrates (new biol file)
 atlantisMerged -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_lowE_20180928.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20181106b  1>1b.junk 2>2b.junk
 
+# testing scaled mum and C based on run from 20181106a (took mum and C values for YTF, DRM, FOU, SHK groups from 1106b (based on v1))
+4 runs:
+A) scaled mum from 20181106a, with old C* from 1106a (* = merged with 1106b 4 groups)
+B) old mum*, scaled C
+C) scaled mum, scaled C
+D) scaled mum, C is 10x mum
+
+atlantisMerged -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180928_A.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20181110a  1>1a.junk 2>2a.junk
+
+atlantisMerged -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180928_B.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20181110b  1>1b.junk 2>2b.junk
+
+atlantisMerged -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180928_C.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20181110c  1>1c.junk 2>2c.junk
+
+atlantisMerged -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20180928_D.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20181110d  1>1d.junk 2>2d.junk
 
 
