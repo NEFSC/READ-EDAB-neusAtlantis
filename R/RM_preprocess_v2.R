@@ -1,21 +1,21 @@
-library("atlantistools")
-library("ggplot2")
-library("gridExtra")
-library("dplyr")
-# 
-# # # 
-# # # #_____________________________
-# # ## WINDOWS
-# # setwd(choose.dir(default=getwd())) # where run data are saved
-# setwd('E:/AtlantisRun/20161103/tes/20181029dta')
-# d2=getwd()
-# d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
-# # d1="C:/Users/ryan.morse/Documents/GitHub/atneus_RM_20180827"
-# 
-# # #linux
-# d1='/home/ryan/Git/atneus737e3d' # for NEUS 1.0 on new code base RM
+# library("atlantistools")
+# library("ggplot2")
+# library("gridExtra")
+# library("dplyr")
+# # 
+# # # # 
+# # # # #_____________________________
+# # # ## WINDOWS
+# # # setwd(choose.dir(default=getwd())) # where run data are saved
+# # setwd('E:/AtlantisRun/20161103/tes/20181029dta')
+# # d2=getwd()
+# # d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
+# # # d1="C:/Users/ryan.morse/Documents/GitHub/atneus_RM_20180827"
+# # 
+# # # #linux
+# # d1='/home/ryan/Git/atneus737e3d' # for NEUS 1.0 on new code base RM
 # d1='/home/ryan/Git/atneus_RM'
-# d2='/home/ryan/AtlRuns/20180927a'
+# d2='/home/ryan/AtlRuns/20181110b'
 # setwd(d2)
 
 files=list.files(path=d2, pattern='.nc')
@@ -249,8 +249,9 @@ result <- list(
 )
 filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
 save(result, file=paste(filename, '_prepro.rdata',sep=''))
-source('~/GitHub/atneus_RM/R/RM_atl_model_calibration.R')
-
+# source('~/GitHub/atneus_RM/R/RM_atl_model_calibration.R') #win
+# source('~/Git/atneus_RM/R/RM_atl_model_calibration.R') #linux
+source(paste(d1, '/R/RM_atl_model_calibration.R', sep='')) #bothd2
 
 # result <- list(
 #   "biomass"                = biomass,       #1

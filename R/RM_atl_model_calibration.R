@@ -121,14 +121,14 @@ update_labels(p = plot, labels = c(gen_labels, list(colour = "Ageclass")))
 ggsave(paste(filename," biomass at age timeseries.png", sep=''), width=20, height=17, dpi=96)
 
 # plot length at age - may need to call: result$biomass_age2 added 20181102
-ii=unique(result$biomass_age2$species)
-pdf(file=paste(filename,'_length_age_test.pdf', sep=''))
-for (x in 1:length(ii)){
-  iii=ii[x]
-  test=result$biomass_age2 %>% filter(species == iii, time > 0)
-  boxplot(test$length_age ~ test$agecl, ylab='cm', xlab='cohort', main=iii)
-  }
-dev.off()
+# ii=unique(result$biomass_age2$species)
+# pdf(file=paste(filename,'_length_age_test.pdf', sep=''))
+# for (x in 1:length(ii)){
+#   iii=ii[x]
+#   test=result$biomass_age2 %>% filter(species == iii, time > 0)
+#   boxplot(test$length_age ~ test$agecl, ylab='cm', xlab='cohort', main=iii)
+#   }
+# dev.off()
 
 
 
@@ -405,11 +405,11 @@ lines(biom$ZG~biom$Time, type='l', col='green')
 legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
 dev.off()
 
-plots <- plot_spatial_overlap(result$spatial_overlap)
-pdf(file=paste(filename, '_spatial_overlap.pdf', sep=''),paper='A4r', width=11, height=8)
-for (i in seq_along(plots)) {
-  cat(paste0("## Spatial Plot ", i, ": ", names(plots)[i]), sep = "\n")
-  gridExtra::grid.arrange(plots[[i]])
-  cat("\n\n")
-}
-dev.off()
+# plots <- plot_spatial_overlap(result$spatial_overlap)
+# pdf(file=paste(filename, '_spatial_overlap.pdf', sep=''),paper='A4r', width=11, height=8)
+# for (i in seq_along(plots)) {
+#   cat(paste0("## Spatial Plot ", i, ": ", names(plots)[i]), sep = "\n")
+#   gridExtra::grid.arrange(plots[[i]])
+#   cat("\n\n")
+# }
+# dev.off()
