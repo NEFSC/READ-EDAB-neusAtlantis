@@ -68,6 +68,8 @@ bio_conv <- get_conv_mgnbiot(prm_biol)
 groups <- get_groups(fgs)
 groups_age <- get_age_groups(fgs)
 groups_rest <- groups[!groups %in% groups_age]
+codes_age=get_age_acronyms(fgs)
+data_fgs=load_fgs(fgs)
 
 # Read in raw untransformed data from nc_gen
 vars <- list("Nums", "StructN", "ResN", "N")
@@ -144,9 +146,9 @@ nums_box <- agg_data(data = dfs_gen[[1]], groups = c("species", "polygon", "time
 
 ### working now?
 # connvert tonnes to mg N by age then to grams N to use in von Bertalanffy params to get length in cm
-biomass_age2$RNSN_ind=biomass_age2$atoutput/nums_age$atoutput/bio_conv
+biomass_age2$RNSN_ind=biomass_age2$atoutput/nums_age$atoutput[1:nrow(biomass_age2)]/bio_conv
 biomass_age2$grams_N_Ind=biomass_age2$RNSN_ind*1e-3
-biomass_age2$wgt=biomass_age2$atoutput/nums_age$atoutput*1e6
+biomass_age2$wgt=biomass_age2$atoutput/nums_age$atoutput[1:nrow(biomass_age2)]*1e6
 # now read in length-weight relationships from biol file
 bfile <- read.table(prm_biol,col.names=1:100,comment.char="",fill=TRUE,header=FALSE)
 #find the length-weight parameters from the old prm file, store them

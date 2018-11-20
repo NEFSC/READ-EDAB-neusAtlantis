@@ -121,14 +121,18 @@ update_labels(p = plot, labels = c(gen_labels, list(colour = "Ageclass")))
 ggsave(paste(filename," biomass at age timeseries.png", sep=''), width=20, height=17, dpi=96)
 
 # plot length at age - may need to call: result$biomass_age2 added 20181102
-# ii=unique(result$biomass_age2$species)
-# pdf(file=paste(filename,'_length_age_test.pdf', sep=''))
-# for (x in 1:length(ii)){
-#   iii=ii[x]
-#   test=result$biomass_age2 %>% filter(species == iii, time > 0)
-#   boxplot(test$length_age ~ test$agecl, ylab='cm', xlab='cohort', main=iii)
-#   }
-# dev.off()
+init_length=read.csv(file=paste(d1, '/vertebrate_init_length_cm.csv', sep=''), header = T, stringsAsFactors = F)
+
+ii=unique(result$biomass_age2$species)
+pdf(file=paste(filename,'_tuning_length_age.pdf', sep=''))
+for (x in 1:length(ii)){
+  iii=ii[x]
+  test=result$biomass_age2 %>% filter(species == iii, time > 0)
+  test2=init_length[,3:13] %>% filter(Long.Name == iii)
+  boxplot(test$length_age ~ test$agecl, ylab='cm', xlab='cohort', main=iii)
+  points(seq(1:10), test2[2:11], col='red', pch=17)
+  }
+dev.off()
 
 
 

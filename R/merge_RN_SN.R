@@ -14,6 +14,10 @@ d1='/home/ryan/Git/atneus_RM'
 # d2='/home/ryan/AtlRuns/20180510a'
 setwd(d1)
 
+codes=read.table(file=paste(d1, '/R/coderelations.csv', sep=''), header=T, sep=',', stringsAsFactors = F)
+codes=codes[-c(1:2),]
+
+
 
 # t=read_xlsx('C:/Users/ryan.morse/Documents/GitHub/atneus_RM/R/RNSN.xlsx', sheet='Sheet1')
 # c=read_xlsx('C:/Users/ryan.morse/Documents/GitHub/atneus_RM/R/RNSN.xlsx', sheet='Sheet2')
@@ -111,6 +115,17 @@ t=newX[,c("Code", "grams2", "Cohort")]
 t2=melt.data.frame(t, id.vars=c('Code', 'Cohort'), measure.vars = 'grams2')
 t3=cast(t2, Code ~ Cohort)
 write.table(t3, file='vertebrate_weights_grams.csv', sep=',', col.names = T, row.names = F)
+
+# length at age for initial conditions 
+t=newX[,c("Code", "Species", "vbert_cm2", "Cohort")]
+t2=melt.data.frame(t, id.vars=c('Code', 'Cohort'), measure.vars = 'vbert_cm2')
+t3=cast(t2, Code ~ Cohort)
+t2=melt.data.frame(t, id.vars=c('Species', 'Cohort'), measure.vars = 'vbert_cm2')
+t4=cast(t2, Species ~ Cohort)
+write.table(t4, file='vertebrate_init_length_cm.csv', sep=',', col.names = T, row.names = F)
+t5=left_join(t3, codes, by=c('Code'='Child'))
+# write.table(t5, file='vertebrate_init_length_cm.csv', sep=',', col.names = T, row.names = F)
+
 
 t=newX[,c("Code", "Cohort")]
 t$RNSN=newX$RN_2 + newX$SN_2
