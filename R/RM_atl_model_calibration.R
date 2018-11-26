@@ -122,7 +122,7 @@ ggsave(paste(filename," biomass at age timeseries.png", sep=''), width=20, heigh
 
 # plot length at age - may need to call: result$biomass_age2 added 20181102
 init_length=read.csv(file=paste(d1, '/vertebrate_init_length_cm.csv', sep=''), header = T, stringsAsFactors = F)
-
+init_length=init_length[order(init_length$Long.Name),]
 ii=unique(result$biomass_age2$species)
 pdf(file=paste(filename,'_tuning_length_age.pdf', sep=''))
 for (x in 1:length(ii)){
@@ -134,7 +134,28 @@ for (x in 1:length(ii)){
   }
 dev.off()
 
-
+# ### ________ load biol info for mum and C -> compare length at age to init___________
+# library(shinyrAtlantis)
+# library(tidyverse)
+# grp.file <- (paste(d1,'/NeusGroups_v15_unix.csv', sep='')) # ALL GROUPS
+# bgm.file <- (paste(d1,"/neus_tmerc_RM.bgm", sep=''))
+# prm.file=(paste(d1,'/at_biol_neus_v15_scaled_diet_20180928_C.prm', sep=''))
+# NEUS_15_prm <- make.sh.prm.object(bgm.file, grp.file, prm.file)
+# mum=NEUS_15_prm$grp.growth
+# mum=mum[complete.cases(mum$co.1),]
+# mum=mum[order(mum$Long.Name),]
+# C=NEUS_15_prm$clearance.data
+# C=C[complete.cases(C$co.1),]
+# C=C[order(C$Long.Name),]
+# len_age_mn=biomass_age2 %>% group_by(species, agecl) %>%
+#   summarise(avg=mean(length_age)) %>%
+#   spread(agecl, avg)
+# lng.lng_int=len_age_mn[,2:11]/init_length[,4:13] # mean length at age divided by initial lenght at age, use to scale mum and C
+## Now scale mum and C by difference between length at age relative to initial conditions
+# mum.scale=mum[,6:15]*1/lng.lng_int
+# C.scale=C[,6:15]*1/lng.lng_int
+# write.csv(mum.scale, file='newMum.csv', col.names = T, row.names = T)
+# write.csv(C.scale, file='newC.csv', col.names = T, row.names = T)
 
 
 ###_________Number timeseries#________________________

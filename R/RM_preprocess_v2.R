@@ -1,13 +1,13 @@
-# library("atlantistools")
-# library("ggplot2")
-# library("gridExtra")
-# library("dplyr")
-# # 
+library("atlantistools")
+library("ggplot2")
+library("gridExtra")
+library("dplyr")
+#
 # # # # 
 # # # # #_____________________________
 # # # ## WINDOWS
 # # # setwd(choose.dir(default=getwd())) # where run data are saved
-# # setwd('E:/AtlantisRun/20161103/tes/20181029dta')
+# # setwd('E:/AtlantisRun/20161103/tes/20181110c')
 # # d2=getwd()
 # # d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
 # # # d1="C:/Users/ryan.morse/Documents/GitHub/atneus_RM_20180827"
