@@ -1,7 +1,7 @@
-library("atlantistools")
-library("ggplot2")
-library("gridExtra")
-library("dplyr")
+# library("atlantistools")
+# library("ggplot2")
+# library("gridExtra")
+# library("dplyr")
 #
 # # # # 
 # # # # #_____________________________
@@ -167,6 +167,9 @@ tempmat3=left_join(tempmat2, fgs2, by='Code')
 biomass_age2=left_join(biomass_age2, tempmat3[,2:4], by=c('species'='LongName'))
 # biomass_age2$length_age=(as.numeric(as.character(biomass_age2$grams_N_Ind))/as.numeric(as.character(biomass_age2$li_a)))^(1/as.numeric(as.character(biomass_age2$li_b)))
 biomass_age2$length_age=(as.numeric(as.character(biomass_age2$wgt))/as.numeric(as.character(biomass_age2$li_a)))^(1/as.numeric(as.character(biomass_age2$li_b)))
+## rename for use in atl_model_calibration.r
+length_age=biomass_age2[,c('species', 'agecl', 'time', 'length_age')]
+colnames(length_age)[4]='atoutput'
 
 
 # Aggregate the rest of the dataframes by mean!
@@ -227,7 +230,6 @@ vol_ts <- agg_data(vol, groups = c("time", "polygon"), fun = sum, out = "volume"
 result <- list(
   "biomass"                = biomass,       #1
   "biomass_age"            = biomass_age,
-  "biomass_age2"           = biomass_age2,
   "biomass_consumed"       = bio_cons,
   "biomass_spatial_stanza" = bio_sp_stanza,
   "diet"                   = df_dm,         #5 
@@ -237,6 +239,7 @@ result <- list(
   "grazing"                = grazing,
   "growth_age"             = growth_age,    #10
   "growth_rel_init"        = gr_rel_init,
+  "length_age"             = length_age,
   "nominal_dz"             = nominal_dz,
   "nums"                   = nums,
   "nums_age"               = nums_age,      
@@ -253,7 +256,7 @@ filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of f
 save(result, file=paste(filename, '_prepro.rdata',sep=''))
 # source('~/GitHub/atneus_RM/R/RM_atl_model_calibration.R') #win
 # source('~/Git/atneus_RM/R/RM_atl_model_calibration.R') #linux
-source(paste(d1, '/R/RM_atl_model_calibration.R', sep='')) #bothd2
+# source(paste(d1, '/R/RM_atl_model_calibration.R', sep='')) #bothd2
 
 # result <- list(
 #   "biomass"                = biomass,       #1
