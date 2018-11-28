@@ -134,29 +134,27 @@ for (x in 1:length(ii)){
   }
 dev.off()
 
-# ### ________ load biol info for mum and C -> compare length at age to init___________
-library(shinyrAtlantis)
-library(tidyverse)
-grp.file <- (paste(d1,'/NeusGroups_v15_unix.csv', sep='')) # ALL GROUPS
-bgm.file <- (paste(d1,"/neus_tmerc_RM.bgm", sep=''))
-prm.file=(paste(d1,'/at_biol_neus_v15_scaled_diet_20180928_C.prm', sep=''))
-NEUS_15_prm <- make.sh.prm.object(bgm.file, grp.file, prm.file)
-mum=NEUS_15_prm$grp.growth
-mum=mum[complete.cases(mum$co.1),]
-mum=mum[order(mum$Long.Name),]
-C=NEUS_15_prm$clearance.data
-C=C[complete.cases(C$co.1),]
-C=C[order(C$Long.Name),]
+#### ________ load biol info for mum and C -> compare length at age to init___________
+gps=get_age_acronyms(fgs)
+fgs_data=load_fgs(fgs)
+code_relations=fgs_data[,c('Code', 'LongName')]
+mum_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "mum") %>%   spread(agecl, mum)
+mum_age=left_join(mum_age, code_relations, by=c('species'='LongName'))
+C_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "C") %>% spread(agecl, c)
+C_age=left_join(C_age, code_relations, by=c('species'='LongName'))
+
+### scale mum and C to length at age relative to initial conditions ###
 len_age_mn=result$length_age %>% group_by(species, agecl) %>%
   summarise(avg=mean(atoutput)) %>%
   spread(agecl, avg)
 lng.lng_int=len_age_mn[,2:11]/init_length[,4:13] # mean length at age divided by initial lenght at age, use to scale mum and C
 # Now scale mum and C by difference between length at age relative to initial conditions
-mum.scale=mum[,6:15]*1/lng.lng_int
-C.scale=C[,6:15]*1/lng.lng_int
+mum.scale=mum_age[,2:11]*1/lng.lng_int; row.names(mum.scale)=mum_age$Code
+C.scale=C_age[,2:11]*1/lng.lng_int; row.names(C.scale)=C_age$Code
 write.csv(mum.scale, file='newMum.csv', col.names = T, row.names = T)
 write.csv(C.scale, file='newC.csv', col.names = T, row.names = T)
 
+### OR... Scale to RN relative to RN Init ###
 RN_mn=result$resn_age %>% group_by(species, agecl) %>%
   summarise(avg=mean(atoutput)) %>%
   spread(agecl, avg)
@@ -168,11 +166,14 @@ df_rel <- convert_relative_initial(result$resn_age) %>%
   group_by(species, agecl) %>%
   summarise(avg=mean(atoutput)) %>%
   spread(agecl, avg)
-
+mum.scale=mum_age[,2:11]*1/RN_RNinit; row.names(mum.scale)=mum_age$Code
+C.scale=C_age[,2:11]*1/RN_RNinit; row.names(C.scale)=C_age$Code
+write.csv(mum.scale, file='newMum.csv', col.names = T, row.names = T)
+write.csv(C.scale, file='newC.csv', col.names = T, row.names = T)
 
 ### load pPrey matrix; ADJUST if necessary
-dm <- load_dietmatrix(prm_biol, fgs)
-test=dm %>% filter(prey=='HAL')
+# dm <- load_dietmatrix(prm_biol, fgs)
+# test=dm %>% filter(prey=='HAL')
 # new_diet <- write_diet(dietmatrix, prm_biol, save_to_disc = T) # overwrite diet matrix after modifications
 
 
