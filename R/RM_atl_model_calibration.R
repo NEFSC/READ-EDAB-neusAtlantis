@@ -129,7 +129,7 @@ for (x in 1:length(ii)){
   iii=ii[x]
   test=result$length_age %>% filter(species == iii, time > 0)
   test2=init_length[,3:13] %>% filter(Long.Name == iii)
-  boxplot(test$length_age ~ test$agecl, ylab='cm', xlab='cohort', main=iii)
+  boxplot(test$atoutput ~ test$agecl, ylab='cm', xlab='cohort', main=iii)
   points(seq(1:10), test2[2:11], col='red', pch=17)
   }
 dev.off()
@@ -151,10 +151,10 @@ lng.lng_int=len_age_mn[,2:11]/init_length[,4:13] # mean length at age divided by
 # Now scale mum and C by difference between length at age relative to initial conditions
 mum.scale=mum_age[,2:11]*1/lng.lng_int; row.names(mum.scale)=mum_age$Code
 C.scale=C_age[,2:11]*1/lng.lng_int; row.names(C.scale)=C_age$Code
-write.csv(mum.scale, file='newMum.csv', col.names = T, row.names = T)
-write.csv(C.scale, file='newC.csv', col.names = T, row.names = T)
+write.csv(mum.scale, file='newMum_lengthbased.csv', row.names = T)
+write.csv(C.scale, file='newC_lengthbased.csv', row.names = T)
 
-### OR... Scale to RN relative to RN Init ###
+### AND/OR... Scale to RN relative to RN Init ###
 RN_mn=result$resn_age %>% group_by(species, agecl) %>%
   summarise(avg=mean(atoutput)) %>%
   spread(agecl, avg)
@@ -168,8 +168,8 @@ df_rel <- convert_relative_initial(result$resn_age) %>%
   spread(agecl, avg)
 mum.scale=mum_age[,2:11]*1/RN_RNinit; row.names(mum.scale)=mum_age$Code
 C.scale=C_age[,2:11]*1/RN_RNinit; row.names(C.scale)=C_age$Code
-write.csv(mum.scale, file='newMum.csv', col.names = T, row.names = T)
-write.csv(C.scale, file='newC.csv', col.names = T, row.names = T)
+write.csv(mum.scale, file='newMum_RNbased.csv', row.names = T)
+write.csv(C.scale, file='newC_RNbased.csv', row.names = T)
 
 ### load pPrey matrix; ADJUST if necessary
 # dm <- load_dietmatrix(prm_biol, fgs)
@@ -191,6 +191,12 @@ ggsave(paste(filename," recruits timeseries.png", sep=''), width=20, height=17, 
 plot <- plot_line(result$ssb_rec, y='ssb')
 update_labels(p = plot, labels = list(x = "Time [days]", y = "Numbers"))
 ggsave(paste(filename," ssb timeseries.png", sep=''), width=20, height=17, dpi=96)
+
+### ______ recruits per spawner_______ added 20181129 RM
+# result$ssb_rec$rec.ssb=result$ssb_rec$rec/result$ssb_rec$ssb
+plot <- plot_line(result$ssb_rec, y='rec.ssb', yexpand = T)
+update_labels(p = plot, labels = list(x = "Time [days]", y = "Numbers"))
+ggsave(paste(filename," Rec_per_SSB timeseries.png", sep=''), width=20, height=17, dpi=96)
 
 
 
@@ -304,6 +310,9 @@ plot <- plot_line(df_rel)
 plot <- update_labels(plot, list(x = "Time [years]", y = expression(Biomass/Biomass[init])))
 plot_add_box(plot)
 ggsave(paste(filename," Biomass_Bio init.png", sep=''), width=20, height=17, dpi=96)
+
+
+
 
 ####__________ SPATIAL DISTRIBUTION PLOTS____________________________________
 ### Numbers at age
