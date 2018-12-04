@@ -10,14 +10,34 @@
 #   Only change the following values:
 #
 ###############################################################################################################################################################################
+d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
+d1='/home/ryan/Git/atneus_RM'
+setwd(d1)
+
+CodeRelations <- read.csv(paste(d1,"/R/coderelations.csv", sep=''), stringsAsFactors = F)
+cr=CodeRelations[order(CodeRelations$Parent),]
+cr=cr[-c(1,2),]
+cr$test=cr$Parent==cr$Child # compare names
+
+cr$rpt=NA
+cr$new=NA
+cr$diff=NA
+for (i in 1:length(cr$Parent)){
+  cr$rpt[i]=sum(cr$Parent==cr$Parent[i]) # total number of groups from parent
+  cr$new[i]=sum(cr$Child==cr$Parent[i]) # if parent is reused (1) or renamed (0)
+  cr$diff[i]=cr$rpt[i]-cr$new[i]
+}
+cr2=cr[cr$diff>0,]
+
 
 # The name of the existing prm file you wish to update.
 # inputFileName = "/data/Atlantis/runFiles/trunk/SETas_model_New/VMPA_setas_biol_fishing_New_BU.prm"
-inputFileName = "C:/Users/ryan.morse/Documents/GitHub/atneus_RM/at_harvest_neus_v15_DE_RM.prm"
+inputFileName = paste(d1,"/atneus_RM/at_harvest_neus_v15_DE_RM.prm", sep='')
 
 #The name of the new prm file.
 # outputFileName = "/data/Atlantis/runFiles/trunk/SETas_model_New/VMPA_setas_biol_fishing_New_Updated.prm"
-outputFileName = "C:/Users/ryan.morse/Documents/GitHub/atneus_RM/at_harvest_neus_v15_DE_RM.prm"
+outputFileName = paste(d1,"/at_harvest_neus_v15_DE_RM2.prm", sep='')
+
 
 # The groupCode of the existing group in your inputFileName prm file.
 OriginalGroupName = "WHT"
