@@ -32,7 +32,7 @@ cr2=cr[cr$diff>0,]
 
 # The name of the existing prm file you wish to update.
 # inputFileName = "/data/Atlantis/runFiles/trunk/SETas_model_New/VMPA_setas_biol_fishing_New_BU.prm"
-inputFileName = paste(d1,"/atneus_RM/at_harvest_neus_v15_DE_RM.prm", sep='')
+inputFileName = paste(d1,"/at_harvest_neus_v15_DE.prm", sep='')
 
 #The name of the new prm file.
 # outputFileName = "/data/Atlantis/runFiles/trunk/SETas_model_New/VMPA_setas_biol_fishing_New_Updated.prm"
@@ -44,6 +44,11 @@ OriginalGroupName = "WHT"
 
 # The groupCode of the new group you want to add.
 AdditionalGroupName = "SWH"
+
+### replace XXX with YYY for certain species (example below)
+tx  <- readLines("~/Desktop/text.txt")
+tx2  <- gsub(pattern = "abc", replace = "ccccccccccccccccccccc", x = tx)
+writeLines(tx2, con="~/Desktop/text2.txt")
 
 ###############################################################################################################################################################################
 
