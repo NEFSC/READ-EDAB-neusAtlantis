@@ -40,10 +40,10 @@ outputFileName = paste(d1,"/at_harvest_neus_v15_DE_RM2.prm", sep='')
 
 
 # The groupCode of the existing group in your inputFileName prm file.
-OriginalGroupName = "WHT"
+OriginalGroupName = "FVT"
 
 # The groupCode of the new group you want to add.
-AdditionalGroupName = "SWH"
+AdditionalGroupName = "BIL"
 
 ### replace XXX with YYY for certain species (example below)
 tx  <- readLines("~/Desktop/text.txt")
@@ -66,7 +66,7 @@ for (lineIndex in 1:numLines){
         if(length(match) > 0){
        
             # Does the next line start with a number?
-            startChar = substr(text[lineIndex + 1], 0, 1);
+            startChar = substr(text[lineIndex + 1], 0, 1); # 0, 10 would catch if it starts with #
             
             result = grep("[0-9]", startChar)
                       
@@ -99,3 +99,78 @@ for (lineIndex in 1:numLines){
 }
 
 sink();
+
+#### testing - currently copies file 66 times...
+
+inputFileName = paste(d1,"/at_harvest_neus_v15_DE.prm", sep='')
+
+outputFileName = paste(d1,"/at_harvest_neus_v15_DE_RM2.prm", sep='')
+text <- readLines(inputFileName,encoding="UTF-8")
+sink(outputFileName);
+
+numLines = length(text)
+for (nn in 1: length(cr2$Parent)){
+  
+  # The groupCode of the existing group in your inputFileName prm file.
+  OriginalGroupName = cr2$Parent[nn] #"FVT"
+  
+  # The groupCode of the new group you want to add.
+  AdditionalGroupName = cr2$Child[nn] #"BIL"
+  
+  numx=cr2$rpt[nn] # number of times it is repeated
+  numnew=cr2$diff[nn] # number of new entries (excludes when parent==child)
+  
+  # ### replace XXX with YYY for certain species (example below)
+  # tx  <- readLines("~/Desktop/text.txt")
+  # tx2  <- gsub(pattern = "abc", replace = "ccccccccccccccccccccc", x = tx)
+  # writeLines(tx2, con="~/Desktop/text2.txt")
+  
+  
+  
+  for (lineIndex in 1:numLines){
+    
+    if(nchar(text[lineIndex]) > 0){
+      
+      match = grep(OriginalGroupName, text[lineIndex]);
+      
+      if(length(match) > 0){
+        
+        # Does the next line start with a number?
+        startChar = substr(text[lineIndex + 1], 0, 1); # 0, 10 would catch if it starts with #
+        
+        result = grep("[0-9]", startChar)
+        
+        if(length(result) > 0){
+          for (nnn in 1:numx){
+            
+            # Double line parameter.
+            write(text[lineIndex], "", append = TRUE);
+            write(text[lineIndex + 1], "", append = TRUE);
+            
+            #Now replace the strings and print out.
+            string = gsub(OriginalGroupName, AdditionalGroupName, text[lineIndex]);
+            write(string, "", append = TRUE);
+            write(text[lineIndex + 1], "", append = TRUE);
+          }
+        }else{
+          for (nnn in 1:numx){
+            # Single line parameter.
+            write(text[lineIndex], "", append = TRUE);
+            
+            #Now replace the strings and print out.
+            string = gsub(OriginalGroupName, AdditionalGroupName, text[lineIndex]);
+            write(string, "", append = TRUE);
+          }
+        }
+      }
+      else{
+        write(text[lineIndex], "", append = TRUE);
+      }
+    }else{
+      write(text[lineIndex], "", append = "TRUE");
+    }
+  }
+  
+}
+sink();
+

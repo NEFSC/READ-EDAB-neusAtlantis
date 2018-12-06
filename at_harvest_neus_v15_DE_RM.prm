@@ -1,6 +1,6 @@
-## Fisheries parameter file for use with the northeast United States version of the Boxmodel (Atlantis) model
+## Fisheries parameter file for use with the northeast United States version of the Box model (Atlantis) model
 #
-## For reference, the following are the codenames for each biological component. 
+## For reference, the following are the code names for each biological component. 
 # Those marked with a + also have Si pool too. Those marked special have three pools, a sructural N
 # (mg N individual-1), reserve N (mg N individual-1) and numbers (per box)
 # Description                   Symbol  Units
