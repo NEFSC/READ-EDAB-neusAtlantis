@@ -174,3 +174,75 @@ for (nn in 1: length(cr2$Parent)){
 }
 sink();
 
+
+#################################################### this seems to work... 20181210 RM
+inputFileName = paste(d1,"/at_harvest_neus_v15_DE.prm", sep='')
+outputFileName = paste(d1,"/at_harvest_neus_v15_DE_RM9.prm", sep='')
+
+text <- readLines(inputFileName,encoding="UTF-8")
+sink(outputFileName);
+numLines = length(text)
+topMatch=unique(cr$Parent)
+# lowMatch=unique(cr$Parent)
+
+for (lineIndex in 1:numLines){
+  # if(nchar(text[lineIndex]) > 0){
+  # matchA = grep(topMatch, text[lineIndex]);
+  # matchA = grep("BFF|BFS|BML|BMS|CEP|FBP|FDB|FDC|FDD|FDE|FDO|FDS|FMM|FPL|FPS|FVB|FVD|FVS|FVT|PWN|SHB|SHD|SHP|SSK|WHB|WHT",text[lineIndex]);
+  excludes=grep("FMN|FVO|BFD|BMD|SP|SHR|WDG|FPO|FDP|FDM|FVV|SHC|WHS", text[lineIndex]);
+  if(length(excludes) > 0){
+    next
+  }
+  else{
+  matchA = grep("BB|BC|BD|BFF|BFS|BG|BML|BMS|BO|CEP|DC|DCsed|DF|DL|DLsed|DR|DRsed|FBP|FDB|FDC|FDD|FDE|FDF|FDO|FDS|FMM|FPL|FPS|FVB|FVD|FVS|FVT|MA|MB|PB|PIN|PL|PS|PWN|REP|SB|SG|SHB|SHD|SHP|SSK|WHB|WHT|ZG|ZL|ZM|ZS",text[lineIndex]);
+  startChar = substr(text[lineIndex + 1], 0, 1); # 0, 10 would catch if it starts with #
+  result = grep("[0-9]", startChar)
+  if(length(matchA) == 0 & length(result==0)){
+    write(text[lineIndex], "", append = "TRUE");
+  }
+   else{
+     
+   for (nn in 1: length(cr$Parent)){
+      OriginalGroupName = cr$Parent[nn] #"FVT"
+      AdditionalGroupName = cr$Child[nn] #"BIL"
+      # numx=cr2$rpt[nn] # number of times it is repeated
+      # numnew=cr2$diff[nn] # number of new entries (excludes when parent==child)
+      
+      if(nchar(text[lineIndex]) > 0){
+        
+        match = grep(OriginalGroupName, text[lineIndex]);
+        
+        if(length(match) > 0){
+          
+          # Does the next line start with a number?
+          startChar = substr(text[lineIndex + 1], 0, 1); # 0, 10 would catch if it starts with #
+          
+          result = grep("[0-9]", startChar)
+          
+          if(length(result) > 0){
+            
+            # Double line parameter.
+            # write(text[lineIndex], "", append = TRUE);
+            # write(text[lineIndex + 1], "", append = TRUE);
+            
+            #Now replace the strings and print out.
+            string = gsub(OriginalGroupName, AdditionalGroupName, text[lineIndex]);
+            write(string, "", append=T)
+            write(text[lineIndex + 1], "", append = TRUE);
+          }else{
+            
+            # Single line parameter.
+            # write(text[lineIndex], "", append = TRUE);
+            
+            #Now replace the strings and print out.
+            string = gsub(OriginalGroupName, AdditionalGroupName, text[lineIndex]);
+            write(string, "", append = TRUE);
+          }
+        }
+      }
+      }
+    }
+  }
+}
+sink();
+
