@@ -73,12 +73,12 @@ for (lineIndex in 1:numLines){
             if(length(result) > 0){
             
                 # Double line parameter.
-                write(text[lineIndex], "", append = TRUE);
-                write(text[lineIndex + 1], "", append = TRUE);
+                # write(text[lineIndex], "", append = TRUE);
+                # write(text[lineIndex + 1], "", append = TRUE);
                
                 #Now replace the strings and print out.
                 string = gsub(OriginalGroupName, AdditionalGroupName, text[lineIndex]);
-                
+                write(string, "", append=T)
                 write(text[lineIndex + 1], "", append = TRUE);
             }else{
             
