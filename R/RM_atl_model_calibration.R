@@ -296,6 +296,7 @@ ggsave(paste(filename," Growth at age_growth init.png", sep=''), width=20, heigh
 ### Growth relative to initial conditions
 plot <- plot_line(result$growth_rel_init, y = "gr_rel", col = "agecl")
 update_labels(plot, list(y = expression((Growth - Growth[req])/Growth[req])))
+ggsave(paste(filename," Growth_growth init.png", sep=''), width=20, height=17, dpi=96)
 
 ### Numbers per ageclass
 df_rel <- convert_relative_initial(result$nums_age)
