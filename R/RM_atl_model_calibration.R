@@ -193,7 +193,7 @@ update_labels(p = plot, labels = list(x = "Time [days]", y = "Numbers"))
 ggsave(paste(filename," ssb timeseries.png", sep=''), width=20, height=17, dpi=96)
 
 ### ______ recruits per spawner_______ added 20181129 RM
-# result$ssb_rec$rec.ssb=result$ssb_rec$rec/result$ssb_rec$ssb
+result$ssb_rec$rec.ssb=result$ssb_rec$rec/result$ssb_rec$ssb
 plot <- plot_line(result$ssb_rec, y='rec.ssb', yexpand = T)
 update_labels(p = plot, labels = list(x = "Time [days]", y = "Numbers"))
 ggsave(paste(filename," Rec_per_SSB timeseries.png", sep=''), width=20, height=17, dpi=96)

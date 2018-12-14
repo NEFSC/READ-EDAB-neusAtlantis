@@ -498,4 +498,11 @@ Mum=mum[order(mum$Code),]
 mdc=Mum[,6:15]/C[,6:15]
 #________________
 
+### Load pPrey Diet Matrix using atlantistools
+# easier to work with
+diett=atlantistools::load_dietmatrix(prm.file, grp.file, transform = T, convert_names = T)
+# untransformed original
+diet=atlantistools::load_dietmatrix(prm.file, grp.file, transform = F, convert_names = T)
+
+
 

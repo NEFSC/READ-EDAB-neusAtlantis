@@ -114,7 +114,7 @@ df_dm <- load_dietcheck(dietcheck = dietcheck, fgs = fgs, prm_run = prm_run, con
 
 # Read in SSB/R
 ssb_rec <- load_rec(yoy = yoy, ssb = ssb, prm_biol = prm_biol)
-result$ssb_rec$rec.ssb=result$ssb_rec$rec/result$ssb_rec$ssb # recruits per spawner
+# result$ssb_rec$rec.ssb=result$ssb_rec$rec/result$ssb_rec$ssb # recruits per spawner
 
 # Read in misc  
 df_agemat <- prm_to_df(prm_biol = prm_biol, fgs = fgs, group = get_age_acronyms(fgs), parameter = "age_mat")
