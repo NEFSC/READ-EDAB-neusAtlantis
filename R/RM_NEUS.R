@@ -503,6 +503,19 @@ mdc=Mum[,6:15]/C[,6:15]
 diett=atlantistools::load_dietmatrix(prm.file, grp.file, transform = T, convert_names = T)
 # untransformed original
 diet=atlantistools::load_dietmatrix(prm.file, grp.file, transform = F, convert_names = T)
+write.csv(diet, file='pPrey20181128.csv')
 
+test=diet[,5:96]
+# idx=test[which(test<0.1) & (test > 0.00001),]
+# test[idx,]=test[idx,]*5
 
+### scale values between 0.1 and 0.0001 by 5x
+# test2=data.frame(t(apply(test, 1, function(x) ifelse((x>0.0001) & (x<0.1), x*5, x))))
+test2=data.frame(t(apply(test, 1, function(x) ifelse((x>0.0001) & (x<0.03), x*10, x))))
 
+diet2=diet
+diet2[,5:96]=test2
+### now write to disc to update file
+new_diet=atlantistools::write_diet(diet2, prm.file, save_to_disc=T)
+write.csv(diet2, file='pPrey20181128_a.csv')
+write.csv(diet2, file='pPrey20181128_b.csv')
