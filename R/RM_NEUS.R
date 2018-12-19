@@ -500,22 +500,132 @@ mdc=Mum[,6:15]/C[,6:15]
 
 ### Load pPrey Diet Matrix using atlantistools
 # easier to work with
+grp.file <- ('NeusGroups_v15_unix.csv') # ALL GROUPS
+wd2='C:/Users/ryan.morse/Documents/GitHub/atneus_RM'
+wd2='/home/ryan/Git/atneus_RM'
+setwd(wd2)
+prm.file=('at_biol_neus_v15_scaled_diet_20181126.prm')
 diett=atlantistools::load_dietmatrix(prm.file, grp.file, transform = T, convert_names = T)
 # untransformed original
 diet=atlantistools::load_dietmatrix(prm.file, grp.file, transform = F, convert_names = T)
-write.csv(diet, file='pPrey20181128.csv')
+# write.csv(diet, file='pPrey20181128.csv') # save orginal diet from biol file prior to mods
 
+### Now scale availability pPrey values ###
 test=diet[,5:96]
-# idx=test[which(test<0.1) & (test > 0.00001),]
-# test[idx,]=test[idx,]*5
-
-### scale values between 0.1 and 0.0001 by 5x
-# test2=data.frame(t(apply(test, 1, function(x) ifelse((x>0.0001) & (x<0.1), x*5, x))))
-test2=data.frame(t(apply(test, 1, function(x) ifelse((x>0.0001) & (x<0.03), x*10, x))))
+# test2=data.frame(t(apply(test, 1, function(x) ifelse((x>0.0001) & (x<0.1), x*5, x)))) # scale values between 0.1 and 0.0001 by 5x
+test2=data.frame(t(apply(test, 1, function(x) ifelse((x>0.0001) & (x<0.03), x*10, x))))# scale values between 0.03 and 0.0001 by 10x
+# test2=data.frame(t(apply(test, 1, function(x) ifelse((x>0), 1, 0)))) # set 1 for all available, 0 for not (testing)
+# test2=data.frame(t(apply(test, 1, function(x) ifelse((x>0), 0, 0)))) # set zero for all (testing)
 
 diet2=diet
 diet2[,5:96]=test2
+# write.csv(diet2, file='pPrey20181128_a.csv') # save option to take a look...
+# write.csv(diet2, file='pPrey20181128_b.csv')
 ### now write to disc to update file
-new_diet=atlantistools::write_diet(diet2, prm.file, save_to_disc=T)
-write.csv(diet2, file='pPrey20181128_a.csv')
-write.csv(diet2, file='pPrey20181128_b.csv')
+new_diet=atlantistools::write_diet(diet2, prm.file, save_to_disc=F) ## set save to disc T to update current biol file
+write(new_diet, file='at_biol_all_available.prm') ## OR write new biology file!
+write(new_diet, file='at_biol_none_available.prm') ## OR write new biology file!
+
+
+
+# 
+# You can use the following functions within atlantistools to extract the data:
+# - load_dietcheck() to read in the "DietCheck.txt"
+# - load_txt() to read in "SpecificMort.txt"
+# - load_spec_mort() to read in "SpecificPredMort.txt"
+# - load_nc() to read in numbers@age
+
+##### Change Clearance and mum from runs #### ________________________
+gps=get_age_acronyms(fgs)
+# prm_biol=(paste(d1,'/at_biol_neus_v15_scaled_diet_20180928.prm', sep='')) # first instance of weight based C, mum computation
+prm_biol=(paste(d1,'/at_biol_neus_v15_scaled_diet_20181126.prm', sep='')) # updated version
+fgs_data=load_fgs(fgs)
+code_relations=fgs_data[,c('Code', 'LongName')]
+cr2=code_relations
+cr2=cr2[which(cr2$Code %in% gps),]
+cr2$code_ord=seq(1:length(cr2$Code))
+### note this uses order, not sort so the indexing is direct eg cr2$Code[cr2$code_alpha_ord] ---- NOT CORRECT YET!!!!
+# cr2$code_alpha_ord=cr2$code_ord[order(cr2$Code)]
+# cr2$code_LongName_ord=cr2$code_ord[order(cr2$LongName)]
+# # cr2$alpha_ord= with(cr2,  cr2[order(Code),'code_ord'])
+# cr3= with(cr2,  cr2[order(Code) , ])
+# cr3$test=seq(1:length(cr3$Code))
+# cr2$code_alpha_ord=cr3$test[sort(cr3$code_ord)]
+# cr3= with(cr2,  cr2[order(LongName) , ])
+# cr2$LNm_alpha_ord=cr3$code_ord
+# mum_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "mum") %>%   spread(agecl, mum)
+# mum_age=left_join(mum_age, code_relations, by=c('species'='LongName'))
+# C_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "C") %>% spread(agecl, c)
+# C_age=left_join(C_age, code_relations, by=c('species'='LongName'))
+
+### scale mum and C to length at age relative to initial conditions ###
+# len_age_mn=result$length_age %>% group_by(species, agecl) %>%
+#   summarise(avg=mean(atoutput)) %>%
+#   spread(agecl, avg)
+# lng.lng_int=len_age_mn[,2:11]/init_length[,4:13] # mean length at age divided by initial lenght at age, use to scale mum and C
+# # Now scale mum and C by difference between length at age relative to initial conditions
+# mum.scale=mum_age[,2:11]*1/lng.lng_int; row.names(mum.scale)=mum_age$Code
+# C.scale=C_age[,2:11]*1/lng.lng_int; row.names(C.scale)=C_age$Code
+df_rel <- convert_relative_initial(result$length_age) %>%
+  group_by(species, agecl) %>%
+  summarise(avg=mean(atoutput)) %>%
+  spread(agecl, avg)
+mum_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "mum") %>%   spread(agecl, mum)
+mum.scale=mum_age[,2:11]*1/df_rel[,2:11]; row.names(mum.scale)=mum_age[,1]
+C_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "C") %>% spread(agecl, c)
+C.scale=C_age[,2:11]*1/df_rel[,2:11]; row.names(C.scale)=mum_age[,1]
+new_prm <- change_prm_cohort(prm_biol, select_acronyms = gps,
+                             roc = as.matrix(C.scale),
+                             parameter = "C",
+                             save_to_disc = T)
+new_prm <- change_prm_cohort(prm_biol, select_acronyms = gps,
+                             roc = as.matrix(mum.scale),
+                             parameter = "mum",
+                             save_to_disc = T)
+
+### AND/OR... Scale to RN relative to RN Init ###
+df_rel <- convert_relative_initial(result$resn_age) %>%
+  group_by(species, agecl) %>%
+  summarise(avg=mean(atoutput)) %>%
+  spread(agecl, avg)
+mum_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "mum") %>%   spread(agecl, mum)
+mum.scale=mum_age[,2:11]*1/df_rel[,2:11]; row.names(mum.scale)=mum_age[,1]
+C_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "C") %>% spread(agecl, c)
+C.scale=C_age[,2:11]*1/df_rel[,2:11]; row.names(C.scale)=mum_age[,1]
+
+### AND/OR... Scale to biomass init ### makes things very wrong...
+# df_rel <- convert_relative_initial(result$biomass_age) %>%
+#   group_by(species, agecl) %>%
+#   summarise(avg=mean(atoutput)) %>%
+#   spread(agecl, avg)
+# mum_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "mum") %>%   spread(agecl, mum)
+# mum.scale=mum_age[,2:11]*1/df_rel[,2:11]; row.names(mum.scale)=mum_age[,1]
+# C_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "C") %>% spread(agecl, c)
+# C.scale=C_age[,2:11]*1/df_rel[,2:11]; row.names(C.scale)=mum_age[,1]
+
+new_prm <- change_prm_cohort(prm_biol, select_acronyms = gps,
+                             roc = as.matrix(1/df_rel[,2:11]),
+                             parameter = "C",
+                             save_to_disc = FALSE)
+
+
+### get mum anc C RN, SN based calc values prior to tweaks from Nov 6 2018, but keep other changes in most recent file... from Dec 2018
+prm_biol=(paste(d1,'/at_biol_neus_v15_scaled_diet_20180928.prm', sep='')) # first instance of weight based C, mum computation
+mum_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "mum") %>%   spread(agecl, mum)
+C_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "C") %>% spread(agecl, c)
+prm_biol=(paste(d1,'/at_biol_neus_v15_scaled_diet_20181126.prm', sep='')) # updated version
+new_prm1 <- change_prm_cohort(prm_biol, select_acronyms = gps,
+                             roc = as.matrix(C_age[,2:11]),
+                             parameter = "C",
+                             save_to_disc = FALSE)
+write(new_prm1, file='at_biol_20180928calc_updated.prm') ## OR write new biology file!
+prm_biol=(paste(d1,'/at_biol_20180928calc_updated.prm', sep=''))
+new_prm <- change_prm_cohort(prm_biol, select_acronyms = gps,
+                             roc = as.matrix(mum_age[,2:11]),
+                             parameter = "mum",
+                             save_to_disc = T)
+
+
+
+
+

@@ -4122,6 +4122,7 @@ q_QHG 33
 0 0 0 0.25 0 0 0 0 0 0 0 0 0.01 0.01 0.01 0 0 0 0 0 0 0 0 0 0 0.0005 0 0 0.0001 0 0 0 0		
 q_ZL 33  
 0 0 0.001 0.01 0 0 0 0 0 0 0 0 0 0 0 0 0.001 0 0 0 0 0 0 0 0 0.02 0 0 0 0 0 0 0
+
 # animals and adjust the selectivity accordingly (e.g. SCA represents many of shallow filter feeders not just
 sel_MAK            33
 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
@@ -4951,6 +4952,7 @@ netMEN_sweptarea     0.0
 midwcNSH_sweptarea   2500200
 midwcOSH_sweptarea   2500200
 mowMA_sweptarea      0.0
+
 p_escape_MAK     33
 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
 p_escape_FPL     33
