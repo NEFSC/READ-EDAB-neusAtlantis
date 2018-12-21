@@ -689,3 +689,18 @@ ____> did not work, crash time 0 clam flux....
 
 ### pPrey from 20181217dtb, scaled mum and C based on length at age from run on 20181218dta
 atlantismain6357 -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_WIN_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20181126.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t C:\Users\ryan.morse\Documents\GitHub\atneus_RM -d 20181219dtd 1>1d.junk 2>2d.junk
+
+
+# Trying to figure out what happened to biol file, issue with time stamp and
+atlantisMerged -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20181126.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20181221a  1>1a.junk 2>2a.junk
+#t = 0, hd.t = 1.5, TofY: 0, % Done: 0.000000
+Creating atneus_v15_test2008hydro_20180208VertSize.txt
+Time: 0.000000e+00 The UNstable vari. 16 is Surf_Clam_N in epi (offset: 3756 Anchovies5_ResN in wc), its  Pool = 0.0252572, Netflux = -0.027446 on day: 0.000000e+00 in box: 8 layer 0
+Try setting ecotest to '4' or higher in your biology input file. Redo your run and look at the bottom of your log.txt output file
+Time step size 9.202497e-02 (seconds) is too small.
+Time: 0.000000e+00 The UNstable vari. 16 is Surf_Clam_N in epi (offset: 3756 Anchovies5_ResN in wc), its  Pool = 0.0252572, Netflux = -0.027446 on day: 0.000000e+00 in box: 8 layer 0
+
+
+
+
+
