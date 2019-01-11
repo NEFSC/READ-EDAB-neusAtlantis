@@ -312,7 +312,6 @@ plot <- update_labels(plot, list(x = "Time [years]", y = expression(Biomass/Biom
 plot_add_box(plot)
 ggsave(paste(filename," Biomass_Bio init.png", sep=''), width=20, height=17, dpi=96)
 
-
 ### Numbers at age
 df <- agg_perc(result$nums_age, groups = c("time", "species"))
 plot <- plot_bar(df, fill = "agecl", wrap = "species")
