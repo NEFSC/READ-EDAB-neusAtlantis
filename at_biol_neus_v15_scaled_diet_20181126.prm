@@ -1006,10 +1006,7 @@ flagtempsensitiveZS 0
 flagtempsensitivePB 0
 flagtempsensitiveBB 0
 flagtempsensitiveBO 0
-
-### 11 Jan 2015  Gavin Fay @UMassD INVERTEBRATES NOT DONE (muted 20180228 RM)
-#flagtempsensitiveCEP   1                                                                             3
-#flagtempsensitivePWN   0                                                                             3
+                                                                            3
 
 # Habitat dependency
 flaghabdepend    0         general vertebrate demersal habitat dependency: 0 = no, 1 = yes     0
@@ -1158,12 +1155,13 @@ TWH_ddepend_move 0
 INV_ddepend_move 0
 
 ### June 24 2015, Gavin Fay @UmassD, Invertebrate entries copied from v1
-LSQ_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky, 4 = no explicit movement 4
-ISQ_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky, 4 = no explicit movement 4
-NSH_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
-OSH_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
-LOB_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
-ZL_ddepend_move  4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
+# values changed to 2, updated seasonal movement with vertebrates below
+LSQ_ddepend_move 2         0 = off, 1 = sedentary, 2 = on, 3 = sticky, 4 = no explicit movement 4
+ISQ_ddepend_move 2         0 = off, 1 = sedentary, 2 = on, 3 = sticky, 4 = no explicit movement 4
+NSH_ddepend_move 2         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
+OSH_ddepend_move 2         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
+LOB_ddepend_move 2         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
+ZL_ddepend_move  2         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
 
 
 # Flags for invertebrate migration out of model domain (enter juveniles and adults              
@@ -1419,22 +1417,15 @@ flagOSHday 0
 flagjOSHday 0
 flagZLday 2
 flagBDday 2
-#flagMAday NA
-#flagMBday NA
-#flagSGday NA
 flagBCday 2
 flagZGday 2
-#flagPLday NA
 flagDFday 0
-#flagPSday NA
 flagZMday 2
 flagZSday 2
 flagPBday 2
 flagBBday 2
 flagBOday 2
-#flagDLday NA
-#flagDRday NA
-#flagDCday NA
+
 
 
 ## Physical and chemical parameters
@@ -1525,14 +1516,14 @@ Q10              2.0       Exponent in temperature effect on rate parameters    
 Tchange_max_num  1         Number of changes in average base temperature                       1
 # Day changes in base tepmerature begins (must have same number of entries as given by Tchange_num)
 Tchange_start    1
-4732
+1
 # Period of time changes in base tepmerature take (must have same number of
 # entries as given by Tchange_num)
 Tchange_period   1
 10920
 # Scale of change in base temperature (must have same number of entries as given by Tchange_num)
 Tchange_mult     1
-1.09
+1.0
 # Differential scaling with depth (must be as many entries as
 # number of water column layers * number of changes)
 vertTchange_mult 4
@@ -1542,14 +1533,14 @@ vertTchange_mult 4
 Schange_max_num  1         Number of changes in average base temperature                       1
 # Day changes in base tepmerature begins (must have same number of entries as given by Schange_num)
 Schange_start    1
-4732
+1
 # Period of time changes in base tepmerature take (must have same number of
 # entries as given by Schange_num)
 Schange_period   1
 10920
 # Scale of change in base temperature (must have same number of entries as given by Schange_num)
 Schange_mult     1
-0.80
+1.0
 # Differential scaling with depth (must be as many entries as
 # number of water column layers * number of changes)
 vertSchange_mult 4
@@ -9003,21 +8994,37 @@ pPREYBO	92
 
 
 ## Ontogenetic diet preferences - one entry per age class, 1=use explicit values above, 0=use ontogenetic values below. 
-p_split_SCA 0
-p_split_QHG 0
-p_split_CLA 0
-p_split_BFF 0
-p_split_BG 0
-p_split_LOB 0
-p_split_RCB 0
-p_split_BMS 0
-p_split_ZL 0
-p_split_BD 0
-p_split_BC 0
-p_split_ZG 0
-p_split_ZM 0
-p_split_ZS 0
+# For each group where the p_split value is set to 0 there will be a value for each cohort of the groups tagged below as age_structured_pred.    
+#p_split_SCA 0
+#p_split_QHG 0
+#p_split_CLA 0
+#p_split_BFF 0
+#p_split_BG 0
+#p_split_LOB 0
+#p_split_RCB 0
+#p_split_BMS 0
+#p_split_ZL 0
+#p_split_BD 0
+#p_split_BC 0
+#p_split_ZG 0
+#p_split_ZM 0
+#p_split_ZS 0
  
+#RM changed these to 1 20190115; this could be a big change...
+p_split_SCA 1
+p_split_QHG 1
+p_split_CLA 1
+p_split_BFF 1
+p_split_BG 1
+p_split_LOB 1
+p_split_RCB 1
+p_split_BMS 1
+p_split_ZL 1
+p_split_BD 1
+p_split_BC 1
+p_split_ZG 1
+p_split_ZM 1
+p_split_ZS 1
 
 # These replace the juvenile/adult values defined in the pPREY entries above
 # Fraction of scallop exploitable by each age class of white hake (WHK)           
@@ -13783,6 +13790,7 @@ mStarve_BWH 1e-03
 mStarve_SWH 1e-03
 mStarve_TWH 1e-03
 mStarve_INV 1e-02
+
 Kthreshm         0.7       Threshold starvation level when mort starts                         0.7
 
 # Oxygen mortality (based on depth and the oxygen horizon) 
@@ -14648,8 +14656,7 @@ Time_Age_OSH 2
 
 
 ## Fish reproduction parameters
-# Spawning season          
-###FPL_Time_Spawn   270       Time of year large planktivores spawn             d                210 - 330
+# Spawning season - day of year          
 MAK_Time_Spawn 270           
 HER_Time_Spawn 290           
 WHK_Time_Spawn 50            
@@ -14718,10 +14725,9 @@ OSH_Time_Spawn 300
 ##PWN_Time_Spawn 300
 ##jPWN_Time_Spawn 90
 
-# NEUS TO DO - CHECK THESE 
-#### G.Fay 06 April 2015, whose comment is this? from v1 files - was this ever checked?
-# Spawning period
-###FPL_spawn_period   7       Period of spawning for large planktivores         d                1 - 365
+
+## Used to calculate time of larval period as below (days, 1-365):	
+## XXX_larval_period = XXX_Recruit_Time	+ XXX_Spawn_Period + optional_small_scale_random_variation
 MAK_spawn_period 7               
 HER_spawn_period 7               
 WHK_spawn_period 7               
@@ -14919,68 +14925,70 @@ Recruit_Period_ISQ 30       Length of time recruits arrive over for cephalopods 
 Recruit_Period_OSH 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                
 Recruit_Period_NSH 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                
 
-# Spawn production  
+# Cost of Spawn production, taken from N weight to produce spawn, not included in spawn calc
+# RM shouldn't these be a proportion of adult mass? E.g. 0.1 * RN for cohort 5? -> changed to this 20190115
 ####KSPA_FPL         31.93     Constant in spawning formulation for large planktivores            31.93
-KSPA_MAK 31.93   
-KSPA_HER 31.93   
-KSPA_WHK 569.65  
-KSPA_BLF 569.65  
-KSPA_WPF 569.65  
-KSPA_SUF 569.65  
-KSPA_WIF 569.65  
-KSPA_WTF 569.65  
-KSPA_HAL 569.65  
-KSPA_PLA 569.65  
-KSPA_FOU 569.65  
-KSPA_FLA 569.65  
-KSPA_BFT 569.65  
-KSPA_TUN 569.65  
-KSPA_BIL 569.65  
-KSPA_MPF 31.93   
-KSPA_BUT 31.93   
-KSPA_ANC 31.93   
-KSPA_BPF 31.93   
-KSPA_GOO 438.6   
-KSPA_MEN 158.25  
-KSPA_FDE 158.25  
-KSPA_COD 158.25  
-KSPA_SHK 158.25  
-KSPA_OHK 158.25  
-KSPA_POL 158.25  
-KSPA_RHK 158.25  
-KSPA_BSB 158.25  
-KSPA_SCU 158.25  
-KSPA_TYL 158.25  
-KSPA_RED 158.25  
-KSPA_OPT 158.25  
-KSPA_SAL 158.25  
-KSPA_DRM 158.25  
-KSPA_STB 158.25  
-KSPA_TAU 158.25  
-KSPA_WOL 158.25  
-KSPA_SDF 158.25  
-KSPA_FDF 158.25  
-KSPA_HAD 438.6   
-KSPA_YTF 158.25  
-KSPA_DOG 2763.3  
-KSPA_SMO 2763.3  
-KSPA_SSH 2763.3  
-KSPA_DSH 2763.3  
-KSPA_BLS 2763.3  
-KSPA_POR 2763.3  
-KSPA_PSH 2763.3  
-KSPA_WSK 2763.3  
-KSPA_LSK 2763.3  
-KSPA_SK  2763.3  
-KSPA_SB  193.9   
-KSPA_PIN 38376.9 
-KSPA_REP 2763.3  
-KSPA_RWH 38376.9 
-KSPA_BWH 38376.9 
-KSPA_SWH 38376.9 
-KSPA_TWH 38376.9 
-KSPA_INV 158.25  
+KSPA_ANC	11.63614182
+KSPA_BFT	279002.5096
+KSPA_BIL	210833.5057
+KSPA_BLF	995.0499757
+KSPA_BLS	56788.80641
+KSPA_BPF	178.1118194
+KSPA_BSB	1348.629044
+KSPA_BUT	119.512348
+KSPA_BWH	35254807.81
+KSPA_COD	7634.640157
+KSPA_DOG	7956.603081
+KSPA_DRM	957.8403831
+KSPA_DSH	213171.7304
+KSPA_FDE	824.3160515
+KSPA_FDF	540.3106902
+KSPA_FLA	32.98508842
+KSPA_FOU	241.2642813
+KSPA_GOO	1543.675754
+KSPA_HAD	1431.120793
+KSPA_HAL	38250.19385
+KSPA_HER	133.3533204
+KSPA_INV	829.1633553
+KSPA_LSK	2076.251538
+KSPA_MAK	181.1289819
+KSPA_MEN	85.0083744
+KSPA_MPF	2.647945276
+KSPA_OHK	326.4666988
+KSPA_OPT	1270.980343
+KSPA_PIN	118104.1345
+KSPA_PLA	770.1515084
+KSPA_POL	6211.947466
+KSPA_POR	71654.99497
+KSPA_PSH	211585.2975
+KSPA_RED	87.32222421
+KSPA_REP	122481.4805
+KSPA_RHK	1110.961006
+KSPA_RWH	43105734.67
+KSPA_SAL	10356.38283
+KSPA_SB	543.2212116
+KSPA_SCU	566.739339
+KSPA_SDF	4767.409282
+KSPA_SHK	232.8329799
+KSPA_SK	12018.19115
+KSPA_SMO	4364.102181
+KSPA_SSH	38843.88271
+KSPA_STB	3633.349462
+KSPA_SUF	4148.224905
+KSPA_SWH	191683.8074
+KSPA_TAU	946.3949332
+KSPA_TUN	23996.14574
+KSPA_TWH	11392928.4
+KSPA_TYL	4777.306547
+KSPA_WHK	983.20449
+KSPA_WIF	2134.915705
+KSPA_WOL	828.2966639
+KSPA_WPF	380.8830211
+KSPA_WSK	8797.039222
+KSPA_WTF	420.0029915
+KSPA_YTF	274.1855668
 
+## proportion of weight used for spawn production
 ####FSP_FPL          0.246     Fraction used in spawning formulation for large planktivores       0.246
 FSP_MAK 0.246  
 FSP_HER 0.246  
@@ -16628,7 +16636,7 @@ KWRR_BLF	265.8674176297
 KWRR_BLS	536.5514054319
 KWRR_BPF	404.252420368
 KWRR_BSB	80.0892549075
-KWRR_BUT	270.393617788
+KWRR_BUT	270.39361778
 KWRR_BWH	21475883.6857261
 KWRR_COD	199.7312904905
 KWRR_DOG	140.5300032708
@@ -16638,14 +16646,14 @@ KWRR_FDE	727.5722408418
 KWRR_FDF	127.1314976492
 KWRR_FLA	12.2518744364
 KWRR_FOU	18.3404136926
-KWRR_GOO	170.201929645
+KWRR_GOO	170.20192964
 KWRR_HAD	486.0157730206
 KWRR_HAL	311.9583792824
 KWRR_HER	7.3494229095
 KWRR_INV	359.9832116582
 KWRR_LSK	122.1349245542
 KWRR_MAK	40.1270101817
-KWRR_MEN	27.4903633798
+KWRR_MEN	27.490363379
 KWRR_MPF	1.0583486411
 KWRR_OHK	224.4754990684
 KWRR_OPT	38.8515007202
@@ -16662,7 +16670,7 @@ KWRR_SAL	954.1953036471
 KWRR_SB	799.2717774123
 KWRR_SCU	33.6162626101
 KWRR_SDF	419.1308165747
-KWRR_SHK	64.353356094
+KWRR_SHK	64.35335609
 KWRR_SK	363.9553440576
 KWRR_SMO	761.0779075425
 KWRR_SSH	116.0715840123
@@ -16673,13 +16681,13 @@ KWRR_TAU	32.2902428253
 KWRR_TUN	4928.5702674546
 KWRR_TWH	1233651.79949192
 KWRR_TYL	94.0392865662
-KWRR_WHK	160.3076620587
+KWRR_WHK	160.307662058
 KWRR_WIF	2266.3398536509
 KWRR_WOL	18.6502466228
 KWRR_WPF	41.0273203471
 KWRR_WSK	131.06966533
 KWRR_WTF	14.1723021547
-KWRR_YTF	142.3188387646
+KWRR_YTF	142.318838764
 
 
 
@@ -17195,54 +17203,115 @@ InvaderScalar           1.0  increase per year of invading species - so what to 
 InvaderSpeed            0.0  speed of spread of invading species
 
 #Flag to indicate that the group uses age structured prey. Used in ontogenetic diet below pPreyvals
+#age_structured_prey_MAK 0                      
+#age_structured_prey_HER 0                      
+#age_structured_prey_WHK 1                      
+#age_structured_prey_BLF 1                      
+#age_structured_prey_WPF 1                      
+#age_structured_prey_SUF 1                      
+#age_structured_prey_WIF 1                      
+#age_structured_prey_WTF 1                      
+#age_structured_prey_HAL 1                      
+#age_structured_prey_PLA 1                      
+#age_structured_prey_FOU 1                      
+#age_structured_prey_FLA 1                      
+#age_structured_prey_BFT 1                      
+#age_structured_prey_TUN 1                      
+#age_structured_prey_BIL 1                      
+#age_structured_prey_MPF 1                      
+#age_structured_prey_BUT 0                      
+#age_structured_prey_ANC 0                      
+#age_structured_prey_BPF 0                      
+#age_structured_prey_GOO 1                      
+#age_structured_prey_MEN 1                      
+#age_structured_prey_FDE 1                      
+#age_structured_prey_COD 1                      
+#age_structured_prey_SHK 1                      
+#age_structured_prey_OHK 1                      
+#age_structured_prey_POL 1                      
+#age_structured_prey_RHK 1                      
+#age_structured_prey_BSB 1                      
+#age_structured_prey_SCU 1                      
+#age_structured_prey_TYL 1                      
+#age_structured_prey_RED 1                      
+#age_structured_prey_OPT 1                      
+#age_structured_prey_SAL 1                      
+#age_structured_prey_DRM 1                      
+#age_structured_prey_STB 1                      
+#age_structured_prey_TAU 1                      
+#age_structured_prey_WOL 1                      
+#age_structured_prey_SDF 1                      
+#age_structured_prey_FDF 1                      
+#age_structured_prey_HAD 1                      
+#age_structured_prey_YTF 1                      
+#age_structured_prey_DOG 1                      
+#age_structured_prey_SMO 1                      
+#age_structured_prey_SSH 1                      
+#age_structured_prey_DSH 1                      
+#age_structured_prey_BLS 1                      
+#age_structured_prey_POR 1                      
+#age_structured_prey_PSH 1                      
+#age_structured_prey_WSK 0                      
+#age_structured_prey_LSK 0                      
+#age_structured_prey_SK  0                      
+#age_structured_prey_SB  0                      
+#age_structured_prey_PIN 0                      
+#age_structured_prey_REP 0                      
+#age_structured_prey_RWH 0                      
+#age_structured_prey_BWH 0                      
+#age_structured_prey_SWH 0                      
+#age_structured_prey_TWH 0                      
+#age_structured_prey_INV 1
+
+## RM 20190115 changed all to 0 from above values, this could be a huge change...
 age_structured_prey_MAK 0                      
 age_structured_prey_HER 0                      
-age_structured_prey_WHK 1                      
-age_structured_prey_BLF 1                      
-age_structured_prey_WPF 1                      
-age_structured_prey_SUF 1                      
-age_structured_prey_WIF 1                      
-age_structured_prey_WTF 1                      
-age_structured_prey_HAL 1                      
-age_structured_prey_PLA 1                      
-age_structured_prey_FOU 1                      
-age_structured_prey_FLA 1                      
-age_structured_prey_BFT 1                      
-age_structured_prey_TUN 1                      
-age_structured_prey_BIL 1                      
-age_structured_prey_MPF 1                      
+age_structured_prey_WHK 0                      
+age_structured_prey_BLF 0                      
+age_structured_prey_WPF 0                      
+age_structured_prey_SUF 0                      
+age_structured_prey_WIF 0                      
+age_structured_prey_WTF 0                      
+age_structured_prey_HAL 0                      
+age_structured_prey_PLA 0                      
+age_structured_prey_FOU 0                      
+age_structured_prey_FLA 0                      
+age_structured_prey_BFT 0                      
+age_structured_prey_TUN 0                      
+age_structured_prey_BIL 0                      
+age_structured_prey_MPF 0                      
 age_structured_prey_BUT 0                      
 age_structured_prey_ANC 0                      
 age_structured_prey_BPF 0                      
-age_structured_prey_GOO 1                      
-age_structured_prey_MEN 1                      
-age_structured_prey_FDE 1                      
-age_structured_prey_COD 1                      
-age_structured_prey_SHK 1                      
-age_structured_prey_OHK 1                      
-age_structured_prey_POL 1                      
-age_structured_prey_RHK 1                      
-age_structured_prey_BSB 1                      
-age_structured_prey_SCU 1                      
-age_structured_prey_TYL 1                      
-age_structured_prey_RED 1                      
-age_structured_prey_OPT 1                      
-age_structured_prey_SAL 1                      
-age_structured_prey_DRM 1                      
-age_structured_prey_STB 1                      
-age_structured_prey_TAU 1                      
-age_structured_prey_WOL 1                      
-age_structured_prey_SDF 1                      
-age_structured_prey_FDF 1                      
-age_structured_prey_HAD 1                      
-age_structured_prey_YTF 1                      
-age_structured_prey_DOG 1                      
-age_structured_prey_SMO 1                      
-age_structured_prey_SSH 1                      
-age_structured_prey_DSH 1                      
-age_structured_prey_BLS 1                      
-age_structured_prey_POR 1                      
-age_structured_prey_PSH 1                      
+age_structured_prey_GOO 0                      
+age_structured_prey_MEN 0                      
+age_structured_prey_FDE 0                      
+age_structured_prey_COD 0                      
+age_structured_prey_SHK 0                      
+age_structured_prey_OHK 0                      
+age_structured_prey_POL 0                      
+age_structured_prey_RHK 0                      
+age_structured_prey_BSB 0                      
+age_structured_prey_SCU 0                      
+age_structured_prey_TYL 0                      
+age_structured_prey_RED 0                      
+age_structured_prey_OPT 0                      
+age_structured_prey_SAL 0                      
+age_structured_prey_DRM 0                      
+age_structured_prey_STB 0                      
+age_structured_prey_TAU 0                      
+age_structured_prey_WOL 0                      
+age_structured_prey_SDF 0                      
+age_structured_prey_FDF 0                      
+age_structured_prey_HAD 0                      
+age_structured_prey_YTF 0                      
+age_structured_prey_DOG 0                      
+age_structured_prey_SMO 0                      
+age_structured_prey_SSH 0                      
+age_structured_prey_DSH 0                      
+age_structured_prey_BLS 0                      
+age_structured_prey_POR 0                      
+age_structured_prey_PSH 0                      
 age_structured_prey_WSK 0                      
 age_structured_prey_LSK 0                      
 age_structured_prey_SK  0                      
@@ -17253,7 +17322,7 @@ age_structured_prey_RWH 0
 age_structured_prey_BWH 0                      
 age_structured_prey_SWH 0                      
 age_structured_prey_TWH 0                      
-age_structured_prey_INV 1                      
+age_structured_prey_INV 0       
 
 #Added by Bec Gorton 17/12/2010
 BMDmax 0
@@ -17925,65 +17994,66 @@ NSH_max_spawn_salt 40
 
 
 # Minimum tolerated oxygen level for age structured groups (typically vertebrates)
-MAK_min_O2 0         
-HER_min_O2 0         
-WHK_min_O2 0         
-BLF_min_O2 0         
-WPF_min_O2 0         
-SUF_min_O2 0         
-WIF_min_O2 0         
-WTF_min_O2 0         
-HAL_min_O2 0         
-PLA_min_O2 0         
-FOU_min_O2 0         
-FLA_min_O2 0         
-BFT_min_O2 0         
-TUN_min_O2 0         
-BIL_min_O2 0         
-MPF_min_O2 0         
-BUT_min_O2 0         
-ANC_min_O2 0         
-BPF_min_O2 0         
-GOO_min_O2 0         
-MEN_min_O2 0         
-FDE_min_O2 0         
-COD_min_O2 0         
-SHK_min_O2 0         
-OHK_min_O2 0         
-POL_min_O2 0         
-RHK_min_O2 0         
-BSB_min_O2 0         
-SCU_min_O2 0         
-TYL_min_O2 0         
-RED_min_O2 0         
-OPT_min_O2 0         
-SAL_min_O2 0         
-DRM_min_O2 0         
-STB_min_O2 0         
-TAU_min_O2 0         
-WOL_min_O2 0         
-SDF_min_O2 0         
-FDF_min_O2 0         
-HAD_min_O2 0         
-YTF_min_O2 0         
-DOG_min_O2 0         
-SMO_min_O2 0         
-SSH_min_O2 0         
-DSH_min_O2 0         
-BLS_min_O2 0         
-POR_min_O2 0         
-PSH_min_O2 0         
-WSK_min_O2 0         
-LSK_min_O2 0         
-SK_min_O2  0         
-SB_min_O2  0         
-PIN_min_O2 0         
-REP_min_O2 0         
-RWH_min_O2 0         
-BWH_min_O2 0         
-SWH_min_O2 0         
-TWH_min_O2 0         
-INV_min_O2 0         
+# changed from 0 to 5000 20190115 RM
+MAK_min_O2 5000         
+HER_min_O2 5000         
+WHK_min_O2 5000         
+BLF_min_O2 5000         
+WPF_min_O2 5000         
+SUF_min_O2 5000         
+WIF_min_O2 5000         
+WTF_min_O2 5000         
+HAL_min_O2 5000         
+PLA_min_O2 5000         
+FOU_min_O2 5000         
+FLA_min_O2 5000         
+BFT_min_O2 5000         
+TUN_min_O2 5000         
+BIL_min_O2 5000         
+MPF_min_O2 5000         
+BUT_min_O2 5000         
+ANC_min_O2 5000         
+BPF_min_O2 5000         
+GOO_min_O2 5000         
+MEN_min_O2 5000         
+FDE_min_O2 5000         
+COD_min_O2 5000         
+SHK_min_O2 5000         
+OHK_min_O2 5000         
+POL_min_O2 5000         
+RHK_min_O2 5000         
+BSB_min_O2 5000         
+SCU_min_O2 5000         
+TYL_min_O2 5000         
+RED_min_O2 5000         
+OPT_min_O2 5000         
+SAL_min_O2 5000         
+DRM_min_O2 5000         
+STB_min_O2 5000         
+TAU_min_O2 5000         
+WOL_min_O2 5000         
+SDF_min_O2 5000         
+FDF_min_O2 5000         
+HAD_min_O2 5000         
+YTF_min_O2 5000         
+DOG_min_O2 5000         
+SMO_min_O2 5000         
+SSH_min_O2 5000         
+DSH_min_O2 5000         
+BLS_min_O2 5000         
+POR_min_O2 5000         
+PSH_min_O2 5000         
+WSK_min_O2 5000         
+LSK_min_O2 5000         
+SK_min_O2  5000         
+SB_min_O2  5000         
+PIN_min_O2 5000         
+REP_min_O2 5000         
+RWH_min_O2 5000         
+BWH_min_O2 5000         
+SWH_min_O2 5000         
+TWH_min_O2 5000         
+INV_min_O2 5000         
 
 
 

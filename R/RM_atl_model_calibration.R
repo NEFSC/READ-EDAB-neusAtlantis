@@ -338,14 +338,14 @@ ggsave(paste(filename," Biomass at age percent.png", sep=''), width=20, height=1
 #   return(col_pal)
 # }
 
-plots <- plot_diet(result$biomass_consumed, wrap_col = "agecl", combine_thresh = 3)
-pdf(file=paste(filename, '_diet_proportions.pdf', sep=''),paper='A4r',width=11, height=8)
-for (i in seq_along(plots)) {
-  cat(paste0("## Diet plot ", i, ": ", names(plots)[i]), sep = "\n")
-  gridExtra::grid.arrange(plots[[i]])
-  cat("\n\n")
-}
-dev.off()
+# plots <- plot_diet(result$biomass_consumed, wrap_col = "agecl", combine_thresh = 3)
+# pdf(file=paste(filename, '_diet_proportions.pdf', sep=''),paper='A4r',width=11, height=8)
+# for (i in seq_along(plots)) {
+#   cat(paste0("## Diet plot ", i, ": ", names(plots)[i]), sep = "\n")
+#   gridExtra::grid.arrange(plots[[i]])
+#   cat("\n\n")
+# }
+# dev.off()
 
 ####__________ SPATIAL DISTRIBUTION PLOTS____________________________________
 ### Spatial Plots 1

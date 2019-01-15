@@ -707,6 +707,13 @@ atlantisMerged -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at
 ## set pPrey availability to none for all, flagrecruits now include spawn (not sure what happened, must have reverted after 9/12???). Hopefully no species will persist now.... testing, adjust BHalpha and BHbeta values down for species that persisted in previous run
 atlantisMerged -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_none_available.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20190109a  1>1a.junk 2>2a.junk
 
+# updated RN and SN values in initial condition file (21 taxa affected), all species have new recruit weights in biol file based on age 1 fish.
+atlantisMerged -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20181126.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20190111a  1>1a.junk 2>2a.junk
+
+
+# turned off age_structured_prey to use pPrey values, changed spawn costs to 10% of RN for cohort 5
+atlantisMerged -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20181126.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20190115a  1>1a.junk 2>2a.junk
+
 
 
 
