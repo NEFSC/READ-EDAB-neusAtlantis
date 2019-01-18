@@ -332,7 +332,7 @@ flagtrecruitdistrib 1      0=humped recruit arrival distrib, 1=flat distrib of r
 # 1=const, 2=dependent on prim producers (Chla), 3=Beverton-Holt, 4=lognormal, 5=dependent on all plankton              
 # groups not just Chla, 6=Bev-Holt with lognormal variation added, 7=Bev-Holt with encourage recovery              
 # 8=Bev-Holt with perscribed recovery, 9=Ricker, 10=Standard Bev-Holt (no explict use of spawn included)             
-# 11=pupping/calving linearly dependent on maternal condition, 12=pupping/calving a fixed number per adult              
+# 11=Recruitment is	equal to spawn, 12=pupping/calving a fixed number per adult              
 # spawning, 13=forced timeseries of recruitment   
 
 ######### 11 Jan 2015  Gavin FAy @UmassD flagrecruit/separate for inverts not done
@@ -1155,13 +1155,13 @@ TWH_ddepend_move 0
 INV_ddepend_move 0
 
 ### June 24 2015, Gavin Fay @UmassD, Invertebrate entries copied from v1
-# values changed to 2, updated seasonal movement with vertebrates below
-LSQ_ddepend_move 2         0 = off, 1 = sedentary, 2 = on, 3 = sticky, 4 = no explicit movement 4
-ISQ_ddepend_move 2         0 = off, 1 = sedentary, 2 = on, 3 = sticky, 4 = no explicit movement 4
-NSH_ddepend_move 2         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
-OSH_ddepend_move 2         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
-LOB_ddepend_move 2         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
-ZL_ddepend_move  2         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
+# values changed to 2, updated seasonal movement with vertebrates below (turn back, need more density dependant inputs)
+LSQ_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky, 4 = no explicit movement 4
+ISQ_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky, 4 = no explicit movement 4
+NSH_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
+OSH_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
+LOB_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
+ZL_ddepend_move  4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
 
 
 # Flags for invertebrate migration out of model domain (enter juveniles and adults              
@@ -1300,7 +1300,7 @@ predcase_LSK 0
 predcase_SK 0
 predcase_SB 9
 predcase_PIN 9
-predcase_REP 0
+predcase_REP 9
 predcase_RWH 9
 predcase_BWH 9
 predcase_SWH 9
