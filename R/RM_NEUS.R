@@ -515,7 +515,7 @@ test=diet[,5:96]
 # test2=data.frame(t(apply(test, 1, function(x) ifelse((x>0.0001) & (x<0.1), x*5, x)))) # scale values between 0.1 and 0.0001 by 5x
 test2=data.frame(t(apply(test, 1, function(x) ifelse((x>0.0001) & (x<0.03), x*10, x))))# scale values between 0.03 and 0.0001 by 10x
 # test2=data.frame(t(apply(test, 1, function(x) ifelse((x>0), 1, 0)))) # set 1 for all available, 0 for not (testing)
-# test2=data.frame(t(apply(test, 1, function(x) ifelse((x>0), 0, 0)))) # set zero for all (testing)
+test2=data.frame(t(apply(test, 1, function(x) ifelse((x>0), 0, 0)))) # set zero for all (testing)
 
 diet2=diet
 diet2[,5:96]=test2

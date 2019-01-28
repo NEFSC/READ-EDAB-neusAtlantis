@@ -312,10 +312,6 @@ plot <- update_labels(plot, list(x = "Time [years]", y = expression(Biomass/Biom
 plot_add_box(plot)
 ggsave(paste(filename," Biomass_Bio init.png", sep=''), width=20, height=17, dpi=96)
 
-
-
-
-####__________ SPATIAL DISTRIBUTION PLOTS____________________________________
 ### Numbers at age
 df <- agg_perc(result$nums_age, groups = c("time", "species"))
 plot <- plot_bar(df, fill = "agecl", wrap = "species")
@@ -351,6 +347,7 @@ for (i in seq_along(plots)) {
 }
 dev.off()
 
+####__________ SPATIAL DISTRIBUTION PLOTS____________________________________
 ### Spatial Plots 1
 plots <- plot_spatial_box(result$biomass_spatial_stanza, bgm_as_df = convert_bgm(bgm = bgm), timesteps = 7)
 pdf(file=paste(filename, '_spatial biomass box distribution.pdf', sep=''), paper='A4r', width=11, height=8)

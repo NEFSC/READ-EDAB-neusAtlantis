@@ -261,6 +261,7 @@ result <- list(
 )
 filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
 save(result, file=paste(filename, '_prepro.rdata',sep=''))
+save.image(paste(d2, '/ws.RData', sep='')) #"~/AtlRuns/20190111a/ws.RData")
 # source('~/GitHub/atneus_RM/R/RM_atl_model_calibration.R') #win
 # source('~/Git/atneus_RM/R/RM_atl_model_calibration.R') #linux
 # source(paste(d1, '/R/RM_atl_model_calibration.R', sep='')) #bothd2

@@ -55,7 +55,7 @@ codes=codes[-c(1:2),]
 ## Read in RN and SN values, xlsx updated 20180709, '____data' tab has values copied from '___calc_doc' tab, which has documentation and calculations
 ## (von Bertalanffy model, Atlantis calcs for RN SN weight conversions, length_weight relationships, etc.)
 # x=read_xlsx('C:/Users/ryan.morse/Documents/GitHub/atneus_RM/R/length_weight_v15.xlsx', sheet='length_weight_v15_data')
-x=read_xlsx(paste(d1, '/R/length_weight_v15.xlsx', sep=''), sheet='length_weight_v15_data')
+x=read_xlsx(paste(d1, '/R/length_weight_v15.xlsx', sep=''), sheet='length_weight_v15_data_update')
 x$Rname=paste(x$Species, x$Cohort, "_ResN", sep="") #make name same as variable name in netcdf file
 x$Sname=paste(x$Species, x$Cohort, "_StructN", sep="") #make name same as variable name in netcdf file
 # ## Subset above to use for replacement in initial conditions netcdf file
@@ -80,7 +80,7 @@ newX$recruit_grams=newX$li_a*(newX$recruit_cm^newX$li_b)
 
 ## plot length vs weight to make sure things look OK - inches/lbs
 nmc=unique(newX$Code)
-pdf(file='weight_length_US.pdf')
+pdf(file='weight_length_US_20190110.pdf')
 for(i in 1:length(nmc)){
   ii=nmc[i]
 plot(newX$inches[newX$Code==ii]~newX$lbs[newX$Code==ii], ylab='inches', xlab='lbs', main=ii)
@@ -89,7 +89,7 @@ dev.off()
 ##
 ## plot length vs weight to make sure things look OK - metric
 nmc=unique(newX$Code)
-pdf(file='weight_length_metric.pdf')
+pdf(file='weight_length_metric_20190110.pdf')
 cohort=seq(1,10,1)
 for(i in 1:length(nmc)){
   ii=nmc[i]
@@ -114,7 +114,7 @@ library(reshape)
 t=newX[,c("Code", "grams2", "Cohort")]
 t2=melt.data.frame(t, id.vars=c('Code', 'Cohort'), measure.vars = 'grams2')
 t3=cast(t2, Code ~ Cohort)
-write.table(t3, file='vertebrate_weights_grams.csv', sep=',', col.names = T, row.names = F)
+write.table(t3, file='vertebrate_weights_grams_20190110.csv', sep=',', col.names = T, row.names = F)
 
 # length at age for initial conditions 
 t=newX[,c("Code", "Species", "vbert_cm2", "Cohort")]
@@ -122,7 +122,7 @@ t2=melt.data.frame(t, id.vars=c('Code', 'Cohort'), measure.vars = 'vbert_cm2')
 t3=cast(t2, Code ~ Cohort)
 t2=melt.data.frame(t, id.vars=c('Species', 'Cohort'), measure.vars = 'vbert_cm2')
 t4=cast(t2, Species ~ Cohort)
-write.table(t4, file='vertebrate_init_length_cm.csv', sep=',', col.names = T, row.names = F)
+write.table(t4, file='vertebrate_init_length_cm_20190110.csv', sep=',', col.names = T, row.names = F)
 t5=left_join(t3, codes, by=c('Code'='Child'))
 # write.table(t5, file='vertebrate_init_length_cm.csv', sep=',', col.names = T, row.names = F)
 
@@ -147,7 +147,7 @@ write.table(t3, file='vertebrate_biomass_mgC.csv', sep=',', col.names = T, row.n
 
 
 
-## read in initiall conditions numbers (saved as output from shinyrAtlantis, nums.df)
+## read in initial conditions numbers (saved as output from shinyrAtlantis, nums.df)
 n=read.csv(file.path(paste(d1,'/init_nums.csv', sep="")), stringsAsFactors = F)
 num=reshape(n,idvar = 'Species', timevar = 'Cohort', direction = 'wide' )
 # n2=melt.data.frame(n, id.vars = c("Species", "Cohort"))

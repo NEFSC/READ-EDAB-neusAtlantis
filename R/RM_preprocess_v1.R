@@ -8,7 +8,7 @@ library("tidyr")
 # d1='/home/ryan/Git/atneus737e3d' # for NEUS 1.0 on new code base RM
 
 d1='/home/ryan/Git/atneus_RM'
-d2='/home/ryan/AtlRuns/20181110b'
+d2='/home/ryan/AtlRuns/20190115a'
 
 d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
 d2='E:/AtlantisRun/20161103/tes/20181219dtb'
