@@ -170,14 +170,14 @@ flagdemMAK 0
 flagdemHER 0
 flagdemWHK 0
 flagdemBLF 0
-flagdemWPF 0
-flagdemSUF 0
-flagdemWIF 0
-flagdemWTF 0
-flagdemHAL 0
-flagdemPLA 0
-flagdemFOU 0
-flagdemFLA 0
+flagdemWPF 1
+flagdemSUF 1
+flagdemWIF 1
+flagdemWTF 1
+flagdemHAL 1
+flagdemPLA 1
+flagdemFOU 1
+flagdemFLA 1
 flagdemBFT 0
 flagdemTUN 0
 flagdemBIL 0
@@ -186,7 +186,7 @@ flagdemBUT 0
 flagdemANC 0
 flagdemBPF 0
 flagdemGOO 1
-flagdemMEN 1
+flagdemMEN 0
 flagdemFDE 1
 flagdemCOD 1
 flagdemSHK 1
@@ -194,21 +194,21 @@ flagdemOHK 1
 flagdemPOL 1
 flagdemRHK 1
 flagdemBSB 1
-flagdemSCU 1
-flagdemTYL 1
+flagdemSCU 0
+flagdemTYL 0
 flagdemRED 1
 flagdemOPT 1
 flagdemSAL 1
-flagdemDRM 1
-flagdemSTB 1
+flagdemDRM 0
+flagdemSTB 0
 flagdemTAU 1
 flagdemWOL 1
 flagdemSDF 1
 flagdemFDF 1
 flagdemHAD 1
 flagdemYTF 1
-flagdemDOG 1
-flagdemSMO 1
+flagdemDOG 0
+flagdemSMO 0
 flagdemSSH 1
 flagdemDSH 1
 flagdemBLS 0
@@ -224,7 +224,7 @@ flagdemRWH 0
 flagdemBWH 0
 flagdemSWH 0
 flagdemTWH 0
-flagdemINV 1
+flagdemINV 0
 flagdemLSQ 0
 flagdemjLSQ 0
 flagdemISQ 0
@@ -388,16 +388,16 @@ flagrecruitSDF 3
 flagrecruitFDF 3
 flagrecruitHAD 3
 flagrecruitYTF 3
-flagrecruitDOG 3
-flagrecruitSMO 3
-flagrecruitSSH 3
-flagrecruitDSH 3
-flagrecruitBLS 3
-flagrecruitPOR 3
-flagrecruitPSH 3
-flagrecruitWSK 3
-flagrecruitLSK 3
-flagrecruitSK 3
+flagrecruitDOG 12
+flagrecruitSMO 12
+flagrecruitSSH 12
+flagrecruitDSH 12
+flagrecruitBLS 12
+flagrecruitPOR 12
+flagrecruitPSH 12
+flagrecruitWSK 12
+flagrecruitLSK 12
+flagrecruitSK 12
 flagrecruitSB 12
 flagrecruitPIN 12
 flagrecruitREP 12
@@ -578,16 +578,16 @@ flaglocalrecruitSDF 0
 flaglocalrecruitFDF 0
 flaglocalrecruitHAD 0
 flaglocalrecruitYTF 0
-flaglocalrecruitDOG 0
-flaglocalrecruitSMO 0
-flaglocalrecruitSSH 0
-flaglocalrecruitDSH 0
+flaglocalrecruitDOG 1
+flaglocalrecruitSMO 1
+flaglocalrecruitSSH 1
+flaglocalrecruitDSH 1
 flaglocalrecruitBLS 1
 flaglocalrecruitPOR 1
 flaglocalrecruitPSH 1
-flaglocalrecruitWSK 0
-flaglocalrecruitLSK 0
-flaglocalrecruitSK 0
+flaglocalrecruitWSK 1
+flaglocalrecruitLSK 1
+flaglocalrecruitSK 1
 flaglocalrecruitSB 1
 flaglocalrecruitPIN 1
 flaglocalrecruitREP 1
@@ -643,10 +643,10 @@ flagbearliveSDF 0
 flagbearliveFDF 0
 flagbearliveHAD 0
 flagbearliveYTF 0
-flagbearliveDOG 0
-flagbearliveSMO 0
-flagbearliveSSH 0
-flagbearliveDSH 0
+flagbearliveDOG 1
+flagbearliveSMO 1
+flagbearliveSSH 1
+flagbearliveDSH 1
 flagbearliveBLS 1
 flagbearlivePOR 1
 flagbearlivePSH 1
@@ -1006,7 +1006,7 @@ flagtempsensitiveZS 0
 flagtempsensitivePB 0
 flagtempsensitiveBB 0
 flagtempsensitiveBO 0
-                                                                            3
+
 
 # Habitat dependency
 flaghabdepend    0         general vertebrate demersal habitat dependency: 0 = no, 1 = yes     0
@@ -14657,57 +14657,57 @@ Time_Age_OSH 2
 
 ## Fish reproduction parameters
 # Spawning season - day of year          
-MAK_Time_Spawn 270           
+MAK_Time_Spawn 210           
 HER_Time_Spawn 290           
-WHK_Time_Spawn 50            
+WHK_Time_Spawn 180            
 BLF_Time_Spawn 180           
-WPF_Time_Spawn 1             
-SUF_Time_Spawn 1             
-WIF_Time_Spawn 1             
-WTF_Time_Spawn 1             
-HAL_Time_Spawn 1             
-PLA_Time_Spawn 1             
-FOU_Time_Spawn 1             
-FLA_Time_Spawn 1             
-BFT_Time_Spawn 280           
-TUN_Time_Spawn 280           
-BIL_Time_Spawn 280           
+WPF_Time_Spawn 180             
+SUF_Time_Spawn 270           
+WIF_Time_Spawn 30             
+WTF_Time_Spawn 100             
+HAL_Time_Spawn 180             
+PLA_Time_Spawn 100             
+FOU_Time_Spawn 180             
+FLA_Time_Spawn 180             
+BFT_Time_Spawn 180           
+TUN_Time_Spawn 180           
+BIL_Time_Spawn 180           
 MPF_Time_Spawn 180           
 BUT_Time_Spawn 100           
 ANC_Time_Spawn 100           
 BPF_Time_Spawn 100           
-GOO_Time_Spawn 270           
-MEN_Time_Spawn 10            
+GOO_Time_Spawn 280           
+MEN_Time_Spawn 270            
 FDE_Time_Spawn 10            
 COD_Time_Spawn 20            
-SHK_Time_Spawn 10            
-OHK_Time_Spawn 10            
+SHK_Time_Spawn 150            
+OHK_Time_Spawn 150            
 POL_Time_Spawn 10            
-RHK_Time_Spawn 10            
-BSB_Time_Spawn 10            
-SCU_Time_Spawn 10            
-TYL_Time_Spawn 10            
-RED_Time_Spawn 10            
-OPT_Time_Spawn 10            
-SAL_Time_Spawn 10            
-DRM_Time_Spawn 10            
-STB_Time_Spawn 10            
-TAU_Time_Spawn 10            
+RHK_Time_Spawn 180            
+BSB_Time_Spawn 150            
+SCU_Time_Spawn 150            
+TYL_Time_Spawn 150            
+RED_Time_Spawn 100            
+OPT_Time_Spawn 100            
+SAL_Time_Spawn 220            
+DRM_Time_Spawn 180            
+STB_Time_Spawn 180            
+TAU_Time_Spawn 180            
 WOL_Time_Spawn 10            
 SDF_Time_Spawn 10            
 FDF_Time_Spawn 10            
 HAD_Time_Spawn 30            
 YTF_Time_Spawn 60            
-DOG_Time_Spawn 60            
+DOG_Time_Spawn 180            
 SMO_Time_Spawn 160           
 SSH_Time_Spawn 160           
 DSH_Time_Spawn 160           
 BLS_Time_Spawn 150           
 POR_Time_Spawn 150           
 PSH_Time_Spawn 150           
-WSK_Time_Spawn 20            
-LSK_Time_Spawn 20            
-SK_Time_Spawn  20            
+WSK_Time_Spawn 190            
+LSK_Time_Spawn 190           
+SK_Time_Spawn  190           
 SB_Time_Spawn  290           
 PIN_Time_Spawn 230           
 REP_Time_Spawn 270           
@@ -14776,9 +14776,9 @@ DSH_spawn_period 7
 BLS_spawn_period 7               
 POR_spawn_period 7               
 PSH_spawn_period 7               
-WSK_spawn_period 7               
-LSK_spawn_period 7               
-SK_spawn_period  7               
+WSK_spawn_period 90              
+LSK_spawn_period 90               
+SK_spawn_period  90              
 SB_spawn_period  7               
 PIN_spawn_period 7               
 REP_spawn_period 7               
@@ -14801,7 +14801,7 @@ BLF_Recruit_Time 30
 WPF_Recruit_Time 80              
 SUF_Recruit_Time 80              
 WIF_Recruit_Time 80              
-WTF_Recruit_Time 80              
+WTF_Recruit_Time 120              
 HAL_Recruit_Time 80              
 PLA_Recruit_Time 80              
 FOU_Recruit_Time 80              
@@ -14843,9 +14843,9 @@ BLS_Recruit_Time 360
 POR_Recruit_Time 360             
 PSH_Recruit_Time 360             
 WSK_Recruit_Time 270             
-LSK_Recruit_Time 270             
-SK_Recruit_Time  270             
-SB_Recruit_Time  200             
+LSK_Recruit_Time 84             
+SK_Recruit_Time  84            
+SB_Recruit_Time  84             
 PIN_Recruit_Time 330             
 REP_Recruit_Time 360             
 RWH_Recruit_Time 360             
@@ -15775,34 +15775,34 @@ KDENR_YTF 1
 51036772
  
 KDENR_DOG 1
-18419234
+10
  
 KDENR_SMO 1
-530007
+10
  
 KDENR_SSH 1
-530007
+7
  
 KDENR_DSH 1
-530007
+7
  
 KDENR_BLS 1
-39968
+23
  
 KDENR_POR 1
-39968
+4
  
 KDENR_PSH 1
-39968
+6
  
 KDENR_WSK 1
-41152175
+25
  
 KDENR_LSK 1
-41152175
+20
  
 KDENR_SK 1
-41152175
+25
  
 KDENR_SB 1
 3
