@@ -170,14 +170,14 @@ flagdemMAK 0
 flagdemHER 0
 flagdemWHK 0
 flagdemBLF 0
-flagdemWPF 0
-flagdemSUF 0
-flagdemWIF 0
-flagdemWTF 0
-flagdemHAL 0
-flagdemPLA 0
-flagdemFOU 0
-flagdemFLA 0
+flagdemWPF 1
+flagdemSUF 1
+flagdemWIF 1
+flagdemWTF 1
+flagdemHAL 1
+flagdemPLA 1
+flagdemFOU 1
+flagdemFLA 1
 flagdemBFT 0
 flagdemTUN 0
 flagdemBIL 0
@@ -186,7 +186,7 @@ flagdemBUT 0
 flagdemANC 0
 flagdemBPF 0
 flagdemGOO 1
-flagdemMEN 1
+flagdemMEN 0
 flagdemFDE 1
 flagdemCOD 1
 flagdemSHK 1
@@ -194,21 +194,21 @@ flagdemOHK 1
 flagdemPOL 1
 flagdemRHK 1
 flagdemBSB 1
-flagdemSCU 1
-flagdemTYL 1
+flagdemSCU 0
+flagdemTYL 0
 flagdemRED 1
 flagdemOPT 1
 flagdemSAL 1
-flagdemDRM 1
-flagdemSTB 1
+flagdemDRM 0
+flagdemSTB 0
 flagdemTAU 1
 flagdemWOL 1
 flagdemSDF 1
 flagdemFDF 1
 flagdemHAD 1
 flagdemYTF 1
-flagdemDOG 1
-flagdemSMO 1
+flagdemDOG 0
+flagdemSMO 0
 flagdemSSH 1
 flagdemDSH 1
 flagdemBLS 0
@@ -224,7 +224,7 @@ flagdemRWH 0
 flagdemBWH 0
 flagdemSWH 0
 flagdemTWH 0
-flagdemINV 1
+flagdemINV 0
 flagdemLSQ 0
 flagdemjLSQ 0
 flagdemISQ 0
@@ -332,7 +332,7 @@ flagtrecruitdistrib 1      0=humped recruit arrival distrib, 1=flat distrib of r
 # 1=const, 2=dependent on prim producers (Chla), 3=Beverton-Holt, 4=lognormal, 5=dependent on all plankton              
 # groups not just Chla, 6=Bev-Holt with lognormal variation added, 7=Bev-Holt with encourage recovery              
 # 8=Bev-Holt with perscribed recovery, 9=Ricker, 10=Standard Bev-Holt (no explict use of spawn included)             
-# 11=pupping/calving linearly dependent on maternal condition, 12=pupping/calving a fixed number per adult              
+# 11=Recruitment is	equal to spawn, 12=pupping/calving a fixed number per adult              
 # spawning, 13=forced timeseries of recruitment   
 
 ######### 11 Jan 2015  Gavin FAy @UmassD flagrecruit/separate for inverts not done
@@ -388,16 +388,16 @@ flagrecruitSDF 3
 flagrecruitFDF 3
 flagrecruitHAD 3
 flagrecruitYTF 3
-flagrecruitDOG 3
-flagrecruitSMO 3
-flagrecruitSSH 3
-flagrecruitDSH 3
-flagrecruitBLS 3
-flagrecruitPOR 3
-flagrecruitPSH 3
-flagrecruitWSK 3
-flagrecruitLSK 3
-flagrecruitSK 3
+flagrecruitDOG 12
+flagrecruitSMO 12
+flagrecruitSSH 12
+flagrecruitDSH 12
+flagrecruitBLS 12
+flagrecruitPOR 12
+flagrecruitPSH 12
+flagrecruitWSK 12
+flagrecruitLSK 12
+flagrecruitSK 12
 flagrecruitSB 12
 flagrecruitPIN 12
 flagrecruitREP 12
@@ -578,16 +578,16 @@ flaglocalrecruitSDF 0
 flaglocalrecruitFDF 0
 flaglocalrecruitHAD 0
 flaglocalrecruitYTF 0
-flaglocalrecruitDOG 0
-flaglocalrecruitSMO 0
-flaglocalrecruitSSH 0
-flaglocalrecruitDSH 0
+flaglocalrecruitDOG 1
+flaglocalrecruitSMO 1
+flaglocalrecruitSSH 1
+flaglocalrecruitDSH 1
 flaglocalrecruitBLS 1
 flaglocalrecruitPOR 1
 flaglocalrecruitPSH 1
-flaglocalrecruitWSK 0
-flaglocalrecruitLSK 0
-flaglocalrecruitSK 0
+flaglocalrecruitWSK 1
+flaglocalrecruitLSK 1
+flaglocalrecruitSK 1
 flaglocalrecruitSB 1
 flaglocalrecruitPIN 1
 flaglocalrecruitREP 1
@@ -643,10 +643,10 @@ flagbearliveSDF 0
 flagbearliveFDF 0
 flagbearliveHAD 0
 flagbearliveYTF 0
-flagbearliveDOG 0
-flagbearliveSMO 0
-flagbearliveSSH 0
-flagbearliveDSH 0
+flagbearliveDOG 1
+flagbearliveSMO 1
+flagbearliveSSH 1
+flagbearliveDSH 1
 flagbearliveBLS 1
 flagbearlivePOR 1
 flagbearlivePSH 1
@@ -1007,9 +1007,6 @@ flagtempsensitivePB 0
 flagtempsensitiveBB 0
 flagtempsensitiveBO 0
 
-### 11 Jan 2015  Gavin Fay @UMassD INVERTEBRATES NOT DONE (muted 20180228 RM)
-#flagtempsensitiveCEP   1                                                                             3
-#flagtempsensitivePWN   0                                                                             3
 
 # Habitat dependency
 flaghabdepend    0         general vertebrate demersal habitat dependency: 0 = no, 1 = yes     0
@@ -1158,6 +1155,7 @@ TWH_ddepend_move 0
 INV_ddepend_move 0
 
 ### June 24 2015, Gavin Fay @UmassD, Invertebrate entries copied from v1
+# values changed to 2, updated seasonal movement with vertebrates below (turn back, need more density dependant inputs)
 LSQ_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky, 4 = no explicit movement 4
 ISQ_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky, 4 = no explicit movement 4
 NSH_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
@@ -1302,7 +1300,7 @@ predcase_LSK 0
 predcase_SK 0
 predcase_SB 9
 predcase_PIN 9
-predcase_REP 0
+predcase_REP 9
 predcase_RWH 9
 predcase_BWH 9
 predcase_SWH 9
@@ -1419,22 +1417,15 @@ flagOSHday 0
 flagjOSHday 0
 flagZLday 2
 flagBDday 2
-#flagMAday NA
-#flagMBday NA
-#flagSGday NA
 flagBCday 2
 flagZGday 2
-#flagPLday NA
 flagDFday 0
-#flagPSday NA
 flagZMday 2
 flagZSday 2
 flagPBday 2
 flagBBday 2
 flagBOday 2
-#flagDLday NA
-#flagDRday NA
-#flagDCday NA
+
 
 
 ## Physical and chemical parameters
@@ -1525,14 +1516,14 @@ Q10              2.0       Exponent in temperature effect on rate parameters    
 Tchange_max_num  1         Number of changes in average base temperature                       1
 # Day changes in base tepmerature begins (must have same number of entries as given by Tchange_num)
 Tchange_start    1
-4732
+1
 # Period of time changes in base tepmerature take (must have same number of
 # entries as given by Tchange_num)
 Tchange_period   1
 10920
 # Scale of change in base temperature (must have same number of entries as given by Tchange_num)
 Tchange_mult     1
-1.09
+1.0
 # Differential scaling with depth (must be as many entries as
 # number of water column layers * number of changes)
 vertTchange_mult 4
@@ -1542,14 +1533,14 @@ vertTchange_mult 4
 Schange_max_num  1         Number of changes in average base temperature                       1
 # Day changes in base tepmerature begins (must have same number of entries as given by Schange_num)
 Schange_start    1
-4732
+1
 # Period of time changes in base tepmerature take (must have same number of
 # entries as given by Schange_num)
 Schange_period   1
 10920
 # Scale of change in base temperature (must have same number of entries as given by Schange_num)
 Schange_mult     1
-0.80
+1.0
 # Differential scaling with depth (must be as many entries as
 # number of water column layers * number of changes)
 vertSchange_mult 4
@@ -4198,28 +4189,28 @@ VERTday_BLF1 4
 0 0 0.5 0.5
  
 VERTday_WPF1 4
-0.5 0.2 0.1 0.2
+0.75 0.25 0 0
  
 VERTday_SUF1 4
-0.5 0.2 0.1 0.2
+0.75 0.25 0 0
  
 VERTday_WIF1 4
-0.5 0.2 0.1 0.2
+0.75 0.25 0 0
  
 VERTday_WTF1 4
-0.5 0.2 0.1 0.2
+0.75 0.25 0 0
  
 VERTday_HAL1 4
-0.5 0.2 0.1 0.2
+0.75 0.25 0 0
  
 VERTday_PLA1 4
-0.5 0.2 0.1 0.2
+0.75 0.25 0 0
  
 VERTday_FOU1 4
-0.5 0.2 0.1 0.2
+0.75 0.25 0 0
  
 VERTday_FLA1 4
-0.5 0.2 0.1 0.2
+0.75 0.25 0 0
  
 VERTday_BFT1 4
 0.1 0.3 0.5 0.1
@@ -4306,7 +4297,7 @@ VERTday_HAD1 4
 0.5 0.5 0 0
  
 VERTday_YTF1 4
-0.5 0.5 0 0
+0.75 0.25 0 0
  
 VERTday_DOG1 4
 0.25 0.25 0.25 0.25
@@ -4376,28 +4367,28 @@ VERTday_BLF2 4
 0 0 0.5 0.5
  
 VERTday_WPF2 4
-0.5 0.2 0.1 0.2
+0.75 0.25 0 0
  
 VERTday_SUF2 4
-0.5 0.2 0.1 0.2
+0.75 0.25 0 0
  
 VERTday_WIF2 4
-0.5 0.2 0.1 0.2
+0.75 0.25 0 0
  
 VERTday_WTF2 4
-0.5 0.2 0.1 0.2
+0.75 0.25 0 0
  
 VERTday_HAL2 4
-0.5 0.2 0.1 0.2
+0.75 0.25 0 0
  
 VERTday_PLA2 4
-0.5 0.2 0.1 0.2
+0.75 0.25 0 0
  
 VERTday_FOU2 4
-0.5 0.2 0.1 0.2
+0.75 0.25 0 0
  
 VERTday_FLA2 4
-0.5 0.2 0.1 0.2
+0.75 0.25 0 0
  
 VERTday_BFT2 4
 0.1 0.5 0.3 0.1
@@ -4409,10 +4400,10 @@ VERTday_BIL2 4
 0.1 0.5 0.3 0.1
  
 VERTday_MPF2 4
-0.3 0.3 0.2 0.2
+0.3 0.4 0.3 0
  
 VERTday_BUT2 4
-0 0 0.2 0.8
+0 0.2 0.4 0.4
  
 VERTday_ANC2 4
 0 0 0.2 0.8
@@ -4484,7 +4475,7 @@ VERTday_HAD2 4
 0.5 0.5 0 0
  
 VERTday_YTF2 4
-0.5 0.5 0 0
+0.75 0.25 0 0
  
 VERTday_DOG2 4
 0.25 0.25 0.25 0.25
@@ -9003,21 +8994,37 @@ pPREYBO	92
 
 
 ## Ontogenetic diet preferences - one entry per age class, 1=use explicit values above, 0=use ontogenetic values below. 
-p_split_SCA 0
-p_split_QHG 0
-p_split_CLA 0
-p_split_BFF 0
-p_split_BG 0
-p_split_LOB 0
-p_split_RCB 0
-p_split_BMS 0
-p_split_ZL 0
-p_split_BD 0
-p_split_BC 0
-p_split_ZG 0
-p_split_ZM 0
-p_split_ZS 0
+# For each group where the p_split value is set to 0 there will be a value for each cohort of the groups tagged below as age_structured_pred.    
+#p_split_SCA 0
+#p_split_QHG 0
+#p_split_CLA 0
+#p_split_BFF 0
+#p_split_BG 0
+#p_split_LOB 0
+#p_split_RCB 0
+#p_split_BMS 0
+#p_split_ZL 0
+#p_split_BD 0
+#p_split_BC 0
+#p_split_ZG 0
+#p_split_ZM 0
+#p_split_ZS 0
  
+#RM changed these to 1 20190115; this could be a big change...
+p_split_SCA 1
+p_split_QHG 1
+p_split_CLA 1
+p_split_BFF 1
+p_split_BG 1
+p_split_LOB 1
+p_split_RCB 1
+p_split_BMS 1
+p_split_ZL 1
+p_split_BD 1
+p_split_BC 1
+p_split_ZG 1
+p_split_ZM 1
+p_split_ZS 1
 
 # These replace the juvenile/adult values defined in the pPREY entries above
 # Fraction of scallop exploitable by each age class of white hake (WHK)           
@@ -11396,181 +11403,182 @@ flagfishrates    0         Switch to show whether clearance and growth rates are
 # Clearance rate of each vertebrate group, per age class       (m3 Ind-1 day-1)
 # updated 20180814 as 0.1 * mum (which is RN+SN * [max % body weight consumption per day] /365)
 C_MAK	10								
-12.44	28.11	45.44	64.27	76.37	84.14	88.83	91.30	92.37	92.13
+2.8	4.3	5.6	6.8	7.8	8.6	9.3	9.8	10.2	10.5
 									
 C_HER	10								
-0.15	5.27	12.02	17.53	21.76	24.42	25.89	26.65	26.81	26.69
+0.1	0.8	1.9	2.9	3.8	4.5	5.0	5.5	5.8	6.0
 									
 C_WHK	10								
-0.32	2.93	7.95	18.44	37.15	58.86	82.38	106.65	130.87	153.62
+0.9	3.2	6.5	10.6	15.2	20.1	25.1	30.1	35.0	39.8
 									
 C_BLF	10								
-25.47	73.93	137.94	189.55	229.19	257.84	277.51	290.74	298.96	302.68
+3.1	7.3	11.7	15.5	18.6	21.1	23.0	24.5	25.6	26.4
 									
 C_WPF	10								
-1.59	4.02	5.53	6.84	8.06	8.75	8.97	9.00	9.00	8.88
+2.1	5.1	7.3	8.7	9.5	9.9	10.2	10.3	10.4	10.5
 									
 C_SUF	10								
-14.48	37.76	53.21	66.96	79.04	85.11	86.27	86.11	85.31	84.39
+11.1	27.3	38.9	45.9	49.8	51.9	53.0	53.6	53.9	54.1
 									
 C_WIF	10								
-14.24	26.61	30.22	34.72	39.81	41.90	41.70	41.24	40.88	40.40
+9.4	18.5	23.0	25.0	25.8	26.1	26.2	26.2	26.3	26.3
 									
 C_WTF	10								
-0.83	3.75	8.20	14.28	20.90	26.53	30.21	32.88	34.67	35.70
+1.3	4.1	7.3	10.4	13.0	15.1	16.8	18.1	19.1	19.9
 									
 C_HAL	10								
-28.24	167.54	402.60	738.45	1150.24	1529.20	1829.16	2077.61	2281.34	2445.69
+20.5	82.5	166.9	259.2	350.2	434.9	510.9	577.3	634.4	682.8
 									
 C_PLA	10								
-3.09	12.04	20.23	28.26	35.40	39.66	41.23	41.80	41.79	41.49
+2.5	7.3	11.6	14.8	16.9	18.3	19.1	19.6	19.9	20.1
 									
 C_FOU	10								
-1.04	2.40	6.27	12.93	25.43	20.68	17.60	16.52	16.12	17.24
+1.3	3.4	5.2	6.5	7.3	7.8	8.1	8.3	8.5	8.5
 									
 C_FLA	10								
-0.00	0.16	0.29	0.41	0.51	0.58	0.65	0.69	0.73	0.71
+0.1	0.4	0.7	1.1	1.4	1.7	2.0	2.3	2.5	2.7
 									
 C_BFT	10								
-1863.65	5325.94	8661.25	10707.92	11019.35	10428.28	9529.19	8568.31	7648.45	6809.50
+276.3	558.9	800.5	963.4	1066.3	1129.1	1166.8	1189.2	1202.5	1210.3
 									
 C_TUN	10								
-1164.56	1648.57	1685.35	1601.89	1406.72	1210.91	1042.53	900.25	779.22	675.98
+105.9	142.4	151.3	153.3	153.8	153.9	153.9	153.9	153.9	153.9
 									
 C_BIL	10								
-25643.61	51666.02	70049.90	80664.90	79790.02	74234.63	67559.78	60899.84	54671.42	49042.02
+303.9	605.7	828.2	972.8	1061.4	1114.3	1145.4	1163.4	1173.9	1180.0
 									
 C_MPF	10								
-0.10	0.35	0.68	0.77	1.10	1.12	1.13	1.39	1.36	1.33
+0.1	0.1	0.2	0.2	0.3	0.3	0.3	0.3	0.4	0.4
 									
 C_BUT	10								
-3.29	13.23	20.16	25.75	29.32	30.97	31.42	31.56	31.50	31.30
+1.2	2.4	3.1	3.4	3.5	3.5	3.6	3.6	3.6	3.6
 									
 C_ANC	10								
-0.06	0.06	0.06	0.06	0.06	0.06	0.06	0.06	0.06	0.06
+0.2	0.3	0.4	0.5	0.6	0.7	0.8	0.9	0.9	1.0
 									
 C_BPF	10								
-0.83	2.59	2.91	3.37	4.03	4.08	4.10	4.10	4.10	4.10
+1.6	3.3	4.1	4.5	4.6	4.7	4.7	4.7	4.7	4.7
 									
 C_GOO	10								
-0.24	2.54	6.20	11.78	19.30	28.43	37.88	47.19	56.47	65.09
+0.9	3.8	8.4	14.2	20.9	28.1	35.6	43.3	50.9	58.4
 									
 C_MEN	10								
-0.93	6.46	13.29	19.35	22.91	25.09	25.93	26.55	26.80	27.02
+0.2	0.8	1.5	2.1	2.7	3.3	3.7	4.1	4.4	4.7
 									
 C_FDE	10								
-4.87	39.16	79.57	108.16	122.18	127.31	127.81	125.72	122.51	118.53
+2.5	6.6	10.0	12.1	13.4	14.2	14.7	14.9	15.0	15.1
 									
 C_COD	10								
-17.91	81.25	152.88	212.43	254.64	282.93	300.66	310.84	315.64	317.11
+9.8	31.9	56.2	78.1	96.3	110.5	121.4	129.6	135.6	140.0
 									
 C_SHK	10								
-22.06	53.84	140.79	160.29	152.54	149.83	147.85	154.79	165.13	173.81
+0.5	1.5	2.8	4.2	5.6	6.8	8.0	9.1	10.0	10.8
 									
 C_OHK	10								
-9.74	17.87	20.49	20.73	20.48	20.02	19.59	19.18	18.78	18.40
+4.2	6.4	7.0	7.1	7.1	7.1	7.1	7.1	7.1	7.1
 									
 C_POL	10								
-25.73	93.84	147.59	177.30	189.83	193.08	191.74	188.36	183.87	179.33
+12.3	33.0	50.6	63.0	71.2	76.4	79.5	81.5	82.7	83.4
 									
 C_RHK	10								
-5.82	49.02	113.74	157.92	183.69	196.11	200.39	199.65	196.63	191.92
+4.0	10.4	15.3	18.6	20.5	21.7	22.4	22.8	23.0	23.1
 									
 C_BSB	10								
-47.00	220.06	384.15	476.31	516.82	530.93	531.96	524.32	514.28	502.34
+4.8	12.3	17.7	20.9	22.6	23.6	24.1	24.3	24.4	24.5
 									
 C_SCU	10								
-4.86	21.83	40.23	52.50	59.05	61.93	62.25	61.42	59.93	58.15
+2.2	6.1	9.4	11.8	13.4	14.4	15.1	15.4	15.7	15.8
 									
 C_TYL	10								
-38.58	151.46	267.62	357.57	416.57	451.30	468.75	474.53	472.66	466.35
+7.1	23.5	40.8	55.4	66.6	74.9	80.8	84.9	87.8	89.8
 									
 C_RED	10								
-0.21	0.46	0.67	0.73	0.79	0.76	0.73	0.78	0.76	0.74
+1.0	2.2	3.0	3.6	3.9	4.1	4.2	4.3	4.3	4.4
 									
 C_OPT	10								
-7.15	42.80	90.40	132.23	163.14	184.01	197.03	204.33	207.33	207.59
+2.7	9.0	16.0	22.4	27.8	32.2	35.6	38.1	40.0	41.4
 									
 C_SAL	10								
-40.57	185.89	340.60	444.51	498.96	518.66	517.09	503.55	483.59	461.09
+20.2	50.6	73.4	87.9	96.4	101.2	104.0	105.5	106.3	106.8
 									
 C_DRM	10								
-0.85	4.35	12.02	17.99	28.62	25.31	22.98	21.73	23.31	22.78
+8.1	13.2	14.7	15.2	15.3	15.3	15.3	15.3	15.3	15.3
 									
 C_STB	10								
-50.52	117.49	177.85	213.14	230.61	237.01	237.44	234.32	229.34	223.53
+16.7	25.9	32.7	37.3	40.4	42.3	43.5	44.3	44.8	45.1
 									
 C_TAU	10								
-1.51	5.70	10.48	14.93	18.39	21.04	22.97	24.22	25.09	25.51
+2.3	7.3	13.0	18.3	22.8	26.6	29.5	31.8	33.5	34.9
 									
 C_WOL	10								
-0.52	3.48	9.89	19.20	30.32	42.30	54.43	65.85	76.50	86.10
+1.6	5.7	11.4	18.0	25.1	32.3	39.4	46.2	52.7	58.7
 									
 C_SDF	10								
-126.81	472.94	891.48	1223.89	1454.55	1599.41	1678.80	1710.20	1708.34	1684.29
+14.3	34.5	57.6	80.6	102.0	121.0	137.4	151.2	162.8	172.4
 									
 C_FDF	10								
-0.31	4.56	13.14	23.33	32.82	41.18	48.25	53.43	57.41	60.26
+0.7	2.6	5.0	7.6	10.0	12.2	14.2	15.8	17.2	18.4
 									
 C_HAD	10								
-5.06	11.60	14.14	14.66	14.55	14.27	13.94	13.66	13.40	13.19
+9.5	16.8	19.4	20.2	20.5	20.6	20.6	20.6	20.6	20.6
 									
 C_YTF	10								
-2.01	10.92	21.57	24.63	24.26	23.15	22.67	22.88	22.39	21.86
+0.8	2.3	3.8	5.1	6.2	7.1	7.7	8.1	8.5	8.7
 									
 C_DOG	10								
-25.94	37.99	43.21	46.08	42.37	37.89	34.20	31.44	29.54	28.27
+38.4	65.7	74.9	77.5	78.3	78.5	78.6	78.6	78.6	78.6
 									
 C_SMO	10								
-12.14	21.69	35.25	42.42	45.27	46.10	46.00	45.64	45.10	44.60
+19.6	36.8	48.5	55.6	59.6	61.8	63.0	63.7	64.0	64.2
 									
 C_SSH	10								
-150.18	287.88	423.27	468.36	468.06	448.81	422.83	396.08	371.14	348.94
+60.4	105.7	133.7	149.0	157.1	161.2	163.3	164.3	164.8	165.1
 									
 C_DSH	10								
-4564.64	3703.25	3566.23	3249.84	2942.53	2676.08	2445.15	2245.16	2071.88	1921.49
+620.9	659.1	660.5	660.5	660.5	660.5	660.5	660.5	660.5	660.5
 									
 C_BLS	10								
-161.65	212.44	234.07	220.46	200.47	180.81	163.50	149.07	137.40	128.21
+223.6	226.0	226.0	226.0	226.0	226.0	226.0	226.0	226.0	226.0
 									
 C_POR	10								
-2738.54	2377.80	2196.68	1902.75	1651.08	1446.49	1279.70	1143.41	1032.69	943.78
+292.3	316.6	317.6	317.6	317.6	317.6	317.6	317.6	317.6	317.6
 									
 C_PSH	10								
-7172.65	5914.18	5341.85	4547.70	3883.15	3356.85	2937.30	2598.78	2323.29	2099.56
+642.8	674.0	674.8	674.8	674.8	674.8	674.8	674.8	674.8	674.8
 									
 C_WSK	10								
-16.39	52.93	104.79	136.04	148.91	152.66	152.26	150.09	147.52	144.90
+21.7	56.1	82.4	99.2	109.2	114.9	118.1	119.8	120.8	121.3
 									
 C_LSK	10								
-5.43	5.99	6.60	6.59	6.50	6.41	6.35	6.30	6.27	6.26
+18.1	22.2	22.8	22.9	22.9	22.9	22.9	22.9	22.9	22.9
 									
 C_SK	10								
-95.08	187.98	282.93	312.33	310.58	299.42	285.91	272.43	260.15	249.09
+44.6	80.6	98.8	106.9	110.4	111.8	112.4	112.7	112.8	112.8
 									
 C_SB	10								
-43.49	60.02	60.36	58.13	55.80	53.57	51.44	49.44	47.54	45.75
+8.0	9.8	10.0	10.1	10.1	10.1	10.1	10.1	10.1	10.1
 									
 C_PIN	10								
-1186.22	1205.26	1082.39	975.32	880.98	800.46	732.57	676.27	630.94	595.87
+392.1	432.8	434.8	434.9	435.0	435.0	435.0	435.0	435.0	435.0
 									
 C_REP	10								
-1267.21	884.39	819.98	732.20	657.43	597.83	551.35	516.16	490.57	472.97
+445.1	446.2	446.2	446.2	446.2	446.2	446.2	446.2	446.2	446.2
 									
 C_RWH	10								
-88447.37	56318.29	48466.02	38034.58	31834.01	28267.44	26163.33	24873.61	24062.12	23547.77
+27011.1	27011.8	27011.8	27011.8	27011.8	27011.8	27011.8	27011.8	27011.8	27011.8
 									
 C_BWH	10								
-1363.21	1418.47	1600.78	1489.60	1398.84	1348.40	1325.74	1318.88	1320.73	1327.35
+23465.0	23465.0	23465.0	23465.0	23465.0	23465.0	23465.0	23465.0	23465.0	23465.0
 									
 C_SWH	10								
-4196.56	2826.32	2256.58	1816.34	1510.74	1304.15	1164.26	1069.94	1007.06	965.88
+608.8	610.0	610.0	610.0	610.0	610.0	610.0	610.0	610.0	610.0
 									
 C_TWH	10								
-97656.19	65767.10	53982.15	43513.90	36107.56	31103.22	27720.63	25442.20	23924.80	22931.48
+10624.9	10645.3	10645.3	10645.3	10645.3	10645.3	10645.3	10645.3	10645.3	10645.3
 									
 C_INV	10								
-12.80	30.17	35.96	35.54	33.81	32.21	30.95	29.95	29.10	28.34
+7.4	12.0	13.3	13.7	13.8	13.8	13.8	13.8	13.8	13.8
+
 
 
 
@@ -11613,181 +11621,182 @@ mum_BO_T15  0.001
 # are chosen as absolute (=0), or as proportion of body mass (=1)  
 # modified 20180814 based on RN+SN * percent consumption (.10 - 0.30 ) per day / 365
 mum_MAK	10.0								
-124.41	281.11	453.29	640.86	766.03	839.96	886.29	911.59	922.27	920.90
+27.5	42.5	56.3	68.3	78.2	86.3	92.8	97.9	101.9	105.0
 									
 mum_HER	10.0								
-1.78	52.51	118.93	175.13	217.46	243.93	258.79	265.89	267.83	266.60
+1.0	8.4	18.6	28.8	37.6	44.8	50.4	54.7	57.9	60.3
 									
 mum_WHK	10.0								
-3.47	29.07	78.54	184.81	372.00	591.07	826.26	1070.08	1310.03	1536.98
+8.5	31.5	65.2	106.2	152.1	200.9	250.9	301.0	350.3	398.3
 									
 mum_BLF	10.0								
-254.06	736.33	1380.31	1899.84	2296.29	2581.92	2778.52	2907.44	2985.50	3027.55
+30.6	73.3	116.5	154.6	186.1	211.0	230.3	245.0	256.1	264.4
 									
 mum_WPF	10.0								
-15.76	40.08	54.84	68.21	80.99	87.89	89.74	89.98	89.24	88.44
+20.9	50.8	72.9	86.8	94.9	99.5	102.0	103.5	104.3	104.7
 									
 mum_SUF	10.0								
-144.70	377.55	532.24	669.23	790.18	851.10	863.19	861.37	853.74	843.91
+110.9	273.0	389.1	458.8	497.8	519.0	530.3	536.2	539.4	541.0
 									
 mum_WIF	10.0								
-141.59	266.31	302.64	346.71	397.26	418.33	416.87	412.97	408.13	403.44
+93.5	185.2	230.4	249.7	257.5	260.6	261.9	262.4	262.6	262.6
 									
 mum_WTF	10.0								
-7.79	38.24	81.88	142.93	210.19	264.55	302.14	328.45	345.59	356.45
+12.8	41.2	73.4	103.7	129.7	151.1	168.1	181.3	191.5	199.2
 									
 mum_HAL	10.0								
-282.32	1674.79	4026.55	7384.04	11503.06	15291.34	18292.28	20776.86	22813.23	24457.88
+205.0	824.7	1669.0	2591.8	3502.0	4349.2	5108.9	5773.4	6344.3	6828.4
 									
 mum_PLA	10.0								
-30.59	120.27	202.75	282.57	354.16	395.74	411.96	418.13	418.19	415.11
+24.7	72.9	116.3	148.0	169.1	182.6	190.9	196.1	199.2	201.1
 									
 mum_FOU	10.0								
-3.47	5.48	7.24	9.08	18.68	24.06	28.06	26.37	25.86	25.61
+13.0	34.3	52.1	64.7	73.0	78.2	81.4	83.3	84.5	85.2
 									
 mum_FLA	10.0								
-0.40	1.82	3.11	4.31	5.29	6.04	6.58	6.82	6.97	7.22
+1.4	4.0	7.2	10.7	14.1	17.4	20.3	22.9	25.2	27.2
 									
 mum_BFT	10.0								
-18635.02	53259.38	86610.09	107077.59	110190.61	104284.76	95293.70	85683.58	76482.31	68093.66
+2763.4	5589.3	8005.5	9634.1	10662.6	11290.9	11668.1	11892.2	12024.7	12102.7
 									
 mum_TUN	10.0								
-11645.57	16483.87	16854.00	16016.92	14065.75	12107.87	10425.94	9003.29	7792.96	6760.44
+1058.5	1423.9	1513.0	1533.3	1537.9	1538.9	1539.1	1539.1	1539.2	1539.2
 									
 mum_BIL	10.0								
-256415.04	516647.39	700486.34	806653.13	797885.22	742352.89	675603.82	608992.99	546721.15	490428.47
+3038.8	6056.8	8282.3	9727.5	10614.3	11143.1	11453.6	11634.4	11739.1	11799.7
 									
 mum_MPF	10.0								
-1.00	3.26	5.73	8.33	10.06	11.53	12.45	12.83	12.85	13.00
+0.7	1.4	1.9	2.4	2.8	3.0	3.3	3.4	3.6	3.6
 									
 mum_BUT	10.0								
-32.89	130.26	200.68	255.10	294.49	309.00	316.32	318.34	317.75	316.40
+12.3	24.3	30.6	33.5	34.8	35.3	35.6	35.7	35.7	35.7
 									
 mum_ANC	10.0								
-0.14	0.15	0.23	0.30	0.38	0.46	0.54	0.55	0.55	0.63
+1.7	2.9	4.1	5.3	6.4	7.4	8.2	8.9	9.5	10.0
 									
 mum_BPF	10.0								
-8.10	25.50	28.70	33.38	39.72	40.77	41.12	41.14	41.40	41.26
+16.3	32.8	41.1	44.6	46.0	46.6	46.8	46.9	46.9	47.0
 									
 mum_GOO	10.0								
-2.60	25.54	61.98	117.76	193.62	285.04	378.95	472.71	563.96	651.33
+8.9	38.2	84.0	142.0	208.6	280.8	356.2	432.8	509.2	584.3
 									
 mum_MEN	10.0								
-9.58	66.50	135.75	190.82	227.60	249.00	259.88	266.55	269.74	268.75
+2.5	8.0	14.7	21.3	27.4	32.7	37.3	41.0	44.1	46.6
 									
 mum_FDE	10.0								
-48.89	390.05	795.67	1079.82	1221.30	1274.40	1278.11	1256.80	1223.79	1185.93
+24.6	66.3	99.5	121.3	134.5	142.1	146.5	149.0	150.3	151.1
 									
 mum_COD	10.0								
-179.26	811.87	1528.34	2123.81	2546.61	2829.73	3006.95	3107.86	3156.73	3171.15
+97.6	318.8	561.8	781.3	962.6	1105.2	1214.1	1295.8	1356.2	1400.5
 									
 mum_SHK	10.0								
-0.09	2.46	3.07	7.41	15.41	26.46	39.51	41.43	45.56	48.09
+4.5	14.8	27.8	41.8	55.5	68.4	80.3	90.8	100.2	108.3
 									
 mum_OHK	10.0								
-96.91	178.71	206.03	207.89	204.36	199.94	195.59	191.47	187.57	183.85
+42.1	63.8	69.6	71.0	71.4	71.4	71.5	71.5	71.5	71.5
 									
 mum_POL	10.0								
-256.78	937.63	1476.94	1772.85	1898.28	1931.56	1917.85	1882.61	1839.23	1793.69
+123.0	330.2	505.9	630.3	712.0	763.5	795.4	814.8	826.6	833.7
 									
 mum_RHK	10.0								
-58.24	490.50	1137.19	1579.41	1835.86	1960.88	2003.32	1998.25	1966.30	1919.43
+40.4	103.7	153.2	185.7	205.5	217.2	223.9	227.8	230.0	231.2
 									
 mum_BSB	10.0								
-472.23	2193.65	3846.58	4756.13	5173.52	5316.27	5314.44	5244.83	5139.55	5018.75
+47.9	123.5	177.2	208.9	226.4	235.7	240.6	243.1	244.5	245.1
 									
 mum_SCU	10.0								
-48.96	218.32	401.64	524.66	590.77	617.77	622.22	613.93	599.28	581.22
+21.9	60.7	94.4	118.5	134.3	144.4	150.6	154.4	156.8	158.2
 									
 mum_TYL	10.0								
-386.07	1513.26	2677.81	3574.42	4165.43	4514.17	4688.35	4745.03	4726.89	4664.58
+70.6	235.3	407.7	553.8	666.5	749.2	808.1	849.4	878.0	897.7
 									
 mum_RED	10.0								
-2.22	5.12	6.77	7.54	7.81	7.91	7.75	7.57	7.34	7.15
+10.4	21.9	30.5	36.0	39.4	41.3	42.5	43.1	43.5	43.7
 									
 mum_OPT	10.0								
-71.33	428.14	904.47	1323.14	1631.43	1839.61	1970.29	2043.47	2074.13	2075.00
+27.4	89.6	159.6	224.2	278.5	321.9	355.5	381.0	400.1	414.3
 									
 mum_SAL	10.0								
-405.96	1858.88	3405.23	4445.38	4989.38	5186.88	5170.69	5034.73	4836.60	4610.64
+201.7	505.6	734.3	878.8	964.0	1012.4	1039.6	1054.6	1062.9	1067.5
 									
 mum_DRM	10.0								
-0.64	3.35	4.73	6.07	7.80	10.14	11.20	10.11	9.51	9.14
+81.1	132.0	147.3	151.5	152.6	152.9	153.0	153.0	153.0	153.0
 									
 mum_STB	10.0								
-504.74	1175.75	1779.11	2131.77	2304.70	2370.29	2373.51	2341.92	2292.85	2234.60
+167.3	259.4	327.1	373.3	403.6	423.0	435.4	443.2	448.1	451.1
 									
 mum_TAU	10.0								
-15.36	56.53	105.37	149.24	184.31	210.39	229.24	242.13	250.49	255.51
+22.8	73.0	129.7	182.8	228.4	265.6	295.0	317.8	335.3	348.6
 									
 mum_WOL	10.0								
-5.03	34.64	98.54	191.91	303.61	423.54	543.61	658.65	765.47	861.76
+15.9	56.7	113.6	179.9	250.8	323.0	393.9	462.2	526.8	587.0
 									
 mum_SDF	10.0								
-1270.72	4725.21	8916.77	12237.18	14543.80	15994.80	16789.47	17104.83	17085.28	16840.54
+143.1	345.3	576.1	806.3	1019.9	1209.7	1373.5	1512.3	1628.0	1723.6
 									
 mum_FDF	10.0								
-3.27	45.47	131.75	231.93	328.60	412.76	481.90	535.68	575.85	603.41
+7.3	25.9	50.1	75.6	100.1	122.3	141.8	158.4	172.5	184.2
 									
 mum_HAD	10.0								
-50.44	115.72	141.44	146.75	145.32	142.39	139.31	136.43	134.02	131.88
+94.6	167.5	193.9	202.3	204.8	205.6	205.8	205.9	205.9	205.9
 									
 mum_YTF	10.0								
-0.61	4.22	7.99	10.74	14.44	18.35	16.75	16.06	16.05	15.37
+7.8	22.8	38.1	51.5	62.2	70.5	76.8	81.5	84.9	87.3
 									
 mum_DOG	10.0								
-259.45	379.55	432.47	460.49	423.11	378.49	341.86	314.44	295.37	282.74
+384.1	657.5	748.7	775.5	783.1	785.2	785.8	786.0	786.0	786.1
 									
 mum_SMO	10.0								
-121.79	217.22	353.01	424.64	452.83	461.02	460.07	455.95	450.98	446.27
+195.7	368.1	485.2	555.5	595.7	618.0	630.2	636.9	640.5	642.5
 									
 mum_SSH	10.0								
-1500.97	2878.83	4233.66	4683.58	4680.87	4488.08	4228.01	3960.36	3711.29	3490.08
+604.2	1057.5	1336.8	1490.2	1570.6	1611.8	1632.6	1643.1	1648.4	1651.1
 									
 mum_DSH	10.0								
-45648.40	37032.50	35663.39	32498.05	29425.31	26760.76	24451.55	22451.56	20718.78	19214.85
+6208.6	6591.2	6604.7	6605.2	6605.2	6605.2	6605.2	6605.2	6605.2	6605.2
 									
 mum_BLS	10.0								
-1616.34	2124.63	2341.03	2204.95	2004.82	1808.27	1635.20	1490.82	1374.19	1282.24
+2235.6	2259.5	2259.7	2259.7	2259.7	2259.7	2259.7	2259.7	2259.7	2259.7
 									
 mum_POR	10.0								
-27385.44	23777.62	21966.84	19026.43	16509.95	14464.09	12796.19	11433.53	10326.36	9437.27
+2922.6	3166.1	3175.8	3176.2	3176.2	3176.2	3176.2	3176.2	3176.2	3176.2
 									
 mum_PSH	10.0								
-71723.01	59144.00	53419.08	45478.76	38832.97	33569.74	29374.18	25988.76	23233.85	20996.31
+6427.8	6739.6	6747.6	6747.8	6747.8	6747.8	6747.8	6747.8	6747.8	6747.8
 									
 mum_WSK	10.0								
-163.78	528.96	1048.21	1361.15	1489.12	1526.32	1522.13	1501.26	1475.16	1449.40
+216.9	560.5	824.3	992.5	1092.0	1148.8	1180.6	1198.3	1208.0	1213.4
 									
 mum_LSK	10.0								
-54.49	59.90	66.08	66.23	65.27	64.45	63.81	63.40	63.10	62.99
+180.7	222.5	227.9	228.6	228.6	228.7	228.7	228.7	228.7	228.7
 									
 mum_SK	10.0								
-950.58	1879.27	2828.67	3123.00	3105.33	2994.16	2859.09	2724.61	2600.79	2491.18
+446.1	806.0	988.3	1069.4	1103.8	1118.2	1124.2	1126.7	1127.7	1128.1
 									
 mum_SB	10.0								
-435.42	601.43	602.40	581.29	558.29	535.83	514.75	494.72	475.69	457.63
+79.6	98.2	100.3	100.5	100.5	100.5	100.5	100.5	100.5	100.5
 									
 mum_PIN	10.0								
-11862.88	12051.63	10824.83	9754.36	8808.87	8003.69	7324.90	6761.95	6308.70	5958.09
+3921.2	4327.7	4348.4	4349.5	4349.5	4349.5	4349.5	4349.5	4349.5	4349.5
 									
 mum_REP	10.0								
-12672.14	8843.34	8199.25	7321.49	6573.86	5977.81	5513.12	5161.27	4905.36	4729.39
+4451.0	4461.7	4461.7	4461.7	4461.7	4461.7	4461.7	4461.7	4461.7	4461.7
 									
 mum_RWH	10.0								
-884473.29	563183.35	484660.61	380346.05	318340.32	282674.59	261633.51	248736.31	240621.33	235477.86
+270110.9	270118.2	270118.2	270118.2	270118.2	270118.2	270118.2	270118.2	270118.2	270118.2
 									
 mum_BWH	10.0								
-13631.95	14184.69	16007.83	14896.04	13988.41	13483.95	13257.35	13188.78	13207.26	13273.51
+234649.9	234649.9	234649.9	234649.9	234649.9	234649.9	234649.9	234649.9	234649.9	234649.9
 									
 mum_SWH	10.0								
-41967.12	28262.47	22565.66	18163.07	15107.25	13041.34	11642.47	10699.11	10070.49	9658.67
+6088.2	6099.9	6099.9	6099.9	6099.9	6099.9	6099.9	6099.9	6099.9	6099.9
 									
 mum_TWH	10.0								
-976559.68	657670.62	539822.03	435139.51	361076.05	311032.49	277206.66	254422.21	239248.40	229315.00
+106249.0	106452.5	106452.7	106452.7	106452.7	106452.7	106452.7	106452.7	106452.7	106452.7
 									
 mum_INV	10.0								
-127.67	302.24	360.54	354.58	336.98	321.34	309.09	299.09	290.54	283.00
+73.8	120.2	133.4	136.7	137.5	137.7	137.8	137.8	137.8	137.8
+
 
 
 
@@ -12524,11 +12533,11 @@ KDEP_HAL 0.5
 KDEP_PLA 0.1
 KDEP_FOU 0.5
 KDEP_FLA 0.1
-KDEP_BFT 0.
-KDEP_TUN 0.
-KDEP_BIL 0.
-KDEP_MPF 0.
-KDEP_BUT 0.
+KDEP_BFT 0.1
+KDEP_TUN 0.1
+KDEP_BIL 0.1
+KDEP_MPF 0.1
+KDEP_BUT 0.1
 KDEP_ANC 0.1
 KDEP_BPF 0.1
 KDEP_GOO 0.5
@@ -13783,6 +13792,7 @@ mStarve_BWH 1e-03
 mStarve_SWH 1e-03
 mStarve_TWH 1e-03
 mStarve_INV 1e-02
+
 Kthreshm         0.7       Threshold starvation level when mort starts                         0.7
 
 # Oxygen mortality (based on depth and the oxygen horizon) 
@@ -14648,59 +14658,58 @@ Time_Age_OSH 2
 
 
 ## Fish reproduction parameters
-# Spawning season          
-###FPL_Time_Spawn   270       Time of year large planktivores spawn             d                210 - 330
-MAK_Time_Spawn 270           
+# Spawning season - day of year          
+MAK_Time_Spawn 210           
 HER_Time_Spawn 290           
-WHK_Time_Spawn 50            
+WHK_Time_Spawn 180            
 BLF_Time_Spawn 180           
-WPF_Time_Spawn 1             
-SUF_Time_Spawn 1             
-WIF_Time_Spawn 1             
-WTF_Time_Spawn 1             
-HAL_Time_Spawn 1             
-PLA_Time_Spawn 1             
-FOU_Time_Spawn 1             
-FLA_Time_Spawn 1             
-BFT_Time_Spawn 280           
-TUN_Time_Spawn 280           
-BIL_Time_Spawn 280           
+WPF_Time_Spawn 180             
+SUF_Time_Spawn 270           
+WIF_Time_Spawn 30             
+WTF_Time_Spawn 100             
+HAL_Time_Spawn 180             
+PLA_Time_Spawn 100             
+FOU_Time_Spawn 180             
+FLA_Time_Spawn 180             
+BFT_Time_Spawn 180           
+TUN_Time_Spawn 180           
+BIL_Time_Spawn 180           
 MPF_Time_Spawn 180           
 BUT_Time_Spawn 100           
 ANC_Time_Spawn 100           
 BPF_Time_Spawn 100           
-GOO_Time_Spawn 270           
-MEN_Time_Spawn 10            
+GOO_Time_Spawn 280           
+MEN_Time_Spawn 270            
 FDE_Time_Spawn 10            
 COD_Time_Spawn 20            
-SHK_Time_Spawn 10            
-OHK_Time_Spawn 10            
+SHK_Time_Spawn 150            
+OHK_Time_Spawn 150            
 POL_Time_Spawn 10            
-RHK_Time_Spawn 10            
-BSB_Time_Spawn 10            
-SCU_Time_Spawn 10            
-TYL_Time_Spawn 10            
-RED_Time_Spawn 10            
-OPT_Time_Spawn 10            
-SAL_Time_Spawn 10            
-DRM_Time_Spawn 10            
-STB_Time_Spawn 10            
-TAU_Time_Spawn 10            
+RHK_Time_Spawn 180            
+BSB_Time_Spawn 150            
+SCU_Time_Spawn 150            
+TYL_Time_Spawn 150            
+RED_Time_Spawn 100            
+OPT_Time_Spawn 100            
+SAL_Time_Spawn 220            
+DRM_Time_Spawn 180            
+STB_Time_Spawn 180            
+TAU_Time_Spawn 180            
 WOL_Time_Spawn 10            
 SDF_Time_Spawn 10            
 FDF_Time_Spawn 10            
 HAD_Time_Spawn 30            
 YTF_Time_Spawn 60            
-DOG_Time_Spawn 60            
+DOG_Time_Spawn 180            
 SMO_Time_Spawn 160           
 SSH_Time_Spawn 160           
 DSH_Time_Spawn 160           
 BLS_Time_Spawn 150           
 POR_Time_Spawn 150           
 PSH_Time_Spawn 150           
-WSK_Time_Spawn 20            
-LSK_Time_Spawn 20            
-SK_Time_Spawn  20            
+WSK_Time_Spawn 190            
+LSK_Time_Spawn 190           
+SK_Time_Spawn  190           
 SB_Time_Spawn  290           
 PIN_Time_Spawn 230           
 REP_Time_Spawn 270           
@@ -14718,10 +14727,9 @@ OSH_Time_Spawn 300
 ##PWN_Time_Spawn 300
 ##jPWN_Time_Spawn 90
 
-# NEUS TO DO - CHECK THESE 
-#### G.Fay 06 April 2015, whose comment is this? from v1 files - was this ever checked?
-# Spawning period
-###FPL_spawn_period   7       Period of spawning for large planktivores         d                1 - 365
+
+## Used to calculate time of larval period as below (days, 1-365):	
+## XXX_larval_period = XXX_Recruit_Time	+ XXX_Spawn_Period + optional_small_scale_random_variation
 MAK_spawn_period 7               
 HER_spawn_period 7               
 WHK_spawn_period 7               
@@ -14770,9 +14778,9 @@ DSH_spawn_period 7
 BLS_spawn_period 7               
 POR_spawn_period 7               
 PSH_spawn_period 7               
-WSK_spawn_period 7               
-LSK_spawn_period 7               
-SK_spawn_period  7               
+WSK_spawn_period 90              
+LSK_spawn_period 90               
+SK_spawn_period  90              
 SB_spawn_period  7               
 PIN_spawn_period 7               
 REP_spawn_period 7               
@@ -14795,7 +14803,7 @@ BLF_Recruit_Time 30
 WPF_Recruit_Time 80              
 SUF_Recruit_Time 80              
 WIF_Recruit_Time 80              
-WTF_Recruit_Time 80              
+WTF_Recruit_Time 120              
 HAL_Recruit_Time 80              
 PLA_Recruit_Time 80              
 FOU_Recruit_Time 80              
@@ -14837,9 +14845,9 @@ BLS_Recruit_Time 360
 POR_Recruit_Time 360             
 PSH_Recruit_Time 360             
 WSK_Recruit_Time 270             
-LSK_Recruit_Time 270             
-SK_Recruit_Time  270             
-SB_Recruit_Time  200             
+LSK_Recruit_Time 84             
+SK_Recruit_Time  84            
+SB_Recruit_Time  84             
 PIN_Recruit_Time 330             
 REP_Recruit_Time 360             
 RWH_Recruit_Time 360             
@@ -14919,68 +14927,71 @@ Recruit_Period_ISQ 30       Length of time recruits arrive over for cephalopods 
 Recruit_Period_OSH 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                
 Recruit_Period_NSH 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                
 
-# Spawn production  
+# Cost of Spawn production, taken from N weight to produce spawn, not included in spawn calc
+# RM shouldn't these be a proportion of adult mass? E.g. X (0.01) * RN for cohort 5? -> changed to this 20190122
 ####KSPA_FPL         31.93     Constant in spawning formulation for large planktivores            31.93
-KSPA_MAK 31.93   
-KSPA_HER 31.93   
-KSPA_WHK 569.65  
-KSPA_BLF 569.65  
-KSPA_WPF 569.65  
-KSPA_SUF 569.65  
-KSPA_WIF 569.65  
-KSPA_WTF 569.65  
-KSPA_HAL 569.65  
-KSPA_PLA 569.65  
-KSPA_FOU 569.65  
-KSPA_FLA 569.65  
-KSPA_BFT 569.65  
-KSPA_TUN 569.65  
-KSPA_BIL 569.65  
-KSPA_MPF 31.93   
-KSPA_BUT 31.93   
-KSPA_ANC 31.93   
-KSPA_BPF 31.93   
-KSPA_GOO 438.6   
-KSPA_MEN 158.25  
-KSPA_FDE 158.25  
-KSPA_COD 158.25  
-KSPA_SHK 158.25  
-KSPA_OHK 158.25  
-KSPA_POL 158.25  
-KSPA_RHK 158.25  
-KSPA_BSB 158.25  
-KSPA_SCU 158.25  
-KSPA_TYL 158.25  
-KSPA_RED 158.25  
-KSPA_OPT 158.25  
-KSPA_SAL 158.25  
-KSPA_DRM 158.25  
-KSPA_STB 158.25  
-KSPA_TAU 158.25  
-KSPA_WOL 158.25  
-KSPA_SDF 158.25  
-KSPA_FDF 158.25  
-KSPA_HAD 438.6   
-KSPA_YTF 158.25  
-KSPA_DOG 2763.3  
-KSPA_SMO 2763.3  
-KSPA_SSH 2763.3  
-KSPA_DSH 2763.3  
-KSPA_BLS 2763.3  
-KSPA_POR 2763.3  
-KSPA_PSH 2763.3  
-KSPA_WSK 2763.3  
-KSPA_LSK 2763.3  
-KSPA_SK  2763.3  
-KSPA_SB  193.9   
-KSPA_PIN 38376.9 
-KSPA_REP 2763.3  
-KSPA_RWH 38376.9 
-KSPA_BWH 38376.9 
-KSPA_SWH 38376.9 
-KSPA_TWH 38376.9 
-KSPA_INV 158.25  
+KSPA_ANC	1.16
+KSPA_BFT	27900.25
+KSPA_BIL	21083.35
+KSPA_BLF	99.50
+KSPA_BLS	5678.88
+KSPA_BPF	17.81
+KSPA_BSB	134.86
+KSPA_BUT	11.95
+KSPA_BWH	3525480.78
+KSPA_COD	763.46
+KSPA_DOG	795.66
+KSPA_DRM	95.78
+KSPA_DSH	21317.17
+KSPA_FDE	82.43
+KSPA_FDF	54.03
+KSPA_FLA	3.30
+KSPA_FOU	24.13
+KSPA_GOO	154.37
+KSPA_HAD	143.11
+KSPA_HAL	3825.02
+KSPA_HER	13.34
+KSPA_INV	82.92
+KSPA_LSK	207.63
+KSPA_MAK	18.11
+KSPA_MEN	8.50
+KSPA_MPF	0.26
+KSPA_OHK	32.65
+KSPA_OPT	127.10
+KSPA_PIN	11810.41
+KSPA_PLA	77.02
+KSPA_POL	621.19
+KSPA_POR	7165.50
+KSPA_PSH	21158.53
+KSPA_RED	8.73
+KSPA_REP	12248.15
+KSPA_RHK	111.10
+KSPA_RWH	4310573.47
+KSPA_SAL	1035.64
+KSPA_SB		54.32
+KSPA_SCU	56.67
+KSPA_SDF	476.74
+KSPA_SHK	23.28
+KSPA_SK		1201.82
+KSPA_SMO	436.41
+KSPA_SSH	3884.39
+KSPA_STB	363.33
+KSPA_SUF	414.82
+KSPA_SWH	19168.38
+KSPA_TAU	94.64
+KSPA_TUN	2399.61
+KSPA_TWH	1139292.84
+KSPA_TYL	477.73
+KSPA_WHK	98.32
+KSPA_WIF	213.49
+KSPA_WOL	82.83
+KSPA_WPF	38.09
+KSPA_WSK	879.70
+KSPA_WTF	42.00
+KSPA_YTF	27.42
 
+
+## proportion of weight used for spawn production
 ####FSP_FPL          0.246     Fraction used in spawning formulation for large planktivores       0.246
 FSP_MAK 0.246  
 FSP_HER 0.246  
@@ -15001,7 +15012,7 @@ FSP_MPF 0.246
 FSP_BUT 0.246  
 FSP_ANC 0.246  
 FSP_BPF 0.246  
-FSP_GOO 0.276  
+FSP_GOO 0.4  
 FSP_MEN 0.276  
 FSP_FDE 0.276  
 FSP_COD 0.276  
@@ -15023,7 +15034,7 @@ FSP_SDF 0.276
 FSP_FDF 0.276  
 FSP_HAD 0.276  
 FSP_YTF 0.276  
-FSP_DOG 0.27   
+FSP_DOG 0.4   
 FSP_SMO 0.27   
 FSP_SSH 0.27   
 FSP_DSH 0.27   
@@ -15031,8 +15042,8 @@ FSP_BLS 0.27
 FSP_POR 0.27   
 FSP_PSH 0.27   
 FSP_WSK 0.27   
-FSP_LSK 0.27   
-FSP_SK  0.27   
+FSP_LSK 0.4   
+FSP_SK  0.4   
 FSP_SB  0.2    
 FSP_PIN 0.16   
 FSP_REP 0.27   
@@ -15250,13 +15261,13 @@ FSPB_ISQ        2
 ### 20180228 RM added values for ISQ, LSQ, OSH, NSH based on period 1 horizontal distribution (check these)
 
 MAK_recruit_hdistrib 30
-0 0 0 0 0 0 0 0.011111111 0.222222222 0.055555556 0.055555556 0.055555556 0.222222222 0.111111111 0.055555556 0.055555556 0 0 0 0.044444444 0.055555556 0.055555556 0 0 0 0 0 0 0 0
+0	0.00	0.00	0.00	0.02	0.03	0.06	0.05	0.06	0.06	0.04	0.05	0.10	0.13	0.08	0.11	0.04	0.01	0.01	0.04	0.04	0.05	0.02	0	0	0	0	0	0	0
  
 HER_recruit_hdistrib 30
-0 0 0 0 0 0 0 0.01 0.2 0.05 0.05 0.05 0.2 0.1 0.1 0.1 0 0 0 0.04 0.05 0.05 0 0 0 0 0 0 0 0
- 
+0	0.02	0.03	0.01	0.03	0.04	0.05	0.05	0.07	0.05	0.07	0.07	0.09	0.06	0.06	0.06	0.05	0.02	0.03	0.04	0.05	0.03	0.02	0	0	0	0	0	0	0
+
 WHK_recruit_hdistrib 30
-0 0 0 0 0 0 0 0.01 0.2 0.02 0.1 0.1 0.1 0.08 0.08 0.07 0.05 0.01 0.01 0.04 0.07 0.05 0.01 0 0 0 0 0 0 0
+0	0.00	0.00	0.00	0.00	0.00	0.02	0.01	0.04	0.03	0.11	0.10	0.11	0.04	0.04	0.04	0.11	0.05	0.05	0.08	0.09	0.05	0.03	0	0	0	0	0	0	0
  
 BLF_recruit_hdistrib 30
 0 0.285714286 0 0 0.285714286 0.071428571 0.071428571 0.285714286 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -15268,8 +15279,8 @@ SUF_recruit_hdistrib 30
 0	0.15	0.16	0.12	0.16	0.10	0.09	0.08	0.01	0.06	0.00	0.00	0.01	0.03	0.03	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0	0	0	0	0	0	0
  
 WIF_recruit_hdistrib 30
-0	0.000	0.000	0.000	0.000	0.000	0.000	0.010	0.050	0.020	0.150	0.130	0.090	0.070	0.040	0.070	0.110	0.050	0.060	0.060	0.050	0.020	0.020	0	0	0	0	0	0	0
- 
+0	0.040	0.020	0.000	0.150	0.040	0.030	0.090	0.080	0.050	0.020	0.020	0.090	0.140	0.010	0.070	0.010	0.030	0.060	0.020	0.000	0.020	0.010	0	0	0	0	0	0	0
+
 WTF_recruit_hdistrib 30
 0	0.010	0.020	0.040	0.000	0.020	0.030	0.010	0.030	0.030	0.100	0.100	0.060	0.020	0.040	0.010	0.140	0.060	0.060	0.100	0.080	0.010	0.030	0	0	0	0	0	0	0
  
@@ -15307,7 +15318,7 @@ BPF_recruit_hdistrib 30
 0 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0.045454545 0 0 0 0 0 0 0
  
 GOO_recruit_hdistrib 30
-0 0 0 0.055555556 0 0.055555556 0.333333333 0 0.011111111 0.222222222 0 0.111111111 0.011111111 0 0.111111111 0.011111111 0.011111111 0 0 0.011111111 0.055555556 0 0 0 0 0 0 0 0 0
+0	0.00	0.02	0.02	0.02	0.05	0.09	0.05	0.05	0.07	0.06	0.07	0.09	0.04	0.05	0.04	0.06	0.04	0.03	0.04	0.06	0.04	0.01	0	0	0	0	0	0	0
  
 MEN_recruit_hdistrib 30
 0 0.111111111 0 0 0.111111111 0.011111111 0.011111111 0.222222222 0.055555556 0 0.222222222 0 0 0 0 0 0 0.111111111 0.133333333 0 0 0 0.011111111 0 0 0 0 0 0 0
@@ -15766,34 +15777,34 @@ KDENR_YTF 1
 51036772
  
 KDENR_DOG 1
-18419234
+10
  
 KDENR_SMO 1
-530007
+10
  
 KDENR_SSH 1
-530007
+7
  
 KDENR_DSH 1
-530007
+7
  
 KDENR_BLS 1
-39968
+23
  
 KDENR_POR 1
-39968
+4
  
 KDENR_PSH 1
-39968
+6
  
 KDENR_WSK 1
-41152175
+25
  
 KDENR_LSK 1
-41152175
+20
  
 KDENR_SK 1
-41152175
+25
  
 KDENR_SB 1
 3
@@ -16110,10 +16121,10 @@ BHalpha_NSH 9e+11
 BHalpha_OSH 9e+11      
 
 #Beta in Beverton-Holt 
-BHbeta_MAK 7.56e+08     
-BHbeta_HER 3e+11     
+BHbeta_MAK 7.56e+12     
+BHbeta_HER 3e+09     
 BHbeta_WHK 1.6e+10   
-BHbeta_BLF 2.88e+08     
+BHbeta_BLF 2.88e+11     
 BHbeta_WPF 3e+10     
 BHbeta_SUF 3e+10     
 BHbeta_WIF 3e+10     
@@ -16126,12 +16137,12 @@ BHbeta_BFT 6e+11
 BHbeta_TUN 6e+11     
 BHbeta_BIL 6e+11     
 BHbeta_MPF 1e+07     
-BHbeta_BUT 1.34e+09     
-BHbeta_ANC 3e+11     
-BHbeta_BPF 3e+10     
+BHbeta_BUT 1.34e+11     
+BHbeta_ANC 3e+08     
+BHbeta_BPF 3e+09     
 BHbeta_GOO 1e+11     
-BHbeta_MEN 2e+10     
-BHbeta_FDE 2e+09     
+BHbeta_MEN 2e+09     
+BHbeta_FDE 2e+10     
 BHbeta_COD 2.5e+10   
 BHbeta_SHK 6e+10     
 BHbeta_OHK 1e+11     
@@ -16142,37 +16153,37 @@ BHbeta_SCU 1e+11
 BHbeta_TYL 1e+11     
 BHbeta_RED 1e+11     
 BHbeta_OPT 1e+11     
-BHbeta_SAL 1e+10     
-BHbeta_DRM 1e+10     
-BHbeta_STB 2.88e+08     
+BHbeta_SAL 1e+11     
+BHbeta_DRM 1e+11     
+BHbeta_STB 2.88e+11     
 BHbeta_TAU 1e+11     
 BHbeta_WOL 1e+11     
-BHbeta_SDF 1e+10     
+BHbeta_SDF 1e+11     
 BHbeta_FDF 1e+11     
 BHbeta_HAD 7e+11     
 BHbeta_YTF 2.5e+10   
-BHbeta_DOG 3.27e+11   
-BHbeta_SMO 2e+11     
+BHbeta_DOG 3.27e+10   
+BHbeta_SMO 2e+10     
 BHbeta_SSH 2e+10     
 BHbeta_DSH 2e+10     
-BHbeta_BLS 1.56e+9  
-BHbeta_POR 1.56e+9  
-BHbeta_PSH 1.56e+9  
-BHbeta_WSK 2e+13     
-BHbeta_LSK 2e+13     
-BHbeta_SK  2e+13     
+BHbeta_BLS 1.56e+10  
+BHbeta_POR 1.56e+10  
+BHbeta_PSH 1.56e+10  
+BHbeta_WSK 2e+10     
+BHbeta_LSK 2e+10     
+BHbeta_SK  2e+10     
 BHbeta_SB  10500000  
 BHbeta_PIN 1.5e+09   
-BHbeta_REP 1.5e+08   
-BHbeta_RWH 3e+07     
-BHbeta_BWH 3e+08     
-BHbeta_SWH 5e+07     
-BHbeta_TWH 5e+07     
+BHbeta_REP 1.5e+09   
+BHbeta_RWH 3e+10     
+BHbeta_BWH 3e+10     
+BHbeta_SWH 5e+10     
+BHbeta_TWH 5e+10     
 BHbeta_INV 1e+11     
 BHbeta_LSQ 2.02e+13  
 BHbeta_ISQ 2.02e+13  
 BHbeta_NSH 2e+13     
-BHbeta_OSH 2e+13     
+BHbeta_OSH 2e+13       
  
 
 
@@ -16557,14 +16568,15 @@ OSH_log_mult 1.82e+10
 
 # Size of recruits 
 ###KWSR_XXX Structural weight of XXX recruits   mg N m-3 updated 20180713 RM as age 1 (i.e. 1-yr old, not cohort 1) fish
-KWSR_ANC	5.9132888378
-KWSR_BFT	11593.2940990598
-KWSR_BIL	26194.320153325
-KWSR_BLF	375.9512022071
-KWSR_BLS	7187.7550032594
+## updated again 20190110 RM to fix negative To in growth equations, causing large size recruits
+KWSR_ANC	4.7008240334
+KWSR_BFT	2232.8729327015
+KWSR_BIL	1403.9533903301
+KWSR_BLF	100.3273274075
+KWSR_BLS	202.4722284649
 KWSR_BPF	152.5480831577
 KWSR_BSB	30.2223603425
-KWSR_BUT	102.0353274671
+KWSR_BUT	102.0353274672
 KWSR_BWH	8104107.05121738
 KWSR_COD	75.3702982983
 KWSR_DOG	53.0301899135
@@ -16574,15 +16586,15 @@ KWSR_FDE	274.5555625818
 KWSR_FDF	47.9741500563
 KWSR_FLA	4.6233488439
 KWSR_FOU	6.9209108274
-KWSR_GOO	64.2271432622
+KWSR_GOO	64.2271432623
 KWSR_HAD	183.4021784983
 KWSR_HAL	117.7201431254
 KWSR_HER	2.7733671356
 KWSR_INV	135.8427213805
-KWSR_LSK	413.7441075166
-KWSR_MAK	322.2671400264
+KWSR_LSK	46.0886507752
+KWSR_MAK	15.1422679931
 KWSR_MEN	10.3737220301
-KWSR_MPF	1.8692729183
+KWSR_MPF	0.3993768457
 KWSR_OHK	84.7077354975
 KWSR_OPT	14.660943668
 KWSR_PIN	29850.9121337563
@@ -16590,7 +16602,7 @@ KWSR_PLA	12.6941803018
 KWSR_POL	164.0519214691
 KWSR_POR	374.2891753943
 KWSR_PSH	1300.4669272763
-KWSR_RED	13.5285652304
+KWSR_RED	0.930345904
 KWSR_REP	1688.8691472876
 KWSR_RHK	35.3167841009
 KWSR_RWH	1760584.52425299
@@ -16598,35 +16610,36 @@ KWSR_SAL	360.0736994895
 KWSR_SB	301.6119914763
 KWSR_SCU	12.685382117
 KWSR_SDF	158.1625722923
-KWSR_SHK	24.2842853184
-KWSR_SK	1153.8120175214
-KWSR_SMO	358.9776868876
-KWSR_SSH	2497.0386435808
-KWSR_STB	1934.518157225
+KWSR_SHK	24.2842853185
+KWSR_SK	137.341639267
+KWSR_SMO	287.1992103934
+KWSR_SSH	43.8005977405
+KWSR_STB	103.1868516911
 KWSR_SUF	152.3196484358
 KWSR_SWH	7832.4346805584
 KWSR_TAU	12.1849972926
 KWSR_TUN	1859.8378367753
 KWSR_TWH	465528.980940346
 KWSR_TYL	35.4865232325
-KWSR_WHK	60.4934573805
-KWSR_WIF	173.642809192
+KWSR_WHK	60.4934573806
+KWSR_WIF	855.2225862834
 KWSR_WOL	7.0378289143
 KWSR_WPF	15.4820076781
 KWSR_WSK	49.4602510679
 KWSR_WTF	5.348038549
-KWSR_YTF	53.7052221752
+KWSR_YTF	53.7052221753
+
     
 
 ###KWRR_XXX Reserve weight of XXX recruits mg N m-3 updated 20180713 RM as age 1 (1-yr old, not cohort 1) fish
-KWRR_ANC	15.6702154201
-KWRR_BFT	30722.2293625085
-KWRR_BIL	69414.9484063112
-KWRR_BLF	996.270685848
-KWRR_BLS	19047.5507586373
+KWRR_ANC	12.4571836886
+KWRR_BFT	5917.113271659
+KWRR_BIL	3720.4764843746
+KWRR_BLF	265.8674176297
+KWRR_BLS	536.5514054319
 KWRR_BPF	404.252420368
 KWRR_BSB	80.0892549075
-KWRR_BUT	270.393617788
+KWRR_BUT	270.39361778
 KWRR_BWH	21475883.6857261
 KWRR_COD	199.7312904905
 KWRR_DOG	140.5300032708
@@ -16636,15 +16649,15 @@ KWRR_FDE	727.5722408418
 KWRR_FDF	127.1314976492
 KWRR_FLA	12.2518744364
 KWRR_FOU	18.3404136926
-KWRR_GOO	170.201929644
+KWRR_GOO	170.20192964
 KWRR_HAD	486.0157730206
 KWRR_HAL	311.9583792824
 KWRR_HER	7.3494229095
 KWRR_INV	359.9832116582
-KWRR_LSK	1096.4218849191
-KWRR_MAK	854.0079210701
-KWRR_MEN	27.4903633797
-KWRR_MPF	4.9535732336
+KWRR_LSK	122.1349245542
+KWRR_MAK	40.1270101817
+KWRR_MEN	27.490363379
+KWRR_MPF	1.0583486411
 KWRR_OHK	224.4754990684
 KWRR_OPT	38.8515007202
 KWRR_PIN	79104.9171544542
@@ -16652,7 +16665,7 @@ KWRR_PLA	33.6395777998
 KWRR_POL	434.737591893
 KWRR_POR	991.8663147949
 KWRR_PSH	3446.2373572822
-KWRR_RED	35.8506978605
+KWRR_RED	2.4654166455
 KWRR_REP	4475.5032403122
 KWRR_RHK	93.5894778673
 KWRR_RWH	4665548.98927043
@@ -16660,24 +16673,25 @@ KWRR_SAL	954.1953036471
 KWRR_SB	799.2717774123
 KWRR_SCU	33.6162626101
 KWRR_SDF	419.1308165747
-KWRR_SHK	64.353356093
-KWRR_SK	3057.6018464317
-KWRR_SMO	951.2908702522
-KWRR_SSH	6617.1524054891
-KWRR_STB	5126.4731166462
+KWRR_SHK	64.35335609
+KWRR_SK	363.9553440576
+KWRR_SMO	761.0779075425
+KWRR_SSH	116.0715840123
+KWRR_STB	273.4451569813
 KWRR_SUF	403.6470683549
 KWRR_SWH	20755.9519034798
 KWRR_TAU	32.2902428253
 KWRR_TUN	4928.5702674546
 KWRR_TWH	1233651.79949192
 KWRR_TYL	94.0392865662
-KWRR_WHK	160.3076620586
-KWRR_WIF	460.1534443588
+KWRR_WHK	160.307662058
+KWRR_WIF	2266.3398536509
 KWRR_WOL	18.6502466228
 KWRR_WPF	41.0273203471
 KWRR_WSK	131.06966533
 KWRR_WTF	14.1723021547
-KWRR_YTF	142.3188387645
+KWRR_YTF	142.318838764
+
 
 
 # Minimum and maximum spawning temperatures
@@ -17192,54 +17206,115 @@ InvaderScalar           1.0  increase per year of invading species - so what to 
 InvaderSpeed            0.0  speed of spread of invading species
 
 #Flag to indicate that the group uses age structured prey. Used in ontogenetic diet below pPreyvals
+#age_structured_prey_MAK 0                      
+#age_structured_prey_HER 0                      
+#age_structured_prey_WHK 1                      
+#age_structured_prey_BLF 1                      
+#age_structured_prey_WPF 1                      
+#age_structured_prey_SUF 1                      
+#age_structured_prey_WIF 1                      
+#age_structured_prey_WTF 1                      
+#age_structured_prey_HAL 1                      
+#age_structured_prey_PLA 1                      
+#age_structured_prey_FOU 1                      
+#age_structured_prey_FLA 1                      
+#age_structured_prey_BFT 1                      
+#age_structured_prey_TUN 1                      
+#age_structured_prey_BIL 1                      
+#age_structured_prey_MPF 1                      
+#age_structured_prey_BUT 0                      
+#age_structured_prey_ANC 0                      
+#age_structured_prey_BPF 0                      
+#age_structured_prey_GOO 1                      
+#age_structured_prey_MEN 1                      
+#age_structured_prey_FDE 1                      
+#age_structured_prey_COD 1                      
+#age_structured_prey_SHK 1                      
+#age_structured_prey_OHK 1                      
+#age_structured_prey_POL 1                      
+#age_structured_prey_RHK 1                      
+#age_structured_prey_BSB 1                      
+#age_structured_prey_SCU 1                      
+#age_structured_prey_TYL 1                      
+#age_structured_prey_RED 1                      
+#age_structured_prey_OPT 1                      
+#age_structured_prey_SAL 1                      
+#age_structured_prey_DRM 1                      
+#age_structured_prey_STB 1                      
+#age_structured_prey_TAU 1                      
+#age_structured_prey_WOL 1                      
+#age_structured_prey_SDF 1                      
+#age_structured_prey_FDF 1                      
+#age_structured_prey_HAD 1                      
+#age_structured_prey_YTF 1                      
+#age_structured_prey_DOG 1                      
+#age_structured_prey_SMO 1                      
+#age_structured_prey_SSH 1                      
+#age_structured_prey_DSH 1                      
+#age_structured_prey_BLS 1                      
+#age_structured_prey_POR 1                      
+#age_structured_prey_PSH 1                      
+#age_structured_prey_WSK 0                      
+#age_structured_prey_LSK 0                      
+#age_structured_prey_SK  0                      
+#age_structured_prey_SB  0                      
+#age_structured_prey_PIN 0                      
+#age_structured_prey_REP 0                      
+#age_structured_prey_RWH 0                      
+#age_structured_prey_BWH 0                      
+#age_structured_prey_SWH 0                      
+#age_structured_prey_TWH 0                      
+#age_structured_prey_INV 1
+
+## RM 20190115 changed all to 0 from above values, this could be a huge change...
 age_structured_prey_MAK 0                      
 age_structured_prey_HER 0                      
-age_structured_prey_WHK 1                      
-age_structured_prey_BLF 1                      
-age_structured_prey_WPF 1                      
-age_structured_prey_SUF 1                      
-age_structured_prey_WIF 1                      
-age_structured_prey_WTF 1                      
-age_structured_prey_HAL 1                      
-age_structured_prey_PLA 1                      
-age_structured_prey_FOU 1                      
-age_structured_prey_FLA 1                      
-age_structured_prey_BFT 1                      
-age_structured_prey_TUN 1                      
-age_structured_prey_BIL 1                      
-age_structured_prey_MPF 1                      
+age_structured_prey_WHK 0                      
+age_structured_prey_BLF 0                      
+age_structured_prey_WPF 0                      
+age_structured_prey_SUF 0                      
+age_structured_prey_WIF 0                      
+age_structured_prey_WTF 0                      
+age_structured_prey_HAL 0                      
+age_structured_prey_PLA 0                      
+age_structured_prey_FOU 0                      
+age_structured_prey_FLA 0                      
+age_structured_prey_BFT 0                      
+age_structured_prey_TUN 0                      
+age_structured_prey_BIL 0                      
+age_structured_prey_MPF 0                      
 age_structured_prey_BUT 0                      
 age_structured_prey_ANC 0                      
 age_structured_prey_BPF 0                      
-age_structured_prey_GOO 1                      
-age_structured_prey_MEN 1                      
-age_structured_prey_FDE 1                      
-age_structured_prey_COD 1                      
-age_structured_prey_SHK 1                      
-age_structured_prey_OHK 1                      
-age_structured_prey_POL 1                      
-age_structured_prey_RHK 1                      
-age_structured_prey_BSB 1                      
-age_structured_prey_SCU 1                      
-age_structured_prey_TYL 1                      
-age_structured_prey_RED 1                      
-age_structured_prey_OPT 1                      
-age_structured_prey_SAL 1                      
-age_structured_prey_DRM 1                      
-age_structured_prey_STB 1                      
-age_structured_prey_TAU 1                      
-age_structured_prey_WOL 1                      
-age_structured_prey_SDF 1                      
-age_structured_prey_FDF 1                      
-age_structured_prey_HAD 1                      
-age_structured_prey_YTF 1                      
-age_structured_prey_DOG 1                      
-age_structured_prey_SMO 1                      
-age_structured_prey_SSH 1                      
-age_structured_prey_DSH 1                      
-age_structured_prey_BLS 1                      
-age_structured_prey_POR 1                      
-age_structured_prey_PSH 1                      
+age_structured_prey_GOO 0                      
+age_structured_prey_MEN 0                      
+age_structured_prey_FDE 0                      
+age_structured_prey_COD 0                      
+age_structured_prey_SHK 0                      
+age_structured_prey_OHK 0                      
+age_structured_prey_POL 0                      
+age_structured_prey_RHK 0                      
+age_structured_prey_BSB 0                      
+age_structured_prey_SCU 0                      
+age_structured_prey_TYL 0                      
+age_structured_prey_RED 0                      
+age_structured_prey_OPT 0                      
+age_structured_prey_SAL 0                      
+age_structured_prey_DRM 0                      
+age_structured_prey_STB 0                      
+age_structured_prey_TAU 0                      
+age_structured_prey_WOL 0                      
+age_structured_prey_SDF 0                      
+age_structured_prey_FDF 0                      
+age_structured_prey_HAD 0                      
+age_structured_prey_YTF 0                      
+age_structured_prey_DOG 0                      
+age_structured_prey_SMO 0                      
+age_structured_prey_SSH 0                      
+age_structured_prey_DSH 0                      
+age_structured_prey_BLS 0                      
+age_structured_prey_POR 0                      
+age_structured_prey_PSH 0                      
 age_structured_prey_WSK 0                      
 age_structured_prey_LSK 0                      
 age_structured_prey_SK  0                      
@@ -17250,7 +17325,7 @@ age_structured_prey_RWH 0
 age_structured_prey_BWH 0                      
 age_structured_prey_SWH 0                      
 age_structured_prey_TWH 0                      
-age_structured_prey_INV 1                      
+age_structured_prey_INV 0       
 
 #Added by Bec Gorton 17/12/2010
 BMDmax 0
@@ -17922,65 +17997,66 @@ NSH_max_spawn_salt 40
 
 
 # Minimum tolerated oxygen level for age structured groups (typically vertebrates)
-MAK_min_O2 0         
-HER_min_O2 0         
-WHK_min_O2 0         
-BLF_min_O2 0         
-WPF_min_O2 0         
-SUF_min_O2 0         
-WIF_min_O2 0         
-WTF_min_O2 0         
-HAL_min_O2 0         
-PLA_min_O2 0         
-FOU_min_O2 0         
-FLA_min_O2 0         
-BFT_min_O2 0         
-TUN_min_O2 0         
-BIL_min_O2 0         
-MPF_min_O2 0         
-BUT_min_O2 0         
-ANC_min_O2 0         
-BPF_min_O2 0         
-GOO_min_O2 0         
-MEN_min_O2 0         
-FDE_min_O2 0         
-COD_min_O2 0         
-SHK_min_O2 0         
-OHK_min_O2 0         
-POL_min_O2 0         
-RHK_min_O2 0         
-BSB_min_O2 0         
-SCU_min_O2 0         
-TYL_min_O2 0         
-RED_min_O2 0         
-OPT_min_O2 0         
-SAL_min_O2 0         
-DRM_min_O2 0         
-STB_min_O2 0         
-TAU_min_O2 0         
-WOL_min_O2 0         
-SDF_min_O2 0         
-FDF_min_O2 0         
-HAD_min_O2 0         
-YTF_min_O2 0         
-DOG_min_O2 0         
-SMO_min_O2 0         
-SSH_min_O2 0         
-DSH_min_O2 0         
-BLS_min_O2 0         
-POR_min_O2 0         
-PSH_min_O2 0         
-WSK_min_O2 0         
-LSK_min_O2 0         
-SK_min_O2  0         
-SB_min_O2  0         
-PIN_min_O2 0         
-REP_min_O2 0         
-RWH_min_O2 0         
-BWH_min_O2 0         
-SWH_min_O2 0         
-TWH_min_O2 0         
-INV_min_O2 0         
+# changed from 0 to 5000 20190115 RM
+MAK_min_O2 5000         
+HER_min_O2 5000         
+WHK_min_O2 5000         
+BLF_min_O2 5000         
+WPF_min_O2 5000         
+SUF_min_O2 5000         
+WIF_min_O2 5000         
+WTF_min_O2 5000         
+HAL_min_O2 5000         
+PLA_min_O2 5000         
+FOU_min_O2 5000         
+FLA_min_O2 5000         
+BFT_min_O2 5000         
+TUN_min_O2 5000         
+BIL_min_O2 5000         
+MPF_min_O2 5000         
+BUT_min_O2 5000         
+ANC_min_O2 5000         
+BPF_min_O2 5000         
+GOO_min_O2 5000         
+MEN_min_O2 5000         
+FDE_min_O2 5000         
+COD_min_O2 5000         
+SHK_min_O2 5000         
+OHK_min_O2 5000         
+POL_min_O2 5000         
+RHK_min_O2 5000         
+BSB_min_O2 5000         
+SCU_min_O2 5000         
+TYL_min_O2 5000         
+RED_min_O2 5000         
+OPT_min_O2 5000         
+SAL_min_O2 5000         
+DRM_min_O2 5000         
+STB_min_O2 5000         
+TAU_min_O2 5000         
+WOL_min_O2 5000         
+SDF_min_O2 5000         
+FDF_min_O2 5000         
+HAD_min_O2 5000         
+YTF_min_O2 5000         
+DOG_min_O2 5000         
+SMO_min_O2 5000         
+SSH_min_O2 5000         
+DSH_min_O2 5000         
+BLS_min_O2 5000         
+POR_min_O2 5000         
+PSH_min_O2 5000         
+WSK_min_O2 5000         
+LSK_min_O2 5000         
+SK_min_O2  5000         
+SB_min_O2  5000         
+PIN_min_O2 5000         
+REP_min_O2 5000         
+RWH_min_O2 5000         
+BWH_min_O2 5000         
+SWH_min_O2 5000         
+TWH_min_O2 5000         
+INV_min_O2 5000         
 
 
 
