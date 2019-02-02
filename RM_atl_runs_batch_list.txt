@@ -717,4 +717,7 @@ atlantisMerged -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at
 # increased BHbeta values for species that increased numbers without food availability, changed spawn costs to 1% of RN for cohort 5, increased FSP_xxx for DOG, skates, GOO.
 atlantisMerged -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20181126.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20190122a  1>1a.junk 2>2a.junk
 
+played with BHbeta values again, FSP values
+atlantisMerged -i RMinit_2018.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20181126.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20190127a  1>1a.junk 2>2a.junk
+
 
