@@ -626,6 +626,61 @@ new_prm <- change_prm_cohort(prm_biol, select_acronyms = gps,
                              save_to_disc = T)
 
 
+### RM testing stock recruit relationships
+library(fishmethods)
+data("striper")
+outs<-sr(recruits=striper$recruits,stock=striper$stock,select=2,model=c(5,6,7,8),
+         initial=list(RA=5e3,RB=2e-5,Rrho=0.1,
+                      BHA=8e3,BHB=1e8,BHrho=0.1,
+                      SHA=1.5e3,SHB=5.6e8,SHC=1,
+                      DSA=9e3,DSB=9e-5,DSC=-1.14,
+                      MYA=1e6,MYB=1e5,MYC=0.4),plot=TRUE)
+outs$results
 
+df=read.csv('C:/Users/RM/Desktop/fishbase Growth Params Atlantis NEUS v15/SSB and recruits.csv', stringsAsFactors = F)
+HERdf=readxl::read_xlsx('C:/Users/RM/Desktop/fishbase Growth Params Atlantis NEUS v15/herring_RSSB.xlsx')
+HER=data.frame(recruits=HERdf[1:52,3])
+HER$stock=HERdf[1:52,2]
+HERout<-sr(recruits=(HERdf$`Age-1 Recruitment (000s)`*1000),stock=HERdf$SSB,select=2,model=c(5,6,7,8),
+           initial=list(RA=5e3,RB=2e-5,Rrho=0.1,
+                        BHA=8e3,BHB=1e8,BHrho=0.1,
+                        SHA=1.5e3,SHB=5.6e8,SHC=1,
+                        DSA=9e3,DSB=9e-5,DSC=-1.14,
+                        MYA=1e6,MYB=1e5,MYC=0.4),plot=TRUE)
+
+  
+RED=data.frame(recruits=df[3:46,2])
+RED$recruits=as.numeric(df[3:46,2])*1000
+RED$stock=as.numeric(df[3:46,3])
+REDout<-sr(recruits=RED$recruits,stock=RED$stock,select=2,model=c(5,6,7,8),
+           initial=list(RA=5e3,RB=2e-5,Rrho=0.1,
+                        BHA=8e3,BHB=1e8,BHrho=0.1,
+                        SHA=1.5e3,SHB=5.6e8,SHC=1,
+                        DSA=9e3,DSB=9e-5,DSC=-1.14,
+                        MYA=1e6,MYB=1e5,MYC=0.4),plot=TRUE)
+REDout$results
+
+
+PLA=data.frame(recruits=df[13:46,5])
+PLA$recruits=as.numeric(df[13:46,5])*1000
+PLA$stock=as.numeric(df[13:46,6])
+PLAout<-sr(recruits=PLA$recruits,stock=PLA$stock,select=2,model=c(5,6,7,8),
+         initial=list(RA=5e3,RB=2e-5,Rrho=0.1,
+                      BHA=8e3,BHB=1e8,BHrho=0.1,
+                      SHA=1.5e3,SHB=5.6e8,SHC=1,
+                      DSA=9e3,DSB=9e-5,DSC=-1.14,
+                      MYA=1e6,MYB=1e5,MYC=0.4),plot=TRUE)
+PLAout$results
+
+GBCOD=data.frame(recruits=df[11:46,8])
+GBCOD$recruits=as.numeric(df[11:46,8])*1000
+GBCOD$stock=as.numeric(df[11:46,9])
+GBCODout<-sr(recruits=GBCOD$recruits,stock=GBCOD$stock,select=2,model=c(5,6,7,8),
+           initial=list(RA=5e3,RB=2e-5,Rrho=0.1,
+                        BHA=8e3,BHB=1e8,BHrho=0.1,
+                        SHA=1.5e3,SHB=5.6e8,SHC=1,
+                        DSA=9e3,DSB=9e-5,DSC=-1.14,
+                        MYA=1e6,MYB=1e5,MYC=0.4),plot=TRUE)
+GBCODout$results
 
 
