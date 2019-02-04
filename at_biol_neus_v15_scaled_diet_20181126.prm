@@ -12942,7 +12942,7 @@ EPlant_LSK 0
 EPlant_SK 0
 EPlant_SB 0
 EPlant_PIN 0
-EPlant_REP 0
+EPlant_REP 0.3
 EPlant_RWH 0
 EPlant_BWH 0
 EPlant_SWH 0
@@ -13415,7 +13415,7 @@ ZM_mL 0 #1e-04
 ZS_mL 0 #8e-05
 PB_mL 1e-04
 BB_mL 1e-05
-BO_mL 4e-07
+BO_mL 0 #4e-07
 
 
 # Invertebrates with age structure
@@ -17370,8 +17370,8 @@ BUT_mindepth 0
 ANC_mindepth 0           
 BPF_mindepth 0           
 GOO_mindepth 0           
-MEN_mindepth 300         
-FDE_mindepth 300         
+MEN_mindepth 0         
+FDE_mindepth 0         
 COD_mindepth 0           
 SHK_mindepth 0           
 OHK_mindepth 0           
@@ -17389,8 +17389,8 @@ TAU_mindepth 0
 WOL_mindepth 0           
 SDF_mindepth 0           
 FDF_mindepth 0           
-HAD_mindepth 300         
-YTF_mindepth 300         
+HAD_mindepth 0         
+YTF_mindepth 0         
 DOG_mindepth 0           
 SMO_mindepth 0           
 SSH_mindepth 0           
@@ -17403,7 +17403,7 @@ LSK_mindepth 0
 SK_mindepth  0           
 SB_mindepth  0           
 PIN_mindepth 0           
-REP_mindepth 300         
+REP_mindepth 0         
 RWH_mindepth 0           
 BWH_mindepth 0           
 SWH_mindepth 0           
@@ -18065,7 +18065,7 @@ min_channel_depth 0.001  Minimum depth of estuarine channels
 
 # Read in for the SM_INF groups. If true group releaseNH contributes to ReminNet.
 BD_remin_contrib  1
-BC_remin_contrib  0
+BC_remin_contrib  1
 BO_remin_contrib  1
 BB_remin_contrib  1
 
