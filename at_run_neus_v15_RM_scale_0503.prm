@@ -36,7 +36,7 @@ fishtest      0        # Count up total population for each vertebrate after eac
 
 flaggape      0        # Periodically list prey vs gape statistics (tuning diagnostic)
 
-flagchecksize 0        # Periodically list relative size (tuning diagnostic)
+flagchecksize 1        # Periodically list relative size (tuning diagnostic)
 
 flagagecheck  0        # Periodically list age structure per cohort (tuning diagnostic)
 
@@ -60,7 +60,7 @@ move_check    20       # ID number of group where tracking movements
 
 fishmove      1        # Set to 0 to turn vertebrate movement off for debugging purposes
 
-debug         0        # 0=debuging off, 1=debug fishing, 2=debug discards, 3=debug histfishing,
+debug         11        # 0=debuging off, 1=debug fishing, 2=debug discards, 3=debug histfishing,
 
                        # 4=debug assessments, 5=debug mpas, 6=debug effort, 7=debug econ effort, 
 
