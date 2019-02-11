@@ -347,47 +347,47 @@ flagseperateNSH  1         CEP, CEPj are: 1 = seperate groups (or single pool), 
 flagseperateOSH  1         CEP, CEPj are: 1 = seperate groups (or single pool), 0 = age structured single group
 
 # RM 20190103 changed all from 10 to 3
-flagrecruitMAK 1
-flagrecruitHER 1
-flagrecruitWHK 1
-flagrecruitBLF 1
-flagrecruitWPF 1
-flagrecruitSUF 1
-flagrecruitWIF 1
-flagrecruitWTF 1
-flagrecruitHAL 1
-flagrecruitPLA 1
-flagrecruitFOU 1
-flagrecruitFLA 1
-flagrecruitBFT 1
-flagrecruitTUN 1
-flagrecruitBIL 1
-flagrecruitMPF 1
-flagrecruitBUT 1
-flagrecruitANC 1
-flagrecruitBPF 1
-flagrecruitGOO 1
-flagrecruitMEN 1
-flagrecruitFDE 1
-flagrecruitCOD 1
-flagrecruitSHK 1
-flagrecruitOHK 1
-flagrecruitPOL 1
-flagrecruitRHK 1
-flagrecruitBSB 1
-flagrecruitSCU 1
-flagrecruitTYL 1
-flagrecruitRED 1
-flagrecruitOPT 1
-flagrecruitSAL 1
-flagrecruitDRM 1
-flagrecruitSTB 1
-flagrecruitTAU 1
-flagrecruitWOL 1
-flagrecruitSDF 1
-flagrecruitFDF 1
-flagrecruitHAD 1
-flagrecruitYTF 1
+flagrecruitMAK 3
+flagrecruitHER 3
+flagrecruitWHK 3
+flagrecruitBLF 3
+flagrecruitWPF 3
+flagrecruitSUF 3
+flagrecruitWIF 3
+flagrecruitWTF 3
+flagrecruitHAL 3
+flagrecruitPLA 3
+flagrecruitFOU 3
+flagrecruitFLA 3
+flagrecruitBFT 3
+flagrecruitTUN 3
+flagrecruitBIL 3
+flagrecruitMPF 3
+flagrecruitBUT 3
+flagrecruitANC 3
+flagrecruitBPF 3
+flagrecruitGOO 3
+flagrecruitMEN 3
+flagrecruitFDE 3
+flagrecruitCOD 3
+flagrecruitSHK 3
+flagrecruitOHK 3
+flagrecruitPOL 3
+flagrecruitRHK 3
+flagrecruitBSB 3
+flagrecruitSCU 3
+flagrecruitTYL 3
+flagrecruitRED 3
+flagrecruitOPT 3
+flagrecruitSAL 3
+flagrecruitDRM 3
+flagrecruitSTB 3
+flagrecruitTAU 3
+flagrecruitWOL 3
+flagrecruitSDF 3
+flagrecruitFDF 3
+flagrecruitHAD 3
+flagrecruitYTF 3
 flagrecruitDOG 12
 flagrecruitSMO 12
 flagrecruitSSH 12
@@ -405,7 +405,7 @@ flagrecruitRWH 12
 flagrecruitBWH 12
 flagrecruitSWH 12
 flagrecruitTWH 12
-flagrecruitINV 1
+flagrecruitINV 3
 
 # External reproduction - spawn is based on adult population within model domain, but actual reproduction           
 # occurs outside model domain (0 = no, 1 = yes) ADDED 20180228 RM
@@ -7196,7 +7196,6 @@ BLS_FSM 1
 POR_FSM 1
 1
 
- 
 PSH_FSM 1
 1
  

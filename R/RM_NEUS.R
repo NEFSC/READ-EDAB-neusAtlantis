@@ -416,8 +416,8 @@ wd4='D:/AtlantisRun/NEUS v1 Base Effort'
 # wd4='/home/ryan/AtlRuns/NEUS v1/Base Effort/rm'
 wd4='/home/ryan/AtlRuns/NEUS v1/Base Effort'
 setwd(wd4)
-bgm.file         <- 'D:/AtlantisRun/NEUS v1 Base Effort/neus30_2012_old.bgm'
-init.file         <- 'D:/AtlantisRun/NEUS v1 Base Effort/inneus_2007.nc'
+bgm.file         <- 'E:/AtlantisRun/NEUS v1 Base Effort/neus30_2012_old.bgm'
+init.file         <- 'E:/AtlantisRun/NEUS v1 Base Effort/inneus_2007.nc'
 NEUS_10_init <- make.sh.init.object(bgm.file, init.file) #changed sed deposit feed, bact, meiobenthos
 
 
@@ -471,7 +471,7 @@ prm.file=('at_biol_neus_v15_scaled_diet_20181126.prm')#/home/ryan/Git/atneus_RM/
 NEUS_15_prm <- make.sh.prm.object(bgm.file, grp.file, prm.file)
 sh.prm(NEUS_15_prm)
 # NEUS_10 prm file
-wd4='D:/AtlantisRun/NEUS v1 Base Effort'
+wd4='E:/AtlantisRun/NEUS v1 Base Effort'
 setwd(wd4)
 bgm.file <- ("neus30_2012.bgm")
 grp.file <- ('functionalGroups.csv')
