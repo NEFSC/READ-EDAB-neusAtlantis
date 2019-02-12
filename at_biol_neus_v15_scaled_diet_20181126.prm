@@ -407,6 +407,7 @@ flagrecruitSWH 12
 flagrecruitTWH 12
 flagrecruitINV 3
 
+
 # External reproduction - spawn is based on adult population within model domain, but actual reproduction           
 # occurs outside model domain (0 = no, 1 = yes) ADDED 20180228 RM
 flagext_reprodMAK 0
@@ -1276,7 +1277,7 @@ MB_habdepend    0
 flagtempdepend   0         0 = off, 1 = temperature preferences used
 flagsaltdepend   0
 flagO2depend    0
-# Vertebrate density dependent movement related flags 0=off, 1=sedentary, 2=on, 3=sticky, 4=no explicit mvmt
+# Vertebrate density dependent movement related flags 0=prescribed quartlerly, 1=sedentary, 2=density dependent + prescribed, 3=sticky, 4=no explicit mvmt
 MAK_ddepend_move 0
 HER_ddepend_move 0
 WHK_ddepend_move 0
@@ -1345,7 +1346,7 @@ NSH_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no ex
 OSH_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
 LOB_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
 ZL_ddepend_move  4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
-
+RCB_ddepend_move 4
 
 # Flags for invertebrate migration out of model domain (enter juveniles and adults              
 # separately for CEP and PWN - as may be separate groups, rather than age groups)
@@ -1360,7 +1361,7 @@ flagjOSHMigrate 0  0=always remain within the model domain, 1+=migrate in/out of
 flagOSHMigrate  0  0=always remain within the model domain, 1+=migrate in/out of the model 
 flagjNSHMigrate 0  0=always remain within the model domain, 1+=migrate in/out of the model              
 flagNSHMigrate  0  0=always remain within the model domain, 1+=migrate in/out of the model 
-
+flagRCBMigrate  0
 
 # Flags for migration out of model domain (maximum number of times juvenile OR 
 # adult stages must leave the model domain). For example if juvenile FVT leave once,
@@ -14907,10 +14908,6 @@ LSQ_Time_Spawn 300
 ISQ_Time_Spawn 300           
 NSH_Time_Spawn 300           
 OSH_Time_Spawn 300           
-##CEP_Time_Spawn 300
-##jCEP_Time_Spawn 90
-##PWN_Time_Spawn 300
-##jPWN_Time_Spawn 90
 
 
 ## Used to calculate time of larval period as below (days, 1-365):	
