@@ -505,7 +505,6 @@ prm.file=('VMPA_setas_biol_fishing_Trunk.prm')
 SETAS_prm <- make.sh.prm.object(bgm.file, grp.file, prm.file)
 sh.prm(SETAS_prm)
 
-
 C=NEUS_15_prm$clearance.data
 C=C[1:59,]
 C=C[order(C$Code),]
@@ -513,7 +512,68 @@ mum=NEUS_15_prm$grp.growth
 mum=mum[1:59,]
 Mum=mum[order(mum$Code),]
 mdc=Mum[,6:15]/C[,6:15]
-#________________
+
+#___________________________________________________________________________
+### New analysis tools 2019
+library("ReactiveAtlantis")
+wd2='C:/Users/ryan.morse/Documents/GitHub/atneus_RM'
+setwd(wd2)
+
+# Set location of runs and run name prefix
+runfolder='20190127a'
+wd3=paste('E:/AtlantisRun/20161103/tes/', runfolder, '/atneus_v15_test2008hydro_20180208',sep='')
+
+
+### Atlantis food web and trophic level composition
+grp.file <- ('NeusGroups_v15_unix.csv') # ALL GROUPS'your_groups_definition_file.csv'
+prm.file=('at_biol_neus_v15_scaled_diet_20181126.prm')
+diet.file   <- paste(wd3,'DietCheck.txt', sep='')
+food.web(diet.file, grp.file)
+
+### Predation analysis from the Atlantis output
+biom        <- paste(wd3, 'BiomIndx.txt', sep='')
+diet.file   <- paste(wd3, 'DietCheck.txt', sep='')
+bio.age     <- paste(wd3, 'AgeBiomIndx.txt', sep='') ## optional file. just if you want to check the predation by age
+grp.csv     <- grp.file
+## Predation by Age
+predation(biom, grp.csv, diet.file, bio.age)
+## No predation by Age
+predation(biom, grp.csv, diet.file, bio.age = NULL)
+
+### Exploring predator-prey interactions from the initial conditions
+prm.file=('at_biol_neus_v15_scaled_diet_20181126.prm')
+nc.initial  <- 'RMinit_2018.nc'
+grp.csv     <- grp.file
+bgm.file    <- 'neus_tmerc_RM.bgm'
+cum.depths  <- c(0, 50, 120, 300, 500) ## This should be the cummulative depth of your model
+feeding.mat(prm.file, grp.file, nc.initial, bgm.file, cum.depths)
+
+### Growth of primary producers and limiting factors
+nc.initial  <- 'RMinit_2018.nc'
+nc.current  <- paste(wd3,'.nc', sep='')
+grp.csv     <- grp.file
+prm.file=('at_biol_neus_v15_scaled_diet_20181126.prm')
+growth.pp(nc.initial, grp.csv, prm.file, nc.current)
+
+### Analysis of recruitment and primary production
+nc.initial  <- 'RMinit_2018.nc'
+nc.current  <- paste(wd3,'.nc', sep='')
+yoy.file    <- paste(wd3,'YOY.txt', sep='')
+grp.csv     <- grp.file
+prm.file    <- 'at_biol_neus_v15_scaled_diet_20181126.prm'
+recruitment.cal(nc.initial, nc.current, yoy.file, grp.file, prm.file)
+
+### Harvest outputs and model skill assessment
+catch.nc    <- paste(wd3,'CATCH.nc', sep='')
+ext.catch   <- 'external_catch_time_serie.csv'
+cum.depths  <- c(0, 50, 120, 300, 500)
+fsh.csv     <- 'your_fisheries_definition_file.csv'
+bgm.file    <- 'neus_tmerc_RM.bgm'
+grp.csv     <- grp.file
+catch(grp.csv, fsh.csv, catch.nc, ext.catch)
+
+
+#_____________________________________________________________________
 
 ### Load pPrey Diet Matrix using atlantistools
 # easier to work with
