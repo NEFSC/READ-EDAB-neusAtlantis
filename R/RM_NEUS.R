@@ -47,8 +47,8 @@
 library(shinyrAtlantis)
 library(tidyverse)
 library(stringr)
-library(rbgm)
-library(bgmfiles)
+# library(rbgm)
+# library(bgmfiles)
 
 wd=getwd()
 
@@ -328,6 +328,23 @@ cum.depth <- c(0,50,120,300,500)  # cumulative water layer depths
 # cum.depth <- c(0,50,120,300,500)  # cumulative water layer depths
 # cum.depth <- c(0,25,50,75,100,150,200)  # cumulative water layer depths from nominal dz init file
 
+### updated 20190215 RM
+exchange.file = paste(wd2, '/tsfiles/flowOutAll_fix_20180402.nc', sep='')
+temperature.file = paste(wd2, '/tsfiles/tempOutAll_fix_20180402.nc', sep='')
+salinity.file = paste(wd2, '/tsfiles/saltOutAll_fix_20180402.nc', sep='')
+bgm.file         <- "/home/ryan/AtlRuns/neus_tmerc_RM.bgm"
+cum.depth <- c(0,50,120,300,500)  # cumulative water layer depths
+forcing <- make.sh.forcings.object(
+  bgm.file         = bgm.file,
+  exchange.file    = exchange.file,
+  cum.depth        = cum.depth,
+  temperature.file = temperature.file,
+  salinity.file    = salinity.file
+)
+sh.forcings(forcing)
+
+  
+  
 #SETAS
 wd2='C:/Users/ryan.morse/Documents/GitHub/atneus_RM'
 setwd(wd2)

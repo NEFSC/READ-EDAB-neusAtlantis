@@ -305,6 +305,20 @@ plot <- update_labels(plot, list(x = "Time [years]", y = expression(Numbers/Numb
 plot_add_box(plot)
 ggsave(paste(filename," Numbers at age_Num init.png", sep=''), width=20, height=17, dpi=96)
 
+### Numbers per ageclass
+df_rel <- convert_relative_initial(result$nums_age)%>%
+  group_by(species, agecl) %>%
+  summarise(avg=mean(atoutput)) %>%
+  spread(agecl, avg)
+numscale=1/rowMeans(df_rel[,2:11])
+# numscale=1/(df_rel[,2]) # scale to mean of all cohorts
+numsc=data.frame(df_rel[,1]) # scale to first year only
+numsc$scale=numscale
+write.csv(numsc, file='new_num_scalar_recruits.csv', row.names = T)
+
+
+
+
 ### Biomass
 df_rel <- convert_relative_initial(result$biomass)
 plot <- plot_line(df_rel)
