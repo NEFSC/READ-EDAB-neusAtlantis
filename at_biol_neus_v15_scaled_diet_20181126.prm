@@ -1748,7 +1748,7 @@ KI_MA_T15        10         Light saturation, macroalgae                      W 
 KI_SG_T15        65        Light saturation, seagrass                        W m-2             65
 KI_MB_T15        10         Light saturation, microphytobenthos               W m-2             3
 
-eddy_scale       10.0       Coefficient scaling eddy strength impact on phytoplankton growth    1.0
+eddy_scale       1.0       Coefficient scaling eddy strength impact on phytoplankton growth    1.0
 # Primary producer nutrient requirements 
 KN_PL            10        Half-sat const for PL growth on DIN (15)          mg N m-3          10
 KN_PS            5    Half-sat const for PS growth on DIN (13)          mg N m-3          4
@@ -16001,7 +16001,7 @@ KDENR_RWH 1
 0.05
  
 KDENR_BWH 1
-0.05
+0.1
  
 KDENR_SWH 1
 0.2
@@ -16238,47 +16238,47 @@ Rbeta_OSH 2e+12
 
 # Beverton-Holt recruitment
 # Alpha in Beverton-Holt
-BHalpha_MAK 2e+09   
-BHalpha_HER 7.55e+09   
-BHalpha_WHK 1.7e+07    
-BHalpha_BLF 3e+07   
-BHalpha_WPF 5.8e+08    
-BHalpha_SUF 5.8e+08    
-BHalpha_WIF 5.8e+08    
-BHalpha_WTF 5.8e+08    
-BHalpha_HAL 5.8e+08    
-BHalpha_PLA 5.8e+08    
-BHalpha_FOU 5.8e+08    
-BHalpha_FLA 5.8e+08    
-BHalpha_BFT 2.8e+07    
-BHalpha_TUN 2.8e+07    
-BHalpha_BIL 2.8e+07    
-BHalpha_MPF 1250000    
-BHalpha_BUT 1.2e+10    
-BHalpha_ANC 4.5e+08    
-BHalpha_BPF 4.5e+07    
-BHalpha_GOO 9.4e+07    
-BHalpha_MEN 1.91e+09   
-BHalpha_FDE 1.91e+08   
-BHalpha_COD 3.7e+07    
-BHalpha_SHK 3.2e+08    
-BHalpha_OHK 1.45e+09   
-BHalpha_POL 1.45e+09   
-BHalpha_RHK 1.45e+09   
-BHalpha_BSB 1.45e+09   
-BHalpha_SCU 1.45e+09   
-BHalpha_TYL 1.45e+09   
-BHalpha_RED 1.45e+09   
-BHalpha_OPT 1.45e+09   
-BHalpha_SAL 1.45e+07   
-BHalpha_DRM 1.45e+07   
-BHalpha_STB 1.45e+07   
-BHalpha_TAU 1.45e+09   
-BHalpha_WOL 1.45e+09   
-BHalpha_SDF 1.45e+07   
-BHalpha_FDF 1.45e+09   
-BHalpha_HAD 2.18e+08   
-BHalpha_YTF 4.05e+08   
+BHalpha_MAK 3.7e+08   
+BHalpha_HER 3e+09   
+BHalpha_WHK 1e+07    
+BHalpha_BLF 5e+08   
+BHalpha_WPF 3e+09    
+BHalpha_SUF 2e+08    
+BHalpha_WIF 1e+09    
+BHalpha_WTF 1e+09    
+BHalpha_HAL 1e+08    
+BHalpha_PLA 1e+08    
+BHalpha_FOU 1e+08    
+BHalpha_FLA 1e+08    
+BHalpha_BFT 6e+08    
+BHalpha_TUN 6e+08    
+BHalpha_BIL 6e+08    
+BHalpha_MPF 1e+09    
+BHalpha_BUT 1e+09     
+BHalpha_ANC 1e+09    
+BHalpha_BPF 5e+07    
+BHalpha_GOO 1e+08    
+BHalpha_MEN 1e+09   
+BHalpha_FDE 1e+08   
+BHalpha_COD 1e+07    
+BHalpha_SHK 1e+08    
+BHalpha_OHK 1e+08   
+BHalpha_POL 1e+08  
+BHalpha_RHK 1e+08   
+BHalpha_BSB 1e+08   
+BHalpha_SCU 1e+08   
+BHalpha_TYL 1e+08   
+BHalpha_RED 1e+08   
+BHalpha_OPT 1e+08   
+BHalpha_SAL 1e+08   
+BHalpha_DRM 1e+08   
+BHalpha_STB 1e+07   
+BHalpha_TAU 4e+08   
+BHalpha_WOL 2e+08   
+BHalpha_SDF 2e+06   
+BHalpha_FDF 2e+08   
+BHalpha_HAD 2e+08   
+BHalpha_YTF 2e+08   
 BHalpha_DOG 4.4e+07    
 BHalpha_SMO 990000     
 BHalpha_SSH 990000     
@@ -16296,7 +16296,7 @@ BHalpha_RWH 7
 BHalpha_BWH 7          
 BHalpha_SWH 1000       
 BHalpha_TWH 1000       
-BHalpha_INV 1.45e+09   
+BHalpha_INV 1e+08   
 BHalpha_LSQ 9.05e+11   
 BHalpha_ISQ 9.05e+11   
 BHalpha_NSH 9e+11      
@@ -16305,45 +16305,45 @@ BHalpha_OSH 9e+11
 #Beta in Beverton-Holt 
 BHbeta_MAK 7.56e+12     
 BHbeta_HER 3e+09     
-BHbeta_WHK 1.6e+10   
-BHbeta_BLF 2.88e+11     
-BHbeta_WPF 3e+10     
-BHbeta_SUF 3e+10     
-BHbeta_WIF 3e+10     
-BHbeta_WTF 3e+10     
-BHbeta_HAL 3e+10     
-BHbeta_PLA 3e+10     
-BHbeta_FOU 3e+10     
-BHbeta_FLA 3e+10     
-BHbeta_BFT 6e+11     
-BHbeta_TUN 6e+11     
-BHbeta_BIL 6e+11     
-BHbeta_MPF 1e+07     
-BHbeta_BUT 1.34e+11     
-BHbeta_ANC 3e+08     
-BHbeta_BPF 3e+09     
-BHbeta_GOO 1e+11     
-BHbeta_MEN 2e+09     
-BHbeta_FDE 2e+10     
-BHbeta_COD 2.5e+10   
-BHbeta_SHK 6e+10     
-BHbeta_OHK 1e+11     
-BHbeta_POL 1e+11     
-BHbeta_RHK 1e+11     
-BHbeta_BSB 1e+11     
-BHbeta_SCU 1e+11     
-BHbeta_TYL 1e+11     
-BHbeta_RED 1e+11     
-BHbeta_OPT 1e+11     
-BHbeta_SAL 1e+11     
-BHbeta_DRM 1e+11     
-BHbeta_STB 2.88e+11     
-BHbeta_TAU 1e+11     
-BHbeta_WOL 1e+11     
-BHbeta_SDF 1e+11     
-BHbeta_FDF 1e+11     
-BHbeta_HAD 7e+11     
-BHbeta_YTF 2.5e+10   
+BHbeta_WHK 5e+12   
+BHbeta_BLF 9e+14     
+BHbeta_WPF 9e+14     
+BHbeta_SUF 3e+14     
+BHbeta_WIF 9e+14    
+BHbeta_WTF 9e+14     
+BHbeta_HAL 3e+12     
+BHbeta_PLA 3e+12     
+BHbeta_FOU 3e+12     
+BHbeta_FLA 3e+12     
+BHbeta_BFT 3e+12     
+BHbeta_TUN 3e+12     
+BHbeta_BIL 3e+12     
+BHbeta_MPF 5e+11     
+BHbeta_BUT 5e+11     
+BHbeta_ANC 1e+11     
+BHbeta_BPF 1e+12     
+BHbeta_GOO 1e+12     
+BHbeta_MEN 1e+13     
+BHbeta_FDE 1e+13     
+BHbeta_COD 1e+14   
+BHbeta_SHK 5e+11     
+BHbeta_OHK 5e+11     
+BHbeta_POL 5e+11     
+BHbeta_RHK 5e+11     
+BHbeta_BSB 5e+11     
+BHbeta_SCU 5e+11     
+BHbeta_TYL 5e+11     
+BHbeta_RED 5e+11     
+BHbeta_OPT 5e+11     
+BHbeta_SAL 1e+14     
+BHbeta_DRM 1e+13     
+BHbeta_STB 5e+13     
+BHbeta_TAU 5e+12     
+BHbeta_WOL 2e+12    
+BHbeta_SDF 2e+12     
+BHbeta_FDF 2e+13     
+BHbeta_HAD 2e+13     
+BHbeta_YTF 2e+13    
 BHbeta_DOG 3.27e+10   
 BHbeta_SMO 2e+10     
 BHbeta_SSH 2e+10     
@@ -16361,7 +16361,7 @@ BHbeta_RWH 3e+10
 BHbeta_BWH 3e+10     
 BHbeta_SWH 5e+10     
 BHbeta_TWH 5e+10     
-BHbeta_INV 1e+11     
+BHbeta_INV 1e+12     
 BHbeta_LSQ 2.02e+13  
 BHbeta_ISQ 2.02e+13  
 BHbeta_NSH 2e+13     

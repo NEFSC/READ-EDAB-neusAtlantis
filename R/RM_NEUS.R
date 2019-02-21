@@ -517,12 +517,13 @@ mdc=Mum[,6:15]/C[,6:15]
 ### New analysis tools 2019
 library("ReactiveAtlantis")
 wd2='C:/Users/ryan.morse/Documents/GitHub/atneus_RM'
+wd2='/home/ryan/Git/atneus_RM'
 setwd(wd2)
 
 # Set location of runs and run name prefix
 runfolder='20190127a'
 wd3=paste('E:/AtlantisRun/20161103/tes/', runfolder, '/atneus_v15_test2008hydro_20180208',sep='')
-
+wd3=paste('/home/ryan/AtlRuns/', runfolder, '/atneus_v15_test2008hydro_20180208',sep='')
 
 ### Atlantis food web and trophic level composition
 grp.file <- ('NeusGroups_v15_unix.csv') # ALL GROUPS'your_groups_definition_file.csv'
@@ -561,7 +562,7 @@ nc.current  <- paste(wd3,'.nc', sep='')
 yoy.file    <- paste(wd3,'YOY.txt', sep='')
 grp.csv     <- grp.file
 prm.file    <- 'at_biol_neus_v15_scaled_diet_20181126.prm'
-recruitment.cal(nc.initial, nc.current, yoy.file, grp.file, prm.file)
+rec=recruitment.cal(nc.initial, nc.current, yoy.file, grp.file, prm.file)
 
 ### Harvest outputs and model skill assessment
 catch.nc    <- paste(wd3,'CATCH.nc', sep='')
