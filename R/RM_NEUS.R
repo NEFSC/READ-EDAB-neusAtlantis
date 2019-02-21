@@ -524,12 +524,15 @@ setwd(wd2)
 runfolder='20190127a'
 wd3=paste('E:/AtlantisRun/20161103/tes/', runfolder, '/atneus_v15_test2008hydro_20180208',sep='')
 wd3=paste('/home/ryan/AtlRuns/', runfolder, '/atneus_v15_test2008hydro_20180208',sep='')
+grp.file <- ('NeusGroups_v15_unix.csv') # ALL GROUPS'your_groups_definition_file.csv'
+
+
 
 ### Atlantis food web and trophic level composition
 grp.file <- ('NeusGroups_v15_unix.csv') # ALL GROUPS'your_groups_definition_file.csv'
 prm.file=('at_biol_neus_v15_scaled_diet_20181126.prm')
 diet.file   <- paste(wd3,'DietCheck.txt', sep='')
-food.web(diet.file, grp.file)
+web=food.web(diet.file, grp.file)
 
 ### Predation analysis from the Atlantis output
 biom        <- paste(wd3, 'BiomIndx.txt', sep='')
@@ -537,9 +540,9 @@ diet.file   <- paste(wd3, 'DietCheck.txt', sep='')
 bio.age     <- paste(wd3, 'AgeBiomIndx.txt', sep='') ## optional file. just if you want to check the predation by age
 grp.csv     <- grp.file
 ## Predation by Age
-predation(biom, grp.csv, diet.file, bio.age)
+pred=predation(biom, grp.csv, diet.file, bio.age)
 ## No predation by Age
-predation(biom, grp.csv, diet.file, bio.age = NULL)
+pred=predation(biom, grp.csv, diet.file, bio.age = NULL)
 
 ### Exploring predator-prey interactions from the initial conditions
 prm.file=('at_biol_neus_v15_scaled_diet_20181126.prm')
@@ -547,14 +550,14 @@ nc.initial  <- 'RMinit_2018.nc'
 grp.csv     <- grp.file
 bgm.file    <- 'neus_tmerc_RM.bgm'
 cum.depths  <- c(0, 50, 120, 300, 500) ## This should be the cummulative depth of your model
-feeding.mat(prm.file, grp.file, nc.initial, bgm.file, cum.depths)
+intx=feeding.mat(prm.file, grp.file, nc.initial, bgm.file, cum.depths)
 
 ### Growth of primary producers and limiting factors
 nc.initial  <- 'RMinit_2018.nc'
 nc.current  <- paste(wd3,'.nc', sep='')
 grp.csv     <- grp.file
 prm.file=('at_biol_neus_v15_scaled_diet_20181126.prm')
-growth.pp(nc.initial, grp.csv, prm.file, nc.current)
+grow=growth.pp(nc.initial, grp.csv, prm.file, nc.current)
 
 ### Analysis of recruitment and primary production
 nc.initial  <- 'RMinit_2018.nc'
