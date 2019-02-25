@@ -11511,32 +11511,53 @@ KUP_PB  0.2
 KUP_BB  0.2      
 KUP_BO  0.4     
  
+# updated 20190221 RM git/R/length_weight_v15.xlsx inverts tab
+LSQ_sn	359.17
+jLSQ_sn	22.99
+ISQ_sn	359.17
+jISQ_sn	22.99
+LOB_sn	77.58
+RCB_sn	44.90
+BMS_sn	44.90
+NSH_sn	5.61
+jNSH_sn	0.04
+OSH_sn	9.70
+jOSH_sn	0.36
+ZG_sn	77.58
+ZL_sn	0.02
+ZM_sn	4.5E-05
+ZS_sn	5.6E-06
+DF_sn	0.00
+BFF_sn	1.21
+BG_sn	1.21
+BO_sn	2.7E-06
+BD_sn	0.02
+BC_sn	5.61
 
 ##### Ref. AFDW for invert consumers so can determine avail fish groups
 ## 20180228 RM added juvenile groups based on SETAS
-LSQ_sn 2375
-jLSQ_sn 355  
-ISQ_sn 2375
-jISQ_sn 355
-LOB_sn 20263 
-RCB_sn 3290  
-BMS_sn 3290  
-NSH_sn 90    
-jNSH_sn 10
-OSH_sn 90    
-jOSH_sn 10
-ZG_sn  2375  
-
+#LSQ_sn 2375
+#jLSQ_sn 355  
+#ISQ_sn 2375
+#jISQ_sn 355
+#LOB_sn 20263 
+#RCB_sn 3290  
+#BMS_sn 3290  
+#NSH_sn 90    
+#jNSH_sn 10
+#OSH_sn 90    
+#jOSH_sn 10
+#ZG_sn  2375  
 # Following parameters required for read-in, but as these species don't eat age-structured groups, not used as yet
-ZL_sn           1.0        Ref. AFDW for large zooplankton so can determine avail fish groups (=10cm prawn)
-ZM_sn           1.0        Ref. AFDW for mesozooplankton so can determine avail fish groups (=10cm prawn)
-ZS_sn           1.0        Ref. AFDW for small zooplankton so can determine avail fish groups (=10cm prawn)
-DF_sn           1.0        Ref. AFDW for dinoflagellates so can determine avail fish groups (=10cm prawn)
-BFF_sn          90.0       Ref. AFDW for other filter feeders so can determine avail fish groups (=10cm prawn)
-BG_sn           50.0       Ref. AFDW for benthic grazers so can determine avail fish groups (=10cm prawn)
-BO_sn           1.0        Ref. AFDW for meiobenthos so can determine avail fish groups (=10cm prawn)
-BD_sn           10.0       Ref. AFDW for deposit feeders so can determine avail fish groups (=10cm prawn)
-BC_sn           5.0        Ref. AFDW for benthic canrivores so can determine avail fish groups (=10cm prawn)
+# ZL_sn           1.0        Ref. AFDW for large zooplankton so can determine avail fish groups (=10cm prawn)
+# ZM_sn           1.0        Ref. AFDW for mesozooplankton so can determine avail fish groups (=10cm prawn)
+# ZS_sn           1.0        Ref. AFDW for small zooplankton so can determine avail fish groups (=10cm prawn)
+# DF_sn           1.0        Ref. AFDW for dinoflagellates so can determine avail fish groups (=10cm prawn)
+# BFF_sn          90.0       Ref. AFDW for other filter feeders so can determine avail fish groups (=10cm prawn)
+# BG_sn           50.0       Ref. AFDW for benthic grazers so can determine avail fish groups (=10cm prawn)
+# BO_sn           1.0        Ref. AFDW for meiobenthos so can determine avail fish groups (=10cm prawn)
+# BD_sn           10.0       Ref. AFDW for deposit feeders so can determine avail fish groups (=10cm prawn)
+# BC_sn           5.0        Ref. AFDW for benthic canrivores so can determine avail fish groups (=10cm prawn)
 
 
 # Detritus handother deep dem. parameters
@@ -11553,32 +11574,60 @@ k_refsDL      10000.0      Reference labile detrit. level in sediments (if highe
 
 ### 20180228 RM added C for juvenile inverts based on SETAS and NEUS adult values (m3 mgN-1 day-1)
 # Clearance rates for biomass pool consumers - this is used by Holling type feeding
-C_LSQ_T15 0.001455  
-C_jLSQ_T15 0.001
-C_ISQ_T15 0.001455  
-C_jISQ_T15 0.001
-C_SCA_T15 0.008     
-C_QHG_T15 0.008    
-C_CLA_T15 0.008    
-C_BFF_T15 7e-03    
-C_BG_T15  5e-02  
-C_LOB_T15 6.5e-04 
-C_RCB_T15 5e-02    
-C_BMS_T15 5e-03    
-C_NSH_T15 0.00015   
-C_jNSH_T15 0.0001
-C_OSH_T15 0.00015   
-C_jOSH_T15 0.0001
-C_ZL_T15  0.05     
-C_BD_T15  5e-04    
-C_ZG_T15  0.03    
-C_DF_T15  0.001     
-C_ZM_T15  0.005    
-C_ZS_T15  0.015     
+#C_LSQ_T15 0.001455  
+#C_jLSQ_T15 0.001
+#C_ISQ_T15 0.001455  
+#C_jISQ_T15 0.001
+#C_SCA_T15 0.008     
+#C_QHG_T15 0.008    
+#C_CLA_T15 0.008    
+#C_BFF_T15 7e-03    
+#C_BG_T15  5e-02  
+#C_LOB_T15 6.5e-04 
+#C_RCB_T15 5e-02    
+#C_BMS_T15 5e-03    
+#C_NSH_T15 0.00015   
+#C_jNSH_T15 0.0001
+#C_OSH_T15 0.00015   
+#C_jOSH_T15 0.0001
+#C_ZL_T15  0.05     
+#C_BD_T15  5e-04    
+#C_ZG_T15  0.03    
+#C_DF_T15  0.001     
+#C_ZM_T15  0.005    
+#C_ZS_T15  0.015     
+#C_PB_T15  0        
+#C_BB_T15  0        
+#C_BO_T15  0.0001    
+#C_BC_T15  0.006
+
+# updated 20190222 based on size, length_weight_v15.xlsx
+C_LSQ_T15	19.16
+C_jLSQ_T15	2.80
+C_ISQ_T15	19.16
+C_jISQ_T15	2.80
+C_LOB_T15	6.55
+C_RCB_T15	4.47
+C_BMS_T15	4.47
+C_NSH_T15	1.04
+C_jNSH_T15	0.04
+C_OSH_T15	1.53
+C_jOSH_T15	0.15
+C_ZG_T15	6.55
+C_ZL_T15	0.02
+C_ZM_T15	2.82E-04
+C_ZS_T15	6.58E-05
+C_DF_T15	1.36E-06
+C_BFF_T15	0.36
+C_BG_T15	0.36
+C_BO_T15	3.99E-05
+C_BD_T15	0.02
+C_BC_T15	1.04
+C_SCA_T15	1.04
+C_QHG_T15	1.53
+C_CLA_T15	2.80
 C_PB_T15  0        
-C_BB_T15  0        
-C_BO_T15  0.0001    
-C_BC_T15  0.006
+C_BB_T15  0
 
 
 flagfishrates    0         Switch to show whether clearance and growth rates are absolute=0, or as proportion of body mass=1  
@@ -11770,37 +11819,71 @@ C_INV	10
 
 # Consumer growth - this is used by Holling type feeding (predcase#0, 1, 2)
 ### 20180228 RM added values for juvenile groups based on SETAS and adult NEUS vals (mgN mgN-1 day-1) for biomass pools
-mum_LSQ_T15 0.044     
-mum_jLSQ_T15 0.04
-mum_ISQ_T15 0.0444     
-mum_jISQ_T15 0.04
-mum_SCA_T15 0.05       
-mum_QHG_T15 0.05     
-mum_CLA_T15 0.05     
-mum_BFF_T15 0.035     
-mum_BG_T15  0.02      
-mum_LOB_T15 0.012    
-mum_RCB_T15 0.05      
-mum_BMS_T15 0.05      
-mum_NSH_T15 0.03043   
-mum_jNSH_T15 0.03
-mum_OSH_T15 0.03043   
-mum_jOSH_T15 0.03
-mum_ZL_T15  0.07        
-mum_BD_T15  0.014      
-mum_MA_T15  0.001        
-mum_MB_T15  0.018       
-mum_SG_T15  0.07       
-mum_BC_T15  0.08      
-mum_ZG_T15  0.025      
-mum_PL_T15  0.5        
-mum_DF_T15  0.1       
-mum_PS_T15  0.1       
-mum_ZM_T15  0.05       
-mum_ZS_T15  0.05       
+#mum_LSQ_T15 0.044     
+#mum_jLSQ_T15 0.04
+#mum_ISQ_T15 0.0444     
+#mum_jISQ_T15 0.04
+#mum_SCA_T15 0.25       
+#mum_QHG_T15 0.25     
+#mum_CLA_T15 0.25     
+#mum_BFF_T15 0.05     
+#mum_BG_T15  0.1      
+#mum_LOB_T15 0.2    
+#mum_RCB_T15 0.25      
+#mum_BMS_T15 0.25      
+#mum_NSH_T15 0.03043   
+#mum_jNSH_T15 0.03
+#mum_OSH_T15 0.03043   
+#mum_jOSH_T15 0.03
+#mum_ZL_T15  0.07        
+#mum_BD_T15  0.014      
+#mum_MA_T15  0.001        
+#mum_MB_T15  0.018       
+#mum_SG_T15  0.07       
+#mum_BC_T15  0.08      
+#mum_ZG_T15  0.025      
+#mum_PL_T15  0.5        
+#mum_DF_T15  0.1       
+#mum_PS_T15  0.1       
+#mum_ZM_T15  0.15       
+#mum_ZS_T15  0.05       
+#mum_PB_T15  0.05        
+#mum_BB_T15  0.02        
+#mum_BO_T15  0.01       
+
+## new size based mum from length_weight_v15.xlsx 20190222
+mum_LSQ_T15	191.56
+mum_jLSQ_T15	27.97
+mum_ISQ_T15	191.56
+mum_jISQ_T15	27.97
+mum_LOB_T15	65.53
+mum_RCB_T15	44.68
+mum_BMS_T15	44.68
+mum_NSH_T15	10.42
+mum_jNSH_T15	0.35
+mum_OSH_T15	15.29
+mum_jOSH_T15	1.52
+mum_ZG_T15	65.53
+mum_ZL_T15	0.19
+mum_ZM_T15	2.82E-03
+mum_ZS_T15	6.58E-04
+mum_DF_T15	1.36E-05
+mum_BFF_T15	3.57
+mum_BG_T15	3.57
+mum_BO_T15	3.99E-04
+mum_BD_T15	0.22
+mum_BC_T15	10.42
+mum_SCA_T15	10.42
+mum_QHG_T15	15.29
+mum_CLA_T15	27.97
 mum_PB_T15  0.05        
 mum_BB_T15  0.02        
-mum_BO_T15  0.01       
+mum_MA_T15  0.001
+mum_MB_T15  0.01        
+mum_SG_T15  0.07   
+mum_PL_T15  0.5        
+mum_DF_T15  0.1       
+mum_PS_T15  0.1    
 
 # Vertebrate growth rates for each "group," per age class (mg N Ind-1 day-1)
 # See _flag.fish.rates above to see whether clearance and growth rates 
