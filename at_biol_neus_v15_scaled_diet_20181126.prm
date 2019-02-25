@@ -347,47 +347,47 @@ flagseperateNSH  1         CEP, CEPj are: 1 = seperate groups (or single pool), 
 flagseperateOSH  1         CEP, CEPj are: 1 = seperate groups (or single pool), 0 = age structured single group
 
 # RM 20190103 changed all from 10 to 3
-flagrecruitMAK 3
-flagrecruitHER 3
-flagrecruitWHK 3
-flagrecruitBLF 3
-flagrecruitWPF 3
-flagrecruitSUF 3
-flagrecruitWIF 3
-flagrecruitWTF 3
-flagrecruitHAL 3
-flagrecruitPLA 3
-flagrecruitFOU 3
-flagrecruitFLA 3
-flagrecruitBFT 3
-flagrecruitTUN 3
-flagrecruitBIL 3
-flagrecruitMPF 3
-flagrecruitBUT 3
-flagrecruitANC 3
-flagrecruitBPF 3
-flagrecruitGOO 3
-flagrecruitMEN 3
-flagrecruitFDE 3
-flagrecruitCOD 3
-flagrecruitSHK 3
-flagrecruitOHK 3
-flagrecruitPOL 3
-flagrecruitRHK 3
-flagrecruitBSB 3
-flagrecruitSCU 3
-flagrecruitTYL 3
-flagrecruitRED 3
-flagrecruitOPT 3
-flagrecruitSAL 3
-flagrecruitDRM 3
-flagrecruitSTB 3
-flagrecruitTAU 3
-flagrecruitWOL 3
-flagrecruitSDF 3
-flagrecruitFDF 3
-flagrecruitHAD 3
-flagrecruitYTF 3
+flagrecruitMAK 10
+flagrecruitHER 10
+flagrecruitWHK 10
+flagrecruitBLF 10
+flagrecruitWPF 10
+flagrecruitSUF 10
+flagrecruitWIF 10
+flagrecruitWTF 10
+flagrecruitHAL 10
+flagrecruitPLA 10
+flagrecruitFOU 10
+flagrecruitFLA 10
+flagrecruitBFT 10
+flagrecruitTUN 10
+flagrecruitBIL 10
+flagrecruitMPF 10
+flagrecruitBUT 10
+flagrecruitANC 10
+flagrecruitBPF 10
+flagrecruitGOO 10
+flagrecruitMEN 10
+flagrecruitFDE 10
+flagrecruitCOD 10
+flagrecruitSHK 10
+flagrecruitOHK 10
+flagrecruitPOL 10
+flagrecruitRHK 10
+flagrecruitBSB 10
+flagrecruitSCU 10
+flagrecruitTYL 10
+flagrecruitRED 10
+flagrecruitOPT 10
+flagrecruitSAL 10
+flagrecruitDRM 10
+flagrecruitSTB 10
+flagrecruitTAU 10
+flagrecruitWOL 10
+flagrecruitSDF 10
+flagrecruitFDF 10
+flagrecruitHAD 10
+flagrecruitYTF 10
 flagrecruitDOG 12
 flagrecruitSMO 12
 flagrecruitSSH 12
@@ -405,7 +405,7 @@ flagrecruitRWH 12
 flagrecruitBWH 12
 flagrecruitSWH 12
 flagrecruitTWH 12
-flagrecruitINV 3
+flagrecruitINV 10
 
 
 # External reproduction - spawn is based on adult population within model domain, but actual reproduction           
@@ -1683,12 +1683,12 @@ k_w_depth        25.0      Bottom depth marking estuarine vs oceanic water (for 
 k_w_cdepth       100.0     Bottom depth marking coastal from oceanic water (for light absorp) m  205.0
 
 k_w_deep         0.016     Coefficient of background light absorption due to oceanic water     0.005 - 0.016
-k_w_shallow      0.07      Coefficient of background light absorption due to coastal water     0.016 - 0.078
+k_w_shallow      0.05      Coefficient of background light absorption due to coastal water     0.016 - 0.078
 k_PN             0.0035    Coefficient of light absorption due to particulate matter           0.0035
 k_DON            0.0009    Coefficient of light absorption due to DON                          0.0009
 k_DL             0.0038    Coefficient of light absorption due to labile detritus              0.0038
 k_IS             0.05      Basic coefficient of light absorption                               0.05
-k_SED            0.001      Coefficient of light absoption due to sediment. Only used if flagIsEstuary is on. 
+k_SED            0.0      Coefficient of light absorption due to sediment. Only used if flagIsEstuary is on. 
 KIOP_min         4.0       Minimum level of light adaptation                                   4.0
 KIOP_shift       0.25      Minimum rate of shift under light adaptation                        0.25
 KI_avail         0.5       Available light                                                     0.5
@@ -1745,7 +1745,7 @@ KI_PL_T15        10        Light saturation, large phytoplankton             W m
 KI_PS_T15        5        Light saturation, small phytoplankton             W m-2          10 - 20
 KI_DF_T15        15        Light saturation, dinoflagellates                 W m-2          10 - 20
 KI_MA_T15        20         Light saturation, macroalgae                      W m-2             5
-KI_SG_T15        65        Light saturation, seagrass                        W m-2             65
+KI_SG_T15        50        Light saturation, seagrass                        W m-2             65
 KI_MB_T15        10         Light saturation, microphytobenthos               W m-2             3
 
 eddy_scale       2.0       Coefficient scaling eddy strength impact on phytoplankton growth    1.0
@@ -11574,60 +11574,34 @@ k_refsDL      10000.0      Reference labile detrit. level in sediments (if highe
 
 ### 20180228 RM added C for juvenile inverts based on SETAS and NEUS adult values (m3 mgN-1 day-1)
 # Clearance rates for biomass pool consumers - this is used by Holling type feeding
-#C_LSQ_T15 0.001455  
-#C_jLSQ_T15 0.001
-#C_ISQ_T15 0.001455  
-#C_jISQ_T15 0.001
-#C_SCA_T15 0.008     
-#C_QHG_T15 0.008    
-#C_CLA_T15 0.008    
-#C_BFF_T15 7e-03    
-#C_BG_T15  5e-02  
-#C_LOB_T15 6.5e-04 
-#C_RCB_T15 5e-02    
-#C_BMS_T15 5e-03    
-#C_NSH_T15 0.00015   
-#C_jNSH_T15 0.0001
-#C_OSH_T15 0.00015   
-#C_jOSH_T15 0.0001
-#C_ZL_T15  0.05     
-#C_BD_T15  5e-04    
-#C_ZG_T15  0.03    
-#C_DF_T15  0.001     
-#C_ZM_T15  0.005    
-#C_ZS_T15  0.015     
-#C_PB_T15  0        
-#C_BB_T15  0        
-#C_BO_T15  0.0001    
-#C_BC_T15  0.006
-
-# updated 20190222 based on size, length_weight_v15.xlsx
-C_LSQ_T15	19.16
-C_jLSQ_T15	2.80
-C_ISQ_T15	19.16
-C_jISQ_T15	2.80
-C_LOB_T15	6.55
-C_RCB_T15	4.47
-C_BMS_T15	4.47
-C_NSH_T15	1.04
-C_jNSH_T15	0.04
-C_OSH_T15	1.53
-C_jOSH_T15	0.15
-C_ZG_T15	6.55
-C_ZL_T15	0.02
-C_ZM_T15	2.82E-04
-C_ZS_T15	6.58E-05
-C_DF_T15	1.36E-06
-C_BFF_T15	0.36
-C_BG_T15	0.36
-C_BO_T15	3.99E-05
-C_BD_T15	0.02
-C_BC_T15	1.04
-C_SCA_T15	1.04
-C_QHG_T15	1.53
-C_CLA_T15	2.80
+C_LSQ_T15 0.001455  
+C_jLSQ_T15 0.001
+C_ISQ_T15 0.001455  
+C_jISQ_T15 0.001
+C_SCA_T15 0.08     
+C_QHG_T15 0.08    
+C_CLA_T15 0.08    
+C_BFF_T15 7e-03    
+C_BG_T15  5e-01  
+C_LOB_T15 6.5e-03 
+C_RCB_T15 5e-02    
+C_BMS_T15 5e-03    
+C_NSH_T15 0.00015   
+C_jNSH_T15 0.0001
+C_OSH_T15 0.00015   
+C_jOSH_T15 0.0001
+C_ZL_T15  0.05     
+C_BD_T15  5e-04    
+C_ZG_T15  0.03    
+C_DF_T15  0.001     
+C_ZM_T15  0.005    
+C_ZS_T15  0.015     
 C_PB_T15  0        
-C_BB_T15  0
+C_BB_T15  0        
+C_BO_T15  0.0001    
+C_BC_T15  0.006
+
+
 
 
 flagfishrates    0         Switch to show whether clearance and growth rates are absolute=0, or as proportion of body mass=1  
@@ -11819,71 +11793,38 @@ C_INV	10
 
 # Consumer growth - this is used by Holling type feeding (predcase#0, 1, 2)
 ### 20180228 RM added values for juvenile groups based on SETAS and adult NEUS vals (mgN mgN-1 day-1) for biomass pools
-#mum_LSQ_T15 0.044     
-#mum_jLSQ_T15 0.04
-#mum_ISQ_T15 0.0444     
-#mum_jISQ_T15 0.04
-#mum_SCA_T15 0.25       
-#mum_QHG_T15 0.25     
-#mum_CLA_T15 0.25     
-#mum_BFF_T15 0.05     
-#mum_BG_T15  0.1      
-#mum_LOB_T15 0.2    
-#mum_RCB_T15 0.25      
-#mum_BMS_T15 0.25      
-#mum_NSH_T15 0.03043   
-#mum_jNSH_T15 0.03
-#mum_OSH_T15 0.03043   
-#mum_jOSH_T15 0.03
-#mum_ZL_T15  0.07        
-#mum_BD_T15  0.014      
-#mum_MA_T15  0.001        
-#mum_MB_T15  0.018       
-#mum_SG_T15  0.07       
-#mum_BC_T15  0.08      
-#mum_ZG_T15  0.025      
-#mum_PL_T15  0.5        
-#mum_DF_T15  0.1       
-#mum_PS_T15  0.1       
-#mum_ZM_T15  0.15       
-#mum_ZS_T15  0.05       
-#mum_PB_T15  0.05        
-#mum_BB_T15  0.02        
-#mum_BO_T15  0.01       
-
-## new size based mum from length_weight_v15.xlsx 20190222
-mum_LSQ_T15	191.56
-mum_jLSQ_T15	27.97
-mum_ISQ_T15	191.56
-mum_jISQ_T15	27.97
-mum_LOB_T15	65.53
-mum_RCB_T15	44.68
-mum_BMS_T15	44.68
-mum_NSH_T15	10.42
-mum_jNSH_T15	0.35
-mum_OSH_T15	15.29
-mum_jOSH_T15	1.52
-mum_ZG_T15	65.53
-mum_ZL_T15	0.19
-mum_ZM_T15	2.82E-03
-mum_ZS_T15	6.58E-04
-mum_DF_T15	1.36E-05
-mum_BFF_T15	3.57
-mum_BG_T15	3.57
-mum_BO_T15	3.99E-04
-mum_BD_T15	0.22
-mum_BC_T15	10.42
-mum_SCA_T15	10.42
-mum_QHG_T15	15.29
-mum_CLA_T15	27.97
-mum_PB_T15  0.05        
-mum_BB_T15  0.02        
-mum_MA_T15  0.001
-mum_MB_T15  0.01        
-mum_SG_T15  0.07   
+mum_LSQ_T15 0.044     
+mum_jLSQ_T15 0.04
+mum_ISQ_T15 0.0444     
+mum_jISQ_T15 0.04
+mum_SCA_T15 0.25       
+mum_QHG_T15 0.25     
+mum_CLA_T15 0.25     
+mum_BFF_T15 0.05     
+mum_BG_T15  0.1      
+mum_LOB_T15 0.2    
+mum_RCB_T15 0.25      
+mum_BMS_T15 0.25      
+mum_NSH_T15 0.03043   
+mum_jNSH_T15 0.03
+mum_OSH_T15 0.03043   
+mum_jOSH_T15 0.03
+mum_ZL_T15  0.07        
+mum_BD_T15  0.014      
+mum_MA_T15  0.001        
+mum_MB_T15  0.018       
+mum_SG_T15  0.07       
+mum_BC_T15  0.08      
+mum_ZG_T15  0.025      
 mum_PL_T15  0.5        
 mum_DF_T15  0.1       
-mum_PS_T15  0.1    
+mum_PS_T15  0.07       
+mum_ZM_T15  0.05       
+mum_ZS_T15  0.05       
+mum_PB_T15  0.05        
+mum_BB_T15  0.02        
+mum_BO_T15  0.01       
+
 
 # Vertebrate growth rates for each "group," per age class (mg N Ind-1 day-1)
 # See _flag.fish.rates above to see whether clearance and growth rates 
