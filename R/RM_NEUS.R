@@ -569,6 +569,21 @@ prm.file    <- 'at_biol_neus_v15_scaled_diet_20181126.prm'
 rec=recruitment.cal(nc.initial, nc.current, yoy.file, grp.file, prm.file)
 rec
 
+### Compare outputs and Biomass visualization
+nc.current  <- paste(wd3,'.nc', sep='')
+oldrunfolder='20190222a'
+wdold=paste('E:/AtlantisRun/20161103/tes/', oldrunfolder, '/atneus_v15_test2008hydro_20180208',sep='')
+nc.old      <- paste(wdold, '.nc', sep='')
+grp.csv     <- grp.file
+bgm.file    <- 'neus_tmerc_RM.bgm'
+cum.depths  <- c(0, 50, 120, 300, 500) ## This should be the cummulative depth of your model
+## individual file
+comp=compare(nc.current, nc.out.old = NULL, grp.csv, bgm.file, cum.depths)
+## compare to previuos run
+comp=compare(nc.current, nc.old, grp.csv, bgm.file, cum.depths)
+comp
+
+
 ### Harvest outputs and model skill assessment
 catch.nc    <- paste(wd3,'CATCH.nc', sep='')
 ext.catch   <- 'external_catch_time_serie.csv'
