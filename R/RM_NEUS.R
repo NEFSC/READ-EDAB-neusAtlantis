@@ -546,26 +546,43 @@ pred=predation(biom, grp.csv, diet.file, bio.age = NULL)
 
 ### Exploring predator-prey interactions from the initial conditions
 prm.file=('at_biol_neus_v15_scaled_diet_20181126.prm')
-nc.initial  <- 'RMinit_2018.nc'
+nc.initial  <- 'RMinit_2019.nc'
 grp.csv     <- grp.file
 bgm.file    <- 'neus_tmerc_RM.bgm'
 cum.depths  <- c(0, 50, 120, 300, 500) ## This should be the cummulative depth of your model
 intx=feeding.mat(prm.file, grp.file, nc.initial, bgm.file, cum.depths)
 
 ### Growth of primary producers and limiting factors
-nc.initial  <- 'RMinit_2018.nc'
+nc.initial  <- 'RMinit_2019.nc'
 nc.current  <- paste(wd3,'.nc', sep='')
 grp.csv     <- grp.file
 prm.file=('at_biol_neus_v15_scaled_diet_20181126.prm')
 grow=growth.pp(nc.initial, grp.csv, prm.file, nc.current)
+grow
 
 ### Analysis of recruitment and primary production
-nc.initial  <- 'RMinit_2018.nc'
+nc.initial  <- 'RMinit_2019.nc'
 nc.current  <- paste(wd3,'.nc', sep='')
 yoy.file    <- paste(wd3,'YOY.txt', sep='')
 grp.csv     <- grp.file
 prm.file    <- 'at_biol_neus_v15_scaled_diet_20181126.prm'
 rec=recruitment.cal(nc.initial, nc.current, yoy.file, grp.file, prm.file)
+rec
+
+### Compare outputs and Biomass visualization
+nc.current  <- paste(wd3,'.nc', sep='')
+oldrunfolder='20190222a'
+wdold=paste('E:/AtlantisRun/20161103/tes/', oldrunfolder, '/atneus_v15_test2008hydro_20180208',sep='')
+nc.old      <- paste(wdold, '.nc', sep='')
+grp.csv     <- grp.file
+bgm.file    <- 'neus_tmerc_RM.bgm'
+cum.depths  <- c(0, 50, 120, 300, 500) ## This should be the cummulative depth of your model
+## individual file
+comp=compare(nc.current, nc.out.old = NULL, grp.csv, bgm.file, cum.depths)
+## compare to previuos run
+comp=compare(nc.current, nc.old, grp.csv, bgm.file, cum.depths)
+comp
+
 
 ### Harvest outputs and model skill assessment
 catch.nc    <- paste(wd3,'CATCH.nc', sep='')

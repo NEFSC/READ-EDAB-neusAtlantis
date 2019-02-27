@@ -1,4 +1,4 @@
-netcdf RMinit_2018 {
+netcdf RMinit_2019 {
 dimensions:
 	t = UNLIMITED ; // (1 currently)
 	b = 30 ;
@@ -7751,7 +7751,7 @@ variables:
 		Diatom_N:dtype = 0 ;
 		Diatom_N:sumtype = 1 ;
 		Diatom_N:inwc = 1 ;
-		Diatom_N:insed = 1 ;
+		Diatom_N:insed = 0 ;
 		Diatom_N:dissol = 0 ;
 		Diatom_N:decay = 0. ;
 		Diatom_N:partic = 1 ;
@@ -7770,7 +7770,7 @@ variables:
 		Diatom_S:dtype = 0 ;
 		Diatom_S:sumtype = 0 ;
 		Diatom_S:inwc = 1 ;
-		Diatom_S:insed = 1 ;
+		Diatom_S:insed = 0 ;
 		Diatom_S:dissol = 0 ;
 		Diatom_S:decay = 0. ;
 		Diatom_S:partic = 1 ;
@@ -8738,7 +8738,7 @@ variables:
 		Fourspotflounder5_StructN:b_dens = 1000000000. ;
 		Fourspotflounder5_StructN:i_conc = 200000000. ;
 		Fourspotflounder5_StructN:f_conc = 200000000. ;
-		Fourspotflounder5_StructN:_FillValue = 1298.7891154473 ;
+		Fourspotflounder5_StructN:_FillValue = 1298.78911544729 ;
 	double Fourspotflounder6_Nums(t, b, z) ;
 		Fourspotflounder6_Nums:bmtype = "tracer" ;
 		Fourspotflounder6_Nums:units = "1" ;
@@ -11955,7 +11955,7 @@ variables:
 		Little_Skate8_StructN:b_dens = 1000000000. ;
 		Little_Skate8_StructN:i_conc = 200000000. ;
 		Little_Skate8_StructN:f_conc = 200000000. ;
-		Little_Skate8_StructN:_FillValue = 9176.9423374219 ;
+		Little_Skate8_StructN:_FillValue = 9176.94233742189 ;
 	double Little_Skate9_Nums(t, b, z) ;
 		Little_Skate9_Nums:bmtype = "tracer" ;
 		Little_Skate9_Nums:units = "1" ;
@@ -18547,7 +18547,7 @@ variables:
 		Plaice6_ResN:b_dens = 1000000000. ;
 		Plaice6_ResN:i_conc = 200000000. ;
 		Plaice6_ResN:f_conc = 200000000. ;
-		Plaice6_ResN:_FillValue = 12760.3467951464 ;
+		Plaice6_ResN:_FillValue = 12760.3467951463 ;
 	double Plaice6_StructN(t, b, z) ;
 		Plaice6_StructN:bmtype = "tracer" ;
 		Plaice6_StructN:units = "mg N" ;
@@ -26174,7 +26174,7 @@ variables:
 		Smooth_Dogfish5_StructN:b_dens = 1000000000. ;
 		Smooth_Dogfish5_StructN:i_conc = 200000000. ;
 		Smooth_Dogfish5_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish5_StructN:_FillValue = 16495.6654566598 ;
+		Smooth_Dogfish5_StructN:_FillValue = 16495.6654566597 ;
 	double Smooth_Dogfish6_Nums(t, b, z) ;
 		Smooth_Dogfish6_Nums:bmtype = "tracer" ;
 		Smooth_Dogfish6_Nums:units = "1" ;
@@ -32652,7 +32652,7 @@ variables:
 		Winter_Skate6_ResN:b_dens = 1000000000. ;
 		Winter_Skate6_ResN:i_conc = 200000000. ;
 		Winter_Skate6_ResN:f_conc = 200000000. ;
-		Winter_Skate6_ResN:_FillValue = 176586.997708177 ;
+		Winter_Skate6_ResN:_FillValue = 176586.997708176 ;
 	double Winter_Skate6_StructN(t, b, z) ;
 		Winter_Skate6_StructN:bmtype = "tracer" ;
 		Winter_Skate6_StructN:units = "mg N" ;
@@ -57070,11 +57070,11 @@ data:
   _, _, _, _, _ ;
 
  Macroalgae_Cover =
-  _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, 
+  _, .1, _, _, .1, _, _, .1, .1, _, _, _, _, .1, _, _, _, _, _, _, _, _, _, _, _, 
     _, _, _, _, _ ;
 
  Macroalgae_N =
-  _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, 
+  _, 10, _, _, 10, _, _, 10, 10, _, _, _, _, 10, _, _, _, _, _, _, _, _, _, _, _, 
     _, _, _, _, _ ;
 
  Macrobenth_Shallow_N =
@@ -75486,11 +75486,11 @@ data:
   _, _, _, _, _ ;
 
  Seagrass_Cover =
-  _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, 
+  _, .1, _, _, .1, _, _, .05, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, 
     _, _, _, _, _ ;
 
  Seagrass_N =
-  _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, 
+  _, 10, _, _, 10, _, _, 2, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, 
     _, _, _, _, _ ;
 
  Sed_Bact_N =
@@ -95755,7 +95755,7 @@ data:
 
  SED =
   _, _, _, _, _,
-  1000, _, _, _, _,
+  _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
