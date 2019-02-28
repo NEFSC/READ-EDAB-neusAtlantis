@@ -35314,7 +35314,7 @@ variables:
 		SED:svel = 0. ;
 		SED:xvel = 0. ;
 		SED:isabs = 0 ;
-		SED:iscontam =0 ;
+		SED:iscontam = 0 ;
 		SED:psize = 1.e-006 ;
 		SED:b_dens = 1000000000. ;
 		SED:i_conc = 200000000. ;

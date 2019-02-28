@@ -26,11 +26,11 @@ flagannual_Mest    1	#Whether to write out estimates of mortality per predator a
 
 
 
-checkbox      11       # Give detailed logged output for this box
+checkbox      1       # Give detailed logged output for this box
 
-checkstart    30 day    # Start detailed logged output after this date
+checkstart    1 day    # Start detailed logged output after this date
 
-checkstop     720 day    # Stop detailed logged output after this date
+checkstop     2 day    # Stop detailed logged output after this date
 
 fishtest      0        # Count up total population for each vertebrate after each main subroutine: 0=no, 1=yes
 
@@ -60,7 +60,7 @@ move_check    20       # ID number of group where tracking movements
 
 fishmove      1        # Set to 0 to turn vertebrate movement off for debugging purposes
 
-debug         11        # 0=debuging off, 1=debug fishing, 2=debug discards, 3=debug histfishing,
+debug         0        # 0=debuging off, 1=debug fishing, 2=debug discards, 3=debug histfishing,
 
                        # 4=debug assessments, 5=debug mpas, 6=debug effort, 7=debug econ effort, 
 

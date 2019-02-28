@@ -11578,9 +11578,9 @@ C_LSQ_T15 0.001455
 C_jLSQ_T15 0.001
 C_ISQ_T15 0.001455  
 C_jISQ_T15 0.001
-C_SCA_T15 0.08     
-C_QHG_T15 0.08    
-C_CLA_T15 0.08    
+C_SCA_T15 0.25     
+C_QHG_T15 0.25    
+C_CLA_T15 0.25    
 C_BFF_T15 7e-03    
 C_BG_T15  5e-01  
 C_LOB_T15 6.5e-03 
@@ -11797,9 +11797,9 @@ mum_LSQ_T15 0.044
 mum_jLSQ_T15 0.04
 mum_ISQ_T15 0.0444     
 mum_jISQ_T15 0.04
-mum_SCA_T15 0.25       
-mum_QHG_T15 0.25     
-mum_CLA_T15 0.25     
+mum_SCA_T15 2.25       
+mum_QHG_T15 2.25     
+mum_CLA_T15 2.25     
 mum_BFF_T15 0.05     
 mum_BG_T15  0.1      
 mum_LOB_T15 0.2    
