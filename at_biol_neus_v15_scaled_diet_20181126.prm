@@ -407,6 +407,7 @@ flagrecruitSWH 1
 flagrecruitTWH 1
 flagrecruitINV 1
 
+
 # External reproduction - spawn is based on adult population within model domain, but actual reproduction           
 # occurs outside model domain (0 = no, 1 = yes) ADDED 20180228 RM
 flagext_reprodMAK 0
