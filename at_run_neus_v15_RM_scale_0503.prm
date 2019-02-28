@@ -184,7 +184,7 @@ check_dups 0
 
 
 # RM 20180530
-flagpassivetracer 1
+flagpassivetracer 0
 flag_old_embryo_init 0
 flag_replicate_old_calendar 0
 

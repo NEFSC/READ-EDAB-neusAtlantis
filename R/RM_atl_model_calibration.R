@@ -171,6 +171,18 @@ C.scale=C_age[,2:11]*1/RN_RNinit; row.names(C.scale)=C_age$Code
 write.csv(mum.scale, file='newMum_RNbased.csv', row.names = T)
 write.csv(C.scale, file='newC_RNbased.csv', row.names = T)
 
+### get initial conditions values RN+SN*nums, dont forget about scalar in run file...
+# test=nums_age %>% filter(time==0, agecl==1)
+# gps=get_age_acronyms(fgs)
+# RN=result$resn_age %>% filter(time==0, agecl==1)
+# SN=result$structn_age %>% filter(time==0, agecl==1)
+# fgs_data=load_fgs(fgs)
+# code_relations=fgs_data[,c('Code', 'LongName')]
+# test2=left_join(test, code_relations, by=c('species'='LongName'))
+# test2$SN_RN=RN$atoutput+SN$atoutput
+# test2$totalN=test2$atoutput*test2$SN_RN
+# write.csv(test2, file='initial_cond_ageclass_1.csv', row.names =F)
+
 ### load pPrey matrix; ADJUST if necessary
 # dm <- load_dietmatrix(prm_biol, fgs)
 # test=dm %>% filter(prey=='HAL')
@@ -305,18 +317,28 @@ plot <- update_labels(plot, list(x = "Time [years]", y = expression(Numbers/Numb
 plot_add_box(plot)
 ggsave(paste(filename," Numbers at age_Num init.png", sep=''), width=20, height=17, dpi=96)
 
-### Numbers per ageclass
+### Numbers per ageclass, use to scale recruitment values from initial conditions ageclass 1 (nums*RN+SN)
 df_rel <- convert_relative_initial(result$nums_age)%>%
   group_by(species, agecl) %>%
   summarise(avg=mean(atoutput)) %>%
   spread(agecl, avg)
-numscale=1/rowMeans(df_rel[,2:11])
+numscale=1/rowMeans(df_rel[,2])
 # numscale=1/(df_rel[,2]) # scale to mean of all cohorts
 numsc=data.frame(df_rel[,1]) # scale to first year only
 numsc$scale=numscale
-write.csv(numsc, file='new_num_scalar_recruits.csv', row.names = T)
-
-
+# write.csv(numsc, file='new_num_scalar_recruits.csv', row.names = T)
+test=nums_age %>% filter(time==0, agecl==1)
+gps=get_age_acronyms(fgs)
+RN=result$resn_age %>% filter(time==0, agecl==1)
+SN=result$structn_age %>% filter(time==0, agecl==1)
+fgs_data=load_fgs(fgs)
+code_relations=fgs_data[,c('Code', 'LongName')]
+test2=left_join(test, code_relations, by=c('species'='LongName'))
+test2$SN_RN=RN$atoutput+SN$atoutput
+test2$totalN=test2$atoutput*test2$SN_RN
+write.csv(test2, file='initial_cond_ageclass_1.csv', row.names =F)
+numscale.f=left_join(test2, numsc, by='species')
+write.csv(numscale.f, file='Init_nums_scalar_for_recruits.csv', row.names = T)
 
 
 ### Biomass

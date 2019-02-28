@@ -9,28 +9,33 @@ hd0.name /tsfiles/flowOutAll_fix_20180402.nc
 
 #############################################
 # Point source/sink lists
-npointss 0
+npointss 1
 
-## nutrient forcing             
-pss0.name GeorgesBank
-pss0.location 1234274.466 3098307.516 -40
-pss0.data /tsfiles/v5_3yr.ts
-pss0.rewind 1
+## nutrient forcing     
+pss0.name CBay_SED
+pss0.location 531250 2625000 -16
+pss0.data /tsfiles/CBay_SED_90days_spike.ts
+pss0.rewind 0
+        
+# pss0.name GeorgesBank
+# pss0.location 1234274.466 3098307.516 -40
+# pss0.data /tsfiles/v5_3yr.ts
+# pss0.rewind 1
 
-pss1.name GulfStreamTrap
-pss1.location 1239774.298 3024140.334 -130
-pss1.data /tsfiles/v5_3yr.ts
-pss1.rewind 1
+# pss1.name GulfStreamTrap
+# pss1.location 1239774.298 3024140.334 -130
+# pss1.data /tsfiles/v5_3yr.ts
+# pss1.rewind 1
 
-pss2.name ChesapeakeBay
-pss2.location 531250 2625000 -16
-pss2.data /tsfiles/CBAYlo3yrSED.ts
-pss2.rewind 1
+# pss2.name ChesapeakeBay
+# pss2.location 531250 2625000 -16
+# pss2.data /tsfiles/CBAYlo3yrSED.ts
+# pss2.rewind 1
 
-pss3.name HudsonRiver
-pss3.location 710000 3000000 -20
-pss3.data /tsfiles/CBAYlo3yr.ts
-pss3.rewind 1
+# pss3.name HudsonRiver
+# pss3.location 710000 3000000 -20
+# pss3.data /tsfiles/CBAYlo3yr.ts
+# pss3.rewind 1
 
 # pss2.name Basin16
 # pss2.location 1102189.803 3299498.894 -150
@@ -47,25 +52,25 @@ pss3.rewind 1
 # pss4.data /tsfiles/basindeep.ts
 # pss4.rewind 0
 
-pss4.name NarragansettBay
-pss4.location 937500 3100000 -20
-pss4.data /tsfiles/NBAYlo3yr.ts
-pss4.rewind 1
+# pss4.name NarragansettBay
+# pss4.location 937500 3100000 -20
+# pss4.data /tsfiles/NBAYlo3yr.ts
+# pss4.rewind 1
 
-pss5.name Boston
-pss5.location 1016047.729 3243653.893 -15
-pss5.data /tsfiles/v5_3yr.ts
-pss5.rewind 1
+# pss5.name Boston
+# pss5.location 1016047.729 3243653.893 -15
+# pss5.data /tsfiles/v5_3yr.ts
+# pss5.rewind 1
 
-pss6.name CascoBayAndPenobscott
-pss6.location 1098345.3045816745 3367268.9230297254 -15
-pss6.data /tsfiles/v5_3yr.ts
-pss6.rewind 1
+# pss6.name CascoBayAndPenobscott
+# pss6.location 1098345.3045816745 3367268.9230297254 -15
+# pss6.data /tsfiles/v5_3yr.ts
+# pss6.rewind 1
 
-pss7.name PenobscottNorth
-pss7.location 1220475.7351718375 3429637.9873865936 -15
-pss7.data /tsfiles/v5_3yr.ts
-pss7.rewind 1
+# pss7.name PenobscottNorth
+# pss7.location 1220475.7351718375 3429637.9873865936 -15
+# pss7.data /tsfiles/v5_3yr.ts
+# pss7.rewind 1
 ##########################################
 # Rain and evaporation
 
