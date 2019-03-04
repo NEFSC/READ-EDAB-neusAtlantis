@@ -521,9 +521,11 @@ wd2='/home/ryan/Git/atneus_RM'
 setwd(wd2)
 
 # Set location of runs and run name prefix
-runfolder='20190228dta'
+runfolder='20190303a' #20190301dtb'
 wd3=paste('E:/AtlantisRun/20161103/tes/', runfolder, '/atneus_v15_test2008hydro_20180208',sep='')
 wd3=paste('/home/ryan/AtlRuns/', runfolder, '/atneus_v15_test2008hydro_20180208',sep='')
+wd3=paste('/media/ryan/Iomega_HDD/', runfolder,  '/atneus_v15_test2008hydro_20180208',sep='')
+
 grp.file <- ('NeusGroups_v15_unix.csv') # ALL GROUPS'your_groups_definition_file.csv'
 
 
@@ -573,7 +575,7 @@ rec
 
 ### Compare outputs and Biomass visualization
 nc.current  <- paste(wd3,'.nc', sep='')
-oldrunfolder='20190226a'
+oldrunfolder='20190301dta'
 wdold=paste('E:/AtlantisRun/20161103/tes/', oldrunfolder, '/atneus_v15_test2008hydro_20180208',sep='')
 nc.old      <- paste(wdold, '.nc', sep='')
 grp.csv     <- grp.file
