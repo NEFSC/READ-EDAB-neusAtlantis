@@ -148,7 +148,7 @@ K_num_catchqueue  7    # Length (in days) of list of catches used in running ave
 flaghemisphere    1  # Flag for hemisphere model is in (0 = southern; 1 = northern)
 
 
-# Parameters for rescalingin inital vertebrate densities - only for use in emergencies,
+# Parameters for rescaling initial vertebrate densities - only for use in emergencies,
 # should really update the cdf file instead
 # GFay Nov 13 2012, check these.
 
