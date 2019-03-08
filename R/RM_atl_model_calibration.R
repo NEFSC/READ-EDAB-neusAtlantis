@@ -135,69 +135,76 @@ for (x in 1:length(ii)){
 dev.off()
 
 #### ________ load biol info for mum and C -> compare length at age to init___________
-gps=get_age_acronyms(fgs)
-fgs_data=load_fgs(fgs)
-code_relations=fgs_data[,c('Code', 'LongName')]
-mum_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "mum") %>%   spread(agecl, mum)
-mum_age=left_join(mum_age, code_relations, by=c('species'='LongName'))
-C_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "C") %>% spread(agecl, c)
-C_age=left_join(C_age, code_relations, by=c('species'='LongName'))
-
-#get biomass pool values
-prm_to_df_RM <- function(prm_biol, fgs, group, parameter) {
-  # Extract data!
-  prms <- lapply(parameter, set_single_prm, group = group)
-  prm_biol_new <- readLines(con = prm_biol, warn = FALSE)
-  test=data.frame(prms)
-  test[,1]=paste(test[,1], "_T15", sep="")
-  # test=test[1:27,]
-  t=data.frame(test)
-  prms=t
-  # prms=list(test)
-  # prm_t  <- do.call(rbind, prms)[,1]
-  prm_t=test
-  no_prm <- which(is.na(charmatch(prm_t, prm_biol_new)))
-  if (sum(no_prm) > 1 && unlist(strsplit(prm_t[no_prm], '_'))[2] == 'AgeClassSize') {
-    prms2  <- prms[-no_prm]
-    values <- lapply(prms2, extract_prm, prm_biol = prm_biol)
-    sps    <- which(load_fgs(fgs = fgs)$Code %in% group)
-    extr   <- load_fgs(fgs = fgs)$NumAgeClassSize[sps]
-    values[[length(values) + 1]] <- extr
-    parameter                    <- c(parameter[-no_prm], parameter[no_prm])
-  } else {
-    values <- lapply(prms, extract_prm, prm_biol = prm_biol)
-  }
-  # Combine to df!
-  df         <- as.data.frame(do.call(cbind, values))
-  names(df)  <- tolower(parameter)
-  df$species <- group#[1:27]
-  df$species <- convert_factor(data_fgs = load_fgs(fgs = fgs), col = df$species)
-  df <- dplyr::select_(df, .dots = c("species", sort(names(df)[-ncol(df)])))
-  return(df)
-}
-get_Pred_nonage_acronyms <- function(fgs){
-  fgs_df <- load_fgs(fgs = fgs)
-  result <- fgs_df$Code[which(fgs_df$NumCohorts <= 2 & fgs_data$isPredator==1)]
-  return(result)
-}
-get_plant_nonage_acronyms <- function(fgs){
-  fgs_df <- load_fgs(fgs = fgs)
-  result <- fgs_df$Code[which(fgs_df$NumCohorts <= 2 & fgs_data$isPredator==0)]
-  return(result)
-}
-gps2=get_Pred_nonage_acronyms(fgs)
-gps_plant=get_plant_nonage_acronyms(fgs)
-gps_plant=gps_plant[1:7]
-mum_bio=prm_to_df_RM(prm_biol, fgs, group=gps2, parameter = "mum") #%>%   spread(mum)
-mum_bio=left_join(mum_bio, code_relations, by=c('species'='LongName'))
-C_bio=prm_to_df_RM(prm_biol, fgs, group=gps2, parameter = "C")
-C_bio=left_join(C_bio, code_relations, by=c('species'='LongName'))
-mum_plant=prm_to_df_RM(prm_biol, fgs, group=gps_plant, parameter = "mum")
-mum_plant=left_join(mum_plant, code_relations, by=c('species'='LongName'))
-test=result$biomass
-test=test[which(test$species %in% mum_bio$species),]
-test.init=test[which(test$time==0),] # intial biomass values
-# test.ratio=test/test.init
+# gps=get_age_acronyms(fgs)
+# fgs_data=load_fgs(fgs)
+# code_relations=fgs_data[,c('Code', 'LongName')]
+# mum_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "mum") %>%   spread(agecl, mum)
+# mum_age=left_join(mum_age, code_relations, by=c('species'='LongName'))
+# C_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "C") %>% spread(agecl, c)
+# C_age=left_join(C_age, code_relations, by=c('species'='LongName'))
+# 
+# set_single_prm <- function(group, parameter) {
+#   if (parameter %in% c("AgeClassSize", "age_mat")) {
+#     paste(group, parameter, sep = "_")
+#   } else {
+#     paste(parameter, group, sep = "_")
+#   }
+# }
+# #get biomass pool values
+# prm_to_df_RM <- function(prm_biol, fgs, group, parameter) {
+#   # Extract data!
+#   prms <- lapply(parameter, set_single_prm, group = group)
+#   prm_biol_new <- readLines(con = prm_biol, warn = FALSE)
+#   test=data.frame(prms)
+#   test[,1]=paste(test[,1], "_T15", sep="")
+#   # test=test[1:27,]
+#   t=data.frame(test)
+#   prms=t
+#   # prms=list(test)
+#   # prm_t  <- do.call(rbind, prms)[,1]
+#   prm_t=test
+#   no_prm <- which(is.na(charmatch(prm_t, prm_biol_new)))
+#   if (sum(no_prm) > 1 && unlist(strsplit(prm_t[no_prm], '_'))[2] == 'AgeClassSize') {
+#     prms2  <- prms[-no_prm]
+#     values <- lapply(prms2, extract_prm, prm_biol = prm_biol)
+#     sps    <- which(load_fgs(fgs = fgs)$Code %in% group)
+#     extr   <- load_fgs(fgs = fgs)$NumAgeClassSize[sps]
+#     values[[length(values) + 1]] <- extr
+#     parameter                    <- c(parameter[-no_prm], parameter[no_prm])
+#   } else {
+#     values <- lapply(prms, extract_prm, prm_biol = prm_biol)
+#   }
+#   # Combine to df!
+#   df         <- as.data.frame(do.call(cbind, values))
+#   names(df)  <- tolower(parameter)
+#   df$species <- group#[1:27]
+#   df$species <- convert_factor(data_fgs = load_fgs(fgs = fgs), col = df$species)
+#   df <- dplyr::select_(df, .dots = c("species", sort(names(df)[-ncol(df)])))
+#   return(df)
+# }
+# get_Pred_nonage_acronyms <- function(fgs){
+#   fgs_df <- load_fgs(fgs = fgs)
+#   result <- fgs_df$Code[which(fgs_df$NumCohorts <= 2 & fgs_data$isPredator==1)]
+#   return(result)
+# }
+# get_plant_nonage_acronyms <- function(fgs){
+#   fgs_df <- load_fgs(fgs = fgs)
+#   result <- fgs_df$Code[which(fgs_df$NumCohorts <= 2 & fgs_data$isPredator==0)]
+#   return(result)
+# }
+# gps2=get_Pred_nonage_acronyms(fgs)
+# gps_plant=get_plant_nonage_acronyms(fgs)
+# gps_plant=gps_plant[1:7]
+# mum_bio=prm_to_df_RM(prm_biol, fgs, group=gps2, parameter = "mum") #%>%   spread(mum)
+# mum_bio=left_join(mum_bio, code_relations, by=c('species'='LongName'))
+# C_bio=prm_to_df_RM(prm_biol, fgs, group=gps2, parameter = "C")
+# C_bio=left_join(C_bio, code_relations, by=c('species'='LongName'))
+# mum_plant=prm_to_df_RM(prm_biol, fgs, group=gps_plant, parameter = "mum")
+# mum_plant=left_join(mum_plant, code_relations, by=c('species'='LongName'))
+# test=result$biomass
+# test=test[which(test$species %in% mum_bio$species),]
+# test.init=test[which(test$time==0),] # intial biomass values
+# # test.ratio=test/test.init
 
 df_rel <- convert_relative_initial(result$biomass) %>%
   group_by(species) %>%

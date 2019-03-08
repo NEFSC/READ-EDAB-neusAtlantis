@@ -11599,7 +11599,7 @@ C_ZS_T15  0.05
 C_PB_T15  0        
 C_BB_T15  0        
 C_BO_T15  0.001    
-C_BC_T15  0.1
+C_BC_T15  0.075
 
 
 
@@ -11797,7 +11797,7 @@ mum_SCA_T15 2.25
 mum_QHG_T15 2.25     
 mum_CLA_T15 2.25     
 mum_BFF_T15 0.15     
-mum_BG_T15  0.5      
+mum_BG_T15  0.15      
 mum_LOB_T15 0.4    
 mum_RCB_T15 0.5      
 mum_BMS_T15 0.35      
@@ -11806,20 +11806,20 @@ mum_jNSH_T15 0.03
 mum_OSH_T15 0.03043   
 mum_jOSH_T15 0.03
 mum_ZL_T15  0.07        
-mum_BD_T15  0.14      
+mum_BD_T15  0.04      
 mum_MA_T15  0.5        
 mum_MB_T15  0.018       
 mum_SG_T15  0.07       
-mum_BC_T15  0.5      
+mum_BC_T15  0.25      
 mum_ZG_T15  0.05      
 mum_PL_T15  0.25        
 mum_DF_T15  0.01       
-mum_PS_T15  0.07       
+mum_PS_T15  0.007       
 mum_ZM_T15  0.05       
 mum_ZS_T15  0.1       
 mum_PB_T15  0.05        
 mum_BB_T15  0.02        
-mum_BO_T15  0.15       
+mum_BO_T15  0.1       
 
 
 # Vertebrate growth rates for each "group," per age class (mg N Ind-1 day-1)
