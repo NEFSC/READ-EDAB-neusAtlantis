@@ -753,6 +753,12 @@ atlantisMerged -i RMinit_2019.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at
 # added MA and SG to init and group file, mum and C back to previous vals (nostly), flagrecruit now does NOT use spawn.
 atlantismain6357 -i RMinit_2019.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_WIN_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20181126.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t C:\Users\ryan.morse\Documents\GitHub\atneus_RM -d 201902d5dta 1>1a.junk 2>2a.junk
 
+# changed flagrecruit to 1 for all (constant) scaled to be same as original age 1 from init file (SN+RN)*(scale*num).
+atlantisMerged -i RMinit_2019.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20181126.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20190226a  1>1a.junk 2>2a.junk
+
+-> flag_passive_tracer in init file causing crash in memory allocation
+
+
 ## scaled recruit values (mostly lower) based on previous run, may need to update mum and C (RN/RNinit is low for most, but could be because of high nums)
 atlantismain6357 -i RMinit_2019.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_WIN_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20181126.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t C:\Users\ryan.morse\Documents\GitHub\atneus_RM -d 20190228dta 1>1a.junk 2>2a.junk
 
@@ -768,4 +774,5 @@ atlantisMerged -i RMinit_2019.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at
 # update mum and C again, rerun (no change to recruits)
 atlantisMerged -i RMinit_2019.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20181126.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20190304a  1>1a.junk 2>2a.junk
 
-
+# update mum and C - mum is normal from scaled file, C is 10x higher for whales, PIN, REP, SB
+atlantismain6357 -i RMinit_2019.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_WIN_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20181126.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix.csv -q NeusFisheries_v15.csv -t C:\Users\ryan.morse\Documents\GitHub\atneus_RM -d 20190305dta 1>1a.junk 2>2a.junk

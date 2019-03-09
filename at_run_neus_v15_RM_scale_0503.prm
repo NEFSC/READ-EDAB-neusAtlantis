@@ -36,7 +36,7 @@ fishtest      0        # Count up total population for each vertebrate after eac
 
 flaggape      1        # Periodically list prey vs gape statistics (tuning diagnostic)
 
-flagchecksize 1        # Periodically list relative size (tuning diagnostic)
+flagchecksize 0        # Periodically list relative size (tuning diagnostic)
 
 flagagecheck  0        # Periodically list age structure per cohort (tuning diagnostic)
 
@@ -148,7 +148,7 @@ K_num_catchqueue  7    # Length (in days) of list of catches used in running ave
 flaghemisphere    1  # Flag for hemisphere model is in (0 = southern; 1 = northern)
 
 
-# Parameters for rescalingin inital vertebrate densities - only for use in emergencies,
+# Parameters for rescaling initial vertebrate densities - only for use in emergencies,
 # should really update the cdf file instead
 # GFay Nov 13 2012, check these.
 
