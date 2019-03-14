@@ -11337,8 +11337,8 @@ p_PBben          0.7      Prop. of pelag. bact. taken when detrit eaten by benth
 ## Take a closer look at these for NEUS, OK for now
 
 # Gape size - to determine available prey fish groups (some groups don't use it, its to ease read-in, so set to 0.0)
-KLP_MAK 1e-05  
-KLP_HER 1e-05  
+KLP_MAK 1e-07  
+KLP_HER 1e-07  
 KLP_WHK 1e-05  
 KLP_BLF 1e-05  
 KLP_WPF 1e-05  
@@ -11349,15 +11349,15 @@ KLP_HAL 1e-05
 KLP_PLA 1e-05  
 KLP_FOU 1e-05  
 KLP_FLA 1e-05  
-KLP_BFT 1e-05  
-KLP_TUN 1e-05  
-KLP_BIL 1e-05  
+KLP_BFT 1e-08  
+KLP_TUN 1e-08  
+KLP_BIL 1e-08  
 KLP_MPF 1e-05  
 KLP_BUT 1e-05  
-KLP_ANC 1e-05  
+KLP_ANC 1e-07  
 KLP_BPF 1e-05  
 KLP_GOO 1e-04  
-KLP_MEN 1e-05  
+KLP_MEN 1e-07  
 KLP_FDE 1e-05  
 KLP_COD 1e-05  
 KLP_SHK 1e-05  
@@ -11382,17 +11382,17 @@ KLP_DOG 1e-04
 KLP_SMO 1e-04  
 KLP_SSH 1e-04  
 KLP_DSH 1e-04  
-KLP_BLS 1e-04  
-KLP_POR 1e-04  
-KLP_PSH 1e-04  
+KLP_BLS 1e-05  
+KLP_POR 1e-05  
+KLP_PSH 1e-05  
 KLP_WSK 1e-04  
 KLP_LSK 1e-04  
 KLP_SK  1e-04  
 KLP_SB  1e-04  
 KLP_PIN 1e-05  
 KLP_REP 1e-05  
-KLP_RWH 1e-10  
-KLP_BWH 1e-10  
+KLP_RWH 0  
+KLP_BWH 1e-12  
 KLP_SWH 1e-07  
 KLP_TWH 1e-07  
 KLP_INV 1e-05  
@@ -11480,8 +11480,8 @@ KUP_PIN 0.5
 KUP_REP 0.4    
 KUP_RWH 0.001  
 KUP_BWH 0.1  
-KUP_SWH 0.8     
-KUP_TWH 0.8     
+KUP_SWH 10     
+KUP_TWH 10     
 KUP_INV 0.6    
 KUP_LSQ 0.6    
 KUP_ISQ 0.6    

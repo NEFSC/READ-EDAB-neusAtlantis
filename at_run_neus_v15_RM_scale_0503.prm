@@ -28,19 +28,19 @@ flagannual_Mest    1	#Whether to write out estimates of mortality per predator a
 
 checkbox      1       # Give detailed logged output for this box
 
-checkstart    1 day    # Start detailed logged output after this date
+checkstart    0 day    # Start detailed logged output after this date
 
-checkstop     2 day    # Stop detailed logged output after this date
+checkstop     181 day    # Stop detailed logged output after this date
 
 fishtest      0        # Count up total population for each vertebrate after each main subroutine: 0=no, 1=yes
 
 flaggape      1        # Periodically list prey vs gape statistics (tuning diagnostic)
 
-flagchecksize 0        # Periodically list relative size (tuning diagnostic)
+flagchecksize 1        # Periodically list relative size (tuning diagnostic)
 
 flagagecheck  0        # Periodically list age structure per cohort (tuning diagnostic)
 
-flagdietcheck 0        # Periodically list realised diet matchups (tuning diagnostic)
+flagdietcheck 1        # Periodically list realised diet matchups (tuning diagnostic)
 
 checkNH       0        # Give detailed logged output for NH in checkbox
 
@@ -62,9 +62,9 @@ fishmove      1        # Set to 0 to turn vertebrate movement off for debugging 
 
 debug         0        # 0=debuging off, 1=debug fishing, 2=debug discards, 3=debug histfishing,
 
-                       # 4=debug assessments, 5=debug mpas, 6=debug effort, 7=debug econ effort, 
+                       # 4=debug assessments, 5=debug mpas, 6=debug effort, 7=debug econ, 
 
-                       # 8=debug econ, 9=debug quota, 10=debug aging, 11=debug recruitment, 
+                       # 8=debug aging, 9=debug quota, 10=debug aging, 11=debug recruitment, 
 
                        # 12=debug spawning, 13=debug migration, 14=debug movement, 15=debug stocks, 
 
