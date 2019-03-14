@@ -31,6 +31,7 @@ bgm.z$chlZ=ifelse(bgm.z$box.botz >-50, bgm.z$box.botz*-1,50)
 bgm.z$area=box$area
 numlayers=c(2, 1, 1, 3, 1, 2, 2, 1, 2, 2, 2, 3, 2, 1, 3, 2, 3, 2, 2, 3, 3, 3, 2, 0, 0, 2, 3, 4, 4, 4)
 bgm.z$nz=numlayers
+bgm.z$vol=bgm.z$area*bgm.z$box.botz*-1 # area * depth (m3)
 
 setwd("/media/ryan/TOSHIBA EXT/1 RM/KINGSTON/transfer/shapefiles/epu_shapes")
 setwd("G:/1 RM/KINGSTON/transfer/shapefiles/epu_shapes")
@@ -115,12 +116,16 @@ wd2='/home/ryan/Git/atneus_RM'
 neus.shp=readShapeSpatial(file.path(wd2,'Neus_ll_0p01.shp')) # newest, from Bec Gorton DEC 2017
 # plot(NEUS.ll, add=T)
 plot(neus.shp)
-
 neus.shp@polygons[[2]]@Polygons[[1]]@coords
+## read in statistical areas
+# statarea=readShapeSpatial('C:/Users/ryan.morse/Downloads/StatAreas-20190314T135243Z-001/StatAreas/Statistical_Areas_2010.shp')
 
-test=gConvexHull(neus.shp) # creates conves hull of basic NEUS shape for exclusion of data
+
+
+
+test=gConvexHull(neus.shp) # creates convex hull of basic NEUS shape for exclusion of data
 test.mat=as.matrix(test@polygons[[1]]@Polygons[[1]]@coords)
-NES.mat=as.matrix(NES.shp@polygons[[1]]@Polygons[[1]]@coords)
+# NES.mat=as.matrix(NES.shp@polygons[[1]]@Polygons[[1]]@coords)
 
 # Find mean zooplankton biomass (mg C m^-3) in each box of the NEUS Atlantis model for each month based
 # on displacement volume and conversion found in Moriarty and O'Brien 2013 (data from NOAA Copepod site)
@@ -136,6 +141,10 @@ for (i in 2:13){
   pointsin=over(c0.neus, neus.shp) #find which boxes samples belong to
   c0.neus2 <- data.frame(c0.neus, pointsin)
   boxbio=aggregate(formula=Total.Carbon.Mass..mg.C.m3.~BOX_ID, data=c0.neus2, FUN=mean)
+  f=(boxbio$BOX_ID)
+  ord=as.numeric(levels(f))[f] # deal with factor numeric conversion
+  boxbio$BOX_ID=ord
+  boxbio=boxbio[order(boxbio$BOX_ID),]
   box.zoo.biomass[i-1]=list(boxbio)
 }
 
@@ -155,7 +164,7 @@ zoo.10=matrix(unlist(box.zoo.biomass[[10]]),ncol=2)
 zoo.11=matrix(unlist(box.zoo.biomass[[11]]),ncol=2)
 zoo.12=matrix(unlist(box.zoo.biomass[[12]]),ncol=2)
 
-base=data.frame(c(seq(from=1,to=30,by=1)))
+base=data.frame(c(seq(from=0,to=29,by=1)))
 colnames(base)='V1'
 base=merge(base, zoo.1, by=c('V1'), all=T)
 base=merge(base, zoo.2, by=c('V1'), all=T)
@@ -177,10 +186,17 @@ rownames(NEUS.zoo.bio)=c(seq(from=0, to=29, by=1))
 colnames(NEUS.zoo.bio)=c(seq(from=1, to=12, by=1))
 NEUS.zoo.bio$`col.mn`=rowMeans(NEUS.zoo.bio, na.rm=T) # this may not work... 
 # NEUS.zoo.bio$`col.sum.N`=rowSums(NEUS.zoo.bio, na.rm=T)/5.7 # this may not work...
+NEUS.zoo.bio$mean.tonnes=NEUS.zoo.bio$col.mn*bgm.z$vol
+
+### this is the final data set in tonnes to use for calibration (need to partition into ZG, ZL, ZM, ZS) RM 20190312
+zoo.bio.tonnes=(NEUS.zoo.bio[,1:12]*bgm.z$vol*1e-9)
+tot.zoo.tonnes=colSums(zoo.bio.tonnes[2:23,], na.rm=T)
 
 # barplot(NEUS.zoo.bio$'col.sum.N', main='NEUS Monthly Zooplankton Biomass Sums (Mg N/m3)', xlab='month')
 barplot(NEUS.zoo.bio$`col.mn`, na.rm=T, main='NEUS Mean Annual Zooplankton Biomass (Mg C/m3)', xlab='box')
 barplot(NEUS.zoo.bio$`col.mn`/5.7, na.rm=T, main='NEUS Mean Annual Zooplankton Biomass (Mg N/m3)', xlab='box')
+barplot(NEUS.zoo.bio$`col.mn`*bgm.z$vol*1e-9, na.rm=T, main='NEUS Mean Annual Zooplankton Biomass (tonnes)', xlab='box')
+
 
 
 # Break up total zoo N biomass into NEUS groups based on NEUS 1.0 partition of biomass
@@ -211,18 +227,18 @@ return(tt2)
 
 tt=round(matrix(NEUS.zoo.bio$'col.mn'/5.7*0.214),digits=3) # ZG mg N m
 ZG=FILL.init(tt,bgm.z)
-tt=round(matrix(NEUS.zoo.bio['col.mn',]/5.7*0.125),digits=3) # ZL
+tt=round(matrix(NEUS.zoo.bio$'col.mn'/5.7*0.125),digits=3) # ZL
 ZL=FILL.init(tt,bgm.z)
-tt=round(matrix(NEUS.zoo.bio['col.mn',]/5.7*0.134),digits=3) # ZM
+tt=round(matrix(NEUS.zoo.bio$'col.mn'/5.7*0.134),digits=3) # ZM
 ZM=FILL.init(tt,bgm.z)
-tt=round(matrix(NEUS.zoo.bio['col.mn',]/5.7*0.528),digits=3) # ZS
+tt=round(matrix(NEUS.zoo.bio$'col.mn'/5.7*0.528),digits=3) # ZS
 ZS=FILL.init(tt,bgm.z)
 
 setwd('C:/Users/ryan.morse/Desktop/NEUS Atl files/RM_initial_conditions')
-write.table(ZG, file='ZG2.csv', sep=', ',col.names = F, row.names=F)
-write.table(ZL, file='ZL2.csv', sep=', ',col.names = F, row.names=F)
-write.table(ZM, file='ZM2.csv', sep=', ',col.names = F, row.names=F)
-write.table(ZS, file='ZS2.csv', sep=', ',col.names = F, row.names=F)
+write.table(ZG, file='ZG3.csv', sep=', ',col.names = F, row.names=F)
+write.table(ZL, file='ZL3.csv', sep=', ',col.names = F, row.names=F)
+write.table(ZM, file='ZM3.csv', sep=', ',col.names = F, row.names=F)
+write.table(ZS, file='ZS3.csv', sep=', ',col.names = F, row.names=F)
 
   
 ### Aggregate mean biomass to box area and depth and sum for total NEUS biomass in tonnes for scaling initial biomass

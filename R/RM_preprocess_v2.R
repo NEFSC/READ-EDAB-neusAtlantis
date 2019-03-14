@@ -83,6 +83,16 @@ grps <- list(groups_age, groups_rest, groups_age)
 dfs_prod <- Map(load_nc, select_variable = vars, select_groups = grps,
                 MoreArgs = list(nc = nc_prod, bps = bps, fgs = fgs, prm_run = prm_run, bboxes = bboxes))
 
+# trying to load diatom production, etc... (thing in bps do not work here)
+# fgs_data=load_fgs(fgs)
+grps_noPred <- fgs_data$Name[fgs_data[, names(fgs_data)[names(fgs_data) %in% c("isPredator", "IsPredator")]] == 0]
+grps_noPred=grps_noPred[4:6]
+vars <- list("Prodn")
+# grps <- list(groups_rest)
+dfs_noPred_prod <- Map(load_nc, select_variable = vars, select_groups = grps_noPred,
+                MoreArgs = list(nc = nc_prod, bps = bps, fgs = fgs, prm_run = prm_run, bboxes = bboxes))
+
+
 # Read in physics
 flux <- load_nc_physics(nc = nc_gen, select_physics = c("eflux", "vflux"),
                         prm_run = prm_run, bboxes = bboxes)
@@ -179,6 +189,9 @@ resn_age    <- agg_data(data = dfs_gen[[3]],  groups = c("species", "time", "age
 eat_age     <- agg_data(data = dfs_prod[[1]], groups = c("species", "time", "agecl"), fun = mean)
 grazing     <- agg_data(data = dfs_prod[[2]], groups = c("species", "time"), fun = mean)
 growth_age  <- agg_data(data = dfs_prod[[3]], groups = c("species", "time", "agecl"), fun = mean)
+# growth_PL  <- agg_data(data = dfs_noPred_prod[[1]], groups = c("species", "time"), fun = mean)
+# growth_PS  <- agg_data(data = dfs_noPred_prod[[2]], groups = c("species", "time", "agecl"), fun = mean)
+# growth_PB  <- agg_data(data = dfs_noPred_prod[[3]], groups = c("species", "time", "agecl"), fun = mean)
 
 # Calculate consumed biomass
 bio_cons <- calculate_consumed_biomass(eat = dfs_prod[[1]], grazing = dfs_prod[[2]], dm = df_dm,
