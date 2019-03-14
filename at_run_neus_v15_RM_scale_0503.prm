@@ -34,7 +34,7 @@ checkstop     2 day    # Stop detailed logged output after this date
 
 fishtest      0        # Count up total population for each vertebrate after each main subroutine: 0=no, 1=yes
 
-flaggape      0        # Periodically list prey vs gape statistics (tuning diagnostic)
+flaggape      1        # Periodically list prey vs gape statistics (tuning diagnostic)
 
 flagchecksize 0        # Periodically list relative size (tuning diagnostic)
 

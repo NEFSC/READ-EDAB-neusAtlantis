@@ -575,8 +575,9 @@ rec
 
 ### Compare outputs and Biomass visualization
 nc.current  <- paste(wd3,'.nc', sep='')
-oldrunfolder='20190301dta'
+oldrunfolder='20190305dta'
 wdold=paste('E:/AtlantisRun/20161103/tes/', oldrunfolder, '/atneus_v15_test2008hydro_20180208',sep='')
+wdold=paste('/media/ryan/Iomega_HDD/', oldrunfolder,  '/atneus_v15_test2008hydro_20180208',sep='')
 nc.old      <- paste(wdold, '.nc', sep='')
 grp.csv     <- grp.file
 bgm.file    <- 'neus_tmerc_RM.bgm'
