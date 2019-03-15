@@ -1810,7 +1810,7 @@ LOBmax            10000
 RCBmax            10000
 
 # RM added 20170509
-flagconstrain_epiwander 1
+flagconstrain_epiwander 0
 
 # If flagBFlim is set to one then the following params are used for spatial crowding of filter feeders
 # (from ERSEM formulations)
@@ -11578,26 +11578,26 @@ C_LSQ_T15 0.001455
 C_jLSQ_T15 0.001
 C_ISQ_T15 0.0008  
 C_jISQ_T15 0.0004
-C_SCA_T15 0.008     
-C_QHG_T15 0.008    
-C_CLA_T15 0.008    
-C_BFF_T15 7e-03
-C_BG_T15  5e-02
-C_LOB_T15 6.5e-04
-C_RCB_T15 5e-02
-C_BMS_T15 5e-03   
+C_SCA_T15 0.01     
+C_QHG_T15 0.01    
+C_CLA_T15 0.01    
+C_BFF_T15 0.007
+C_BG_T15  0.05
+C_LOB_T15 0.05
+C_RCB_T15 0.05
+C_BMS_T15 0.05   
 C_NSH_T15 0.00015   
 C_jNSH_T15 0.0001
 C_OSH_T15 0.00015   
 C_jOSH_T15 0.0001
 C_ZL_T15  0.05    
-C_BD_T15  5e-04    
+C_BD_T15  0.0005    
 C_ZG_T15  0.03    
 C_DF_T15  0.001     
-C_ZM_T15  0.005    
+C_ZM_T15  0.05    
 C_ZS_T15  0.015     
-C_PB_T15  0        
-C_BB_T15  0        
+C_PB_T15  0.000001        
+C_BB_T15  0.000001  
 C_BO_T15  0.0001    
 C_BC_T15  0.006
 
@@ -11793,13 +11793,13 @@ mum_LSQ_T15 0.044
 mum_jLSQ_T15 0.04
 mum_ISQ_T15 0.0444     
 mum_jISQ_T15 0.04
-mum_SCA_T15 0.05       
-mum_QHG_T15 0.05     
-mum_CLA_T15 0.05     
+mum_SCA_T15 0.1       
+mum_QHG_T15 0.1     
+mum_CLA_T15 0.1     
 mum_BFF_T15 0.035     
-mum_BG_T15  0.02      
-mum_LOB_T15 0.012    
-mum_RCB_T15 0.01      
+mum_BG_T15  0.1      
+mum_LOB_T15 0.05    
+mum_RCB_T15 0.03      
 mum_BMS_T15 0.01      
 mum_NSH_T15 0.03043   
 mum_jNSH_T15 0.03
@@ -11812,14 +11812,14 @@ mum_MB_T15  0.018
 mum_SG_T15  0.07       
 mum_BC_T15  0.08      
 mum_ZG_T15  0.025      
-mum_PL_T15  0.05        
+mum_PL_T15  0.25        
 mum_DF_T15  0.001       
 mum_PS_T15  0.01       
-mum_ZM_T15  0.018       
+mum_ZM_T15  0.03       
 mum_ZS_T15  0.055       
-mum_PB_T15  0.05        
-mum_BB_T15  0.02        
-mum_BO_T15  0.001 
+mum_PB_T15  0.1        
+mum_BB_T15  0.2        
+mum_BO_T15  0.01 
 
 
 # Vertebrate growth rates for each "group," per age class (mg N Ind-1 day-1)
