@@ -13,7 +13,7 @@ d2='/home/ryan/AtlRuns/20190303a'
 
 
 d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
-d2='E:/AtlantisRun/20161103/tes/20190307dta'
+d2='E:/AtlantisRun/20161103/tes/20190315dta'
 
 
 setwd(d2)

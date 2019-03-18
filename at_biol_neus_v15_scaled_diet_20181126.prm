@@ -1273,10 +1273,13 @@ MB_habdepend    0
 
 
 
-# movement related flags
+# movement related flags see min/max.move_var_XXX to set tolerance values
+# If none of the cells have suitable conditions the species will die
 flagtempdepend   0         0 = off, 1 = temperature preferences used
 flagsaltdepend   0
-flagO2depend    0
+flagO2depend    1
+
+
 # Vertebrate density dependent movement related flags 0=prescribed quartlerly, 1=sedentary, 2=density dependent + prescribed, 3=sticky, 4=no explicit mvmt
 MAK_ddepend_move 0
 HER_ddepend_move 0

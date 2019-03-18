@@ -86,7 +86,7 @@ bgm       <- file.path(d1, "neus_tmerc_RM.bgm") #30_v15.bgm")
 
 
 ### select box plot time series of benthic 
-tb=21 # choose box
+tb=1 # choose box
 ll=4 # choose layer (4 is bottom for NEUS)
 test=result$biomass_spatial_stanza[which(result$biomass_spatial_stanza$layer==ll & result$biomass_spatial_stanza$polygon==tb),]
 ii=unique(test$species)
@@ -135,13 +135,13 @@ for (x in 1:length(ii)){
 dev.off()
 
 #### ________ load biol info for mum and C -> compare length at age to init___________
-# gps=get_age_acronyms(fgs)
-# fgs_data=load_fgs(fgs)
-# code_relations=fgs_data[,c('Code', 'LongName')]
-# mum_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "mum") %>%   spread(agecl, mum)
-# mum_age=left_join(mum_age, code_relations, by=c('species'='LongName'))
-# C_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "C") %>% spread(agecl, c)
-# C_age=left_join(C_age, code_relations, by=c('species'='LongName'))
+gps=get_age_acronyms(fgs)
+fgs_data=load_fgs(fgs)
+code_relations=fgs_data[,c('Code', 'LongName')]
+mum_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "mum") %>%   spread(agecl, mum)
+mum_age=left_join(mum_age, code_relations, by=c('species'='LongName'))
+C_age=prm_to_df_ages(prm_biol, fgs, group=gps, parameter = "C") %>% spread(agecl, c)
+C_age=left_join(C_age, code_relations, by=c('species'='LongName'))
 # 
 # set_single_prm <- function(group, parameter) {
 #   if (parameter %in% c("AgeClassSize", "age_mat")) {
@@ -206,16 +206,16 @@ dev.off()
 # test.init=test[which(test$time==0),] # intial biomass values
 # # test.ratio=test/test.init
 
-df_rel <- convert_relative_initial(result$biomass) %>%
-  group_by(species) %>%
-  summarise(avg=mean(atoutput)) %>%
-  spread(avg) %>% filter (mum_bio$species)
-mum.scale=mum_age[,2:11]*1/RN_RNinit; row.names(mum.scale)=mum_age$Code
-mum.scale=mum.scale[order(row.names(mum.scale)),]
-C.scale=C_age[,2:11]*1/RN_RNinit; row.names(C.scale)=C_age$Code
-C.scale=C.scale[order(row.names(C.scale)),]
-write.csv(mum.scale, file='newMum_RNbased.csv', row.names = T)
-write.csv(C.scale, file='newC_RNbased.csv', row.names = T)
+# df_rel <- convert_relative_initial(result$biomass) %>%
+#   group_by(species) %>%
+#   summarise(avg=mean(atoutput)) %>%
+#   spread(avg)  %>% filter (mum_bio$species)
+# mum.scale=mum_age[,2:11]*1/RN_RNinit; row.names(mum.scale)=mum_age$Code
+# mum.scale=mum.scale[order(row.names(mum.scale)),]
+# C.scale=C_age[,2:11]*1/RN_RNinit; row.names(C.scale)=C_age$Code
+# C.scale=C.scale[order(row.names(C.scale)),]
+# write.csv(mum.scale, file='newMum_RNbased.csv', row.names = T)
+# write.csv(C.scale, file='newC_RNbased.csv', row.names = T)
 
 
 ### scale mum and C to length at age relative to initial conditions ###

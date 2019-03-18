@@ -255,16 +255,16 @@ mix_season_kz 3.0
 
 # Deep ocean mixing on or not. Yes = 1 No = 0.
 
-mix_deep 0
+mix_deep 1
 
 
 
 # Depth for marking deep ocean (boxes deeper than this will get deep ocean mixing)
 
-mix_deep_depth -500
+mix_deep_depth -100
 
 # Deep mixing of oxygen added 5/9/17 RM
-mix_deep_O2 0
+mix_deep_O2 1
 
 
 
@@ -280,7 +280,7 @@ injection 1
 
 # the atmosphere is used. Yes = 1, No =0.
 
-atmospherics 0
+atmospherics 1
 
 
 
@@ -360,7 +360,7 @@ decay_wc 0
 
 # is used in the sediment. Yes = 1, No =0.
 
-decay_sed 1
+decay_sed 0
 
  
 
@@ -545,6 +545,8 @@ pss_start2 0
 
 # Atmospheric concentrations of gases or dust based inputs (mg m-3)
 
+include_atmosphere 0
+
 atmospheric_NH 0.017
 
 atmospheric_NO 0.025
@@ -566,7 +568,3 @@ fill_zero_exchange 0
 use_fill_horizmix 0
 
 flush_threshold 1
-
-include_atmosphere 0
-
-
