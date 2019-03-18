@@ -18262,7 +18262,35 @@ BWH_min_O2 5000
 SWH_min_O2 5000         
 TWH_min_O2 5000         
 INV_min_O2 5000         
-
+LSQ_min_O2 5000
+ISQ_min_O2 5000
+SCA_min_O2 4000
+QHG_min_O2 2000
+CLA_min_O2 2000
+BFF_min_O2 3000
+BG_min_O2 4000
+LOB_min_O2 3000
+RCB_min_O2 3000
+BMS_min_O2 3000
+NSH_min_O2 3000
+jNSH_min_O2 3000
+OSH_min_O2 3000
+jOSH_min_O2 3000
+BD_min_O2 3000
+MB_min_O2 4000
+BC_min_O2 5000
+ZG_min_O2 4000
+ZL_min_O2 4000
+PL_min_O2 4000
+MA_min_O2 4000
+SG_min_O2 5000
+DF_min_O2 4000
+PS_min_O2 4000
+ZM_min_O2 4000
+ZS_min_O2 4000
+PB_min_O2 4000
+BB_min_O2 4000
+BO_min_O2 4000
 
 
 min_channel_depth 0.001  Minimum depth of estuarine channels
