@@ -134,6 +134,13 @@ for (x in 1:length(ii)){
   }
 dev.off()
 
+### Length at age timeseries#________________________
+plot <- plot_line(result$length_age, col = "agecl")
+update_labels(p = plot, labels = c(gen_labels, list(colour = "Ageclass")))
+ggsave(paste(filename," length at age timeseries.png", sep=''), width=20, height=17, dpi=96)
+
+
+
 #### ________ load biol info for mum and C -> compare length at age to init___________
 gps=get_age_acronyms(fgs)
 fgs_data=load_fgs(fgs)
@@ -249,6 +256,12 @@ C.scale=C_age[,2:11]*1/RN_RNinit; row.names(C.scale)=C_age$Code
 C.scale=C.scale[order(row.names(C.scale)),]
 write.csv(mum.scale, file='newMum_RNbased.csv', row.names = T)
 write.csv(C.scale, file='newC_RNbased.csv', row.names = T)
+mum.age=mum_age[order(mum_age$Code ),]
+C.age=C_age[order(C_age$Code ),]
+write.csv(mum.age, file=paste(filename,'_Mum_used.csv', sep=''), row.names = T)
+write.csv(C.age, file=paste(filename,'_C_used.csv', sep=''), row.names = T)
+
+
 
 ### get initial conditions values RN+SN*nums, dont forget about scalar in run file...
 # test=nums_age %>% filter(time==0, agecl==1)
@@ -370,12 +383,37 @@ plot <- update_labels(plot, list(x = "Time [years]", y = expression(Biomass/Biom
 plot_add_box(plot)
 ggsave(paste(filename," Biomass at age_Bio age init.png", sep=''), width=20, height=17, dpi=96)
 
+### Numbers per box timeseries
+plot <- plot_line(result$nums_box)
+custom_grid(plot, grid_x = "polygon", grid_y = "species")
+ggsave(paste(filename," Numbers per box timeseries.png", sep=''), width=30, height=34, dpi=96)
+
+plot <- plot_line(result$strucn_box)
+custom_grid(plot, grid_x = "polygon", grid_y = "species")
+ggsave(paste(filename," SN per box timeseries.png", sep=''), width=30, height=34, dpi=96)
+
+plot <- plot_line(result$resn_box)
+custom_grid(plot, grid_x = "polygon", grid_y = "species")
+ggsave(paste(filename," RN per box timeseries.png", sep=''), width=30, height=34, dpi=96)
+
+
 ### Eat per ageclass
 df_rel <- convert_relative_initial(result$eat_age)
 plot <- plot_line(df_rel, col = "agecl")
 plot <- update_labels(plot, list(x = "Time [years]", y = expression(Cons./Cons.[init])))
 plot_add_box(plot)
 ggsave(paste(filename," Consumption at age_Cons init.png", sep=''), width=20, height=17, dpi=96)
+
+## Now plot without comparing to initial values... just timeseries
+plot <- plot_line(result$eat_age, col = "agecl")
+update_labels(p = plot, labels = c(gen_labels, list(colour = "Ageclass")))
+ggsave(paste(filename," Consumption at age timeseries.png", sep=''), width=20, height=17, dpi=96)
+
+### Plot biomass pool grazing timeseries
+plot <- plot_line(result$grazing)
+update_labels(p = plot, labels = list(x = "Time [years]", y = "Numbers"))
+ggsave(paste(filename," Bio pool grazing timeseries.png", sep=''), width=20, height=17, dpi=96)
+
 
 ### Growth per ageclass
 df_rel <- convert_relative_initial(result$growth_age)

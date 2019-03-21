@@ -13,8 +13,13 @@ hd0.name \tsfiles\flowOutAll_fix_20180402.nc
 npointss 1
 
 ## nutrient forcing     
-pss0.name CBay_SED
-pss0.location 531250 2625000 -16
+# pss0.name CBay_SED
+# pss0.location 531250 2625000 -16
+# pss0.data \tsfiles\CBay_SED_90days_spike.ts
+# pss0.rewind 0
+
+pss0.name GBK_SED
+pss0.location 1209670.2408048501 3163985.5138113 -49
 pss0.data \tsfiles\CBay_SED_90days_spike.ts
 pss0.rewind 0
         

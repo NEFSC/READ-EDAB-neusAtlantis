@@ -154,6 +154,9 @@ biomass_age2 <- biomass_age #bio_sp %>%
 nums     <- agg_data(data = dfs_gen[[1]], groups = c("species", "time"), fun = sum)
 nums_age <- agg_data(data = dfs_gen[[1]], groups = c("species", "agecl", "time"), fun = sum)
 nums_box <- agg_data(data = dfs_gen[[1]], groups = c("species", "polygon", "time"), fun = sum)
+RN_box = agg_data(data=dfs_gen[[3]], groups=c("species", "polygon","time"), fun=sum)
+SN_box = agg_data(data=dfs_gen[[2]], groups=c("species", "polygon","time"), fun=sum)
+
 
 ### working now?
 # connvert tonnes to mg N by age then to grams N to use in von Bertalanffy params to get length in cm
@@ -262,15 +265,17 @@ result <- list(
   "length_age"             = length_age,
   "nominal_dz"             = nominal_dz,
   "nums"                   = nums,
-  "nums_age"               = nums_age,      
-  "nums_box"               = nums_box,      #15
+  "nums_age"               = nums_age,      #15
+  "nums_box"               = nums_box,      
   "physics"                = physics,
+  "resn_box"               = RN_box,
   "resn_age"               = resn_age,
+  "strucn_box"             = SN_box,        #20
   "sink"                   = sink,
   "spatial_overlap"        = sp_overlap,    
-  "ssb_rec"                = ssb_rec,       #20
+  "ssb_rec"                = ssb_rec,       
   "structn_age"            = structn_age,    
-  "vol"                    = vol_ts
+  "vol"                    = vol_ts         #25
 )
 filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
 save(result, file=paste(filename, '_prepro.rdata',sep=''))
