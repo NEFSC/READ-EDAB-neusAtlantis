@@ -19474,3 +19474,869 @@ flag_predratiodepend 0
 flag_competing_epiff 0
 #flag indicating whether inverebrates use dynamic biohabitat to condition growth
 flag_invert_biohab 0
+
+#RM 20190325
+flag_modify_KWSR 0
+
+#Turbidity effect on mortality
+#_L defines the minimum of the curve, _a  defines slope, _b midpoint of the curve (per stage)
+turbid_refuge_MAK 0 
+turbid_refuge_HER 0 
+turbid_refuge_WHK 0 
+turbid_refuge_BLF 0 
+turbid_refuge_WPF 0 
+turbid_refuge_SUF 0 
+turbid_refuge_WIF 0 
+turbid_refuge_WTF 0 
+turbid_refuge_HAL 0 
+turbid_refuge_PLA 0 
+turbid_refuge_FOU 0 
+turbid_refuge_FLA 0 
+turbid_refuge_BFT 0 
+turbid_refuge_TUN 0 
+turbid_refuge_BIL 0 
+turbid_refuge_MPF 0 
+turbid_refuge_BUT 0 
+turbid_refuge_ANC 0 
+turbid_refuge_BPF 0 
+turbid_refuge_GOO 0 
+turbid_refuge_MEN 0 
+turbid_refuge_FDE 0 
+turbid_refuge_COD 0 
+turbid_refuge_SHK 0 
+turbid_refuge_OHK 0 
+turbid_refuge_POL 0 
+turbid_refuge_RHK 0 
+turbid_refuge_BSB 0 
+turbid_refuge_SCU 0 
+turbid_refuge_TYL 0 
+turbid_refuge_RED 0 
+turbid_refuge_OPT 0 
+turbid_refuge_SAL 0 
+turbid_refuge_DRM 0 
+turbid_refuge_STB 0 
+turbid_refuge_TAU 0 
+turbid_refuge_WOL 0 
+turbid_refuge_SDF 0 
+turbid_refuge_FDF 0 
+turbid_refuge_HAD 0 
+turbid_refuge_YTF 0 
+turbid_refuge_DOG 0 
+turbid_refuge_SMO 0 
+turbid_refuge_SSH 0 
+turbid_refuge_DSH 0 
+turbid_refuge_BLS 0 
+turbid_refuge_POR 0 
+turbid_refuge_PSH 0 
+turbid_refuge_WSK 0 
+turbid_refuge_LSK 0 
+turbid_refuge_SK 0 
+turbid_refuge_SB 0 
+turbid_refuge_PIN 0 
+turbid_refuge_REP 0 
+turbid_refuge_RWH 0 
+turbid_refuge_BWH 0 
+turbid_refuge_SWH 0 
+turbid_refuge_TWH 0 
+turbid_refuge_INV 0 
+turbid_refuge_LSQ 0 
+turbid_refuge_ISQ 0 
+turbid_refuge_SCA 0 
+turbid_refuge_QHG 0 
+turbid_refuge_CLA 0 
+turbid_refuge_BFF 0 
+turbid_refuge_BG 0 
+turbid_refuge_LOB 0 
+turbid_refuge_RCB 0 
+turbid_refuge_BMS 0 
+turbid_refuge_NSH 0 
+turbid_refuge_OSH 0 
+turbid_refuge_ZL 0 
+turbid_refuge_BD 0 
+turbid_refuge_MA 0 
+turbid_refuge_MB 0 
+turbid_refuge_SG 0 
+turbid_refuge_BC 0 
+turbid_refuge_ZG 0 
+turbid_refuge_PL 0 
+turbid_refuge_DF 0 
+turbid_refuge_PS 0 
+turbid_refuge_ZM 0 
+turbid_refuge_ZS 0 
+turbid_refuge_PB 0 
+turbid_refuge_BB 0 
+turbid_refuge_BO 0 
+
+MAK_turbid_L 2
+0 0
+ 
+HER_turbid_L 2
+0 0
+ 
+WHK_turbid_L 2
+0 0
+ 
+BLF_turbid_L 2
+0 0
+ 
+WPF_turbid_L 2
+0 0
+ 
+SUF_turbid_L 2
+0 0
+ 
+WIF_turbid_L 2
+0 0
+ 
+WTF_turbid_L 2
+0 0
+ 
+HAL_turbid_L 2
+0 0
+ 
+PLA_turbid_L 2
+0 0
+ 
+FOU_turbid_L 2
+0 0
+ 
+FLA_turbid_L 2
+0 0
+ 
+BFT_turbid_L 2
+0 0
+ 
+TUN_turbid_L 2
+0 0
+ 
+BIL_turbid_L 2
+0 0
+ 
+MPF_turbid_L 2
+0 0
+ 
+BUT_turbid_L 2
+0 0
+ 
+ANC_turbid_L 2
+0 0
+ 
+BPF_turbid_L 2
+0 0
+ 
+GOO_turbid_L 2
+0 0
+ 
+MEN_turbid_L 2
+0 0
+ 
+FDE_turbid_L 2
+0 0
+ 
+COD_turbid_L 2
+0 0
+ 
+SHK_turbid_L 2
+0 0
+ 
+OHK_turbid_L 2
+0 0
+ 
+POL_turbid_L 2
+0 0
+ 
+RHK_turbid_L 2
+0 0
+ 
+BSB_turbid_L 2
+0 0
+ 
+SCU_turbid_L 2
+0 0
+ 
+TYL_turbid_L 2
+0 0
+ 
+RED_turbid_L 2
+0 0
+ 
+OPT_turbid_L 2
+0 0
+ 
+SAL_turbid_L 2
+0 0
+ 
+DRM_turbid_L 2
+0 0
+ 
+STB_turbid_L 2
+0 0
+ 
+TAU_turbid_L 2
+0 0
+ 
+WOL_turbid_L 2
+0 0
+ 
+SDF_turbid_L 2
+0 0
+ 
+FDF_turbid_L 2
+0 0
+ 
+HAD_turbid_L 2
+0 0
+ 
+YTF_turbid_L 2
+0 0
+ 
+DOG_turbid_L 2
+0 0
+ 
+SMO_turbid_L 2
+0 0
+ 
+SSH_turbid_L 2
+0 0
+ 
+DSH_turbid_L 2
+0 0
+ 
+BLS_turbid_L 2
+0 0
+ 
+POR_turbid_L 2
+0 0
+ 
+PSH_turbid_L 2
+0 0
+ 
+WSK_turbid_L 2
+0 0
+ 
+LSK_turbid_L 2
+0 0
+ 
+SK_turbid_L 2
+0 0
+ 
+SB_turbid_L 2
+0 0
+ 
+PIN_turbid_L 2
+0 0
+ 
+REP_turbid_L 2
+0 0
+ 
+RWH_turbid_L 2
+0 0
+ 
+BWH_turbid_L 2
+0 0
+ 
+SWH_turbid_L 2
+0 0
+ 
+TWH_turbid_L 2
+0 0
+ 
+INV_turbid_L 2
+0 0
+
+LSQ_turbid_L 2  
+0 0
+ 
+ISQ_turbid_L 2  
+0 0
+
+SCA_turbid_L 1  
+0
+
+QHG_turbid_L 1  
+0
+
+CLA_turbid_L 1  
+0
+
+BFF_turbid_L 1  
+0
+
+BG_turbid_L 1  
+0
+
+LOB_turbid_L 1  
+0
+
+RCB_turbid_L 1  
+0
+
+BMS_turbid_L 1  
+0
+
+NSH_turbid_L 2  
+0 0
+
+OSH_turbid_L 2  
+0 0
+
+ZL_turbid_L 1  
+0
+
+BD_turbid_L 1  
+0
+
+MA_turbid_L 1  
+0
+
+MB_turbid_L 1  
+0
+
+SG_turbid_L 1  
+0
+
+BC_turbid_L 1  
+0
+
+ZG_turbid_L 1  
+0
+
+PL_turbid_L 1  
+0
+
+DF_turbid_L 1  
+0
+
+PS_turbid_L 1  
+0
+
+ZM_turbid_L 1  
+0
+
+ZS_turbid_L 1  
+0
+
+PB_turbid_L 1  
+0
+
+BB_turbid_L 1  
+0
+
+BO_turbid_L 1 
+0
+
+MAK_turbid_a 2
+0 0
+ 
+HER_turbid_a 2
+0 0
+ 
+WHK_turbid_a 2
+0 0
+ 
+BLF_turbid_a 2
+0 0
+ 
+WPF_turbid_a 2
+0 0
+ 
+SUF_turbid_a 2
+0 0
+ 
+WIF_turbid_a 2
+0 0
+ 
+WTF_turbid_a 2
+0 0
+ 
+HAL_turbid_a 2
+0 0
+ 
+PLA_turbid_a 2
+0 0
+ 
+FOU_turbid_a 2
+0 0
+ 
+FLA_turbid_a 2
+0 0
+ 
+BFT_turbid_a 2
+0 0
+ 
+TUN_turbid_a 2
+0 0
+ 
+BIL_turbid_a 2
+0 0
+ 
+MPF_turbid_a 2
+0 0
+ 
+BUT_turbid_a 2
+0 0
+ 
+ANC_turbid_a 2
+0 0
+ 
+BPF_turbid_a 2
+0 0
+ 
+GOO_turbid_a 2
+0 0
+ 
+MEN_turbid_a 2
+0 0
+ 
+FDE_turbid_a 2
+0 0
+ 
+COD_turbid_a 2
+0 0
+ 
+SHK_turbid_a 2
+0 0
+ 
+OHK_turbid_a 2
+0 0
+ 
+POL_turbid_a 2
+0 0
+ 
+RHK_turbid_a 2
+0 0
+ 
+BSB_turbid_a 2
+0 0
+ 
+SCU_turbid_a 2
+0 0
+ 
+TYL_turbid_a 2
+0 0
+ 
+RED_turbid_a 2
+0 0
+ 
+OPT_turbid_a 2
+0 0
+ 
+SAL_turbid_a 2
+0 0
+ 
+DRM_turbid_a 2
+0 0
+ 
+STB_turbid_a 2
+0 0
+ 
+TAU_turbid_a 2
+0 0
+ 
+WOL_turbid_a 2
+0 0
+ 
+SDF_turbid_a 2
+0 0
+ 
+FDF_turbid_a 2
+0 0
+ 
+HAD_turbid_a 2
+0 0
+ 
+YTF_turbid_a 2
+0 0
+ 
+DOG_turbid_a 2
+0 0
+ 
+SMO_turbid_a 2
+0 0
+ 
+SSH_turbid_a 2
+0 0
+ 
+DSH_turbid_a 2
+0 0
+ 
+BLS_turbid_a 2
+0 0
+ 
+POR_turbid_a 2
+0 0
+ 
+PSH_turbid_a 2
+0 0
+ 
+WSK_turbid_a 2
+0 0
+ 
+LSK_turbid_a 2
+0 0
+ 
+SK_turbid_a 2
+0 0
+ 
+SB_turbid_a 2
+0 0
+ 
+PIN_turbid_a 2
+0 0
+ 
+REP_turbid_a 2
+0 0
+ 
+RWH_turbid_a 2
+0 0
+ 
+BWH_turbid_a 2
+0 0
+ 
+SWH_turbid_a 2
+0 0
+ 
+TWH_turbid_a 2
+0 0
+ 
+INV_turbid_a 2
+0 0
+
+LSQ_turbid_a 2  
+0 0
+ 
+ISQ_turbid_a 2  
+0 0
+
+SCA_turbid_a 1  
+0
+
+QHG_turbid_a 1  
+0
+
+CLA_turbid_a 1  
+0
+
+BFF_turbid_a 1  
+0
+
+BG_turbid_a 1  
+0
+
+LOB_turbid_a 1  
+0
+
+RCB_turbid_a 1  
+0
+
+BMS_turbid_a 1  
+0
+
+NSH_turbid_a 2  
+0 0
+
+OSH_turbid_a 2  
+0 0
+
+ZL_turbid_a 1  
+0
+
+BD_turbid_a 1  
+0
+
+MA_turbid_a 1  
+0
+
+MB_turbid_a 1  
+0
+
+SG_turbid_a 1  
+0
+
+BC_turbid_a 1  
+0
+
+ZG_turbid_a 1  
+0
+
+PL_turbid_a 1  
+0
+
+DF_turbid_a 1  
+0
+
+PS_turbid_a 1  
+0
+
+ZM_turbid_a 1  
+0
+
+ZS_turbid_a 1  
+0
+
+PB_turbid_a 1  
+0
+
+BB_turbid_a 1  
+0
+
+BO_turbid_a 1 
+0
+
+MAK_turbid_a 2
+0 0
+ 
+HER_turbid_a 2
+0 0
+ 
+WHK_turbid_a 2
+0 0
+ 
+BLF_turbid_a 2
+0 0
+ 
+WPF_turbid_a 2
+0 0
+ 
+SUF_turbid_a 2
+0 0
+ 
+WIF_turbid_a 2
+0 0
+ 
+WTF_turbid_a 2
+0 0
+ 
+HAL_turbid_a 2
+0 0
+ 
+PLA_turbid_a 2
+0 0
+ 
+FOU_turbid_a 2
+0 0
+ 
+FLA_turbid_a 2
+0 0
+ 
+BFT_turbid_a 2
+0 0
+ 
+TUN_turbid_a 2
+0 0
+ 
+BIL_turbid_a 2
+0 0
+ 
+MPF_turbid_a 2
+0 0
+ 
+BUT_turbid_a 2
+0 0
+ 
+ANC_turbid_a 2
+0 0
+ 
+BPF_turbid_a 2
+0 0
+ 
+GOO_turbid_a 2
+0 0
+ 
+MEN_turbid_a 2
+0 0
+ 
+FDE_turbid_a 2
+0 0
+ 
+COD_turbid_a 2
+0 0
+ 
+SHK_turbid_a 2
+0 0
+ 
+OHK_turbid_a 2
+0 0
+ 
+POL_turbid_a 2
+0 0
+ 
+RHK_turbid_a 2
+0 0
+ 
+BSB_turbid_a 2
+0 0
+ 
+SCU_turbid_a 2
+0 0
+ 
+TYL_turbid_a 2
+0 0
+ 
+RED_turbid_a 2
+0 0
+ 
+OPT_turbid_a 2
+0 0
+ 
+SAL_turbid_a 2
+0 0
+ 
+DRM_turbid_a 2
+0 0
+ 
+STB_turbid_a 2
+0 0
+ 
+TAU_turbid_a 2
+0 0
+ 
+WOL_turbid_a 2
+0 0
+ 
+SDF_turbid_a 2
+0 0
+ 
+FDF_turbid_a 2
+0 0
+ 
+HAD_turbid_a 2
+0 0
+ 
+YTF_turbid_a 2
+0 0
+ 
+DOG_turbid_a 2
+0 0
+ 
+SMO_turbid_a 2
+0 0
+ 
+SSH_turbid_a 2
+0 0
+ 
+DSH_turbid_a 2
+0 0
+ 
+BLS_turbid_a 2
+0 0
+ 
+POR_turbid_a 2
+0 0
+ 
+PSH_turbid_a 2
+0 0
+ 
+WSK_turbid_a 2
+0 0
+ 
+LSK_turbid_a 2
+0 0
+ 
+SK_turbid_a 2
+0 0
+ 
+SB_turbid_a 2
+0 0
+ 
+PIN_turbid_a 2
+0 0
+ 
+REP_turbid_a 2
+0 0
+ 
+RWH_turbid_a 2
+0 0
+ 
+BWH_turbid_a 2
+0 0
+ 
+SWH_turbid_a 2
+0 0
+ 
+TWH_turbid_a 2
+0 0
+ 
+INV_turbid_a 2
+0 0
+
+LSQ_turbid_a 2  
+0 0
+ 
+ISQ_turbid_a 2  
+0 0
+
+SCA_turbid_a 1  
+0
+
+QHG_turbid_a 1  
+0
+
+CLA_turbid_a 1  
+0
+
+BFF_turbid_a 1  
+0
+
+BG_turbid_a 1  
+0
+
+LOB_turbid_a 1  
+0
+
+RCB_turbid_a 1  
+0
+
+BMS_turbid_a 1  
+0
+
+NSH_turbid_a 2  
+0 0
+
+OSH_turbid_a 2  
+0 0
+
+ZL_turbid_a 1  
+0
+
+BD_turbid_a 1  
+0
+
+MA_turbid_a 1  
+0
+
+MB_turbid_a 1  
+0
+
+SG_turbid_a 1  
+0
+
+BC_turbid_a 1  
+0
+
+ZG_turbid_a 1  
+0
+
+PL_turbid_a 1  
+0
+
+DF_turbid_a 1  
+0
+
+PS_turbid_a 1  
+0
+
+ZM_turbid_a 1  
+0
+
+ZS_turbid_a 1  
+0
+
+PB_turbid_a 1  
+0
+
+BB_turbid_a 1  
+0
+
+BO_turbid_a 1 
+0

@@ -188,6 +188,12 @@ flagpassivetracer 0
 flag_old_embryo_init 0
 flag_replicate_old_calendar 0
 
+# RM 20190325
+external_populations 0
+flag_multiyr_migs 0
+external_box 0
+
+
 ################################################
 
 
