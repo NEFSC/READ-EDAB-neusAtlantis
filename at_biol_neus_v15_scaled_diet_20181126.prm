@@ -19480,866 +19480,550 @@ flag_modify_KWSR 0
 
 #Turbidity effect on mortality
 #_L defines the minimum of the curve, _a  defines slope, _b midpoint of the curve (per stage)
-turbid_refuge_MAK 0 
-turbid_refuge_HER 0 
-turbid_refuge_WHK 0 
-turbid_refuge_BLF 0 
-turbid_refuge_WPF 0 
-turbid_refuge_SUF 0 
-turbid_refuge_WIF 0 
-turbid_refuge_WTF 0 
-turbid_refuge_HAL 0 
-turbid_refuge_PLA 0 
-turbid_refuge_FOU 0 
-turbid_refuge_FLA 0 
-turbid_refuge_BFT 0 
-turbid_refuge_TUN 0 
-turbid_refuge_BIL 0 
-turbid_refuge_MPF 0 
-turbid_refuge_BUT 0 
-turbid_refuge_ANC 0 
-turbid_refuge_BPF 0 
-turbid_refuge_GOO 0 
-turbid_refuge_MEN 0 
-turbid_refuge_FDE 0 
-turbid_refuge_COD 0 
-turbid_refuge_SHK 0 
-turbid_refuge_OHK 0 
-turbid_refuge_POL 0 
-turbid_refuge_RHK 0 
-turbid_refuge_BSB 0 
-turbid_refuge_SCU 0 
-turbid_refuge_TYL 0 
-turbid_refuge_RED 0 
-turbid_refuge_OPT 0 
-turbid_refuge_SAL 0 
-turbid_refuge_DRM 0 
-turbid_refuge_STB 0 
-turbid_refuge_TAU 0 
-turbid_refuge_WOL 0 
-turbid_refuge_SDF 0 
-turbid_refuge_FDF 0 
-turbid_refuge_HAD 0 
-turbid_refuge_YTF 0 
-turbid_refuge_DOG 0 
-turbid_refuge_SMO 0 
-turbid_refuge_SSH 0 
-turbid_refuge_DSH 0 
-turbid_refuge_BLS 0 
-turbid_refuge_POR 0 
-turbid_refuge_PSH 0 
-turbid_refuge_WSK 0 
-turbid_refuge_LSK 0 
-turbid_refuge_SK 0 
-turbid_refuge_SB 0 
-turbid_refuge_PIN 0 
-turbid_refuge_REP 0 
-turbid_refuge_RWH 0 
-turbid_refuge_BWH 0 
-turbid_refuge_SWH 0 
-turbid_refuge_TWH 0 
-turbid_refuge_INV 0 
-turbid_refuge_LSQ 0 
-turbid_refuge_ISQ 0 
-turbid_refuge_SCA 0 
-turbid_refuge_QHG 0 
-turbid_refuge_CLA 0 
-turbid_refuge_BFF 0 
-turbid_refuge_BG 0 
-turbid_refuge_LOB 0 
-turbid_refuge_RCB 0 
-turbid_refuge_BMS 0 
-turbid_refuge_NSH 0 
-turbid_refuge_OSH 0 
-turbid_refuge_ZL 0 
-turbid_refuge_BD 0 
-turbid_refuge_MA 0 
-turbid_refuge_MB 0 
-turbid_refuge_SG 0 
-turbid_refuge_BC 0 
-turbid_refuge_ZG 0 
-turbid_refuge_PL 0 
-turbid_refuge_DF 0 
-turbid_refuge_PS 0 
-turbid_refuge_ZM 0 
-turbid_refuge_ZS 0 
-turbid_refuge_PB 0 
-turbid_refuge_BB 0 
-turbid_refuge_BO 0 
-turbid_refuge_DL 0 
-turbid_refuge_DR 0 
-turbid_refuge_DC 0 
+# Turbidity related refugia parameters
+turbid_refuge_ANC	0
+turbid_refuge_BFT	0
+turbid_refuge_BIL	0
+turbid_refuge_BLF	0
+turbid_refuge_BLS	0
+turbid_refuge_BPF	0
+turbid_refuge_BSB	0
+turbid_refuge_BUT	0
+turbid_refuge_BWH	0
+turbid_refuge_COD	0
+turbid_refuge_DOG	0
+turbid_refuge_DRM	0
+turbid_refuge_DSH	0
+turbid_refuge_FDE	0
+turbid_refuge_FDF	0
+turbid_refuge_FLA	0
+turbid_refuge_FOU	0
+turbid_refuge_GOO	0
+turbid_refuge_HAD	0
+turbid_refuge_HAL	0
+turbid_refuge_HER	0
+turbid_refuge_INV	0
+turbid_refuge_LSK	0
+turbid_refuge_MAK	0
+turbid_refuge_MEN	0
+turbid_refuge_MPF	0
+turbid_refuge_OHK	0
+turbid_refuge_OPT	0
+turbid_refuge_PIN	0
+turbid_refuge_PLA	0
+turbid_refuge_POL	0
+turbid_refuge_POR	0
+turbid_refuge_PSH	0
+turbid_refuge_RED	0
+turbid_refuge_REP	0
+turbid_refuge_RHK	0
+turbid_refuge_RWH	0
+turbid_refuge_SAL	0
+turbid_refuge_SB	0
+turbid_refuge_SCU	0
+turbid_refuge_SDF	0
+turbid_refuge_SHK	0
+turbid_refuge_SK	0
+turbid_refuge_SMO	0
+turbid_refuge_SSH	0
+turbid_refuge_STB	0
+turbid_refuge_SUF	0
+turbid_refuge_SWH	0
+turbid_refuge_TAU	0
+turbid_refuge_TUN	0
+turbid_refuge_TWH	0
+turbid_refuge_TYL	0
+turbid_refuge_WHK	0
+turbid_refuge_WIF	0
+turbid_refuge_WOL	0
+turbid_refuge_WPF	0
+turbid_refuge_WSK	0
+turbid_refuge_WTF	0
+turbid_refuge_YTF	0
+turbid_refuge_LSQ	0
+turbid_refuge_ISQ   0
+turbid_refuge_SCA   0
+turbid_refuge_QHG   0
+turbid_refuge_CLA   0
+turbid_refuge_BFF   0
+turbid_refuge_BG    0
+turbid_refuge_LOB	0
+turbid_refuge_RCB	0
+turbid_refuge_BMS	0
+turbid_refuge_NSH	0
+turbid_refuge_OSH	0
+turbid_refuge_ZL	0
+turbid_refuge_BD	0
+turbid_refuge_MA	0
+turbid_refuge_MB	0
+turbid_refuge_SG	0
+turbid_refuge_BC	0
+turbid_refuge_ZG	0
+turbid_refuge_PL	0
+turbid_refuge_DF	0
+turbid_refuge_PS	0
+turbid_refuge_ZM	0
+turbid_refuge_ZS	0
+turbid_refuge_BO	0
+turbid_refuge_PB	0
+turbid_refuge_BB	0
+>>>>>>> c10b0a23fcbfb9baa2080054f69fd1b03577c0a6
 
-MAK_turbid_L 2
-0 0
- 
-HER_turbid_L 2
-0 0
- 
-WHK_turbid_L 2
-0 0
- 
-BLF_turbid_L 2
-0 0
- 
-WPF_turbid_L 2
-0 0
- 
-SUF_turbid_L 2
-0 0
- 
-WIF_turbid_L 2
-0 0
- 
-WTF_turbid_L 2
-0 0
- 
-HAL_turbid_L 2
-0 0
- 
-PLA_turbid_L 2
-0 0
- 
-FOU_turbid_L 2
-0 0
- 
-FLA_turbid_L 2
-0 0
- 
-BFT_turbid_L 2
-0 0
- 
-TUN_turbid_L 2
-0 0
- 
-BIL_turbid_L 2
-0 0
- 
-MPF_turbid_L 2
-0 0
- 
-BUT_turbid_L 2
-0 0
- 
 ANC_turbid_L 2
-0 0
- 
-BPF_turbid_L 2
-0 0
- 
-GOO_turbid_L 2
-0 0
- 
-MEN_turbid_L 2
-0 0
- 
-FDE_turbid_L 2
-0 0
- 
-COD_turbid_L 2
-0 0
- 
-SHK_turbid_L 2
-0 0
- 
-OHK_turbid_L 2
-0 0
- 
-POL_turbid_L 2
-0 0
- 
-RHK_turbid_L 2
-0 0
- 
-BSB_turbid_L 2
-0 0
- 
-SCU_turbid_L 2
-0 0
- 
-TYL_turbid_L 2
-0 0
- 
-RED_turbid_L 2
-0 0
- 
-OPT_turbid_L 2
-0 0
- 
-SAL_turbid_L 2
-0 0
- 
-DRM_turbid_L 2
-0 0
- 
-STB_turbid_L 2
-0 0
- 
-TAU_turbid_L 2
-0 0
- 
-WOL_turbid_L 2
-0 0
- 
-SDF_turbid_L 2
-0 0
- 
-FDF_turbid_L 2
-0 0
- 
-HAD_turbid_L 2
-0 0
- 
-YTF_turbid_L 2
-0 0
- 
-DOG_turbid_L 2
-0 0
- 
-SMO_turbid_L 2
-0 0
- 
-SSH_turbid_L 2
-0 0
- 
-DSH_turbid_L 2
-0 0
- 
+0.5 0.5
+BFT_turbid_L 2
+0.5 0.5
+BIL_turbid_L 2
+0.5 0.5
+BLF_turbid_L 2
+0.5 0.5
 BLS_turbid_L 2
-0 0
- 
-POR_turbid_L 2
-0 0
- 
-PSH_turbid_L 2
-0 0
- 
-WSK_turbid_L 2
-0 0
- 
-LSK_turbid_L 2
-0 0
- 
-SK_turbid_L 2
-0 0
- 
-SB_turbid_L 2
-0 0
- 
-PIN_turbid_L 2
-0 0
- 
-REP_turbid_L 2
-0 0
- 
-RWH_turbid_L 2
-0 0
- 
+0.5 0.5
+BPF_turbid_L 2
+0.5 0.5
+BSB_turbid_L 2
+0.5 0.5
+BUT_turbid_L 2
+0.5 0.5
 BWH_turbid_L 2
-0 0
- 
-SWH_turbid_L 2
-0 0
- 
-TWH_turbid_L 2
-0 0
- 
+0.5 0.5
+COD_turbid_L 2
+0.5 0.5
+DOG_turbid_L 2
+0.5 0.5
+DRM_turbid_L 2
+0.5 0.5
+DSH_turbid_L 2
+0.5 0.5
+FDE_turbid_L 2
+0.5 0.5
+FDF_turbid_L 2
+0.5 0.5
+FLA_turbid_L 2
+0.5 0.5
+FOU_turbid_L 2
+0.5 0.5
+GOO_turbid_L 2
+0.5 0.5
+HAD_turbid_L 2
+0.5 0.5
+HAL_turbid_L 2
+0.5 0.5
+HER_turbid_L 2
+0.5 0.5
 INV_turbid_L 2
-0 0
+0.5 0.5
+LSK_turbid_L 2
+0.5 0.5
+MAK_turbid_L 2
+0.5 0.5
+MEN_turbid_L 2
+0.5 0.5
+MPF_turbid_L 2
+0.5 0.5
+OHK_turbid_L 2
+0.5 0.5
+OPT_turbid_L 2
+0.5 0.5
+PIN_turbid_L 2
+0.5 0.5
+PLA_turbid_L 2
+0.5 0.5
+POL_turbid_L 2
+0.5 0.5
+POR_turbid_L 2
+0.5 0.5
+PSH_turbid_L 2
+0.5 0.5
+RED_turbid_L 2
+0.5 0.5
+REP_turbid_L 2
+0.5 0.5
+RHK_turbid_L 2
+0.5 0.5
+RWH_turbid_L 2
+0.5 0.5
+SAL_turbid_L 2
+0.5 0.5
+SB_turbid_L 2
+0.5 0.5
+SCU_turbid_L 2
+0.5 0.5
+SDF_turbid_L 2
+0.5 0.5
+SHK_turbid_L 2
+0.5 0.5
+SK_turbid_L 2
+0.5 0.5
+SMO_turbid_L 2
+0.5 0.5
+SSH_turbid_L 2
+0.5 0.5
+STB_turbid_L 2
+0.5 0.5
+SUF_turbid_L 2
+0.5 0.5
+SWH_turbid_L 2
+0.5 0.5
+TAU_turbid_L 2
+0.5 0.5
+TUN_turbid_L 2
+0.5 0.5
+TWH_turbid_L 2
+0.5 0.5
+TYL_turbid_L 2
+0.5 0.5
+WHK_turbid_L 2
+0.5 0.5
+WIF_turbid_L 2
+0.5 0.5
+WOL_turbid_L 2
+0.5 0.5
+WPF_turbid_L 2
+0.5 0.5
+WSK_turbid_L 2
+0.5 0.5
+WTF_turbid_L 2
+0.5 0.5
+YTF_turbid_L 2
+0.5 0.5
+LSQ_turbid_L 2
+0.5 0.5
+ISQ_turbid_L 2
+0.5 0.5
+SCA_turbid_L 0.5
+QHG_turbid_L 0.5
+CLA_turbid_L 0.5
+BFF_turbid_L 0.5
+BG_turbid_L  0.5
+LOB_turbid_L 0.5
+RCB_turbid_L 0.5
+BMS_turbid_L 0.5
+NSH_turbid_L 2
+0.5 0.5
+OSH_turbid_L 2
+0.5 0.5
+ZL_turbid_L	0.5
+BD_turbid_L	0.5
+MA_turbid_L	0.5
+MB_turbid_L	0.5
+SG_turbid_L	0.5
+BC_turbid_L	0.5
+ZG_turbid_L	0.5
+PL_turbid_L	0.5
+DF_turbid_L	0.5
+PS_turbid_L	0.5
+ZM_turbid_L	0.5
+ZS_turbid_L	0.5
+BO_turbid_L	0.5
+PB_turbid_L	0.5
+BB_turbid_L	0.5
+DL_turbid_L	0.5
+DR_turbid_L	0.5
+DC_turbid_L	0.5
 
-LSQ_turbid_L 2  
-0 0
- 
-ISQ_turbid_L 2  
-0 0
-
-SCA_turbid_L 1  
-0
-
-QHG_turbid_L 1  
-0
-
-CLA_turbid_L 1  
-0
-
-BFF_turbid_L 1  
-0
-
-BG_turbid_L 1  
-0
-
-LOB_turbid_L 1  
-0
-
-RCB_turbid_L 1  
-0
-
-BMS_turbid_L 1  
-0
-
-NSH_turbid_L 2  
-0 0
-
-OSH_turbid_L 2  
-0 0
-
-ZL_turbid_L 1  
-0
-
-BD_turbid_L 1  
-0
-
-MA_turbid_L 1  
-0
-
-MB_turbid_L 1  
-0
-
-SG_turbid_L 1  
-0
-
-BC_turbid_L 1  
-0
-
-ZG_turbid_L 1  
-0
-
-PL_turbid_L 1  
-0
-
-DF_turbid_L 1  
-0
-
-PS_turbid_L 1  
-0
-
-ZM_turbid_L 1  
-0
-
-ZS_turbid_L 1  
-0
-
-PB_turbid_L 1  
-0
-
-BB_turbid_L 1  
-0
-
-BO_turbid_L 1 
-0
-
-MAK_turbid_a 2
-0 0
- 
-HER_turbid_a 2
-0 0
- 
-WHK_turbid_a 2
-0 0
- 
-BLF_turbid_a 2
-0 0
- 
-WPF_turbid_a 2
-0 0
- 
-SUF_turbid_a 2
-0 0
- 
-WIF_turbid_a 2
-0 0
- 
-WTF_turbid_a 2
-0 0
- 
-HAL_turbid_a 2
-0 0
- 
-PLA_turbid_a 2
-0 0
- 
-FOU_turbid_a 2
-0 0
- 
-FLA_turbid_a 2
-0 0
- 
-BFT_turbid_a 2
-0 0
- 
-TUN_turbid_a 2
-0 0
- 
-BIL_turbid_a 2
-0 0
- 
-MPF_turbid_a 2
-0 0
- 
-BUT_turbid_a 2
-0 0
- 
 ANC_turbid_a 2
-0 0
- 
-BPF_turbid_a 2
-0 0
- 
-GOO_turbid_a 2
-0 0
- 
-MEN_turbid_a 2
-0 0
- 
-FDE_turbid_a 2
-0 0
- 
-COD_turbid_a 2
-0 0
- 
-SHK_turbid_a 2
-0 0
- 
-OHK_turbid_a 2
-0 0
- 
-POL_turbid_a 2
-0 0
- 
-RHK_turbid_a 2
-0 0
- 
-BSB_turbid_a 2
-0 0
- 
-SCU_turbid_a 2
-0 0
- 
-TYL_turbid_a 2
-0 0
- 
-RED_turbid_a 2
-0 0
- 
-OPT_turbid_a 2
-0 0
- 
-SAL_turbid_a 2
-0 0
- 
-DRM_turbid_a 2
-0 0
- 
-STB_turbid_a 2
-0 0
- 
-TAU_turbid_a 2
-0 0
- 
-WOL_turbid_a 2
-0 0
- 
-SDF_turbid_a 2
-0 0
- 
-FDF_turbid_a 2
-0 0
- 
-HAD_turbid_a 2
-0 0
- 
-YTF_turbid_a 2
-0 0
- 
-DOG_turbid_a 2
-0 0
- 
-SMO_turbid_a 2
-0 0
- 
-SSH_turbid_a 2
-0 0
- 
-DSH_turbid_a 2
-0 0
- 
-BLS_turbid_a 2
-0 0
- 
-POR_turbid_a 2
-0 0
- 
-PSH_turbid_a 2
-0 0
- 
-WSK_turbid_a 2
-0 0
- 
-LSK_turbid_a 2
-0 0
- 
-SK_turbid_a 2
-0 0
- 
-SB_turbid_a 2
-0 0
- 
-PIN_turbid_a 2
-0 0
- 
-REP_turbid_a 2
-0 0
- 
-RWH_turbid_a 2
-0 0
- 
-BWH_turbid_a 2
-0 0
- 
-SWH_turbid_a 2
-0 0
- 
-TWH_turbid_a 2
-0 0
- 
-INV_turbid_a 2
-0 0
-
-LSQ_turbid_a 2  
-0 0
- 
-ISQ_turbid_a 2  
-0 0
-
-SCA_turbid_a 1  
-0
-
-QHG_turbid_a 1  
-0
-
-CLA_turbid_a 1  
-0
-
-BFF_turbid_a 1  
-0
-
-BG_turbid_a 1  
-0
-
-LOB_turbid_a 1  
-0
-
-RCB_turbid_a 1  
-0
-
-BMS_turbid_a 1  
-0
-
-NSH_turbid_a 2  
-0 0
-
-OSH_turbid_a 2  
-0 0
-
-ZL_turbid_a 1  
-0
-
-BD_turbid_a 1  
-0
-
-MA_turbid_a 1  
-0
-
-MB_turbid_a 1  
-0
-
-SG_turbid_a 1  
-0
-
-BC_turbid_a 1  
-0
-
-ZG_turbid_a 1  
-0
-
-PL_turbid_a 1  
-0
-
-DF_turbid_a 1  
-0
-
-PS_turbid_a 1  
-0
-
-ZM_turbid_a 1  
-0
-
-ZS_turbid_a 1  
-0
-
-PB_turbid_a 1  
-0
-
-BB_turbid_a 1  
-0
-
-BO_turbid_a 1 
-0
-
-MAK_turbid_a 2
-0 0
- 
-HER_turbid_a 2
-0 0
- 
-WHK_turbid_a 2
-0 0
- 
-BLF_turbid_a 2
-0 0
- 
-WPF_turbid_a 2
-0 0
- 
-SUF_turbid_a 2
-0 0
- 
-WIF_turbid_a 2
-0 0
- 
-WTF_turbid_a 2
-0 0
- 
-HAL_turbid_a 2
-0 0
- 
-PLA_turbid_a 2
-0 0
- 
-FOU_turbid_a 2
-0 0
- 
-FLA_turbid_a 2
-0 0
- 
+0.1 0.1
 BFT_turbid_a 2
-0 0
- 
-TUN_turbid_a 2
-0 0
- 
+0.1 0.1
 BIL_turbid_a 2
-0 0
- 
-MPF_turbid_a 2
-0 0
- 
-BUT_turbid_a 2
-0 0
- 
-ANC_turbid_a 2
-0 0
- 
-BPF_turbid_a 2
-0 0
- 
-GOO_turbid_a 2
-0 0
- 
-MEN_turbid_a 2
-0 0
- 
-FDE_turbid_a 2
-0 0
- 
-COD_turbid_a 2
-0 0
- 
-SHK_turbid_a 2
-0 0
- 
-OHK_turbid_a 2
-0 0
- 
-POL_turbid_a 2
-0 0
- 
-RHK_turbid_a 2
-0 0
- 
-BSB_turbid_a 2
-0 0
- 
-SCU_turbid_a 2
-0 0
- 
-TYL_turbid_a 2
-0 0
- 
-RED_turbid_a 2
-0 0
- 
-OPT_turbid_a 2
-0 0
- 
-SAL_turbid_a 2
-0 0
- 
-DRM_turbid_a 2
-0 0
- 
-STB_turbid_a 2
-0 0
- 
-TAU_turbid_a 2
-0 0
- 
-WOL_turbid_a 2
-0 0
- 
-SDF_turbid_a 2
-0 0
- 
-FDF_turbid_a 2
-0 0
- 
-HAD_turbid_a 2
-0 0
- 
-YTF_turbid_a 2
-0 0
- 
-DOG_turbid_a 2
-0 0
- 
-SMO_turbid_a 2
-0 0
- 
-SSH_turbid_a 2
-0 0
- 
-DSH_turbid_a 2
-0 0
- 
+0.1 0.1
+BLF_turbid_a 2
+0.1 0.1
 BLS_turbid_a 2
-0 0
- 
-POR_turbid_a 2
-0 0
- 
-PSH_turbid_a 2
-0 0
- 
-WSK_turbid_a 2
-0 0
- 
-LSK_turbid_a 2
-0 0
- 
-SK_turbid_a 2
-0 0
- 
-SB_turbid_a 2
-0 0
- 
-PIN_turbid_a 2
-0 0
- 
-REP_turbid_a 2
-0 0
- 
-RWH_turbid_a 2
-0 0
- 
+0.1 0.1
+BPF_turbid_a 2
+0.1 0.1
+BSB_turbid_a 2
+0.1 0.1
+BUT_turbid_a 2
+0.1 0.1
 BWH_turbid_a 2
-0 0
- 
-SWH_turbid_a 2
-0 0
- 
-TWH_turbid_a 2
-0 0
- 
+0.1 0.1
+COD_turbid_a 2
+0.1 0.1
+DOG_turbid_a 2
+0.1 0.1
+DRM_turbid_a 2
+0.1 0.1
+DSH_turbid_a 2
+0.1 0.1
+FDE_turbid_a 2
+0.1 0.1
+FDF_turbid_a 2
+0.1 0.1
+FLA_turbid_a 2
+0.1 0.1
+FOU_turbid_a 2
+0.1 0.1
+GOO_turbid_a 2
+0.1 0.1
+HAD_turbid_a 2
+0.1 0.1
+HAL_turbid_a 2
+0.1 0.1
+HER_turbid_a 2
+0.1 0.1
 INV_turbid_a 2
-0 0
+0.1 0.1
+LSK_turbid_a 2
+0.1 0.1
+MAK_turbid_a 2
+0.1 0.1
+MEN_turbid_a 2
+0.1 0.1
+MPF_turbid_a 2
+0.1 0.1
+OHK_turbid_a 2
+0.1 0.1
+OPT_turbid_a 2
+0.1 0.1
+PIN_turbid_a 2
+0.1 0.1
+PLA_turbid_a 2
+0.1 0.1
+POL_turbid_a 2
+0.1 0.1
+POR_turbid_a 2
+0.1 0.1
+PSH_turbid_a 2
+0.1 0.1
+RED_turbid_a 2
+0.1 0.1
+REP_turbid_a 2
+0.1 0.1
+RHK_turbid_a 2
+0.1 0.1
+RWH_turbid_a 2
+0.1 0.1
+SAL_turbid_a 2
+0.1 0.1
+SB_turbid_a 2
+0.1 0.1
+SCU_turbid_a 2
+0.1 0.1
+SDF_turbid_a 2
+0.1 0.1
+SHK_turbid_a 2
+0.1 0.1
+SK_turbid_a 2
+0.1 0.1
+SMO_turbid_a 2
+0.1 0.1
+SSH_turbid_a 2
+0.1 0.1
+STB_turbid_a 2
+0.1 0.1
+SUF_turbid_a 2
+0.1 0.1
+SWH_turbid_a 2
+0.1 0.1
+TAU_turbid_a 2
+0.1 0.1
+TUN_turbid_a 2
+0.1 0.1
+TWH_turbid_a 2
+0.1 0.1
+TYL_turbid_a 2
+0.1 0.1
+WHK_turbid_a 2
+0.1 0.1
+WIF_turbid_a 2
+0.1 0.1
+WOL_turbid_a 2
+0.1 0.1
+WPF_turbid_a 2
+0.1 0.1
+WSK_turbid_a 2
+0.1 0.1
+WTF_turbid_a 2
+0.1 0.1
+YTF_turbid_a 2
+0.1 0.1
+LSQ_turbid_a 2
+0.1 0.1
+ISQ_turbid_a 2
+0.1 0.1
+SCA_turbid_a 0.1
+QHG_turbid_a 0.1
+CLA_turbid_a 0.1
+BFF_turbid_a 0.1
+BG_turbid_a  0.1
+LOB_turbid_a 0.1
+RCB_turbid_a 0.1
+BMS_turbid_a 0.1
+NSH_turbid_a 2
+0.1 0.1
+OSH_turbid_a 2
+0.1 0.1
+ZL_turbid_a	0.1
+BD_turbid_a	0.1
+MA_turbid_a	0.1
+MB_turbid_a	0.1
+SG_turbid_a	0.1
+BC_turbid_a	0.1
+ZG_turbid_a	0.1
+PL_turbid_a	0.1
+DF_turbid_a	0.1
+PS_turbid_a	0.1
+ZM_turbid_a	0.1
+ZS_turbid_a	0.1
+BO_turbid_a	0.1
+PB_turbid_a	0.1
+BB_turbid_a	0.1
+DL_turbid_a	0.1
+DR_turbid_a	0.1
+DC_turbid_a	0.1
 
-LSQ_turbid_a 2  
-0 0
- 
-ISQ_turbid_a 2  
-0 0
-
-SCA_turbid_a 1  
-0
-
-QHG_turbid_a 1  
-0
-
-CLA_turbid_a 1  
-0
-
-BFF_turbid_a 1  
-0
-
-BG_turbid_a 1  
-0
-
-LOB_turbid_a 1  
-0
-
-RCB_turbid_a 1  
-0
-
-BMS_turbid_a 1  
-0
-
-NSH_turbid_a 2  
-0 0
-
-OSH_turbid_a 2  
-0 0
-
-ZL_turbid_a 1  
-0
-
-BD_turbid_a 1  
-0
-
-MA_turbid_a 1  
-0
-
-MB_turbid_a 1  
-0
-
-SG_turbid_a 1  
-0
-
-BC_turbid_a 1  
-0
-
-ZG_turbid_a 1  
-0
-
-PL_turbid_a 1  
-0
-
-DF_turbid_a 1  
-0
-
-PS_turbid_a 1  
-0
-
-ZM_turbid_a 1  
-0
-
-ZS_turbid_a 1  
-0
-
-PB_turbid_a 1  
-0
-
-BB_turbid_a 1  
-0
-
-BO_turbid_a 1 
-0
+ANC_turbid_b 2
+30.0 30.0
+BFT_turbid_b 2
+30.0 30.0
+BIL_turbid_b 2
+30.0 30.0
+BLF_turbid_b 2
+30.0 30.0
+BLS_turbid_b 2
+30.0 30.0
+BPF_turbid_b 2
+30.0 30.0
+BSB_turbid_b 2
+30.0 30.0
+BUT_turbid_b 2
+30.0 30.0
+BWH_turbid_b 2
+30.0 30.0
+COD_turbid_b 2
+30.0 30.0
+DOG_turbid_b 2
+30.0 30.0
+DRM_turbid_b 2
+30.0 30.0
+DSH_turbid_b 2
+30.0 30.0
+FDE_turbid_b 2
+30.0 30.0
+FDF_turbid_b 2
+30.0 30.0
+FLA_turbid_b 2
+30.0 30.0
+FOU_turbid_b 2
+30.0 30.0
+GOO_turbid_b 2
+30.0 30.0
+HAD_turbid_b 2
+30.0 30.0
+HAL_turbid_b 2
+30.0 30.0
+HER_turbid_b 2
+30.0 30.0
+INV_turbid_b 2
+30.0 30.0
+LSK_turbid_b 2
+30.0 30.0
+MAK_turbid_b 2
+30.0 30.0
+MEN_turbid_b 2
+30.0 30.0
+MPF_turbid_b 2
+30.0 30.0
+OHK_turbid_b 2
+30.0 30.0
+OPT_turbid_b 2
+30.0 30.0
+PIN_turbid_b 2
+30.0 30.0
+PLA_turbid_b 2
+30.0 30.0
+POL_turbid_b 2
+30.0 30.0
+POR_turbid_b 2
+30.0 30.0
+PSH_turbid_b 2
+30.0 30.0
+RED_turbid_b 2
+30.0 30.0
+REP_turbid_b 2
+30.0 30.0
+RHK_turbid_b 2
+30.0 30.0
+RWH_turbid_b 2
+30.0 30.0
+SAL_turbid_b 2
+30.0 30.0
+SB_turbid_b 2
+30.0 30.0
+SCU_turbid_b 2
+30.0 30.0
+SDF_turbid_b 2
+30.0 30.0
+SHK_turbid_b 2
+30.0 30.0
+SK_turbid_b 2
+30.0 30.0
+SMO_turbid_b 2
+30.0 30.0
+SSH_turbid_b 2
+30.0 30.0
+STB_turbid_b 2
+30.0 30.0
+SUF_turbid_b 2
+30.0 30.0
+SWH_turbid_b 2
+30.0 30.0
+TAU_turbid_b 2
+30.0 30.0
+TUN_turbid_b 2
+30.0 30.0
+TWH_turbid_b 2
+30.0 30.0
+TYL_turbid_b 2
+30.0 30.0
+WHK_turbid_b 2
+30.0 30.0
+WIF_turbid_b 2
+30.0 30.0
+WOL_turbid_b 2
+30.0 30.0
+WPF_turbid_b 2
+30.0 30.0
+WSK_turbid_b 2
+30.0 30.0
+WTF_turbid_b 2
+30.0 30.0
+YTF_turbid_b 2
+30.0 30.0
+LSQ_turbid_b 2
+30.0 30.0
+ISQ_turbid_b 2
+30.0 30.0
+SCA_turbid_b 30.0
+QHG_turbid_b 30.0
+CLA_turbid_b 30.0
+BFF_turbid_b 30.0
+BG_turbid_b  30.0
+LOB_turbid_b 30.0
+RCB_turbid_b 30.0
+BMS_turbid_b 30.0
+NSH_turbid_b 2
+30.0 30.0
+OSH_turbid_b 2
+30.0 30.0
+ZL_turbid_b	30.0
+BD_turbid_b	30.0
+MA_turbid_b	30.0
+MB_turbid_b	30.0
+SG_turbid_b	30.0
+BC_turbid_b	30.0
+ZG_turbid_b	30.0
+PL_turbid_b	30.0
+DF_turbid_b	30.0
+PS_turbid_b	30.0
+ZM_turbid_b	30.0
+ZS_turbid_b	30.0
+BO_turbid_b	30.0
+PB_turbid_b	30.0
+BB_turbid_b	30.0
+DL_turbid_b	30.0
+DR_turbid_b	30.0
+DC_turbid_b	30.0
