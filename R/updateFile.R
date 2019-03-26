@@ -205,8 +205,8 @@ for (lineIndex in 1:numLines){
    for (nn in 1: length(cr$Parent)){
       OriginalGroupName = cr$Parent[nn] #"FVT"
       AdditionalGroupName = cr$Child[nn] #"BIL"
-      # numx=cr2$rpt[nn] # number of times it is repeated
-      # numnew=cr2$diff[nn] # number of new entries (excludes when parent==child)
+      # numx=cr$rpt[nn] # number of times it is repeated
+      # numnew=cr$diff[nn] # number of new entries (excludes when parent==child)
       
       if(nchar(text[lineIndex]) > 0){
         
@@ -236,7 +236,7 @@ for (lineIndex in 1:numLines){
             
             #Now replace the strings and print out.
             string = gsub(OriginalGroupName, AdditionalGroupName, text[lineIndex]);
-            write(string, "", append = TRUE);
+            write(string, "", append = F);
           }
         }
       }
@@ -244,5 +244,38 @@ for (lineIndex in 1:numLines){
     }
   }
 }
-sink();
+sink()
 
+## now clean up file to remove instances of name changes FPS->HER not caught in above code conversion
+test=cr[which((cr$Child != cr$Parent) & (cr$diff<2)),] # find name changes
+inputFileName = paste(d1,"/at_harvest_neus_v15_DE_RM9.prm", sep='')
+outputFileName = paste(d1,"/at_harvest_neus_v15_DE_RM_10.prm", sep='')
+
+text <- readLines(inputFileName,encoding="UTF-8")
+sink(outputFileName);
+numLines = length(text)
+
+for (lineIndex in 1:numLines){
+  excludes=grep("BFS|BML|BMS|FDB|FDD|FDE|FDF|FDO|FDS|FMM|FPL|FPS|FVD|FVS|SHB", text[lineIndex]);
+  excludes2=grep("BFS|BML|BMS|FDB|FDD|FDE|FDF|FDO|FDS|FMM|FPL|FPS|FVD|FVS|SHB", text[lineIndex-1]) #check previous to catch in loop;
+  # Does the next line start with a number?
+  startChar = substr(text[lineIndex + 1], 0, 1); # 0, 10 would catch if it starts with #
+  result = grep("[0-9]", startChar)
+  if((length(excludes) > 0) & (length(result)>0)){
+    # lineIndex=lineIndex+1
+    # string = lineIndex;
+    # write(string, "", append = F);
+    next
+  }
+  else if ((length(excludes2) > 0) & (length(result)==0)){
+    # lineIndex=lineIndex+1
+    # string = lineIndex;
+    # write(string, "", append = F);
+    next
+  }
+  else{
+    string = text[lineIndex];
+    write(string, "", append = F);
+  }
+}
+sink()
