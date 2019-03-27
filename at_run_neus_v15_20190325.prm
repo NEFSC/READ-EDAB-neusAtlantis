@@ -1,0 +1,147 @@
+#
+# 4/2003, Beth Fulton, renamed and cut down to very short 
+# time period for PC Version tests
+#
+#############################################
+# Run parameters
+verbose       0       # Detailed logged output
+flag_sanity_check 1		#switch to check for overlapping recruitment events due to one set being calculated before the last set was completely exhausted allowing for artificial boosts in long-lived species (bug)
+flagecon_on        0   # Flag showing whether want economics loaded and submodel run (1) or not (0)
+flag_fisheries_on  0   # Flag showing whether want fisheries loaded and submodel run (1) or not (0)
+flag_skip_biol     0   # Flag showing whether want biological model run (1) or not (0 - only used when debugging fisheries)
+flag_skip_phys     0   # Flag showing whether want biological model run (0) or not (1 - only used when debugging fisheries)
+flagannual_Mest    1	#Whether to write out estimates of mortality per predator annually (1) or not (0)
+
+external_populations 0
+flag_multiyr_migs 0
+
+checkbox      1       # Give detailed logged output for this box
+checkstart    0 day    # Start detailed logged output after this date
+checkstop     20 day    # Stop detailed logged output after this date
+fishtest      0        # Count up total population for each vertebrate after each main subroutine: 0=no, 1=yes
+flaggape      1        # Periodically list prey vs gape statistics (tuning diagnostic)
+flagchecksize 1        # Periodically list relative size (tuning diagnostic)
+flagagecheck  1        # Periodically list age structure per cohort (tuning diagnostic)
+flagdietcheck 1        # Periodically list realised diet matchups (tuning diagnostic)
+checkNH       0        # Give detailed logged output for NH in checkbox
+checkDL       0        # Give detailed logged output for DL in checkbox
+checkDR       0        # Give detailed logged output for DR in checkbox
+checkbiom     0        # Give detailed logged output for biomasses in checkbox
+which_fleet   33       # ID number of fleet to track (if don't want to track anything set to 33 (for other fleets see list below)
+which_check   79       # ID number of group to track (if don't want to track anything set higher than N groups)
+habitat_check 0			# water column 0, sed 1, epibenthic 2, land 3, ice 4
+move_check    20       # ID number of group where tracking movements
+fishmove      1        # Set to 0 to turn vertebrate movement off for debugging purposes
+debug         0        # 0=debuging off, 1=debug fishing, 2=debug discards, 3=debug histfishing,
+                       # 4=debug assessments, 5=debug mpas, 6=debug effort, 7=debug econ effort, 
+                       # 8=debug econ, 9=debug quota, 10=debug aging, 11=debug recruitment, 
+                       # 12=debug spawning, 13=debug migration, 14=debug movement, 15=debug stocks, 
+                       # 16=debug biomass calcs, 17=debug feeding, 18=debug everything
+debug_it      0
+
+title      test version, DynEffort NEUS v1.5 with Atlantis2 codebase
+dt         24 hour     # 12 hour time step
+tstop      18260 day   # Stop time after the given period (18260)18260  , 4000   2191 7320 9120 3660 7320
+toutstart  1 day       # Output start time
+toutinc    90 day      # Write output with this periodicity
+toutfinc   90 day      # Write fisheries output with this periodicity
+tsumout    90 day     # Write stock state summary with this periodicity
+fishout    0           # Switch to turn fisheries output on = 1, off = 0
+flagreusefile 2        # Switch to show want to append output file no = 0, yes = 1, replace = 2
+tburnday 0
+flagIsEstuary 1
+flag_age_output 1
+
+
+# Parameters defining the numbers of certain types of groups (needed to define parameter arrays in the
+# initialisation section of the model, best left untouched for now) 
+K_num_tot_sp    89     # total number of biological groups in the model
+K_num_stocks_per_sp 1  # maximum number of stocks per group in the model
+K_num_bed_types  3     # maximum number of seabed types (currently only reef, soft and flat) 3
+K_num_cover_types 11   # maximum number of habitat types                                     9
+K_num_detritus   3     # Total number of detritus groups in the model (labile and refractory; water column and sediments) 
+
+# Parameters defining the numbers of certain types of fisheries 
+# (needed to define parameter arrays in the initialisation section of the model,
+# best left untouched for now) 
+K_num_fisheries   33   # Maximum number of fisheries
+K_num_subfleet    1    # Maximum number of sub fleets (vessel types)
+K_num_fished_sp   89   # Maximum number of groups targeted by fishing 
+K_num_impacted_sp 89   # Maxiumum number of groups impacted by fishing (target or bycatch) 
+K_num_ports       17   # Maxiumum number of ports in the model area 
+K_max_num_zoning  1    # Maximum number of spatial zonings used in the model
+K_num_reg         1    # Maximum number of management zonings used in the model
+K_num_markets     2    # Maxiumum number of markets in the model area 
+K_num_catchqueue  7    # Length (in days) of list of catches used in running average to give recent CPUE for effort model 8
+
+# Location parameters
+flaghemisphere    1  # Flag for hemisphere model is in (0 = southern; 1 = northern)
+
+# Parameters for rescaling initial vertebrate densities - only for use in emergencies,
+# should really update the cdf file instead
+# GFay Nov 13 2012, check these.
+flagscaleinit     1  # Flag to indicate whether scaling initial vertebrate densities (1=yes, 0=no)
+# RM 20161122 changed 0 to 1 for species at end (mostly benthic and inverts) Need to modify cdf file still (only works for vertebrates)
+# Multiplicative scalar for vertebrate initial densities (as read-in from cdf file)
+# RM 20180712 updated scaling to match previous calibrated biomass values after changing initial conditions RN and SN vertebrate values and length-weight relationships
+# this only scales vertebrates, so inverts are all set to 1 and biomass set in initial conditions file
+# updated 20180816
+init_scalar       89
+1	1	1	0.449815	1	1	1	1	1	1	1	0.0165	0.10086	1.379642	0.058535	0.097947	1	0.056091	1	1	1.174644	0.152468	1	1	1	1	1	1	1	1	1	1	0.000002	1	0.000437	1	1	0.000052	0.699984	1	1	1	1	0.018171	0.000515	0.727557	0.232208	0.16854	1	1	1	2.172812	0.434166	0.349456	0.180294	0.881796	1.130103	0.012676	0.002091	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+
+
+#G.Fay, 29 Apr 2014, added trackAtomicRatio to turn off P:N:C tracking, as per https://wiki.csiro.au/display/Atlantis/2013/04/23/New+Phosphorus+tracking
+trackAtomicRatio 0
+#S Gaichas added to fix mysterious crash jan 12 2015
+track_rugosity_arag 0
+track_pH 0
+mirror_invalid 0
+# @gavinfay 22 Jan 2016
+flagAllowLand 0
+flag_replicated_old 0
+track_contaminants 0
+#G.Fay, 20 Sep 2016
+check_dups 0
+
+# RM 20180530
+flagpassivetracer 0
+flag_old_embryo_init 0
+flag_replicate_old_calendar 0
+################################################
+
+################################################
+# List of fishery numbers for use with which_check
+# Fishery ID number
+# midwcCEP 0
+# jigCEP 1
+# midwcFP 2
+# dredgeBFS 3
+# netFD 4
+# netSH 5
+# plineFVO 6
+# pseineFVO 7
+# pseineFP 8
+# trapBMS 9
+# trapFD 10
+# dtrawlBMS 11
+# dtrawlCEP 12
+# dtrawlFD 13
+# dtrawlFDB 14
+# dtrawlFDO 15
+# midwcFD 16
+# dseineFDB 17
+# dlineFD 18
+# dlineFVS 19
+# dlineSH 20
+# diveBG 21
+# pseineFVS 22
+# cullPIN 23
+# recfish 24
+# ptrawlPWN 25
+# dtrawlFBP 26
+# midwcZL 27
+# trapFDE 28
+# dlineFDE 29
+# netFDE 30
+# midwcPWN 31
+# mowMA 32
