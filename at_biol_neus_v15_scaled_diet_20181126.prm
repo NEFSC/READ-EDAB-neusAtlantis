@@ -126,7 +126,7 @@ flagbactstim     0         Switch to turn stimulation of bacterial growth on/off
 flagtrackpops    1         Flag to indicate whether yearly stock value required             1
 flagseason       1         Flag of seasonal change, 0 for no, 1 yes                            1
 flaglight        0         Light adaptation: 1 = on, 0 = off                                   1
-flagIsEstuary    1
+flagIsEstuary    0
 flaglightopt     3         Light model: 0=midwater proxy used, 1=bottom, 2=top, 3=middle of layer                     3
 flagmodeltemp    0         Temperature model used: 1 = regression, 0 = from data
 flagq10          1         Q10 corrections used in the model: 1 = yes, 0 = no                  1
@@ -168,7 +168,7 @@ InvadersEntering 0
 # layers when in depths where there were less than complete set of depth layers)
 flagdemMAK 0
 flagdemHER 0
-flagdemWHK 0
+flagdemWHK 1
 flagdemBLF 0
 flagdemWPF 1
 flagdemSUF 1
@@ -184,7 +184,7 @@ flagdemBIL 0
 flagdemMPF 0
 flagdemBUT 0
 flagdemANC 0
-flagdemBPF 0
+flagdemBPF 1
 flagdemGOO 1
 flagdemMEN 0
 flagdemFDE 1
@@ -194,12 +194,12 @@ flagdemOHK 1
 flagdemPOL 1
 flagdemRHK 1
 flagdemBSB 1
-flagdemSCU 0
+flagdemSCU 1
 flagdemTYL 0
 flagdemRED 1
 flagdemOPT 1
 flagdemSAL 1
-flagdemDRM 0
+flagdemDRM 1
 flagdemSTB 0
 flagdemTAU 1
 flagdemWOL 1
@@ -207,8 +207,8 @@ flagdemSDF 1
 flagdemFDF 1
 flagdemHAD 1
 flagdemYTF 1
-flagdemDOG 0
-flagdemSMO 0
+flagdemDOG 1
+flagdemSMO 1
 flagdemSSH 1
 flagdemDSH 1
 flagdemBLS 0
@@ -219,7 +219,7 @@ flagdemLSK 1
 flagdemSK 1
 flagdemSB 0
 flagdemPIN 0
-flagdemREP 1
+flagdemREP 0
 flagdemRWH 0
 flagdemBWH 0
 flagdemSWH 0
@@ -320,10 +320,6 @@ flagplankfishBWH 0
 flagplankfishSWH 0
 flagplankfishTWH 0
 flagplankfishINV 0
-
-# Identifier indicating whether vertebrate group is parameterised as a bird (1 = yes, 0 = no)
-# Identifier indicating whether vertebrate group is parameterised as a shark (1 = yes, 0 = no)
-# Identifier indicating whether vertebrate group is parameterised as a mammal (1 = yes, 0 = no)
 
 # Vertebrate reproduction related flags. 
 flagtrecruitdistrib 1      0=humped recruit arrival distrib, 1=flat distrib of recruits        1
@@ -717,7 +713,7 @@ flagmotherWSK 0
 flagmotherLSK 0
 flagmotherSK 0
 flagmotherSB 0
-flagmotherPIN 0
+flagmotherPIN 1
 flagmotherREP 0
 flagmotherRWH 1
 flagmotherBWH 1
@@ -11819,7 +11815,7 @@ mum_PS_T15  0.05
 mum_ZM_T15  0.03       
 mum_ZS_T15  0.055       
 mum_PB_T15  0.1        
-mum_BB_T15  0.2        
+mum_BB_T15  0.02        
 mum_BO_T15  0.01 
 
 
