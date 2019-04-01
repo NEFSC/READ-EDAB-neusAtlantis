@@ -8,7 +8,7 @@ library("tidyr")
 # d1='/home/ryan/Git/atneus737e3d' # for NEUS 1.0 on new code base RM
 
 d1='/home/ryan/Git/atneus_RM'
-d2='/home/ryan/AtlRuns/20190318b'
+d2='/home/ryan/AtlRuns/20190327a'
 # # d2='/media/ryan/Iomega_HDD/20190301dta'
 
 
