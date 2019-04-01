@@ -20,7 +20,7 @@ setwd(d2)
 source(paste(d1,'/R/RM_preprocess_v2.R', sep=''))
 source(paste(d1,'/R/RM_atl_model_calibration.R', sep=''))
 
-save.image(paste(d2,"/ws.RData", sep=''))
+# save.image(paste(d2,"/ws.RData", sep='')) # done at end of preprocess_v2
 
 ## use to call this script in bat file for windows:
 # cd C:\Users\ryan.morse\Documents\R\R-3.4.2.1\bin

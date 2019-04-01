@@ -82,19 +82,21 @@ ncbase=nc.str[which(lncstr==min(lncstr))] #get base nc file name
 # ex_bio <- read.csv(file.path(d, "setas-bench.csv"), stringsAsFactors = FALSE)
 
 # bgm file
-bgm       <- file.path(d1, "neus_tmerc_RM.bgm") #30_v15.bgm")
+bgm       <- file.path(d1, "neus_tmerc_RM2.bgm") #30_v15.bgm")
 
 
 ### select box plot time series of benthic 
-tb=1 # choose box
+tb=17 # choose box
 ll=4 # choose layer (4 is bottom for NEUS)
 test=result$biomass_spatial_stanza[which(result$biomass_spatial_stanza$layer==ll & result$biomass_spatial_stanza$polygon==tb),]
 ii=unique(test$species)
-pdf(file=paste(filename,'Box21_bottom.pdf', sep=''))
+pdf(file=paste(filename,'_Box_',tb,'_bottom.pdf', sep=''))
+boxbgm=load_box(bgm)
+barea=boxbgm$boxes[[tb+1]]$area # get area, add 1 boxes start at 0
 for (x in 1:length(ii)){
   iii=ii[x]
-plot(test$atoutput[which(test$species==iii)]~test$time[which(test$species==iii)], 
-     type='l',main=ii[x], ylab='atoutput', xlab='time')
+plot(test$atoutput[which(test$species==iii)]/barea~test$time[which(test$species==iii)], 
+     type='l',main=paste(iii, 'Box', tb, 'layer', ll, sep=' '), ylab='Mg N m-2', xlab='time')
 }
 dev.off()
 
@@ -499,6 +501,7 @@ ggsave(paste(filename," Biomass at age percent.png", sep=''), width=20, height=1
 #   return(col_pal)
 # }
 
+if(!is.na(result$biomass_consumed)){
 plots <- plot_diet(result$biomass_consumed, wrap_col = "agecl", combine_thresh = 3)
 pdf(file=paste(filename, '_diet_proportions.pdf', sep=''),paper='A4r',width=11, height=8)
 for (i in seq_along(plots)) {
@@ -507,6 +510,7 @@ for (i in seq_along(plots)) {
   cat("\n\n")
 }
 dev.off()
+}
 
 ####__________ SPATIAL DISTRIBUTION PLOTS____________________________________
 ### Spatial Plots 1

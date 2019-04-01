@@ -196,10 +196,17 @@ growth_PL  <- agg_data(data = dfs_noPred_prod[[1]], groups = c("species", "time"
 growth_PS  <- agg_data(data = dfs_noPred_prod[[2]], groups = c("species", "time"), fun = mean)
 # growth_PB  <- agg_data(data = dfs_noPred_prod[[3]], groups = c("species", "time", "agecl"), fun = mean)
 
-# Calculate consumed biomass
-bio_cons <- calculate_consumed_biomass(eat = dfs_prod[[1]], grazing = dfs_prod[[2]], dm = df_dm,
-                                       vol = vol, bio_conv = bio_conv) %>%
-  agg_data(groups = c("pred", "agecl", "time", "prey"), fun = sum)
+# Calculate consumed biomass - updated to avoid memory allocation error with short summary times in run file
+safe_diet=purrr::possibly(calculate_consumed_biomass, otherwise = NA)
+bio_cons <- safe_diet(eat = dfs_prod[[1]], grazing = dfs_prod[[2]], dm = df_dm, vol = vol, bio_conv = bio_conv)
+if(!is.na(bio_cons)){
+bio_cons=agg_data(bio_cons, groups = c("pred", "agecl", "time", "prey"), fun = sum)
+}
+## original call:
+# bio_cons <- calculate_consumed_biomass(eat = dfs_prod[[1]], grazing = dfs_prod[[2]], dm = df_dm, vol = vol, bio_conv = bio_conv) %>% 
+#   agg_data(groups = c("pred", "agecl", "time", "prey"), fun = sum)
+
+
 
 #### see 'RM_preprocess_v2_workarounds.R' in dropbox if this does not work ###
 ## note - also did not work when output and time steps are not in sync in run file - 
