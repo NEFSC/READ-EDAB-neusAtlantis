@@ -19,10 +19,10 @@ checkbox      1       # Give detailed logged output for this box
 checkstart    0 day    # Start detailed logged output after this date
 checkstop     20 day    # Stop detailed logged output after this date
 fishtest      0        # Count up total population for each vertebrate after each main subroutine: 0=no, 1=yes
-flaggape      1        # Periodically list prey vs gape statistics (tuning diagnostic)
-flagchecksize 1        # Periodically list relative size (tuning diagnostic)
+flaggape      0        # Periodically list prey vs gape statistics (tuning diagnostic)
+flagchecksize 0        # Periodically list relative size (tuning diagnostic)
 flagagecheck  1        # Periodically list age structure per cohort (tuning diagnostic)
-flagdietcheck 1        # Periodically list realised diet matchups (tuning diagnostic)
+flagdietcheck 0        # Periodically list realised diet matchups (tuning diagnostic)
 checkNH       0        # Give detailed logged output for NH in checkbox
 checkDL       0        # Give detailed logged output for DL in checkbox
 checkDR       0        # Give detailed logged output for DR in checkbox
