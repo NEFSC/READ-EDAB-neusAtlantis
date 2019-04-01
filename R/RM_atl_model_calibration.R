@@ -120,6 +120,14 @@ plot <- plot_line(result$biomass_age, col = "agecl")
 update_labels(p = plot, labels = c(gen_labels, list(colour = "Ageclass")))
 ggsave(paste(filename," biomass at age timeseries.png", sep=''), width=20, height=17, dpi=96)
 
+### Biomass at age relative to initial biomass timeseries#________________________
+df_rel <- convert_relative_initial(result$biomass_age)
+plot <- plot_line(df_rel, col = "agecl")
+plot <- update_labels(plot, list(x = "Time [years]", y = expression(biomass/bio[init])))
+plot_add_box(plot)
+ggsave(paste(filename," biomass at age rel init.png", sep=''), width=20, height=17, dpi=96)
+
+
 # plot length at age - may need to call: result$biomass_age2 added 20181102, result$length_age modified 20181127
 init_length=read.csv(file=paste(d1, '/vertebrate_init_length_cm.csv', sep=''), header = T, stringsAsFactors = F)
 init_length=init_length[order(init_length$Long.Name),]
