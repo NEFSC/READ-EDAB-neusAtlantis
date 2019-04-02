@@ -52,7 +52,7 @@ LSK,49,1,Little_Skate,Little skate,10,1,2,1,3,1,1,1,1,1,1,SHARK,1,0,0,1,0,0,0,0,
 SK,50,1,Skate,Northeast skate complex,10,1,2,1,3,1,1,1,1,1,1,SHARK,1,0,0,1,0,0,0,0,4,0,0
 SB,51,1,Seabird,Seabirds,10,1,2,1,2,1,1,1,1,1,1,BIRD,1,0,0,1,0,0,0,0,4,0,0
 PIN,52,1,Pinniped,Pinnipeds,10,1,2,1,3,1,1,1,1,1,1,MAMMAL,1,0,0,1,0,0,0,0,4,0,0
-REP,53,1,Turtle,Marine turtles,10,1,2,1,8,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
+REP,53,1,Turtle,Marine turtles,10,1,2,1,8,1,1,1,1,1,1,REPTILE,1,0,0,1,0,0,0,0,4,0,0
 RWH,54,1,Right_Whale,Right whales,10,1,2,1,9,1,1,1,1,1,1,MAMMAL,1,0,0,1,0,0,0,0,4,0,0
 BWH,55,1,Baleen_Whale,Baleen whales,10,1,2,1,9,1,1,1,1,1,1,MAMMAL,1,0,0,1,0,0,0,0,4,0,0
 SWH,56,1,Small_Whale,Small toothed whales,10,1,2,1,7,1,1,1,1,1,1,MAMMAL,1,0,0,1,0,0,0,0,4,0,0

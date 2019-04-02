@@ -549,7 +549,7 @@ dev.off()
 #biom=read.table('/home/ryan/AtlRuns/20170914a/atneus_v10_newcodebaseAgeBiomIndx.txt', header=T) # v1.0 on new codebase
 biom=read.table(paste(d1, '/R/atneus_v10_newcodebaseBiomIndx.txt', sep=''), header=T) # v1.0 on new codebase
 bio1=read.table(paste(d1, '/R/neusDynEffort_Base_Effort_BiomIndx.txt', sep=''), header=T) # v1.0 on old codebase
-bio2=read.table(paste(d2, '/atneus_v15_test2008hydro_20180208BiomIndx.txt', sep=''), header=T) # v1.5 run
+bio2=read.table(paste(d2, '/', ncbase, 'BiomIndx.txt', sep=''), header=T) # v1.5 run
 phyto=read.table(paste(d1, '/R/phytoplankton_timeseries_biomass_tonnes_1998_2016.csv', sep=''),header=T, sep=',')
 zoo=read.table(paste(d1, '/R/Zooplankton_total_biomass_tonnes_N_20yrs.csv', sep=''), header =T, sep=',')
 
@@ -628,12 +628,3 @@ lines(bio1$ZG~bio1$Time, type='l', col='blue')
 lines(biom$ZG~biom$Time, type='l', col='green')
 legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
 dev.off()
-
-# plots <- plot_spatial_overlap(result$spatial_overlap)
-# pdf(file=paste(filename, '_spatial_overlap.pdf', sep=''),paper='A4r', width=11, height=8)
-# for (i in seq_along(plots)) {
-#   cat(paste0("## Spatial Plot ", i, ": ", names(plots)[i]), sep = "\n")
-#   gridExtra::grid.arrange(plots[[i]])
-#   cat("\n\n")
-# }
-# dev.off()
