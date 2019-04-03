@@ -159,14 +159,43 @@ RN_box = agg_data(data=dfs_gen[[3]], groups=c("species", "polygon","time"), fun=
 SN_box = agg_data(data=dfs_gen[[2]], groups=c("species", "polygon","time"), fun=sum)
 
 
-### working now?
-# connvert tonnes to mg N by age then to grams N to use in von Bertalanffy params to get length in cm
-biomass_age2$RNSN_ind=biomass_age2$atoutput/nums_age$atoutput[1:nrow(biomass_age2)]/bio_conv
-biomass_age2$grams_N_Ind=biomass_age2$RNSN_ind*1e-3
-biomass_age2$wgt=biomass_age2$atoutput/nums_age$atoutput[1:nrow(biomass_age2)]*1e6
-# now read in length-weight relationships from biol file
+### working now? - this was causing errors when biomass_age and nums_age had different lengths due to missing data (memory issue?)
+## connvert tonnes to mg N by age then to grams N to use in von Bertalanffy params to get length in cm
+# biomass_age2$RNSN_ind=biomass_age2$atoutput/nums_age$atoutput[1:nrow(biomass_age2)]/bio_conv
+# biomass_age2$grams_N_Ind=biomass_age2$RNSN_ind*1e-3
+# biomass_age2$wgt=biomass_age2$atoutput/nums_age$atoutput[1:nrow(biomass_age2)]*1e6
+# # now read in length-weight relationships from biol file
+# bfile <- read.table(prm_biol,col.names=1:100,comment.char="",fill=TRUE,header=FALSE)
+# #find the length-weight parameters from the old prm file, store them
+# pick <- grep("li_a_",bfile[,1])
+# xx <- bfile[pick,1:20]
+# tempmat <- matrix(NA,nrow=nrow(xx),ncol=3)
+# for (igroup in 1:nrow(tempmat)) tempmat[igroup,1] <- strsplit(as.character(xx[igroup,1]),"li_a_")[[1]][2]
+# tempmat[,2] <- as.numeric(as.character(xx[,2]))
+# pick <- grep("li_b_",bfile[,1])
+# tempmat[,3] <- as.numeric(as.character(bfile[pick,2]))
+# fgs2 <- load_fgs(fgs)
+# fgs2=fgs2[,c('Code', 'LongName')]
+# tempmat2=as.data.frame(tempmat[2:60,])
+# colnames(tempmat2)=c('Code', 'li_a', 'li_b')
+# tempmat3=left_join(tempmat2, fgs2, by='Code')
+# biomass_age2=left_join(biomass_age2, tempmat3[,2:4], by=c('species'='LongName'))
+# # biomass_age2$length_age=(as.numeric(as.character(biomass_age2$grams_N_Ind))/as.numeric(as.character(biomass_age2$li_a)))^(1/as.numeric(as.character(biomass_age2$li_b)))
+# biomass_age2$length_age=(as.numeric(as.character(biomass_age2$wgt))/as.numeric(as.character(biomass_age2$li_a)))^(1/as.numeric(as.character(biomass_age2$li_b)))
+# ## rename for use in atl_model_calibration.r
+# length_age=biomass_age2[,c('species', 'agecl', 'time', 'length_age')]
+# colnames(length_age)[4]='atoutput'
+
+RN_age = agg_data(data=dfs_gen[[3]], groups=c("species", "agecl","time"), fun=mean)
+SN_age = agg_data(data=dfs_gen[[2]], groups=c("species", "agecl","time"), fun=mean)
+
+RN_age=left_join(RN_age, SN_age, by=c('species', 'agecl', 'time'))
+test=left_join(RN_age, nums_age, by=c('species', 'agecl', 'time'))
+works=left_join(test, biomass_age2,by=c('species', 'agecl', 'time'))
+colnames(works)=c('species', 'agecl', 'time', 'RN', 'SN', 'Nums', 'Biomass')
+works$RNSN_Ind=works$Biomass/works$Nums/bio_conv # biomass/nums, convert from tonnes C to mg N
+works$grams_N_Ind=works$RNSN_Ind*1e-3 #convert to grams N
 bfile <- read.table(prm_biol,col.names=1:100,comment.char="",fill=TRUE,header=FALSE)
-#find the length-weight parameters from the old prm file, store them
 pick <- grep("li_a_",bfile[,1])
 xx <- bfile[pick,1:20]
 tempmat <- matrix(NA,nrow=nrow(xx),ncol=3)
@@ -179,12 +208,11 @@ fgs2=fgs2[,c('Code', 'LongName')]
 tempmat2=as.data.frame(tempmat[2:60,])
 colnames(tempmat2)=c('Code', 'li_a', 'li_b')
 tempmat3=left_join(tempmat2, fgs2, by='Code')
-biomass_age2=left_join(biomass_age2, tempmat3[,2:4], by=c('species'='LongName'))
-# biomass_age2$length_age=(as.numeric(as.character(biomass_age2$grams_N_Ind))/as.numeric(as.character(biomass_age2$li_a)))^(1/as.numeric(as.character(biomass_age2$li_b)))
-biomass_age2$length_age=(as.numeric(as.character(biomass_age2$wgt))/as.numeric(as.character(biomass_age2$li_a)))^(1/as.numeric(as.character(biomass_age2$li_b)))
-## rename for use in atl_model_calibration.r
-length_age=biomass_age2[,c('species', 'agecl', 'time', 'length_age')]
-colnames(length_age)[4]='atoutput'
+biomass_age2=left_join(works, tempmat3[,2:4], by=c('species'='LongName'))
+biomass_age2$length_age=(as.numeric(as.character(biomass_age2$grams_N_Ind))/as.numeric(as.character(biomass_age2$li_a)))^(1/as.numeric(as.character(biomass_age2$li_b)))
+
+
+
 
 
 # Aggregate the rest of the dataframes by mean!

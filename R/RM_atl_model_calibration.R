@@ -146,8 +146,9 @@ dev.off()
 
 ### Length at age timeseries#________________________
 plot <- plot_line(result$length_age, col = "agecl")
+gen_labels <- list(x = "Time [years]", y = "Length [cm]")
 update_labels(p = plot, labels = c(gen_labels, list(colour = "Ageclass")))
-ggsave(paste(filename," length at age timeseries.png", sep=''), width=20, height=17, dpi=96)
+ggsave(paste(filename," length at age timeseries2.png", sep=''), width=20, height=17, dpi=96)
 
 
 
@@ -416,6 +417,7 @@ ggsave(paste(filename," Consumption at age_Cons init.png", sep=''), width=20, he
 
 ## Now plot without comparing to initial values... just timeseries
 plot <- plot_line(result$eat_age, col = "agecl")
+gen_labels <- list(x = "Time [years]", y = "Biomass [t]")
 update_labels(p = plot, labels = c(gen_labels, list(colour = "Ageclass")))
 ggsave(paste(filename," Consumption at age timeseries.png", sep=''), width=20, height=17, dpi=96)
 
