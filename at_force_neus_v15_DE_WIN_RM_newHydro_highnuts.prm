@@ -137,7 +137,7 @@ use_VertMixFiles 0
 
 ## G.Fay added 09\20\16
 # Frequency of inputs.ts and exports.ts output - write out each dt.
-inputs_tout 43200 seconds
+inputs_tout 86400 seconds
 
 ## G.Fay added 09\20\16
 use_external_scaling 0

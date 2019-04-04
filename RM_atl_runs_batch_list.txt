@@ -821,3 +821,13 @@ atlantismain_6197 -i inneus_2012RM.nc 0 -o atneus_v10_newcodebase.nc -r at_run_n
 
 C:\Users\ryan.morse\Documents\GitHub\atneus_737e3dffb7_trunk6066\atneus-737e3dffb77baa72fb1159d5d312f322ea500662
 C:\Users\ryan.morse\Documents\GitHub\atneus_RM
+
+## run from 20190331a has strange 6 year periodicity of drops in numbers, causes issues with processing in R (nums_age has different length than RN_age)
+#update to v6440 to see if this is different (memory issue?) run on desktop, same commands
+atlantismain_6440 -i RMinit2_2019.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_WIN_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20181126.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix_RM.csv -q NeusFisheries_v15.csv -t C:\Users\ryan.morse\Documents\GitHub\atneus_RM -d 20190404dta  1>1a.junk 2>2a.junk
+
+
+
+
+
+
