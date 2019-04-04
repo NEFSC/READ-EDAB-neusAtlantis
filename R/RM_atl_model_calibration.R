@@ -134,7 +134,7 @@ ggsave(paste(filename," biomass at age rel init.png", sep=''), width=20, height=
 init_length=read.csv(file=paste(d1, '/vertebrate_init_length_cm.csv', sep=''), header = T, stringsAsFactors = F)
 init_length=init_length[order(init_length$Long.Name),]
 ii=unique(result$length_age$species)
-pdf(file=paste(filename,'_tuning_length_age.pdf', sep=''))
+pdf(file=paste(filename,'_tuning_length_age2.pdf', sep=''))
 for (x in 1:length(ii)){
   iii=ii[x]
   test=result$length_age %>% filter(species == iii, time > 0)
@@ -148,7 +148,7 @@ dev.off()
 plot <- plot_line(result$length_age, col = "agecl")
 gen_labels <- list(x = "Time [years]", y = "Length [cm]")
 update_labels(p = plot, labels = c(gen_labels, list(colour = "Ageclass")))
-ggsave(paste(filename," length at age timeseries2.png", sep=''), width=20, height=17, dpi=96)
+ggsave(paste(filename," length at age timeseries3.png", sep=''), width=20, height=17, dpi=96)
 
 
 
