@@ -17,3 +17,5 @@ spp=as.character(species)
 
 fish=validate_names(spp)
 lw=length_weight(species_list = fish)
+test=lw[,c('SpecCode', 'Species', 'a', 'b')]
+t2=aggregate(.~Species, test, mean, na.rm=T)
