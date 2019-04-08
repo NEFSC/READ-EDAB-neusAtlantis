@@ -394,6 +394,11 @@ plot <- update_labels(plot, list(x = "Time [years]", y = expression(Biomass/Biom
 plot_add_box(plot)
 ggsave(paste(filename," Biomass at age_Bio age init.png", sep=''), width=20, height=17, dpi=96)
 
+### biomass per box timeseries
+plot <- plot_line(result$bio_box)
+custom_grid(plot, grid_x = "polygon", grid_y = "species")
+ggsave(paste(filename," Biomass per box timeseries.png", sep=''), width=30, height=34, dpi=96)
+
 ### Numbers per box timeseries
 plot <- plot_line(result$nums_box)
 custom_grid(plot, grid_x = "polygon", grid_y = "species")

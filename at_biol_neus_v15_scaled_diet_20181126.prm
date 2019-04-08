@@ -126,7 +126,7 @@ flagbactstim     0         Switch to turn stimulation of bacterial growth on/off
 flagtrackpops    1         Flag to indicate whether yearly stock value required             1
 flagseason       1         Flag of seasonal change, 0 for no, 1 yes                            1
 flaglight        0         Light adaptation: 1 = on, 0 = off                                   1
-flagIsEstuary    0
+flagIsEstuary    1
 flaglightopt     3         Light model: 0=midwater proxy used, 1=bottom, 2=top, 3=middle of layer                     3
 flagmodeltemp    0         Temperature model used: 1 = regression, 0 = from data
 flagq10          1         Q10 corrections used in the model: 1 = yes, 0 = no                  1
@@ -1649,7 +1649,7 @@ r_DR_T15         0.008     Rate of ref detrital breakdown at 15 deg C        d-1
 r_DON_T15        0.00176   Rate of DON breakdown at 15 deg C                 d-1               0.00176
 r_DSi_T15        0.033     Rate of detrital Si breakdown at 15 deg C         d-1               0.05  (0.04)  
 
-FDR_DC           0.2       Fraction of carrion that breaks down to refractory detrit           0.1
+FDR_DC           0.1       Fraction of carrion that breaks down to refractory detrit           0.1
 FDR_DL           0.2       Fraction of lab detrit that breaks down to refractory detrit        0.2
 FDON_D           0.05      Fraction od DON breakdown that becomes detritus                     0.05
 
@@ -11805,11 +11805,11 @@ mum_jOSH_T15 0.03
 mum_ZL_T15  0.05        
 mum_BD_T15  0.014      
 mum_MA_T15  0.001        
-mum_MB_T15  0.018       
+mum_MB_T15  0.01       
 mum_SG_T15  0.07       
 mum_BC_T15  0.08      
 mum_ZG_T15  0.025      
-mum_PL_T15  0.25        
+mum_PL_T15  0.1        
 mum_DF_T15  0.01       
 mum_PS_T15  0.05       
 mum_ZM_T15  0.03       
@@ -17721,13 +17721,13 @@ OSH_maxdepth 1900
 ZL_maxdepth  5000        
 BD_maxdepth  5000        
 MA_maxdepth  5000        
-MB_maxdepth  5000        
+MB_maxdepth  50        
 SG_maxdepth  50        
 BC_maxdepth  5000        
 ZG_maxdepth  5000        
-PL_maxdepth  5000        
-DF_maxdepth  5000        
-PS_maxdepth  5000        
+PL_maxdepth  100        
+DF_maxdepth  100        
+PS_maxdepth  200        
 ZM_maxdepth  5000        
 ZS_maxdepth  5000        
 PB_maxdepth  5000        
@@ -18279,7 +18279,7 @@ jNSH_min_O2 3000
 OSH_min_O2 3000
 jOSH_min_O2 3000
 BD_min_O2 3000
-MB_min_O2 4000
+MB_min_O2 1000
 BC_min_O2 5000
 ZG_min_O2 4000
 ZL_min_O2 4000
@@ -19444,14 +19444,14 @@ NSH_maxtotdepth  100000
 OSH_maxtotdepth  100000  
 ZL_maxtotdepth  100000  
 BD_maxtotdepth  100000  
-MA_maxtotdepth  100000  
-MB_maxtotdepth  100000  
-SG_maxtotdepth  100000  
+MA_maxtotdepth  50  
+MB_maxtotdepth  50  
+SG_maxtotdepth  50  
 BC_maxtotdepth  100000  
 ZG_maxtotdepth  100000  
-PL_maxtotdepth  100000  
-DF_maxtotdepth  100000  
-PS_maxtotdepth  100000  
+PL_maxtotdepth  100  
+DF_maxtotdepth  100  
+PS_maxtotdepth  100  
 ZM_maxtotdepth  100000  
 ZS_maxtotdepth  100000  
 PB_maxtotdepth  100000  

@@ -10,7 +10,7 @@ hd0.name \tsfiles\flowOutAll_fix_20180402.nc
 
 #############################################
 # Point source\sink lists
-npointss 0
+npointss 1
 
 pss0.name GBK_SED
 pss0.location 1234274.466 3098307.516 -40

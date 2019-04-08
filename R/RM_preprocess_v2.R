@@ -142,6 +142,9 @@ bio_sp_stanza <- combine_ages(bio_sp, grp_col = "species", agemat = df_agemat)
 biomass <- bio_sp %>%
   agg_data(groups = c("species", "time"), fun = sum)
 
+# biomass by box
+bio_box=agg_data(bio_sp, groups= c('species', 'polygon', 'time'), fun=sum)
+
 biomass_age <- bio_sp %>%
   filter(species %in% df_agemat$species) %>% #filter(agecl > 2) %>%
   agg_data(groups = c("species", "agecl", "time"), fun = sum)
