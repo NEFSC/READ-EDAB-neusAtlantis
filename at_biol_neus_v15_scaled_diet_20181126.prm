@@ -11587,14 +11587,14 @@ C_NSH_T15 0.00015
 C_jNSH_T15 0.0001
 C_OSH_T15 0.00015   
 C_jOSH_T15 0.0001
-C_ZL_T15  0.05    
+C_ZL_T15  0.005    
 C_BD_T15  0.0005    
-C_ZG_T15  0.03    
-C_DF_T15  0.001     
-C_ZM_T15  0.05    
-C_ZS_T15  0.015     
-C_PB_T15  0.000001        
-C_BB_T15  0.000001  
+C_ZG_T15  0.003    
+C_DF_T15  0.0001     
+C_ZM_T15  0.005    
+C_ZS_T15  0.001     
+C_PB_T15  0.00000001        
+C_BB_T15  0.00000001  
 C_BO_T15  0.0001    
 C_BC_T15  0.006
 
@@ -11809,13 +11809,13 @@ mum_MB_T15  0.01
 mum_SG_T15  0.07       
 mum_BC_T15  0.08      
 mum_ZG_T15  0.025      
-mum_PL_T15  0.1        
+mum_PL_T15  0.05        
 mum_DF_T15  0.01       
 mum_PS_T15  0.05       
 mum_ZM_T15  0.03       
 mum_ZS_T15  0.055       
-mum_PB_T15  0.01        
-mum_BB_T15  0.02        
+mum_PB_T15  0.0001        
+mum_BB_T15  0.0002        
 mum_BO_T15  0.01 
 
 
