@@ -241,6 +241,7 @@ len_age_mn=result$length_age %>% group_by(species, agecl) %>%
   summarise(avg=mean(atoutput)) %>%
   spread(agecl, avg)
 lng.lng_int=len_age_mn[,2:11]/init_length[,4:13] # mean length at age divided by initial lenght at age, use to scale mum and C
+row.names(lng.lng_int)=mum_age$Code
 # Now scale mum and C by difference between length at age relative to initial conditions
 mum.scale=mum_age[,2:11]*1/lng.lng_int; row.names(mum.scale)=mum_age$Code
 mum.scale=mum.scale[order(row.names(mum.scale)),]
@@ -255,7 +256,7 @@ RN_mn=result$resn_age %>% group_by(species, agecl) %>%
   spread(agecl, avg)
 RN_init=result$resn_age %>% filter(time==0) %>%
   spread(agecl, atoutput)
-RN_RNinit=RN_mn[,2:11]/RN_init[,3:12]
+RN_RNinit=round(RN_mn[,2:11]/RN_init[,3:12], digits = 2); row.names(RN_RNinit)=mum_age$Code
 ## test to compare (yes, same as below)
 df_rel <- convert_relative_initial(result$resn_age) %>%
   group_by(species, agecl) %>%
@@ -263,15 +264,19 @@ df_rel <- convert_relative_initial(result$resn_age) %>%
   spread(agecl, avg)
 mum.scale=mum_age[,2:11]*1/RN_RNinit; row.names(mum.scale)=mum_age$Code
 mum.scale=mum.scale[order(row.names(mum.scale)),]
+# mum.scale=round(mum.scale, digits=2)
 C.scale=C_age[,2:11]*1/RN_RNinit; row.names(C.scale)=C_age$Code
 C.scale=C.scale[order(row.names(C.scale)),]
+# C.scale=round(C.scale, digits=2)
 write.csv(mum.scale, file='newMum_RNbased.csv', row.names = T)
 write.csv(C.scale, file='newC_RNbased.csv', row.names = T)
 mum.age=mum_age[order(mum_age$Code ),]
 C.age=C_age[order(C_age$Code ),]
 write.csv(mum.age, file=paste(filename,'_Mum_used.csv', sep=''), row.names = T)
 write.csv(C.age, file=paste(filename,'_C_used.csv', sep=''), row.names = T)
-
+mum.C=round(mum_age[,2:11]/C_age[,2:11], digits=2); row.names(mum.C)=mum_age$Code # ratio of mum:C (originally ~ 10)
+mum.C=mum.C[order(row.names(mum.C)),]
+write.csv(mum.C, file=paste(filename,'_mum_to_C_ratio.csv', sep=''), row.names=T)
 
 
 ### get initial conditions values RN+SN*nums, dont forget about scalar in run file...

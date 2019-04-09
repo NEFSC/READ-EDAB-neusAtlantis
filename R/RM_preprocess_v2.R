@@ -249,7 +249,7 @@ gr_rel_init <- growth_age %>%
 
 # specmort <- file.path(d2, paste(ncbase, 'SpecificPredMort.txt', sep=''))
 # mort2=load_spec_mort(specmort, prm_run, fgs, convert_names = F,version_flag = 2)
-# ggplot2::ggplot(subset(mort, pred == "COD" & prey == "COD"), ggplot2::aes(x = factor(time), y = atoutput, fill = stanza)) +
+# ggplot2::ggplot(subset(mort2, pred == "COD" & prey == "COD"), ggplot2::aes(x = factor(time), y = atoutput, fill = stanza)) +
 #   ggplot2::geom_boxplot(position = "dodge") +
 #   # ggplot2::geom_point()
 #   ggplot2::facet_wrap(~prey, scale = "free")
@@ -287,36 +287,6 @@ result <- list(
 filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
 save(result, file=paste(filename, '_prepro.rdata',sep=''))
 save.image(paste(d2, '/ws.RData', sep='')) #"~/AtlRuns/20190111a/ws.RData")
-# source('~/GitHub/atneus_RM/R/RM_atl_model_calibration.R') #win
-# source('~/Git/atneus_RM/R/RM_atl_model_calibration.R') #linux
-# source(paste(d1, '/R/RM_atl_model_calibration.R', sep='')) #bothd2
-
-# result <- list(
-#   "biomass"                = biomass,       #1
-#   "biomass_age"            = biomass_age,
-#   "biomass_consumed"       = bio_cons,
-#   "biomass_spatial_stanza" = bio_sp_stanza,
-#   "diet"                   = df_dm,         #5 
-#   "dz"                     = dz,
-#   "eat_age"                = eat_age,       
-#   "flux"                   = flux,
-#   "grazing"                = grazing,
-#   "growth_age"             = growth_age,    #10
-#   "growth_rel_init"        = gr_rel_init,
-#   "nominal_dz"             = nominal_dz,
-#   "nums"                   = nums,
-#   "nums_age"               = nums_age,      
-#   "nums_box"               = nums_box,      #15
-#   "physics"                = physics,
-#   "resn_age"               = resn_age,
-#   "sink"                   = sink,
-#   "spatial_overlap"        = sp_overlap,    
-#   "ssb_rec"                = ssb_rec,       #20
-#   "structn_age"            = structn_age,    
-#   "vol"                    = vol_ts
-# )
-# filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
-# save(result, file=paste(filename, '_prepro.rdata',sep=''))
 
 # USE TO LOAD Result for other fn calls in atlantistools
 # loadRData <- function(fileName){

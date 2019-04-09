@@ -11814,7 +11814,7 @@ mum_DF_T15  0.01
 mum_PS_T15  0.05       
 mum_ZM_T15  0.03       
 mum_ZS_T15  0.055       
-mum_PB_T15  0.1        
+mum_PB_T15  0.01        
 mum_BB_T15  0.02        
 mum_BO_T15  0.01 
 
@@ -13994,20 +13994,20 @@ mStarve_INV 1e-02
 
 Kthreshm         0.7       Threshold starvation level when mort starts                         0.7
 
-# Oxygen mortality (based on depth and the oxygen horizon) 
-mD_SCA 0.001
-mD_QHG 0.001
-mD_CLA 0.001
-mD_BFF 0.001
-mD_BG 0.001
-mD_LOB 0.001
-mD_RCB 0.001
-mD_BMS 0.001
-mD_BD 0.005
-mD_BC 0.005
-mD_PB 0
-mD_BB 0.005
-mD_BO 0.005
+# half Oxygen mortality depth in meters (based on depth and the oxygen horizon) 
+mD_SCA 0.1
+mD_QHG 0.1
+mD_CLA 0.1
+mD_BFF 0.1
+mD_BG 0.1
+mD_LOB 0.1
+mD_RCB 0.1
+mD_BMS 0.1
+mD_BD 0.1
+mD_BC 0.1
+mD_PB 0.1
+mD_BB 0.1
+mD_BO 0.1
 #mD_PB           0
 #mD_BB            0.005     Half oxygen mortality depth for sediment bacteria m              0.001 - 0.005
 #mD_BO            0.005     Half oxygen mortality depth for meiobenthos       m              0.001 - 0.005
@@ -14300,24 +14300,24 @@ mS_SBSHK 4
  
 # Seabird sloppy feeding 
 ####FSBDR_FPS        0.2       Proportion of seabird catch of small planktivores lost             0.2
-FSBDR_MAK 0.2      
-FSBDR_HER 0.2      
+FSBDR_MAK 0.1      
+FSBDR_HER 0.1      
 FSBDR_WHK 0        
 FSBDR_BLF 0.05     
-FSBDR_WPF 0.05     
-FSBDR_SUF 0.05     
-FSBDR_WIF 0.05     
-FSBDR_WTF 0.05     
-FSBDR_HAL 0.05     
-FSBDR_PLA 0.05     
-FSBDR_FOU 0.05     
-FSBDR_FLA 0.05     
-FSBDR_BFT 0.05     
-FSBDR_TUN 0.05     
-FSBDR_BIL 0.05     
+FSBDR_WPF 0     
+FSBDR_SUF 0     
+FSBDR_WIF 0     
+FSBDR_WTF 0     
+FSBDR_HAL 0     
+FSBDR_PLA 0     
+FSBDR_FOU 0     
+FSBDR_FLA 0     
+FSBDR_BFT 0     
+FSBDR_TUN 0     
+FSBDR_BIL 0     
 FSBDR_MPF 0        
 FSBDR_BUT 0        
-FSBDR_ANC 0        
+FSBDR_ANC 0.1        
 FSBDR_BPF 0        
 FSBDR_GOO 0        
 FSBDR_MEN 0.15     
@@ -14441,7 +14441,7 @@ FDG_ZL  0.3
 FDG_BD  0.35   
 FDG_BC  0.3    
 FDG_ZG  0.3    
-FDG_DF  0      
+FDG_DF  0.1      
 FDG_ZM  0.25   
 FDG_ZS  0.25   
 FDG_BO  0.25   
@@ -14450,7 +14450,7 @@ FDG_BO  0.25
 ######FDGDL_ZS         0.0       Detrit contrib from unassim lab detrit ingested by microzooplankton  0.0 - 0.9      
 ######FDGDL_ZM         0.3       Detrit contrib from unassim lab detrit ingested by mesozooplankton   0.4 - 0.9      
 FDGDL_MAK 0        
-FDGDL_HER 0        
+FDGDL_HER 0.2        
 FDGDL_WHK 0        
 FDGDL_BLF 0        
 FDGDL_WPF 0        
@@ -14458,18 +14458,18 @@ FDGDL_SUF 0
 FDGDL_WIF 0        
 FDGDL_WTF 0        
 FDGDL_HAL 0        
-FDGDL_PLA 0        
+FDGDL_PLA 0.2        
 FDGDL_FOU 0        
 FDGDL_FLA 0        
 FDGDL_BFT 0        
 FDGDL_TUN 0        
 FDGDL_BIL 0        
-FDGDL_MPF 0        
-FDGDL_BUT 0        
-FDGDL_ANC 0        
-FDGDL_BPF 0        
+FDGDL_MPF 0.2        
+FDGDL_BUT 0.2        
+FDGDL_ANC 0.3        
+FDGDL_BPF 0.3        
 FDGDL_GOO 0        
-FDGDL_MEN 0        
+FDGDL_MEN 0.3        
 FDGDL_FDE 0        
 FDGDL_COD 0.3      
 FDGDL_SHK 0        
@@ -14497,9 +14497,9 @@ FDGDL_DSH 0
 FDGDL_BLS 0        
 FDGDL_POR 0        
 FDGDL_PSH 0        
-FDGDL_WSK 0        
-FDGDL_LSK 0        
-FDGDL_SK  0        
+FDGDL_WSK 0.2        
+FDGDL_LSK 0.2        
+FDGDL_SK  0.2        
 FDGDL_SB  0        
 FDGDL_PIN 0        
 FDGDL_REP 0        
@@ -14518,15 +14518,15 @@ FDGDL_BG  0.2
 FDGDL_LOB 0.3      
 FDGDL_RCB 0.3      
 FDGDL_BMS 0.3      
-FDGDL_NSH 0        
-FDGDL_OSH 0        
+FDGDL_NSH 0.1        
+FDGDL_OSH 0.1        
 FDGDL_ZL  0        
 FDGDL_BD  0.2      
-FDGDL_BC  0        
+FDGDL_BC  0.2        
 FDGDL_ZG  0.3      
-FDGDL_DF  0        
+FDGDL_DF  0.1        
 FDGDL_ZM  0.3      
-FDGDL_ZS  0        
+FDGDL_ZS  0.1        
 FDGDL_BO  0.2      
  
 # Fraction of non-assimilate from refractory detrital food lost to detritus 
@@ -14535,7 +14535,7 @@ FDGDL_BO  0.2
 ###FDGDR_FDS   0.0 Detrit contrib from unassim ref detrit ingested by shallow demersals 0.4 - 0.9      
 ###FDGDR_FPL   0.0 Detrit contrib from unassim ref detrit                               0.0 - 0.9      
 FDGDR_MAK 0        
-FDGDR_HER 0        
+FDGDR_HER 0.3        
 FDGDR_WHK 0        
 FDGDR_BLF 0        
 FDGDR_WPF 0        
@@ -14551,10 +14551,10 @@ FDGDR_TUN 0
 FDGDR_BIL 0        
 FDGDR_MPF 0        
 FDGDR_BUT 0        
-FDGDR_ANC 0        
-FDGDR_BPF 0        
+FDGDR_ANC 0.3        
+FDGDR_BPF 0.3        
 FDGDR_GOO 0        
-FDGDR_MEN 0        
+FDGDR_MEN 0.3        
 FDGDR_FDE 0        
 FDGDR_COD 0        
 FDGDR_SHK 0        
@@ -14595,21 +14595,21 @@ FDGDR_TWH 0
 FDGDR_INV 0        
 FDGDR_LSQ 0        
 FDGDR_ISQ 0        
-FDGDR_SCA 0        
-FDGDR_QHG 0        
-FDGDR_CLA 0        
-FDGDR_BFF 0        
-FDGDR_BG  0        
-FDGDR_LOB 0        
-FDGDR_RCB 0        
-FDGDR_BMS 0        
-FDGDR_NSH 0        
-FDGDR_OSH 0        
+FDGDR_SCA 0.3        
+FDGDR_QHG 0.3        
+FDGDR_CLA 0.3        
+FDGDR_BFF 0.3        
+FDGDR_BG  0.3        
+FDGDR_LOB 0.3        
+FDGDR_RCB 0.3        
+FDGDR_BMS 0.3        
+FDGDR_NSH 0.3        
+FDGDR_OSH 0.3        
 FDGDR_ZL  0.3      
 FDGDR_BD  0.3      
 FDGDR_BC  0        
 FDGDR_ZG  0.3      
-FDGDR_DF  0        
+FDGDR_DF  0.3        
 FDGDR_ZM  0.3      
 FDGDR_ZS  0.3      
 FDGDR_BO  0.2      
