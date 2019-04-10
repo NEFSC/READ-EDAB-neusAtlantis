@@ -82,19 +82,21 @@ ncbase=nc.str[which(lncstr==min(lncstr))] #get base nc file name
 # ex_bio <- read.csv(file.path(d, "setas-bench.csv"), stringsAsFactors = FALSE)
 
 # bgm file
-bgm       <- file.path(d1, "neus_tmerc_RM.bgm") #30_v15.bgm")
+bgm       <- file.path(d1, "neus_tmerc_RM2.bgm") #30_v15.bgm")
 
 
 ### select box plot time series of benthic 
-tb=1 # choose box
+tb=17 # choose box
 ll=4 # choose layer (4 is bottom for NEUS)
 test=result$biomass_spatial_stanza[which(result$biomass_spatial_stanza$layer==ll & result$biomass_spatial_stanza$polygon==tb),]
 ii=unique(test$species)
-pdf(file=paste(filename,'Box21_bottom.pdf', sep=''))
+pdf(file=paste(filename,'_Box_',tb,'_bottom.pdf', sep=''))
+boxbgm=load_box(bgm)
+barea=boxbgm$boxes[[tb+1]]$area # get area, add 1 boxes start at 0
 for (x in 1:length(ii)){
   iii=ii[x]
-plot(test$atoutput[which(test$species==iii)]~test$time[which(test$species==iii)], 
-     type='l',main=ii[x], ylab='atoutput', xlab='time')
+plot(test$atoutput[which(test$species==iii)]/barea~test$time[which(test$species==iii)], 
+     type='l',main=paste(iii, 'Box', tb, 'layer', ll, sep=' '), ylab='Mg N m-2', xlab='time')
 }
 dev.off()
 
@@ -120,11 +122,19 @@ plot <- plot_line(result$biomass_age, col = "agecl")
 update_labels(p = plot, labels = c(gen_labels, list(colour = "Ageclass")))
 ggsave(paste(filename," biomass at age timeseries.png", sep=''), width=20, height=17, dpi=96)
 
+### Biomass at age relative to initial biomass timeseries#________________________
+df_rel <- convert_relative_initial(result$biomass_age)
+plot <- plot_line(df_rel, col = "agecl")
+plot <- update_labels(plot, list(x = "Time [years]", y = expression(biomass/bio[init])))
+plot_add_box(plot)
+ggsave(paste(filename," biomass at age rel init.png", sep=''), width=20, height=17, dpi=96)
+
+
 # plot length at age - may need to call: result$biomass_age2 added 20181102, result$length_age modified 20181127
 init_length=read.csv(file=paste(d1, '/vertebrate_init_length_cm.csv', sep=''), header = T, stringsAsFactors = F)
 init_length=init_length[order(init_length$Long.Name),]
 ii=unique(result$length_age$species)
-pdf(file=paste(filename,'_tuning_length_age.pdf', sep=''))
+pdf(file=paste(filename,'_tuning_length_age2.pdf', sep=''))
 for (x in 1:length(ii)){
   iii=ii[x]
   test=result$length_age %>% filter(species == iii, time > 0)
@@ -136,8 +146,9 @@ dev.off()
 
 ### Length at age timeseries#________________________
 plot <- plot_line(result$length_age, col = "agecl")
+gen_labels <- list(x = "Time [years]", y = "Length [cm]")
 update_labels(p = plot, labels = c(gen_labels, list(colour = "Ageclass")))
-ggsave(paste(filename," length at age timeseries.png", sep=''), width=20, height=17, dpi=96)
+ggsave(paste(filename," length at age timeseries3.png", sep=''), width=20, height=17, dpi=96)
 
 
 
@@ -230,6 +241,7 @@ len_age_mn=result$length_age %>% group_by(species, agecl) %>%
   summarise(avg=mean(atoutput)) %>%
   spread(agecl, avg)
 lng.lng_int=len_age_mn[,2:11]/init_length[,4:13] # mean length at age divided by initial lenght at age, use to scale mum and C
+row.names(lng.lng_int)=mum_age$Code
 # Now scale mum and C by difference between length at age relative to initial conditions
 mum.scale=mum_age[,2:11]*1/lng.lng_int; row.names(mum.scale)=mum_age$Code
 mum.scale=mum.scale[order(row.names(mum.scale)),]
@@ -244,7 +256,7 @@ RN_mn=result$resn_age %>% group_by(species, agecl) %>%
   spread(agecl, avg)
 RN_init=result$resn_age %>% filter(time==0) %>%
   spread(agecl, atoutput)
-RN_RNinit=RN_mn[,2:11]/RN_init[,3:12]
+RN_RNinit=round(RN_mn[,2:11]/RN_init[,3:12], digits = 2); row.names(RN_RNinit)=mum_age$Code
 ## test to compare (yes, same as below)
 df_rel <- convert_relative_initial(result$resn_age) %>%
   group_by(species, agecl) %>%
@@ -252,15 +264,19 @@ df_rel <- convert_relative_initial(result$resn_age) %>%
   spread(agecl, avg)
 mum.scale=mum_age[,2:11]*1/RN_RNinit; row.names(mum.scale)=mum_age$Code
 mum.scale=mum.scale[order(row.names(mum.scale)),]
+# mum.scale=round(mum.scale, digits=2)
 C.scale=C_age[,2:11]*1/RN_RNinit; row.names(C.scale)=C_age$Code
 C.scale=C.scale[order(row.names(C.scale)),]
+# C.scale=round(C.scale, digits=2)
 write.csv(mum.scale, file='newMum_RNbased.csv', row.names = T)
 write.csv(C.scale, file='newC_RNbased.csv', row.names = T)
 mum.age=mum_age[order(mum_age$Code ),]
 C.age=C_age[order(C_age$Code ),]
 write.csv(mum.age, file=paste(filename,'_Mum_used.csv', sep=''), row.names = T)
 write.csv(C.age, file=paste(filename,'_C_used.csv', sep=''), row.names = T)
-
+mum.C=round(mum_age[,2:11]/C_age[,2:11], digits=2); row.names(mum.C)=mum_age$Code # ratio of mum:C (originally ~ 10)
+mum.C=mum.C[order(row.names(mum.C)),]
+write.csv(mum.C, file=paste(filename,'_mum_to_C_ratio.csv', sep=''), row.names=T)
 
 
 ### get initial conditions values RN+SN*nums, dont forget about scalar in run file...
@@ -383,6 +399,11 @@ plot <- update_labels(plot, list(x = "Time [years]", y = expression(Biomass/Biom
 plot_add_box(plot)
 ggsave(paste(filename," Biomass at age_Bio age init.png", sep=''), width=20, height=17, dpi=96)
 
+### biomass per box timeseries
+plot <- plot_line(result$bio_box)
+custom_grid(plot, grid_x = "polygon", grid_y = "species")
+ggsave(paste(filename," Biomass per box timeseries.png", sep=''), width=30, height=34, dpi=96)
+
 ### Numbers per box timeseries
 plot <- plot_line(result$nums_box)
 custom_grid(plot, grid_x = "polygon", grid_y = "species")
@@ -406,6 +427,7 @@ ggsave(paste(filename," Consumption at age_Cons init.png", sep=''), width=20, he
 
 ## Now plot without comparing to initial values... just timeseries
 plot <- plot_line(result$eat_age, col = "agecl")
+gen_labels <- list(x = "Time [years]", y = "Biomass [t]")
 update_labels(p = plot, labels = c(gen_labels, list(colour = "Ageclass")))
 ggsave(paste(filename," Consumption at age timeseries.png", sep=''), width=20, height=17, dpi=96)
 
@@ -491,6 +513,7 @@ ggsave(paste(filename," Biomass at age percent.png", sep=''), width=20, height=1
 #   return(col_pal)
 # }
 
+if(!is.na(result$biomass_consumed)){
 plots <- plot_diet(result$biomass_consumed, wrap_col = "agecl", combine_thresh = 3)
 pdf(file=paste(filename, '_diet_proportions.pdf', sep=''),paper='A4r',width=11, height=8)
 for (i in seq_along(plots)) {
@@ -499,6 +522,7 @@ for (i in seq_along(plots)) {
   cat("\n\n")
 }
 dev.off()
+}
 
 ####__________ SPATIAL DISTRIBUTION PLOTS____________________________________
 ### Spatial Plots 1
@@ -537,7 +561,7 @@ dev.off()
 #biom=read.table('/home/ryan/AtlRuns/20170914a/atneus_v10_newcodebaseAgeBiomIndx.txt', header=T) # v1.0 on new codebase
 biom=read.table(paste(d1, '/R/atneus_v10_newcodebaseBiomIndx.txt', sep=''), header=T) # v1.0 on new codebase
 bio1=read.table(paste(d1, '/R/neusDynEffort_Base_Effort_BiomIndx.txt', sep=''), header=T) # v1.0 on old codebase
-bio2=read.table(paste(d2, '/atneus_v15_test2008hydro_20180208BiomIndx.txt', sep=''), header=T) # v1.5 run
+bio2=read.table(paste(d2, '/', ncbase, 'BiomIndx.txt', sep=''), header=T) # v1.5 run
 phyto=read.table(paste(d1, '/R/phytoplankton_timeseries_biomass_tonnes_1998_2016.csv', sep=''),header=T, sep=',')
 zoo=read.table(paste(d1, '/R/Zooplankton_total_biomass_tonnes_N_20yrs.csv', sep=''), header =T, sep=',')
 
@@ -616,12 +640,3 @@ lines(bio1$ZG~bio1$Time, type='l', col='blue')
 lines(biom$ZG~biom$Time, type='l', col='green')
 legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
 dev.off()
-
-# plots <- plot_spatial_overlap(result$spatial_overlap)
-# pdf(file=paste(filename, '_spatial_overlap.pdf', sep=''),paper='A4r', width=11, height=8)
-# for (i in seq_along(plots)) {
-#   cat(paste0("## Spatial Plot ", i, ": ", names(plots)[i]), sep = "\n")
-#   gridExtra::grid.arrange(plots[[i]])
-#   cat("\n\n")
-# }
-# dev.off()

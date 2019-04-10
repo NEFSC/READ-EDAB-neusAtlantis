@@ -261,7 +261,7 @@ mix_deep 0
 
 # Depth for marking deep ocean (boxes deeper than this will get deep ocean mixing)
 
-mix_deep_depth -17
+mix_deep_depth -65
 
 # Deep mixing of oxygen added 5/9/17 RM
 mix_deep_O2 1

@@ -54,6 +54,7 @@ init # make sure
 # init      <- file.path(d1, 'RMinit_notsohighvertmix.nc')# "RMinit_newvalues2017.nc")
 init=paste(d1,'/RMinitnofill.nc', sep='') # dropped _FillValue to make init_growth work 20180412 (see history in cdf version for command)
 # ran this command: ncatted -O -a _FillValue,,d,, RMinit_2018.nc RMinitnofill_2018.nc
+# ncks -d time,0,9 in.nc out.nc to remove time steps from v1.0 (use 't' not 'time') 
 
 # ### SANITY CHECK ON INITIAL CONDITIONS
 # data1 <- sc_init(init, prm_biol, fgs, bboxes)
@@ -141,12 +142,15 @@ bio_sp_stanza <- combine_ages(bio_sp, grp_col = "species", agemat = df_agemat)
 biomass <- bio_sp %>%
   agg_data(groups = c("species", "time"), fun = sum)
 
+# biomass by box
+bio_box=agg_data(bio_sp, groups= c('species', 'polygon', 'time'), fun=sum)
+
 biomass_age <- bio_sp %>%
   filter(species %in% df_agemat$species) %>% #filter(agecl > 2) %>%
   agg_data(groups = c("species", "agecl", "time"), fun = sum)
 
 # only vertebrates - convert to weight in grams, use for length at age plots
-biomass_age2 <- biomass_age #bio_sp %>%
+# biomass_age2 <- biomass_age #bio_sp %>%
   # filter(species %in% df_agemat$species) %>%
   # agg_data(groups = c("species", "agecl", "time"), fun = sum)
 
@@ -157,15 +161,12 @@ nums_box <- agg_data(data = dfs_gen[[1]], groups = c("species", "polygon", "time
 RN_box = agg_data(data=dfs_gen[[3]], groups=c("species", "polygon","time"), fun=sum)
 SN_box = agg_data(data=dfs_gen[[2]], groups=c("species", "polygon","time"), fun=sum)
 
-
-### working now?
-# connvert tonnes to mg N by age then to grams N to use in von Bertalanffy params to get length in cm
-biomass_age2$RNSN_ind=biomass_age2$atoutput/nums_age$atoutput[1:nrow(biomass_age2)]/bio_conv
-biomass_age2$grams_N_Ind=biomass_age2$RNSN_ind*1e-3
-biomass_age2$wgt=biomass_age2$atoutput/nums_age$atoutput[1:nrow(biomass_age2)]*1e6
-# now read in length-weight relationships from biol file
+### updated 20190404, use mean RN+SN per age for each species, convert to wgt, get length w/ Von Bert fn
+RN_age = agg_data(data=dfs_gen[[3]], groups=c("species", "agecl","time"), fun=mean)
+SN_age = agg_data(data=dfs_gen[[2]], groups=c("species", "agecl","time"), fun=mean)
+RN_age=left_join(RN_age, SN_age, by=c('species', 'agecl', 'time'))
+colnames(RN_age)=c('species', 'agecl', 'time', 'RN', 'SN')
 bfile <- read.table(prm_biol,col.names=1:100,comment.char="",fill=TRUE,header=FALSE)
-#find the length-weight parameters from the old prm file, store them
 pick <- grep("li_a_",bfile[,1])
 xx <- bfile[pick,1:20]
 tempmat <- matrix(NA,nrow=nrow(xx),ncol=3)
@@ -175,13 +176,12 @@ pick <- grep("li_b_",bfile[,1])
 tempmat[,3] <- as.numeric(as.character(bfile[pick,2]))
 fgs2 <- load_fgs(fgs)
 fgs2=fgs2[,c('Code', 'LongName')]
-tempmat2=as.data.frame(tempmat[2:60,])
+tempmat2=as.data.frame(tempmat[2:dim(tempmat)[1],]) #drop inverts
 colnames(tempmat2)=c('Code', 'li_a', 'li_b')
 tempmat3=left_join(tempmat2, fgs2, by='Code')
-biomass_age2=left_join(biomass_age2, tempmat3[,2:4], by=c('species'='LongName'))
-# biomass_age2$length_age=(as.numeric(as.character(biomass_age2$grams_N_Ind))/as.numeric(as.character(biomass_age2$li_a)))^(1/as.numeric(as.character(biomass_age2$li_b)))
-biomass_age2$length_age=(as.numeric(as.character(biomass_age2$wgt))/as.numeric(as.character(biomass_age2$li_a)))^(1/as.numeric(as.character(biomass_age2$li_b)))
-## rename for use in atl_model_calibration.r
+biomass_age2=left_join(RN_age, tempmat3[,2:4], by=c('species'='LongName'))
+biomass_age2$grams_N_Ind=(biomass_age2$RN+biomass_age2$SN)*5.7*20/1000
+biomass_age2$length_age=(as.numeric(as.character(biomass_age2$grams_N_Ind))/as.numeric(as.character(biomass_age2$li_a)))^(1/as.numeric(as.character(biomass_age2$li_b)))
 length_age=biomass_age2[,c('species', 'agecl', 'time', 'length_age')]
 colnames(length_age)[4]='atoutput'
 
@@ -196,10 +196,17 @@ growth_PL  <- agg_data(data = dfs_noPred_prod[[1]], groups = c("species", "time"
 growth_PS  <- agg_data(data = dfs_noPred_prod[[2]], groups = c("species", "time"), fun = mean)
 # growth_PB  <- agg_data(data = dfs_noPred_prod[[3]], groups = c("species", "time", "agecl"), fun = mean)
 
-# Calculate consumed biomass
-bio_cons <- calculate_consumed_biomass(eat = dfs_prod[[1]], grazing = dfs_prod[[2]], dm = df_dm,
-                                       vol = vol, bio_conv = bio_conv) %>%
-  agg_data(groups = c("pred", "agecl", "time", "prey"), fun = sum)
+# Calculate consumed biomass - updated to avoid memory allocation error with short summary times in run file
+safe_diet=purrr::possibly(calculate_consumed_biomass, otherwise = NA)
+bio_cons <- safe_diet(eat = dfs_prod[[1]], grazing = dfs_prod[[2]], dm = df_dm, vol = vol, bio_conv = bio_conv)
+if(!is.na(bio_cons)){
+bio_cons=agg_data(bio_cons, groups = c("pred", "agecl", "time", "prey"), fun = sum)
+}
+## original call:
+# bio_cons <- calculate_consumed_biomass(eat = dfs_prod[[1]], grazing = dfs_prod[[2]], dm = df_dm, vol = vol, bio_conv = bio_conv) %>% 
+#   agg_data(groups = c("pred", "agecl", "time", "prey"), fun = sum)
+
+
 
 #### see 'RM_preprocess_v2_workarounds.R' in dropbox if this does not work ###
 ## note - also did not work when output and time steps are not in sync in run file - 
@@ -242,7 +249,7 @@ gr_rel_init <- growth_age %>%
 
 # specmort <- file.path(d2, paste(ncbase, 'SpecificPredMort.txt', sep=''))
 # mort2=load_spec_mort(specmort, prm_run, fgs, convert_names = F,version_flag = 2)
-# ggplot2::ggplot(subset(mort, pred == "COD" & prey == "COD"), ggplot2::aes(x = factor(time), y = atoutput, fill = stanza)) +
+# ggplot2::ggplot(subset(mort2, pred == "COD" & prey == "COD"), ggplot2::aes(x = factor(time), y = atoutput, fill = stanza)) +
 #   ggplot2::geom_boxplot(position = "dodge") +
 #   # ggplot2::geom_point()
 #   ggplot2::facet_wrap(~prey, scale = "free")
@@ -280,36 +287,6 @@ result <- list(
 filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
 save(result, file=paste(filename, '_prepro.rdata',sep=''))
 save.image(paste(d2, '/ws.RData', sep='')) #"~/AtlRuns/20190111a/ws.RData")
-# source('~/GitHub/atneus_RM/R/RM_atl_model_calibration.R') #win
-# source('~/Git/atneus_RM/R/RM_atl_model_calibration.R') #linux
-# source(paste(d1, '/R/RM_atl_model_calibration.R', sep='')) #bothd2
-
-# result <- list(
-#   "biomass"                = biomass,       #1
-#   "biomass_age"            = biomass_age,
-#   "biomass_consumed"       = bio_cons,
-#   "biomass_spatial_stanza" = bio_sp_stanza,
-#   "diet"                   = df_dm,         #5 
-#   "dz"                     = dz,
-#   "eat_age"                = eat_age,       
-#   "flux"                   = flux,
-#   "grazing"                = grazing,
-#   "growth_age"             = growth_age,    #10
-#   "growth_rel_init"        = gr_rel_init,
-#   "nominal_dz"             = nominal_dz,
-#   "nums"                   = nums,
-#   "nums_age"               = nums_age,      
-#   "nums_box"               = nums_box,      #15
-#   "physics"                = physics,
-#   "resn_age"               = resn_age,
-#   "sink"                   = sink,
-#   "spatial_overlap"        = sp_overlap,    
-#   "ssb_rec"                = ssb_rec,       #20
-#   "structn_age"            = structn_age,    
-#   "vol"                    = vol_ts
-# )
-# filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
-# save(result, file=paste(filename, '_prepro.rdata',sep=''))
 
 # USE TO LOAD Result for other fn calls in atlantistools
 # loadRData <- function(fileName){

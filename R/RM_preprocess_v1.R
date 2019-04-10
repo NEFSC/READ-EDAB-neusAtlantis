@@ -13,14 +13,14 @@ d2='/home/ryan/AtlRuns/20190327a'
 
 
 d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
-d2='E:/AtlantisRun/20161103/tes/20190321dta'
+d2='E:/AtlantisRun/20161103/tes/20190404dta'
 
 
 setwd(d2)
 source(paste(d1,'/R/RM_preprocess_v2.R', sep=''))
 source(paste(d1,'/R/RM_atl_model_calibration.R', sep=''))
 
-save.image(paste(d2,"/ws.RData", sep=''))
+# save.image(paste(d2,"/ws.RData", sep='')) # done at end of preprocess_v2
 
 ## use to call this script in bat file for windows:
 # cd C:\Users\ryan.morse\Documents\R\R-3.4.2.1\bin

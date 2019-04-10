@@ -126,7 +126,7 @@ flagbactstim     0         Switch to turn stimulation of bacterial growth on/off
 flagtrackpops    1         Flag to indicate whether yearly stock value required             1
 flagseason       1         Flag of seasonal change, 0 for no, 1 yes                            1
 flaglight        0         Light adaptation: 1 = on, 0 = off                                   1
-flagIsEstuary    0
+flagIsEstuary    1
 flaglightopt     3         Light model: 0=midwater proxy used, 1=bottom, 2=top, 3=middle of layer                     3
 flagmodeltemp    0         Temperature model used: 1 = regression, 0 = from data
 flagq10          1         Q10 corrections used in the model: 1 = yes, 0 = no                  1
@@ -1649,7 +1649,7 @@ r_DR_T15         0.008     Rate of ref detrital breakdown at 15 deg C        d-1
 r_DON_T15        0.00176   Rate of DON breakdown at 15 deg C                 d-1               0.00176
 r_DSi_T15        0.033     Rate of detrital Si breakdown at 15 deg C         d-1               0.05  (0.04)  
 
-FDR_DC           0.2       Fraction of carrion that breaks down to refractory detrit           0.1
+FDR_DC           0.1       Fraction of carrion that breaks down to refractory detrit           0.1
 FDR_DL           0.2       Fraction of lab detrit that breaks down to refractory detrit        0.2
 FDON_D           0.05      Fraction od DON breakdown that becomes detritus                     0.05
 
@@ -11587,14 +11587,14 @@ C_NSH_T15 0.00015
 C_jNSH_T15 0.0001
 C_OSH_T15 0.00015   
 C_jOSH_T15 0.0001
-C_ZL_T15  0.05    
+C_ZL_T15  0.005    
 C_BD_T15  0.0005    
-C_ZG_T15  0.03    
-C_DF_T15  0.001     
-C_ZM_T15  0.05    
-C_ZS_T15  0.015     
-C_PB_T15  0.000001        
-C_BB_T15  0.000001  
+C_ZG_T15  0.003    
+C_DF_T15  0.0001     
+C_ZM_T15  0.005    
+C_ZS_T15  0.001     
+C_PB_T15  0.00000001        
+C_BB_T15  0.00000001  
 C_BO_T15  0.0001    
 C_BC_T15  0.006
 
@@ -11805,17 +11805,17 @@ mum_jOSH_T15 0.03
 mum_ZL_T15  0.05        
 mum_BD_T15  0.014      
 mum_MA_T15  0.001        
-mum_MB_T15  0.018       
+mum_MB_T15  0.01       
 mum_SG_T15  0.07       
 mum_BC_T15  0.08      
 mum_ZG_T15  0.025      
-mum_PL_T15  0.25        
+mum_PL_T15  0.05        
 mum_DF_T15  0.01       
 mum_PS_T15  0.05       
 mum_ZM_T15  0.03       
 mum_ZS_T15  0.055       
-mum_PB_T15  0.1        
-mum_BB_T15  0.02        
+mum_PB_T15  0.0001        
+mum_BB_T15  0.0002        
 mum_BO_T15  0.01 
 
 
@@ -13994,20 +13994,20 @@ mStarve_INV 1e-02
 
 Kthreshm         0.7       Threshold starvation level when mort starts                         0.7
 
-# Oxygen mortality (based on depth and the oxygen horizon) 
-mD_SCA 0.001
-mD_QHG 0.001
-mD_CLA 0.001
-mD_BFF 0.001
-mD_BG 0.001
-mD_LOB 0.001
-mD_RCB 0.001
-mD_BMS 0.001
-mD_BD 0.005
-mD_BC 0.005
-mD_PB 0
-mD_BB 0.005
-mD_BO 0.005
+# half Oxygen mortality depth in meters (based on depth and the oxygen horizon) 
+mD_SCA 0.1
+mD_QHG 0.1
+mD_CLA 0.1
+mD_BFF 0.1
+mD_BG 0.1
+mD_LOB 0.1
+mD_RCB 0.1
+mD_BMS 0.1
+mD_BD 0.1
+mD_BC 0.1
+mD_PB 0.1
+mD_BB 0.1
+mD_BO 0.1
 #mD_PB           0
 #mD_BB            0.005     Half oxygen mortality depth for sediment bacteria m              0.001 - 0.005
 #mD_BO            0.005     Half oxygen mortality depth for meiobenthos       m              0.001 - 0.005
@@ -14300,24 +14300,24 @@ mS_SBSHK 4
  
 # Seabird sloppy feeding 
 ####FSBDR_FPS        0.2       Proportion of seabird catch of small planktivores lost             0.2
-FSBDR_MAK 0.2      
-FSBDR_HER 0.2      
+FSBDR_MAK 0.1      
+FSBDR_HER 0.1      
 FSBDR_WHK 0        
 FSBDR_BLF 0.05     
-FSBDR_WPF 0.05     
-FSBDR_SUF 0.05     
-FSBDR_WIF 0.05     
-FSBDR_WTF 0.05     
-FSBDR_HAL 0.05     
-FSBDR_PLA 0.05     
-FSBDR_FOU 0.05     
-FSBDR_FLA 0.05     
-FSBDR_BFT 0.05     
-FSBDR_TUN 0.05     
-FSBDR_BIL 0.05     
+FSBDR_WPF 0     
+FSBDR_SUF 0     
+FSBDR_WIF 0     
+FSBDR_WTF 0     
+FSBDR_HAL 0     
+FSBDR_PLA 0     
+FSBDR_FOU 0     
+FSBDR_FLA 0     
+FSBDR_BFT 0     
+FSBDR_TUN 0     
+FSBDR_BIL 0     
 FSBDR_MPF 0        
 FSBDR_BUT 0        
-FSBDR_ANC 0        
+FSBDR_ANC 0.1        
 FSBDR_BPF 0        
 FSBDR_GOO 0        
 FSBDR_MEN 0.15     
@@ -14441,7 +14441,7 @@ FDG_ZL  0.3
 FDG_BD  0.35   
 FDG_BC  0.3    
 FDG_ZG  0.3    
-FDG_DF  0      
+FDG_DF  0.1      
 FDG_ZM  0.25   
 FDG_ZS  0.25   
 FDG_BO  0.25   
@@ -14450,7 +14450,7 @@ FDG_BO  0.25
 ######FDGDL_ZS         0.0       Detrit contrib from unassim lab detrit ingested by microzooplankton  0.0 - 0.9      
 ######FDGDL_ZM         0.3       Detrit contrib from unassim lab detrit ingested by mesozooplankton   0.4 - 0.9      
 FDGDL_MAK 0        
-FDGDL_HER 0        
+FDGDL_HER 0.2        
 FDGDL_WHK 0        
 FDGDL_BLF 0        
 FDGDL_WPF 0        
@@ -14458,18 +14458,18 @@ FDGDL_SUF 0
 FDGDL_WIF 0        
 FDGDL_WTF 0        
 FDGDL_HAL 0        
-FDGDL_PLA 0        
+FDGDL_PLA 0.2        
 FDGDL_FOU 0        
 FDGDL_FLA 0        
 FDGDL_BFT 0        
 FDGDL_TUN 0        
 FDGDL_BIL 0        
-FDGDL_MPF 0        
-FDGDL_BUT 0        
-FDGDL_ANC 0        
-FDGDL_BPF 0        
+FDGDL_MPF 0.2        
+FDGDL_BUT 0.2        
+FDGDL_ANC 0.3        
+FDGDL_BPF 0.3        
 FDGDL_GOO 0        
-FDGDL_MEN 0        
+FDGDL_MEN 0.3        
 FDGDL_FDE 0        
 FDGDL_COD 0.3      
 FDGDL_SHK 0        
@@ -14497,9 +14497,9 @@ FDGDL_DSH 0
 FDGDL_BLS 0        
 FDGDL_POR 0        
 FDGDL_PSH 0        
-FDGDL_WSK 0        
-FDGDL_LSK 0        
-FDGDL_SK  0        
+FDGDL_WSK 0.2        
+FDGDL_LSK 0.2        
+FDGDL_SK  0.2        
 FDGDL_SB  0        
 FDGDL_PIN 0        
 FDGDL_REP 0        
@@ -14518,15 +14518,15 @@ FDGDL_BG  0.2
 FDGDL_LOB 0.3      
 FDGDL_RCB 0.3      
 FDGDL_BMS 0.3      
-FDGDL_NSH 0        
-FDGDL_OSH 0        
+FDGDL_NSH 0.1        
+FDGDL_OSH 0.1        
 FDGDL_ZL  0        
 FDGDL_BD  0.2      
-FDGDL_BC  0        
+FDGDL_BC  0.2        
 FDGDL_ZG  0.3      
-FDGDL_DF  0        
+FDGDL_DF  0.1        
 FDGDL_ZM  0.3      
-FDGDL_ZS  0        
+FDGDL_ZS  0.1        
 FDGDL_BO  0.2      
  
 # Fraction of non-assimilate from refractory detrital food lost to detritus 
@@ -14535,7 +14535,7 @@ FDGDL_BO  0.2
 ###FDGDR_FDS   0.0 Detrit contrib from unassim ref detrit ingested by shallow demersals 0.4 - 0.9      
 ###FDGDR_FPL   0.0 Detrit contrib from unassim ref detrit                               0.0 - 0.9      
 FDGDR_MAK 0        
-FDGDR_HER 0        
+FDGDR_HER 0.3        
 FDGDR_WHK 0        
 FDGDR_BLF 0        
 FDGDR_WPF 0        
@@ -14551,10 +14551,10 @@ FDGDR_TUN 0
 FDGDR_BIL 0        
 FDGDR_MPF 0        
 FDGDR_BUT 0        
-FDGDR_ANC 0        
-FDGDR_BPF 0        
+FDGDR_ANC 0.3        
+FDGDR_BPF 0.3        
 FDGDR_GOO 0        
-FDGDR_MEN 0        
+FDGDR_MEN 0.3        
 FDGDR_FDE 0        
 FDGDR_COD 0        
 FDGDR_SHK 0        
@@ -14595,21 +14595,21 @@ FDGDR_TWH 0
 FDGDR_INV 0        
 FDGDR_LSQ 0        
 FDGDR_ISQ 0        
-FDGDR_SCA 0        
-FDGDR_QHG 0        
-FDGDR_CLA 0        
-FDGDR_BFF 0        
-FDGDR_BG  0        
-FDGDR_LOB 0        
-FDGDR_RCB 0        
-FDGDR_BMS 0        
-FDGDR_NSH 0        
-FDGDR_OSH 0        
+FDGDR_SCA 0.3        
+FDGDR_QHG 0.3        
+FDGDR_CLA 0.3        
+FDGDR_BFF 0.3        
+FDGDR_BG  0.3        
+FDGDR_LOB 0.3        
+FDGDR_RCB 0.3        
+FDGDR_BMS 0.3        
+FDGDR_NSH 0.3        
+FDGDR_OSH 0.3        
 FDGDR_ZL  0.3      
 FDGDR_BD  0.3      
 FDGDR_BC  0        
 FDGDR_ZG  0.3      
-FDGDR_DF  0        
+FDGDR_DF  0.3        
 FDGDR_ZM  0.3      
 FDGDR_ZS  0.3      
 FDGDR_BO  0.2      
@@ -17721,13 +17721,13 @@ OSH_maxdepth 1900
 ZL_maxdepth  5000        
 BD_maxdepth  5000        
 MA_maxdepth  5000        
-MB_maxdepth  5000        
+MB_maxdepth  50        
 SG_maxdepth  50        
 BC_maxdepth  5000        
 ZG_maxdepth  5000        
-PL_maxdepth  5000        
-DF_maxdepth  5000        
-PS_maxdepth  5000        
+PL_maxdepth  100        
+DF_maxdepth  100        
+PS_maxdepth  200        
 ZM_maxdepth  5000        
 ZS_maxdepth  5000        
 PB_maxdepth  5000        
@@ -18279,7 +18279,7 @@ jNSH_min_O2 3000
 OSH_min_O2 3000
 jOSH_min_O2 3000
 BD_min_O2 3000
-MB_min_O2 4000
+MB_min_O2 1000
 BC_min_O2 5000
 ZG_min_O2 4000
 ZL_min_O2 4000
@@ -19444,14 +19444,14 @@ NSH_maxtotdepth  100000
 OSH_maxtotdepth  100000  
 ZL_maxtotdepth  100000  
 BD_maxtotdepth  100000  
-MA_maxtotdepth  100000  
-MB_maxtotdepth  100000  
-SG_maxtotdepth  100000  
+MA_maxtotdepth  50  
+MB_maxtotdepth  50  
+SG_maxtotdepth  50  
 BC_maxtotdepth  100000  
 ZG_maxtotdepth  100000  
-PL_maxtotdepth  100000  
-DF_maxtotdepth  100000  
-PS_maxtotdepth  100000  
+PL_maxtotdepth  100  
+DF_maxtotdepth  100  
+PS_maxtotdepth  100  
 ZM_maxtotdepth  100000  
 ZS_maxtotdepth  100000  
 PB_maxtotdepth  100000  
