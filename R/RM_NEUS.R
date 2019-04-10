@@ -214,14 +214,25 @@ flow='/home/ryan/Dunn/RM hydro/ROMS_doppio/20180327/0330/flowOut2008_fix_0330flu
 temp='/home/ryan/Dunn/RM hydro/ROMS_doppio/20180327/0330/tempOut2008_fix_0330fluxtime2_a.nc'
 salt='/home/ryan/Dunn/RM hydro/ROMS_doppio/20180327/0330/saltOut2008_fix_0330fluxtime2_a.nc'
 
-test<- make.sh.forcings.object(
+# 20190402 testing values used for runs since 20180403 -----> these are the ones being used
+salt='/home/ryan/Dunn/RM hydro/ROMS_doppio/20180327/0330/0402/fluxtime/saltOutAll_fix_20180402.nc'
+temp='/home/ryan/Dunn/RM hydro/ROMS_doppio/20180327/0330/0402/fluxtime/tempOutAll_fix_20180402.nc'
+flow='/home/ryan/Dunn/RM hydro/ROMS_doppio/20180327/0330/0402/fluxtime/flowOutAll_fix_20180402.nc'
+
+# non scaled (before multiply fluxes by 3600) these were not used for runs ------> these are NOT USED
+salt='/home/ryan/Dunn/RM hydro/ROMS_doppio/20180327/0330/0402/saltOutAll_fix_20180402.nc'
+temp='/home/ryan/Dunn/RM hydro/ROMS_doppio/20180327/0330/0402/tempOutAll_fix_20180402.nc'
+flow='/home/ryan/Dunn/RM hydro/ROMS_doppio/20180327/0330/0402/flowOutAll_fix_20180402.nc'
+
+
+test2<- make.sh.forcings.object(
   bgm.file         = "/home/ryan/Git/atneus_RM/neus_tmerc_RM.bgm",
-  exchange.file    = hydro,
+  exchange.file    = flow,
   cum.depth        = c(0,50,120,300,500),
   temperature.file = temp,
   salinity.file    = salt
 )
-sh.forcings(test)
+sh.forcings(test2)
 
 
 ### SETAS linux added 20180327
