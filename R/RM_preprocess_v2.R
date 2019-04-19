@@ -145,14 +145,21 @@ biomass <- bio_sp %>%
 # biomass by box
 bio_box=agg_data(bio_sp, groups= c('species', 'polygon', 'time'), fun=sum)
 
+invert_bio_box=agg_data(bio_sp, groups= c('species', 'polygon', 'time'), fun=sum) %>%
+  filter(!(species %in% df_agemat$species))
+
 biomass_age <- bio_sp %>%
   filter(species %in% df_agemat$species) %>% #filter(agecl > 2) %>%
   agg_data(groups = c("species", "agecl", "time"), fun = sum)
-
 # only vertebrates - convert to weight in grams, use for length at age plots
 # biomass_age2 <- biomass_age #bio_sp %>%
   # filter(species %in% df_agemat$species) %>%
   # agg_data(groups = c("species", "agecl", "time"), fun = sum)
+
+# only invertebrates 
+biomass_age3 <- bio_sp %>%
+filter(!(species %in% df_agemat$species)) %>%
+agg_data(groups = c("species", "time"), fun = sum)
 
 # Aggregate Numbers! This is done seperately since numbers need to be summed!
 nums     <- agg_data(data = dfs_gen[[1]], groups = c("species", "time"), fun = sum)
@@ -262,6 +269,8 @@ result <- list(
   "biomass_age"            = biomass_age,
   "biomass_consumed"       = bio_cons,
   "biomass_spatial_stanza" = bio_sp_stanza,
+  "biomass_inverts"        = biomass_age3,
+  "bio_invert_box"         = invert_bio_box,
   "diet"                   = df_dm,         #5 
   "dz"                     = dz,
   "eat_age"                = eat_age,       

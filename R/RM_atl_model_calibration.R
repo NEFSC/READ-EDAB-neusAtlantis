@@ -436,6 +436,16 @@ plot <- plot_line(result$grazing)
 update_labels(p = plot, labels = list(x = "Time [years]", y = "Numbers"))
 ggsave(paste(filename," Bio pool grazing timeseries.png", sep=''), width=20, height=17, dpi=96)
 
+### Plot biomass pool biomass timeseries
+plot <- plot_line(result$biomass_inverts)
+update_labels(p = plot, labels = list(x = "Time [years]", y = "Biomass"))
+ggsave(paste(filename," Invert biomass timeseries.png", sep=''), width=20, height=17, dpi=96)
+
+## Plot biomass pool biomass by box timeseries
+plot <- plot_line(result$bio_invert_box)
+custom_grid(plot, grid_x = "polygon", grid_y = "species")
+update_labels(p = plot, labels = list(x = "Time [years]", y = "Biomass"))
+ggsave(paste(filename," Invert biomass by box.png", sep=''), width=30, height=34, dpi=96)
 
 ### Growth per ageclass
 df_rel <- convert_relative_initial(result$growth_age)
