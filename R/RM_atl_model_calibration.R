@@ -444,8 +444,7 @@ ggsave(paste(filename," Invert biomass timeseries.png", sep=''), width=20, heigh
 ## Plot biomass pool biomass by box timeseries
 plot <- plot_line(result$bio_invert_box)
 custom_grid(plot, grid_x = "polygon", grid_y = "species")
-update_labels(p = plot, labels = list(x = "Time [years]", y = "Biomass"))
-ggsave(paste(filename," Invert biomass by box.png", sep=''), width=30, height=34, dpi=96)
+ggsave(paste(filename," Invert biomass by box.png", sep=''), width=30, height=20, dpi=96)
 
 ### Growth per ageclass
 df_rel <- convert_relative_initial(result$growth_age)

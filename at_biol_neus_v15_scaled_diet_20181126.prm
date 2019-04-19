@@ -1807,7 +1807,7 @@ LOBmax            10000
 RCBmax            10000
 
 # RM added 20170509
-flagconstrain_epiwander 0
+flagconstrain_epiwander 1
 
 # If flagBFlim is set to one then the following params are used for spatial crowding of filter feeders
 # (from ERSEM formulations)
@@ -11805,17 +11805,17 @@ mum_jOSH_T15 0.03
 mum_ZL_T15  0.05        
 mum_BD_T15  0.014      
 mum_MA_T15  0.001        
-mum_MB_T15  0.01       
+mum_MB_T15  0.0001       
 mum_SG_T15  0.07       
 mum_BC_T15  0.08      
 mum_ZG_T15  0.025      
 mum_PL_T15  0.05        
-mum_DF_T15  0.01       
+mum_DF_T15  0.0001       
 mum_PS_T15  0.05       
 mum_ZM_T15  0.03       
 mum_ZS_T15  0.055       
-mum_PB_T15  0.0001        
-mum_BB_T15  0.0002        
+mum_PB_T15  0.00001        
+mum_BB_T15  0.00002        
 mum_BO_T15  0.01 
 
 
@@ -13577,8 +13577,8 @@ Ktmp_mammal      0.08      Factor relating temperature to respiration for mammal
 # Lysis rate of microalgaes  
 KLYS_PL          0.005    Lysis rate of diatoms                             d-1 (0.05 )      0.0001
 KLYS_PS          0.01      Lysis rate of picophytoplankton                   d-1 (0.01)       0.01
-KLYS_DF          0.005    Lysis rate of dinoflagellates                     d-1              0.01
-KLYS_MB          0.005     Lysis rate of microphytobenthos (0.005)           d-1               0.005
+KLYS_DF          0.01    Lysis rate of dinoflagellates                     d-1              0.01
+KLYS_MB          0.01     Lysis rate of microphytobenthos (0.005)           d-1               0.005
 
 # gfay @UMassD 2015/06/24, adding because atlantis2 is prompting for values for MA & SG
 KLYS_MA 0.1

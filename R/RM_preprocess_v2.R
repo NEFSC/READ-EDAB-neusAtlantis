@@ -148,6 +148,11 @@ bio_box=agg_data(bio_sp, groups= c('species', 'polygon', 'time'), fun=sum)
 invert_bio_box=agg_data(bio_sp, groups= c('species', 'polygon', 'time'), fun=sum) %>%
   filter(!(species %in% df_agemat$species))
 
+epibenthic_invert_bio_box=agg_data(bio_sp, groups= c('species', 'polygon', 'time'), fun=sum) %>%
+  # filter(!(species %in% df_agemat$species)) %>%
+  filter(species %in% bps)
+
+
 biomass_age <- bio_sp %>%
   filter(species %in% df_agemat$species) %>% #filter(agecl > 2) %>%
   agg_data(groups = c("species", "agecl", "time"), fun = sum)
