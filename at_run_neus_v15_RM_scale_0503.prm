@@ -82,11 +82,11 @@ tstop      18260 day   # Stop time after the given period (18260)18260  , 4000  
 
 toutstart  0 day       # Output start time
 
-toutinc    10 day      # Write output with this periodicity
+toutinc    90 day      # Write output with this periodicity
 
-toutfinc   10 day      # Write fisheries output with this periodicity
+toutfinc   90 day      # Write fisheries output with this periodicity
 
-tsumout    10 day     # Write stock state summary with this periodicity
+tsumout    90 day     # Write stock state summary with this periodicity
 
 fishout    0           # Switch to turn fisheries output on = 1, off = 0
 
@@ -94,7 +94,7 @@ flagreusefile 2        # Switch to show want to append output file no = 0, yes =
 
 tburnday 0
 
-flagIsEstuary 1
+flagIsEstuary 0
 
 flag_age_output 1
 
@@ -184,7 +184,7 @@ check_dups 0
 
 
 # RM 20180530
-flagpassivetracer 0
+flagpassivetracer 1
 flag_old_embryo_init 0
 flag_replicate_old_calendar 0
 
