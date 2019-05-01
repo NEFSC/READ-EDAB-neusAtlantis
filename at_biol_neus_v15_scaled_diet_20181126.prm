@@ -13586,7 +13586,7 @@ KLYS_SG 0
 
 # Extra macrophyte mortality (based on physical environment)   
 mS_MA_T15        180.0     Scour (bottom stress) macroalgae mortality        d-1             120 - 180
-mS_SG_T15        0.00002   Excessive DIN seagrass  mortality                 d-1             0.0 - 0.0002
+mS_SG_T15        0.0002   Excessive DIN seagrass  mortality                 d-1             0.0 - 0.0002
 
 ## Linear mortality modified 20180404 RM, drop mL_XXX_T15 and change to zero for tuning
 # Invertebrates
@@ -13606,13 +13606,13 @@ MB_mL 0 #0.005
 SG_mL 0 #2e-05
 BC_mL 0 #8e-05
 ZG_mL 0 #3e-06
-PL_mL 0.0015
+PL_mL 0 #0.0015
 DF_mL 0 #5e-04
 PS_mL 0 #0.016
 ZM_mL 0 #1e-04
 ZS_mL 0 #8e-05
-PB_mL 1e-04
-BB_mL 1e-05
+PB_mL 0 #1e-04
+BB_mL 0 #1e-05
 BO_mL 0 #4e-07
 
 
@@ -14298,12 +14298,12 @@ mS_SBCOD 4
 mS_SBSHK 4
 0 0 0 0
  
-# Seabird sloppy feeding 
+# Seabird sloppy feeding for mortality OUTSIDE of model domain, only nonzer when FSBDR_XXX is nonzero
 ####FSBDR_FPS        0.2       Proportion of seabird catch of small planktivores lost             0.2
-FSBDR_MAK 0.1      
-FSBDR_HER 0.1      
+FSBDR_MAK 0      
+FSBDR_HER 0      
 FSBDR_WHK 0        
-FSBDR_BLF 0.05     
+FSBDR_BLF 0     
 FSBDR_WPF 0     
 FSBDR_SUF 0     
 FSBDR_WIF 0     
@@ -14317,13 +14317,13 @@ FSBDR_TUN 0
 FSBDR_BIL 0     
 FSBDR_MPF 0        
 FSBDR_BUT 0        
-FSBDR_ANC 0.1        
+FSBDR_ANC 0        
 FSBDR_BPF 0        
 FSBDR_GOO 0        
-FSBDR_MEN 0.15     
-FSBDR_FDE 0.15     
-FSBDR_COD 0.05     
-FSBDR_SHK 0.15     
+FSBDR_MEN 0     
+FSBDR_FDE 0     
+FSBDR_COD 0     
+FSBDR_SHK 0     
 FSBDR_OHK 0        
 FSBDR_POL 0        
 FSBDR_RHK 0        
@@ -14360,8 +14360,8 @@ FSBDR_SWH 0
 FSBDR_TWH 0        
 FSBDR_INV 0        
  
-# Demersal fish sloppy feeding   
-FFDDR            0.95      Proportion of static demersal fish's planktivore prey that's lost
+# Demersal fish sloppy feeding for extra mortality OUTSIDE model domain, nonzero when mS_FDXXX are nonzero
+FFDDR 0 			# 0.95      Proportion of static demersal fish's planktivore prey that's lost
 
 # Fraction of animal and plant food non-assimilate (feces) lost to detritus by consumer XXX
 ####FDG_ZG           0.3       Detrit contrib from unassim material ingested by gelatinous zoopl   0.25 - 0.5
