@@ -1,4 +1,4 @@
-Code,Index,IsTurnedOn,Name,LongName,NumCohorts,NumGeneTypes,NumStages,NumSpawns,NumAgeClassSize,NumStocks,VerticallyMigrates,HorizontallyMigrates,isFished,IsImpacted,isTAC,GroupType,isPredator,IsCover,isSiliconDep,isAssessed,IsCatchGrazer,OverWinters,isCultured,isHabDepend,numMoveSeasons,isBioEroder,isSupplemented
+Code,Index,IsTurnedOn,Name,LongName,NumCohorts,NumGeneTypes,NumStages,NumSpawns,NumAgeClassSize,NumStocks,VerticallyMigrates,HorizontallyMigrates,isFished,IsImpacted,isTAC,GroupType,IsPredator,IsCover,isSiliconDep,isAssessed,IsCatchGrazer,OverWinters,isCultured,isHabDepend,numMoveSeasons,isBioEroder,isSupplemented
 MAK,0,1,Mackerel,Mackerel,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 HER,1,1,Herring,Atlantic herring,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 WHK,2,1,White_Hake,White hake,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0

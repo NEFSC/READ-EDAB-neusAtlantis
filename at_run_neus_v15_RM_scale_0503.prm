@@ -40,7 +40,7 @@ flagchecksize 0        # Periodically list relative size (tuning diagnostic)
 
 flagagecheck  0        # Periodically list age structure per cohort (tuning diagnostic)
 
-flagdietcheck 0        # Periodically list realised diet matchups (tuning diagnostic)
+flagdietcheck 1        # Periodically list realised diet matchups (tuning diagnostic)
 
 checkNH       0        # Give detailed logged output for NH in checkbox
 
@@ -48,7 +48,7 @@ checkDL       0        # Give detailed logged output for DL in checkbox
 
 checkDR       0        # Give detailed logged output for DR in checkbox
 
-checkbiom     0        # Give detailed logged output for biomasses in checkbox
+checkbiom     1        # Give detailed logged output for biomasses in checkbox
 
 which_fleet   33       # ID number of fleet to track (if don't want to track anything set to 33 (for other fleets see list below)
 
@@ -78,9 +78,9 @@ title      test version, DynEffort NEUS v1.5 with Atlantis2 codebase
 
 dt         24 hour     # 12 hour time step
 
-tstop      18260 day   # Stop time after the given period (18260)18260  , 4000   2191 7320 9120 3660 7320
+tstop      730 day   # Stop time after the given period (18260)18260  , 4000   2191 7320 9120 3660 7320
 
-toutstart  0 day       # Output start time
+toutstart  1 day       # Output start time
 
 toutinc    90 day      # Write output with this periodicity
 

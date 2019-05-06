@@ -532,12 +532,13 @@ wd2='/home/ryan/Git/atneus_RM'
 setwd(wd2)
 
 # Set location of runs and run name prefix
-runfolder='20190422dtb' #20190301dtb'
+runfolder='20190506dta' #20190301dtb'
 wd3=paste('E:/AtlantisRun/20161103/tes/', runfolder, '/atneus_v15_test2008hydro_20180208',sep='')
 wd3=paste('/home/ryan/AtlRuns/', runfolder, '/atneus_v15_test2008hydro_20180208',sep='')
 wd3=paste('/media/ryan/Iomega_HDD/', runfolder,  '/atneus_v15_test2008hydro_20180208',sep='')
 
 grp.file <- ('NeusGroups_v15_unix.csv') # ALL GROUPS'your_groups_definition_file.csv'
+grp.file <- ('NeusGroups_v15_unix_RM.csv') # ALL GROUPS'your_groups_definition_file.csv'
 
 
 
@@ -545,7 +546,11 @@ grp.file <- ('NeusGroups_v15_unix.csv') # ALL GROUPS'your_groups_definition_file
 grp.file <- ('NeusGroups_v15_unix.csv') # ALL GROUPS'your_groups_definition_file.csv'
 prm.file=('at_biol_neus_v15_scaled_diet_20181126.prm')
 diet.file   <- paste(wd3,'DietCheck.txt', sep='')
+diet.file.bypol=paste(wd3,'DetailedDietCheck.txt', sep='') # only if flagdietcheck was active in run file
 web=food.web(diet.file, grp.file)
+web.box=food.web(diet.file, grp.file, diet.file.bypol) # by polygon
+web
+web.box
 
 ### Predation analysis from the Atlantis output
 biom        <- paste(wd3, 'BiomIndx.txt', sep='')
@@ -560,7 +565,7 @@ pred
 
 ### Exploring predator-prey interactions from the initial conditions
 prm.file=('at_biol_neus_v15_scaled_diet_20181126.prm')
-nc.initial  <- 'RMinit_2019.nc'
+nc.initial  <- 'RMinit2_2019.nc'
 grp.csv     <- grp.file
 bgm.file    <- 'neus_tmerc_RM.bgm'
 cum.depths  <- c(0, 50, 120, 300, 500) ## This should be the cummulative depth of your model

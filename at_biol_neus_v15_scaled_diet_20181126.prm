@@ -1263,7 +1263,7 @@ BC_habdepend    0
 BO_habdepend    0
 MA_habdepend    0
 SG_habdepend    0
-MB_habdepend    0
+MB_habdepend    1
 
 
 
@@ -1743,7 +1743,7 @@ KI_PS_T15        10        Light saturation, small phytoplankton             W m
 KI_DF_T15        20        Light saturation, dinoflagellates                 W m-2          10 - 20
 KI_MA_T15        20         Light saturation, macroalgae                      W m-2             5
 KI_SG_T15        60        Light saturation, seagrass                        W m-2             65
-KI_MB_T15        20         Light saturation, microphytobenthos               W m-2             3
+KI_MB_T15        60         Light saturation, microphytobenthos               W m-2             3
 
 eddy_scale       1.0       Coefficient scaling eddy strength impact on phytoplankton growth    1.0
 # Primary producer nutrient requirements 
@@ -1752,12 +1752,12 @@ KN_PS            5    Half-sat const for PS growth on DIN (13)          mg N m-3
 KN_DF            10         Half-sat const for DF growth on DIN (13)          mg N m-3          4
 KN_MA            20        Half-sat const for MA growth on DIN (20)          mg N m-3          20
 KN_SG            50         Half-sat const for SG growth on DIN (12)          mg N m-3          5
-KN_MB            400       Half-sat const for MB growth on DIN (200)         mg N m-3          200
+KN_MB            200       Half-sat const for MB growth on DIN (200)         mg N m-3          200
 
 KS_PL            10        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
 KS_PS            0         Half-sat const for PS growth on a second nutrient mg nutrient m-3   0 
 KS_DF            0         Half-sat const for DF growth on a second nutrient mg nutrient m-3   0 
-KS_MB            400        Half-sat const for MB growth on Si                mg Si m-3         100
+KS_MB            200        Half-sat const for MB growth on Si                mg Si m-3         100
 #gfay@umassd 06/24/15  added KS_MA to suppress error, setting to zero CHECK
 KS_MA            0
 KS_SG            0
@@ -1885,8 +1885,8 @@ habitat_BD 11
 habitat_MA 11
 0 0 0 0 1 1 1 1 1 0 0
  
-#habitat_MB 11
-#NA NA NA NA NA NA NA NA NA NA NA
+habitat_MB 11
+0 0 0 0 0 0 1 1 1 0 0
  
 habitat_SG 11
 0 0 0 0 0 0 1 0 1 1 0
@@ -13579,7 +13579,7 @@ Ktmp_mammal      0.08      Factor relating temperature to respiration for mammal
 KLYS_PL          0.005    Lysis rate of diatoms                             d-1 (0.05 )      0.0001
 KLYS_PS          0.01      Lysis rate of picophytoplankton                   d-1 (0.01)       0.01
 KLYS_DF          0.01    Lysis rate of dinoflagellates                     d-1              0.01
-KLYS_MB          0.01     Lysis rate of microphytobenthos (0.005)           d-1               0.005
+KLYS_MB          0.1     Lysis rate of microphytobenthos (0.005)           d-1               0.005
 
 # gfay @UMassD 2015/06/24, adding because atlantis2 is prompting for values for MA & SG
 KLYS_MA 0.1
@@ -13603,7 +13603,7 @@ BMS_mL 0 #3e-06
 ZL_mL 0 #5e-06
 BD_mL 0 #1e-07
 MA_mL 0 #3.25e-05
-MB_mL 0 #0.005
+MB_mL 0.1 #0.005
 SG_mL 0 #2e-05
 BC_mL 0 #8e-05
 ZG_mL 0 #3e-06
@@ -17722,7 +17722,7 @@ OSH_maxdepth 1900
 ZL_maxdepth  5000        
 BD_maxdepth  5000        
 MA_maxdepth  5000        
-MB_maxdepth  50        
+MB_maxdepth  25        
 SG_maxdepth  50        
 BC_maxdepth  5000        
 ZG_maxdepth  5000        
@@ -18280,7 +18280,7 @@ jNSH_min_O2 3000
 OSH_min_O2 3000
 jOSH_min_O2 3000
 BD_min_O2 3000
-MB_min_O2 1000
+MB_min_O2 5000
 BC_min_O2 5000
 ZG_min_O2 4000
 ZL_min_O2 4000
@@ -19446,7 +19446,7 @@ OSH_maxtotdepth  100000
 ZL_maxtotdepth  100000  
 BD_maxtotdepth  100000  
 MA_maxtotdepth  50  
-MB_maxtotdepth  50  
+MB_maxtotdepth  25  
 SG_maxtotdepth  50  
 BC_maxtotdepth  100000  
 ZG_maxtotdepth  100000  
