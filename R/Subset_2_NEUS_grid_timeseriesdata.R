@@ -448,6 +448,13 @@ box.mon=apply(BoxChl.array, c(1,2), mean, na.rm=T) # monthly means over all year
 box.yr=apply(BoxChl.array, c(2,3), mean, na.rm=T) # yearly means over all months for each box
 box.NES=apply(BoxChl.array, c(1,3), mean, na.rm=T) # NEUS (all boxes) monthly means in each year
 
+library(gplots) # heatmap of time series of  CHL 1998-2016 by month
+my_palette <- colorRampPalette(c("turquoise", "yellow", "red"))(n = 299)
+heatmap.2(box.NES, density.info="none",  trace="none", col=my_palette, dendrogram='none', Rowv=FALSE, Colv=FALSE)   
+
+
+
+
 #limit to boxes 1-22 (no boundary boxes or islands)
 BoxChl.array.NES=abind(Jan.chl[2:23,], Feb.chl[2:23,], Mar.chl[2:23,], Apr.chl[2:23,], May.chl[2:23,], 
                        Jun.chl[2:23,], Jul.chl[2:23,], Aug.chl[2:23,], Sep.chl[2:23,], Oct.chl[2:23,], 
@@ -599,7 +606,19 @@ barplot(Oct.chl, ylim=c(0,70), col=cl)
 barplot(Nov.chl, ylim=c(0,70), col=cl)
 barplot(Dec.chl, ylim=c(0,70), col=cl)
 
-
+# boxes on X axis, time on Y
+barplot(t(Jan.chl), ylim=c(0,70), col=cl)
+barplot(t(Feb.chl), ylim=c(0,70), col=cl)
+barplot(t(Mar.chl), ylim=c(0,70), col=cl)
+barplot(t(Apr.chl), ylim=c(0,70), col=cl)
+barplot(t(May.chl), ylim=c(0,70), col=cl)
+barplot(t(Jun.chl), ylim=c(0,70), col=cl)
+barplot(t(Jul.chl), ylim=c(0,70), col=cl)
+barplot(t(Aug.chl), ylim=c(0,70), col=cl)
+barplot(t(Sep.chl), ylim=c(0,70), col=cl)
+barplot(t(Oct.chl), ylim=c(0,70), col=cl)
+barplot(t(Nov.chl), ylim=c(0,70), col=cl)
+barplot(t(Dec.chl), ylim=c(0,70), col=cl)
 ### Box climatology - use to train Atlantis model
 year=seq(1998, 2015, 1)
 for (i in 1:nrow(m)){
