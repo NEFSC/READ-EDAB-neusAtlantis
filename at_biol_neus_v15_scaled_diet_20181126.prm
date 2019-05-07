@@ -125,7 +125,7 @@ flagbactstim     0         Switch to turn stimulation of bacterial growth on/off
 # interaction formulations used      
 flagtrackpops    1         Flag to indicate whether yearly stock value required             1
 flagseason       1         Flag of seasonal change, 0 for no, 1 yes                            1
-flaglight        0         Light adaptation: 1 = on, 0 = off                                   1
+flaglight        1         Light adaptation: 1 = on, 0 = off                                   1
 flagIsEstuary    1
 flaglightopt     3         Light model: 0=midwater proxy used, 1=bottom, 2=top, 3=middle of layer                     3
 flagmodeltemp    0         Temperature model used: 1 = regression, 0 = from data
@@ -11570,32 +11570,32 @@ k_refsDL      10000.0      Reference labile detrit. level in sediments (if highe
 
 ### 20180228 RM added C for juvenile inverts based on SETAS and NEUS adult values (m3 mgN-1 day-1)
 # Clearance rates for biomass pool consumers - this is used by Holling type feeding
-C_LSQ_T15 0.001455  
-C_jLSQ_T15 0.001
-C_ISQ_T15 0.0008  
-C_jISQ_T15 0.0004
-C_SCA_T15 0.01     
-C_QHG_T15 0.01    
-C_CLA_T15 0.01    
-C_BFF_T15 0.007
-C_BG_T15  0.01
-C_LOB_T15 0.01
-C_RCB_T15 0.01
-C_BMS_T15 0.01   
-C_NSH_T15 0.00015   
-C_jNSH_T15 0.0001
-C_OSH_T15 0.00015   
-C_jOSH_T15 0.0001
-C_ZL_T15  0.005    
-C_BD_T15  0.0005    
-C_ZG_T15  0.003    
-C_DF_T15  0.0001     
-C_ZM_T15  0.005    
-C_ZS_T15  0.001     
-C_PB_T15  0.00000001        
-C_BB_T15  0.00000001  
-C_BO_T15  0.0001    
-C_BC_T15  0.006
+C_LSQ_T15	0.00044
+C_jLSQ_T15	0.0004
+C_ISQ_T15	0.000444
+C_jISQ_T15	0.0004
+C_SCA_T15	0.0015
+C_QHG_T15	0.0015
+C_CLA_T15	0.0015
+C_BFF_T15	0.0035
+C_BG_T15	0.0015
+C_LOB_T15	0.0015
+C_RCB_T15	0.0013
+C_BMS_T15	0.001
+C_NSH_T15	0.0003043
+C_jNSH_T15	0.0003
+C_OSH_T15	0.0003043
+C_jOSH_T15	0.0003
+C_ZL_T15	0.005
+C_BD_T15	0.0014
+C_BC_T15	0.008
+C_ZG_T15	0.0025
+C_ZM_T15	0.0005
+C_ZS_T15	0.0055
+C_PB_T15	0.000001
+C_BB_T15	0.000002
+C_BO_T15	0.001
+C_DF_T15	0.0001
 
 
 
