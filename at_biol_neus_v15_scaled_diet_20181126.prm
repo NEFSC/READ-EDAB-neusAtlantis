@@ -11595,7 +11595,7 @@ C_ZS_T15	0.0055
 C_PB_T15	0.000001
 C_BB_T15	0.000002
 C_BO_T15	0.001
-C_DF_T15	0.0001
+C_DF_T15	0.0000001
 
 
 
@@ -11809,8 +11809,8 @@ mum_MB_T15  0.000001
 mum_SG_T15  0.07       
 mum_BC_T15  0.08      
 mum_ZG_T15  0.025      
-mum_PL_T15  0.005        
-mum_DF_T15  0.001       
+mum_PL_T15  0.0005        
+mum_DF_T15  0.00001       
 mum_PS_T15  0.001       
 mum_ZM_T15  0.005       
 mum_ZS_T15  0.055       
@@ -13578,7 +13578,7 @@ Ktmp_mammal      0.08      Factor relating temperature to respiration for mammal
 # Lysis rate of microalgaes  
 KLYS_PL          0.005    Lysis rate of diatoms                             d-1 (0.05 )      0.0001
 KLYS_PS          0.01      Lysis rate of picophytoplankton                   d-1 (0.01)       0.01
-KLYS_DF          0.01    Lysis rate of dinoflagellates                     d-1              0.01
+KLYS_DF          0.1    Lysis rate of dinoflagellates                     d-1              0.01
 KLYS_MB          0.3     Lysis rate of microphytobenthos (0.005)           d-1               0.005
 
 # gfay @UMassD 2015/06/24, adding because atlantis2 is prompting for values for MA & SG
@@ -13608,7 +13608,7 @@ SG_mL 0 #2e-05
 BC_mL 0 #8e-05
 ZG_mL 0 #3e-06
 PL_mL 0 #0.0015
-DF_mL 0 #5e-04
+DF_mL 0.1 #5e-04
 PS_mL 0 #0.016
 ZM_mL 0 #1e-04
 ZS_mL 0 #8e-05
@@ -15850,184 +15850,183 @@ recruitRangeFlat 1.5        max relative cohort strength (multiplicative) for gr
 # or number produced per adult (used if recruit flag is set to 12)
  
 KDENR_MAK	1
-8374498	
- 	
+8555604	
+	
 KDENR_HER	1
-614531643	
- 	
+214406308	
+	
 KDENR_WHK	1
-54353647	
- 	
+56487630	
+	
 KDENR_BLF	1
-520153	
- 	
+530748	
+	
 KDENR_WPF	1
-8520153	
- 	
+8108077	
+	
 KDENR_SUF	1
-6837747	
- 	
+646358	
+	
 KDENR_WIF	1
-8974020	
- 	
+5349942	
+	
 KDENR_WTF	1
-13402426	
- 	
+11650218	
+	
 KDENR_HAL	1
-48820	
- 	
+28167	
+	
 KDENR_PLA	1
-21785961	
- 	
+15579871	
+	
 KDENR_FOU	1
-8807237	
- 	
+8314004	
+	
 KDENR_FLA	1
-959602	
- 	
+996792	
+	
 KDENR_BFT	1
-11302	
- 	
+2285	
+	
 KDENR_TUN	1
-154581	
- 	
+31252	
+	
 KDENR_BIL	1
-6558	
- 	
+1326	
+	
 KDENR_MPF	1
-749734	
- 	
+786817	
+	
 KDENR_BUT	1
-20935153	
- 	
+20126625	
+	
 KDENR_ANC	1
-113642576	
- 	
+114125378	
+	
 KDENR_BPF	1
-29355446	
- 	
+29144047	
+	
 KDENR_GOO	1
-596726180	
- 	
+100277557	
+	
 KDENR_MEN	1
-23646664	
- 	
+24288764	
+	
 KDENR_FDE	1
-4088453	
- 	
+3123761	
+	
 KDENR_COD	1
-7219936	
- 	
+7461552	
+	
 KDENR_SHK	1
-365291281	
- 	
+375827441	
+	
 KDENR_OHK	1
-311774	
- 	
+322511	
+	
 KDENR_POL	1
-7751283	
- 	
+7852929	
+	
 KDENR_RHK	1
-12119072	
- 	
+12528066	
+	
 KDENR_BSB	1
-125425	
- 	
+129703	
+	
 KDENR_SCU	1
-2759905	
- 	
+2855160	
+	
 KDENR_TYL	1
-17900	
- 	
+18518	
+	
 KDENR_RED	1
-57589455	
- 	
+58754062	
+	
 KDENR_OPT	1
-9380578	
- 	
+9568147	
+	
 KDENR_SAL	1
-500	
- 	
+515	
+	
 KDENR_DRM	1
-77420	
- 	
+80012	
+	
 KDENR_STB	1
-109456	
- 	
+113160	
+	
 KDENR_TAU	1
-70085	
- 	
+72455	
+	
 KDENR_WOL	1
-985119	
- 	
+998417	
+	
 KDENR_SDF	1
-13100	
- 	
+13254	
+	
 KDENR_FDF	1
-175527310	
- 	
+177873933	
+	
 KDENR_HAD	1
-102461614	
- 	
+104562460	
+	
 KDENR_YTF	1
-208090621	
- 	
+210750273	
+	
 KDENR_DOG	1
-115695529	
- 	
+24396481	
+	
 KDENR_SMO	1
-218839	
- 	
+221366	
+	
 KDENR_SSH	1
-10312	
- 	
+10432	
+	
 KDENR_DSH	1
-293	
- 	
+296	
+	
 KDENR_BLS	1
-2134	
- 	
+2151	
+	
 KDENR_POR	1
-681	
- 	
+686	
+	
 KDENR_PSH	1
-495	
- 	
+499	
+	
 KDENR_WSK	1
-29015905	
- 	
+5018603	
+	
 KDENR_LSK	1
-6897442	
- 	
+7042431	
+	
 KDENR_SK	1
-1433655	
- 	
+1465244	
+	
 KDENR_SB	1
-7102442	
- 	
+1152057	
+	
 KDENR_PIN	1
-61133	
- 	
+19389	
+	
 KDENR_REP	1
-195	
- 	
+197	
+	
 KDENR_RWH	1
 11	
- 	
+	
 KDENR_BWH	1
 54	
- 	
+	
 KDENR_SWH	1
-2107	
- 	
+2110	
+	
 KDENR_TWH	1
 24	
- 	
+	
 KDENR_INV	1
-525968	
-
-
-
+532555	
+ 	
+	
 
 
 ## G.Fay 6 Apr 2015, KDENR_ is different for inverts.
