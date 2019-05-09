@@ -260,7 +260,7 @@ gr_rel_init <- growth_age %>%
   mutate(gr_rel = (atoutput - growth_req) / growth_req)
 
 # specmort <- file.path(d2, paste(ncbase, 'SpecificPredMort.txt', sep=''))
-# mort2=load_spec_mort(specmort, prm_run, fgs, convert_names = F,version_flag = 2)
+# mort2=load_spec_mort(specmort, prm_run, fgs, convert_names = T,version_flag = 2)
 # ggplot2::ggplot(subset(mort2, pred == "COD" & prey == "COD"), ggplot2::aes(x = factor(time), y = atoutput, fill = stanza)) +
 #   ggplot2::geom_boxplot(position = "dodge") +
 #   # ggplot2::geom_point()

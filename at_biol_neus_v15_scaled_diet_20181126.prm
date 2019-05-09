@@ -1643,7 +1643,7 @@ K_MAX_IRR        10.0      Maximum contributions to bioirrigation               
 K_MIN_IRR        2.0       Minimum contributions to bioirrigation                              2.0
 
 # Detrital breakdown (DL and DR breakdown not used if bacteria groups are on)
-r_DC_T15         0.5       Rate of carrion breakdown to detritus at 15 deg C d-1               0.5
+r_DC_T15         0.1       Rate of carrion breakdown to detritus at 15 deg C d-1               0.5
 r_DL_T15         0.1       Rate of labile detrital breakdown at 15 deg C     d-1               0.1
 r_DR_T15         0.008     Rate of ref detrital breakdown at 15 deg C        d-1               0.008
 r_DON_T15        0.00176   Rate of DON breakdown at 15 deg C                 d-1               0.00176
@@ -11562,9 +11562,9 @@ k_trans_QHG 1
 k_trans_CLA 1          
 k_trans_BFF 1          
 
-k_refDL          10.0      Reference labile detrit. level in water column (if higher availability to omnivores reduced)
-k_refDR          20.0      Reference refract. detrit. level in water column (if higher availability to omnivores reduced)
-k_refsDL      10000.0      Reference labile detrit. level in sediments (if higher availability to omnivores reduced)
+k_refDL          100.0      Reference labile detrit. level in water column (if higher availability to omnivores reduced)
+k_refDR          200.0      Reference refract. detrit. level in water column (if higher availability to omnivores reduced)
+k_refsDL      1000.0      Reference labile detrit. level in sediments (if higher availability to omnivores reduced)
 
 
 
@@ -12887,18 +12887,18 @@ EPlant_BO 0.0
 #EPlant_PWN            0.5       Assimilation efficiency of prawns                                  0.5
 
 # Assimilation efficiency of invertebrate consumers on labile detritus AND CARRION
-EDL_LSQ 0
-EDL_ISQ 0
+EDL_LSQ 0.2
+EDL_ISQ 0.2
 EDL_SCA 0.2
-EDL_QHG 0.2
-EDL_CLA 0.2
-EDL_BFF 0.2
-EDL_BG 0.2
-EDL_LOB 0.12
-EDL_RCB 0.12
-EDL_BMS 0.12
-EDL_NSH 0.1
-EDL_OSH 0.1
+EDL_QHG 0.3
+EDL_CLA 0.3
+EDL_BFF 0.3
+EDL_BG 0.3
+EDL_LOB 0.3
+EDL_RCB 0.2
+EDL_BMS 0.2
+EDL_NSH 0.2
+EDL_OSH 0.2
 EDL_ZL 0.1
 EDL_BD 0.15
 EDL_MA 0.0
@@ -12911,8 +12911,8 @@ EDL_DF 0.2
 EDL_PS 0.0
 EDL_ZM 0.2
 EDL_ZS 0.3
-EDL_PB 0.5
-EDL_BB 0.5
+EDL_PB 0.4
+EDL_BB 0.4
 EDL_BO 0.18
 ##EDL_BB           0.5       Assim efficiency of sediment bacteria on labile detritus           0.5       
 ##EDL_BD           0.15      Assim efficiency of deposit feeder on labile detritus            0.002 - 0.3    
@@ -13199,32 +13199,32 @@ EDL_FLA 0
 EDL_BFT 0
 EDL_TUN 0
 EDL_BIL 0
-EDL_MPF 0.05
-EDL_BUT 0.05
-EDL_ANC 0.05
-EDL_BPF 0.05
+EDL_MPF 0.1
+EDL_BUT 0.1
+EDL_ANC 0.1
+EDL_BPF 0.1
 EDL_GOO 0.2
-EDL_MEN 0.05
-EDL_FDE 0.05
-EDL_COD 0.05
-EDL_SHK 0
-EDL_OHK 0.05
-EDL_POL 0.05
-EDL_RHK 0.05
+EDL_MEN 0.1
+EDL_FDE 0.1
+EDL_COD 0.1
+EDL_SHK 0.1
+EDL_OHK 0.1
+EDL_POL 0.1
+EDL_RHK 0.1
 EDL_BSB 0.05
 EDL_SCU 0.05
 EDL_TYL 0.05
 EDL_RED 0.05
 EDL_OPT 0.05
 EDL_SAL 0.05
-EDL_DRM 0.05
-EDL_STB 0.05
-EDL_TAU 0.05
-EDL_WOL 0.05
+EDL_DRM 0.1
+EDL_STB 0.1
+EDL_TAU 0.1
+EDL_WOL 0.1
 EDL_SDF 0.05
 EDL_FDF 0.05
-EDL_HAD 0.05
-EDL_YTF 0.05
+EDL_HAD 0.1
+EDL_YTF 0.1
 EDL_DOG 0.6
 EDL_SMO 0.4
 EDL_SSH 0.4
@@ -13237,7 +13237,7 @@ EDL_LSK 0.4
 EDL_SK 0
 EDL_SB 0
 EDL_PIN 0
-EDL_REP 0
+EDL_REP 0.4
 EDL_RWH 0.05
 EDL_BWH 0.05
 EDL_SWH 0
@@ -14699,10 +14699,10 @@ FDM_BB  0.2
 FDM_BO  0.25   
 
 # Split up of losses to detritus between labile and refractory detritus 
-FDL_fish         0.3       Split between DL and DR for fish                                   0.0 - 1.0
-FDL_benth        0.2       Split between DL and DR for benthos                                0.0 - 1.0
+FDL_fish         0.4       Split between DL and DR for fish                                   0.0 - 1.0
+FDL_benth        0.5       Split between DL and DR for benthos                                0.0 - 1.0
 FDL_top          0.3       Split between DL and DR for top predators                          0.0 - 1.0
-FDL_wc           0.2       Split between DL and DR for pelagic invertebrates                  0.0 - 1.0
+FDL_wc           0.5       Split between DL and DR for pelagic invertebrates                  0.0 - 1.0
 
 # Fraction of bacterial losses sent to refractory detritus 
 FPB_DR           0.2       Detrit contrib from pelagic bacteria                               0.2

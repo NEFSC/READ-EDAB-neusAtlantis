@@ -22,7 +22,7 @@ flag_skip_biol     0   # Flag showing whether want biological model run (1) or n
 
 flag_skip_phys     0   # Flag showing whether want biological model run (0) or not (1 - only used when debugging fisheries)
 
-flagannual_Mest    1	#Whether to write out estimates of mortality per predator annually (1) or not (0)
+flagannual_Mest    0	#Whether to write out estimates of mortality per predator annually (1) or not (0)
 
 
 
@@ -30,7 +30,7 @@ checkbox      17       # Give detailed logged output for this box
 
 checkstart    0 day    # Start detailed logged output after this date
 
-checkstop     181 day    # Stop detailed logged output after this date
+checkstop     30 day    # Stop detailed logged output after this date
 
 fishtest      0        # Count up total population for each vertebrate after each main subroutine: 0=no, 1=yes
 
@@ -40,23 +40,23 @@ flagchecksize 0        # Periodically list relative size (tuning diagnostic)
 
 flagagecheck  0        # Periodically list age structure per cohort (tuning diagnostic)
 
-flagdietcheck 1        # Periodically list realised diet matchups (tuning diagnostic)
+flagdietcheck 0        # Periodically list realised diet matchups (tuning diagnostic)
 
 checkNH       0        # Give detailed logged output for NH in checkbox
 
 checkDL       0        # Give detailed logged output for DL in checkbox
 
-checkDR       0        # Give detailed logged output for DR in checkbox
+checkDR       1        # Give detailed logged output for DR in checkbox
 
 checkbiom     1        # Give detailed logged output for biomasses in checkbox
 
 which_fleet   33       # ID number of fleet to track (if don't want to track anything set to 33 (for other fleets see list below)
 
-which_check   21       # ID number of group to track (if don't want to track anything set higher than N groups)
+which_check   80       # ID number of group to track (if don't want to track anything set higher than N groups)
 
 habitat_check 0			# water column 0, sed 1, epibenthic 2, land 3, ice 4
 
-move_check    21       # ID number of group where tracking movements
+move_check    3       # ID number of group where tracking movements
 
 fishmove      1        # Set to 0 to turn vertebrate movement off for debugging purposes
 
@@ -78,15 +78,15 @@ title      test version, DynEffort NEUS v1.5 with Atlantis2 codebase
 
 dt         24 hour     # 24 hour time step
 
-tstop      730 day   # Stop time after the given period (18260)18260  , 4000   2191 7320 9120 3660 7320
+tstop      100 day   # Stop time after the given period (18260)18260  , 4000   2191 7320 9120 3660 7320
 
 toutstart  1 day       # Output start time
 
-toutinc    30 day      # Write output with this periodicity
+toutinc    1 day      # Write output with this periodicity
 
-toutfinc   30 day      # Write fisheries output with this periodicity
+toutfinc   1 day      # Write fisheries output with this periodicity
 
-tsumout    30 day     # Write stock state summary with this periodicity
+tsumout    1 day     # Write stock state summary with this periodicity
 
 fishout    0           # Switch to turn fisheries output on = 1, off = 0
 
@@ -94,7 +94,7 @@ flagreusefile 2        # Switch to show want to append output file no = 0, yes =
 
 tburnday 0
 
-flagIsEstuary 0
+flagIsEstuary 1
 
 flag_age_output 1
 
