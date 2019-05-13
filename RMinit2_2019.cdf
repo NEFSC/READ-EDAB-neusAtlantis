@@ -7751,7 +7751,7 @@ variables:
 		Diatom_N:dtype = 0 ;
 		Diatom_N:sumtype = 1 ;
 		Diatom_N:inwc = 1 ;
-		Diatom_N:insed = 0 ;
+		Diatom_N:insed = 1 ;
 		Diatom_N:dissol = 0 ;
 		Diatom_N:decay = 0. ;
 		Diatom_N:partic = 1 ;
