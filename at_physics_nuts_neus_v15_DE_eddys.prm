@@ -312,7 +312,7 @@ bioturbation 0
 
 # added to the transport model is used. Yes = 1, No =0.
 
-horiz_diffusion 1
+horiz_diffusion 0
 
 
 
@@ -320,7 +320,7 @@ horiz_diffusion 1
 
 # added to the transport model is used. Yes = 1, No =0.
 
-vert_diffusion 1
+vert_diffusion 0
 
 
 
@@ -563,7 +563,7 @@ atmospheric_O2   198.9
 
 
 ### force mixing between adjacent boxes and layers with no fluxes after threshold number of days
-fill_zero_exchange 1
+fill_zero_exchange 0
 
 use_fill_horizmix 0
 
