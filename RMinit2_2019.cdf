@@ -35236,7 +35236,7 @@ variables:
 		erosion_rate:long_name = "Erosion rate" ;
 		erosion_rate:dtype = 0 ;
 		erosion_rate:sumtype = 0 ;
-		erosion_rate:_FillValue = 4.e-007 ;
+		erosion_rate:_FillValue = 4.e-004 ;
 	double flat(t, b) ;
 		flat:bmtype = "tracer" ;
 		flat:units = "1" ;
