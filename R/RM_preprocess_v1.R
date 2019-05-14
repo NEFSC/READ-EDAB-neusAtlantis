@@ -7,7 +7,7 @@ library("tidyr")
 # d1="C:/Users/ryan.morse/Documents/GitHub/atneus_RM_20180827"
 # d1='/home/ryan/Git/atneus737e3d' # for NEUS 1.0 on new code base RM
 
-runfile='20190514dtb'
+runfile='20190514dtc'
 
 
 d1='/home/ryan/Git/atneus_RM'
