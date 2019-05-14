@@ -210,7 +210,7 @@ bt_expulsion 1e-8
 
 
 
-# Limit to errosion rate for a 1 cm sediment model
+# Limit to erosion rate for a 1 cm sediment model
 
 max_erosion 0.005
 
