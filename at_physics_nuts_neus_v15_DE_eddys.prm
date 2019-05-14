@@ -344,7 +344,7 @@ advect_diffusion 1
 
 # is used. Yes = 1, No =0.
 
-resuspension 0
+resuspension 1
 
 
 
@@ -396,7 +396,7 @@ ka_exchange 1000
 
 # Switch to indicate whether or not to have cascading flows (exchanges). No =0, Yes = 1
 
-cascade_flows 1
+cascade_flows 0
 
 
 
