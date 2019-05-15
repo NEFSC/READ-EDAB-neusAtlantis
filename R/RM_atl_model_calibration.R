@@ -268,6 +268,9 @@ mum.scale=mum.scale[order(row.names(mum.scale)),] # reorder to code not long nam
 C.scale=C_age[,2:11]/RN_RNinit; row.names(C.scale)=C_age$Code
 C.scale=C.scale[order(row.names(C.scale)),]
 # C.scale=round(C.scale, digits=2)
+growth_scalar=1/RN_RNinit
+growth_scalar=growth_scalar[order(row.names(growth_scalar)),]
+write.csv(growth_scalar, file='RNbased_growth_scalar.csv', row.names = T)
 write.csv(mum.scale, file='newMum_RNbased.csv', row.names = T)
 write.csv(C.scale, file='newC_RNbased.csv', row.names = T)
 mum.age=mum_age[order(mum_age$Code ),]
