@@ -243,9 +243,9 @@ len_age_mn=result$length_age %>% group_by(species, agecl) %>%
 lng.lng_int=len_age_mn[,2:11]/init_length[,4:13] # mean length at age divided by initial lenght at age, use to scale mum and C
 row.names(lng.lng_int)=mum_age$Code
 # Now scale mum and C by difference between length at age relative to initial conditions
-mum.scale=mum_age[,2:11]*1/lng.lng_int; row.names(mum.scale)=mum_age$Code
+mum.scale=mum_age[,2:11]/lng.lng_int; row.names(mum.scale)=mum_age$Code
 mum.scale=mum.scale[order(row.names(mum.scale)),]
-C.scale=C_age[,2:11]*1/lng.lng_int; row.names(C.scale)=C_age$Code
+C.scale=C_age[,2:11]/lng.lng_int; row.names(C.scale)=C_age$Code
 C.scale=C.scale[order(row.names(C.scale)),]
 write.csv(mum.scale, file='newMum_lengthbased.csv', row.names = T)
 write.csv(C.scale, file='newC_lengthbased.csv', row.names = T)
@@ -262,10 +262,10 @@ df_rel <- convert_relative_initial(result$resn_age) %>%
   group_by(species, agecl) %>%
   summarise(avg=mean(atoutput)) %>%
   spread(agecl, avg)
-mum.scale=mum_age[,2:11]*1/RN_RNinit; row.names(mum.scale)=mum_age$Code
-mum.scale=mum.scale[order(row.names(mum.scale)),]
+mum.scale=mum_age[,2:11]/RN_RNinit; row.names(mum.scale)=mum_age$Code
+mum.scale=mum.scale[order(row.names(mum.scale)),] # reorder to code not long name
 # mum.scale=round(mum.scale, digits=2)
-C.scale=C_age[,2:11]*1/RN_RNinit; row.names(C.scale)=C_age$Code
+C.scale=C_age[,2:11]/RN_RNinit; row.names(C.scale)=C_age$Code
 C.scale=C.scale[order(row.names(C.scale)),]
 # C.scale=round(C.scale, digits=2)
 write.csv(mum.scale, file='newMum_RNbased.csv', row.names = T)
