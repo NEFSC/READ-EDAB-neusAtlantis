@@ -125,7 +125,7 @@ flagbactstim     0         Switch to turn stimulation of bacterial growth on/off
 # interaction formulations used      
 flagtrackpops    1         Flag to indicate whether yearly stock value required             1
 flagseason       1         Flag of seasonal change, 0 for no, 1 yes                            1
-flaglight        1         Light adaptation: 1 = on, 0 = off                                   1
+flaglight        0         Light adaptation: 1 = on, 0 = off                                   1
 flagIsEstuary    1
 flaglightopt     3         Light model: 0=midwater proxy used, 1=bottom, 2=top, 3=middle of layer                     3
 flagmodeltemp    0         Temperature model used: 1 = regression, 0 = from data
@@ -11811,7 +11811,7 @@ mum_BO_T15	0.01
 mum_PB_T15	0.01
 mum_BB_T15	0.02
 mum_DF_T15	0.05
-mum_PL_T15	0.05
+mum_PL_T15	0.1
 mum_PS_T15	0.05
 mum_MA_T15	0.001
 mum_MB_T15	0.001
@@ -12911,9 +12911,9 @@ EDL_PL 0.0
 EDL_DF 0.2
 EDL_PS 0.0
 EDL_ZM 0.2
-EDL_ZS 0.3
-EDL_PB 0.4
-EDL_BB 0.4
+EDL_ZS 0.2
+EDL_PB 0.5
+EDL_BB 0.5
 EDL_BO 0.18
 ##EDL_BB           0.5       Assim efficiency of sediment bacteria on labile detritus           0.5       
 ##EDL_BD           0.15      Assim efficiency of deposit feeder on labile detritus            0.002 - 0.3    
@@ -12946,7 +12946,7 @@ EDR_ISQ 0
 EDR_SCA 0
 EDR_QHG 0
 EDR_CLA 0
-EDR_BFF 0
+EDR_BFF 0.05
 EDR_BG 0
 EDR_LOB 0
 EDR_RCB 0
@@ -12967,7 +12967,7 @@ EDR_ZM 0.03
 EDR_ZS 0.05
 EDR_PB 0.25
 EDR_BB 0.25
-EDR_BO 0.0
+EDR_BO 0.05
 #EDR_ZS           0.05      Assim efficiency of microzooplankton on refractory detritus      0.001 - 0.1
 #EDR_ZM           0.03      Assim efficiency of meso-zooplankton on refractory detritus      0.001 - 0.1
 #EDR_ZL           0.02      Assim efficiency of large zooplankton on refractory detritus     0.001 - 0.1     
@@ -13006,9 +13006,9 @@ E_HAL 0.35
 E_PLA 0.3
 E_FOU 0.3
 E_FLA 0.3
-E_BFT 0.35
-E_TUN 0.35
-E_BIL 0.35
+E_BFT 0.4
+E_TUN 0.4
+E_BIL 0.4
 E_MPF 0.3
 E_BUT 0.35
 E_ANC 0.35
@@ -13040,13 +13040,13 @@ E_SMO 0.3
 E_SSH 0.3
 E_DSH 0.3
 E_BLS 0.3
-E_POR 0.3
+E_POR 0.4
 E_PSH 0.3
 E_WSK 0.35
 E_LSK 0.35
 E_SK 0.3
 E_SB 0.3
-E_PIN 0.3
+E_PIN 0.4
 E_REP 0.3
 E_RWH 0.25
 E_BWH 0.25
@@ -13142,7 +13142,7 @@ EPlant_LSK 0
 EPlant_SK 0
 EPlant_SB 0
 EPlant_PIN 0
-EPlant_REP 0.3
+EPlant_REP 0.4
 EPlant_RWH 0
 EPlant_BWH 0
 EPlant_SWH 0
@@ -13577,13 +13577,13 @@ Ktmp_bird        0.08      Factor relating temperature to respiration for seabir
 Ktmp_mammal      0.08      Factor relating temperature to respiration for mammals             0.08 
  
 # Lysis rate of microalgaes  
-KLYS_PL          0.005    Lysis rate of diatoms                             d-1 (0.05 )      0.0001
+KLYS_PL          0.0005    Lysis rate of diatoms                             d-1 (0.05 )      0.0001
 KLYS_PS          0.01      Lysis rate of picophytoplankton                   d-1 (0.01)       0.01
 KLYS_DF          0.01    Lysis rate of dinoflagellates                     d-1              0.01
-KLYS_MB          0.03     Lysis rate of microphytobenthos (0.005)           d-1               0.005
+KLYS_MB          0.003     Lysis rate of microphytobenthos (0.005)           d-1               0.005
 
 # gfay @UMassD 2015/06/24, adding because atlantis2 is prompting for values for MA & SG
-KLYS_MA 0.1
+KLYS_MA 0.05
 KLYS_SG 0
 
 # Extra macrophyte mortality (based on physical environment)   

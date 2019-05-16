@@ -78,15 +78,15 @@ title      test version, DynEffort NEUS v1.5 with Atlantis2 codebase
 
 dt         24 hour     # 24 hour time step
 
-tstop      3660 day   # Stop time after the given period (18260)18260  , 4000   2191 7320 9120 3660 7320
+tstop      7320 day   # Stop time after the given period (18260)18260  , 4000   2191 7320 9120 3660 7320
 
 toutstart  0 day       # Output start time
 
-toutinc    30 day      # Write output with this periodicity
+toutinc    90 day      # Write output with this periodicity
 
-toutfinc   30 day      # Write fisheries output with this periodicity
+toutfinc   90 day      # Write fisheries output with this periodicity
 
-tsumout    30 day     # Write stock state summary with this periodicity
+tsumout    90 day     # Write stock state summary with this periodicity
 
 fishout    0           # Switch to turn fisheries output on = 1, off = 0
 
