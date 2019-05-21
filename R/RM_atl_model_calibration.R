@@ -524,38 +524,41 @@ ggsave(paste(filename," Biomass at age percent.png", sep=''), width=20, height=1
 #                greys)
 #   return(col_pal)
 # }
+if (make_diet_pdf == 1){
+  if(!is.na(result$biomass_consumed)){
+    plots <- plot_diet(result$biomass_consumed, wrap_col = "agecl", combine_thresh = 3)
+    pdf(file=paste(filename, '_diet_proportions.pdf', sep=''),paper='A4r',width=11, height=8)
+    for (i in seq_along(plots)) {
+      cat(paste0("## Diet plot ", i, ": ", names(plots)[i]), sep = "\n")
+      gridExtra::grid.arrange(plots[[i]])
+      cat("\n\n")
+    }
+    dev.off()
+  }
+}
 
-if(!is.na(result$biomass_consumed)){
-plots <- plot_diet(result$biomass_consumed, wrap_col = "agecl", combine_thresh = 3)
-pdf(file=paste(filename, '_diet_proportions.pdf', sep=''),paper='A4r',width=11, height=8)
-for (i in seq_along(plots)) {
-  cat(paste0("## Diet plot ", i, ": ", names(plots)[i]), sep = "\n")
-  gridExtra::grid.arrange(plots[[i]])
-  cat("\n\n")
+if (make_spatial_plots == 1){
+  ####__________ SPATIAL DISTRIBUTION PLOTS____________________________________
+  ### Spatial Plots 1
+  plots <- plot_spatial_box(result$biomass_spatial_stanza, bgm_as_df = convert_bgm(bgm = bgm), timesteps = 7)
+  pdf(file=paste(filename, '_spatial biomass box distribution.pdf', sep=''), paper='A4r', width=11, height=8)
+  for (i in seq_along(plots)) {
+    cat(paste0("## Spatial Plot ", i, ": ", names(plots)[i]), sep = "\n")
+    gridExtra::grid.arrange(plots[[i]])
+    cat("\n\n")
+  }
+  dev.off()
+  
+  ### Spatial Plots 2
+  plots <- plot_spatial_ts(result$biomass_spatial_stanza, bgm_as_df = convert_bgm(bgm = bgm), vol = result$vol)
+  pdf(file=paste(filename, '_spatial biomass distribution timeseries.pdf', sep=''),paper='A4r', width=11, height=8)
+  for (i in seq_along(plots)) {
+    cat(paste0("## Spatial Plot ", i, ": ", names(plots)[i]), sep = "\n")
+    gridExtra::grid.arrange(plots[[i]])
+    cat("\n\n")
+  }
+  dev.off()
 }
-dev.off()
-}
-
-####__________ SPATIAL DISTRIBUTION PLOTS____________________________________
-### Spatial Plots 1
-plots <- plot_spatial_box(result$biomass_spatial_stanza, bgm_as_df = convert_bgm(bgm = bgm), timesteps = 7)
-pdf(file=paste(filename, '_spatial biomass box distribution.pdf', sep=''), paper='A4r', width=11, height=8)
-for (i in seq_along(plots)) {
-  cat(paste0("## Spatial Plot ", i, ": ", names(plots)[i]), sep = "\n")
-  gridExtra::grid.arrange(plots[[i]])
-  cat("\n\n")
-}
-dev.off()
-
-### Spatial Plots 2
-plots <- plot_spatial_ts(result$biomass_spatial_stanza, bgm_as_df = convert_bgm(bgm = bgm), vol = result$vol)
-pdf(file=paste(filename, '_spatial biomass distribution timeseries.pdf', sep=''),paper='A4r', width=11, height=8)
-for (i in seq_along(plots)) {
-  cat(paste0("## Spatial Plot ", i, ": ", names(plots)[i]), sep = "\n")
-  gridExtra::grid.arrange(plots[[i]])
-  cat("\n\n")
-}
-dev.off()
 
 
 ### Plot Spatial Overlap Schoener Index of diet matchups STILL WORKING ON THIS
@@ -568,87 +571,87 @@ dev.off()
 
 
 #_______________________________________________________________
-
-
-#biom=read.table('/home/ryan/AtlRuns/20170914a/atneus_v10_newcodebaseAgeBiomIndx.txt', header=T) # v1.0 on new codebase
-biom=read.table(paste(d1, '/R/atneus_v10_newcodebaseBiomIndx.txt', sep=''), header=T) # v1.0 on new codebase
-bio1=read.table(paste(d1, '/R/neusDynEffort_Base_Effort_BiomIndx.txt', sep=''), header=T) # v1.0 on old codebase
-bio2=read.table(paste(d2, '/', ncbase, 'BiomIndx.txt', sep=''), header=T) # v1.5 run
-phyto=read.table(paste(d1, '/R/phytoplankton_timeseries_biomass_tonnes_1998_2016.csv', sep=''),header=T, sep=',')
-zoo=read.table(paste(d1, '/R/Zooplankton_total_biomass_tonnes_N_20yrs.csv', sep=''), header =T, sep=',')
-
-# #diatom
-# plot(biom$PL~biom$Time, type='l') # v1.0 new code
-# lines(bio1$PL~bio1$Time, type='l', col='red') # v1.0 old code
-# lines(bio2$PL~bio2$Time, type='l', col='blue') #v1.5
-# lines(phyto$PL.ts~phyto$days, type='l', col='green') # measured
-# 
-# #pico
-# plot(biom$PS~biom$Time, type='l') # v1.0 new code
-# lines(bio1$PS~bio1$Time, type='l', col='red') # v1.0 old code
-# lines(bio2$PS~bio2$Time, type='l', col='blue') #v1.5
-# lines(phyto$PS.ts~phyto$days, type='l', col='green') # measured
-# 
-#picoplankton (v1.5 first)
-png(filename=paste(filename,'PS.png', sep=''))
-mmax=max(c(bio2$PS, phyto$PS))
-plot(bio2$PS~bio2$Time, type='l', ylim=c(0,max(c(bio2$PS, phyto$PS))))
-lines(phyto$PS.ts~phyto$days, type='l', col='red')
-lines(bio1$PS~bio1$Time, type='l', col='blue')
-lines(biom$PS~biom$Time, type='l', col='green')
-legend('topleft', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
-dev.off()
-
-#diatom (v1.5 first)
-png(filename=paste(filename,'PL.png', sep=''))
-plot(bio2$PL~bio2$Time, type='l', ylim=c(0,max(c(bio2$PL, phyto$PL))))
-lines(phyto$PL.ts~phyto$days, type='l', col='red')
-lines(bio1$PL~bio1$Time, type='l', col='blue')
-lines(biom$PL~biom$Time, type='l', col='green')
-legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
-dev.off()
-
-#dinoflag (v1.5 first)
-png(filename=paste(filename,'DF.png', sep=''))
-plot(bio2$DF~bio2$Time, type='l', ylim=c(0,max(c(bio2$DF, phyto$DF))))
-lines(phyto$DF.ts~phyto$days, type='l', col='red')
-lines(bio1$DF~bio1$Time, type='l', col='blue')
-lines(biom$DF~biom$Time, type='l', col='green')
-legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
-dev.off()
-
-#Carn Zoo (v1.5 first)
-png(filename=paste(filename,'ZL.png', sep=''))
-plot(bio2$ZL~bio2$Time, type='l', ylim=c(0,max(c(bio2$ZL, phyto$ZL))))
-lines(zoo$ZL~zoo$Time, type='l', col='red')
-lines(bio1$ZL~bio1$Time, type='l', col='blue')
-lines(biom$ZL~biom$Time, type='l', col='green')
-legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
-dev.off()
-
-#Copepod (v1.5 first)
-png(filename=paste(filename,'ZM.png', sep=''))
-plot(bio2$ZM~bio2$Time, type='l', ylim=c(0,max(c(bio2$ZM, phyto$ZM))))
-lines(zoo$ZM~zoo$Time, type='l', col='red')
-lines(bio1$ZM~bio1$Time, type='l', col='blue')
-lines(biom$ZM~biom$Time, type='l', col='green')
-legend('topleft', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
-dev.off()
-
-#Small Zoo (v1.5 first)
-png(filename=paste(filename,'ZS.png', sep=''))
-plot(bio2$ZS~bio2$Time, type='l', ylim=c(0,max(c(bio2$ZS, phyto$ZS))))
-lines(zoo$ZS~zoo$Time, type='l', col='red')
-lines(bio1$ZS~bio1$Time, type='l', col='blue')
-lines(biom$ZS~biom$Time, type='l', col='green')
-legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
-dev.off()
-
-#GelatZoo (v1.5 first)
-png(filename=paste(filename,'ZG.png', sep=''))
-plot(bio2$ZG~bio2$Time, type='l', ylim=c(0,max(c(bio2$ZG, phyto$ZG))))
-lines(zoo$ZG~zoo$Time, type='l', col='red')
-lines(bio1$ZG~bio1$Time, type='l', col='blue')
-lines(biom$ZG~biom$Time, type='l', col='green')
-legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
-dev.off()
+if (make_LTL_plots==1){
+  #biom=read.table('/home/ryan/AtlRuns/20170914a/atneus_v10_newcodebaseAgeBiomIndx.txt', header=T) # v1.0 on new codebase
+  biom=read.table(paste(d1, '/R/atneus_v10_newcodebaseBiomIndx.txt', sep=''), header=T) # v1.0 on new codebase
+  bio1=read.table(paste(d1, '/R/neusDynEffort_Base_Effort_BiomIndx.txt', sep=''), header=T) # v1.0 on old codebase
+  bio2=read.table(paste(d2, '/', ncbase, 'BiomIndx.txt', sep=''), header=T) # v1.5 run
+  phyto=read.table(paste(d1, '/R/phytoplankton_timeseries_biomass_tonnes_1998_2016.csv', sep=''),header=T, sep=',')
+  zoo=read.table(paste(d1, '/R/Zooplankton_total_biomass_tonnes_N_20yrs.csv', sep=''), header =T, sep=',')
+  
+  # #diatom
+  # plot(biom$PL~biom$Time, type='l') # v1.0 new code
+  # lines(bio1$PL~bio1$Time, type='l', col='red') # v1.0 old code
+  # lines(bio2$PL~bio2$Time, type='l', col='blue') #v1.5
+  # lines(phyto$PL.ts~phyto$days, type='l', col='green') # measured
+  # 
+  # #pico
+  # plot(biom$PS~biom$Time, type='l') # v1.0 new code
+  # lines(bio1$PS~bio1$Time, type='l', col='red') # v1.0 old code
+  # lines(bio2$PS~bio2$Time, type='l', col='blue') #v1.5
+  # lines(phyto$PS.ts~phyto$days, type='l', col='green') # measured
+  # 
+  #picoplankton (v1.5 first)
+  png(filename=paste(filename,'PS.png', sep=''))
+  mmax=max(c(bio2$PS, phyto$PS))
+  plot(bio2$PS~bio2$Time, type='l', ylim=c(0,max(c(bio2$PS, phyto$PS))))
+  lines(phyto$PS.ts~phyto$days, type='l', col='red')
+  lines(bio1$PS~bio1$Time, type='l', col='blue')
+  lines(biom$PS~biom$Time, type='l', col='green')
+  legend('topleft', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+  dev.off()
+  
+  #diatom (v1.5 first)
+  png(filename=paste(filename,'PL.png', sep=''))
+  plot(bio2$PL~bio2$Time, type='l', ylim=c(0,max(c(bio2$PL, phyto$PL))))
+  lines(phyto$PL.ts~phyto$days, type='l', col='red')
+  lines(bio1$PL~bio1$Time, type='l', col='blue')
+  lines(biom$PL~biom$Time, type='l', col='green')
+  legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+  dev.off()
+  
+  #dinoflag (v1.5 first)
+  png(filename=paste(filename,'DF.png', sep=''))
+  plot(bio2$DF~bio2$Time, type='l', ylim=c(0,max(c(bio2$DF, phyto$DF))))
+  lines(phyto$DF.ts~phyto$days, type='l', col='red')
+  lines(bio1$DF~bio1$Time, type='l', col='blue')
+  lines(biom$DF~biom$Time, type='l', col='green')
+  legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+  dev.off()
+  
+  #Carn Zoo (v1.5 first)
+  png(filename=paste(filename,'ZL.png', sep=''))
+  plot(bio2$ZL~bio2$Time, type='l', ylim=c(0,max(c(bio2$ZL, phyto$ZL))))
+  lines(zoo$ZL~zoo$Time, type='l', col='red')
+  lines(bio1$ZL~bio1$Time, type='l', col='blue')
+  lines(biom$ZL~biom$Time, type='l', col='green')
+  legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+  dev.off()
+  
+  #Copepod (v1.5 first)
+  png(filename=paste(filename,'ZM.png', sep=''))
+  plot(bio2$ZM~bio2$Time, type='l', ylim=c(0,max(c(bio2$ZM, phyto$ZM))))
+  lines(zoo$ZM~zoo$Time, type='l', col='red')
+  lines(bio1$ZM~bio1$Time, type='l', col='blue')
+  lines(biom$ZM~biom$Time, type='l', col='green')
+  legend('topleft', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+  dev.off()
+  
+  #Small Zoo (v1.5 first)
+  png(filename=paste(filename,'ZS.png', sep=''))
+  plot(bio2$ZS~bio2$Time, type='l', ylim=c(0,max(c(bio2$ZS, phyto$ZS))))
+  lines(zoo$ZS~zoo$Time, type='l', col='red')
+  lines(bio1$ZS~bio1$Time, type='l', col='blue')
+  lines(biom$ZS~biom$Time, type='l', col='green')
+  legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+  dev.off()
+  
+  #GelatZoo (v1.5 first)
+  png(filename=paste(filename,'ZG.png', sep=''))
+  plot(bio2$ZG~bio2$Time, type='l', ylim=c(0,max(c(bio2$ZG, phyto$ZG))))
+  lines(zoo$ZG~zoo$Time, type='l', col='red')
+  lines(bio1$ZG~bio1$Time, type='l', col='blue')
+  lines(biom$ZG~biom$Time, type='l', col='green')
+  legend('topright', legend = c(filename, 'data', 'v1.0 old', 'v1.0 new'), lty=c(1,1,1,1),col=c('black', 'red', 'blue','green'), bty='n')
+  dev.off()
+}
