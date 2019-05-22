@@ -585,7 +585,7 @@ nc.initial  <- 'RMinit2_2019.nc'
 nc.current  <- paste(wd3,'.nc', sep='')
 yoy.file    <- paste(wd3,'YOY.txt', sep='')
 grp.csv     <- grp.file
-prm.file    <- 'at_biol_neus_v15_scaled_diet_20181126.prm'
+prm.file    <- 'at_biol_neus_v15_scaled_diet_20181126_2.prm'
 rec=recruitment.cal(nc.initial, nc.current, yoy.file, grp.file, prm.file)
 rec
 
