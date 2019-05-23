@@ -7,7 +7,7 @@ library("tidyr")
 # d1="C:/Users/ryan.morse/Documents/GitHub/atneus_RM_20180827"
 # d1='/home/ryan/Git/atneus737e3d' # for NEUS 1.0 on new code base RM
 
-runfile='20190520dta'
+runfile='20190522dta'
 
 
 d1='/home/ryan/Git/atneus_RM'
@@ -20,7 +20,7 @@ d2=paste('E:/AtlantisRun/20161103/tes/', runfile, sep='')
 
 #choose plots
 make_spatial_plots=F
-make_diet_pdf=F
+make_diet_pdf=T
 make_LTL_plots=T
 
 setwd(d2)
