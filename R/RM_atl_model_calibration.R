@@ -270,9 +270,9 @@ C.scale=C.scale[order(row.names(C.scale)),]
 # C.scale=round(C.scale, digits=2)
 growth_scalar=1/RN_RNinit
 growth_scalar=growth_scalar[order(row.names(growth_scalar)),]
-write.csv(growth_scalar, file='RNbased_growth_scalar.csv', row.names = T)
-write.csv(mum.scale, file='newMum_RNbased.csv', row.names = T)
-write.csv(C.scale, file='newC_RNbased.csv', row.names = T)
+write.csv(growth_scalar, file=paste(filename,'RNbased_growth_scalar.csv', sep=''), row.names = T)
+write.csv(mum.scale, file=paste(filename,'newMum_RNbased.csv', sep=''), row.names = T)
+write.csv(C.scale, file=paste(filename,'newC_RNbased.csv', sep=''), row.names = T)
 mum.age=mum_age[order(mum_age$Code ),]
 C.age=C_age[order(C_age$Code ),]
 write.csv(mum.age, file=paste(filename,'_Mum_used.csv', sep=''), row.names = T)
@@ -487,9 +487,9 @@ code_relations=fgs_data[,c('Code', 'LongName')]
 test2=left_join(test, code_relations, by=c('species'='LongName'))
 test2$SN_RN=RN$atoutput+SN$atoutput
 test2$totalN=test2$atoutput*test2$SN_RN
-write.csv(test2, file='initial_cond_ageclass_1.csv', row.names =F)
+write.csv(test2, file=paste(runfile,'initial_cond_ageclass_1.csv', sep=''), row.names =F)
 numscale.f=left_join(test2, numsc, by='species')
-write.csv(numscale.f, file='Init_nums_scalar_for_recruits.csv', row.names = T)
+write.csv(numscale.f, file=paste(runfile,'Init_nums_scalar_for_recruits.csv', sep=''), row.names = T)
 
 
 ### Biomass

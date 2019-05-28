@@ -428,7 +428,7 @@ NEUS_15_newestinit=make.sh.init.object(
   # 'C:/Users/ryan.morse/Documents/GitHub/atneus_RM/RMinit_newvalues2017.nc'
   'C:/Users/ryan.morse/Documents/GitHub/atneus_RM/RMinit_2018.nc'
 )
-NEUS_15_newestinit=make.sh.init.object( 'neus_tmerc_RM.bgm','RMinit_2018.nc')
+NEUS_15_newestinit=make.sh.init.object( 'neus_tmerc_RM.bgm','RMinit2_2019.nc')
 
 # 20180620
 bgm.file <- ("neus_tmerc_RM.bgm")

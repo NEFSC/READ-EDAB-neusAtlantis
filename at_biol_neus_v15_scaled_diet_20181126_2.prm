@@ -4414,7 +4414,7 @@ VERTday_BPF1	4
 0.6	0.2	0.2	0
 			
 VERTday_GOO1	4		
-0.8	0.2	0	0
+1	0	0	0
 			
 VERTday_MEN1	4		
 0.25	0.25	0.25	0.25
@@ -4593,7 +4593,7 @@ VERTday_BPF2	4
 0.6	0.2	0.2	0
 			
 VERTday_GOO2	4		
-0.8	0.2	0	0
+1	0	0	0
 			
 VERTday_MEN2	4		
 0.25	0.25	0.25	0.25
@@ -4772,7 +4772,7 @@ VERTnight_BPF1	4
 0	0.2	0.2	0.6
 			
 VERTnight_GOO1	4		
-0.5	0.5	0	0
+0.95	0.05	0	0
 			
 VERTnight_MEN1	4		
 0	0	0.5	0.5
@@ -4951,7 +4951,7 @@ VERTnight_BPF2	4
 0	0.2	0.2	0.6
 			
 VERTnight_GOO2	4		
-0.5	0.5	0	0
+0.95	0.05	0	0
 			
 VERTnight_MEN2	4		
 0	0	0.5	0.5
