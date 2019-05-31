@@ -487,9 +487,9 @@ code_relations=fgs_data[,c('Code', 'LongName')]
 test2=left_join(test, code_relations, by=c('species'='LongName'))
 test2$SN_RN=RN$atoutput+SN$atoutput
 test2$totalN=test2$atoutput*test2$SN_RN
-write.csv(test2, file=paste(runfile,'initial_cond_ageclass_1.csv', sep=''), row.names =F)
+# write.csv(test2, file=paste(runfile,'initial_cond_ageclass_1.csv', sep=''), row.names =F)
 numscale.f=left_join(test2, numsc, by='species')
-write.csv(numscale.f, file=paste(runfile,'Init_nums_scalar_for_recruits.csv', sep=''), row.names = T)
+write.csv(numscale.f, file=paste(runfile,'Init_nums_scalar_for_recruits.csv', sep=''), row.names = F)
 
 
 ### Biomass
