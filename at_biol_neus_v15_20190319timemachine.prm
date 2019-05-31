@@ -11806,7 +11806,7 @@ mum_jOSH_T15 0.03
 mum_ZL_T15  0.05        
 mum_BD_T15  0.014      
 mum_MA_T15  0.001        
-mum_MB_T15  0.018       
+mum_MB_T15  0.008       
 mum_SG_T15  0.07       
 mum_BC_T15  0.08      
 mum_ZG_T15  0.025      
@@ -11815,8 +11815,8 @@ mum_DF_T15  0.001
 mum_PS_T15  0.01       
 mum_ZM_T15  0.03       
 mum_ZS_T15  0.055       
-mum_PB_T15  0.1        
-mum_BB_T15  0.2        
+mum_PB_T15  0.01        
+mum_BB_T15  0.02        
 mum_BO_T15  0.01 
 
 
@@ -12887,18 +12887,18 @@ EPlant_BO 0.0
 #EPlant_PWN            0.5       Assimilation efficiency of prawns                                  0.5
 
 # Assimilation efficiency of invertebrate consumers on labile detritus AND CARRION
-EDL_LSQ 0
-EDL_ISQ 0
+EDL_LSQ 0.2
+EDL_ISQ 0.2
 EDL_SCA 0.2
-EDL_QHG 0.2
-EDL_CLA 0.2
-EDL_BFF 0.2
-EDL_BG 0.2
-EDL_LOB 0.12
-EDL_RCB 0.12
-EDL_BMS 0.12
-EDL_NSH 0.1
-EDL_OSH 0.1
+EDL_QHG 0.3
+EDL_CLA 0.3
+EDL_BFF 0.3
+EDL_BG 0.3
+EDL_LOB 0.3
+EDL_RCB 0.2
+EDL_BMS 0.2
+EDL_NSH 0.2
+EDL_OSH 0.2
 EDL_ZL 0.1
 EDL_BD 0.15
 EDL_MA 0.0
@@ -12945,7 +12945,7 @@ EDR_ISQ 0
 EDR_SCA 0
 EDR_QHG 0
 EDR_CLA 0
-EDR_BFF 0
+EDR_BFF 0.05
 EDR_BG 0
 EDR_LOB 0
 EDR_RCB 0
@@ -12966,7 +12966,7 @@ EDR_ZM 0.03
 EDR_ZS 0.05
 EDR_PB 0.25
 EDR_BB 0.25
-EDR_BO 0.0
+EDR_BO 0.05
 #EDR_ZS           0.05      Assim efficiency of microzooplankton on refractory detritus      0.001 - 0.1
 #EDR_ZM           0.03      Assim efficiency of meso-zooplankton on refractory detritus      0.001 - 0.1
 #EDR_ZL           0.02      Assim efficiency of large zooplankton on refractory detritus     0.001 - 0.1     
@@ -13005,9 +13005,9 @@ E_HAL 0.35
 E_PLA 0.3
 E_FOU 0.3
 E_FLA 0.3
-E_BFT 0.35
-E_TUN 0.35
-E_BIL 0.35
+E_BFT 0.4
+E_TUN 0.4
+E_BIL 0.4
 E_MPF 0.3
 E_BUT 0.35
 E_ANC 0.35
@@ -13039,13 +13039,13 @@ E_SMO 0.3
 E_SSH 0.3
 E_DSH 0.3
 E_BLS 0.3
-E_POR 0.3
+E_POR 0.4
 E_PSH 0.3
 E_WSK 0.35
 E_LSK 0.35
 E_SK 0.3
 E_SB 0.3
-E_PIN 0.3
+E_PIN 0.4
 E_REP 0.3
 E_RWH 0.25
 E_BWH 0.25
@@ -13141,7 +13141,7 @@ EPlant_LSK 0
 EPlant_SK 0
 EPlant_SB 0
 EPlant_PIN 0
-EPlant_REP 0.3
+EPlant_REP 0.4
 EPlant_RWH 0
 EPlant_BWH 0
 EPlant_SWH 0
@@ -13199,32 +13199,32 @@ EDL_FLA 0
 EDL_BFT 0
 EDL_TUN 0
 EDL_BIL 0
-EDL_MPF 0.05
-EDL_BUT 0.05
-EDL_ANC 0.05
-EDL_BPF 0.05
+EDL_MPF 0.1
+EDL_BUT 0.1
+EDL_ANC 0.1
+EDL_BPF 0.1
 EDL_GOO 0.2
-EDL_MEN 0.05
-EDL_FDE 0.05
-EDL_COD 0.05
-EDL_SHK 0
-EDL_OHK 0.05
-EDL_POL 0.05
-EDL_RHK 0.05
+EDL_MEN 0.1
+EDL_FDE 0.1
+EDL_COD 0.1
+EDL_SHK 0.1
+EDL_OHK 0.1
+EDL_POL 0.1
+EDL_RHK 0.1
 EDL_BSB 0.05
 EDL_SCU 0.05
 EDL_TYL 0.05
 EDL_RED 0.05
 EDL_OPT 0.05
 EDL_SAL 0.05
-EDL_DRM 0.05
-EDL_STB 0.05
-EDL_TAU 0.05
-EDL_WOL 0.05
+EDL_DRM 0.1
+EDL_STB 0.1
+EDL_TAU 0.1
+EDL_WOL 0.1
 EDL_SDF 0.05
 EDL_FDF 0.05
-EDL_HAD 0.05
-EDL_YTF 0.05
+EDL_HAD 0.1
+EDL_YTF 0.1
 EDL_DOG 0.6
 EDL_SMO 0.4
 EDL_SSH 0.4
@@ -13237,7 +13237,7 @@ EDL_LSK 0.4
 EDL_SK 0
 EDL_SB 0
 EDL_PIN 0
-EDL_REP 0
+EDL_REP 0.4
 EDL_RWH 0.05
 EDL_BWH 0.05
 EDL_SWH 0
@@ -13576,8 +13576,8 @@ Ktmp_bird        0.08      Factor relating temperature to respiration for seabir
 Ktmp_mammal      0.08      Factor relating temperature to respiration for mammals             0.08 
  
 # Lysis rate of microalgaes  
-KLYS_PL          0.01    Lysis rate of diatoms                             d-1 (0.05 )      0.0001
-KLYS_PS          0.05      Lysis rate of picophytoplankton                   d-1 (0.01)       0.01
+KLYS_PL          0.005    Lysis rate of diatoms                             d-1 (0.05 )      0.0001
+KLYS_PS          0.01      Lysis rate of picophytoplankton                   d-1 (0.01)       0.01
 KLYS_DF          0.005    Lysis rate of dinoflagellates                     d-1              0.01
 KLYS_MB          0.005     Lysis rate of microphytobenthos (0.005)           d-1               0.005
 
@@ -13607,13 +13607,13 @@ MB_mL 0 #0.005
 SG_mL 0 #2e-05
 BC_mL 0 #8e-05
 ZG_mL 0 #3e-06
-PL_mL 0.0015
+PL_mL 0 #0.0015
 DF_mL 0 #5e-04
 PS_mL 0 #0.016
 ZM_mL 0 #1e-04
 ZS_mL 0 #8e-05
-PB_mL 1e-04
-BB_mL 1e-05
+PB_mL 0 #1e-04
+BB_mL 0 #1e-05
 BO_mL 0 #4e-07
 
 
@@ -14299,7 +14299,7 @@ mS_SBCOD 4
 mS_SBSHK 4
 0 0 0 0
  
-# Seabird sloppy feeding 
+# Seabird sloppy feeding for mortality OUTSIDE of model domain, only nonzero when FSBDR_XXX is nonzero
 ####FSBDR_FPS        0.2       Proportion of seabird catch of small planktivores lost             0.2
 FSBDR_MAK 0.2      
 FSBDR_HER 0.2      
@@ -14442,7 +14442,7 @@ FDG_ZL  0.3
 FDG_BD  0.35   
 FDG_BC  0.3    
 FDG_ZG  0.3    
-FDG_DF  0      
+FDG_DF  0.1      
 FDG_ZM  0.25   
 FDG_ZS  0.25   
 FDG_BO  0.25   
@@ -14451,7 +14451,7 @@ FDG_BO  0.25
 ######FDGDL_ZS         0.0       Detrit contrib from unassim lab detrit ingested by microzooplankton  0.0 - 0.9      
 ######FDGDL_ZM         0.3       Detrit contrib from unassim lab detrit ingested by mesozooplankton   0.4 - 0.9      
 FDGDL_MAK 0        
-FDGDL_HER 0        
+FDGDL_HER 0.2        
 FDGDL_WHK 0        
 FDGDL_BLF 0        
 FDGDL_WPF 0        
@@ -14459,18 +14459,18 @@ FDGDL_SUF 0
 FDGDL_WIF 0        
 FDGDL_WTF 0        
 FDGDL_HAL 0        
-FDGDL_PLA 0        
+FDGDL_PLA 0.2        
 FDGDL_FOU 0        
 FDGDL_FLA 0        
 FDGDL_BFT 0        
 FDGDL_TUN 0        
 FDGDL_BIL 0        
-FDGDL_MPF 0        
-FDGDL_BUT 0        
-FDGDL_ANC 0        
-FDGDL_BPF 0        
+FDGDL_MPF 0.2        
+FDGDL_BUT 0.2        
+FDGDL_ANC 0.3        
+FDGDL_BPF 0.3        
 FDGDL_GOO 0        
-FDGDL_MEN 0        
+FDGDL_MEN 0.3        
 FDGDL_FDE 0        
 FDGDL_COD 0.3      
 FDGDL_SHK 0        
@@ -14498,9 +14498,9 @@ FDGDL_DSH 0
 FDGDL_BLS 0        
 FDGDL_POR 0        
 FDGDL_PSH 0        
-FDGDL_WSK 0        
-FDGDL_LSK 0        
-FDGDL_SK  0        
+FDGDL_WSK 0.2        
+FDGDL_LSK 0.2        
+FDGDL_SK  0.2        
 FDGDL_SB  0        
 FDGDL_PIN 0        
 FDGDL_REP 0        
@@ -14519,15 +14519,15 @@ FDGDL_BG  0.2
 FDGDL_LOB 0.3      
 FDGDL_RCB 0.3      
 FDGDL_BMS 0.3      
-FDGDL_NSH 0        
-FDGDL_OSH 0        
+FDGDL_NSH 0.1        
+FDGDL_OSH 0.1        
 FDGDL_ZL  0        
 FDGDL_BD  0.2      
-FDGDL_BC  0        
+FDGDL_BC  0.2        
 FDGDL_ZG  0.3      
-FDGDL_DF  0        
+FDGDL_DF  0.1        
 FDGDL_ZM  0.3      
-FDGDL_ZS  0        
+FDGDL_ZS  0.1        
 FDGDL_BO  0.2      
  
 # Fraction of non-assimilate from refractory detrital food lost to detritus 
@@ -14536,7 +14536,7 @@ FDGDL_BO  0.2
 ###FDGDR_FDS   0.0 Detrit contrib from unassim ref detrit ingested by shallow demersals 0.4 - 0.9      
 ###FDGDR_FPL   0.0 Detrit contrib from unassim ref detrit                               0.0 - 0.9      
 FDGDR_MAK 0        
-FDGDR_HER 0        
+FDGDR_HER 0.3        
 FDGDR_WHK 0        
 FDGDR_BLF 0        
 FDGDR_WPF 0        
@@ -14552,10 +14552,10 @@ FDGDR_TUN 0
 FDGDR_BIL 0        
 FDGDR_MPF 0        
 FDGDR_BUT 0        
-FDGDR_ANC 0        
-FDGDR_BPF 0        
+FDGDR_ANC 0.3        
+FDGDR_BPF 0.3        
 FDGDR_GOO 0        
-FDGDR_MEN 0        
+FDGDR_MEN 0.3        
 FDGDR_FDE 0        
 FDGDR_COD 0        
 FDGDR_SHK 0        
@@ -14596,21 +14596,21 @@ FDGDR_TWH 0
 FDGDR_INV 0        
 FDGDR_LSQ 0        
 FDGDR_ISQ 0        
-FDGDR_SCA 0        
-FDGDR_QHG 0        
-FDGDR_CLA 0        
-FDGDR_BFF 0        
-FDGDR_BG  0        
-FDGDR_LOB 0        
-FDGDR_RCB 0        
-FDGDR_BMS 0        
-FDGDR_NSH 0        
-FDGDR_OSH 0        
+FDGDR_SCA 0.3        
+FDGDR_QHG 0.3        
+FDGDR_CLA 0.3        
+FDGDR_BFF 0.3        
+FDGDR_BG  0.3        
+FDGDR_LOB 0.3        
+FDGDR_RCB 0.3        
+FDGDR_BMS 0.3        
+FDGDR_NSH 0.3        
+FDGDR_OSH 0.3        
 FDGDR_ZL  0.3      
 FDGDR_BD  0.3      
 FDGDR_BC  0        
 FDGDR_ZG  0.3      
-FDGDR_DF  0        
+FDGDR_DF  0.3        
 FDGDR_ZM  0.3      
 FDGDR_ZS  0.3      
 FDGDR_BO  0.2      
@@ -17533,7 +17533,7 @@ age_structured_prey_INV 0
 BMDmax 0
 BMLmax 0
 BMSmax 0
-###flagBFSlim  1 Switch to identify filter feeding crowding used: simple=0, ERSEM=1 0 
+###"Flag to turn on population limitation for biomass groups." Switch to identify filter feeding crowding used: simple=0, ERSEM=1 0 
 flagSCAlim 1         
 flagQHGlim 1         
 flagCLAlim 1         
@@ -17549,9 +17549,7 @@ flagLOBlim  0
 flagRCBlim  0
 flagBMSlim  0
 flagNSHlim  0
-flagOSHlim  0       
-
-
+flagOSHlim  0
 
 #Added by Bec Gorton 24th October 2012
 lim_sun_hours 0
@@ -17724,13 +17722,13 @@ OSH_maxdepth 1900
 ZL_maxdepth  5000        
 BD_maxdepth  5000        
 MA_maxdepth  5000        
-MB_maxdepth  5000        
-SG_maxdepth  5000        
+MB_maxdepth  25        
+SG_maxdepth  50        
 BC_maxdepth  5000        
 ZG_maxdepth  5000        
-PL_maxdepth  5000        
-DF_maxdepth  5000        
-PS_maxdepth  5000        
+PL_maxdepth  100        
+DF_maxdepth  100        
+PS_maxdepth  200        
 ZM_maxdepth  5000        
 ZS_maxdepth  5000        
 PB_maxdepth  5000        
@@ -19447,14 +19445,14 @@ NSH_maxtotdepth  100000
 OSH_maxtotdepth  100000  
 ZL_maxtotdepth  100000  
 BD_maxtotdepth  100000  
-MA_maxtotdepth  100000  
-MB_maxtotdepth  100000  
-SG_maxtotdepth  100000  
+MA_maxtotdepth  50  
+MB_maxtotdepth  25  
+SG_maxtotdepth  50  
 BC_maxtotdepth  100000  
 ZG_maxtotdepth  100000  
-PL_maxtotdepth  100000  
-DF_maxtotdepth  100000  
-PS_maxtotdepth  100000  
+PL_maxtotdepth  100  
+DF_maxtotdepth  100  
+PS_maxtotdepth  100  
 ZM_maxtotdepth  100000  
 ZS_maxtotdepth  100000  
 PB_maxtotdepth  100000  

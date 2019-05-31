@@ -13615,7 +13615,7 @@ BMS_mL 0 #3e-06
 ZL_mL 0 #5e-06
 BD_mL 0 #1e-07
 MA_mL 0 #3.25e-05
-MB_mL 0.1 #0.005
+MB_mL 0 #0.005
 SG_mL 0 #2e-05
 BC_mL 0 #8e-05
 ZG_mL 0 #3e-06
@@ -14311,7 +14311,7 @@ mS_SBCOD 4
 mS_SBSHK 4
 0 0 0 0
  
-# Seabird sloppy feeding for mortality OUTSIDE of model domain, only nonzer when FSBDR_XXX is nonzero
+# Seabird sloppy feeding for mortality OUTSIDE of model domain, only nonzero when FSBDR_XXX is nonzero
 ####FSBDR_FPS        0.2       Proportion of seabird catch of small planktivores lost             0.2
 FSBDR_MAK 0      
 FSBDR_HER 0      
