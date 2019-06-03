@@ -396,13 +396,13 @@ flagrecruitPSH 1
 flagrecruitWSK 1
 flagrecruitLSK 1
 flagrecruitSK 1
-flagrecruitSB 1
-flagrecruitPIN 1
-flagrecruitREP 1
-flagrecruitRWH 1
-flagrecruitBWH 1
-flagrecruitSWH 1
-flagrecruitTWH 1
+flagrecruitSB 12
+flagrecruitPIN 12
+flagrecruitREP 12
+flagrecruitRWH 12
+flagrecruitBWH 12
+flagrecruitSWH 12
+flagrecruitTWH 12
 flagrecruitINV 1
 
 
@@ -16003,25 +16003,25 @@ KDENR_SK	1
 1498024	
  	
 KDENR_SB	1
-7379065	
+4	
  	
 KDENR_PIN	1
-62897	
+0.25	
  	
 KDENR_REP	1
-199	
+3
  	
 KDENR_RWH	1
-11	
+0.125
  	
 KDENR_BWH	1
-55	
+0.167
  	
 KDENR_SWH	1
-2140	
+0.25	
  	
 KDENR_TWH	1
-24	
+0.25
  	
 KDENR_INV	1
 532773	
