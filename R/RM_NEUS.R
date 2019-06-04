@@ -532,6 +532,7 @@ wd2='/home/ryan/Git/atneus_RM'
 setwd(wd2)
 
 # Set location of runs and run name prefix
+runfolder=runfile
 runfolder='20190524dta' #20190301dtb'
 wd3=paste('E:/AtlantisRun/20161103/tes/', runfolder, '/atneus_v15_test2008hydro_20180208',sep='')
 wd3=paste('/home/ryan/AtlRuns/', runfolder, '/atneus_v15_test2008hydro_20180208',sep='')
@@ -545,6 +546,8 @@ grp.file <- ('NeusGroups_v15_unix_RM.csv') # ALL GROUPS'your_groups_definition_f
 ### Atlantis food web and trophic level composition
 grp.file <- ('NeusGroups_v15_unix.csv') # ALL GROUPS'your_groups_definition_file.csv'
 prm.file=('at_biol_neus_v15_scaled_diet_20181126.prm')
+prm.file=('at_biol_neus_v15_20190319timemachine.prm')
+
 diet.file   <- paste(wd3,'DietCheck.txt', sep='')
 diet.file.bypol=paste(wd3,'DetailedDietCheck.txt', sep='') # only if flagdietcheck was active in run file
 web=food.web(diet.file, grp.file)

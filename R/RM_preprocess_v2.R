@@ -102,13 +102,24 @@ sink <- load_nc_physics(nc = nc_gen, select_physics = c("hdsource", "hdsink"),
                         prm_run = prm_run, bboxes = bboxes)
 
 physics <- load_nc_physics(nc = nc_gen, 
-                           select_physics = c("salt", "NO3", "NH3", "Temp", "Chl_a", "Denitrifiction"),
+                           select_physics = c("salt", "NO3", "NH3", "Temp", "Chl_a", "Oxygen", "Light"),
                            prm_run = prm_run, bboxes = bboxes)
 
 # exclude sediment layer from salinity
 physics <- filter(physics, !(variable == "salt" & layer == max(layer) & time == min(time)))
+# exclude sediment layer from oxygen
+physics <- filter(physics, !(variable == "Oxygen" & layer == max(layer)))
 # exlucde water column from Denitrifiction
 physics <- filter(physics, !(variable == "Denitrifiction" & layer != max(layer) & time == min(time)))
+
+## RM 20190604 this is not correct - in sequence 0, 1, 2, 4; 4 is bottom, 2 is surface and 0 is deepest depth... need to get just surface but it varies by box
+# surf_phys=filter(physics, layer!=max(layer) & layer != min(layer))
+# surf_phys=filter(surf_phys, layer==max(layer))
+# plot <- plot_line(surf_phys, wrap = NULL)
+# custom_grid(plot, grid_x = "polygon", grid_y = "variable")
+
+
+
 
 vol_dz <- load_nc_physics(nc = nc_gen, select_physics = c("volume", "dz"),
                           prm_run = prm_run, bboxes = bboxes)
