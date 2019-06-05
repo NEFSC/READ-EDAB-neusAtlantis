@@ -108,7 +108,7 @@ physics <- load_nc_physics(nc = nc_gen,
 # exclude sediment layer from salinity
 physics <- filter(physics, !(variable == "salt" & layer == max(layer) & time == min(time)))
 # exclude sediment layer from oxygen
-physics <- filter(physics, !(variable == "Oxygen" & layer == max(layer)))
+# physics <- filter(physics, !(variable == "Oxygen" & layer == max(layer)))
 # exlucde water column from Denitrifiction
 physics <- filter(physics, !(variable == "Denitrifiction" & layer != max(layer) & time == min(time)))
 

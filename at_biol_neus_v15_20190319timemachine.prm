@@ -11817,8 +11817,8 @@ mum_DF_T15  0.001
 mum_PS_T15  0.01       
 mum_ZM_T15  0.03       
 mum_ZS_T15  0.055       
-mum_PB_T15  0.01        
-mum_BB_T15  0.02        
+mum_PB_T15  0.05        
+mum_BB_T15  0.05        
 mum_BO_T15  0.01 
 
 
@@ -18465,7 +18465,7 @@ jack_b_OSH 1.45e+09
 
 ##RM added 20180209 Choose shape of feeding window: knife edge, humped original, smooth (all SN size based), or bilogistic (LENGTH based)
 # use for knife-edge size selectivity of prey (1)
-UseHardFeedingWindow  1
+UseHardFeedingWindow  0
 
 # for original implementation of smooth feeding window set to 1; or 0 for new implementation of smooth window using Kmax coefft below to shape curve:
 UseHumpedFeedingWindow 0

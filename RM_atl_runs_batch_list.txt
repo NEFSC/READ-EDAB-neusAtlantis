@@ -829,6 +829,32 @@ atlantismain_6440 -i RMinit2_2019.nc 0 -o atneus_v15_test2008hydro_20180208.nc -
 # reduced mum for MB, reduced portion of refractory DR coming from OM, desktop. Deep mix 02 still on at 17 m, SED SHOULD be on GBK.... not box 1
 20180408dta - O2 drops year 1 box 17, try again - reduce C?, rerun (over write)
 
+#### large time gap - used desktop and notes in notebook, many updates, noted on github.
+format is this (generally): atlantismain6440 -i RMinit2_2019.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_WIN_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15scaled_diet_20181126_2.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix_RM.csv -q NeusFisheries_v15.csv -t C:\Users\ryan.morse\Documents\GitHub\atneus_RM -d 20190605dta 1>1a.junk 2>2a.junk
+#####
+
+20190530dta  went back to run from  20190318b, took biology file and updated params to fit new atlantis version requirments; using params from most recent run (with horiz_mix turned off in phys file), used mum and C values from this run, created new file at_biol_v15_20190319timemachine.prm
+atlantismain6440 -i RMinit2_2019.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_WIN_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_20190319timemachine.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix_RM.csv -q NeusFisheries_v15.csv -t C:\Users\ryan.morse\Documents\GitHub\atneus_RM -d 20190530dta 1>1a.junk 2>2a.junk
+		
+		---> RN/RNinit looks good for most species (if not high) but O2 and nutrient issues are problem
+
+5/31 20190531dta - update recruitment to 11 for all --> crash at 2 yrs
+
+6/3/19
+20190603dta - update flagrecruit to 1, 12 and update kdenr for WH, REP, PIN SB
+20190603dtb adjust mum back to size based calc in r/growth_req and c based on volume searched ratio --> RN/RNinit low, still O2 and nut issues
+20190603dtc adjust gape size and use hard feeding window --> RN/RNinit low, still O2 and nut issues
+
+6/4 still having oxygen issues in box 8, 15, nutrients too high
+20190604dta - update mum and C from 0603dtc; remove seasonal eddies
+20190604dtb - no eddies, increase N half-saturation values, light requirements
+
+6/5 yesterday runs had some effect on O2 issue, but RN/RNinit still low, nuts still high and O2 still ~ 5500 in deep waters of box 8.
+cut NO3 values in half, but still huge 2500 mg N in box 8, 1000 box 13
+20190605dta try run 0604dtb again but with smooth feeding window (hard_feeding 0) (mum and C are size based, clearance ratio based)
+20190605dtb mum and C from recommended (update to) values from 0530dta run
+
+
 
 
 
