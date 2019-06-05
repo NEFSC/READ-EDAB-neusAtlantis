@@ -843,11 +843,11 @@ atlantismain6440 -i RMinit2_2019.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r
 6/3/19
 20190603dta - update flagrecruit to 1, 12 and update kdenr for WH, REP, PIN SB
 20190603dtb adjust mum back to size based calc in r/growth_req and c based on volume searched ratio --> RN/RNinit low, still O2 and nut issues
-20190603dtc adjust gape size and use hard feeding window --> RN/RNinit low, still O2 and nut issues
+20190603dtc adjust gape size and use hard feeding window --> RN/RNinit low, still O2 and nut issues; Bio/Bio_Init starts to look better here compared to all previous runs -> predation working as it should? Shark predation
 
 6/4 still having oxygen issues in box 8, 15, nutrients too high
 20190604dta - update mum and C from 0603dtc; remove seasonal eddies
-20190604dtb - no eddies, increase N half-saturation values, light requirements
+20190604dtb - no eddies, increase N half-saturation values, light requirements  -- Bio/Bio_Init looks better than it has in a very long time...
 
 6/5 yesterday runs had some effect on O2 issue, but RN/RNinit still low, nuts still high and O2 still ~ 5500 in deep waters of box 8.
 cut NO3 values in half, but still huge 2500 mg N in box 8, 1000 box 13
