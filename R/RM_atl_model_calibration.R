@@ -330,12 +330,13 @@ ggsave(paste(filename," numbers at age timeseries.png", sep=''), width=20, heigh
 ###____________SSB and recruitment NEED External Data input for this to work
 # plot_rec(result$ssb_rec, ex_data = ex_rec_ssb)
 
-### Age class 1 numbers timeseries ###
-test=filter(result$nums_age, agecl==1)
+### Age class 1-10 numbers timeseries ###
+for (ii in 1:10){
+test=filter(result$nums_age, agecl==ii)
 plot=plot_line(test)
 update_labels(p = plot, labels = list(x = "Time [years]", y = "Numbers"))
-ggsave(paste(filename," Age-1 Cohort timeseries.png", sep=''), width=20, height=17, dpi=96)
-
+ggsave(paste(filename," Age-",ii, " Cohort timeseries.png", sep=''), width=20, height=17, dpi=96)
+}
 
 ##____________PHYSICS____________________________
 plot <- plot_line(result$physics, wrap = NULL)

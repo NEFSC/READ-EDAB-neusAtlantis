@@ -155,7 +155,7 @@ larvae_connect_only 0
 # whether larvae are independent of environmental conditions (do not reset recruit_hdistrib based on environmental conditions like temperature)
 enviro_independ_larvae 1
 
-# Flag indicating the rough age of larvae effected by environmental conditions (i.e. when to reset recruit_hdistrib based on environmental conditions like temperature). This is only important if enviro independ larvae is set to 0
+# Flag indicating the rough age of larvae effected by environmental conditions (i.e. when to reset recruit_hdistrib based on environmental conditions like temperature). This is only important if enviro_independ_larvae is set to 0
 # 0=effects are calculated at the time of spawning; 1=effects are calculated at the start of the recruitment period 
 flag_recruit_effect 1
 
@@ -256,7 +256,9 @@ flagdemZS 0
 flagdemPB 0
 flagdemBB 1
 flagdemBO 1
-
+#flagdemDL NA
+#flagdemDR NA
+#flagdemDC NA
 
 # Flag indicating whether vertebrate is a planktivore primarily
 flagplankfishMAK 1
@@ -345,57 +347,57 @@ flagseperateNSH  1         CEP, CEPj are: 1 = seperate groups (or single pool), 
 flagseperateOSH  1         CEP, CEPj are: 1 = seperate groups (or single pool), 0 = age structured single group
 
 # RM 20190103 changed all from 10 to 3
-flagrecruitMAK 1
-flagrecruitHER 1
-flagrecruitWHK 1
-flagrecruitBLF 1
-flagrecruitWPF 1
-flagrecruitSUF 1
-flagrecruitWIF 1
-flagrecruitWTF 1
-flagrecruitHAL 1
-flagrecruitPLA 1
-flagrecruitFOU 1
-flagrecruitFLA 1
+flagrecruitMAK 3
+flagrecruitHER 3
+flagrecruitWHK 3
+flagrecruitBLF 3
+flagrecruitWPF 3
+flagrecruitSUF 3
+flagrecruitWIF 3
+flagrecruitWTF 3
+flagrecruitHAL 3
+flagrecruitPLA 3
+flagrecruitFOU 3
+flagrecruitFLA 3
 flagrecruitBFT 1
 flagrecruitTUN 1
 flagrecruitBIL 1
-flagrecruitMPF 1
-flagrecruitBUT 1
-flagrecruitANC 1
-flagrecruitBPF 1
-flagrecruitGOO 1
-flagrecruitMEN 1
-flagrecruitFDE 1
-flagrecruitCOD 1
-flagrecruitSHK 1
-flagrecruitOHK 1
-flagrecruitPOL 1
-flagrecruitRHK 1
-flagrecruitBSB 1
-flagrecruitSCU 1
-flagrecruitTYL 1
-flagrecruitRED 1
-flagrecruitOPT 1
-flagrecruitSAL 1
-flagrecruitDRM 1
-flagrecruitSTB 1
-flagrecruitTAU 1
-flagrecruitWOL 1
-flagrecruitSDF 1
-flagrecruitFDF 1
-flagrecruitHAD 1
-flagrecruitYTF 1
-flagrecruitDOG 1
-flagrecruitSMO 1
-flagrecruitSSH 1
-flagrecruitDSH 1
-flagrecruitBLS 1
-flagrecruitPOR 1
-flagrecruitPSH 1
-flagrecruitWSK 1
-flagrecruitLSK 1
-flagrecruitSK 1
+flagrecruitMPF 3
+flagrecruitBUT 3
+flagrecruitANC 3
+flagrecruitBPF 3
+flagrecruitGOO 3
+flagrecruitMEN 3
+flagrecruitFDE 3
+flagrecruitCOD 3
+flagrecruitSHK 3
+flagrecruitOHK 3
+flagrecruitPOL 3
+flagrecruitRHK 3
+flagrecruitBSB 3
+flagrecruitSCU 3
+flagrecruitTYL 3
+flagrecruitRED 3
+flagrecruitOPT 3
+flagrecruitSAL 3
+flagrecruitDRM 3
+flagrecruitSTB 3
+flagrecruitTAU 3
+flagrecruitWOL 3
+flagrecruitSDF 3
+flagrecruitFDF 3
+flagrecruitHAD 3
+flagrecruitYTF 3
+flagrecruitDOG 3
+flagrecruitSMO 3
+flagrecruitSSH 3
+flagrecruitDSH 3
+flagrecruitBLS 3
+flagrecruitPOR 3
+flagrecruitPSH 3
+flagrecruitWSK 3
+flagrecruitLSK 3
+flagrecruitSK 3
 flagrecruitSB 12
 flagrecruitPIN 12
 flagrecruitREP 12
@@ -403,8 +405,7 @@ flagrecruitRWH 12
 flagrecruitBWH 12
 flagrecruitSWH 12
 flagrecruitTWH 12
-flagrecruitINV 1
-
+flagrecruitINV 3
 
 # External reproduction - spawn is based on adult population within model domain, but actual reproduction           
 # occurs outside model domain (0 = no, 1 = yes) ADDED 20180228 RM
@@ -577,16 +578,16 @@ flaglocalrecruitSDF 0
 flaglocalrecruitFDF 0
 flaglocalrecruitHAD 0
 flaglocalrecruitYTF 0
-flaglocalrecruitDOG 1
-flaglocalrecruitSMO 1
-flaglocalrecruitSSH 1
-flaglocalrecruitDSH 1
+flaglocalrecruitDOG 0
+flaglocalrecruitSMO 0
+flaglocalrecruitSSH 0
+flaglocalrecruitDSH 0
 flaglocalrecruitBLS 1
 flaglocalrecruitPOR 1
 flaglocalrecruitPSH 1
-flaglocalrecruitWSK 1
-flaglocalrecruitLSK 1
-flaglocalrecruitSK 1
+flaglocalrecruitWSK 0
+flaglocalrecruitLSK 0
+flaglocalrecruitSK 0
 flaglocalrecruitSB 1
 flaglocalrecruitPIN 1
 flaglocalrecruitREP 1
@@ -642,10 +643,10 @@ flagbearliveSDF 0
 flagbearliveFDF 0
 flagbearliveHAD 0
 flagbearliveYTF 0
-flagbearliveDOG 1
-flagbearliveSMO 1
-flagbearliveSSH 1
-flagbearliveDSH 1
+flagbearliveDOG 0
+flagbearliveSMO 0
+flagbearliveSSH 0
+flagbearliveDSH 0
 flagbearliveBLS 1
 flagbearlivePOR 1
 flagbearlivePSH 1
@@ -715,7 +716,7 @@ flagmotherWSK 0
 flagmotherLSK 0
 flagmotherSK 0
 flagmotherSB 0
-flagmotherPIN 1
+flagmotherPIN 0
 flagmotherREP 0
 flagmotherRWH 1
 flagmotherBWH 1
@@ -1188,7 +1189,7 @@ flagtempsensitiveZS 0
 flagtempsensitivePB 0
 flagtempsensitiveBB 0
 flagtempsensitiveBO 0
-
+                                                                            3
 
 # Habitat dependency
 flaghabdepend    0         general vertebrate demersal habitat dependency: 0 = no, 1 = yes     0
@@ -1271,14 +1272,11 @@ MB_habdepend    0
 
 
 
-# movement related flags see min/max.move_var_XXX to set tolerance values
-# If none of the cells have suitable conditions the species will die
+# movement related flags
 flagtempdepend   0         0 = off, 1 = temperature preferences used
 flagsaltdepend   0
-flagO2depend    1
-
-
-# Vertebrate density dependent movement related flags 0=prescribed quartlerly, 1=sedentary, 2=density dependent + prescribed, 3=sticky, 4=no explicit mvmt
+flagO2depend    0
+# Vertebrate density dependent movement related flags 0=off, 1=sedentary, 2=on, 3=sticky, 4=no explicit mvmt
 MAK_ddepend_move 0
 HER_ddepend_move 0
 WHK_ddepend_move 0
@@ -1680,7 +1678,7 @@ X_FeN            30000.0   Redfield ratio of Fe:N                               
 k_wetdry         20.0      Ratio of Wet weight to AFDW                                         20.0                                  
 
 # Light penetration through the water column 
-k_w_depth        55.0      Bottom depth marking estuarine vs oceanic water (for light absorp) m  55.0
+k_w_depth        25.0      Bottom depth marking estuarine vs oceanic water (for light absorp) m  55.0
 k_w_cdepth       100.0     Bottom depth marking coastal from oceanic water (for light absorp) m  205.0
 
 k_w_deep         0.016     Coefficient of background light absorption due to oceanic water     0.005 - 0.016
@@ -1692,10 +1690,10 @@ k_IS             0.05      Basic coefficient of light absorption                
 k_SED            0.0      Coefficient of light absorption due to sediment. Only used if flagIsEstuary is on. 
 KIOP_min         4.0       Minimum level of light adaptation                                   4.0
 KIOP_shift       0.25      Minimum rate of shift under light adaptation                        0.25
-KI_avail         5.0       Available light                                                     0.5
+KI_avail         0.5       Available light                                                     0.5
 K_addepth        10.0      Depth down to which adaptation occurs                               10.0
 
-## Temperature effects 
+## Temperature effects     
 Q10              2.0       Exponent in temperature effect on rate parameters                   2.0
 
 Tchange_max_num  1         Number of changes in average base temperature                       1
@@ -1749,19 +1747,19 @@ KI_MA_T15        10         Light saturation, macroalgae                      W 
 KI_SG_T15        65        Light saturation, seagrass                        W m-2             65
 KI_MB_T15        10         Light saturation, microphytobenthos               W m-2             3
 
-eddy_scale       1.0       Coefficient scaling eddy strength impact on phytoplankton growth    1.0
+eddy_scale       2.0       Coefficient scaling eddy strength impact on phytoplankton growth    1.0
 # Primary producer nutrient requirements 
-KN_PL            20        Half-sat const for PL growth on DIN (15)          mg N m-3          10
-KN_PS            10    Half-sat const for PS growth on DIN (13)          mg N m-3          4
+KN_PL            10        Half-sat const for PL growth on DIN (15)          mg N m-3          10
+KN_PS            5    Half-sat const for PS growth on DIN (13)          mg N m-3          4
 KN_DF            20         Half-sat const for DF growth on DIN (13)          mg N m-3          4
 KN_MA            20        Half-sat const for MA growth on DIN (20)          mg N m-3          20
-KN_SG            50         Half-sat const for SG growth on DIN (12)          mg N m-3          5
-KN_MB            400       Half-sat const for MB growth on DIN (200)         mg N m-3          200
+KN_SG            12         Half-sat const for SG growth on DIN (12)          mg N m-3          5
+KN_MB            200       Half-sat const for MB growth on DIN (200)         mg N m-3          200
 
-KS_PL            20        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
+KS_PL            10        Half-sat const for PL growth on Si (35)           mg Si m-3         20 
 KS_PS            0         Half-sat const for PS growth on a second nutrient mg nutrient m-3   0 
 KS_DF            0         Half-sat const for DF growth on a second nutrient mg nutrient m-3   0 
-KS_MB            400        Half-sat const for MB growth on Si                mg Si m-3         100
+KS_MB            200        Half-sat const for MB growth on Si                mg Si m-3         100
 #gfay@umassd 06/24/15  added KS_MA to suppress error, setting to zero CHECK
 KS_MA            0
 KS_SG            0
@@ -7198,6 +7196,7 @@ BLS_FSM 1
 POR_FSM 1
 1
 
+ 
 PSH_FSM 1
 1
  
@@ -11574,32 +11573,30 @@ k_refsDL      1000.0      Reference labile detrit. level in sediments (if higher
 # Clearance rates for biomass pool consumers - this is used by Holling type feeding
 C_LSQ_T15 0.001455  
 C_jLSQ_T15 0.001
-C_ISQ_T15 0.0008  
-C_jISQ_T15 0.0004
-C_SCA_T15 0.01     
-C_QHG_T15 0.01    
-C_CLA_T15 0.01    
-C_BFF_T15 0.007
-C_BG_T15  0.05
-C_LOB_T15 0.05
-C_RCB_T15 0.05
-C_BMS_T15 0.05   
+C_ISQ_T15 0.001455  
+C_jISQ_T15 0.001
+C_SCA_T15 0.008     
+C_QHG_T15 0.008    
+C_CLA_T15 0.008    
+C_BFF_T15 7e-03    
+C_BG_T15  5e-02  
+C_LOB_T15 6.5e-04 
+C_RCB_T15 5e-02    
+C_BMS_T15 5e-03    
 C_NSH_T15 0.00015   
 C_jNSH_T15 0.0001
 C_OSH_T15 0.00015   
 C_jOSH_T15 0.0001
-C_ZL_T15  0.05    
-C_BD_T15  0.0005    
+C_ZL_T15  0.05     
+C_BD_T15  5e-04    
 C_ZG_T15  0.03    
 C_DF_T15  0.001     
-C_ZM_T15  0.05    
+C_ZM_T15  0.005    
 C_ZS_T15  0.015     
-C_PB_T15  0.000001        
-C_BB_T15  0.000001  
+C_PB_T15  0        
+C_BB_T15  0        
 C_BO_T15  0.0001    
 C_BC_T15  0.006
-
-
 
 
 flagfishrates    0         Switch to show whether clearance and growth rates are absolute=0, or as proportion of body mass=1  
@@ -11607,183 +11604,181 @@ flagfishrates    0         Switch to show whether clearance and growth rates are
 # Clearance rate of each vertebrate group, per age class       (m3 Ind-1 day-1)
 # updated 20180814 as 0.1 * mum (which is RN+SN * [max % body weight consumption per day] /365)
 C_MAK	10								
-0.10	2.74	9.11	16.19	22.52	27.72	31.20	33.20	33.87	34.45
+12.44	28.11	45.44	64.27	76.37	84.14	88.83	91.30	92.37	92.13
 									
 C_HER	10								
-0.41	7.14	17.43	23.89	28.52	30.32	29.87	29.42	28.86	27.43
+0.15	5.27	12.02	17.53	21.76	24.42	25.89	26.65	26.81	26.69
 									
 C_WHK	10								
-0.60	20.21	40.79	75.44	128.69	177.42	214.78	251.14	286.79	321.27
+0.32	2.93	7.95	18.44	37.15	58.86	82.38	106.65	130.87	153.62
 									
 C_BLF	10								
-1.29	26.61	68.72	112.69	149.54	179.05	198.60	207.03	210.33	204.22
+25.47	73.93	137.94	189.55	229.19	257.84	277.51	290.74	298.96	302.68
 									
 C_WPF	10								
-1.04	3.12	3.67	7.45	12.04	15.87	18.55	18.91	18.81	18.47
+1.59	4.02	5.53	6.84	8.06	8.75	8.97	9.00	9.00	8.88
 									
 C_SUF	10								
-31.78	138.36	192.45	242.63	285.50	304.87	297.63	283.68	272.18	259.99
+14.48	37.76	53.21	66.96	79.04	85.11	86.27	86.11	85.31	84.39
 									
 C_WIF	10								
-21.78	17.88	13.60	17.00	22.90	25.10	24.69	24.42	24.26	24.07
+14.24	26.61	30.22	34.72	39.81	41.90	41.70	41.24	40.88	40.40
 									
 C_WTF	10								
-1.26	6.29	13.49	21.23	30.19	36.15	38.44	39.64	39.97	39.89
+0.83	3.75	8.20	14.28	20.90	26.53	30.21	32.88	34.67	35.70
 									
 C_HAL	10								
-32.57	228.56	452.61	711.29	1084.53	1419.55	1658.66	1833.86	1967.48	2063.82
+28.24	167.54	402.60	738.45	1150.24	1529.20	1829.16	2077.61	2281.34	2445.69
 									
 C_PLA	10								
-5.82	32.54	59.61	94.04	129.20	147.82	146.56	141.52	134.28	126.13
+3.09	12.04	20.23	28.26	35.40	39.66	41.23	41.80	41.79	41.49
 									
 C_FOU	10								
-1.53	5.07	7.47	9.61	12.31	13.63	13.16	12.72	13.25	13.00
+1.04	2.40	6.27	12.93	25.43	20.68	17.60	16.52	16.12	17.24
 									
 C_FLA	10								
-0.04	0.31	0.74	2.67	4.65	5.57	6.96	7.37	7.87	8.28
+0.00	0.16	0.29	0.41	0.51	0.58	0.65	0.69	0.73	0.71
 									
 C_BFT	10								
-5518.24	11203.91	15583.82	17910.73	18202.67	17121.84	15267.83	13046.44	10613.56	7620.85
+1863.65	5325.94	8661.25	10707.92	11019.35	10428.28	9529.19	8568.31	7648.45	6809.50
 									
 C_TUN	10								
-2068.81	2664.15	2614.93	2409.85	2085.43	1726.03	1381.60	1071.14	803.94	589.22
+1164.56	1648.57	1685.35	1601.89	1406.72	1210.91	1042.53	900.25	779.22	675.98
 									
 C_BIL	10								
-6466.59	12893.69	16847.78	18783.72	18840.89	17662.68	15780.45	13543.66	11210.06	9006.16
+25643.61	51666.02	70049.90	80664.90	79790.02	74234.63	67559.78	60899.84	54671.42	49042.02
 									
 C_MPF	10								
-0.04	0.22	0.40	0.48	0.96	0.89	0.88	0.88	0.81	0.80
+0.10	0.35	0.68	0.77	1.10	1.12	1.13	1.39	1.36	1.33
 									
 C_BUT	10								
-0.51	2.79	2.67	3.15	3.50	3.24	3.17	2.90	2.85	3.13
+3.29	13.23	20.16	25.75	29.32	30.97	31.42	31.56	31.50	31.30
 									
 C_ANC	10								
-0.05	0.22	0.28	0.33	0.33	0.33	0.28	0.28	0.27	0.26
+0.06	0.06	0.06	0.06	0.06	0.06	0.06	0.06	0.06	0.06
 									
 C_BPF	10								
-0.66	4.61	4.63	5.18	6.74	7.84	8.43	9.41	10.56	10.65
+0.83	2.59	2.91	3.37	4.03	4.08	4.10	4.10	4.10	4.10
 									
 C_GOO	10								
-0.21	10.27	25.15	47.71	81.76	120.89	152.93	185.14	204.33	226.20
+0.24	2.54	6.20	11.78	19.30	28.43	37.88	47.19	56.47	65.09
 									
 C_MEN	10								
-0.07	2.84	8.11	14.63	19.86	23.28	25.08	25.45	25.71	30.57
+0.93	6.46	13.29	19.35	22.91	25.09	25.93	26.55	26.80	27.02
 									
 C_FDE	10								
-1.36	46.53	85.94	122.82	165.88	175.71	177.35	173.12	165.48	157.98
+4.87	39.16	79.57	108.16	122.18	127.31	127.81	125.72	122.51	118.53
 									
 C_COD	10								
-10.76	62.91	123.67	168.15	186.97	202.98	214.04	220.14	221.83	220.84
+17.91	81.25	152.88	212.43	254.64	282.93	300.66	310.84	315.64	317.11
 									
 C_SHK	10								
-0.11	2.31	4.43	7.51	10.73	13.04	15.16	16.89	18.83	20.78
+22.06	53.84	140.79	160.29	152.54	149.83	147.85	154.79	165.13	173.81
 									
 C_OHK	10								
-28.78	36.93	38.28	35.47	31.95	28.96	26.69	24.70	22.90	21.51
+9.74	17.87	20.49	20.73	20.48	20.02	19.59	19.18	18.78	18.40
 									
 C_POL	10								
-36.69	150.15	224.33	256.26	261.75	256.35	246.14	235.34	216.66	201.99
+25.73	93.84	147.59	177.30	189.83	193.08	191.74	188.36	183.87	179.33
 									
 C_RHK	10								
-8.78	42.00	58.62	62.91	60.93	57.91	54.81	53.02	51.90	49.51
+5.82	49.02	113.74	157.92	183.69	196.11	200.39	199.65	196.63	191.92
 									
 C_BSB	10								
-12.29	54.33	80.92	90.67	90.81	87.67	82.90	77.68	72.96	68.68
+47.00	220.06	384.15	476.31	516.82	530.93	531.96	524.32	514.28	502.34
 									
 C_SCU	10								
-2.84	15.22	25.20	29.86	31.14	30.40	28.88	27.25	29.64	34.37
+4.86	21.83	40.23	52.50	59.05	61.93	62.25	61.42	59.93	58.15
 									
 C_TYL	10								
-25.68	105.48	191.73	257.27	298.49	321.19	330.44	330.48	325.24	316.94
+38.58	151.46	267.62	357.57	416.57	451.30	468.75	474.53	472.66	466.35
 									
 C_RED	10								
-0.50	3.38	6.50	8.88	10.78	11.89	12.53	12.76	12.88	12.94
+0.21	0.46	0.67	0.73	0.79	0.76	0.73	0.78	0.76	0.74
 									
 C_OPT	10								
-2.97	17.90	34.04	46.66	55.02	60.44	63.49	59.92	52.58	47.94
+7.15	42.80	90.40	132.23	163.14	184.01	197.03	204.33	207.33	207.59
 									
 C_SAL	10								
-632.40	2308.14	3237.29	3509.54	3403.38	3138.36	2844.79	2555.49	2293.50	2062.66
+40.57	185.89	340.60	444.51	498.96	518.66	517.09	503.55	483.59	461.09
 									
 C_DRM	10								
-15.20	17.86	18.15	17.11	15.64	14.47	13.56	12.84	12.08	11.51
+0.85	4.35	12.02	17.99	28.62	25.31	22.98	21.73	23.31	22.78
 									
 C_STB	10								
-21.41	83.10	125.49	144.51	148.78	146.22	141.08	134.87	128.64	123.16
+50.52	117.49	177.85	213.14	230.61	237.01	237.44	234.32	229.34	223.53
 									
 C_TAU	10								
-4.44	14.74	27.62	38.88	47.22	53.15	56.67	58.47	58.76	58.21
+1.51	5.70	10.48	14.93	18.39	21.04	22.97	24.22	25.09	25.51
 									
 C_WOL	10								
-0.98	6.79	17.56	30.89	44.82	58.75	72.39	85.21	97.01	107.83
+0.52	3.48	9.89	19.20	30.32	42.30	54.43	65.85	76.50	86.10
 									
 C_SDF	10								
-48.72	790.20	2581.73	4275.19	5611.40	6027.34	5967.44	5853.49	4055.90	3570.85
+126.81	472.94	891.48	1223.89	1454.55	1599.41	1678.80	1710.20	1708.34	1684.29
 									
 C_FDF	10								
-0.08	3.82	9.62	15.03	19.47	23.25	26.42	28.60	30.11	31.23
+0.31	4.56	13.14	23.33	32.82	41.18	48.25	53.43	57.41	60.26
 									
 C_HAD	10								
-56.29	107.76	105.36	90.80	80.87	76.06	72.38	73.93	69.86	64.30
+5.06	11.60	14.14	14.66	14.55	14.27	13.94	13.66	13.40	13.19
 									
 C_YTF	10								
-0.16	2.12	3.92	4.76	5.18	5.40	5.43	5.88	6.50	6.24
+2.01	10.92	21.57	24.63	24.26	23.15	22.67	22.88	22.39	21.86
 									
 C_DOG	10								
-32.12	44.65	60.26	91.86	85.09	69.35	56.46	46.51	41.18	38.13
+25.94	37.99	43.21	46.08	42.37	37.89	34.20	31.44	29.54	28.27
 									
 C_SMO	10								
-121.63	62.81	65.06	50.42	41.50	36.96	35.53	30.73	26.62	24.54
+12.14	21.69	35.25	42.42	45.27	46.10	46.00	45.64	45.10	44.60
 									
 C_SSH	10								
-158.21	315.57	631.86	700.69	622.92	474.10	363.60	313.66	284.80	254.96
+150.18	287.88	423.27	468.36	468.06	448.81	422.83	396.08	371.14	348.94
 									
 C_DSH	10								
-1913.52	797.63	1014.63	949.94	871.28	826.80	808.02	809.72	792.13	772.14
+4564.64	3703.25	3566.23	3249.84	2942.53	2676.08	2445.15	2245.16	2071.88	1921.49
 									
 C_BLS	10								
-7935.62	5635.69	5108.85	4074.32	3242.92	2618.50	2162.19	1832.02	1598.49	1290.39
+161.65	212.44	234.07	220.46	200.47	180.81	163.50	149.07	137.40	128.21
 									
 C_POR	10								
-10713.32	7822.32	7056.04	5539.10	4302.20	2711.24	1719.67	1275.62	1050.37	949.07
+2738.54	2377.80	2196.68	1902.75	1651.08	1446.49	1279.70	1143.41	1032.69	943.78
 									
 C_PSH	10								
-23420.02	15508.02	13134.59	9703.61	7246.35	4490.53	3224.91	2452.00	1964.98	1642.85
+7172.65	5914.18	5341.85	4547.70	3883.15	3356.85	2937.30	2598.78	2323.29	2099.56
 									
 C_WSK	10								
-8.08	28.08	67.01	80.07	79.87	77.19	74.07	71.24	69.14	67.96
+16.39	52.93	104.79	136.04	148.91	152.66	152.26	150.09	147.52	144.90
 									
 C_LSK	10								
-7.91	8.72	11.14	13.19	12.29	11.26	10.48	9.92	9.48	9.16
+5.43	5.99	6.60	6.59	6.50	6.41	6.35	6.30	6.27	6.26
 									
 C_SK	10								
-70.99	142.60	200.80	234.00	200.32	161.48	144.07	126.98	118.59	111.72
+95.08	187.98	282.93	312.33	310.58	299.42	285.91	272.43	260.15	249.09
 									
 C_SB	10								
-97.22	146.78	150.87	143.79	133.60	123.22	113.58	105.29	97.04	89.98
+43.49	60.02	60.36	58.13	55.80	53.57	51.44	49.44	47.54	45.75
 									
 C_PIN	10								
-5259.58	5248.29	4612.32	4040.37	3490.70	3014.92	2613.25	2276.60	1996.53	1766.65
+1186.22	1205.26	1082.39	975.32	880.98	800.46	732.57	676.27	630.94	595.87
 									
 C_REP	10								
-6960.27	4830.04	3847.44	2897.88	2227.87	1771.77	1459.46	1243.08	1091.83	986.09
+1267.21	884.39	819.98	732.20	657.43	597.83	551.35	516.16	490.57	472.97
 									
 C_RWH	10								
-852496.66	324854.96	226974.77	117846.42	66592.82	42821.62	30980.08	24584.71	20927.94	18774.15
+88447.37	56318.29	48466.02	38034.58	31834.01	28267.44	26163.33	24873.61	24062.12	23547.77
 									
 C_BWH	10								
-582424.55	242022.63	180520.58	96950.00	55930.79	36446.74	26589.13	21208.47	18109.18	16274.67
+1363.21	1418.47	1600.78	1489.60	1398.84	1348.40	1325.74	1318.88	1320.73	1327.35
 									
 C_SWH	10								
-32108.03	14811.97	10421.63	6766.24	4499.73	3179.49	2397.29	1922.57	1629.16	1445.78
+4196.56	2826.32	2256.58	1816.34	1510.74	1304.15	1164.26	1069.94	1007.06	965.88
 									
 C_TWH	10								
-559847.70	258192.02	181670.56	117947.08	78437.28	55431.85	41798.75	33527.48	28414.90	25219.91
+97656.19	65767.10	53982.15	43513.90	36107.56	31103.22	27720.63	25442.20	23924.80	22931.48
 									
 C_INV	10								
-79.42	149.32	135.89	112.92	93.41	78.62	68.81	62.32	59.61	54.90
-
-
+12.80	30.17	35.96	35.54	33.81	32.21	30.95	29.95	29.10	28.34
 
 
 
@@ -11793,13 +11788,13 @@ mum_LSQ_T15 0.044
 mum_jLSQ_T15 0.04
 mum_ISQ_T15 0.0444     
 mum_jISQ_T15 0.04
-mum_SCA_T15 0.1       
-mum_QHG_T15 0.1     
-mum_CLA_T15 0.1     
+mum_SCA_T15 0.05       
+mum_QHG_T15 0.05     
+mum_CLA_T15 0.05     
 mum_BFF_T15 0.035     
-mum_BG_T15  0.1      
-mum_LOB_T15 0.05    
-mum_RCB_T15 0.03      
+mum_BG_T15  0.02      
+mum_LOB_T15 0.012    
+mum_RCB_T15 0.01      
 mum_BMS_T15 0.01      
 mum_NSH_T15 0.03043   
 mum_jNSH_T15 0.03
@@ -11808,200 +11803,199 @@ mum_jOSH_T15 0.03
 mum_ZL_T15  0.05        
 mum_BD_T15  0.014      
 mum_MA_T15  0.001        
-mum_MB_T15  0.008       
+mum_MB_T15  0.018       
 mum_SG_T15  0.07       
 mum_BC_T15  0.08      
 mum_ZG_T15  0.025      
-mum_PL_T15  0.025        
+mum_PL_T15  0.05        
 mum_DF_T15  0.001       
 mum_PS_T15  0.01       
-mum_ZM_T15  0.03       
+mum_ZM_T15  0.018       
 mum_ZS_T15  0.055       
 mum_PB_T15  0.05        
-mum_BB_T15  0.05        
-mum_BO_T15  0.01 
-
+mum_BB_T15  0.02        
+mum_BO_T15  0.001       
 
 # Vertebrate growth rates for each "group," per age class (mg N Ind-1 day-1)
 # See _flag.fish.rates above to see whether clearance and growth rates 
 # are chosen as absolute (=0), or as proportion of body mass (=1)  
 # modified 20180814 based on RN+SN * percent consumption (.10 - 0.30 ) per day / 365
-mum_MAK	10								
-1.10	28.94	89.95	161.89	230.80	278.35	310.89	330.41	341.45	348.11
+mum_MAK	10.0								
+124.41	281.11	453.29	640.86	766.03	839.96	886.29	911.59	922.27	920.90
 									
-mum_HER	10								
-0.27	71.42	167.23	234.35	279.76	297.78	300.96	296.65	285.09	271.94
+mum_HER	10.0								
+1.78	52.51	118.93	175.13	217.46	243.93	258.79	265.89	267.83	266.60
 									
-mum_WHK	10								
-5.64	198.91	409.57	754.42	1287.54	1772.46	2147.15	2512.82	2870.43	3214.43
+mum_WHK	10.0								
+3.47	29.07	78.54	184.81	372.00	591.07	826.26	1070.08	1310.03	1536.98
 									
-mum_BLF	10								
-12.74	267.03	683.98	1122.97	1498.38	1791.05	1989.83	2068.19	2101.73	2043.88
+mum_BLF	10.0								
+254.06	736.33	1380.31	1899.84	2296.29	2581.92	2778.52	2907.44	2985.50	3027.55
 									
-mum_WPF	10								
-11.05	30.48	36.55	74.17	120.91	159.96	185.53	189.64	189.30	184.71
+mum_WPF	10.0								
+15.76	40.08	54.84	68.21	80.99	87.89	89.74	89.98	89.24	88.44
 									
-mum_SUF	10								
-317.18	1384.40	1925.63	2424.21	2851.94	3050.38	2977.98	2836.80	2724.36	2601.07
+mum_SUF	10.0								
+144.70	377.55	532.24	669.23	790.18	851.10	863.19	861.37	853.74	843.91
 									
-mum_WIF	10								
-216.17	178.50	136.23	169.97	228.67	250.82	246.92	244.76	242.51	240.67
+mum_WIF	10.0								
+141.59	266.31	302.64	346.71	397.26	418.33	416.87	412.97	408.13	403.44
 									
-mum_WTF	10								
-13.50	63.59	134.94	210.75	300.50	360.78	385.13	397.49	401.64	399.34
+mum_WTF	10.0								
+7.79	38.24	81.88	142.93	210.19	264.55	302.14	328.45	345.59	356.45
 									
-mum_HAL	10								
-325.37	2283.96	4527.14	7111.75	10844.91	14195.15	16585.24	18340.07	19675.87	20639.14
+mum_HAL	10.0								
+282.32	1674.79	4026.55	7384.04	11503.06	15291.34	18292.28	20776.86	22813.23	24457.88
 									
-mum_PLA	10								
-57.01	327.29	600.18	938.50	1293.40	1475.58	1468.92	1415.58	1342.09	1262.46
+mum_PLA	10.0								
+30.59	120.27	202.75	282.57	354.16	395.74	411.96	418.13	418.19	415.11
 									
-mum_FOU	10								
-14.26	49.75	73.82	96.52	121.36	135.15	132.73	128.38	131.43	130.17
+mum_FOU	10.0								
+3.47	5.48	7.24	9.08	18.68	24.06	28.06	26.37	25.86	25.61
 									
-mum_FLA	10								
-0.10	2.71	10.93	25.67	42.33	59.85	70.37	76.96	82.65	84.35
+mum_FLA	10.0								
+0.40	1.82	3.11	4.31	5.29	6.04	6.58	6.82	6.97	7.22
 									
-mum_BFT	10								
-55194.96	112042.59	155852.93	179105.25	182020.23	171220.05	152681.28	130467.39	106135.33	76206.64
+mum_BFT	10.0								
+18635.02	53259.38	86610.09	107077.59	110190.61	104284.76	95293.70	85683.58	76482.31	68093.66
 									
-mum_TUN	10								
-20677.36	26636.44	26152.04	24102.13	20852.18	17258.48	13814.74	10710.43	8040.95	5893.88
+mum_TUN	10.0								
+11645.57	16483.87	16854.00	16016.92	14065.75	12107.87	10425.94	9003.29	7792.96	6760.44
 									
-mum_BIL	10								
-64664.69	128938.18	168484.64	187823.59	188414.92	176624.84	157798.61	135441.81	112100.06	90059.13
+mum_BIL	10.0								
+256415.04	516647.39	700486.34	806653.13	797885.22	742352.89	675603.82	608992.99	546721.15	490428.47
 									
-mum_MPF	10								
-0.10	1.39	4.54	6.89	8.42	8.37	9.52	9.30	8.91	8.19
+mum_MPF	10.0								
+1.00	3.26	5.73	8.33	10.06	11.53	12.45	12.83	12.85	13.00
 									
-mum_BUT	10								
-5.43	27.53	25.98	30.39	35.18	32.96	31.17	29.04	28.34	31.32
+mum_BUT	10.0								
+32.89	130.26	200.68	255.10	294.49	309.00	316.32	318.34	317.75	316.40
 									
-mum_ANC	10								
-0.20	1.39	2.17	3.29	3.33	3.33	3.31	2.77	2.74	2.55
+mum_ANC	10.0								
+0.14	0.15	0.23	0.30	0.38	0.46	0.54	0.55	0.55	0.63
 									
-mum_BPF	10								
-6.38	46.28	45.53	51.83	67.77	77.60	83.79	94.96	106.37	105.73
+mum_BPF	10.0								
+8.10	25.50	28.70	33.38	39.72	40.77	41.12	41.14	41.40	41.26
 									
-mum_GOO	10								
-1.97	103.46	252.65	476.06	817.23	1208.54	1530.30	1850.06	2043.29	2262.37
+mum_GOO	10.0								
+2.60	25.54	61.98	117.76	193.62	285.04	378.95	472.71	563.96	651.33
 									
-mum_MEN	10								
-0.89	29.09	84.48	151.85	200.53	230.42	247.92	257.32	259.47	305.75
+mum_MEN	10.0								
+9.58	66.50	135.75	190.82	227.60	249.00	259.88	266.55	269.74	268.75
 									
-mum_FDE	10								
-13.08	464.15	854.16	1225.51	1667.79	1761.79	1771.08	1730.34	1656.72	1582.51
+mum_FDE	10.0								
+48.89	390.05	795.67	1079.82	1221.30	1274.40	1278.11	1256.80	1223.79	1185.93
 									
-mum_COD	10								
-106.67	629.13	1236.23	1682.70	1869.53	2030.84	2140.52	2201.37	2217.78	2209.51
+mum_COD	10.0								
+179.26	811.87	1528.34	2123.81	2546.61	2829.73	3006.95	3107.86	3156.73	3171.15
 									
-mum_SHK	10								
-1.20	23.86	45.43	74.60	106.94	132.35	152.87	167.99	189.25	209.21
+mum_SHK	10.0								
+0.09	2.46	3.07	7.41	15.41	26.46	39.51	41.43	45.56	48.09
 									
-mum_OHK	10								
-289.97	368.87	382.82	352.51	319.52	291.58	269.00	248.83	232.09	216.43
+mum_OHK	10.0								
+96.91	178.71	206.03	207.89	204.36	199.94	195.59	191.47	187.57	183.85
 									
-mum_POL	10								
-367.88	1501.76	2244.06	2564.51	2618.27	2560.82	2461.64	2352.80	2165.10	2018.49
+mum_POL	10.0								
+256.78	937.63	1476.94	1772.85	1898.28	1931.56	1917.85	1882.61	1839.23	1793.69
 									
-mum_RHK	10								
-88.59	418.53	586.23	626.83	611.15	579.11	547.66	530.19	518.60	495.50
+mum_RHK	10.0								
+58.24	490.50	1137.19	1579.41	1835.86	1960.88	2003.32	1998.25	1966.30	1919.43
 									
-mum_BSB	10								
-123.98	544.41	811.71	906.31	909.51	874.78	827.25	778.19	731.63	688.29
+mum_BSB	10.0								
+472.23	2193.65	3846.58	4756.13	5173.52	5316.27	5314.44	5244.83	5139.55	5018.75
 									
-mum_SCU	10								
-27.73	150.41	253.09	301.24	311.35	304.00	288.82	272.09	295.19	345.28
+mum_SCU	10.0								
+48.96	218.32	401.64	524.66	590.77	617.77	622.22	613.93	599.28	581.22
 									
-mum_TYL	10								
-255.23	1056.81	1916.17	2572.72	2988.02	3213.33	3303.85	3305.86	3252.94	3168.31
+mum_TYL	10.0								
+386.07	1513.26	2677.81	3574.42	4165.43	4514.17	4688.35	4745.03	4726.89	4664.58
 									
-mum_RED	10								
-5.91	32.66	64.21	90.40	107.80	119.30	126.11	129.05	129.64	127.81
+mum_RED	10.0								
+2.22	5.12	6.77	7.54	7.81	7.91	7.75	7.57	7.34	7.15
 									
-mum_OPT	10								
-29.96	178.70	339.41	466.43	551.34	604.05	633.88	599.69	526.44	479.92
+mum_OPT	10.0								
+71.33	428.14	904.47	1323.14	1631.43	1839.61	1970.29	2043.47	2074.13	2075.00
 									
-mum_SAL	10								
-6317.09	23072.23	32380.84	35091.64	34034.64	31400.07	28429.49	25549.46	22934.99	20622.29
+mum_SAL	10.0								
+405.96	1858.88	3405.23	4445.38	4989.38	5186.88	5170.69	5034.73	4836.60	4610.64
 									
-mum_DRM	10								
-152.60	178.70	182.13	170.14	156.41	145.40	136.04	127.96	121.15	115.44
+mum_DRM	10.0								
+0.64	3.35	4.73	6.07	7.80	10.14	11.20	10.11	9.51	9.14
 									
-mum_STB	10								
-214.39	833.34	1255.97	1445.35	1486.01	1463.47	1411.56	1349.34	1287.03	1231.23
+mum_STB	10.0								
+504.74	1175.75	1779.11	2131.77	2304.70	2370.29	2373.51	2341.92	2292.85	2234.60
 									
-mum_TAU	10								
-43.17	147.01	275.45	387.82	473.19	531.52	567.02	584.09	587.84	581.93
+mum_TAU	10.0								
+15.36	56.53	105.37	149.24	184.31	210.39	229.24	242.13	250.49	255.51
 									
-mum_WOL	10								
-9.51	66.88	175.48	308.31	447.48	587.79	723.64	851.95	970.33	1077.81
+mum_WOL	10.0								
+5.03	34.64	98.54	191.91	303.61	423.54	543.61	658.65	765.47	861.76
 									
-mum_SDF	10								
-486.54	7908.70	25826.72	42775.03	56114.86	60251.67	59656.86	58551.66	40558.10	35694.74
+mum_SDF	10.0								
+1270.72	4725.21	8916.77	12237.18	14543.80	15994.80	16789.47	17104.83	17085.28	16840.54
 									
-mum_FDF	10								
-0.91	38.16	96.64	148.81	194.72	233.52	263.63	286.33	302.47	312.49
+mum_FDF	10.0								
+3.27	45.47	131.75	231.93	328.60	412.76	481.90	535.68	575.85	603.41
 									
-mum_HAD	10								
-557.78	1076.12	1052.17	911.43	806.73	758.64	725.49	737.15	699.23	643.01
+mum_HAD	10.0								
+50.44	115.72	141.44	146.75	145.32	142.39	139.31	136.43	134.02	131.88
 									
-mum_YTF	10								
-1.67	22.08	38.61	48.40	52.51	53.55	53.26	59.51	65.07	62.38
+mum_YTF	10.0								
+0.61	4.22	7.99	10.74	14.44	18.35	16.75	16.06	16.05	15.37
 									
-mum_DOG	10								
-321.42	446.73	602.07	919.57	850.62	693.73	564.66	465.03	411.60	381.58
+mum_DOG	10.0								
+259.45	379.55	432.47	460.49	423.11	378.49	341.86	314.44	295.37	282.74
 									
-mum_SMO	10								
-1215.31	628.11	650.72	504.06	414.96	369.79	355.74	307.39	266.37	245.39
+mum_SMO	10.0								
+121.79	217.22	353.01	424.64	452.83	461.02	460.07	455.95	450.98	446.27
 									
-mum_SSH	10								
-1583.03	3156.62	6317.01	7008.05	6227.00	4740.95	3634.88	3136.57	2849.18	2549.30
+mum_SSH	10.0								
+1500.97	2878.83	4233.66	4683.58	4680.87	4488.08	4228.01	3960.36	3711.29	3490.08
 									
-mum_DSH	10								
-19133.49	7976.66	10146.24	9499.65	8712.89	8268.08	8080.77	8097.78	7921.00	7721.33
+mum_DSH	10.0								
+45648.40	37032.50	35663.39	32498.05	29425.31	26760.76	24451.55	22451.56	20718.78	19214.85
 									
-mum_BLS	10								
-79338.69	56349.74	51080.79	40735.39	32422.27	26184.00	21617.41	18316.10	15980.94	12903.40
+mum_BLS	10.0								
+1616.34	2124.63	2341.03	2204.95	2004.82	1808.27	1635.20	1490.82	1374.19	1282.24
 									
-mum_POR	10								
-107123.09	78229.61	70553.78	55397.12	43027.41	27112.44	17197.25	12757.74	10503.34	9491.92
+mum_POR	10.0								
+27385.44	23777.62	21966.84	19026.43	16509.95	14464.09	12796.19	11433.53	10326.36	9437.27
 									
-mum_PSH	10								
-234187.52	155075.05	131342.21	97032.04	72460.07	44903.25	32248.59	24520.13	19648.86	16427.72
+mum_PSH	10.0								
+71723.01	59144.00	53419.08	45478.76	38832.97	33569.74	29374.18	25988.76	23233.85	20996.31
 									
-mum_WSK	10								
-80.63	280.58	670.07	800.86	798.48	771.72	740.54	712.45	691.36	680.15
+mum_WSK	10.0								
+163.78	528.96	1048.21	1361.15	1489.12	1526.32	1522.13	1501.26	1475.16	1449.40
 									
-mum_LSK	10								
-79.12	87.18	111.21	131.77	122.89	112.39	104.79	99.12	94.90	91.44
+mum_LSK	10.0								
+54.49	59.90	66.08	66.23	65.27	64.45	63.81	63.40	63.10	62.99
 									
-mum_SK	10								
-709.91	1426.52	2008.10	2340.81	2002.82	1615.49	1441.21	1269.83	1185.48	1117.25
+mum_SK	10.0								
+950.58	1879.27	2828.67	3123.00	3105.33	2994.16	2859.09	2724.61	2600.79	2491.18
 									
-mum_SB	10								
-964.48	1472.30	1510.39	1434.53	1326.95	1225.38	1131.68	1045.22	965.31	892.35
+mum_SB	10.0								
+435.42	601.43	602.40	581.29	558.29	535.83	514.75	494.72	475.69	457.63
 									
-mum_PIN	10								
-52594.23	52479.49	46129.09	40407.32	34903.53	30147.38	26128.82	22761.84	19963.89	17665.52
+mum_PIN	10.0								
+11862.88	12051.63	10824.83	9754.36	8808.87	8003.69	7324.90	6761.95	6308.70	5958.09
 									
-mum_REP	10								
-69603.57	48299.90	38472.10	28974.98	22277.31	17716.21	14594.14	12430.81	10917.49	9859.74
+mum_REP	10.0								
+12672.14	8843.34	8199.25	7321.49	6573.86	5977.81	5513.12	5161.27	4905.36	4729.39
 									
-mum_RWH	10								
-8524971.42	3248552.07	2269748.64	1178463.66	665928.18	428216.06	309800.78	245847.50	209279.14	187741.83
+mum_RWH	10.0								
+884473.29	563183.35	484660.61	380346.05	318340.32	282674.59	261633.51	248736.31	240621.33	235477.86
 									
-mum_BWH	10								
-5824235.95	2420221.79	1805204.40	969500.17	559306.75	364467.55	265891.59	212084.74	181092.04	162746.30
+mum_BWH	10.0								
+13631.95	14184.69	16007.83	14896.04	13988.41	13483.95	13257.35	13188.78	13207.26	13273.51
 									
-mum_SWH	10								
-321096.42	148118.21	104213.53	67662.42	44996.13	31796.17	23972.95	19225.81	16291.20	14457.10
+mum_SWH	10.0								
+41967.12	28262.47	22565.66	18163.07	15107.25	13041.34	11642.47	10699.11	10070.49	9658.67
 									
-mum_TWH	10								
-5598488.65	2581905.02	1816697.88	1179466.14	784368.54	554317.67	417987.87	335274.22	284148.29	252197.91
+mum_TWH	10.0								
+976559.68	657670.62	539822.03	435139.51	361076.05	311032.49	277206.66	254422.21	239248.40	229315.00
 									
-mum_INV	10								
-794.23	1500.17	1365.50	1127.45	928.64	786.96	685.94	623.94	598.18	548.95
+mum_INV	10.0								
+127.67	302.24	360.54	354.58	336.98	321.34	309.09	299.09	290.54	283.00
 
 
 
@@ -12010,7 +12004,7 @@ mum_INV	10
 
 # Seed bank/population refuge based on consumer "intake," if available food below this feeding
 # slows/stops so can't eat out all food. This is used by min-max feeding (predcase@4)
-#eg. KL_ZG            20.0      Lower threshold for feeding by gelatinous zoopl    mg N m-3     15.0 - 25.0   
+#e.g. KL_ZG            20.0      Lower threshold for feeding by gelatinous zoopl    mg N m-3     15.0 - 25.0   
 KL_MAK 5.0     
 KL_HER 5.0     
 KL_WHK 0.2   
@@ -13581,8 +13575,8 @@ Ktmp_bird        0.08      Factor relating temperature to respiration for seabir
 Ktmp_mammal      0.08      Factor relating temperature to respiration for mammals             0.08 
  
 # Lysis rate of microalgaes  
-KLYS_PL          0.005    Lysis rate of diatoms                             d-1 (0.05 )      0.0001
-KLYS_PS          0.01      Lysis rate of picophytoplankton                   d-1 (0.01)       0.01
+KLYS_PL          0.01    Lysis rate of diatoms                             d-1 (0.05 )      0.0001
+KLYS_PS          0.05      Lysis rate of picophytoplankton                   d-1 (0.01)       0.01
 KLYS_DF          0.005    Lysis rate of dinoflagellates                     d-1              0.01
 KLYS_MB          0.005     Lysis rate of microphytobenthos (0.005)           d-1               0.005
 
@@ -13612,14 +13606,14 @@ MB_mL 0 #0.005
 SG_mL 0 #2e-05
 BC_mL 0 #8e-05
 ZG_mL 0 #3e-06
-PL_mL 0 #0.0015
+PL_mL 0.0015
 DF_mL 0 #5e-04
 PS_mL 0 #0.016
 ZM_mL 0 #1e-04
 ZS_mL 0 #8e-05
-PB_mL 0 #1e-04
-BB_mL 0 #1e-05
-BO_mL 0 #4e-07
+PB_mL 1e-04
+BB_mL 1e-05
+BO_mL 4e-07
 
 
 # Invertebrates with age structure
@@ -14304,7 +14298,7 @@ mS_SBCOD 4
 mS_SBSHK 4
 0 0 0 0
  
-# Seabird sloppy feeding for mortality OUTSIDE of model domain, only nonzero when FSBDR_XXX is nonzero
+# Seabird sloppy feeding 
 ####FSBDR_FPS        0.2       Proportion of seabird catch of small planktivores lost             0.2
 FSBDR_MAK 0.2      
 FSBDR_HER 0.2      
@@ -14927,6 +14921,10 @@ LSQ_Time_Spawn 300
 ISQ_Time_Spawn 300           
 NSH_Time_Spawn 300           
 OSH_Time_Spawn 300           
+##CEP_Time_Spawn 300
+##jCEP_Time_Spawn 90
+##PWN_Time_Spawn 300
+##jPWN_Time_Spawn 90
 
 
 ## Used to calculate time of larval period as below (days, 1-365):	
@@ -16261,47 +16259,47 @@ Rbeta_OSH 2e+12
 
 # Beverton-Holt recruitment
 # Alpha in Beverton-Holt
-BHalpha_MAK 3.7e+08   
-BHalpha_HER 3e+09   
-BHalpha_WHK 1e+07    
-BHalpha_BLF 5e+08   
-BHalpha_WPF 3e+09    
-BHalpha_SUF 2e+08    
-BHalpha_WIF 1e+09    
-BHalpha_WTF 1e+09    
-BHalpha_HAL 1e+08    
-BHalpha_PLA 1e+08    
-BHalpha_FOU 1e+08    
-BHalpha_FLA 1e+08    
-BHalpha_BFT 6e+08    
-BHalpha_TUN 6e+08    
-BHalpha_BIL 6e+08    
-BHalpha_MPF 1e+09    
-BHalpha_BUT 1e+09     
-BHalpha_ANC 1e+09    
-BHalpha_BPF 5e+07    
-BHalpha_GOO 1e+08    
-BHalpha_MEN 1e+09   
-BHalpha_FDE 1e+08   
-BHalpha_COD 1e+07    
-BHalpha_SHK 1e+08    
-BHalpha_OHK 1e+08   
-BHalpha_POL 1e+08  
-BHalpha_RHK 1e+08   
-BHalpha_BSB 1e+08   
-BHalpha_SCU 1e+08   
-BHalpha_TYL 1e+08   
-BHalpha_RED 1e+08   
-BHalpha_OPT 1e+08   
-BHalpha_SAL 1e+08   
-BHalpha_DRM 1e+08   
-BHalpha_STB 1e+07   
-BHalpha_TAU 4e+08   
-BHalpha_WOL 2e+08   
-BHalpha_SDF 2e+06   
-BHalpha_FDF 2e+08   
-BHalpha_HAD 2e+08   
-BHalpha_YTF 2e+08   
+BHalpha_MAK 2e+09   
+BHalpha_HER 7.55e+09   
+BHalpha_WHK 1.7e+07    
+BHalpha_BLF 3e+07   
+BHalpha_WPF 5.8e+08    
+BHalpha_SUF 5.8e+08    
+BHalpha_WIF 5.8e+08    
+BHalpha_WTF 5.8e+08    
+BHalpha_HAL 5.8e+08    
+BHalpha_PLA 5.8e+08    
+BHalpha_FOU 5.8e+08    
+BHalpha_FLA 5.8e+08    
+BHalpha_BFT 2.8e+07    
+BHalpha_TUN 2.8e+07    
+BHalpha_BIL 2.8e+07    
+BHalpha_MPF 1250000    
+BHalpha_BUT 1.2e+10    
+BHalpha_ANC 4.5e+08    
+BHalpha_BPF 4.5e+07    
+BHalpha_GOO 9.4e+07    
+BHalpha_MEN 1.91e+09   
+BHalpha_FDE 1.91e+08   
+BHalpha_COD 3.7e+07    
+BHalpha_SHK 3.2e+08    
+BHalpha_OHK 1.45e+09   
+BHalpha_POL 1.45e+09   
+BHalpha_RHK 1.45e+09   
+BHalpha_BSB 1.45e+09   
+BHalpha_SCU 1.45e+09   
+BHalpha_TYL 1.45e+09   
+BHalpha_RED 1.45e+09   
+BHalpha_OPT 1.45e+09   
+BHalpha_SAL 1.45e+07   
+BHalpha_DRM 1.45e+07   
+BHalpha_STB 1.45e+07   
+BHalpha_TAU 1.45e+09   
+BHalpha_WOL 1.45e+09   
+BHalpha_SDF 1.45e+07   
+BHalpha_FDF 1.45e+09   
+BHalpha_HAD 2.18e+08   
+BHalpha_YTF 4.05e+08   
 BHalpha_DOG 4.4e+07    
 BHalpha_SMO 990000     
 BHalpha_SSH 990000     
@@ -16319,7 +16317,7 @@ BHalpha_RWH 7
 BHalpha_BWH 7          
 BHalpha_SWH 1000       
 BHalpha_TWH 1000       
-BHalpha_INV 1e+08   
+BHalpha_INV 1.45e+09   
 BHalpha_LSQ 9.05e+11   
 BHalpha_ISQ 9.05e+11   
 BHalpha_NSH 9e+11      
@@ -16328,45 +16326,45 @@ BHalpha_OSH 9e+11
 #Beta in Beverton-Holt 
 BHbeta_MAK 7.56e+12     
 BHbeta_HER 3e+09     
-BHbeta_WHK 5e+12   
-BHbeta_BLF 9e+14     
-BHbeta_WPF 9e+14     
-BHbeta_SUF 3e+14     
-BHbeta_WIF 9e+14    
-BHbeta_WTF 9e+14     
-BHbeta_HAL 3e+12     
-BHbeta_PLA 3e+12     
-BHbeta_FOU 3e+12     
-BHbeta_FLA 3e+12     
-BHbeta_BFT 3e+12     
-BHbeta_TUN 3e+12     
-BHbeta_BIL 3e+12     
-BHbeta_MPF 5e+11     
-BHbeta_BUT 5e+11     
-BHbeta_ANC 1e+11     
-BHbeta_BPF 1e+12     
-BHbeta_GOO 1e+12     
-BHbeta_MEN 1e+13     
-BHbeta_FDE 1e+13     
-BHbeta_COD 1e+14   
-BHbeta_SHK 5e+11     
-BHbeta_OHK 5e+11     
-BHbeta_POL 5e+11     
-BHbeta_RHK 5e+11     
-BHbeta_BSB 5e+11     
-BHbeta_SCU 5e+11     
-BHbeta_TYL 5e+11     
-BHbeta_RED 5e+11     
-BHbeta_OPT 5e+11     
-BHbeta_SAL 1e+14     
-BHbeta_DRM 1e+13     
-BHbeta_STB 5e+13     
-BHbeta_TAU 5e+12     
-BHbeta_WOL 2e+12    
-BHbeta_SDF 2e+12     
-BHbeta_FDF 2e+13     
-BHbeta_HAD 2e+13     
-BHbeta_YTF 2e+13    
+BHbeta_WHK 1.6e+10   
+BHbeta_BLF 2.88e+11     
+BHbeta_WPF 3e+10     
+BHbeta_SUF 3e+10     
+BHbeta_WIF 3e+10     
+BHbeta_WTF 3e+10     
+BHbeta_HAL 3e+10     
+BHbeta_PLA 3e+10     
+BHbeta_FOU 3e+10     
+BHbeta_FLA 3e+10     
+BHbeta_BFT 6e+11     
+BHbeta_TUN 6e+11     
+BHbeta_BIL 6e+11     
+BHbeta_MPF 1e+07     
+BHbeta_BUT 1.34e+11     
+BHbeta_ANC 3e+08     
+BHbeta_BPF 3e+09     
+BHbeta_GOO 1e+11     
+BHbeta_MEN 2e+09     
+BHbeta_FDE 2e+10     
+BHbeta_COD 2.5e+10   
+BHbeta_SHK 6e+10     
+BHbeta_OHK 1e+11     
+BHbeta_POL 1e+11     
+BHbeta_RHK 1e+11     
+BHbeta_BSB 1e+11     
+BHbeta_SCU 1e+11     
+BHbeta_TYL 1e+11     
+BHbeta_RED 1e+11     
+BHbeta_OPT 1e+11     
+BHbeta_SAL 1e+11     
+BHbeta_DRM 1e+11     
+BHbeta_STB 2.88e+11     
+BHbeta_TAU 1e+11     
+BHbeta_WOL 1e+11     
+BHbeta_SDF 1e+11     
+BHbeta_FDF 1e+11     
+BHbeta_HAD 7e+11     
+BHbeta_YTF 2.5e+10   
 BHbeta_DOG 3.27e+10   
 BHbeta_SMO 2e+10     
 BHbeta_SSH 2e+10     
@@ -16384,7 +16382,7 @@ BHbeta_RWH 3e+10
 BHbeta_BWH 3e+10     
 BHbeta_SWH 5e+10     
 BHbeta_TWH 5e+10     
-BHbeta_INV 1e+12     
+BHbeta_INV 1e+11     
 BHbeta_LSQ 2.02e+13  
 BHbeta_ISQ 2.02e+13  
 BHbeta_NSH 2e+13     
