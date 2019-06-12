@@ -55,40 +55,45 @@ codes=codes[-c(1:2),]
 ## Read in RN and SN values, xlsx updated 20180709, '____data' tab has values copied from '___calc_doc' tab, which has documentation and calculations
 ## (von Bertalanffy model, Atlantis calcs for RN SN weight conversions, length_weight relationships, etc.)
 # x=read_xlsx('C:/Users/ryan.morse/Documents/GitHub/atneus_RM/R/length_weight_v15.xlsx', sheet='length_weight_v15_data')
-x=read_xlsx(paste(d1, '/R/length_weight_v15.xlsx', sep=''), sheet='length_weight_v15_data_update')
-x=read_xlsx(paste(d1, '/R/length_weight_v15.xlsx', sep=''), sheet='length_weight_v15_calc_To=0') # change To to zero for all
-x=x[,1:23]
-x$Rname=paste(x$Species, x$Cohort, "_ResN", sep="") #make name same as variable name in netcdf file
-x$Sname=paste(x$Species, x$Cohort, "_StructN", sep="") #make name same as variable name in netcdf file
+# x=read_xlsx(paste(d1, '/R/length_weight_v15.xlsx', sep=''), sheet='length_weight_v15_data_update')
+# x$Rname=paste(x$Species, x$Cohort, "_ResN", sep="") #make name same as variable name in netcdf file
+# x$Sname=paste(x$Species, x$Cohort, "_StructN", sep="") #make name same as variable name in netcdf file
 # ## Subset above to use for replacement in initial conditions netcdf file
 # xR=data.frame(Variables=x$Rname,RN=x$RN_mg) # this is the new calculated reserve nitrogen value
 # xS=data.frame(Variables=x$Sname,SN=x$SN_mg) # this is the new calculated structural nitrogen value
 
+
 ### edit RN and SN values to compensate for long-lived species being at old age for cohort 1 (e.g. whales, sharks, etc)
-newX=x
-newX[,c('SN', 'RN', 'weight_g')]=NULL
-newX[,c('weight_kg', 'weight_t', 'weight_lbs', 'length_cm')]=NULL
-### weight of inidividual fish in a cohort should be mean size (age 1.5 in cohort 1 of a fish that spends 2 years in a cohort)
-### The recruit weight is then that of an age 1 fish
-newX$interval=apply(newX[,'numyrs'], 1, function(x) median(seq(1:x))) # use to get mean age of cohort
-newX$newage=newX$age*newX$interval # this is updated mean age of cohort to use in von Bert calcs instead of below
+# newX=x
+# newX[,c('SN', 'RN', 'weight_g')]=NULL
+# newX[,c('weight_kg', 'weight_t', 'weight_lbs', 'length_cm')]=NULL
+# ### weight of inidividual fish in a cohort should be mean size (age 1.5 in cohort 1 of a fish that spends 2 years in a cohort)
+# ### The recruit weight is then that of an age 1 fish
+# newX$interval=apply(newX[,'numyrs'], 1, function(x) median(seq(1:x))) # use to get mean age of cohort
+# newX$newage=newX$age*newX$interval # this is updated mean age of cohort to use in von Bert calcs instead of below
 # newX$newage=newX$age-(newX$numyrs-1) # use this for von Bertalannfy calculations, li_a li_b (offsets values to start at 1)
-newX$vbert_cm2=newX$Linf*(1-exp(-newX$K*(newX$newage-newX$To)))
 
-newX$vbert_cm2=newX$Linf*(1-exp(-newX$K*(newX$newage-0))) # use if To set to zero
 
+#### 20190612 Updated version ###
+# remove old static data, update calc of age as beginning of cohort age (i.e. for 4 year numyrageclass cohort age = 1, 5, 9, etc.)
+x=read_xlsx(paste(d1, '/R/length_weight_v15.xlsx', sep=''), sheet='length_weight_v15_calc_age_R') # change To to zero for all
+x=x[,1:11]
+x$Rname=paste(x$Species, x$Cohort, "_ResN", sep="") #make name same as variable name in netcdf file
+x$Sname=paste(x$Species, x$Cohort, "_StructN", sep="") #make name same as variable name in netcdf file
+newX=x
+
+newX$vbert_cm2=newX$Linf*(1-exp(-newX$K*(newX$cohortAGE-newX$To)))
+# newX$vbert_cm2=newX$Linf*(1-exp(-newX$K*(newX$newage-0))) # use if To set to zero
 newX$grams2=newX$li_a*(newX$vbert_cm2^newX$li_b)
 newX$inches=newX$vbert_cm2*0.393701
 newX$lbs=newX$grams2*0.00220462
 newX$recruit_cm=newX$Linf*(1-exp(-newX$K*(1-newX$To))) # age 1 fish
-
-newX$recruit_cm=newX$Linf*(1-exp(-newX$K*(1-0))) # age 1 fish # use if To set to zero
-
+# newX$recruit_cm=newX$Linf*(1-exp(-newX$K*(1-0))) # age 1 fish # use if To set to zero
 newX$recruit_grams=newX$li_a*(newX$recruit_cm^newX$li_b)
 
 ## plot length vs weight to make sure things look OK - inches/lbs
 nmc=unique(newX$Code)
-pdf(file='weight_length_US_20190612.pdf')
+pdf(file='weight_length_US_20190612_updated.pdf')
 for(i in 1:length(nmc)){
   ii=nmc[i]
 plot(newX$inches[newX$Code==ii]~newX$lbs[newX$Code==ii], ylab='inches', xlab='lbs', main=ii)
@@ -97,7 +102,7 @@ dev.off()
 ##
 ## plot length vs weight to make sure things look OK - metric
 nmc=unique(newX$Code)
-pdf(file='weight_length_metric_20190612.pdf')
+pdf(file='weight_length_metric_20190612_updated.pdf')
 cohort=seq(1,10,1)
 for(i in 1:length(nmc)){
   ii=nmc[i]
@@ -107,11 +112,11 @@ for(i in 1:length(nmc)){
 dev.off()
 
 ### USE THESE VALUES TO REPLACE RN AND SN IN INITIAL CONDITIONS FILE ### updated 20180711
-newX$SN_2=newX$grams2/20/5.7/3.65*1000 # convert grams wet weight to mg SN
-newX$RN_2=newX$SN_2*2.65 # convert SN to RN (mg)
+newX$SN_2=round(newX$grams2/20/5.7/3.65*1000, digits=2) # convert grams wet weight to mg SN
+newX$RN_2=round(newX$SN_2*2.65, digits = 2) # convert SN to RN (mg)
 ### for recruits, use in KWRR_xxx KWSS_xxx in biol file
-newX$recruitSN=newX$recruit_grams /20/5.7/3.65*1000 
-newX$recruitRN=newX$recruitSN *2.65 
+newX$recruitSN=round(newX$recruit_grams /20/5.7/3.65*1000, digits=2)
+newX$recruitRN=round(newX$recruitSN *2.65, digits=2)
 
 ## Subset above to use for replacement in initial conditions netcdf file
 xR=data.frame(Variables=newX$Rname,RN=newX$RN_2) # this is the new calculated reserve nitrogen value
@@ -122,7 +127,7 @@ library(reshape)
 t=newX[,c("Code", "grams2", "Cohort")]
 t2=melt.data.frame(t, id.vars=c('Code', 'Cohort'), measure.vars = 'grams2')
 t3=cast(t2, Code ~ Cohort)
-write.table(t3, file='vertebrate_weights_grams_20190110.csv', sep=',', col.names = T, row.names = F)
+write.table(t3, file='vertebrate_weights_grams_20190612.csv', sep=',', col.names = T, row.names = F)
 
 # length at age for initial conditions 
 t=newX[,c("Code", "Species", "vbert_cm2", "Cohort")]
@@ -254,8 +259,8 @@ library(ncdf4)
 # nc_close(nc)
 
 
-#### 20180711 update - used this to write data to variables for ResN and StructN
-nc=nc_open('RMinit_2018.nc', write=T) # 
+#### 20180711 update - used this to write data to variables for ResN and StructN; (just need xR and xS from routine above)
+nc=nc_open('RMinit2_2019.nc', write=T) # 
 a=data.frame(attributes(nc$var), stringsAsFactors = F) # dataframe
 
 aaR=data.frame(nm=a$names[grep("_ResN", a$names)], stringsAsFactors = F) # split names with ResN
