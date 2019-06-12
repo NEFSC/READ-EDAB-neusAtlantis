@@ -6485,7 +6485,7 @@ variables:
 	double Cod10_Nums(t, b, z) ;
 		Cod10_Nums:bmtype = "tracer" ;
 		Cod10_Nums:units = "1" ;
-		Cod10_Nums:long_name = "Numbers of shallow demersals cohort 10" ;
+		Cod10_Nums:long_name = "Numbers of cod cohort 10" ;
 		Cod10_Nums:dtype = 0 ;
 		Cod10_Nums:sumtype = 0 ;
 		Cod10_Nums:inwc = 0 ;
@@ -6504,7 +6504,7 @@ variables:
 	double Cod10_ResN(t, b, z) ;
 		Cod10_ResN:bmtype = "tracer" ;
 		Cod10_ResN:units = "mg N" ;
-		Cod10_ResN:long_name = "Individ reserve N for shallow demersals cohort 10" ;
+		Cod10_ResN:long_name = "Individ reserve N for cod cohort 10" ;
 		Cod10_ResN:dtype = 0 ;
 		Cod10_ResN:sumtype = 0 ;
 		Cod10_ResN:inwc = 0 ;
@@ -6523,7 +6523,7 @@ variables:
 	double Cod10_StructN(t, b, z) ;
 		Cod10_StructN:bmtype = "tracer" ;
 		Cod10_StructN:units = "mg N" ;
-		Cod10_StructN:long_name = "Individ structural N for shallow demersals cohort 10" ;
+		Cod10_StructN:long_name = "Individ structural N for cod cohort 10" ;
 		Cod10_StructN:dtype = 0 ;
 		Cod10_StructN:sumtype = 0 ;
 		Cod10_StructN:inwc = 0 ;
@@ -6542,7 +6542,7 @@ variables:
 	double Cod1_Nums(t, b, z) ;
 		Cod1_Nums:bmtype = "tracer" ;
 		Cod1_Nums:units = "1" ;
-		Cod1_Nums:long_name = "Numbers of shallow demersals cohort 1" ;
+		Cod1_Nums:long_name = "Numbers of cod cohort 1" ;
 		Cod1_Nums:dtype = 0 ;
 		Cod1_Nums:sumtype = 0 ;
 		Cod1_Nums:inwc = 0 ;
@@ -6561,7 +6561,7 @@ variables:
 	double Cod1_ResN(t, b, z) ;
 		Cod1_ResN:bmtype = "tracer" ;
 		Cod1_ResN:units = "mg N" ;
-		Cod1_ResN:long_name = "Individ reserve N for shallow demersals cohort 1" ;
+		Cod1_ResN:long_name = "Individ reserve N for cod cohort 1" ;
 		Cod1_ResN:dtype = 0 ;
 		Cod1_ResN:sumtype = 0 ;
 		Cod1_ResN:inwc = 0 ;
@@ -6580,7 +6580,7 @@ variables:
 	double Cod1_StructN(t, b, z) ;
 		Cod1_StructN:bmtype = "tracer" ;
 		Cod1_StructN:units = "mg N" ;
-		Cod1_StructN:long_name = "Individ structural N for shallow demersals cohort 1" ;
+		Cod1_StructN:long_name = "Individ structural N for cod cohort 1" ;
 		Cod1_StructN:dtype = 0 ;
 		Cod1_StructN:sumtype = 0 ;
 		Cod1_StructN:inwc = 0 ;
@@ -6599,7 +6599,7 @@ variables:
 	double Cod2_Nums(t, b, z) ;
 		Cod2_Nums:bmtype = "tracer" ;
 		Cod2_Nums:units = "1" ;
-		Cod2_Nums:long_name = "Numbers of shallow demersals cohort 2" ;
+		Cod2_Nums:long_name = "Numbers of cod cohort 2" ;
 		Cod2_Nums:dtype = 0 ;
 		Cod2_Nums:sumtype = 0 ;
 		Cod2_Nums:inwc = 0 ;
@@ -6618,7 +6618,7 @@ variables:
 	double Cod2_ResN(t, b, z) ;
 		Cod2_ResN:bmtype = "tracer" ;
 		Cod2_ResN:units = "mg N" ;
-		Cod2_ResN:long_name = "Individ reserve N for shallow demersals cohort 2" ;
+		Cod2_ResN:long_name = "Individ reserve N for cod cohort 2" ;
 		Cod2_ResN:dtype = 0 ;
 		Cod2_ResN:sumtype = 0 ;
 		Cod2_ResN:inwc = 0 ;
@@ -6637,7 +6637,7 @@ variables:
 	double Cod2_StructN(t, b, z) ;
 		Cod2_StructN:bmtype = "tracer" ;
 		Cod2_StructN:units = "mg N" ;
-		Cod2_StructN:long_name = "Individ structural N for shallow demersals cohort 2" ;
+		Cod2_StructN:long_name = "Individ structural N for cod cohort 2" ;
 		Cod2_StructN:dtype = 0 ;
 		Cod2_StructN:sumtype = 0 ;
 		Cod2_StructN:inwc = 0 ;
@@ -6656,7 +6656,7 @@ variables:
 	double Cod3_Nums(t, b, z) ;
 		Cod3_Nums:bmtype = "tracer" ;
 		Cod3_Nums:units = "1" ;
-		Cod3_Nums:long_name = "Numbers of shallow demersals cohort 3" ;
+		Cod3_Nums:long_name = "Numbers of cod cohort 3" ;
 		Cod3_Nums:dtype = 0 ;
 		Cod3_Nums:sumtype = 0 ;
 		Cod3_Nums:inwc = 0 ;
@@ -6675,7 +6675,7 @@ variables:
 	double Cod3_ResN(t, b, z) ;
 		Cod3_ResN:bmtype = "tracer" ;
 		Cod3_ResN:units = "mg N" ;
-		Cod3_ResN:long_name = "Individ reserve N for shallow demersals cohort 3" ;
+		Cod3_ResN:long_name = "Individ reserve N for cod cohort 3" ;
 		Cod3_ResN:dtype = 0 ;
 		Cod3_ResN:sumtype = 0 ;
 		Cod3_ResN:inwc = 0 ;
@@ -6694,7 +6694,7 @@ variables:
 	double Cod3_StructN(t, b, z) ;
 		Cod3_StructN:bmtype = "tracer" ;
 		Cod3_StructN:units = "mg N" ;
-		Cod3_StructN:long_name = "Individ structural N for shallow demersals cohort 3" ;
+		Cod3_StructN:long_name = "Individ structural N for cod cohort 3" ;
 		Cod3_StructN:dtype = 0 ;
 		Cod3_StructN:sumtype = 0 ;
 		Cod3_StructN:inwc = 0 ;
@@ -6713,7 +6713,7 @@ variables:
 	double Cod4_Nums(t, b, z) ;
 		Cod4_Nums:bmtype = "tracer" ;
 		Cod4_Nums:units = "1" ;
-		Cod4_Nums:long_name = "Numbers of shallow demersals cohort 4" ;
+		Cod4_Nums:long_name = "Numbers of cod cohort 4" ;
 		Cod4_Nums:dtype = 0 ;
 		Cod4_Nums:sumtype = 0 ;
 		Cod4_Nums:inwc = 0 ;
@@ -6732,7 +6732,7 @@ variables:
 	double Cod4_ResN(t, b, z) ;
 		Cod4_ResN:bmtype = "tracer" ;
 		Cod4_ResN:units = "mg N" ;
-		Cod4_ResN:long_name = "Individ reserve N for shallow demersals cohort 4" ;
+		Cod4_ResN:long_name = "Individ reserve N for cod cohort 4" ;
 		Cod4_ResN:dtype = 0 ;
 		Cod4_ResN:sumtype = 0 ;
 		Cod4_ResN:inwc = 0 ;
@@ -6751,7 +6751,7 @@ variables:
 	double Cod4_StructN(t, b, z) ;
 		Cod4_StructN:bmtype = "tracer" ;
 		Cod4_StructN:units = "mg N" ;
-		Cod4_StructN:long_name = "Individ structural N for shallow demersals cohort 4" ;
+		Cod4_StructN:long_name = "Individ structural N for cod cohort 4" ;
 		Cod4_StructN:dtype = 0 ;
 		Cod4_StructN:sumtype = 0 ;
 		Cod4_StructN:inwc = 0 ;
@@ -6770,7 +6770,7 @@ variables:
 	double Cod5_Nums(t, b, z) ;
 		Cod5_Nums:bmtype = "tracer" ;
 		Cod5_Nums:units = "1" ;
-		Cod5_Nums:long_name = "Numbers of shallow demersals cohort 5" ;
+		Cod5_Nums:long_name = "Numbers of cod cohort 5" ;
 		Cod5_Nums:dtype = 0 ;
 		Cod5_Nums:sumtype = 0 ;
 		Cod5_Nums:inwc = 0 ;
@@ -6789,7 +6789,7 @@ variables:
 	double Cod5_ResN(t, b, z) ;
 		Cod5_ResN:bmtype = "tracer" ;
 		Cod5_ResN:units = "mg N" ;
-		Cod5_ResN:long_name = "Individ reserve N for shallow demersals cohort 5" ;
+		Cod5_ResN:long_name = "Individ reserve N for cod cohort 5" ;
 		Cod5_ResN:dtype = 0 ;
 		Cod5_ResN:sumtype = 0 ;
 		Cod5_ResN:inwc = 0 ;
@@ -6808,7 +6808,7 @@ variables:
 	double Cod5_StructN(t, b, z) ;
 		Cod5_StructN:bmtype = "tracer" ;
 		Cod5_StructN:units = "mg N" ;
-		Cod5_StructN:long_name = "Individ structural N for shallow demersals cohort 5" ;
+		Cod5_StructN:long_name = "Individ structural N for cod cohort 5" ;
 		Cod5_StructN:dtype = 0 ;
 		Cod5_StructN:sumtype = 0 ;
 		Cod5_StructN:inwc = 0 ;
@@ -6827,7 +6827,7 @@ variables:
 	double Cod6_Nums(t, b, z) ;
 		Cod6_Nums:bmtype = "tracer" ;
 		Cod6_Nums:units = "1" ;
-		Cod6_Nums:long_name = "Numbers of shallow demersals cohort 6" ;
+		Cod6_Nums:long_name = "Numbers of cod cohort 6" ;
 		Cod6_Nums:dtype = 0 ;
 		Cod6_Nums:sumtype = 0 ;
 		Cod6_Nums:inwc = 0 ;
@@ -6846,7 +6846,7 @@ variables:
 	double Cod6_ResN(t, b, z) ;
 		Cod6_ResN:bmtype = "tracer" ;
 		Cod6_ResN:units = "mg N" ;
-		Cod6_ResN:long_name = "Individ reserve N for shallow demersals cohort 6" ;
+		Cod6_ResN:long_name = "Individ reserve N for cod cohort 6" ;
 		Cod6_ResN:dtype = 0 ;
 		Cod6_ResN:sumtype = 0 ;
 		Cod6_ResN:inwc = 0 ;
@@ -6865,7 +6865,7 @@ variables:
 	double Cod6_StructN(t, b, z) ;
 		Cod6_StructN:bmtype = "tracer" ;
 		Cod6_StructN:units = "mg N" ;
-		Cod6_StructN:long_name = "Individ structural N for shallow demersals cohort 6" ;
+		Cod6_StructN:long_name = "Individ structural N for cod cohort 6" ;
 		Cod6_StructN:dtype = 0 ;
 		Cod6_StructN:sumtype = 0 ;
 		Cod6_StructN:inwc = 0 ;
@@ -6884,7 +6884,7 @@ variables:
 	double Cod7_Nums(t, b, z) ;
 		Cod7_Nums:bmtype = "tracer" ;
 		Cod7_Nums:units = "1" ;
-		Cod7_Nums:long_name = "Numbers of shallow demersals cohort 7" ;
+		Cod7_Nums:long_name = "Numbers of cod cohort 7" ;
 		Cod7_Nums:dtype = 0 ;
 		Cod7_Nums:sumtype = 0 ;
 		Cod7_Nums:inwc = 0 ;
@@ -6903,7 +6903,7 @@ variables:
 	double Cod7_ResN(t, b, z) ;
 		Cod7_ResN:bmtype = "tracer" ;
 		Cod7_ResN:units = "mg N" ;
-		Cod7_ResN:long_name = "Individ reserve N for shallow demersals cohort 7" ;
+		Cod7_ResN:long_name = "Individ reserve N for cod cohort 7" ;
 		Cod7_ResN:dtype = 0 ;
 		Cod7_ResN:sumtype = 0 ;
 		Cod7_ResN:inwc = 0 ;
@@ -6922,7 +6922,7 @@ variables:
 	double Cod7_StructN(t, b, z) ;
 		Cod7_StructN:bmtype = "tracer" ;
 		Cod7_StructN:units = "mg N" ;
-		Cod7_StructN:long_name = "Individ structural N for shallow demersals cohort 7" ;
+		Cod7_StructN:long_name = "Individ structural N for cod cohort 7" ;
 		Cod7_StructN:dtype = 0 ;
 		Cod7_StructN:sumtype = 0 ;
 		Cod7_StructN:inwc = 0 ;
@@ -6941,7 +6941,7 @@ variables:
 	double Cod8_Nums(t, b, z) ;
 		Cod8_Nums:bmtype = "tracer" ;
 		Cod8_Nums:units = "1" ;
-		Cod8_Nums:long_name = "Numbers of shallow demersals fish cohort 8" ;
+		Cod8_Nums:long_name = "Numbers of cod fish cohort 8" ;
 		Cod8_Nums:dtype = 0 ;
 		Cod8_Nums:sumtype = 0 ;
 		Cod8_Nums:inwc = 0 ;
@@ -6960,7 +6960,7 @@ variables:
 	double Cod8_ResN(t, b, z) ;
 		Cod8_ResN:bmtype = "tracer" ;
 		Cod8_ResN:units = "mg N" ;
-		Cod8_ResN:long_name = "Individ reserve N for shallow demersals fish cohort 8" ;
+		Cod8_ResN:long_name = "Individ reserve N for cod fish cohort 8" ;
 		Cod8_ResN:dtype = 0 ;
 		Cod8_ResN:sumtype = 0 ;
 		Cod8_ResN:inwc = 0 ;
@@ -6979,7 +6979,7 @@ variables:
 	double Cod8_StructN(t, b, z) ;
 		Cod8_StructN:bmtype = "tracer" ;
 		Cod8_StructN:units = "mg N" ;
-		Cod8_StructN:long_name = "Individ structural N for shallow demersals fish cohort 8" ;
+		Cod8_StructN:long_name = "Individ structural N for cod fish cohort 8" ;
 		Cod8_StructN:dtype = 0 ;
 		Cod8_StructN:sumtype = 0 ;
 		Cod8_StructN:inwc = 0 ;
@@ -6998,7 +6998,7 @@ variables:
 	double Cod9_Nums(t, b, z) ;
 		Cod9_Nums:bmtype = "tracer" ;
 		Cod9_Nums:units = "1" ;
-		Cod9_Nums:long_name = "Numbers of shallow demersals cohort 9" ;
+		Cod9_Nums:long_name = "Numbers of cod cohort 9" ;
 		Cod9_Nums:dtype = 0 ;
 		Cod9_Nums:sumtype = 0 ;
 		Cod9_Nums:inwc = 0 ;
@@ -7017,7 +7017,7 @@ variables:
 	double Cod9_ResN(t, b, z) ;
 		Cod9_ResN:bmtype = "tracer" ;
 		Cod9_ResN:units = "mg N" ;
-		Cod9_ResN:long_name = "Individ reserve N for shallow demersals cohort 9" ;
+		Cod9_ResN:long_name = "Individ reserve N for cod cohort 9" ;
 		Cod9_ResN:dtype = 0 ;
 		Cod9_ResN:sumtype = 0 ;
 		Cod9_ResN:inwc = 0 ;
@@ -7036,7 +7036,7 @@ variables:
 	double Cod9_StructN(t, b, z) ;
 		Cod9_StructN:bmtype = "tracer" ;
 		Cod9_StructN:units = "mg N" ;
-		Cod9_StructN:long_name = "Individ structural N for shallow demersals cohort 9" ;
+		Cod9_StructN:long_name = "Individ structural N for cod cohort 9" ;
 		Cod9_StructN:dtype = 0 ;
 		Cod9_StructN:sumtype = 0 ;
 		Cod9_StructN:inwc = 0 ;
@@ -7055,7 +7055,7 @@ variables:
 	double Cod_N(t, b, z) ;
 		Cod_N:bmtype = "tracer" ;
 		Cod_N:units = "mg N m-3" ;
-		Cod_N:long_name = "Shallow demersal fish total N" ;
+		Cod_N:long_name = "Cod N" ;
 		Cod_N:dtype = 0 ;
 		Cod_N:sumtype = 1 ;
 		Cod_N:inwc = 0 ;
@@ -10256,7 +10256,7 @@ variables:
 		Herring1_ResN:b_dens = 1000000000. ;
 		Herring1_ResN:i_conc = 200000000. ;
 		Herring1_ResN:f_conc = 200000000. ;
-		Herring1_ResN:_FillValue = 7.34942290946954 ;
+		Herring1_ResN:_FillValue = 62.57 ;
 	double Herring1_StructN(t, b, z) ;
 		Herring1_StructN:bmtype = "tracer" ;
 		Herring1_StructN:units = "mg N" ;
@@ -10275,7 +10275,7 @@ variables:
 		Herring1_StructN:b_dens = 1000000000. ;
 		Herring1_StructN:i_conc = 200000000. ;
 		Herring1_StructN:f_conc = 200000000. ;
-		Herring1_StructN:_FillValue = 2.77336713564888 ;
+		Herring1_StructN:_FillValue = 23.61 ;
 	double Herring2_Nums(t, b, z) ;
 		Herring2_Nums:bmtype = "tracer" ;
 		Herring2_Nums:units = "1" ;
@@ -12695,7 +12695,7 @@ variables:
 	double Menhaden10_Nums(t, b, z) ;
 		Menhaden10_Nums:bmtype = "tracer" ;
 		Menhaden10_Nums:units = "1" ;
-		Menhaden10_Nums:long_name = "Numbers of flat deep demersal cohort 10" ;
+		Menhaden10_Nums:long_name = "Numbers of estuarine deep demersal cohort 10" ;
 		Menhaden10_Nums:dtype = 0 ;
 		Menhaden10_Nums:sumtype = 0 ;
 		Menhaden10_Nums:inwc = 0 ;
@@ -12714,7 +12714,7 @@ variables:
 	double Menhaden10_ResN(t, b, z) ;
 		Menhaden10_ResN:bmtype = "tracer" ;
 		Menhaden10_ResN:units = "mg N" ;
-		Menhaden10_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 10" ;
+		Menhaden10_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 10" ;
 		Menhaden10_ResN:dtype = 0 ;
 		Menhaden10_ResN:sumtype = 0 ;
 		Menhaden10_ResN:inwc = 0 ;
@@ -12752,7 +12752,7 @@ variables:
 	double Menhaden1_Nums(t, b, z) ;
 		Menhaden1_Nums:bmtype = "tracer" ;
 		Menhaden1_Nums:units = "1" ;
-		Menhaden1_Nums:long_name = "Numbers of flat deep demersal cohort 1" ;
+		Menhaden1_Nums:long_name = "Numbers of estuarine deep demersal cohort 1" ;
 		Menhaden1_Nums:dtype = 0 ;
 		Menhaden1_Nums:sumtype = 0 ;
 		Menhaden1_Nums:inwc = 0 ;
@@ -12771,7 +12771,7 @@ variables:
 	double Menhaden1_ResN(t, b, z) ;
 		Menhaden1_ResN:bmtype = "tracer" ;
 		Menhaden1_ResN:units = "mg N" ;
-		Menhaden1_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 1" ;
+		Menhaden1_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 1" ;
 		Menhaden1_ResN:dtype = 0 ;
 		Menhaden1_ResN:sumtype = 0 ;
 		Menhaden1_ResN:inwc = 0 ;
@@ -12809,7 +12809,7 @@ variables:
 	double Menhaden2_Nums(t, b, z) ;
 		Menhaden2_Nums:bmtype = "tracer" ;
 		Menhaden2_Nums:units = "1" ;
-		Menhaden2_Nums:long_name = "Numbers of flat deep demersal cohort 2" ;
+		Menhaden2_Nums:long_name = "Numbers of estuarine deep demersal cohort 2" ;
 		Menhaden2_Nums:dtype = 0 ;
 		Menhaden2_Nums:sumtype = 0 ;
 		Menhaden2_Nums:inwc = 0 ;
@@ -12828,7 +12828,7 @@ variables:
 	double Menhaden2_ResN(t, b, z) ;
 		Menhaden2_ResN:bmtype = "tracer" ;
 		Menhaden2_ResN:units = "mg N" ;
-		Menhaden2_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 2" ;
+		Menhaden2_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 2" ;
 		Menhaden2_ResN:dtype = 0 ;
 		Menhaden2_ResN:sumtype = 0 ;
 		Menhaden2_ResN:inwc = 0 ;
@@ -12866,7 +12866,7 @@ variables:
 	double Menhaden3_Nums(t, b, z) ;
 		Menhaden3_Nums:bmtype = "tracer" ;
 		Menhaden3_Nums:units = "1" ;
-		Menhaden3_Nums:long_name = "Numbers of flat deep demersal cohort 3" ;
+		Menhaden3_Nums:long_name = "Numbers of estuarine deep demersal cohort 3" ;
 		Menhaden3_Nums:dtype = 0 ;
 		Menhaden3_Nums:sumtype = 0 ;
 		Menhaden3_Nums:inwc = 0 ;
@@ -12885,7 +12885,7 @@ variables:
 	double Menhaden3_ResN(t, b, z) ;
 		Menhaden3_ResN:bmtype = "tracer" ;
 		Menhaden3_ResN:units = "mg N" ;
-		Menhaden3_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 3" ;
+		Menhaden3_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 3" ;
 		Menhaden3_ResN:dtype = 0 ;
 		Menhaden3_ResN:sumtype = 0 ;
 		Menhaden3_ResN:inwc = 0 ;
@@ -12923,7 +12923,7 @@ variables:
 	double Menhaden4_Nums(t, b, z) ;
 		Menhaden4_Nums:bmtype = "tracer" ;
 		Menhaden4_Nums:units = "1" ;
-		Menhaden4_Nums:long_name = "Numbers of flat deep demersal cohort 4" ;
+		Menhaden4_Nums:long_name = "Numbers of estuarine deep demersal cohort 4" ;
 		Menhaden4_Nums:dtype = 0 ;
 		Menhaden4_Nums:sumtype = 0 ;
 		Menhaden4_Nums:inwc = 0 ;
@@ -12942,7 +12942,7 @@ variables:
 	double Menhaden4_ResN(t, b, z) ;
 		Menhaden4_ResN:bmtype = "tracer" ;
 		Menhaden4_ResN:units = "mg N" ;
-		Menhaden4_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 4" ;
+		Menhaden4_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 4" ;
 		Menhaden4_ResN:dtype = 0 ;
 		Menhaden4_ResN:sumtype = 0 ;
 		Menhaden4_ResN:inwc = 0 ;
@@ -12980,7 +12980,7 @@ variables:
 	double Menhaden5_Nums(t, b, z) ;
 		Menhaden5_Nums:bmtype = "tracer" ;
 		Menhaden5_Nums:units = "1" ;
-		Menhaden5_Nums:long_name = "Numbers of flat deep demersal cohort 5" ;
+		Menhaden5_Nums:long_name = "Numbers of estuarine deep demersal cohort 5" ;
 		Menhaden5_Nums:dtype = 0 ;
 		Menhaden5_Nums:sumtype = 0 ;
 		Menhaden5_Nums:inwc = 0 ;
@@ -12999,7 +12999,7 @@ variables:
 	double Menhaden5_ResN(t, b, z) ;
 		Menhaden5_ResN:bmtype = "tracer" ;
 		Menhaden5_ResN:units = "mg N" ;
-		Menhaden5_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 5" ;
+		Menhaden5_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 5" ;
 		Menhaden5_ResN:dtype = 0 ;
 		Menhaden5_ResN:sumtype = 0 ;
 		Menhaden5_ResN:inwc = 0 ;
@@ -13037,7 +13037,7 @@ variables:
 	double Menhaden6_Nums(t, b, z) ;
 		Menhaden6_Nums:bmtype = "tracer" ;
 		Menhaden6_Nums:units = "1" ;
-		Menhaden6_Nums:long_name = "Numbers of flat deep demersal cohort 6" ;
+		Menhaden6_Nums:long_name = "Numbers of estuarine deep demersal cohort 6" ;
 		Menhaden6_Nums:dtype = 0 ;
 		Menhaden6_Nums:sumtype = 0 ;
 		Menhaden6_Nums:inwc = 0 ;
@@ -13056,7 +13056,7 @@ variables:
 	double Menhaden6_ResN(t, b, z) ;
 		Menhaden6_ResN:bmtype = "tracer" ;
 		Menhaden6_ResN:units = "mg N" ;
-		Menhaden6_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 6" ;
+		Menhaden6_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 6" ;
 		Menhaden6_ResN:dtype = 0 ;
 		Menhaden6_ResN:sumtype = 0 ;
 		Menhaden6_ResN:inwc = 0 ;
@@ -13094,7 +13094,7 @@ variables:
 	double Menhaden7_Nums(t, b, z) ;
 		Menhaden7_Nums:bmtype = "tracer" ;
 		Menhaden7_Nums:units = "1" ;
-		Menhaden7_Nums:long_name = "Numbers of flat deep demersal cohort 7" ;
+		Menhaden7_Nums:long_name = "Numbers of estuarine deep demersal cohort 7" ;
 		Menhaden7_Nums:dtype = 0 ;
 		Menhaden7_Nums:sumtype = 0 ;
 		Menhaden7_Nums:inwc = 0 ;
@@ -13113,7 +13113,7 @@ variables:
 	double Menhaden7_ResN(t, b, z) ;
 		Menhaden7_ResN:bmtype = "tracer" ;
 		Menhaden7_ResN:units = "mg N" ;
-		Menhaden7_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 7" ;
+		Menhaden7_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 7" ;
 		Menhaden7_ResN:dtype = 0 ;
 		Menhaden7_ResN:sumtype = 0 ;
 		Menhaden7_ResN:inwc = 0 ;
@@ -13151,7 +13151,7 @@ variables:
 	double Menhaden8_Nums(t, b, z) ;
 		Menhaden8_Nums:bmtype = "tracer" ;
 		Menhaden8_Nums:units = "1" ;
-		Menhaden8_Nums:long_name = "Numbers of flat deep demersal fish cohort 8" ;
+		Menhaden8_Nums:long_name = "Numbers of estuarine deep demersal fish cohort 8" ;
 		Menhaden8_Nums:dtype = 0 ;
 		Menhaden8_Nums:sumtype = 0 ;
 		Menhaden8_Nums:inwc = 0 ;
@@ -13170,7 +13170,7 @@ variables:
 	double Menhaden8_ResN(t, b, z) ;
 		Menhaden8_ResN:bmtype = "tracer" ;
 		Menhaden8_ResN:units = "mg N" ;
-		Menhaden8_ResN:long_name = "Individ reserve N for flat deep demersal fish fish cohort 8" ;
+		Menhaden8_ResN:long_name = "Individ reserve N for estuarine deep demersal fish fish cohort 8" ;
 		Menhaden8_ResN:dtype = 0 ;
 		Menhaden8_ResN:sumtype = 0 ;
 		Menhaden8_ResN:inwc = 0 ;
@@ -13208,7 +13208,7 @@ variables:
 	double Menhaden9_Nums(t, b, z) ;
 		Menhaden9_Nums:bmtype = "tracer" ;
 		Menhaden9_Nums:units = "1" ;
-		Menhaden9_Nums:long_name = "Numbers of flat deep demersal cohort 9" ;
+		Menhaden9_Nums:long_name = "Numbers of estuarine deep demersal cohort 9" ;
 		Menhaden9_Nums:dtype = 0 ;
 		Menhaden9_Nums:sumtype = 0 ;
 		Menhaden9_Nums:inwc = 0 ;
@@ -13227,7 +13227,7 @@ variables:
 	double Menhaden9_ResN(t, b, z) ;
 		Menhaden9_ResN:bmtype = "tracer" ;
 		Menhaden9_ResN:units = "mg N" ;
-		Menhaden9_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 9" ;
+		Menhaden9_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 9" ;
 		Menhaden9_ResN:dtype = 0 ;
 		Menhaden9_ResN:sumtype = 0 ;
 		Menhaden9_ResN:inwc = 0 ;
@@ -13265,7 +13265,7 @@ variables:
 	double Menhaden_N(t, b, z) ;
 		Menhaden_N:bmtype = "tracer" ;
 		Menhaden_N:units = "mg N m-3" ;
-		Menhaden_N:long_name = "Estuarine demersal fish total N" ;
+		Menhaden_N:long_name = "Estuarine deep demersal fish total N" ;
 		Menhaden_N:dtype = 0 ;
 		Menhaden_N:sumtype = 1 ;
 		Menhaden_N:inwc = 0 ;
@@ -14026,7 +14026,7 @@ variables:
 		Misc_Demersal_Fish1_ResN:b_dens = 1000000000. ;
 		Misc_Demersal_Fish1_ResN:i_conc = 200000000. ;
 		Misc_Demersal_Fish1_ResN:f_conc = 200000000. ;
-		Misc_Demersal_Fish1_ResN:_FillValue = 127.131497649247 ;
+		Misc_Demersal_Fish1_ResN:_FillValue = 727.57 ;
 	double Misc_Demersal_Fish1_StructN(t, b, z) ;
 		Misc_Demersal_Fish1_StructN:bmtype = "tracer" ;
 		Misc_Demersal_Fish1_StructN:units = "mg N" ;
@@ -14045,7 +14045,7 @@ variables:
 		Misc_Demersal_Fish1_StructN:b_dens = 1000000000. ;
 		Misc_Demersal_Fish1_StructN:i_conc = 200000000. ;
 		Misc_Demersal_Fish1_StructN:f_conc = 200000000. ;
-		Misc_Demersal_Fish1_StructN:_FillValue = 47.9741500563195 ;
+		Misc_Demersal_Fish1_StructN:_FillValue = 274.56 ;
 	double Misc_Demersal_Fish2_Nums(t, b, z) ;
 		Misc_Demersal_Fish2_Nums:bmtype = "tracer" ;
 		Misc_Demersal_Fish2_Nums:units = "1" ;
@@ -14608,7 +14608,7 @@ variables:
 		Monkfish1_ResN:b_dens = 1000000000. ;
 		Monkfish1_ResN:i_conc = 200000000. ;
 		Monkfish1_ResN:f_conc = 200000000. ;
-		Monkfish1_ResN:_FillValue = 170.201929644982 ;
+		Monkfish1_ResN:_FillValue = 223.00 ;
 	double Monkfish1_StructN(t, b, z) ;
 		Monkfish1_StructN:bmtype = "tracer" ;
 		Monkfish1_StructN:units = "mg N" ;
@@ -14627,7 +14627,7 @@ variables:
 		Monkfish1_StructN:b_dens = 1000000000. ;
 		Monkfish1_StructN:i_conc = 200000000. ;
 		Monkfish1_StructN:f_conc = 200000000. ;
-		Monkfish1_StructN:_FillValue = 64.2271432622573 ;
+		Monkfish1_StructN:_FillValue = 84.15 ;
 	double Monkfish2_Nums(t, b, z) ;
 		Monkfish2_Nums:bmtype = "tracer" ;
 		Monkfish2_Nums:units = "1" ;
@@ -23496,7 +23496,7 @@ variables:
 	double Shallow_Demersal_Fish10_Nums(t, b, z) ;
 		Shallow_Demersal_Fish10_Nums:bmtype = "tracer" ;
 		Shallow_Demersal_Fish10_Nums:units = "1" ;
-		Shallow_Demersal_Fish10_Nums:long_name = "Numbers of flat deep demersal cohort 10" ;
+		Shallow_Demersal_Fish10_Nums:long_name = "Numbers of estuarine demersal cohort 10" ;
 		Shallow_Demersal_Fish10_Nums:dtype = 0 ;
 		Shallow_Demersal_Fish10_Nums:sumtype = 0 ;
 		Shallow_Demersal_Fish10_Nums:inwc = 0 ;
@@ -23515,7 +23515,7 @@ variables:
 	double Shallow_Demersal_Fish10_ResN(t, b, z) ;
 		Shallow_Demersal_Fish10_ResN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish10_ResN:units = "mg N" ;
-		Shallow_Demersal_Fish10_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 10" ;
+		Shallow_Demersal_Fish10_ResN:long_name = "Individ reserve N for estuarine demersal fish cohort 10" ;
 		Shallow_Demersal_Fish10_ResN:dtype = 0 ;
 		Shallow_Demersal_Fish10_ResN:sumtype = 0 ;
 		Shallow_Demersal_Fish10_ResN:inwc = 0 ;
@@ -23534,7 +23534,7 @@ variables:
 	double Shallow_Demersal_Fish10_StructN(t, b, z) ;
 		Shallow_Demersal_Fish10_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish10_StructN:units = "mg N" ;
-		Shallow_Demersal_Fish10_StructN:long_name = "Individ structural N for estuarine deep demersal fish cohort 10" ;
+		Shallow_Demersal_Fish10_StructN:long_name = "Individ structural N for estuarine demersal fish cohort 10" ;
 		Shallow_Demersal_Fish10_StructN:dtype = 0 ;
 		Shallow_Demersal_Fish10_StructN:sumtype = 0 ;
 		Shallow_Demersal_Fish10_StructN:inwc = 0 ;
@@ -23553,7 +23553,7 @@ variables:
 	double Shallow_Demersal_Fish1_Nums(t, b, z) ;
 		Shallow_Demersal_Fish1_Nums:bmtype = "tracer" ;
 		Shallow_Demersal_Fish1_Nums:units = "1" ;
-		Shallow_Demersal_Fish1_Nums:long_name = "Numbers of flat deep demersal cohort 1" ;
+		Shallow_Demersal_Fish1_Nums:long_name = "Numbers of estuarine demersal cohort 1" ;
 		Shallow_Demersal_Fish1_Nums:dtype = 0 ;
 		Shallow_Demersal_Fish1_Nums:sumtype = 0 ;
 		Shallow_Demersal_Fish1_Nums:inwc = 0 ;
@@ -23572,7 +23572,7 @@ variables:
 	double Shallow_Demersal_Fish1_ResN(t, b, z) ;
 		Shallow_Demersal_Fish1_ResN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish1_ResN:units = "mg N" ;
-		Shallow_Demersal_Fish1_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 1" ;
+		Shallow_Demersal_Fish1_ResN:long_name = "Individ reserve N for estuarine demersal fish cohort 1" ;
 		Shallow_Demersal_Fish1_ResN:dtype = 0 ;
 		Shallow_Demersal_Fish1_ResN:sumtype = 0 ;
 		Shallow_Demersal_Fish1_ResN:inwc = 0 ;
@@ -23587,11 +23587,11 @@ variables:
 		Shallow_Demersal_Fish1_ResN:b_dens = 1000000000. ;
 		Shallow_Demersal_Fish1_ResN:i_conc = 200000000. ;
 		Shallow_Demersal_Fish1_ResN:f_conc = 200000000. ;
-		Shallow_Demersal_Fish1_ResN:_FillValue = 727.572240841819 ;
+		Shallow_Demersal_Fish1_ResN:_FillValue = 727.57 ;
 	double Shallow_Demersal_Fish1_StructN(t, b, z) ;
 		Shallow_Demersal_Fish1_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish1_StructN:units = "mg N" ;
-		Shallow_Demersal_Fish1_StructN:long_name = "Individ structural N for estuarine deep demersal fish cohort 1" ;
+		Shallow_Demersal_Fish1_StructN:long_name = "Individ structural N for estuarine demersal fish cohort 1" ;
 		Shallow_Demersal_Fish1_StructN:dtype = 0 ;
 		Shallow_Demersal_Fish1_StructN:sumtype = 0 ;
 		Shallow_Demersal_Fish1_StructN:inwc = 0 ;
@@ -23606,11 +23606,11 @@ variables:
 		Shallow_Demersal_Fish1_StructN:b_dens = 1000000000. ;
 		Shallow_Demersal_Fish1_StructN:i_conc = 200000000. ;
 		Shallow_Demersal_Fish1_StructN:f_conc = 200000000. ;
-		Shallow_Demersal_Fish1_StructN:_FillValue = 274.555562581818 ;
+		Shallow_Demersal_Fish1_StructN:_FillValue = 274.56 ;
 	double Shallow_Demersal_Fish2_Nums(t, b, z) ;
 		Shallow_Demersal_Fish2_Nums:bmtype = "tracer" ;
 		Shallow_Demersal_Fish2_Nums:units = "1" ;
-		Shallow_Demersal_Fish2_Nums:long_name = "Numbers of flat deep demersal cohort 2" ;
+		Shallow_Demersal_Fish2_Nums:long_name = "Numbers of estuarine demersal cohort 2" ;
 		Shallow_Demersal_Fish2_Nums:dtype = 0 ;
 		Shallow_Demersal_Fish2_Nums:sumtype = 0 ;
 		Shallow_Demersal_Fish2_Nums:inwc = 0 ;
@@ -23629,7 +23629,7 @@ variables:
 	double Shallow_Demersal_Fish2_ResN(t, b, z) ;
 		Shallow_Demersal_Fish2_ResN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish2_ResN:units = "mg N" ;
-		Shallow_Demersal_Fish2_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 2" ;
+		Shallow_Demersal_Fish2_ResN:long_name = "Individ reserve N for estuarine demersal fish cohort 2" ;
 		Shallow_Demersal_Fish2_ResN:dtype = 0 ;
 		Shallow_Demersal_Fish2_ResN:sumtype = 0 ;
 		Shallow_Demersal_Fish2_ResN:inwc = 0 ;
@@ -23648,7 +23648,7 @@ variables:
 	double Shallow_Demersal_Fish2_StructN(t, b, z) ;
 		Shallow_Demersal_Fish2_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish2_StructN:units = "mg N" ;
-		Shallow_Demersal_Fish2_StructN:long_name = "Individ structural N for estuarine deep demersal fish cohort 2" ;
+		Shallow_Demersal_Fish2_StructN:long_name = "Individ structural N for estuarine demersal fish cohort 2" ;
 		Shallow_Demersal_Fish2_StructN:dtype = 0 ;
 		Shallow_Demersal_Fish2_StructN:sumtype = 0 ;
 		Shallow_Demersal_Fish2_StructN:inwc = 0 ;
@@ -23667,7 +23667,7 @@ variables:
 	double Shallow_Demersal_Fish3_Nums(t, b, z) ;
 		Shallow_Demersal_Fish3_Nums:bmtype = "tracer" ;
 		Shallow_Demersal_Fish3_Nums:units = "1" ;
-		Shallow_Demersal_Fish3_Nums:long_name = "Numbers of flat deep demersal cohort 3" ;
+		Shallow_Demersal_Fish3_Nums:long_name = "Numbers of estuarine demersal cohort 3" ;
 		Shallow_Demersal_Fish3_Nums:dtype = 0 ;
 		Shallow_Demersal_Fish3_Nums:sumtype = 0 ;
 		Shallow_Demersal_Fish3_Nums:inwc = 0 ;
@@ -23686,7 +23686,7 @@ variables:
 	double Shallow_Demersal_Fish3_ResN(t, b, z) ;
 		Shallow_Demersal_Fish3_ResN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish3_ResN:units = "mg N" ;
-		Shallow_Demersal_Fish3_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 3" ;
+		Shallow_Demersal_Fish3_ResN:long_name = "Individ reserve N for estuarine demersal fish cohort 3" ;
 		Shallow_Demersal_Fish3_ResN:dtype = 0 ;
 		Shallow_Demersal_Fish3_ResN:sumtype = 0 ;
 		Shallow_Demersal_Fish3_ResN:inwc = 0 ;
@@ -23705,7 +23705,7 @@ variables:
 	double Shallow_Demersal_Fish3_StructN(t, b, z) ;
 		Shallow_Demersal_Fish3_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish3_StructN:units = "mg N" ;
-		Shallow_Demersal_Fish3_StructN:long_name = "Individ structural N for estuarine deep demersal fish cohort 3" ;
+		Shallow_Demersal_Fish3_StructN:long_name = "Individ structural N for estuarine demersal fish cohort 3" ;
 		Shallow_Demersal_Fish3_StructN:dtype = 0 ;
 		Shallow_Demersal_Fish3_StructN:sumtype = 0 ;
 		Shallow_Demersal_Fish3_StructN:inwc = 0 ;
@@ -23724,7 +23724,7 @@ variables:
 	double Shallow_Demersal_Fish4_Nums(t, b, z) ;
 		Shallow_Demersal_Fish4_Nums:bmtype = "tracer" ;
 		Shallow_Demersal_Fish4_Nums:units = "1" ;
-		Shallow_Demersal_Fish4_Nums:long_name = "Numbers of flat deep demersal cohort 4" ;
+		Shallow_Demersal_Fish4_Nums:long_name = "Numbers of estuarine demersal cohort 4" ;
 		Shallow_Demersal_Fish4_Nums:dtype = 0 ;
 		Shallow_Demersal_Fish4_Nums:sumtype = 0 ;
 		Shallow_Demersal_Fish4_Nums:inwc = 0 ;
@@ -23743,7 +23743,7 @@ variables:
 	double Shallow_Demersal_Fish4_ResN(t, b, z) ;
 		Shallow_Demersal_Fish4_ResN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish4_ResN:units = "mg N" ;
-		Shallow_Demersal_Fish4_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 4" ;
+		Shallow_Demersal_Fish4_ResN:long_name = "Individ reserve N for estuarine demersal fish cohort 4" ;
 		Shallow_Demersal_Fish4_ResN:dtype = 0 ;
 		Shallow_Demersal_Fish4_ResN:sumtype = 0 ;
 		Shallow_Demersal_Fish4_ResN:inwc = 0 ;
@@ -23762,7 +23762,7 @@ variables:
 	double Shallow_Demersal_Fish4_StructN(t, b, z) ;
 		Shallow_Demersal_Fish4_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish4_StructN:units = "mg N" ;
-		Shallow_Demersal_Fish4_StructN:long_name = "Individ structural N for estuarine deep demersal fish cohort 4" ;
+		Shallow_Demersal_Fish4_StructN:long_name = "Individ structural N for estuarine demersal fish cohort 4" ;
 		Shallow_Demersal_Fish4_StructN:dtype = 0 ;
 		Shallow_Demersal_Fish4_StructN:sumtype = 0 ;
 		Shallow_Demersal_Fish4_StructN:inwc = 0 ;
@@ -23781,7 +23781,7 @@ variables:
 	double Shallow_Demersal_Fish5_Nums(t, b, z) ;
 		Shallow_Demersal_Fish5_Nums:bmtype = "tracer" ;
 		Shallow_Demersal_Fish5_Nums:units = "1" ;
-		Shallow_Demersal_Fish5_Nums:long_name = "Numbers of flat deep demersal cohort 5" ;
+		Shallow_Demersal_Fish5_Nums:long_name = "Numbers of estuarine demersal cohort 5" ;
 		Shallow_Demersal_Fish5_Nums:dtype = 0 ;
 		Shallow_Demersal_Fish5_Nums:sumtype = 0 ;
 		Shallow_Demersal_Fish5_Nums:inwc = 0 ;
@@ -23800,7 +23800,7 @@ variables:
 	double Shallow_Demersal_Fish5_ResN(t, b, z) ;
 		Shallow_Demersal_Fish5_ResN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish5_ResN:units = "mg N" ;
-		Shallow_Demersal_Fish5_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 5" ;
+		Shallow_Demersal_Fish5_ResN:long_name = "Individ reserve N for estuarine demersal fish cohort 5" ;
 		Shallow_Demersal_Fish5_ResN:dtype = 0 ;
 		Shallow_Demersal_Fish5_ResN:sumtype = 0 ;
 		Shallow_Demersal_Fish5_ResN:inwc = 0 ;
@@ -23819,7 +23819,7 @@ variables:
 	double Shallow_Demersal_Fish5_StructN(t, b, z) ;
 		Shallow_Demersal_Fish5_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish5_StructN:units = "mg N" ;
-		Shallow_Demersal_Fish5_StructN:long_name = "Individ structural N for estuarine deep demersal fish cohort 5" ;
+		Shallow_Demersal_Fish5_StructN:long_name = "Individ structural N for estuarine demersal fish cohort 5" ;
 		Shallow_Demersal_Fish5_StructN:dtype = 0 ;
 		Shallow_Demersal_Fish5_StructN:sumtype = 0 ;
 		Shallow_Demersal_Fish5_StructN:inwc = 0 ;
@@ -23838,7 +23838,7 @@ variables:
 	double Shallow_Demersal_Fish6_Nums(t, b, z) ;
 		Shallow_Demersal_Fish6_Nums:bmtype = "tracer" ;
 		Shallow_Demersal_Fish6_Nums:units = "1" ;
-		Shallow_Demersal_Fish6_Nums:long_name = "Numbers of flat deep demersal cohort 6" ;
+		Shallow_Demersal_Fish6_Nums:long_name = "Numbers of estuarine demersal cohort 6" ;
 		Shallow_Demersal_Fish6_Nums:dtype = 0 ;
 		Shallow_Demersal_Fish6_Nums:sumtype = 0 ;
 		Shallow_Demersal_Fish6_Nums:inwc = 0 ;
@@ -23857,7 +23857,7 @@ variables:
 	double Shallow_Demersal_Fish6_ResN(t, b, z) ;
 		Shallow_Demersal_Fish6_ResN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish6_ResN:units = "mg N" ;
-		Shallow_Demersal_Fish6_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 6" ;
+		Shallow_Demersal_Fish6_ResN:long_name = "Individ reserve N for estuarine demersal fish cohort 6" ;
 		Shallow_Demersal_Fish6_ResN:dtype = 0 ;
 		Shallow_Demersal_Fish6_ResN:sumtype = 0 ;
 		Shallow_Demersal_Fish6_ResN:inwc = 0 ;
@@ -23876,7 +23876,7 @@ variables:
 	double Shallow_Demersal_Fish6_StructN(t, b, z) ;
 		Shallow_Demersal_Fish6_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish6_StructN:units = "mg N" ;
-		Shallow_Demersal_Fish6_StructN:long_name = "Individ structural N for estuarine deep demersal fish cohort 6" ;
+		Shallow_Demersal_Fish6_StructN:long_name = "Individ structural N for estuarine demersal fish cohort 6" ;
 		Shallow_Demersal_Fish6_StructN:dtype = 0 ;
 		Shallow_Demersal_Fish6_StructN:sumtype = 0 ;
 		Shallow_Demersal_Fish6_StructN:inwc = 0 ;
@@ -23895,7 +23895,7 @@ variables:
 	double Shallow_Demersal_Fish7_Nums(t, b, z) ;
 		Shallow_Demersal_Fish7_Nums:bmtype = "tracer" ;
 		Shallow_Demersal_Fish7_Nums:units = "1" ;
-		Shallow_Demersal_Fish7_Nums:long_name = "Numbers of flat deep demersal cohort 7" ;
+		Shallow_Demersal_Fish7_Nums:long_name = "Numbers of estuarine demersal cohort 7" ;
 		Shallow_Demersal_Fish7_Nums:dtype = 0 ;
 		Shallow_Demersal_Fish7_Nums:sumtype = 0 ;
 		Shallow_Demersal_Fish7_Nums:inwc = 0 ;
@@ -23914,7 +23914,7 @@ variables:
 	double Shallow_Demersal_Fish7_ResN(t, b, z) ;
 		Shallow_Demersal_Fish7_ResN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish7_ResN:units = "mg N" ;
-		Shallow_Demersal_Fish7_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 7" ;
+		Shallow_Demersal_Fish7_ResN:long_name = "Individ reserve N for estuarine demersal fish cohort 7" ;
 		Shallow_Demersal_Fish7_ResN:dtype = 0 ;
 		Shallow_Demersal_Fish7_ResN:sumtype = 0 ;
 		Shallow_Demersal_Fish7_ResN:inwc = 0 ;
@@ -23933,7 +23933,7 @@ variables:
 	double Shallow_Demersal_Fish7_StructN(t, b, z) ;
 		Shallow_Demersal_Fish7_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish7_StructN:units = "mg N" ;
-		Shallow_Demersal_Fish7_StructN:long_name = "Individ structural N for estuarine deep demersal fish cohort 7" ;
+		Shallow_Demersal_Fish7_StructN:long_name = "Individ structural N for estuarine demersal fish cohort 7" ;
 		Shallow_Demersal_Fish7_StructN:dtype = 0 ;
 		Shallow_Demersal_Fish7_StructN:sumtype = 0 ;
 		Shallow_Demersal_Fish7_StructN:inwc = 0 ;
@@ -23952,7 +23952,7 @@ variables:
 	double Shallow_Demersal_Fish8_Nums(t, b, z) ;
 		Shallow_Demersal_Fish8_Nums:bmtype = "tracer" ;
 		Shallow_Demersal_Fish8_Nums:units = "1" ;
-		Shallow_Demersal_Fish8_Nums:long_name = "Numbers of flat deep demersal fish cohort 8" ;
+		Shallow_Demersal_Fish8_Nums:long_name = "Numbers of estuarine demersal fish cohort 8" ;
 		Shallow_Demersal_Fish8_Nums:dtype = 0 ;
 		Shallow_Demersal_Fish8_Nums:sumtype = 0 ;
 		Shallow_Demersal_Fish8_Nums:inwc = 0 ;
@@ -23971,7 +23971,7 @@ variables:
 	double Shallow_Demersal_Fish8_ResN(t, b, z) ;
 		Shallow_Demersal_Fish8_ResN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish8_ResN:units = "mg N" ;
-		Shallow_Demersal_Fish8_ResN:long_name = "Individ reserve N for flat deep demersal fish fish cohort 8" ;
+		Shallow_Demersal_Fish8_ResN:long_name = "Individ reserve N for estuarine demersal fish fish cohort 8" ;
 		Shallow_Demersal_Fish8_ResN:dtype = 0 ;
 		Shallow_Demersal_Fish8_ResN:sumtype = 0 ;
 		Shallow_Demersal_Fish8_ResN:inwc = 0 ;
@@ -23990,7 +23990,7 @@ variables:
 	double Shallow_Demersal_Fish8_StructN(t, b, z) ;
 		Shallow_Demersal_Fish8_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish8_StructN:units = "mg N" ;
-		Shallow_Demersal_Fish8_StructN:long_name = "Individ structural N for estuarine deep demersal fish fish cohort 8" ;
+		Shallow_Demersal_Fish8_StructN:long_name = "Individ structural N for estuarine demersal fish fish cohort 8" ;
 		Shallow_Demersal_Fish8_StructN:dtype = 0 ;
 		Shallow_Demersal_Fish8_StructN:sumtype = 0 ;
 		Shallow_Demersal_Fish8_StructN:inwc = 0 ;
@@ -24009,7 +24009,7 @@ variables:
 	double Shallow_Demersal_Fish9_Nums(t, b, z) ;
 		Shallow_Demersal_Fish9_Nums:bmtype = "tracer" ;
 		Shallow_Demersal_Fish9_Nums:units = "1" ;
-		Shallow_Demersal_Fish9_Nums:long_name = "Numbers of flat deep demersal cohort 9" ;
+		Shallow_Demersal_Fish9_Nums:long_name = "Numbers of estuarine demersal cohort 9" ;
 		Shallow_Demersal_Fish9_Nums:dtype = 0 ;
 		Shallow_Demersal_Fish9_Nums:sumtype = 0 ;
 		Shallow_Demersal_Fish9_Nums:inwc = 0 ;
@@ -24028,7 +24028,7 @@ variables:
 	double Shallow_Demersal_Fish9_ResN(t, b, z) ;
 		Shallow_Demersal_Fish9_ResN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish9_ResN:units = "mg N" ;
-		Shallow_Demersal_Fish9_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 9" ;
+		Shallow_Demersal_Fish9_ResN:long_name = "Individ reserve N for estuarine demersal fish cohort 9" ;
 		Shallow_Demersal_Fish9_ResN:dtype = 0 ;
 		Shallow_Demersal_Fish9_ResN:sumtype = 0 ;
 		Shallow_Demersal_Fish9_ResN:inwc = 0 ;
@@ -24047,7 +24047,7 @@ variables:
 	double Shallow_Demersal_Fish9_StructN(t, b, z) ;
 		Shallow_Demersal_Fish9_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish9_StructN:units = "mg N" ;
-		Shallow_Demersal_Fish9_StructN:long_name = "Individ structural N for estuarine deep demersal fish cohort 9" ;
+		Shallow_Demersal_Fish9_StructN:long_name = "Individ structural N for estuarine demersal fish cohort 9" ;
 		Shallow_Demersal_Fish9_StructN:dtype = 0 ;
 		Shallow_Demersal_Fish9_StructN:sumtype = 0 ;
 		Shallow_Demersal_Fish9_StructN:inwc = 0 ;
@@ -24090,7 +24090,7 @@ variables:
 	double Silver_Hake10_Nums(t, b, z) ;
 		Silver_Hake10_Nums:bmtype = "tracer" ;
 		Silver_Hake10_Nums:units = "1" ;
-		Silver_Hake10_Nums:long_name = "Numbers of other demersal cohort 10" ;
+		Silver_Hake10_Nums:long_name = "Numbers of silver hake cohort 10" ;
 		Silver_Hake10_Nums:dtype = 0 ;
 		Silver_Hake10_Nums:sumtype = 0 ;
 		Silver_Hake10_Nums:inwc = 0 ;
@@ -24109,7 +24109,7 @@ variables:
 	double Silver_Hake10_ResN(t, b, z) ;
 		Silver_Hake10_ResN:bmtype = "tracer" ;
 		Silver_Hake10_ResN:units = "mg N" ;
-		Silver_Hake10_ResN:long_name = "Individ reserve N for other demersal fish cohort 10" ;
+		Silver_Hake10_ResN:long_name = "Individ reserve N for silver hake cohort 10" ;
 		Silver_Hake10_ResN:dtype = 0 ;
 		Silver_Hake10_ResN:sumtype = 0 ;
 		Silver_Hake10_ResN:inwc = 0 ;
@@ -24128,7 +24128,7 @@ variables:
 	double Silver_Hake10_StructN(t, b, z) ;
 		Silver_Hake10_StructN:bmtype = "tracer" ;
 		Silver_Hake10_StructN:units = "mg N" ;
-		Silver_Hake10_StructN:long_name = "Individ structural N for other demersal fish cohort 10" ;
+		Silver_Hake10_StructN:long_name = "Individ structural N for silver hake cohort 10" ;
 		Silver_Hake10_StructN:dtype = 0 ;
 		Silver_Hake10_StructN:sumtype = 0 ;
 		Silver_Hake10_StructN:inwc = 0 ;
@@ -24166,7 +24166,7 @@ variables:
 	double Silver_Hake1_ResN(t, b, z) ;
 		Silver_Hake1_ResN:bmtype = "tracer" ;
 		Silver_Hake1_ResN:units = "mg N" ;
-		Silver_Hake1_ResN:long_name = "Individ reserve N for other demersal fish cohort 1" ;
+		Silver_Hake1_ResN:long_name = "Individ reserve N for silver hake cohort 1" ;
 		Silver_Hake1_ResN:dtype = 0 ;
 		Silver_Hake1_ResN:sumtype = 0 ;
 		Silver_Hake1_ResN:inwc = 0 ;
@@ -24185,7 +24185,7 @@ variables:
 	double Silver_Hake1_StructN(t, b, z) ;
 		Silver_Hake1_StructN:bmtype = "tracer" ;
 		Silver_Hake1_StructN:units = "mg N" ;
-		Silver_Hake1_StructN:long_name = "Individ structural N for other demersal fish cohort 1" ;
+		Silver_Hake1_StructN:long_name = "Individ structural N for silver hake cohort 1" ;
 		Silver_Hake1_StructN:dtype = 0 ;
 		Silver_Hake1_StructN:sumtype = 0 ;
 		Silver_Hake1_StructN:inwc = 0 ;
@@ -24223,7 +24223,7 @@ variables:
 	double Silver_Hake2_ResN(t, b, z) ;
 		Silver_Hake2_ResN:bmtype = "tracer" ;
 		Silver_Hake2_ResN:units = "mg N" ;
-		Silver_Hake2_ResN:long_name = "Individ reserve N for other demersal fish cohort 2" ;
+		Silver_Hake2_ResN:long_name = "Individ reserve N for silver hake cohort 2" ;
 		Silver_Hake2_ResN:dtype = 0 ;
 		Silver_Hake2_ResN:sumtype = 0 ;
 		Silver_Hake2_ResN:inwc = 0 ;
@@ -24242,7 +24242,7 @@ variables:
 	double Silver_Hake2_StructN(t, b, z) ;
 		Silver_Hake2_StructN:bmtype = "tracer" ;
 		Silver_Hake2_StructN:units = "mg N" ;
-		Silver_Hake2_StructN:long_name = "Individ structural N for other demersal fish cohort 2" ;
+		Silver_Hake2_StructN:long_name = "Individ structural N for silver hake cohort 2" ;
 		Silver_Hake2_StructN:dtype = 0 ;
 		Silver_Hake2_StructN:sumtype = 0 ;
 		Silver_Hake2_StructN:inwc = 0 ;
@@ -24280,7 +24280,7 @@ variables:
 	double Silver_Hake3_ResN(t, b, z) ;
 		Silver_Hake3_ResN:bmtype = "tracer" ;
 		Silver_Hake3_ResN:units = "mg N" ;
-		Silver_Hake3_ResN:long_name = "Individ reserve N for other demersal fish cohort 3" ;
+		Silver_Hake3_ResN:long_name = "Individ reserve N for silver hake cohort 3" ;
 		Silver_Hake3_ResN:dtype = 0 ;
 		Silver_Hake3_ResN:sumtype = 0 ;
 		Silver_Hake3_ResN:inwc = 0 ;
@@ -24299,7 +24299,7 @@ variables:
 	double Silver_Hake3_StructN(t, b, z) ;
 		Silver_Hake3_StructN:bmtype = "tracer" ;
 		Silver_Hake3_StructN:units = "mg N" ;
-		Silver_Hake3_StructN:long_name = "Individ structural N for other demersal fish cohort 3" ;
+		Silver_Hake3_StructN:long_name = "Individ structural N for silver hake cohort 3" ;
 		Silver_Hake3_StructN:dtype = 0 ;
 		Silver_Hake3_StructN:sumtype = 0 ;
 		Silver_Hake3_StructN:inwc = 0 ;
@@ -24337,7 +24337,7 @@ variables:
 	double Silver_Hake4_ResN(t, b, z) ;
 		Silver_Hake4_ResN:bmtype = "tracer" ;
 		Silver_Hake4_ResN:units = "mg N" ;
-		Silver_Hake4_ResN:long_name = "Individ reserve N for other demersal fish cohort 4" ;
+		Silver_Hake4_ResN:long_name = "Individ reserve N for silver hake cohort 4" ;
 		Silver_Hake4_ResN:dtype = 0 ;
 		Silver_Hake4_ResN:sumtype = 0 ;
 		Silver_Hake4_ResN:inwc = 0 ;
@@ -24356,7 +24356,7 @@ variables:
 	double Silver_Hake4_StructN(t, b, z) ;
 		Silver_Hake4_StructN:bmtype = "tracer" ;
 		Silver_Hake4_StructN:units = "mg N" ;
-		Silver_Hake4_StructN:long_name = "Individ structural N for other demersal fish cohort 4" ;
+		Silver_Hake4_StructN:long_name = "Individ structural N for silver hake cohort 4" ;
 		Silver_Hake4_StructN:dtype = 0 ;
 		Silver_Hake4_StructN:sumtype = 0 ;
 		Silver_Hake4_StructN:inwc = 0 ;
@@ -24394,7 +24394,7 @@ variables:
 	double Silver_Hake5_ResN(t, b, z) ;
 		Silver_Hake5_ResN:bmtype = "tracer" ;
 		Silver_Hake5_ResN:units = "mg N" ;
-		Silver_Hake5_ResN:long_name = "Individ reserve N for other demersal fish cohort 5" ;
+		Silver_Hake5_ResN:long_name = "Individ reserve N for silver hake cohort 5" ;
 		Silver_Hake5_ResN:dtype = 0 ;
 		Silver_Hake5_ResN:sumtype = 0 ;
 		Silver_Hake5_ResN:inwc = 0 ;
@@ -24413,7 +24413,7 @@ variables:
 	double Silver_Hake5_StructN(t, b, z) ;
 		Silver_Hake5_StructN:bmtype = "tracer" ;
 		Silver_Hake5_StructN:units = "mg N" ;
-		Silver_Hake5_StructN:long_name = "Individ structural N for other demersal fish cohort 5" ;
+		Silver_Hake5_StructN:long_name = "Individ structural N for silver hake cohort 5" ;
 		Silver_Hake5_StructN:dtype = 0 ;
 		Silver_Hake5_StructN:sumtype = 0 ;
 		Silver_Hake5_StructN:inwc = 0 ;
@@ -24451,7 +24451,7 @@ variables:
 	double Silver_Hake6_ResN(t, b, z) ;
 		Silver_Hake6_ResN:bmtype = "tracer" ;
 		Silver_Hake6_ResN:units = "mg N" ;
-		Silver_Hake6_ResN:long_name = "Individ reserve N for other demersal fish cohort 6" ;
+		Silver_Hake6_ResN:long_name = "Individ reserve N for silver hake cohort 6" ;
 		Silver_Hake6_ResN:dtype = 0 ;
 		Silver_Hake6_ResN:sumtype = 0 ;
 		Silver_Hake6_ResN:inwc = 0 ;
@@ -24470,7 +24470,7 @@ variables:
 	double Silver_Hake6_StructN(t, b, z) ;
 		Silver_Hake6_StructN:bmtype = "tracer" ;
 		Silver_Hake6_StructN:units = "mg N" ;
-		Silver_Hake6_StructN:long_name = "Individ structural N for other demersal fish cohort 6" ;
+		Silver_Hake6_StructN:long_name = "Individ structural N for silver hake cohort 6" ;
 		Silver_Hake6_StructN:dtype = 0 ;
 		Silver_Hake6_StructN:sumtype = 0 ;
 		Silver_Hake6_StructN:inwc = 0 ;
@@ -24508,7 +24508,7 @@ variables:
 	double Silver_Hake7_ResN(t, b, z) ;
 		Silver_Hake7_ResN:bmtype = "tracer" ;
 		Silver_Hake7_ResN:units = "mg N" ;
-		Silver_Hake7_ResN:long_name = "Individ reserve N for other demersal fish cohort 7" ;
+		Silver_Hake7_ResN:long_name = "Individ reserve N for silver hake cohort 7" ;
 		Silver_Hake7_ResN:dtype = 0 ;
 		Silver_Hake7_ResN:sumtype = 0 ;
 		Silver_Hake7_ResN:inwc = 0 ;
@@ -24527,7 +24527,7 @@ variables:
 	double Silver_Hake7_StructN(t, b, z) ;
 		Silver_Hake7_StructN:bmtype = "tracer" ;
 		Silver_Hake7_StructN:units = "mg N" ;
-		Silver_Hake7_StructN:long_name = "Individ structural N for other demersal fish cohort 7" ;
+		Silver_Hake7_StructN:long_name = "Individ structural N for silver hake cohort 7" ;
 		Silver_Hake7_StructN:dtype = 0 ;
 		Silver_Hake7_StructN:sumtype = 0 ;
 		Silver_Hake7_StructN:inwc = 0 ;
@@ -24546,7 +24546,7 @@ variables:
 	double Silver_Hake8_Nums(t, b, z) ;
 		Silver_Hake8_Nums:bmtype = "tracer" ;
 		Silver_Hake8_Nums:units = "1" ;
-		Silver_Hake8_Nums:long_name = "Numbers of other demersal fish cohort 8" ;
+		Silver_Hake8_Nums:long_name = "Numbers of silver hake cohort 8" ;
 		Silver_Hake8_Nums:dtype = 0 ;
 		Silver_Hake8_Nums:sumtype = 0 ;
 		Silver_Hake8_Nums:inwc = 0 ;
@@ -24565,7 +24565,7 @@ variables:
 	double Silver_Hake8_ResN(t, b, z) ;
 		Silver_Hake8_ResN:bmtype = "tracer" ;
 		Silver_Hake8_ResN:units = "mg N" ;
-		Silver_Hake8_ResN:long_name = "Individ reserve N for other demersal fish fish cohort 8" ;
+		Silver_Hake8_ResN:long_name = "Individ reserve N for silver hake fish cohort 8" ;
 		Silver_Hake8_ResN:dtype = 0 ;
 		Silver_Hake8_ResN:sumtype = 0 ;
 		Silver_Hake8_ResN:inwc = 0 ;
@@ -24584,7 +24584,7 @@ variables:
 	double Silver_Hake8_StructN(t, b, z) ;
 		Silver_Hake8_StructN:bmtype = "tracer" ;
 		Silver_Hake8_StructN:units = "mg N" ;
-		Silver_Hake8_StructN:long_name = "Individ structural N for other demersal fish fish cohort 8" ;
+		Silver_Hake8_StructN:long_name = "Individ structural N for silver hake fish cohort 8" ;
 		Silver_Hake8_StructN:dtype = 0 ;
 		Silver_Hake8_StructN:sumtype = 0 ;
 		Silver_Hake8_StructN:inwc = 0 ;
@@ -24622,7 +24622,7 @@ variables:
 	double Silver_Hake9_ResN(t, b, z) ;
 		Silver_Hake9_ResN:bmtype = "tracer" ;
 		Silver_Hake9_ResN:units = "mg N" ;
-		Silver_Hake9_ResN:long_name = "Individ reserve N for other demersal fish cohort 9" ;
+		Silver_Hake9_ResN:long_name = "Individ reserve N for silver hake cohort 9" ;
 		Silver_Hake9_ResN:dtype = 0 ;
 		Silver_Hake9_ResN:sumtype = 0 ;
 		Silver_Hake9_ResN:inwc = 0 ;
@@ -24641,7 +24641,7 @@ variables:
 	double Silver_Hake9_StructN(t, b, z) ;
 		Silver_Hake9_StructN:bmtype = "tracer" ;
 		Silver_Hake9_StructN:units = "mg N" ;
-		Silver_Hake9_StructN:long_name = "Individ structural N for other demersal fish cohort 9" ;
+		Silver_Hake9_StructN:long_name = "Individ structural N for silver hake cohort 9" ;
 		Silver_Hake9_StructN:dtype = 0 ;
 		Silver_Hake9_StructN:sumtype = 0 ;
 		Silver_Hake9_StructN:inwc = 0 ;
@@ -24660,7 +24660,7 @@ variables:
 	double Silver_Hake_N(t, b, z) ;
 		Silver_Hake_N:bmtype = "tracer" ;
 		Silver_Hake_N:units = "mg N m-3" ;
-		Silver_Hake_N:long_name = "Other shallow demersal fish total N" ;
+		Silver_Hake_N:long_name = "silver hake fish total N" ;
 		Silver_Hake_N:dtype = 0 ;
 		Silver_Hake_N:sumtype = 1 ;
 		Silver_Hake_N:inwc = 0 ;
@@ -34604,7 +34604,7 @@ variables:
 	double Yellowtail_Flounder10_Nums(t, b, z) ;
 		Yellowtail_Flounder10_Nums:bmtype = "tracer" ;
 		Yellowtail_Flounder10_Nums:units = "1" ;
-		Yellowtail_Flounder10_Nums:long_name = "Numbers of estuarine deep demersal cohort 10" ;
+		Yellowtail_Flounder10_Nums:long_name = "Numbers of flat deep demersal cohort 10" ;
 		Yellowtail_Flounder10_Nums:dtype = 0 ;
 		Yellowtail_Flounder10_Nums:sumtype = 0 ;
 		Yellowtail_Flounder10_Nums:inwc = 0 ;
@@ -34623,7 +34623,7 @@ variables:
 	double Yellowtail_Flounder10_ResN(t, b, z) ;
 		Yellowtail_Flounder10_ResN:bmtype = "tracer" ;
 		Yellowtail_Flounder10_ResN:units = "mg N" ;
-		Yellowtail_Flounder10_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 10" ;
+		Yellowtail_Flounder10_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 10" ;
 		Yellowtail_Flounder10_ResN:dtype = 0 ;
 		Yellowtail_Flounder10_ResN:sumtype = 0 ;
 		Yellowtail_Flounder10_ResN:inwc = 0 ;
@@ -34661,7 +34661,7 @@ variables:
 	double Yellowtail_Flounder1_Nums(t, b, z) ;
 		Yellowtail_Flounder1_Nums:bmtype = "tracer" ;
 		Yellowtail_Flounder1_Nums:units = "1" ;
-		Yellowtail_Flounder1_Nums:long_name = "Numbers of estuarine deep demersal cohort 1" ;
+		Yellowtail_Flounder1_Nums:long_name = "Numbers of flat deep demersal cohort 1" ;
 		Yellowtail_Flounder1_Nums:dtype = 0 ;
 		Yellowtail_Flounder1_Nums:sumtype = 0 ;
 		Yellowtail_Flounder1_Nums:inwc = 0 ;
@@ -34680,7 +34680,7 @@ variables:
 	double Yellowtail_Flounder1_ResN(t, b, z) ;
 		Yellowtail_Flounder1_ResN:bmtype = "tracer" ;
 		Yellowtail_Flounder1_ResN:units = "mg N" ;
-		Yellowtail_Flounder1_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 1" ;
+		Yellowtail_Flounder1_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 1" ;
 		Yellowtail_Flounder1_ResN:dtype = 0 ;
 		Yellowtail_Flounder1_ResN:sumtype = 0 ;
 		Yellowtail_Flounder1_ResN:inwc = 0 ;
@@ -34695,7 +34695,7 @@ variables:
 		Yellowtail_Flounder1_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder1_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder1_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder1_ResN:_FillValue = 142.31883876458 ;
+		Yellowtail_Flounder1_ResN:_FillValue = 142.32 ;
 	double Yellowtail_Flounder1_StructN(t, b, z) ;
 		Yellowtail_Flounder1_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder1_StructN:units = "mg N" ;
@@ -34714,11 +34714,11 @@ variables:
 		Yellowtail_Flounder1_StructN:b_dens = 1000000000. ;
 		Yellowtail_Flounder1_StructN:i_conc = 200000000. ;
 		Yellowtail_Flounder1_StructN:f_conc = 200000000. ;
-		Yellowtail_Flounder1_StructN:_FillValue = 53.7052221753132 ;
+		Yellowtail_Flounder1_StructN:_FillValue = 53.71 ;
 	double Yellowtail_Flounder2_Nums(t, b, z) ;
 		Yellowtail_Flounder2_Nums:bmtype = "tracer" ;
 		Yellowtail_Flounder2_Nums:units = "1" ;
-		Yellowtail_Flounder2_Nums:long_name = "Numbers of estuarine deep demersal cohort 2" ;
+		Yellowtail_Flounder2_Nums:long_name = "Numbers of flat deep demersal cohort 2" ;
 		Yellowtail_Flounder2_Nums:dtype = 0 ;
 		Yellowtail_Flounder2_Nums:sumtype = 0 ;
 		Yellowtail_Flounder2_Nums:inwc = 0 ;
@@ -34737,7 +34737,7 @@ variables:
 	double Yellowtail_Flounder2_ResN(t, b, z) ;
 		Yellowtail_Flounder2_ResN:bmtype = "tracer" ;
 		Yellowtail_Flounder2_ResN:units = "mg N" ;
-		Yellowtail_Flounder2_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 2" ;
+		Yellowtail_Flounder2_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 2" ;
 		Yellowtail_Flounder2_ResN:dtype = 0 ;
 		Yellowtail_Flounder2_ResN:sumtype = 0 ;
 		Yellowtail_Flounder2_ResN:inwc = 0 ;
@@ -34775,7 +34775,7 @@ variables:
 	double Yellowtail_Flounder3_Nums(t, b, z) ;
 		Yellowtail_Flounder3_Nums:bmtype = "tracer" ;
 		Yellowtail_Flounder3_Nums:units = "1" ;
-		Yellowtail_Flounder3_Nums:long_name = "Numbers of estuarine deep demersal cohort 3" ;
+		Yellowtail_Flounder3_Nums:long_name = "Numbers of flat deep demersal cohort 3" ;
 		Yellowtail_Flounder3_Nums:dtype = 0 ;
 		Yellowtail_Flounder3_Nums:sumtype = 0 ;
 		Yellowtail_Flounder3_Nums:inwc = 0 ;
@@ -34794,7 +34794,7 @@ variables:
 	double Yellowtail_Flounder3_ResN(t, b, z) ;
 		Yellowtail_Flounder3_ResN:bmtype = "tracer" ;
 		Yellowtail_Flounder3_ResN:units = "mg N" ;
-		Yellowtail_Flounder3_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 3" ;
+		Yellowtail_Flounder3_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 3" ;
 		Yellowtail_Flounder3_ResN:dtype = 0 ;
 		Yellowtail_Flounder3_ResN:sumtype = 0 ;
 		Yellowtail_Flounder3_ResN:inwc = 0 ;
@@ -34832,7 +34832,7 @@ variables:
 	double Yellowtail_Flounder4_Nums(t, b, z) ;
 		Yellowtail_Flounder4_Nums:bmtype = "tracer" ;
 		Yellowtail_Flounder4_Nums:units = "1" ;
-		Yellowtail_Flounder4_Nums:long_name = "Numbers of estuarine deep demersal cohort 4" ;
+		Yellowtail_Flounder4_Nums:long_name = "Numbers of flat deep demersal cohort 4" ;
 		Yellowtail_Flounder4_Nums:dtype = 0 ;
 		Yellowtail_Flounder4_Nums:sumtype = 0 ;
 		Yellowtail_Flounder4_Nums:inwc = 0 ;
@@ -34851,7 +34851,7 @@ variables:
 	double Yellowtail_Flounder4_ResN(t, b, z) ;
 		Yellowtail_Flounder4_ResN:bmtype = "tracer" ;
 		Yellowtail_Flounder4_ResN:units = "mg N" ;
-		Yellowtail_Flounder4_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 4" ;
+		Yellowtail_Flounder4_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 4" ;
 		Yellowtail_Flounder4_ResN:dtype = 0 ;
 		Yellowtail_Flounder4_ResN:sumtype = 0 ;
 		Yellowtail_Flounder4_ResN:inwc = 0 ;
@@ -34889,7 +34889,7 @@ variables:
 	double Yellowtail_Flounder5_Nums(t, b, z) ;
 		Yellowtail_Flounder5_Nums:bmtype = "tracer" ;
 		Yellowtail_Flounder5_Nums:units = "1" ;
-		Yellowtail_Flounder5_Nums:long_name = "Numbers of estuarine deep demersal cohort 5" ;
+		Yellowtail_Flounder5_Nums:long_name = "Numbers of flat deep demersal cohort 5" ;
 		Yellowtail_Flounder5_Nums:dtype = 0 ;
 		Yellowtail_Flounder5_Nums:sumtype = 0 ;
 		Yellowtail_Flounder5_Nums:inwc = 0 ;
@@ -34908,7 +34908,7 @@ variables:
 	double Yellowtail_Flounder5_ResN(t, b, z) ;
 		Yellowtail_Flounder5_ResN:bmtype = "tracer" ;
 		Yellowtail_Flounder5_ResN:units = "mg N" ;
-		Yellowtail_Flounder5_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 5" ;
+		Yellowtail_Flounder5_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 5" ;
 		Yellowtail_Flounder5_ResN:dtype = 0 ;
 		Yellowtail_Flounder5_ResN:sumtype = 0 ;
 		Yellowtail_Flounder5_ResN:inwc = 0 ;
@@ -34946,7 +34946,7 @@ variables:
 	double Yellowtail_Flounder6_Nums(t, b, z) ;
 		Yellowtail_Flounder6_Nums:bmtype = "tracer" ;
 		Yellowtail_Flounder6_Nums:units = "1" ;
-		Yellowtail_Flounder6_Nums:long_name = "Numbers of estuarine deep demersal cohort 6" ;
+		Yellowtail_Flounder6_Nums:long_name = "Numbers of flat deep demersal cohort 6" ;
 		Yellowtail_Flounder6_Nums:dtype = 0 ;
 		Yellowtail_Flounder6_Nums:sumtype = 0 ;
 		Yellowtail_Flounder6_Nums:inwc = 0 ;
@@ -34965,7 +34965,7 @@ variables:
 	double Yellowtail_Flounder6_ResN(t, b, z) ;
 		Yellowtail_Flounder6_ResN:bmtype = "tracer" ;
 		Yellowtail_Flounder6_ResN:units = "mg N" ;
-		Yellowtail_Flounder6_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 6" ;
+		Yellowtail_Flounder6_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 6" ;
 		Yellowtail_Flounder6_ResN:dtype = 0 ;
 		Yellowtail_Flounder6_ResN:sumtype = 0 ;
 		Yellowtail_Flounder6_ResN:inwc = 0 ;
@@ -35003,7 +35003,7 @@ variables:
 	double Yellowtail_Flounder7_Nums(t, b, z) ;
 		Yellowtail_Flounder7_Nums:bmtype = "tracer" ;
 		Yellowtail_Flounder7_Nums:units = "1" ;
-		Yellowtail_Flounder7_Nums:long_name = "Numbers of estuarine deep demersal cohort 7" ;
+		Yellowtail_Flounder7_Nums:long_name = "Numbers of flat deep demersal cohort 7" ;
 		Yellowtail_Flounder7_Nums:dtype = 0 ;
 		Yellowtail_Flounder7_Nums:sumtype = 0 ;
 		Yellowtail_Flounder7_Nums:inwc = 0 ;
@@ -35022,7 +35022,7 @@ variables:
 	double Yellowtail_Flounder7_ResN(t, b, z) ;
 		Yellowtail_Flounder7_ResN:bmtype = "tracer" ;
 		Yellowtail_Flounder7_ResN:units = "mg N" ;
-		Yellowtail_Flounder7_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 7" ;
+		Yellowtail_Flounder7_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 7" ;
 		Yellowtail_Flounder7_ResN:dtype = 0 ;
 		Yellowtail_Flounder7_ResN:sumtype = 0 ;
 		Yellowtail_Flounder7_ResN:inwc = 0 ;
@@ -35060,7 +35060,7 @@ variables:
 	double Yellowtail_Flounder8_Nums(t, b, z) ;
 		Yellowtail_Flounder8_Nums:bmtype = "tracer" ;
 		Yellowtail_Flounder8_Nums:units = "1" ;
-		Yellowtail_Flounder8_Nums:long_name = "Numbers of estuarine deep demersal fish cohort 8" ;
+		Yellowtail_Flounder8_Nums:long_name = "Numbers of flat deep demersal fish cohort 8" ;
 		Yellowtail_Flounder8_Nums:dtype = 0 ;
 		Yellowtail_Flounder8_Nums:sumtype = 0 ;
 		Yellowtail_Flounder8_Nums:inwc = 0 ;
@@ -35079,7 +35079,7 @@ variables:
 	double Yellowtail_Flounder8_ResN(t, b, z) ;
 		Yellowtail_Flounder8_ResN:bmtype = "tracer" ;
 		Yellowtail_Flounder8_ResN:units = "mg N" ;
-		Yellowtail_Flounder8_ResN:long_name = "Individ reserve N for estuarine deep demersal fish fish cohort 8" ;
+		Yellowtail_Flounder8_ResN:long_name = "Individ reserve N for flat deep demersal fish fish cohort 8" ;
 		Yellowtail_Flounder8_ResN:dtype = 0 ;
 		Yellowtail_Flounder8_ResN:sumtype = 0 ;
 		Yellowtail_Flounder8_ResN:inwc = 0 ;
@@ -35117,7 +35117,7 @@ variables:
 	double Yellowtail_Flounder9_Nums(t, b, z) ;
 		Yellowtail_Flounder9_Nums:bmtype = "tracer" ;
 		Yellowtail_Flounder9_Nums:units = "1" ;
-		Yellowtail_Flounder9_Nums:long_name = "Numbers of estuarine deep demersal cohort 9" ;
+		Yellowtail_Flounder9_Nums:long_name = "Numbers of flat deep demersal cohort 9" ;
 		Yellowtail_Flounder9_Nums:dtype = 0 ;
 		Yellowtail_Flounder9_Nums:sumtype = 0 ;
 		Yellowtail_Flounder9_Nums:inwc = 0 ;
@@ -35136,7 +35136,7 @@ variables:
 	double Yellowtail_Flounder9_ResN(t, b, z) ;
 		Yellowtail_Flounder9_ResN:bmtype = "tracer" ;
 		Yellowtail_Flounder9_ResN:units = "mg N" ;
-		Yellowtail_Flounder9_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 9" ;
+		Yellowtail_Flounder9_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 9" ;
 		Yellowtail_Flounder9_ResN:dtype = 0 ;
 		Yellowtail_Flounder9_ResN:sumtype = 0 ;
 		Yellowtail_Flounder9_ResN:inwc = 0 ;

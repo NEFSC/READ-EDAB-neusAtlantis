@@ -19,7 +19,7 @@ d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data
 d2=paste('E:/AtlantisRun/20161103/tes/', runfile, sep='')
 
 #choose plots
-make_spatial_plots=F
+make_spatial_plots=T
 make_diet_pdf=T
 make_LTL_plots=T
 
