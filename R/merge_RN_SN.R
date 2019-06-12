@@ -56,6 +56,8 @@ codes=codes[-c(1:2),]
 ## (von Bertalanffy model, Atlantis calcs for RN SN weight conversions, length_weight relationships, etc.)
 # x=read_xlsx('C:/Users/ryan.morse/Documents/GitHub/atneus_RM/R/length_weight_v15.xlsx', sheet='length_weight_v15_data')
 x=read_xlsx(paste(d1, '/R/length_weight_v15.xlsx', sep=''), sheet='length_weight_v15_data_update')
+x=read_xlsx(paste(d1, '/R/length_weight_v15.xlsx', sep=''), sheet='length_weight_v15_calc_To=0') # change To to zero for all
+x=x[,1:23]
 x$Rname=paste(x$Species, x$Cohort, "_ResN", sep="") #make name same as variable name in netcdf file
 x$Sname=paste(x$Species, x$Cohort, "_StructN", sep="") #make name same as variable name in netcdf file
 # ## Subset above to use for replacement in initial conditions netcdf file
@@ -72,15 +74,21 @@ newX$interval=apply(newX[,'numyrs'], 1, function(x) median(seq(1:x))) # use to g
 newX$newage=newX$age*newX$interval # this is updated mean age of cohort to use in von Bert calcs instead of below
 # newX$newage=newX$age-(newX$numyrs-1) # use this for von Bertalannfy calculations, li_a li_b (offsets values to start at 1)
 newX$vbert_cm2=newX$Linf*(1-exp(-newX$K*(newX$newage-newX$To)))
+
+newX$vbert_cm2=newX$Linf*(1-exp(-newX$K*(newX$newage-0))) # use if To set to zero
+
 newX$grams2=newX$li_a*(newX$vbert_cm2^newX$li_b)
 newX$inches=newX$vbert_cm2*0.393701
 newX$lbs=newX$grams2*0.00220462
 newX$recruit_cm=newX$Linf*(1-exp(-newX$K*(1-newX$To))) # age 1 fish
+
+newX$recruit_cm=newX$Linf*(1-exp(-newX$K*(1-0))) # age 1 fish # use if To set to zero
+
 newX$recruit_grams=newX$li_a*(newX$recruit_cm^newX$li_b)
 
 ## plot length vs weight to make sure things look OK - inches/lbs
 nmc=unique(newX$Code)
-pdf(file='weight_length_US_20190110.pdf')
+pdf(file='weight_length_US_20190612.pdf')
 for(i in 1:length(nmc)){
   ii=nmc[i]
 plot(newX$inches[newX$Code==ii]~newX$lbs[newX$Code==ii], ylab='inches', xlab='lbs', main=ii)
@@ -89,7 +97,7 @@ dev.off()
 ##
 ## plot length vs weight to make sure things look OK - metric
 nmc=unique(newX$Code)
-pdf(file='weight_length_metric_20190110.pdf')
+pdf(file='weight_length_metric_20190612.pdf')
 cohort=seq(1,10,1)
 for(i in 1:length(nmc)){
   ii=nmc[i]
