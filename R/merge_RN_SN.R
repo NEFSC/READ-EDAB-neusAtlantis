@@ -118,6 +118,19 @@ newX$RN_2=round(newX$SN_2*2.65, digits = 2) # convert SN to RN (mg)
 newX$recruitSN=round(newX$recruit_grams /20/5.7/3.65*1000, digits=2)
 newX$recruitRN=round(newX$recruitSN *2.65, digits=2)
 
+### save recruit weights to use in biol file KWRR_XXX and KWSR_XXX ###
+recruits=data.frame(newX$recruitRN, newX$recruitSN)
+recruits$code=newX$Code
+sec=seq(from=1, to=length(recruits$code),by=10)
+recruits=recruits[sec,]
+recruits$Rname=paste("KWRR_",recruits$code, sep="") 
+recruits$Sname=paste("KWSR_",recruits$code, sep="") 
+columns=colnames(recruits)
+col2=columns[c(3, 4, 1, 5, 2)]
+rec=recruits[,col2]
+write.table(rec, file='vertebrate_recruit_weights_kwrr_kwsr_20190612.csv', sep=',', col.names = T, row.names = F)
+
+
 ## Subset above to use for replacement in initial conditions netcdf file
 xR=data.frame(Variables=newX$Rname,RN=newX$RN_2) # this is the new calculated reserve nitrogen value
 xS=data.frame(Variables=newX$Sname,SN=newX$SN_2) # this is the new calculated structural nitrogen value
