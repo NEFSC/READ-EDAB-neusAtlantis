@@ -71,7 +71,7 @@ codes=codes[-c(1:2),]
 # ### The recruit weight is then that of an age 1 fish
 # newX$interval=apply(newX[,'numyrs'], 1, function(x) median(seq(1:x))) # use to get mean age of cohort
 # newX$newage=newX$age*newX$interval # this is updated mean age of cohort to use in von Bert calcs instead of below
-# newX$newage=newX$age-(newX$numyrs-1) # use this for von Bertalannfy calculations, li_a li_b (offsets values to start at 1)
+# newX$newage2=newX$age-(newX$numyrs-1) # use this for von Bertalannfy calculations, li_a li_b (offsets values to start at 1)
 
 
 #### 20190612 Updated version ###
@@ -144,7 +144,7 @@ t=newX[,c("Code", "Cohort")]
 t$RNSN=newX$RN_2 + newX$SN_2
 # t2=melt.data.frame(t, id.vars=c("Code", "Cohort")) #, measure.vars = c('RN_2', 'SN_2'))
 t3=cast(t, Code ~ Cohort)
-write.table(t3, file='vertebrate_sumRNSN.csv', sep=',', col.names = T, row.names = F)
+write.table(t3, file='vertebrate_sumRNSN_20190612.csv', sep=',', col.names = T, row.names = F)
 
 ## write out RN and SN by cohort
 t=newX[,c("Code", "Cohort", "SN_2")]
