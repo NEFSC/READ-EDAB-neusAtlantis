@@ -322,6 +322,7 @@ bgm.file <- ("neus_tmerc_RM2.bgm")
 NEUS_15_init=make.sh.init.object(bgm.file, 'RMinit2_2019.nc') #surfOnly.nc') #'RMinit_newvalues2017.nc')
 sh.init(NEUS_15_init)
 newN=NEUS_15_init$df.nitrogen
+newNums=NEUS_15_init$df.nums
 write.csv(t, file='benthic_species_N.csv', sep=',', col.names = T, row.names = F)
 
 
