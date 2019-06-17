@@ -22,7 +22,7 @@ flag_skip_biol     0   # Flag showing whether want biological model run (1) or n
 
 flag_skip_phys     0   # Flag showing whether want biological model run (0) or not (1 - only used when debugging fisheries)
 
-flagannual_Mest    1	#Whether to write out estimates of mortality per predator annually (1) or not (0)
+flagannual_Mest    0	#Whether to write out estimates of mortality per predator annually (1) or not (0)
 
 
 
@@ -60,7 +60,7 @@ move_check    3       # ID number of group where tracking movements
 
 fishmove      1        # Set to 0 to turn vertebrate movement off for debugging purposes
 
-debug         0        # 0=debuging off, 1=debug fishing, 2=debug discards, 3=debug histfishing,
+debug         0        # 0=debuging off, 1.0=debug fishing, 2=debug discards, 3=debug histfishing,
 
                        # 4=debug assessments, 5=debug mpas, 6=debug effort, 7=debug econ, 
 
@@ -159,9 +159,9 @@ flagscaleinit     1  # Flag to indicate whether scaling initial vertebrate densi
 
 # RM 20180712 updated scaling to match previous calibrated biomass values after changing initial conditions RN and SN vertebrate values and length-weight relationships
 # this only scales vertebrates, so inverts are all set to 1 and biomass set in initial conditions file
-# updated 20190614
+# updated 20180816
 init_scalar       89
-1	1	1	0.45	1	1	1	1	1	1	1	0.11	0.1	1.38	0.06	0.4	1	0.06	1	1	1.17	0.15	1	1	1	1	1	1	1	1	1	1	0.000002	1	0.0004	1	1	0	0.7	1	1	1	1	0.018	0.001	0.73	0.23	0.17	1	1	1	2.17	0.44	0.35	0.18	0.88	1.13	0.01	0.002	0.75	1.16	0.62	0.79	1	85	100	1	0.23	0.9	2.19	1.48	0.61	10005	1	1	1	5	0.61	7.11	7.83	0.9	0.61	0.61	1	1000	190.61	1	1	1
+2.927478	1.000015	1.000001	1.458523	1.931973	1.919255	1.051117	2.435020	2.035203	2.854386	2.107475	0.110290	0.267149	3.424994	0.215659	0.599097	0.999986	0.056091	0.910075	1.000000	1.174672	0.152468	2.378932	1.000004	1.568112	2.046148	1.979438	1.933132	2.067839	2.303232	17.120676	2.410281	0.000004	1.605362	0.000888	2.423904	3.046740	0.000254	0.699984	1.653982	0.999996	2.902088	1.668947	0.029194	0.001080	1.696623	0.622131	0.170000	1.000000	1.000000	1.000000	2.170000	0.440000	0.350000	0.180000	0.880000	1.130000	0.010000	0.002000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000	1.000000
 
 
 
