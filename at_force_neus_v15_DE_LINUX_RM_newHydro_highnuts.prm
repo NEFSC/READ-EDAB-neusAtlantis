@@ -130,8 +130,6 @@ use_force_tracers 0
 #tracerNames
 #SED
 
-# RM 20180530
-use_VertMixFiles 0
 
 #BottomStress <filename> #RM this only works if filename is supplied here
 #pCO2_forcing 0
@@ -140,7 +138,7 @@ use_VertMixFiles 0
 #Evaporation 0
 #Recruitment_time_series 0
 
-### 20180302 added based on warning
+# RM 20180530
 use_VertMixFiles 0
 
 

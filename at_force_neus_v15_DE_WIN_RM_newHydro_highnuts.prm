@@ -124,8 +124,15 @@ typeResidualsts 0
 
 #RM added 20170517 based on warnings
 use_phFiles 0
+
+# RM adding Sedimnent tracer 20180316 (not implemented yet, need nc file, try input in .ts file instead)
 use_force_tracers 0
-#BottomStress 0
+#nforceTracers 1
+#tracerNames
+#SED
+
+
+#BottomStress <filename> #RM this only works if filename is supplied here
 #pCO2_forcing 0
 #FSPBChange 0
 #Precipitation 0
