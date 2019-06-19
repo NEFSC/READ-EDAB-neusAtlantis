@@ -11821,7 +11821,7 @@ mum_BO_T15	0.03
 mum_PB_T15	0.01
 mum_BB_T15	0.02
 mum_DF_T15	0.05
-mum_PL_T15	0.015
+mum_PL_T15	0.05
 mum_PS_T15	0.01
 mum_MA_T15	0.001
 mum_MB_T15	0.001
@@ -13590,7 +13590,7 @@ Ktmp_bird        0.08      Factor relating temperature to respiration for seabir
 Ktmp_mammal      0.08      Factor relating temperature to respiration for mammals             0.08 
  
 # Lysis rate of microalgaes  
-KLYS_PL          0.005    Lysis rate of diatoms                             d-1 (0.05 )      0.0001
+KLYS_PL          0.0001    Lysis rate of diatoms                             d-1 (0.05 )      0.0001
 KLYS_PS          0.01      Lysis rate of picophytoplankton                   d-1 (0.01)       0.01
 KLYS_DF          0.01    Lysis rate of dinoflagellates                     d-1              0.01
 KLYS_MB          0.03     Lysis rate of microphytobenthos (0.005)           d-1               0.005
@@ -13885,27 +13885,27 @@ HAD_mQ	2
 YTF_mQ	2
 0.00E+00	0.00E+00
 DOG_mQ	2
-0.00E+00	0.00E+00
+3.9e-7	6.9e-7
 SMO_mQ	2
-0.00E+00	0.00E+00
+3.9e-7	6.9e-7
 SSH_mQ	2
-0.00E+00	0.00E+00
+3.9e-7	6.9e-7
 DSH_mQ	2
-0.00E+00	0.00E+00
+3.9e-7	6.9e-7
 BLS_mQ	2
-0.00E+00	0.00E+00
+3.9e-7	6.9e-7
 POR_mQ	2
-0.00E+00	0.00E+00
+3.9e-7	6.9e-7
 PSH_mQ	2
-0.00E+00	0.00E+00
+3.9e-7	6.9e-7
 WSK_mQ	2
-0.00E+00	0.00E+00
+3.9e-7	6.9e-7
 LSK_mQ	2
-0.00E+00	0.00E+00
+3.9e-7	6.9e-7
 SK_mQ	2
-0.00E+00	0.00E+00
+3.9e-7	6.9e-7
 SB_mQ	2
-1.3e-8	1.3e-6
+3.9e-7	6.9e-7
 PIN_mQ	2
 3.9e-7	6.9e-7
 REP_mQ	2
