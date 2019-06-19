@@ -140,7 +140,7 @@ library(reshape)
 t=newX[,c("Code", "grams2", "Cohort")]
 t2=melt.data.frame(t, id.vars=c('Code', 'Cohort'), measure.vars = 'grams2')
 t3=cast(t2, Code ~ Cohort)
-write.table(t3, file='vertebrate_weights_grams_20190612.csv', sep=',', col.names = T, row.names = F)
+write.table(t3, file='vertebrate_weights_grams_20190617.csv', sep=',', col.names = T, row.names = F)
 
 # length at age for initial conditions 
 t=newX[,c("Code", "Species", "vbert_cm2", "Cohort")]
