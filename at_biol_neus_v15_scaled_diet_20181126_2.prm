@@ -1337,13 +1337,13 @@ INV_ddepend_move 0
 
 ### June 24 2015, Gavin Fay @UmassD, Invertebrate entries copied from v1
 # values changed to 2, updated seasonal movement with vertebrates below (turn back, need more density dependant inputs)
-LSQ_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky, 4 = no explicit movement 4
-ISQ_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky, 4 = no explicit movement 4
-NSH_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
-OSH_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
-LOB_ddepend_move 4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
-ZL_ddepend_move  4         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
-RCB_ddepend_move 4
+LSQ_ddepend_move 0         0 = off, 1 = sedentary, 2 = on, 3 = sticky, 4 = no explicit movement 4
+ISQ_ddepend_move 0         0 = off, 1 = sedentary, 2 = on, 3 = sticky, 4 = no explicit movement 4
+NSH_ddepend_move 0         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
+OSH_ddepend_move 0         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
+LOB_ddepend_move 0         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
+ZL_ddepend_move  0         0 = off, 1 = sedentary, 2 = on, 3 = sticky  4 = no explicit movement 4
+RCB_ddepend_move 0
 
 # Flags for invertebrate migration out of model domain (enter juveniles and adults              
 # separately for CEP and PWN - as may be separate groups, rather than age groups)
