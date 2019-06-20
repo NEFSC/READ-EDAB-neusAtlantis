@@ -865,3 +865,14 @@ debug on desktop in VS2012 exp:
 FTH: (7832): *** Fault tolerant heap shim applied to current process. This is usually due to previous crashes. ***
 
 Unhandled exception at 0x00557F3F in atlantismain.exe: 0xC0000005: Access violation writing location 0x34502F38.
+
+# updated to rev6456 on desktop, ran OK
+atlantisMerged -i RMinit2_2019.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20181126_2.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix_RM.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20190619a  1>1a.junk 2>2a.junk
+
+Program received signal SIGSEGV, Segmentation fault.
+0x000000000058fc4a in Init_Migration (bm=0x7fffffff5720, llogfp=0x9996d0, do_debug=0, sp=1) at atmigration.c:58
+58	                    MIGRATION[sp].migrationID[stage][this_currentID] = migrationID;
+
+updated rev 6456 and rebuilt from trunk folder -> OK now.
+
+
