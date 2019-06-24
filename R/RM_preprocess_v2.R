@@ -43,7 +43,7 @@ bgm       <- file.path(d1, bgm.files) #"neus_tmerc_RM.bgm")
 
 ## read log file to get input command for Atlantis run
 con <- file("log.txt","r")
-logfile_lines <- readLines(con,n=15)
+logfile_lines <- readLines(con,n=107)
 close(con)
 run.cmd=logfile_lines[14]
 run.cmd #print to make sure
@@ -55,6 +55,14 @@ init # make sure
 init=paste(d1,'/RMinitnofill_2019.nc', sep='') # dropped _FillValue to make init_growth work 20180412 (see history in cdf version for command)
 # ran this command: ncatted -O -a _FillValue,,d,, RMinit_2018.nc RMinitnofill_2018.nc
 # ncks -d time,0,9 in.nc out.nc to remove time steps from v1.0 (use 't' not 'time') 
+
+## get virgin biomass, check scaling 
+tt=data.frame(logfile_lines[17:106])
+foo=tt %>% separate(logfile_lines.17.106., c("t", "z1", "z2", "z3", "s", "code", "v", "b", "i", "b1", "b2", "tonnes"))
+tt2=paste(foo$b1,".",foo$b2, sep="")
+foo$biomass=as.numeric(tt2)
+vir.biomass=foo[,c('code', 'biomass')]
+rm(tt, foo) # cleanup
 
 # ### SANITY CHECK ON INITIAL CONDITIONS
 # data1 <- sc_init(init, prm_biol, fgs, bboxes)
