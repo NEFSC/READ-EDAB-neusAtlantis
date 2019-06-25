@@ -57,25 +57,26 @@ init=paste(d1,'/RMinitnofill_2019.nc', sep='') # dropped _FillValue to make init
 # ncks -d time,0,9 in.nc out.nc to remove time steps from v1.0 (use 't' not 'time') 
 
 ## get virgin biomass, check scaling 
-tt=data.frame(logfile_lines[17:106])
-foo=tt %>% separate(logfile_lines.17.106., c("t", "z1", "z2", "z3", "s", "code", "v", "b", "i", "b1", "b2", "tonnes"))
-tt2=paste(foo$b1,".",foo$b2, sep="")
-foo$biomass=as.numeric(tt2)
-vir.biomass=as.numeric(format(foo[,c('code', 'biomass')], scientific = F))
-rm(tt, foo) # cleanup
-des.bio=readxl::read_xlsx(paste(d1, '/NEUS_v15_Initial_Biomass.xlsx', sep=''), col_names = T)
-vir.biomass$desired=format(des.bio$`target biomass (tonnes)`, scientific = F)
-vir.biomass[,2]=as.numeric(vir.biomass[,2])
-vir.biomass[,3]=as.numeric(vir.biomass[,3])
-vir.biomass$scalar=vir.biomass$desired/vir.biomass$biomass
-vir.biomass[,4]=as.numeric(vir.biomass[,4])
-vir.biomass[which(vir.biomass$desired==0),4]=1
-vir.biomass[,4]=format(vir.biomass[,4], scientific = F)
-vir.biomass[which((vir.biomass$scalar<1.05) & (vir.biomass$scalar>0.95)),4]=1
-vir.biomass[,4]=as.numeric(vir.biomass[,4])
-vir.biomass[,4]=round(vir.biomass[,4], digits=2)
-write.csv(vir.biomass, file=paste(runfile,'_virgin_biomass_scalar.csv', sep=''), row.names=T)
-
+if (check_scale_init==1){
+  tt=data.frame(logfile_lines[17:106])
+  foo=tt %>% separate(logfile_lines.17.106., c("t", "z1", "z2", "z3", "s", "code", "v", "b", "i", "b1", "b2", "tonnes"))
+  tt2=paste(foo$b1,".",foo$b2, sep="")
+  foo$biomass=as.numeric(tt2)
+  vir.biomass=foo[,c('code', 'biomass')]
+  rm(tt, foo) # cleanup
+  des.bio=readxl::read_xlsx(paste(d1, '/NEUS_v15_Initial_Biomass.xlsx', sep=''), col_names = T)
+  vir.biomass$desired=format(des.bio$`target biomass (tonnes)`, scientific = F)
+  vir.biomass[,2]=as.numeric(vir.biomass[,2])
+  vir.biomass[,3]=as.numeric(vir.biomass[,3])
+  vir.biomass$scalar=vir.biomass$desired/vir.biomass$biomass
+  vir.biomass[,4]=as.numeric(vir.biomass[,4])
+  vir.biomass[which(vir.biomass$desired==0),4]=1
+  vir.biomass[,4]=format(vir.biomass[,4], scientific = F)
+  vir.biomass[which((vir.biomass$scalar<1.05) & (vir.biomass$scalar>0.95)),4]=1
+  vir.biomass[,4]=as.numeric(vir.biomass[,4])
+  vir.biomass[,4]=round(vir.biomass[,4], digits=2)
+  write.csv(vir.biomass, file=paste(runfile,'_virgin_biomass_scalar.csv', sep=''), row.names=T)
+}
 
 # ### SANITY CHECK ON INITIAL CONDITIONS
 # data1 <- sc_init(init, prm_biol, fgs, bboxes)

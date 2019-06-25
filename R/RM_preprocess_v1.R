@@ -23,6 +23,9 @@ make_spatial_plots=T
 make_diet_pdf=T
 make_LTL_plots=T
 
+#check initial conditions scaling of biomass?
+check_scale_init=T
+
 setwd(d2)
 source(paste(d1,'/R/RM_preprocess_v2.R', sep=''))
 source(paste(d1,'/R/RM_atl_model_calibration.R', sep=''))
