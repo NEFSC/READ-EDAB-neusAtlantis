@@ -1741,7 +1741,7 @@ MB_wc            0.1       Scalar for microphytoben. growth in wc (reduced as no
 KI_PL_T15        20        Light saturation, large phytoplankton             W m-2          10 - 20
 KI_PS_T15        10        Light saturation, small phytoplankton             W m-2          10 - 20
 KI_DF_T15        20        Light saturation, dinoflagellates                 W m-2          10 - 20
-KI_MA_T15        10         Light saturation, macroalgae                      W m-2             5
+KI_MA_T15        5         Light saturation, macroalgae                      W m-2             5
 KI_SG_T15        60        Light saturation, seagrass                        W m-2             65
 KI_MB_T15        60         Light saturation, microphytobenthos               W m-2             3
 
@@ -11823,7 +11823,7 @@ mum_BB_T15	0.02
 mum_DF_T15	0.05
 mum_PL_T15	0.01
 mum_PS_T15	0.01
-mum_MA_T15	0.01
+mum_MA_T15	0.1
 mum_MB_T15	0.01
 mum_SG_T15	0.01
 
@@ -13594,11 +13594,11 @@ KLYS_DF          0.01    Lysis rate of dinoflagellates                     d-1  
 KLYS_MB          0.03     Lysis rate of microphytobenthos (0.005)           d-1               0.005
 
 # gfay @UMassD 2015/06/24, adding because atlantis2 is prompting for values for MA & SG
-KLYS_MA 0.1
+KLYS_MA 0
 KLYS_SG 0
 
 # Extra macrophyte mortality (based on physical environment)   
-mS_MA_T15        180.0     Scour (bottom stress) macroalgae mortality        d-1             120 - 180
+mS_MA_T15        120.0     Scour (bottom stress) macroalgae mortality        d-1             120 - 180
 mS_SG_T15        0.0002   Excessive DIN seagrass  mortality                 d-1             0.0 - 0.0002
 
 ## Linear mortality modified 20180404 RM, drop mL_XXX_T15 and change to zero for tuning
