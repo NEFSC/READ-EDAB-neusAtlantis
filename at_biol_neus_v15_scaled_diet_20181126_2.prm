@@ -13591,7 +13591,7 @@ Ktmp_mammal      0.08      Factor relating temperature to respiration for mammal
 KLYS_PL          0.0001    Lysis rate of diatoms                             d-1 (0.05 )      0.0001
 KLYS_PS          0.01      Lysis rate of picophytoplankton                   d-1 (0.01)       0.01
 KLYS_DF          0.01    Lysis rate of dinoflagellates                     d-1              0.01
-KLYS_MB          0.03     Lysis rate of microphytobenthos (0.005)           d-1               0.005
+KLYS_MB          0.005     Lysis rate of microphytobenthos (0.005)           d-1               0.005
 
 # gfay @UMassD 2015/06/24, adding because atlantis2 is prompting for values for MA & SG
 KLYS_MA 0
@@ -14008,19 +14008,19 @@ mStarve_INV 1e-02
 Kthreshm         0.7       Threshold starvation level when mort starts                         0.7
 
 # half Oxygen mortality depth in meters (based on depth and the oxygen horizon) 
-mD_SCA 0.1
-mD_QHG 0.1
-mD_CLA 0.1
-mD_BFF 0.1
-mD_BG 0.1
-mD_LOB 0.1
-mD_RCB 0.1
-mD_BMS 0.1
-mD_BD 0.1
-mD_BC 0.1
-mD_PB 0.1
-mD_BB 0.1
-mD_BO 0.1
+mD_SCA 0.005
+mD_QHG 0.005
+mD_CLA 0.005
+mD_BFF 0.005
+mD_BG 0.005
+mD_LOB 0.005
+mD_RCB 0.005
+mD_BMS 0.005
+mD_BD 0.005
+mD_BC 0.005
+mD_PB 0.005
+mD_BB 0.005
+mD_BO 0.005
 #mD_PB           0
 #mD_BB            0.005     Half oxygen mortality depth for sediment bacteria m              0.001 - 0.005
 #mD_BO            0.005     Half oxygen mortality depth for meiobenthos       m              0.001 - 0.005
@@ -14039,14 +14039,14 @@ mO_SCA 1e-05
 mO_QHG 1e-05
 mO_CLA 1e-05
 mO_BFF 1e-05
-mO_BG 0.001
-mO_LOB 0.001
-mO_RCB 0.001
-mO_BMS 0.001
+mO_BG 0.0001
+mO_LOB 0.0001
+mO_RCB 0.0001
+mO_BMS 0.0001
 mO_BD 1e-04
 mO_BC 1e-04
-mO_PB 0.001
-mO_BB 0.001
+mO_PB 0.0001
+mO_BB 0.0001
 mO_BO 1e-04
 #mO_PB            0.001     Oxygen dependent mortality for pelagic bacteria   d-1               0.1
 #mO_BB            0.001     Oxygen dependent mortality for sediment bacteria  d-1               0.3
@@ -15206,8 +15206,8 @@ FSP_HER 0.246
 FSP_WHK 0.25  
 FSP_BLF 0.25  
 FSP_WPF 0.25  
-FSP_SUF 0.325  
-FSP_WIF 0.325  
+FSP_SUF 0.27 
+FSP_WIF 0.27  
 FSP_WTF 0.25  
 FSP_HAL 0.25  
 FSP_PLA 0.25  
