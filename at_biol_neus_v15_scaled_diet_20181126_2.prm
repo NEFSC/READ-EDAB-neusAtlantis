@@ -1741,7 +1741,7 @@ MB_wc            0.1       Scalar for microphytoben. growth in wc (reduced as no
 KI_PL_T15        20        Light saturation, large phytoplankton             W m-2          10 - 20
 KI_PS_T15        10        Light saturation, small phytoplankton             W m-2          10 - 20
 KI_DF_T15        20        Light saturation, dinoflagellates                 W m-2          10 - 20
-KI_MA_T15        10         Light saturation, macroalgae                      W m-2             5
+KI_MA_T15        5         Light saturation, macroalgae                      W m-2             5
 KI_SG_T15        60        Light saturation, seagrass                        W m-2             65
 KI_MB_T15        60         Light saturation, microphytobenthos               W m-2             3
 
@@ -11582,14 +11582,14 @@ C_LSQ_T15	0.00044
 C_jLSQ_T15	0.0004
 C_ISQ_T15	0.000444
 C_jISQ_T15	0.0004
-C_SCA_T15	0.005
-C_QHG_T15	0.002
-C_CLA_T15	0.002
+C_SCA_T15	0.01
+C_QHG_T15	0.01
+C_CLA_T15	0.01
 C_BFF_T15	0.04
-C_BG_T15	0.04
+C_BG_T15	0.05
 C_BC_T15	0.001
-C_LOB_T15	0.0008
-C_RCB_T15	0.0007
+C_LOB_T15	0.008
+C_RCB_T15	0.007
 C_BMS_T15	0.005
 C_NSH_T15	0.0003043
 C_jNSH_T15	0.0003
@@ -11802,12 +11802,12 @@ mum_jISQ_T15	0.004
 mum_SCA_T15	0.015
 mum_QHG_T15	0.015
 mum_CLA_T15	0.035
-mum_BFF_T15	0.04
-mum_BG_T15	0.04
+mum_BFF_T15	0.1
+mum_BG_T15	0.1
 mum_BC_T15	0.01
-mum_LOB_T15	0.01
-mum_RCB_T15	0.01
-mum_BMS_T15	0.05
+mum_LOB_T15	0.05
+mum_RCB_T15	0.05
+mum_BMS_T15	0.08
 mum_NSH_T15	0.003043
 mum_jNSH_T15	0.003
 mum_OSH_T15	0.003043
@@ -11816,15 +11816,15 @@ mum_ZG_T15	0.01
 mum_ZL_T15	0.05
 mum_ZM_T15	0.025
 mum_ZS_T15	0.06
-mum_BD_T15	0.014
+mum_BD_T15	0.02
 mum_BO_T15	0.03
 mum_PB_T15	0.01
 mum_BB_T15	0.02
 mum_DF_T15	0.05
 mum_PL_T15	0.01
 mum_PS_T15	0.01
-mum_MA_T15	0.001
-mum_MB_T15	0.001
+mum_MA_T15	0.1
+mum_MB_T15	0.01
 mum_SG_T15	0.01
 
 
@@ -13591,14 +13591,14 @@ Ktmp_mammal      0.08      Factor relating temperature to respiration for mammal
 KLYS_PL          0.0001    Lysis rate of diatoms                             d-1 (0.05 )      0.0001
 KLYS_PS          0.01      Lysis rate of picophytoplankton                   d-1 (0.01)       0.01
 KLYS_DF          0.01    Lysis rate of dinoflagellates                     d-1              0.01
-KLYS_MB          0.03     Lysis rate of microphytobenthos (0.005)           d-1               0.005
+KLYS_MB          0.005     Lysis rate of microphytobenthos (0.005)           d-1               0.005
 
 # gfay @UMassD 2015/06/24, adding because atlantis2 is prompting for values for MA & SG
-KLYS_MA 0.1
+KLYS_MA 0
 KLYS_SG 0
 
 # Extra macrophyte mortality (based on physical environment)   
-mS_MA_T15        180.0     Scour (bottom stress) macroalgae mortality        d-1             120 - 180
+mS_MA_T15        120.0     Scour (bottom stress) macroalgae mortality        d-1             120 - 180
 mS_SG_T15        0.0002   Excessive DIN seagrass  mortality                 d-1             0.0 - 0.0002
 
 ## Linear mortality modified 20180404 RM, drop mL_XXX_T15 and change to zero for tuning
@@ -14008,19 +14008,19 @@ mStarve_INV 1e-02
 Kthreshm         0.7       Threshold starvation level when mort starts                         0.7
 
 # half Oxygen mortality depth in meters (based on depth and the oxygen horizon) 
-mD_SCA 0.1
-mD_QHG 0.1
-mD_CLA 0.1
-mD_BFF 0.1
-mD_BG 0.1
-mD_LOB 0.1
-mD_RCB 0.1
-mD_BMS 0.1
-mD_BD 0.1
-mD_BC 0.1
-mD_PB 0.1
-mD_BB 0.1
-mD_BO 0.1
+mD_SCA 0.005
+mD_QHG 0.005
+mD_CLA 0.005
+mD_BFF 0.005
+mD_BG 0.005
+mD_LOB 0.005
+mD_RCB 0.005
+mD_BMS 0.005
+mD_BD 0.005
+mD_BC 0.005
+mD_PB 0.005
+mD_BB 0.005
+mD_BO 0.005
 #mD_PB           0
 #mD_BB            0.005     Half oxygen mortality depth for sediment bacteria m              0.001 - 0.005
 #mD_BO            0.005     Half oxygen mortality depth for meiobenthos       m              0.001 - 0.005
@@ -14039,14 +14039,14 @@ mO_SCA 1e-05
 mO_QHG 1e-05
 mO_CLA 1e-05
 mO_BFF 1e-05
-mO_BG 0.001
-mO_LOB 0.001
-mO_RCB 0.001
-mO_BMS 0.001
+mO_BG 0.0001
+mO_LOB 0.0001
+mO_RCB 0.0001
+mO_BMS 0.0001
 mO_BD 1e-04
 mO_BC 1e-04
-mO_PB 0.001
-mO_BB 0.001
+mO_PB 0.0001
+mO_BB 0.0001
 mO_BO 1e-04
 #mO_PB            0.001     Oxygen dependent mortality for pelagic bacteria   d-1               0.1
 #mO_BB            0.001     Oxygen dependent mortality for sediment bacteria  d-1               0.3
@@ -15206,8 +15206,8 @@ FSP_HER 0.246
 FSP_WHK 0.25  
 FSP_BLF 0.25  
 FSP_WPF 0.25  
-FSP_SUF 0.325  
-FSP_WIF 0.325  
+FSP_SUF 0.27 
+FSP_WIF 0.27  
 FSP_WTF 0.25  
 FSP_HAL 0.25  
 FSP_PLA 0.25  

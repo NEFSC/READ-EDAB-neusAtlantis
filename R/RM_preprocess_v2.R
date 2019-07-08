@@ -52,7 +52,7 @@ init.file=test[[1]][3]
 init = file.path(d1, init.file)
 init # make sure
 # init      <- file.path(d1, 'RMinit_notsohighvertmix.nc')# "RMinit_newvalues2017.nc")
-init=paste(d1,'/RMinitnofill_2019.nc', sep='') # dropped _FillValue to make init_growth work 20180412 (see history in cdf version for command)
+init=paste(d1,'/RMinit4_nofill_2019.nc', sep='') # dropped _FillValue to make init_growth work 20180412 (see history in cdf version for command)
 # ran this command: ncatted -O -a _FillValue,,d,, RMinit_2018.nc RMinitnofill_2018.nc
 # ncks -d time,0,9 in.nc out.nc to remove time steps from v1.0 (use 't' not 'time') 
 

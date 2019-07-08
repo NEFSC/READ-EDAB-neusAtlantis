@@ -75,7 +75,7 @@ BD,72,1,Deposit_Feeder,Deposit Feeder,1,1,1,1,1,1,0,0,1,1,1,LG_INF,1,0,0,1,0,0,0
 MA,73,1,Macroalgae,Macroalgae,1,1,1,1,1,1,0,0,1,1,1,PHYTOBEN,0,1,0,1,0,0,0,0,4,0,0
 MB,74,1,MicroPB,Microphtybenthos,1,1,1,1,1,1,0,0,0,1,1,MICROPHTYBENTHOS,0,1,1,1,0,0,0,0,4,0,0
 SG,75,1,Seagrass,Seagrass,1,1,1,1,1,1,0,0,0,1,1,SEAGRASS,0,1,0,1,0,0,0,0,4,0,0
-BC,76,1,Benthic_Carniv,Benthic Carnivore,1,1,1,1,1,1,0,0,0,1,1,LG_INF,1,0,0,1,0,0,0,0,4,0,0
+BC,76,1,Benthic_Carniv,Benthic Carnivore,1,1,1,1,1,1,0,0,0,1,1,MOB_EP_OTHER,1,0,0,1,0,0,0,0,4,0,0
 ZG,77,1,Gelat_Zoo,Gelatinous zooplankton,1,1,1,1,1,1,1,0,0,1,1,LG_ZOO,1,0,0,1,0,0,0,0,4,0,0
 PL,78,1,Diatom,Diatom,1,1,1,1,1,1,0,0,0,0,0,LG_PHY,0,0,1,1,0,0,0,0,4,0,0
 DF,79,1,DinoFlag,Dinoflagellates,1,1,1,1,1,1,0,0,0,0,0,DINOFLAG,1,0,0,1,0,0,0,0,4,0,0
