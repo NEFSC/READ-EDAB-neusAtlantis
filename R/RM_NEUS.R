@@ -577,10 +577,10 @@ intx=feeding.mat(prm.file, grp.file, nc.initial, bgm.file, cum.depths)
 intx
 
 ### Growth of primary producers and limiting factors
-nc.initial  <- 'RMinit2_2019.nc'
+nc.initial  <- 'RMinit4_2019.nc'
 nc.current  <- paste(wd3,'.nc', sep='')
 grp.csv     <- grp.file
-prm.file=('at_biol_neus_v15_scaled_diet_20181126.prm')
+prm.file=prm.file #('at_biol_neus_v15_scaled_diet_20181126.prm')
 grow=growth.pp(nc.initial, grp.csv, prm.file, nc.current)
 grow
 
