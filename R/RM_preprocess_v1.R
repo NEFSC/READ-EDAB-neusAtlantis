@@ -20,7 +20,7 @@ d2=paste('E:/AtlantisRun/20161103/tes/', runfile, sep='')
 
 #choose plots
 make_spatial_plots=F
-make_diet_pdf=F
+make_diet_pdf=T
 make_LTL_plots=T
 
 #check initial conditions scaling of biomass?
