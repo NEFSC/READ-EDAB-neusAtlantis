@@ -569,7 +569,7 @@ pred
 
 ### Exploring predator-prey interactions from the initial conditions
 prm.file=('at_biol_neus_v15_scaled_diet_20181126_2.prm')
-nc.initial  <- 'RMinit2_2019.nc'
+nc.initial  <- 'RMinit4_2019.nc'
 grp.csv     <- grp.file
 bgm.file    <- 'neus_tmerc_RM.bgm'
 cum.depths  <- c(0, 50, 120, 300, 500) ## This should be the cummulative depth of your model
