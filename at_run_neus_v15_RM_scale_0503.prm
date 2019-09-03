@@ -32,10 +32,10 @@ debug         0        # 0=debuging off, 1=debug fishing, 2=debug discards, 3=de
 
 title      NEUS v1.5 no fishing
 dt         24 hour     # 24 hour time step
-tstop      1826 day   # Stop time after the given period (18260)18260  , 4000   2191 7320 9120 3660 7320
+tstop      18260 day   # Stop time after the given period (18260)18260  , 4000   2191 7320 9120 3660 7320
 toutstart  0 day       # Output start time
-toutinc    5 day      # Write output with this periodicity
-toutfinc   5 day      # Write fisheries output with this periodicity
+toutinc    30 day      # Write output with this periodicity
+toutfinc   30 day      # Write fisheries output with this periodicity
 tburnday   0 day
 
 check_dups 0    # 1 to check for duplicates in your prm files. Turning this on will make file read in very very slow. Only turn on every once in a while and turn off once the duplicates have been removed.
@@ -95,8 +95,8 @@ mirror_invalid 0
 track_contaminants 0
 
 # See the manual for more info
-flag_replicated_old 1
+flag_replicated_old 0
 external_box 0
 flagAllowLand 0
-flag_old_embryo_init 1  #This flag is to allow legacy models to have the same starting conditions under the new code as they did in older version
-flag_replicate_old_calendar 1 #This flag specifically allows for legacy models and the influence of environment on the distribution of recruits to be replicated in the newer code
+flag_old_embryo_init 0  #This flag is to allow legacy models to have the same starting conditions under the new code as they did in older version
+flag_replicate_old_calendar 0 #This flag specifically allows for legacy models and the influence of environment on the distribution of recruits to be replicated in the newer code
