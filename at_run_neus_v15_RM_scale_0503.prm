@@ -3,7 +3,7 @@
 verbose      0 	# Detailed logged output
 
 flagecon_on        0   # Flag showing whether want economics loaded and submodel run (1) or not (0)
-flag_fisheries_on  0  # Flag showing whether want fisheries loaded and submodel run (1) or not (0)
+flag_fisheries_on  1  # Flag showing whether want fisheries loaded and submodel run (1) or not (0)
 flag_skip_biol     0   # Flag showing whether want biological model run: 1 turns of Ecology, so only used when debugging fisheries)
 flag_skip_phys     0   # Flag showing whether want Physics model run: 1 turns of Physics, so only used when debugging fisheries)
 
@@ -20,27 +20,27 @@ checkNH       0        # Give detailed logged output for NH in checkbox
 checkDL       0        # Give detailed logged output for DL in checkbox
 checkDR       0        # Give detailed logged output for DR in checkbox
 checkbiom     0        # Give detailed logged output for biomasses in checkbox
-which_fleet   33       # ID number of fleet to track (if don't want to track anything set to 33), find number in fisheries input file.
-which_check   80       # ID number of group to track (if don't want to track anything set to 80), find number from functional group input file.
+which_fleet   1       # ID number of fleet to track (if don't want to track anything set to 33), find number in fisheries input file.
+which_check   79       # ID number of group to track (if don't want to track anything set to 80), find number from functional group input file.
 habitat_check 0
-move_check    67       # ID number of group where tracking movements
+move_check    20       # ID number of group where tracking movements
 fishmove      1        # Set to 0 to turn vertebrate movement off for debugging purposes
 debug         0        # 0=debuging off, 1=debug fishing, 2=debug discards, 3=debug histfishing,
                        # 4=debug assessments, 5=debug mpas, 6=debug effort, 7=debug econ, 8=debug aging,
                        # 9=debug_spawning, 10=debug migration, 11=debug movement, 12=debug stocks,
                        # 13=debug biomass calcs, 14=debug feeding, 15=debug everything
 
-title      NEUS v1.5 no fishing
+title      NEUS v1.5 with fishing
 dt         24 hour     # 24 hour time step
 tstop      18260 day   # Stop time after the given period (18260)18260  , 4000   2191 7320 9120 3660 7320
 toutstart  0 day       # Output start time
-toutinc    30 day      # Write output with this periodicity
-toutfinc   30 day      # Write fisheries output with this periodicity
+toutinc    90 day      # Write output with this periodicity
+toutfinc   90 day      # Write fisheries output with this periodicity
 tburnday   0 day
 
 check_dups 0    # 1 to check for duplicates in your prm files. Turning this on will make file read in very very slow. Only turn on every once in a while and turn off once the duplicates have been removed.
 
-tsumout    30 day      # Write stock state summary with this periodicity
+tsumout    90 day      # Write stock state summary with this periodicity
 flagannual_Mest 1      # Whether to write out estimates of mortality per predator annually (1) or not (0)
 fishout    	0           # Switch to turn fisheries output on = 1, off = 0
 flagreusefile 	2        # Switch to show want to append output file no = 0, yes = 1, replace = 2
@@ -62,7 +62,7 @@ K_num_detritus   3     # Total number of detritus groups in the model (labile an
 # Parameters defining the numbers of certain types of fisheries
 # (needed to  parameter arrays in the initialisation section of the model,
 # best left untouched for now)
-K_num_fisheries   33   # Maximum number of fisheries - must match the number of fisheries defined in your fisheries definition input file.
+K_num_fisheries   28   # Maximum number of fisheries - must match the number of fisheries defined in your fisheries definition input file.
 K_num_ports       17   # Maxiumum number of ports in the model area
 K_max_num_zoning  1    # Maximum number of spatial zonings used in the model
 K_num_reg         1    # Maximum number of management zonings used in the model
