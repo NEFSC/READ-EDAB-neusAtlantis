@@ -43,26 +43,78 @@ flagdyn_coupdate     0
 flagSimpleStartStopMPAs  0
 explore_thresh_effort	 0
 k_proprecfish         0.20    The proportion of the population who fish recreationally          0.20
-targ_refA			 0.40
-targ_refB			 0.40
-targ_refC			 0.40
-targ_refD			 0.40
+
+
+####### Management parameters
+# Reference points and trend lengths for use in dynamic TAC setting
+targ_refA 0.40                Target reference point - tier 1
+targ_refB 0.40                Target reference point - tier 1
+targ_refC 0.40                Target reference point - tier 2
+targ_refD 0.40                Target reference point - tier 2
 lim_ref   0.20                Limit reference point
+forage_refA 0.60              Forage target reference point - tier1
+forage_refB 0.60              Forage target reference point - tier1
+forage_refC 0.60              Forage target reference point - tier2
+forage_refD 0.60              Forage target reference point - tier2
+forage_lim_ref 0.40           Forage limit reference point
+
+byproduct_refA 0.20 Byproduct target reference point - tier1
+byproduct_refB 0.20 Byproduct target reference point - tier1
+byproduct_refC 0.25 Byproduct target reference point - tier2
+byproduct_refD 0.25 Byproduct target reference point - tier2
+byproduct_lim_ref 0.20 Byproduct limit reference point
+
+bycatch_refA 0.20 Bycatch target reference point - tier1
+bycatch_refB 0.20 Bycatch target reference point - tier1
+bycatch_refC 0.25 Bycatch target reference point - tier2
+bycatch_refD 0.25 Bycatch target reference point - tier2
+bycatch_lim_ref 0.20 Bycatch limit reference point
+
+# Flag to incidcate which set of reference points to use.
+# Enter a 1 to use targ_ref reference points or 0 to use forage reference points
+whichref 89
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+
 TAC_multiyr  5                Years of trend before change TAC  
 critCPUE  0.05                Threshold CPUE before TAC changes
 prop_incTAC 1.2               Proportional jump in TAC (scalar so if 20% jump put 1.2)
 prop_decTAC 0.9               Proportional drop in TAC (scalar so if 10% drop put 0.9)
 TAC_crit_change 100           Magnitude of TAC shift before actually implemented (t) - so don;t get caught up shifting it 10kg
 pseudo_RBCcheck 0.8
-forage_refA			0.6
-forage_refB			0.6
-forage_refC			0.6
-forage_refD			0.6
-forage_lim_ref		0.4
 
-TACbound			 0
+# error type applied (per species) to "perfect knowledge biomass estimate" for broken stick management (if not using formal assessment code)
+# uniform_err = 0
+# normal_err = 1
+# lognorm_err = 2
+#
+estError  89
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+# error variance applied (per species) to "perfect knowledge biomass estimate" for broken stick management (if not using formal assessment code)
+# as proportion of the true value
+estCV  89
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+# bias applied (per species) to "perfect knowledge biomass estimate" for broken stick management (if not using formal assessment code)
+# as proportion of the true value
+estBias  89
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+# Virgin biomasses for use with pseudo assessment (typically dynamically calculated in model instead)
 estBo    89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Fref 89
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+Frestart_scalar 89
+1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+
+Fref_High 89
+1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+
+TACbound			 0
 
 SP_Concern    89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -8177,8 +8229,7 @@ ports_pop   17
 # which market is feed by each port (for economic model)
 ports_markets 17
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-whichref 89
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
 RBCalpha 0
 pseudo_RBCcheck 0.8
 estBio 47
@@ -15814,8 +15865,7 @@ netMEN_mindepth     0
 midwcNSH_mindepth   0
 midwcOSH_mindepth   0
 mowMA_mindepth      0
-Fref 89
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
 UseLever 89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
@@ -15877,3 +15927,33 @@ EffortPenaltymowMA          30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 
 dynanyway 0
+
+midwcISQ_flag_framebased   0.0
+midwcLSQ_flag_framebased   0.0
+jigISQ_flag_framebased     0.0
+jigLSQ_flag_framebased     0.0
+dredgeSCA_flag_framebased  0.0
+trapRCB_flag_framebased    0.0
+dtrawlRCB_flag_framebased  0.0
+dtrawlISQ_flag_framebased  0.0
+dtrawlLSQ_flag_framebased  0.0
+dtrawlSHK_flag_framebased  0.0
+dtrawlHAD_flag_framebased  0.0
+dseineSHK_flag_framebased  0.0
+dlineBLF_flag_framebased   0.0
+diveBG_flag_framebased     0.0
+pseineBLF_flag_framebased  0.0
+cullPIN_flag_framebased    0.0
+ptrawlNSH_flag_framebased  0.0
+ptrawlOSH_flag_framebased  0.0
+dtrawlANC_flag_framebased  0.0
+dtrawlBPF_flag_framebased  0.0
+dtrawlBUT_flag_framebased  0.0
+midwcZL_flag_framebased    0.0
+trapMEN_flag_framebased    0.0
+dlineMEN_flag_framebased   0.0
+netMEN_flag_framebased     0.0
+midwcNSH_flag_framebased   0.0
+midwcOSH_flag_framebased   0.0
+mowMA_flag_framebased      0.0
+
