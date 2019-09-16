@@ -30,12 +30,31 @@ ssb       <- file.path(d2, paste(ncbase, 'SSB.txt', sep=""))
 
 xml.files=list.files(path=d2, pattern='.xml')
 xml.str=strsplit(xml.files, '.xml')
-prm_run <- file.path(d1, paste(xml.str[[2]], '.prm',sep=''))
+
+for (i in 1:length(xml.files)){
+  x='run' %in% strsplit(xml.files[i], split='_')[[1]]
+  if (x==T){
+  break
+  }
+}
+prm_run <- file.path(d1, paste(xml.str[[i]], '.prm',sep=''))
 prm_run #make sure
-prm_biol <- file.path(d1, paste(xml.str[[1]], '.prm',sep=''))
+for (i in 1:length(xml.files)){
+  x='biol' %in% strsplit(xml.files[i], split='_')[[1]]
+  if (x==T){
+    break
+  }
+}
+prm_biol <- file.path(d1, paste(xml.str[[i]], '.prm',sep=''))
 prm_biol #make sure
 
-fgs       <- file.path(d1, paste(xml.str[[3]], '.csv',sep='')) #file.path(d1, "NeusGroups_v15_LTLonly.csv") #unix.csv")
+for (i in 1:length(xml.files)){
+  x='NeusGroups' %in% strsplit(xml.files[i], split='_')[[1]]
+  if (x==T){
+    break
+  }
+}
+fgs       <- file.path(d1, paste(xml.str[[i]], '.csv',sep='')) #file.path(d1, "NeusGroups_v15_LTLonly.csv") #unix.csv")
 fgs #make sure
 # bgm.files=list.files(path=d1, pattern='.bgm')
 bgm.files="neus_tmerc_RM.bgm"
