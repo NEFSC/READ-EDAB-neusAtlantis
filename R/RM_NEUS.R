@@ -534,7 +534,7 @@ setwd(wd2)
 # Set location of runs and run name prefix
 runfolder=runfile
 prm.file=prm_biol
-# runfolder='20190524dta' #20190301dtb'
+runfolder='201900913dta' #20190301dtb'
 wd3=paste('E:/AtlantisRun/20161103/tes/', runfolder, '/atneus_v15_test2008hydro_20180208',sep='')
 wd3=paste('/home/ryan/AtlRuns/', runfolder, '/atneus_v15_test2008hydro_20180208',sep='')
 wd3=paste('/media/ryan/Iomega_HDD/', runfolder,  '/atneus_v15_test2008hydro_20180208',sep='')
