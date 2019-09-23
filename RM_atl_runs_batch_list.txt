@@ -908,6 +908,11 @@ dta - update PIN biomass (halved) and reduced kdenr by half. Adjusted diet pPrey
 
 20190917dtb - further increases to select benthic inverts mum and C; decrease mum for PB and BB (too much growth in previous run 10 years in)
 
+20190919dta - reduced gape size KUP_XXX for most fish -> results in more inverts in diet, need to redo; also adjust initial biomass value for HER based on SAW report, ~300x scale increase; HER recruitment not changed
+
+20190921 - update mum, C, recruitment scalar for all (but HER was really needed)
+
+NOTE. Oxygen issue begin in run from 9/17 (due to increasing mum and C for inverts?) -> continue through 9/21. ZG growth is too high, blocking light?
 
 
 
