@@ -8,6 +8,53 @@ d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM/R' #where (PRM, bgm, group da
 setwd(d1)
 # d1=getwd()
 
+# 20190923 read in file and update invert availability
+diet=read.csv('C:/Users/ryan.morse/Documents/GitHub/atneus_RM/1569272172_NewpPrey.csv', header=T, stringsAsFactors = F)
+diet.nms=diet[!complete.cases(diet[,3]),] # drops data
+diet.data=diet[!is.na(diet[,3]),] #drops names
+dpnms=diet.nms$X.. # pPrey rowname entry to match with dnms column
+dnms=colnames(diet.data)
+dnms=dnms[2:93]
+pdf(file='20190924_pPrey_avail.pdf')
+for (i in 60:length(dnms)){
+  barplot(table(diet.data[which(diet.data[,i]>0),i]), main=dnms[i])
+}
+dev.off()
+
+#check on certain ones:
+test=dpnms[which(diet.data$BG > 0.08)]
+
+# test 1 reduce pPREY availability of ALL inverts to verts by 10x
+t1=diet.data
+t1[1:236,60:92]=t1[1:236,60:92]*0.1
+
+# test 2 reduce pPREY availability of ALL inverts to verts by 100x
+t2=diet.data
+t2[1:236,60:92]=t2[1:236,60:92]*0.01
+
+# test 3 reduce pPREY availability of SELECT inverts to verts by 10x
+t3=diet.data
+xx=c(60:78, 82, 83, 86)
+dnms[xx]
+t3[1:236,xx]=t1[1:236,xx]*0.1
+
+dim(diet)
+
+nms=as.character(diet.nms[,1])
+size=as.numeric(diet.nms[,2])
+diet3=as.data.frame(matrix(NA,nrow=536, ncol=92))
+diet3[rownames(diet.nms),1]=nms
+diet3[rownames(diet.nms),2]=size
+# diet3[rownames(diet.data[1:92]),]=t1
+diet3[rownames(diet.data[1:92]),]=t2
+diet3[rownames(diet.data[1:92]),]=t3
+write.table(diet3, file='20190924_invert_avail_10x_reduced.csv',row.names=F, col.names=dnms , sep=",")
+write.table(diet3, file='20190924_invert_avail_100x_reduced.csv',row.names=F, col.names=dnms , sep=",")
+write.table(diet3, file='20190924_select_invert_avail_10x_reduced.csv',row.names=F, col.names=dnms , sep=",")
+
+
+
+
 # Read original pPrey data from Gavin
 # diet=read.csv('atneus_diet_RM.csv', header = F)
 diet=read.csv('C:/Users/ryan.morse/Desktop/NEUS Atl files/10 Atlantis transfer files/atneus_diet_RM_edited.csv', header = F) # 20170424 added stages to shrimps and squid
