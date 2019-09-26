@@ -36,7 +36,7 @@ t2[1:236,60:92]=t2[1:236,60:92]*0.01
 t3=diet.data
 xx=c(60:78, 82, 83, 86)
 dnms[xx]
-t3[1:236,xx]=t1[1:236,xx]*0.1
+t3[1:236,xx]=t3[1:236,xx]*0.1
 
 dim(diet)
 
@@ -46,10 +46,10 @@ diet3=as.data.frame(matrix(NA,nrow=536, ncol=92))
 diet3[rownames(diet.nms),1]=nms
 diet3[rownames(diet.nms),2]=size
 # diet3[rownames(diet.data[1:92]),]=t1
-diet3[rownames(diet.data[1:92]),]=t2
+# diet3[rownames(diet.data[1:92]),]=t2
 diet3[rownames(diet.data[1:92]),]=t3
-write.table(diet3, file='20190924_invert_avail_10x_reduced.csv',row.names=F, col.names=dnms , sep=",")
-write.table(diet3, file='20190924_invert_avail_100x_reduced.csv',row.names=F, col.names=dnms , sep=",")
+# write.table(diet3, file='20190924_invert_avail_10x_reduced.csv',row.names=F, col.names=dnms , sep=",")
+# write.table(diet3, file='20190924_invert_avail_100x_reduced.csv',row.names=F, col.names=dnms , sep=",")
 write.table(diet3, file='20190924_select_invert_avail_10x_reduced.csv',row.names=F, col.names=dnms , sep=",")
 
 
