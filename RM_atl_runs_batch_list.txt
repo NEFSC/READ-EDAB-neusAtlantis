@@ -925,5 +925,9 @@ also reduced mum and C for select inverts suspected of influencing oxygen dynami
 20190924dtc - at_biol_neus_v15_diet_20190924_100x_less_invert_avail -> at_biol_neus_v15_diet_20190924_2.prm
 20190924dtd - at_biol_neus_v15_diet_20190924_10x_less_select_invert_avail -> at_biol_neus_v15_diet_20190924_3.prm
 
+20190926 - update parent biol file (previous files did not look good, most species crashed, dtd had better of the 3 outcomes - possible use, still many inverts in diet, not many verts for many species)
+removed quadratic mortality, updated pPREY for some species
+
+
 
 
