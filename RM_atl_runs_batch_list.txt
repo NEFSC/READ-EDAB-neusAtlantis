@@ -928,6 +928,9 @@ also reduced mum and C for select inverts suspected of influencing oxygen dynami
 20190926 - update parent biol file (previous files did not look good, most species crashed, dtd had better of the 3 outcomes - possible use, still many inverts in diet, not many verts for many species)
 removed quadratic mortality, updated pPREY for some species
 
-
+20190930
+dta updated mum and C from 0926 run
+dtb (reduced mum for PL PS, increased for DF)
+dtc (update pPREY to reduce grazing by inverts on BG and BFF)
 
 
