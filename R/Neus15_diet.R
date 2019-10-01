@@ -10,6 +10,7 @@ setwd(d1)
 
 # 20190923 read in file and update invert availability
 diet=read.csv('C:/Users/ryan.morse/Documents/GitHub/atneus_RM/1569272172_NewpPrey.csv', header=T, stringsAsFactors = F)
+diet=read.csv('C:/Users/ryan.morse/Documents/GitHub/atneus_RM/1569876433_NewpPrey.csv', header=T, stringsAsFactors = F)
 diet.nms=diet[!complete.cases(diet[,3]),] # drops data
 diet.data=diet[!is.na(diet[,3]),] #drops names
 dpnms=diet.nms$X.. # pPrey rowname entry to match with dnms column
@@ -22,7 +23,7 @@ for (i in 60:length(dnms)){
 dev.off()
 
 #check on certain ones:
-test=dpnms[which(diet.data$BG > 0.08)]
+test=dpnms[which(diet.data$BFF > 0.1)]
 
 # test 1 reduce pPREY availability of ALL inverts to verts by 10x
 t1=diet.data
@@ -39,6 +40,14 @@ dnms[xx]
 t3[1:236,xx]=t3[1:236,xx]*0.1
 
 dim(diet)
+
+t4=diet.data
+xx=c(1:59)
+t3[1:236,xx]=t3[1:236,xx]
+
+
+
+
 
 nms=as.character(diet.nms[,1])
 size=as.numeric(diet.nms[,2])

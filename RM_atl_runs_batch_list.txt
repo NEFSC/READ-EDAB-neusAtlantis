@@ -933,4 +933,10 @@ dta updated mum and C from 0926 run
 dtb (reduced mum for PL PS, increased for DF)
 dtc (update pPREY to reduce grazing by inverts on BG and BFF)
 
+20191001 -
+new biol file from 20190924dta run and update mum for some inverts, quadratic mortality removed -> 'at_biol...20190924_2.prm'
+dta - run using this file
+dtb - test of 20181126_2.prm with new vertebrate availability scaling
+c - linux run laptop based on 20190710a run (No fishing) run for 100 years test for stability
+
 
