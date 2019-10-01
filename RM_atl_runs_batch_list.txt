@@ -908,7 +908,29 @@ dta - update PIN biomass (halved) and reduced kdenr by half. Adjusted diet pPrey
 
 20190917dtb - further increases to select benthic inverts mum and C; decrease mum for PB and BB (too much growth in previous run 10 years in)
 
+20190919dta - reduced gape size KUP_XXX for most fish -> results in more inverts in diet, need to redo; also adjust initial biomass value for HER based on SAW report, ~300x scale increase; HER recruitment not changed
 
+20190921 - update mum, C, recruitment scalar for all (but HER was really needed)
 
+NOTE. Oxygen issue begin in run from 9/17 (due to increasing mum and C for inverts?) -> continue through 9/21. ZG growth is too high, blocking light?
+
+20190924: update pPREY for inverts to vertebrate in 3 new biol files derived from parent: `at_biol_neus_v15_scaled_diet_20181126_2.prm`;
+1) 10 reduction in all inverts: t1[1:236,60:92]=t1[1:236,60:92]*0.1
+2) 100x reduction in all inverts: t2[1:236,60:92]=t2[1:236,60:92]*0.01
+3) 10x reduction in select inverts only: xx=c(60:78, 82, 83, 86); t3[1:236,xx]=t3[1:236,xx]*0.1
+also reduced mum and C for select inverts suspected of influencing oxygen dynamics after 20190917 runs -> updated in each of the biol files
+#RUNS:
+20190924dta - using parent biol file, gape back to previous (at_biol_neus_v15_scaled_diet_20181126_2) -> naming broke atlantis, renamed as below:
+20190924dtb - at_biol_neus_v15_diet_20190924_10x_less_invert_avail -> at_biol_neus_v15_diet_20190924_1.prm
+20190924dtc - at_biol_neus_v15_diet_20190924_100x_less_invert_avail -> at_biol_neus_v15_diet_20190924_2.prm
+20190924dtd - at_biol_neus_v15_diet_20190924_10x_less_select_invert_avail -> at_biol_neus_v15_diet_20190924_3.prm
+
+20190926 - update parent biol file (previous files did not look good, most species crashed, dtd had better of the 3 outcomes - possible use, still many inverts in diet, not many verts for many species)
+removed quadratic mortality, updated pPREY for some species
+
+20190930
+dta updated mum and C from 0926 run
+dtb (reduced mum for PL PS, increased for DF)
+dtc (update pPREY to reduce grazing by inverts on BG and BFF)
 
 

@@ -282,6 +282,32 @@ mum.C=mum.C[order(row.names(mum.C)),]
 write.csv(mum.C, file=paste(filename,'_mum_to_C_ratio.csv', sep=''), row.names=T)
 
 
+### get SN only, apply values for reality check of mum and C used (Pethybridge et al 2019)
+SN=result$structn_age %>% filter(time==0)
+SN$highMum=SN$atoutput*0.1
+SN$lowMum=SN$atoutput*0.05
+SN$lowC=SN$atoutput*0.01
+SN$highC=SN$atoutput*0.06
+test2=left_join(SN, code_relations, by=c('species'='LongName'))
+## add used mum and C values, transform wide to long
+test=mum_age[,2:12]
+library(reshape2)
+t=melt(test)
+t$variable=as.numeric(t$variable)
+test3=left_join(test2, t, by=c('Code', 'agecl'='variable'))
+#add C
+test=C_age[,2:12]
+t=melt(test)
+t$variable=as.numeric(t$variable)
+test4=left_join(test3, t, by=c('Code', 'agecl'='variable'))
+## check values compared to reference
+test4$mumbelowhigh=test4$value.x<test4$highMum
+test4$mumoverlow=test4$value.x>test4$lowMum
+test4$Cbelowhigh=test4$value.y<test4$highC
+test4$Coverlow=test4$value.y>test4$lowC
+write.csv(test4, file=paste(runfile,'_SN_sanity_check_on_mum_and_C.csv', sep=''), row.names = F)
+
+
 ### get initial conditions values RN+SN*nums, dont forget about scalar in run file...
 # test=nums_age %>% filter(time==0, agecl==1)
 # gps=get_age_acronyms(fgs)
