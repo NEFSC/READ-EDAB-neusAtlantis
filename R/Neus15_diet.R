@@ -4,7 +4,7 @@ library(stringr)
 # setwd("/media/ryan/TOSHIBA EXT/1 RM/10 ATLANTIS transfer/") # linux
 # setwd("I:/1 RM/10 ATLANTIS transfer/") #win
 d1='/home/ryan/Git/atneus_RM/R'
-d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM/R' #where (PRM, bgm, group data) are saved
+d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' # /R' #where (PRM, bgm, group data) are saved
 setwd(d1)
 # d1=getwd()
 
@@ -43,10 +43,22 @@ dim(diet)
 
 t4=diet.data
 xx=c(1:59)
-t3[1:236,xx]=t3[1:236,xx]
+t5=t4[1:236,xx] #=t3[1:236,xx]
 
-
-
+# t5[which(t5<0.01)]=t5[which(t5<0.01)]*10
+# t5[] <- lapply(t5, function(x) ifelse(x<0.01,x*10, x))
+# t5 %>% mutate_all(funs(ifelse(x<0.01, x*10, x)))
+tt=as.numeric(t5[,1])
+t5[,1]=tt
+for (i in 1:length(t5)){
+  # d[which(floor(log10(d[,i]))==-15),i]=d[which(floor(log10(d[,i]))==-15),i]*1e12 # scale to e-3
+  t5[which(t5[,i]<0.01),i]=t5[which(t5[,i]<0.01),i]*10
+  t5[which(t5[,i]<0.05 & t5[,i]>0.01),i]=t5[which(t5[,i]<0.05 & t5[,i]>0.01),i]*2
+  # t5[which(t5[,i]<0.1 & t5[,i]>0.05),i]=t5[which(t5[,i]<0.1 & t5[,i]>0.05),i]*1.3
+  # t5[which(t5[,i]<0.15 & t5[,i]>0.1),i]=t5[which(t5[,i]<0.15 & t5[,i]>0.1),i]*1.2
+  # t5[which(t5[,i]<0.2 & t5[,i]>0.15),i]=t5[which(t5[,i]<0.2 & t5[,i]>0.15),i]*1.1
+}
+t4[1:236,xx]=t5
 
 
 nms=as.character(diet.nms[,1])
@@ -56,10 +68,12 @@ diet3[rownames(diet.nms),1]=nms
 diet3[rownames(diet.nms),2]=size
 # diet3[rownames(diet.data[1:92]),]=t1
 # diet3[rownames(diet.data[1:92]),]=t2
-diet3[rownames(diet.data[1:92]),]=t3
+diet3[rownames(diet.data[1:92]),]=t4 #t3
 # write.table(diet3, file='20190924_invert_avail_10x_reduced.csv',row.names=F, col.names=dnms , sep=",")
 # write.table(diet3, file='20190924_invert_avail_100x_reduced.csv',row.names=F, col.names=dnms , sep=",")
-write.table(diet3, file='20190924_select_invert_avail_10x_reduced.csv',row.names=F, col.names=dnms , sep=",")
+# write.table(diet3, file='20190924_select_invert_avail_10x_reduced.csv',row.names=F, col.names=dnms , sep=",")
+
+write.table(diet3, file='20191001_scaledup_vert_avail_b.csv',row.names=F, col.names=dnms , sep=",")
 
 
 
