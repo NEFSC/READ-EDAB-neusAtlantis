@@ -1,0 +1,93 @@
+---
+title: "Atlantis Diagnostics Development Documentation"
+author: "Sarah Gaichas"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+bibliography: modreview.bib
+csl: plos.csl
+link-citations: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Intro
+
+Here we document the development Atlantis diagnostics code to determine whether the model is meeting define performance and review criteria. Code we be developed to evaluate the model output against detailed performance criteria developed in @kaplan_guinea_2016:
+
+1. All functional groups persist
+
+1. Model stabilizes for the last ~20 years of an unfished, unperturbed 80-100 year run
+
+1. Hindcast period established where we have survey/assessment time series with error bounds
+
+1. Species groups totaling ~80% of system biomass should qualitatively match hindcast biomass trends
+
+1. Patterns of temporal variability captured (emergent or forced with e.g. recruitment time series)
+
+1. Productivity for groups totaling ~80% of system biomass should qualitatively match FMSY or life history expectations
+
+1. Natural mortality decreases with age for majority of groups
+
+1. Age and length structure qualitatively matches expectations for majority of groups
+
+1. Diet predicted qualitatively matches empirical diet comp for majority of groups
+
+An R function for each criterion is developed below, and a wrapper that runs all functions will be developed and tested here.
+
+### Persistence test
+
+```{r persist}
+summary(cars)
+```
+
+### Stability test
+
+You can also embed plots, for example:
+
+```{r stability}
+
+```
+
+### Establish hindcast period
+
+See discussion [here](https://github.com/NOAA-EDAB/atneus_RM/issues/7) and [here](https://github.com/NOAA-EDAB/atneus_RM/wiki/Meeting-minutes#20191002).
+
+The period will be 1980-2010 for trend comparison. 
+
+Data sources include ecodata and stock assessment outputs for major species.
+
+### Interim step: which species to include and what data are in the reference set for comparison
+
+Not all species need to match, we will first determine the most important subset(s). Based on discussion, we want to track the species the comprise 80% of biomass (and 80% of catch and 80% of revenue). 
+
+Code to evaluate which species are most important based on biomass, catch, and revenue, union and intersection.
+
+```{r which-species}
+
+# first past B, catch, revenue, use ecodata
+
+devtools::install_github("noaa-edab/ecodata",build_vignettes=TRUE) # use remotes::install_github instead
+library(ecodata)
+
+survbio <- ecodata::nefsc_survey #these are aggregated, need by species
+
+
+
+
+```
+
+ode to develop the hindcast comparison (call it "reference") dataset:
+
+### Species qualitatively match trends
+
+Key species to match and their most representative trend datasets are determined in analyses above, and the code that looks for the match between this reference set and Atlantis output is developed here.
+
+```{r trend-match}
+
+```
+
+
+
+## References
