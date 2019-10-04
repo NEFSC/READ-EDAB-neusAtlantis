@@ -946,7 +946,7 @@ c - linux run laptop based on 20190710a run (No fishing) run for 100 years test 
 d - second iteration through scalar
 atlantismain_6456 -i RMinit4_2019.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_WIN_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_diet_20190924_4.prm -h at_harvest_neus_v15_FC_RG_5_16_19.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix_RM.csv -q NeusFisheries_v15_5_17_19.csv -t C:\Users\ryan.morse\Documents\GitHub\atneus_RM -d 20191001dtd 1>1d.junk 2>2d.junk
 
-%%%%%%% note to self --> need to pull from git, turn fishing back on and reduce frpm 100 to 50 year run tomorrow
+%%%%%%% note to self --> need to pull from git, turn fishing back on and reduce frpm 100 to 50 year run tomorrow -> done
 
 # 20191001a- 100 year run with no fishing to look at stability
 atlantisMerged -i RMinit4_2019.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20190710a_lt.prm -h at_harvest_neus_v15_working.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix_RM.csv -q NeusFisheries_v15.csv -t /home/ryan/Git/atneus_RM -d 20191001a  1>1a.junk 2>2a.junk
