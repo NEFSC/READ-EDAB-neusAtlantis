@@ -12,19 +12,6 @@ link-citations: yes
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r dependencies}
-
-#devtools::install_github("noaa-edab/ecodata",build_vignettes=TRUE) 
-# suggested to use remotes::install_github instead
-
-library(ecodata)
-library(tidyverse)
-
-
-
-```
-
-
 ## Intro
 
 Here we document the development Atlantis diagnostics code to determine whether the model is meeting define performance and review criteria. Code we be developed to evaluate the model output against detailed performance criteria developed in @kaplan_guinea_2016:
@@ -49,9 +36,73 @@ Here we document the development Atlantis diagnostics code to determine whether 
 
 An R function for each criterion is developed below, and a wrapper that runs all functions will be developed and tested here.
 
+We use these R libraries, with non-CRAN package installation instructions in comments. 
+
+```{r dependencies}
+
+#devtools::install_github("noaa-edab/ecodata",build_vignettes=TRUE) 
+# suggested to use remotes::install_github instead
+#devtools::install_github("r4atlantis/atlantisom")
+
+library(ecodata)
+library(tidyverse)
+library(atlantisom)
+library(here)
+
+```
+
+Configure files to be read in here (can have different files to source)
+
+```{r config}
+# set up files to be read in
+# the below can go into a config file to be sourced
+
+d.name <- here("diagnostics", "testfiles") #folder with files below; e.g. here("atlantisoutput","currentrun")
+functional.groups.file <- "NeusGroups_v15_unix_RM.csv"
+biomass.pools.file <- ".nc"
+biol.prm.file <- "at_biol_neus_v15_scaled_diet_20190710a_lt.prm"
+box.file <- ".bgm"
+initial.conditions.file <- "RMinit4_2019.nc"
+run.prm.file <- "at_run_neus_v15_RM_scale_0503.xml"
+scenario.name <- "OLDNEUS"
+bioind.file <- "outputOLDNEUSBiomIndx.txt"
+catch.file <- "outputOLDNEUSCatch.txt"
+
+```
+
+Get functional group names for other functions
+
+```{r get_names, message=FALSE, warning=FALSE}
+#Load functional groups
+funct.groups <- load_fgs(dir=d.name,
+                         file_fgs = functional.groups.file)
+#Get just the names of active functional groups
+funct.group.names <- funct.groups %>% 
+  filter(IsTurnedOn == 1) %>%
+  select(Name) %>%
+  .$Name
+
+```
+
+
 ### Persistence test
 
-```{r persist}
+Setup but need the real output file because old one doesnt match new group names.
+
+```{r persist, eval=FALSE}
+
+# read the output atlantis biom.txt file
+
+atBtxt <- read.table(file.path(d.name, paste0("output", scenario.name, "BiomIndx.txt")), header=T)
+groupslookup <- funct.groups %>%
+  filter(IsTurnedOn > 0)
+
+atBtxttidy <- atBtxt %>%
+  select(Time:DIN) %>%
+  rename_(.dots=with(groupslookup, setNames(as.list(as.character(Code)), Name))) %>%
+  gather(species, biomass, -Time) 
+
+# flag any groups with biomass below a threshold 
 
 ```
 
@@ -60,6 +111,10 @@ An R function for each criterion is developed below, and a wrapper that runs all
 Model reaches steady state for last ~20 years of an unperturbed, unfished ~100 year run.
 
 ```{r stability}
+
+# assumes biom.txt output already read in
+
+# look for non-significant linear slope over last 20 years? 30 years would be better
 
 ```
 
@@ -96,7 +151,11 @@ survbio <- ecodata::nefsc_survey_disaggregated %>%
 
 hibiosp <- survbio$comname[cumsum(survbio$prop)<0.81 & !is.na(cumsum(survbio$prop))]
 
-# comdat and bennet are already aggregated in ecodata, need other source
+# comdat and bennet are already aggregated in ecodata
+
+# need comland, should be able to run similar code as above to get catch and revenue
+
+# add recreational catch and rec value/n participants?
 
 ```
 
@@ -109,9 +168,13 @@ Code to develop the hindcast comparison (call it "reference") dataset:
 
 ### Species qualitatively match trends
 
-Key species to match and their most representative trend datasets are determined in analyses above, and the code that looks for the match between this reference set and Atlantis output is developed here.
+Key species to match and their most representative trend datasets are determined in analyses above, and the code that looks for the match between this reference set and Atlantis output is developed here. By match we mean significance and direction only. 
 
 ```{r trend-match}
+
+# assumes biom.txt output already read in
+
+
 
 ```
 
