@@ -12,6 +12,19 @@ link-citations: yes
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r dependencies}
+
+#devtools::install_github("noaa-edab/ecodata",build_vignettes=TRUE) 
+# suggested to use remotes::install_github instead
+
+library(ecodata)
+library(tidyverse)
+
+
+
+```
+
+
 ## Intro
 
 Here we document the development Atlantis diagnostics code to determine whether the model is meeting define performance and review criteria. Code we be developed to evaluate the model output against detailed performance criteria developed in @kaplan_guinea_2016:
@@ -39,12 +52,12 @@ An R function for each criterion is developed below, and a wrapper that runs all
 ### Persistence test
 
 ```{r persist}
-summary(cars)
+
 ```
 
 ### Stability test
 
-You can also embed plots, for example:
+Model reaches steady state for last ~20 years of an unperturbed, unfished ~100 year run.
 
 ```{r stability}
 
@@ -54,7 +67,13 @@ You can also embed plots, for example:
 
 See discussion [here](https://github.com/NOAA-EDAB/atneus_RM/issues/7) and [here](https://github.com/NOAA-EDAB/atneus_RM/wiki/Meeting-minutes#20191002).
 
-The period will be 1980-2010 for trend comparison. 
+The period is defined as 1980-2010 for trend comparison. Change it here to see different results:
+
+```{r hindcast-def}
+
+hindcast <- c(1980:2010)
+
+```
 
 Data sources include ecodata and stock assessment outputs for major species.
 
@@ -68,17 +87,25 @@ Code to evaluate which species are most important based on biomass, catch, and r
 
 # first past B, catch, revenue, use ecodata
 
-devtools::install_github("noaa-edab/ecodata",build_vignettes=TRUE) # use remotes::install_github instead
-library(ecodata)
+survbio <- ecodata::nefsc_survey_disaggregated %>%
+  filter(Time %in% hindcast) %>%
+  group_by(comname) %>%
+  summarize(avgkgtow = mean(kg.per.tow, na.rm = T)) %>%
+  mutate(prop = avgkgtow/sum(avgkgtow, na.rm = T)) %>%
+  arrange(desc(prop))
 
-survbio <- ecodata::nefsc_survey #these are aggregated, need by species
+hibiosp <- survbio$comname[cumsum(survbio$prop)<0.81 & !is.na(cumsum(survbio$prop))]
 
-
-
+# comdat and bennet are already aggregated in ecodata, need other source
 
 ```
 
-ode to develop the hindcast comparison (call it "reference") dataset:
+Species comprising 80% of survey kg per tow averaged over `r hindcast[1]` to `r hindcast[length(hindcast)]`:
+
+`r hibiosp`
+
+
+Code to develop the hindcast comparison (call it "reference") dataset:
 
 ### Species qualitatively match trends
 
