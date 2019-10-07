@@ -160,11 +160,28 @@ unique(crash$species)
 
 Model reaches steady state for last ~20 years of an unperturbed, unfished ~100 year run.
 
-```{r stability}
+```{r stability, warning=FALSE}
 
 # assumes biom.txt output already read in
 
 # look for non-significant linear slope over last 20 years? 30 years would be better
+nlast <- 20
+
+startlast <- floor(runpar$nyears)-nlast
+
+stable <- atBtxttidy %>%
+  filter(Time %in% seq(startlast*365, floor(runpar$nyears)*365, by=365)) %>%
+  group_by(species) %>%
+  ggplot(aes(yr, biomass)) +
+  geom_point() +
+  geom_gls(warn = FALSE)
+
+stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 1, scales="free")
+stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 2, scales="free")
+stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 3, scales="free")
+stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 4, scales="free")
+stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 5, scales="free")
+stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 6, scales="free")
 
 ```
 
