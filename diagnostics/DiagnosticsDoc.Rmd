@@ -59,14 +59,14 @@ Configure files to be read in here (can have different files to source)
 
 d.name <- here("diagnostics", "testfiles") #folder with files below; e.g. here("atlantisoutput","currentrun")
 functional.groups.file <- "NeusGroups_v15_unix_RM.csv"
-biomass.pools.file <- ".nc"
-biol.prm.file <- "at_biol_neus_v15_scaled_diet_20190710a_lt.prm"
-box.file <- ".bgm"
+biomass.pools.file <- "atneus_v15_test2008hydro_20180208.nc"
+biol.prm.file <- "at_biol_neus_v15_scaled_diet_20190924_2.xml"
+box.file <- "neus_tmerc_RM2.bgm"
 initial.conditions.file <- "RMinit4_2019.nc"
 run.prm.file <- "at_run_neus_v15_RM_scale_0503.xml"
-scenario.name <- "OLDNEUS"
-bioind.file <- "outputOLDNEUSBiomIndx.txt"
-catch.file <- "outputOLDNEUSCatch.txt"
+scenario.name <- "atneus_v15_test2008hydro_20180208"
+bioind.file <- "atneus_v15_test2008hydro_20180208BiomIndx.txt"
+catch.file <- "atneus_v15_test2008hydro_20180208Catch.txt"
 
 ```
 
@@ -84,25 +84,75 @@ funct.group.names <- funct.groups %>%
 
 ```
 
+Get basic output parameters
+
+```{r modpars}
+# should return all model areas
+boxpars <- load_box(d.name, box.file)
+boxall <- c(0:(boxpars$nbox - 1))
+
+# generalized timesteps all models
+runpar <- load_runprm(d.name, run.prm.file)
+noutsteps <- runpar$tstop/runpar$outputstep
+stepperyr <- if(runpar$outputstepunit=="days") 365/runpar$toutinc
+midptyr <- round(median(seq(0,stepperyr)))
+
+# a survey that takes place once per year mid year
+annualmidyear <- seq(midptyr, noutsteps, stepperyr)
+
+timeall <- c(0:noutsteps)
+
+# learned the hard way this can be different from ecosystem outputs
+fstepperyr <- if(runpar$outputstepunit=="days") 365/runpar$toutfinc
+
+```
 
 ### Persistence test
 
-Setup but need the real output file because old one doesnt match new group names.
+This should be run on an **unfished, unperturbed** run. Fishing or perturbations may legitimately drive groups extinct.
 
-```{r persist, eval=FALSE}
+```{r persist}
 
 # read the output atlantis biom.txt file
 
-atBtxt <- read.table(file.path(d.name, paste0("output", scenario.name, "BiomIndx.txt")), header=T)
+atBtxt <- read.table(file.path(d.name, paste0(scenario.name, "BiomIndx.txt")), header=T)
 groupslookup <- funct.groups %>%
   filter(IsTurnedOn > 0)
 
 atBtxttidy <- atBtxt %>%
   select(Time:DIN) %>%
   rename_(.dots=with(groupslookup, setNames(as.list(as.character(Code)), Name))) %>%
-  gather(species, biomass, -Time) 
+  gather(species, biomass, -Time) %>%
+  mutate(yr = ceiling(Time/365))  # assumes BiomInd.txt time unit is days leaves initial time 0 on its own
 
-# flag any groups with biomass below a threshold 
+# visualize; hardcoded pages for ~89 group model
+
+plotB <-ggplot() +
+  geom_line(data=atBtxttidy, aes(x=Time/365,y=biomass, color="txt output B"),
+             alpha = 10/10) + 
+  ggthemes::theme_tufte() +
+  theme(legend.position = "top") +
+  labs(colour=scenario.name)
+
+plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 1, scales="free") 
+plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 2, scales="free") 
+plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 3, scales="free") 
+plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 4, scales="free") 
+plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 5, scales="free")
+plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 6, scales="free") 
+
+# need in annual units? Or fail when any output timestep below threshold?
+# make safe for migratory species, assume that over the course of the year mean B > 0.
+# assumes biomass never goes negative in atlantis
+
+crash <- atBtxttidy %>%
+  group_by(species, yr) %>%
+  summarise(meanB = mean(biomass)) %>%
+  filter(meanB < 1e-4)
+
+# flag any groups with any mean annual biomass below a threshold
+
+unique(crash$species)
 
 ```
 
