@@ -38,7 +38,7 @@ An R function for each criterion is developed below, and a wrapper that runs all
 
 We use these R libraries, with non-CRAN package installation instructions in comments. 
 
-```{r dependencies}
+```{r dependencies, message=FALSE}
 
 #devtools::install_github("noaa-edab/ecodata",build_vignettes=TRUE) 
 # suggested to use remotes::install_github instead
@@ -111,7 +111,7 @@ fstepperyr <- if(runpar$outputstepunit=="days") 365/runpar$toutfinc
 
 This should be run on an **unfished, unperturbed** run. Fishing or perturbations may legitimately drive groups extinct.
 
-```{r persist}
+```{r persist, warning=FALSE}
 
 # read the output atlantis biom.txt file
 
@@ -188,7 +188,7 @@ Not all species need to match, we will first determine the most important subset
 
 Code to evaluate which species are most important based on biomass, catch, and revenue, union and intersection.
 
-```{r which-species}
+```{r which-species, message=FALSE}
 
 # first past B, catch, revenue, use ecodata
 
@@ -199,12 +199,39 @@ survbio <- ecodata::nefsc_survey_disaggregated %>%
   mutate(prop = avgkgtow/sum(avgkgtow, na.rm = T)) %>%
   arrange(desc(prop))
 
-hibiosp <- survbio$comname[cumsum(survbio$prop)<0.81 & !is.na(cumsum(survbio$prop))]
+hibiosp <- stringr::str_to_sentence(survbio$comname[cumsum(survbio$prop)<0.81 & !is.na(cumsum(survbio$prop))])
 
 # comdat and bennet are already aggregated in ecodata
 
 # need comland, should be able to run similar code as above to get catch and revenue
+# NOTE: THIS FILE NOT TO BE POSTED ON GITHUB DUE TO POTENTIAL CONFIDENTIALITY CONCERNS
+# ask Sean for it
+load(here("diagnostics", "comland_meatwt_deflated_stat_areas.RData"))
 
+# from https://github.com/NOAA-EDAB/Atlantis-Catch-Files/blob/master/Atlantis_1_5_groups_svspp_nespp3.csv
+spcodes <- readr::read_csv("Atlantis_1_5_groups_svspp_nespp3.csv")
+
+# time series in case we want to plot them
+comlandts <- merge(comland, spcodes) %>%
+  filter(YEAR %in% hindcast) %>%
+  group_by(YEAR, Name) %>%
+  summarise_at(vars(SPPLIVMT, SPPVALUE), sum) 
+
+comlandat <- comlandts %>%
+  group_by(Name) %>%
+  summarize_at(vars(SPPLIVMT, SPPVALUE), mean, na.rm = T) %>%
+  rename(avSPPLIVMT = SPPLIVMT, avSPPVALUE = SPPVALUE) %>%
+  mutate(propcatch = avSPPLIVMT/sum(avSPPLIVMT, na.rm = T)) %>%
+  mutate(propvalue = avSPPVALUE/sum(avSPPVALUE, na.rm = T)) %>%
+  arrange(desc(propcatch))
+
+hicatchsp <- comlandat$Name[cumsum(comlandat$propcatch) <0.81 & !is.na(cumsum(comlandat$propcatch))]
+
+# danger, has to be sorted to be correct
+comlandatv <- arrange(comlandat, desc(propvalue))
+  
+hivalsp <- comlandatv$Name[cumsum(comlandatv$propvalue) <0.81 & !is.na(cumsum(comlandatv$propvalue))]
+  
 # add recreational catch and rec value/n participants?
 
 ```
@@ -213,6 +240,17 @@ Species comprising 80% of survey kg per tow averaged over `r hindcast[1]` to `r 
 
 `r hibiosp`
 
+Species comprising 80% of commercial landings averaged over the same period:
+
+`r hicatchsp`
+
+Species comprising 80% of commercial value averaged over the same period:
+
+`r hivalsp`
+
+A list with all of these species:
+
+`r sort(unique(c(hibiosp, hicatchsp, hivalsp)))`
 
 Code to develop the hindcast comparison (call it "reference") dataset:
 
