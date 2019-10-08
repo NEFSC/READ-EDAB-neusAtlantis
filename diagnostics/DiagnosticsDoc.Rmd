@@ -49,6 +49,8 @@ library(tidyverse)
 library(atlantisom)
 library(here)
 
+source("shift_legend.R")
+
 ```
 
 Configure files to be read in here (can have different files to source)
@@ -174,6 +176,7 @@ stable <- atBtxttidy %>%
   group_by(species) %>%
   ggplot(aes(yr, biomass)) +
   geom_point() +
+  ggthemes::theme_tufte() +
   geom_gls(warn = FALSE)
 
 stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 1, scales="free")
@@ -251,6 +254,10 @@ hivalsp <- comlandatv$Name[cumsum(comlandatv$propvalue) <0.81 & !is.na(cumsum(co
   
 # add recreational catch and rec value/n participants?
 
+# WARNING our names dont match between survbio comnames and comland Name, fix here otherwise have duplicates
+# union all 
+hibiocatvalsp <- sort(unique(c(hibiosp, hicatchsp, hivalsp)))
+
 ```
 
 Species comprising 80% of survey kg per tow averaged over `r hindcast[1]` to `r hindcast[length(hindcast)]`:
@@ -267,9 +274,37 @@ Species comprising 80% of commercial value averaged over the same period:
 
 A list with all of these species:
 
-`r sort(unique(c(hibiosp, hicatchsp, hivalsp)))`
+`r hibiocatvalsp`
 
 Code to develop the hindcast comparison (call it "reference") dataset:
+
+```{r survbio-ts}
+
+# simplest is annual output comparison, but which season should be compared to Atlantis? 
+
+# WARNING our names dont match between survbio comnames and comland Name, fix above
+
+survbio.ts <- ecodata::nefsc_survey_disaggregated %>%
+  filter(Time %in% hindcast) %>%
+  mutate(comname = stringr::str_to_sentence(comname)) %>%
+  filter(comname %in% hibiocatvalsp) %>%
+  group_by(Time, Season, comname) %>%
+  summarise(annkgtow = sum(kg.per.tow))
+
+tsplot <- ggplot(survbio.ts, aes(Time, annkgtow, color=Season)) + geom_point() + ggthemes::theme_tufte() + facet_wrap(~comname, scales = "free")
+
+grid.draw(shift_legend(tsplot))
+
+# ecosystem indicators for comparison: total survey biomass
+survbio.tot <- ecodata::nefsc_survey_disaggregated %>%
+  filter(Time %in% hindcast) %>%
+  group_by(Time, Season) %>%
+  summarise(annkgtow = sum(kg.per.tow, na.rm = TRUE))
+
+ggplot(survbio.tot, aes(Time, annkgtow)) + geom_point() + ggthemes::theme_tufte() + facet_wrap(~Season)
+
+```
+
 
 ### Species qualitatively match trends
 
