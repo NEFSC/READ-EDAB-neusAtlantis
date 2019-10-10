@@ -164,20 +164,46 @@ Model reaches steady state for last ~20 years of an unperturbed, unfished ~100 y
 
 ```{r stability, warning=FALSE}
 
-# assumes biom.txt output already read in
+# read in long run from separate folder
+longatBtxt <- read.table(file.path(here("diagnostics", "testfiles", "100_year_no_fishing"), paste0(scenario.name, "BiomIndx.txt")), header=T)
+groupslookup <- funct.groups %>% #assumes we have the same functional groups in this run as the shorter ones
+  filter(IsTurnedOn > 0)
+
+longatBtxttidy <- longatBtxt %>%
+  select(Time:DIN) %>%
+  rename_(.dots=with(groupslookup, setNames(as.list(as.character(Code)), Name))) %>%
+  gather(species, biomass, -Time) %>%
+  mutate(yr = ceiling(Time/365))  %>%
+  filter(Time %in% seq(365, floor(longrunpar$nyears)*365, by=365)) 
+
+
+# read in run pars for the long run too
+longrunpar <- load_runprm(here("diagnostics", "testfiles", "100_year_no_fishing"), run.prm.file) #assumes same name as above, it is
+longnoutsteps <- longrunpar$tstop/longrunpar$outputstep
+
+longtimeall <- c(0:longnoutsteps)
 
 # look for non-significant linear slope over last 20 years? 30 years would be better
 nlast <- 20
 
-startlast <- floor(runpar$nyears)-nlast
+startlast <- floor(longrunpar$nyears)-nlast
+
+lastyrs <- longatBtxttidy %>%
+  filter(Time %in% seq(startlast*365, floor(longrunpar$nyears)*365, by=365)) %>%
+  group_by(species) %>%
+  rename(lastbio = biomass)
+
+#this isn't showing the geom_gls line on my work computer that showed on my laptop, code should be identical
+#also, geom_gls errors out when I include the long run as input. not sure why
 
 stable <- atBtxttidy %>%
-  filter(Time %in% seq(startlast*365, floor(runpar$nyears)*365, by=365)) %>%
+  filter(Time %in% seq((floor(runpar$nyears)-nlast)*365, floor(runpar$nyears)*365, by=365)) %>%
   group_by(species) %>%
-  ggplot(aes(yr, biomass)) +
-  geom_point() +
-  ggthemes::theme_tufte() +
+  ggplot(aes(yr, biomass)) +   geom_point() + ggthemes::theme_tufte() +
+  #geom_point(data=longatBtxttidy, aes(x=yr, y=biomass)) +
+  #geom_point(data=lastyrs, aes(x=yr, y=lastbio, color="last")) #+
   geom_gls(warn = FALSE)
+
 
 stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 1, scales="free")
 stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 2, scales="free")
