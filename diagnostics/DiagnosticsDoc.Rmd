@@ -160,7 +160,7 @@ unique(crash$species)
 
 ### Stability test
 
-Model reaches steady state for last ~20 years of an unperturbed, unfished ~100 year run.
+Model reaches steady state for last ~20 years of an unperturbed, unfished ~100 year run. Things at 0 shouldn't count, so run persistence test as well. For plotting, let's skip the first 20 model years so we only look after spinup.
 
 ```{r stability, warning=FALSE, message=FALSE, error=FALSE}
 
@@ -180,7 +180,7 @@ longatBtxttidy <- longatBtxt %>%
   rename_(.dots=with(groupslookup, setNames(as.list(as.character(Code)), Name))) %>%
   gather(species, biomass, -Time) %>%
   mutate(yr = ceiling(Time/365))  %>%
-  filter(Time %in% seq(365, floor(longrunpar$nyears)*365, by=365)) 
+  filter(Time %in% seq(20*365, floor(longrunpar$nyears)*365, by=365)) 
 
 
 # look for non-significant slope over last 20 years? 30 years would be better
@@ -208,6 +208,21 @@ stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 6, scal
 
 # what I need is to extract the output of geom_gls that is NULL (no significant trend)
 #ggplot_build(stable)
+
+#test this run for persistence too
+
+longcrash <- longatBtxt %>%
+  select(Time:DIN) %>%
+  rename_(.dots=with(groupslookup, setNames(as.list(as.character(Code)), Name))) %>%
+  gather(species, biomass, -Time) %>%
+  mutate(yr = ceiling(Time/365))  %>%
+  group_by(species, yr) %>%
+  summarise(meanB = mean(biomass)) %>%
+  filter(meanB < 1e-4)
+
+# flag any groups with any mean annual biomass below a threshold
+
+unique(longcrash$species)
 
 ```
 
