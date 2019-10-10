@@ -162,7 +162,7 @@ unique(crash$species)
 
 Model reaches steady state for last ~20 years of an unperturbed, unfished ~100 year run.
 
-```{r stability, warning=FALSE}
+```{r stability, warning=FALSE, message=FALSE, error=FALSE}
 
 # read in long run from separate folder
 longatBtxt <- read.table(file.path(here("diagnostics", "testfiles", "100_year_no_fishing"), paste0(scenario.name, "BiomIndx.txt")), header=T)
@@ -183,30 +183,19 @@ longatBtxttidy <- longatBtxt %>%
   filter(Time %in% seq(365, floor(longrunpar$nyears)*365, by=365)) 
 
 
-# look for non-significant linear slope over last 20 years? 30 years would be better
+# look for non-significant slope over last 20 years? 30 years would be better
 nlast <- 20
 
 startlast <- floor(longrunpar$nyears)-nlast
 
-lastyrs <- longatBtxttidy %>%
-  filter(Time %in% seq(startlast*365, floor(longrunpar$nyears)*365, by=365)) %>%
-  group_by(species) %>%
-  rename(lastbio = biomass)
+#warning, was getting different behavior with this code on my linux machine
 
-#this isn't showing the geom_gls line on my work computer that showed on my laptop, code should be identical--confirmed works with short test dataset on laptop.
-#also, geom_gls errors out when I include the long run as input. not sure why
-
-#stable <- atBtxttidy %>%
-#  filter(Time %in% seq((floor(runpar$nyears)-nlast)*365, floor(runpar$nyears)*365, by=365)) %>%
 stable <- longatBtxttidy %>%
   filter(Time %in% seq(startlast*365, floor(longrunpar$nyears)*365, by=365)) %>%
   group_by(species) %>%
   ggplot(aes(x=yr, y=biomass)) +
-  #geom_point() +
   ggthemes::theme_tufte() +
-  #ggplot(aes(yr, biomass)) +   geom_point() + ggthemes::theme_tufte() +
   geom_line(data=longatBtxttidy, aes(x=yr, y=biomass)) +
-  #geom_point(data=lastyrs, aes(x=yr, y=lastbio, color="last")) #+
   geom_gls(warn = FALSE)
 
 
