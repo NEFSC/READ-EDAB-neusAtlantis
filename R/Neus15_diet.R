@@ -54,7 +54,7 @@ for (i in 1:length(t5)){
   # d[which(floor(log10(d[,i]))==-15),i]=d[which(floor(log10(d[,i]))==-15),i]*1e12 # scale to e-3
   t5[which(t5[,i]<0.01),i]=t5[which(t5[,i]<0.01),i]*10
   t5[which(t5[,i]<0.05 & t5[,i]>0.01),i]=t5[which(t5[,i]<0.05 & t5[,i]>0.01),i]*2
-  # t5[which(t5[,i]<0.1 & t5[,i]>0.05),i]=t5[which(t5[,i]<0.1 & t5[,i]>0.05),i]*1.3
+  t5[which(t5[,i]<0.1 & t5[,i]>0.05),i]=t5[which(t5[,i]<0.1 & t5[,i]>0.05),i]*1.5
   # t5[which(t5[,i]<0.15 & t5[,i]>0.1),i]=t5[which(t5[,i]<0.15 & t5[,i]>0.1),i]*1.2
   # t5[which(t5[,i]<0.2 & t5[,i]>0.15),i]=t5[which(t5[,i]<0.2 & t5[,i]>0.15),i]*1.1
 }
@@ -73,7 +73,7 @@ diet3[rownames(diet.data[1:92]),]=t4 #t3
 # write.table(diet3, file='20190924_invert_avail_100x_reduced.csv',row.names=F, col.names=dnms , sep=",")
 # write.table(diet3, file='20190924_select_invert_avail_10x_reduced.csv',row.names=F, col.names=dnms , sep=",")
 
-write.table(diet3, file='20191001_scaledup_vert_avail_b.csv',row.names=F, col.names=dnms , sep=",")
+write.table(diet3, file='20191016_scaledup_vert_avail_b.csv',row.names=F, col.names=dnms , sep=",")
 
 
 
