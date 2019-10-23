@@ -957,4 +957,10 @@ INV cohort 0 marked as active in the model but nums in input nc file and migrati
 inital size of INV:0-SN is VERY large: 1.797693e+308 (cohort (0) - will retry without looking at numbers present
 inital size of INV:0-RN is VERY large: 1.797693e+308 (cohort (0) - will retry without looking at numbers present
 
+--> fixed, scaling was 0 due to rounding error scaled mum and C accourding to sanity check file
+
+20191017dta - high RN/RNinit 
+
+20191021dta revised kdenr numbers based on scaling, RN/RNinit still high, very stable for many species but size at age is too big, pelagic sharks are 1e10x more RN at the end than the beginning, same for REP (1e4) BLS, POR, and RWH (1e4) need to reduce mum and C; diet contribution of deposit feeders is too high (increased scaling to match v1.0 initial biomass).
+
 
