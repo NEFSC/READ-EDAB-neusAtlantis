@@ -7,6 +7,8 @@ output: html_document
 
 These pages document initial development and testing of the Northeast US (NEUS) [Atlantis](https://research.csiro.au/atlantis/) model. 
 
+Please see also the [wiki for this repository](https://github.com/NOAA-EDAB/atneus_RM/wiki).
+
 Additional tools are from the atlantisom package in development at https://github.com/r4atlantis/atlantisom   
 
 ### Diagnostics applied during development (in progress)
