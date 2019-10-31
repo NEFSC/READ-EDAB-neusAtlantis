@@ -1,0 +1,19 @@
+---
+title: "Atlantis NEUS Development"
+output: html_document
+---
+
+ <!-- ADD LINKS BELOW, note, using the RMD link syntax will open the presentation in the same tab, which is annoying. Use the html with the "_blank" to fix that behavior -->
+
+These pages document initial development and testing of the Northeast US (NEUS) [Atlantis](https://research.csiro.au/atlantis/) model. 
+
+Please see also the [wiki for this repository](https://github.com/NOAA-EDAB/atneus_RM/wiki).
+
+Additional tools are from the atlantisom package in development at https://github.com/r4atlantis/atlantisom   
+
+### Diagnostics applied during development (in progress)
+
+<a href="https://noaa-edab.github.io/atneus_RM/DiagnosticsDoc.html" target="_blank">Diagnostics testing as of 28 October 2019</a>
+
+
+### More to come later!
