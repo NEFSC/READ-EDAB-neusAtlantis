@@ -535,7 +535,7 @@ setwd(wd2)
 runfolder=runfile
 prm.file=prm_biol
 runfolder='201900913dta' #20190301dtb'
-wd3=paste('E:/AtlantisRun/20161103/tes/', runfolder, '/atneus_v15_test2008hydro_20180208',sep='')
+wd3=paste('D:/AtlantisRun/20161103/tes/', runfolder, '/atneus_v15_test2008hydro_20180208',sep='')
 wd3=paste('/home/ryan/AtlRuns/', runfolder, '/atneus_v15_test2008hydro_20180208',sep='')
 wd3=paste('/media/ryan/Iomega_HDD/', runfolder,  '/atneus_v15_test2008hydro_20180208',sep='')
 
@@ -568,7 +568,7 @@ pred=predation(biom, grp.csv, diet.file, bio.age = NULL)
 pred
 
 ### Exploring predator-prey interactions from the initial conditions
-prm.file=('at_biol_neus_v15_scaled_diet_20181126_2.prm')
+prm.file=('at_biol_neus_v15_scaled_diet_20181126_3.prm')
 nc.initial  <- 'RMinit4_2019.nc'
 grp.csv     <- grp.file
 bgm.file    <- 'neus_tmerc_RM.bgm'
