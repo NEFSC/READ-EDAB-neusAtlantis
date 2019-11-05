@@ -7,7 +7,7 @@ library("tidyr")
 # d1="C:/Users/ryan.morse/Documents/GitHub/atneus_RM_20180827"
 # d1='/home/ryan/Git/atneus737e3d' # for NEUS 1.0 on new code base RM
 
-runfile='20190917dtb'
+runfile='20191021dta'
 
 
 d1='/home/ryan/Git/atneus_RM'
@@ -16,7 +16,7 @@ d2=paste('/home/ryan/AtlRuns/', runfile, sep='')
 
 
 d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
-d2=paste('E:/AtlantisRun/20161103/tes/', runfile, sep='')
+d2=paste('D:/AtlantisRun/20161103/tes/', runfile, sep='')
 
 #choose plots
 make_spatial_plots=F
