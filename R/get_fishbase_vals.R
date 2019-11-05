@@ -19,3 +19,14 @@ fish=validate_names(spp)
 lw=length_weight(species_list = fish)
 test=lw[,c('SpecCode', 'Species', 'a', 'b')]
 t2=aggregate(.~Species, test, mean, na.rm=T)
+
+# get maturity data for habitat mapping
+spp=gnms$spp
+spp=unlist(spp)
+spp=spp[2:14]
+library(Hmisc)
+spp=tolower(spp)
+spp=capitalize(spp)
+validate_names(spp)
+xx=maturity(spp)
+t2=aggregate(Lm~Species, xx, mean, na.rm=T)
