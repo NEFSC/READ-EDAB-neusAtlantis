@@ -23,6 +23,9 @@ make_spatial_plots=F
 make_diet_pdf=T
 make_LTL_plots=T
 
+#If catch was included in run:
+include_catch=T
+
 #check initial conditions scaling of biomass?
 check_scale_init=T
 
