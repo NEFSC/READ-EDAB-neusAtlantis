@@ -96,6 +96,7 @@ track_pH 0      # Flag indicating that want to track pH
 
 mirror_invalid 0
 track_contaminants 0
+flag_want_all_KMIG 0
 
 # See the manual for more info
 flag_replicated_old 0
