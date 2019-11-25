@@ -517,7 +517,7 @@ gps=get_age_acronyms(fgs)
 RN=result$resn_age %>% filter(time==0, agecl==1)
 SN=result$structn_age %>% filter(time==0, agecl==1)
 fgs_data=load_fgs(fgs)
-code_relations=fgs_data[,c('Code', 'LongName')]
+code_relations=fgs_data[,c('Code', 'LongName', 'Index')]
 test2=left_join(test, code_relations, by=c('species'='LongName'))
 test2$SN_RN=RN$atoutput+SN$atoutput
 test2$totalN=test2$atoutput*test2$SN_RN
