@@ -300,11 +300,11 @@ test=C_age[,2:12]
 t=melt(test)
 t$variable=as.numeric(t$variable)
 test4=left_join(test3, t, by=c('Code', 'agecl'='variable'))
-## check values compared to reference
-test4$mumbelowhigh=test4$value.x<test4$highMum
-test4$mumoverlow=test4$value.x>test4$lowMum
-test4$Cbelowhigh=test4$value.y<test4$highC
-test4$Coverlow=test4$value.y>test4$lowC
+## check values compared to reference plus/minus 5%
+test4$mumbelowhigh=test4$value.x<(test4$highMum*1.05)
+test4$mumoverlow=test4$value.x>(test4$lowMum*0.95)
+test4$Cbelowhigh=test4$value.y<(test4$highC*1.05)
+test4$Coverlow=test4$value.y>(test4$lowC*0.95)
 write.csv(test4, file=paste(runfile,'_SN_sanity_check_on_mum_and_C.csv', sep=''), row.names = F)
 
 
