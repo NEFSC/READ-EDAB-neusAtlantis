@@ -14,15 +14,22 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Intro
 
-Here we document the development Atlantis diagnostics code to determine whether the model is meeting define performance and review criteria. Code we be developed to evaluate the model output against detailed performance criteria developed in @kaplan_guinea_2016:
+Here we document the development Atlantis diagnostics code to determine whether the model is meeting define performance and review criteria. Code we be developed to evaluate the model output against detailed performance criteria developed in @kaplan_guinea_2016 and the calibration criteria in @pethybridge_calibrating_2019:
 
-1. All functional groups persist
+1. All functional groups persist 
 
 1. Model stabilizes for the last ~20 years of an unfished, unperturbed 80-100 year run
 
+1. Details for calibration:   
+    + Unfished system: 
+       + produce stable biomass through time under stable-environmental forcing 
+       + keep all groups from going extinct 
+       + obtain stable biomasses that are not oscillating more than a certain  percentage from initial values
+    + System with constant fishing: reproduce realistic responses to a range of fishing pressures   
+
 1. Hindcast period established where we have survey/assessment time series with error bounds
 
-1. Species groups totaling ~80% of system biomass should qualitatively match hindcast biomass trends
+1. Species groups totaling ~80% of system biomass should qualitatively match hindcast biomass trends. During calibration: reproduce historical trends in biomass when forcing the model with historical fishing and environmental drivers.
 
 1. Patterns of temporal variability captured (emergent or forced with e.g. recruitment time series)
 
@@ -43,8 +50,10 @@ We use these R libraries, with non-CRAN package installation instructions in com
 #devtools::install_github("noaa-edab/ecodata",build_vignettes=TRUE) 
 # suggested to use remotes::install_github instead
 #devtools::install_github("r4atlantis/atlantisom")
+#remotes::install_github("noaa-edab/ecotrend")
 
 library(ecodata)
+library(ecotrend)
 library(tidyverse)
 library(atlantisom)
 library(here)
@@ -207,7 +216,17 @@ stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 5, scal
 stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 6, scales="free")
 
 # what I need is to extract the output of geom_gls that is NULL (no significant trend)
-#ggplot_build(stable)
+
+# this may work eventually but blows up R right now, fix later
+# # get results from ecotrend package
+# stabletest <- longatBtxttidy %>%
+#   filter(Time %in% seq(startlast*365, floor(longrunpar$nyears)*365, by=365)) %>%
+#   group_by(species) %>%
+#   dplyr::do(ecotrend::glsMs(data = ., formula = yr ~ biomass))
+# 
+# #ecotrend::glsMs(data = ., formula = yr ~ biomass)
+# 
+# #ecotrend::glsMs(yr ~ biomass, stabletest)
 
 #test this run for persistence too
 
