@@ -18,9 +18,10 @@ spp=as.character(species)
 fish=validate_names(spp)
 lw=length_weight(species_list = fish)
 test=lw[,c('SpecCode', 'Species', 'a', 'b')]
-t2=aggregate(.~Species, test, mean, na.rm=T)
+t=aggregate(.~Species, test, mean, na.rm=T)
 
-# get maturity data for habitat mapping
+# get maturity data for habitat mapping (includes ALL fish - need to sort for region - locality?)
+loc=unique(xx$Locality)
 spp=gnms$spp
 spp=unlist(spp)
 spp=spp[2:14]
@@ -29,4 +30,17 @@ spp=tolower(spp)
 spp=capitalize(spp)
 validate_names(spp)
 xx=maturity(spp)
+loc=unique(xx$Locality) # locations
 t2=aggregate(Lm~Species, xx, mean, na.rm=T)
+t2sd=aggregate(Lm~Species, xx, sd, na.rm=T)
+t2med=aggregate(Lm~Species, xx, median.default, na.rm=T)
+t2min=aggregate(Lm~Species, xx, min, na.rm=T)
+t2max=aggregate(Lm~Species, xx, max, na.rm=T)
+t2$sd=t2sd$Lm
+t2$med=t2med$Lm
+t2$min=t4$Lm
+t2$max=t5$Lm
+t2ra=t2max$Lm-t2min$Lm
+t2geom=aggregate(Lm~Species, xx, function(x) exp(mean(log(x))))
+t2$geoMean=t2geom$Lm
+

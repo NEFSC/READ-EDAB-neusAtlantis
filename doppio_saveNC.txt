@@ -13,3 +13,9 @@ ncks -d ocean_time,%x,%x  -v ocean_time,u,v,salt,temp,lat_rho,lon_rho,lat_u,lon_
 )
 
 ncrcat -h roms2008* roms2008_all.nc
+
+#save OCCI satellite data Rrs output
+for /l %x in (1, 1, 7871) do (
+echo %x
+ncks -d lat,22.5,48.5 -d lon,-82.5,-51.5 -d time,%x,%x  https://www.oceancolour.org/thredds/dodsC/CCI_ALL-v4.0-DAILY-1km occi%x.nc
+)
