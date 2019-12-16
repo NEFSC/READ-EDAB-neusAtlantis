@@ -571,7 +571,7 @@ pred
 prm.file=('at_biol_neus_v15_scaled_diet_20181126_3.prm')
 nc.initial  <- 'RMinit4_2019.nc'
 grp.csv     <- grp.file
-bgm.file    <- 'neus_tmerc_RM.bgm'
+bgm.file    <- 'neus_tmerc_RM2.bgm'
 cum.depths  <- c(0, 50, 120, 300, 500) ## This should be the cummulative depth of your model
 intx=feeding.mat(prm.file, grp.file, nc.initial, bgm.file, cum.depths)
 intx

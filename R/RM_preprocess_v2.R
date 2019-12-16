@@ -312,6 +312,8 @@ gr_req <- pd %>%
 gr_rel_init <- growth_age %>%
   left_join(gr_req) %>%
   mutate(gr_rel = (atoutput - growth_req) / growth_req)
+test=which(gr_rel_init$gr_rel=="Inf")
+gr_rel_init$gr_rel[test]=1
 
 # specmort <- file.path(d2, paste(ncbase, 'SpecificPredMort.txt', sep=''))
 # mort2=load_spec_mort(specmort, prm_run, fgs, convert_names = T,version_flag = 2)
