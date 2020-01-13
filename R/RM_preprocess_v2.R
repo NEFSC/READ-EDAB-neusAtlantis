@@ -308,6 +308,8 @@ if (any(pd$growth_req < 0)) {
 unique(pd$species[which(pd$growth_req<0)])
 gr_req <- pd %>%
   select(species, agecl, growth_req)
+# add small amount to values where zero growth needed (see also next code set 'test' -> does similar)
+# gr_req$growth_req[which(gr_req$growth_req==0)]=gr_req$growth_req[which(gr_req$growth_req==0)]+1e-2
 
 gr_rel_init <- growth_age %>%
   left_join(gr_req) %>%
