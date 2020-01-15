@@ -323,12 +323,17 @@ gr_rel_init$gr_rel[test]=1
 #   ggplot2::facet_wrap(~prey, scale = "free")
 
 ## add catch
-catch <- load_nc(catchfile, fgs, bps = load_bps(fgs, init), 
-                 select_groups = get_groups(fgs), 
-                 select_variable = "Catch", prm_run, bboxes)
-
-# aggregrate boxes
-totcatch=agg_data(catch, groups = c("species","time", "agecl"), fun=sum)
+if(paste0(ncbase,'CATCH.nc')%in%dir()){
+  catch <- load_nc(catchfile, fgs, bps = load_bps(fgs, init), 
+                   select_groups = get_groups(fgs), 
+                   select_variable = "Catch", prm_run, bboxes)
+  
+  # aggregrate boxes
+  totcatch=agg_data(catch, groups = c("species","time", "agecl"), fun=sum)
+} else{
+  catch = NA
+  totcatch = NA
+}
 
 # Aggregate volume vertically. bio_cons
 vol_ts <- agg_data(vol, groups = c("time", "polygon"), fun = sum, out = "volume")
