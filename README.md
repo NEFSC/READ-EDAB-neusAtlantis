@@ -1,9 +1,13 @@
 # atneus
+
 Atlantis Neus file repository v1.5
 
 Physics based on Doppio Roms model hindcast 2008-2010 downscaled to NEUS boxes.
 
-2019 run structure 
+### The spatial domain
+![Atlantis_Neus](Geometry/AtlantisNeusDomain.png)
+
+### 2019 run structure 
 
 Now includes fishing, last updated 20190917
 
