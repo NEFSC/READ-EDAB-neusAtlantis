@@ -1,0 +1,14 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+#files
+*.html
+
+# restricted files
+comland*.rds
+
+# folders
+researchDocs
