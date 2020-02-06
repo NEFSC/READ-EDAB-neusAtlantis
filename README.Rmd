@@ -20,7 +20,9 @@ Atlantis Neus file repository v1.5
 Physics based on Doppio Roms model hindcast 2008-2010 downscaled to NEUS boxes.
 
 ### The spatial domain
-![Atlantis_Neus](https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/Geometry//AtlantisNeusDomain.png)
+```{r neusfig, echo=F}
+knitr::include_graphics(path="https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/Geometry/AtlantisNeusDomain.PNG")
+```
 
 ### 2019 run structure 
 
