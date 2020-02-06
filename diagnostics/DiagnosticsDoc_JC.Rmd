@@ -1,0 +1,386 @@
+---
+title: "Atlantis Diagnostics Development Documentation"
+author: "Sarah Gaichas"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document: default
+  pdf_document: default
+link-citations: yes
+csl: plos.csl
+bibliography: modreview.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,error = T)
+# knitr::opts_knit$set(root.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis')
+
+```
+
+## Intro
+
+Here we document the development Atlantis diagnostics code to determine whether the model is meeting define performance and review criteria. Code we be developed to evaluate the model output against detailed performance criteria developed in @kaplan_guinea_2016 and the calibration criteria in @pethybridge_calibrating_2019:
+
+1. All functional groups persist 
+
+1. Model stabilizes for the last ~20 years of an unfished, unperturbed 80-100 year run
+
+1. Details for calibration:   
+    + Unfished system: 
+       + produce stable biomass through time under stable-environmental forcing 
+       + keep all groups from going extinct 
+       + obtain stable biomasses that are not oscillating more than a certain  percentage from initial values
+    + System with constant fishing: reproduce realistic responses to a range of fishing pressures   
+
+1. Hindcast period established where we have survey/assessment time series with error bounds
+
+1. Species groups totaling ~80% of system biomass should qualitatively match hindcast biomass trends. During calibration: reproduce historical trends in biomass when forcing the model with historical fishing and environmental drivers.
+
+1. Patterns of temporal variability captured (emergent or forced with e.g. recruitment time series)
+
+1. Productivity for groups totaling ~80% of system biomass should qualitatively match FMSY or life history expectations
+
+1. Natural mortality decreases with age for majority of groups
+
+1. Age and length structure qualitatively matches expectations for majority of groups
+
+1. Diet predicted qualitatively matches empirical diet comp for majority of groups
+
+An R function for each criterion is developed below, and a wrapper that runs all functions will be developed and tested here.
+
+We use these R libraries, with non-CRAN package installation instructions in comments. 
+
+```{r dependencies, message=FALSE}
+
+#devtools::install_github("noaa-edab/ecodata",build_vignettes=TRUE) 
+# suggested to use remotes::install_github instead
+#devtools::install_github("r4atlantis/atlantisom")
+# devtools::install_local('C:/Users/joseph.caracappa/Documents/GitHub/atlantisom/')
+# remotes::install_github("noaa-edab/ecotrend")
+
+library(ecodata)
+library(ecotrend)
+library(tidyverse)
+library(atlantisom)
+library(here)
+
+
+source("shift_legend.R")
+
+```
+
+Configure files to be read in here (can have different files to source)
+
+```{r config}
+# set up files to be read in
+# the below can go into a config file to be sourced
+
+d.name <- here("diagnostics", "testfiles",'50_year_no_fishing') #folder with files below; e.g. here("atlantisoutput","currentrun")
+functional.groups.file <- "NeusGroups_v15_unix_RM.csv"
+biomass.pools.file <- "atneus_v15_test2008hydro_20180208.nc"
+biol.prm.file <- "at_biol_neus_v15_scaled_diet_20190924_2.xml"
+box.file <- "neus_tmerc_RM2.bgm"
+initial.conditions.file <- "RMinit4_2019.nc"
+run.prm.file <- "at_run_neus_v15_RM_scale_0503_nofishing.xml"
+scenario.name <- "atneus_v15_JC_testv6490_nofishing"
+bioind.file <- "atneus_v15_JC_testv6490_nofishingBiomIndx.txt"
+# catch.file <- "atneus_v15_test2008hydro_20180208Catch.txt"
+
+```
+
+Get functional group names for other functions
+
+```{r get_names, message=FALSE, warning=FALSE}
+#Load functional groups
+funct.groups <- load_fgs(dir=d.name,
+                         file_fgs = functional.groups.file)
+#Get just the names of active functional groups
+funct.group.names <- funct.groups %>% 
+  filter(IsTurnedOn == 1) %>%
+  select(Name) %>%
+  .$Name
+
+```
+
+Get basic output parameters
+
+```{r modpars}
+# should return all model areas
+boxpars <- load_box(d.name, box.file)
+boxall <- c(0:(boxpars$nbox - 1))
+
+# generalized timesteps all models
+runpar <- load_runprm(d.name, run.prm.file)
+noutsteps <- runpar$tstop/runpar$outputstep
+stepperyr <- if(runpar$outputstepunit=="days") 365/runpar$toutinc
+midptyr <- round(median(seq(0,stepperyr)))
+
+# a survey that takes place once per year mid year
+annualmidyear <- seq(midptyr, noutsteps, stepperyr)
+
+timeall <- c(0:noutsteps)
+
+# learned the hard way this can be different from ecosystem outputs
+fstepperyr <- if(runpar$outputstepunit=="days") 365/runpar$toutfinc
+
+```
+
+### Persistence test
+
+This should be run on an **unfished, unperturbed** run. Fishing or perturbations may legitimately drive groups extinct.
+
+```{r persist, warning=FALSE}
+
+# read the output atlantis biom.txt file
+
+atBtxt <- read.table(file.path(d.name, paste0(scenario.name, "BiomIndx.txt")), header=T)
+groupslookup <- funct.groups %>%
+  filter(IsTurnedOn > 0)
+
+atBtxttidy <- atBtxt %>%
+  select(Time:DIN) %>%
+  rename_(.dots=with(groupslookup, setNames(as.list(as.character(Code)), Name))) %>%
+  gather(species, biomass, -Time) %>%
+  mutate(yr = ceiling(Time/365))  # assumes BiomInd.txt time unit is days leaves initial time 0 on its own
+
+# visualize; hardcoded pages for ~89 group model
+
+plotB <-ggplot() +
+  geom_line(data=atBtxttidy, aes(x=Time/365,y=biomass, color="txt output B"),
+             alpha = 10/10) + 
+  ggthemes::theme_tufte() +
+  theme(legend.position = "top") +
+  labs(colour=scenario.name)
+
+plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 1, scales="free") 
+plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 2, scales="free") 
+plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 3, scales="free") 
+plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 4, scales="free") 
+plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 5, scales="free")
+plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 6, scales="free") 
+
+# need in annual units? Or fail when any output timestep below threshold?
+# make safe for migratory species, assume that over the course of the year mean B > 0.
+# assumes biomass never goes negative in atlantis
+
+crash <- atBtxttidy %>%
+  group_by(species, yr) %>%
+  summarise(meanB = mean(biomass)) %>%
+  filter(meanB < 1e-4)
+
+# flag any groups with any mean annual biomass below a threshold
+
+unique(crash$species)
+
+```
+
+### Stability test
+
+Model reaches steady state for last ~20 years of an unperturbed, unfished ~100 year run. Things at 0 shouldn't count, so run persistence test as well. For plotting, let's skip the first 20 model years so we only look after spinup.
+
+```{r stability, warning=FALSE, message=FALSE, error=FALSE}
+
+# read in long run from separate folder
+longatBtxt <- read.table(file.path(here("diagnostics", "testfiles", "100_year_no_fishing"), paste0(scenario.name, "BiomIndx.txt")), header=T)
+groupslookup <- funct.groups %>% #assumes we have the same functional groups in this run as the shorter ones
+  filter(IsTurnedOn > 0)
+
+# read in run pars for the long run too
+longrunpar <- load_runprm(here("diagnostics", "testfiles", "50_year_no_fishing"), run.prm.file) #assumes same name as above, it is
+longnoutsteps <- longrunpar$tstop/longrunpar$outputstep
+
+longtimeall <- c(0:longnoutsteps)
+
+longatBtxttidy <- longatBtxt %>%
+  select(Time:DIN) %>%
+  rename_(.dots=with(groupslookup, setNames(as.list(as.character(Code)), Name))) %>%
+  gather(species, biomass, -Time) %>%
+  mutate(yr = ceiling(Time/365))  %>%
+  filter(Time %in% seq(20*365, floor(longrunpar$nyears)*365, by=365)) 
+
+
+# look for non-significant slope over last 20 years? 30 years would be better
+nlast <- 20
+
+startlast <- floor(longrunpar$nyears)-nlast
+
+#warning, was getting different behavior with this code on my linux machine
+
+stable <- longatBtxttidy %>%
+  filter(Time %in% seq(startlast*365, floor(longrunpar$nyears)*365, by=365)) %>%
+  group_by(species) %>%
+  ggplot(aes(x=yr, y=biomass)) +
+  ggthemes::theme_tufte() +
+  geom_line(data=longatBtxttidy, aes(x=yr, y=biomass)) +
+  geom_gls(warn = FALSE)
+
+
+stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 1, scales="free")
+stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 2, scales="free")
+stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 3, scales="free")
+stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 4, scales="free")
+stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 5, scales="free")
+stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 6, scales="free")
+
+# what I need is to extract the output of geom_gls that is NULL (no significant trend)
+
+# this may work eventually but blows up R right now, fix later
+# # get results from ecotrend package
+# stabletest <- longatBtxttidy %>%
+#   filter(Time %in% seq(startlast*365, floor(longrunpar$nyears)*365, by=365)) %>%
+#   group_by(species) %>%
+#   dplyr::do(ecotrend::glsMs(data = ., formula = yr ~ biomass))
+# 
+# #ecotrend::glsMs(data = ., formula = yr ~ biomass)
+# 
+# #ecotrend::glsMs(yr ~ biomass, stabletest)
+
+#test this run for persistence too
+
+longcrash <- longatBtxt %>%
+  select(Time:DIN) %>%
+  rename_(.dots=with(groupslookup, setNames(as.list(as.character(Code)), Name))) %>%
+  gather(species, biomass, -Time) %>%
+  mutate(yr = ceiling(Time/365))  %>%
+  group_by(species, yr) %>%
+  summarise(meanB = mean(biomass)) %>%
+  filter(meanB < 1e-4)
+
+# flag any groups with any mean annual biomass below a threshold
+
+unique(longcrash$species)
+
+```
+
+### Establish hindcast period
+
+See discussion [here](https://github.com/NOAA-EDAB/atneus_RM/issues/7) and [here](https://github.com/NOAA-EDAB/atneus_RM/wiki/Meeting-minutes#20191002).
+
+The period is defined as 1980-2010 for trend comparison. Change it here to see different results:
+
+```{r hindcast-def}
+
+hindcast <- c(1980:2010)
+
+```
+
+Data sources include ecodata and stock assessment outputs for major species.
+
+### Interim step: which species to include and what data are in the reference set for comparison
+
+Not all species need to match, we will first determine the most important subset(s). Based on discussion, we want to track the species the comprise 80% of biomass (and 80% of catch and 80% of revenue). 
+
+Code to evaluate which species are most important based on biomass, catch, and revenue, union and intersection.
+
+```{r which-species, eval=FALSE, error=F, message=FALSE, warning=FALSE, include=FALSE}
+
+# first past B, catch, revenue, use ecodata
+
+survbio <- ecodata::nefsc_survey_disaggregated %>%
+  filter(Time %in% hindcast) %>%
+  group_by(comname) %>%
+  summarize(avgkgtow = mean(kg.per.tow, na.rm = T)) %>%
+  mutate(prop = avgkgtow/sum(avgkgtow, na.rm = T)) %>%
+  arrange(desc(prop))
+
+hibiosp <- stringr::str_to_sentence(survbio$comname[cumsum(survbio$prop)<0.81 & !is.na(cumsum(survbio$prop))])
+
+# comdat and bennet are already aggregated in ecodata
+
+# need comland, should be able to run similar code as above to get catch and revenue
+# NOTE: THIS FILE NOT TO BE POSTED ON GITHUB DUE TO POTENTIAL CONFIDENTIALITY CONCERNS
+# ask Sean for it
+load(here("diagnostics", "comland_meatwt_deflated_stat_areas.RData"))
+
+# from https://github.com/NOAA-EDAB/Atlantis-Catch-Files/blob/master/Atlantis_1_5_groups_svspp_nespp3.csv
+spcodes <- readr::read_csv("Atlantis_1_5_groups_svspp_nespp3.csv")
+
+# time series in case we want to plot them
+comlandts <- merge(comland, spcodes) %>%
+  filter(YEAR %in% hindcast) %>%
+  group_by(YEAR, Name) %>%
+  summarise_at(vars(SPPLIVMT, SPPVALUE), sum) 
+
+comlandat <- comlandts %>%
+  group_by(Name) %>%
+  summarize_at(vars(SPPLIVMT, SPPVALUE), mean, na.rm = T) %>%
+  rename(avSPPLIVMT = SPPLIVMT, avSPPVALUE = SPPVALUE) %>%
+  mutate(propcatch = avSPPLIVMT/sum(avSPPLIVMT, na.rm = T)) %>%
+  mutate(propvalue = avSPPVALUE/sum(avSPPVALUE, na.rm = T)) %>%
+  arrange(desc(propcatch))
+
+hicatchsp <- comlandat$Name[cumsum(comlandat$propcatch) <0.81 & !is.na(cumsum(comlandat$propcatch))]
+
+# danger, has to be sorted to be correct
+comlandatv <- arrange(comlandat, desc(propvalue))
+  
+hivalsp <- comlandatv$Name[cumsum(comlandatv$propvalue) <0.81 & !is.na(cumsum(comlandatv$propvalue))]
+  
+# add recreational catch and rec value/n participants?
+
+# WARNING our names dont match between survbio comnames and comland Name, fix here otherwise have duplicates
+# union all 
+hibiocatvalsp <- sort(unique(c(hibiosp, hicatchsp, hivalsp)))
+
+```
+
+Species comprising 80% of survey kg per tow averaged over `r hindcast[1]` to `r hindcast[length(hindcast)]`:
+
+`r #hibiosp`
+
+Species comprising 80% of commercial landings averaged over the same period:
+
+`r #hicatchsp`
+
+Species comprising 80% of commercial value averaged over the same period:
+
+`r #hivalsp`
+
+A list with all of these species:
+
+`r #hibiocatvalsp`
+
+Code to develop the hindcast comparison (call it "reference") dataset:
+
+```{r survbio-ts, eval=FALSE, include=FALSE}
+
+# simplest is annual output comparison, but which season should be compared to Atlantis? 
+
+# WARNING our names dont match between survbio comnames and comland Name, fix above
+
+survbio.ts <- ecodata::nefsc_survey_disaggregated %>%
+  filter(Time %in% hindcast) %>%
+  mutate(comname = stringr::str_to_sentence(comname)) %>%
+  filter(comname %in% hibiocatvalsp) %>%
+  group_by(Time, Season, comname) %>%
+  summarise(annkgtow = sum(kg.per.tow))
+
+tsplot <- ggplot(survbio.ts, aes(Time, annkgtow, color=Season)) + geom_point() + ggthemes::theme_tufte() + facet_wrap(~comname, scales = "free")
+
+grid.draw(shift_legend(tsplot))
+
+# ecosystem indicators for comparison: total survey biomass
+survbio.tot <- ecodata::nefsc_survey_disaggregated %>%
+  filter(Time %in% hindcast) %>%
+  group_by(Time, Season) %>%
+  summarise(annkgtow = sum(kg.per.tow, na.rm = TRUE))
+
+ggplot(survbio.tot, aes(Time, annkgtow)) + geom_point() + ggthemes::theme_tufte() + facet_wrap(~Season)
+
+```
+
+
+### Species qualitatively match trends
+
+Key species to match and their most representative trend datasets are determined in analyses above, and the code that looks for the match between this reference set and Atlantis output is developed here. By match we mean significance and direction only. 
+
+```{r trend-match}
+
+# assumes biom.txt output already read in
+
+
+
+```
+
+
+
+## References
