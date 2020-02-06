@@ -14,7 +14,7 @@ boxes.
 
 ### The spatial domain
 
-![Atlantis\_Neus](Geometry/AtlantisNeusDomain.png)
+![Atlantis\_Neus](https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/Geometry//AtlantisNeusDomain.png)
 
 ### 2019 run structure
 
