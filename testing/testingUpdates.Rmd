@@ -1,0 +1,16 @@
+---
+title: "testing steps"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This file is used to document steps made towards a new version/subversion
+
+* reason for change - Developers initials - name of local filename changed
+
+*
+
+*
