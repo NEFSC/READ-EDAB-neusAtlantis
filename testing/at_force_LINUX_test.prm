@@ -1,0 +1,154 @@
+# Linux Version (created by Beth Fulton and Adam Davidson)
+# modded by gfay@nmfs June 2014
+#
+# Hydrodynamic files - new hydro from roms doppio
+# this is created from 2008-2010 daily files
+nhdfiles 1
+hd0.name /tsfiles/flowOutAll_fix_20180402.nc
+# Bottom stress
+
+#############################################
+# Point source\sink lists
+npointss 0
+
+pss0.name GBK_SED
+pss0.location 1234274.466 3098307.516 -40
+pss0.data /tsfiles/CBay_SED_90days_spike.ts
+pss0.rewind 0
+
+## nutrient forcing     
+#pss0.name CBay_SED
+#pss0.location 531250 2625000 -16
+#pss0.data /tsfiles/CBay_SED_90days_spike.ts
+#pss0.rewind 0
+        
+# pss0.name GeorgesBank
+# pss0.location 1234274.466 3098307.516 -40
+# pss0.data /tsfiles/v5_3yr.ts
+# pss0.rewind 1
+
+# pss1.name GulfStreamTrap
+# pss1.location 1239774.298 3024140.334 -130
+# pss1.data /tsfiles/v5_3yr.ts
+# pss1.rewind 1
+
+# pss2.name ChesapeakeBay
+# pss2.location 531250 2625000 -16
+# pss2.data /tsfiles/CBAYlo3yrSED.ts
+# pss2.rewind 1
+
+# pss3.name HudsonRiver
+# pss3.location 710000 3000000 -20
+# pss3.data /tsfiles/CBAYlo3yr.ts
+# pss3.rewind 1
+
+# pss2.name Basin16
+# pss2.location 1102189.803 3299498.894 -150
+# pss2.data /tsfiles/basindeep.ts
+# pss2.rewind 0
+
+# pss3.name Basin20
+# pss3.location 1223937.669 3213347.009 -220
+# pss3.data /tsfiles/basindeep.ts
+# pss3.rewind 0
+
+# pss4.name Basin11
+# pss4.location 1100958.262 3181632.652 -170
+# pss4.data /tsfiles/basindeep.ts
+# pss4.rewind 0
+
+# pss4.name NarragansettBay
+# pss4.location 937500 3100000 -20
+# pss4.data /tsfiles/NBAYlo3yr.ts
+# pss4.rewind 1
+
+# pss5.name Boston
+# pss5.location 1016047.729 3243653.893 -15
+# pss5.data /tsfiles/v5_3yr.ts
+# pss5.rewind 1
+
+# pss6.name CascoBayAndPenobscott
+# pss6.location 1098345.3045816745 3367268.9230297254 -15
+# pss6.data /tsfiles/v5_3yr.ts
+# pss6.rewind 1
+
+# pss7.name PenobscottNorth
+# pss7.location 1220475.7351718375 3429637.9873865936 -15
+# pss7.data /tsfiles/v5_3yr.ts
+# pss7.rewind 1
+##########################################
+# Rain and evaporation
+
+# Solar time series data file
+Solar_radiation /tsfiles/RMirradiance_smooth_3yr.ts
+Solar_radiation_rewind 1
+
+# Temperature time series data file
+use_tempfiles 1
+ntempfiles 1
+Temperature0.name /tsfiles/tempOutAll_fix_20180402.nc
+temp_rewind 1
+
+# Salinity time series data file
+use_saltfiles 1
+nsaltfiles 1
+Salinity0.name /tsfiles/saltOutAll_fix_20180402.nc
+salt_rewind 1
+
+ts_on_hydro_time 1
+
+# Recruitment_time_series (actual recruit time series)
+# Recruitment_enviro_forcing (scales recruitment)
+# Recruitment_enviro_forcing /tsfiles/recruitscalar.ts # RM - file needs to be remade for NEUS v1.5
+
+# G. Fay added 09/21/2016
+use_larvalfiles 0 # 1 = use larval files, 0 = don't use larval files.
+
+#############################################
+# Historical catch lists - nCatchts is the number of time series to be loaded and
+# typeCatchts is whether or not the data is to be interpolated (0) by the model
+# or just use previous record (1)
+nCatchts 1
+typeCatchts 1
+
+Catchts0.name totcatch
+Catchts0.location 52965.5227 2474675.803 0
+Catchts0.data CatchFiles/total_catch.ts
+Catchts0.rewind 0
+#############################################
+# Historical discard lists
+nDiscardts 0
+typeDiscardts 0
+
+#############################################
+# Residual lists
+nResidualsts 0
+typeResidualsts 0
+
+#RM added 20170517 based on warnings
+use_phFiles 0
+
+# RM adding Sedimnent tracer 20180316 (not implemented yet, need nc file, try input in .ts file instead)
+use_force_tracers 0
+#nforceTracers 1
+#tracerNames
+#SED
+
+
+#BottomStress <filename> #RM this only works if filename is supplied here
+#pCO2_forcing 0
+#FSPBChange 0
+#Precipitation 0
+#Evaporation 0
+#Recruitment_time_series 0
+
+# RM 20180530
+use_VertMixFiles 0
+
+
+## G.Fay added 09/20/16, RM changed to 86400 from 43200
+# Frequency of inputs.ts and exports.ts output - write out each dt.
+inputs_tout 86400 seconds
+
+## G.Fay added 09/20/16
+use_external_scaling 0
