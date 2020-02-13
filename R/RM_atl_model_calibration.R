@@ -86,8 +86,8 @@ bgm       <- file.path(d1, "neus_tmerc_RM2.bgm") #30_v15.bgm")
 
 
 ### select box plot time series of benthic 
-tb=17 # choose box
-ll=4 # choose layer (4 is bottom for NEUS)
+# tb=17 # choose box
+# ll=4 # choose layer (4 is bottom for NEUS)
 test=result$biomass_spatial_stanza[which(result$biomass_spatial_stanza$layer==ll & result$biomass_spatial_stanza$polygon==tb),]
 ii=unique(test$species)
 pdf(file=paste(filename,'_Box_',tb,'_bottom.pdf', sep=''))
@@ -481,7 +481,7 @@ ggsave(paste(filename," Invert biomass timeseries.png", sep=''), width=20, heigh
 ## Plot biomass pool biomass by box timeseries
 plot <- plot_line(result$bio_invert_box)
 custom_grid(plot, grid_x = "polygon", grid_y = "species")
-ggsave(paste(filename," Invert biomass by box.png", sep=''), width=30, height=20, dpi=96)
+ggsave(paste(filename," Invert biomass by box.png", sep=''), width=30, height=20, dpi=300)
 
 ### Growth per ageclass
 df_rel <- convert_relative_initial(result$growth_age)
