@@ -1,5 +1,5 @@
 ---
-title: "testing steps"
+title: "Testing Steps"
 output: html_document
 ---
 
@@ -11,6 +11,14 @@ This file is used to document steps made towards a new version/subversion
 
 * reason for change - Developers initials - name of local filename changed
 
-*
+## Primary Production and Benthic Community Update
 
-*
+* JC: 02-13-2020
+* Reduces magnitude of Diatom (PL) bloom and stabilizes closer to initial biomass
+    + Reduce mum_PL
+    + Increase predation on PL by Meiobenthos (BO) in sediment (reduces sediment accumulation)
+    + Decrease cannibalism of BO
+* Slight increase in longevity of scallops (SCA) and Lobseter (LOB)
+    + Decreased cannibalism in LOB (and other benthic carnivores)
+    + Increase grazing of benthic filter feeders (CLA, SCA, QHG, BFF) on PL and decrease consumption of refractory detritus (DR)
+* Affects: at_biology.prm
