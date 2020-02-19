@@ -4,24 +4,34 @@ library("gridExtra")
 library("dplyr")
 library("tidyr")
 
-# d1="C:/Users/ryan.morse/Documents/GitHub/atneus_RM_20180827"
-# d1='/home/ryan/Git/atneus737e3d' # for NEUS 1.0 on new code base RM
+#prefix for output file names
+runfile='neus_output'
+# runfile = 'atneus_v15_01272020'
 
-runfile='20191106a'
+git.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/'
+#Input file directory where (PRM, bgm, group data) are saved
+d1=paste0(git.dir,'currentVersion')
+# d1 = 'C:/Users/joseph.caracappa/Documents/Branch Backup/neus-atlantis'
+#Output file directory (.nc and .txt files)
+d2=paste0(git.dir,'currentVersion/Output')
+# d2 = 'C:/Users/joseph.caracappa/Documents/Atlantis/Run_Files/atneus_v15_01272020/'
+#R scripts directory (where post-processing code is)
+d3 = paste0(git.dir,'R/')
+# d3 = 'C:/Users/joseph.caracappa/Documents/Branch Bacup/neus-atlantis/R'
+#Location of Diagnostic Figures/tables
+d4 = paste0(git.dir,'currentVersion/Diagnostics/')
 
-
-d1='/home/ryan/Git/atneus_RM'
-d2=paste('/home/ryan/AtlRuns/', runfile, sep='')
-# # d2='/media/ryan/Iomega_HDD/20190301dta'
-
-
-d1='C:/Users/ryan.morse/Documents/GitHub/atneus_RM' #where (PRM, bgm, group data) are saved
-d2=paste('D:/AtlantisRun/20161103/tes/', runfile, sep='')
-
-#choose plots
-make_spatial_plots=F
+  
+#choose plots: spatial plots visualize group biomass across, time, boxes, and layers
+make_spatial_plots=T
+#diet plots show top predators and prey for all groups
 make_diet_pdf=T
+#LTL plots show timeseries of biomass for LTL groups
 make_LTL_plots=T
+
+#Choose for diagnostic focal box/layer
+tb=17 # choose box
+ll=4 # choose layer (4 is bottom for NEUS)
 
 #If catch was included in run:
 include_catch=T
@@ -30,8 +40,10 @@ include_catch=T
 check_scale_init=T
 
 setwd(d2)
-source(paste(d1,'/R/RM_preprocess_v2.R', sep=''))
-source(paste(d1,'/R/RM_atl_model_calibration.R', sep=''))
+#preprocessing code: creates runfile_prepro.rdata
+source(paste0(d3,'RM_preprocess_v2.R'))
+#creates diagnostic figures
+source(paste0(d3,'RM_atl_model_calibration.R'))
 
 # save.image(paste(d2,"/ws.RData", sep='')) # done at end of preprocess_v2
 

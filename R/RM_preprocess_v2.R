@@ -35,7 +35,8 @@ catchtotfile <- file.path(d2, paste(ncbase, 'TOTCATCH.nc', sep=""))
 xml.files=list.files(path=d2, pattern='.xml')
 xml.str=strsplit(xml.files, '.xml')
 for (i in 1:length(xml.files)){
-  x='run' %in% strsplit(xml.files[i], split='_')[[1]]
+  x='run.xml' %in% strsplit(xml.files[i], split='_')[[1]]
+  # x='run' %in% strsplit(xml.files[i], split='_')[[1]]
   if (x==T){
     break
   }
@@ -43,7 +44,8 @@ for (i in 1:length(xml.files)){
 prm_run <- file.path(d1, paste(xml.str[[i]], '.prm',sep=''))
 prm_run #make sure
 for (i in 1:length(xml.files)){
-  x='biol' %in% strsplit(xml.files[i], split='_')[[1]]
+  x='biology.xml' %in% strsplit(xml.files[i], split='_')[[1]]
+  # x='biol' %in% strsplit(xml.files[i], split='_')[[1]]
   if (x==T){
     break
   }
@@ -51,15 +53,16 @@ for (i in 1:length(xml.files)){
 prm_biol <- file.path(d1, paste(xml.str[[i]], '.prm',sep=''))
 prm_biol #make sure
 for (i in 1:length(xml.files)){
-  x='NeusGroups' %in% strsplit(xml.files[i], split='_')[[1]]
+  x='groups.xml' %in% strsplit(xml.files[i], split='_')[[1]]
+  # x='Neusgroups' %in% strsplit(xml.files[i], split='_')[[1]]
   if (x==T){
     break
   }
 }
-fgs       <- file.path(d1, paste(xml.str[[i]], '.csv',sep='')) #file.path(d1, "NeusGroups_v15_LTLonly.csv") #unix.csv")
+fgs <- file.path(d1, paste(xml.str[[i]], '.csv',sep='')) #file.path(d1, "NeusGroups_v15_LTLonly.csv") #unix.csv")
 fgs #make sure
 # bgm.files=list.files(path=d1, pattern='.bgm')
-bgm.files="neus_tmerc_RM.bgm"
+bgm.files="neus_tmerc_RM2.bgm"
 bgm       <- file.path(d1, bgm.files) #"neus_tmerc_RM.bgm")
 
 ## read log file to get input command for Atlantis run
@@ -73,7 +76,8 @@ init.file=test[[1]][3]
 init = file.path(d1, init.file)
 init # make sure
 # init      <- file.path(d1, 'RMinit_notsohighvertmix.nc')# "RMinit_newvalues2017.nc")
-init=paste(d1,'/RMinit4_nofill_2019.nc', sep='') # dropped _FillValue to make init_growth work 20180412 (see history in cdf version for command)
+init=paste(d1,'/neus_init_nofill.nc', sep='') # dropped _FillValue to make init_growth work 20180412 (see history in cdf version for command)
+# init = paste0(d1,'/RMinit4_nofill_2019.nc')
 # ran this command: ncatted -O -a _FillValue,,d,, RMinit_2018.nc RMinitnofill_2018.nc
 # ncks -d time,0,9 in.nc out.nc to remove time steps from v1.0 (use 't' not 'time') 
 
@@ -85,7 +89,7 @@ if (check_scale_init==1){
   foo$biomass=as.numeric(tt2)
   vir.biomass=foo[,c('code', 'biomass')]
   rm(tt, foo) # cleanup
-  des.bio=readxl::read_xlsx(paste(d1, '/NEUS_v15_Initial_Biomass.xlsx', sep=''), col_names = T)
+  des.bio=readxl::read_xlsx(paste(d1, '/neus_v15_initial_biomass.xlsx', sep=''), col_names = T)
   vir.biomass$desired=format(des.bio$`target biomass (tonnes)`, scientific = F)
   vir.biomass[,2]=as.numeric(vir.biomass[,2])
   vir.biomass[,3]=as.numeric(vir.biomass[,3])
@@ -96,7 +100,7 @@ if (check_scale_init==1){
   vir.biomass[which((vir.biomass$scalar<1.05) & (vir.biomass$scalar>0.95)),4]=1
   vir.biomass[,4]=as.numeric(vir.biomass[,4])
   vir.biomass[,4]=round(vir.biomass[,4], digits=2)
-  write.csv(vir.biomass, file=paste(runfile,'_virgin_biomass_scalar.csv', sep=''), row.names=T)
+  write.csv(vir.biomass, file=paste(d2,'/Diagnostics',runfile,'_virgin_biomass_scalar.csv', sep=''), row.names=T)
 }
 
 # ### SANITY CHECK ON INITIAL CONDITIONS
@@ -366,8 +370,8 @@ result <- list(
   "catch"                  = catch,
   "totcatch"               = totcatch
 )
-filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
-save(result, file=paste(filename, '_prepro.rdata',sep=''))
+# filename=sapply(strsplit(as.character(d2), "/"), tail, 1) # grab last chars of folder
+save(result, file=paste(d2,'/',runfile, '_prepro.rdata',sep=''))
 save.image(paste(d2, '/ws.RData', sep='')) #"~/AtlRuns/20190111a/ws.RData")
 
 #
