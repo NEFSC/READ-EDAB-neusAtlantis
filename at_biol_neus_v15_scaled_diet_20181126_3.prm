@@ -9175,7 +9175,7 @@ pPREYZM 92
 pPREYZS 92                                                                                          
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.01 0 0 0 0.0005 0.002 0.015 0 0.01 0.01 0.01 0 0 0 0 0.05 0.05 0
 pPREYBO 92                                                                                          
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.01 0.075 0.01 0.0026 0 0 0 0.05 0 0 0 0.1 0.23 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.01 0.0625 0.01 0.0026 0 0 0 0.05 0 0 0 0.1 0.23 0
 
 ## Ontogenetic diet preferences - one entry per age class, 1=use explicit values above, 0=use ontogenetic values below. 
 # For each group where the p_split value is set to 0 there will be a value for each cohort of the groups tagged below as age_structured_pred.    
@@ -11813,14 +11813,14 @@ mum_jNSH_T15	0.003
 mum_OSH_T15	0.003043
 mum_jOSH_T15	0.003
 mum_ZG_T15	0.003
-mum_ZL_T15	0.4
-mum_ZM_T15	0.08
-mum_ZS_T15	0.65
+mum_ZL_T15	0.3
+mum_ZM_T15	0.06
+mum_ZS_T15	0.675
 mum_BD_T15	0.0004
 mum_BO_T15	0.04
 mum_PB_T15	0.2
 mum_BB_T15	0.8
-mum_DF_T15	0.075
+mum_DF_T15	0.0775
 mum_PL_T15	0.015
 mum_PS_T15	0.01
 mum_MA_T15	0.2
