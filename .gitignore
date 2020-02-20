@@ -15,23 +15,23 @@ researchDocs
 
 # ignore all files in testing except prm
 /testing/*.*
-!/testing/at_biology_test.prm
-!/testing/at_economics_test.prm
-!/testing/at_force_LINUX_test.prm
-!/testing/at_force_WIN_test.prm
-!/testing/at_harvest_test.prm
-!/testing/at_physics_test.prm
-!/testing/at_run_test.prm
+#!/testing/at_biology_test.prm
+#!/testing/at_economics_test.prm
+#!/testing/at_force_LINUX_test.prm
+#!/testing/at_force_WIN_test.prm
+#!/testing/at_harvest_test.prm
+#!/testing/at_physics_test.prm
+#!/testing/at_run_test.prm
 # except nc
-!/testing/neus_init_test_nc
+#!/testing/neus_init_test_nc
 # except csv
-!/testing/neus_fisheries_test.csv
-!/testing/neus_groups_test.csv
+#!/testing/neus_fisheries_test.csv
+#!/testing/neus_groups_test.csv
 # except bgm
-!/testing/neus_boxes_test.bgm
+#!/testing/neus_boxes_test.bgm
 # except rmd
-!/testing/*.Rmd
+#!/testing/*.Rmd
 # except altlantis
-!/testing/*.exe
-!/testing/run_command_test.txt
+#!/testing/*.exe
+#!/testing/run_command_test.txt
 
