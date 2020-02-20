@@ -14,7 +14,7 @@ comland*.rds
 researchDocs
 
 # ignore all files in testing except prm
-/testing/*.*
+#/testing/*.*
 #!/testing/at_biology_test.prm
 #!/testing/at_economics_test.prm
 #!/testing/at_force_LINUX_test.prm
