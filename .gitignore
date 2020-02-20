@@ -13,8 +13,8 @@ comland*.rds
 # folders
 researchDocs
 
-# ignore all prm files in testing except 
-/testing/*.prm
+# ignore all files in testing except prm
+/testing/*.*
 !/testing/at_biology_test.prm
 !/testing/at_economics_test.prm
 !/testing/at_force_LINUX_test.prm
@@ -22,13 +22,16 @@ researchDocs
 !/testing/at_harvest_test.prm
 !/testing/at_physics_test.prm
 !/testing/at_run_test.prm
-# ignore all .mc files in testing except
-/testing/*.nc
+# except nc
 !/testing/neus_init_test_nc
-# ignore all csv files in testing except
-/testing/*.csv
+# except csv
 !/testing/neus_fisheries_test.csv
 !/testing/neus_groups_test.csv
-# ignore all bgm files in testing except
-/testing/*.bgm
+# except bgm
 !/testing/neus_boxes_test.bgm
+# except rmd
+!/testing/*.Rmd
+# except altlantis
+!/testing/*.exe
+!/testing/run_command_test.txt
+
