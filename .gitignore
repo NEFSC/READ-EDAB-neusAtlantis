@@ -12,6 +12,7 @@ comland*.rds
 
 # folders
 researchDocs
+other
 
 # prevent changes to gitignore?
 .gitignore
