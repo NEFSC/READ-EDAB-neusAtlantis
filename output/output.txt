@@ -1,1 +1,0 @@
-Files displaying characteristics of the current stable version
