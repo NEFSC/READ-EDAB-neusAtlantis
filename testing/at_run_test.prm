@@ -1,5 +1,5 @@
 
-# Run parameters
+# Run parameters - Robert.Gamble@noaa.gov
 verbose      0 	# Detailed logged output
 
 flagecon_on        0   # Flag showing whether want economics loaded and submodel run (1) or not (0)
