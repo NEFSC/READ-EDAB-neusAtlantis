@@ -1,13 +1,15 @@
 
 # Run parameters
+
 verbose      0 	# Detailed logged output
+
 
 flagecon_on        0   # Flag showing whether want economics loaded and submodel run (1) or not (0)
 flag_fisheries_on  1  # Flag showing whether want fisheries loaded and submodel run (1) or not (0)
 flag_skip_biol     0   # Flag showing whether want biological model run: 1 turns of Ecology, so only used when debugging fisheries)
 flag_skip_phys     0   # Flag showing whether want Physics model run: 1 turns of Physics, so only used when debugging fisheries)
 
-debug_it      0
+debug_it      1
 checkbox      8        # Give detailed logged output for this box
 checkstart    366666660 day    # Start detailed logged output after this date
 checkstop     366666660 day    # Stop detailed logged output after this date
