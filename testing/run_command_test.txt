@@ -1,0 +1,1 @@
+atlantismain_6490 -i neus_init_test.nc 0 -o neus_output_test.nc -r at_run_test.prm -f at_force_WIN_test.prm -p at_physics_test.prm -b at_biology_test.prm -h at_harvest_test.prm -e at_economics_test.prm -s neus_groups_test.csv -q neus_fisheries_test.csv -t C:\Users\joseph.caracappa\Documents\Github\neus-atlantis\testing

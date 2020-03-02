@@ -1,0 +1,29 @@
+Code,Index,Name,IsRec,NumSubFleets
+midwcISQ,0,Midwater trawl on small pelagics,0,1
+midwcLSQ,1,Scallop dredge,0,1
+jigISQ,2,Surfclam / ocean quahog Dredge,0,1
+jigLSQ,3,Demersal gillnet on other deep demersals,0,1
+dredgeSCA,4,Pelagic line on tuna and sharks,0,1
+trapRCB,5,Purse seine on small pelagics,0,1
+dtrawlRCB,6,Lobster traps,0,1
+dtrawlISQ,7,Goosefish demersal trawl,0,1
+dtrawlLSQ,8,Demersal trawl on cephalopods,0,1
+dtrawlSHK,9,Demersal trawl on other deep demersals,0,1
+dtrawlHAD,10,Demersal trawl on shallow demersals,0,1
+dseineSHK,11,Midwater Trawl - international fleet,0,1
+dlineBLF,12,Line fishery on demersals,0,1
+diveBG,13,Recreational fishery - charter / party,1,1
+pseineBLF,14,Recreational fishery- private,1,1
+cullPIN,15,Shrimp trawl,0,1
+ptrawlNSH,16,Demersal trawl on benthopelagics,0,1
+ptrawlOSH,17,Trap on demersals,0,1
+dtrawlANC,18,New fishery, 0,1
+dtrawlBPF,19,New fishery, 0,1
+dtrawlBUT,20,New fishery, 0,1
+midwcZL,21,New fishery, 0,1
+trapMEN,22,New fishery, 0,1
+dlineMEN,23,New fishery, 0,1
+netMEN,24,New fishery, 0,1
+midwcNSH,25,New fishery, 0,1
+midwcOSH,26,New fishery, 0,1
+mowMA,27,New fishery, 0,1
