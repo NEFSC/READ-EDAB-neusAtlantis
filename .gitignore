@@ -14,9 +14,6 @@ comland*.rds
 researchDocs
 other
 
-# prevent changes to gitignore?
-.gitignore
-
 # ignore all files in testing except prm
 /testing/*.*
 !/testing/at_biology_test.prm
