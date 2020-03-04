@@ -32,3 +32,18 @@ Once a task item has been created and assigned to a developer the following set 
 
 1. Repeat with additional tasks
 
+
+## Testing environment
+
+A test environment (repo) has been created called [atlantis_test](https://github.com/andybeet/atlantis_test) for developers to practive creating branches, conflicts, pull requests, and for merging pull requests. 
+
+This repo can be cloned in Rstudio.
+
+1. File -> New Project
+1. Select Version Control
+1. Select Git
+1. Enter the url of the gitHub repository
+1. Give the name of the directory to be created on your machine to hold the repo
+1. Select the location of the directory (named above)
+1. Click "Create Project"
+
