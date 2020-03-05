@@ -36,7 +36,15 @@ Once a task item has been created and assigned to a developer the following set 
 
 1. Delete branch on gitHub 
 
-    > Note: The branch will remain on your PC even if you try to pull the deleted branch from gitHub. If you make changes to this branch locally in the future and then commit and push these changes,  the branch will be recreated
+    > Note: The branch will remain on your PC even if you try to pull the deleted branch from gitHub. If you make changes to this branch locally in the future and then commit and push these changes,  the branch will be recreated.
+    >
+    > To remove the branch locally type the following in the terminal:
+    >
+    > `git branch -d branchName`
+    >
+    > `git fetch -p`
+    >
+    > For more info see [here](https://www.freecodecamp.org/news/how-to-delete-a-git-branch-both-locally-and-remotely/)
 
 1. Repeat with additional tasks
 
