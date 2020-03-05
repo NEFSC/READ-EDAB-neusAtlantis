@@ -1,8 +1,10 @@
 ---
 title: "Atlantis Development Workflow"
+
 output: 
   html_document:
     css: styling.css
+
 ---
 
 ```{r setup, include=FALSE}
