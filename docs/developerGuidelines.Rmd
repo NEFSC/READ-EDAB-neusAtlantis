@@ -1,6 +1,6 @@
 ---
 title: "Atlantis Development Workflow"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
