@@ -1,6 +1,8 @@
 ---
 title: "Atlantis Development Workflow"
-output: html_document
+output: 
+  html_document:
+    css: styling.css
 ---
 
 ```{r setup, include=FALSE}
@@ -29,6 +31,10 @@ Once a task item has been created and assigned to a developer the following set 
 1. Make sure there a no conflicts.
 
 1. Other team member will be notified of your request via email. They will be required to review the request, possibly test the changes (by running the code locally), and ultimately merge the pull request.
+
+1. Delete branch on gitHub 
+
+    > Note: The branch will remain on your PC even if you try to pull the deleted branch from gitHub. If you make changes to this branch locally in the future and then commit and push these changes,  the branch will be recreated
 
 1. Repeat with additional tasks
 
