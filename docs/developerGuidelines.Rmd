@@ -1,11 +1,9 @@
 ---
 title: "Atlantis Development Workflow"
-
 output: 
   html_document:
     keep_md: true
     css: styling.css
-
 ---
 
 ```{r setup, include=FALSE}
@@ -24,6 +22,7 @@ Once a task item has been created and assigned to a developer the following set 
 1. When a task is complete:
 
     i. Copy the contents of the .prm files to the appropriate at_xxx_test.prm file in the `testing` folder.
+    
     ii. Any R files created during this task should be made into a function with arguments and its directions for use should be well documented. All R code should reside in the `R` folder of the branch. For example: see [exampleFunction.R](https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/R/exampleFunction.R)
     
 
