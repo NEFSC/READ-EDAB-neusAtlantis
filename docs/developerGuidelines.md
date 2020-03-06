@@ -8,9 +8,7 @@ output:
 
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+
 
 
 Once a task item has been created and assigned to a developer the following set of steps should be used as a guide.
