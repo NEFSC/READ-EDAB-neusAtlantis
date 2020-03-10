@@ -24,7 +24,7 @@ ggplot()+
   scale_fill_manual(name = "NEUS 1.5",values =c('grey60','lightsalmon','skyblue','royalblue2','slateblue2'),
                     labels = c('Island','0-50m','50-120m','120-300m','300m +'))+
   coord_fixed()+
-  geom_text(data = corners2, aes(x = midx,y = midy, label = label),size = 4)+
+  geom_text(data = corners2, aes(x = midx,y = midy, label = label),size = 5)+
   xlab('')+
   ylab('')+
   theme_void()+
