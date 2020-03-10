@@ -342,6 +342,9 @@ face_cell_u  = dplyr::rename(face_z_uindex, level = roms_level, cell = cell)
 face_cell_v = dplyr::rename(face_z_vindex, level = roms_level, cell = cell)
 box_cell = dplyr::rename(box_z_index, level = roms_level, cell = cell)
 ocean_time = numeric(nrow(file_db))
+rho.mu = numeric(nrow(file_db))
+
+
 
 for (i_timeslice in seq(nrow(file_db))) {
 # tic()
@@ -351,6 +354,7 @@ for (i_timeslice in seq(nrow(file_db))) {
   roms_file <- file_db$fullname[i_timeslice]
   
   ocean_time[i_timeslice] = ncvar_get(nc_open(roms_file),'ocean_time')
+  rho.mu[i_timeslice] = ncvar_get(nc_open(roms_file),'rho0')
   # level <- file_db$band_level[i_timeslice]
   level = 1
 
@@ -362,6 +366,7 @@ for (i_timeslice in seq(nrow(file_db))) {
   r_salt <- set_indextent(brick(roms_file, varname = "salt", lvar = 4, level = level, ncdf=T))
   
   #COBALT PARAMS
+  r_rho <- set_indextent(brick(roms_file, varname = "rho", lvar = 4, level = level, ncdf=T)) #Fluid Density Anomaly
   r_ndi <- set_indextent(brick(roms_file, varname = "ndi", lvar = 4, level = level, ncdf=T)) #Diazotroph N
   r_nlg <- set_indextent(brick(roms_file, varname = "nlg", lvar = 4, level = level, ncdf=T)) #Large Phyto N
   r_nlgz <- set_indextent(brick(roms_file, varname = "nlgz", lvar = 4, level = level, ncdf=T)) #Large Zoo N
@@ -380,14 +385,19 @@ for (i_timeslice in seq(nrow(file_db))) {
   box_z_index$salt <- extract_at_level(readAll(r_salt), box_cell); rm(r_salt)
   
   #COBALT PARAMS
-  box_z_index$ndi <- extract_at_level(readAll(r_ndi), box_cell); rm(r_ndi)
-  box_z_index$nlg <- extract_at_level(readAll(r_nlg), box_cell); rm(r_nlg)
-  box_z_index$nlgz <- extract_at_level(readAll(r_nlgz), box_cell); rm(r_nlgz)
-  box_z_index$nmdz <- extract_at_level(readAll(r_nmdz), box_cell); rm(r_nmdz)
-  box_z_index$nsm <- extract_at_level(readAll(r_nsm), box_cell); rm(r_nsm)
-  box_z_index$nsmz <- extract_at_level(readAll(r_nsmz), box_cell); rm(r_nsmz)
-  box_z_index$silg <- extract_at_level(readAll(r_silg), box_cell); rm(r_silg)
-  box_z_index$nbact <- extract_at_level(readAll(r_nbact), box_cell); rm(r_nbact)
+  box_z_index$rho <- extract_at_level(readAll(r_rho), box_cell)+1000; rm(r_rho)
+  #convert biological groups from molN/kg to mgN/m3
+  rho_scale = box_z_index$rho*1E6/14.0067
+  
+  box_z_index$ndi <- extract_at_level(readAll(r_ndi), box_cell)*rho_scale; rm(r_ndi)
+  box_z_index$nlg <- extract_at_level(readAll(r_nlg), box_cell)*rho_scale; rm(r_nlg)
+  box_z_index$nlgz <- extract_at_level(readAll(r_nlgz), box_cell)*rho_scale; rm(r_nlgz)
+  box_z_index$nmdz <- extract_at_level(readAll(r_nmdz), box_cell)*rho_scale; rm(r_nmdz)
+  box_z_index$nsm <- extract_at_level(readAll(r_nsm), box_cell)*rho_scale; rm(r_nsm)
+  box_z_index$nsmz <- extract_at_level(readAll(r_nsmz), box_cell)*rho_scale; rm(r_nsmz)
+  box_z_index$silg <- extract_at_level(readAll(r_silg), box_cell)*rho_scale; rm(r_silg)
+  box_z_index$nbact <- extract_at_level(readAll(r_nbact), box_cell)*rho_scale; rm(r_nbact)
+  
   # toc()
   
   ### added to get missing data back in as NA dimensions should be 30x4=120 for each date
@@ -409,6 +419,7 @@ for (i_timeslice in seq(nrow(file_db))) {
   box_z_index2[idx,'salt']=NA
   box_z_index2[idx,'temp']=NA
   
+  box_z_index2[idx,'rho'] = NA
   box_z_index2[idx,'ndi'] = NA
   box_z_index2[idx,'nlg'] = NA
   box_z_index2[idx,'nlgz'] = NA
@@ -428,7 +439,7 @@ for (i_timeslice in seq(nrow(file_db))) {
   
   # For biological parameters, summarize by MEAN (units are density (mol/kg)) * maybe convert to mgN per m^3
   box_props_cob[[i_timeslice]] <- box_z_index2 %>% group_by(atlantis_level, .bx0) %>%
-    summarize(ndi = mean(ndi,na.rm=T), nlg = mean(nlg,na.rm=T), nlgz = mean(nlgz, na.rm=T), nmdz = mean(nmdz,na.rm=T),
+    summarize(rho = mean(rho,na.rm=T),ndi = mean(ndi,na.rm=T), nlg = mean(nlg,na.rm=T), nlgz = mean(nlgz, na.rm=T), nmdz = mean(nmdz,na.rm=T),
               nsm = mean(nsm,na.rm=T), nsmz = mean(nsmz,na.rm=T), silg = mean(silg,na.rm=T), nbact = mean(nbact, na.rm=T)) %>%
     ungroup(box_z_index2) %>%
     complete(atlantis_level,.bx0)
