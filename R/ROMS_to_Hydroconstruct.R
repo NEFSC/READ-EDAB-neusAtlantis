@@ -15,28 +15,24 @@
 #' @param roms.prefix String. ROMS output prefix to pattern match
 #' @param out.dir String. Path for output files
 #' @param name.out String. Prefix for output (arrays and .nc) files
-#' @param dz.file String. Path to neus dz.csv file. (Depth intervals for each box/layer)
-#' @param bgm.file String. Path to atlantis .bgm file
-#' @param shp.file  String. Path to atlatnis shape file
 #' 
 #' @return Output is a 4D array [NEUS level,Box/Face, Time, Var] for each processed variable as well as well as
 #' .nc files for horizontal exchanges, phyical state variables, and biological state variables
 #' 
 #' #' Created by R. Morse and modified by J. Caracappa
 
-dz.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/dz.csv'
-bgm.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/currentVersion/neus_tmerc_RM2.bgm'
-shp.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/Neus_ll_0p01.shp'
 # roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Test_Output/1980/'
 roms.dir = 'D:/NWA/1980/'
 roms.prefix = 'RM_NWA-SZ.HCob05T_avg_'
+out.dir = 'D:/OUtput/1980/'
+name.out = 'roms_cobalt_'
 
-Roms2Hydro = function(roms.dir,roms.prefix, dz.file,bgm.file,shp.file,out.dir,name.out){
+Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
   # Packages ----------------------------------------------------------------
   library(angstroms)
   library(rbgm)
   library(bgmfiles)
-  library(raadtools)
+  # library(raadtools)
   library(ncdump)
   library(ggplot2)
   library(dplyr)
@@ -91,16 +87,15 @@ Roms2Hydro = function(roms.dir,roms.prefix, dz.file,bgm.file,shp.file,out.dir,na
   
   
   # Read in External Data Files ---------------------------------------------
-  
   # Read box_depth data (shows depth of each layer in each box)
   
-  dz_box = read.csv(dz.file,header=T)
+  dz_box = read.csv(here('Geometry','dz.csv'),header=T)
   
   # Read BGM file
-  bgm = bgmfile(bgm.file)
+  bgm = bgmfile(here('Geometry','neus_tmerc_RM2.bgm'))
   
   # Read boxes shape file
-  neus.shp = rgdal::readOGR(shp.file)
+  neus.shp = rgdal::readOGR(here('Geometry','Neus_ll_0p01.shp'))
   
   
   # Read in ROMS Output  -----------------------------------------------------
@@ -367,6 +362,8 @@ Roms2Hydro = function(roms.dir,roms.prefix, dz.file,bgm.file,shp.file,out.dir,na
   box_cell = dplyr::rename(box_z_index, level = roms_level, cell = cell)
   ocean_time = numeric(nrow(file_db))
   
+  # for(i in 1:nrow(file_db)){ocean_time[i] = ncvar_get(nc_open(file_db$fullname[i]),'ocean_time')}
+  
   
   for (i_timeslice in seq(nrow(file_db))) {
   # tic()
@@ -375,7 +372,7 @@ Roms2Hydro = function(roms.dir,roms.prefix, dz.file,bgm.file,shp.file,out.dir,na
     #roms file name and band name
     roms_file <- file_db$fullname[i_timeslice]
     
-    ocean_time[i_timeslice] = ncvar_get(nc_open(roms_file),'ocean_time')
+    ocean_time[i_timeslice] = ncvar_get(nc_open(paste0(roms.dir,'/',roms_file)),'ocean_time')
     # level <- file_db$band_level[i_timeslice]
     level = 1
   
@@ -484,7 +481,7 @@ Roms2Hydro = function(roms.dir,roms.prefix, dz.file,bgm.file,shp.file,out.dir,na
   }
   
   # save(box_props,box_props_cob,face_props,file = 'Test Dump.R')
-  load('Test Dump.R')
+  # load(paste0(roms.dir,'Test Dump.R'))
   
   # Combine box and face properties
   box_props <- bind_rows(box_props)
@@ -628,7 +625,7 @@ Roms2Hydro = function(roms.dir,roms.prefix, dz.file,bgm.file,shp.file,out.dir,na
   # get depths of boxes, reverse order 1=shallow, 4=deep NEUS ONLY
   dz_box2=dz_box[,c(5,4,3,2,1)] 
   
-  ### depth of origin box * lenght of face added 20180325
+  ### depth of origin box * length of face added 20180325
   face_props2$facearea=NA
   for (i in 1:length(face_props2$atlantis_level)){
     if (is.na(face_props2$fluxsign.new[i])|is.na(face_props2$atlantis_level[i])){
@@ -676,16 +673,9 @@ Roms2Hydro = function(roms.dir,roms.prefix, dz.file,bgm.file,shp.file,out.dir,na
   
   #subtract seconds between 1-1-1964 and 1-1-1900 
   #ROMS is 1900, NEUS is 1964 reference point
-  # ocean_time2 = ocean_time - 2019600000
-  # t_tot = seq(ocean_time2[1],ocean_time2[length(ocean_time2)],86400)
-  
-  ynum = 0
-  ocean_time=ncdf4::ncvar_get(ncdf4::nc_open(roms_files[1]), varid='ocean_time') # need to change these:
-  t_start=min(unique(face_props2$band_level))+ynum ### MAKE SURE TO SELECT ABOVE ynum CORRECTLY
+  t_tot = ocean_time  - 2019600000
   dt=86400 # seconds in one day
-  t_stop=max(unique(face_props2$band_level))+ynum ### MAKE SURE TO SELECT ABOVE ynum CORRECTLY
-  t_tot=seq(t_start*dt,t_stop*dt,dt)
-  t_tot = seq(ocean_time,by = dt, length.out = length(roms_files))
+  # t_tot = seq(ocean_time[1],by = dt, length.out = length(roms_files))
   
   
   ## variables in transport file:
@@ -698,6 +688,8 @@ Roms2Hydro = function(roms.dir,roms.prefix, dz.file,bgm.file,shp.file,out.dir,na
   # positive flow is right to left across face from p1 to p2
   source_boxid=bgm$faces$right 
   
+  year = last(strsplit(getwd(),'/')[[1]])
+  
   ### create 3d array of transport vals
   transport=array(NA, dim=c(nlevel, nfaces, ntimes))
   for (i in 1:length(face_props2$flux)){
@@ -707,6 +699,9 @@ Roms2Hydro = function(roms.dir,roms.prefix, dz.file,bgm.file,shp.file,out.dir,na
     l=face_props2$atlantis_level[i]# depth
     transport[l,k,j]=face_props2$fluxtime[i] # time now added back in (flux per day in seconds)
   }
+  
+  #Write transport array as R object
+  save('transport',file = paste0(out.dir,name.out,'transport_',year,'.R'))
   
   ### create vars for box structure data
   ### NOTE added 1 because index cannot be 0, must remove 1 later w/ ncks
@@ -749,8 +744,11 @@ Roms2Hydro = function(roms.dir,roms.prefix, dz.file,bgm.file,shp.file,out.dir,na
     nbact[l,k,j]=box_props_cob$nbact[i]
   }
   
+  save('vertical_flux','temperature','salinity',file = paste0(out.dir,name.out,'statevars_',year,'.R'))
+  save('ndi','nlg','nlgz','nmdz','nsm','nsmz','silg','nbact',file = paste0(out.dir,name.out,'ltl_statevars_',year,'.R'))
+  
   ### FOR TRANSPORT NC FILE
-  filename="Out/neus_transport_test.nc"
+  filename=paste0(out.dir,name.out,'transport_2hydro.nc')
   
   #define dimensions
   timedim=ncdim_def("time", "", 1:length(t_tot), unlim=T, create_dimvar = F) #as.double(t_tot)
@@ -793,14 +791,12 @@ Roms2Hydro = function(roms.dir,roms.prefix, dz.file,bgm.file,shp.file,out.dir,na
   ncvar_put(nc_transp,var.pt2y,pt2_y)
   ncvar_put(nc_transp,var.sourceb,source_boxid)
   
-  
-  
   nc_close(nc_transp)
   
   # x = nc_open(filename)
   
   ### For T, S, Vertical Flux NC file
-  filename="Out/neus_variables_test.nc"
+  filename=paste0(out.dir,name.out,'statevars_2hydro.nc')
   
   #define dimensions
   timedim=ncdim_def("time", "", 1:length(t_tot), unlim=T, create_dimvar = F) #as.double(t_tot)
@@ -829,7 +825,7 @@ Roms2Hydro = function(roms.dir,roms.prefix, dz.file,bgm.file,shp.file,out.dir,na
   
   #assign variables to file
   ncvar_put(nc_varfile,var.vertflux,vertical_flux, count=c(nlevel,nboxes, ntimes))
-  ncvar_put(nc_varfile,var.time,t_tot)
+  ncvar_put(nc_varfile,var.time,t_tot,verbose = T)
   ncvar_put(nc_varfile,var.lev,atl.level)
   ncvar_put(nc_varfile,var.salt,salinity, count=c(nlevel,nboxes, ntimes))
   ncvar_put(nc_varfile,var.temp,temperature, count=c(nlevel,nboxes, ntimes))
@@ -839,44 +835,44 @@ Roms2Hydro = function(roms.dir,roms.prefix, dz.file,bgm.file,shp.file,out.dir,na
   # x = nc_open(filename)
   
   ### For COBALT LTL variables
-  filename="Out/neus_variables_cobalt_test.nc"
-  
+  filename=paste0(out.dir,name.out,'ltl_statevars_2hydro.nc')
+
   #define dimensions
   timedim=ncdim_def("time", "", 1:length(t_tot), unlim=T, create_dimvar = F) #as.double(t_tot)
-  # timedim=ncdim_def("time", "", t_tot, unlim=T, create_dimvar = F) #as.double(t_tot)
   leveldim=ncdim_def("level", "", 1:nlevel, create_dimvar = F)
   boxesdim=ncdim_def("boxes", "", 1:nboxes, create_dimvar = F)
-  
+
   #create variables
   #NB!!!!!! Unlimited rec needs to be on the right - otherwise R complains!
   #origMissVal_ex=0.0
   var.time=ncvar_def("time","seconds since 1964-01-01 00:00:00 +10",timedim,prec="double")
   var.box=ncvar_def("boxes", "", boxesdim, longname="Box IDs", prec='integer')
   var.lev=ncvar_def("level","",leveldim,longname="layer index; 1=near surface; positice=down" ,prec="integer")
-  var.ndi=ncvar_def('ndi','mol/kg',list(leveldim,boxesdim,timedim),-999,longname = 'Diazotroph Nitrogen',prec='float')
-  var.nlg=ncvar_def('nlg','mol/kg',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phyotplankton Nitrogen',prec='float')
-  var.nlgz=ncvar_def('nlgz','mol/kg',list(leveldim,boxesdim,timedim),-999,longname = 'Large Zooplankton Nitrogen',prec='float')
-  var.nmdz=ncvar_def('nmdz','mol/kg',list(leveldim,boxesdim,timedim),-999,longname = 'Medium Zooplankton Nitrogen',prec='float')
-  var.nsm=ncvar_def('nsm','mol/kg',list(leveldim,boxesdim,timedim),-999,longname = 'Small Phytoplankton Nitrogen',prec='float')
-  var.nsmz=ncvar_def('nsmz','mol/kg',list(leveldim,boxesdim,timedim),-999,longname = 'Small Zooplankton Nitrogen',prec='float')
-  var.silg=ncvar_def('silg','mol/kg',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phytoplankton Silicon',prec='float')
-  var.nbact=ncvar_def('nbact','mol/kg',list(leveldim,boxesdim,timedim),-999,longname = 'Bacterial Nitrogen',prec='float')
-  
-  nc_varfile=nc_create(filename,list(var.time,var.box, var.lev, var.ndi,var.nlg,var.nlgz,var.nmdz,var.nsm,var.nsmz,var.silg,var.nbact))
-  
+  var.ndi=ncvar_def('ndi','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Diazotroph Nitrogen',prec='float')
+  var.nlg=ncvar_def('nlg','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phyotplankton Nitrogen',prec='float')
+  var.nlgz=ncvar_def('nlgz','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Zooplankton Nitrogen',prec='float')
+  var.nmdz=ncvar_def('nmdz','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Medium Zooplankton Nitrogen',prec='float')
+  var.nsm=ncvar_def('nsm','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Small Phytoplankton Nitrogen',prec='float')
+  var.nsmz=ncvar_def('nsmz','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Small Zooplankton Nitrogen',prec='float')
+  var.silg=ncvar_def('silg','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phytoplankton Silicon',prec='float')
+  var.nbact=ncvar_def('nbact','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Bacterial Nitrogen',prec='float')
+
+  nc_varfile=nc_create(filename,list(var.time,var.box, var.lev,
+                                     var.ndi,var.nlg,var.nlgz,
+                                     var.nmdz,var.nsm,var.nsmz,
+                                     var.silg,var.nbact))
   #assign global attributes to file
   ncatt_put(nc_varfile,0,"title","Box averaged properties file, NEUS")
   ncatt_put(nc_varfile,0,"geometry","neus_tmerc_RM.bgm")
   ncatt_put(nc_varfile,0,"parameters","")
-  
+
   #assign attributes to variables
   ncatt_put(nc_varfile,var.time,"dt",86400,prec="double")
-  
+
   #assign variables to file
-  ncvar_put(nc_varfile,var.box,box.boxes)
-  ncvar_put(nc_varfile,var.time,t_tot)
-  ncvar_put(nc_varfile,var.lev,atl.level)
   ncvar_put(nc_varfile,var.ndi,ndi,count = c(nlevel,nboxes,ntimes))
+  ncvar_put(nc_varfile,var.time,t_tot,verbose = T)
+  ncvar_put(nc_varfile,var.lev,atl.level)
   ncvar_put(nc_varfile,var.nlg,nlg,count = c(nlevel,nboxes,ntimes))
   ncvar_put(nc_varfile,var.nlgz,nlgz,count = c(nlevel,nboxes,ntimes))
   ncvar_put(nc_varfile,var.nmdz,nmdz,count = c(nlevel,nboxes,ntimes))
@@ -884,7 +880,12 @@ Roms2Hydro = function(roms.dir,roms.prefix, dz.file,bgm.file,shp.file,out.dir,na
   ncvar_put(nc_varfile,var.nsmz,nsmz,count = c(nlevel,nboxes,ntimes))
   ncvar_put(nc_varfile,var.silg,silg,count = c(nlevel,nboxes,ntimes))
   ncvar_put(nc_varfile,var.nbact,nbact,count = c(nlevel,nboxes,ntimes))
+  ncvar_put(nc_varfile,var.box,box.boxes)
   
   nc_close(nc_varfile)
   # x = nc_open(filename)
+  # x$dim$time
+
 }
+
+Roms2Hydro(roms.dir,roms.prefix,out.dir,name.out)
