@@ -94,16 +94,16 @@ Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
   # Read in External Data Files ---------------------------------------------
   # Read box_depth data (shows depth of each layer in each box)
   
-  # dz_box = read.csv(here('Geometry','dz.csv'),header=T)
-  dz_box = read.csv('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/dz.csv',header = T)
+  dz_box = read.csv(here('Geometry','dz.csv'),header=T)
+  # dz_box = read.csv('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/dz.csv',header = T)
   
   # Read BGM file
-  # bgm = bgmfile(here('Geometry','neus_tmerc_RM2.bgm'))
-  bgm = bgmfile('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/neus_tmerc_RM2.bgm')
+  bgm = bgmfile(here('Geometry','neus_tmerc_RM2.bgm'))
+  # bgm = bgmfile('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/neus_tmerc_RM2.bgm')
   
   # Read boxes shape file
-  # neus.shp = rgdal::readOGR(here('Geometry','Neus_ll_0p01.shp'))
-  neus.shp = rgdal::readOGR('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/Neus_ll_0p01.shp')
+  neus.shp = rgdal::readOGR(here('Geometry','Neus_ll_0p01.shp'))
+  # neus.shp = rgdal::readOGR('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/Neus_ll_0p01.shp')
   
   
   # Read in ROMS Output  -----------------------------------------------------
