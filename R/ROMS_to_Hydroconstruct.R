@@ -21,11 +21,16 @@
 #' 
 #' #' Created by R. Morse and modified by J. Caracappa
 
-# roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Test_Output/1980/'
-roms.dir = 'D:/NWA/1980/'
-roms.prefix = 'RM_NWA-SZ.HCob05T_avg_'
-out.dir = 'D:/OUtput/1980/'
-name.out = 'roms_cobalt_'
+# # roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Test_Output/1980/'
+# roms.dir = 'D:/NWA/1980/'
+# roms.prefix = 'RM_NWA-SZ.HCob05T_avg_'
+# out.dir = 'D:/OUtput/1980/'
+# name.out = 'roms_cobalt_'
+
+# roms.dir =local.dir
+# roms.prefix = 'RM_NWA-SZ.HCob05T_avg_'
+# out.dir = paste0(local.output.dir,dir.names[yr],'/')
+# name.out = 'roms_cobalt_'
 
 Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
   # Packages ----------------------------------------------------------------
@@ -89,13 +94,16 @@ Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
   # Read in External Data Files ---------------------------------------------
   # Read box_depth data (shows depth of each layer in each box)
   
-  dz_box = read.csv(here('Geometry','dz.csv'),header=T)
+  # dz_box = read.csv(here('Geometry','dz.csv'),header=T)
+  dz_box = read.csv('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/dz.csv',header = T)
   
   # Read BGM file
-  bgm = bgmfile(here('Geometry','neus_tmerc_RM2.bgm'))
+  # bgm = bgmfile(here('Geometry','neus_tmerc_RM2.bgm'))
+  bgm = bgmfile('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/neus_tmerc_RM2.bgm')
   
   # Read boxes shape file
-  neus.shp = rgdal::readOGR(here('Geometry','Neus_ll_0p01.shp'))
+  # neus.shp = rgdal::readOGR(here('Geometry','Neus_ll_0p01.shp'))
+  neus.shp = rgdal::readOGR('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/Neus_ll_0p01.shp')
   
   
   # Read in ROMS Output  -----------------------------------------------------
@@ -372,7 +380,9 @@ Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
     #roms file name and band name
     roms_file <- file_db$fullname[i_timeslice]
     
-    ocean_time[i_timeslice] = ncvar_get(nc_open(paste0(roms.dir,'/',roms_file)),'ocean_time')
+    roms.nc = nc_open(paste0(roms.dir,'/',roms_file))
+    ocean_time[i_timeslice] = ncvar_get(roms.nc,'ocean_time')
+    nc_close(roms.nc)
     # level <- file_db$band_level[i_timeslice]
     level = 1
   
@@ -395,26 +405,27 @@ Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
     r_nbact <- set_indextent(brick(roms_file, varname = "nbact", lvar = 4, level = level, ncdf=T)) #Bacterial N
     
     # tic()
+    rasterTmpFile('test_')
   
-    face_z_uindex$ue <- extract_at_level(readAll(r_u), face_cell_u); rm(r_u)
-    face_z_vindex$vn <- extract_at_level(readAll(r_v), face_cell_v); rm(r_v)
-    box_z_index$w <- extract_at_level(readAll(r_w),box_cell ); rm(r_w)
-    box_z_index$temp <- extract_at_level(readAll(r_temp), box_cell); rm(r_temp)
-    box_z_index$salt <- extract_at_level(readAll(r_salt), box_cell); rm(r_salt)
+    face_z_uindex$ue <- extract_at_level(readAll(r_u), face_cell_u); rm(r_u);gc()
+    face_z_vindex$vn <- extract_at_level(readAll(r_v), face_cell_v); rm(r_v);gc()
+    box_z_index$w <- extract_at_level(readAll(r_w),box_cell ); rm(r_w);gc()
+    box_z_index$temp <- extract_at_level(readAll(r_temp), box_cell); rm(r_temp);gc()
+    box_z_index$salt <- extract_at_level(readAll(r_salt), box_cell); rm(r_salt);gc()
     
     #COBALT PARAMS
-    box_z_index$rho <- extract_at_level(readAll(r_rho), box_cell)+1000; rm(r_rho)
+    box_z_index$rho <- extract_at_level(readAll(r_rho), box_cell)+1000; rm(r_rho);gc()
     #convert biological groups from molN/kg to mgN/m3
     rho_scale = box_z_index$rho*1E6/14.0067
     
-    box_z_index$ndi <- extract_at_level(readAll(r_ndi), box_cell)*rho_scale; rm(r_ndi)
-    box_z_index$nlg <- extract_at_level(readAll(r_nlg), box_cell)*rho_scale; rm(r_nlg)
-    box_z_index$nlgz <- extract_at_level(readAll(r_nlgz), box_cell)*rho_scale; rm(r_nlgz)
-    box_z_index$nmdz <- extract_at_level(readAll(r_nmdz), box_cell)*rho_scale; rm(r_nmdz)
-    box_z_index$nsm <- extract_at_level(readAll(r_nsm), box_cell)*rho_scale; rm(r_nsm)
-    box_z_index$nsmz <- extract_at_level(readAll(r_nsmz), box_cell)*rho_scale; rm(r_nsmz)
-    box_z_index$silg <- extract_at_level(readAll(r_silg), box_cell)*rho_scale; rm(r_silg)
-    box_z_index$nbact <- extract_at_level(readAll(r_nbact), box_cell)*rho_scale; rm(r_nbact)
+    box_z_index$ndi <- extract_at_level(readAll(r_ndi), box_cell)*rho_scale; rm(r_ndi);gc()
+    box_z_index$nlg <- extract_at_level(readAll(r_nlg), box_cell)*rho_scale; rm(r_nlg);gc()
+    box_z_index$nlgz <- extract_at_level(readAll(r_nlgz), box_cell)*rho_scale; rm(r_nlgz);gc()
+    box_z_index$nmdz <- extract_at_level(readAll(r_nmdz), box_cell)*rho_scale; rm(r_nmdz);gc()
+    box_z_index$nsm <- extract_at_level(readAll(r_nsm), box_cell)*rho_scale; rm(r_nsm);gc()
+    box_z_index$nsmz <- extract_at_level(readAll(r_nsmz), box_cell)*rho_scale; rm(r_nsmz);gc()
+    box_z_index$silg <- extract_at_level(readAll(r_silg), box_cell)*rho_scale; rm(r_silg);gc()
+    box_z_index$nbact <- extract_at_level(readAll(r_nbact), box_cell)*rho_scale; rm(r_nbact);gc()
     
     # toc()
     
@@ -477,7 +488,8 @@ Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
       complete(atlantis_level, .fx0) 
       # mutate(band_level = level)
       face_props[[i_timeslice]]$band_level = file_db$band_level[i_timeslice]
-  # toc()
+      
+    # toc()
   }
   
   # save(box_props,box_props_cob,face_props,file = 'Test Dump.R')
@@ -888,4 +900,4 @@ Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
 
 }
 
-Roms2Hydro(roms.dir,roms.prefix,out.dir,name.out)
+# Roms2Hydro(roms.dir,roms.prefix,out.dir,name.out)
