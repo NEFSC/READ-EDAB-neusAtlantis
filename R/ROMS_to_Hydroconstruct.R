@@ -264,9 +264,14 @@ Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
   # Create Index between ROMS and NEUS Levels -------------------------------
   
   #Read cell depths from ROMS
-  h <- readAll(raster(roms_files[1], varname = "h", ncdf=T)) 
+  h <- readAll(raster(roms_files[1], varname = "h", ncdf=T))
+  
   ## Cs_r is the S-coord stretching (length is num layers from -1 to 0 describing what portion of the w.c. each layer spans)
-  Cs_r <- rawdata(roms_files[1], "Cs_r")
+  ### CANNOT NC_OPEN WITHIN FUNCTION. INDEFINITELY KEEPS CONNECTION OPEN
+  dumm = nc_open(roms_files[1])
+  Cs_r = ncvar_get(dumm,'Cs_r')
+  nc_close(dumm)
+  # Cs_r <- rawdata(roms_files[1], "Cs_r")
   
   #Atlantis depths
   max_depth <- 500 # max(extract(h, unique(box_roms_index$cell)))
@@ -290,6 +295,7 @@ Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
     # retreives depth of each cell and applies coord-stretching
     rl <- roms_level(Cs_r, h, box_roms_rhoindex$cell[i])
     
+    
     # implicit 0 at the surface, and implicit bottom based on ROMS
     # Identifies where ROMS depths fit in NEUS intervals and reverses order (NEUS: 1 at bottom, 4 at surface)
     list_nc_z_rhoindex[[i]] <- length(atlantis_depths) - findInterval(rl, atlantis_depths, all.inside = F) # + 1
@@ -297,6 +303,7 @@ Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
     
     if (i %% 1000 == 0) print(i)
   }
+  gc()
   
   # join the box-xy-index to the level index using rho coordinates
   box_z_index <- bind_rows(lapply(list_nc_z_rhoindex, 
@@ -331,6 +338,7 @@ Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
       rl_u = rl_u[rl_u >= -z.min]
       rl_v = rl_v[rl_v >= -z.min]
     }
+ 
     
     ## implicit 0 at the surface, and implicit bottom based on ROMS
     list_nc_z_uindex[[i]] <- length(atlantis_depths) -findInterval(rl_u, atlantis_depths) #+ 1
@@ -341,6 +349,9 @@ Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
     
     if (i %% 1000 == 0) print(i)
   }
+  
+  gc()
+  rm(h)
   
   ## join the face-xy-index to the level index
   face_z_uindex <- bind_rows(lapply(list_nc_z_uindex, 
@@ -405,8 +416,7 @@ Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
     r_nbact <- set_indextent(brick(roms_file, varname = "nbact", lvar = 4, level = level, ncdf=T)) #Bacterial N
     
     # tic()
-    rasterTmpFile('test_')
-  
+    
     face_z_uindex$ue <- extract_at_level(readAll(r_u), face_cell_u); rm(r_u);gc()
     face_z_vindex$vn <- extract_at_level(readAll(r_v), face_cell_v); rm(r_v);gc()
     box_z_index$w <- extract_at_level(readAll(r_w),box_cell ); rm(r_w);gc()
@@ -897,6 +907,7 @@ Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
   nc_close(nc_varfile)
   # x = nc_open(filename)
   # x$dim$time
+
 
 }
 
