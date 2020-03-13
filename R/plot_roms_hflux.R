@@ -16,7 +16,7 @@
 
 
 #test
-# year.dir = plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_OUT/1983/'
+# year.dir = plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_OUT/1980/'
 # which.face = 0:150
 # which.levels = 4
 
@@ -31,10 +31,10 @@ plot_roms_hflux = function(year.dir,hflux.file,which.face = 0:150,which.levels =
   hflux.plots = list()
   
   for(f.id in seq_along(which.face) ){
-    plot.lab = paste0('Face',which.face[f.id],': From-Box',source_b[f.id],' To-Box',dest_b[f.id])
+    plot.lab = paste0('Face',which.face[f.id],': From-Box',source_b[which.face[f.id]+1],' To-Box',dest_b[which.face[f.id]+1])
     plot.cols = RColorBrewer::brewer.pal(which.levels,'Set1')
     
-    DF = as.data.frame(t(transport[1:which.levels,which.face+1,]))
+    DF = as.data.frame(t(transport[1:which.levels,which.face[f.id]+1,]))
     colnames(DF) = paste0('lev',1:which.levels)
     DF$time = real.time
     DF = DF[,c(ncol(DF),1:(ncol(DF)-1))]
