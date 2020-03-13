@@ -295,6 +295,12 @@ Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
     # retreives depth of each cell and applies coord-stretching
     rl <- roms_level(Cs_r, h, box_roms_rhoindex$cell[i])
     
+    focal.box = bgm$boxes$.bx0[bgm$boxes$label == box_roms_rhoindex$box[i]]
+    
+    if(!(focal.box %in% c(23,24))){
+      z.box = NEUSz$zmax[NEUSz$.bx0 == focal.box]
+      rl = rl[rl >= -z.box]
+    }
     
     # implicit 0 at the surface, and implicit bottom based on ROMS
     # Identifies where ROMS depths fit in NEUS intervals and reverses order (NEUS: 1 at bottom, 4 at surface)
@@ -385,6 +391,7 @@ Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
   
   
   for (i_timeslice in seq(nrow(file_db))) {
+  # for(i_timeslice in 1:2){
   # tic()
     print(i_timeslice)
     
@@ -417,25 +424,25 @@ Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
     
     # tic()
     
-    face_z_uindex$ue <- extract_at_level(readAll(r_u), face_cell_u); rm(r_u);gc()
-    face_z_vindex$vn <- extract_at_level(readAll(r_v), face_cell_v); rm(r_v);gc()
-    box_z_index$w <- extract_at_level(readAll(r_w),box_cell ); rm(r_w);gc()
-    box_z_index$temp <- extract_at_level(readAll(r_temp), box_cell); rm(r_temp);gc()
-    box_z_index$salt <- extract_at_level(readAll(r_salt), box_cell); rm(r_salt);gc()
+    face_z_uindex$ue <- extract_at_level(readAll(r_u), face_cell_u); rm(r_u)
+    face_z_vindex$vn <- extract_at_level(readAll(r_v), face_cell_v); rm(r_v)
+    box_z_index$w <- extract_at_level(readAll(r_w),box_cell ); rm(r_w)
+    box_z_index$temp <- extract_at_level(readAll(r_temp), box_cell); rm(r_temp)
+    box_z_index$salt <- extract_at_level(readAll(r_salt), box_cell); rm(r_salt)
     
     #COBALT PARAMS
-    box_z_index$rho <- extract_at_level(readAll(r_rho), box_cell)+1000; rm(r_rho);gc()
+    box_z_index$rho <- extract_at_level(readAll(r_rho), box_cell)+1000; rm(r_rho)
     #convert biological groups from molN/kg to mgN/m3
     rho_scale = box_z_index$rho*1E6/14.0067
     
-    box_z_index$ndi <- extract_at_level(readAll(r_ndi), box_cell)*rho_scale; rm(r_ndi);gc()
-    box_z_index$nlg <- extract_at_level(readAll(r_nlg), box_cell)*rho_scale; rm(r_nlg);gc()
-    box_z_index$nlgz <- extract_at_level(readAll(r_nlgz), box_cell)*rho_scale; rm(r_nlgz);gc()
-    box_z_index$nmdz <- extract_at_level(readAll(r_nmdz), box_cell)*rho_scale; rm(r_nmdz);gc()
-    box_z_index$nsm <- extract_at_level(readAll(r_nsm), box_cell)*rho_scale; rm(r_nsm);gc()
-    box_z_index$nsmz <- extract_at_level(readAll(r_nsmz), box_cell)*rho_scale; rm(r_nsmz);gc()
-    box_z_index$silg <- extract_at_level(readAll(r_silg), box_cell)*rho_scale; rm(r_silg);gc()
-    box_z_index$nbact <- extract_at_level(readAll(r_nbact), box_cell)*rho_scale; rm(r_nbact);gc()
+    box_z_index$ndi <- extract_at_level(readAll(r_ndi), box_cell)*rho_scale; rm(r_ndi)
+    box_z_index$nlg <- extract_at_level(readAll(r_nlg), box_cell)*rho_scale; rm(r_nlg)
+    box_z_index$nlgz <- extract_at_level(readAll(r_nlgz), box_cell)*rho_scale; rm(r_nlgz)
+    box_z_index$nmdz <- extract_at_level(readAll(r_nmdz), box_cell)*rho_scale; rm(r_nmdz)
+    box_z_index$nsm <- extract_at_level(readAll(r_nsm), box_cell)*rho_scale; rm(r_nsm)
+    box_z_index$nsmz <- extract_at_level(readAll(r_nsmz), box_cell)*rho_scale; rm(r_nsmz)
+    box_z_index$silg <- extract_at_level(readAll(r_silg), box_cell)**box_z_index$rho*1E6/28.0855; rm(r_silg)
+    box_z_index$nbact <- extract_at_level(readAll(r_nbact), box_cell)*rho_scale; rm(r_nbact)
     
     # toc()
     
@@ -453,20 +460,20 @@ Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
     # Index where number of levels in roms is greater than atlantis box depth
     ## WHERE DOES TEST COME FROM?
     # idx=test$roms_level>test$atlantis_level
-    idx = box_z_index2$roms_level > box_z_index2$atlantis_level
-    box_z_index2[idx,'w']=NA
-    box_z_index2[idx,'salt']=NA
-    box_z_index2[idx,'temp']=NA
-    
-    box_z_index2[idx,'rho'] = NA
-    box_z_index2[idx,'ndi'] = NA
-    box_z_index2[idx,'nlg'] = NA
-    box_z_index2[idx,'nlgz'] = NA
-    box_z_index2[idx,'nmdz'] = NA
-    box_z_index2[idx,'nsm'] = NA
-    box_z_index2[idx,'nsmz'] = NA
-    box_z_index2[idx,'silg'] = NA
-    box_z_index2[idx,'nbact'] = NA
+    # idx = box_z_index2$roms_level > box_z_index2$atlantis_level
+    # box_z_index2[idx,'w']=NA
+    # box_z_index2[idx,'salt']=NA
+    # box_z_index2[idx,'temp']=NA
+    # 
+    # box_z_index2[idx,'rho'] = NA
+    # box_z_index2[idx,'ndi'] = NA
+    # box_z_index2[idx,'nlg'] = NA
+    # box_z_index2[idx,'nlgz'] = NA
+    # box_z_index2[idx,'nmdz'] = NA
+    # box_z_index2[idx,'nsm'] = NA
+    # box_z_index2[idx,'nsmz'] = NA
+    # box_z_index2[idx,'silg'] = NA
+    # box_z_index2[idx,'nbact'] = NA
     
     #box_props: summary of box-wide variables, grouped by box, atl_level, where means are used across cells
     box_props[[i_timeslice]] <- box_z_index2 %>% group_by(atlantis_level, .bx0) %>% 
