@@ -59,7 +59,7 @@ plot_roms_hflux = function(year.dir,hflux.file,which.face = 0:150,which.levels =
   }
   dev.off()
   
-  
+  nc_close(hflux.nc)
 }
 
 # plot_hflux(year.dir,hflux.file,which.face,which.levels,plot.dir)

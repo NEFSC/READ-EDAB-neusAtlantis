@@ -108,6 +108,7 @@ plot_roms_ltlvars = function(year.dir,ltlvars.file,which.box = 0:29,which.levels
   make.plot(silg.plots,'Large Phyto Si')
   make.plot(nbact.plots,'Bacteria')
   
+  nc_close(ltlvars.nc)
 }
 
 
