@@ -3,10 +3,11 @@
 source('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/R/Roms_to_Hydroconstruct.R')
 
 dir.names = 1980:2014
+
 # ellapsed.t = list()
 
 
-for(yr in 6){
+for(yr in 8:30){
   if(!dir.names[yr] %in% dir('D:/Output')){
     dir.create(paste0('D:/Output/',dir.names[yr]))
   }
@@ -32,7 +33,7 @@ for(yr in 6){
              name.out = 'roms_cobalt_')
   
   files2copy.out = list.files(paste0(local.output.dir,dir.names[yr],'/'),full.names = T)
-  file.copy(files2copy.out,final.output.dir)
+  file.copy(files2copy.out,final.output.dir,overwrite = T)
   
   ncdf.tools::closeAllNcfiles()
   closeAllConnections()
@@ -40,6 +41,14 @@ for(yr in 6){
   
   gc()
   
+  # close.files = dir(local.dir,full.names = T)
+  # for(i in 1:length(close.files)){
+  #   x =nc_open(close.files[i])
+  #   nc_close(x)
+  #   rm(x)
+  #   unlink(close.files[i])
+  #   system(paste0('attrib -r', close.files[i]))
+  # }
   file.remove(dir(local.dir,full.names = T))
 
   # unlink(dir(local.dir,full.names = T),recursive = T)

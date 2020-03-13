@@ -20,7 +20,7 @@
 # which.face = 0:150
 # which.levels = 4
 
-plot_hflux = function(year.dir,hflux.file,which.face = 0:150,which.levels = 4, plot.dir){
+plot_roms_hflux = function(year.dir,hflux.file,which.face = 0:150,which.levels = 4, plot.dir){
   
   hflux.nc = ncdf4::nc_open(paste0(year.dir,hflux.file))
   dest_b = ncdf4::ncvar_get(hflux.nc,'dest_boxid')
@@ -34,7 +34,7 @@ plot_hflux = function(year.dir,hflux.file,which.face = 0:150,which.levels = 4, p
     plot.lab = paste0('Face',which.face[f.id],': From-Box',source_b[f.id],' To-Box',dest_b[f.id])
     plot.cols = RColorBrewer::brewer.pal(which.levels,'Set1')
     
-    DF = as.data.frame(t(transport[1:which.levels,f.id,]))
+    DF = as.data.frame(t(transport[1:which.levels,which.face+1,]))
     colnames(DF) = paste0('lev',1:which.levels)
     DF$time = real.time
     DF = DF[,c(ncol(DF),1:(ncol(DF)-1))]
@@ -43,7 +43,7 @@ plot_hflux = function(year.dir,hflux.file,which.face = 0:150,which.levels = 4, p
     
     hflux.plots[[f.id]] =ggplot2::ggplot(data = DF, ggplot2::aes(x = time,y = value, color = neus.level))+
       ggplot2::geom_path()+
-      ggplot2::ylab(expression('Transport ('~m^3~')'))+
+      ggplot2::ylab(expression('Transport ('~m^3~s^-1*')'))+
       ggplot2::xlab('')+
       ggplot2::ggtitle(plot.lab)+
       ggplot2::scale_color_manual(values = plot.cols, labels = paste0('Level ',1:which.levels),name = 'Surface = 1')+
