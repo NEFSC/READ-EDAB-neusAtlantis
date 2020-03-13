@@ -441,7 +441,7 @@ Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
     box_z_index$nmdz <- extract_at_level(readAll(r_nmdz), box_cell)*rho_scale; rm(r_nmdz)
     box_z_index$nsm <- extract_at_level(readAll(r_nsm), box_cell)*rho_scale; rm(r_nsm)
     box_z_index$nsmz <- extract_at_level(readAll(r_nsmz), box_cell)*rho_scale; rm(r_nsmz)
-    box_z_index$silg <- extract_at_level(readAll(r_silg), box_cell)**box_z_index$rho*1E6/28.0855; rm(r_silg)
+    box_z_index$silg <- extract_at_level(readAll(r_silg), box_cell)*box_z_index$rho*1E6/28.0855; rm(r_silg)
     box_z_index$nbact <- extract_at_level(readAll(r_nbact), box_cell)*rho_scale; rm(r_nbact)
     
     # toc()
