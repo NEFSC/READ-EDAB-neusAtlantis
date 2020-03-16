@@ -7,7 +7,7 @@ dir.names = 1980:2014
 # ellapsed.t = list()
 
 
-for(yr in 8:30){
+for(yr in 1:length(dir.names)){
   if(!dir.names[yr] %in% dir('D:/Output')){
     dir.create(paste0('D:/Output/',dir.names[yr]))
   }
@@ -35,9 +35,9 @@ for(yr in 8:30){
   files2copy.out = list.files(paste0(local.output.dir,dir.names[yr],'/'),full.names = T)
   file.copy(files2copy.out,final.output.dir,overwrite = T)
   
-  ncdf.tools::closeAllNcfiles()
-  closeAllConnections()
-  removeTmpFiles()
+  # ncdf.tools::closeAllNcfiles()
+  # closeAllConnections()
+  # removeTmpFiles()
   
   gc()
   
