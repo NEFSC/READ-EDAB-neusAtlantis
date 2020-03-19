@@ -49,11 +49,11 @@ ROMS_Timeseries = function(year.dir, which.face = 0:150, which.box = 0:29, plot.
   
 }
 
-ROMS_Timeseries(year.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_OUT/1980/',
-                plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_OUT/1980/',
-                which.face = 0:150,
-                which.box = 0:29,
-                which.levels = 4,
-                plot.hflux = T, 
-                plot.statevar = T,
-                plot.ltlvar = T)
+# ROMS_Timeseries(year.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_OUT/1980/',
+#                 plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_OUT/1980/',
+#                 which.face = 0:150,
+#                 which.box = 0:29,
+#                 which.levels = 4,
+#                 plot.hflux = T, 
+#                 plot.statevar = T,
+#                 plot.ltlvar = T)
