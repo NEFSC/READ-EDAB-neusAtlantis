@@ -111,7 +111,7 @@ plot_roms_statevars = function(year.dir,statevars.file,which.box = 0:29,which.le
   }
   dev.off()
   
-  nc_close(statevars.nc)
+  ncdf4::nc_close(statevars.nc)
   
 }
 
