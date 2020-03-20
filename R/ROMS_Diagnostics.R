@@ -1,35 +1,48 @@
-#### Diagnostic tests for box-aggregated ROMS-COBALT output ####
-# 1) Boxes exchange to/from all neighboring boxes
-# 2) Boxes exchange ONLY to neighboring boxes (no jumps)
-# 3) Net flux within box close to 0 for a given time
+#' Runs diagnostic routine for box/face-aggregated ROMS data
+#' 
+#' Diagnostic tests for aggregated ROMS data before feeding into
+#' hydroconstruct. This includes 3 major tests: 1) Boxes exchange 
+#' to/from all neighboring boxes (i.e. full connectivity), 2) Boxes 
+#' exchange ONLY to neighboring boxes (i.e. no jumps), and 3) The 
+#' net flux within a box/layer is close to 0 at all timesteps
+#' (i.e. mass balance). ROMS data is assumed to be aggregated such 
+#' that fluxes are in ncdf4 files that countain horizontal fluxes
+#' with the dimensions (levels,faces,time), and box variables have
+#' dimensions (levels, boxes, time).
+#' 
+#' @roms.dir string. Path to folder containing roms data as .nc files
+#' @roms.prefix string. Prefix for name of roms files
+#' @bgm.file string. Name of atlantis bgm file in atlantis coordinates
+#' @dz.file string. Name of file containing box-level information. Should be column names (box, l1,l2,l3,l4)
+#' @output.name string. Desired plot and table naming prefix
+#' @output.dir string. Path to save output
+#' 
+#' @return ???
+#' 
+#' Author: J. Caracappa
 
 
-# Packages ----------------------------------------------------------------
+roms.diagnostics = function(roms.dir,roms.prefix,bgm.file,dz.file,output.name,output.dir){
 
-library(ncdf4)
-library(ggplot2)
-library(raster)
-library(rbgm)
-library(tictoc)
-library(dplyr)
-library(gridExtra)
+`%>%` = dplyr::`%>%`
+
 # Read in box-aggregated data ---------------------------------------------
-setwd('C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/NEUS_Example/')
 
-box.nc = nc_open('neus_variables_test.nc')
-face.nc = nc_open('neus_transport_test.nc')
-face.nc.old = nc_open('C:/Users/joseph.caracappa/Documents/Atlantis/Atlantis_Code/hydroconstruct/trunk/Example/trans_SEAP132_1year.nc')
+nc.files = list.files(roms.dir,pattern = paste0('^',roms.prefix,'.*\\.nc$'),full.names = T)
+transport.file = nc.files[which(sapply(nc.files,function(x) any(strsplit(x,'[_.]+')[[1]]=='transport')))]
+statevars.file = nc.files[which(sapply(nc.files,function(x) any(strsplit(x,'[_.]+')[[1]]=='statevars') & all(strsplit(x,'[_.]+')[[1]] != 'ltl')))]
+# ltlvars.file = nc.files[which(sapply(nc.files, function(x) any(strsplit(x,'[_.]+')[[1]] == 'ltl')))]
 
-hflux = ncvar_get(face.nc,'transport')
-hflux.old = ncvar_get(face.nc.old,'transport')
-source.box = ncvar_get(face.nc,'source_boxid')
-dest.box = ncvar_get(face.nc,'dest_boxid')
-vflux = ncvar_get(box.nc,'verticalflux')
+transport.nc = ncdf4::nc_open(transport.file)
+statevars.nc = ncdf4::nc_open(statevars.file)
 
-bgm = bgmfile('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/currentVersion/neus_tmerc_RM2.bgm')
-load('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/neus_boxes_info.R')
+hflux = ncdf4::ncvar_get(transport.nc,'transport')
+source.box = ncdf4::ncvar_get(transport.nc,'source_boxid')
+dest.box = ncdf4::ncvar_get(transport.nc,'dest_boxid')
+vflux = ncdf4::ncvar_get(statevars.nc,'verticalflux')
 
-dz_box = read.csv('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/dz.csv',header=T)
+bgm = rbgm::bgmfile(here::here('Geometry',bgm.file))
+dz_box = read.csv(here::here('Geometry','dz.csv'),header = T)
 dz_box$nlevel = apply(dz_box[,2:5],1,function(x) sum(!is.na(x)))
 level_dz = dz_box[,5:2]
 
@@ -38,8 +51,8 @@ flux.sign = data.frame(bx.left = c(1,1,0,0),bx.right = c(0,0,1,1),sign = c(0,1,0
 
 # Box Related Tests (1,2,3) -------------------------
 
-boxes = 0:29
-faces = 0:150
+boxes = 0:(dim(vflux)[2]-1)
+faces = 0:(dim(hflux)[2]-1)
 dt = 1:dim(hflux)[3]
 
 # Output DF
@@ -51,16 +64,16 @@ box.net.flux = data.frame(box = boxes,l1 = NA, l2 = NA, l3 = NA, l4 = NA, l1.pct
                           l1.vol = NA, l2.vol = NA, l3.vol = NA, l4.vol = NA,time = NA)
 box.net.flux.ls = lapply(dt,function(x) box.net.flux)
 
-bx = 4
-t = 1
-lev = 1
+# bx = 4
+# t = 1
+# lev = 1
 for(bx in seq_along(bgm$boxes$.bx0)){
   
   if(bx %in% c(24,25)){
     next
   }
   #Identify faces connected to each box (excludes Islands B23 + B24)
-  flux.faces = bgm$faces %>% filter( (left == boxes[bx] | right == boxes[bx]) & !(left %in% c(23,24)| right %in% c(23,24)))
+  flux.faces = bgm$faces %>% dplyr::filter( (left == boxes[bx] | right == boxes[bx]) & !(left %in% c(23,24)| right %in% c(23,24)))
   
   #Determine Face Ids for each box
   face.id = which(faces %in% flux.faces$.fx0)
@@ -148,22 +161,36 @@ for(bx in seq_along(bgm$boxes$.bx0)){
   }
 }
 
-boxes.net.flux = bind_rows(box.net.flux.ls)
-boxes.exchange = bind_rows(boxes.exchange.ls)
+boxes.net.flux = dplyr::bind_rows(box.net.flux.ls)
+boxes.exchange = dplyr::bind_rows(boxes.exchange.ls)
+
 
 
 #Plot net flux % over time for each box
-net.flux.pct = boxes.net.flux %>% select(box,l1.pct,l2.pct,l3.pct,l4.pct,time)
+net.flux.pct = boxes.net.flux %>% dplyr::select(box,l1.pct,l2.pct,l3.pct,l4.pct,time)
 net.flux.pct = reshape2::melt(net.flux.pct,id.vars = c('box','time'))
 flux.pct.plots = list()
 for(i in seq_along(boxes)){
-  sub = net.flux.pct %>% filter(box == boxes[i])
-  flux.pct.plots[[i]] = ggplot(data = sub, aes(x= time,y=value))+
-    geom_bar(stat='identity')+
-    ylim(-100,100)+
-    facet_wrap(~variable)+
-    ggtitle(paste0('Box ',boxes[i]))
+  sub = net.flux.pct %>% dplyr::filter(box == boxes[i])
+  flux.pct.plots[[i]] = ggplot2::ggplot(data = sub, ggplot2::aes(x= time,y=value))+
+    ggplot2::geom_bar(stat='identity')+
+    ggplot2::ylim(-100,100)+
+    ggplot2::facet_wrap(~variable)+
+    ggplot2::ggtitle(paste0('Box ',boxes[i]))
 }
-pdf('Net Flux Percent.pdf',width = 12,height = 8)
-for(i in seq_along(boxes)){grid.arrange(flux.pct.plots[[i]])}
+pdf(paste0(output.dir,output.name,'Net_Flux_Pct.pdf'),width = 12,height = 8)
+for(i in seq_along(boxes)){gridExtra::grid.arrange(flux.pct.plots[[i]])}
 dev.off()
+
+save(boxes.net.flux,boxes.exchange, net.flux.pct,file = paste0(output.dir,output.name,'_box_diagnostics.R'))
+
+}
+
+
+roms.diagnostics(roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing Files/',
+                 roms.prefix = 'roms_',
+                 bgm.file = 'neus_tmerc_RM2.bgm',
+                 dz.file = 'dz.csv',
+                 output.name = 'roms_diag_allyears_',
+                 output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/'
+)
