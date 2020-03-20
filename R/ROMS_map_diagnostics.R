@@ -105,7 +105,7 @@ roms_maps = function(roms.dir,plot.transport=T,plot.statevars=T,plot.ltlvars=T,p
     return(out)
   }
 
-  plot.fluxes.level = function(data,lev,title){
+  plot.fluxes.level = function(data,lev,title,var.breaks){
     xx = subset(data,level == lev,c(face,hflux,midx,midy,new.x,new.y))
     # xx = subset(data,level == lev,c(face,hflux,pt1_x,pt1_y,pt2_x,pt2_y,midx,midy,new.x,new.y))
     ggplot2::ggplot(box.map,ggplot2::aes(x=long,y=lat,group = box)) +
@@ -121,8 +121,10 @@ roms_maps = function(roms.dir,plot.transport=T,plot.statevars=T,plot.ltlvars=T,p
                           ggplot2::aes(x=midx,y=midy,xend = new.x,yend = new.y,col = log(abs(hflux),10),group=face),
                           arrow = ggplot2::arrow(length = ggplot2::unit(0.2,'cm')),
                           size = 0.75)+
-    ggplot2::scale_color_gradient(name = expression(atop('Horiz. Flux','Log('*m^3~s^-1*')')),
-                                  low = 'blue2',high = 'red3')+
+      
+    ggplot2::scale_color_gradientn(name = expression(atop('Horiz. Flux','Log('*m^3~s^-1*')')),
+                                  limits = c(min(var.breaks),max(var.breaks)),
+                                  colors = c('blue2','red2'),breaks = var.breaks)+
     ggplot2::ggtitle(title)+
     ggplot2::theme_void()+
     ggplot2::theme(
@@ -147,7 +149,7 @@ roms_maps = function(roms.dir,plot.transport=T,plot.statevars=T,plot.ltlvars=T,p
     dat = roms2long(transport.file,is.hflux = T) %>% 
       dplyr::select(level,time,face,hflux,dest_b,source_b) %>%
       dplyr::left_join(bgm.all, by = 'face')
-    
+    var.breaks = signif(seq(min(dat$hflux,na.rm=T),max(dat$hflux,na.rm=T),length.out=8),2)
 
     if(plot.yearly){
       dat$year = format(dat$time,format = '%Y')
@@ -156,13 +158,25 @@ roms_maps = function(roms.dir,plot.transport=T,plot.statevars=T,plot.ltlvars=T,p
         dplyr::filter(!dest_b %in% c(23,24) & !source_b %in% c(23,24)) %>%
         dplyr::summarise_at(dplyr::vars(hflux:pt2_y),mean,na.rm=T)
       dat.year = face.vector(dat.year,D=0.5)
+      years = unique(dat.year$year)
       year.plots = list()
-      for(lev in 1:4){
-       year.plots[[lev]] = plot.fluxes.level(dat.year,lev = lev, title = paste0('Yearly (',dat.year$year[1],'): Level',lev))
+      for(yr in 1:length(years)){
+      # for(yr in 1:2){
+        lev.plots = list()
+        for(lev in 1:4){
+         lev.plots[[lev]] = plot.fluxes.level(dat.year %>% dplyr::filter(year == years[yr]),lev = lev,
+                                              title = paste0('Yearly (',years[yr],'): Level',lev),var.breaks)
+        }
+        year.plots[[yr]]= do.call(gridExtra::grid.arrange,c(lev.plots,ncol = 2))
+        print(yr)
       }
-      
-      year.plots.all = do.call(gridExtra::grid.arrange,c(year.plots,ncol = 2))
-      ggplot2::ggsave(paste0(plot.dir,plot.prefix,'_yearly_transport.pdf'),year.plots.all,width = 14,height = 14)
+      pdf(paste0(plot.dir,plot.prefix,'_yearly_transport.pdf'),onefile=T,width = 14, height = 14)
+      for(i in 1:length(year.plots)){
+        gridExtra::grid.arrange(year.plots[[i]])
+      }
+       dev.off()
+      # year.plots.all = do.call(gridExtra::grid.arrange,c(year.plots,ncol = 2))
+      # ggplot2::ggsave(paste0(plot.dir,plot.prefix,'_yearly_transport.pdf'),year.plots.all,width = 14,height = 14)
     }
     if(plot.seasonal){
       dat$month = format(dat$time,format = '%m')
@@ -192,7 +206,7 @@ roms_maps = function(roms.dir,plot.transport=T,plot.statevars=T,plot.ltlvars=T,p
         for(lev in 1:3){
           lev.plots[[lev]] = plot.fluxes.level(dat.season %>% dplyr::filter(season == s),
                                                lev = lev,
-                                               title = paste0('Season',s,': Level ',lev))
+                                               title = paste0('Season',s,': Level ',lev),var.breaks)
         }
         season.plots[[s]] = do.call(gridExtra::grid.arrange,c(lev.plots,ncol=2))
       }
@@ -219,7 +233,8 @@ roms_maps = function(roms.dir,plot.transport=T,plot.statevars=T,plot.ltlvars=T,p
         for(lev in 1:3){
           lev.plots[[lev]] = plot.fluxes.level(dat.month %>% dplyr::filter(month == months[m]),
                                                lev = lev,
-                                               title = paste0(month.names[m],': Level ',lev))
+                                               title = paste0(month.names[m],': Level ',lev),
+                                               var.breaks)
         }
         month.plots[[m]] = do.call(gridExtra::grid.arrange,c(lev.plots,ncol =2))
       }
@@ -240,7 +255,8 @@ roms_maps = function(roms.dir,plot.transport=T,plot.statevars=T,plot.ltlvars=T,p
     ncdf4::nc_close(dumm)
     var.breaks = lapply(dat.ls,function(x) {
       vals = x[,4] 
-      return(signif(seq(min(vals,na.rm=T),max(vals,na.rm=T),length.out = 8),2))
+      return(signif(seq(quantile(vals,0.01,na.rm=T),quantile(vals,0.99,na.rm=T),length.out=8),2))
+      # return(signif(seq(min(vals,na.rm=T),max(vals,na.rm=T),length.out = 8),2))
     })
     
     if(plot.yearly){
@@ -255,21 +271,30 @@ roms_maps = function(roms.dir,plot.transport=T,plot.statevars=T,plot.ltlvars=T,p
         DF2$box = as.character(DF2$box)
          return(DF2) 
       })
-      year.plots = list()
-      for(i in 1:nvars) { year.plots[[i]] = list()}
-      
+      years = unique(dat.year.ls[[1]]$year)
+      # year.plots = list()
+      # for(i in 1:nvars) { year.plots[[i]] = list()}
+
       for(var in 1:nvars){
+        
         
         dat.var = dat.year.ls[[var]] %>% dplyr::left_join(box.map,by='box')
         colnames(dat.var)[5] = 'statevar'
-
-        var.plots = list()
-        for(lev in 1:nlev){
-          var.plots[[lev]] = plot.boxvars(dat.var,lev=lev,var=var,var.breaks = var.breaks[[var]],
-                                          title = paste0('Yearly (',dat.var$year[1],'): Level',lev))
+        year.plots = list()
+        for(yr in 1:length(years)){
+        # for(yr in 1:2){
+          lev.plots = list()
+          for(lev in 1:nlev){
+            lev.plots[[lev]] = plot.boxvars(dat.var %>% dplyr::filter(year == years[yr]),lev=lev,var=var,var.breaks = var.breaks[[var]],
+                                            title = paste0('Yearly (',years[yr],'): Level',lev))
+          }
+          year.plots[[yr]] = do.call(gridExtra::grid.arrange,c(lev.plots,ncol = 2,padding = ggplot2::unit(1,'line')))
         }
-        year.plots.all = do.call(gridExtra::grid.arrange,c(var.plots,ncol = 2,padding = ggplot2::unit(1,'line')))
-        ggplot2::ggsave(paste0(plot.dir,plot.prefix,'_yearly_',var.names[var],'.pdf'),year.plots.all,width = 14, height =14)
+        pdf(paste0(plot.dir,plot.prefix,'_yearly_',var.names[var],'.pdf'),width = 14, height = 14, onefile = T)
+        for(i in 1:length(year.plots)){
+          gridExtra::grid.arrange(year.plots[[i]])
+        }
+        dev.off()
       }
     }
     
@@ -369,7 +394,8 @@ roms_maps = function(roms.dir,plot.transport=T,plot.statevars=T,plot.ltlvars=T,p
     ncdf4::nc_close(dumm)
     var.breaks = lapply(dat.ls,function(x) {
       vals = x[,4] 
-      return(signif(seq(min(vals,na.rm=T),max(vals,na.rm=T),length.out = 8),2))
+      # return(signif(seq(min(vals,na.rm=T),max(vals,na.rm=T),length.out = 8),2))
+      return(signif(seq(quantile(vals,0.01,na.rm=T),quantile(vals,0.99,na.rm=T),length.out=8),2))
     })
     
     if(plot.yearly){
@@ -384,24 +410,33 @@ roms_maps = function(roms.dir,plot.transport=T,plot.statevars=T,plot.ltlvars=T,p
         DF2$box = as.character(DF2$box)
         return(DF2) 
       })
-      year.plots = list()
-      for(i in 1:nvars) { year.plots[[i]] = list()}
+      years = unique(dat.year.ls[[1]]$year)
+      # year.plots = list()
+      # for(i in 1:nvars) { year.plots[[i]] = list()}
       
       for(var in 1:nvars){
         
         dat.var = dat.year.ls[[var]] %>% dplyr::left_join(box.map,by='box')
         colnames(dat.var)[5] = 'statevar'
-        
-        var.plots = list()
-        for(lev in 1:nlev){
-          var.plots[[lev]] = plot.boxvars(dat.var,lev=lev,var=var,var.breaks = var.breaks[[var]],
-                                          title = paste0('Yearly (',dat.var$year[1],'): Level',lev))
+        year.plots = list()
+        for(yr in 1:length(years)){
+        # for(yr in 1:2){
+          lev.plots = list()
+          for(lev in 1:nlev){
+            lev.plots[[lev]] = plot.boxvars(dat.var %>% dplyr::filter(year == years[yr]),lev=lev,var=var,var.breaks = var.breaks[[var]],
+                                            title = paste0('Yearly (',years[yr],'): Level',lev))
+          }
+          year.plots[[yr]] = do.call(gridExtra::grid.arrange,c(lev.plots,ncol = 2,padding = ggplot2::unit(1,'line')))
         }
-        year.plots.all = do.call(gridExtra::grid.arrange,c(var.plots,ncol = 2,padding = ggplot2::unit(1,'line')))
-        ggplot2::ggsave(paste0(plot.dir,plot.prefix,'_yearly_',var.names[var],'.pdf'),year.plots.all,width = 14, height =14)
+          pdf(paste0(plot.dir,plot.prefix,'_yearly_',var.names[var],'.pdf'),width = 14, height = 14, onefile = T)
+          for(i in 1:length(year.plots)){
+            gridExtra::grid.arrange(year.plots[[i]])
+          }
+          dev.off()
       }
     }
-    
+
+
     if(plot.seasonal){
       dat.season.ls = lapply(dat.ls,function(x) {
         DF = x
@@ -490,22 +525,23 @@ roms_maps = function(roms.dir,plot.transport=T,plot.statevars=T,plot.ltlvars=T,p
   }
 }
   
-file.dirs = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_OUT/',1980:2014,'/')
-prefixes = 1980:2014
+# file.dirs = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_OUT/',1980:2014,'/')
+# prefixes = 1980:2014
 
-for(f.dir in 1:length(file.dirs)){
-  
-  roms_maps(roms.dir = file.dirs[f.dir],
-            plot.transport = T,
-            plot.statevars = T,
-            plot.ltlvars = T,
-            plot.yearly = T,
-            plot.seasonal = T,
-            plot.monthly = T,
-            plot.prefix = prefixes[f.dir],
-            plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/',
-            bgm.file = 'Neus_ll_WGS84.bgm')
-  graphics.off()
-  print(f.dir)
-  
-}  
+# 
+# for(f.dir in 20:length(file.dirs)){
+#   
+#   roms_maps(roms.dir = file.dirs[f.dir],
+#             plot.transport = T,
+#             plot.statevars = T,
+#             plot.ltlvars = T,
+#             plot.yearly = T,
+#             plot.seasonal = T,
+#             plot.monthly = T,
+#             plot.prefix = prefixes[f.dir],
+#             plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/',
+#             bgm.file = 'Neus_ll_WGS84.bgm')
+#   graphics.off()
+#   print(f.dir)
+#   
+# }  
