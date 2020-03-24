@@ -295,7 +295,8 @@ roms.climatology = function(roms.dir,roms.prefix,output.dir, output.prefix,
         pdf(file = paste0(output.dir,output.prefix,'_montly_transport_aggregated.pdf'),onefile = T,width = 14)
         for(i in 1:length(faces)){gridExtra::grid.arrange(g.ls[[i]])}
         dev.off()
-      } else if(plot.type %in% c('sequential','both')){
+      }
+      if(plot.type %in% c('sequential','both')){
         dumm = month.sequential(transport.monthly,is.hflux = T)
         if(export.tables){write.csv(dumm,file = paste0(output.dir,output.prefix,'_monthly_transport_sequential.csv'),row.names = F)}
         g.ls = list()
@@ -325,7 +326,8 @@ roms.climatology = function(roms.dir,roms.prefix,output.dir, output.prefix,
         pdf(file = paste0(output.dir,output.prefix,'_seasonal_transport_aggregated.pdf'),onefile = T,width = 14)
         for(i in 1:length(faces)){gridExtra::grid.arrange(g.ls[[i]])}
         dev.off()
-      } else if(plot.type %in% c('sequential','both')){
+      } 
+      if(plot.type %in% c('sequential','both')){
         dumm = season.sequential(transport.seasonal,is.hflux = T)
         if(export.tables){write.csv(dumm,file = paste0(output.dir,output.prefix,'_season_transport_sequential.csv'),row.names = F)}
         g.ls = list()
@@ -368,7 +370,8 @@ roms.climatology = function(roms.dir,roms.prefix,output.dir, output.prefix,
           pdf(file = paste0(output.dir,output.prefix,'_montly_',var.names[var],'_aggregated.pdf'),onefile = T,width = 14)
           for(i in 1:length(boxes)){gridExtra::grid.arrange(g.ls[[i]])}
           dev.off()
-        } else if(plot.type %in% c('sequential','both')){
+        } 
+        if(plot.type %in% c('sequential','both')){
           dumm = month.sequential(statevars.monthly,is.hflux = F)
           if(export.tables){write.csv(dumm,file = paste0(output.dir,output.prefix,'_monthly_',var.names[var],'_sequential.csv'),row.names = F)}
           g.ls = list()
