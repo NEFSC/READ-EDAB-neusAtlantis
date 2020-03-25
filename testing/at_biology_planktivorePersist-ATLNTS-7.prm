@@ -14872,7 +14872,7 @@ Time_Age_OSH 2
 ## Fish reproduction parameters
 # Spawning season - day of year          
 MAK_Time_Spawn 210           
-HER_Time_Spawn 260 # Changed from 290 to fix glitch           
+HER_Time_Spawn 210 # Changed from 290 to fix glitch           
 WHK_Time_Spawn 180            
 BLF_Time_Spawn 180           
 WPF_Time_Spawn 180             
