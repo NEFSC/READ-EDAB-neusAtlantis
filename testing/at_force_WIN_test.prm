@@ -3,8 +3,12 @@
 # Hydrodynamic files - new hydro from roms doppio
 # this is created from 2008-2010 daily files
 
-nhdfiles 1
-hd0.name \tsfiles\flowOutAll_fix_20180402.nc
+nhdfiles 4
+#hd0.name \tsfiles\flowOutAll_fix_20180402.nc
+hd0.name \tsfiles\roms_cobalt_flows_03242020_1980_1989.nc
+hd1.name \tsfiles\roms_cobalt_flows_03242020_1990_1999.nc
+hd2.name \tsfiles\roms_cobalt_flows_03242020_2000_2009.nc
+hd3.name \tsfiles\roms_cobalt_flows_03242020_2010_2014.nc
 
 # Bottom stress
 
@@ -86,14 +90,23 @@ Solar_radiation_rewind 1
 
 # Temperature time series data file
 use_tempfiles 1
-ntempfiles 1
-Temperature0.name \tsfiles\tempOutAll_fix_20180402.nc
+ntempfiles 4
+#Temperature0.name \tsfiles\tempOutAll_fix_20180402.nc
+Temperature0.name \tsfiles\roms_cobalt_temp_03242020_1980_1989.nc
+Temperature1.name \tsfiles\roms_cobalt_temp_03242020_1990_1999.nc
+Temperature2.name \tsfiles\roms_cobalt_temp_03242020_2000_2009.nc
+Temperature3.name \tsfiles\roms_cobalt_temp_03242020_2010_2014.nc
 temp_rewind 1
 
 # Salinity time series data file
 use_saltfiles 1
-nsaltfiles 1
-Salinity0.name \tsfiles\saltOutAll_fix_20180402.nc
+nsaltfiles 4
+#Salinity0.name \tsfiles\saltOutAll_fix_20180402.nc
+Salinity0.name \tsfiles\roms_cobalt_salt_03242020_1980_1989.nc
+Salinity1.name \tsfiles\roms_cobalt_salt_03242020_1990_1999.nc
+Salinity2.name \tsfiles\roms_cobalt_salt_03242020_2000_2009.nc
+Salinity3.name \tsfiles\roms_cobalt_salt_03242020_2010_2014.nc
+
 salt_rewind 1
 
 ts_on_hydro_time 1
