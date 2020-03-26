@@ -118,7 +118,7 @@ roms_maps = function(roms.dir,plot.transport=T,plot.statevars=T,plot.ltlvars=T,p
     # ggplot2::geom_path(data = bgm$boundaryvertices, ggplot2::aes(x=x,y=y))+
     # ggplot2::geom_path(data = bgm.boundary, ggplot2::aes(x=x,y=y,group=.bx0))+
     ggplot2::geom_segment(data = xx,
-                          ggplot2::aes(x=midx,y=midy,xend = new.x,yend = new.y,col = log(abs(hflux),10),group=face),
+                          ggplot2::aes(x=midx,y=midy,xend = new.x,yend = new.y,col = hflux,group=face),
                           arrow = ggplot2::arrow(length = ggplot2::unit(0.2,'cm')),
                           size = 0.75)+
       
@@ -149,7 +149,8 @@ roms_maps = function(roms.dir,plot.transport=T,plot.statevars=T,plot.ltlvars=T,p
     dat = roms2long(transport.file,is.hflux = T) %>% 
       dplyr::select(level,time,face,hflux,dest_b,source_b) %>%
       dplyr::left_join(bgm.all, by = 'face')
-    var.breaks = signif(seq(min(dat$hflux,na.rm=T),max(dat$hflux,na.rm=T),length.out=8),2)
+    # dat$hflux = log(abs(dat$hflux),10)*sign(dat$hflux)
+    var.breaks = signif(seq(floor(quantile(log(dat$hflux,10),0.01,na.rm=T)),ceiling(quantile(log(dat$hflux,10),0.99,na.rm=T)),by=1),2)
 
     if(plot.yearly){
       dat$year = format(dat$time,format = '%Y')
@@ -158,6 +159,7 @@ roms_maps = function(roms.dir,plot.transport=T,plot.statevars=T,plot.ltlvars=T,p
         dplyr::filter(!dest_b %in% c(23,24) & !source_b %in% c(23,24)) %>%
         dplyr::summarise_at(dplyr::vars(hflux:pt2_y),mean,na.rm=T)
       dat.year = face.vector(dat.year,D=0.5)
+      dat.year$hflux = log(abs(dat.year$hflux),10)
       years = unique(dat.year$year)
       year.plots = list()
       for(yr in 1:length(years)){
@@ -199,6 +201,7 @@ roms_maps = function(roms.dir,plot.transport=T,plot.statevars=T,plot.ltlvars=T,p
         dplyr::filter(!dest_b %in% c(23,24) & !source_b %in% c(23,24)) %>%
         dplyr::summarise_at(dplyr::vars(hflux:pt2_y),mean,na.rm=T)
       dat.season = face.vector(dat.season, D = 0.5)
+      dat.season$hflux = log(abs(dat.season$hflux),10)
 
       season.plots = list()
       for(s in 1:4){
@@ -225,6 +228,7 @@ roms_maps = function(roms.dir,plot.transport=T,plot.statevars=T,plot.ltlvars=T,p
         dplyr::filter(!dest_b %in% c(23,24) & !source_b %in% c(23,24)) %>%
         dplyr::summarise_at(dplyr::vars(hflux:pt2_y),mean,na.rm=T)
       dat.month = face.vector(dat.month, D = 0.5)
+      dat.month$hflux = log(abs(dat.month$hflux),10)
       months = unique(dat$month)
       month.names = unique(dat$month.name)
       month.plots = list()
