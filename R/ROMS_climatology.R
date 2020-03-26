@@ -398,7 +398,7 @@ roms.climatology = function(roms.dir,roms.prefix,output.dir, output.prefix,
                                        var.name = paste0(var.names[var],'(',units[var],')'),
                                        time.name = 'Season',title = paste0('Box',boxes[i]))
           }
-          pdf(file = paste0(output.dir,output.prefix,'_seasonal_',var.names[var],'_aggregated.pdf'),onefile = T)
+          pdf(file = paste0(output.dir,output.prefix,'_seasonal_',var.names[var],'_aggregated.pdf'),onefile = T,width = 14)
           for(i in 1:length(boxes)){gridExtra::grid.arrange(g.ls[[i]])}
           dev.off()
         }
@@ -411,7 +411,7 @@ roms.climatology = function(roms.dir,roms.prefix,output.dir, output.prefix,
                                         var.name = paste0(var.names[var],'(',units[var],')'),
                                         time.name = 'Season',title = paste0('Box',boxes[i]))
           }
-          pdf(file = paste0(output.dir,output.prefix,'_seasonal_',var.names[var],'_sequential.pdf'),onefile = T)
+          pdf(file = paste0(output.dir,output.prefix,'_seasonal_',var.names[var],'_sequential.pdf'),onefile = T,width = 14)
           for(i in 1:length(boxes)){gridExtra::grid.arrange(g.ls[[i]])}
           dev.off()
           rm(statevars.seasonal)
@@ -475,7 +475,7 @@ roms.climatology = function(roms.dir,roms.prefix,output.dir, output.prefix,
                                        var.name = paste0(var.names[var],'(',units[var],')'),
                                        time.name = 'Season',title = paste0('Box',boxes[i]))
           }
-          pdf(file = paste0(output.dir,output.prefix,'_seasonal_',var.names[var],'_aggregated.pdf'),onefile = T)
+          pdf(file = paste0(output.dir,output.prefix,'_seasonal_',var.names[var],'_aggregated.pdf'),onefile = T,width = 14)
           for(i in 1:length(boxes)){gridExtra::grid.arrange(g.ls[[i]])}
           dev.off()
         }
@@ -488,7 +488,7 @@ roms.climatology = function(roms.dir,roms.prefix,output.dir, output.prefix,
                                         var.name = paste0(var.names[var],'(',units[var],')'),
                                         time.name = 'Season',title = paste0('Box',boxes[i]))
           }
-          pdf(file = paste0(output.dir,output.prefix,'_seasonal_',var.names[var],'_sequential.pdf'),onefile = T)
+          pdf(file = paste0(output.dir,output.prefix,'_seasonal_',var.names[var],'_sequential.pdf'),onefile = T,width = 14)
           for(i in 1:length(boxes)){gridExtra::grid.arrange(g.ls[[i]])}
           dev.off()
           rm(statevars.seasonal)
