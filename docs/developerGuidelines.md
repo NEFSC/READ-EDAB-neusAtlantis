@@ -75,7 +75,7 @@ You should now have a good editor for custom git commands.
 
 Scenario: You commit a large file (100+MB) then subsequently make additional commits. When you push to GitHub, you recieve an error similar to this:
 
-<img src="C:/Users/andrew.beet/Documents/MyWork/center_repos/neus-atlantis/docs/GitError-LargeFileSize.png" width="847" />
+![](https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/docs/GitError-LargeFileSize.PNG)<!-- -->
 
 You now want to remove the commit for the large file and push all subsequent commits.
 
@@ -88,7 +88,7 @@ You now want to remove the commit for the large file and push all subsequent com
     
 2. When the `nano` editor opens find the line that reflects the commit you want to delete (circled)
 
-<img src="C:/Users/andrew.beet/Documents/MyWork/center_repos/neus-atlantis/docs/rebaseInNano-LargeFileSize.png" width="741" />
+![](https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/docs/rebaseInNano-LargeFileSize.PNG)<!-- -->
 
 Follow these steps:
 
@@ -97,7 +97,9 @@ Follow these steps:
     >
     > Save "modified buffer" to default location
 
-Thats it
+
+
+
 
 ## Testing environment
 

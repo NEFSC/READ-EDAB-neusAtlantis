@@ -78,7 +78,7 @@ You should now have a good editor for custom git commands.
 Scenario: You commit a large file (100+MB) then subsequently make additional commits. When you push to GitHub, you recieve an error similar to this:
 
 ```{r error1, echo = FALSE}
-knitr::include_graphics(here::here("docs","GitError-LargeFileSize.png"))
+knitr::include_graphics(path="https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/docs/GitError-LargeFileSize.PNG")
 ```
 
 You now want to remove the commit for the large file and push all subsequent commits.
@@ -93,7 +93,7 @@ You now want to remove the commit for the large file and push all subsequent com
 2. When the `nano` editor opens find the line that reflects the commit you want to delete (circled)
 
 ```{r nano1, echo = FALSE}
-knitr::include_graphics(here::here("docs","rebaseInNano-LargeFileSize.png"))
+knitr::include_graphics(path="https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/docs/rebaseInNano-LargeFileSize.PNG")
 ```
 
 Follow these steps:
