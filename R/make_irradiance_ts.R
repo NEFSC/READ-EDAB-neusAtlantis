@@ -18,7 +18,8 @@ for(yr in 1:length(years)){
   print(years[yr])
 }
 irradiance.all.years = dplyr::bind_rows(yr.ls)
-save(irradiance.all.years,file = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/daily irradiance raw.R')
+# save(irradiance.all.years,file = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/daily irradiance raw.R')
+load(file = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/daily irradiance raw.R')
 
 irradiance.all.years$irr.spline = spline(irradiance.all.years$day.from.start,irradiance.all.years$irradiance, n = nrow(irradiance.all.years))$y
 irradiance.all.years$irr.smooth = smooth(irradiance.all.years$irradiance)
@@ -34,3 +35,4 @@ lines(as.Date(irradiance.all.years$date),irradiance.all.years$irr.smoothspline,c
 # dev.off()
 
 solar.out = subset(irradiance.all.years,select = c(day.from.start,irr.smoothspline))
+write.table(solar.out,file = here::here('testing','tsfiles','ROMS_irradiance_smoothed.txt'),row.names = F,sep = ' ')
