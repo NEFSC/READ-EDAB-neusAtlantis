@@ -93,8 +93,8 @@ forcing.diagnostics = function(force.dir,hydro.name){
       exch.all = dplyr::bind_rows(exch.ls)
       
       # exch.lev = exch.all %>% filter( (source.b == b | dest.b == b) & !is.na(exch)) %>% arrange(array.l,dest.b,dest.l)
-      dumm1 = exch.all %>% dplyr::filter(source.b == b & !is.na(exch))
-      dumm2 = exch.all %>% dplyr::filter(dest.b == b & !is.na(exch))
+      dumm1 = dplyr::ungroup(exch.all) %>% dplyr::filter(source.b == b & !is.na(exch))
+      dumm2 = dplyr::ungroup(exch.all) %>% dplyr::filter(dest.b == b & !is.na(exch))
       exch.lev = rbind(dumm1,dumm2)
       
       exch.lev2 = exch.lev
@@ -167,7 +167,8 @@ forcing.diagnostics = function(force.dir,hydro.name){
   for(t in 1:t.tot){
     box.connections[[t]]$time = t
     for(b in seq_along(boxes)){
-      sub = full.exchanges %>% dplyr::filter(source.b == (b-1) & time == t) 
+      # sub = dplyr::ungroup(full.exchanges) %>% dplyr::filter(source.b == (b-1) & time == t) 
+      sub = subset(full.exchanges, source.b == (b-1) & time == T)
       if( b == 1){
         conn.flag = length(unique(sub$dest.b))==30
       } else if(b %in% c(24,25)){
@@ -177,9 +178,11 @@ forcing.diagnostics = function(force.dir,hydro.name){
       }
       box.connections[[t]]$all.connected[b] = conn.flag
     }
+    print(t)
   }
+  save('box.connections', file = paste0(force.dir,'box connections full.R'))
   box.connections2 = dplyr::bind_rows(box.connections)
-  as.data.frame(box.connections2 %>% dplyr::group_by(box,all.connected) %>% dplyr::summarize(total = sum(all.connected)))
+  all.connected = as.data.frame(box.connections2 %>% dplyr::group_by(box,all.connected) %>% dplyr::summarize(total = sum(all.connected)))
   
   #  Is the net flux across a box/layer close to zero? Mass balance? --------
   
@@ -208,13 +211,22 @@ forcing.diagnostics = function(force.dir,hydro.name){
   for(i in 1:nrow(box.level.all)){
     
     #subset full exchange output
-    DF=full.exchanges %>% 
+    DF=dplyr::ungroup(full.exchanges) %>% 
       dplyr::filter( source.b == box.level.all$box[i] & source.l == box.level.all$at.level[i] & time == box.level.all$time[i]) 
     DF= DF[apply(DF,1,function(x) return( !all( c(x[1],x[2]) == c(x[3],x[4])))),]
     
     box.level.all$net.flux[i ] = sum(DF$exch,na.rm=T)
     box.level.all$pct.flux[i] = 100*abs(box.level.all$net.flux[i]) / box.level.all$volume[i]
+    if( i %% 1000 == 0){print(i)}
   }
-  
+  # save('box.level.all',file = paste0(force.dir,'box_level_all.R'))
   box.level.all = box.level.all %>% dplyr::filter( !(box %in% c(23,24)))
   summary(box.level.all$pct.flux)
+  
+  output = list(full.exchanges = full.exchanges,
+                box.connections = box.connections2,
+                box.level.all = box.level.all)
+  save(full.exchanges,box.connections2,box.level.all,file = paste0(force.dir,'post_hydroconstruct_output.R'))
+}
+
+test = box.level.all %>% dplyr::group_by(box,at.level) %>% dplyr::summarise(pct = mean(pct.flux,na.rm=T))
