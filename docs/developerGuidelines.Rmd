@@ -48,6 +48,64 @@ Once a task item has been created and assigned to a developer the following set 
 
 1. Repeat with additional tasks
 
+## Change the default editor
+
+You will find the terminal is needed for some git commands, mostly to "get out of trouble". A few steps for Rstudio
+
+* First change the environment in which you'll be making these commands. Change the terminal:
+
+    > `Tools -> Global Options -> Terminal`
+
+Select Git Bash from the dropdown under the `shell` header. 
+
+* Open a new Terminal:
+
+    > `Tools -> Terminal -> New Terminal`
+
+* Check to see if you have `nano` editor installed
+
+    > Type `nano test` in the terminal. 
+    > If it opens type Ctrl + X to close.
+
+* Change the default editor `VI` to [nano](https://www.oreilly.com/library/view/gitlab-cookbook/9781783986842/apas07.html)
+
+    >Type `git config --global core.editor "nano"` in the terminal
+
+You should now have a good editor for custom git commands.
+
+## Useful git commands
+
+Scenario: You commit a large file (100+MB) then subsequently make additional commits. When you push to GitHub, you recieve an error similar to this:
+
+```{r error1, echo = FALSE}
+knitr::include_graphics(here::here("docs","GitError-LargeFileSize.png"))
+```
+
+You now want to remove the commit for the large file and push all subsequent commits.
+
+1. This removes the commit AND THE LARGE FILE from your local repo. Be sure to make a copy of the large file!
+
+    > git rebase -i \< commit SHA \>
+    >
+    > Select a commit message before the one you want to remove
+    > The \<commit SHA\> can be found in the history in RStudios commit window.
+    
+2. When the `nano` editor opens find the line that reflects the commit you want to delete (circled)
+
+```{r nano1, echo = FALSE}
+knitr::include_graphics(here::here("docs","rebaseInNano-LargeFileSize.png"))
+```
+
+Follow these steps:
+
+    > Delete the line
+    > Ctrl + X to exit
+    >
+    > Save "modified buffer" to default location
+
+
+
+
 
 ## Testing environment
 
