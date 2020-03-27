@@ -187,10 +187,10 @@ save(boxes.net.flux,boxes.exchange, net.flux.pct,file = paste0(output.dir,output
 }
 
 
-roms.diagnostics(roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing Files/',
+roms.diagnostics(roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/',
                  roms.prefix = 'roms_',
                  bgm.file = 'neus_tmerc_RM2.bgm',
                  dz.file = 'dz.csv',
-                 output.name = 'roms_diag_allyears_',
-                 output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/'
+                 output.name = 'roms_diag_allyears',
+                 output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Pre Hydroconstruct Diagnostics/'
 )
