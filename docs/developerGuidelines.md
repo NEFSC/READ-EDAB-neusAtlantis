@@ -73,6 +73,14 @@ You should now have a good editor for custom git commands.
 
 ## Useful git commands
 
+Git resources
+
+* [https://git-scm.com/docs](https://git-scm.com/docs)
+* [Undo stuff - 2015](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
+* [Pro Git book](https://git-scm.com/book/en/v2) and its [repo](https://github.com/progit/progit2)
+
+### git rebase
+
 Scenario: You commit a large file (100+MB) then subsequently make additional commits. When you push to GitHub, you recieve an error similar to this:
 
 ![](https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/docs/GitError-LargeFileSize.PNG)<!-- -->
@@ -97,8 +105,13 @@ Follow these steps:
     >
     > Save "modified buffer" to default location
 
+### git reset
 
+examples coming ...
 
+### git revert
+
+examples coming ...
 
 
 ## Testing environment
