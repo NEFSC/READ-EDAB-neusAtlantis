@@ -81,20 +81,22 @@ Git resources
 
 ### git rebase
 
-Scenario: You commit a large file (100+MB) then subsequently make additional commits. When you push to GitHub, you recieve an error similar to this:
+Scenario: You commit a large file (100+MB) then subsequently make additional commits. When you push to GitHub, you recieve an error similar to this.
 
 ![](https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/docs/GitError-LargeFileSize.PNG)<!-- -->
 
 You now want to remove the commit for the large file and push all subsequent commits.
 
-1. This removes the commit AND THE LARGE FILE from your local repo. Be sure to make a copy of the large file!
+1. Make sure you have no pending commits and that (in the following steps) you remove all commits related to the large file (for example, if you tried a git revert)
+
+2. This removes the commit AND THE LARGE FILE from your local repo. Be sure to make a copy of the large file!
 
     > git rebase -i \< commit SHA \>
     >
     > Select a commit message before the one you want to remove
     > The \<commit SHA\> can be found in the history in RStudios commit window.
     
-2. When the `nano` editor opens find the line that reflects the commit you want to delete (circled)
+3. When the `nano` editor opens find the line that reflects the commit you want to delete (circled)
 
 ![](https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/docs/rebaseInNano-LargeFileSize.PNG)<!-- -->
 
