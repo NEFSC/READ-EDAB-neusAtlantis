@@ -5,10 +5,41 @@
 
 nhdfiles 4
 #hd0.name \tsfiles\flowOutAll_fix_20180402.nc
-hd0.name \tsfiles\roms_cobalt_flows_03242020_1980_1989.nc
-hd1.name \tsfiles\roms_cobalt_flows_03242020_1990_1999.nc
-hd2.name \tsfiles\roms_cobalt_flows_03242020_2000_2009.nc
-hd3.name \tsfiles\roms_cobalt_flows_03242020_2010_2014.nc
+hd0.name \tsfiles\Annual_Files\flow_1980.nc
+hd1.name \tsfiles\Annual_Files\flow_1981.nc
+hd2.name \tsfiles\Annual_Files\flow_1982.nc
+hd3.name \tsfiles\Annual_Files\flow_1983.nc
+hd4.name \tsfiles\Annual_Files\flow_1984.nc
+hd5.name \tsfiles\Annual_Files\flow_1985.nc
+hd6.name \tsfiles\Annual_Files\flow_1986.nc
+hd7.name \tsfiles\Annual_Files\flow_1987.nc
+hd8.name \tsfiles\Annual_Files\flow_1988.nc
+hd9.name \tsfiles\Annual_Files\flow_1989.nc
+hd10.name \tsfiles\Annual_Files\flow_1990.nc
+hd11.name \tsfiles\Annual_Files\flow_1991.nc
+hd12.name \tsfiles\Annual_Files\flow_1992.nc
+hd13.name \tsfiles\Annual_Files\flow_1993.nc
+hd14.name \tsfiles\Annual_Files\flow_1994.nc
+hd15.name \tsfiles\Annual_Files\flow_1995.nc
+hd16.name \tsfiles\Annual_Files\flow_1996.nc
+hd17.name \tsfiles\Annual_Files\flow_1997.nc
+hd18.name \tsfiles\Annual_Files\flow_1998.nc
+hd19.name \tsfiles\Annual_Files\flow_1999.nc
+hd20.name \tsfiles\Annual_Files\flow_2000.nc
+hd21.name \tsfiles\Annual_Files\flow_2001.nc
+hd22.name \tsfiles\Annual_Files\flow_2002.nc
+hd23.name \tsfiles\Annual_Files\flow_2003.nc
+hd24.name \tsfiles\Annual_Files\flow_2004.nc
+hd25.name \tsfiles\Annual_Files\flow_2005.nc
+hd26.name \tsfiles\Annual_Files\flow_2006.nc
+hd27.name \tsfiles\Annual_Files\flow_2007.nc
+hd28.name \tsfiles\Annual_Files\flow_2008.nc
+hd29.name \tsfiles\Annual_Files\flow_2009.nc
+hd30.name \tsfiles\Annual_Files\flow_2010.nc
+hd31.name \tsfiles\Annual_Files\flow_2011.nc
+hd32.name \tsfiles\Annual_Files\flow_2012.nc
+hd33.name \tsfiles\Annual_Files\flow_2013.nc
+hd34.name \tsfiles\Annual_Files\flow_2014.nc
 
 # Bottom stress
 
@@ -85,27 +116,90 @@ pss0.rewind 0
 # Rain and evaporation
 
 # Solar time series data file
-Solar_radiation \tsfiles\RMirradiance_smooth_3yr.ts
-Solar_radiation_rewind 1
+Solar_radiation \tsfiles\ROMS_irradiance_smoothed.ts
+Solar_radiation_rewind 0
 
 # Temperature time series data file
 use_tempfiles 1
 ntempfiles 4
 #Temperature0.name \tsfiles\tempOutAll_fix_20180402.nc
-Temperature0.name \tsfiles\roms_cobalt_temp_03242020_1980_1989.nc
-Temperature1.name \tsfiles\roms_cobalt_temp_03242020_1990_1999.nc
-Temperature2.name \tsfiles\roms_cobalt_temp_03242020_2000_2009.nc
-Temperature3.name \tsfiles\roms_cobalt_temp_03242020_2010_2014.nc
+Temperature0.name \tsfiles\Annual_Files\temp1980.nc
+Temperature1.name \tsfiles\Annual_Files\temp1981.nc
+Temperature2.name \tsfiles\Annual_Files\temp1982.nc
+Temperature3.name \tsfiles\Annual_Files\temp1983.nc
+Temperature4.name \tsfiles\Annual_Files\temp1984.nc
+Temperature5.name \tsfiles\Annual_Files\temp1985.nc
+Temperature6.name \tsfiles\Annual_Files\temp1986.nc
+Temperature7.name \tsfiles\Annual_Files\temp1987.nc
+Temperature8.name \tsfiles\Annual_Files\temp1988.nc
+Temperature9.name \tsfiles\Annual_Files\temp1989.nc
+Temperature10.name \tsfiles\Annual_Files\temp1990.nc
+Temperature11.name \tsfiles\Annual_Files\temp1991.nc
+Temperature12.name \tsfiles\Annual_Files\temp1992.nc
+Temperature13.name \tsfiles\Annual_Files\temp1993.nc
+Temperature14.name \tsfiles\Annual_Files\temp1994.nc
+Temperature15.name \tsfiles\Annual_Files\temp1995.nc
+Temperature16.name \tsfiles\Annual_Files\temp1996.nc
+Temperature17.name \tsfiles\Annual_Files\temp1997.nc
+Temperature18.name \tsfiles\Annual_Files\temp1998.nc
+Temperature19.name \tsfiles\Annual_Files\temp1999.nc
+Temperature20.name \tsfiles\Annual_Files\temp2000.nc
+Temperature21.name \tsfiles\Annual_Files\temp2001.nc
+Temperature22.name \tsfiles\Annual_Files\temp2002.nc
+Temperature23.name \tsfiles\Annual_Files\temp2003.nc
+Temperature24.name \tsfiles\Annual_Files\temp2004.nc
+Temperature25.name \tsfiles\Annual_Files\temp2005.nc
+Temperature26.name \tsfiles\Annual_Files\temp2006.nc
+Temperature27.name \tsfiles\Annual_Files\temp2007.nc
+Temperature28.name \tsfiles\Annual_Files\temp2008.nc
+Temperature29.name \tsfiles\Annual_Files\temp2009.nc
+Temperature30.name \tsfiles\Annual_Files\temp2010.nc
+Temperature31.name \tsfiles\Annual_Files\temp2011.nc
+Temperature32.name \tsfiles\Annual_Files\temp2012.nc
+Temperature33.name \tsfiles\Annual_Files\temp2013.nc
+Temperature34.name \tsfiles\Annual_Files\temp2014.nc
+
 temp_rewind 1
 
 # Salinity time series data file
 use_saltfiles 1
 nsaltfiles 4
 #Salinity0.name \tsfiles\saltOutAll_fix_20180402.nc
-Salinity0.name \tsfiles\roms_cobalt_salt_03242020_1980_1989.nc
-Salinity1.name \tsfiles\roms_cobalt_salt_03242020_1990_1999.nc
-Salinity2.name \tsfiles\roms_cobalt_salt_03242020_2000_2009.nc
-Salinity3.name \tsfiles\roms_cobalt_salt_03242020_2010_2014.nc
+Salinity0.name \tsfiles\Annual_Files\salt_1980.nc
+Salinity1.name \tsfiles\Annual_Files\salt_1981.nc
+Salinity2.name \tsfiles\Annual_Files\salt_1982.nc
+Salinity3.name \tsfiles\Annual_Files\salt_1983.nc
+Salinity4.name \tsfiles\Annual_Files\salt_1984.nc
+Salinity5.name \tsfiles\Annual_Files\salt_1985.nc
+Salinity6.name \tsfiles\Annual_Files\salt_1986.nc
+Salinity7.name \tsfiles\Annual_Files\salt_1987.nc
+Salinity8.name \tsfiles\Annual_Files\salt_1988.nc
+Salinity9.name \tsfiles\Annual_Files\salt_1989.nc
+Salinity10.name \tsfiles\Annual_Files\salt_1990.nc
+Salinity11.name \tsfiles\Annual_Files\salt_1991.nc
+Salinity12.name \tsfiles\Annual_Files\salt_1992.nc
+Salinity13.name \tsfiles\Annual_Files\salt_1993.nc
+Salinity14.name \tsfiles\Annual_Files\salt_1994.nc
+Salinity15.name \tsfiles\Annual_Files\salt_1995.nc
+Salinity16.name \tsfiles\Annual_Files\salt_1996.nc
+Salinity17.name \tsfiles\Annual_Files\salt_1997.nc
+Salinity18.name \tsfiles\Annual_Files\salt_1998.nc
+Salinity19.name \tsfiles\Annual_Files\salt_1999.nc
+Salinity20.name \tsfiles\Annual_Files\salt_2000.nc
+Salinity21.name \tsfiles\Annual_Files\salt_2001.nc
+Salinity22.name \tsfiles\Annual_Files\salt_2002.nc
+Salinity23.name \tsfiles\Annual_Files\salt_2003.nc
+Salinity24.name \tsfiles\Annual_Files\salt_2004.nc
+Salinity25.name \tsfiles\Annual_Files\salt_2005.nc
+Salinity26.name \tsfiles\Annual_Files\salt_2006.nc
+Salinity27.name \tsfiles\Annual_Files\salt_2007.nc
+Salinity28.name \tsfiles\Annual_Files\salt_2008.nc
+Salinity29.name \tsfiles\Annual_Files\salt_2009.nc
+Salinity30.name \tsfiles\Annual_Files\salt_2010.nc
+Salinity31.name \tsfiles\Annual_Files\salt_2011.nc
+Salinity32.name \tsfiles\Annual_Files\salt_2012.nc
+Salinity33.name \tsfiles\Annual_Files\salt_2013.nc
+Salinity34.name \tsfiles\Annual_Files\salt_2014.nc
 
 salt_rewind 1
 
