@@ -44,6 +44,26 @@ Now includes fishing, last updated 20190917
 
 t: location of local git folder
 
+### Development team
+
+In alphabetical
+order:
+
+| \[@jcaracappa1\][jcaracappa1-user](https://github.com/jcaracappa1)                                 | \[@gambler1650\][gambler1650-user](https://github.com/gambler1650)                                |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| [![](https://avatars1.githubusercontent.com/u/57966543?s=100&v=4)](https://github.com/jcaracappa1) | [![](https://avatars1.githubusercontent.com/u/5949383?s=100&v=4)](https://github.com/gambler1650) |
+
+### Team members
+
+Members of the Atlantis team other than the core development team:
+
+In alphabetical
+order:
+
+| \[@andybeet\][andybeet-user](https://github.com/andybeet)                                       | \[@sgaichas\][sgaichas-user](https://github.com/sgaichas)                                      | \[@ScottLarge-NOAA\][ScottLarge-NOAA-user](https://github.com/ScottLarge-NOAA)                        | \[@slucey\][slucey-user](https://github.com/slucey)                                          | \[@RMORSEcode\][RMORSEcode-user](https://github.com/RMORSEcode)                                   |
+| ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| [![](https://avatars1.githubusercontent.com/u/22455149?s=100&v=4)](https://github.com/andybeet) | [![](https://avatars1.githubusercontent.com/u/8172302?s=100&v=4)](https://github.com/sgaichas) | [![](https://avatars1.githubusercontent.com/u/5000131?s=100&v=4)](https://github.com/ScottLarge-NOAA) | [![](https://avatars1.githubusercontent.com/u/5578254?s=100&v=4)](https://github.com/slucey) | [![](https://avatars1.githubusercontent.com/u/10620840?s=100&v=4)](https://github.com/RMORSEcode) |
+
 *This repository is a scientific product and is not official
 communication of the National Oceanic and Atmospheric Administration, or
 the United States Department of Commerce. All NOAA GitHub project code
