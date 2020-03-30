@@ -43,15 +43,15 @@ t: location of local git folder
 
 In alphabetical order:
 
-| [@jcaracappa1][jcaracappa1-user] | [@gambler1650][gambler1650-user] |
-|---|---|
-| [![][jcaracappa1-img]][jcaracappa1-user] | [![][gambler1650-img]][gambler1650-user] |
+| [jcaracappa1] | [gambler1650] |
+|-|-|
+| [![][jcaracappa1-img]][jcaracappa1] | [![][gambler1650-img]][gambler1650] |
 
 
 [jcaracappa1-img]: https://avatars1.githubusercontent.com/u/57966543?s=100&v=4
 [gambler1650-img]: https://avatars1.githubusercontent.com/u/5949383?s=100&v=4
-[jcaracappa1-user]: https://github.com/jcaracappa1
-[gambler1650-user]: https://github.com/gambler1650
+[jcaracappa1]: https://github.com/jcaracappa1
+[gambler1650]: https://github.com/gambler1650
 
 ### Team members
 
@@ -59,20 +59,20 @@ Members of the Atlantis team other than the core development team:
 
 In alphabetical order:
 
-| [@andybeet][andybeet-user] | [@sgaichas][sgaichas-user] | [@ScottLarge-NOAA][ScottLarge-NOAA-user] |  [@slucey][slucey-user] | [@RMORSEcode][RMORSEcode-user] |
+| [andybeet] | [sgaichas] | [ScottLarge-NOAA] |  [slucey] | [RMORSEcode] |
 |---|---|---|---|---|
-| [![][andybeet-img]][andybeet-user] | [![][sgaichas-img]][sgaichas-user] | [![][ScottLarge-NOAA-img]][ScottLarge-NOAA-user] | [![][slucey-img]][slucey-user] | [![][RMORSEcode-img]][RMORSEcode-user] | 
+| [![][andybeet-img]][andybeet] | [![][sgaichas-img]][sgaichas] | [![][ScottLarge-NOAA-img]][ScottLarge-NOAA] | [![][slucey-img]][slucey] | [![][RMORSEcode-img]][RMORSEcode] | 
 
 [andybeet-img]: https://avatars1.githubusercontent.com/u/22455149?s=100&v=4
 [sgaichas-img]: https://avatars1.githubusercontent.com/u/8172302?s=100&v=4
 [ScottLarge-NOAA-img]: https://avatars1.githubusercontent.com/u/5000131?s=100&v=4
 [slucey-img]: https://avatars1.githubusercontent.com/u/5578254?s=100&v=4
 [RMORSEcode-img]: https://avatars1.githubusercontent.com/u/10620840?s=100&v=4
-[andybeet-user]: https://github.com/andybeet
-[sgaichas-user]: https://github.com/sgaichas
-[ScottLarge-NOAA-user]: https://github.com/ScottLarge-NOAA
-[slucey-user]: https://github.com/slucey
-[RMORSEcode-user]: https://github.com/RMORSEcode
+[andybeet]: https://github.com/andybeet
+[sgaichas]: https://github.com/sgaichas
+[ScottLarge-NOAA]: https://github.com/ScottLarge-NOAA
+[slucey]: https://github.com/slucey
+[RMORSEcode]: https://github.com/RMORSEcode
 
 
 *This repository is a scientific product and is not official communication of the National Oceanic and Atmospheric Administration, or the United States Department of Commerce. All NOAA GitHub project code is provided on an ‘as is’ basis and the user assumes responsibility for its use. Any claims against the Department of Commerce or Department of Commerce bureaus stemming from the use of this GitHub project will be governed by all applicable Federal law. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by the Department of Commerce. The Department of Commerce seal and logo, or the seal and logo of a DOC bureau, shall not be used in any manner to imply endorsement of any commercial product or activity by DOC or the United States Government.*
