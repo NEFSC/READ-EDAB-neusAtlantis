@@ -98,6 +98,7 @@ You now want to remove the commit for the large file and push all subsequent com
     > git rebase -i \< commit SHA \>
     >
     > Select a commit message before the one you want to remove
+    >
     > The \<commit SHA\> can be found in the history in RStudios commit window.
     
 3. When the `nano` editor opens find the line that reflects the commit you want to delete (circled)
@@ -106,16 +107,27 @@ You now want to remove the commit for the large file and push all subsequent com
 knitr::include_graphics(path="https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/docs/rebaseInNano-LargeFileSize.PNG")
 ```
 
-Follow these steps:
+Follow these steps
 
     > Delete the line
     > Ctrl + X to exit
     >
-    > Save "modified buffer" to default location
+    > Save \"modified buffer\" to default location
 
 ### git reset
 
-examples coming ...
+Scenario: You just made a local commit and either: 
+  a. tried to push to GitHub and got an error message saying you can not push the changes (maybe due to file size) or
+  b. you just changed your mind and would like to "undo" the commit
+  
+  Follow these steps
+  
+    > Make sure you are in the correct branch
+    > Open the terminal window
+    >
+    > git reset --soft HEAD~1
+    
+If you are in Rstudio, you will see the files reappear in your git tab assigned with check marks (ie. in the state right before you previously committed them)
 
 ### git revert
 
