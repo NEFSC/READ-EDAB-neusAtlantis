@@ -24,25 +24,24 @@
 #' 
 #' Author: J. Caracappa
 
-roms.out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/'
-# file2copy = 'roms_output_transport_tohydro_1981.nc'
-transport.file = paste0(roms.out.dir,'transport/roms_output_transport_tohydro_1981.nc')
-statevar.file = paste0(roms.out.dir,'statevars/roms_output_statevars_tohydro_1981.nc')
-ltlvar.file = paste0(roms.out.dir,'ltl_statevars/roms_output_ltl_statevars_tohydro_1981.nc')
-hydro.command = ''
-force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/'
-start.year = 1964
-new.year = 1964
-param.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/roms_cobalt_hydroconstruct_v2.prm'
-bat.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/hydroconstruct_run_template.bat'
+# roms.out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/'
+# # file2copy = 'roms_output_transport_tohydro_1981.nc'
+# transport.file = paste0(roms.out.dir,'transport/roms_output_transport_tohydro_1981.nc')
+# statevar.file = paste0(roms.out.dir,'statevars/roms_output_statevars_tohydro_1981.nc')
+# ltlvar.file = paste0(roms.out.dir,'ltl_statevars/roms_output_ltl_statevars_tohydro_1981.nc')
+# force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/'
+# start.year = 1964
+# new.year = 1964
+# param.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/roms_cobalt_hydroconstruct_v2.prm'
+# bat.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/hydroconstruct_run_template.bat'
 
 duplicate.forcing.year = function(transport.file,
                                   statevar.file,
                                   ltlvar.file,
                                   roms.out.dir,
-                                  hydro.command,
                                   force.dir,
                                   start.year,
+                                  new.year,
                                   param.temp,
                                   bat.temp){
   setwd(force.dir)
@@ -231,3 +230,20 @@ duplicate.forcing.year = function(transport.file,
   
   
 }
+
+# duplicate.forcing.year(
+#   roms.out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/',
+#   # file2copy = 'roms_output_transport_tohydro_1981.nc',
+#   # transport.file = paste0(roms.out.dir,'transport/roms_output_transport_tohydro_1981.nc'),
+#   transport.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/transport/roms_otuput_transport_tohydro_1981.nc',
+#   # statevar.file = paste0(roms.out.dir,'statevars/roms_output_statevars_tohydro_1981.nc'),
+#   statevar.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/statevars/roms_output_statevars_tohydro_1981.nc',
+#   # ltlvar.file = paste0(roms.out.dir,'ltl_statevars/roms_output_ltl_statevars_tohydro_1981.nc'),
+#   ltlvar.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/ltl_statevars/roms_output_ltl_statevars_tohydro_1981.nc',
+#   force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/',
+#   start.year = 1964,
+#   new.year = 1964,
+#   param.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/roms_cobalt_hydroconstruct_v2.prm',
+#   bat.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/hydroconstruct_run_template.bat'
+#   
+# )
