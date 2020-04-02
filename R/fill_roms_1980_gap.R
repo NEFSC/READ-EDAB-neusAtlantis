@@ -13,7 +13,7 @@ trans.81 = ncvar_get(transport.81.nc,'transport')[,,1:31]
 nc_close(transport.81.nc)
 
 t1 = seq.Date(as.Date('1980-01-01 00:00:00'),as.Date('1980-12-31 00:00:00'),'days')
-time.vals =difftime(as.POSIXct(t1,tz = 'UTC'),as.POSIXct('1964-01-01 00:00:00',tz = 'UTC'),units = 'secs')+86400
+time.vals =difftime(as.POSIXct(t1,tz = 'UTC'),as.POSIXct('1964-01-01 00:00:00',tz = 'UTC'),units = 'secs')
 
 timedim = ncdf4::ncdim_def('time','',1:length(time.vals),unlim = T,create_dimvar = F)
 leveldim = ncdf4::ncdim_def('level','',1:4,create_dimvar = F)
@@ -23,7 +23,7 @@ transport.80.nc = nc_open(paste0(roms.dir,'/transport/roms_output_transport_tohy
 facesdim = ncdf4::ncdim_def('faces','',1:151,create_dimvar = F)
 trans.80 = ncvar_get(transport.80.nc,'transport')
 new.trans = array(NA,dim=c(4,151,366))
-new.trans[,,32:366] = trans.80
+new.trans[,,32:366] = trans.80[,,32:366]
 new.trans[,,1:31] = trans.81
 var.trans = ncdf4::ncvar_def('transport','m3/s',list(leveldim,facesdim,timedim),0,prec='float')
 ncdf4::ncvar_put(transport.80.nc,var.trans,new.trans,count = c(4,151,366))
@@ -54,9 +54,9 @@ vflux.80 = ncvar_get(statevars.80.nc,'verticalflux')
 
 new.temp = new.salt = new.vflux = array(NA,dim=c(4,30,366))
 
-new.temp[,,32:366] = temp.80
-new.salt[,,32:366] = salt.80
-new.vflux[,,32:366] = vflux.80
+new.temp[,,32:366] = temp.80[,,32:366]
+new.salt[,,32:366] = salt.80[,,32:366]
+new.vflux[,,32:366] = vflux.80[,,32:366]
 
 new.temp[,,1:31] = temp.81
 new.salt[,,1:31] = salt.81
@@ -105,14 +105,14 @@ nbact.80 = ncvar_get(ltlvars.80.nc,'nbact')
 
 new.ndi = new.nlg = new.nlgz = new.nmdz = new.nsm = new.nsmz = new.silg = new.nbact = array(NA,dim=c(4,30,366))
 
-new.ndi[,,32:366] = ndi.80
-new.nlg[,,32:366] = nlg.80
-new.nlgz[,,32:366] = nlgz.80
-new.nmdz[,,32:366] = nmdz.80
-new.nsm[,,32:366] = nsm.80
-new.nsmz[,,32:366] = nsmz.80
-new.silg[,,32:366] = silg.80
-new.nbact[,,32:366] = nbact.80
+new.ndi[,,32:366] = ndi.80[,,32:366]
+new.nlg[,,32:366] = nlg.80[,,32:366]
+new.nlgz[,,32:366] = nlgz.80[,,32:366]
+new.nmdz[,,32:366] = nmdz.80[,,32:366]
+new.nsm[,,32:366] = nsm.80[,,32:366]
+new.nsmz[,,32:366] = nsmz.80[,,32:366]
+new.silg[,,32:366] = silg.80[,,32:366]
+new.nbact[,,32:366] = nbact.80[,,32:366]
 
 new.ndi[,,1:31] = ndi.81
 new.nlg[,,1:31] = nlg.81
