@@ -58,7 +58,7 @@ duplicate.forcing.year = function(transport.file,
   transport.nc = ncdf4::nc_open(new.trans.file,write = T)
   
   t1 = seq.Date(as.Date(paste0(new.year,'-01-01 00:00:00')),as.Date(paste0(new.year,'-12-31 00:00:00')),'days')
-  time.vals =difftime(as.POSIXct(t1,tz = 'UTC'),as.POSIXct(paste0(start.year,'-01-01 00:00:00'),tz = 'UTC'),units = 'secs')+86400
+  time.vals =difftime(as.POSIXct(t1,tz = 'UTC'),as.POSIXct(paste0(start.year,'-01-01 00:00:00'),tz = 'UTC'),units = 'secs')
   
   timedim = ncdf4::ncdim_def('time','',1:length(time.vals),unlim = T,create_dimvar = F)
   leveldim = ncdf4::ncdim_def('level','',1:4,create_dimvar = F)
