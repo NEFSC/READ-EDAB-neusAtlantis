@@ -20,14 +20,14 @@
 #' 
 #' Author: J. Caracappa
 
-model1.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Run_Files/atneus_v15_01272020/'
-model2.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output/'
-plot.raw = T
-plot.diff = T
-plot.out = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output/Figures/'
-table.out = T
-# groups = c('HER','CLA','LOB')
-groups = NULL
+# model1.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Run_Files/atneus_v15_01272020/'
+# model2.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output/'
+# plot.raw = T
+# plot.diff = T
+# plot.out = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output/Figures/'
+# table.out = T
+# # groups = c('HER','CLA','LOB')
+# groups = NULL
 
 comp.model.groups = function(model1.dir,model2.dir,plot.raw = T,
                              plot.diff = T, plot.out, table.out = F, groups = NULL){
@@ -145,10 +145,10 @@ comp.model.groups = function(model1.dir,model2.dir,plot.raw = T,
 #Testing
 comp.model.groups(
   model1.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Run_Files/atneus_v15_01272020/',
-  model2.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output/',
+  model2.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output_start1964/',
   plot.raw = T,
   plot.diff = T,
-  plot.out = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output/Figures/',
+  plot.out = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output_start1964/Figures/',
   table.out = T,
   # groups = c('HER','CLA','LOB')
   groups = NULL
