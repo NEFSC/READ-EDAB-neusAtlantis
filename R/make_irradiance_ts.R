@@ -36,3 +36,29 @@ lines(as.Date(irradiance.all.years$date),irradiance.all.years$irr.smoothspline,c
 
 solar.out = subset(irradiance.all.years,select = c(day.from.start,irr.smoothspline))
 write.table(solar.out,file = here::here('testing','tsfiles','ROMS_irradiance_smoothed.txt'),row.names = F,sep = ' ')
+
+
+#extend from 1964
+irradiance.all.years$real.time = as.Date(format(irradiance.all.years$date,format = '%Y-%m-%d %H:%M:%S'))
+irradiance.all.years$year = format(irradiance.all.years$real.time,'%Y')
+irradiance.all.years$month = format(irradiance.all.years$real.time,'%m')
+
+irr.1981 = subset(irradiance.all.years,year == 1981)
+jan.1981 = subset(irradiance.all.years,year == 1981 & month == '01')
+new.years = 1964:1979
+irr.ls = list()
+for(i in 1:length(new.years)){
+  dat = irr.1981
+  if(new.years[i]%%4 == 0){
+    dat = rbind(dat,dat[365,])
+  }  
+  irr.ls[[i]] = dat
+}
+irr.ls[[17]] = jan.1981
+irr.ls[[18]] = irradiance.all.years
+
+new.solar = dplyr::bind_rows(irr.ls) 
+new.solar$day.from.start = 1:nrow(new.solar)
+
+new.solar = subset(new.solar,select = c(day.from.start,irr.smoothspline))
+write.table(new.solar,file = here::here('testing','tsfiles','ROMS_irradiance_smoothed_start1964.txt'),row.names = F, sep = ' ')
