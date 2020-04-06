@@ -64,6 +64,8 @@ order:
 | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | [![](https://avatars1.githubusercontent.com/u/22455149?s=100&v=4)](https://github.com/andybeet) | [![](https://avatars1.githubusercontent.com/u/8172302?s=100&v=4)](https://github.com/sgaichas) | [![](https://avatars1.githubusercontent.com/u/62562436?s=100&v=4)](https://github.com/ScottLarge-NOAA) | [![](https://avatars1.githubusercontent.com/u/5578254?s=100&v=4)](https://github.com/slucey) | [![](https://avatars1.githubusercontent.com/u/10620840?s=100&v=4)](https://github.com/RMORSEcode) |
 
+#### Legal disclaimer
+
 *This repository is a scientific product and is not official
 communication of the National Oceanic and Atmospheric Administration, or
 the United States Department of Commerce. All NOAA GitHub project code

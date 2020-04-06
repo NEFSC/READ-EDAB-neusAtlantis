@@ -69,7 +69,7 @@ Select Git Bash from the dropdown under the `shell` header.
 
 * Change the default editor `VI` to [nano](https://www.oreilly.com/library/view/gitlab-cookbook/9781783986842/apas07.html)
 
-    >Type `git config --global core.editor "nano"` in the terminal
+    > Type `git config --global core.editor "nano"` in the terminal
 
 You should now have a good editor for custom git commands.
 
@@ -95,11 +95,11 @@ You now want to remove the commit for the large file and push all subsequent com
 
 2. This removes the commit AND THE LARGE FILE from your local repo. Be sure to make a copy of the large file!
 
-    > git rebase -i \< commit SHA \>
-    >
-    > Select a commit message before the one you want to remove
-    >
-    > The \<commit SHA\> can be found in the history in RStudios commit window.
+  > git rebase -i \< commit SHA \>
+  >
+  > Select a commit message before the one you want to remove
+  >
+  > The \<commit SHA\> can be found in the history in RStudios commit window.
     
 3. When the `nano` editor opens find the line that reflects the commit you want to delete (circled)
 
@@ -109,10 +109,11 @@ knitr::include_graphics(path="https://raw.githubusercontent.com/NOAA-EDAB/neus-a
 
 Follow these steps
 
-    > Delete the line
-    > Ctrl + X to exit
-    >
-    > Save \"modified buffer\" to default location
+  > Delete the line
+  >
+  > Ctrl + X to exit
+  >
+  > Save \"modified buffer\" to default location
 
 ### git reset
 
@@ -122,16 +123,49 @@ Scenario: You just made a local commit and either:
   
   Follow these steps
   
-    > Make sure you are in the correct branch
-    > Open the terminal window
-    >
-    > git reset --soft HEAD~1
+  > Make sure you are in the correct branch
+  >
+  > Open the terminal window
+  >
+  > git reset --soft HEAD~1
     
 If you are in Rstudio, you will see the files reappear in your git tab assigned with check marks (ie. in the state right before you previously committed them)
 
 ### git revert
 
 examples coming ...
+
+### git lfs (large file storage)
+
+Scenario: Large files (> 100MB) get rejected by GitHub when trying to push from a repo. 
+
+Download `git lfs` for [windows, mac, or linux](https://github.com/git-lfs/git-lfs/releases/tag/v2.10.0).
+This is a git extension called `lfs` which handles large files in need of tracking.
+
+To track a file(s) use one of the following:
+
+  > git lfs track "*.nc"
+  >
+  > git lfs track "images/*.nc"
+  >
+  > git lfs track "images"
+    
+To see which file types are being tracked by `lfs` and to list all files being tracked:
+
+  > git lfs track
+  > git lfs ls-files
+
+"Git LFS handles large files by storing references to the file in the repository, but not the actual file itself. To work around Git's architecture, Git LFS creates a pointer file which acts as a reference to the actual file (which is stored somewhere else). GitHub manages this pointer file in your repository. When you clone the repository down, GitHub uses the pointer file as a map to go and find the large file for you."
+
+The `.gitattributes` file is used to store information about the files being tracked by `lfs`. This file becomes part of the repo. Anyone who clones the repo is automatically configured to handle these large files.
+
+* There are a few [limitations](https://github.com/git-lfs/git-lfs/wiki/Limitations), the most important being a file size cap of 2GB 
+
+* Every account has 1 GB free. Or increments of 50GB for $5 a month. [Fee structure](https://help.github.com/en/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-git-large-file-storage)
+
+* Getting started [Video](https://www.youtube.com/watch?v=uLR1RNqJ1Mw)
+* Git lfs [site](https://git-lfs.github.com/)
+
 
 
 ## Testing environment
