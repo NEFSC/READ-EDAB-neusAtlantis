@@ -6,7 +6,8 @@ roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT
 
 
 ltl.files = list.files(roms.dir,'roms_output_ltl_statevars_tohydro*',full.names = T)
-
+.packages = c("devtools","tidyverse","stringi","RNetCDF", "data.table")
+lapply(.packages, require, character.only=TRUE)
 source(here::here('R','make_ltl_forcing.R'))
 
 for(i in 1:length(ltl.files)){
