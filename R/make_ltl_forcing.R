@@ -8,12 +8,12 @@
 #'Author: Hem Nalini Morzaria Luna, modified by J.Caracappa
 #'
 # 
-# roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/ltl_statevars/'
+roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/ltl_statevars/'
 # # roms.files <- list.files(path=roms.dir, pattern="^roms_output_ltl_statevars_tohydro_.*\\.nc$", recursive = TRUE, full.names = TRUE, include.dirs = TRUE)
-# roms.file = paste0(roms.dir,'roms_output_ltl_statevars_tohydro_1964.nc')
+roms.file = paste0(roms.dir,'roms_output_ltl_statevars_tohydro_1965.nc')
 
 make.ltl.force = function(roms.dir,roms.file){
-  
+
   source(here::here('R','make_hydrofile_functions.R'))
   source(here::here('R','ROMS_aggregated_convert_longform.R'))
   
@@ -62,7 +62,8 @@ make.ltl.force = function(roms.dir,roms.file){
   }
   avg.data$month = as.numeric(format(avg.data$time,format= '%m'))
   avg.data$year = as.numeric(format(avg.data$time,format = '%Y'))
-  avg.data$timesteps = as.numeric(avg.data$time - as.POSIXct('1964-01-01 00:00:00',tz= 'UTC'))
+  # avg.data$timesteps = as.numeric(avg.data$time - as.POSIXct('1964-01-01 00:00:00',tz= 'UTC'))
+  avg.data$timesteps = difftime(avg.data$time,as.Date('1964-01-01 00:00:00 UTC'),units = 'sec')
   avg.data = avg.data %>% select(year,month,time,timesteps,box,level,ndi,nlg,nlgz,nmdz,nsm,nsmz,silg,nbact) %>% arrange(year,month,time,box,level)
   
   avg.data = na.omit(avg.data)
@@ -170,22 +171,22 @@ make.ltl.force = function(roms.dir,roms.file){
     
     var.def.nc(nc.file, "t", "NC_DOUBLE", "t")
     var.def.nc(nc.file, 'ndi', 'NC_DOUBLE', c('z','b','t'))
-    var.def.nc(nc.file, 'nlg', 'NC_DOUBLE', c('z','b','t'))
-    var.def.nc(nc.file, 'nlgz', 'NC_DOUBLE', c('z','b','t'))
-    var.def.nc(nc.file, 'nmdz', 'NC_DOUBLE', c('z','b','t'))
-    var.def.nc(nc.file, 'nsm', 'NC_DOUBLE', c('z','b','t'))
-    var.def.nc(nc.file, 'nsmz', 'NC_DOUBLE', c('z','b','t'))
-    var.def.nc(nc.file, 'silg', 'NC_DOUBLE', c('z','b','t'))
-    var.def.nc(nc.file, 'nbact', 'NC_DOUBLE', c('z','b','t'))
+    var.def.nc(nc.file, 'Diatom_N', 'NC_DOUBLE', c('z','b','t'))
+    var.def.nc(nc.file, 'Carniv_Zoo_N', 'NC_DOUBLE', c('z','b','t'))
+    var.def.nc(nc.file, 'Zoo_N', 'NC_DOUBLE', c('z','b','t'))
+    var.def.nc(nc.file, 'PicoPhytopl_N', 'NC_DOUBLE', c('z','b','t'))
+    var.def.nc(nc.file, 'MicroZoo_N', 'NC_DOUBLE', c('z','b','t'))
+    var.def.nc(nc.file, 'Diatom_S', 'NC_DOUBLE', c('z','b','t'))
+    var.def.nc(nc.file, 'Pelag_Bact_N', 'NC_DOUBLE', c('z','b','t'))
     
     att.put.nc(nc.file, 'ndi', "_FillValue", "NC_DOUBLE", 0)
-    att.put.nc(nc.file, 'nlg', "_FillValue", "NC_DOUBLE", 0)
-    att.put.nc(nc.file, 'nlgz', "_FillValue", "NC_DOUBLE", 0)
-    att.put.nc(nc.file, 'nmdz', "_FillValue", "NC_DOUBLE", 0)
-    att.put.nc(nc.file, 'nsm', "_FillValue", "NC_DOUBLE", 0)
-    att.put.nc(nc.file, 'nsmz', "_FillValue", "NC_DOUBLE", 0)
-    att.put.nc(nc.file, 'silg', "_FillValue", "NC_DOUBLE", 0)
-    att.put.nc(nc.file, 'nbact', "_FillValue", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'Diatom_N', "_FillValue", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'Carniv_Zoo_N', "_FillValue", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'Zoo_N', "_FillValue", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'PicoPhytopl_N', "_FillValue", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'MicroZoo_N', "_FillValue", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'Diatom_S', "_FillValue", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'Pelag_Bact_N', "_FillValue", "NC_DOUBLE", 0)
     
     att.put.nc(nc.file, "t", "units", "NC_CHAR", t.units)
     att.put.nc(nc.file, "t", "dt", "NC_DOUBLE", seconds.timestep)
@@ -195,13 +196,13 @@ make.ltl.force = function(roms.dir,roms.file){
     
     var.put.nc(nc.file, "t", time.array)
     var.put.nc(nc.file,'ndi',ndi.result.array)
-    var.put.nc(nc.file,'nlg',nlg.result.array)
-    var.put.nc(nc.file,'nlgz',nlgz.result.array)
-    var.put.nc(nc.file,'nmdz',nmdz.result.array)
-    var.put.nc(nc.file,'nsm',nsm.result.array)
-    var.put.nc(nc.file,'nsmz',nsmz.result.array)
-    var.put.nc(nc.file,'silg',silg.result.array)
-    var.put.nc(nc.file,'nbact',nbact.result.array)
+    var.put.nc(nc.file,'Diatom_N',nlg.result.array)
+    var.put.nc(nc.file,'Carniv_Zoo_N',nlgz.result.array)
+    var.put.nc(nc.file,'Zoo_N',nmdz.result.array)
+    var.put.nc(nc.file,'PicoPhytopl_N',nsm.result.array)
+    var.put.nc(nc.file,'MicroZoo_N',nsmz.result.array)
+    var.put.nc(nc.file,'Diatom_S',silg.result.array)
+    var.put.nc(nc.file,'Pelag_Bact_N',nbact.result.array)
     
     close.nc(nc.file)
     
@@ -209,7 +210,7 @@ make.ltl.force = function(roms.dir,roms.file){
     
     
   }
-  make_hydro(nc.name=paste0(roms.dir,"test_roms_",file.year,".nc"), t.units, seconds.timestep, this.title, this.geometry, time.array, cdf.name = paste0(roms.dir,"test_roms_",file.year,".cdf"))
+  make_hydro(nc.name=paste0(roms.dir,"roms_ltl_force_",file.year,".nc"), t.units, seconds.timestep, this.title, this.geometry, time.array, cdf.name = paste0(roms.dir,"test_roms_",file.year,".cdf"))
   
   
 }
