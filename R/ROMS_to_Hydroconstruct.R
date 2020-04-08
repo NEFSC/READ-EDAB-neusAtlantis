@@ -883,7 +883,7 @@ Roms2Hydro = function(roms.dir,roms.prefix,out.dir,name.out){
   var.nmdz=ncvar_def('nmdz','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Medium Zooplankton Nitrogen',prec='float')
   var.nsm=ncvar_def('nsm','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Small Phytoplankton Nitrogen',prec='float')
   var.nsmz=ncvar_def('nsmz','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Small Zooplankton Nitrogen',prec='float')
-  var.silg=ncvar_def('silg','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phytoplankton Silicon',prec='float')
+  var.silg=ncvar_def('silg','mg Si / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phytoplankton Silicon',prec='float')
   var.nbact=ncvar_def('nbact','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Bacterial Nitrogen',prec='float')
 
   nc_varfile=nc_create(filename,list(var.time,var.box, var.lev,
