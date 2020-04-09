@@ -16,11 +16,13 @@
 #' 
 #' Author: J. Caracappa
 
-force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/ltl_statevars/'
-file.pattern = 'roms_ltl_force_*'
-plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Forcing_Climatology/'
-time.group = 'ym'
-plot.region = T
+# force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/ltl_statevars/'
+# file.pattern = 'roms_ltl_force_*'
+# force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/'
+# file.pattern = '^salt.*\\.nc$'
+# plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Forcing_Climatology/'
+# time.group = 'ym'
+# plot.region = T
 
 forcing.climatology = function(force.dir, file.pattern, plot.dir, time.group = 'ym', plot.region = NULL){
   
@@ -28,7 +30,8 @@ forcing.climatology = function(force.dir, file.pattern, plot.dir, time.group = '
   
   source(here::here('R','forcing_longform.R'))
   file.names = list.files(force.dir,file.pattern)
-  years = as.numeric(sort(gsub(".*_(\\d{4}).+","\\1",file.names)))
+  years = as.numeric(sort(gsub(".*(\\d{4}).+","\\1",file.names)))
+  file.prefix = strsplit(file.names[1],paste0('[',years[1],']+'))[[1]][1]
   
   dumm.nc = ncdf4::nc_open(paste0(force.dir,file.names[1]))
   var.names = names(dumm.nc$var)
@@ -40,35 +43,36 @@ forcing.climatology = function(force.dir, file.pattern, plot.dir, time.group = '
     print(f)
   }
   data.full = dplyr::bind_rows(data.ls)
-  save(data.full, file = paste0(plot.dir,'Forcing_Data_Flat.R'))
-  load(paste0(plot.dir,'Forcing_Data_Flat.R'))
+  save(data.full, file = paste0(plot.dir,file.prefix,'Forcing_Data_Flat.R'))
+  # load(paste0(plot.dir,file.prefix,'Forcing_Data_Flat.R'))
   
   if(plot.region){
-    data.full = data.full %>% filter(box %in% 1:22)
+    data.full = data.full %>% dplyr::filter(box %in% 1:22)
     data.full$region = 'GM'
     data.full$region[which(data.full$box %in% 1:7)]='MAB'
   }
   
-  data.full$month = as.numeric(data.full$month)
-  data.full$year = as.numeric(data.full$year)
+  # data.full$month = as.numeric(data.full$month)
+  # data.full$year = as.numeric(data.full$year)
   
   group.m = function(data){
+    data$month = as.numeric(data$month)
     if(plot.region){
-      data.month = data.full %>% group_by(var.name,month,region,alt.level) %>%
+      data.month = data.full %>% dplyr::group_by(var.name,month,region,alt.level) %>%
         dplyr::summarize(value.mu = mean(value),value.se = sd(value)/sqrt(length(value)))
     } else{
-      data.month = data.full %>% group_by(var.name,month,alt.level) %>%
+      data.month = data.full %>% dplyr::group_by(var.name,month,alt.level) %>%
         dplyr::summarize(value.mu = mean(value),value.se = sd(value)/sqrt(length(value)))
     }
     return(data.month)
   }
   group.ym = function(data){
     if(plot.region){
-      data.year.month = data.full %>% group_by(var.name,year,month,region,alt.level) %>%
+      data.year.month = data.full %>% dplyr::group_by(var.name,year,month,region,alt.level) %>%
         dplyr::summarize(value.mu = mean(value),value.se = sd(value)/sqrt(length(value))) %>%
         tidyr::unite('year.month',year:month,remove=F)
     } else{
-      data.year.month = data.full %>% group_by(var.name,year,month,alt.level) %>%
+      data.year.month = data.full %>% dplyr::group_by(var.name,year,month,alt.level) %>%
         dplyr::summarize(value.mu = mean(value),value.se = sd(value)/sqrt(length(value))) %>%
         tidyr::unite('year.month',year:month,remove=F)
     }
@@ -80,7 +84,7 @@ forcing.climatology = function(force.dir, file.pattern, plot.dir, time.group = '
   }else if(time.group == 'ym'){
     data.group = group.ym(data.full)
   }else{
-    stop('Select a "m" or "my" for grouping code')
+    stop('Select a "m" or "ym" for grouping code')
   }
   
   plot.m = function(data,variable){
@@ -105,7 +109,8 @@ forcing.climatology = function(force.dir, file.pattern, plot.dir, time.group = '
   plot.ym = function(data,variable){
     data = data %>% dplyr::filter(var.name == variable)
     ym.labels = unique(data$year.month)
-    data$year.month = as.numeric(as.factor(data$year.month))
+    # data$year.month = as.numeric(as.factor(data$year.month))
+    data$year.month = as.Date(format(paste0(data$year.month,'_01'),format = '%Y_%m_$d' ), format = '%Y_%m_%d')
     if(plot.region){
       g= ggplot2::ggplot(data, ggplot2::aes(x = year.month, y = value.mu,color = region,
                                             fill = region,ymin = value.mu - value.se, ymax = value.mu+value.se))+
@@ -116,15 +121,18 @@ forcing.climatology = function(force.dir, file.pattern, plot.dir, time.group = '
       g = ggplot2::ggplot(data, ggplot2::aes(x = year.month, y = value.mu,ymin = value.mu - value.se, ymax = value.mu+value.se))
     }
     g=g+ggplot2::geom_line()+
+      ggplot2::geom_vline(xintercept = as.Date(paste0(years,'-01-01'),format = '%Y-%m-%d'),size = 0.25,lty = 3)+
       ggplot2::facet_grid(alt.level~.,labeller = ggplot2::label_both)+
       ggplot2::geom_ribbon(alpha=0.5)+
-      scale_x_continuous(breaks = seq(1,max(data$year.month),1),labels = ym.labels)+
+      # ggplot2::scale_x_continuous(breaks = seq(1,max(data$year.month),1),labels = ym.labels)+
       ggplot2::ylab(variable)+
-      ggplot2::xlab('Time')
+      ggplot2::xlab('Time')+
+      ggplot2::theme_minimal()
+      
     return(g)
   }
   
-  png(file = paste0(plot.dir,''))
+  pdf(file = paste0(plot.dir,file.prefix,'Climatology_',time.group,'.pdf'),width =14,onefile = T)
   for(v in 1:length(var.names)){
     
     if(time.group == 'm'){
@@ -132,9 +140,28 @@ forcing.climatology = function(force.dir, file.pattern, plot.dir, time.group = '
     }else if(time.group == 'ym'){
       g.var = plot.ym(data.group, var.names[v])
     }else{
-      stop('Select a "m" or "my" for grouping code')
+      stop('Select a "m" or "ym" for grouping code')
     }
+    g.var = g.var + ggplot2::ggtitle(var.names[v])
     print(var.names[v])
+    gridExtra::grid.arrange(g.var)
   }
+  dev.off()
   
 }
+
+# forcing.climatology(
+#   force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/',
+#   file.pattern = '^salt.*\\.nc$',
+#   plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Forcing_Climatology/',
+#   time.group = 'ym',
+#   plot.region = T
+# )
+
+forcing.climatology(
+  force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/ltl_statevars/',
+  file.pattern = 'roms_ltl_force_*',
+  plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Forcing_Climatology/',
+  time.group = 'ym',
+  plot.region = T
+)
