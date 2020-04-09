@@ -3,8 +3,59 @@
 # Hydrodynamic files - new hydro from roms doppio
 # this is created from 2008-2010 daily files
 
-nhdfiles 1
-hd0.name \tsfiles\flowOutAll_fix_20180402.nc
+nhdfiles 51
+#hd0.name \tsfiles\flowOutAll_fix_20180402.nc
+hd0.name \tsfiles\Annual_Files\flow_1964.nc
+hd1.name \tsfiles\Annual_Files\flow_1965.nc
+hd2.name \tsfiles\Annual_Files\flow_1966.nc
+hd3.name \tsfiles\Annual_Files\flow_1967.nc
+hd4.name \tsfiles\Annual_Files\flow_1968.nc
+hd5.name \tsfiles\Annual_Files\flow_1969.nc
+hd6.name \tsfiles\Annual_Files\flow_1970.nc
+hd7.name \tsfiles\Annual_Files\flow_1971.nc
+hd8.name \tsfiles\Annual_Files\flow_1972.nc
+hd9.name \tsfiles\Annual_Files\flow_1973.nc
+hd10.name \tsfiles\Annual_Files\flow_1974.nc
+hd11.name \tsfiles\Annual_Files\flow_1975.nc
+hd12.name \tsfiles\Annual_Files\flow_1976.nc
+hd13.name \tsfiles\Annual_Files\flow_1977.nc
+hd14.name \tsfiles\Annual_Files\flow_1978.nc
+hd15.name \tsfiles\Annual_Files\flow_1979.nc
+hd16.name \tsfiles\Annual_Files\flow_1980.nc
+hd17.name \tsfiles\Annual_Files\flow_1981.nc
+hd18.name \tsfiles\Annual_Files\flow_1982.nc
+hd19.name \tsfiles\Annual_Files\flow_1983.nc
+hd20.name \tsfiles\Annual_Files\flow_1984.nc
+hd21.name \tsfiles\Annual_Files\flow_1985.nc
+hd22.name \tsfiles\Annual_Files\flow_1986.nc
+hd23.name \tsfiles\Annual_Files\flow_1987.nc
+hd24.name \tsfiles\Annual_Files\flow_1988.nc
+hd25.name \tsfiles\Annual_Files\flow_1989.nc
+hd26.name \tsfiles\Annual_Files\flow_1990.nc
+hd27.name \tsfiles\Annual_Files\flow_1991.nc
+hd28.name \tsfiles\Annual_Files\flow_1992.nc
+hd29.name \tsfiles\Annual_Files\flow_1993.nc
+hd30.name \tsfiles\Annual_Files\flow_1994.nc
+hd31.name \tsfiles\Annual_Files\flow_1995.nc
+hd32.name \tsfiles\Annual_Files\flow_1996.nc
+hd33.name \tsfiles\Annual_Files\flow_1997.nc
+hd34.name \tsfiles\Annual_Files\flow_1998.nc
+hd35.name \tsfiles\Annual_Files\flow_1999.nc
+hd36.name \tsfiles\Annual_Files\flow_2000.nc
+hd37.name \tsfiles\Annual_Files\flow_2001.nc
+hd38.name \tsfiles\Annual_Files\flow_2002.nc
+hd39.name \tsfiles\Annual_Files\flow_2003.nc
+hd40.name \tsfiles\Annual_Files\flow_2004.nc
+hd41.name \tsfiles\Annual_Files\flow_2005.nc
+hd42.name \tsfiles\Annual_Files\flow_2006.nc
+hd43.name \tsfiles\Annual_Files\flow_2007.nc
+hd44.name \tsfiles\Annual_Files\flow_2008.nc
+hd45.name \tsfiles\Annual_Files\flow_2009.nc
+hd46.name \tsfiles\Annual_Files\flow_2010.nc
+hd47.name \tsfiles\Annual_Files\flow_2011.nc
+hd48.name \tsfiles\Annual_Files\flow_2012.nc
+hd49.name \tsfiles\Annual_Files\flow_2013.nc
+hd50.name \tsfiles\Annual_Files\flow_2014.nc
 
 # Bottom stress
 
@@ -81,19 +132,125 @@ pss0.rewind 0
 # Rain and evaporation
 
 # Solar time series data file
-Solar_radiation \tsfiles\RMirradiance_smooth_3yr.ts
-Solar_radiation_rewind 1
+Solar_radiation \tsfiles\ROMS_irradiance_smoothed_start1964.ts
+Solar_radiation_rewind 0
 
 # Temperature time series data file
 use_tempfiles 1
-ntempfiles 1
-Temperature0.name \tsfiles\tempOutAll_fix_20180402.nc
+ntempfiles 51
+#Temperature0.name \tsfiles\tempOutAll_fix_20180402.nc
+Temperature0.name \tsfiles\Annual_Files\temp1964.nc
+Temperature1.name \tsfiles\Annual_Files\temp1965.nc
+Temperature2.name \tsfiles\Annual_Files\temp1966.nc
+Temperature3.name \tsfiles\Annual_Files\temp1967.nc
+Temperature4.name \tsfiles\Annual_Files\temp1968.nc
+Temperature5.name \tsfiles\Annual_Files\temp1969.nc
+Temperature6.name \tsfiles\Annual_Files\temp1970.nc
+Temperature7.name \tsfiles\Annual_Files\temp1971.nc
+Temperature8.name \tsfiles\Annual_Files\temp1972.nc
+Temperature9.name \tsfiles\Annual_Files\temp1973.nc
+Temperature10.name \tsfiles\Annual_Files\temp1974.nc
+Temperature11.name \tsfiles\Annual_Files\temp1975.nc
+Temperature12.name \tsfiles\Annual_Files\temp1976.nc
+Temperature13.name \tsfiles\Annual_Files\temp1977.nc
+Temperature14.name \tsfiles\Annual_Files\temp1978.nc
+Temperature15.name \tsfiles\Annual_Files\temp1979.nc
+Temperature16.name \tsfiles\Annual_Files\temp1980.nc
+Temperature17.name \tsfiles\Annual_Files\temp1981.nc
+Temperature18.name \tsfiles\Annual_Files\temp1982.nc
+Temperature19.name \tsfiles\Annual_Files\temp1983.nc
+Temperature20.name \tsfiles\Annual_Files\temp1984.nc
+Temperature21.name \tsfiles\Annual_Files\temp1985.nc
+Temperature22.name \tsfiles\Annual_Files\temp1986.nc
+Temperature23.name \tsfiles\Annual_Files\temp1987.nc
+Temperature24.name \tsfiles\Annual_Files\temp1988.nc
+Temperature25.name \tsfiles\Annual_Files\temp1989.nc
+Temperature26.name \tsfiles\Annual_Files\temp1990.nc
+Temperature27.name \tsfiles\Annual_Files\temp1991.nc
+Temperature28.name \tsfiles\Annual_Files\temp1992.nc
+Temperature29.name \tsfiles\Annual_Files\temp1993.nc
+Temperature30.name \tsfiles\Annual_Files\temp1994.nc
+Temperature31.name \tsfiles\Annual_Files\temp1995.nc
+Temperature32.name \tsfiles\Annual_Files\temp1996.nc
+Temperature33.name \tsfiles\Annual_Files\temp1997.nc
+Temperature34.name \tsfiles\Annual_Files\temp1998.nc
+Temperature35.name \tsfiles\Annual_Files\temp1999.nc
+Temperature36.name \tsfiles\Annual_Files\temp2000.nc
+Temperature37.name \tsfiles\Annual_Files\temp2001.nc
+Temperature38.name \tsfiles\Annual_Files\temp2002.nc
+Temperature39.name \tsfiles\Annual_Files\temp2003.nc
+Temperature40.name \tsfiles\Annual_Files\temp2004.nc
+Temperature41.name \tsfiles\Annual_Files\temp2005.nc
+Temperature42.name \tsfiles\Annual_Files\temp2006.nc
+Temperature43.name \tsfiles\Annual_Files\temp2007.nc
+Temperature44.name \tsfiles\Annual_Files\temp2008.nc
+Temperature45.name \tsfiles\Annual_Files\temp2009.nc
+Temperature46.name \tsfiles\Annual_Files\temp2010.nc
+Temperature47.name \tsfiles\Annual_Files\temp2011.nc
+Temperature48.name \tsfiles\Annual_Files\temp2012.nc
+Temperature49.name \tsfiles\Annual_Files\temp2013.nc
+Temperature50.name \tsfiles\Annual_Files\temp2014.nc
+
+
 temp_rewind 1
 
 # Salinity time series data file
 use_saltfiles 1
-nsaltfiles 1
-Salinity0.name \tsfiles\saltOutAll_fix_20180402.nc
+nsaltfiles 51
+#Salinity0.name \tsfiles\saltOutAll_fix_20180402.nc
+Salinity0.name \tsfiles\Annual_Files\salt_1964.nc
+Salinity1.name \tsfiles\Annual_Files\salt_1965.nc
+Salinity2.name \tsfiles\Annual_Files\salt_1966.nc
+Salinity3.name \tsfiles\Annual_Files\salt_1967.nc
+Salinity4.name \tsfiles\Annual_Files\salt_1968.nc
+Salinity5.name \tsfiles\Annual_Files\salt_1969.nc
+Salinity6.name \tsfiles\Annual_Files\salt_1970.nc
+Salinity7.name \tsfiles\Annual_Files\salt_1971.nc
+Salinity8.name \tsfiles\Annual_Files\salt_1972.nc
+Salinity9.name \tsfiles\Annual_Files\salt_1973.nc
+Salinity10.name \tsfiles\Annual_Files\salt_1974.nc
+Salinity11.name \tsfiles\Annual_Files\salt_1975.nc
+Salinity12.name \tsfiles\Annual_Files\salt_1976.nc
+Salinity13.name \tsfiles\Annual_Files\salt_1977.nc
+Salinity14.name \tsfiles\Annual_Files\salt_1978.nc
+Salinity15.name \tsfiles\Annual_Files\salt_1979.nc
+Salinity16.name \tsfiles\Annual_Files\salt_1980.nc
+Salinity17.name \tsfiles\Annual_Files\salt_1981.nc
+Salinity18.name \tsfiles\Annual_Files\salt_1982.nc
+Salinity19.name \tsfiles\Annual_Files\salt_1983.nc
+Salinity20.name \tsfiles\Annual_Files\salt_1984.nc
+Salinity21.name \tsfiles\Annual_Files\salt_1985.nc
+Salinity22.name \tsfiles\Annual_Files\salt_1986.nc
+Salinity23.name \tsfiles\Annual_Files\salt_1987.nc
+Salinity24.name \tsfiles\Annual_Files\salt_1988.nc
+Salinity25.name \tsfiles\Annual_Files\salt_1989.nc
+Salinity26.name \tsfiles\Annual_Files\salt_1990.nc
+Salinity27.name \tsfiles\Annual_Files\salt_1991.nc
+Salinity28.name \tsfiles\Annual_Files\salt_1992.nc
+Salinity29.name \tsfiles\Annual_Files\salt_1993.nc
+Salinity30.name \tsfiles\Annual_Files\salt_1994.nc
+Salinity31.name \tsfiles\Annual_Files\salt_1995.nc
+Salinity32.name \tsfiles\Annual_Files\salt_1996.nc
+Salinity33.name \tsfiles\Annual_Files\salt_1997.nc
+Salinity34.name \tsfiles\Annual_Files\salt_1998.nc
+Salinity35.name \tsfiles\Annual_Files\salt_1999.nc
+Salinity36.name \tsfiles\Annual_Files\salt_2000.nc
+Salinity37.name \tsfiles\Annual_Files\salt_2001.nc
+Salinity38.name \tsfiles\Annual_Files\salt_2002.nc
+Salinity39.name \tsfiles\Annual_Files\salt_2003.nc
+Salinity40.name \tsfiles\Annual_Files\salt_2004.nc
+Salinity41.name \tsfiles\Annual_Files\salt_2005.nc
+Salinity42.name \tsfiles\Annual_Files\salt_2006.nc
+Salinity43.name \tsfiles\Annual_Files\salt_2007.nc
+Salinity44.name \tsfiles\Annual_Files\salt_2008.nc
+Salinity45.name \tsfiles\Annual_Files\salt_2009.nc
+Salinity46.name \tsfiles\Annual_Files\salt_2010.nc
+Salinity47.name \tsfiles\Annual_Files\salt_2011.nc
+Salinity48.name \tsfiles\Annual_Files\salt_2012.nc
+Salinity49.name \tsfiles\Annual_Files\salt_2013.nc
+Salinity50.name \tsfiles\Annual_Files\salt_2014.nc
+
+
 salt_rewind 1
 
 ts_on_hydro_time 1

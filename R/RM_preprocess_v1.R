@@ -5,21 +5,23 @@ library("dplyr")
 library("tidyr")
 
 #prefix for output file names
-runfile='neus_output'
+runfile='neus_output_test'
 # runfile = 'atneus_v15_01272020'
 
 git.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/'
 #Input file directory where (PRM, bgm, group data) are saved
-d1=paste0(git.dir,'currentVersion')
+d1=paste0(git.dir,'testing')
 # d1 = 'C:/Users/joseph.caracappa/Documents/Branch Backup/neus-atlantis'
 #Output file directory (.nc and .txt files)
-d2=paste0(git.dir,'currentVersion/Output')
+# d2=paste0(git.dir,'currentVersion/Output')
+d2 = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output/'
 # d2 = 'C:/Users/joseph.caracappa/Documents/Atlantis/Run_Files/atneus_v15_01272020/'
 #R scripts directory (where post-processing code is)
 d3 = paste0(git.dir,'R/')
 # d3 = 'C:/Users/joseph.caracappa/Documents/Branch Bacup/neus-atlantis/R'
 #Location of Diagnostic Figures/tables
-d4 = paste0(git.dir,'currentVersion/Diagnostics/')
+d4 = paste0(d2,'Figures/')
+# d4 = paste()
 
   
 #choose plots: spatial plots visualize group biomass across, time, boxes, and layers
@@ -37,7 +39,7 @@ ll=4 # choose layer (4 is bottom for NEUS)
 include_catch=T
 
 #check initial conditions scaling of biomass?
-check_scale_init=T
+check_scale_init=F
 
 setwd(d2)
 #preprocessing code: creates runfile_prepro.rdata

@@ -35,7 +35,7 @@ catchtotfile <- file.path(d2, paste(ncbase, 'TOTCATCH.nc', sep=""))
 xml.files=list.files(path=d2, pattern='.xml')
 xml.str=strsplit(xml.files, '.xml')
 for (i in 1:length(xml.files)){
-  x='run.xml' %in% strsplit(xml.files[i], split='_')[[1]]
+  x='run' %in% strsplit(xml.files[i], split='_')[[1]]
   # x='run' %in% strsplit(xml.files[i], split='_')[[1]]
   if (x==T){
     break
@@ -44,7 +44,7 @@ for (i in 1:length(xml.files)){
 prm_run <- file.path(d1, paste(xml.str[[i]], '.prm',sep=''))
 prm_run #make sure
 for (i in 1:length(xml.files)){
-  x='biology.xml' %in% strsplit(xml.files[i], split='_')[[1]]
+  x='biology' %in% strsplit(xml.files[i], split='_')[[1]]
   # x='biol' %in% strsplit(xml.files[i], split='_')[[1]]
   if (x==T){
     break
@@ -53,7 +53,7 @@ for (i in 1:length(xml.files)){
 prm_biol <- file.path(d1, paste(xml.str[[i]], '.prm',sep=''))
 prm_biol #make sure
 for (i in 1:length(xml.files)){
-  x='groups.xml' %in% strsplit(xml.files[i], split='_')[[1]]
+  x='groups' %in% strsplit(xml.files[i], split='_')[[1]]
   # x='Neusgroups' %in% strsplit(xml.files[i], split='_')[[1]]
   if (x==T){
     break
