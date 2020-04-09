@@ -8,9 +8,9 @@
 #'Author: Hem Nalini Morzaria Luna, modified by J.Caracappa
 #'
 # 
-roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/ltl_statevars/'
-# # roms.files <- list.files(path=roms.dir, pattern="^roms_output_ltl_statevars_tohydro_.*\\.nc$", recursive = TRUE, full.names = TRUE, include.dirs = TRUE)
-roms.file = paste0(roms.dir,'roms_output_ltl_statevars_tohydro_1965.nc')
+# roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/ltl_statevars/'
+# # # roms.files <- list.files(path=roms.dir, pattern="^roms_output_ltl_statevars_tohydro_.*\\.nc$", recursive = TRUE, full.names = TRUE, include.dirs = TRUE)
+# roms.file = paste0(roms.dir,'roms_output_ltl_statevars_tohydro_1965.nc')
 
 make.ltl.force = function(roms.dir,roms.file){
 
