@@ -2,7 +2,8 @@
 
 start.year = 1964
 
-years = seq(start.year,1979)
+# years = seq(start.year,1980)
+years = 1980
 
 source('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/R/make_spinup_forcing.R')
 
