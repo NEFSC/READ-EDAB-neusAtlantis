@@ -1,0 +1,64 @@
+#Script to fix the ltl variable units
+library(RNetCDF)
+roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/ltl_statevars'
+
+ltl.files =  list.files(roms.dir,pattern = '^roms_ltl_force.*\\.nc$',full.names = T)
+
+for(i in 1:length(ltl.files)){
+  
+  nc.file = open.nc(ltl.files[i],write = T)
+  
+  #_FillValue
+  att.put.nc(nc.file, 'ndi', "_FillValue", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'Diatom_N', "_FillValue", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'Carniv_Zoo_N', "_FillValue", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'Zoo_N', "_FillValue", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'PicoPhytopl_N', "_FillValue", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'MicroZoo_N', "_FillValue", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'Diatom_S', "_FillValue", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'Pelag_Bact_N', "_FillValue", "NC_DOUBLE", 0.2)
+  
+  #missing_value
+  att.put.nc(nc.file, 'ndi', "missing_value", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'Diatom_N', "missing_value", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'Carniv_Zoo_N', "missing_value", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'Zoo_N', "missing_value", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'PicoPhytopl_N', "missing_value", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'MicroZoo_N', "missing_value", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'Diatom_S', "missing_value", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'Pelag_Bact_N', "missing_value", "NC_DOUBLE", 0.2)
+  
+  #valid_min
+  att.put.nc(nc.file, 'ndi', "valid_min", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'Diatom_N', "valid_min", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'Carniv_Zoo_N', "valid_min", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'Zoo_N', "valid_min", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'PicoPhytopl_N', "valid_min", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'MicroZoo_N', "valid_min", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'Diatom_S', "valid_min", "NC_DOUBLE", 0)
+  att.put.nc(nc.file, 'Pelag_Bact_N', "valid_min", "NC_DOUBLE", 0)
+  
+  #valid_max
+  att.put.nc(nc.file, 'ndi', "valid_max", "NC_DOUBLE", 999)
+  att.put.nc(nc.file, 'Diatom_N', "valid_max", "NC_DOUBLE", 999)
+  att.put.nc(nc.file, 'Carniv_Zoo_N', "valid_max", "NC_DOUBLE", 999)
+  att.put.nc(nc.file, 'Zoo_N', "valid_max", "NC_DOUBLE", 999)
+  att.put.nc(nc.file, 'PicoPhytopl_N', "valid_max", "NC_DOUBLE", 999)
+  att.put.nc(nc.file, 'MicroZoo_N', "valid_max", "NC_DOUBLE", 999)
+  att.put.nc(nc.file, 'Diatom_S', "valid_max", "NC_DOUBLE", 999)
+  att.put.nc(nc.file, 'Pelag_Bact_N', "valid_max", "NC_DOUBLE", 999)
+  
+  #units
+  att.put.nc(nc.file, 'ndi', "units", "NC_CHAR", "mg N m-3")
+  att.put.nc(nc.file, 'Diatom_N', "units", "NC_CHAR", "mg N m-3")
+  att.put.nc(nc.file, 'Carniv_Zoo_N', "units", "NC_CHAR", "mg N m-3")
+  att.put.nc(nc.file, 'Zoo_N', "units", "NC_CHAR", "mg N m-3")
+  att.put.nc(nc.file, 'PicoPhytopl_N', "units", "NC_CHAR", "mg N m-3")
+  att.put.nc(nc.file, 'MicroZoo_N', "units", "NC_CHAR", "mg N m-3")
+  att.put.nc(nc.file, 'Diatom_S', "units", "NC_CHAR", "mg Si m-3")
+  att.put.nc(nc.file, 'Pelag_Bact_N', "units", "NC_CHAR", "mg N m-3")
+  
+  
+  close.nc(nc.file)
+  print(i)
+}
