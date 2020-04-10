@@ -188,6 +188,15 @@ make.ltl.force = function(roms.dir,roms.file){
     att.put.nc(nc.file, 'Diatom_S', "_FillValue", "NC_DOUBLE", 0)
     att.put.nc(nc.file, 'Pelag_Bact_N', "_FillValue", "NC_DOUBLE", 0)
     
+    att.put.nc(nc.file, 'ndi', "units", "NC_CHAR", "mg N m-3")
+    att.put.nc(nc.file, 'Diatom_N', "units", "NC_CHAR", "mg N m-3")
+    att.put.nc(nc.file, 'Carniv_Zoo_N', "units", "NC_CHAR", "mg N m-3")
+    att.put.nc(nc.file, 'Zoo_N', "units", "NC_CHAR", "mg N m-3")
+    att.put.nc(nc.file, 'PicoPhytopl_N', "units", "NC_CHAR", "mg N m-3")
+    att.put.nc(nc.file, 'MicroZoo_N', "units", "NC_CHAR", "mg N m-3")
+    att.put.nc(nc.file, 'Diatom_S', "units", "NC_CHAR", "mg Si m-3")
+    att.put.nc(nc.file, 'Pelag_Bact_N', "units", "NC_CHAR", "mg N m-3")
+    
     att.put.nc(nc.file, "t", "units", "NC_CHAR", t.units)
     att.put.nc(nc.file, "t", "dt", "NC_DOUBLE", seconds.timestep)
     att.put.nc(nc.file, "NC_GLOBAL", "title", "NC_CHAR", this.title)
