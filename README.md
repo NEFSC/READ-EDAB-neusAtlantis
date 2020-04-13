@@ -7,10 +7,7 @@
 
 <!-- badges: end -->
 
-Atlantis Neus file repository v1.5
-
-Physics based on Doppio Roms model hindcast 2008-2010 downscaled to NEUS
-boxes.
+Atlantis is a series of submodels (biological, geophysical, fishing, assessment, and management) and as a whole simulates a Management Strategy Evaluation (MSE) procedure which allows for qualitative comparisons of different management choices. We have parameterized Atlantis for the Northeast United States Continental Shelf (NEUS), including the major functional groups from an ecosystem perspective. We have also parameterized and simulated the physiographic dynamics of the ecosystem, as well as the most important fleets. Our goal was to recreate, at least in approximate terms, the biomass, catch, and effort trends in the NEUS from 1964 to the mid 2000s.
 
 ### The spatial domain
 
