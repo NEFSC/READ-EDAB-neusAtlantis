@@ -7,12 +7,21 @@
 
 <!-- badges: end -->
 
-Atlantis is a series of submodels (biological, geophysical, fishing, assessment, and management) and as a whole simulates a Management Strategy Evaluation (MSE) procedure which allows for qualitative comparisons of different management choices. We have parameterized Atlantis for the Northeast United States Continental Shelf (NEUS), including the major functional groups from an ecosystem perspective. We have also parameterized and simulated the physiographic dynamics of the ecosystem, as well as the most important fleets. Our goal was to recreate, at least in approximate terms, the biomass, catch, and effort trends in the NEUS from 1964 to the mid 2000s.
+Atlantis is a series of submodels (biological, geophysical, fishing,
+assessment, and management) and as a whole simulates a Management
+Strategy Evaluation (MSE) procedure which allows for qualitative
+comparisons of different management choices. We have parameterized
+Atlantis for the Northeast United States Continental Shelf (NEUS),
+including the major functional groups from an ecosystem perspective. We
+have also parameterized and simulated the physiographic dynamics of the
+ecosystem, as well as the most important fleets. Our goal was to
+recreate, at least in approximate terms, the biomass, catch, and effort
+trends in the NEUS from 1964 to the mid
+2000s.
 
 ### The spatial domain
 
 ![](https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/Geometry/AtlantisNeusDomain.PNG)<!-- -->
-
 
 ### Development team
 
