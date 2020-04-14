@@ -22,7 +22,8 @@ ltl.files =  list.files(roms.dir,pattern = '^roms_ltl_force.*\\.nc$',full.names 
 
 var.names = c('Diatom_N','PicoPhytopl_N','Carniv_Zoo_N','Zoo_N','MicroZoo_N','Pelag_Bact_N','Diatom_S')
 
-for(f in 1:length(ltl.files)){
+# for(f in 1:length(ltl.files)){
+for(f in 17){
   for(v in 1:length(var.names)){
     remove.neg(force.file = ltl.files[f], variable = var.names[v])
     # print(var.names[v])

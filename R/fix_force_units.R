@@ -3,8 +3,9 @@ library(RNetCDF)
 roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/ltl_statevars'
 
 ltl.files =  list.files(roms.dir,pattern = '^roms_ltl_force.*\\.nc$',full.names = T)
-
-for(i in 1:length(ltl.files)){
+# ltl.files = ltl.files[17]
+# for(i in 1:length(ltl.files)){
+for(i in 17){
   
   nc.file = open.nc(ltl.files[i],write = T)
   
