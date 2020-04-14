@@ -19,11 +19,16 @@
 # force.file = 'roms_output_transport_tohydro_1981.nc'
 
 
-fix.force.time = function(force.dir,force.file){
+fix.force.time = function(force.dir,force.file,is.romsfile = F){
   force.nc =   ncdf4::nc_open(paste0(force.dir,force.file),write = T)
   
   file.year = as.numeric(sort(gsub(".*_(\\d{4}).+","\\1",force.file)))
-  orig.time = ncdf4::ncvar_get(force.nc,'time')
+  if(is.romsfile){
+    orig.time = ncdf4::ncvar_get(force.nc,'time')  
+  }else{
+    orig.time = ncdf4::ncvar_get(force.nc,'t')
+  }
+  
   x=as.POSIXct(orig.time,origin = '1964-01-01',tz = 'UTC')
     
   end.day = as.Date(x[length(x)])
@@ -32,10 +37,17 @@ fix.force.time = function(force.dir,force.file){
   time.vals =difftime(as.POSIXct(t1,tz = 'UTC'),as.POSIXct('1964-01-01 00:00:00',tz = 'UTC'),units = 'secs')
   # as.POSIXct(as.numeric(time.vals),origin = '1964-01-01',tz = 'UTC')
   
-  timedim = ncdf4::ncdim_def('time','',1:length(time.vals),unlim = T,create_dimvar = F)
-  var.time = ncdf4::ncvar_def('time',paste0('seconds since 1964-01-01 00:00:00 +10'),timedim,prec='double')
-  ncdf4::ncatt_put(force.nc,'time','units',paste0('seconds since 1964-01-01 00:00:00 +10'))
-  
+  if(is.romsfile){
+    timedim = ncdf4::ncdim_def('time','',1:length(time.vals),unlim = T,create_dimvar = F)
+    var.time = ncdf4::ncvar_def('time',paste0('seconds since 1964-01-01 00:00:00 +10'),timedim,prec='double')
+    ncdf4::ncatt_put(force.nc,'time','units',paste0('seconds since 1964-01-01 00:00:00 +10'))
+  } else {
+    timedim = ncdf4::ncdim_def('t','',1:length(time.vals),unlim = T,create_dimvar = F)
+    var.time = ncdf4::ncvar_def('t',paste0('seconds since 1964-01-01 00:00:00 +10'),timedim,prec='double')
+    ncdf4::ncatt_put(force.nc,'t','units',paste0('seconds since 1964-01-01 00:00:00 +10'))
+    
+  }
+
   ncdf4::ncvar_put(force.nc,var.time,time.vals)
   ncdf4::nc_close(force.nc)
   
