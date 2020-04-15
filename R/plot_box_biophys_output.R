@@ -22,6 +22,8 @@
 
 plot.box.biophys = function(nc.file, variable.name, plot.dir, plot.name){
   
+  `%>%` = dplyr::`%>%`
+  
   output.nc = ncdf4::nc_open(nc.file)
   var.data = ncdf4::ncvar_get(output.nc,variable.name)
   var.plotname = ncdf4::ncatt_get(output.nc,variable.name)$long_name
@@ -42,9 +44,24 @@ plot.box.biophys = function(nc.file, variable.name, plot.dir, plot.name){
     var.box$time = var.time
     var.box.lev = reshape2::melt(var.box,id.vars = 'time')
     
+    var.box.lev$time.group = NA
+    var.box.lev$time.group[which(var.box.lev$time < as.POSIXct('1979-01-01',tz = 'UTC'))] = 'early'
+    var.box.lev$time.group[which(var.box.lev$time > as.POSIXct('1994-01-01',tz = 'UTC'))] = 'late'
+    
+    var.box.lev = var.box.lev[which(var.box.lev$value != 0),]
+    
+    box.level.means = na.omit(var.box.lev) %>% dplyr::group_by(variable,time.group) %>%
+      dplyr::summarize(value.mu = mean(value,na.rm=T))
+    box.level.means$x = as.POSIXct('1964-01-01',tz = 'UTC')
+    box.level.means$x[box.level.means$time.group=='late'] = as.POSIXct('1994-01-01',tz = 'UTC')
+    box.level.means$xend = as.POSIXct('1979-01-01',tz = 'UTC')
+    box.level.means$xend[box.level.means$time.group=='late'] = as.POSIXct('2014-12-12',tz = 'UTC')
+  
     plot.ls[[b]] = ggplot2::ggplot(data = var.box.lev,ggplot2::aes(x=time, y=value))+
       ggplot2::geom_line(col='red3')+
+      ggplot2::geom_segment(data = box.level.means, ggplot2::aes(x = x, xend = xend, y = value.mu,yend = value.mu, lty = time.group),color = 'black',size = 1.2)+
       ggplot2::facet_wrap(~variable,nrow = 5)+
+      ggplot2::scale_linetype_discrete(name = 'Mean Value')+
       ggplot2::xlab('Date')+
       ggplot2::ylab(paste0(var.plotname,' (',var.units,')'))+
       ggplot2::ggtitle(paste0('Box ',b-1))+
@@ -53,6 +70,7 @@ plot.box.biophys = function(nc.file, variable.name, plot.dir, plot.name){
         plot.title = ggplot2::element_text(hjust = 0.5),
         panel.grid = ggplot2::element_blank()
       )
+      
   }
   
   pdf(paste0(plot.dir,plot.name,'.pdf'),width = 14, height = 8, onefile = T)
