@@ -68,3 +68,28 @@ comp.model.groups(
   groups = NULL
 )
 
+#LTL 1980 fill vs original
+comp.model.groups(
+  model1.dir = new.ltl.fill1980,
+  model2.dir = original.model,
+  model1.name = 'new ltl - filled 1980',
+  model2.name = 'original model',
+  plot.raw = T,
+  plot.diff = T,
+  plot.out = paste(figure.dir,'newltl1980_v_orig_'),
+  table.out = T,
+  groups = NULL
+)
+
+#Ltl 1980 fill vs new physics
+comp.model.groups(
+  model1.dir = new.ltl.fill1980,
+  model2.dir = new.physics,
+  model1.name = 'new ltl - filled 1980',
+  model2.name = 'new physics',
+  plot.raw = T,
+  plot.diff = T,
+  plot.out = paste(figure.dir,'newltl1980_v_newphys_'),
+  table.out = T,
+  groups = NULL
+)
