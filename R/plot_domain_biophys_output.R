@@ -21,7 +21,9 @@
 # plot.name = 'NH3_timeseries'
 
 plot.domain.biophys = function(nc.file, variable.name, plot.dir, plot.name){
+
   `%>%` = dplyr::`%>%`
+
   output.nc = ncdf4::nc_open(nc.file)
   var.data = ncdf4::ncvar_get(output.nc,variable.name)
   var.plotname = ncdf4::ncatt_get(output.nc,variable.name)$long_name
@@ -35,10 +37,12 @@ plot.domain.biophys = function(nc.file, variable.name, plot.dir, plot.name){
   levels = 1:dim(var.data)[1]
   
   var.domain = as.data.frame(t(apply(var.data,c(1,3),mean,na.rm=T)))
+
   colnames(var.domain) = paste0('L',levels)
   var.domain$time = var.time
   var.domain.lev = reshape2::melt(var.domain, id.vars = 'time')
   
+
   var.domain.lev = var.domain.lev[which(var.domain.lev$value != 0),]
   
   var.domain.lev$time.group = NA
@@ -55,6 +59,7 @@ plot.domain.biophys = function(nc.file, variable.name, plot.dir, plot.name){
   ggplot2::ggplot(data = var.domain.lev,ggplot2::aes(x=time, y=value))+
     ggplot2::geom_line(col='red3')+
     ggplot2::geom_segment(data = box.level.means, ggplot2::aes(x = x, xend = xend, y = value.mu,yend = value.mu, lty = time.group),color = 'black',size = 1.2)+
+
     ggplot2::facet_wrap(~variable,nrow = 5)+
     ggplot2::xlab('Date')+
     ggplot2::ylab(paste0(var.plotname,' (',var.units,')'))+

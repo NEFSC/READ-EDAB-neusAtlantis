@@ -23,7 +23,7 @@
 plot.box.biophys = function(nc.file, variable.name, plot.dir, plot.name){
   
   `%>%` = dplyr::`%>%`
-  
+
   output.nc = ncdf4::nc_open(nc.file)
   var.data = ncdf4::ncvar_get(output.nc,variable.name)
   var.plotname = ncdf4::ncatt_get(output.nc,variable.name)$long_name
@@ -62,6 +62,7 @@ plot.box.biophys = function(nc.file, variable.name, plot.dir, plot.name){
       ggplot2::geom_segment(data = box.level.means, ggplot2::aes(x = x, xend = xend, y = value.mu,yend = value.mu, lty = time.group),color = 'black',size = 1.2)+
       ggplot2::facet_wrap(~variable,nrow = 5)+
       ggplot2::scale_linetype_discrete(name = 'Mean Value')+
+
       ggplot2::xlab('Date')+
       ggplot2::ylab(paste0(var.plotname,' (',var.units,')'))+
       ggplot2::ggtitle(paste0('Box ',b-1))+
@@ -70,7 +71,7 @@ plot.box.biophys = function(nc.file, variable.name, plot.dir, plot.name){
         plot.title = ggplot2::element_text(hjust = 0.5),
         panel.grid = ggplot2::element_blank()
       )
-      
+
   }
   
   pdf(paste0(plot.dir,plot.name,'.pdf'),width = 14, height = 8, onefile = T)

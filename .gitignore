@@ -13,6 +13,7 @@ comland*.rds
 # folders
 researchDocs
 other
+output
 
 # ignore all files in testing except prm
 /testing/*.*
