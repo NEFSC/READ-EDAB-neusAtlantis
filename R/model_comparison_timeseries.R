@@ -29,7 +29,7 @@
 # # groups = c('HER','CLA','LOB')
 # groups = NULL
 
-comp.model.groups = function(model1.dir,model2.dir,plot.raw = T,
+comp.model.groups = function(model1.dir,model2.dir,model1.name,model2.name,plot.raw = T,
                              plot.diff = T, plot.out, table.out = F, groups = NULL){
   `%>%` = dplyr::`%>%`
   
@@ -116,7 +116,7 @@ comp.model.groups = function(model1.dir,model2.dir,plot.raw = T,
       p= ggplot2::ggplot(data = subset(bio.all,Group == plot.groups[i]),
                          ggplot2::aes(x=Real.Time,y = Biomass,color = Model))+
         ggplot2::geom_path()+
-        ggplot2::scale_color_manual(name = 'Model',labels = c(model1.prefix,model2.prefix),values = c('red3','blue3'))+
+        ggplot2::scale_color_manual(name = 'Model',labels = c(model1.name,model2.name),values = c('red3','blue3'))+
         ggplot2::ylab('Group Biomass (Tonnes)')+
         ggplot2::xlab('Date')+
         ggplot2::ggtitle(plot.groups[i])+
@@ -143,13 +143,13 @@ comp.model.groups = function(model1.dir,model2.dir,plot.raw = T,
 }
 
 #Testing
-comp.model.groups(
-  model1.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Run_Files/atneus_v15_01272020/',
-  model2.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output_start1964/',
-  plot.raw = T,
-  plot.diff = T,
-  plot.out = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output_start1964/Figures/',
-  table.out = T,
-  # groups = c('HER','CLA','LOB')
-  groups = NULL
-)
+# comp.model.groups(
+#   model1.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Run_Files/atneus_v15_01272020/',
+#   model2.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output_start1964/',
+#   plot.raw = T,
+#   plot.diff = T,
+#   plot.out = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output_start1964/Figures/',
+#   table.out = T,
+#   # groups = c('HER','CLA','LOB')
+#   groups = NULL
+# )

@@ -8,9 +8,9 @@
 #'Author: Hem Nalini Morzaria Luna, modified by J.Caracappa
 #'
 # 
-roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/ltl_statevars/'
-# # roms.files <- list.files(path=roms.dir, pattern="^roms_output_ltl_statevars_tohydro_.*\\.nc$", recursive = TRUE, full.names = TRUE, include.dirs = TRUE)
-roms.file = paste0(roms.dir,'roms_output_ltl_statevars_tohydro_1965.nc')
+# roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/ltl_statevars/'
+# # # roms.files <- list.files(path=roms.dir, pattern="^roms_output_ltl_statevars_tohydro_.*\\.nc$", recursive = TRUE, full.names = TRUE, include.dirs = TRUE)
+# roms.file = paste0(roms.dir,'roms_output_ltl_statevars_tohydro_1965.nc')
 
 make.ltl.force = function(roms.dir,roms.file){
 
@@ -179,6 +179,7 @@ make.ltl.force = function(roms.dir,roms.file){
     var.def.nc(nc.file, 'Diatom_S', 'NC_DOUBLE', c('z','b','t'))
     var.def.nc(nc.file, 'Pelag_Bact_N', 'NC_DOUBLE', c('z','b','t'))
     
+    #_FillValue
     att.put.nc(nc.file, 'ndi', "_FillValue", "NC_DOUBLE", 0)
     att.put.nc(nc.file, 'Diatom_N', "_FillValue", "NC_DOUBLE", 0)
     att.put.nc(nc.file, 'Carniv_Zoo_N', "_FillValue", "NC_DOUBLE", 0)
@@ -186,7 +187,47 @@ make.ltl.force = function(roms.dir,roms.file){
     att.put.nc(nc.file, 'PicoPhytopl_N', "_FillValue", "NC_DOUBLE", 0)
     att.put.nc(nc.file, 'MicroZoo_N', "_FillValue", "NC_DOUBLE", 0)
     att.put.nc(nc.file, 'Diatom_S', "_FillValue", "NC_DOUBLE", 0)
-    att.put.nc(nc.file, 'Pelag_Bact_N', "_FillValue", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'Pelag_Bact_N', "_FillValue", "NC_DOUBLE", 0.2)
+    
+    #missing_value
+    att.put.nc(nc.file, 'ndi', "missing_value", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'Diatom_N', "missing_value", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'Carniv_Zoo_N', "missing_value", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'Zoo_N', "missing_value", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'PicoPhytopl_N', "missing_value", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'MicroZoo_N', "missing_value", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'Diatom_S', "missing_value", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'Pelag_Bact_N', "missing_value", "NC_DOUBLE", 0.2)
+    
+    #valid_min
+    att.put.nc(nc.file, 'ndi', "valid_min", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'Diatom_N', "valid_min", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'Carniv_Zoo_N', "valid_min", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'Zoo_N', "valid_min", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'PicoPhytopl_N', "valid_min", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'MicroZoo_N', "valid_min", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'Diatom_S', "valid_min", "NC_DOUBLE", 0)
+    att.put.nc(nc.file, 'Pelag_Bact_N', "valid_min", "NC_DOUBLE", 0)
+    
+    #valid_max
+    att.put.nc(nc.file, 'ndi', "valid_max", "NC_DOUBLE", 999)
+    att.put.nc(nc.file, 'Diatom_N', "valid_max", "NC_DOUBLE", 999)
+    att.put.nc(nc.file, 'Carniv_Zoo_N', "valid_max", "NC_DOUBLE", 999)
+    att.put.nc(nc.file, 'Zoo_N', "valid_max", "NC_DOUBLE", 999)
+    att.put.nc(nc.file, 'PicoPhytopl_N', "valid_max", "NC_DOUBLE", 999)
+    att.put.nc(nc.file, 'MicroZoo_N', "valid_max", "NC_DOUBLE", 999)
+    att.put.nc(nc.file, 'Diatom_S', "valid_max", "NC_DOUBLE", 999)
+    att.put.nc(nc.file, 'Pelag_Bact_N', "valid_max", "NC_DOUBLE", 999)
+    
+    #units
+    att.put.nc(nc.file, 'ndi', "units", "NC_CHAR", "mg N m-3")
+    att.put.nc(nc.file, 'Diatom_N', "units", "NC_CHAR", "mg N m-3")
+    att.put.nc(nc.file, 'Carniv_Zoo_N', "units", "NC_CHAR", "mg N m-3")
+    att.put.nc(nc.file, 'Zoo_N', "units", "NC_CHAR", "mg N m-3")
+    att.put.nc(nc.file, 'PicoPhytopl_N', "units", "NC_CHAR", "mg N m-3")
+    att.put.nc(nc.file, 'MicroZoo_N', "units", "NC_CHAR", "mg N m-3")
+    att.put.nc(nc.file, 'Diatom_S', "units", "NC_CHAR", "mg Si m-3")
+    att.put.nc(nc.file, 'Pelag_Bact_N', "units", "NC_CHAR", "mg N m-3")
     
     att.put.nc(nc.file, "t", "units", "NC_CHAR", t.units)
     att.put.nc(nc.file, "t", "dt", "NC_DOUBLE", seconds.timestep)

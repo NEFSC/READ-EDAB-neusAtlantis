@@ -128,7 +128,7 @@ forcing.climatology = function(force.dir, file.pattern, plot.dir, time.group = '
       ggplot2::ylab(variable)+
       ggplot2::xlab('Time')+
       ggplot2::theme_minimal()
-      
+
     return(g)
   }
   
@@ -158,10 +158,12 @@ forcing.climatology = function(force.dir, file.pattern, plot.dir, time.group = '
 #   plot.region = T
 # )
 
-forcing.climatology(
-  force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/ltl_statevars/',
-  file.pattern = 'roms_ltl_force_*',
-  plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Forcing_Climatology/',
-  time.group = 'ym',
-  plot.region = T
-)
+
+# forcing.climatology(
+#   force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/ltl_statevars/',
+#   file.pattern = 'roms_ltl_force_*',
+#   plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Forcing_Climatology/',
+#   time.group = 'ym',
+#   plot.region = T
+# )
+
