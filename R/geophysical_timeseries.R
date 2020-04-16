@@ -10,12 +10,12 @@ plot.names = paste0(variable.names,'_Timeseries')
 
 for(f in 1:length(variable.names)){
   
-  plot.box.biophys(
-    nc.file = nc.file,
-    variable.name = variable.names[f],
-    plot.dir = plot.dir,
-    plot.name = plot.names[f]
-  )
+  # plot.box.biophys(
+  #   nc.file = nc.file,
+  #   variable.name = variable.names[f],
+  #   plot.dir = plot.dir,
+  #   plot.name = plot.names[f]
+  # )
   
   plot.domain.biophys(
     nc.file = nc.file,
@@ -23,5 +23,5 @@ for(f in 1:length(variable.names)){
     plot.dir = plot.dir,
     plot.name = plot.names[f]
   )
-  plot(f)
+
 }
