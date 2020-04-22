@@ -11,7 +11,7 @@ source(here::here('R','model_comparison_timeseries.R'))
 
 roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/'
 orig.model = 'C:/Users/joseph.caracappa/Documents/Atlantis/Run_Files/atneus_v15_01272020/'
-new.physics = paste0(roms.dir,'Atlantis_Output/')
+new.physics = paste0(roms.dir,'Atlantis_Output_2/')
 new.ltl = paste0(roms.dir,'Atlantis_Output_LTLForce_1/')
 new.ltl.fill1980 = paste0(roms.dir,'Atlantis_Output_LTLForce_1980Fill/')
 ltl.noscale = paste0(roms.dir,'Atlantis_Output_noLTLscale/')
@@ -82,18 +82,18 @@ figure.dir = paste0(roms.dir,'Diagnostic_Figures/Run_Comparisons/')
 #   groups = NULL
 # )
 # 
-# #Ltl 1980 fill vs new physics
-# comp.model.groups(
-#   model1.dir = new.ltl.fill1980,
-#   model2.dir = new.physics,
-#   model1.name = 'new ltl - filled 1980',
-#   model2.name = 'new physics',
-#   plot.raw = T,
-#   plot.diff = T,
-#   plot.out = paste(figure.dir,'newltl1980_v_newphys_'),
-#   table.out = T,
-#   groups = NULL
-# )
+#Ltl 1980 fill vs new physics
+comp.model.groups(
+  model1.dir = new.ltl.fill1980,
+  model2.dir = new.physics,
+  model1.name = 'new ltl - filled 1980',
+  model2.name = 'new physics',
+  plot.raw = T,
+  plot.diff = T,
+  plot.out = paste(figure.dir,'newltl1980_v_newphys_'),
+  table.out = T,
+  groups = NULL
+)
 
 #Ltl no init scale vs new LTL fill 1980
 comp.model.groups(
