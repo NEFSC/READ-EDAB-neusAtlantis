@@ -36,4 +36,4 @@ This file is used to document steps made towards a new version/subversion
 * Increased assimilation efficiency for Mackerel and Herring
     + Mackerel persists at resonable levels
     + Herring still collapses at time step 51 with normal fishing
-* Affects: at_biology_test.prm, at_run_WIN_test.prm
+* Affects: at_biology_test.prm, at_run_test.prm
