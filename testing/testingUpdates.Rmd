@@ -36,4 +36,5 @@ This file is used to document steps made towards a new version/subversion
 * Increased assimilation efficiency for Mackerel and Herring
     + Mackerel persists at resonable levels
     + Herring still collapses at time step 51 with normal fishing
-* Affects: at_biology_test.prm, at_run_test.prm
+* Changed the age structure of the catch for Mackerel and Herring to prevent overfishing at lower age classes
+* Affects: at_biology_test.prm, at_run_test.prm, at_harvest_test.prm
