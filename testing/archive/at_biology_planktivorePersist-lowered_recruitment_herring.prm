@@ -1365,8 +1365,8 @@ flagRCBMigrate  0
 # but adults leave 3 times then enter 3 here
 # 0=always remain within the model domain, 1+=migrate in/out of the model 0
 # 0=always remain within the model domain, 1+=migrate in/out of the model 0
-flagMAKMigrate 1
-flagHERMigrate 1
+flagMAKMigrate 0
+flagHERMigrate 0
 flagWHKMigrate 0
 flagBLFMigrate 0
 flagWPFMigrate 0
@@ -1406,7 +1406,7 @@ flagSDFMigrate 0
 flagFDFMigrate 0
 flagHADMigrate 0
 flagYTFMigrate 0
-flagDOGMigrate 1
+flagDOGMigrate 0
 flagSMOMigrate 0
 flagSSHMigrate 0
 flagDSHMigrate 0
@@ -5519,10 +5519,10 @@ jOSH_Migrate_Time 1
 
 # Adult migration times - days of the year adult stages of each group leave the model domain
 MAK_Migrate_Time 1
-300
+0
  
 HER_Migrate_Time 1
-300
+0
  
 WHK_Migrate_Time 1
 0
@@ -5642,7 +5642,7 @@ YTF_Migrate_Time 1
 0
  
 DOG_Migrate_Time 1
-300
+0
  
 SMO_Migrate_Time 1
 0
@@ -5909,10 +5909,10 @@ jOSH_Migrate_Return 1
 # Adult migration return times - days of the year adult stages of each group return the model domain
  
 MAK_Migrate_Return 1
-90
+364
  
 HER_Migrate_Return 1
-90
+364
  
 WHK_Migrate_Return 1
 364
@@ -6032,7 +6032,7 @@ YTF_Migrate_Return 1
 364
  
 DOG_Migrate_Return 1
-100
+364
  
 SMO_Migrate_Return 1
 364
@@ -6301,10 +6301,10 @@ jOSH_Migrate_Period 1
 # Adult migration periods - period of time migrating adult stages exit/enter over
  
 MAK_Migrate_Period 1
-14
+0
  
 HER_Migrate_Period 1
-14
+0
  
 WHK_Migrate_Period 1
 0
@@ -6424,7 +6424,7 @@ YTF_Migrate_Period 1
 0
  
 DOG_Migrate_Period 1
-21
+0
  
 SMO_Migrate_Period 1
 0
@@ -7617,10 +7617,10 @@ REP_FSMG 1
 0
  
 RWH_FSMG 1
-0
+1
  
 BWH_FSMG 1
-0
+1
  
 SWH_FSMG 1
 0.0
@@ -7658,10 +7658,10 @@ ZL_FSMG 1
 # Juvenile migration
  
 MigIOBox_MAKjuv 30
-0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_HERjuv 30
-0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_WHKjuv 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -7781,7 +7781,7 @@ MigIOBox_YTFjuv 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_DOGjuv 30
-0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_SMOjuv 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -7850,10 +7850,10 @@ MigIOBox_OSHjuv 30
 # Adult migrations
  
 MigIOBox_MAKad 30
-0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
 MigIOBox_HERad 30
-0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_WHKad 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -7973,7 +7973,7 @@ MigIOBox_YTFad 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_DOGad 30
-0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_SMOad 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -8263,11 +8263,11 @@ KMIGa_INV 10
 # Reserve weights for each age group
  
 KMIGa_MAKrn 10
-64.84 82.79 160.73 609.67 1160.21 1321.3 1541.12 1610.16 1866.37 2012.27
- 
+0 0 0 0 0 0 0 0 0 0
+
 KMIGa_HERrn 10
-44.58062965 87.37803414 242.4549388 523.6950253 758.8896899 942.7529441 1108.5292 1207.052391 1378.305696 1716.195025
- 
+0 0 0 0 0 0 0 0 0 0
+
 KMIGa_WHKrn 10
 0 0 0 0 0 0 0 0 0 0
  
@@ -8386,8 +8386,8 @@ KMIGa_YTFrn 10
 0 0 0 0 0 0 0 0 0 0
  
 KMIGa_DOGrn 10
-911.0151998 5153.799963 12764.15838 22695.81535 33795.08351 45142.99118 56093.07562 66237.56802 75379.54588 83451.37925
- 
+0 0 0 0 0 0 0 0 0 0
+
 KMIGa_SMOrn 10
 0 0 0 0 0 0 0 0 0 0
  
@@ -8443,11 +8443,11 @@ KMIGa_INVrn 10
 # Structural weights for each age group
  
 KMIGa_MAKsn 10
-24.46 31.24 60.65 230.06 437.81 498.6 581.55 607.61 704.28 759.34
- 
+0 0 0 0 0 0 0 0 0 0
+
 KMIGa_HERsn 10
-16.82287911 32.97284307 91.49242972 197.6207643 286.3734679 355.755828 418.3129055 455.4914684 520.1153569 647.6207643
- 
+0 0 0 0 0 0 0 0 0 0
+
 KMIGa_WHKsn 10
 0 0 0 0 0 0 0 0 0 0
  
@@ -8566,8 +8566,8 @@ KMIGa_YTFsn 10
 0 0 0 0 0 0 0 0 0 0
  
 KMIGa_DOGsn 10
-343.7793207 1944.830175 4816.663539 8564.458623 12752.8617 17035.09101 21167.19835 24995.30869 28445.11165 31491.08651
- 
+0 0 0 0 0 0 0 0 0 0
+
 KMIGa_SMOsn 10
 0 0 0 0 0 0 0 0 0 0
  
@@ -8639,7 +8639,7 @@ KHTI             1.5       Factor handother deep dem. time increased by for relr
 # are considered grazed.
 # pPREY1FY1 is the availability of juvenile prey groups to juvenile predator group FY
 # pPREY1FY2 is the availability of juvenile prey groups to adult group FY
-##     MAK HER WHK BLF WPF SUF WIF WTF FOU HAL PLA FLA BFT TUN BIL MPF BUT BPF ANC GOO MEN FDE COD SHK OHK POL RHK BSB SCU TYL RED OPT SAL DRM STB TAU WOL SDF FDF HAD YTF DOG SMO SSH DSH BLS POR PSH WSK LSK SK SB PIN REP RWH BWH SWH TWH INV LSQ ISQ SCA QHG CLA BFF BG LOB RCB BMS NSH OSH ZL BD MA MB SG BC ZG PL DF PS ZM ZS PB BB BO DL DR DC DLsed DRsed DCsed
+# MAK	HER	WHK	BLF	WPF	SUF	WIF	WTF	FOU	HAL	PLA	FLA	BFT	TUN	BIL	MPF	BUT	BPF	ANC	GOO	MEN	FDE	COD	SHK	OHK	POL	RHK	BSB	SCU	TYL	RED	OPT	SAL	DRM	STB	TAU	WOL	SDF	FDF	HAD	YTF	DOG	SMO	SSH	DSH	BLS	POR	PSH	WSK	LSK	SK	SB	PIN	REP	RWH	BWH	SWH	TWH	INV	LSQ	ISQ	SCA	QHG	CLA	BFF	BG	LOB	RCB	BMS	NSH	OSH	ZL	BD	MA	MB	SG	BC	ZG	PL	DF	PS	ZM	ZS	PB	BB	BO	DL	DR	DC	DLsed	DRsed	DCsed
 pPREY1MAK1  92
 0 0.01 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0.1 0.2 0.05 0 0.1 0.1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0.03 0.1 0 0 0 0 0 0.1 0 0 0 0.2 0 0 0 0 0 0 0 0 0 0
 pPREY2MAK1  92
@@ -9176,6 +9176,8 @@ pPREYZS 92
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.01 0 0 0 0.0005 0.002 0.015 0 0.01 0.01 0.01 0 0 0 0 0.05 0.05 0
 pPREYBO  92
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0.0625 0.01 0.0026 0 0 0 0.05 0 0 0 0.1 0.23 0
+
+
 
 ## Ontogenetic diet preferences - one entry per age class, 1=use explicit values above, 0=use ontogenetic values below. 
 # For each group where the p_split value is set to 0 there will be a value for each cohort of the groups tagged below as age_structured_pred.    
@@ -11613,7 +11615,7 @@ C_MAK	10
 0.151	1.234	2.600	5.043	7.594	10.199	12.553	14.651	16.452	17.770
 									
 C_HER	10								
-0.100	1.000	2.200	4.034	6.032	8.460	10.651	12.602	14.340	15.901
+0.028	0.588	1.845	3.434	5.032	6.460	7.651	8.602	9.340	9.901
 									
 C_WHK	10								
 0.605	5.255	11.056	22.214	37.102	55.182	75.813	98.343	122.160	146.716
@@ -11804,7 +11806,7 @@ mum_QHG_T15	0.05
 mum_CLA_T15	0.05
 mum_BFF_T15	0.05
 mum_BG_T15	0.1
-mum_BC_T15	0.016
+mum_BC_T15	0.008
 mum_LOB_T15	0.08
 mum_RCB_T15	0.05
 mum_BMS_T15	0.08
@@ -11812,20 +11814,20 @@ mum_NSH_T15	0.003043
 mum_jNSH_T15	0.003
 mum_OSH_T15	0.003043
 mum_jOSH_T15	0.003
-mum_ZG_T15	0.003
-mum_ZL_T15	0.3
-mum_ZM_T15	0.06
-mum_ZS_T15	0.675
+mum_ZG_T15	0.005
+mum_ZL_T15	0.1
+mum_ZM_T15	0.1
+mum_ZS_T15	0.55
 mum_BD_T15	0.0004
 mum_BO_T15	0.04
-mum_PB_T15	0.2
-mum_BB_T15	0.8
-mum_DF_T15	0.0775
+mum_PB_T15	0.05
+mum_BB_T15	0.05
+mum_DF_T15	0.1
 mum_PL_T15	0.015
 mum_PS_T15	0.01
-mum_MA_T15	0.2
+mum_MA_T15	0.1
 mum_MB_T15	0.01
-mum_SG_T15	0.14
+mum_SG_T15	0.07
 
 
 
@@ -11837,7 +11839,7 @@ mum_MAK	10.00
 0.76	8.78	23.70	47.07	66.74	73.66	81.47	83.02	82.26	88.85
 									
 mum_HER	10.00								
-0.65	7.88	22.45	45.34	62.32	70.60	80.51	86.02	93.40	99.01
+0.28	5.88	18.45	34.34	50.32	64.60	76.51	86.02	93.40	99.01
 									
 mum_WHK	10.00								
 3.02	19.60	55.28	111.07	185.51	275.91	379.06	491.72	610.80	733.58
@@ -12911,9 +12913,9 @@ EDL_NSH 0.2
 EDL_OSH 0.2
 EDL_ZL 0.1
 EDL_BD 0.15
-EDL_MA 0.1
-EDL_MB 0.1
-EDL_SG 0.1
+EDL_MA 0.0
+EDL_MB 0.0
+EDL_SG 0.0
 EDL_BC 0.1
 EDL_ZG 0.1
 EDL_PL 0.0
@@ -12964,9 +12966,9 @@ EDR_NSH 0
 EDR_OSH 0
 EDR_ZL 0.02
 EDR_BD 0.08
-EDR_MA 0.01
-EDR_MB 0.01
-EDR_SG 0.01
+EDR_MA 0
+EDR_MB 0
+EDR_SG 0
 EDR_BC 0
 EDR_ZG 0.02
 EDR_PL 0
@@ -13003,8 +13005,8 @@ EDR_BO 0.05
 #EDR_BG           0.0       Assim efficiency of benthic grazers on refractory detritus       0.0 - 0.05
 
 # Assimilation efficiencies of vertebrate consumers 
-E_MAK 0.9
-E_HER 0.7
+E_MAK 0.35
+E_HER 0.3
 E_WHK 0.3
 E_BLF 0.35
 E_WPF 0.3
@@ -14773,8 +14775,8 @@ DOG_AgeClassSize 4
 SMO_AgeClassSize 5               
 SSH_AgeClassSize 5               
 DSH_AgeClassSize 5               
-BLS_AgeClassSize 7               
-POR_AgeClassSize 7               
+BLS_AgeClassSize 5 # Testing, changed from 7              
+POR_AgeClassSize 5 # Testing, changed from 7               
 PSH_AgeClassSize 7               
 WSK_AgeClassSize 3               
 LSK_AgeClassSize 3               
@@ -15863,7 +15865,7 @@ KDENR_MAK
 932233758.4
 
 KDENR_HER
-7000000000
+20000000
 
 KDENR_WHK
 52020187.37
@@ -19997,6 +19999,7 @@ WSK_turbid_b 2
 30.0 30.0
 WTF_turbid_b 2
 30.0 30.0
+YTF_turbid_b 2
 30.0 30.0
 LSQ_turbid_b 2
 30.0 30.0
