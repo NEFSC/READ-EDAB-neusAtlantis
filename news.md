@@ -1,4 +1,24 @@
+# neus-atlantis 1.0.0-9005 (in dev) 
+(built with altantis rev 6490)
 
+Major fixes
+
+* Fixes incorrect conversion from COBALT (mol X/ kg H20) to Atlantis (mg X/m3) units
+* Updated LTL-Forcing scripts
+* Removed initial conditions scaling of forced LTL groups
+
+
+As described in [#30]( https://github.com/NOAA-EDAB/neus-atlantis/pull/30)
+
+# neus-atlantis 1.0.0-9004 (in dev) 
+(built with altantis rev 6490)
+
+Tested the run with the COBALT forcing for lower trophic levels
+* Herring persisted at full fishing levels - but still drop after the 50th time step, not to as great a magnitude as previously
+Increased herring recruit numbers
+* Mackerel persist and probably need to have biological parameters reduced a bit to constrain growth
+
+As described in [#31]( https://github.com/NOAA-EDAB/neus-atlantis/pull/31)
 
 # neus-atlantis 1.0.0-9003 (in dev) 
 (built with altantis rev 6490)
