@@ -7,42 +7,43 @@
 
 <!-- badges: end -->
 
-Atlantis Neus file repository v1.5
-
-Physics based on Doppio Roms model hindcast 2008-2010 downscaled to NEUS
-boxes.
+Atlantis is a series of submodels (biological, geophysical, fishing,
+assessment, and management) and as a whole simulates a Management
+Strategy Evaluation (MSE) procedure which allows for qualitative
+comparisons of different management choices. We have parameterized
+Atlantis for the Northeast United States Continental Shelf (NEUS),
+including the major functional groups from an ecosystem perspective. We
+have also parameterized and simulated the physiographic dynamics of the
+ecosystem, as well as the most important fleets. Our goal was to
+recreate, at least in approximate terms, the biomass, catch, and effort
+trends in the NEUS from 1964 to the mid
+2000s.
 
 ### The spatial domain
 
 ![](https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/Geometry/AtlantisNeusDomain.PNG)<!-- -->
 
-### 2019 run structure
+### Development team
 
-Now includes fishing, last updated 20190917
+In alphabetical
+order:
 
-  - Windows build: atlantismain\_6456 -i RMinit4\_2019.nc 0 -o
-    atneus\_v15\_test2008hydro\_20180208.nc -r
-    at\_run\_neus\_v15\_RM\_scale\_0503.prm -f
-    at\_force\_neus\_v15\_DE\_WIN\_RM\_newHydro\_highnuts.prm -p
-    at\_physics\_nuts\_neus\_v15\_DE\_eddys.prm -b
-    at\_biol\_neus\_v15\_scaled\_diet\_20181126\_2.prm -h
-    at\_harvest\_neus\_v15\_FC\_RG\_5\_16\_19.prm -e
-    at\_economics\_neus\_DE\_New.prm -s NeusGroups\_v15\_unix\_RM.csv -q
-    NeusFisheries\_v15\_5\_17\_19.csv -t C:.morse\_RM -d 20190916dta
-    1\>1a.junk 2\>2a.junk
+| [jcaracappa1](https://github.com/jcaracappa1)                                                      | [gambler1650](https://github.com/gambler1650)                                                     |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| [![](https://avatars1.githubusercontent.com/u/57966543?s=100&v=4)](https://github.com/jcaracappa1) | [![](https://avatars1.githubusercontent.com/u/5949383?s=100&v=4)](https://github.com/gambler1650) |
 
-  - Linux build: atlantisMerged -i RMinit4\_2019.nc 0 -o
-    atneus\_v15\_test2008hydro\_20180208.nc -r
-    at\_run\_neus\_v15\_RM\_scale\_0503.prm -f
-    at\_force\_neus\_v15\_DE\_LINUX\_RM\_newHydro\_highnuts.prm -p
-    at\_physics\_nuts\_neus\_v15\_DE\_eddys.prm -b
-    at\_biol\_neus\_v15\_scaled\_diet\_20181126\_2.prm -h
-    at\_harvest\_neus\_v15\_FC\_RG\_5\_16\_19.prm -e
-    at\_economics\_neus\_DE\_New.prm -s NeusGroups\_v15\_unix\_RM.csv -q
-    NeusFisheries\_v15\_5\_17\_19.csv -t /home/ryan/Git/atneus\_RM -d
-    20190626a 1\>1a.junk 2\>2a.junk
+### Team members
 
-t: location of local git folder
+Members of the Atlantis team other than the core development team:
+
+In alphabetical
+order:
+
+| [andybeet](https://github.com/andybeet)                                                         | [sgaichas](https://github.com/sgaichas)                                                        | [ScottLarge-NOAA](https://github.com/ScottLarge-NOAA)                                                  | [slucey](https://github.com/slucey)                                                          | [RMORSEcode](https://github.com/RMORSEcode)                                                       |
+| ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| [![](https://avatars1.githubusercontent.com/u/22455149?s=100&v=4)](https://github.com/andybeet) | [![](https://avatars1.githubusercontent.com/u/8172302?s=100&v=4)](https://github.com/sgaichas) | [![](https://avatars1.githubusercontent.com/u/62562436?s=100&v=4)](https://github.com/ScottLarge-NOAA) | [![](https://avatars1.githubusercontent.com/u/5578254?s=100&v=4)](https://github.com/slucey) | [![](https://avatars1.githubusercontent.com/u/10620840?s=100&v=4)](https://github.com/RMORSEcode) |
+
+#### Legal disclaimer
 
 *This repository is a scientific product and is not official
 communication of the National Oceanic and Atmospheric Administration, or

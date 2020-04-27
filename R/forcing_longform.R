@@ -38,17 +38,26 @@ make.force.long = function(force.dir, force.file){
     for(t in 1:length(tsteps)){
       
       dat = var.vals[,,t]
-      dat.ls = lapply(1:length(boxes),function(b){
+      dat.ls = list()
+      for(b in 1:length(boxes)){
         vals = as.numeric(na.omit(dat[,b]))
+        vals = vals[vals!=0]
+        if(length(vals) == 0){
+          dat.ls[[b]] = NULL
+          next
+        }
         levs = 0:(length(vals)-1)
         alt.levs = rev(levs)+1
         if(b %in% c(24,25)){
-          return(NULL)
+          dat.ls[[b]] = NULL
         }else{
-          return(data.frame(box = (b-1),level = levs,alt.level = alt.levs,
+          dat.ls[[b]] =data.frame(box = (b-1),level = levs,alt.level = alt.levs,
                             time = t,value = vals, var.name = var.names[var],time.s = time.vals[t],
-                            time.date = time.date[t],year = time.year[t],month = time.month[t],stringsAsFactors = F ))  
-        }})
+                            time.date = time.date[t],year = time.year[t],month = time.month[t],
+                            stringsAsFactors = F )  
+        }
+      }
+      
       var.ls[[t]] = dplyr::bind_rows(dat.ls)
     }
     

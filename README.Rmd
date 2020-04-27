@@ -15,28 +15,50 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-Atlantis Neus file repository v1.5
-
-Physics based on Doppio Roms model hindcast 2008-2010 downscaled to NEUS boxes.
+Atlantis is a series of submodels (biological, geophysical, fishing, assessment, and management) and as a whole simulates a Management Strategy Evaluation (MSE) procedure which allows for qualitative comparisons of different management choices. We have parameterized Atlantis for the Northeast United States Continental Shelf (NEUS), including the major functional groups from an ecosystem perspective. We have also parameterized and simulated the physiographic dynamics of the ecosystem, as well as the most important fleets. Our goal was to recreate, at least in approximate terms, the biomass, catch, and effort trends in the NEUS from 1964 to the mid 2000s.
 
 ### The spatial domain
 ```{r neusfig, echo=F}
 knitr::include_graphics(path="https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/Geometry/AtlantisNeusDomain.PNG")
 ```
 
-### 2019 run structure 
 
-Now includes fishing, last updated 20190917
+### Development team
 
-- Windows build:
-atlantismain_6456 -i RMinit4_2019.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_WIN_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20181126_2.prm -h at_harvest_neus_v15_FC_RG_5_16_19.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix_RM.csv -q NeusFisheries_v15_5_17_19.csv -t C:\Users\ryan.morse\Documents\GitHub\atneus_RM -d 20190916dta 1>1a.junk 2>2a.junk
+In alphabetical order:
 
-- Linux build:
-atlantisMerged -i RMinit4_2019.nc 0 -o atneus_v15_test2008hydro_20180208.nc -r at_run_neus_v15_RM_scale_0503.prm -f at_force_neus_v15_DE_LINUX_RM_newHydro_highnuts.prm -p at_physics_nuts_neus_v15_DE_eddys.prm -b at_biol_neus_v15_scaled_diet_20181126_2.prm -h at_harvest_neus_v15_FC_RG_5_16_19.prm -e at_economics_neus_DE_New.prm -s NeusGroups_v15_unix_RM.csv -q NeusFisheries_v15_5_17_19.csv -t /home/ryan/Git/atneus_RM -d 20190626a  1>1a.junk 2>2a.junk
-
+| [jcaracappa1] | [gambler1650] |
+|-|-|
+| [![][jcaracappa1-img]][jcaracappa1] | [![][gambler1650-img]][gambler1650] |
 
 
-t: location of local git folder
+[jcaracappa1-img]: https://avatars1.githubusercontent.com/u/57966543?s=100&v=4
+[gambler1650-img]: https://avatars1.githubusercontent.com/u/5949383?s=100&v=4
+[jcaracappa1]: https://github.com/jcaracappa1
+[gambler1650]: https://github.com/gambler1650
 
+### Team members
+
+Members of the Atlantis team other than the core development team:
+
+In alphabetical order:
+
+| [andybeet] | [sgaichas] | [ScottLarge-NOAA] |  [slucey] | [RMORSEcode] |
+|---|---|---|---|---|
+| [![][andybeet-img]][andybeet] | [![][sgaichas-img]][sgaichas] | [![][ScottLarge-NOAA-img]][ScottLarge-NOAA] | [![][slucey-img]][slucey] | [![][RMORSEcode-img]][RMORSEcode] | 
+
+[andybeet-img]: https://avatars1.githubusercontent.com/u/22455149?s=100&v=4
+[sgaichas-img]: https://avatars1.githubusercontent.com/u/8172302?s=100&v=4
+[ScottLarge-NOAA-img]: https://avatars1.githubusercontent.com/u/62562436?s=100&v=4
+[slucey-img]: https://avatars1.githubusercontent.com/u/5578254?s=100&v=4
+[RMORSEcode-img]: https://avatars1.githubusercontent.com/u/10620840?s=100&v=4
+[andybeet]: https://github.com/andybeet
+[sgaichas]: https://github.com/sgaichas
+[ScottLarge-NOAA]: https://github.com/ScottLarge-NOAA
+[slucey]: https://github.com/slucey
+[RMORSEcode]: https://github.com/RMORSEcode
+
+
+#### Legal disclaimer
 
 *This repository is a scientific product and is not official communication of the National Oceanic and Atmospheric Administration, or the United States Department of Commerce. All NOAA GitHub project code is provided on an ‘as is’ basis and the user assumes responsibility for its use. Any claims against the Department of Commerce or Department of Commerce bureaus stemming from the use of this GitHub project will be governed by all applicable Federal law. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by the Department of Commerce. The Department of Commerce seal and logo, or the seal and logo of a DOC bureau, shall not be used in any manner to imply endorsement of any commercial product or activity by DOC or the United States Government.*
