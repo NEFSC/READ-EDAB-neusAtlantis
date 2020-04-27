@@ -38,3 +38,9 @@ This file is used to document steps made towards a new version/subversion
     + Herring still collapses at time step 51 with normal fishing
 * Changed the age structure of the catch for Mackerel and Herring to prevent overfishing at lower age classes
 * Affects: at_biology_test.prm, at_run_test.prm, at_harvest_test.prm
+
+* RG: 4-26-2020
+* Tested the run with the COBALT forcing for lower trophic levels
+    + Herring persisted at full fishing levels - but still drop after the 50th time step, not to as great a magnitude as previously
+    + Increased herring recruit numbers
+    + Mackerel persist and probably need to have biological parameters reduced a bit to constrain growth
