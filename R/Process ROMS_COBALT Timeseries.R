@@ -1,8 +1,9 @@
 
 #source(here::here('R','Roms_to_Hydroconstruct.R'))
-source('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/R/Roms_to_Hydroconstruct.R')
+source('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/R/Roms_to_Hydroconstruct_nutrients.R')
 
-dir.names = 1980:2014
+# dir.names = 1981:2014
+dir.names = 1981:1989
 
 # ellapsed.t = list()
 
@@ -19,16 +20,22 @@ for(yr in 1:length(dir.names)){
   
   #Copy files from external to local directory
   files2copy.in = list.files(orig.dir,'RM_NWA-SZ*',full.names = T)
-  tictoc::tic()
-  file.copy(files2copy.in, local.dir)
-  tictoc::toc()
+  files2copy.in.short = list.files(orig.dir,'RM_NWA-SZ*',full.names = F)
+  files.in.local = list.files(local.dir,'RM_NWA-SZ*',full.names = F)
+  
+  if(!all(files2copy.in.short %in% files.in.local)){
+    tictoc::tic()
+    file.copy(files2copy.in, local.dir)
+    tictoc::toc()
+  }
+  
   
   if(!dir.names[yr] %in% dir(local.output.dir)){
     dir.create(paste0(local.output.dir,dir.names[yr]))
   }
   
   Roms2Hydro(roms.dir =local.dir,
-             roms.prefix = 'RM_NWA-SZ.HCob05T_avg_',
+             roms.prefix = paste0('RM_NWA-SZ.HCob05T_avg_',dir.names[yr],'*'),
              out.dir = paste0(local.output.dir,dir.names[yr],'/'),
              name.out = 'roms_cobalt_')
   
