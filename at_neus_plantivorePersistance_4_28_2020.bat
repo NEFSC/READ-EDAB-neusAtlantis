@@ -1,1 +1,0 @@
-atlantismain_6490 -i neus_init_test.nc 0 -o atneus_v15_test.nc -r at_run_test.prm -f at_force_WIN_test.prm -p at_physics_test.prm -b at_biology_test.prm -h at_harvest_test.prm -e at_economics_test.prm -s neus_groups_test.csv -q neus_fisheries_test.csv -t F:\Atlantis-6490\neus-atlantis-forced2\testing -d 4_28_2020 1>1a.junk 2>2a.junk
