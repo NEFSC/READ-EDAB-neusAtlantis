@@ -1365,8 +1365,8 @@ flagRCBMigrate  0
 # but adults leave 3 times then enter 3 here
 # 0=always remain within the model domain, 1+=migrate in/out of the model 0
 # 0=always remain within the model domain, 1+=migrate in/out of the model 0
-flagMAKMigrate 1
-flagHERMigrate 1
+flagMAKMigrate 0
+flagHERMigrate 0
 flagWHKMigrate 0
 flagBLFMigrate 0
 flagWPFMigrate 0
@@ -7658,10 +7658,10 @@ ZL_FSMG 1
 # Juvenile migration
  
 MigIOBox_MAKjuv 30
-0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_HERjuv 30
-0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_WHKjuv 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -7850,10 +7850,10 @@ MigIOBox_OSHjuv 30
 # Adult migrations
  
 MigIOBox_MAKad 30
-0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
 MigIOBox_HERad 30
-0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_WHKad 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -8266,8 +8266,8 @@ KMIGa_MAKrn 10
 64.84 82.79 160.73 609.67 1160.21 1321.3 1541.12 1610.16 1866.37 2012.27
  
 KMIGa_HERrn 10
-44.58062965 87.37803414 242.4549388 523.6950253 758.8896899 942.7529441 1108.5292 1207.052391 1378.305696 1716.195025
- 
+0 0 0 0 0 0 0 0 0 0
+
 KMIGa_WHKrn 10
 0 0 0 0 0 0 0 0 0 0
  
@@ -8446,8 +8446,8 @@ KMIGa_MAKsn 10
 24.46 31.24 60.65 230.06 437.81 498.6 581.55 607.61 704.28 759.34
  
 KMIGa_HERsn 10
-16.82287911 32.97284307 91.49242972 197.6207643 286.3734679 355.755828 418.3129055 455.4914684 520.1153569 647.6207643
- 
+0 0 0 0 0 0 0 0 0 0
+
 KMIGa_WHKsn 10
 0 0 0 0 0 0 0 0 0 0
  
@@ -11837,7 +11837,7 @@ mum_MAK	10.00
 0.76	8.78	23.70	47.07	66.74	73.66	81.47	83.02	82.26	88.85
 									
 mum_HER	10.00								
-0.65	7.88	22.45	45.34	62.32	70.60	80.51	86.02	93.40	99.01
+26.5	27.88	40	65.34	62.32	70.60	80.51	86.02	93.40	99.01
 									
 mum_WHK	10.00								
 3.02	19.60	55.28	111.07	185.51	275.91	379.06	491.72	610.80	733.58
@@ -13004,7 +13004,7 @@ EDR_BO 0.05
 
 # Assimilation efficiencies of vertebrate consumers 
 E_MAK 0.9
-E_HER 0.7
+E_HER 0.9
 E_WHK 0.3
 E_BLF 0.35
 E_WPF 0.3
@@ -15860,10 +15860,10 @@ recruitRangeFlat 1.5        max relative cohort strength (multiplicative) for gr
 # or number produced per adult (used if recruit flag is set to 12)
  
 KDENR_MAK
-932233758.4
+28000000.4
 
 KDENR_HER
-7000000000
+50000000000
 
 KDENR_WHK
 52020187.37
@@ -19997,7 +19997,6 @@ WSK_turbid_b 2
 30.0 30.0
 WTF_turbid_b 2
 30.0 30.0
-YTF_turbid_b 2
 30.0 30.0
 LSQ_turbid_b 2
 30.0 30.0

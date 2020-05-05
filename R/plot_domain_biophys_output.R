@@ -20,10 +20,13 @@
 # plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output_LTLForce_1980Fill/Figures/geophysical_output/'
 # plot.name = 'NH3_timeseries'
 
+
 plot.domain.biophys = function(nc.file, variable.name, plot.dir, plot.name,save.data = T){
   
   source(here::here('R','atl_var_to_longform.R'))
+
   `%>%` = dplyr::`%>%`
+
   output.nc = ncdf4::nc_open(nc.file)
   var.data = ncdf4::ncvar_get(output.nc,variable.name)
   var.plotname = ncdf4::ncatt_get(output.nc,variable.name)$long_name
@@ -36,6 +39,7 @@ plot.domain.biophys = function(nc.file, variable.name, plot.dir, plot.name,save.
   boxes = 0:(dim(var.data)[2] -1)
   levels = 1:dim(var.data)[1]
   
+
   # var.domain = as.data.frame(t(apply(var.data,c(1,3),mean,na.rm=T)))
   var.domain = atl_var_to_longform(nc.file,variable.name,'1964-01-01')
   var.domain$region = sapply(var.domain$box, function(x){
@@ -58,6 +62,7 @@ plot.domain.biophys = function(nc.file, variable.name, plot.dir, plot.name,save.
   var.domain.lev = var.domain %>% dplyr::group_by(time,time.date,level,region) %>%
     dplyr::summarize( value.mu = mean(value,na.rm=T))
   var.domain.lev = var.domain.lev[which(var.domain.lev$value.mu != 0),]
+
   
   var.domain.lev$time.group = NA
   var.domain.lev$time.group[which(var.domain.lev$time.date < as.POSIXct('1979-01-01',tz = 'UTC'))] = 'early'
@@ -74,6 +79,7 @@ plot.domain.biophys = function(nc.file, variable.name, plot.dir, plot.name,save.
   
   origin = '1964-01-01'
   
+
   ggplot2::ggplot(data = var.domain.lev,ggplot2::aes(x=time.date, y=value.mu,color = region))+
     ggplot2::geom_line()+
     ggplot2::geom_segment(data = box.level.means,
@@ -81,6 +87,7 @@ plot.domain.biophys = function(nc.file, variable.name, plot.dir, plot.name,save.
                                        yend = value.mu, lty = time.group,
                                        color = region),size = 1.2)+
     ggplot2::facet_wrap(~level,nrow = 5)+
+
     ggplot2::xlab('Date')+
     ggplot2::ylab(paste0(var.plotname,' (',var.units,')'))+
     ggplot2::theme_classic()+
