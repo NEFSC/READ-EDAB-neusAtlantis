@@ -10,7 +10,7 @@ runfile='neus_output_test'
 
 git.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/'
 #Input file directory where (PRM, bgm, group data) are saved
-d1=paste0(git.dir,'testing')
+d1=paste0(git.dir,'CurrentVersion')
 # d1 = 'C:/Users/joseph.caracappa/Documents/Branch Backup/neus-atlantis'
 #Output file directory (.nc and .txt files)
 # d2=paste0(git.dir,'currentVersion/Output')

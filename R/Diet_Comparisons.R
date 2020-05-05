@@ -13,7 +13,7 @@ run.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Run_Files/'
 plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Figures/'
 
 #Functional groups file
-fgs = read.csv('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/currentVersion/neus_groups.csv',header = T, stringsAsFactors = F)
+fgs = read.csv('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/CurrentVersion/neus_groups.csv',header = T, stringsAsFactors = F)
 
 #Runs you want to compare
 run.names = c('atneus_v15_01272020','02042020_NewBivalvePred_3','02062020_PrimProdDiag_1')

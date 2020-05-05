@@ -35,7 +35,7 @@ lines(as.Date(irradiance.all.years$date),irradiance.all.years$irr.smoothspline,c
 # dev.off()
 
 solar.out = subset(irradiance.all.years,select = c(day.from.start,irr.smoothspline))
-write.table(solar.out,file = here::here('testing','tsfiles','ROMS_irradiance_smoothed.txt'),row.names = F,sep = ' ')
+write.table(solar.out,file = here::here('CurrentVersion','tsfiles','ROMS_irradiance_smoothed.txt'),row.names = F,sep = ' ')
 
 
 #extend from 1964
@@ -61,4 +61,4 @@ new.solar = dplyr::bind_rows(irr.ls)
 new.solar$day.from.start = 1:nrow(new.solar)
 
 new.solar = subset(new.solar,select = c(day.from.start,irr.smoothspline))
-write.table(new.solar,file = here::here('testing','tsfiles','ROMS_irradiance_smoothed_start1964.txt'),row.names = F, sep = ' ')
+write.table(new.solar,file = here::here('CurrentVersion','tsfiles','ROMS_irradiance_smoothed_start1964.txt'),row.names = F, sep = ' ')
