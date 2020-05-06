@@ -1406,7 +1406,7 @@ flagSDFMigrate 0
 flagFDFMigrate 0
 flagHADMigrate 0
 flagYTFMigrate 0
-flagDOGMigrate 1
+flagDOGMigrate 0
 flagSMOMigrate 0
 flagSSHMigrate 0
 flagDSHMigrate 0
@@ -13023,7 +13023,7 @@ E_BUT 0.35
 E_ANC 0.35
 E_BPF 0.3
 E_GOO 0.3
-E_MEN 0.35
+E_MEN 0.6  # From 0.35
 E_FDE 0.35
 E_COD 0.35
 E_SHK 0.35
@@ -15860,7 +15860,7 @@ recruitRangeFlat 1.5        max relative cohort strength (multiplicative) for gr
 # or number produced per adult (used if recruit flag is set to 12)
  
 KDENR_MAK
-28000000.4
+500000000
 
 KDENR_HER
 50000000000
@@ -15920,7 +15920,7 @@ KDENR_GOO
 432544359.3
 
 KDENR_MEN
-32122718.55
+321227180.55
 
 KDENR_FDE
 2957397.365
