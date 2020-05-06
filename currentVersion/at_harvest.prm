@@ -3454,7 +3454,7 @@ CatchTS_agedistribANC      10
 CatchTS_agedistribGOO      10
 0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
 CatchTS_agedistribMEN      10
-0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
+0 0 0 0 0 0.15 0.2 0.3 0.25 0.1
 CatchTS_agedistribFDE      10
 0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
 CatchTS_agedistribCOD      10
@@ -15956,4 +15956,3 @@ netMEN_flag_framebased     0.0
 midwcNSH_flag_framebased   0.0
 midwcOSH_flag_framebased   0.0
 mowMA_flag_framebased      0.0
-
