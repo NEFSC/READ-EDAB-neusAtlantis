@@ -15,7 +15,9 @@ new.physics = paste0(roms.dir,'Atlantis_Output_2/')
 new.ltl = paste0(roms.dir,'Atlantis_Output_LTLForce_1/')
 new.ltl.fill1980 = paste0(roms.dir,'Atlantis_Output_LTLForce_1980Fill/')
 ltl.noscale = paste0(roms.dir,'Atlantis_Output_noLTLscale/')
+force.nutrients = paste0(roms.dir,'Atlantis_Output_NutrientForcing/')
 figure.dir = paste0(roms.dir,'Diagnostic_Figures/Run_Comparisons/')
+
 
 #Original vs. new physics
 # comp.model.groups(
@@ -104,6 +106,18 @@ comp.model.groups(
   plot.raw = T,
   plot.diff = T,
   plot.out = paste(figure.dir,'newltl1980_v_noLTLscale_'),
+  table.out = T,
+  groups = NULL
+)
+
+comp.model.groups(
+  model1.dir = ltl.noscale  ,
+  model2.dir = force.nutrients,
+  model1.name = 'Forced LTL',
+  model2.name = 'Forced Nutrients',
+  plot.raw = T,
+  plot.diff = T,
+  plot.out = paste(figure.dir,'newltl_v_newnutrients_'),
   table.out = T,
   groups = NULL
 )
