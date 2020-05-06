@@ -16,26 +16,26 @@ other
 output
 
 # ignore all files in testing except prm
-#/testing/*.*
-#!/testing/at_biology_test.prm
-#!/testing/at_economics_test.prm
-#!/testing/at_force_LINUX_test.prm
-#!/testing/at_force_WIN_test.prm
-#!/testing/at_harvest_test.prm
-#!/testing/at_physics_test.prm
-#!/testing/at_run_test.prm
+/CurrentVersion/*.*
+!/CurrentVersion/at_biology_test.prm
+!/CurrentVersion/at_economics_test.prm
+!/CurrentVersion/at_force_LINUX_test.prm
+!/CurrentVersion/at_force_WIN_test.prm
+!/CurrentVersion/at_harvest_test.prm
+!/CurrentVersion/at_physics_test.prm
+!/CurrentVersion/at_run_test.prm
 # except nc
-#!/testing/neus_init_test_nc
+!/CurrentVersion/neus_init_test_nc
 # except csv
-#!/testing/neus_fisheries_test.csv
-#!/testing/neus_groups_test.csv
+!/CurrentVersion/neus_fisheries_test.csv
+!/CurrentVersion/neus_groups_test.csv
 # except bgm
-#!/testing/neus_boxes_test.bgm
+!/CurrentVersion/neus_boxes_test.bgm
 # except rmd
-#!/testing/*.Rmd
+!/CurrentVersion/*.Rmd
 # except altlantis
-#!/testing/*.exe
-#!/testing/run_command_test.txt
+!/CurrentVersion/*.exe
+!/CurrentVersion/run_command_test.txt
 
 #Geometry/NEUS 1-5 Map.R
 #Geometry/Neus 1-5.pdf
