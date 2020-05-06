@@ -40,7 +40,7 @@ output
 #Geometry/NEUS 1-5 Map.R
 #Geometry/Neus 1-5.pdf
 #Geometry/Neus Faces.pdf
-#R/desktop.ini
+R/desktop.ini
 #R/generate_annual_forcing.R
 #R/generate_forcing_paths.R
 #R/Post_Hydroconstruct_Diagnostics.R
@@ -48,3 +48,4 @@ output
 #testing/at_force_WIN_test.prm
 testing/tsfiles/roms_cobalt_flows_03242020_1980_1989.nc
 testing/tsfiles/roms_cobalt_flows_03242020_1980_1989.nc
+
