@@ -4,18 +4,41 @@
 
 ## Bug Fixes (patch)
 
+# neus-atlantis 1.0.0-9007 (in dev) 
+
+* Mackerel and Menhaden Update
+* Increased Mackerel recruits
+    + Mackerel persists to end now, though at perhaps too high a biomass - will need to be tuned further after next forcing files
+* Increased Menhaden recruits, assimilation efficiency and modified age structure of the catch to allow larger age classes to persist better
+* Increased growth on Menhaden's first 3 age classes
+* Menhaden persists to end now and at about half of Mackerel's biomass
+
+As described in [#37](https://github.com/NOAA-EDAB/neus-atlantis/pull/37) & 
+[#39](https://github.com/NOAA-EDAB/neus-atlantis/pull/39)
 
 # neus-atlantis 1.0.0-9006 (in dev) 
 (built with altantis rev 6490)
 
-Major fixes
+#### Major fixes
 
 * Fixes incorrect conversion from COBALT (mol X/ kg H20) to Atlantis (mg X/m3) units
 * Updated LTL-Forcing scripts
 * Removed initial conditions scaling of forced LTL groups
 
-
 As described in [#30]( https://github.com/NOAA-EDAB/neus-atlantis/pull/30)
+
+#### Minor fixes
+
+Adds forcing files for NH3, NO3, O2, and Si. Includes:
+* New scripts
+* Pulling and aggregating data from ROMS_COBALT
+* Converting data into Atlantis forcing files
+* Plotting variables from nutrient forcing
+* Added new nutrient forcing files
+* Updated force_WIN_test.prm with nutrient forcing
+
+As described in [#33](https://github.com/NOAA-EDAB/neus-atlantis/pull/33)
+
 
 # neus-atlantis 1.0.0-9005 (in dev) 
 (built with altantis rev 6490)
