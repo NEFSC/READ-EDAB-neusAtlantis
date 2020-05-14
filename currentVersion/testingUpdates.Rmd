@@ -51,4 +51,11 @@ This file is used to document steps made towards a new version/subversion
 * Increased Mackerel recruits
     + Mackerel persists to end now, though at perhaps too high a biomass - will need to be tuned further after next forcing files
 * Increased Menhaden recruits, assimilation efficiency and modified age structure of the catch to allow larger age classes to persist better
-    + Menhaden persists to end now, though at perhaps too high a biomass - will need to be tuned further after next forcing files
+    + Menhaden persists almost to end now
+    
+ ## Menhaden Update
+ 
+ * RG: 05-14-2020
+ * Increased Menhaden recruits
+ * Increased growth on Menhaden's first 3 age classes
+ + Menhaden persists to end now and at about half of Mackerel's biomass
