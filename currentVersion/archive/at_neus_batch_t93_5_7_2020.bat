@@ -1,0 +1,1 @@
+atlantismain_6490 -i neus_init.nc 0 -o atneus_v15.nc -r at_run_t93a.prm -f at_force_WIN.prm -p at_physics.prm -b at_biology_t93b.prm -h at_harvest.prm -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -t F:\Atlantis-6490\neus-atlantis-ATLNTS-93\currentVersion -d 5_8_2020 1>1a.junk 2>2a.junk
