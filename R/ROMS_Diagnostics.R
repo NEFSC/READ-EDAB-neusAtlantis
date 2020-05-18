@@ -22,7 +22,7 @@
 #' Author: J. Caracappa
 
 
-roms.diagnostics = function(roms.dir,roms.prefix,bgm.file,dz.file,output.name,output.dir){
+ROMS_Diagnostics = function(roms.dir,roms.prefix,bgm.file,dz.file,output.name,output.dir){
 
 `%>%` = dplyr::`%>%`
 

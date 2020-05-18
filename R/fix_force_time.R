@@ -19,7 +19,7 @@
 # force.file = 'roms_output_transport_tohydro_1981.nc'
 
 
-fix.force.time = function(force.dir,force.file,is.romsfile = F){
+fix_force_time = function(force.dir,force.file,is.romsfile = F){
   force.nc =   ncdf4::nc_open(paste0(force.dir,force.file),write = T)
   
   file.year = as.numeric(sort(gsub(".*_(\\d{4}).+","\\1",force.file)))
