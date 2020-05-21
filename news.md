@@ -6,6 +6,7 @@
 
 
 # neus-atlantis 1.0.0-9008 (in dev) 
+(built with altantis rev 6490)
 
 #### Post-processing Routine split across 3 functions
 
@@ -36,6 +37,7 @@ As described in [#40](https://github.com/NOAA-EDAB/neus-atlantis/pull/40)
 
 
 # neus-atlantis 1.0.0-9007 (in dev) 
+(built with altantis rev 6490)
 
 * Mackerel and Menhaden Update
 * Increased Mackerel recruits
