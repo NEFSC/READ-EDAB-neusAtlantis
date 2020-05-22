@@ -152,6 +152,7 @@ make_ROMS_files = function(roms.dir,
   }
   file_db = dplyr::bind_rows(file_db_ls)
   file_db = dplyr::arrange(file_db,ocean_time)
+  file_db$time_id = 1:nrow(file_db)
   # file_db$band_level = 1:nrow(file_db)
   
   # file_db = dplyr::tibble(fullname = roms_files,
@@ -415,16 +416,19 @@ make_ROMS_files = function(roms.dir,
   
   
   for (i_timeslice in seq(nrow(file_db))) {
-  # for(i_timeslice in 1:2){
+  # for(i_timeslice in 300){
   # tic()
     print(i_timeslice)
     
     #roms file name and band name
     roms_file <-file_db$fullname[i_timeslice]
+
+    # roms.nc = nc_open(paste0(roms.dir,roms_file))
+    # ocean_time[i_timeslice] = ncvar_get(roms.nc,'ocean_time')
+    # nc_close(roms.nc)
     
-    roms.nc = nc_open(paste0(roms.dir,roms_file))
-    ocean_time[i_timeslice] = ncvar_get(roms.nc,'ocean_time')
-    nc_close(roms.nc)
+    ocean_time[i_timeslice] = file_db$ocean_time[i_timeslice]
+    
     level <- file_db$band_level[i_timeslice]
     # level = 1
   
@@ -533,7 +537,7 @@ make_ROMS_files = function(roms.dir,
         summarize(temp = mean(temp, na.rm = TRUE), salt = mean(salt ,na.rm = TRUE), vertflux=mean(w, na.rm=T)) %>% 
         ungroup(box_z_index2)%>%
         complete(atlantis_level, .bx0)
-      box_props[[i_timeslice]]$band_level = file_db$band_level[i_timeslice]
+      box_props[[i_timeslice]]$band_level = file_db$time_id[i_timeslice]
       # mutate(band_level = level)
     }
     
@@ -544,7 +548,7 @@ make_ROMS_files = function(roms.dir,
                   nsm = mean(nsm,na.rm=T), nsmz = mean(nsmz,na.rm=T), silg = mean(silg,na.rm=T), nbact = mean(nbact, na.rm=T)) %>%
         ungroup(box_z_index2) %>%
         complete(atlantis_level,.bx0)
-      box_props_cob[[i_timeslice]]$band_level = file_db$band_level[i_timeslice]
+      box_props_cob[[i_timeslice]]$band_level = file_db$time_id[i_timeslice]
     }
     
     if(make.nutvars){
@@ -553,7 +557,7 @@ make_ROMS_files = function(roms.dir,
         summarize(rho = mean(rho,na.rm=T), nh4 = mean(nh4,na.rm=T),no3 = mean(no3,na.rm=T), o2 = mean(o2,na.rm=T), sio4 = mean(sio4,na.rm=T)) %>%
         ungroup(box_z_index2) %>%
         complete(atlantis_level,.bx0)
-      box_props_nut[[i_timeslice]]$band_level = file_db$band_level[i_timeslice]
+      box_props_nut[[i_timeslice]]$band_level = file_db$time_id[i_timeslice]
       
     }
     
@@ -571,7 +575,7 @@ make_ROMS_files = function(roms.dir,
         ungroup(face_z_uvindex2) %>%
         complete(atlantis_level, .fx0) 
       # mutate(band_level = level)
-      face_props[[i_timeslice]]$band_level = file_db$band_level[i_timeslice]
+      face_props[[i_timeslice]]$band_level = file_db$time_id[i_timeslice]
       
     }
    
@@ -819,7 +823,8 @@ make_ROMS_files = function(roms.dir,
     source_boxid=bgm$faces$right 
   }
   
-  year = last(strsplit(getwd(),'/')[[1]])
+  # year = last(strsplit(getwd(),'/')[[1]])
+  year =as.numeric(sort(gsub(".*_(\\d{4}).+","\\1",file_db$fullname[1])))
   
   if(make.hflux){
     ### create 3d array of transport vals
@@ -916,7 +921,7 @@ make_ROMS_files = function(roms.dir,
   
   if(make.hflux){
     ### FOR TRANSPORT NC FILE
-    filename=paste0(out.dir,name.out,'transport_2hydro.nc')
+    filename=paste0(out.dir,name.out,'transport__',year,'_neus_atl.nc')
     
     #define dimensions
     timedim=ncdim_def("time", "", 1:length(t_tot), unlim=T, create_dimvar = F) #as.double(t_tot)
@@ -966,7 +971,7 @@ make_ROMS_files = function(roms.dir,
   # x = nc_open(filename)
   if(make.physvars){
     ### For T, S, Vertical Flux NC file
-    filename=paste0(out.dir,name.out,'statevars_2hydro.nc')
+    filename=paste0(out.dir,name.out,'statevars__',year,'_neus_atl.nc')
     
     #define dimensions
     timedim=ncdim_def("time", "", 1:length(t_tot), unlim=T, create_dimvar = F) #as.double(t_tot)
@@ -1008,7 +1013,7 @@ make_ROMS_files = function(roms.dir,
   
   if(make.ltlvars){
     ### For COBALT LTL variables
-    filename=paste0(out.dir,name.out,'ltl_statevars_2hydro.nc')
+    filename=paste0(out.dir,name.out,'ltl_statevars_',year,'_neus_atl.nc')
     
     #define dimensions
     timedim=ncdim_def("time", "", 1:length(t_tot), unlim=T, create_dimvar = F) #as.double(t_tot)
@@ -1061,7 +1066,7 @@ make_ROMS_files = function(roms.dir,
   }
   
   if(make.nutvars){
-    filename=paste0(out.dir,name.out,'nutvars_2hydro.nc')
+    filename=paste0(out.dir,name.out,'nutvars__',year,'_neus_atl.nc')
     
     #define dimensions
     timedim=ncdim_def("time", "", 1:length(t_tot), unlim=T, create_dimvar = F) #as.double(t_tot)
