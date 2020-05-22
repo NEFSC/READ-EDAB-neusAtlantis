@@ -21,6 +21,11 @@
 #' 
 #' Author: J. Caracappa
 
+transport.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/transport/'
+statevars.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/phys_statevars/'
+output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Pre Forcing Diagnostics/'
+bgm.file = 'neus_tmerc_RM2.bgm'
+dz.file = 'dz.csv'
 
 ROMS_Diagnostics = function(roms.dir,roms.prefix,bgm.file,dz.file,output.name,output.dir){
 
@@ -28,18 +33,28 @@ ROMS_Diagnostics = function(roms.dir,roms.prefix,bgm.file,dz.file,output.name,ou
 
 # Read in box-aggregated data ---------------------------------------------
 
-nc.files = list.files(roms.dir,pattern = paste0('^',roms.prefix,'.*\\.nc$'),full.names = T)
-transport.file = nc.files[which(sapply(nc.files,function(x) any(strsplit(x,'[_.]+')[[1]]=='transport')))]
-statevars.file = nc.files[which(sapply(nc.files,function(x) any(strsplit(x,'[_.]+')[[1]]=='statevars') & all(strsplit(x,'[_.]+')[[1]] != 'ltl')))]
-# ltlvars.file = nc.files[which(sapply(nc.files, function(x) any(strsplit(x,'[_.]+')[[1]] == 'ltl')))]
+transport.files = list.files(transport.dir,'*.nc',full.names = T)
+statevar.files = list.files(statevars.dir,'*.nc',full.names = T)
 
-transport.nc = ncdf4::nc_open(transport.file)
-statevars.nc = ncdf4::nc_open(statevars.file)
+#Pull variables from annual netCDF
+hflux.ls =vflux.ls = list()
+for(i in 1:length(transport.files)){
+  transport.nc = ncdf4::nc_open(transport.files[i])
+  hflux.ls[[i]] = ncdf4::ncvar_get(transport.nc,'transport')
+  if(i == 1){
+    source.box = ncdf4::ncvar_get(transport.nc,'source_boxid')
+    dest.box = ncdf4::ncvar_get(transport.nc,'dest_boxid')
+  }
+  ncdf4::nc_close(transport.nc)
+  
+  statevar.nc = ncdf4::nc_open(statevar.files[i])
+  vflux.ls[[i]] = ncdf4::ncvar_get(statevar.nc,'verticalflux')
+  ncdf4::nc_close(statevar.nc)
+}
 
-hflux = ncdf4::ncvar_get(transport.nc,'transport')
-source.box = ncdf4::ncvar_get(transport.nc,'source_boxid')
-dest.box = ncdf4::ncvar_get(transport.nc,'dest_boxid')
-vflux = ncdf4::ncvar_get(statevars.nc,'verticalflux')
+#Combine years into single array/matrix for each variable. Last dimension is time (34 yrs ~ 12395 d)
+hflux = abind::abind(hflux.ls,along =3)
+vflux = abind::abind(vflux.ls, along =3)
 
 bgm = rbgm::bgmfile(here::here('Geometry',bgm.file))
 dz_box = read.csv(here::here('Geometry','dz.csv'),header = T)
@@ -179,7 +194,10 @@ for(i in seq_along(boxes)){
     ggplot2::ggtitle(paste0('Box ',boxes[i]))
 }
 pdf(paste0(output.dir,output.name,'Net_Flux_Pct.pdf'),width = 12,height = 8)
-for(i in seq_along(boxes)){gridExtra::grid.arrange(flux.pct.plots[[i]])}
+for(i in seq_along(boxes)){
+  gridExtra::grid.arrange(flux.pct.plots[[i]])
+  print(i)
+  }
 dev.off()
 
 save(boxes.net.flux,boxes.exchange, net.flux.pct,file = paste0(output.dir,output.name,'_box_diagnostics.R'))
@@ -187,10 +205,10 @@ save(boxes.net.flux,boxes.exchange, net.flux.pct,file = paste0(output.dir,output
 }
 
 
-roms.diagnostics(roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/',
-                 roms.prefix = 'roms_',
+ROMS_Diagnostics(roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/transport',
+                 roms.prefix = 'roms_cobalt_v10_transport_1981*',
                  bgm.file = 'neus_tmerc_RM2.bgm',
                  dz.file = 'dz.csv',
                  output.name = 'roms_diag_allyears',
-                 output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Pre Hydroconstruct Diagnostics/'
+                 output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Pre Forcing Diagnostics/'
 )
