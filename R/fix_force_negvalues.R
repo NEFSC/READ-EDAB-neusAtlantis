@@ -16,8 +16,23 @@ fix_force_negvalues = function(force.file, variable){
  
 }
 
+#Physics
+roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/phys_statevars_alternate/'
+phys.files =  list.files(roms.dir,pattern = '^roms_tempsalt_force.*\\.nc$',full.names = T)
+
+var.names = c('Temp','salt')
+
+for(f in 1:length(phys.files)){
+  # for(f in 17){
+  for(v in 1:length(var.names)){
+    fix_force_negvalues(force.file = phys.files[f], variable = var.names[v])
+    # print(var.names[v])
+  }
+  print(f)
+}
+
 #LTL values
-roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/ltl_statevars'
+roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/ltl_statevars/'
 ltl.files =  list.files(roms.dir,pattern = '^roms_ltl_force.*\\.nc$',full.names = T)
 
 var.names = c('Diatom_N','PicoPhytopl_N','Carniv_Zoo_N','Zoo_N','MicroZoo_N','Pelag_Bact_N','Diatom_S')
@@ -25,22 +40,22 @@ var.names = c('Diatom_N','PicoPhytopl_N','Carniv_Zoo_N','Zoo_N','MicroZoo_N','Pe
 for(f in 1:length(ltl.files)){
 # for(f in 17){
   for(v in 1:length(var.names)){
-    remove.neg(force.file = ltl.files[f], variable = var.names[v])
+    fix_force_negvalues(force.file = ltl.files[f], variable = var.names[v])
     # print(var.names[v])
   }
   print(f)
 }
 
 #Nutrient Values
-roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/nut_statevars'
+roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/nut_statevars/'
 nut.files =  list.files(roms.dir,pattern = '^roms_nut_force.*\\.nc$',full.names = T)
 
 var.names = c('NH3','NO3','Oxygen','Si')
 
-for(f in 1:length(ltl.files)){
+for(f in 1:length(nut.files)){
   # for(f in 17){
   for(v in 1:length(var.names)){
-    remove.neg(force.file = ltl.files[f], variable = var.names[v])
+    fix_force_negvalues(force.file = nut.files[f], variable = var.names[v])
     # print(var.names[v])
   }
   print(f)
