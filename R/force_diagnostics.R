@@ -10,12 +10,12 @@
 #'
 #'Author: J.caracappa
 
-# force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Done/'
-# hydro.name = 'roms_cobalt_flows_03242020_1980_1989.nc'
-# bgm.file = 'neus_tmerc_RM2.bgm'
-# dz.file = 'dz.csv'
-# level.key.file = 'box layer key rev.csv'
-# level.key.rev.file = 'box layer key.csv'
+force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/transport/'
+hydro.name = 'flow_1981.nc'
+bgm.file = 'neus_tmerc_RM2.bgm'
+dz.file = 'dz.csv'
+level.key.file = 'box layer key rev.csv'
+level.key.rev.file = 'box layer key.csv'
 
 force_diagnostics = function(force.dir,hydro.name){
 
@@ -137,7 +137,7 @@ force_diagnostics = function(force.dir,hydro.name){
   full.exchanges$source.b = factor(full.exchanges$source.b)
   full.exchanges$dest.b = factor(full.exchanges$dest.b)
   
-  # save('full.exchanges', file = paste0(force.dir,'Long Format Net Exchanges.R'))
+  save('full.exchanges', file = paste0(force.dir,'Long Format Net Exchanges.R'))
   
   #Example plot
   # ggplot(data = subset(full.exchanges,source.b == 1), aes(x = time, y = exch, col = dest.b))+geom_path(stat = 'sum',size = 1)
