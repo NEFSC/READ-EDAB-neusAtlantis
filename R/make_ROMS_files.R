@@ -433,7 +433,7 @@ make_ROMS_files = function(roms.dir,roms.prefix,out.dir,name.out){
     #COBALT PARAMS
     box_z_index$rho <- extract_at_level(readAll(r_rho), box_cell)+1000; rm(r_rho)
     #convert biological groups from molN/kg to mgN/m3
-    rho_scale = box_z_index$rho*1E6/14.0067
+    rho_scale = box_z_index$rho*14.0067*1E3
     
     box_z_index$ndi <- extract_at_level(readAll(r_ndi), box_cell)*rho_scale; rm(r_ndi)
     box_z_index$nlg <- extract_at_level(readAll(r_nlg), box_cell)*rho_scale; rm(r_nlg)
@@ -441,7 +441,7 @@ make_ROMS_files = function(roms.dir,roms.prefix,out.dir,name.out){
     box_z_index$nmdz <- extract_at_level(readAll(r_nmdz), box_cell)*rho_scale; rm(r_nmdz)
     box_z_index$nsm <- extract_at_level(readAll(r_nsm), box_cell)*rho_scale; rm(r_nsm)
     box_z_index$nsmz <- extract_at_level(readAll(r_nsmz), box_cell)*rho_scale; rm(r_nsmz)
-    box_z_index$silg <- extract_at_level(readAll(r_silg), box_cell)*box_z_index$rho*1E6/28.0855; rm(r_silg)
+    box_z_index$silg <- extract_at_level(readAll(r_silg), box_cell)*box_z_index$rho*1E3*28.0855; rm(r_silg)
     box_z_index$nbact <- extract_at_level(readAll(r_nbact), box_cell)*rho_scale; rm(r_nbact)
     
     # toc()
