@@ -6,14 +6,14 @@ source(here::here('R','process_atl_output.R'))
 source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Define local/git directories for atlantis output, parameter files, and desired location for figures/tables
-atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output_NutrientForcing/'
+atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_NewCOBALT/'
 param.dir = here::here('CurrentVersion')
-out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output_NutrientForcing/Post_Processed/'
+out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_NewCOBALT/Post_Processed/'
 
 #Run prefix is the filename prefix in the atlantis output (specified in run.bat)
-run.prefix = 'neus_output_test'
+run.prefix = 'neus_output'
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
-run.name = 'NutrientForcing'
+run.name = 'NewCOBALT'
 
 #Run function that retreives parameter files
 param.ls= get_atl_paramfiles(param.dir = param.dir,
@@ -22,9 +22,9 @@ param.ls= get_atl_paramfiles(param.dir = param.dir,
 
 #Run  post-processing function to generate "result" R object. 
 process_atl_output( param.dir = here::here('CurrentVersion'),
-  atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output_NutrientForcing/',
-  out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output_NutrientForcing/Post_Processed/',
-  run.prefix = 'neus_output_test',
+  atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_NewCOBALT/',
+  out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_NewCOBALT/Post_Processed/',
+  run.prefix = 'neus_output',
   include_catch = T,
   save.out = T, #If T, saves to file, if F returns to current environment
   bgm.file = param.ls$bgm,
@@ -43,7 +43,7 @@ process_atl_output( param.dir = here::here('CurrentVersion'),
 )
 
 #If result object saved to file or already exists load it into env.
-load(paste0(out.dir,'neus_output_test_postprocessed.rdata'))
+load(paste0(out.dir,'neus_output_postprocessed.rdata'))
 
 #Run diagnostic figures/tables script. See function document for more detailed description of figures.
 make_atlantis_diagnostic_figures(
