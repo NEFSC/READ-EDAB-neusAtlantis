@@ -6,7 +6,7 @@ setwd(paste0(roms.dir,'Forcing_Files/'))
 orig.prm = readLines(paste0(roms.dir,'Forcing_Files/roms_cobalt_hydroconstruct_template.prm'))
 orig.bat = readLines(paste0(roms.dir,'Forcing_Files/hydroconstruct_run_template.bat'))
 roms.prefix = 'roms_cobalt_v10_'
-years = 1981:2014
+years = 1964:1980
 # years = 1981
 
 for(yr in 1:length(years)){
