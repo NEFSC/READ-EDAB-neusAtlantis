@@ -15,7 +15,7 @@
 # force.vars = c('temperature','salinity')
 # var.units = c('deg C','psu')
 
-make_force_statevar = function(roms.dir,roms.file,out.dir,force.vars,var.units,out.prefix){
+make_force_statevar = function(roms.dir,roms.file,out.dir,force.vars,final.vars,var.units,out.prefix){
 
   library(dplyr)
   library(RNetCDF)
@@ -154,7 +154,7 @@ make_force_statevar = function(roms.dir,roms.file,out.dir,force.vars,var.units,o
   # }
   
   
-  make_hydro <- function(nc.name, t.units, seconds.timestep, this.title, this.geometry, time.array, cdf.name,force.vars, var.units) {
+  make_hydro <- function(nc.name, t.units, seconds.timestep, this.title, this.geometry, time.array, cdf.name,force.vars, final.vars,var.units) {
     
     nc.file <- create.nc(nc.name)
     
@@ -166,20 +166,20 @@ make_force_statevar = function(roms.dir,roms.file,out.dir,force.vars,var.units,o
     for(v in 1:length(force.vars)){
       var.name = force.vars[v]
       #Define Variables
-      var.def.nc(nc.file, force.vars[v], 'NC_DOUBLE', c('z','b','t'))
+      var.def.nc(nc.file, final.vars[v], 'NC_DOUBLE', c('z','b','t'))
       #Assign Fill Value
-      att.put.nc(nc.file, force.vars[v], '_FillValue', "NC_DOUBLE", 0)
+      att.put.nc(nc.file, final.vars[v], '_FillValue', "NC_DOUBLE", 0)
       #Assign 
-      att.put.nc(nc.file, force.vars[v], 'missing_value', 'NC_DOUBLE',0)
+      att.put.nc(nc.file, final.vars[v], 'missing_value', 'NC_DOUBLE',0)
       #Assign valid_min
-      att.put.nc(nc.file, force.vars[v], 'valid_min', 'NC_DOUBLE', 0)
+      att.put.nc(nc.file, final.vars[v], 'valid_min', 'NC_DOUBLE', 0)
       #Assing valid_max
-      att.put.nc(nc.file, force.vars[v], 'valid_max', 'NC_DOUBLE', 999)
+      att.put.nc(nc.file, final.vars[v], 'valid_max', 'NC_DOUBLE', 999)
       #Assign units
-      att.put.nc(nc.file, force.vars[v], 'units','NC_CHAR', var.units[v])
+      att.put.nc(nc.file, final.vars[v], 'units','NC_CHAR', var.units[v])
       
       #Put variable values
-      var.put.nc(nc.file,force.vars[v],var.result.list[[v]])
+      var.put.nc(nc.file,final.vars[v],var.result.list[[v]])
     }
     
     att.put.nc(nc.file, "t", "units", "NC_CHAR", t.units)
@@ -197,7 +197,14 @@ make_force_statevar = function(roms.dir,roms.file,out.dir,force.vars,var.units,o
     
     
   }
-  make_hydro(nc.name=paste0(out.dir,out.prefix,file.year,".nc"), t.units, seconds.timestep, this.title, this.geometry, time.array, cdf.name = paste0(out.dir,"test_roms_",file.year,".cdf"),force.vars = force.vars, var.units = var.units)
+  make_hydro(nc.name=paste0(out.dir,out.prefix,file.year,".nc"),
+             t.units, seconds.timestep,
+             this.title, this.geometry,
+             time.array,
+             cdf.name = paste0(out.dir,"test_roms_",file.year,".cdf"),
+             force.vars = force.vars,
+             final.vars = final.vars,
+             var.units = var.units)
   
   
 }
