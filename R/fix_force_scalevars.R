@@ -26,8 +26,8 @@ fix_force_scalevars = function(roms.dir,file.name,var.name,scale.factor){
 
 
 years = 1964:2014
-roms.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/CurrentVersion/tsfiles/Annual_Files/'
-
+# roms.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/CurrentVersion/tsfiles/Annual_Files/'
+roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/ltl_statevars/'
 
 for( yr in 1:length(years)){
   file.name = paste0('roms_ltl_force_',years[yr],'.nc')  
