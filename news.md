@@ -4,8 +4,16 @@
 
 ## Bug Fixes (patch)
 
+# neus-atlantis 1.0.0-9009 (in dev) 
+(built with altantis rev 6490.1)
+
+* Edited source code to turn on age-structured output flag. This makes the ANNAGEBIO.nc and ANNAGECATCH.nc. This is a temporary fix, and will need to be updated from the SVN when implemented officially.
+
+As described in [#42](https://github.com/NOAA-EDAB/neus-atlantis/pull/42)
+
 
 # neus-atlantis 1.0.0-9008 (in dev) 
+(built with altantis rev 6490)
 
 #### Post-processing Routine split across 3 functions
 
@@ -36,6 +44,7 @@ As described in [#40](https://github.com/NOAA-EDAB/neus-atlantis/pull/40)
 
 
 # neus-atlantis 1.0.0-9007 (in dev) 
+(built with altantis rev 6490)
 
 * Mackerel and Menhaden Update
 * Increased Mackerel recruits

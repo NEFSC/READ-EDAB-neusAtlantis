@@ -161,6 +161,62 @@ The `.gitattributes` file is used to store information about the files being tra
 * Git lfs [site](https://git-lfs.github.com/)
 
 
+## Using Docker 
+
+Atlantis can be run inside a docker container and the output can be copied on to your local machine. The advantages are you don't need additional compilers and software installed on your local machine, you just need [docker desktop](https://www.docker.com/products/docker-desktop). (On a windows 10 machine you can use windows powershell to run all docker commands.)
+
+### Some useful commands
+
+Getting help for docker functions:
+
+```
+docker --help
+docker run --help
+docker images --help
+```
+
+Pull an ubuntu image
+
+```
+docker pull ubuntu
+```
+
+Display docker images, run them, stop them
+
+`docker images  # display all images `
+
+`docker run -it <image_name or image_id> bash #run an image and enter the container`
+
+`docker exec -it <image_name or image_id> bash # to enter a running container`
+
+`docker run -it -d ubuntu # run the ubuntu image in the back ground`
+
+`docker stop <container_id>`
+
+
+Once inside the container, navigate as if you were on your local machine. Some commands may not be valid depending on what was installed in the container. This is configured in the docker image.
+
+
+Copy files from a container to local machine. The following example copies the file `at_biology.prm` from the directory `app/model` inside the container with id `bc0b994a06dd` to the local machine in the current directory as `at_biology_CONTAINER.prm`
+
+```
+docker cp bc0b994a06dd:/app/model/at_biology.prm at_biology_CONTAINER.prm
+```
+
+To remove all images from your machine
+
+```
+docker rm -f $(docker ps -a -q)
+docker rmi -f $(docker images -q)
+```
+
+To view all containers running
+
+```
+docker container ls
+```
+
+
 
 ## Testing environment
 
