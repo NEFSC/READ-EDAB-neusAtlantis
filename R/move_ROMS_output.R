@@ -16,7 +16,7 @@ for(yr in 1:length(years)){
   
   file.copy(paste0(orig.out.dir,'/',years[yr],'/',hflux.file),paste0(new.out.dir,'/transport/',hflux.file))
   file.copy(paste0(orig.out.dir,'/',years[yr],'/',statevars.file),paste0(new.out.dir,'/phys_statevars/',statevars.file))
-  file.copy(paste0(orig.out.dir,'/',years[yr],'/',ltlvars.file),paste0(new.out.dir,'/ltl_statevars/',ltlvars.file))
+  file.copy(paste0(orig.out.dir,'/',years[yr],'/',ltlvars.file),paste0(new.out.dir,'/ltl_statevars/',ltlvars.file),overwrite = T)
   file.copy(paste0(orig.out.dir,'/',years[yr],'/',nutvars.file),paste0(new.out.dir,'/nut_statevars/',nutvars.file))
   
   
@@ -30,7 +30,7 @@ for(yr in 1:length(years)){
   
   file.copy(paste0(orig.out.dir,'/',years[yr],'/',hflux.file),paste0(new.out.dir,'/transport/',hflux.file))
   file.copy(paste0(orig.out.dir,'/',years[yr],'/',statevars.file),paste0(new.out.dir,'/phys_statevars/',statevars.file))
-  file.copy(paste0(orig.out.dir,'/',years[yr],'/',ltlvars.file),paste0(new.out.dir,'/ltl_statevars/',ltlvars.file))
+  file.copy(paste0(orig.out.dir,'/',years[yr],'/',ltlvars.file),paste0(new.out.dir,'/ltl_statevars/',ltlvars.file),overwrite =T)
   file.copy(paste0(orig.out.dir,'/',years[yr],'/',nutvars.file),paste0(new.out.dir,'/nut_statevars/',nutvars.file))
   
 }
