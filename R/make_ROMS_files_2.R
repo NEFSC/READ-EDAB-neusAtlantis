@@ -407,8 +407,10 @@ make_ROMS_files = function(roms.dir,
   box_props <- box_props_cob <- box_props_nut <- face_props <- face_props_sum <- vector("list", nrow(file_db))
   i_timeslice <- 1
   
-  face_cell_u  = dplyr::rename(face_z_uindex, level = roms_level, cell = cell)
-  face_cell_v = dplyr::rename(face_z_vindex, level = roms_level, cell = cell)
+  if(make.hflux){
+    face_cell_u  = dplyr::rename(face_z_uindex, level = roms_level, cell = cell)
+    face_cell_v = dplyr::rename(face_z_vindex, level = roms_level, cell = cell)
+  }
   box_cell = dplyr::rename(box_z_index, level = roms_level, cell = cell)
   ocean_time = numeric(nrow(file_db))
   
