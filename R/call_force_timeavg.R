@@ -1,7 +1,9 @@
 source(here::here('R','plot_force_timeavg.R'))
 
-file.patterns = c('roms_tempsalt_force_*','roms_ltl_force_*','roms_nut_force_*')
-folders = c('phys_statevars_alternate','ltl_statevars','nut_statevars')
+# file.patterns = c('roms_tempsalt_force_*','roms_ltl_force_*','roms_nut_force_*')
+file.patterns= 'roms_ltl_force_*'
+# folders = c('phys_statevars_alternate','ltl_statevars','nut_statevars')
+folders = c('ltl_statevars')
 
 for(i in 1:length(file.patterns)){
   plot_force_timeavg(
