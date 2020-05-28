@@ -1,15 +1,17 @@
-
+#Script to generate forcing files using hydrocontstruct (This is mainly for the fluxes files, but temp and salt work as well)
+#see make_force_statevar_alternate.R for alternative forcing generation
 
 roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/'
 setwd(paste0(roms.dir,'Forcing_Files/'))
-orig.prm = readLines(paste0(roms.dir,'Forcing_Files/roms_cobalt_hydroconstruct_v2.prm'))
+orig.prm = readLines(paste0(roms.dir,'Forcing_Files/roms_cobalt_hydroconstruct_template.prm'))
 orig.bat = readLines(paste0(roms.dir,'Forcing_Files/hydroconstruct_run_template.bat'))
-# years = 1964:2014
-years = 1980
+roms.prefix = 'roms_cobalt_v10_'
+years = 1964:1980
+# years = 1981
 
 for(yr in 1:length(years)){
-  transport.file = paste0(roms.dir,'ROMS_COBALT output/transport/roms_output_transport_tohydro_',years[yr],'.nc')
-  tempsalt.file = vtrans.file = paste0(roms.dir,'ROMS_COBALT output/statevars/roms_output_statevars_tohydro_',years[yr],'.nc')
+  transport.file = paste0(roms.dir,'ROMS_COBALT output/transport/',roms.prefix,'transport_',years[yr],'_neus_atl.nc')
+  vtrans.file = tempsalt.file = paste0(roms.dir,'ROMS_COBALT output/phys_statevars/',roms.prefix,'statevars_',years[yr],'_neus_atl.nc')
   dumm.nc = ncdf4::nc_open(transport.file)
   nt = length(dumm.nc$dim$time$vals)
   ncdf4::nc_close(dumm.nc)

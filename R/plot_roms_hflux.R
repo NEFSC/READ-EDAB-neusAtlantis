@@ -20,8 +20,9 @@
 # which.face = 0:150
 # which.levels = 4
 
-plot_roms_hflux = function(year.dir,hflux.file,which.face = 0:150,which.levels = 4, plot.dir){
+plot_roms_hflux = function(year.dir,hflux.file,which.face = 0:150,which.levels = 4, plot.dir,plot.year){
   
+  year = 
   hflux.nc = ncdf4::nc_open(paste0(year.dir,hflux.file))
   dest_b = ncdf4::ncvar_get(hflux.nc,'dest_boxid')
   source_b = ncdf4::ncvar_get(hflux.nc,'source_boxid')
@@ -52,7 +53,7 @@ plot_roms_hflux = function(year.dir,hflux.file,which.face = 0:150,which.levels =
                      legend.position ='bottom',legend.box = 'horizontal')
   }
   
-  pdf(paste0(plot.dir,'Horizontal Flux.pdf'),width = 14, height = 6)
+  pdf(paste0(plot.dir,'Horizontal Flux ',plot.year,'.pdf'),width = 14, height = 6)
   for(f.id in seq_along(which.face)){
     gridExtra::grid.arrange(hflux.plots[[f.id]])
     print(f.id)

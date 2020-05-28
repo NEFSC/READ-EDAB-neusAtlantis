@@ -39,7 +39,7 @@ plot_force_timeavg = function(force.dir, file.pattern, plot.dir, time.group = 'y
   
   data.ls = list()
   for(f in 1:length(file.names)){
-    data.ls[[f]] = make.force.long(force.dir,file.names[f])
+    data.ls[[f]] = flatten_force(force.dir,file.names[f])
     print(f)
   }
   data.full = dplyr::bind_rows(data.ls)
@@ -150,10 +150,10 @@ plot_force_timeavg = function(force.dir, file.pattern, plot.dir, time.group = 'y
   
 }
 
-# forcing.climatology(
-#   force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/',
+# plot_force_timeavg(
+#   force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/phys_statevars/',
 #   file.pattern = '^salt.*\\.nc$',
-#   plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Forcing_Climatology/',
+#   plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Forcing Aggregated Timeseries/',
 #   time.group = 'ym',
 #   plot.region = T
 # )
