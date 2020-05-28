@@ -32,7 +32,8 @@ for(f in 1:length(phys.files)){
 }
 
 #LTL values
-roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/ltl_statevars/'
+# roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/ltl_statevars/'
+roms.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/CurrentVersion/tsfiles/Annual_Files/'
 ltl.files =  list.files(roms.dir,pattern = '^roms_ltl_force.*\\.nc$',full.names = T)
 
 var.names = c('Diatom_N','PicoPhytopl_N','Carniv_Zoo_N','Zoo_N','MicroZoo_N','Pelag_Bact_N','Diatom_S')
