@@ -4,6 +4,17 @@
 
 ## Bug Fixes (patch)
 
+
+# neus-atlantis 1.0.0-9010 (in dev) 
+(built with altantis rev 6490.1)
+
+* update of the correct COBALT v10 output, and includes the ROMS-aggregations scripts, ROMS diagnostics, forcing generation, forcing diagnostics, and Atlantis integration steps. 
+* Some scripts have just been updated for a more consistent file naming and directory organization. 
+* The biggest change to the final forcing is that the alternative (non-Hydroconstruct) routine was used for temperature and salinity so that it's consistent with the other box variables.
+
+As described in [#44](https://github.com/NOAA-EDAB/neus-atlantis/pull/44)
+
+
 # neus-atlantis 1.0.0-9009 (in dev) 
 (built with altantis rev 6490.1)
 
