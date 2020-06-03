@@ -25,20 +25,22 @@
 #' Author: J. Caracappa
 
 # roms.out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/'
+# roms.prefix = 'roms_cobalt_v10_'
 # # file2copy = 'roms_output_transport_tohydro_1981.nc'
-# # transport.file = paste0(roms.out.dir,'transport/roms_output_transport_tohydro_1981.nc')
-# transport.file = NA
-# # statevar.file = paste0(roms.out.dir,'statevars/roms_output_statevars_tohydro_1981.nc')
-# statevar.file =NA
-# nutvar.file = paste0(roms.out.dir,'nut_statevars/roms_output_nut_statevars_tohydro_1981.nc')
-# ltlvar.file = paste0(roms.out.dir,'ltl_statevars/roms_output_ltl_statevars_tohydro_1981.nc')
+# transport.file = paste0(roms.out.dir,'transport/roms_cobalt_v10_transport_1981_neus_atl.nc')
+# # transport.file = NA
+# statevar.file = paste0(roms.out.dir,'phys_statevars/roms_cobalt_v10_statevars_1981_neus_atl.nc')
+# # statevar.file =NA
+# nutvar.file = paste0(roms.out.dir,'nut_statevars/roms_cobalt_v10_nutvars_1981_neus_atl.nc')
+# ltlvar.file = paste0(roms.out.dir,'ltl_statevars/roms_cobalt_v10_ltl_statevars_1981_neus_atl.nc')
 # force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/'
 # start.year = 1964
 # new.year = 1964
-# param.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/roms_cobalt_hydroconstruct_v2.prm'
+# param.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/roms_cobalt_hydroconstruct_template.prm'
 # bat.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/hydroconstruct_run_template.bat'
 
-make_force_spinup = function(transport.file,
+make_force_spinup = function(roms.prefix,
+                             transport.file,
                                   statevar.file,
                                   ltlvar.file,
                                   nutvar.file,
@@ -51,19 +53,19 @@ make_force_spinup = function(transport.file,
   setwd(force.dir)
   #Make a copy of the replicated year
   if(!is.na(transport.file)){
-    new.trans.file = paste0(roms.out.dir,'transport/roms_output_transport_tohydro_',new.year,'.nc')  
+    new.trans.file = paste0(roms.out.dir,paste0('transport/',roms.prefix,'transport_',new.year,'_neus_atl.nc'))
     file.copy(transport.file,new.trans.file,overwrite= T)
   }
   if(!is.na(statevar.file)){
-    new.statevar.file = paste0(roms.out.dir,'statevars/roms_output_statevars_tohydro_',new.year,'.nc')
+    new.statevar.file = paste0(roms.out.dir,paste0('phys_statevars/',roms.prefix,'statevars_',new.year,'_neus_atl.nc'))
     file.copy(statevar.file,new.statevar.file,overwrite=T)
   }
   if(!is.na(ltlvar.file)){
-    new.ltlvar.file = paste0(roms.out.dir,'ltl_statevars/roms_output_ltl_statevars_tohydro_',new.year,'.nc')
+    new.ltlvar.file = paste0(roms.out.dir,'ltl_statevars/',roms.prefix,'ltl_statevars_',new.year,'_neus_atl.nc')
     file.copy(ltlvar.file,new.ltlvar.file,overwrite=T)
   }
   if(!is.na(nutvar.file)){
-    new.nutvar.file = paste0(roms.out.dir,'nut_statevars/roms_output_nut_statevars_tohydro_',new.year,'.nc')
+    new.nutvar.file = paste0(roms.out.dir,'nut_statevars/',roms.prefix,'nutvars_',new.year,'_neus_atl.nc')
     file.copy(nutvar.file,new.nutvar.file,overwrite=T)
   }
   
@@ -205,7 +207,7 @@ make_force_spinup = function(transport.file,
       var.nmdz=ncdf4::ncvar_def('nmdz','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Medium Zooplankton Nitrogen',prec='float')
       var.nsm=ncdf4::ncvar_def('nsm','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Small Phytoplankton Nitrogen',prec='float')
       var.nsmz=ncdf4::ncvar_def('nsmz','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Small Zooplankton Nitrogen',prec='float')
-      var.silg=ncdf4::ncvar_def('silg','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phytoplankton Silicon',prec='float')
+      var.silg=ncdf4::ncvar_def('silg','mg Si / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phytoplankton Silicon',prec='float')
       var.nbact=ncdf4::ncvar_def('nbact','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Bacterial Nitrogen',prec='float')
       
       ncdf4::ncvar_put(ltlvar.nc,var.ndi,new.ndi, count=c(4,30,366))
@@ -298,7 +300,7 @@ make_force_spinup = function(transport.file,
     #sub batch file values
     bat.sub = gsub(pattern = 'flow_year',replacement = paste0('flow_',new.year),x = bat.lines)
     bat.sub = gsub(pattern = 'salt_year',replacement = paste0('salt_',new.year),x = bat.sub)
-    bat.sub = gsub(pattern = 'temp_year',replacement = paste0('temp',new.year),x = bat.sub)
+    bat.sub = gsub(pattern = 'temp_year',replacement = paste0('temp_',new.year),x = bat.sub)
     bat.sub = gsub(pattern = 'volume_year',replacement = paste0('volume',new.year),x = bat.sub)
     bat.sub = gsub(pattern = 'roms_cobalt_hydroconstruct_v2.prm','roms_cobalt_hydroconstruct_temp.prm', x= bat.sub)
     

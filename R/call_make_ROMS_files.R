@@ -7,7 +7,7 @@ dir.names = 1981:2014
 
 # ellapsed.t = list()
 
-for(yr in 8:length(dir.names)){
+for(yr in 9:length(dir.names)){
 # for(yr in 1:length(dir.names)){
   if(!dir.names[yr] %in% dir('D:/Output')){
     dir.create(paste0('D:/Output/',dir.names[yr]))
