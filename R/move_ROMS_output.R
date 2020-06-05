@@ -1,7 +1,7 @@
 # Script to move from ROMS_OUT into by-variable folder ins ROMS_COBALT output
 
-orig.out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_OUT/'
-new.out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/'
+orig.out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_OUT_new_levels/'
+new.out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/New_Levels_Output/'
 
 years = 1981:2014
 
