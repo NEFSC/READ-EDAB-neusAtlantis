@@ -1,11 +1,11 @@
 # Combine all yearly .R output files (ROMS aggregated) into one file.
 
-transport.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/transport/'
-phys.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/phys_statevars/'
-nut.dir ='C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/nut_statevars/'
-ltl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/ltl_statevars/'
+# transport.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/New_Levels_Output/transport/'
+phys.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/New_Levels_Output/phys_statevars/'
+# nut.dir ='C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/New_Levels_Output/nut_statevars/'
+# ltl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/New_Levels_Output/ltl_statevars/'
 
-out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/combined_years/'
+out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/New_Levels_Output/combined_years/'
 
 # years = 1981:2014
 
