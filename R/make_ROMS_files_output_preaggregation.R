@@ -22,16 +22,16 @@
 #' #' Created by R. Morse and modified by J. Caracappa
 
 # roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Test_Output/TestYear/'
-roms.dir = 'D:/NWA_Revised/2012/'
-roms.prefix = 'neusNWA_Cob10_avg_2012_*'
-roms.files = list.files(roms.dir,roms.prefix)
-# out.dir = 'D:/OUtput/1980/'
-out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/PreAggregated Temperature/'
-dz.file = here::here('Geometry','dz.csv')
-bgm.file = here::here('Geometry','neus_tmerc_RM2.bgm')
-shp.file = here::here('Geometry','Neus_ll_0p01.shp')
-# name.out = 'roms_cobalt_'
-year.id = 2012
+# roms.dir = 'D:/NWA_Revised/2012/'
+# roms.prefix = 'neusNWA_Cob10_avg_2012_*'
+# roms.files = list.files(roms.dir,roms.prefix)
+# # out.dir = 'D:/OUtput/1980/'
+# out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/PreAggregated Temperature/'
+# dz.file = here::here('Geometry','dz.csv')
+# bgm.file = here::here('Geometry','neus_tmerc_RM2.bgm')
+# shp.file = here::here('Geometry','Neus_ll_0p01.shp')
+# # name.out = 'roms_cobalt_'
+# year.id = 2012
 
 
 make_ROMS_files_output_preaggregation = function(roms.dir,
@@ -309,15 +309,18 @@ make_ROMS_files_output_preaggregation = function(roms.dir,
     #   arrange(atlantis_level,roms_level,cell) %>%
     #   select(atlantis_level, roms_level,cell, lon.rho,lat.rho,z,maxz,zmax,temp)
     # 
+    
     box_z_index3 = box_z_index2 %>% select(band_level,.bx0,cell,roms_level,atlantis_level,NEUSlevels,temp,z,maxz) %>%
-      filter(z <=500) %>%
-      group_by(band_level, .bx0,atlantis_level,NEUSlevels,roms_level) %>%
-      summarize(mean.temp = mean(temp,na.rm=T),
-                med.temp = median(temp,na.rm=T),
-                mean.z = mean(z,na.rm=T),
-                med.z = median(z,na.rm = T),
-                maxz = mean(maxz)
-      )
+      filter( roms_level %in% c(1,40))
+    # box_z_index3 = box_z_index2 %>% select(band_level,.bx0,cell,roms_level,atlantis_level,NEUSlevels,temp,z,maxz) %>%
+    #   filter(z <=500) %>%
+    #   group_by(band_level, .bx0,atlantis_level,NEUSlevels,roms_level) %>%
+    #   summarize(mean.temp = mean(temp,na.rm=T),
+    #             med.temp = median(temp,na.rm=T),
+    #             mean.z = mean(z,na.rm=T),
+    #             med.z = median(z,na.rm = T),
+    #             maxz = mean(maxz)
+      # )
                 
     
     # box_z_index3 = box_z_index2 %>% group_by(month, date,band_level, .bx0, atlantis_level, roms_level) %>%
