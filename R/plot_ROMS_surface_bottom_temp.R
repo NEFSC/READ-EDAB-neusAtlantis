@@ -3,13 +3,15 @@
 
 roms.file = 'D:/NWA_Revised/2012/neusNWA_Cob10_avg_2012_227.nc'
 depths = c(1,40)
-epu.file = here::here('Geometry','EPU_NOESTUARIES.shp')
+epu.file =here::here('Geometry','EPU_NOESTUARIES.shp')
 
 
 
 gather_temp = function(roms.file, depths, epu.file){
-  
+  # shp.file = raster::shapefile('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/EPU_NOESTUARIES.shp')
+  # epu_shp = sf::read_sf(dsn = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/',layer = 'EPU_NOESTUARIES')
   epu_shp = rgdal::readOGR(epu.file)
+  
   
   roms.nc = ncdf4::nc_open(roms.file)
   roms.temp = ncdf4::ncvar_get(roms.nc,'temp')
@@ -29,7 +31,7 @@ gather_temp = function(roms.file, depths, epu.file){
   
   mean(sub.temp,na.rm=T)
   filled.contour(sub.temp)
-  
+  ncdf4::nc_close(roms.nc)
   
   
 }
