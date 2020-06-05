@@ -923,7 +923,7 @@ make_ROMS_files = function(roms.dir,
   
   if(make.hflux){
     ### FOR TRANSPORT NC FILE
-    filename=paste0(out.dir,name.out,'transport__',year,'_neus_atl.nc')
+    filename=paste0(out.dir,name.out,'transport_',year,'_neus_atl.nc')
     
     #define dimensions
     timedim=ncdim_def("time", "", 1:length(t_tot), unlim=T, create_dimvar = F) #as.double(t_tot)
@@ -973,7 +973,7 @@ make_ROMS_files = function(roms.dir,
   # x = nc_open(filename)
   if(make.physvars){
     ### For T, S, Vertical Flux NC file
-    filename=paste0(out.dir,name.out,'statevars__',year,'_neus_atl.nc')
+    filename=paste0(out.dir,name.out,'statevars_',year,'_neus_atl.nc')
     
     #define dimensions
     timedim=ncdim_def("time", "", 1:length(t_tot), unlim=T, create_dimvar = F) #as.double(t_tot)
@@ -1068,7 +1068,7 @@ make_ROMS_files = function(roms.dir,
   }
   
   if(make.nutvars){
-    filename=paste0(out.dir,name.out,'nutvars__',year,'_neus_atl.nc')
+    filename=paste0(out.dir,name.out,'nutvars_',year,'_neus_atl.nc')
     
     #define dimensions
     timedim=ncdim_def("time", "", 1:length(t_tot), unlim=T, create_dimvar = F) #as.double(t_tot)
