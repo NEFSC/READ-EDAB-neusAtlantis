@@ -57,7 +57,7 @@ make_force_statevar = function(roms.dir,roms.file,out.dir,force.vars,final.vars,
 
   roms.nc = ncdf4::nc_open(roms.file)
   time.steps = roms.nc$dim$time$vals
-  dat.ls =  roms2long(roms.file,is.hflux = F)
+  dat.ls =  flatten_ROMS(roms.file,is.hflux = F)
   
   avg.data = dat.ls[[1]]
   for(i in 2:length(dat.ls)){
