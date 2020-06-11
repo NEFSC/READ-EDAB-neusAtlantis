@@ -68,6 +68,7 @@ make_ROMS_files = function(roms.dir,
   library(ncdf4)
   library(ncdf4)
   library(here)
+  library(spatstat)
   library(tictoc) #just for timing
   
   #Make sure package conflicts are sorted out
@@ -118,6 +119,13 @@ make_ROMS_files = function(roms.dir,
     # return(as.Date(x,format = '%Y-%m-%d'))
   }
   
+  weighted.median2 = function(values,weights){
+    v = values[order(values)]
+    w = weights[order(values)]
+    prob = cumsum(w)/sum(w)
+    ps = which(abs(prob - 0.5) == min(abs(prob - 0.5)))
+    return(v[ps])
+  }
   # Read in External Data Files ---------------------------------------------
   # Read box_depth data (shows depth of each layer in each box)
   
@@ -291,6 +299,9 @@ make_ROMS_files = function(roms.dir,
   dumm = nc_open(paste0(roms.dir,roms.files[1]))
   Cs_r = ncvar_get(dumm,'Cs_r')
   nc_close(dumm)
+  
+  #Vertical weights from Cs_r
+  Cs_wgt = diff(c(-Cs_r/Cs_r[1],0))
   # Cs_r <- rawdata(roms.files[1], "Cs_r")
   
   #Atlantis depths
@@ -306,6 +317,7 @@ make_ROMS_files = function(roms.dir,
   
   ## build the level index between Atlantis and ROMS
   list_nc_z_rhoindex <- vector('list', nrow(box_roms_rhoindex))
+  list_z_wgt = vector('list',nrow(box_roms_rhoindex))
   if(make.hflux){
     list_nc_z_uindex <- vector('list', nrow(face_roms_uindex))
     list_nc_z_vindex <- vector('list', nrow(face_roms_vindex))
@@ -323,12 +335,18 @@ make_ROMS_files = function(roms.dir,
       
       if(!(focal.box %in% c(23,24))){
         z.box = NEUSz$zmax[NEUSz$.bx0 == focal.box]
-        rl = rl[rl >= -z.box]
+        # rl = rl[rl >= -z.box]
       }
       
       # implicit 0 at the surface, and implicit bottom based on ROMS
       # Identifies where ROMS depths fit in NEUS intervals and reverses order (NEUS: 1 at bottom, 4 at surface)
       list_nc_z_rhoindex[[i]] <- length(atlantis_depths) - findInterval(rl, atlantis_depths, all.inside = F) # + 1
+      z.ls = list()
+      for(L in 1:length(atlantis_depths)){
+        dumm1 = Cs_r[which(list_nc_z_rhoindex[[i]]==L)]
+        z.ls[[L]] = diff(c(-dumm1/dumm1[1],0))
+      }
+      list_z_wgt[[i]] = unlist(z.ls)
       list_nc_z_rhoindex[[i]][which(list_nc_z_rhoindex[[i]]==5)]=NA ### remove depths greater than 500
       
       if (i %% 1000 == 0) print(i)
@@ -336,10 +354,17 @@ make_ROMS_files = function(roms.dir,
     gc()
     
     # join the box-xy-index to the level index using rho coordinates
-    box_z_index <- bind_rows(lapply(list_nc_z_rhoindex, 
-                                    function(x) tibble(atlantis_level = pmax(1, x), roms_level = seq_along(x))), 
-                             .id = "cell_index") %>% 
-      filter(!is.na(atlantis_level)) %>%
+    box_z_index <- bind_rows(lapply(list_nc_z_rhoindex,
+                                    function(x) tibble(atlantis_level = pmax(1, x),
+                                                       roms_level = seq_along(x))),
+                             .id = "cell_index")
+    box_z_index$z.wgt = unlist(list_z_wgt)
+    # box_z_index <- bind_rows(lapply(list_nc_z_rhoindex, 
+    #                                 function(x) tibble(atlantis_level = pmax(1, x),
+    #                                                    roms_level = seq_along(x))),
+                             
+      # filter(!is.na(atlantis_level)) %>%
+    box_z_index = box_z_index %>%
       inner_join(mutate(box_roms_rhoindex, cell_index = as.character(row_number()))) %>% 
       select(-cell_index)
   }
@@ -509,12 +534,12 @@ make_ROMS_files = function(roms.dir,
     ##WHICH ONE?
     # note - ungroup and complete (both vars) needed to get to desired dimension, works now
     ## add proper box number to sort on
-    box_z_index2=left_join(box_z_index, bgm$boxes[c("label", ".bx0")], by=c("box"="label")) 
+    box_z_index1=left_join(box_z_index, bgm$boxes[c("label", ".bx0")], by=c("box"="label")) 
     
     ### RM 20180320 drop data (set NA) in boxes deeper than atlantis_depth by box numberusing NEUSz (above)
     ##Add number of total NEUS Atlantis levels per box
-    box_z_index2=left_join(box_z_index2, NEUSz, by='.bx0') 
-    
+    box_z_index1=left_join(box_z_index1, NEUSz, by='.bx0') 
+
     # Index where number of levels in roms is greater than atlantis box depth
     ## WHERE DOES TEST COME FROM?
     # idx=test$roms_level>test$atlantis_level
@@ -534,9 +559,23 @@ make_ROMS_files = function(roms.dir,
     # box_z_index2[idx,'nbact'] = NA
     
     if(make.physvars){
+      
+      box_z_index2 = box_z_index1 %>%
+        group_by(.bx0,atlantis_level,cell) %>%
+        summarize(temp = weighted.median2(temp,z.wgt),
+                  salt = weighted.median2(salt,z.wgt),
+                  w = weighted.median2(w,z.wgt))
+      # tic()
+      # ##Aggregate over cells with weighted median for roms_levels
+      # box_z_index2b = box_z_index1 %>%
+      #   group_by(.bx0,atlantis_level,cell) %>%
+      #   summarize(temp = if( sum(!is.na(temp))<3){NA} else {weighted.median(temp,w=z.wgt,na.rm=T)},
+      #          salt = if( sum(!is.na(salt))<3){NA} else {weighted.median(salt,w=z.wgt,na.rm=T)},
+      #          w =  if( sum(!is.na(w))<3){NA} else {weighted.median(w,w=z.wgt,na.rm=T)})
+      # toc()
       #box_props: summary of box-wide variables, grouped by box, atl_level, where means are used across cells
       box_props[[i_timeslice]] <- box_z_index2 %>% group_by(atlantis_level, .bx0) %>% 
-        summarize(temp = mean(temp, na.rm = TRUE), salt = mean(salt ,na.rm = TRUE), vertflux=mean(w, na.rm=T)) %>% 
+        summarize(temp = median(temp, na.rm = TRUE), salt = median(salt ,na.rm = TRUE), vertflux=median(w, na.rm=T)) %>% 
         ungroup(box_z_index2)%>%
         complete(atlantis_level, .bx0)
       box_props[[i_timeslice]]$band_level = file_db$time_id[i_timeslice]
@@ -544,19 +583,41 @@ make_ROMS_files = function(roms.dir,
     }
     
     if(make.ltlvars){
+      
+      box_z_index2 = box_z_index1 %>%
+        group_by(.bx0,atlantis_level,cell) %>%
+        summarize(rho  = weighted.median2(rho,z.wgt),
+                  ndi  = weighted.median2(ndi,z.wgt),
+                  nlg = weighted.median2(nlg,z.wgt),
+                  nlgz = weighted.median2(nlgz,z.wgt),
+                  nmdz  = weighted.median2(nmdz,z.wgt),
+                  nsm = weighted.median2(nsm,z.wgt),
+                  nsmz = weighted.median2(nsmz,z.wgt),
+                  silg = weighted.median2(silg,z.wgt),
+                  nbact = weighted.median2(nbact,z.wgt)
+                  )
+      
       # For biological parameters, summarize by MEAN (units are density (mol/kg)) * maybe convert to mgN per m^3
       box_props_cob[[i_timeslice]] <- box_z_index2 %>% group_by(atlantis_level, .bx0) %>%
-        summarize(rho = mean(rho,na.rm=T),ndi = mean(ndi,na.rm=T), nlg = mean(nlg,na.rm=T), nlgz = mean(nlgz, na.rm=T), nmdz = mean(nmdz,na.rm=T),
-                  nsm = mean(nsm,na.rm=T), nsmz = mean(nsmz,na.rm=T), silg = mean(silg,na.rm=T), nbact = mean(nbact, na.rm=T)) %>%
+        summarize(rho = median(rho,na.rm=T),ndi = median(ndi,na.rm=T), nlg = median(nlg,na.rm=T), nlgz = median(nlgz, na.rm=T), nmdz = median(nmdz,na.rm=T),
+                  nsm = median(nsm,na.rm=T), nsmz = median(nsmz,na.rm=T), silg = median(silg,na.rm=T), nbact = median(nbact, na.rm=T)) %>%
         ungroup(box_z_index2) %>%
         complete(atlantis_level,.bx0)
       box_props_cob[[i_timeslice]]$band_level = file_db$time_id[i_timeslice]
     }
     
     if(make.nutvars){
+      box_z_index2 = box_z_index1 %>%
+        group_by(.bx0,atlantis_level,cell) %>%
+        summarize(rho = weighted.median2(rho,z.wgt),
+                  nh4 = weighted.median2(nh4,z.wgt),
+                  no3 = weighted.median2(no3,z.wgt),
+                  o2 = weighted.median2(o2,z.wgt),
+                  sio4  = weighted.median2(sio4,z.wgt)
+        )
       
       box_props_nut[[i_timeslice]] <- box_z_index2 %>% group_by(atlantis_level, .bx0) %>%
-        summarize(rho = mean(rho,na.rm=T), nh4 = mean(nh4,na.rm=T),no3 = mean(no3,na.rm=T), o2 = mean(o2,na.rm=T), sio4 = mean(sio4,na.rm=T)) %>%
+        summarize(rho = median(rho,na.rm=T), nh4 = median(nh4,na.rm=T),no3 = median(no3,na.rm=T), o2 = median(o2,na.rm=T), sio4 = median(sio4,na.rm=T)) %>%
         ungroup(box_z_index2) %>%
         complete(atlantis_level,.bx0)
       box_props_nut[[i_timeslice]]$band_level = file_db$time_id[i_timeslice]
@@ -584,7 +645,7 @@ make_ROMS_files = function(roms.dir,
     # toc()
   }
   
-  # save(box_props,box_props_cob,face_props,file = 'Test Dump.R')
+  # save(box_props,box_props_cob,box_props_nut,face_props,file = 'Test Dump.R')
   # load(paste0(roms.dir,'Test Dump.R'))
   
   # Combine box and face properties
