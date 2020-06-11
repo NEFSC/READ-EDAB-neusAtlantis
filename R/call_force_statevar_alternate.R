@@ -4,9 +4,9 @@
 # roms.files <- list.files(path=roms.dir, pattern="^roms_output_ltl_statevars_tohydro_.*\\.nc$", recursive = TRUE, full.names = TRUE, include.dirs = TRUE)
 # roms.file = paste0(roms.dir,'roms_output_ltl_statevars_tohydro_1964.nc')
 
-roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/phys_statevars/'
+roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT_Output/phys_statevars/'
 out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/phys_statevars_alternate/'
-# roms.file = paste0(roms.dir,'roms_cobalt_v10_statevars_1981_neus_atl.nc')
+# roms.file = paste0(roms.dir,'roms_cobalt_v10_statevars_1981.nc')
 force.vars = c('temperature','salinity')
 final.vars = c('Temp','salt')
 var.units = c('degrees Celcius','PSU')
@@ -32,9 +32,9 @@ for(i in 1:length(tempsalt.files)){
   print(i)
 }
 
-roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/ltl_statevars/'
+roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT_Output/ltl_statevars/'
 out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/ltl_statevars/'
-# roms.file = paste0(roms.dir,'roms_cobalt_v10_statevars_1981_neus_atl.nc')
+# roms.file = paste0(roms.dir,'roms_cobalt_v10_statevars_1981.nc')
 force.vars = c('ndi','nlg','nlgz','nmdz','nsm','nsmz','silg','nbact')
 final.vars = c('ndi','Diatom_N','Carniv_Zoo_N','Zoo_N','PicoPhytopl_N','MicroZoo_N','Diatom_S','Pelag_Bact_N')
 var.units = c(rep('mg N m-3',6),'mg Si m-3','mg N m-3')
@@ -53,9 +53,9 @@ for(i in 1:length(tempsalt.files)){
   print(i)
 }
 
-roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/nut_statevars/'
+roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT_Output/nut_statevars/'
 out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/nut_statevars/'
-# roms.file = paste0(roms.dir,'roms_cobalt_v10_statevars_1981_neus_atl.nc')
+# roms.file = paste0(roms.dir,'roms_cobalt_v10_statevars_1981.nc')
 force.vars = c('nh4','no3','o2','sio4')
 final.vars = c('NH3','NO3','Oxygen','Si')
 var.units = c('mg N m-3','mg N m-3','mg O2 m-3','mg Si m-3')
