@@ -4,8 +4,8 @@ roms.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/CurrentVers
 
 ltl.files =  list.files(roms.dir,pattern = '^roms_ltl_force.*\\.nc$',full.names = T)
 # ltl.files = ltl.files[17]
-# for(i in 1:length(ltl.files)){
-for(i in 17){
+for(i in 1:length(ltl.files)){
+# for(i in 17){
 
   nc.file = open.nc(ltl.files[i],write = T)
 
