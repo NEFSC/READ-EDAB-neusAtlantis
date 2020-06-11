@@ -311,7 +311,7 @@ make_ROMS_files_output_preaggregation = function(roms.dir,
     # 
     
     box_z_index3 = box_z_index2 %>% select(band_level,.bx0,cell,roms_level,atlantis_level,NEUSlevels,temp,z,maxz) %>%
-      filter( roms_level %in% c(1,40))
+      filter( roms_level %in% c(1,2,3,40))
     # box_z_index3 = box_z_index2 %>% select(band_level,.bx0,cell,roms_level,atlantis_level,NEUSlevels,temp,z,maxz) %>%
     #   filter(z <=500) %>%
     #   group_by(band_level, .bx0,atlantis_level,NEUSlevels,roms_level) %>%
@@ -326,7 +326,7 @@ make_ROMS_files_output_preaggregation = function(roms.dir,
     # box_z_index3 = box_z_index2 %>% group_by(month, date,band_level, .bx0, atlantis_level, roms_level) %>%
     #   summarize(mean.)
     
-    box_props[[i_timeslice]] = box_z_index2
+    box_props[[i_timeslice]] = box_z_index3
   }
   
   # Combine box and face properties
