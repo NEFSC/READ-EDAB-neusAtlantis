@@ -5,6 +5,20 @@
 ## Bug Fixes (patch)
 
 
+# neus-atlantis 1.0.0-9011 (in dev) 
+(built with altantis rev 6490.1)
+
+* Increased Initial Biomass for Lobster and Red Crab
+* Decreased predation between and cannibalism by Lobster and Red Crab
+* Increased growth on Macroalgae - important food source for Benthic Grazers
+* Decreased predation by LOB, RCB, BC, BMS (other crabs) on Benthic Grazers
+* Increased growth on BG
+* Increased assimilation efficiencies for BG, LOB, RCB
+* All benthic species persist to the end. Clams appear to have too high a biomass, so the next step will be to try to bring them down 
+
+As described in [#45](https://github.com/NOAA-EDAB/neus-atlantis/pull/45)
+
+
 # neus-atlantis 1.0.0-9010 (in dev) 
 (built with altantis rev 6490.1)
 
