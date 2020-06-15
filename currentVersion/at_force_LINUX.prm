@@ -132,9 +132,9 @@ pss0.rewind 0
 # Rain and evaporation
 
 # Solar time series data file
-#Solar_radiation /tsfiles/RMirradiance_smooth_3yr.ts
-#Solar_radiation /tsfiles/ROMS_irradiance_smoothed_start1964.ts
-#Solar_radiation_rewind 0
+Solar_radiation /tsfiles/RMirradiance_smooth_3yr.ts
+Solar_radiation /tsfiles/ROMS_irradiance_smoothed_start1964.ts
+Solar_radiation_rewind 0
 
 # Temperature time series data file
 use_tempfiles 1
