@@ -1,17 +1,17 @@
 # Combine all yearly .R output files (ROMS aggregated) into one file.
 
-# transport.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/New_Levels_Output/transport/'
-phys.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/New_Levels_Output/phys_statevars/'
-# nut.dir ='C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/New_Levels_Output/nut_statevars/'
-# ltl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/New_Levels_Output/ltl_statevars/'
+transport.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT_Output/transport/'
+phys.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT_Output/phys_statevars/'
+nut.dir ='C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT_Output/nut_statevars/'
+ltl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT_Output/ltl_statevars/'
 
-out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/New_Levels_Output/combined_years/'
+out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT_Output/combined_years/'
 
 # years = 1981:2014
 
-file.dir = transport.dir
-var.name = 'transport'
-file.pattern = '*.nc'
+# file.dir = transport.dir
+# var.name = 'transport'
+# file.pattern = '*.nc'
 
 combine_years = function(file.dir,file.pattern,var.name,out.dir){
   
@@ -36,7 +36,7 @@ combine_years = function(file.dir,file.pattern,var.name,out.dir){
 } 
 
 #Transport
-combine_years(transport.dir,file.pattern = '*.nc','transport',out.dir)
+# combine_years(transport.dir,file.pattern = '*.nc','exchange',out.dir)
 
 #Physics Statevariables
 combine_years(phys.dir,file.pattern = '*.nc','temperature',out.dir)
@@ -44,17 +44,20 @@ combine_years(phys.dir,file.pattern = '*.nc','salinity',out.dir)
 combine_years(phys.dir,file.pattern = '*.nc','verticalflux',out.dir)
 
 #LTL statevariables
-combine_years(ltl.dir,file.pattern = '*.nc','ndi',out.dir)
-combine_years(ltl.dir,file.pattern = '*.nc','nlg',out.dir)
-combine_years(ltl.dir,file.pattern = '*.nc','nlgz',out.dir)
-combine_years(ltl.dir,file.pattern = '*.nc','nmdz',out.dir)
-combine_years(ltl.dir,file.pattern = '*.nc','nsm',out.dir)
-combine_years(ltl.dir,file.pattern = '*.nc','nsmz',out.dir)
-combine_years(ltl.dir,file.pattern = '*.nc','silg',out.dir)
-combine_years(ltl.dir,file.pattern = '*.nc','nbact',out.dir)
+# combine_years(ltl.dir,file.pattern = '*.nc','ndi',out.dir)
+combine_years(ltl.dir,file.pattern = '*.nc','Diatom_N',out.dir)
+combine_years(ltl.dir,file.pattern = '*.nc','Carniv_Zoo_N',out.dir)
+combine_years(ltl.dir,file.pattern = '*.nc','Zoo_N',out.dir)
+combine_years(ltl.dir,file.pattern = '*.nc','PicoPhytopl_N',out.dir)
+combine_years(ltl.dir,file.pattern = '*.nc','MicroZoo_N',out.dir)
+combine_years(ltl.dir,file.pattern = '*.nc','Diatom_S',out.dir)
+combine_years(ltl.dir,file.pattern = '*.nc','Pelag_Bact_N',out.dir)
 
 #Nutrient statevariables
 combine_years(nut.dir,file.pattern = '*.nc','no3',out.dir)
 combine_years(nut.dir,file.pattern = '*.nc','nh4',out.dir)
 combine_years(nut.dir,file.pattern = '*.nc','o2',out.dir)
 combine_years(nut.dir,file.pattern = '*.nc','sio4',out.dir)
+
+
+

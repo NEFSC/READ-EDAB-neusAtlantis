@@ -2,7 +2,7 @@
 source(here::here('R','make_ROMS_files_2.R'))
 # source('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/R/make_ROMS_files_new_levels.R')
 
-dir.names = 1981:2014
+dir.names = 1981:1983
 # dir.names = 2010:2014
 
 # ellapsed.t = list()
@@ -15,7 +15,7 @@ for(yr in 1:length(dir.names)){
   # Set from and to directories
   orig.dir = paste0('D:/NWA_Revised/',dir.names[yr],'/')
   local.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_IN/'
-  local.output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_OUT_new_agg/'
+  local.output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_OUT/'
   final.output.dir = paste0('D:/Output/',dir.names[yr],'/')
   
   #Copy files from external to local directory
@@ -46,7 +46,7 @@ for(yr in 1:length(dir.names)){
     # shp.file = here::here('Geometry','Neus_ll_0p01.shp'),
     shp.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/Neus_ll_0p01.shp',
     name.out = 'roms_cobalt_v10_',
-    make.hflux = T,
+    make.hflux = F,
     make.physvars = T,
     make.ltlvars = T,
     make.nutvars = T  

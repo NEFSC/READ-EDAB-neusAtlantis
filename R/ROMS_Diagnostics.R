@@ -21,8 +21,8 @@
 #' 
 #' Author: J. Caracappa
 
-transport.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/transport/'
-statevars.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/phys_statevars/'
+transport.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT_Output/transport/'
+statevars.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT_Output/phys_statevars/'
 output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Pre Forcing Diagnostics/'
 bgm.file = 'neus_tmerc_RM2.bgm'
 dz.file = 'dz.csv'
@@ -33,8 +33,8 @@ ROMS_Diagnostics = function(roms.dir,roms.prefix,bgm.file,dz.file,output.name,ou
 
 # Read in box-aggregated data ---------------------------------------------
 
-transport.files = list.files(transport.dir,'*.nc',full.names = T)
-statevar.files = list.files(statevars.dir,'*.nc',full.names = T)
+transport.files = list.files(transport.dir,glob2rx('roms_cobalt+*.nc'),full.names = T)
+statevar.files = list.files(statevars.dir,glob2rx('roms_cobalt+*.nc'),full.names = T)
 
 #Pull variables from annual netCDF
 hflux.ls =vflux.ls = list()
@@ -205,7 +205,7 @@ save(boxes.net.flux,boxes.exchange, net.flux.pct,file = paste0(output.dir,output
 }
 
 
-ROMS_Diagnostics(roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/transport',
+ROMS_Diagnostics(roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT_Output/transport',
                  roms.prefix = 'roms_cobalt_v10_transport_1981*',
                  bgm.file = 'neus_tmerc_RM2.bgm',
                  dz.file = 'dz.csv',
