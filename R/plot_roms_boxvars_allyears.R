@@ -22,9 +22,11 @@ plot_roms_boxvars_allyears = function(roms.dir,out.dir,file.name,var.name,units,
     box.var$date = full.date
     box.var2 = reshape2::melt(box.var,id.vars = 'date')
     
-    plot.box = ggplot2::ggplot(data = box.var2,ggplot2::aes(x=date, y=zoo::rollmean(value,smooth.length,na.pad = T), col = variable))+
+    # box.var2 = na.omit(box.var2)
+    # plot.box = ggplot2::ggplot(data = box.var2,ggplot2::aes(x=date, y=zoo::rollmean(value,smooth.length,na.pad = T), col = variable))+
+    plot.box = ggplot2::ggplot(data = box.var2,ggplot2::aes(x=date, y=value, col = variable))+
     # ggplot2::ggplot(data = box.var2, ggplot2::aes(x=date,y = zoo::rollmean(value,365,na.pad = T),col = variable))+
-      ggplot2::geom_line()+
+      # ggplot2::geom_line()+
       ggplot2::ylab(paste0(var.name,' (',units,')'))+
       ggplot2::xlab('')+
       ggplot2::scale_color_manual(name = 'Atlantis Level',values = c('red3','blue3','green3','violet'))+
@@ -40,23 +42,23 @@ plot_roms_boxvars_allyears = function(roms.dir,out.dir,file.name,var.name,units,
 }
 
 # roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/New_Levels_Output/combined_years/'
-# out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Allyears_Summary_New_Levels/'
+# out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Allyears_Summary_NewAgg/'
 
-roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/combined_years/'
-out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Allyears Summary/'
+roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT_Output/combined_years/'
+out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Allyears_Summary_NewAgg/'
 
-# all.vars = c('temperature','Salinity',
-#              'ndi','nlg','nlgz','nmdz','nsm','nsmz','silg','nbact',
-#              'nh4','no3','o2','silg'
-#              )
-# file.name = paste0(all.vars,'_allyears.R')
-# units = c('deg C','psu',
-#           rep('mg N m-3',6),'mg Si m-3','mg N m-3',
-#           rep('mg N m-3',2), 'mg O2 m-3','mg Si m-3')
-
-all.vars = c('temperature')
+all.vars = c('temperature','Salinity',
+             'ndi','nlg','nlgz','nmdz','nsm','nsmz','silg','nbact',
+             'nh4','no3','o2','silg'
+             )
 file.name = paste0(all.vars,'_allyears.R')
-units = c('deg C')
+units = c('deg C','psu',
+          rep('mg N m-3',6),'mg Si m-3','mg N m-3',
+          rep('mg N m-3',2), 'mg O2 m-3','mg Si m-3')
+
+# all.vars = c('temperature')
+# file.name = paste0(all.vars,'_allyears.R')
+# units = c('deg C')
 
 
 for(i in 1:length(all.vars)){
@@ -70,3 +72,12 @@ for(i in 1:length(all.vars)){
                              )
   print(i)
 }
+
+
+plot_roms_boxvars_allyears(roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/combined_debias_temp/',
+                           out.dir ='C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Debiased_Temperature/',
+                           file.name = 'temperature_allyears.R',
+                           var.name = 'temperature',
+                           units = 'deg C',
+                           plot.name = 'NCEI NWA Debiased',
+                           smooth.length = 1)
