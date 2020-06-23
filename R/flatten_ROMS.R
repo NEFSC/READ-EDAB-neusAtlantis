@@ -15,7 +15,7 @@
 # nc.file = statevars.file
 # is.hflux = T
 
-roms2long = function(nc.file, is.hflux = T){
+flatten_ROMS = function(nc.file, is.hflux = T){
   
   dat = ncdf4::nc_open(nc.file)
   ocean_time = as.POSIXct(ncdf4::ncvar_get(dat,'time'),origin = '1964-01-01',tz = 'GMT')

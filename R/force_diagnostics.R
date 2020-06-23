@@ -229,4 +229,4 @@ force_diagnostics = function(force.dir,hydro.name){
   save(full.exchanges,box.connections2,box.level.all,file = paste0(force.dir,'post_hydroconstruct_output.R'))
 }
 
-test = box.level.all %>% dplyr::group_by(box,at.level) %>% dplyr::summarise(pct = mean(pct.flux,na.rm=T))
+# test = box.level.all %>% dplyr::group_by(box,at.level) %>% dplyr::summarise(pct = mean(pct.flux,na.rm=T))
