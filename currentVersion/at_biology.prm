@@ -11801,18 +11801,18 @@ mum_ISQ_T15	0.00444
 mum_jISQ_T15	0.004
 mum_SCA_T15	0.05
 mum_QHG_T15	0.05
-mum_CLA_T15	0.05
-mum_BFF_T15	0.2
+mum_CLA_T15	0.02 # From 0.05
+mum_BFF_T15	0.05  # From 0.2
 mum_BG_T15	200000
 mum_BC_T15	0.2
-mum_LOB_T15	0.48
-mum_RCB_T15	0.1
-mum_BMS_T15	0.3
+mum_LOB_T15	0.5
+mum_RCB_T15	0.1  
+mum_BMS_T15	0.33    # From 0.3, then 0.5
 mum_NSH_T15	0.003043
 mum_jNSH_T15	0.003
 mum_OSH_T15	0.003043
 mum_jOSH_T15	0.003
-mum_ZG_T15	1.1
+mum_ZG_T15	1000    # From 1.1
 mum_ZL_T15	0.3
 mum_ZM_T15	0.06
 mum_ZS_T15	0.675
@@ -12834,7 +12834,7 @@ E_OSH 0.5
 E_ZL 0.5
 E_BD 0.5
 E_BC 0.4
-E_ZG 0.6
+E_ZG 0.65
 E_DF 0.5
 E_ZM 0.5
 E_ZS 0.5
@@ -12860,20 +12860,20 @@ E_BO 0.35
 # Assimilation efficiency of invertebrate consumers on plants
 EPlant_LSQ 0.4
 EPlant_ISQ 0.4
-EPlant_SCA 0.6
+EPlant_SCA 0.55
 EPlant_QHG 0.6
 EPlant_CLA 0.6
 EPlant_BFF 0.5
 EPlant_BG 0.7
 EPlant_LOB 0.1
-EPlant_RCB 0.35
+EPlant_RCB 0.3
 EPlant_BMS 0.5
 EPlant_NSH 0.5
 EPlant_OSH 0.5
 EPlant_ZL 0.45
 EPlant_BD 0.01
 EPlant_BC 0.0
-EPlant_ZG 0.45
+EPlant_ZG 0.55
 EPlant_DF 0.15
 EPlant_ZM 0.7
 EPlant_ZS 0.7
@@ -12899,13 +12899,13 @@ EPlant_BO 0.0
 # Assimilation efficiency of invertebrate consumers on labile detritus AND CARRION
 EDL_LSQ 0.2
 EDL_ISQ 0.2
-EDL_SCA 0.2
+EDL_SCA 0.15
 EDL_QHG 0.3
 EDL_CLA 0.3
 EDL_BFF 0.3
 EDL_BG 0.6
 EDL_LOB 0.45
-EDL_RCB 0.35
+EDL_RCB 0.325
 EDL_BMS 0.2
 EDL_NSH 0.2
 EDL_OSH 0.2
@@ -12915,7 +12915,7 @@ EDL_MA 0.1
 EDL_MB 0.1
 EDL_SG 0.1
 EDL_BC 0.02
-EDL_ZG 0.1
+EDL_ZG 0.3
 EDL_PL 0.0
 EDL_DF 0.2
 EDL_PS 0.0
@@ -12958,7 +12958,7 @@ EDR_CLA 0
 EDR_BFF 0.05
 EDR_BG 0.15
 EDR_LOB 0.01
-EDR_RCB 0.01
+EDR_RCB 0.0095
 EDR_BMS 0
 EDR_NSH 0
 EDR_OSH 0
@@ -12968,7 +12968,7 @@ EDR_MA 0.01
 EDR_MB 0.01
 EDR_SG 0.01
 EDR_BC 0
-EDR_ZG 0.02
+EDR_ZG 0.1
 EDR_PL 0
 EDR_DF 0.15
 EDR_PS 0
@@ -13023,7 +13023,7 @@ E_BUT 0.35
 E_ANC 0.35
 E_BPF 0.3
 E_GOO 0.3
-E_MEN 0.6  # From 0.35
+E_MEN 0.72  # From 0.6 and then 0.8
 E_FDE 0.35
 E_COD 0.35
 E_SHK 0.35

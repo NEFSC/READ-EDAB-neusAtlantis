@@ -70,3 +70,11 @@ This file is used to document steps made towards a new version/subversion
 * Increased growth on BG
 * Increased assimilation efficiencies for BG, LOB, RCB
 + All benthic species persist to the end now.  Clams appear to have too high a biomass, so the next step will be to try to bring them down a bit and finish off the Benthic Community Persists story on the Jira board.
+
+## Rerun for new plankton levels (ATLNTS-107)
+* RG: 06-25-2020
+* RCB, LOB, BMS and MEN crashed at the end of the run where they used to persist
+* All changes made to at_biology.prm file
+* Modified MEN assimilation efficiencies
+* Increased growth rates for LOB, RCB and BMS
++ All previously persisting species continue to persist
