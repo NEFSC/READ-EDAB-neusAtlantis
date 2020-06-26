@@ -314,65 +314,69 @@ use_external_scaling 0
 
 # JC adding LTL forcing 
 use_force_tracers 1
-nforceTracers 11
+nforceTracers 12
 use_weighted_assim 0
 
-tracerNames 11
-Diatom_N PicoPhytopl_N Carniv_Zoo_N Zoo_N MicroZoo_N Pelag_Bact_N Diatom_S NH3 NO3 Oxygen Si
+tracerNames 12
+Diatom_N PicoPhytopl_N Carniv_Zoo_N Zoo_N MicroZoo_N Pelag_Bact_N Diatom_S DinoFlag_N NH3 NO3 Oxygen Si
 
 #Diatom_N
 Diatom_N_nFiles 51
-Diatom_N_File0.name /tsfiles/Annual_Files/roms_ltl_force_1964.nc
-Diatom_N_File1.name /tsfiles/Annual_Files/roms_ltl_force_1965.nc
-Diatom_N_File2.name /tsfiles/Annual_Files/roms_ltl_force_1966.nc
-Diatom_N_File3.name /tsfiles/Annual_Files/roms_ltl_force_1967.nc
-Diatom_N_File4.name /tsfiles/Annual_Files/roms_ltl_force_1968.nc
-Diatom_N_File5.name /tsfiles/Annual_Files/roms_ltl_force_1969.nc
-Diatom_N_File6.name /tsfiles/Annual_Files/roms_ltl_force_1970.nc
-Diatom_N_File7.name /tsfiles/Annual_Files/roms_ltl_force_1971.nc
-Diatom_N_File8.name /tsfiles/Annual_Files/roms_ltl_force_1972.nc
-Diatom_N_File9.name /tsfiles/Annual_Files/roms_ltl_force_1973.nc
-Diatom_N_File10.name /tsfiles/Annual_Files/roms_ltl_force_1974.nc
-Diatom_N_File11.name /tsfiles/Annual_Files/roms_ltl_force_1975.nc
-Diatom_N_File12.name /tsfiles/Annual_Files/roms_ltl_force_1976.nc
-Diatom_N_File13.name /tsfiles/Annual_Files/roms_ltl_force_1977.nc
-Diatom_N_File14.name /tsfiles/Annual_Files/roms_ltl_force_1978.nc
-Diatom_N_File15.name /tsfiles/Annual_Files/roms_ltl_force_1979.nc
-Diatom_N_File16.name /tsfiles/Annual_Files/roms_ltl_force_1980.nc
-Diatom_N_File17.name /tsfiles/Annual_Files/roms_ltl_force_1981.nc
-Diatom_N_File18.name /tsfiles/Annual_Files/roms_ltl_force_1982.nc
-Diatom_N_File19.name /tsfiles/Annual_Files/roms_ltl_force_1983.nc
-Diatom_N_File20.name /tsfiles/Annual_Files/roms_ltl_force_1984.nc
-Diatom_N_File21.name /tsfiles/Annual_Files/roms_ltl_force_1985.nc
-Diatom_N_File22.name /tsfiles/Annual_Files/roms_ltl_force_1986.nc
-Diatom_N_File23.name /tsfiles/Annual_Files/roms_ltl_force_1987.nc
-Diatom_N_File24.name /tsfiles/Annual_Files/roms_ltl_force_1988.nc
-Diatom_N_File25.name /tsfiles/Annual_Files/roms_ltl_force_1989.nc
-Diatom_N_File26.name /tsfiles/Annual_Files/roms_ltl_force_1990.nc
-Diatom_N_File27.name /tsfiles/Annual_Files/roms_ltl_force_1991.nc
-Diatom_N_File28.name /tsfiles/Annual_Files/roms_ltl_force_1992.nc
-Diatom_N_File29.name /tsfiles/Annual_Files/roms_ltl_force_1993.nc
-Diatom_N_File30.name /tsfiles/Annual_Files/roms_ltl_force_1994.nc
-Diatom_N_File31.name /tsfiles/Annual_Files/roms_ltl_force_1995.nc
-Diatom_N_File32.name /tsfiles/Annual_Files/roms_ltl_force_1996.nc
-Diatom_N_File33.name /tsfiles/Annual_Files/roms_ltl_force_1997.nc
-Diatom_N_File34.name /tsfiles/Annual_Files/roms_ltl_force_1998.nc
-Diatom_N_File35.name /tsfiles/Annual_Files/roms_ltl_force_1999.nc
-Diatom_N_File36.name /tsfiles/Annual_Files/roms_ltl_force_2000.nc
-Diatom_N_File37.name /tsfiles/Annual_Files/roms_ltl_force_2001.nc
-Diatom_N_File38.name /tsfiles/Annual_Files/roms_ltl_force_2002.nc
-Diatom_N_File39.name /tsfiles/Annual_Files/roms_ltl_force_2003.nc
-Diatom_N_File40.name /tsfiles/Annual_Files/roms_ltl_force_2004.nc
-Diatom_N_File41.name /tsfiles/Annual_Files/roms_ltl_force_2005.nc
-Diatom_N_File42.name /tsfiles/Annual_Files/roms_ltl_force_2006.nc
-Diatom_N_File43.name /tsfiles/Annual_Files/roms_ltl_force_2007.nc
-Diatom_N_File44.name /tsfiles/Annual_Files/roms_ltl_force_2008.nc
-Diatom_N_File45.name /tsfiles/Annual_Files/roms_ltl_force_2009.nc
-Diatom_N_File46.name /tsfiles/Annual_Files/roms_ltl_force_2010.nc
-Diatom_N_File47.name /tsfiles/Annual_Files/roms_ltl_force_2011.nc
-Diatom_N_File48.name /tsfiles/Annual_Files/roms_ltl_force_2012.nc
-Diatom_N_File49.name /tsfiles/Annual_Files/roms_ltl_force_2013.nc
-Diatom_N_File50.name /tsfiles/Annual_Files/roms_ltl_force_2014.nc
+
+Diatom_N_File0.name /tsfiles/Annual_Files/roms_largephyto_force_1964.nc
+Diatom_N_File1.name /tsfiles/Annual_Files/roms_largephyto_force_1965.nc
+Diatom_N_File2.name /tsfiles/Annual_Files/roms_largephyto_force_1966.nc
+Diatom_N_File3.name /tsfiles/Annual_Files/roms_largephyto_force_1967.nc
+Diatom_N_File4.name /tsfiles/Annual_Files/roms_largephyto_force_1968.nc
+Diatom_N_File5.name /tsfiles/Annual_Files/roms_largephyto_force_1969.nc
+Diatom_N_File6.name /tsfiles/Annual_Files/roms_largephyto_force_1970.nc
+Diatom_N_File7.name /tsfiles/Annual_Files/roms_largephyto_force_1971.nc
+Diatom_N_File8.name /tsfiles/Annual_Files/roms_largephyto_force_1972.nc
+Diatom_N_File9.name /tsfiles/Annual_Files/roms_largephyto_force_1973.nc
+Diatom_N_File10.name /tsfiles/Annual_Files/roms_largephyto_force_1974.nc
+Diatom_N_File11.name /tsfiles/Annual_Files/roms_largephyto_force_1975.nc
+Diatom_N_File12.name /tsfiles/Annual_Files/roms_largephyto_force_1976.nc
+Diatom_N_File13.name /tsfiles/Annual_Files/roms_largephyto_force_1977.nc
+Diatom_N_File14.name /tsfiles/Annual_Files/roms_largephyto_force_1978.nc
+Diatom_N_File15.name /tsfiles/Annual_Files/roms_largephyto_force_1979.nc
+Diatom_N_File16.name /tsfiles/Annual_Files/roms_largephyto_force_1980.nc
+Diatom_N_File17.name /tsfiles/Annual_Files/roms_largephyto_force_1981.nc
+Diatom_N_File18.name /tsfiles/Annual_Files/roms_largephyto_force_1982.nc
+Diatom_N_File19.name /tsfiles/Annual_Files/roms_largephyto_force_1983.nc
+Diatom_N_File20.name /tsfiles/Annual_Files/roms_largephyto_force_1984.nc
+Diatom_N_File21.name /tsfiles/Annual_Files/roms_largephyto_force_1985.nc
+Diatom_N_File22.name /tsfiles/Annual_Files/roms_largephyto_force_1986.nc
+Diatom_N_File23.name /tsfiles/Annual_Files/roms_largephyto_force_1987.nc
+Diatom_N_File24.name /tsfiles/Annual_Files/roms_largephyto_force_1988.nc
+Diatom_N_File25.name /tsfiles/Annual_Files/roms_largephyto_force_1989.nc
+Diatom_N_File26.name /tsfiles/Annual_Files/roms_largephyto_force_1990.nc
+Diatom_N_File27.name /tsfiles/Annual_Files/roms_largephyto_force_1991.nc
+Diatom_N_File28.name /tsfiles/Annual_Files/roms_largephyto_force_1992.nc
+Diatom_N_File29.name /tsfiles/Annual_Files/roms_largephyto_force_1993.nc
+Diatom_N_File30.name /tsfiles/Annual_Files/roms_largephyto_force_1994.nc
+Diatom_N_File31.name /tsfiles/Annual_Files/roms_largephyto_force_1995.nc
+Diatom_N_File32.name /tsfiles/Annual_Files/roms_largephyto_force_1996.nc
+Diatom_N_File33.name /tsfiles/Annual_Files/roms_largephyto_force_1997.nc
+Diatom_N_File34.name /tsfiles/Annual_Files/roms_largephyto_force_1998.nc
+Diatom_N_File35.name /tsfiles/Annual_Files/roms_largephyto_force_1999.nc
+Diatom_N_File36.name /tsfiles/Annual_Files/roms_largephyto_force_2000.nc
+Diatom_N_File37.name /tsfiles/Annual_Files/roms_largephyto_force_2001.nc
+Diatom_N_File38.name /tsfiles/Annual_Files/roms_largephyto_force_2002.nc
+Diatom_N_File39.name /tsfiles/Annual_Files/roms_largephyto_force_2003.nc
+Diatom_N_File40.name /tsfiles/Annual_Files/roms_largephyto_force_2004.nc
+Diatom_N_File41.name /tsfiles/Annual_Files/roms_largephyto_force_2005.nc
+Diatom_N_File42.name /tsfiles/Annual_Files/roms_largephyto_force_2006.nc
+Diatom_N_File43.name /tsfiles/Annual_Files/roms_largephyto_force_2007.nc
+Diatom_N_File44.name /tsfiles/Annual_Files/roms_largephyto_force_2008.nc
+Diatom_N_File45.name /tsfiles/Annual_Files/roms_largephyto_force_2009.nc
+Diatom_N_File46.name /tsfiles/Annual_Files/roms_largephyto_force_2010.nc
+Diatom_N_File47.name /tsfiles/Annual_Files/roms_largephyto_force_2011.nc
+Diatom_N_File48.name /tsfiles/Annual_Files/roms_largephyto_force_2012.nc
+Diatom_N_File49.name /tsfiles/Annual_Files/roms_largephyto_force_2013.nc
+Diatom_N_File50.name /tsfiles/Annual_Files/roms_largephyto_force_2014.nc
+
+
+
 
 
 Diatom_N_rewind 0
@@ -613,61 +617,124 @@ MicroZoo_N_wgt_coefft 1.0
 #Diatom_S
 
 Diatom_S_nFiles 51
-Diatom_S_File0.name /tsfiles/Annual_Files/roms_ltl_force_1964.nc
-Diatom_S_File1.name /tsfiles/Annual_Files/roms_ltl_force_1965.nc
-Diatom_S_File2.name /tsfiles/Annual_Files/roms_ltl_force_1966.nc
-Diatom_S_File3.name /tsfiles/Annual_Files/roms_ltl_force_1967.nc
-Diatom_S_File4.name /tsfiles/Annual_Files/roms_ltl_force_1968.nc
-Diatom_S_File5.name /tsfiles/Annual_Files/roms_ltl_force_1969.nc
-Diatom_S_File6.name /tsfiles/Annual_Files/roms_ltl_force_1970.nc
-Diatom_S_File7.name /tsfiles/Annual_Files/roms_ltl_force_1971.nc
-Diatom_S_File8.name /tsfiles/Annual_Files/roms_ltl_force_1972.nc
-Diatom_S_File9.name /tsfiles/Annual_Files/roms_ltl_force_1973.nc
-Diatom_S_File10.name /tsfiles/Annual_Files/roms_ltl_force_1974.nc
-Diatom_S_File11.name /tsfiles/Annual_Files/roms_ltl_force_1975.nc
-Diatom_S_File12.name /tsfiles/Annual_Files/roms_ltl_force_1976.nc
-Diatom_S_File13.name /tsfiles/Annual_Files/roms_ltl_force_1977.nc
-Diatom_S_File14.name /tsfiles/Annual_Files/roms_ltl_force_1978.nc
-Diatom_S_File15.name /tsfiles/Annual_Files/roms_ltl_force_1979.nc
-Diatom_S_File16.name /tsfiles/Annual_Files/roms_ltl_force_1980.nc
-Diatom_S_File17.name /tsfiles/Annual_Files/roms_ltl_force_1981.nc
-Diatom_S_File18.name /tsfiles/Annual_Files/roms_ltl_force_1982.nc
-Diatom_S_File19.name /tsfiles/Annual_Files/roms_ltl_force_1983.nc
-Diatom_S_File20.name /tsfiles/Annual_Files/roms_ltl_force_1984.nc
-Diatom_S_File21.name /tsfiles/Annual_Files/roms_ltl_force_1985.nc
-Diatom_S_File22.name /tsfiles/Annual_Files/roms_ltl_force_1986.nc
-Diatom_S_File23.name /tsfiles/Annual_Files/roms_ltl_force_1987.nc
-Diatom_S_File24.name /tsfiles/Annual_Files/roms_ltl_force_1988.nc
-Diatom_S_File25.name /tsfiles/Annual_Files/roms_ltl_force_1989.nc
-Diatom_S_File26.name /tsfiles/Annual_Files/roms_ltl_force_1990.nc
-Diatom_S_File27.name /tsfiles/Annual_Files/roms_ltl_force_1991.nc
-Diatom_S_File28.name /tsfiles/Annual_Files/roms_ltl_force_1992.nc
-Diatom_S_File29.name /tsfiles/Annual_Files/roms_ltl_force_1993.nc
-Diatom_S_File30.name /tsfiles/Annual_Files/roms_ltl_force_1994.nc
-Diatom_S_File31.name /tsfiles/Annual_Files/roms_ltl_force_1995.nc
-Diatom_S_File32.name /tsfiles/Annual_Files/roms_ltl_force_1996.nc
-Diatom_S_File33.name /tsfiles/Annual_Files/roms_ltl_force_1997.nc
-Diatom_S_File34.name /tsfiles/Annual_Files/roms_ltl_force_1998.nc
-Diatom_S_File35.name /tsfiles/Annual_Files/roms_ltl_force_1999.nc
-Diatom_S_File36.name /tsfiles/Annual_Files/roms_ltl_force_2000.nc
-Diatom_S_File37.name /tsfiles/Annual_Files/roms_ltl_force_2001.nc
-Diatom_S_File38.name /tsfiles/Annual_Files/roms_ltl_force_2002.nc
-Diatom_S_File39.name /tsfiles/Annual_Files/roms_ltl_force_2003.nc
-Diatom_S_File40.name /tsfiles/Annual_Files/roms_ltl_force_2004.nc
-Diatom_S_File41.name /tsfiles/Annual_Files/roms_ltl_force_2005.nc
-Diatom_S_File42.name /tsfiles/Annual_Files/roms_ltl_force_2006.nc
-Diatom_S_File43.name /tsfiles/Annual_Files/roms_ltl_force_2007.nc
-Diatom_S_File44.name /tsfiles/Annual_Files/roms_ltl_force_2008.nc
-Diatom_S_File45.name /tsfiles/Annual_Files/roms_ltl_force_2009.nc
-Diatom_S_File46.name /tsfiles/Annual_Files/roms_ltl_force_2010.nc
-Diatom_S_File47.name /tsfiles/Annual_Files/roms_ltl_force_2011.nc
-Diatom_S_File48.name /tsfiles/Annual_Files/roms_ltl_force_2012.nc
-Diatom_S_File49.name /tsfiles/Annual_Files/roms_ltl_force_2013.nc
-Diatom_S_File50.name /tsfiles/Annual_Files/roms_ltl_force_2014.nc
+Diatom_S_File0.name /tsfiles/Annual_Files/roms_largephyto_force_1964.nc
+Diatom_S_File1.name /tsfiles/Annual_Files/roms_largephyto_force_1965.nc
+Diatom_S_File2.name /tsfiles/Annual_Files/roms_largephyto_force_1966.nc
+Diatom_S_File3.name /tsfiles/Annual_Files/roms_largephyto_force_1967.nc
+Diatom_S_File4.name /tsfiles/Annual_Files/roms_largephyto_force_1968.nc
+Diatom_S_File5.name /tsfiles/Annual_Files/roms_largephyto_force_1969.nc
+Diatom_S_File6.name /tsfiles/Annual_Files/roms_largephyto_force_1970.nc
+Diatom_S_File7.name /tsfiles/Annual_Files/roms_largephyto_force_1971.nc
+Diatom_S_File8.name /tsfiles/Annual_Files/roms_largephyto_force_1972.nc
+Diatom_S_File9.name /tsfiles/Annual_Files/roms_largephyto_force_1973.nc
+Diatom_S_File10.name /tsfiles/Annual_Files/roms_largephyto_force_1974.nc
+Diatom_S_File11.name /tsfiles/Annual_Files/roms_largephyto_force_1975.nc
+Diatom_S_File12.name /tsfiles/Annual_Files/roms_largephyto_force_1976.nc
+Diatom_S_File13.name /tsfiles/Annual_Files/roms_largephyto_force_1977.nc
+Diatom_S_File14.name /tsfiles/Annual_Files/roms_largephyto_force_1978.nc
+Diatom_S_File15.name /tsfiles/Annual_Files/roms_largephyto_force_1979.nc
+Diatom_S_File16.name /tsfiles/Annual_Files/roms_largephyto_force_1980.nc
+Diatom_S_File17.name /tsfiles/Annual_Files/roms_largephyto_force_1981.nc
+Diatom_S_File18.name /tsfiles/Annual_Files/roms_largephyto_force_1982.nc
+Diatom_S_File19.name /tsfiles/Annual_Files/roms_largephyto_force_1983.nc
+Diatom_S_File20.name /tsfiles/Annual_Files/roms_largephyto_force_1984.nc
+Diatom_S_File21.name /tsfiles/Annual_Files/roms_largephyto_force_1985.nc
+Diatom_S_File22.name /tsfiles/Annual_Files/roms_largephyto_force_1986.nc
+Diatom_S_File23.name /tsfiles/Annual_Files/roms_largephyto_force_1987.nc
+Diatom_S_File24.name /tsfiles/Annual_Files/roms_largephyto_force_1988.nc
+Diatom_S_File25.name /tsfiles/Annual_Files/roms_largephyto_force_1989.nc
+Diatom_S_File26.name /tsfiles/Annual_Files/roms_largephyto_force_1990.nc
+Diatom_S_File27.name /tsfiles/Annual_Files/roms_largephyto_force_1991.nc
+Diatom_S_File28.name /tsfiles/Annual_Files/roms_largephyto_force_1992.nc
+Diatom_S_File29.name /tsfiles/Annual_Files/roms_largephyto_force_1993.nc
+Diatom_S_File30.name /tsfiles/Annual_Files/roms_largephyto_force_1994.nc
+Diatom_S_File31.name /tsfiles/Annual_Files/roms_largephyto_force_1995.nc
+Diatom_S_File32.name /tsfiles/Annual_Files/roms_largephyto_force_1996.nc
+Diatom_S_File33.name /tsfiles/Annual_Files/roms_largephyto_force_1997.nc
+Diatom_S_File34.name /tsfiles/Annual_Files/roms_largephyto_force_1998.nc
+Diatom_S_File35.name /tsfiles/Annual_Files/roms_largephyto_force_1999.nc
+Diatom_S_File36.name /tsfiles/Annual_Files/roms_largephyto_force_2000.nc
+Diatom_S_File37.name /tsfiles/Annual_Files/roms_largephyto_force_2001.nc
+Diatom_S_File38.name /tsfiles/Annual_Files/roms_largephyto_force_2002.nc
+Diatom_S_File39.name /tsfiles/Annual_Files/roms_largephyto_force_2003.nc
+Diatom_S_File40.name /tsfiles/Annual_Files/roms_largephyto_force_2004.nc
+Diatom_S_File41.name /tsfiles/Annual_Files/roms_largephyto_force_2005.nc
+Diatom_S_File42.name /tsfiles/Annual_Files/roms_largephyto_force_2006.nc
+Diatom_S_File43.name /tsfiles/Annual_Files/roms_largephyto_force_2007.nc
+Diatom_S_File44.name /tsfiles/Annual_Files/roms_largephyto_force_2008.nc
+Diatom_S_File45.name /tsfiles/Annual_Files/roms_largephyto_force_2009.nc
+Diatom_S_File46.name /tsfiles/Annual_Files/roms_largephyto_force_2010.nc
+Diatom_S_File47.name /tsfiles/Annual_Files/roms_largephyto_force_2011.nc
+Diatom_S_File48.name /tsfiles/Annual_Files/roms_largephyto_force_2012.nc
+Diatom_S_File49.name /tsfiles/Annual_Files/roms_largephyto_force_2013.nc
+Diatom_S_File50.name /tsfiles/Annual_Files/roms_largephyto_force_2014.nc
+
+
+
 
 Diatom_S_rewind 0
 Diatom_S_wgt_coefft 1.0
 
+#DinoFlag_N
+DinoFlag_N_nFiles 51
+
+DinoFlag_N_File0.name /tsfiles/Annual_Files/roms_largephyto_force_1964.nc
+DinoFlag_N_File1.name /tsfiles/Annual_Files/roms_largephyto_force_1965.nc
+DinoFlag_N_File2.name /tsfiles/Annual_Files/roms_largephyto_force_1966.nc
+DinoFlag_N_File3.name /tsfiles/Annual_Files/roms_largephyto_force_1967.nc
+DinoFlag_N_File4.name /tsfiles/Annual_Files/roms_largephyto_force_1968.nc
+DinoFlag_N_File5.name /tsfiles/Annual_Files/roms_largephyto_force_1969.nc
+DinoFlag_N_File6.name /tsfiles/Annual_Files/roms_largephyto_force_1970.nc
+DinoFlag_N_File7.name /tsfiles/Annual_Files/roms_largephyto_force_1971.nc
+DinoFlag_N_File8.name /tsfiles/Annual_Files/roms_largephyto_force_1972.nc
+DinoFlag_N_File9.name /tsfiles/Annual_Files/roms_largephyto_force_1973.nc
+DinoFlag_N_File10.name /tsfiles/Annual_Files/roms_largephyto_force_1974.nc
+DinoFlag_N_File11.name /tsfiles/Annual_Files/roms_largephyto_force_1975.nc
+DinoFlag_N_File12.name /tsfiles/Annual_Files/roms_largephyto_force_1976.nc
+DinoFlag_N_File13.name /tsfiles/Annual_Files/roms_largephyto_force_1977.nc
+DinoFlag_N_File14.name /tsfiles/Annual_Files/roms_largephyto_force_1978.nc
+DinoFlag_N_File15.name /tsfiles/Annual_Files/roms_largephyto_force_1979.nc
+DinoFlag_N_File16.name /tsfiles/Annual_Files/roms_largephyto_force_1980.nc
+DinoFlag_N_File17.name /tsfiles/Annual_Files/roms_largephyto_force_1981.nc
+DinoFlag_N_File18.name /tsfiles/Annual_Files/roms_largephyto_force_1982.nc
+DinoFlag_N_File19.name /tsfiles/Annual_Files/roms_largephyto_force_1983.nc
+DinoFlag_N_File20.name /tsfiles/Annual_Files/roms_largephyto_force_1984.nc
+DinoFlag_N_File21.name /tsfiles/Annual_Files/roms_largephyto_force_1985.nc
+DinoFlag_N_File22.name /tsfiles/Annual_Files/roms_largephyto_force_1986.nc
+DinoFlag_N_File23.name /tsfiles/Annual_Files/roms_largephyto_force_1987.nc
+DinoFlag_N_File24.name /tsfiles/Annual_Files/roms_largephyto_force_1988.nc
+DinoFlag_N_File25.name /tsfiles/Annual_Files/roms_largephyto_force_1989.nc
+DinoFlag_N_File26.name /tsfiles/Annual_Files/roms_largephyto_force_1990.nc
+DinoFlag_N_File27.name /tsfiles/Annual_Files/roms_largephyto_force_1991.nc
+DinoFlag_N_File28.name /tsfiles/Annual_Files/roms_largephyto_force_1992.nc
+DinoFlag_N_File29.name /tsfiles/Annual_Files/roms_largephyto_force_1993.nc
+DinoFlag_N_File30.name /tsfiles/Annual_Files/roms_largephyto_force_1994.nc
+DinoFlag_N_File31.name /tsfiles/Annual_Files/roms_largephyto_force_1995.nc
+DinoFlag_N_File32.name /tsfiles/Annual_Files/roms_largephyto_force_1996.nc
+DinoFlag_N_File33.name /tsfiles/Annual_Files/roms_largephyto_force_1997.nc
+DinoFlag_N_File34.name /tsfiles/Annual_Files/roms_largephyto_force_1998.nc
+DinoFlag_N_File35.name /tsfiles/Annual_Files/roms_largephyto_force_1999.nc
+DinoFlag_N_File36.name /tsfiles/Annual_Files/roms_largephyto_force_2000.nc
+DinoFlag_N_File37.name /tsfiles/Annual_Files/roms_largephyto_force_2001.nc
+DinoFlag_N_File38.name /tsfiles/Annual_Files/roms_largephyto_force_2002.nc
+DinoFlag_N_File39.name /tsfiles/Annual_Files/roms_largephyto_force_2003.nc
+DinoFlag_N_File40.name /tsfiles/Annual_Files/roms_largephyto_force_2004.nc
+DinoFlag_N_File41.name /tsfiles/Annual_Files/roms_largephyto_force_2005.nc
+DinoFlag_N_File42.name /tsfiles/Annual_Files/roms_largephyto_force_2006.nc
+DinoFlag_N_File43.name /tsfiles/Annual_Files/roms_largephyto_force_2007.nc
+DinoFlag_N_File44.name /tsfiles/Annual_Files/roms_largephyto_force_2008.nc
+DinoFlag_N_File45.name /tsfiles/Annual_Files/roms_largephyto_force_2009.nc
+DinoFlag_N_File46.name /tsfiles/Annual_Files/roms_largephyto_force_2010.nc
+DinoFlag_N_File47.name /tsfiles/Annual_Files/roms_largephyto_force_2011.nc
+DinoFlag_N_File48.name /tsfiles/Annual_Files/roms_largephyto_force_2012.nc
+DinoFlag_N_File49.name /tsfiles/Annual_Files/roms_largephyto_force_2013.nc
+DinoFlag_N_File50.name /tsfiles/Annual_Files/roms_largephyto_force_2014.nc
+
+
+
+
+Diatom_S_rewind 0
+Diatom_S_wgt_coefft 1.0
 #Pelag_Bact_N
 
 Pelag_Bact_N_nFiles 51
