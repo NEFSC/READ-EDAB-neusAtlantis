@@ -28,7 +28,7 @@
 # full.var.name = 'Large Phytoplankton'
 # units = 'mgN'
 # roms.file = 'roms_cobalt_v10_ltl_statevars_1981_neus_atl.nc'
-# which.box = 0:29
+# which.boxes = 0:29
 # which.levels = 4
 # box.z.key = here::here('Geometry','box_depth_key.csv')
 # bgm.file = here::here('Geometry','neus_tmerc_RM2.bgm')
@@ -67,7 +67,7 @@ plot_roms_boxvars = function(var.name,full.var.name,units,year.dir,roms.file,whi
   var.plots = list()
   
   reshape.var = function(var.df){
-    DF = as.data.frame(t(var.df[1:which.levels,which.box[b.id]+1,]))
+    DF = as.data.frame(t(var.df[1:which.levels,which.boxes[b.id]+1,]))
     colnames(DF) = paste0('lev',1:which.levels)
     DF$time = real.time
     DF = DF[,c(ncol(DF),1:(ncol(DF)-1))]
@@ -91,7 +91,7 @@ plot_roms_boxvars = function(var.name,full.var.name,units,year.dir,roms.file,whi
   
   make.plot = function(plot.ls,plot.title){
     pdf(paste0(plot.dir,plot.title,'.pdf'),width = 14, height = 6)
-    for(b.id in seq_along(which.box)){
+    for(b.id in seq_along(which.boxes)){
       gridExtra::grid.arrange(plot.ls[[b.id]])
       print(b.id)
     }
@@ -99,8 +99,8 @@ plot_roms_boxvars = function(var.name,full.var.name,units,year.dir,roms.file,whi
   }
   
   
-  for(b.id in seq_along(which.box) ){
-    plot.lab = paste0('Box',which.box[b.id])
+  for(b.id in seq_along(which.boxes) ){
+    plot.lab = paste0('Box',which.boxes[b.id])
     plot.cols = RColorBrewer::brewer.pal(which.levels,'Set1')
     
     DF.var = reshape.var(var)

@@ -53,19 +53,19 @@ make_force_spinup = function(roms.prefix,
   setwd(force.dir)
   #Make a copy of the replicated year
   if(!is.na(transport.file)){
-    new.trans.file = paste0(roms.out.dir,paste0('transport/',roms.prefix,'transport_',new.year,'_neus_atl.nc'))
+    new.trans.file = paste0(roms.out.dir,paste0('transport/',roms.prefix,'transport_',new.year,'.nc'))
     file.copy(transport.file,new.trans.file,overwrite= T)
   }
   if(!is.na(statevar.file)){
-    new.statevar.file = paste0(roms.out.dir,paste0('phys_statevars/',roms.prefix,'statevars_',new.year,'_neus_atl.nc'))
+    new.statevar.file = paste0(roms.out.dir,paste0('phys_statevars/',roms.prefix,'statevars_',new.year,'.nc'))
     file.copy(statevar.file,new.statevar.file,overwrite=T)
   }
   if(!is.na(ltlvar.file)){
-    new.ltlvar.file = paste0(roms.out.dir,'ltl_statevars/',roms.prefix,'ltl_statevars_',new.year,'_neus_atl.nc')
+    new.ltlvar.file = paste0(roms.out.dir,'ltl_statevars/',roms.prefix,'ltl_statevars_',new.year,'.nc')
     file.copy(ltlvar.file,new.ltlvar.file,overwrite=T)
   }
   if(!is.na(nutvar.file)){
-    new.nutvar.file = paste0(roms.out.dir,'nut_statevars/',roms.prefix,'nutvars_',new.year,'_neus_atl.nc')
+    new.nutvar.file = paste0(roms.out.dir,'nut_statevars/',roms.prefix,'nutvars_',new.year,'.nc')
     file.copy(nutvar.file,new.nutvar.file,overwrite=T)
   }
   
@@ -160,21 +160,21 @@ make_force_spinup = function(roms.prefix,
     #If leap year, append values to add extra day
     if(new.year %% 4 == 0){
       
-      ndi = ncdf4::ncvar_get(ltlvar.nc,'ndi')
-      nlg = ncdf4::ncvar_get(ltlvar.nc,'nlg')
-      nlgz= ncdf4::ncvar_get(ltlvar.nc,'nlgz')
-      nmdz = ncdf4::ncvar_get(ltlvar.nc,'nmdz')
-      nsm = ncdf4::ncvar_get(ltlvar.nc,'nsm')
-      nsmz = ncdf4::ncvar_get(ltlvar.nc,'nsmz')
-      silg = ncdf4::ncvar_get(ltlvar.nc,'silg')
-      nbact = ncdf4::ncvar_get(ltlvar.nc,'nbact')
+      # ndi = ncdf4::ncvar_get(ltlvar.nc,'ndi')
+      nlg = ncdf4::ncvar_get(ltlvar.nc,'Diatom_N')
+      nlgz= ncdf4::ncvar_get(ltlvar.nc,'Carniv_Zoo_N')
+      nmdz = ncdf4::ncvar_get(ltlvar.nc,'Zoo_N')
+      nsm = ncdf4::ncvar_get(ltlvar.nc,'PicoPhytopl_N')
+      nsmz = ncdf4::ncvar_get(ltlvar.nc,'MicroZoo_N')
+      silg = ncdf4::ncvar_get(ltlvar.nc,'Diatom_S')
+      nbact = ncdf4::ncvar_get(ltlvar.nc,'Pelag_Bact_N')
       
-      dims = dim(ndi)
+      dims = dim(nlg)
       dims[3] = 366
       
-      new.ndi = new.nlg = new.nlgz = new.nmdz = new.nsm = new.nsmz = new.silg = new.nbact = array(NA,dim=dims)
+      new.nlg = new.nlgz = new.nmdz = new.nsm = new.nsmz = new.silg = new.nbact = array(NA,dim=dims)
       
-      last.ndi = ndi[,,365]
+      # last.ndi = ndi[,,365]
       last.nlg = nlg[,,365]
       last.nlgz = nlgz[,,365]
       last.nmdz = nmdz[,,365]
@@ -183,7 +183,7 @@ make_force_spinup = function(roms.prefix,
       last.silg = silg[,,365]
       last.nbact = nbact[,,365]
       
-      new.ndi[,,1:365] = ndi[,,1:365]
+      # new.ndi[,,1:365] = ndi[,,1:365]
       new.nlg[,,1:365] = nlg[,,1:365]
       new.nlgz[,,1:365] = nlgz[,,1:365]
       new.nmdz[,,1:365] = nmdz[,,1:365]
@@ -192,7 +192,7 @@ make_force_spinup = function(roms.prefix,
       new.silg[,,1:365] = silg[,,1:365]
       new.nbact[,,1:365] = nbact[,,1:365]
       
-      new.ndi[,,366] = last.ndi
+      # new.ndi[,,366] = last.ndi
       new.nlg[,,366] = last.nlg
       new.nlgz[,,366] = last.nlgz
       new.nmdz[,,366] = last.nmdz
@@ -201,16 +201,16 @@ make_force_spinup = function(roms.prefix,
       new.silg[,,366] = last.silg
       new.nbact[,,366] = last.nbact
       
-      var.ndi=ncdf4::ncvar_def('ndi','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Diazotroph Nitrogen',prec='float')
-      var.nlg=ncdf4::ncvar_def('nlg','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phyotplankton Nitrogen',prec='float')
-      var.nlgz=ncdf4::ncvar_def('nlgz','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Zooplankton Nitrogen',prec='float')
-      var.nmdz=ncdf4::ncvar_def('nmdz','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Medium Zooplankton Nitrogen',prec='float')
-      var.nsm=ncdf4::ncvar_def('nsm','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Small Phytoplankton Nitrogen',prec='float')
-      var.nsmz=ncdf4::ncvar_def('nsmz','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Small Zooplankton Nitrogen',prec='float')
-      var.silg=ncdf4::ncvar_def('silg','mg Si / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phytoplankton Silicon',prec='float')
-      var.nbact=ncdf4::ncvar_def('nbact','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Bacterial Nitrogen',prec='float')
+      # var.ndi=ncdf4::ncvar_def('ndi','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Diazotroph Nitrogen',prec='float')
+      var.nlg=ncdf4::ncvar_def('Diatom_N','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phyotplankton Nitrogen',prec='float')
+      var.nlgz=ncdf4::ncvar_def('Carniv_Zoo_N','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Zooplankton Nitrogen',prec='float')
+      var.nmdz=ncdf4::ncvar_def('Zoo_N','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Medium Zooplankton Nitrogen',prec='float')
+      var.nsm=ncdf4::ncvar_def('PicoPhytopl_N','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Small Phytoplankton Nitrogen',prec='float')
+      var.nsmz=ncdf4::ncvar_def('MicroZoo_N','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Small Zooplankton Nitrogen',prec='float')
+      var.silg=ncdf4::ncvar_def('Diatom_S','mg Si / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phytoplankton Silicon',prec='float')
+      var.nbact=ncdf4::ncvar_def('Pelag_Bact_N','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Bacterial Nitrogen',prec='float')
       
-      ncdf4::ncvar_put(ltlvar.nc,var.ndi,new.ndi, count=c(4,30,366))
+      # ncdf4::ncvar_put(ltlvar.nc,var.ndi,new.ndi, count=c(4,30,366))
       ncdf4::ncvar_put(ltlvar.nc,var.nlg,new.nlg, count=c(4,30,366))
       ncdf4::ncvar_put(ltlvar.nc,var.nlgz,new.nlgz, count=c(4,30,366))
       ncdf4::ncvar_put(ltlvar.nc,var.nmdz,new.nmdz, count=c(4,30,366))

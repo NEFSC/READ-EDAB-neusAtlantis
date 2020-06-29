@@ -6,12 +6,12 @@ setwd(paste0(roms.dir,'Forcing_Files/'))
 orig.prm = readLines(paste0(roms.dir,'Forcing_Files/roms_cobalt_hydroconstruct_template.prm'))
 orig.bat = readLines(paste0(roms.dir,'Forcing_Files/hydroconstruct_run_template.bat'))
 roms.prefix = 'roms_cobalt_v10_'
-years = 1964:1980
+years = 1981:2014
 # years = 1981
 
 for(yr in 1:length(years)){
-  transport.file = paste0(roms.dir,'ROMS_COBALT output/transport/',roms.prefix,'transport_',years[yr],'_neus_atl.nc')
-  vtrans.file = tempsalt.file = paste0(roms.dir,'ROMS_COBALT output/phys_statevars/',roms.prefix,'statevars_',years[yr],'_neus_atl.nc')
+  transport.file = paste0(roms.dir,'ROMS_COBALT_Output/transport/',roms.prefix,'transport_',years[yr],'.nc')
+  vtrans.file = tempsalt.file = paste0(roms.dir,'ROMS_COBALT_Output/phys_statevars/',roms.prefix,'statevars_',years[yr],'.nc')
   dumm.nc = ncdf4::nc_open(transport.file)
   nt = length(dumm.nc$dim$time$vals)
   ncdf4::nc_close(dumm.nc)

@@ -17,10 +17,12 @@ fix_force_negvalues = function(force.file, variable){
 }
 
 #Physics
-roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/phys_statevars_alternate/'
+# roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/phys_statevars_alternate/'
+roms.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/CurrentVersion/tsfiles/Annual_Files/'
 phys.files =  list.files(roms.dir,pattern = '^roms_tempsalt_force.*\\.nc$',full.names = T)
 
 var.names = c('Temp','salt')
+var.names = c('temperature','salinity')
 
 for(f in 1:length(phys.files)){
   # for(f in 17){
@@ -49,6 +51,7 @@ for(f in 1:length(ltl.files)){
 
 #Nutrient Values
 roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/nut_statevars/'
+roms.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/CurrentVersion/tsfiles/Annual_Files/'
 nut.files =  list.files(roms.dir,pattern = '^roms_nut_force.*\\.nc$',full.names = T)
 
 var.names = c('NH3','NO3','Oxygen','Si')

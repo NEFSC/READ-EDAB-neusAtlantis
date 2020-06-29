@@ -6,7 +6,7 @@
 #' 
 #' @year.dir string. The directory of the output that you want to summarize
 #' @which.face  numeric vector. Vector of faceid you want to plot. Default is all.
-#' @which.box numeric vector. Vector of boxid you want to plot. Default is all.
+#' @which.boxes numeric vector. Vector of boxid you want to plot. Default is all.
 #' @plot.hflux  logical. Plot horizontal fluxes?
 #' @plot.statevar logical. Plot physcial state variables (i.e. temperature, salinity, vertical flux)?
 #' @plot.ltlvar logical. Plot lower trophi level variables (i.e. phytoplankton, zooplankton)?
@@ -21,18 +21,19 @@
 #' 
 #' #' Created by J. Caracappa
 
-# year.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_OUT/1981/'
-# plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Summary/'
+# year.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_OUT_new_levels/1981/'
+# plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Summary_New_Levels/'
 # plot.year = 1981
 # which.face = 0:150
-# which.box = 0:29
-# plot.hflux = plot.statevar = plot.ltlvar = plot.nutvar = T
+# which.boxes = 0:29
+# plot.hflux = plot.ltlvar = plot.nutvar = F
+# plot.statevar = T
 # which.levels = 4
 # box.z.key = here::here('Geometry','box_depth_key.csv')
 # bgm.file = here::here('Geometry','neus_tmerc_RM2.bgm')
 
-plot_ROMS_summary = function(year.dir, which.face = 0:150, which.box = 0:29,
-                           plot.hflux = T, plot.statevar = T, plot.ltlvar = T,plot.nutvars = T,which.levels = 4, plot.dir,
+plot_ROMS_summary = function(year.dir, which.face = 0:150, which.boxes = 0:29,
+                           plot.hflux = T, plot.statevar = T, plot.ltlvar = T,plot.nutvar = T,which.levels = 4, plot.dir,
                            scale.volume = F, bgm.file,box.z.key,plot.year){
 
     nc.files = dir(year.dir,pattern = '*.nc')
@@ -89,7 +90,7 @@ plot_ROMS_summary = function(year.dir, which.face = 0:150, which.box = 0:29,
 # plot_ROMS_summary(year.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing Files/',
 #                 plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/',
 #                 which.face = 0:150,
-#                 which.box = 0:29,
+#                 which.boxes = 0:29,
 #                 which.levels = 4,
 #                 plot.hflux = T,
 #                 plot.statevar = T,

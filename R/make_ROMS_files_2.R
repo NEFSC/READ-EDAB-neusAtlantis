@@ -21,20 +21,20 @@
 #' 
 #' #' Created by R. Morse and modified by J. Caracappa
 
-# roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Test_Output/TestYear/'
-# # roms.dir = 'D:/NWA/1980/'
-# roms.prefix = 'neusNWA_Cob10_avg_1981*'
-# roms.files = list.files(roms.dir,roms.prefix)
-# # out.dir = 'D:/OUtput/1980/'
-# out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Test_Output/TestYear/Out/'
-# dz.file = here::here('Geometry','dz.csv')
-# bgm.file = here::here('Geometry','neus_tmerc_RM2.bgm')
-# shp.file = here::here('Geometry','Neus_ll_0p01.shp')
-# name.out = 'roms_cobalt_'
-# make.hflux = T
-# make.physvars = T
-# make.ltlvars = T
-# make.nutvars = T
+roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Test_Output/TestYear/'
+# roms.dir = 'D:/NWA/1980/'
+roms.prefix = 'neusNWA_Cob10_avg_1981*'
+roms.files = list.files(roms.dir,roms.prefix)
+# out.dir = 'D:/OUtput/1980/'
+out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Test_Output/TestYear/Out/'
+dz.file = here::here('Geometry','dz.csv')
+bgm.file = here::here('Geometry','neus_tmerc_RM2.bgm')
+shp.file = here::here('Geometry','Neus_ll_0p01.shp')
+name.out = 'roms_cobalt_'
+make.hflux = F
+make.physvars = T
+make.ltlvars = T
+make.nutvars = T
 
 # roms.dir =local.dir
 # roms.prefix = 'RM_NWA-SZ.HCob05T_avg_'
@@ -68,6 +68,7 @@ make_ROMS_files = function(roms.dir,
   library(ncdf4)
   library(ncdf4)
   library(here)
+  library(spatstat)
   library(tictoc) #just for timing
   
   #Make sure package conflicts are sorted out
@@ -118,6 +119,17 @@ make_ROMS_files = function(roms.dir,
     # return(as.Date(x,format = '%Y-%m-%d'))
   }
   
+  # weighted.median2 = function(values,weights){
+  #   v = values[order(values)]
+  #   w = weights[order(values)]
+  #   prob = cumsum(w)/sum(w)
+  #   ps = which(abs(prob - 0.5) == min(abs(prob - 0.5)))
+  #   return(v[ps])
+  # }
+  
+  # weighted.median2= function(values,weights){
+  #   return(values[order(values)][which.min(abs(cumsum(weights[order(values)])-0.5))])
+  # }
   # Read in External Data Files ---------------------------------------------
   # Read box_depth data (shows depth of each layer in each box)
   
@@ -291,6 +303,9 @@ make_ROMS_files = function(roms.dir,
   dumm = nc_open(paste0(roms.dir,roms.files[1]))
   Cs_r = ncvar_get(dumm,'Cs_r')
   nc_close(dumm)
+  
+  #Vertical weights from Cs_r
+  Cs_wgt = diff(c(-Cs_r/Cs_r[1],0))
   # Cs_r <- rawdata(roms.files[1], "Cs_r")
   
   #Atlantis depths
@@ -306,6 +321,7 @@ make_ROMS_files = function(roms.dir,
   
   ## build the level index between Atlantis and ROMS
   list_nc_z_rhoindex <- vector('list', nrow(box_roms_rhoindex))
+  list_z_wgt = vector('list',nrow(box_roms_rhoindex))
   if(make.hflux){
     list_nc_z_uindex <- vector('list', nrow(face_roms_uindex))
     list_nc_z_vindex <- vector('list', nrow(face_roms_vindex))
@@ -315,12 +331,12 @@ make_ROMS_files = function(roms.dir,
     
     # Loop through each cell, identify depths of ROMS layers, identify corresponding NEUS layers
     for (i in seq_len(nrow(box_roms_rhoindex))) {
-      
+    
       # retreives depth of each cell and applies coord-stretching
       rl <- roms_level(Cs_r, h, box_roms_rhoindex$cell[i])
       
       focal.box = bgm$boxes$.bx0[bgm$boxes$label == box_roms_rhoindex$box[i]]
-      
+    
       if(!(focal.box %in% c(23,24))){
         z.box = NEUSz$zmax[NEUSz$.bx0 == focal.box]
         rl = rl[rl >= -z.box]
@@ -329,6 +345,12 @@ make_ROMS_files = function(roms.dir,
       # implicit 0 at the surface, and implicit bottom based on ROMS
       # Identifies where ROMS depths fit in NEUS intervals and reverses order (NEUS: 1 at bottom, 4 at surface)
       list_nc_z_rhoindex[[i]] <- length(atlantis_depths) - findInterval(rl, atlantis_depths, all.inside = F) # + 1
+      z.ls = list()
+      for(L in 1:length(atlantis_depths)){
+        dumm1 = Cs_r[which(list_nc_z_rhoindex[[i]]==L)]
+        z.ls[[L]] = diff(c(-dumm1/dumm1[1],0))
+      }
+      list_z_wgt[[i]] = unlist(z.ls)
       list_nc_z_rhoindex[[i]][which(list_nc_z_rhoindex[[i]]==5)]=NA ### remove depths greater than 500
       
       if (i %% 1000 == 0) print(i)
@@ -336,10 +358,17 @@ make_ROMS_files = function(roms.dir,
     gc()
     
     # join the box-xy-index to the level index using rho coordinates
-    box_z_index <- bind_rows(lapply(list_nc_z_rhoindex, 
-                                    function(x) tibble(atlantis_level = pmax(1, x), roms_level = seq_along(x))), 
-                             .id = "cell_index") %>% 
-      filter(!is.na(atlantis_level)) %>%
+    box_z_index <- bind_rows(lapply(list_nc_z_rhoindex,
+                                    function(x) tibble(atlantis_level = pmax(1, x),
+                                                       roms_level = seq_along(x))),
+                             .id = "cell_index")
+    box_z_index$z.wgt = unlist(list_z_wgt)
+    # box_z_index <- bind_rows(lapply(list_nc_z_rhoindex, 
+    #                                 function(x) tibble(atlantis_level = pmax(1, x),
+    #                                                    roms_level = seq_along(x))),
+                             
+      # filter(!is.na(atlantis_level)) %>%
+    box_z_index = box_z_index %>%
       inner_join(mutate(box_roms_rhoindex, cell_index = as.character(row_number()))) %>% 
       select(-cell_index)
   }
@@ -420,6 +449,8 @@ make_ROMS_files = function(roms.dir,
   for (i_timeslice in seq(nrow(file_db))) {
   # for(i_timeslice in 300){
   # tic()
+    #profile start
+    # profvis::profvis({
     print(i_timeslice)
     
     #roms file name and band name
@@ -449,7 +480,7 @@ make_ROMS_files = function(roms.dir,
     r_rho <- set_indextent(brick(paste0(roms.dir,roms_file), varname = "rho", lvar = 4, level = level, ncdf=T)) #Fluid Density Anomaly
     
     if(make.ltlvars){
-      r_ndi <- set_indextent(brick(paste0(roms.dir,roms_file), varname = "ndi", lvar = 4, level = level, ncdf=T)) #Diazotroph N
+      # r_ndi <- set_indextent(brick(paste0(roms.dir,roms_file), varname = "ndi", lvar = 4, level = level, ncdf=T)) #Diazotroph N
       r_nlg <- set_indextent(brick(paste0(roms.dir,roms_file), varname = "nlg", lvar = 4, level = level, ncdf=T)) #Large Phyto N
       r_nlgz <- set_indextent(brick(paste0(roms.dir,roms_file), varname = "nlgz", lvar = 4, level = level, ncdf=T)) #Large Zoo N
       r_nmdz <- set_indextent(brick(paste0(roms.dir,roms_file), varname = "nmdz", lvar = 4, level = level, ncdf=T)) #Med Zoo N
@@ -471,12 +502,15 @@ make_ROMS_files = function(roms.dir,
     if(make.hflux){
       face_z_uindex$ue <- extract_at_level(readAll(r_u), face_cell_u); rm(r_u)
       face_z_vindex$vn <- extract_at_level(readAll(r_v), face_cell_v); rm(r_v)
+      
     }
     
     if(make.physvars){
       box_z_index$w <- extract_at_level(readAll(r_w),box_cell ); rm(r_w)
       box_z_index$temp <- extract_at_level(readAll(r_temp), box_cell); rm(r_temp)
       box_z_index$salt <- extract_at_level(readAll(r_salt), box_cell); rm(r_salt)
+      
+      box_z_index$salt[box_z_index$salt < 0] = NA
     }
     
     #COBALT PARAMS
@@ -485,7 +519,7 @@ make_ROMS_files = function(roms.dir,
     rho_scale = box_z_index$rho*14.0067*1E3
     
     if(make.ltlvars){
-      box_z_index$ndi <- extract_at_level(readAll(r_ndi), box_cell)*rho_scale; rm(r_ndi)
+      # box_z_index$ndi <- extract_at_level(readAll(r_ndi), box_cell)*rho_scale; rm(r_ndi)
       box_z_index$nlg <- extract_at_level(readAll(r_nlg), box_cell)*rho_scale; rm(r_nlg)
       box_z_index$nlgz <- extract_at_level(readAll(r_nlgz), box_cell)*rho_scale; rm(r_nlgz)
       box_z_index$nmdz <- extract_at_level(readAll(r_nmdz), box_cell)*rho_scale; rm(r_nmdz)
@@ -493,6 +527,14 @@ make_ROMS_files = function(roms.dir,
       box_z_index$nsmz <- extract_at_level(readAll(r_nsmz), box_cell)*rho_scale; rm(r_nsmz)
       box_z_index$silg <- extract_at_level(readAll(r_silg), box_cell)*box_z_index$rho*1E3*28.0855; rm(r_silg)
       box_z_index$nbact <- extract_at_level(readAll(r_nbact), box_cell)*rho_scale; rm(r_nbact)
+      
+      box_z_index$nlg[box_z_index$nlg < 0] = NA
+      box_z_index$nlgz[box_z_index$nlgz < 0] = NA
+      box_z_index$nmdz[box_z_index$nmdz < 0] = NA
+      box_z_index$nsm[box_z_index$nsmz < 0] = NA
+      box_z_index$nsmz[box_z_index$nsmz < 0] = NA
+      box_z_index$silg[box_z_index$silg < 0] = NA
+      box_z_index$nbact[box_z_index$nbact < 0] = NA
     }
     
     if(make.nutvars){
@@ -500,6 +542,11 @@ make_ROMS_files = function(roms.dir,
       box_z_index$no3 = extract_at_level(readAll(r_no3), box_cell)*box_z_index$rho*1E3*62.004 ; rm(r_no3)
       box_z_index$o2 = extract_at_level(readAll(r_o2), box_cell)*box_z_index$rho*1E3*31.998; rm(r_o2)
       box_z_index$sio4 = extract_at_level(readAll(r_sio4), box_cell)*box_z_index$rho*1E3*92.0831; rm(r_sio4)
+      
+      box_z_index$nh4[box_z_index$nh4 < 0] = NA
+      box_z_index$no3[box_z_index$no3 < 0] = NA
+      box_z_index$o2[box_z_index$o2 < 0] = NA
+      box_z_index$sio4[box_z_index$sio4 < 0] = NA
     }
     
     # toc()
@@ -509,12 +556,12 @@ make_ROMS_files = function(roms.dir,
     ##WHICH ONE?
     # note - ungroup and complete (both vars) needed to get to desired dimension, works now
     ## add proper box number to sort on
-    box_z_index2=left_join(box_z_index, bgm$boxes[c("label", ".bx0")], by=c("box"="label")) 
+    box_z_index1=left_join(box_z_index, bgm$boxes[c("label", ".bx0")], by=c("box"="label")) 
     
     ### RM 20180320 drop data (set NA) in boxes deeper than atlantis_depth by box numberusing NEUSz (above)
     ##Add number of total NEUS Atlantis levels per box
-    box_z_index2=left_join(box_z_index2, NEUSz, by='.bx0') 
-    
+    box_z_index1=left_join(box_z_index1, NEUSz, by='.bx0') 
+
     # Index where number of levels in roms is greater than atlantis box depth
     ## WHERE DOES TEST COME FROM?
     # idx=test$roms_level>test$atlantis_level
@@ -534,9 +581,26 @@ make_ROMS_files = function(roms.dir,
     # box_z_index2[idx,'nbact'] = NA
     
     if(make.physvars){
+      
+      box_z_index2 = box_z_index1 %>%
+        group_by(.bx0,atlantis_level,cell) %>%
+        # summarize(temp = weighted.median2(temp,z.wgt),
+        #           salt = weighted.median2(salt,z.wgt),
+        #           w = weighted.median2(w,z.wgt))
+        summarize(temp = weighted.mean(temp,z.wgt),
+                  salt = weighted.mean(salt,z.wgt),
+                  w = weighted.mean(w,z.wgt))
+      # tic()
+      # ##Aggregate over cells with weighted median for roms_levels
+      # box_z_index2b = box_z_index1 %>%
+      #   group_by(.bx0,atlantis_level,cell) %>%
+      #   summarize(temp = if( sum(!is.na(temp))<3){NA} else {weighted.median(temp,w=z.wgt,na.rm=T)},
+      #          salt = if( sum(!is.na(salt))<3){NA} else {weighted.median(salt,w=z.wgt,na.rm=T)},
+      #          w =  if( sum(!is.na(w))<3){NA} else {weighted.median(w,w=z.wgt,na.rm=T)})
+      # toc()
       #box_props: summary of box-wide variables, grouped by box, atl_level, where means are used across cells
       box_props[[i_timeslice]] <- box_z_index2 %>% group_by(atlantis_level, .bx0) %>% 
-        summarize(temp = mean(temp, na.rm = TRUE), salt = mean(salt ,na.rm = TRUE), vertflux=mean(w, na.rm=T)) %>% 
+        summarize(temp = median(temp, na.rm = TRUE), salt = median(salt ,na.rm = TRUE), vertflux=median(w, na.rm=T)) %>% 
         ungroup(box_z_index2)%>%
         complete(atlantis_level, .bx0)
       box_props[[i_timeslice]]$band_level = file_db$time_id[i_timeslice]
@@ -544,19 +608,56 @@ make_ROMS_files = function(roms.dir,
     }
     
     if(make.ltlvars){
+      
+      box_z_index2 = box_z_index1 %>%
+        group_by(.bx0,atlantis_level,cell) %>%
+        # summarize(rho  = weighted.median2(rho,z.wgt),
+        #           # ndi  = weighted.median2(ndi,z.wgt),
+        #           nlg = weighted.median2(nlg,z.wgt),
+        #           nlgz = weighted.median2(nlgz,z.wgt),
+        #           nmdz  = weighted.median2(nmdz,z.wgt),
+        #           nsm = weighted.median2(nsm,z.wgt),
+        #           nsmz = weighted.median2(nsmz,z.wgt),
+        #           silg = weighted.median2(silg,z.wgt),
+        #           nbact = weighted.median2(nbact,z.wgt)
+        #           )
+        summarize(rho  = weighted.mean(rho,z.wgt),
+                  # ndi  = weighted.mean(ndi,z.wgt),
+                  nlg = weighted.mean(nlg,z.wgt),
+                  nlgz = weighted.mean(nlgz,z.wgt),
+                  nmdz  = weighted.mean(nmdz,z.wgt),
+                  nsm = weighted.mean(nsm,z.wgt),
+                  nsmz = weighted.mean(nsmz,z.wgt),
+                  silg = weighted.mean(silg,z.wgt),
+                  nbact = weighted.mean(nbact,z.wgt)
+        )
+      
       # For biological parameters, summarize by MEAN (units are density (mol/kg)) * maybe convert to mgN per m^3
       box_props_cob[[i_timeslice]] <- box_z_index2 %>% group_by(atlantis_level, .bx0) %>%
-        summarize(rho = mean(rho,na.rm=T),ndi = mean(ndi,na.rm=T), nlg = mean(nlg,na.rm=T), nlgz = mean(nlgz, na.rm=T), nmdz = mean(nmdz,na.rm=T),
-                  nsm = mean(nsm,na.rm=T), nsmz = mean(nsmz,na.rm=T), silg = mean(silg,na.rm=T), nbact = mean(nbact, na.rm=T)) %>%
+        summarize(rho = median(rho,na.rm=T), nlg = median(nlg,na.rm=T), nlgz = median(nlgz, na.rm=T), nmdz = median(nmdz,na.rm=T),
+                  nsm = median(nsm,na.rm=T), nsmz = median(nsmz,na.rm=T), silg = median(silg,na.rm=T), nbact = median(nbact, na.rm=T)) %>%
         ungroup(box_z_index2) %>%
         complete(atlantis_level,.bx0)
       box_props_cob[[i_timeslice]]$band_level = file_db$time_id[i_timeslice]
     }
     
     if(make.nutvars){
+      box_z_index2 = box_z_index1 %>%
+        group_by(.bx0,atlantis_level,cell) %>%
+        # summarize(rho = weighted.median2(rho,z.wgt),
+        #           nh4 = weighted.median2(nh4,z.wgt),
+        #           no3 = weighted.median2(no3,z.wgt),
+        #           o2 = weighted.median2(o2,z.wgt),
+        #           sio4  = weighted.median2(sio4,z.wgt)
+        summarize(rho = weighted.mean(rho,z.wgt),
+                  nh4 = weighted.mean(nh4,z.wgt),
+                  no3 = weighted.mean(no3,z.wgt),
+                  o2 = weighted.mean(o2,z.wgt),
+                  sio4  = weighted.mean(sio4,z.wgt)
+        )
       
       box_props_nut[[i_timeslice]] <- box_z_index2 %>% group_by(atlantis_level, .bx0) %>%
-        summarize(rho = mean(rho,na.rm=T), nh4 = mean(nh4,na.rm=T),no3 = mean(no3,na.rm=T), o2 = mean(o2,na.rm=T), sio4 = mean(sio4,na.rm=T)) %>%
+        summarize(rho = median(rho,na.rm=T), nh4 = median(nh4,na.rm=T),no3 = median(no3,na.rm=T), o2 = median(o2,na.rm=T), sio4 = median(sio4,na.rm=T)) %>%
         ungroup(box_z_index2) %>%
         complete(atlantis_level,.bx0)
       box_props_nut[[i_timeslice]]$band_level = file_db$time_id[i_timeslice]
@@ -580,11 +681,13 @@ make_ROMS_files = function(roms.dir,
       face_props[[i_timeslice]]$band_level = file_db$time_id[i_timeslice]
       
     }
+    #profile stop
+    # })
    
     # toc()
   }
   
-  # save(box_props,box_props_cob,face_props,file = 'Test Dump.R')
+  # save(box_props,box_props_cob,box_props_nut,face_props,file = 'Test Dump.R')
   # load(paste0(roms.dir,'Test Dump.R'))
   
   # Combine box and face properties
@@ -598,8 +701,8 @@ make_ROMS_files = function(roms.dir,
   if(make.ltlvars){
     box_props_cob <- bind_rows(box_props_cob)
     
-    box_props_cob[which(box_props_cob$.bx0==23 | box_props_cob$.bx0==24), c('ndi','nlg','nlgz','nmdz','nsm','nsmz','silg','nbact')]=-999 #islands
-    box_props_cob[is.na(box_props_cob$nlg),c('ndi','nlg','nlgz','nmdz','nsm','nsmz','silg','nbact')]=-999 # change NA to fill value
+    box_props_cob[which(box_props_cob$.bx0==23 | box_props_cob$.bx0==24), c('nlg','nlgz','nmdz','nsm','nsmz','silg','nbact')]=-999 #islands
+    box_props_cob[is.na(box_props_cob$nlg),c('nlg','nlgz','nmdz','nsm','nsmz','silg','nbact')]=-999 # change NA to fill value
   }
   
   if(make.nutvars){
@@ -773,7 +876,7 @@ make_ROMS_files = function(roms.dir,
     box.id = box_props$.bx0
     level.id = box_props$atlantis_level
   }else if(make.ltlvars){
-    nit = length(box_props_cob$ndi)
+    nit = length(box_props_cob$nlg)
     bands = box_props_cob$band_level
     box.id = box_props_cob$.bx0
     level.id = box_props_cob$atlantis_level
@@ -856,7 +959,7 @@ make_ROMS_files = function(roms.dir,
   
   if(make.ltlvars){
     ##COBALT vars
-    ndi=array(NA, dim=c(nlevel,nboxes, ntimes))
+    # ndi=array(NA, dim=c(nlevel,nboxes, ntimes))
     nlg=array(NA, dim=c(nlevel,nboxes, ntimes))
     nlgz=array(NA, dim=c(nlevel,nboxes, ntimes))
     nmdz=array(NA, dim=c(nlevel,nboxes, ntimes))
@@ -889,7 +992,7 @@ make_ROMS_files = function(roms.dir,
       }
       
       if(make.ltlvars){
-        ndi[l,k,j]=box_props_cob$ndi[i]
+        # ndi[l,k,j]=box_props_cob$ndi[i]
         nlg[l,k,j]=box_props_cob$nlg[i]
         nlgz[l,k,j]=box_props_cob$nlgz[i]
         nmdz[l,k,j]=box_props_cob$nmdz[i]
@@ -914,7 +1017,7 @@ make_ROMS_files = function(roms.dir,
     save('vertical_flux','temperature','salinity',file = paste0(out.dir,name.out,'statevars_',year,'.R'))  
   }
   if(make.ltlvars){
-    save('ndi','nlg','nlgz','nmdz','nsm','nsmz','silg','nbact',file = paste0(out.dir,name.out,'ltl_statevars_',year,'.R'))  
+    save('nlg','nlgz','nmdz','nsm','nsmz','silg','nbact',file = paste0(out.dir,name.out,'ltl_statevars_',year,'.R'))  
   }
   if(make.nutvars){
     save('nh4','no3','o2','sio4',file = paste0(out.dir,name.out,'nutvars_',year,'.R'))
@@ -923,7 +1026,7 @@ make_ROMS_files = function(roms.dir,
   
   if(make.hflux){
     ### FOR TRANSPORT NC FILE
-    filename=paste0(out.dir,name.out,'transport__',year,'_neus_atl.nc')
+    filename=paste0(out.dir,name.out,'transport_',year,'.nc')
     
     #define dimensions
     timedim=ncdim_def("time", "", 1:length(t_tot), unlim=T, create_dimvar = F) #as.double(t_tot)
@@ -973,7 +1076,7 @@ make_ROMS_files = function(roms.dir,
   # x = nc_open(filename)
   if(make.physvars){
     ### For T, S, Vertical Flux NC file
-    filename=paste0(out.dir,name.out,'statevars__',year,'_neus_atl.nc')
+    filename=paste0(out.dir,name.out,'statevars_',year,'.nc')
     
     #define dimensions
     timedim=ncdim_def("time", "", 1:length(t_tot), unlim=T, create_dimvar = F) #as.double(t_tot)
@@ -1015,7 +1118,7 @@ make_ROMS_files = function(roms.dir,
   
   if(make.ltlvars){
     ### For COBALT LTL variables
-    filename=paste0(out.dir,name.out,'ltl_statevars_',year,'_neus_atl.nc')
+    filename=paste0(out.dir,name.out,'ltl_statevars_',year,'.nc')
     
     #define dimensions
     timedim=ncdim_def("time", "", 1:length(t_tot), unlim=T, create_dimvar = F) #as.double(t_tot)
@@ -1028,17 +1131,17 @@ make_ROMS_files = function(roms.dir,
     var.time=ncvar_def("time","seconds since 1964-01-01 00:00:00 +10",timedim,prec="double")
     var.box=ncvar_def("boxes", "", boxesdim, longname="Box IDs", prec='integer')
     var.lev=ncvar_def("level","",leveldim,longname="layer index; 1=near surface; positice=down" ,prec="integer")
-    var.ndi=ncvar_def('ndi','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Diazotroph Nitrogen',prec='float')
-    var.nlg=ncvar_def('nlg','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phyotplankton Nitrogen',prec='float')
-    var.nlgz=ncvar_def('nlgz','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Zooplankton Nitrogen',prec='float')
-    var.nmdz=ncvar_def('nmdz','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Medium Zooplankton Nitrogen',prec='float')
-    var.nsm=ncvar_def('nsm','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Small Phytoplankton Nitrogen',prec='float')
-    var.nsmz=ncvar_def('nsmz','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Small Zooplankton Nitrogen',prec='float')
-    var.silg=ncvar_def('silg','mg Si / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phytoplankton Silicon',prec='float')
-    var.nbact=ncvar_def('nbact','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Bacterial Nitrogen',prec='float')
+    # var.ndi=ncvar_def('ndi','mg N m-3',list(leveldim,boxesdim,timedim),-999,longname = 'Diazotroph Nitrogen',prec='float')
+    var.nlg=ncvar_def('Diatom_N','mg N m-3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phyotplankton Nitrogen',prec='float')
+    var.nlgz=ncvar_def('Carniv_Zoo_N','mg N m-3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Zooplankton Nitrogen',prec='float')
+    var.nmdz=ncvar_def('Zoo_N','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Medium Zooplankton Nitrogen',prec='float')
+    var.nsm=ncvar_def('PicoPhytopl_N','mg N m-3',list(leveldim,boxesdim,timedim),-999,longname = 'Small Phytoplankton Nitrogen',prec='float')
+    var.nsmz=ncvar_def('MicroZoo_N','mg N m-3',list(leveldim,boxesdim,timedim),-999,longname = 'Small Zooplankton Nitrogen',prec='float')
+    var.silg=ncvar_def('Diatom_S','mg Si m-3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phytoplankton Silicon',prec='float')
+    var.nbact=ncvar_def('Pelag_Bact_N','mg N m-3',list(leveldim,boxesdim,timedim),-999,longname = 'Bacterial Nitrogen',prec='float')
     
     nc_varfile=nc_create(filename,list(var.time,var.box, var.lev,
-                                       var.ndi,var.nlg,var.nlgz,
+                                       var.nlg,var.nlgz,
                                        var.nmdz,var.nsm,var.nsmz,
                                        var.silg,var.nbact))
     #assign global attributes to file
@@ -1050,10 +1153,10 @@ make_ROMS_files = function(roms.dir,
     ncatt_put(nc_varfile,var.time,"dt",86400,prec="double")
     
     #assign variables to file
-    ncvar_put(nc_varfile,var.ndi,ndi,count = c(nlevel,nboxes,ntimes))
+    # ncvar_put(nc_varfile,var.ndi,ndi,count = c(nlevel,nboxes,ntimes))
+    ncvar_put(nc_varfile,var.nlg,nlg,count = c(nlevel,nboxes,ntimes))
     ncvar_put(nc_varfile,var.time,t_tot,verbose = T)
     ncvar_put(nc_varfile,var.lev,atl.level)
-    ncvar_put(nc_varfile,var.nlg,nlg,count = c(nlevel,nboxes,ntimes))
     ncvar_put(nc_varfile,var.nlgz,nlgz,count = c(nlevel,nboxes,ntimes))
     ncvar_put(nc_varfile,var.nmdz,nmdz,count = c(nlevel,nboxes,ntimes))
     ncvar_put(nc_varfile,var.nsm,nsm,count = c(nlevel,nboxes,ntimes))
@@ -1068,7 +1171,7 @@ make_ROMS_files = function(roms.dir,
   }
   
   if(make.nutvars){
-    filename=paste0(out.dir,name.out,'nutvars__',year,'_neus_atl.nc')
+    filename=paste0(out.dir,name.out,'nutvars_',year,'.nc')
     
     #define dimensions
     timedim=ncdim_def("time", "", 1:length(t_tot), unlim=T, create_dimvar = F) #as.double(t_tot)
