@@ -6,14 +6,14 @@ source(here::here('R','process_atl_output.R'))
 source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Define local/git directories for atlantis output, parameter files, and desired location for figures/tables
-atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_NewCOBALT_NewAgg_2/'
+atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_Base_06232020/'
 param.dir = here::here('currentVersion')
-out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_NewCOBALT_NewAgg_2/Post_Processed/'
+out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_Base_06232020/Post_Processed/'
 
 #Run prefix is the filename prefix in the atlantis output (specified in run.bat)
 run.prefix = 'neus_output'
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
-run.name = 'NewCOBALT_NewAgg'
+run.name = 'Base_06232020'
 
 #Run function that retreives parameter files
 param.ls= get_atl_paramfiles(param.dir = param.dir,
@@ -22,8 +22,8 @@ param.ls= get_atl_paramfiles(param.dir = param.dir,
 
 #Run  post-processing function to generate "result" R object. 
 process_atl_output( param.dir = here::here('CurrentVersion'),
-  atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_NewCOBALT_NewAgg_2/',
-  out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_NewCOBALT_NewAgg_2/Post_Processed/',
+  atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_Base_06232020/',
+  out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_Base_06232020/Post_Processed/',
   run.prefix = 'neus_output',
   include_catch = T,
   save.out = T, #If T, saves to file, if F returns to current environment
