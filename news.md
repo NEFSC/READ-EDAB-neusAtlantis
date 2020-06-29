@@ -5,6 +5,33 @@
 ## Bug Fixes (patch)
 
 
+# neus-atlantis 1.0.0-9014 (in dev) 
+(built with altantis rev 6490.1)
+
+New script to break up COBALT's **nlg** and **silg** into Atlantis' Diatom_N, Diatiom_S, and DinoFlag_N. Addition of new annual forcing files "roms_largephyto_force_*.nc"
+
+As described in [#48](https://github.com/NOAA-EDAB/neus-atlantis/pull/48)
+
+# neus-atlantis 1.0.0-9013 (in dev) 
+(built with altantis rev 6490.1)
+
+* Changes to at_biology parameter file to get all species persisting again after the last change to plankton levels. (RCB, LOB, BMS and MEN). Modified MEN assimilation efficiencies
+* Changed growth rates and assimilation efficiencies for LOB, RCB and BMS. All previously persisting species continue to persist
+
+As described in [#47](https://github.com/NOAA-EDAB/neus-atlantis/pull/47)
+
+# neus-atlantis 1.0.0-9012 (in dev) 
+(built with altantis rev 6490.1)
+
+Work aimed at investigating why the temperature in the forcing files did not mirror observations well. The source of the discrepancy was outside of our model development/processing but other changes were made to the forcing that should improve Atlantis' representation of the ROMS_COBALT output.
+
+* Temperature Diagnostics. Addition of EPU shape files for SOE comparisons
+Various scripts aimed at diagnosing temperature (or any forcing) issues with model (i.e. box-level_Scripts to plot NCEI temperature againts ROMS data on various temporal/spatial scales
+* Changes to Aggregation. Established workflow for adding new depth layer. Did not substantially improve model temperature. Updated aggregating statistic/methods. Weighted mean of each layers within a cell.
+*Updated Forcing Files
+
+As described in [#46](https://github.com/NOAA-EDAB/neus-atlantis/pull/46)
+
 # neus-atlantis 1.0.0-9011 (in dev) 
 (built with altantis rev 6490.1)
 
