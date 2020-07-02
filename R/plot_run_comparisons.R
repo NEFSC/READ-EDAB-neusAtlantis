@@ -8,8 +8,8 @@
 #' functional groups to compare. All data is based on the BiomIndx.txt 
 #' output file
 #' 
-#' @model1.dir string. path to the first model output files
-#' @model2.dir string. path to the second model output files. Convention is that model2 is most recent
+#' @model.dirs string. Character vector to of paths to all run outputs
+#' @model.names string. Character vector of model run names
 #' @plot.raw logical. Do you want to plot timeseries of the raw data (biomass)?
 #' @plot.diff logical. Do you want to plot only the difference between 2 models?
 #' @plot.out string. path where output plots are saved
@@ -20,59 +20,58 @@
 #' 
 #' Author: J. Caracappa
 
-# model1.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Run_Files/atneus_v15_01272020/'
-# model2.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output/'
-# plot.raw = T
-# plot.diff = T
-# plot.out = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output/Figures/'
-# table.out = T
-# # groups = c('HER','CLA','LOB')
-# groups = NULL
+# model.dirs = c('C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_DinoFlag/',
+#                'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output/')
+# model.names = c('model 1','model 2')
+# # plot.raw = T
+# # plot.diff = T
+# # plot.out = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output/Figures/'
+# # table.out = T
+# groups = c('HER','CLA','LOB')
+# # groups = NULL
 
-plot_run_comparisons = function(model1.dir,model2.dir,model1.name,model2.name,plot.raw = T,
+plot_run_comparisons = function(model.dirs,model.names,plot.raw = T,
                              plot.diff = T, plot.out, table.out = F, groups = NULL){
   `%>%` = dplyr::`%>%`
   
-  model1.files = sort(list.files(model1.dir,'*.nc'))
-  model2.files = sort(list.files(model2.dir,'*.nc'))
+  bio.long.ls = list()
+  t.starts = character()
   
-  model1.prefix = strsplit(model1.files[1],'\\.')[[1]][1]
-  model2.prefix = strsplit(model2.files[1],'\\.')[[1]][1]
-  
-  model1.bio = paste0(model1.prefix,'BiomIndx.txt')
-  model2.bio = paste0(model2.prefix, 'BiomIndx.txt')
-  
-  bio1 = read.table(file = paste0(model1.dir,model1.bio),header = T)
-  bio2 = read.table(file = paste0(model2.dir,model2.bio),header = T)
-  
-  fgs = colnames(bio1)[2:ncol(bio1)]
-  
-  #If specifying groups, subset only those
-  if(!is.null(groups)){
-    bio1 = subset(bio1,select = c('Time',groups))
-    bio2 = subset(bio2,select = c('Time',groups))
+  for(i in 1:length(model.dirs)){
+    
+    model.files = sort(list.files(model.dirs[i],'*.nc'))
+    model.prefix =  strsplit(model.files[1],'\\.')[[1]][1]
+    model.bio = paste0(model.prefix, 'BiomIndx.txt')
+    
+    bio = read.table(paste0(model.dirs[i],model.bio),header = T)
+    
+
+    
+    #If specifying groups, subset only those
+    if(!is.null(groups)){
+      fgs = groups
+    }else{
+      fgs = colnames(bio)[2:ncol(bio)]
+      fgs = fgs[-grep('Rel',fgs)]
+    }
+    bio = subset(bio,select = c('Time',fgs))
+    
+    #convert each model to long format
+    bio.long = tidyr::gather(bio,key = 'Group','Biomass',-Time)
+    
+    bio.long$Model = paste0('model',i)
+    
+    nc = ncdf4::nc_open(paste0(model.dirs[i],model.prefix,'.nc'))
+    t.start = strsplit(ncdf4::ncatt_get(nc,'t')$units,'\\ ')[[1]][3]
+    ncdf4::nc_close(nc)
+    
+    bio.long$Real.Time = as.Date(bio.long$Time,origin = t.start)
+    
+    t.starts[i] = t.start
+    bio.long.ls[[i]] = bio.long
   }
-  
-  #convert each model to long format
-  bio1.long = tidyr::gather(bio1,key = 'Group','Biomass',-Time)
-  bio2.long = tidyr::gather(bio2,key = 'Group','Biomass',-Time)
-  
-  bio1.long$Model = 'model1'
-  bio2.long$Model = 'model2'
-  
-  nc1 = ncdf4::nc_open(paste0(model1.dir,model1.prefix,'.nc'))
-  nc2 = ncdf4::nc_open(paste0(model2.dir,model2.prefix,'.nc'))
-  
-  t.start1 = strsplit(ncdf4::ncatt_get(nc1,'t')$units,'\\ ')[[1]][3]
-  t.start2 = strsplit(ncdf4::ncatt_get(nc2,'t')$units,'\\ ')[[1]][3]
-  
-  ncdf4::nc_close(nc1)
-  ncdf4::nc_close(nc2)
-  
-  bio1.long$Real.Time = as.Date(bio1.long$Time,origin = t.start1)
-  bio2.long$Real.Time = as.Date(bio2.long$Time,origin = t.start2)
-  
-  bio.all = rbind(bio1.long,bio2.long)
+
+  bio.all = dplyr::bind_rows(bio.long.ls)
   
   if(is.null(groups)){
     plot.groups = sort(unique(bio.all$Group))  
@@ -82,7 +81,7 @@ plot_run_comparisons = function(model1.dir,model2.dir,model1.name,model2.name,pl
   
   if(plot.diff){
 
-    if(t.start1 != t.start2){
+    if(length(unique(t.starts))!=1){
       print('Error: models do not have the same start date. Difference function not applicable')
     } else{
       bio.diff = bio.all %>% dplyr::ungroup() %>%
@@ -116,7 +115,7 @@ plot_run_comparisons = function(model1.dir,model2.dir,model1.name,model2.name,pl
       p= ggplot2::ggplot(data = subset(bio.all,Group == plot.groups[i]),
                          ggplot2::aes(x=Real.Time,y = Biomass,color = Model))+
         ggplot2::geom_path()+
-        ggplot2::scale_color_manual(name = 'Model',labels = c(model1.name,model2.name),values = c('red3','blue3'))+
+        ggplot2::scale_color_manual(name = 'Model',labels = model.names,values = RColorBrewer::brewer.pal(length(model.dirs),'Set1'))+
         ggplot2::ylab('Group Biomass (Tonnes)')+
         ggplot2::xlab('Date')+
         ggplot2::ggtitle(plot.groups[i])+
