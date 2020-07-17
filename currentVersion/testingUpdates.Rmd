@@ -78,3 +78,17 @@ This file is used to document steps made towards a new version/subversion
 * Modified MEN assimilation efficiencies
 * Increased growth rates for LOB, RCB and BMS
 + All previously persisting species continue to persist
+
+## Top Commercial and Recerational Species Persistence (ATLNTS-3)
+ * RG: 07-17-2020
+ * SUF: Increased assimilation efficiency and number of recruits
+ * WPF: Increased number of recruits and growth rate
+ * TYL: Increased number of recruits
+ * DRM: Increased number of recruits
+ * ZG: Reduced predation on, increased assimilation efficiency, increased growth
+ * MEN: Increased assimilation efficiency and number of recruits
+
+## Retune previously tuned species (ATLNTS-155)
+ * RG: 07-17-2020
+ * BC: Increased growth rate
+ * LOB: Increased growth rate
