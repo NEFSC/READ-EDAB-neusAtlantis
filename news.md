@@ -4,6 +4,22 @@
 
 ## Bug Fixes (patch)
 
+# neus-atlantis 1.0.0-9015 (in dev) 
+(built with altantis rev 6490.1)
+
+Species persistence tuning
+
+ZG: Reduced predation on, increased assimilation efficiency, increased growth
+MEN: Increased assimilation efficiency and number of recruits
+SUF: Increased assimilation efficiency and number of recruits
+WPF: Increased number of recruits and growth rate
+TYL: Increased number of recruits
+DRM: Increased number of recruits
+BC: Increased growth rate
+LOB: Increased growth rate
+
+As described in [#49](https://github.com/NOAA-EDAB/neus-atlantis/pull/49)
+
 
 # neus-atlantis 1.0.0-9014 (in dev) 
 (built with altantis rev 6490.1)
