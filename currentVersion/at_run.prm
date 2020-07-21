@@ -1,10 +1,19 @@
 # Run parameters
-verbose      0 	# Detailed logged output
+verbose      2 	# Detailed logged output
 
 flagecon_on        0   # Flag showing whether want economics loaded and submodel run (1) or not (0)
-flag_fisheries_on  1  # Flag showing whether want fisheries loaded and submodel run (1) or not (0)
+flag_fisheries_on  0  # Flag showing whether want fisheries loaded and submodel run (1) or not (0)
 flag_skip_biol     0   # Flag showing whether want biological model run: 1 turns of Ecology, so only used when debugging fisheries)
 flag_skip_phys     0   # Flag showing whether want Physics model run: 1 turns of Physics, so only used when debugging fisheries)
+#Added J. Caracappa v6520 on 07-15-2020
+flag_multiyr_migs  0   # Flag indicating whether multi year migrations are active (1) or not (0)
+flag_want_all_KMIG 0   # Flag indicating whether want to load entire KMIG array even if not supposed to start outside model (important for multi year migrators)
+external_populations 0 # Flag indicating have groups using the external population model
+flag_sanity_check 1 # Flag to correct for bug that occasionally goes off for groups who’s recruitment or gestation periods is roughly the same length as the time between reproduction(spawning events). To replicate old code set it to 0.
+flagpassivetracer 0
+flag_use_deltaH 0
+store_aggregate_yoy 1
+store_mig_array 1
 
 debug_it      0
 checkbox      8        # Give detailed logged output for this box
@@ -24,7 +33,7 @@ which_check   79       # ID number of group to track (if don't want to track any
 habitat_check 0
 move_check    20       # ID number of group where tracking movements
 fishmove      1        # Set to 0 to turn vertebrate movement off for debugging purposes
-debug         0        # 0=debuging off, 1=debug fishing, 2=debug discards, 3=debug histfishing,
+debug         10        # 0=debuging off, 1=debug fishing, 2=debug discards, 3=debug histfishing,
                        # 4=debug assessments, 5=debug mpas, 6=debug effort, 7=debug econ, 8=debug aging,
                        # 9=debug_spawning, 10=debug migration, 11=debug movement, 12=debug stocks,
                        # 13=debug biomass calcs, 14=debug feeding, 15=debug everything
@@ -32,7 +41,7 @@ debug         0        # 0=debuging off, 1=debug fishing, 2=debug discards, 3=de
 title      NEUS v1.5 with fishing
 dt         24 hour     # 24 hour time step
 tstop      18608 day   # Stop time after the given period (18260)18260  , 4000   2191 7320 9120 3660 7320 (01-01-1964 to 12-12-2014 is 18608 d)
-toutstart  0 day       # Output start time
+toutstart  1 day       # Output start time
 toutinc    73 day      # Write output with this periodicity
 toutfinc   73 day      # Write fisheries output with this periodicity
 tburnday   0 day
@@ -45,12 +54,6 @@ flagannual_Mest 1      # Whether to write out estimates of mortality per predato
 fishout    	1           # Switch to turn fisheries output on = 1, off = 0
 flagreusefile 	2        # Switch to show want to append output file no = 0, yes = 1, replace = 2
 flag_age_output 1
-
-
-flagpassivetracer 0
-flag_sanity_check 1
-external_populations 0
-flag_multiyr_migs 0
 
 # Parameters defining the numbers of certain types of groups (needed to  parameter arrays in the
 # initialisation section of the model, best left untouched for now)
@@ -98,7 +101,6 @@ track_pH 0      # Flag indicating that want to track pH
 
 mirror_invalid 0
 track_contaminants 0
-flag_want_all_KMIG 0
 
 # See the manual for more info
 flag_replicated_old 0
@@ -106,3 +108,4 @@ external_box 0
 flagAllowLand 0
 flag_old_embryo_init 0  #This flag is to allow legacy models to have the same starting conditions under the new code as they did in older version
 flag_replicate_old_calendar 0 #This flag specifically allows for legacy models and the influence of environment on the distribution of recruits to be replicated in the newer code
+
