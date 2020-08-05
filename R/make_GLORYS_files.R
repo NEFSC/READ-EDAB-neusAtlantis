@@ -20,27 +20,27 @@
 #' .nc files for horizontal exchanges, phyical state variables, and biological state variables
 #' 
 #' #' Created by R. Morse and modified by J. Caracappa
-
-glorys.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/Data/1993/'
-# glorys.dir = 'D:/NWA/1980/'
-glorys.prefix = 'GLORYS_REANALYSIS_*'
-glorys.files = list.files(glorys.dir,glorys.prefix)
-# out.dir = 'D:/OUtput/1980/'
-out.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/Atlantis_Format/'
-dz.file = here::here('Geometry','dz.csv')
-bgm.file = here::here('Geometry','neus_tmerc_RM2.bgm')
-# bgm.file = here::here('Geometry','neus_ll_WGS84.bgm')
-shp.file = here::here('Geometry','Neus_ll_0p01.shp')
-name.out = 'GLORYS_Atlantis_'
-make.hflux = T
-make.physvars = T
+# 
+# glorys.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/Data/1993/'
+# # glorys.dir = 'D:/NWA/1980/'
+# glorys.prefix = 'GLORYS_REANALYSIS_*'
+# glorys.files = list.files(glorys.dir,glorys.prefix)
+# # out.dir = 'D:/OUtput/1980/'
+# out.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/Atlantis_Format/'
+# dz.file = here::here('Geometry','dz.csv')
+# bgm.file = here::here('Geometry','neus_tmerc_RM2.bgm')
+# # bgm.file = here::here('Geometry','neus_ll_WGS84.bgm')
+# shp.file = here::here('Geometry','Neus_ll_0p01.shp')
+# name.out = 'GLORYS_Atlantis_'
+# make.hflux = T
+# make.physvars = T
 
 # glorys.dir =local.dir
 # glorys.prefix = 'RM_NWA-SZ.HCob05T_avg_'
 # out.dir = paste0(local.output.dir,dir.names[yr],'/')
 # name.out = 'roms_cobalt_'
 
-make_ROMS_files = function(glorys.dir,
+make_GLORYS_files = function(glorys.dir,
                            glorys.prefix,
                            glorys.files,
                            out.dir,
@@ -49,9 +49,7 @@ make_ROMS_files = function(glorys.dir,
                            shp.file,
                            name.out,
                            make.hflux,
-                           make.physvars,
-                           make.ltlvars,
-                           make.nutvars){
+                           make.physvars){
   # Packages ----------------------------------------------------------------
   library(angstroms)
   library(rbgm)
@@ -96,15 +94,33 @@ make_ROMS_files = function(glorys.dir,
   
   # matching cell for the right group
   extract_at_level <- function(x, cell_level) {
+    #identify all levels and remove NA
     ulevel <- unique(cell_level$level)
+    na.lev = which(is.na(ulevel))
+    ulevel = ulevel[-na.lev]
+    
+    #Create empty vector for out values
     values <- numeric(nrow(cell_level))
+    #Which cell_level rows are NAs
+    val.na = which(is.na(cell_level$level))
+    #places NA values
+    values[val.na] = NA
+    
+    #loop through levels and extract cell-level vals
     for (ul in seq_along(ulevel)) {
       asub <- cell_level$level == ulevel[ul]
-      values[asub] <- raster::extract(x[[ulevel[ul]]], 
-                              cell_level$cell[asub])
+      # asub = asub[-val.na]
+      rs.vals =  raster::extract(x[[ulevel[ul]]],cell_level$cell[asub])
+      rs.na = which(is.na(rs.vals))
+      if(length(rs.na)==length(rs.vals)){
+        values[which(asub)] = NA
+      }else{
+        values[which(asub)] <- rs.vals[-rs.na]  
+      }
+      
     }
     values
-  }
+  } 
   
   # sets the extent of indexed data
   set_indextent <- function(x) {
@@ -148,7 +164,7 @@ make_ROMS_files = function(glorys.dir,
   # setwd(glorys.dir)
   # glorys.files = dir(glorys.dir,pattern = glorys.prefix)
   
-  #Creates table of glorys output files: For daily files (don't need RM old function, all have ocean_time length of 1)
+  #Creates table of glorys output files: For daily files (don't need RM old function, all have model_time length of 1)
   #Might still need if dailies are concatenated
   
   #Time is in hours from 1950-01-01 00:00:00
@@ -157,13 +173,13 @@ make_ROMS_files = function(glorys.dir,
     file.nc = ncdf4::nc_open(paste0(glorys.dir,glorys.files[f]))
     file_db_ls[[f]] = data.frame(fullname = glorys.files[f],
                                     date = as.Date(date_from_file(glorys.files[f])),
-                                    time = file.nc$dim$time$vals)
+                                    model_time = file.nc$dim$time$vals)
     file_db_ls[[f]]$band_level = 1:nrow(file_db_ls[[f]])
     ncdf4::nc_close(file.nc)
     print(f)
   }
   file_db = dplyr::bind_rows(file_db_ls)
-  file_db = dplyr::arrange(file_db,time)
+  file_db = dplyr::arrange(file_db,model_time)
   file_db$time_id = 1:nrow(file_db)
   # file_db$band_level = 1:nrow(file_db)
   
@@ -309,50 +325,45 @@ make_ROMS_files = function(glorys.dir,
     # points(bearmat[32,1],bearmat[32,2],cex = 2,col=2,pch=16)
   }
 
-  # Build Index for the glorys Cell of NEUS Boxes and Faces -------------------
+  #Build Index for the glorys Cell of NEUS Boxes and Faces -------------------
   
   #For each face, which cells does it traverse
   box_index = index_box(boxes, glorys_coords)
   
-  if(make.hflux){
-    #raster::cellFromLine determines which cells each face line intersects (u and v)
-    ind_face = raster::cellFromLine(angstroms::romsdata(paste0(glorys.dir,glorys.files[1]),'uo'),face_coords)
+  #raster::cellFromLine determines which cells each face line intersects (u and v)
+  ind_face = raster::cellFromLine(angstroms::romsdata(paste0(glorys.dir,glorys.files[1]),'uo'),face_coords)
     
-    # creates table of face cell index for u and v points
-    face_index <- dplyr::tibble(face = face_coords$label[rep(seq_len(nrow(face_coords)), lengths(ind_face))], 
+  # creates table of face cell index for u and v points
+  face_index <- dplyr::tibble(face = face_coords$label[rep(seq_len(nrow(face_coords)), lengths(ind_face))], 
                                cell = unlist(ind_face))
-    }
   
+  
+  #Combinde box and face into one df for processing (split out later)
+  colnames(box_index) = c('ID','cell')
+  colnames(face_index) = c('ID','cell')
+  box_index$type = 'box'
+  face_index$type = 'face'
+  full_index = bind_rows(box_index,face_index)
+  
+  #Retreive cell dimensions from coordinates file
   #Add cell area to box_index
   grid_dx = raster(grid.file,ncdf = T, varname = 'e1t')
   grid_dy = raster(grid.file,ncdf = T, varname = 'e2t')
   grid_dz = brick(grid.file,ncdf4 = T, varname = 'e3t')
   grid_nlev = raster(mask.file,ncdf = T, varname = 'deptho_lev')
+  grid_bathy = raster(mask.file,ncdf = T, varname = 'deptho')
   
-  box_index$dx = extract(grid_dx,box_index$cell)
-  box_index$dy = extract(grid_dy,box_index$cell)
-  box_index$cell_area = box_index$dx * box_index$dy
-  box_index$nlev = extract(grid_nlev,box_index$cell)
+  full_index$dx = extract(grid_dx,full_index$cell)
+  full_index$dy = extract(grid_dy,full_index$cell)
+  full_index$cell_area = full_index$dx * full_index$dy
+  full_index$nlev = extract(grid_nlev,full_index$cell)
   
-  box_index_dz=extract(grid_dz,box_index$cell)
+  full_index_dz=extract(grid_dz,full_index$cell)
+
+  # Create Index between GLORYS and NEUS Levels for all box and face cells -------------------------------
   
-  #Add cell area to face_index
-  face_index$dx = extract(grid_dx,face_index$cell)
-  face_index$dy = extract(grid_dy,face_index$cell)
-  face_index$cell_area = face_index$dx * face_index$dy
-  face_index$nlev = extract(grid_nlev, face_index$cell)
-  
-  face_index_dz = extract(grid_dz,face_index$cell)
-  
-  # 
-  # graphics::image(glorys_lon,glorys_lat,grid_dx)
-  # plot(neus.shp)
-  # segments(bgmXY$lon1,bgmXY$lat1,bgmXY$lon2,bgmXY$lat2,col='red')
-  
-  # Create Index between glorys and NEUS Levels -------------------------------
-  
-  #Read cell depths from glorys
-  z = glorys_grid$dim$depth$vals
+  #Read cell depths from glorys: These are cell mid points
+  t.z = glorys_grid$dim$depth$vals
 
   #Vertical weights from depth bin intervals (changes with cell though)
   # z_wgt = diff(c(0,z/z[length(z)]))
@@ -369,286 +380,167 @@ make_ROMS_files = function(glorys.dir,
   NEUSz$zmax = apply(dz_box[,2:5],1,function(x) sum(x,na.rm=T))
   
   ## build the level index between Atlantis and glorys
-  list_nc_z_index = vector('list', nrow(box_index))
-  if(make.hflux){
-    list_face_index <- vector('list', nrow(face_index))
-  }
-  
-  if(make.physvars){
-    
-    # Loop through each cell, identify depths of glorys layers, identify corresponding NEUS layers
-    for (i in seq_len(nrow(box_index))) {
-    
-      #Retreives depths at each cell, and calculates cell volume (for volume-based weights)
-      nlev = box_index$nlev[i]
-      
-      if(is.na(nlev)){
-        list_nc_z_index[[i]] = NULL
-        next
-      }else{
-        #Calculate total z intervals
-        cell.z.int = as.numeric(extract(grid_dz,box_index$cell[i]))  
-        ##optional_ full depth weights (unused)
-        #cell.z.wgt = cell.z.int/sum(cell.z.int,na.rm=T)
-        
-        #Calculate cell volume
-        cell.vol = cell.z.int * box_index$cell_area[i]
-        cell.vol = cell.vol[1:nlev]
-        
-        cell.z = z[1:nlev]
-        
-        focal.box = bgm$boxes$.bx0[bgm$boxes$label == box_index$box[i]]
-        
-        if(!(focal.box %in% c(23,24))){
-          z.box = NEUSz$zmax[NEUSz$.bx0 == focal.box]
-          cell.vol = cell.vol[cell.z <= z.box]
-          cell.z = cell.z[cell.z <= z.box]
-        
-          # implicit 0 at the surface, and implicit bottom based on glorys
-          # Identifies where glorys depths fit in NEUS intervals and reverses order (NEUS: 1 at bottom, 4 at surface)
-          z_index <- length(atlantis_depths) - findInterval(cell.z, atlantis_depths, all.inside = F) # + 1
-          z.ls = list()
-          for(L in 1:length(atlantis_depths)){
-            dumm1 = cell.z.int[which(z_index==L)]
-            z.ls[[L]] = dumm1/sum(dumm1)
-          }
-          z_index[which(z_index==5)]=NA ### remove depths greater than 500
-          list_nc_z_index[[i]] = data.frame(atlantis_levels = z_index,
-                                            glorys_levels = 1:length(z_index),
-                                            z.wgt = rev(unlist(z.ls)),
-                                            cell.vol = cell.vol,
-                                            cell = box_index$cell[i])
-        } else{
-          list_nc_z_index[[i]] = data.frame(atlantis_levels = NA,
-                                            glorys_levels = NA,
-                                            z.wgt = NA,
-                                            cell.vol = NA,
-                                            cell = box_index$cell[i])
-       }
-      
-      
-      if (i %% 1000 == 0) print(i)
-      }
-    }
-    gc()
-    
-    # join the box-xy-index to the level index using rho coordinates
-    box_z_index =  bind_rows(list_nc_z_index)
+  list_nc_z_index = vector('list', nrow(full_index))
 
-    #test z.wgts sum to 1 per cell/level
-    # box_z_index %>% group_by(cell,atlantis_levels) %>% summarize(tot.wgt = sum(z.wgt,na.rm=T)) %>% filter(tot.wgt != 1)
-
-      # filter(!is.na(atlantis_level)) %>%
-    
-    box_z_index = box_z_index %>%
-      inner_join(box_index)
-  }
+  # Loop through each cell, identify depths of glorys layers, identify corresponding NEUS layers
+  for (i in seq_len(nrow(full_index))) {
   
-  if(make.hflux){
-    # Repeat same process for U and V indices
-    for (i in seq_len(nrow(face_index))) {
+    #Retreives depths at each cell, and calculates cell volume (for volume-based weights)
+    nlev = full_index$nlev[i]
+    na.flag = ifelse(is.na(nlev),T,F)
+    
+    #identify box and/or face ID as well as whether island box
+    if(full_index$type[i] == 'box'){
+      box.id = bgm$boxes$.bx0[bgm$boxes$label == full_index$ID[i]]
+      island.flag = ifelse(box.id %in% c(23,24),T,F)
+    }else{
+      face.id = full_index$ID[i]  
       
-      nlev = extract(grid_nlev, face_index$cell[i])
+      box.left = bgm$faces$left[bgm$faces$label == face.id]
+      box.right = bgm$faces$right[bgm$faces$label == face.id]
       
-      if(is.na(nlev)){
-        list_face_index[[i]] =data.frame(atlantis_levels = NA,
-                                         glorys_levels = NA,
-                                         z.wgt = NA,
-                                         cell.vol = NA,
-                                         cell = face_index$cell[i])
-        next
-      }else{
-        #Calculate z intervals
-        cell.z.int = as.numeric(extract(grid_dz,face_index$cell[i]))  
-        ##optional_ full depth weights (unused)
-        #cell.z.wgt = cell.z.int/sum(cell.z.int,na.rm=T)
-        
-        #Calculate cell volume
-        cell.vol = cell.z.int * face_index$cell_area[i]
-        cell.vol = cell.vol[1:nlev]
-        
-        cell.z = z[1:nlev]
-        
-        face.id = face_index$face[i]
-        
-        box.left = bgm$faces$left[bgm$faces$label == face.id]
-        box.right = bgm$faces$right[bgm$faces$label == face.id]
-        
-        if(!(box.left %in% c(23,24) | box.right %in% c(23,24))){
-          
-          z.left = NEUSz$zmax[NEUSz$.bx0 == box.left]
-          z.right = NEUSz$zmax[NEUSz$.bx0 == box.right]
-          
-          box.min = ifelse(z.left<=z.right,box.left,box.right)
-          box.max = ifelse(z.left>z.right,box.left,box.right)
-          
-          z.min = min(c(z.left,z.right))
-          
-          cell.vol = cell.vol[cell.z <= z.min]
-          cell.z = cell.z[cell.z <= z.min]
-          
-          
-          #Determine Atlantis levels
-          ## implicit 0 at the surface, and implicit bottom based on glorys
-          z_index <- length(atlantis_depths) -findInterval(cell.z, atlantis_depths) #+ 1
-          
-          z.ls = list()
-          for(L in 1:length(atlantis_depths)){
-            dumm1 = cell.z.int[which(z_index==L)]
-            z.ls[[L]] = dumm1/sum(dumm1)
-          }
-          z_index[which(z_index==5)]=NA ### remove depths greater than 500
-          
-          list_face_index[[i]] =  data.frame(atlantis_levels = z_index,
-                                              glorys_levels = 1:length(z_index),
-                                              z.wgt = rev(unlist(z.ls)),
-                                              cell.vol = cell.vol,
-                                              cell = face_index$cell[i])        
-        }else {
-          list_face_index[[i]] = data.frame(atlantis_levels = NA,
-                                            glorys_levels = NA,
-                                            z.wgt = NA,
-                                            cell.vol = NA,
-                                            cell = face_index$cell[i])
-        }
-      if (i %% 1000 == 0) print(i)
-      }
+      island.flag = ifelse(box.left %in% c(23,24) | box.right %in% c(23,24),T,F)
     }
     
-    gc()
-    
-    
-    ## join the face-xy-index to the level index
-    face_z_uindex = face_z_v_index =  bind_rows(list_face_index) %>%
-      inner_join(face_index) %>%
-      filter(!is.na(atlantis_levels)) 
+    #Fill placeholder for cells in island or with no output values
+    if(na.flag | island.flag){
+      list_nc_z_index[[i]] = data.frame(atlantis_levels = NA,
+                                        glorys_levels = NA,
+                                        cell.z = NA,
+                                        cell.dz = NA,
+                                        z.wgt = NA,
+                                        cell.vol = NA,
+                                        cell = full_index$cell[i])
+    }else{
 
-    # face_z_uindex = face_z_uindex[which(!is.na(face_z_uindex$atlantis_level)),]
-    
+      cell.bath = extract(grid_bathy,full_index$cell[i])
+      #Calculate total z intervals
+      cell.dz = as.numeric(extract(grid_dz,full_index$cell[i])) 
+      cell.w = t.z + 0.5*cell.dz
+      
+      # plot(t.z[1:nlev],ylim = c(0,cell.bath),pch = 16)
+      # abline(h = cell.w[1:nlev],lty = 2)
+      # points(cumsum(cell.dz),col = 2)
+      # abline(h=cell.bath,col = 3, lwd = 2)
+      
+      #Calculate cell volume
+      cell.vol = cell.dz * full_index$cell_area[i]
+      cell.vol = cell.vol[1:nlev]
+      
+      #If bathymetry is less than bottom of the deepest depth level, take halfway between 2nd bottom and bathy
+      cell.z = t.z[1:nlev]
+      if(cell.w[nlev]>cell.bath){
+        cell.z[nlev] = ((cell.bath-cell.w[nlev-1])/2)+cell.w[nlev-1]
+      }
+      
+      cell.dz = cell.dz[1:nlev]
+      
+      if(full_index$type[i] == 'box'){
+        z.box = NEUSz$zmax[NEUSz$.bx0 == box.id]
+        cell.vol = cell.vol[cell.z <= z.box]
+        cell.dz = cell.dz[cell.z <= z.box]
+        cell.z = cell.z[cell.z <= z.box]
+      }else{
+        
+        z.left = NEUSz$zmax[NEUSz$.bx0 == box.left]
+        z.right = NEUSz$zmax[NEUSz$.bx0 == box.right]
+        
+        box.min = ifelse(z.left<=z.right,box.left,box.right)
+        box.max = ifelse(z.left>z.right,box.left,box.right)
+        
+        z.min = min(c(z.left,z.right))
+        
+        cell.vol = cell.vol[cell.z <= z.min]
+        cell.dz = cell.dz[cell.z <= z.min]
+        cell.z = cell.z[cell.z <= z.min]
+      }
+      # length(atlantis_depths) - 
+      z_index <- findInterval(cell.z, atlantis_depths, all.inside = F) # + 1
+      z.ls = list()
+      for(L in 1:length(atlantis_depths)){
+        dumm1 = cell.dz[which(z_index==L)]
+        z.ls[[L]] = dumm1/sum(dumm1)
+      }
+      z_index[which(z_index==5)]=NA ### remove depths greater than 500
 
+      list_nc_z_index[[i]] = data.frame(atlantis_levels = z_index,
+                                        glorys_levels = 1:length(z_index),
+                                        cell.z = cell.z,
+                                        cell.dz = cell.dz,
+                                        z.wgt = rev(unlist(z.ls)),
+                                        cell.vol = cell.vol,
+                                        cell = full_index$cell[i])
+    }
+
+    
+    if (i %% 1000 == 0) print(i)
+  
   }
+  gc()
+  
+  # join the box-xy-index to the level index using rho coordinates
+  full_z_index =  bind_rows(list_nc_z_index) %>% inner_join(full_index) 
+
+  #test z.wgts sum to 1 per cell/level
+  # full_z_index %>% group_by(cell,atlantis_levels) %>% summarize(tot.wgt = sum(z.wgt,na.rm=T)) %>% filter(tot.wgt != 1)
+
+  #Split full index into box and face index
+  box_z_index = full_z_index %>% filter(type == 'box') %>% select (-type) %>% rename(box = ID)
+  
+  face_z_index = full_z_index %>% filter(type == 'face') %>% select (-type) %>% rename(face = ID)
 
   # Loop over glorys files and calculate state variables and fluxes -----------
   
   # creating placeholders
-  box_props <- box_props_cob <- box_props_nut <- face_props <- face_props_sum <- vector("list", nrow(file_db))
+  box_props <- face_props <- face_props_sum <- vector("list", nrow(file_db))
   i_timeslice <- 1
   
-  if(make.hflux){
-    face_cell_u  = dplyr::rename(face_z_uindex, level = roms_level, cell = cell)
-    face_cell_v = dplyr::rename(face_z_vindex, level = roms_level, cell = cell)
-  }
-  box_cell = dplyr::rename(box_z_index, level = roms_level, cell = cell)
-  ocean_time = numeric(nrow(file_db))
+  box_cell = dplyr::rename(box_z_index, level = glorys_levels)  
+  face_cell = dplyr::rename(face_z_index, level = glorys_levels)
+
+  model_time = numeric(nrow(file_db))
   
-  # for(i in 1:nrow(file_db)){ocean_time[i] = ncvar_get(nc_open(file_db$fullname[i]),'ocean_time')}
+  # for(i in 1:nrow(file_db)){model_time[i] = ncvar_get(nc_open(file_db$fullname[i]),'model_time')}
   
   
   for (i_timeslice in seq(nrow(file_db))) {
   # for(i_timeslice in 300){
-  # tic()
-    #profile start
-    # profvis::profvis({
+  
     print(i_timeslice)
     
     #glorys file name and band name
     roms_file <-file_db$fullname[i_timeslice]
 
-    # glorys.nc = nc_open(paste0(glorys.dir,roms_file))
-    # ocean_time[i_timeslice] = ncvar_get(glorys.nc,'ocean_time')
-    # nc_close(glorys.nc)
-    
-    ocean_time[i_timeslice] = file_db$ocean_time[i_timeslice]
+    model_time[i_timeslice] = file_db$time[i_timeslice]
     
     level <- file_db$band_level[i_timeslice]
-    # level = 1
-  
+    
     #Sets extent of u,v,w, temp, and salt
     if(make.hflux){
-      r_u <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "u", lvar = 4, level = level, ncdf=T))
-      r_v <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "v", lvar = 4, level = level, ncdf=T))
+      r_u <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "uo", lvar = 4, level = level, ncdf=T))
+      r_v <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "vo", lvar = 4, level = level, ncdf=T))
     }
     if(make.physvars){
-      r_w <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "w", lvar = 4, level = level, ncdf=T))
-      r_temp <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "temp", lvar = 4, level = level, ncdf=T))
-      r_salt <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "salt", lvar = 4, level = level, ncdf=T))
+      # r_w <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "w", lvar = 4, level = level, ncdf=T))
+      r_temp <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "thetao", lvar = 4, level = level, ncdf=T))
+      r_salt <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "so", lvar = 4, level = level, ncdf=T))
     }
     
-    #COBALT PARAMS
-    r_rho <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "rho", lvar = 4, level = level, ncdf=T)) #Fluid Density Anomaly
-    
-    if(make.ltlvars){
-      # r_ndi <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "ndi", lvar = 4, level = level, ncdf=T)) #Diazotroph N
-      r_nlg <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "nlg", lvar = 4, level = level, ncdf=T)) #Large Phyto N
-      r_nlgz <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "nlgz", lvar = 4, level = level, ncdf=T)) #Large Zoo N
-      r_nmdz <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "nmdz", lvar = 4, level = level, ncdf=T)) #Med Zoo N
-      r_nsm <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "nsm", lvar = 4, level = level, ncdf=T)) #Small Phtyo N
-      r_nsmz <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "nsmz", lvar = 4, level = level, ncdf=T)) #Small Zoo N
-      r_silg <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "silg", lvar = 4, level = level, ncdf=T)) #Large Phyto Si
-      r_nbact <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "nbact", lvar = 4, level = level, ncdf=T)) #Bacterial N
-    }
-    
-    if(make.nutvars){
-      r_nh4 = set_indextent(brick(paste0(glorys.dir,roms_file),varname= 'nh4',lvar = 4, level = level, ncdf4 = T)) #Ammonia
-      r_no3 = set_indextent(brick(paste0(glorys.dir,roms_file),varname= 'no3',lvar = 4, level = level, ncdf4 = T)) #Nitrate
-      r_o2 = set_indextent(brick(paste0(glorys.dir,roms_file),varname= 'o2',lvar = 4, level = level, ncdf4 = T)) #Oxygen
-      r_sio4 = set_indextent(brick(paste0(glorys.dir,roms_file),varname= 'sio4',lvar = 4, level = level, ncdf4 = T)) #Silicate
-    }
-    
-   
     # tic()
     if(make.hflux){
-      face_z_uindex$ue <- extract_at_level(readAll(r_u), face_cell_u); rm(r_u)
-      face_z_vindex$vn <- extract_at_level(readAll(r_v), face_cell_v); rm(r_v)
-      
+      face_z_index$u <- extract_at_level(readAll(r_u), face_cell)
+        rm(r_u)
+      face_z_index$v <- extract_at_level(readAll(r_v), face_cell)
+        rm(r_v)
     }
     
     if(make.physvars){
-      box_z_index$w <- extract_at_level(readAll(r_w),box_cell ); rm(r_w)
-      box_z_index$temp <- extract_at_level(readAll(r_temp), box_cell); rm(r_temp)
-      box_z_index$salt <- extract_at_level(readAll(r_salt), box_cell); rm(r_salt)
-      
-      box_z_index$salt[box_z_index$salt < 0] = NA
+      box_z_index$temp <- extract_at_level(readAll(r_temp), box_cell)
+        rm(r_temp)
+      box_z_index$salt <- extract_at_level(readAll(r_salt), box_cell)
+        rm(r_salt)
     }
-    
-    #COBALT PARAMS
-    box_z_index$rho <- extract_at_level(readAll(r_rho), box_cell)+1000; rm(r_rho)
-    #convert biological groups from molN/kg to mgN/m3
-    rho_scale = box_z_index$rho*14.0067*1E3
-    
-    if(make.ltlvars){
-      # box_z_index$ndi <- extract_at_level(readAll(r_ndi), box_cell)*rho_scale; rm(r_ndi)
-      box_z_index$nlg <- extract_at_level(readAll(r_nlg), box_cell)*rho_scale; rm(r_nlg)
-      box_z_index$nlgz <- extract_at_level(readAll(r_nlgz), box_cell)*rho_scale; rm(r_nlgz)
-      box_z_index$nmdz <- extract_at_level(readAll(r_nmdz), box_cell)*rho_scale; rm(r_nmdz)
-      box_z_index$nsm <- extract_at_level(readAll(r_nsm), box_cell)*rho_scale; rm(r_nsm)
-      box_z_index$nsmz <- extract_at_level(readAll(r_nsmz), box_cell)*rho_scale; rm(r_nsmz)
-      box_z_index$silg <- extract_at_level(readAll(r_silg), box_cell)*box_z_index$rho*1E3*28.0855; rm(r_silg)
-      box_z_index$nbact <- extract_at_level(readAll(r_nbact), box_cell)*rho_scale; rm(r_nbact)
-      
-      box_z_index$nlg[box_z_index$nlg < 0] = NA
-      box_z_index$nlgz[box_z_index$nlgz < 0] = NA
-      box_z_index$nmdz[box_z_index$nmdz < 0] = NA
-      box_z_index$nsm[box_z_index$nsmz < 0] = NA
-      box_z_index$nsmz[box_z_index$nsmz < 0] = NA
-      box_z_index$silg[box_z_index$silg < 0] = NA
-      box_z_index$nbact[box_z_index$nbact < 0] = NA
-    }
-    
-    if(make.nutvars){
-      box_z_index$nh4 = extract_at_level(readAll(r_nh4), box_cell)*box_z_index$rho*1E3*18.039; rm(r_nh4)
-      box_z_index$no3 = extract_at_level(readAll(r_no3), box_cell)*box_z_index$rho*1E3*62.004 ; rm(r_no3)
-      box_z_index$o2 = extract_at_level(readAll(r_o2), box_cell)*box_z_index$rho*1E3*31.998; rm(r_o2)
-      box_z_index$sio4 = extract_at_level(readAll(r_sio4), box_cell)*box_z_index$rho*1E3*92.0831; rm(r_sio4)
-      
-      box_z_index$nh4[box_z_index$nh4 < 0] = NA
-      box_z_index$no3[box_z_index$no3 < 0] = NA
-      box_z_index$o2[box_z_index$o2 < 0] = NA
-      box_z_index$sio4[box_z_index$sio4 < 0] = NA
-    }
-    
-    # toc()
-    
+
     ### added to get missing data back in as NA dimensions should be 30x4=120 for each date
     
     ##WHICH ONE?
@@ -660,121 +552,54 @@ make_ROMS_files = function(glorys.dir,
     ##Add number of total NEUS Atlantis levels per box
     box_z_index1=left_join(box_z_index1, NEUSz, by='.bx0') 
 
-    # Index where number of levels in glorys is greater than atlantis box depth
-    ## WHERE DOES TEST COME FROM?
-    # idx=test$roms_level>test$atlantis_level
-    # idx = box_z_index2$roms_level > box_z_index2$atlantis_level
-    # box_z_index2[idx,'w']=NA
-    # box_z_index2[idx,'salt']=NA
-    # box_z_index2[idx,'temp']=NA
-    # 
-    # box_z_index2[idx,'rho'] = NA
-    # box_z_index2[idx,'ndi'] = NA
-    # box_z_index2[idx,'nlg'] = NA
-    # box_z_index2[idx,'nlgz'] = NA
-    # box_z_index2[idx,'nmdz'] = NA
-    # box_z_index2[idx,'nsm'] = NA
-    # box_z_index2[idx,'nsmz'] = NA
-    # box_z_index2[idx,'silg'] = NA
-    # box_z_index2[idx,'nbact'] = NA
-    
     if(make.physvars){
       
+      #Aggregate vertically weighted by z weights
       box_z_index2 = box_z_index1 %>%
-        group_by(.bx0,atlantis_level,cell) %>%
-        # summarize(temp = weighted.median2(temp,z.wgt),
-        #           salt = weighted.median2(salt,z.wgt),
-        #           w = weighted.median2(w,z.wgt))
-        summarize(temp = weighted.mean(temp,z.wgt),
-                  salt = weighted.mean(salt,z.wgt),
-                  w = weighted.mean(w,z.wgt))
-      # tic()
-      # ##Aggregate over cells with weighted median for roms_levels
-      # box_z_index2b = box_z_index1 %>%
-      #   group_by(.bx0,atlantis_level,cell) %>%
-      #   summarize(temp = if( sum(!is.na(temp))<3){NA} else {weighted.median(temp,w=z.wgt,na.rm=T)},
-      #          salt = if( sum(!is.na(salt))<3){NA} else {weighted.median(salt,w=z.wgt,na.rm=T)},
-      #          w =  if( sum(!is.na(w))<3){NA} else {weighted.median(w,w=z.wgt,na.rm=T)})
-      # toc()
-      #box_props: summary of box-wide variables, grouped by box, atl_level, where means are used across cells
-      box_props[[i_timeslice]] <- box_z_index2 %>% group_by(atlantis_level, .bx0) %>% 
-        summarize(temp = median(temp, na.rm = TRUE), salt = median(salt ,na.rm = TRUE), vertflux=median(w, na.rm=T)) %>% 
+        group_by(.bx0,atlantis_levels,cell,cell_area) %>%
+        summarize(temp = weighted.mean(temp,z.wgt,na.rm=T),
+                  salt = weighted.mean(salt,z.wgt,na.rm=T))
+      #get total area of all cells within Atlantis box
+      box_cell_wgt = box_z_index2 %>% 
+        group_by(.bx0,atlantis_levels) %>%
+        summarize(tot_area = sum(cell_area,na.rm=T))
+      #add area totals and calculate area weigths
+      box_z_index2 = box_z_index2 %>% 
+        inner_join(box_cell_wgt) %>%
+        mutate(cell_wgt = cell_area/tot_area)
+    
+      #aggregate over boxes and weight by cell area
+      box_props[[i_timeslice]] <- box_z_index2 %>% group_by(atlantis_levels, .bx0) %>% 
+        summarize(temp = weighted.mean(temp, cell_wgt, na.rm = TRUE),
+                  salt = weighted.mean(salt, cell_wgt,na.rm = TRUE)) %>% 
         ungroup(box_z_index2)%>%
-        complete(atlantis_level, .bx0)
+        complete(atlantis_levels, .bx0) %>%
+        filter(!is.na(atlantis_levels))
       box_props[[i_timeslice]]$band_level = file_db$time_id[i_timeslice]
-      # mutate(band_level = level)
-    }
-    
-    if(make.ltlvars){
-      
-      box_z_index2 = box_z_index1 %>%
-        group_by(.bx0,atlantis_level,cell) %>%
-        # summarize(rho  = weighted.median2(rho,z.wgt),
-        #           # ndi  = weighted.median2(ndi,z.wgt),
-        #           nlg = weighted.median2(nlg,z.wgt),
-        #           nlgz = weighted.median2(nlgz,z.wgt),
-        #           nmdz  = weighted.median2(nmdz,z.wgt),
-        #           nsm = weighted.median2(nsm,z.wgt),
-        #           nsmz = weighted.median2(nsmz,z.wgt),
-        #           silg = weighted.median2(silg,z.wgt),
-        #           nbact = weighted.median2(nbact,z.wgt)
-        #           )
-        summarize(rho  = weighted.mean(rho,z.wgt),
-                  # ndi  = weighted.mean(ndi,z.wgt),
-                  nlg = weighted.mean(nlg,z.wgt),
-                  nlgz = weighted.mean(nlgz,z.wgt),
-                  nmdz  = weighted.mean(nmdz,z.wgt),
-                  nsm = weighted.mean(nsm,z.wgt),
-                  nsmz = weighted.mean(nsmz,z.wgt),
-                  silg = weighted.mean(silg,z.wgt),
-                  nbact = weighted.mean(nbact,z.wgt)
-        )
-      
-      # For biological parameters, summarize by MEAN (units are density (mol/kg)) * maybe convert to mgN per m^3
-      box_props_cob[[i_timeslice]] <- box_z_index2 %>% group_by(atlantis_level, .bx0) %>%
-        summarize(rho = median(rho,na.rm=T), nlg = median(nlg,na.rm=T), nlgz = median(nlgz, na.rm=T), nmdz = median(nmdz,na.rm=T),
-                  nsm = median(nsm,na.rm=T), nsmz = median(nsmz,na.rm=T), silg = median(silg,na.rm=T), nbact = median(nbact, na.rm=T)) %>%
-        ungroup(box_z_index2) %>%
-        complete(atlantis_level,.bx0)
-      box_props_cob[[i_timeslice]]$band_level = file_db$time_id[i_timeslice]
-    }
-    
-    if(make.nutvars){
-      box_z_index2 = box_z_index1 %>%
-        group_by(.bx0,atlantis_level,cell) %>%
-        # summarize(rho = weighted.median2(rho,z.wgt),
-        #           nh4 = weighted.median2(nh4,z.wgt),
-        #           no3 = weighted.median2(no3,z.wgt),
-        #           o2 = weighted.median2(o2,z.wgt),
-        #           sio4  = weighted.median2(sio4,z.wgt)
-        summarize(rho = weighted.mean(rho,z.wgt),
-                  nh4 = weighted.mean(nh4,z.wgt),
-                  no3 = weighted.mean(no3,z.wgt),
-                  o2 = weighted.mean(o2,z.wgt),
-                  sio4  = weighted.mean(sio4,z.wgt)
-        )
-      
-      box_props_nut[[i_timeslice]] <- box_z_index2 %>% group_by(atlantis_level, .bx0) %>%
-        summarize(rho = median(rho,na.rm=T), nh4 = median(nh4,na.rm=T),no3 = median(no3,na.rm=T), o2 = median(o2,na.rm=T), sio4 = median(sio4,na.rm=T)) %>%
-        ungroup(box_z_index2) %>%
-        complete(atlantis_level,.bx0)
-      box_props_nut[[i_timeslice]]$band_level = file_db$time_id[i_timeslice]
-      
     }
     
     if(make.hflux){
-      #Summarize horizontal flows
-      face_z_uv_index=left_join(face_z_uindex, face_z_vindex, by = c("atlantis_level", "roms_level", "face")) # join u and v indices together
-      face_z_uv_index2=left_join(face_z_uv_index, bgm$faces[c("label", ".fx0")], by=c("face"="label")) ## add proper box number to sort on
+      
+      face_z_index1 = left_join(face_z_index, bgm$faces[c("label", ".fx0")], by=c("face"="label") )
+      
+      #Aggregate vertically weighted by z weights
+      face_z_index2 = face_z_index1 %>%
+        group_by(.fx0, atlantis_levels, cell, cell_area) %>%
+        summarize(u = weighted.mean(u, z.wgt,na.rm=T),
+                  v = weighted.mean(v,z.wgt,na.rm=T))
+      ####Not weighted by cell_area because can't determine how exactly transect crosses cells
+      ####Should be proportional to the prop. of linear distance each cell compromises the face...
+      
       
       ### RM mod 20180320 *** MEAN *** -> good, direction is same as previous, drop complete cases to reduce NAs -> 379(5) per time
       #face_props: summary of face-level flow magnitudes and direction, grouped by box/faceID with magnitude mean velocity as stat. and direction
       # Might revisit summary statistic (mean,median, sum,etc.)
-      face_props[[i_timeslice]] <-  face_z_uv_index2 %>% group_by(atlantis_level, .fx0) %>% 
-        summarize(velocity = sqrt((mean(ue, na.rm=T)^2) + (mean(vn, na.rm = TRUE)^2)), 
-                  dir.uv=atan2(mean(vn, na.rm=T),mean(ue, na.rm=T)), na.rm=T) %>% 
+      face_props[[i_timeslice]] <-  face_z_index2 %>% group_by(atlantis_levels, .fx0) %>% 
+        summarize(velocity = sqrt((mean(u, na.rm=T)^2) + (mean(v, na.rm = TRUE)^2)), 
+                  dir.uv=atan2(mean(v, na.rm=T),mean(u, na.rm=T))) %>% 
         ungroup(face_z_uvindex2) %>%
-        complete(atlantis_level, .fx0) 
+        complete(atlantis_levels, .fx0) %>%
+        filter(!is.na(atlantis_levels))
       # mutate(band_level = level)
       face_props[[i_timeslice]]$band_level = file_db$time_id[i_timeslice]
       
@@ -785,31 +610,18 @@ make_ROMS_files = function(glorys.dir,
     # toc()
   }
   
-  # save(box_props,box_props_cob,box_props_nut,face_props,file = 'Test Dump.R')
-  # load(paste0(glorys.dir,'Test Dump.R'))
+  save(box_props,face_props,file = paste0(glorys.dir,'Test Dump.R'))
+  load(paste0(glorys.dir,'Test Dump.R'))
   
   # Combine box and face properties
   if(make.physvars){
     box_props <- bind_rows(box_props)  
     
     #Remove data from islands (Boxes 23 and 24)
-    box_props[which(box_props$.bx0==23 | box_props$.bx0==24), c('temp', 'salt', 'vertflux')]=-999 #islands
-    box_props[is.na(box_props$vertflux),c('temp', 'salt', 'vertflux')]=-999 # change NA to fill value
+    box_props[which(box_props$.bx0==23 | box_props$.bx0==24), c('temp', 'salt')]=-999 #islands
+    box_props[is.na(box_props$temp),c('temp', 'salt')]=-999 # change NA to fill value
   }
-  if(make.ltlvars){
-    box_props_cob <- bind_rows(box_props_cob)
-    
-    box_props_cob[which(box_props_cob$.bx0==23 | box_props_cob$.bx0==24), c('nlg','nlgz','nmdz','nsm','nsmz','silg','nbact')]=-999 #islands
-    box_props_cob[is.na(box_props_cob$nlg),c('nlg','nlgz','nmdz','nsm','nsmz','silg','nbact')]=-999 # change NA to fill value
-  }
-  
-  if(make.nutvars){
-    box_props_nut <- bind_rows(box_props_nut)
-    
-    box_props_cob[which(box_props_cob$.bx0==23 | box_props_cob$.bx0==24), c('nh4','no3','o2','sio4')]=-999 #islands
-    box_props_cob[is.na(box_props_cob$nh4),c('nh4','no3','o2','sio4')]=-999 # change NA to fill value
-  }
-  
+
   if(make.hflux){
     face_props <- bind_rows(face_props)  
   }
@@ -869,52 +681,7 @@ make_ROMS_files = function(glorys.dir,
     ### CHECK ON ADDITION OF 90 Degrees... 20180322
     face_props2$cos_theta=abs(cos(face_props2$rel_angle + pi/2)) ### this is the scalar for flux velocity across face, plus 90 degrees rotation
     
-    ### direction of flow depends on quadrant the face lies in: (this may be hemisphere dependent???)
-    ### where x=current direction in XY coords, y=bearing of face from p1 to p2 (rhumbline) in XY coords (all in radians)
-    # If x=y | x -y = +-pi then parallel (no flux)
-    # If Q I/II : 
-          #if x > y | x + pi < y  Flux R:L (pos)
-          #if x < y | x + pi > y  Flux L:R (neg)
-    # If Q III/IV:
-          #if x > y | x - pi < y  Flux R:L (pos)
-          #if x < y | x - pi > y  Flux L:R
-    # for (i in 1:length(face_props2$left)){
-    #   if (i %% 10000 ==0) print(paste('progress:',i/length(face_props2$atlantis_level)*100, '%'))
-    #   x=face_props2$dir.uv[i]
-    #   y=face_props2$angles.XYbearingRhumb[i]
-    #   if (is.na(face_props2$cos_theta[i]) | is.na(face_props2$quadrant[i])){
-    #     next
-    #   } else if(x == y | (x-y) == pi | (y-x) == pi){
-    #     y = face_props2$fluxsign[i] = 0
-    #     next
-    #   } else if (face_props2$quadrant[i]==1 | face_props2$quadrant[i]==2){
-    #     if (x > y | (x+pi) < y){
-    #       face_props2$destbox[i]=face_props2$left[i]
-    #       face_props2$fluxsign[i]=1 #positive flux R:L
-    #       face_props2$destbox.lr[i]='l'
-    #     } else if(x < y | (x+pi)>y){
-    #       face_props2$destbox[i]=face_props2$right[i]
-    #       face_props2$fluxsign[i]=-1 #negative flux L:R
-    #       face_props2$destbox.lr[i]='r'
-    #     } else {
-    #       next
-    #     }
-    #   } else if (face_props2$quadrant[i]==3 | face_props2$quadrant[i]==4){
-    #     if ( x>y | (x-pi) <y){
-    #       face_props2$destbox[i]=face_props2$left[i]
-    #       face_props2$fluxsign[i]=1 
-    #       face_props2$destbox.lr[i]='l'
-    #     } else if(x<y | (x-pi)>y){
-    #       face_props2$destbox[i]=face_props2$right[i]
-    #       face_props2$fluxsign[i]=-1 #positve flux R:L
-    #       face_props2$destbox.lr[i]='r'
-    #     } else {
-    #       next
-    #     }
-    #   }
-    # }
-    
-    # add area -> length of face x depth from dz file... need to merge on dz_box "polygon"="left" (same for "right" later) && "l1"="atlantis_level==1"
+    # add area -> length of face x depth from dz file... need to merge on dz_box "polygon"="left" (same for "right" later) && "l1"="atlantis_levels==1"
     face_props2=left_join(face_props2, dz_box, by=c("left"="polygon")) ### l1.x-l4.x is boxleft
     face_props2=left_join(face_props2, dz_box, by=c("right"="polygon")) ### l1.y-l4.y is boxright
     face_props2$Sediment_1.x=NULL
@@ -931,22 +698,22 @@ make_ROMS_files = function(glorys.dir,
     face_props2=left_join(face_props2, NEUSz, by=c("origbox.new"=".bx0"),suffix = c("_dest", "_orig")) # rename dest and orig
     
     ### manually try this... 20180323, this works, slow, could make bottom more like top, also add face area...
-    # face_props2$orig_z=ifelse((!is.na(face_props2$fluxsign) & face_props2$atlantis_level==1), 1, NA)
-    # face_props2$dest_z=ifelse((!is.na(face_props2$fluxsign) & face_props2$atlantis_level==1), 1, NA) # misses areas with NA (islands...) ->fixed
+    # face_props2$orig_z=ifelse((!is.na(face_props2$fluxsign) & face_props2$atlantis_levels==1), 1, NA)
+    # face_props2$dest_z=ifelse((!is.na(face_props2$fluxsign) & face_props2$atlantis_levels==1), 1, NA) # misses areas with NA (islands...) ->fixed
     # face_props2$facearea=NA 
     
     ### origin level - added 20180325
-    face_props2$orig_z=ifelse(face_props2$atlantis_level <= face_props2$NEUSlevels_orig, face_props2$atlantis_level, face_props2$NEUSlevels_orig)
+    face_props2$orig_z=ifelse(face_props2$atlantis_levels <= face_props2$NEUSlevels_orig, face_props2$atlantis_levels, face_props2$NEUSlevels_orig)
     
     ### destination level - added 20180325
-    face_props2$dest_z=ifelse(face_props2$atlantis_level <= face_props2$NEUSlevels_dest, face_props2$atlantis_level, face_props2$NEUSlevels_dest)
+    face_props2$dest_z=ifelse(face_props2$atlantis_levels <= face_props2$NEUSlevels_dest, face_props2$atlantis_levels, face_props2$NEUSlevels_dest)
     # get depths of boxes, reverse order 1=shallow, 4=deep NEUS ONLY
     dz_box2=dz_box[,c(5,4,3,2,1)] 
     
     ### depth of origin box * length of face added 20180325
     face_props2$facearea=NA
-    for (i in 1:length(face_props2$atlantis_level)){
-      if (is.na(face_props2$fluxsign.new[i])|is.na(face_props2$atlantis_level[i])){
+    for (i in 1:length(face_props2$atlantis_levels)){
+      if (is.na(face_props2$fluxsign.new[i])|is.na(face_props2$atlantis_levels[i])){
         next
       } else {
         face_props2$facearea[i]=dz_box2[(face_props2$origbox.new[i]+1) ,face_props2$orig_z[i]]*face_props2$length[i]
@@ -972,17 +739,12 @@ make_ROMS_files = function(glorys.dir,
     nit = length(box_props$temp)
     bands = box_props$band_level
     box.id = box_props$.bx0
-    level.id = box_props$atlantis_level
+    level.id = box_props$atlantis_levels
   }else if(make.ltlvars){
     nit = length(box_props_cob$nlg)
     bands = box_props_cob$band_level
     box.id = box_props_cob$.bx0
-    level.id = box_props_cob$atlantis_level
-  }else if(make.ltlvars){
-    nit = length(box_props_nut$nh4)
-    bands = box_props_nut$band_level
-    box.id = box_props_nut$.bx0
-    level.id = box_props_nut$atlantis_level
+    level.id = box_props_cob$atlantis_levels
   }
   
   ### Define dimensions for the two NetCDF files that go into hydroconstruct:
@@ -992,27 +754,14 @@ make_ROMS_files = function(glorys.dir,
   atl.level = unique(level.id)
   if(make.hflux){nfaces = length(unique(face_props2$.fx0))}
   
-  ### fix time dimension - needs to be from 1964 for NEUS
-  # ynum=0 # use for 2008 data (first year of data)
-  # # ynum=365 # use for 2009 data (1 year already processed)
-  # # ynum=730 # use for 2010 data (2 years already processed)
-  # 
-  # # ocean_time=ncdf4::ncvar_get(ncdf4::nc_open(glorys.files[1]), varid='ocean_time') 
-  # ocean_time = sapply(glorys.files,function(x) ncvar_get(nc_open(x),varid='ocean_time'))
-  # ### MAKE SURE TO SELECT ABOVE ynum CORRECTLY
-  # t_start=min(unique(face_props2$band_level))+ynum 
-  # # seconds in one day
-  # dt=86400 
-  # ### MAKE SURE TO SELECT ABOVE ynum CORRECTLY
-  # # t_stop = ocean_time[1]+(dim(exch_nc)[4]-1)*86400
-  # t_stop=max(unique(face_props2$band_level))+ynum 
-  # t_tot=seq(t_start*dt,t_stop*dt,dt)
   
-  #subtract seconds between 1-1-1964 and 1-1-1900 
-  #glorys is 1900, NEUS is 1964 reference point
-  t_tot = file_db$ocean_time  - 2019600000
+  #glorys is 1950, NEUS is 1964 reference point
+  glorys_time = as.POSIXct(file_db$model_time*3600, origin = '1950-01-01 00:00:00',tz = 'UTC')
+  #convert to numeric
+  t_tot = as.numeric(difftime(glorys_time,as.POSIXct('1964-01-01 00:00:00',tz = 'UTC'),units = 'secs'))
+  # as.POSIXct(atl_time, origin ='1964-01-01 00:00:00',tz = 'UTC' )
   dt=86400 # seconds in one day
-  # t_tot = seq(ocean_time[1],by = dt, length.out = length(glorys.files))
+  # t_tot = seq(model_time[1],by = dt, length.out = length(glorys.files))
   
   if(make.hflux){
     ## variables in transport file:
@@ -1036,7 +785,7 @@ make_ROMS_files = function(glorys.dir,
       if (i %% 10000 ==0) print(paste('progress:',i/length(face_props2$flux)*100, '%'))
       j=face_props2$band_level[i] #time
       k=face_props2$.fx0[i]+1 ### Face NOTE added 1 because index cannot be 0, must remove later (maybe not?)
-      l=face_props2$atlantis_level[i]# depth
+      l=face_props2$atlantis_levels[i]# depth
       transport[l,k,j]=face_props2$fluxtime[i] # time now added back in (flux per day in seconds)
     }
     
@@ -1052,27 +801,10 @@ make_ROMS_files = function(glorys.dir,
   if(make.physvars){
     salinity=array(NA, dim=c(nlevel,nboxes, ntimes))
     temperature=array(NA, dim=c(nlevel,nboxes,ntimes))
-    vertical_flux=array(NA, dim=c(nlevel,nboxes,ntimes))
-  }
-  
-  if(make.ltlvars){
-    ##COBALT vars
-    # ndi=array(NA, dim=c(nlevel,nboxes, ntimes))
-    nlg=array(NA, dim=c(nlevel,nboxes, ntimes))
-    nlgz=array(NA, dim=c(nlevel,nboxes, ntimes))
-    nmdz=array(NA, dim=c(nlevel,nboxes, ntimes))
-    nsm=array(NA, dim=c(nlevel,nboxes, ntimes))
-    nsmz=array(NA, dim=c(nlevel,nboxes, ntimes))
-    silg=array(NA, dim=c(nlevel,nboxes, ntimes))
-    nbact=array(NA, dim=c(nlevel,nboxes, ntimes))
-  }
-  
-  if(make.nutvars){
-    nh4 = no3 = o2 = sio4 = array(NA,dim = c(nlevel,nboxes,ntimes))
+    # vertical_flux=array(NA, dim=c(nlevel,nboxes,ntimes))
   }
 
-  
-  if(any(make.physvars,make.ltlvars,make.nutvars)){
+  if(make.physvars){
     
     for (i in 1:nit){
       if (i %% 5000 ==0) print(paste('progress:',i/length(box_props$temp)*100, '%'))
@@ -1084,43 +816,14 @@ make_ROMS_files = function(glorys.dir,
       l=level.id[i]
       
       if(make.physvars){
-        vertical_flux[l,k,j]=box_props$vertflux[i]
+        # vertical_flux[l,k,j]=box_props$vertflux[i]
         temperature[l,k,j]=box_props$temp[i]
         salinity[l,k,j]=box_props$salt[i]
       }
-      
-      if(make.ltlvars){
-        # ndi[l,k,j]=box_props_cob$ndi[i]
-        nlg[l,k,j]=box_props_cob$nlg[i]
-        nlgz[l,k,j]=box_props_cob$nlgz[i]
-        nmdz[l,k,j]=box_props_cob$nmdz[i]
-        nsm[l,k,j]=box_props_cob$nsm[i]
-        nsmz[l,k,j]=box_props_cob$nsmz[i]
-        silg[l,k,j]=box_props_cob$silg[i]
-        nbact[l,k,j]=box_props_cob$nbact[i]
-      }
-      
-      if(make.nutvars){
-        nh4[l,k,j] = box_props_nut$nh4[i]
-        no3[l,k,j] = box_props_nut$no3[i]
-        o2[l,k,j] = box_props_nut$o2[i]
-        sio4[l,k,j] = box_props_nut$sio4[i]
-      }
-      
+
     }
-    
+    save('temperature','salinity',file = paste0(out.dir,name.out,'statevars_',year,'.R'))  
   }
-  
-  if(make.physvars){
-    save('vertical_flux','temperature','salinity',file = paste0(out.dir,name.out,'statevars_',year,'.R'))  
-  }
-  if(make.ltlvars){
-    save('nlg','nlgz','nmdz','nsm','nsmz','silg','nbact',file = paste0(out.dir,name.out,'ltl_statevars_',year,'.R'))  
-  }
-  if(make.nutvars){
-    save('nh4','no3','o2','sio4',file = paste0(out.dir,name.out,'nutvars_',year,'.R'))
-  }
-  
   
   if(make.hflux){
     ### FOR TRANSPORT NC FILE
@@ -1187,11 +890,11 @@ make_ROMS_files = function(glorys.dir,
     var.time=ncvar_def("time","seconds since 1964-01-01 00:00:00 +10",timedim,prec="double")
     var.box=ncvar_def("boxes", "", boxesdim, longname="Box IDs", prec='integer')
     var.lev=ncvar_def("level","",leveldim,longname="layer index; 1=near surface; positice=down" ,prec="integer")
-    var.vertflux=ncvar_def("verticalflux","m3/s",list(leveldim, boxesdim, timedim),-999,longname="vertical flux averaged over floor of box",prec="float")
+    # var.vertflux=ncvar_def("verticalflux","m3/s",list(leveldim, boxesdim, timedim),-999,longname="vertical flux averaged over floor of box",prec="float")
     var.temp=ncvar_def("temperature","degree_C",list(leveldim, boxesdim, timedim),-999,longname="temperature volume averaged",prec="float")
     var.salt=ncvar_def("salinity","psu",list(leveldim,boxesdim,timedim),-999,longname="salinity volume averaged",prec="float")
     
-    nc_varfile=nc_create(filename,list(var.time,var.box, var.lev, var.salt, var.temp, var.vertflux))
+    nc_varfile=nc_create(filename,list(var.time,var.box, var.lev, var.salt, var.temp))
     
     #assign global attributes to file
     ncatt_put(nc_varfile,0,"title","Box averaged properties file, NEUS")
@@ -1202,10 +905,10 @@ make_ROMS_files = function(glorys.dir,
     ncatt_put(nc_varfile,var.time,"dt",86400,prec="double")
     
     #assign variables to file
-    ncvar_put(nc_varfile,var.vertflux,vertical_flux, count=c(nlevel,nboxes, ntimes))
-    ncvar_put(nc_varfile,var.time,t_tot,verbose = T)
-    ncvar_put(nc_varfile,var.lev,atl.level)
+    # ncvar_put(nc_varfile,var.vertflux,vertical_flux, count=c(nlevel,nboxes, ntimes))
     ncvar_put(nc_varfile,var.salt,salinity, count=c(nlevel,nboxes, ntimes))
+    ncvar_put(nc_varfile,var.time,t_tot,verbose = F)
+    ncvar_put(nc_varfile,var.lev,atl.level)
     ncvar_put(nc_varfile,var.temp,temperature, count=c(nlevel,nboxes, ntimes))
     ncvar_put(nc_varfile,var.box,box.boxes)
     
@@ -1214,104 +917,6 @@ make_ROMS_files = function(glorys.dir,
  
   # x = nc_open(filename)
   
-  if(make.ltlvars){
-    ### For COBALT LTL variables
-    filename=paste0(out.dir,name.out,'ltl_statevars_',year,'.nc')
-    
-    #define dimensions
-    timedim=ncdim_def("time", "", 1:length(t_tot), unlim=T, create_dimvar = F) #as.double(t_tot)
-    leveldim=ncdim_def("level", "", 1:nlevel, create_dimvar = F)
-    boxesdim=ncdim_def("boxes", "", 1:nboxes, create_dimvar = F)
-    
-    #create variables
-    #NB!!!!!! Unlimited rec needs to be on the right - otherwise R complains!
-    #origMissVal_ex=0.0
-    var.time=ncvar_def("time","seconds since 1964-01-01 00:00:00 +10",timedim,prec="double")
-    var.box=ncvar_def("boxes", "", boxesdim, longname="Box IDs", prec='integer')
-    var.lev=ncvar_def("level","",leveldim,longname="layer index; 1=near surface; positice=down" ,prec="integer")
-    # var.ndi=ncvar_def('ndi','mg N m-3',list(leveldim,boxesdim,timedim),-999,longname = 'Diazotroph Nitrogen',prec='float')
-    var.nlg=ncvar_def('Diatom_N','mg N m-3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phyotplankton Nitrogen',prec='float')
-    var.nlgz=ncvar_def('Carniv_Zoo_N','mg N m-3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Zooplankton Nitrogen',prec='float')
-    var.nmdz=ncvar_def('Zoo_N','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Medium Zooplankton Nitrogen',prec='float')
-    var.nsm=ncvar_def('PicoPhytopl_N','mg N m-3',list(leveldim,boxesdim,timedim),-999,longname = 'Small Phytoplankton Nitrogen',prec='float')
-    var.nsmz=ncvar_def('MicroZoo_N','mg N m-3',list(leveldim,boxesdim,timedim),-999,longname = 'Small Zooplankton Nitrogen',prec='float')
-    var.silg=ncvar_def('Diatom_S','mg Si m-3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phytoplankton Silicon',prec='float')
-    var.nbact=ncvar_def('Pelag_Bact_N','mg N m-3',list(leveldim,boxesdim,timedim),-999,longname = 'Bacterial Nitrogen',prec='float')
-    
-    nc_varfile=nc_create(filename,list(var.time,var.box, var.lev,
-                                       var.nlg,var.nlgz,
-                                       var.nmdz,var.nsm,var.nsmz,
-                                       var.silg,var.nbact))
-    #assign global attributes to file
-    ncatt_put(nc_varfile,0,"title","Box averaged properties file, NEUS")
-    ncatt_put(nc_varfile,0,"geometry","neus_tmerc_RM.bgm")
-    ncatt_put(nc_varfile,0,"parameters","")
-    
-    #assign attributes to variables
-    ncatt_put(nc_varfile,var.time,"dt",86400,prec="double")
-    
-    #assign variables to file
-    # ncvar_put(nc_varfile,var.ndi,ndi,count = c(nlevel,nboxes,ntimes))
-    ncvar_put(nc_varfile,var.nlg,nlg,count = c(nlevel,nboxes,ntimes))
-    ncvar_put(nc_varfile,var.time,t_tot,verbose = T)
-    ncvar_put(nc_varfile,var.lev,atl.level)
-    ncvar_put(nc_varfile,var.nlgz,nlgz,count = c(nlevel,nboxes,ntimes))
-    ncvar_put(nc_varfile,var.nmdz,nmdz,count = c(nlevel,nboxes,ntimes))
-    ncvar_put(nc_varfile,var.nsm,nsm,count = c(nlevel,nboxes,ntimes))
-    ncvar_put(nc_varfile,var.nsmz,nsmz,count = c(nlevel,nboxes,ntimes))
-    ncvar_put(nc_varfile,var.silg,silg,count = c(nlevel,nboxes,ntimes))
-    ncvar_put(nc_varfile,var.nbact,nbact,count = c(nlevel,nboxes,ntimes))
-    ncvar_put(nc_varfile,var.box,box.boxes)
-    
-    nc_close(nc_varfile)
-    # x = nc_open(filename)
-    # x$dim$time
-  }
-  
-  if(make.nutvars){
-    filename=paste0(out.dir,name.out,'nutvars_',year,'.nc')
-    
-    #define dimensions
-    timedim=ncdim_def("time", "", 1:length(t_tot), unlim=T, create_dimvar = F) #as.double(t_tot)
-    leveldim=ncdim_def("level", "", 1:nlevel, create_dimvar = F)
-    boxesdim=ncdim_def("boxes", "", 1:nboxes, create_dimvar = F)
-    
-    #create variables
-    #NB!!!!!! Unlimited rec needs to be on the right - otherwise R complains!
-    #origMissVal_ex=0.0
-    var.time=ncvar_def("time","seconds since 1964-01-01 00:00:00 +10",timedim,prec="double")
-    var.box=ncvar_def("boxes", "", boxesdim, longname="Box IDs", prec='integer')
-    var.lev=ncvar_def("level","",leveldim,longname="layer index; 1=near surface; positice=down" ,prec="integer")
-    var.nh4=ncvar_def('nh4','mg NH4 / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Ammonia',prec='float')
-    var.no3=ncvar_def('no3','mg NO3 / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Nitrate',prec='float')
-    var.o2=ncvar_def('o2','mg O2 / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Oxygen',prec='float')
-    var.sio4=ncvar_def('sio4','mg SiO4 / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Silicate',prec='float')
-    
-    nc_varfile = nc_create(filename, list(var.time,var.box,var.lev,
-                                          var.nh4,var.no3,var.o2,var.sio4))
-    
-    #assign global attributes to file
-    ncatt_put(nc_varfile,0,"title","Box averaged properties file, NEUS")
-    ncatt_put(nc_varfile,0,"geometry","neus_tmerc_RM.bgm")
-    ncatt_put(nc_varfile,0,"parameters","")
-    
-    #assign attributes to variables
-    ncatt_put(nc_varfile,var.time,"dt",86400,prec="double")
-    
-    #assign variables to file
-    ncvar_put(nc_varfile,var.nh4,nh4,count = c(nlevel,nboxes,ntimes))
-    ncvar_put(nc_varfile,var.no3,no3,count = c(nlevel,nboxes,ntimes))
-    ncvar_put(nc_varfile,var.o2,o2,count = c(nlevel,nboxes,ntimes))
-    ncvar_put(nc_varfile,var.sio4,sio4,count = c(nlevel,nboxes,ntimes))
-    ncvar_put(nc_varfile,var.time,t_tot,verbose = T)
-    ncvar_put(nc_varfile,var.lev,atl.level)
-    ncvar_put(nc_varfile,var.box,box.boxes)
-    
-    nc_close(nc_varfile)
-  }
- 
-
-
 }
 
-# Roms2Hydro(glorys.dir,glorys.prefix,out.dir,name.out)
+# make_ROMS_files(glorys.dir,glorys.prefix,glorys.files,out.dir,dz.file,bgm.file,shp.file, name.out, make.hflux =T, make.physvars = T)
