@@ -1,17 +1,21 @@
 #Script to generate forcing files using hydrocontstruct (This is mainly for the fluxes files, but temp and salt work as well)
 #see make_force_statevar_alternate.R for alternative forcing generation
 
-roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/'
-setwd(paste0(roms.dir,'Forcing_Files/'))
-orig.prm = readLines(paste0(roms.dir,'Forcing_Files/roms_cobalt_hydroconstruct_template.prm'))
-orig.bat = readLines(paste0(roms.dir,'Forcing_Files/hydroconstruct_run_template.bat'))
-roms.prefix = 'roms_cobalt_v10_'
-years = 1981:2014
-# years = 1981
-
+trans.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/'
+statevar.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/statevars/'
+atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/'
+setwd(paste0(atl.dir,'Forcing_Files/'))
+orig.prm = readLines(paste0(atl.dir,'Forcing_Files/obs_hindcast_hydroconstruct_template.prm'))
+orig.bat = readLines(paste0(atl.dir,'Forcing_Files/hydroconstruct_run_template.bat'))
+trans.prefix = 'GLORYS_Atlantis_'
+statevar.prefix = 'Obs_Hindcast_statevars_'
+# years = 1993:2017
+years = 1995
+yr=1
 for(yr in 1:length(years)){
-  transport.file = paste0(roms.dir,'ROMS_COBALT_Output/transport/',roms.prefix,'transport_',years[yr],'.nc')
-  vtrans.file = tempsalt.file = paste0(roms.dir,'ROMS_COBALT_Output/phys_statevars/',roms.prefix,'statevars_',years[yr],'.nc')
+  transport.file = paste0(trans.dir,'Atlantis_Format/',years[yr],'/',trans.prefix,'transport_',years[yr],'.nc')
+  vtrans.file = paste0(statevar.dir,statevar.prefix,years[yr],'.nc')
+  tempsalt.file = paste0(statevar.dir,statevar.prefix,years[yr],'.nc')
   dumm.nc = ncdf4::nc_open(transport.file)
   nt = length(dumm.nc$dim$time$vals)
   ncdf4::nc_close(dumm.nc)
@@ -27,21 +31,21 @@ for(yr in 1:length(years)){
   orig.sub = gsub(pattern = 'tstart 1',replacement = paste0('tstart ',t.start),x=orig.sub)
   
   #save as yearly temp param file
-  writeLines(orig.sub,con = paste0(roms.dir,'Forcing_Files/roms_cobalt_hydroconstruct_temp.prm'))
+  writeLines(orig.sub,con = paste0(atl.dir,'Forcing_Files/obs_hindcast_hydroconstruct_temp.prm'))
   
   #sub batch file values
   bat.sub = gsub(pattern = 'flow_year',replacement = paste0('flow_',years[yr]),x = orig.bat)
   bat.sub = gsub(pattern = 'salt_year',replacement = paste0('salt_',years[yr]),x = bat.sub)
-  bat.sub = gsub(pattern = 'temp_year',replacement = paste0('temp',years[yr]),x = bat.sub)
+  bat.sub = gsub(pattern = 'temp_year',replacement = paste0('temp_',years[yr]),x = bat.sub)
   bat.sub = gsub(pattern = 'volume_year',replacement = paste0('volume',years[yr]),x = bat.sub)
-  bat.sub = gsub(pattern = 'roms_cobalt_hydroconstruct_v2.prm','roms_cobalt_hydroconstruct_temp.prm', x= bat.sub)
+  bat.sub = gsub(pattern = 'obs_hindcast_hydroconstruct.prm','obs_hindcast_hydroconstruct_temp.prm', x= bat.sub)
   
   #save batch as temp file
-  writeLines(bat.sub, con = paste0(roms.dir,'Forcing_Files/hydroconstruct_run_temp.bat'))
+  writeLines(bat.sub, con = paste0(atl.dir,'Forcing_Files/hydroconstruct_run_temp.bat'))
   
   #Run hydroconstruct with system()
   
-  shell(paste0(roms.dir,'Forcing_Files/hydroconstruct_run_temp.bat'))
+  shell(paste0(atl.dir,'Forcing_Files/hydroconstruct_run_temp.bat'))
   
   
 }

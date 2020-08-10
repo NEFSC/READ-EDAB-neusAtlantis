@@ -21,7 +21,7 @@
 #' 
 #' #' Created by R. Morse and modified by J. Caracappa
 # 
-# glorys.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/Data/1993/'
+# glorys.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/Data/1995/'
 # # glorys.dir = 'D:/NWA/1980/'
 # glorys.prefix = 'GLORYS_REANALYSIS_*'
 # glorys.files = list.files(glorys.dir,glorys.prefix)
@@ -29,16 +29,13 @@
 # out.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/Atlantis_Format/'
 # dz.file = here::here('Geometry','dz.csv')
 # bgm.file = here::here('Geometry','neus_tmerc_RM2.bgm')
-# # bgm.file = here::here('Geometry','neus_ll_WGS84.bgm')
+# bgm.ll.file = here::here('Geometry','neus_ll_WGS84.bgm')
 # shp.file = here::here('Geometry','Neus_ll_0p01.shp')
 # name.out = 'GLORYS_Atlantis_'
 # make.hflux = T
 # make.physvars = T
 
-# glorys.dir =local.dir
-# glorys.prefix = 'RM_NWA-SZ.HCob05T_avg_'
-# out.dir = paste0(local.output.dir,dir.names[yr],'/')
-# name.out = 'roms_cobalt_'
+
 
 make_GLORYS_files = function(glorys.dir,
                            glorys.prefix,
@@ -46,6 +43,7 @@ make_GLORYS_files = function(glorys.dir,
                            out.dir,
                            dz.file,
                            bgm.file,
+                           bgm.ll.file,
                            shp.file,
                            name.out,
                            make.hflux,
@@ -153,6 +151,7 @@ make_GLORYS_files = function(glorys.dir,
   
   # Read BGM file
   bgm = rbgm::bgmfile(bgm.file)
+  bgm.ll = rbgm::bgmfile(bgm.ll.file)
   # bgm = bgmfile('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/neus_tmerc_RM2.bgm')
   
   # Read boxes shape file
@@ -249,23 +248,25 @@ make_GLORYS_files = function(glorys.dir,
   coord.ls = lapply(coord.ls, function(x) setExtent(x, extent(0, nrow(x), 0, ncol(x))))
   glorys_coords = stack(coord.ls)
   
-  # obtain find nearest-neighbor of bgm faces on glorys grid
-  face_coords <- angstroms::romsmap(project_to(rbgm::faceSpatial(bgm), "+init=epsg:4326"), glorys_coords)
+  # obtain find nearest-neighbor of bgm faces on glorys grid - NN doesn't work when mapping to same 2 grid points. Use actual vertices
+  face_coords <- angstroms::romsmap(project_to(rbgm::faceSpatial(bgm.ll), "+init=epsg:4326"), glorys_coords)
   
   #get coordinates of faces in terms of glorys XY
-  bgm_lstXY = sp::coordinates(face_coords)
+  # bgm_lstXY = sp::coordinates(face_coords)
+  bgm_lstXY = sp::coordinates(rbgm::faceSpatial(bgm.ll))
   #creates matrix of face coordinates
   bgmXY = matrix(ncol = length(bgm_lstXY), nrow = 4, unlist(bgm_lstXY))
   
   #IMPORTANT ORDER FOR GEOMETRY! Point 1 = x1,y1; Point 2 = x2,y2
-  rownames(bgmXY) = c('x1','x2','y1','y2')
+  # rownames(bgmXY) = c('x1','x2','y1','y2')
+  rownames(bgmXY)= c('lon1','lon2','lat1','lat2')
   #Turn into long dataframe with glorys grid X and Y coordinates, to use with romes_ll_...
   bgmXY = data.frame(t(bgmXY))
   #Add empty values for fill for lat/lon of face coords
-  bgmXY$lat1=glorys_lat[bgmXY$y1]
-  bgmXY$lat2=glorys_lat[bgmXY$y2]
-  bgmXY$lon1=glorys_lon[bgmXY$x1]
-  bgmXY$lon2=glorys_lon[bgmXY$x2]
+  # bgmXY$lat1=glorys_lat[bgmXY$y1]
+  # bgmXY$lat2=glorys_lat[bgmXY$y2]
+  # bgmXY$lon1=glorys_lon[bgmXY$x1]
+  # bgmXY$lon2=glorys_lon[bgmXY$x2]
   
   #testplot bgmXY
   # ggplot(data = bgmXY,aes(x = x1, xend = x2, y = y1, yend = y2))+geom_segment()
@@ -404,7 +405,8 @@ make_GLORYS_files = function(glorys.dir,
     
     #Fill placeholder for cells in island or with no output values
     if(na.flag | island.flag){
-      list_nc_z_index[[i]] = data.frame(atlantis_levels = NA,
+      list_nc_z_index[[i]] = data.frame(ID = full_index$ID[i],
+                                        atlantis_levels = NA,
                                         glorys_levels = NA,
                                         cell.z = NA,
                                         cell.dz = NA,
@@ -437,9 +439,19 @@ make_GLORYS_files = function(glorys.dir,
       
       if(full_index$type[i] == 'box'){
         z.box = NEUSz$zmax[NEUSz$.bx0 == box.id]
-        cell.vol = cell.vol[cell.z <= z.box]
-        cell.dz = cell.dz[cell.z <= z.box]
-        cell.z = cell.z[cell.z <= z.box]
+        
+        if(cell.z[nlev] > z.box){
+          z.ind = which(findInterval(cell.z,z.box)==1)[1]
+          cell.vol = cell.vol[1:z.ind]
+          cell.dz = cell.dz[1:z.ind]
+          cell.z = cell.z[1:z.ind]
+        }else{
+          cell.vol = cell.vol[cell.z <= z.box]
+          cell.dz = cell.dz[cell.z <= z.box]
+          cell.z = cell.z[cell.z <= z.box]
+        }
+        
+        neus.max = NEUSz$NEUSlevels[which(NEUSz$.bx0 == box.id)]
       }else{
         
         z.left = NEUSz$zmax[NEUSz$.bx0 == box.left]
@@ -448,11 +460,22 @@ make_GLORYS_files = function(glorys.dir,
         box.min = ifelse(z.left<=z.right,box.left,box.right)
         box.max = ifelse(z.left>z.right,box.left,box.right)
         
+        
         z.min = min(c(z.left,z.right))
         
-        cell.vol = cell.vol[cell.z <= z.min]
-        cell.dz = cell.dz[cell.z <= z.min]
-        cell.z = cell.z[cell.z <= z.min]
+        if(cell.z[nlev] > z.min){
+          z.ind = which(findInterval(cell.z,z.min)==1)[1]
+          
+          cell.vol = cell.vol[1:z.ind]
+          cell.dz = cell.dz[1:z.ind]
+          cell.z = cell.z[1:z.ind]
+        }else {
+          cell.vol = cell.vol[cell.z <= z.min]
+          cell.dz = cell.dz[cell.z <= z.min]
+          cell.z = cell.z[cell.z <= z.min]
+        }
+        
+        neus.max = NEUSz$NEUSlevels[which(NEUSz$.bx0 == box.min)]
       }
       # length(atlantis_depths) - 
       z_index <- findInterval(cell.z, atlantis_depths, all.inside = F) # + 1
@@ -462,8 +485,10 @@ make_GLORYS_files = function(glorys.dir,
         z.ls[[L]] = dumm1/sum(dumm1)
       }
       z_index[which(z_index==5)]=NA ### remove depths greater than 500
-
-      list_nc_z_index[[i]] = data.frame(atlantis_levels = z_index,
+      z_index[which(z_index > neus.max)] = NA
+      
+      list_nc_z_index[[i]] = data.frame(ID = full_index$ID[i],
+                                        atlantis_levels = z_index,
                                         glorys_levels = 1:length(z_index),
                                         cell.z = cell.z,
                                         cell.dz = cell.dz,
@@ -479,7 +504,7 @@ make_GLORYS_files = function(glorys.dir,
   gc()
   
   # join the box-xy-index to the level index using rho coordinates
-  full_z_index =  bind_rows(list_nc_z_index) %>% inner_join(full_index) 
+  full_z_index =  bind_rows(list_nc_z_index) %>% inner_join(full_index, by = c('ID','cell')) 
 
   #test z.wgts sum to 1 per cell/level
   # full_z_index %>% group_by(cell,atlantis_levels) %>% summarize(tot.wgt = sum(z.wgt,na.rm=T)) %>% filter(tot.wgt != 1)
@@ -595,6 +620,7 @@ make_GLORYS_files = function(glorys.dir,
       #face_props: summary of face-level flow magnitudes and direction, grouped by box/faceID with magnitude mean velocity as stat. and direction
       # Might revisit summary statistic (mean,median, sum,etc.)
       face_props[[i_timeslice]] <-  face_z_index2 %>% group_by(atlantis_levels, .fx0) %>% 
+        # filter(.fx0==20) %>%
         summarize(velocity = sqrt((mean(u, na.rm=T)^2) + (mean(v, na.rm = TRUE)^2)), 
                   dir.uv=atan2(mean(v, na.rm=T),mean(u, na.rm=T))) %>% 
         ungroup(face_z_uvindex2) %>%
@@ -725,7 +751,7 @@ make_GLORYS_files = function(glorys.dir,
     for (i in 1:length(face_props2$rel_angle)){
       if (i %% 10000 ==0) print(paste('progress:',i/length(face_props2$rel_angle)*100, '%'))
       if (is.na(face_props2$destbox.lr.new[i])){
-        next
+        next 
       } 
       face_props2$flux[i]=face_props2$cos_theta[i] *face_props2$fluxsign.new[i] * face_props2$velocity[i] *face_props2$facearea[i]
     }

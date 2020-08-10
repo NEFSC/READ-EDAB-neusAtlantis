@@ -7,16 +7,16 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Define local/git directories for atlantis output, parameter files, and desired location for figures/tables
 
-atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_DinoFlag/'
+atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/GLORYS_Physics_1/'
 param.dir = here::here('currentVersion')
-out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_DinoFlag/Post_Processed/'
+out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/GLORYS_Physics_1/Post_Processed/'
 
 
 #Run prefix is the filename prefix in the atlantis output (specified in run.bat)
 run.prefix = 'neus_output'
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'DinoFlag'
+run.name = 'GLORYS_1'
 
 
 #Run function that retreives parameter files
@@ -27,8 +27,8 @@ param.ls= get_atl_paramfiles(param.dir = param.dir,
 #Run  post-processing function to generate "result" R object. 
 
 process_atl_output( param.dir = here::here('currentVersion'),
-  atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_DinoFlag/',
-  out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_DinoFlag/Post_Processed/',
+  atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/GLORYS_Physics_1/',
+  out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/GLORYS_Physics_1/Post_Processed/',
 
   run.prefix = 'neus_output',
   include_catch = T,
@@ -57,7 +57,7 @@ make_atlantis_diagnostic_figures(
   out.dir = out.dir,
   param.dir = param.dir,
   run.prefix = 'neus_output_test',
-  run.name = 'NewAggregation',
+  run.name = 'GLORYS_1',
   result = result,
   benthic.box = 10,
   benthic.level = 4,
