@@ -10,8 +10,8 @@
 #'
 #'Author: J.caracappa
 
-force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/transport/'
-hydro.name = 'flow_1981.nc'
+force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/transport/'
+hydro.name = 'flow_1993.nc'
 bgm.file = 'neus_tmerc_RM2.bgm'
 dz.file = 'dz.csv'
 level.key.file = 'box layer key rev.csv'

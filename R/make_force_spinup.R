@@ -12,7 +12,7 @@
 #' @transport.file string. path to roms transport file to copy
 #' @statevar.file string. path to state variables (temp and salt) file to copy
 #' @ltlvar.file string. path to the LTL variable (phyto and zoo) file to copy
-#' @roms.out.dir string. Path to location of ROMS output files
+#' @out.dir string. Path to location of ROMS output files
 #' @hydro.command string. Command to be run by hydroconstruct
 #' @force.dir string. Path to location of forcing files
 #' @start.year string. Year model starts (assumes 01-01-'start.year')
@@ -24,51 +24,38 @@
 #' 
 #' Author: J. Caracappa
 
-# roms.out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/'
-# roms.prefix = 'roms_cobalt_v10_'
-# # file2copy = 'roms_output_transport_tohydro_1981.nc'
-# transport.file = paste0(roms.out.dir,'transport/roms_cobalt_v10_transport_1981_neus_atl.nc')
-# # transport.file = NA
-# statevar.file = paste0(roms.out.dir,'phys_statevars/roms_cobalt_v10_statevars_1981_neus_atl.nc')
-# # statevar.file =NA
-# nutvar.file = paste0(roms.out.dir,'nut_statevars/roms_cobalt_v10_nutvars_1981_neus_atl.nc')
-# ltlvar.file = paste0(roms.out.dir,'ltl_statevars/roms_cobalt_v10_ltl_statevars_1981_neus_atl.nc')
-# force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/'
+# out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/'
+# trans.prefix = 'GLORYS_Atlantis_Transport_'
+# statevar.prefix = 'Obs_Hindcast_statevars_'
+# transport.file = paste0(out.dir,'transport/GLORYS_Atlantis_Transport_1993.nc')
+# statevar.file = paste0(out.dir,'statevars/Obs_Hindcast_statevars_1993.nc')
+# force.dir = paste0(out.dir,'Forcing_Files/')
 # start.year = 1964
 # new.year = 1964
-# param.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/roms_cobalt_hydroconstruct_template.prm'
-# bat.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/hydroconstruct_run_template.bat'
+# param.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/obs_hindcast_hydroconstruct_template.prm'
+# bat.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/hydroconstruct_run_template.bat'
 
-make_force_spinup = function(roms.prefix,
+make_force_spinup = function(trans.prefix,
+                             statevar.prefix,
                              transport.file,
-                                  statevar.file,
-                                  ltlvar.file,
-                                  nutvar.file,
-                                  roms.out.dir,
-                                  force.dir,
-                                  start.year,
-                                  new.year,
-                                  param.temp,
-                                  bat.temp){
+                             statevar.file,
+                             out.dir,
+                             force.dir,
+                             start.year,
+                             new.year,
+                             param.temp,
+                             bat.temp){
   setwd(force.dir)
   #Make a copy of the replicated year
   if(!is.na(transport.file)){
-    new.trans.file = paste0(roms.out.dir,paste0('transport/',roms.prefix,'transport_',new.year,'.nc'))
+    new.trans.file = paste0(out.dir,paste0('transport/',trans.prefix,new.year,'.nc'))
     file.copy(transport.file,new.trans.file,overwrite= T)
   }
   if(!is.na(statevar.file)){
-    new.statevar.file = paste0(roms.out.dir,paste0('phys_statevars/',roms.prefix,'statevars_',new.year,'.nc'))
+    new.statevar.file = paste0(out.dir,paste0('statevars/',statevar.prefix,new.year,'.nc'))
     file.copy(statevar.file,new.statevar.file,overwrite=T)
   }
-  if(!is.na(ltlvar.file)){
-    new.ltlvar.file = paste0(roms.out.dir,'ltl_statevars/',roms.prefix,'ltl_statevars_',new.year,'.nc')
-    file.copy(ltlvar.file,new.ltlvar.file,overwrite=T)
-  }
-  if(!is.na(nutvar.file)){
-    new.nutvar.file = paste0(roms.out.dir,'nut_statevars/',roms.prefix,'nutvars_',new.year,'.nc')
-    file.copy(nutvar.file,new.nutvar.file,overwrite=T)
-  }
-  
+
   t1 = seq.Date(as.Date(paste0(new.year,'-01-01 00:00:00')),as.Date(paste0(new.year,'-12-31 00:00:00')),'days')
   time.vals =difftime(as.POSIXct(t1,tz = 'UTC'),as.POSIXct(paste0(start.year,'-01-01 00:00:00'),tz = 'UTC'),units = 'secs')
   timedim = ncdf4::ncdim_def('time','',1:length(time.vals),unlim = T,create_dimvar = F)
@@ -153,137 +140,12 @@ make_force_spinup = function(roms.prefix,
     ncdf4::nc_close(statevar.nc)
   }
   
-  if(!is.na(ltlvar.file)){
-    #Modify and append ltl statevar file
-    ltlvar.nc = ncdf4::nc_open(new.ltlvar.file,write = T)
-    
-    #If leap year, append values to add extra day
-    if(new.year %% 4 == 0){
-      
-      # ndi = ncdf4::ncvar_get(ltlvar.nc,'ndi')
-      nlg = ncdf4::ncvar_get(ltlvar.nc,'Diatom_N')
-      nlgz= ncdf4::ncvar_get(ltlvar.nc,'Carniv_Zoo_N')
-      nmdz = ncdf4::ncvar_get(ltlvar.nc,'Zoo_N')
-      nsm = ncdf4::ncvar_get(ltlvar.nc,'PicoPhytopl_N')
-      nsmz = ncdf4::ncvar_get(ltlvar.nc,'MicroZoo_N')
-      silg = ncdf4::ncvar_get(ltlvar.nc,'Diatom_S')
-      nbact = ncdf4::ncvar_get(ltlvar.nc,'Pelag_Bact_N')
-      
-      dims = dim(nlg)
-      dims[3] = 366
-      
-      new.nlg = new.nlgz = new.nmdz = new.nsm = new.nsmz = new.silg = new.nbact = array(NA,dim=dims)
-      
-      # last.ndi = ndi[,,365]
-      last.nlg = nlg[,,365]
-      last.nlgz = nlgz[,,365]
-      last.nmdz = nmdz[,,365]
-      last.nsm = nsm[,,365]
-      last.nsmz = nsmz[,,365]
-      last.silg = silg[,,365]
-      last.nbact = nbact[,,365]
-      
-      # new.ndi[,,1:365] = ndi[,,1:365]
-      new.nlg[,,1:365] = nlg[,,1:365]
-      new.nlgz[,,1:365] = nlgz[,,1:365]
-      new.nmdz[,,1:365] = nmdz[,,1:365]
-      new.nsm[,,1:365] = nsm[,,1:365]
-      new.nsmz[,,1:365] = nsmz[,,1:365]
-      new.silg[,,1:365] = silg[,,1:365]
-      new.nbact[,,1:365] = nbact[,,1:365]
-      
-      # new.ndi[,,366] = last.ndi
-      new.nlg[,,366] = last.nlg
-      new.nlgz[,,366] = last.nlgz
-      new.nmdz[,,366] = last.nmdz
-      new.nsm[,,366] = last.nsm
-      new.nsmz[,,366] = last.nsmz
-      new.silg[,,366] = last.silg
-      new.nbact[,,366] = last.nbact
-      
-      # var.ndi=ncdf4::ncvar_def('ndi','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Diazotroph Nitrogen',prec='float')
-      var.nlg=ncdf4::ncvar_def('Diatom_N','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phyotplankton Nitrogen',prec='float')
-      var.nlgz=ncdf4::ncvar_def('Carniv_Zoo_N','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Zooplankton Nitrogen',prec='float')
-      var.nmdz=ncdf4::ncvar_def('Zoo_N','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Medium Zooplankton Nitrogen',prec='float')
-      var.nsm=ncdf4::ncvar_def('PicoPhytopl_N','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Small Phytoplankton Nitrogen',prec='float')
-      var.nsmz=ncdf4::ncvar_def('MicroZoo_N','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Small Zooplankton Nitrogen',prec='float')
-      var.silg=ncdf4::ncvar_def('Diatom_S','mg Si / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Large Phytoplankton Silicon',prec='float')
-      var.nbact=ncdf4::ncvar_def('Pelag_Bact_N','mg N / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Bacterial Nitrogen',prec='float')
-      
-      # ncdf4::ncvar_put(ltlvar.nc,var.ndi,new.ndi, count=c(4,30,366))
-      ncdf4::ncvar_put(ltlvar.nc,var.nlg,new.nlg, count=c(4,30,366))
-      ncdf4::ncvar_put(ltlvar.nc,var.nlgz,new.nlgz, count=c(4,30,366))
-      ncdf4::ncvar_put(ltlvar.nc,var.nmdz,new.nmdz, count=c(4,30,366))
-      ncdf4::ncvar_put(ltlvar.nc,var.nsm,new.nsm, count=c(4,30,366))
-      ncdf4::ncvar_put(ltlvar.nc,var.nsmz,new.nsmz, count=c(4,30,366))
-      ncdf4::ncvar_put(ltlvar.nc,var.silg,new.silg, count=c(4,30,366))
-      ncdf4::ncvar_put(ltlvar.nc,var.nbact,new.nbact, count=c(4,30,366))
-      
-    } 
-    
-    # var.time = ncdf4::ncvar_def('time',paste0('seconds since ',start.year,'-01-01 00:00:00 +10'),timedim,prec='double')
-    ncdf4::ncatt_put(ltlvar.nc,'time','units',paste0('seconds since ',start.year,'-01-01 00:00:00 +10'))
-    
-    ncdf4::ncvar_put(ltlvar.nc,var.time,time.vals)
-    ncdf4::nc_close(ltlvar.nc)
-  }
-  
-  #Nutrient File
-  if(!is.na(nutvar.file)){
-    #Modify and append ltl statevar file
-    nutvar.nc = ncdf4::nc_open(new.nutvar.file,write = T)
-    
-    #If leap year, append values to add extra day
-    if(new.year %% 4 == 0){
-      
-      nh4 = ncdf4::ncvar_get(nutvar.nc,'nh4')
-      no3 = ncdf4::ncvar_get(nutvar.nc,'no3')
-      o2 = ncdf4::ncvar_get(nutvar.nc,'o2')
-      sio4 = ncdf4::ncvar_get(nutvar.nc,'sio4')
-
-      dims = dim(nh4)
-      dims[3] = 366
-      
-      new.nh4 = new.no3 = new.o2 = new.sio4 = array(NA,dim = dims)
-      
-      last.nh4 = nh4[,,365]
-      last.no3 = no3[,,365]
-      last.o2 = o2[,,365]
-      last.sio4 = sio4[,,365]
-
-      new.nh4[,,1:365] = nh4[,,1:365]
-      new.no3[,,1:365] = no3[,,1:365]
-      new.o2[,,1:365] = o2[,,1:365]
-      new.sio4[,,1:365] = sio4[,,1:365]
-      
-      new.nh4[,,366] = last.nh4
-      new.no3[,,366] = last.no3
-      new.o2[,,366] = last.o2
-      new.sio4[,,366] = last.sio4
-
-      var.nh4=ncdf4::ncvar_def('nh4','mg NH4 / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Ammonium',prec='float')
-      var.no3=ncdf4::ncvar_def('no3','mg NO3 / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Nitrate',prec='float')
-      var.o2=ncdf4::ncvar_def('o2','mg O2 / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Oxygen',prec='float')
-      var.sio4=ncdf4::ncvar_def('sio4','mg SiO4 / m^3',list(leveldim,boxesdim,timedim),-999,longname = 'Silicate',prec='float')
-      
-      ncdf4::ncvar_put(nutvar.nc,var.nh4,new.nh4, count=c(4,30,366))
-      ncdf4::ncvar_put(nutvar.nc,var.no3,new.no3, count=c(4,30,366))
-      ncdf4::ncvar_put(nutvar.nc,var.o2,new.o2, count=c(4,30,366))
-      ncdf4::ncvar_put(nutvar.nc,var.sio4,new.sio4, count=c(4,30,366))
-    } 
-    
-    # var.time = ncdf4::ncvar_def('time',paste0('seconds since ',start.year,'-01-01 00:00:00 +10'),timedim,prec='double')
-    ncdf4::ncatt_put(nutvar.nc,'time','units',paste0('seconds since ',start.year,'-01-01 00:00:00 +10'))
-    
-    ncdf4::ncvar_put(nutvar.nc,var.time,time.vals)
-    ncdf4::nc_close(nutvar.nc)
-  }
-  
-  
-  
-  
   #Run Hydroconstruct with proper start year
   if(!is.na(transport.file) & !is.na(statevar.file)){
+
+    t.start = as.numeric(difftime(as.Date(paste0(new.year,'-01-01 00:00:00'),tz='UTC'),as.Date('1964-01-01 00:00:00',tz = 'UTC'),'days'))
+    t.stop =(t.start + length(time.vals))-1
+    
     param.lines = readLines(param.temp)
     bat.lines = readLines(bat.temp)
     
@@ -292,17 +154,19 @@ make_force_spinup = function(roms.prefix,
     param.sub = gsub(pattern = 'vtrans.nc',replacement = new.statevar.file,x=param.sub)
     param.sub = gsub(pattern = 'tempsalt.nc',replacement = new.statevar.file,x = param.sub)
     param.sub = gsub(pattern = 'reference_year 1964',replacement = paste0('reference_year ',start.year),x=param.sub)
-    param.sub = gsub(pattern = 'tstop 1',replacement = paste0('tstop ',length(time.vals)),x =param.sub)
+    param.sub = gsub(pattern = 'tstop 1',replacement = paste0('tstop ',t.stop),x =param.sub)
+    param.sub = gsub(pattern = 'tstart 1',replacement = paste0('tstart ',t.start),x=param.sub)
+    # param.sub = gsub(pattern = 'tstop 1',replacement = paste0('tstop ',length(time.vals)),x =param.sub)
     
     #save as yearly temp param file
-    writeLines(param.sub,con = paste0(force.dir,'roms_cobalt_hydroconstruct_temp.prm'))
+    writeLines(param.sub,con = paste0(force.dir,'obs_hindcast_hydroconstruct_temp.prm'))
     
     #sub batch file values
     bat.sub = gsub(pattern = 'flow_year',replacement = paste0('flow_',new.year),x = bat.lines)
     bat.sub = gsub(pattern = 'salt_year',replacement = paste0('salt_',new.year),x = bat.sub)
     bat.sub = gsub(pattern = 'temp_year',replacement = paste0('temp_',new.year),x = bat.sub)
     bat.sub = gsub(pattern = 'volume_year',replacement = paste0('volume',new.year),x = bat.sub)
-    bat.sub = gsub(pattern = 'roms_cobalt_hydroconstruct_v2.prm','roms_cobalt_hydroconstruct_temp.prm', x= bat.sub)
+    bat.sub = gsub(pattern = 'obs_hindcast_hydroconstruct.prm','obs_hindcast_hydroconstruct_temp.prm', x= bat.sub)
     
     #save batch as temp file
     writeLines(bat.sub, con = paste0(force.dir,'hydroconstruct_run_temp.bat'))
@@ -317,19 +181,3 @@ make_force_spinup = function(roms.prefix,
   
 }
 
-# duplicate.forcing.year(
-#   roms.out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/',
-#   # file2copy = 'roms_output_transport_tohydro_1981.nc',
-#   # transport.file = paste0(roms.out.dir,'transport/roms_output_transport_tohydro_1981.nc'),
-#   transport.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/transport/roms_otuput_transport_tohydro_1981.nc',
-#   # statevar.file = paste0(roms.out.dir,'statevars/roms_output_statevars_tohydro_1981.nc'),
-#   statevar.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/statevars/roms_output_statevars_tohydro_1981.nc',
-#   # ltlvar.file = paste0(roms.out.dir,'ltl_statevars/roms_output_ltl_statevars_tohydro_1981.nc'),
-#   ltlvar.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT output/ltl_statevars/roms_output_ltl_statevars_tohydro_1981.nc',
-#   force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/',
-#   start.year = 1964,
-#   new.year = 1964,
-#   param.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/roms_cobalt_hydroconstruct_v2.prm',
-#   bat.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/hydroconstruct_run_template.bat'
-#   
-# )
