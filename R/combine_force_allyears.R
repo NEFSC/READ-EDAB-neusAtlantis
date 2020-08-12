@@ -7,9 +7,9 @@
 # force.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/currentVersion/tsfiles/Annual_Files/'
 force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/bias_corrected_tempsalt/'
 
-# out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/combined_years/'
+out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/combined_years/'
 # out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/combined_years_repo/'
-out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/combined_debias_temp/'
+# out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/combined_debias_temp/'
 
 # file.dir = phys.dir
 # var.name = 'Temp'
@@ -84,3 +84,10 @@ combine_years(force.dir,file.pattern = 'roms_nut*','NH3',out.dir)
 combine_years(force.dir,file.pattern = 'roms_nut*','NO3',out.dir)
 combine_years(force.dir,file.pattern = 'roms_nut*','Oxygen',out.dir)
 combine_years(force.dir,file.pattern = 'roms_nut*','Si',out.dir)
+
+#Dinoflagellates
+combine_years(file.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/largephyto_statevars/',
+              file.pattern = 'roms_largephyto_force*','Diatom_N',out.dir)
+combine_years(file.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/largephyto_statevars/',
+              file.pattern = 'roms_largephyto_force*','DinoFlag_N',out.dir)
+
