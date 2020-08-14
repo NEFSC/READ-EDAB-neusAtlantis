@@ -91,3 +91,16 @@ combine_years(file.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBA
 combine_years(file.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/largephyto_statevars/',
               file.pattern = 'roms_largephyto_force*','DinoFlag_N',out.dir)
 
+#New Satellite Phytoplankton
+combine_years(file.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_Files/',
+              file.pattern = 'SatPhyto_Forcing_*',
+              var.name = 'Diatom_N',
+              out.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_Files/combined_years/')
+combine_years(file.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_Files/',
+              file.pattern = 'SatPhyto_Forcing_*',
+              var.name = 'DinoFlag_N',
+              out.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_Files/combined_years/')
+combine_years(file.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_Files/',
+              file.pattern = 'SatPhyto_Forcing_*',
+              var.name = 'PicoPhytopl_N',
+              out.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_Files/combined_years/')
