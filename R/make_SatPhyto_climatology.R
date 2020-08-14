@@ -108,15 +108,15 @@ make_SatPhyto_climatology = function(in.dir,
   
   nc.file = RNetCDF::create.nc(filename)
   
-  RNetCDF::dim.def.nc(nc.file, "t", unlim=TRUE)
+  RNetCDF::dim.def.nc(nc.file, "time", unlim=TRUE)
   RNetCDF::dim.def.nc(nc.file, "b", 30)
   RNetCDF::dim.def.nc(nc.file, "z", 5)
   
-  RNetCDF::var.def.nc(nc.file, "t", "NC_DOUBLE", "t")
+  RNetCDF::var.def.nc(nc.file, "time", "NC_DOUBLE", "time")
   for(v in 1:length(atl.var.ls)){
     var.name = atl.varname[v]
     #Define Variables
-    RNetCDF::var.def.nc(nc.file, atl.varname[v], 'NC_DOUBLE', c('z','b','t'))
+    RNetCDF::var.def.nc(nc.file, atl.varname[v], 'NC_DOUBLE', c('z','b','time'))
     #Assign Fill Value
     RNetCDF::att.put.nc(nc.file, atl.varname[v], '_FillValue', "NC_DOUBLE", 0)
     #Assign 
@@ -134,13 +134,13 @@ make_SatPhyto_climatology = function(in.dir,
     RNetCDF::var.put.nc(nc.file,atl.varname[v],atl.var.ls[[v]])
   }
   
-  RNetCDF::att.put.nc(nc.file, "t", "units", "NC_CHAR", 'seconds since 1964-01-01 00:00:00 UTC')
-  RNetCDF::att.put.nc(nc.file, "t", "dt", "NC_DOUBLE", 86400)
+  RNetCDF::att.put.nc(nc.file, "time", "units", "NC_CHAR", 'seconds since 1964-01-01 00:00:00 UTC')
+  RNetCDF::att.put.nc(nc.file, "time", "dt", "NC_DOUBLE", 86400)
   RNetCDF::att.put.nc(nc.file, "NC_GLOBAL", "title", "NC_CHAR", 'NEUS_Atlantis_Obs_Hindcast')
   RNetCDF::att.put.nc(nc.file, "NC_GLOBAL", "geometry", "NC_CHAR", 'neus_tmerc_RM2.bgm')
   RNetCDF::att.put.nc(nc.file, "NC_GLOBAL", "parameters", "NC_CHAR", "")
   
-  RNetCDF::var.put.nc(nc.file, "t", t_tot)
+  RNetCDF::var.put.nc(nc.file, "time", t_tot)
   
   
   RNetCDF::close.nc(nc.file)
