@@ -15,7 +15,7 @@
 # force.vars = c('temperature','salinity')
 # var.units = c('deg C','psu')
 
-make_force_statevar = function(roms.dir,roms.file,out.dir,force.vars,final.vars,var.units,fill.val,miss.val,valid.min,valid.max,long.names,out.prefix){
+make_force_statevar = function(roms.dir,roms.file,out.dir,force.vars,final.vars,var.units,fill.val,miss.val,valid.min,valid.max,long.names,out.prefix,dupe.bottom){
 
   library(dplyr)
   library(RNetCDF)
@@ -25,7 +25,10 @@ make_force_statevar = function(roms.dir,roms.file,out.dir,force.vars,final.vars,
   bgm.polygons = 0:29
   
   file.year = as.numeric(sort(gsub(".*_(\\d{4}).+","\\1",roms.file)))
-
+  if(is.na(file.year)){
+    file.year = ''
+  }
+  
   # general
   fill.value <- 0
   this.geometry <- "neus_tmerc_RM2.bgm"
@@ -114,7 +117,10 @@ make_force_statevar = function(roms.dir,roms.file,out.dir,force.vars,final.vars,
           length(this.value) <- 5
           
           #Below copies bottom layer into sediment layer
-          this.value[5] <- this.value[1]
+          if(dupe.bottom){
+            this.value[5] <- this.value[1]  
+          }
+          
           
         }
         
