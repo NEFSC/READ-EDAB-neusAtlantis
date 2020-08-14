@@ -1,19 +1,14 @@
 ### For Forcing Files
 
-# transport.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/transport/'
-# phys.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/phys_statevars_alternate/'
-# nut.dir ='C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/nut_statevars/'
-# ltl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/ltl_statevars/'
-# force.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/currentVersion/tsfiles/Annual_Files/'
-force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/bias_corrected_tempsalt/'
+transport.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/transport/'
+phys.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phys_statevars/'
+force.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/currentVersion/tsfiles/Annual_Files/'
 
-out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/combined_years/'
-# out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/combined_years_repo/'
-# out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Forcing_Files/Annual_Output/combined_debias_temp/'
+out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years/'
 
-# file.dir = phys.dir
-# var.name = 'Temp'
-# file.pattern = '*.nc'
+file.dir = phys.dir
+var.name = 'temperature'
+file.pattern = '^temp_.*\\.nc$'
 
 combine_years = function(file.dir,file.pattern,var.name,out.dir){
   
@@ -35,15 +30,17 @@ combine_years = function(file.dir,file.pattern,var.name,out.dir){
   full.time = unlist(time.ls)
   
   save(full.data,full.time, file = paste0(out.dir,var.name,'_allyears.R'))
-} 
+
+}
 
 #Transport
-# combine_years(transport.dir,file.pattern = '*.nc','hlfux',out.dir)
+combine_years(transport.dir,file.pattern = '^GLORYS_Atlantis.*\\.nc','transport',out.dir)
 
 # #Physics Statevariables
-# combine_years(phys.dir,file.pattern = '*.nc','Temp',out.dir)
-# combine_years(phys.dir,file.pattern = '*.nc','salt',out.dir)
+combine_years(phys.dir,file.pattern = '^temp.*\\.nc','temperature',out.dir)
+combine_years(phys.dir,file.pattern = '^salt.*\\.nc','salinity',out.dir)
 # # combine_years(phys.dir,file.pattern = '*.nc','verticalflux',out.dir)
+
 # 
 # #LTL statevariables
 # combine_years(ltl.dir,file.pattern = '*.nc','ndi',out.dir)
@@ -104,3 +101,4 @@ combine_years(file.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Fo
               file.pattern = 'SatPhyto_Forcing_*',
               var.name = 'PicoPhytopl_N',
               out.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_Files/combined_years/')
+
