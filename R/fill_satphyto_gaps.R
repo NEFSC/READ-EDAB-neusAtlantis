@@ -21,6 +21,8 @@
 # doy.file = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format/Phyto_Climatology.nc'
 # max.interp = 3
 # write.gaps = T
+# ref.year = 2000
+# ref.year.dates = seq.Date(as.Date(paste0(ref.year,'-01-01')),as.Date(paste0(ref.year,'-12-31')),by = 1)
 # gaps.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Diagnostics/Gap_Analysis/'
 
 fill_satphyto_gaps = function(input.mat,
@@ -79,11 +81,26 @@ fill_satphyto_gaps = function(input.mat,
     for(g in 1:nrow(var.box.gaps)){
       gap.length = var.box.gaps$lengths[g]
       doy.range = var.box.gaps$start[g]:var.box.gaps$stop[g]
-      #End of Year
+      
+      #First year no data vs gap
+      if(ref.year == 1997){
+        #Start date '1997-09-07'
+        before.dates = which(ref.year.dates < as.Date('1997-09-07'))
+        before.dates.gap = which(!(doy.range %in% before.dates))
+        doy.range = doy.range[before.dates.gap]
+
+        #Exception if missing dates in beginning of 1997 start
+        start.doy = which(ref.year.dates == as.Date('1997-09-07'))
+        if(start.doy %in% doy.range){
+          input.mat[1,b,doy.range] = var.box.doy[doy.range]
+          next()
+        }
+      }
+      
       if(366 %in% doy.range| 365 %in% doy.range){
         #replace day 366 with climatology doy 365
         if(length(ref.year.dates) == 366){
-          input.mat[1,b,366] = var.box.doy[365]  
+          input.mat[1,b,366] = var.box.doy[365]
         }
         #replace rest with DOY
         not.leap.day = doy.range[which(doy.range != 366)]
