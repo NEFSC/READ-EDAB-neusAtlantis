@@ -8,24 +8,23 @@
 #'  @out.name string. Output file name
 #'  @stat.var string. Name of summary statitic column used for aggregation
 #'  @bio.vars Character vector of primary producer variable names
-#'  @atl.groups character vector of atlantis phytoplankton group names
 #'  @atl.varname Character vector length atl.groups with full Atlantis name (for netCDF variables). Should match initial conditions file
 #'  @atl.longname Character vector length atl.groups with full descriptive name for each atlantis variable.
+#'  @atl.units character vector of units from initial conditions file
 #'  @phtyo.fract matrix (box x time) that contains the Diatom:Dinoflagellate ratio for the microphytoplankton
 #'  @chl.conv numeric vector same length as bio.vars that has the Cholorphyll to biomass conversion factor
 #'  
 #'Author: J. Caracappa
 #'
-
+# 
 # in.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Data/'
 # in.file = 'D8-OCCCI-ATLANTIS_2000.csv'
 # out.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format/'
 # out.file = 'Phyto_2000'
 # stat.var = 'MED'
 # bio.vars = c('MICRO','NANO','PICO')
-# atl.groups = c('PL','DF','PS')
-# atl.varname = c('Diatom_N','DinoFlag_N','PicoPhytopl_N')
-# atl.longname = c('Diatom Nitrogen','Dinoflagellate Nitrogen','PicoPhytoplankton Nitrogen')
+# atl.varname = c('Diatom_N','DinoFlag_N','PicoPhytopl_N','Diatom_S')
+# atl.longname = c('Diatom Nitrogen','Dinoflagellate Nitrogen','PicoPhytoplankton Nitrogen','Diatom Silicon')
 # # phyto.fract = data.frame(PL = c(0.5,0,0),DF = c(0.5,0.5,0), PS = c(0,0.5,1))
 # phyto.fract = matrix(0.75,nrow = 30, ncol = 366)
 # chl.conv = rep(7,3)
@@ -37,9 +36,9 @@ make_SatPhyto_files = function(in.dir,
                                      out.file,
                                      stat.var,
                                      bio.vars,
-                                     atl.groups,
                                      atl.varname,
                                      atl.longname,
+                                     atl.units,
                                      phyto.fract,
                                      chl.conv){
   
@@ -87,7 +86,7 @@ make_SatPhyto_files = function(in.dir,
   }
   
   #Assign Producer groups to Atlantis groups using phyto.fract
-  atl.var.ls = lapply(1:3,function(x) array(NA,dim = c(5,30,length(ref.year.dates))))
+  atl.var.ls = lapply(1:4,function(x) array(NA,dim = c(5,30,length(ref.year.dates))))
   names(atl.var.ls) = atl.varname
   
   #Extract appropriate fractions and assign Atlantis variables
@@ -100,11 +99,17 @@ make_SatPhyto_files = function(in.dir,
     
     #Small Phytoplankton Calculation
     atl.var.ls[[3]][1,,d] = prod.ls[[2]][1,,d]+prod.ls[[3]][1,,d]
+
   }
   
   for(i in 1:length(atl.var.ls)){
+    if(names(atl.var.ls)[i] == 'Diatom_S'){
+      var.name = 'Diatom_N'
+    }else{
+      var.name = atl.varname[i]
+    }
     atl.var.ls[[i]] = fill_satphyto_gaps(input.mat = atl.var.ls[[i]],
-                       var.name = atl.varname[i],
+                       var.name = var.name,
                        doy.file = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format/Phyto_Climatology.nc',
                        max.interp = 8,
                        write.gaps = T,
@@ -113,6 +118,11 @@ make_SatPhyto_files = function(in.dir,
                        ref.year.dates = ref.year.dates
                        )
   }
+  
+  
+  #Diatom_S Using Si:N = 1.1
+  # From Brzezinski 1985
+  atl.var.ls[[4]] = atl.var.ls[[1]] * 1.1
   
   # save(atl.var.ls,file= paste0(out.dir,'var_test.R'))
   #Format as netCDF
@@ -128,15 +138,15 @@ make_SatPhyto_files = function(in.dir,
   
   nc.file = RNetCDF::create.nc(filename)
   
-  RNetCDF::dim.def.nc(nc.file, "time", unlim=TRUE)
+  RNetCDF::dim.def.nc(nc.file, "t", unlim=TRUE)
   RNetCDF::dim.def.nc(nc.file, "b", 30)
   RNetCDF::dim.def.nc(nc.file, "z", 5)
   
-  RNetCDF::var.def.nc(nc.file, "time", "NC_DOUBLE", "time")
+  RNetCDF::var.def.nc(nc.file, "t", "NC_DOUBLE", "t")
   for(v in 1:length(atl.var.ls)){
     var.name = atl.varname[v]
     #Define Variables
-    RNetCDF::var.def.nc(nc.file, atl.varname[v], 'NC_DOUBLE', c('z','b','time'))
+    RNetCDF::var.def.nc(nc.file, atl.varname[v], 'NC_DOUBLE', c('z','b','t'))
     #Assign Fill Value
     RNetCDF::att.put.nc(nc.file, atl.varname[v], '_FillValue', "NC_DOUBLE", 0)
     #Assign 
@@ -146,7 +156,7 @@ make_SatPhyto_files = function(in.dir,
     #Assing valid_max
     RNetCDF::att.put.nc(nc.file, atl.varname[v], 'valid_max', 'NC_DOUBLE', 99999)
     #Assign units
-    RNetCDF::att.put.nc(nc.file, atl.varname[v], 'units','NC_CHAR', 'mg N m-3')
+    RNetCDF::att.put.nc(nc.file, atl.varname[v], 'units','NC_CHAR', atl.units[v])  
     #Assign long_name
     RNetCDF::att.put.nc(nc.file,atl.varname[v],'long_name','NC_CHAR',atl.longname[v])
     
@@ -154,13 +164,13 @@ make_SatPhyto_files = function(in.dir,
     RNetCDF::var.put.nc(nc.file,atl.varname[v],atl.var.ls[[v]])
   }
   
-  RNetCDF::att.put.nc(nc.file, "time", "units", "NC_CHAR", 'seconds since 1964-01-01 00:00:00 UTC')
-  RNetCDF::att.put.nc(nc.file, "time", "dt", "NC_DOUBLE", 86400)
+  RNetCDF::att.put.nc(nc.file, "t", "units", "NC_CHAR", 'seconds since 1964-01-01 00:00:00 UTC')
+  RNetCDF::att.put.nc(nc.file, "t", "dt", "NC_DOUBLE", 86400)
   RNetCDF::att.put.nc(nc.file, "NC_GLOBAL", "title", "NC_CHAR", 'NEUS_Atlantis_Obs_Hindcast')
   RNetCDF::att.put.nc(nc.file, "NC_GLOBAL", "geometry", "NC_CHAR", 'neus_tmerc_RM2.bgm')
   RNetCDF::att.put.nc(nc.file, "NC_GLOBAL", "parameters", "NC_CHAR", "")
   
-  RNetCDF::var.put.nc(nc.file, "time", t_tot)
+  RNetCDF::var.put.nc(nc.file, "t", t_tot)
   
   
   RNetCDF::close.nc(nc.file)
