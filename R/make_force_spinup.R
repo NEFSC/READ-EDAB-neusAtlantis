@@ -27,8 +27,12 @@
 # out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/'
 # trans.prefix = 'GLORYS_Atlantis_Transport_'
 # statevar.prefix = 'Obs_Hindcast_statevars_'
-# transport.file = paste0(out.dir,'transport/GLORYS_Atlantis_Transport_1993.nc')
-# statevar.file = paste0(out.dir,'statevars/Obs_Hindcast_statevars_1993.nc')
+# # transport.file = paste0(out.dir,'transport/GLORYS_Atlantis_Transport_1993.nc')
+# transport.file = NA
+# # statevar.file = paste0(out.dir,'statevars/Obs_Hindcast_statevars_1993.nc')
+# statevar.file = NA
+# phyto.file = paste0(out.dir,'phyto_statevars/SatPhyto_Forcing_1998.nc')
+# phyto.prefix = 'SatPhyto_Forcing_'
 # force.dir = paste0(out.dir,'Forcing_Files/')
 # start.year = 1964
 # new.year = 1964
@@ -37,8 +41,10 @@
 
 make_force_spinup = function(trans.prefix,
                              statevar.prefix,
+                             phyto.prefix,
                              transport.file,
                              statevar.file,
+                             phyto.file,
                              out.dir,
                              force.dir,
                              start.year,
@@ -54,6 +60,10 @@ make_force_spinup = function(trans.prefix,
   if(!is.na(statevar.file)){
     new.statevar.file = paste0(out.dir,paste0('statevars/',statevar.prefix,new.year,'.nc'))
     file.copy(statevar.file,new.statevar.file,overwrite=T)
+  }
+  if(!is.na(phyto.file)){
+    new.phyto.file = paste0(out.dir,paste0('phyto_statevars/',phyto.prefix,new.year,'.nc'))
+    file.copy(phyto.file,new.phyto.file,overwrite=T)
   }
 
   t1 = seq.Date(as.Date(paste0(new.year,'-01-01 00:00:00')),as.Date(paste0(new.year,'-12-31 00:00:00')),'days')
@@ -138,6 +148,63 @@ make_force_spinup = function(trans.prefix,
     
     ncdf4::ncvar_put(statevar.nc,var.time,time.vals)
     ncdf4::nc_close(statevar.nc)
+  }
+  
+  #Phyto Statevariables
+  if(!is.na(phyto.file)){
+    leveldim = ncdf4::ncdim_def('level','',1:5,create_dimvar = F) 
+    
+    timedim = ncdf4::ncdim_def('t','',1:length(time.vals),unlim = T,create_dimvar = F)
+    var.time = ncdf4::ncvar_def('t',paste0('seconds since ',start.year,'-01-01 00:00:00 +10'),timedim,prec='double')
+    
+    #Modify and append statevar file
+    phyto.nc = ncdf4::nc_open(new.phyto.file,write = T)
+    
+    
+    #If leap year, append values to add extra day
+    if(new.year %% 4 == 0){
+      
+      diatom.n = ncdf4::ncvar_get(phyto.nc,'Diatom_N')
+      dinoflag = ncdf4::ncvar_get(phyto.nc,'DinoFlag_N')
+      picophyto = ncdf4::ncvar_get(phyto.nc,'PicoPhytopl_N')
+      diatom.s = ncdf4::ncvar_get(phyto.nc,'Diatom_S')
+      
+      dims = dim(diatom.n)
+      dims[3] = 366
+      new.diatom.n = new.dinoflag = new.picophyto = new.diatom.s = array(NA,dim = dims)
+      
+      last.diatom.n = diatom.n[,,365]
+      last.dinoflag = dinoflag[,,365]
+      last.picophyto = picophyto[,,365]
+      last.diatom.s = diatom.s[,,365]
+      
+      new.diatom.n[,,1:365] = diatom.n[,,1:365]
+      new.dinoflag[,,1:365] = dinoflag[,,1:365]
+      new.picophyto[,,1:365] = picophyto[,,1:365]
+      new.diatom.s[,,1:365] = diatom.s[,,1:365]
+      
+      new.diatom.n[,,366] = last.diatom.n
+      new.dinoflag[,,366] = last.dinoflag
+      new.picophyto[,,366] = last.picophyto
+      new.diatom.s[,,366] = last.diatom.s
+      
+      var.diatom.n = ncdf4::ncvar_def("Diatom_N","mg N m-3",list(leveldim, boxesdim, timedim),-999,longname="Diatom Nitrogen",prec="float")
+      var.dinoflag = ncdf4::ncvar_def("DinoFlag_N","mg N m-3",list(leveldim, boxesdim, timedim),-999,longname="Dinoflagellate Nitrogen",prec="float")
+      var.picophyto = ncdf4::ncvar_def("PicoPhytopl_N","mg N m-3",list(leveldim, boxesdim, timedim),-999,longname="Picophytoplankton Nitrogen",prec="float")
+      var.diatom.s = ncdf4::ncvar_def("Diatom_S","mg Si m-3",list(leveldim, boxesdim, timedim),-999,longname="Diatom Silicon",prec="float")
+      
+      ncdf4::ncvar_put(phyto.nc,var.diatom.n, new.diatom.n,count=c(5,30,366) )
+      ncdf4::ncvar_put(phyto.nc,var.dinoflag, new.dinoflag, count=c(5,30,366))
+      ncdf4::ncvar_put(phyto.nc,var.picophyto,new.picophyto,count=c(5,30,366))
+      ncdf4::ncvar_put(phyto.nc,var.diatom.s, new.diatom.s,count=c(5,30,366))
+      
+    } 
+    
+    # var.time = ncdf4::ncvar_def('time',paste0('seconds since ',start.year,'-01-01 00:00:00 +10'),timedim,prec='double')
+    ncdf4::ncatt_put(phyto.nc,'t','units',paste0('seconds since ',start.year,'-01-01 00:00:00 +10'))
+    
+    ncdf4::ncvar_put(phyto.nc,var.time,time.vals)
+    ncdf4::nc_close(phyto.nc)
   }
   
   #Run Hydroconstruct with proper start year

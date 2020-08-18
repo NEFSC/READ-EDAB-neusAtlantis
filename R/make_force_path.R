@@ -19,30 +19,36 @@ make_force_path = function(force.dirs, ts.dir, years,var.names, pattern.names,ou
 
 #All windows variables
 make_force_path(
-  var.names = c('hd','Temperature','Salinity'),
+  var.names = c('hd','Temperature','Salinity',
+                'Diatom_N','DinoFlag_N','PicoPhytopl_N','Diatom_S'),
   force.dirs = c('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/transport/',
-                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phys_statevars/',2)
+                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phys_statevars/',2),
+                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars/',4)
                  ),
   years = 1964:2017,
   ts.dir = "\\tsfiles\\Annual_Files\\",
   pattern.names = c('^flow.*\\.nc$',
                     '^temp_.*\\.nc$',
-                    '^salt_.*\\.nc$'),
+                    '^salt_.*\\.nc$',
+                    rep('^Phyto_Forcing_.*\\.nc$',4)),
   out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/',
   out.name = 'obs_hindcast_forcing_paths_WINDOWS'
 )
 
 #All LINUX variables
 make_force_path(
-  var.names = c('hd','Temperature','Salinity'),
+  var.names = c('hd','Temperature','Salinity',
+                'Diatom_N','DinoFlag_N','PicoPhytopl_N','Diatom_S'),
   force.dirs = c('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/transport/',
-                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phys_statevars/',2)
+                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phys_statevars/',2),
+                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars/',4)
   ),
   years = 1964:2017,
   ts.dir = "/tsfiles/Annual_Files/",
   pattern.names = c('^flow.*\\.nc$',
                     '^temp_.*\\.nc$',
-                    '^salt_.*\\.nc$'),
+                    '^salt_.*\\.nc$',
+                    rep('^Phyto_Forcing_.*\\.nc$',4)),
   out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/',
   out.name = 'obs_hindcast_forcing_paths_LINUX'
 )

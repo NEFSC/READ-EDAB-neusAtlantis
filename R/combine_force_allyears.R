@@ -101,4 +101,8 @@ combine_years(file.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Fo
               file.pattern = 'SatPhyto_Forcing_*',
               var.name = 'PicoPhytopl_N',
               out.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_Files/combined_years/')
+combine_years(file.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_Files/',
+              file.pattern = 'SatPhyto_Forcing_*',
+              var.name = 'Diatom_S',
+              out.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_Files/combined_years/')
 
