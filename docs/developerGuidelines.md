@@ -183,13 +183,17 @@ docker pull ubuntu
 
 Display docker images, run them, stop them
 
-```
-docker images  # display all images
-docker run -it <image_name or image_id> bash #run an image and enter the container
-docker run -it -d ubuntu # run the ubuntu image
-docker stop <container_id>
+`docker images  # display all images `
 
-```
+`docker run -it <image_name or image_id> bash #run an image and enter the container`
+
+`docker exec -it <image_name or image_id> bash # to enter a running container`
+
+`docker run -it -d ubuntu # run the ubuntu image in the back ground`
+
+`docker stop <container_id>`
+
+
 Once inside the container, navigate as if you were on your local machine. Some commands may not be valid depending on what was installed in the container. This is configured in the docker image.
 
 

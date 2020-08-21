@@ -65,7 +65,9 @@ process_atl_output = function(param.dir,atl.dir,out.dir,bgm.file,groups.file,ini
                                       bboxes = bboxes)) 
   
   #Read in production (no predators)
-  groups.nopred = groups.data$Name[groups.data[,names(groups.data)[names(groups.data) %in% c('isPredator','IsPredator')]] == 0][4:6]
+  # groups.nopred = groups.data$Name[groups.data[,names(groups.data)[names(groups.data) %in% c('isPredator','IsPredator')]] == 0][4:6]
+  groups.nopred = c('Diatom','PicoPhytopl')
+  # groups.nopred = 'Pelag_Bact'
   vars = list('Prodn')
   rawdata.nopred.prod = Map(atlantistools::load_nc,
                             select_variable = vars,
@@ -180,7 +182,7 @@ process_atl_output = function(param.dir,atl.dir,out.dir,bgm.file,groups.file,ini
   growth.age =  atlantistools::agg_data(data = rawdata.prod[[3]], groups = c('species','time','agecl'),fun = mean)
   growth.PL = atlantistools::agg_data(data = rawdata.nopred.prod[[1]],groups = c('species','time'),fun = mean )
   growth.PS = atlantistools::agg_data(data = rawdata.nopred.prod[[2]],groups = c('species','time'),fun = mean )
-  growth.PB = atlantistools::agg_data(data = rawdata.nopred.prod[[3]],groups = c('species','time'),fun = mean )
+  # growth.PB = atlantistools::agg_data(data = rawdata.nopred.prod[[3]],groups = c('species','time'),fun = mean )
   
   #Calculate consumed biomasss
   safe.diet = purrr::possibly(atlantistools::calculate_consumed_biomass, otherwise = NA)

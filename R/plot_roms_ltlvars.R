@@ -136,14 +136,14 @@ plot_roms_ltlvars = function(year.dir,ltlvars.file,which.box = 0:29,which.levels
   
   }
   
-  make.plot(ndi.plots,'Diazotroph')
-  make.plot(nlg.plots,'Large Phyto')
-  make.plot(nlgz.plots,'Large Zoo')
-  make.plot(nmdz.plots,'Med Zoo')
-  make.plot(nsm.plots,'Small Phyto')
-  make.plot(nsmz.plots,'Small Zoo')
-  make.plot(silg.plots,'Large Phyto Si')
-  make.plot(nbact.plots,'Bacteria')
+  make.plot(ndi.plots,paste0(plot.prefix,' Diazotroph'))
+  make.plot(nlg.plots,paste0(plot.prefix,' Large Phyto'))
+  make.plot(nlgz.plots,paste0(plot.prefix,' Large Zoo'))
+  make.plot(nmdz.plots,paste0(plot.prefix,' Med Zoo'))
+  make.plot(nsm.plots,paste0(plot.prefix,' Small Phyto'))
+  make.plot(nsmz.plots,paste0(plot.prefix,' Small Zoo'))
+  make.plot(silg.plots,paste0(plot.prefix,' Large Phyto Si'))
+  make.plot(nbact.plots,paste0(plot.prefix,' Bacteria'))
   
   ncdf4::nc_close(ltlvars.nc)
 }

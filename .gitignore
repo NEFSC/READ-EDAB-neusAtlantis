@@ -14,8 +14,9 @@ comland*.rds
 researchDocs
 other
 output
-atlantisCode
 .svn
+atlantisCode
+outputFolder
 
 # ignore all files in testing except prm
 /CurrentVersion/*.*

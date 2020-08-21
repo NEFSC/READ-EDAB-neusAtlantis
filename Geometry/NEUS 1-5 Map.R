@@ -4,6 +4,9 @@ setwd('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/')
 library(ggplot2)
 library(rbgm)
 library(dplyr)
+library(maps)
+library(mapdata)
+library(ggmap)
 
 corners = read.csv('RM_allboxes_NEUS_corners.csv',as.is =T)
 bgm = bgmfile('neus_ll_WGS84.bgm')
@@ -37,6 +40,24 @@ ggplot()+
     legend.key.size = 
   )+
   ggsave('Neus 1-5.pdf')
+
+neus = map('worldHires',xlim = c(-78,-62),ylim = c(34,46.5),plot = F)
+ggplot()+ 
+  annotation_map(map_data('worldHires'),fill = 'grey70')+
+  geom_polygon(data = corners2, aes(x= Lon1,y = Lat1,group = Area,fill = nrLayers),col = 'black',alpha = 0.75,size = 0.5)+
+  scale_fill_manual(name = "Maximum Depth Bin",values =c('grey60','lightsalmon','skyblue','royalblue2','slateblue2'),
+                    labels = c('Island/Land','0-50m','50-120m','120-300m','300m +'))+
+  coord_quickmap()+
+  ggtitle('Northeast US Atlantis Model')+
+  xlab('')+
+  ylab('')+
+  theme_void()+
+  theme(
+    legend.position = c(0.8,0.30),
+    plot.title = element_text(hjust=0.5)
+  )+
+  ggsave('Neus 1-5 with Coastline.png',width = 5,height = 10, dpi = 350)
+
 
 ggplot()+ 
   geom_polygon(data = corners2, aes(x= Lon1,y = Lat1,group = Area,fill = nrLayers),col = 'black',alpha = 0.75)+
