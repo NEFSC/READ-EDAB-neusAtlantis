@@ -59,3 +59,36 @@ This file is used to document steps made towards a new version/subversion
 * Increased Menhaden recruits
 * Increased growth on Menhaden's first 3 age classes
 + Menhaden persists to end now and at about half of Mackerel's biomass
+
+## Benthic Community Update
+
+* RG: 06-15-2020
+* Increased Initial Biomass for Lobster and Red Crab
+* Decreased predation between and cannibalism by Lobster and Red Crab
+* Increased growth on Macroalgae - important food source for Benthic Grazers
+* Decreased predation by LOB, RCB, BC, BMS (other crabs) on Benthic Grazers
+* Increased growth on BG
+* Increased assimilation efficiencies for BG, LOB, RCB
++ All benthic species persist to the end now.  Clams appear to have too high a biomass, so the next step will be to try to bring them down a bit and finish off the Benthic Community Persists story on the Jira board.
+
+## Rerun for new plankton levels (ATLNTS-107)
+* RG: 06-25-2020
+* RCB, LOB, BMS and MEN crashed at the end of the run where they used to persist
+* All changes made to at_biology.prm file
+* Modified MEN assimilation efficiencies
+* Increased growth rates for LOB, RCB and BMS
++ All previously persisting species continue to persist
+
+## Top Commercial and Recerational Species Persistence (ATLNTS-3)
+ * RG: 07-17-2020
+ * SUF: Increased assimilation efficiency and number of recruits
+ * WPF: Increased number of recruits and growth rate
+ * TYL: Increased number of recruits
+ * DRM: Increased number of recruits
+ * ZG: Reduced predation on, increased assimilation efficiency, increased growth
+ * MEN: Increased assimilation efficiency and number of recruits
+
+## Retune previously tuned species (ATLNTS-155)
+ * RG: 07-17-2020
+ * BC: Increased growth rate
+ * LOB: Increased growth rate

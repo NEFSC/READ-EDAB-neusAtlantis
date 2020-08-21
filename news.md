@@ -4,6 +4,74 @@
 
 ## Bug Fixes (patch)
 
+# neus-atlantis 1.0.0-9015 (in dev) 
+(built with altantis rev 6490.1)
+
+Species persistence tuning
+
+ZG: Reduced predation on, increased assimilation efficiency, increased growth
+MEN: Increased assimilation efficiency and number of recruits
+SUF: Increased assimilation efficiency and number of recruits
+WPF: Increased number of recruits and growth rate
+TYL: Increased number of recruits
+DRM: Increased number of recruits
+BC: Increased growth rate
+LOB: Increased growth rate
+
+As described in [#49](https://github.com/NOAA-EDAB/neus-atlantis/pull/49)
+
+
+# neus-atlantis 1.0.0-9014 (in dev) 
+(built with altantis rev 6490.1)
+
+New script to break up COBALT's **nlg** and **silg** into Atlantis' Diatom_N, Diatiom_S, and DinoFlag_N. Addition of new annual forcing files "roms_largephyto_force_*.nc"
+
+As described in [#48](https://github.com/NOAA-EDAB/neus-atlantis/pull/48)
+
+# neus-atlantis 1.0.0-9013 (in dev) 
+(built with altantis rev 6490.1)
+
+* Changes to at_biology parameter file to get all species persisting again after the last change to plankton levels. (RCB, LOB, BMS and MEN). Modified MEN assimilation efficiencies
+* Changed growth rates and assimilation efficiencies for LOB, RCB and BMS. All previously persisting species continue to persist
+
+As described in [#47](https://github.com/NOAA-EDAB/neus-atlantis/pull/47)
+
+# neus-atlantis 1.0.0-9012 (in dev) 
+(built with altantis rev 6490.1)
+
+Work aimed at investigating why the temperature in the forcing files did not mirror observations well. The source of the discrepancy was outside of our model development/processing but other changes were made to the forcing that should improve Atlantis' representation of the ROMS_COBALT output.
+
+* Temperature Diagnostics. Addition of EPU shape files for SOE comparisons
+Various scripts aimed at diagnosing temperature (or any forcing) issues with model (i.e. box-level_Scripts to plot NCEI temperature againts ROMS data on various temporal/spatial scales
+* Changes to Aggregation. Established workflow for adding new depth layer. Did not substantially improve model temperature. Updated aggregating statistic/methods. Weighted mean of each layers within a cell.
+*Updated Forcing Files
+
+As described in [#46](https://github.com/NOAA-EDAB/neus-atlantis/pull/46)
+
+# neus-atlantis 1.0.0-9011 (in dev) 
+(built with altantis rev 6490.1)
+
+* Increased Initial Biomass for Lobster and Red Crab
+* Decreased predation between and cannibalism by Lobster and Red Crab
+* Increased growth on Macroalgae - important food source for Benthic Grazers
+* Decreased predation by LOB, RCB, BC, BMS (other crabs) on Benthic Grazers
+* Increased growth on BG
+* Increased assimilation efficiencies for BG, LOB, RCB
+* All benthic species persist to the end. Clams appear to have too high a biomass, so the next step will be to try to bring them down 
+
+As described in [#45](https://github.com/NOAA-EDAB/neus-atlantis/pull/45)
+
+
+# neus-atlantis 1.0.0-9010 (in dev) 
+(built with altantis rev 6490.1)
+
+* update of the correct COBALT v10 output, and includes the ROMS-aggregations scripts, ROMS diagnostics, forcing generation, forcing diagnostics, and Atlantis integration steps. 
+* Some scripts have just been updated for a more consistent file naming and directory organization. 
+* The biggest change to the final forcing is that the alternative (non-Hydroconstruct) routine was used for temperature and salinity so that it's consistent with the other box variables.
+
+As described in [#44](https://github.com/NOAA-EDAB/neus-atlantis/pull/44)
+
+
 # neus-atlantis 1.0.0-9009 (in dev) 
 (built with altantis rev 6490.1)
 

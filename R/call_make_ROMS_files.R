@@ -1,13 +1,13 @@
 
-#source(here::here('R','make_ROMS_files_2.R'))
-source('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/R/make_ROMS_files_2.R')
+source(here::here('R','make_ROMS_files_2.R'))
+# source('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/R/make_ROMS_files_new_levels.R')
 
-# dir.names = 1981:2014
-dir.names = 1981:2014
+dir.names = 1981:1983
+# dir.names = 2010:2014
 
 # ellapsed.t = list()
 
-for(yr in 8:length(dir.names)){
+for(yr in 1:length(dir.names)){
 # for(yr in 1:length(dir.names)){
   if(!dir.names[yr] %in% dir('D:/Output')){
     dir.create(paste0('D:/Output/',dir.names[yr]))
@@ -46,7 +46,7 @@ for(yr in 8:length(dir.names)){
     # shp.file = here::here('Geometry','Neus_ll_0p01.shp'),
     shp.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/Neus_ll_0p01.shp',
     name.out = 'roms_cobalt_v10_',
-    make.hflux = T,
+    make.hflux = F,
     make.physvars = T,
     make.ltlvars = T,
     make.nutvars = T  
