@@ -23,7 +23,7 @@ make_force_path(
                 'Diatom_N','DinoFlag_N','PicoPhytopl_N','Diatom_S'),
   force.dirs = c('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/transport/',
                  rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phys_statevars/',2),
-                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars/',4)
+                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars_constant_PLDF/',4)
                  ),
   years = 1964:2017,
   ts.dir = "\\tsfiles\\Annual_Files\\",
@@ -32,7 +32,7 @@ make_force_path(
                     '^salt_.*\\.nc$',
                     rep('^Phyto_Forcing_.*\\.nc$',4)),
   out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/',
-  out.name = 'obs_hindcast_forcing_paths_WINDOWS'
+  out.name = 'obs_hindcast_forcing_paths_WINDOWS_constant_PLDF'
 )
 
 #All LINUX variables
@@ -41,7 +41,7 @@ make_force_path(
                 'Diatom_N','DinoFlag_N','PicoPhytopl_N','Diatom_S'),
   force.dirs = c('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/transport/',
                  rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phys_statevars/',2),
-                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars/',4)
+                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars_constant_PLDF/',4)
   ),
   years = 1964:2017,
   ts.dir = "/tsfiles/Annual_Files/",
@@ -50,5 +50,42 @@ make_force_path(
                     '^salt_.*\\.nc$',
                     rep('^Phyto_Forcing_.*\\.nc$',4)),
   out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/',
-  out.name = 'obs_hindcast_forcing_paths_LINUX'
+  out.name = 'obs_hindcast_forcing_paths_LINUX_constant_PLDF'
+)
+
+### For Hirata Model
+#All windows variables
+make_force_path(
+  var.names = c('hd','Temperature','Salinity',
+                'Diatom_N','DinoFlag_N','PicoPhytopl_N','Diatom_S'),
+  force.dirs = c('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/transport/',
+                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phys_statevars/',2),
+                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars_Hirata_PLDF/',4)
+  ),
+  years = 1964:2017,
+  ts.dir = "\\tsfiles\\Annual_Files\\",
+  pattern.names = c('^flow.*\\.nc$',
+                    '^temp_.*\\.nc$',
+                    '^salt_.*\\.nc$',
+                    rep('^Phyto_Forcing_Hirata_.*\\.nc$',4)),
+  out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/',
+  out.name = 'obs_hindcast_forcing_paths_WINDOWS_Hirata_PLDF'
+)
+
+#All LINUX variables
+make_force_path(
+  var.names = c('hd','Temperature','Salinity',
+                'Diatom_N','DinoFlag_N','PicoPhytopl_N','Diatom_S'),
+  force.dirs = c('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/transport/',
+                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phys_statevars/',2),
+                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars_Hirata_PLDF/',4)
+  ),
+  years = 1964:2017,
+  ts.dir = "/tsfiles/Annual_Files/",
+  pattern.names = c('^flow.*\\.nc$',
+                    '^temp_.*\\.nc$',
+                    '^salt_.*\\.nc$',
+                    rep('^Phyto_Forcing_Hirata_.*\\.nc$',4)),
+  out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/',
+  out.name = 'obs_hindcast_forcing_paths_LINUX_Hirata_PLDF'
 )
