@@ -1,0 +1,584 @@
+# Linux Version (created by Beth Fulton and Adam Davidson)
+# modded by gfay@nmfs June 2014
+# Hydrodynamic files - new hydro from roms doppio
+# this is created from 2008-2010 daily files
+
+nhdfiles 54
+#hd0.name \tsfiles\flowOutAll_fix_20180402.nc
+hd0.name \tsfiles\Annual_Files\flow_1964.nc
+hd1.name \tsfiles\Annual_Files\flow_1965.nc
+hd2.name \tsfiles\Annual_Files\flow_1966.nc
+hd3.name \tsfiles\Annual_Files\flow_1967.nc
+hd4.name \tsfiles\Annual_Files\flow_1968.nc
+hd5.name \tsfiles\Annual_Files\flow_1969.nc
+hd6.name \tsfiles\Annual_Files\flow_1970.nc
+hd7.name \tsfiles\Annual_Files\flow_1971.nc
+hd8.name \tsfiles\Annual_Files\flow_1972.nc
+hd9.name \tsfiles\Annual_Files\flow_1973.nc
+hd10.name \tsfiles\Annual_Files\flow_1974.nc
+hd11.name \tsfiles\Annual_Files\flow_1975.nc
+hd12.name \tsfiles\Annual_Files\flow_1976.nc
+hd13.name \tsfiles\Annual_Files\flow_1977.nc
+hd14.name \tsfiles\Annual_Files\flow_1978.nc
+hd15.name \tsfiles\Annual_Files\flow_1979.nc
+hd16.name \tsfiles\Annual_Files\flow_1980.nc
+hd17.name \tsfiles\Annual_Files\flow_1981.nc
+hd18.name \tsfiles\Annual_Files\flow_1982.nc
+hd19.name \tsfiles\Annual_Files\flow_1983.nc
+hd20.name \tsfiles\Annual_Files\flow_1984.nc
+hd21.name \tsfiles\Annual_Files\flow_1985.nc
+hd22.name \tsfiles\Annual_Files\flow_1986.nc
+hd23.name \tsfiles\Annual_Files\flow_1987.nc
+hd24.name \tsfiles\Annual_Files\flow_1988.nc
+hd25.name \tsfiles\Annual_Files\flow_1989.nc
+hd26.name \tsfiles\Annual_Files\flow_1990.nc
+hd27.name \tsfiles\Annual_Files\flow_1991.nc
+hd28.name \tsfiles\Annual_Files\flow_1992.nc
+hd29.name \tsfiles\Annual_Files\flow_1993.nc
+hd30.name \tsfiles\Annual_Files\flow_1994.nc
+hd31.name \tsfiles\Annual_Files\flow_1995.nc
+hd32.name \tsfiles\Annual_Files\flow_1996.nc
+hd33.name \tsfiles\Annual_Files\flow_1997.nc
+hd34.name \tsfiles\Annual_Files\flow_1998.nc
+hd35.name \tsfiles\Annual_Files\flow_1999.nc
+hd36.name \tsfiles\Annual_Files\flow_2000.nc
+hd37.name \tsfiles\Annual_Files\flow_2001.nc
+hd38.name \tsfiles\Annual_Files\flow_2002.nc
+hd39.name \tsfiles\Annual_Files\flow_2003.nc
+hd40.name \tsfiles\Annual_Files\flow_2004.nc
+hd41.name \tsfiles\Annual_Files\flow_2005.nc
+hd42.name \tsfiles\Annual_Files\flow_2006.nc
+hd43.name \tsfiles\Annual_Files\flow_2007.nc
+hd44.name \tsfiles\Annual_Files\flow_2008.nc
+hd45.name \tsfiles\Annual_Files\flow_2009.nc
+hd46.name \tsfiles\Annual_Files\flow_2010.nc
+hd47.name \tsfiles\Annual_Files\flow_2011.nc
+hd48.name \tsfiles\Annual_Files\flow_2012.nc
+hd49.name \tsfiles\Annual_Files\flow_2013.nc
+hd50.name \tsfiles\Annual_Files\flow_2014.nc
+hd51.name \tsfiles\Annual_Files\flow_2015.nc
+hd52.name \tsfiles\Annual_Files\flow_2016.nc
+hd53.name \tsfiles\Annual_Files\flow_2017.nc
+
+
+# Bottom stress
+
+#############################################
+# Point source\sink lists
+npointss 0
+
+pss0.name GBK_SED
+pss0.location 1234274.466 3098307.516 -40
+pss0.data \tsfiles\CBay_SED_90days_spike.ts
+pss0.rewind 0
+
+## nutrient forcing     
+# pss0.name CBay_SED
+# pss0.location 531250 2625000 -16
+# pss0.data \tsfiles\CBay_SED_90days_spike.ts
+# pss0.rewind 0
+
+# pss0.name GeorgesBank
+# pss0.location 1234274.466 3098307.516 -40
+# pss0.data \tsfiles\v5_3yr.ts
+# pss0.rewind 1
+
+# pss1.name GulfStreamTrap
+# pss1.location 1239774.298 3024140.334 -130
+# pss1.data \tsfiles\v5_3yr.ts
+# pss1.rewind 1
+
+# pss2.name ChesapeakeBay
+# pss2.location 531250 2625000 -16
+# pss2.data \tsfiles\CBAYlo3yrSED.ts
+# pss2.rewind 1
+
+# pss3.name HudsonRiver
+# pss3.location 710000 3000000 -20
+# pss3.data \tsfiles\CBAYlo3yr.ts
+# pss3.rewind 1
+
+# pss2.name Basin16
+# pss2.location 1102189.803 3299498.894 -150
+# pss2.data \tsfiles\basindeep.ts
+# pss2.rewind 0
+
+# pss3.name Basin20
+# pss3.location 1223937.669 3213347.009 -220
+# pss3.data \tsfiles\basindeep.ts
+# pss3.rewind 0
+
+# pss4.name Basin11
+# pss4.location 1100958.262 3181632.652 -170
+# pss4.data \tsfiles\basindeep.ts
+# pss4.rewind 0
+
+# pss4.name NarragansettBay
+# pss4.location 937500 3100000 -20
+# pss4.data \tsfiles\NBAYlo3yr.ts
+# pss4.rewind 1
+
+# pss5.name Boston
+# pss5.location 1016047.729 3243653.893 -15
+# pss5.data \tsfiles\v5_3yr.ts
+# pss5.rewind 1
+
+# pss6.name CascoBayAndPenobscott
+# pss6.location 1098345.3045816745 3367268.9230297254 -15
+# pss6.data \tsfiles\v5_3yr.ts
+# pss6.rewind 1
+
+# pss7.name PenobscottNorth
+# pss7.location 1220475.7351718375 3429637.9873865936 -15
+# pss7.data \tsfiles\v5_3yr.ts
+# pss7.rewind 1
+##########################################
+# Rain and evaporation
+
+# Solar time series data file
+Solar_radiation \tsfiles\ROMS_irradiance_smoothed_start1964.ts
+Solar_radiation_rewind 0
+
+# Temperature time series data file
+use_tempfiles 1
+ntempfiles 54
+#Temperature0.name \tsfiles\tempOutAll_fix_20180402.nc
+Temperature0.name \tsfiles\Annual_Files\temp_1964.nc
+Temperature1.name \tsfiles\Annual_Files\temp_1965.nc
+Temperature2.name \tsfiles\Annual_Files\temp_1966.nc
+Temperature3.name \tsfiles\Annual_Files\temp_1967.nc
+Temperature4.name \tsfiles\Annual_Files\temp_1968.nc
+Temperature5.name \tsfiles\Annual_Files\temp_1969.nc
+Temperature6.name \tsfiles\Annual_Files\temp_1970.nc
+Temperature7.name \tsfiles\Annual_Files\temp_1971.nc
+Temperature8.name \tsfiles\Annual_Files\temp_1972.nc
+Temperature9.name \tsfiles\Annual_Files\temp_1973.nc
+Temperature10.name \tsfiles\Annual_Files\temp_1974.nc
+Temperature11.name \tsfiles\Annual_Files\temp_1975.nc
+Temperature12.name \tsfiles\Annual_Files\temp_1976.nc
+Temperature13.name \tsfiles\Annual_Files\temp_1977.nc
+Temperature14.name \tsfiles\Annual_Files\temp_1978.nc
+Temperature15.name \tsfiles\Annual_Files\temp_1979.nc
+Temperature16.name \tsfiles\Annual_Files\temp_1980.nc
+Temperature17.name \tsfiles\Annual_Files\temp_1981.nc
+Temperature18.name \tsfiles\Annual_Files\temp_1982.nc
+Temperature19.name \tsfiles\Annual_Files\temp_1983.nc
+Temperature20.name \tsfiles\Annual_Files\temp_1984.nc
+Temperature21.name \tsfiles\Annual_Files\temp_1985.nc
+Temperature22.name \tsfiles\Annual_Files\temp_1986.nc
+Temperature23.name \tsfiles\Annual_Files\temp_1987.nc
+Temperature24.name \tsfiles\Annual_Files\temp_1988.nc
+Temperature25.name \tsfiles\Annual_Files\temp_1989.nc
+Temperature26.name \tsfiles\Annual_Files\temp_1990.nc
+Temperature27.name \tsfiles\Annual_Files\temp_1991.nc
+Temperature28.name \tsfiles\Annual_Files\temp_1992.nc
+Temperature29.name \tsfiles\Annual_Files\temp_1993.nc
+Temperature30.name \tsfiles\Annual_Files\temp_1994.nc
+Temperature31.name \tsfiles\Annual_Files\temp_1995.nc
+Temperature32.name \tsfiles\Annual_Files\temp_1996.nc
+Temperature33.name \tsfiles\Annual_Files\temp_1997.nc
+Temperature34.name \tsfiles\Annual_Files\temp_1998.nc
+Temperature35.name \tsfiles\Annual_Files\temp_1999.nc
+Temperature36.name \tsfiles\Annual_Files\temp_2000.nc
+Temperature37.name \tsfiles\Annual_Files\temp_2001.nc
+Temperature38.name \tsfiles\Annual_Files\temp_2002.nc
+Temperature39.name \tsfiles\Annual_Files\temp_2003.nc
+Temperature40.name \tsfiles\Annual_Files\temp_2004.nc
+Temperature41.name \tsfiles\Annual_Files\temp_2005.nc
+Temperature42.name \tsfiles\Annual_Files\temp_2006.nc
+Temperature43.name \tsfiles\Annual_Files\temp_2007.nc
+Temperature44.name \tsfiles\Annual_Files\temp_2008.nc
+Temperature45.name \tsfiles\Annual_Files\temp_2009.nc
+Temperature46.name \tsfiles\Annual_Files\temp_2010.nc
+Temperature47.name \tsfiles\Annual_Files\temp_2011.nc
+Temperature48.name \tsfiles\Annual_Files\temp_2012.nc
+Temperature49.name \tsfiles\Annual_Files\temp_2013.nc
+Temperature50.name \tsfiles\Annual_Files\temp_2014.nc
+Temperature51.name \tsfiles\Annual_Files\temp_2015.nc
+Temperature52.name \tsfiles\Annual_Files\temp_2016.nc
+Temperature53.name \tsfiles\Annual_Files\temp_2017.nc
+
+
+
+
+temp_rewind 1
+
+# Salinity time series data file
+use_saltfiles 1
+nsaltfiles 54
+#Salinity0.name \tsfiles\saltOutAll_fix_20180402.nc
+Salinity0.name \tsfiles\Annual_Files\salt_1964.nc
+Salinity1.name \tsfiles\Annual_Files\salt_1965.nc
+Salinity2.name \tsfiles\Annual_Files\salt_1966.nc
+Salinity3.name \tsfiles\Annual_Files\salt_1967.nc
+Salinity4.name \tsfiles\Annual_Files\salt_1968.nc
+Salinity5.name \tsfiles\Annual_Files\salt_1969.nc
+Salinity6.name \tsfiles\Annual_Files\salt_1970.nc
+Salinity7.name \tsfiles\Annual_Files\salt_1971.nc
+Salinity8.name \tsfiles\Annual_Files\salt_1972.nc
+Salinity9.name \tsfiles\Annual_Files\salt_1973.nc
+Salinity10.name \tsfiles\Annual_Files\salt_1974.nc
+Salinity11.name \tsfiles\Annual_Files\salt_1975.nc
+Salinity12.name \tsfiles\Annual_Files\salt_1976.nc
+Salinity13.name \tsfiles\Annual_Files\salt_1977.nc
+Salinity14.name \tsfiles\Annual_Files\salt_1978.nc
+Salinity15.name \tsfiles\Annual_Files\salt_1979.nc
+Salinity16.name \tsfiles\Annual_Files\salt_1980.nc
+Salinity17.name \tsfiles\Annual_Files\salt_1981.nc
+Salinity18.name \tsfiles\Annual_Files\salt_1982.nc
+Salinity19.name \tsfiles\Annual_Files\salt_1983.nc
+Salinity20.name \tsfiles\Annual_Files\salt_1984.nc
+Salinity21.name \tsfiles\Annual_Files\salt_1985.nc
+Salinity22.name \tsfiles\Annual_Files\salt_1986.nc
+Salinity23.name \tsfiles\Annual_Files\salt_1987.nc
+Salinity24.name \tsfiles\Annual_Files\salt_1988.nc
+Salinity25.name \tsfiles\Annual_Files\salt_1989.nc
+Salinity26.name \tsfiles\Annual_Files\salt_1990.nc
+Salinity27.name \tsfiles\Annual_Files\salt_1991.nc
+Salinity28.name \tsfiles\Annual_Files\salt_1992.nc
+Salinity29.name \tsfiles\Annual_Files\salt_1993.nc
+Salinity30.name \tsfiles\Annual_Files\salt_1994.nc
+Salinity31.name \tsfiles\Annual_Files\salt_1995.nc
+Salinity32.name \tsfiles\Annual_Files\salt_1996.nc
+Salinity33.name \tsfiles\Annual_Files\salt_1997.nc
+Salinity34.name \tsfiles\Annual_Files\salt_1998.nc
+Salinity35.name \tsfiles\Annual_Files\salt_1999.nc
+Salinity36.name \tsfiles\Annual_Files\salt_2000.nc
+Salinity37.name \tsfiles\Annual_Files\salt_2001.nc
+Salinity38.name \tsfiles\Annual_Files\salt_2002.nc
+Salinity39.name \tsfiles\Annual_Files\salt_2003.nc
+Salinity40.name \tsfiles\Annual_Files\salt_2004.nc
+Salinity41.name \tsfiles\Annual_Files\salt_2005.nc
+Salinity42.name \tsfiles\Annual_Files\salt_2006.nc
+Salinity43.name \tsfiles\Annual_Files\salt_2007.nc
+Salinity44.name \tsfiles\Annual_Files\salt_2008.nc
+Salinity45.name \tsfiles\Annual_Files\salt_2009.nc
+Salinity46.name \tsfiles\Annual_Files\salt_2010.nc
+Salinity47.name \tsfiles\Annual_Files\salt_2011.nc
+Salinity48.name \tsfiles\Annual_Files\salt_2012.nc
+Salinity49.name \tsfiles\Annual_Files\salt_2013.nc
+Salinity50.name \tsfiles\Annual_Files\salt_2014.nc
+Salinity51.name \tsfiles\Annual_Files\salt_2015.nc
+Salinity52.name \tsfiles\Annual_Files\salt_2016.nc
+Salinity53.name \tsfiles\Annual_Files\salt_2017.nc
+
+
+
+
+salt_rewind 1
+
+ts_on_hydro_time 1
+
+# Recruitment_time_series (actual recruit time series)
+# Recruitment_enviro_forcing (scales recruitment)
+# Recruitment_enviro_forcing \tsfiles\recruitscalar.ts # RM - file needs to be remade for NEUS v1.5
+
+# G. Fay added 09\21\2016
+use_larvalfiles 0    # 1 = use larval files, 0 = don't use larval files.
+
+#############################################
+# Historical catch lists - nCatchts is the number of time series to be loaded and
+# typeCatchts is whether or not the data is to be interpolated (0) by the model
+# or just use previous record (1)
+nCatchts 1
+typeCatchts 1
+
+Catchts0.name totcatch
+Catchts0.location 52965.5227 2474675.803 0
+Catchts0.data \CatchFiles\total_catch.ts
+Catchts0.rewind 0
+#############################################
+# Historical discard lists
+nDiscardts 0
+typeDiscardts 0
+
+#############################################
+# Residual lists
+nResidualsts 0
+typeResidualsts 0
+
+#RM added 20170517 based on warnings
+use_phFiles 0
+
+# RM adding Sedimnent tracer 20180316 (not implemented yet, need nc file, try input in .ts file instead)
+
+#nforceTracers 1
+#tracerNames
+#SED
+
+
+#BottomStress <filename> #RM this only works if filename is supplied here
+#pCO2_forcing 0
+#FSPBChange 0
+#Precipitation 0
+#Evaporation 0
+#Recruitment_time_series 0
+
+# RM 20180530
+use_VertMixFiles 0
+
+## G.Fay added 09\20\16
+# Frequency of inputs.ts and exports.ts output - write out each dt.
+inputs_tout 86400 seconds
+
+## G.Fay added 09\20\16
+use_external_scaling 0
+
+
+# JC adding LTL forcing 
+use_force_tracers 1
+nforceTracers 4
+use_weighted_assim 0
+
+tracerNames 4
+Diatom_N DinoFlag_N PicoPhytopl_N Diatom_S 
+
+#Diatom_N
+Diatom_N_nFiles 54
+Diatom_N_File0.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1964.nc
+Diatom_N_File1.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1965.nc
+Diatom_N_File2.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1966.nc
+Diatom_N_File3.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1967.nc
+Diatom_N_File4.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1968.nc
+Diatom_N_File5.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1969.nc
+Diatom_N_File6.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1970.nc
+Diatom_N_File7.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1971.nc
+Diatom_N_File8.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1972.nc
+Diatom_N_File9.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1973.nc
+Diatom_N_File10.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1974.nc
+Diatom_N_File11.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1975.nc
+Diatom_N_File12.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1976.nc
+Diatom_N_File13.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1977.nc
+Diatom_N_File14.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1978.nc
+Diatom_N_File15.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1979.nc
+Diatom_N_File16.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1980.nc
+Diatom_N_File17.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1981.nc
+Diatom_N_File18.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1982.nc
+Diatom_N_File19.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1983.nc
+Diatom_N_File20.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1984.nc
+Diatom_N_File21.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1985.nc
+Diatom_N_File22.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1986.nc
+Diatom_N_File23.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1987.nc
+Diatom_N_File24.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1988.nc
+Diatom_N_File25.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1989.nc
+Diatom_N_File26.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1990.nc
+Diatom_N_File27.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1991.nc
+Diatom_N_File28.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1992.nc
+Diatom_N_File29.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1993.nc
+Diatom_N_File30.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1994.nc
+Diatom_N_File31.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1995.nc
+Diatom_N_File32.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1996.nc
+Diatom_N_File33.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1997.nc
+Diatom_N_File34.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1998.nc
+Diatom_N_File35.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1999.nc
+Diatom_N_File36.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2000.nc
+Diatom_N_File37.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2001.nc
+Diatom_N_File38.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2002.nc
+Diatom_N_File39.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2003.nc
+Diatom_N_File40.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2004.nc
+Diatom_N_File41.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2005.nc
+Diatom_N_File42.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2006.nc
+Diatom_N_File43.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2007.nc
+Diatom_N_File44.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2008.nc
+Diatom_N_File45.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2009.nc
+Diatom_N_File46.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2010.nc
+Diatom_N_File47.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2011.nc
+Diatom_N_File48.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2012.nc
+Diatom_N_File49.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2013.nc
+Diatom_N_File50.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2014.nc
+Diatom_N_File51.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2015.nc
+Diatom_N_File52.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2016.nc
+Diatom_N_File53.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2017.nc
+
+
+
+Diatom_N_rewind 0
+Diatom_N_wgt_coefft 1.0
+
+#PicoPhytopl_N
+
+PicoPhytopl_N_nFiles 54
+PicoPhytopl_N_File0.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1964.nc
+PicoPhytopl_N_File1.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1965.nc
+PicoPhytopl_N_File2.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1966.nc
+PicoPhytopl_N_File3.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1967.nc
+PicoPhytopl_N_File4.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1968.nc
+PicoPhytopl_N_File5.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1969.nc
+PicoPhytopl_N_File6.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1970.nc
+PicoPhytopl_N_File7.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1971.nc
+PicoPhytopl_N_File8.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1972.nc
+PicoPhytopl_N_File9.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1973.nc
+PicoPhytopl_N_File10.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1974.nc
+PicoPhytopl_N_File11.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1975.nc
+PicoPhytopl_N_File12.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1976.nc
+PicoPhytopl_N_File13.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1977.nc
+PicoPhytopl_N_File14.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1978.nc
+PicoPhytopl_N_File15.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1979.nc
+PicoPhytopl_N_File16.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1980.nc
+PicoPhytopl_N_File17.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1981.nc
+PicoPhytopl_N_File18.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1982.nc
+PicoPhytopl_N_File19.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1983.nc
+PicoPhytopl_N_File20.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1984.nc
+PicoPhytopl_N_File21.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1985.nc
+PicoPhytopl_N_File22.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1986.nc
+PicoPhytopl_N_File23.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1987.nc
+PicoPhytopl_N_File24.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1988.nc
+PicoPhytopl_N_File25.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1989.nc
+PicoPhytopl_N_File26.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1990.nc
+PicoPhytopl_N_File27.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1991.nc
+PicoPhytopl_N_File28.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1992.nc
+PicoPhytopl_N_File29.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1993.nc
+PicoPhytopl_N_File30.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1994.nc
+PicoPhytopl_N_File31.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1995.nc
+PicoPhytopl_N_File32.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1996.nc
+PicoPhytopl_N_File33.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1997.nc
+PicoPhytopl_N_File34.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1998.nc
+PicoPhytopl_N_File35.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1999.nc
+PicoPhytopl_N_File36.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2000.nc
+PicoPhytopl_N_File37.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2001.nc
+PicoPhytopl_N_File38.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2002.nc
+PicoPhytopl_N_File39.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2003.nc
+PicoPhytopl_N_File40.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2004.nc
+PicoPhytopl_N_File41.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2005.nc
+PicoPhytopl_N_File42.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2006.nc
+PicoPhytopl_N_File43.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2007.nc
+PicoPhytopl_N_File44.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2008.nc
+PicoPhytopl_N_File45.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2009.nc
+PicoPhytopl_N_File46.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2010.nc
+PicoPhytopl_N_File47.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2011.nc
+PicoPhytopl_N_File48.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2012.nc
+PicoPhytopl_N_File49.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2013.nc
+PicoPhytopl_N_File50.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2014.nc
+PicoPhytopl_N_File51.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2015.nc
+PicoPhytopl_N_File52.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2016.nc
+PicoPhytopl_N_File53.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2017.nc
+
+
+
+PicoPhytopl_N_rewind 0
+PicoPhytopl_N_wgt_coefft 1.0
+
+#Diatom_S
+
+Diatom_S_nFiles 54
+
+Diatom_S_File0.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1964.nc
+Diatom_S_File1.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1965.nc
+Diatom_S_File2.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1966.nc
+Diatom_S_File3.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1967.nc
+Diatom_S_File4.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1968.nc
+Diatom_S_File5.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1969.nc
+Diatom_S_File6.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1970.nc
+Diatom_S_File7.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1971.nc
+Diatom_S_File8.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1972.nc
+Diatom_S_File9.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1973.nc
+Diatom_S_File10.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1974.nc
+Diatom_S_File11.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1975.nc
+Diatom_S_File12.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1976.nc
+Diatom_S_File13.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1977.nc
+Diatom_S_File14.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1978.nc
+Diatom_S_File15.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1979.nc
+Diatom_S_File16.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1980.nc
+Diatom_S_File17.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1981.nc
+Diatom_S_File18.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1982.nc
+Diatom_S_File19.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1983.nc
+Diatom_S_File20.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1984.nc
+Diatom_S_File21.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1985.nc
+Diatom_S_File22.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1986.nc
+Diatom_S_File23.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1987.nc
+Diatom_S_File24.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1988.nc
+Diatom_S_File25.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1989.nc
+Diatom_S_File26.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1990.nc
+Diatom_S_File27.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1991.nc
+Diatom_S_File28.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1992.nc
+Diatom_S_File29.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1993.nc
+Diatom_S_File30.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1994.nc
+Diatom_S_File31.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1995.nc
+Diatom_S_File32.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1996.nc
+Diatom_S_File33.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1997.nc
+Diatom_S_File34.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1998.nc
+Diatom_S_File35.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1999.nc
+Diatom_S_File36.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2000.nc
+Diatom_S_File37.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2001.nc
+Diatom_S_File38.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2002.nc
+Diatom_S_File39.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2003.nc
+Diatom_S_File40.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2004.nc
+Diatom_S_File41.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2005.nc
+Diatom_S_File42.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2006.nc
+Diatom_S_File43.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2007.nc
+Diatom_S_File44.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2008.nc
+Diatom_S_File45.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2009.nc
+Diatom_S_File46.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2010.nc
+Diatom_S_File47.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2011.nc
+Diatom_S_File48.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2012.nc
+Diatom_S_File49.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2013.nc
+Diatom_S_File50.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2014.nc
+Diatom_S_File51.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2015.nc
+Diatom_S_File52.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2016.nc
+Diatom_S_File53.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2017.nc
+
+
+Diatom_S_rewind 0
+Diatom_S_wgt_coefft 1.0
+
+#DinoFlag_N
+DinoFlag_N_nFiles 54
+DinoFlag_N_File0.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1964.nc
+DinoFlag_N_File1.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1965.nc
+DinoFlag_N_File2.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1966.nc
+DinoFlag_N_File3.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1967.nc
+DinoFlag_N_File4.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1968.nc
+DinoFlag_N_File5.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1969.nc
+DinoFlag_N_File6.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1970.nc
+DinoFlag_N_File7.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1971.nc
+DinoFlag_N_File8.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1972.nc
+DinoFlag_N_File9.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1973.nc
+DinoFlag_N_File10.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1974.nc
+DinoFlag_N_File11.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1975.nc
+DinoFlag_N_File12.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1976.nc
+DinoFlag_N_File13.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1977.nc
+DinoFlag_N_File14.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1978.nc
+DinoFlag_N_File15.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1979.nc
+DinoFlag_N_File16.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1980.nc
+DinoFlag_N_File17.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1981.nc
+DinoFlag_N_File18.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1982.nc
+DinoFlag_N_File19.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1983.nc
+DinoFlag_N_File20.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1984.nc
+DinoFlag_N_File21.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1985.nc
+DinoFlag_N_File22.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1986.nc
+DinoFlag_N_File23.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1987.nc
+DinoFlag_N_File24.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1988.nc
+DinoFlag_N_File25.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1989.nc
+DinoFlag_N_File26.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1990.nc
+DinoFlag_N_File27.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1991.nc
+DinoFlag_N_File28.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1992.nc
+DinoFlag_N_File29.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1993.nc
+DinoFlag_N_File30.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1994.nc
+DinoFlag_N_File31.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1995.nc
+DinoFlag_N_File32.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1996.nc
+DinoFlag_N_File33.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1997.nc
+DinoFlag_N_File34.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1998.nc
+DinoFlag_N_File35.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_1999.nc
+DinoFlag_N_File36.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2000.nc
+DinoFlag_N_File37.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2001.nc
+DinoFlag_N_File38.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2002.nc
+DinoFlag_N_File39.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2003.nc
+DinoFlag_N_File40.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2004.nc
+DinoFlag_N_File41.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2005.nc
+DinoFlag_N_File42.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2006.nc
+DinoFlag_N_File43.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2007.nc
+DinoFlag_N_File44.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2008.nc
+DinoFlag_N_File45.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2009.nc
+DinoFlag_N_File46.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2010.nc
+DinoFlag_N_File47.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2011.nc
+DinoFlag_N_File48.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2012.nc
+DinoFlag_N_File49.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2013.nc
+DinoFlag_N_File50.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2014.nc
+DinoFlag_N_File51.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2015.nc
+DinoFlag_N_File52.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2016.nc
+DinoFlag_N_File53.name \tsfiles\Annual_Files\Phyto_Forcing_Hirata_2017.nc
+
+
+
+DinoFlag_N_rewind 0
+DinoFlag_N_wgt_coefft 1.0
