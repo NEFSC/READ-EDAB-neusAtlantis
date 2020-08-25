@@ -51,18 +51,20 @@ make_force_spinup = function(trans.prefix,
                              new.year,
                              param.temp,
                              bat.temp){
-  setwd(force.dir)
+ 
   #Make a copy of the replicated year
   if(!is.na(transport.file)){
+    setwd(force.dir)
     new.trans.file = paste0(out.dir,paste0('transport/',trans.prefix,new.year,'.nc'))
     file.copy(transport.file,new.trans.file,overwrite= T)
   }
   if(!is.na(statevar.file)){
+    setwd(force.dir)
     new.statevar.file = paste0(out.dir,paste0('statevars/',statevar.prefix,new.year,'.nc'))
     file.copy(statevar.file,new.statevar.file,overwrite=T)
   }
   if(!is.na(phyto.file)){
-    new.phyto.file = paste0(out.dir,paste0('phyto_statevars/',phyto.prefix,new.year,'.nc'))
+    new.phyto.file = paste0(out.dir,paste0(phyto.prefix,new.year,'.nc'))
     file.copy(phyto.file,new.phyto.file,overwrite=T)
   }
 
@@ -171,7 +173,9 @@ make_force_spinup = function(trans.prefix,
       
       dims = dim(diatom.n)
       dims[3] = 366
-      new.diatom.n = new.dinoflag = new.picophyto = new.diatom.s = array(NA,dim = dims)
+      dum.array = array(0,dim = dims)
+      dum.array[5,,] = NA
+      new.diatom.n = new.dinoflag = new.picophyto = new.diatom.s = dum.array
       
       last.diatom.n = diatom.n[,,365]
       last.dinoflag = dinoflag[,,365]
