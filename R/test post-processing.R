@@ -7,16 +7,16 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Define local/git directories for atlantis output, parameter files, and desired location for figures/tables
 
-atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/SatPhyto_Forcing_Const_Diatom_Prop/'
+atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/SatPhyto_Forcing_Hirata_Diatom_Prop/'
 param.dir = here::here('currentVersion')
-out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/SatPhyto_Forcing_Const_Diatom_Prop/Post_Processed/'
+out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/SatPhyto_Forcing_Hirata_Diatom_Prop/Post_Processed/'
 
 
 #Run prefix is the filename prefix in the atlantis output (specified in run.bat)
 run.prefix = 'neus_output'
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'SatPhyto_Const_Diatom_Prop'
+run.name = 'SatPhyto_Hirata_Diatom_Prop'
 
 
 #Run function that retreives parameter files
@@ -27,8 +27,8 @@ param.ls= get_atl_paramfiles(param.dir = param.dir,
 #Run  post-processing function to generate "result" R object. 
 
 process_atl_output( param.dir = here::here('currentVersion'),
-  atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/SatPhyto_Forcing_Const_Diatom_Prop/',
-  out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/SatPhyto_Forcing_Const_Diatom_Prop/Post_Processed/',
+  atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/SatPhyto_Forcing_Hirata_Diatom_Prop/',
+  out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/SatPhyto_Forcing_Hirata_Diatom_Prop/Post_Processed/',
 
   run.prefix = 'neus_output',
   include_catch = T,

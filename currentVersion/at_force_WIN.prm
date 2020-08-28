@@ -327,11 +327,11 @@ use_external_scaling 0
 
 # JC adding LTL forcing 
 use_force_tracers 1
-nforceTracers 4
+nforceTracers 5
 use_weighted_assim 0
 
-tracerNames 4
-Diatom_N DinoFlag_N PicoPhytopl_N Diatom_S 
+tracerNames 5
+Diatom_N DinoFlag_N PicoPhytopl_N Diatom_S Lab_Det_N
 
 #Diatom_N
 Diatom_N_nFiles 54
@@ -578,3 +578,64 @@ DinoFlag_N_File53.name \tsfiles\Annual_Files\Phyto_Forcing_2017.nc
 
 DinoFlag_N_rewind 0
 DinoFlag_N_wgt_coefft 1.0
+
+#Lab_Det_N
+Lab_Det_N_nFiles 54
+Lab_Det_N_File0.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1964.nc
+Lab_Det_N_File1.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1965.nc
+Lab_Det_N_File2.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1966.nc
+Lab_Det_N_File3.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1967.nc
+Lab_Det_N_File4.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1968.nc
+Lab_Det_N_File5.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1969.nc
+Lab_Det_N_File6.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1970.nc
+Lab_Det_N_File7.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1971.nc
+Lab_Det_N_File8.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1972.nc
+Lab_Det_N_File9.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1973.nc
+Lab_Det_N_File10.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1974.nc
+Lab_Det_N_File11.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1975.nc
+Lab_Det_N_File12.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1976.nc
+Lab_Det_N_File13.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1977.nc
+Lab_Det_N_File14.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1978.nc
+Lab_Det_N_File15.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1979.nc
+Lab_Det_N_File16.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1980.nc
+Lab_Det_N_File17.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1981.nc
+Lab_Det_N_File18.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1982.nc
+Lab_Det_N_File19.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1983.nc
+Lab_Det_N_File20.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1984.nc
+Lab_Det_N_File21.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1985.nc
+Lab_Det_N_File22.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1986.nc
+Lab_Det_N_File23.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1987.nc
+Lab_Det_N_File24.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1988.nc
+Lab_Det_N_File25.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1989.nc
+Lab_Det_N_File26.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1990.nc
+Lab_Det_N_File27.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1991.nc
+Lab_Det_N_File28.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1992.nc
+Lab_Det_N_File29.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1993.nc
+Lab_Det_N_File30.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1994.nc
+Lab_Det_N_File31.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1995.nc
+Lab_Det_N_File32.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1996.nc
+Lab_Det_N_File33.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1997.nc
+Lab_Det_N_File34.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1998.nc
+Lab_Det_N_File35.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_1999.nc
+Lab_Det_N_File36.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_2000.nc
+Lab_Det_N_File37.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_2001.nc
+Lab_Det_N_File38.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_2002.nc
+Lab_Det_N_File39.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_2003.nc
+Lab_Det_N_File40.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_2004.nc
+Lab_Det_N_File41.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_2005.nc
+Lab_Det_N_File42.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_2006.nc
+Lab_Det_N_File43.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_2007.nc
+Lab_Det_N_File44.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_2008.nc
+Lab_Det_N_File45.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_2009.nc
+Lab_Det_N_File46.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_2010.nc
+Lab_Det_N_File47.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_2011.nc
+Lab_Det_N_File48.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_2012.nc
+Lab_Det_N_File49.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_2013.nc
+Lab_Det_N_File50.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_2014.nc
+Lab_Det_N_File51.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_2015.nc
+Lab_Det_N_File52.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_2016.nc
+Lab_Det_N_File53.name \tsfiles\Annual_Files\Satphyto_Forcing_DL_2017.nc
+
+Lab_Det_N_rewind 0
+Lab_Det_N_wgt_coefft 1.0
+

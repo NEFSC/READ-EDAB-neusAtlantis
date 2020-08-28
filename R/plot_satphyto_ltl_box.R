@@ -14,3 +14,12 @@ for(v in 1:length(var.names)){
     # plot.dir =  'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_DinoFlag/Figures/',
     plot.name = var.names[v])  
 }
+for(v in 1:length(var.names)){
+  plot_atlvar_box(
+    nc.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/SatPhyto_Forcing_Const_Diatom_Prop/neus_output.nc',
+    # nc.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_DinoFlag/neus_output.nc',
+    variable.name = var.names[v],
+    plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/SatPhyto_Forcing_Const_Diatom_Prop/Figures/',
+    # plot.dir =  'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_DinoFlag/Figures/',
+    plot.name = var.names[v])  
+}
