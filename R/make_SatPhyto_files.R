@@ -19,7 +19,6 @@
 #'
 
 # in.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Data/'
-# # in.file = 'D8-OCCCI-ATLANTIS_2000.csv'
 # in.prefix = 'D8-OCCCI-ATLANTIS_*'
 # out.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format/'
 # out.prefix = 'Phyto_Forcing_'
@@ -31,6 +30,7 @@
 # atl.units = c(rep('mg N m-3',3),'mg Si m-3')
 # # phyto.fract = data.frame(PL = c(0.5,0,0),DF = c(0.5,0.5,0), PS = c(0,0.5,1))
 # phyto.fract = matrix(0.75,nrow = 30, ncol = 366)
+# phyto.fract.ls = lapply(1,function(x) return(phyto.fract))
 # chl.conv = rep(7,3)
 
 
@@ -93,7 +93,7 @@ make_SatPhyto_files = function(in.dir,
       }
       
       #Convert Chl to Nitrogen
-      var.mat = var.mat * chl.conv[v]
+      var.mat = var.mat / chl.conv[v]
       
       #Put into Prod.ls
       prod.ls[[v]] = var.mat
@@ -191,7 +191,7 @@ make_SatPhyto_files = function(in.dir,
         dplyr::filter(ref.year == years[y]) %>%
         dplyr::arrange(date,box)
       dat2 = reshape2::dcast(dat, box ~date) %>% dplyr::select(-box)
-      dat.array = array(0,dim = c(5,30,length(ref.year.dates)))
+      dat.array = array(NA,dim = c(5,30,length(ref.year.dates)))
       dat.array[5,,] = NA
       for(b in 1:length(boxes)){
         dat.array[1,b,] = as.numeric(dat2[b,])
