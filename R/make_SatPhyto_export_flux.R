@@ -139,12 +139,32 @@ bgm.file = rbgm::bgmfile('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlant
 box.data = bgm.file$boxes %>% 
   select(.bx0, area) %>%
   rename(box = '.bx0')
-full.data = full.data %>% 
+full.data.2 = full.data %>% 
   left_join(box.data) %>%
   mutate(
     #prod.box.c in mg C m-3 d-1
     prod.box.C = prod/50,
     #export.box.N in mg N m-3 d-1
-    export.box.N = prod * pe.r.2/50/5.7) 
+    export.box.N = prod * pe.r.2/50/5.7,
+    doy = as.numeric(format(date,format = '%j')),
+    ref.year = as.numeric(format(date,format = '%Y')),
+    variable = 'export_prod') %>%
+  select(date,doy,ref.year,box,variable,export.box.N) %>%
+  rename(values = 'export.box.N') %>%
+  filter(date >= as.Date('1997-09-19'))
+
+# first.day =full.data.2 %>% group_by(box) %>%
+#   summarize(first.day = date[min(which(!is.na(values)))])
+source(here::here('R','fill_satphyto_gaps.R'))
+
+#fill gaps in data
+full.data.3 = fill_satphyto_gaps(input.mat = full.data.2,
+                                var.name = 'export_prod',
+                                doy.file = NA,
+                                max.interp = 100,
+                                write.gaps = F,
+                                gaps.dir = NA
+                                )
   
-  
+write.csv(full.data.3,file = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Data/export_flux_allyears.csv',row.names = F)
+
