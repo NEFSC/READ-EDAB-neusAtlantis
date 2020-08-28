@@ -19,6 +19,8 @@
 #' @new.year string.New year for forcing file
 #' @param.temp string. Name of template hydroconstruct parameter file to modify
 #' @bat.temp string. Name of template batch file (that runs hydroconstruct) to modify
+#' @dynamic.mid.layer logical. If TRUE NA placed for non-surface, if FALSE, NA
+#' @dynamic.bot.layer logical. If TRUE NA placed for bottom layer, else NA
 #' 
 #' @return Yearly ROMS and Atlantis formatted forcing files. 
 #' 
@@ -50,7 +52,9 @@ make_force_spinup = function(trans.prefix,
                              start.year,
                              new.year,
                              param.temp,
-                             bat.temp){
+                             bat.temp,
+                             dynamic.mid.layer,
+                             dynamic.bot.layer){
  
   #Make a copy of the replicated year
   if(!is.na(transport.file)){
@@ -162,45 +166,74 @@ make_force_spinup = function(trans.prefix,
     #Modify and append statevar file
     phyto.nc = ncdf4::nc_open(new.phyto.file,write = T)
     
+    var.names = names(phyto.nc$var)
+    var.units = sapply(var.names,function(x) return(ncdf4::ncatt_get(phyto.nc,x,'units')$value))
+    var.longname = sapply(var.names,function(x) return(ncdf4::ncatt_get(phyto.nc,x,'long_name')$value))
     
     #If leap year, append values to add extra day
     if(new.year %% 4 == 0){
       
-      diatom.n = ncdf4::ncvar_get(phyto.nc,'Diatom_N')
-      dinoflag = ncdf4::ncvar_get(phyto.nc,'DinoFlag_N')
-      picophyto = ncdf4::ncvar_get(phyto.nc,'PicoPhytopl_N')
-      diatom.s = ncdf4::ncvar_get(phyto.nc,'Diatom_S')
-      
-      dims = dim(diatom.n)
-      dims[3] = 366
-      dum.array = array(0,dim = dims)
-      dum.array[5,,] = NA
-      new.diatom.n = new.dinoflag = new.picophyto = new.diatom.s = dum.array
-      
-      last.diatom.n = diatom.n[,,365]
-      last.dinoflag = dinoflag[,,365]
-      last.picophyto = picophyto[,,365]
-      last.diatom.s = diatom.s[,,365]
-      
-      new.diatom.n[,,1:365] = diatom.n[,,1:365]
-      new.dinoflag[,,1:365] = dinoflag[,,1:365]
-      new.picophyto[,,1:365] = picophyto[,,1:365]
-      new.diatom.s[,,1:365] = diatom.s[,,1:365]
-      
-      new.diatom.n[,,366] = last.diatom.n
-      new.dinoflag[,,366] = last.dinoflag
-      new.picophyto[,,366] = last.picophyto
-      new.diatom.s[,,366] = last.diatom.s
-      
-      var.diatom.n = ncdf4::ncvar_def("Diatom_N","mg N m-3",list(leveldim, boxesdim, timedim),-999,longname="Diatom Nitrogen",prec="float")
-      var.dinoflag = ncdf4::ncvar_def("DinoFlag_N","mg N m-3",list(leveldim, boxesdim, timedim),-999,longname="Dinoflagellate Nitrogen",prec="float")
-      var.picophyto = ncdf4::ncvar_def("PicoPhytopl_N","mg N m-3",list(leveldim, boxesdim, timedim),-999,longname="Picophytoplankton Nitrogen",prec="float")
-      var.diatom.s = ncdf4::ncvar_def("Diatom_S","mg Si m-3",list(leveldim, boxesdim, timedim),-999,longname="Diatom Silicon",prec="float")
-      
-      ncdf4::ncvar_put(phyto.nc,var.diatom.n, new.diatom.n,count=c(5,30,366) )
-      ncdf4::ncvar_put(phyto.nc,var.dinoflag, new.dinoflag, count=c(5,30,366))
-      ncdf4::ncvar_put(phyto.nc,var.picophyto,new.picophyto,count=c(5,30,366))
-      ncdf4::ncvar_put(phyto.nc,var.diatom.s, new.diatom.s,count=c(5,30,366))
+      new.var.ls = list()
+      for(v in 1:length(var.names)){
+        var.dat = ncdf4::ncvar_get(phyto.nc,var.names[v])
+        
+        dims = dim(var.dat)
+        dims[3] = 366
+        if(dynamic.mid.layer){
+          dum.array = array(NA,dim = dims)  
+        }else{
+          dum.array = array(0,dim = dims)
+        }
+        if(dynamic.bot.layer){
+          dum.array[5,,] = NA  
+        }else{
+          dum.array[5,,] = 0
+        }
+        
+        new.var.dat = dum.array
+        
+        last.var = var.dat[,,365]
+        new.var.dat[,,1:365] = var.dat[,,1:365]
+        new.var.dat[,,366] = last.var
+        
+        var.def = ncdf4::ncvar_def(var.names[v],var.units[v],list(leveldim, boxesdim, timedim),-999,longname=var.longname,prec="float")
+        ncdf4::ncvar_put(phyto.nc,var.def, new.var.dat,count=c(5,30,366))
+      }
+      # diatom.n = ncdf4::ncvar_get(phyto.nc,'Diatom_N')
+      # dinoflag = ncdf4::ncvar_get(phyto.nc,'DinoFlag_N')
+      # picophyto = ncdf4::ncvar_get(phyto.nc,'PicoPhytopl_N')
+      # diatom.s = ncdf4::ncvar_get(phyto.nc,'Diatom_S')
+      # 
+      # dims = dim(diatom.n)
+      # dims[3] = 366
+      # dum.array = array(0,dim = dims)
+      # dum.array[5,,] = NA
+      # new.diatom.n = new.dinoflag = new.picophyto = new.diatom.s = dum.array
+      # 
+      # last.diatom.n = diatom.n[,,365]
+      # last.dinoflag = dinoflag[,,365]
+      # last.picophyto = picophyto[,,365]
+      # last.diatom.s = diatom.s[,,365]
+      # 
+      # new.diatom.n[,,1:365] = diatom.n[,,1:365]
+      # new.dinoflag[,,1:365] = dinoflag[,,1:365]
+      # new.picophyto[,,1:365] = picophyto[,,1:365]
+      # new.diatom.s[,,1:365] = diatom.s[,,1:365]
+      # 
+      # new.diatom.n[,,366] = last.diatom.n
+      # new.dinoflag[,,366] = last.dinoflag
+      # new.picophyto[,,366] = last.picophyto
+      # new.diatom.s[,,366] = last.diatom.s
+      # 
+      # var.diatom.n = ncdf4::ncvar_def("Diatom_N","mg N m-3",list(leveldim, boxesdim, timedim),-999,longname="Diatom Nitrogen",prec="float")
+      # var.dinoflag = ncdf4::ncvar_def("DinoFlag_N","mg N m-3",list(leveldim, boxesdim, timedim),-999,longname="Dinoflagellate Nitrogen",prec="float")
+      # var.picophyto = ncdf4::ncvar_def("PicoPhytopl_N","mg N m-3",list(leveldim, boxesdim, timedim),-999,longname="Picophytoplankton Nitrogen",prec="float")
+      # var.diatom.s = ncdf4::ncvar_def("Diatom_S","mg Si m-3",list(leveldim, boxesdim, timedim),-999,longname="Diatom Silicon",prec="float")
+      # 
+      # ncdf4::ncvar_put(phyto.nc,var.diatom.n, new.diatom.n,count=c(5,30,366) )
+      # ncdf4::ncvar_put(phyto.nc,var.dinoflag, new.dinoflag, count=c(5,30,366))
+      # ncdf4::ncvar_put(phyto.nc,var.picophyto,new.picophyto,count=c(5,30,366))
+      # ncdf4::ncvar_put(phyto.nc,var.diatom.s, new.diatom.s,count=c(5,30,366))
       
     } 
     
