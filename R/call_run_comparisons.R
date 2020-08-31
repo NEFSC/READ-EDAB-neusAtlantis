@@ -20,8 +20,9 @@ obs.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/'
 roms.cobalt = paste0(roms.dir,'Atlantis_Runs/Atlantis_Output_DinoFlag/')
 GLORYS = paste0(obs.dir,'Atlantis_Runs/GLORYS_Physics_1/')
 Satphyto = paste0(obs.dir,'Atlantis_Runs/SatPhyto_Forcing_1/')
-satphyto.const.diatom = paste0(obs.dir,'Atlantis_RUns/SatPhyto_Forcing_Const_Diatom_Prop/')
-satphyto.hirata.diatom = paste0(obs.dir,'Atlantis_RUns/SatPhyto_Forcing_Hirata_Diatom_Prop/')
+# satphyto.const.diatom = paste0(obs.dir,'Atlantis_RUns/SatPhyto_Forcing_Const_Diatom_Prop/')
+# satphyto.hirata.diatom = paste0(obs.dir,'Atlantis_RUns/SatPhyto_Forcing_Hirata_Diatom_Prop/')
+satphyto.dyn.low = paste0(obs.dir,'Atlantis_Runs/SatPhyto_Forcing_Dynamic_Lower_with_DL/')
 figure.dir = paste0(obs.dir,'Diagnostic_Figures/Run_Comparisons/')
 
 #ROMS_COBALT vs GLORYS
@@ -50,25 +51,13 @@ plot_run_comparisons(
 )
 
 plot_run_comparisons(
-  model1.dir = GLORYS,
-  model2.dir = Satphyto,
-  model1.name = 'GLORYS',
-  model2.name = 'OCCCI + GLORYS',
+  model1.dir = roms.cobalt,
+  model2.dir = satphyto.dyn.low,
+  model1.name = 'ROMS-COBALT',
+  model2.name = 'Obs. Hindcast - Dynamic Intermediate',
   plot.raw = T,
   plot.diff = T,
-  plot.out = paste(figure.dir,'GLORYS_v_SatPhyto'),
-  table.out = T,
-  groups = NULL
-)
-
-plot_run_comparisons(
-  model1.dir = satphyto.const.diatom,
-  model2.dir = satphyto.hirata.diatom,
-  model1.name = 'Sat. Const. ',
-  model2.name = 'Sat. Hirata',
-  plot.raw = T,
-  plot.diff = T,
-  plot.out = paste(figure.dir,'Const_v_Hirata'),
+  plot.out = paste(figure.dir,'ROMS_v_ObsHindcat'),
   table.out = T,
   groups = NULL
 )
