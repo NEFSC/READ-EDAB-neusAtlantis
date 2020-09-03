@@ -43,6 +43,8 @@ make_SatPhyto_files = function(in.dir,
                                      atl.varname,
                                      atl.longname,
                                      atl.units,
+                                    dynamic.mid,
+                                    dynamic.bot,
                                      phyto.fract.ls,
                                      chl.conv){
   
@@ -191,8 +193,17 @@ make_SatPhyto_files = function(in.dir,
         dplyr::filter(ref.year == years[y]) %>%
         dplyr::arrange(date,box)
       dat2 = reshape2::dcast(dat, box ~date) %>% dplyr::select(-box)
-      dat.array = array(NA,dim = c(5,30,length(ref.year.dates)))
-      dat.array[5,,] = NA
+      if(dynamic.mid){
+        dat.array = array(NA,dim = c(5,30,length(ref.year.dates)))  
+      }else{
+        dat.array = array(0,dim = c(5,30,length(ref.year.dates)))
+      }
+      if(dynamic.bot){
+        dat.array[5,,] = NA  
+      }else{
+        dat.array[5,,] = 0
+      }
+      
       for(b in 1:length(boxes)){
         dat.array[1,b,] = as.numeric(dat2[b,])
       }
