@@ -51,8 +51,10 @@ make_SatPhyto_files(in.dir = rawdata.dir,
                     atl.varname = atl.varname,
                     atl.longname = atl.longname,
                     atl.units = c(rep('mg N m-3',3),'mg Si m-3'),
+                    dynamic.mid = T,
+                    dynamic.bot = T,
                     phyto.fract.ls = phyto.fract.ls,
-                    chl.con = rep(7,3)
+                    chl.conv = rep(7,3)
 )
 
 #copy to obs hindcast directory

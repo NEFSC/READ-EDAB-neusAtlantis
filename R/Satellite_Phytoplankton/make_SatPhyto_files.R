@@ -165,15 +165,14 @@ make_SatPhyto_files = function(in.dir,
     atl.var.ls[[i]] = fill_satphyto_gaps(input.mat = year.var.ls[[i]],
                        var.name = var.name,
                        doy.file = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format/Phyto_Climatology.nc',
-                       max.interp = 8,
+                       max.interp = 100,
                        write.gaps = T,
-                       gaps.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Diagnostics/Gap_Analysis/',
+                       gaps.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Diagnostics/Gap_Analysis/'
                        )
   }
   
-  
-  
-
+  #  y = atl.var.ls[[3]] %>% filter(box == 1)
+  # plot(values~date,y,type='l')
   
   # save(atl.var.ls,file= paste0(out.dir,'var_test.R'))
   #Format as netCDF
