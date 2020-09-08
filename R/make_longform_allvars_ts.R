@@ -11,7 +11,7 @@ force.vars.df.ls = list()
 #Loop over forcing variables, reformat, and write to list
 
 boxes = 0:29
-v=1
+v=7
 for(v in 1:length(force.vars)){
   
   #load in data
@@ -46,27 +46,27 @@ for(v in 1:length(force.vars)){
   names(force.vars.df.ls)[v] = force.vars[v]
   
   #Plot timeseries
-  pdf(paste0(data.dir,force.vars[v],'_full_timeseries.pdf'),width = 16, height = 6, onefile = T)
-  for(b in 1:length(boxes)){
-    dat = var.dat %>% filter(box == boxes[b])
-    dat$level = factor(dat$level)
-    
-    fig = ggplot(data = dat, aes(x = date, y = values,col = level))+
-      geom_line()+
-      ggtitle(paste0('Box ',boxes[b]))+
-      xlab('')+
-      ylab(paste0(force.vars[v],' (',var.units[v],')'))+
-      theme_bw()+
-      theme(plot.title = element_text(hjust = 0.5))
-    gridExtra::grid.arrange(fig)
-  }
-  dev.off()
+  # pdf(paste0(data.dir,force.vars[v],'_full_timeseries.pdf'),width = 16, height = 6, onefile = T)
+  # for(b in 1:length(boxes)){
+  #   dat = var.dat %>% filter(box == boxes[b])
+  #   dat$level = factor(dat$level)
+  #   
+  #   fig = ggplot(data = dat, aes(x = date, y = values,col = level))+
+  #     geom_line()+
+  #     ggtitle(paste0('Box ',boxes[b]))+
+  #     xlab('')+
+  #     ylab(paste0(force.vars[v],' (',var.units[v],')'))+
+  #     theme_bw()+
+  #     theme(plot.title = element_text(hjust = 0.5))
+  #   gridExtra::grid.arrange(fig)
+  # }
+  # dev.off()
 
 }
 
 force.vars.df = bind_rows(force.vars.df.ls)
 save('force.vars.df', file=paste0(data.dir,'All_Forcing_Variables_Longform.R'))
-write.csv(force.vars.df,paste0(data.dir,'All_Forcing_Variables_Longform.csv'),row.names =F)
+# write.csv(force.vars.df,paste0(data.dir,'All_Forcing_Variables_Longform.csv'),row.names =F)
 
 # load(paste0(data.dir,'All_Forcing_Variables_Longform.R'))
 #plot(temp vs diatom)
