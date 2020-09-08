@@ -20,7 +20,7 @@ make_force_statevar = function(roms.dir,roms.file,out.dir,force.vars,final.vars,
   library(dplyr)
   library(RNetCDF)
   source(here::here('R','alternate_force_functions.R'))
-  source(here::here('R','flatten_ROMS.R'))
+  source(here::here('R','ROMS_COBALT','flatten_ROMS.R'))
   
   bgm.polygons = 0:29
   
@@ -201,7 +201,7 @@ make_force_statevar = function(roms.dir,roms.file,out.dir,force.vars,final.vars,
 
     close.nc(nc.file)
     
-    system(paste("ncdump ",nc.name," > ", cdf.name,sep=""), wait = TRUE)
+    # system(paste("ncdump ",nc.name," > ", cdf.name,sep=""), wait = TRUE)
     
     
   }

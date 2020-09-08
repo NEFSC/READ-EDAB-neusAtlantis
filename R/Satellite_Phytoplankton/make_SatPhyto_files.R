@@ -49,7 +49,7 @@ make_SatPhyto_files = function(in.dir,
                                      chl.conv){
   
   
-  source(here::here('R','fill_satphyto_gaps.R'))
+  source(here::here('R','Satellite_Phytoplankton','fill_satphyto_gaps.R'))
   
   `%>%` = dplyr::`%>%`
   
@@ -177,6 +177,9 @@ make_SatPhyto_files = function(in.dir,
   # save(atl.var.ls,file= paste0(out.dir,'var_test.R'))
   #Format as netCDF
   
+  #Read in dz.csv file
+  dz = read.csv(here::here('Geometry','dz.csv'))
+  box.lev = apply(dz[,2:5],1,function(x) return(sum(!is.na(x))))
   #Dimension values
   levels = 1:5
   
@@ -204,7 +207,7 @@ make_SatPhyto_files = function(in.dir,
       }
       
       for(b in 1:length(boxes)){
-        dat.array[1,b,] = as.numeric(dat2[b,])
+        dat.array[box.lev[b],b,] = as.numeric(dat2[b,])
       }
       atl.year.ls[[v]] = dat.array
       names(atl.year.ls)[v] = atl.varname[v]
