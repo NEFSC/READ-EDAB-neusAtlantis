@@ -79,7 +79,8 @@ for(i in 1:length(all.vars)){
   print(i)
 }
 
-force.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_Files/combined_years/'
+# force.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_Files/combined_years/'
+force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years'
 out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Figures/boxvars_allyears/'
 
 all.vars = c('Diatom_N','DinoFlag_N','PicoPhytopl_N','Diatom_S')

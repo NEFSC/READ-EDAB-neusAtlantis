@@ -23,41 +23,30 @@ Satphyto = paste0(obs.dir,'Atlantis_Runs/SatPhyto_Forcing_1/')
 # satphyto.const.diatom = paste0(obs.dir,'Atlantis_RUns/SatPhyto_Forcing_Const_Diatom_Prop/')
 # satphyto.hirata.diatom = paste0(obs.dir,'Atlantis_RUns/SatPhyto_Forcing_Hirata_Diatom_Prop/')
 satphyto.dyn.low = paste0(obs.dir,'Atlantis_Runs/SatPhyto_Forcing_Dynamic_Lower_with_DL/')
+satphyto.fast.sink = paste0(obs.dir,'Atlantis_Runs/SatPhyto_Forcing_Fast_PL_Sink_3/')
 figure.dir = paste0(obs.dir,'Diagnostic_Figures/Run_Comparisons/')
 
 #ROMS_COBALT vs GLORYS
 plot_run_comparisons(
-  model1.dir = roms.cobalt,
-  model2.dir = GLORYS,
-  model1.name = 'ROMS-COBALT',
-  model2.name = 'GLORYS',
+  model1.dir = satphyto.dyn.low,
+  model2.dir = satphyto.fast.sink,
+  model1.name = 'Dynamic_Lower',
+  model2.name = 'Faster_Sinking',
   plot.raw = T,
   plot.diff = T,
-  plot.out = paste(figure.dir,'ROMS_v_GLORYS_'),
+  plot.out = paste(figure.dir,'DynLow_v_FastSink'),
   table.out = T,
   groups = NULL
 )
 
 plot_run_comparisons(
-  model1.dir = roms.cobalt,
-  model2.dir = Satphyto,
-  model1.name = 'ROMS-COBALT',
-  model2.name = 'OCCCI + GLORYS',
+  model1.dir = GLORYS,
+  model2.dir = satphyto.fast.sink,
+  model1.name = 'GLORYS',
+  model2.name = 'Faster_Sinking',
   plot.raw = T,
   plot.diff = T,
-  plot.out = paste(figure.dir,'ROMS_v_SatPhyto_'),
-  table.out = T,
-  groups = NULL
-)
-
-plot_run_comparisons(
-  model1.dir = roms.cobalt,
-  model2.dir = satphyto.dyn.low,
-  model1.name = 'ROMS-COBALT',
-  model2.name = 'Obs. Hindcast - Dynamic Intermediate',
-  plot.raw = T,
-  plot.diff = T,
-  plot.out = paste(figure.dir,'ROMS_v_ObsHindcat'),
+  plot.out = paste(figure.dir,'GLORYS_v_FastSink'),
   table.out = T,
   groups = NULL
 )
