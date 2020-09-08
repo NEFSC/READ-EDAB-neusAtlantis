@@ -57,9 +57,9 @@ lapply(.packages, require, character.only=TRUE)
 force.vars = final.vars = c('temperature','salinity')
 var.units = c('degrees Celcius','PSU')
 long.names = c('Temperature','Salinity')
-fill.val = c(-999,-999)
-miss.val = c(-999,-999)
-valid.min = c(-1000,-1000)
+fill.val = c(15,0)
+miss.val = c(15,0)
+valid.min = c(-2,0)
 valid.max = c(999,999)
 
 years = 1993:2017
@@ -94,19 +94,22 @@ source('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/R/make_force_sp
 for(i in 1:length(years)){
   
   make_force_spinup(
+    do.hydroconstruct = F,
     out.dir = obs.dir,
     trans.prefix = 'GLORYS_Atlantis_Transport_',
     statevar.prefix = 'Obs_Hindcast_statevars_',
-    phyto.prefix = NA,
-    transport.file = paste0(obs.dir,'transport/GLORYS_Atlantis_Transport_1993.nc'),
-    statevar.file = paste0(obs.dir,'phys_statevars_alternate/GLORYS_tempsalt_force_1993.nc'),
-    phyto.file = NA,
+    anyvar.prefix = 'GLORYS_tempsalt_force_',
+    # transport.file = paste0(obs.dir,'transport/GLORYS_Atlantis_Transport_1993.nc'),
+    transport.file = NA,
+    # statevar.file = paste0(obs.dir,'statevars/Obs_Hindcast_statevars_1993.nc'),
+    statevar.file = NA,
+    anyvar.file = paste0(final.force.dir,'phys_statevars_alternate/GLORYS_tempsalt_force_1993.nc'),
+    anyvar.out = paste0(final.force.dir,'phys_statevars_alternate/'),
     force.dir = paste0(obs.dir,'Forcing_Files/'),
     start.year = 1964,
     new.year = years[i],
     param.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/obs_hindcast_hydroconstruct_template.prm',
     bat.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/hydroconstruct_run_template.bat'
-    
   )
   print(i)
   
@@ -114,6 +117,8 @@ for(i in 1:length(years)){
 
 
 # F) Copy files to Git Directory ------------------------------------------
-final.transport = list.files(paste0(final.force.dir,'transport/'),'^flow.*\\.nc$')
-final.tempsalt = 
+final.transport = list.files(paste0(final.force.dir,'transport/'),'^flow.*\\.nc$',full.names = T)
+final.tempsalt = list.files(paste0(final.force.dir,'phys_statevars_alternate/'),'GLORYS_tempsalt_force_*',full.names = T)
 
+file.copy(final.transport,git.force.dir,overwrite = T)
+file.copy(final.tempsalt,git.force.dir,overwrite = T)
