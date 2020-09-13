@@ -35,18 +35,20 @@ edit_init_param = function(init.file,var.name,print.param,att.name,new.val,overw
 }
 
 edit_init_param(
-  init.file = here::here('currentVersion','neus_init_FastSink.nc'),
-  var.name = 'Diatom_N',
+  # init.file = here::here('currentVersion','neus_init.nc'),
+  init.file = 'C:/Users/joseph.caracappa/Downloads/nordic_biol_v23.nc',
+  var.name = 'Large_phytop_N',
   att.name = 'svel',
   print.param = T
 )
 
 edit_init_param(
   init.file = here::here('currentVersion','neus_init.nc'),
-  var.name = 'Diatom_N',
+  var.name = 'DinoFlag_N',
   att.name = 'svel',
-  new.val = -4.6E-5,
-  overwrite = F,
+  new.val = -2.89E-5,
+  overwrite = T,
+  print.param = F,
   new.file.name = here::here('currentVersion','neus_init_FastSink.nc')
 )
 
@@ -54,7 +56,8 @@ edit_init_param(
   init.file = here::here('currentVersion','neus_init.nc'),
   var.name = 'Diatom_S',
   att.name = 'svel',
-  new.val = -4.6E-5,
-  overwrite = F,
+  new.val = -5.78E-6,
+  overwrite = T,
+  print.param = F,
   new.file.name = here::here('currentVersion','neus_init_FastSink.nc')
 )
