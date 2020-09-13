@@ -38,7 +38,7 @@ combine_years(transport.dir,file.pattern = '^GLORYS_Atlantis.*\\.nc','transport'
 
 # #Physics Statevariables
 combine_years(phys.dir,file.pattern = '^GLORYS_tempsalt_force_.*\\.nc','temperature',out.dir)
-combine_years(phys.dir,file.pattern = '^GLORYS_tempsalt_force_*\\.nc','salinity',out.dir)
+combine_years(phys.dir,file.pattern = '^GLORYS_tempsalt_force_.*\\.nc','salinity',out.dir)
 combine_years('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/statevars/',file.pattern = '^ECCO_vflux_Atlantis_.*\\.nc','verticalflux',out.dir)
 
 phyto.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars_dynamic_lower/'

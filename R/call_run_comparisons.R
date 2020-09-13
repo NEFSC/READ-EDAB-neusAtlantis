@@ -22,33 +22,23 @@ GLORYS = paste0(obs.dir,'Atlantis_Runs/GLORYS_Physics_1/')
 Satphyto = paste0(obs.dir,'Atlantis_Runs/SatPhyto_Forcing_1/')
 # satphyto.const.diatom = paste0(obs.dir,'Atlantis_RUns/SatPhyto_Forcing_Const_Diatom_Prop/')
 # satphyto.hirata.diatom = paste0(obs.dir,'Atlantis_RUns/SatPhyto_Forcing_Hirata_Diatom_Prop/')
-satphyto.dyn.low = paste0(obs.dir,'Atlantis_Runs/SatPhyto_Forcing_Dynamic_Lower_with_DL/')
-satphyto.fast.sink = paste0(obs.dir,'Atlantis_Runs/SatPhyto_Forcing_Fast_PL_Sink_3/')
+# satphyto.dyn.low = paste0(obs.dir,'Atlantis_Runs/SatPhyto_Forcing_Dynamic_Lower_with_DL/')
+leapyear.fix = paste0(obs.dir,'Atlantis_Runs/Obs_Hindcast_LeapYearFix/')
+satphyto.doy.spinup = paste0(obs.dir,'Atlantis_Runs/SatPhyto_Forcing_DOY_spinup/')
 figure.dir = paste0(obs.dir,'Diagnostic_Figures/Run_Comparisons/')
 
-#ROMS_COBALT vs GLORYS
 plot_run_comparisons(
-  model1.dir = satphyto.dyn.low,
-  model2.dir = satphyto.fast.sink,
-  model1.name = 'Dynamic_Lower',
-  model2.name = 'Faster_Sinking',
+  model1.dir = satphyto.doy.spinup,
+  model2.dir = leapyear.fix,
+  model1.name = 'DOY_Spinup',
+  model2.name = 'Final_Fix',
   plot.raw = T,
   plot.diff = T,
-  plot.out = paste(figure.dir,'DynLow_v_FastSink'),
+  plot.out = paste(figure.dir,'DOY_v_New_Obs'),
   table.out = T,
-  groups = NULL
+  groups = NULL,
+  remove.init = T
 )
 
-plot_run_comparisons(
-  model1.dir = GLORYS,
-  model2.dir = satphyto.fast.sink,
-  model1.name = 'GLORYS',
-  model2.name = 'Faster_Sinking',
-  plot.raw = T,
-  plot.diff = T,
-  plot.out = paste(figure.dir,'GLORYS_v_FastSink'),
-  table.out = T,
-  groups = NULL
-)
 
 
