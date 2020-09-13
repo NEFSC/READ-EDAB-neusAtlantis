@@ -4,14 +4,14 @@ library(ggplot2)
 #Read in all forcing variables that are on the Atlantis box level
 data.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years/'
 force.vars = c('Diatom_N','DinoFlag_N','PicoPhytopl_N','Lab_Det_N','Diatom_S','salinity','temperature','verticalflux')
-surf.var.flag = c(T,T,T,T,T,F,F,F)
+# surf.var.flag = c(T,T,T,T,T,F,F,F)
 var.units = c(rep('mg N m-3',4),'mg Si m-3','psu','deg C','m3 s-1')
 
 force.vars.df.ls = list()
 #Loop over forcing variables, reformat, and write to list
 
 boxes = 0:29
-v=7
+v=1
 for(v in 1:length(force.vars)){
   
   #load in data
@@ -36,10 +36,10 @@ for(v in 1:length(force.vars)){
   #combine boxes
   var.dat = dplyr::bind_rows(box.data.ls)
   #remove deeper layers if surface variable
-  if(surf.var.flag[v]){
-    var.dat = var.dat %>%
-      filter(level == 1)
-  }
+  # if(surf.var.flag[v]){
+  #   var.dat = var.dat %>%
+  #     filter(level == 1)
+  # }
   
   #write to master list
   force.vars.df.ls[[v]] = var.dat
