@@ -88,7 +88,7 @@ make_SatPhyto_files(in.dir = rawdata.dir,
 
 
 #copy to obs hindcast directory
-obs.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars_dynamic_lower/'
+obs.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars_DOY_spinup/'
 from.files = paste0(satphyto.force.dir,'Phyto_Forcing_',1998:2017,'.nc')
 file.copy(from.files,obs.dir,overwrite = T)
 
@@ -96,13 +96,15 @@ file.copy(from.files,obs.dir,overwrite = T)
 years = 1964:1997
 for(i in 1:length(years)){
   make_force_spinup(
+    do.hydroconstruct = F,
     out.dir = obs.dir,
     trans.prefix = NA,
     statevar.prefix = NA,
     anyvar.prefix = 'Phyto_Forcing_',
     transport.file = NA,
     statevar.file = NA,
-    anyvar.file = paste0(obs.dir,'Phyto_Forcing_1998.nc'),
+    # anyvar.file = paste0(obs.dir,'Phyto_Forcing_1998.nc'),
+    anyvar.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years/LTL_DOY_Climatology.nc',
     anyvar.out = obs.dir,
     force.dir = obs.dir,
     start.year = 1964,

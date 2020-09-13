@@ -10,6 +10,10 @@ satphyto.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/'
 #load in export flux data
 data.pe = read.csv(paste0(satphyto.dir,'Data/export_flux_allyears.csv'))
 
+#Read in dz.csv file
+dz = read.csv(here::here('Geometry','dz.csv'))
+box.lev = apply(dz[,2:5],1,function(x) return(sum(!is.na(x))))
+
 years = sort(as.numeric(unique(data.pe$ref.year)))
 
 out.dir = paste0(satphyto.dir,'Forcing_DL/')
@@ -37,7 +41,7 @@ for(y in 1:length(years)){
       filter(box == boxes[b]) %>%
       arrange(doy)
     
-    dat.array[1,b,dat.box$doy] = dat.box$values
+    dat.array[box.lev[b],b,dat.box$doy] = dat.box$values
   }
   
   t_tot = as.numeric(difftime(as.POSIXct(year.date.index$date,tz='UTC'),as.POSIXct('1964-01-01 00:00:00',tz='UTC'),units = 'secs'))
@@ -86,11 +90,12 @@ for(y in 1:length(years)){
   RNetCDF::close.nc(nc.file)
 }
 
+
 #Call spinup function
 
 #copy to obs hindcast directory
 force.dir = 'c:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_DL/'
-obs.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/labile_detritus/'
+obs.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/labile_detritus_DOY_spinup/'
 from.files = paste0(force.dir,'Satphyto_Forcing_DL_',1998:2017,'.nc')
 file.copy(from.files,obs.dir,overwrite = T)
 
@@ -102,18 +107,21 @@ for(i in 1:length(years)){
   # out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/'
   
   make_force_spinup(
+    do.hydroconstruct = F,
     out.dir = obs.dir,
     trans.prefix = NA,
     statevar.prefix = NA,
-    phyto.prefix = 'Satphyto_Forcing_DL_',
+    anyvar.prefix = 'Satphyto_Forcing_DL_',
     transport.file = NA,
     statevar.file = NA,
-    phyto.file = paste0(obs.dir,'Satphyto_Forcing_DL_1998.nc'),
+    # anyvar.file = paste0(obs.dir,'Satphyto_Forcing_DL_1998.nc'),
+    anyvar.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years/Det_DOY_Climatology.nc',
+    anyvar.out = obs.dir,
     force.dir = obs.dir,
     start.year = 1964,
     new.year = years[i],
-    dynamic.mid.layer = T,
-    dynamic.bot.layer = T,
+    mid.layer = 'dynamic',
+    bot.layer = 'dynamic',
     param.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/obs_hindcast_hydroconstruct_template.prm',
     bat.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/hydroconstruct_run_template.bat'
   )
