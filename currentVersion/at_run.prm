@@ -31,7 +31,7 @@ debug         0        # 0=debuging off, 1=debug fishing, 2=debug discards, 3=de
 
 title      NEUS v1.5 with fishing
 dt         24 hour     # 24 hour time step
-tstop      18608 day   # Stop time after the given period (18260)18260  , 4000   2191 7320 9120 3660 7320 (01-01-1964 to 12-31-2017 is 19724 d)
+tstop      19724 day   # Stop time after the given period (18260)18260  , 4000   2191 7320 9120 3660 7320 (01-01-1964 to 12-31-2017 is 19724 d)
 toutstart  0 day       # Output start time
 toutinc    73 day      # Write output with this periodicity
 toutfinc   73 day      # Write fisheries output with this periodicity
