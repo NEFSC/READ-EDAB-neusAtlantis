@@ -74,21 +74,39 @@ get_pprey_vals = function(atl.dir,biol.file,fgs.file,spp.names,is.pred,remove.ze
   
   #If specifying predators, extract prey vals
   if(is.pred){
-    pred.match = unique(grep(paste(spp.names,collapse='|'),pred.names))
-    out.mat = pprey.mat[pred.match,]
-    row.names(out.mat) = pred.names[pred.match]
-    colnames(out.mat) = prey.names
+    pred.match =unname(sapply(spp.names,function(x){return(which(pred.names == x))}))
+    # pred.match = unique(grep(paste(spp.names,collapse='|'),pred.names))
+    if(length(spp.names) == 1){
+      out.mat = as.data.frame(t(pprey.mat[pred.match,]))  
+    }else{
+      out.mat = as.data.frame(pprey.mat[pred.match,])
+    }
+    colnames(out.mat)= prey.names
+    out.mat$pred = pred.names[pred.match]
+    out.mat = out.mat[,c(ncol(out.mat),1:(ncol(out.mat)-1))]
+    # out.mat = pprey.mat[pred.match,]
+    # row.names(out.mat) = pred.names[pred.match]
+    # colnames(out.mat) = prey.names
     if(remove.zero){
-      out.mat = out.mat[,!(apply(out.mat,2,function(x) return(all(x==0))))]
+      if(length(spp.names) == 1){
+        out.mat = out.mat[,which(out.mat[1,]!=0)]
+      }else{
+        out.mat = out.mat[,!(apply(out.mat,2,function(x) return(all(x==0))))]  
       }
+    }
     return(out.mat)
   }else{
-    prey.match = unique(grep(paste(spp.names,collapse='|'),prey.names))
-    out.mat = pprey.mat[,prey.match]
-    colnames(out.mat) = prey.names[prey.match]
-    row.names(out.mat) = pred.names
+    prey.match =unname(sapply(spp.names,function(x){return(which(prey.names == x))}))
+    # prey.match = unique(grep(paste(spp.names,collapse='|'),prey.names))
+    out.mat = data.frame(pred = pred.names,pprey.mat[,prey.match])
+    colnames(out.mat)[2:ncol(out.mat)] = prey.names[prey.match]
+    # row.names(out.mat) = pred.names
     if(remove.zero){
-      out.mat = out.mat[!(apply(out.mat,1,function(x) return(all(x==0)))),]
+      if(length(spp.names) == 1){
+        out.mat = out.mat[which(out.mat[,2]!=0),]
+      }else{
+        out.mat = out.mat[!(apply(out.mat[,2:ncol(out.mat)],1,function(x) return(all(x==0)))),]  
+      }
     }
     return(out.mat)
   }
