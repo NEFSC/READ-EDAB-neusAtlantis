@@ -24,17 +24,18 @@ Satphyto = paste0(obs.dir,'Atlantis_Runs/SatPhyto_Forcing_1/')
 # satphyto.hirata.diatom = paste0(obs.dir,'Atlantis_RUns/SatPhyto_Forcing_Hirata_Diatom_Prop/')
 # satphyto.dyn.low = paste0(obs.dir,'Atlantis_Runs/SatPhyto_Forcing_Dynamic_Lower_with_DL/')
 leapyear.fix = paste0(obs.dir,'Atlantis_Runs/Obs_Hindcast_LeapYearFix/')
+solar.fix = paste0(obs.dir,'Atlantis_Runs/Obs_Hindcast_SolarFix/')
 satphyto.doy.spinup = paste0(obs.dir,'Atlantis_Runs/SatPhyto_Forcing_DOY_spinup/')
 figure.dir = paste0(obs.dir,'Diagnostic_Figures/Run_Comparisons/')
 
 plot_run_comparisons(
-  model1.dir = satphyto.doy.spinup,
+  model1.dir = solar.fix,
   model2.dir = leapyear.fix,
-  model1.name = 'DOY_Spinup',
-  model2.name = 'Final_Fix',
+  model1.name = 'Solar_Fix',
+  model2.name = 'LeapYear_Fix',
   plot.raw = T,
   plot.diff = T,
-  plot.out = paste(figure.dir,'DOY_v_New_Obs'),
+  plot.out = paste(figure.dir,'Solar_v_LeapYear'),
   table.out = T,
   groups = NULL,
   remove.init = T

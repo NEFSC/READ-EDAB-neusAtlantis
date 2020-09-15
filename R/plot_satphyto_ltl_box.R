@@ -4,7 +4,7 @@ source(here::here('R','plot_atlvar_box.R'))
 
 var.names = c('Diatom_N','Diatom_S','DinoFlag_N','PicoPhytopl_N','Lab_Det_N','Ref_Det_N','Temp')
 # var.names
-run.name = 'Obs_Hindcast_LeapYearFix'
+run.name = 'Obs_Hindcast_SolarFix'
 run.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/'
 
 for(v in 1:length(var.names)){

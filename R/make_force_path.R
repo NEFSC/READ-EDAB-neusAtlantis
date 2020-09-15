@@ -52,7 +52,7 @@ make_force_path(
   ts.dir = "/tsfiles/Annual_Files/",
   pattern.names = c('^flow.*\\.nc$',
                     rep('GLORYS_tempsalt_force_*',2),
-                    rep('^Phyto_Forcing_Hirata_.*\\.nc$',4),
+                    rep('^Phyto_Forcing_.*\\.nc$',4),
                     '^Satphyto_Forcing_DL_.*\\.nc$'),
   out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/',
   out.name = 'obs_hindcast_forcing_paths_LINUX'

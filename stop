@@ -1,0 +1,457 @@
+[1mdiff --git a/R/append_vflux.R b/R/ECCO/append_vflux.R[m
+[1msimilarity index 100%[m
+[1mrename from R/append_vflux.R[m
+[1mrename to R/ECCO/append_vflux.R[m
+[1mdiff --git a/R/call_make_ECCO_vflux.R b/R/ECCO/call_make_ECCO_vflux.R[m
+[1msimilarity index 100%[m
+[1mrename from R/call_make_ECCO_vflux.R[m
+[1mrename to R/ECCO/call_make_ECCO_vflux.R[m
+[1mdiff --git a/R/make_ECCO_vflux.R b/R/ECCO/make_ECCO_vflux.R[m
+[1msimilarity index 100%[m
+[1mrename from R/make_ECCO_vflux.R[m
+[1mrename to R/ECCO/make_ECCO_vflux.R[m
+[1mdiff --git a/R/GLORYS_Diagnostics.R b/R/GLORYS/GLORYS_Diagnostics.R[m
+[1msimilarity index 100%[m
+[1mrename from R/GLORYS_Diagnostics.R[m
+[1mrename to R/GLORYS/GLORYS_Diagnostics.R[m
+[1mdiff --git a/R/GLORYS/call_make_GLORYS_files.R b/R/GLORYS/call_make_GLORYS_files.R[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4c491e9[m
+[1m--- /dev/null[m
+[1m+++ b/R/GLORYS/call_make_GLORYS_files.R[m
+[36m@@ -0,0 +1,142 @@[m
+[32m+[m[32m# Wrapper script to fully process GLORYS data[m
+[32m+[m[32m# A) make GLORYS Atlantis Format (make_GLORYS_files) 1993-2017[m
+[32m+[m[32m# B) make transport files w/ hydroconstruct (make_force_annual) 1993-2017[m
+[32m+[m[32m# C) make tempsalt files using alternative method (make_force_statevar) 1993-2017[m
+[32m+[m[32m# D) create spinup forcing w/ alternative tempsalt and hydroconstruct transport (make_force_spinup) 1964-1992[m
+[32m+[m
+[32m+[m[32mglorys.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/'[m
+[32m+[m[32mglorys.atl.dir = paste0(glorys.dir,'Atlantis_Format/')[m
+[32m+[m[32mobs.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/'[m
+[32m+[m[32mfinal.force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/'[m
+[32m+[m[32mgit.force.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/currentVersion/tsfiles/Annual_Files/'[m
+[32m+[m
+[32m+[m[32m# A) Make GLORYS Atlantis Format (make_GLORYS_files) 1993-2017 ------------[m
+[32m+[m
+[32m+[m[32msource(here::here('R','GLORYS','make_GLORYS_files.R'))[m
+[32m+[m[32mdir.names = 1993:2018[m
+[32m+[m
+[32m+[m[32mfor(yr in 1:length(dir.names)){[m
+[32m+[m[41m  [m
+[32m+[m[32m  # Set from and to directories[m
+[32m+[m[32m  in.dir = paste0(glorys.dir,'Data/',dir.names[yr],'/')[m
+[32m+[m[32m  out.dir = paste0(glorys.dir,'Atlantis_Format/',dir.names[yr],'/')[m
+[32m+[m[32m  in.files = list.files(in.dir,paste0('GLORYS_REANALYSIS_*'),full.names = F)[m
+[32m+[m
+[32m+[m[32m  make_GLORYS_files([m
+[32m+[m[32m    glorys.dir = in.dir,[m
+[32m+[m[32m    glorys.prefix = paste0('GLORYS_REANALYSIS_*'),[m
+[32m+[m[32m    glorys.files = in.files,[m
+[32m+[m[32m    out.dir = out.dir,[m
+[32m+[m[32m    dz.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/dz.csv',[m
+[32m+[m[32m    bgm.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/neus_tmerc_RM2.bgm',[m
+[32m+[m[32m    bgm.ll.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/neus_ll_WGS84.bgm',[m
+[32m+[m[32m    shp.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/Neus_ll_0p01.shp',[m
+[32m+[m[32m    name.out = 'GLORYS_Atlantis_',[m
+[32m+[m[32m    make.hflux = T,[m
+[32m+[m[32m    make.physvars = T[m
+[32m+[m[32m  )[m
+[32m+[m[32m  print(paste0('##################  ',yr,'   #################'))[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m# B) run append_vflux from ECCO -------------------------------------------[m
+[32m+[m[32m#moves statevar files from glorys.atl.dir to Obs_Hindcast/statevars/[m
+[32m+[m[32msource(here::here('R','ECCO','append_vflux.R'))[m
+[32m+[m
+[32m+[m[32m#STOP run 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/append_vflux_ECCO.sh[m
+[32m+[m
+[32m+[m[32m# C) Make transport files w/ hydroconstruct (make_force_annual) 19 --------[m
+[32m+[m[32msource(here::here('R','synch_force_time.R'))[m
+[32m+[m[32msource(here::here('R','make_force_annual.R'))[m
+[32m+[m
+[32m+[m[32m# D) make tempsalt files  using alternative method (make_force_statevar)--------[m
+[32m+[m[32msource(here::here('R','make_force_statevar.R'))[m
+[32m+[m
+[32m+[m[32m.packages = c("devtools","tidyverse","stringi","RNetCDF", "data.table")[m
+[32m+[m[32mlapply(.packages, require, character.only=TRUE)[m
+[32m+[m
+[32m+[m[32mforce.vars = final.vars = c('temperature','salinity')[m
+[32m+[m[32mvar.units = c('degrees Celcius','PSU')[m
+[32m+[m[32mlong.names = c('Temperature','Salinity')[m
+[32m+[m[32mfill.val = c(15,0)[m
+[32m+[m[32mmiss.val = c(15,0)[m
+[32m+[m[32mvalid.min = c(-2,0)[m
+[32m+[m[32mvalid.max = c(999,999)[m
+[32m+[m
+[32m+[m[32myears = 1993:2017[m
+[32m+[m
+[32m+[m[32mfor(yr in 1:length(years)){[m
+[32m+[m[32m  in.dir = paste0(obs.dir,'statevars/')[m
+[32m+[m[32m  in.file = paste0(in.dir,'Obs_Hindcast_statevars_',years[yr],'.nc')[m
+[32m+[m[41m  [m
+[32m+[m[32m  make_force_statevar(roms.dir = in.dir,[m
+[32m+[m[32m                      roms.file = in.file,[m
+[32m+[m[32m                      out.dir = paste0(final.force.dir,'phys_statevars_alternate/'),[m
+[32m+[m[32m                      force.vars = force.vars,[m
+[32m+[m[32m                      var.units = var.units,[m
+[32m+[m[32m                      final.vars = final.vars,[m
+[32m+[m[32m                      fill.val = fill.val,[m
+[32m+[m[32m                      long.names = long.names,[m
+[32m+[m[32m                      miss.val = miss.val,[m
+[32m+[m[32m                      valid.min = valid.min,[m
+[32m+[m[32m                      valid.max = valid.max,[m
+[32m+[m[32m                      out.prefix = 'GLORYS_tempsalt_force_',[m
+[32m+[m[32m                      dupe.bottom = T)[m
+[32m+[m[41m  [m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m# E) create spinup forcing 1964-1992 --------[m
+[32m+[m
+[32m+[m[32mstart.year = 1964[m
+[32m+[m[32myears = 1964:1992[m
+[32m+[m
+[32m+[m[32msource('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/R/make_force_spinup.R')[m
+[32m+[m[32m# obs.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/'[m
+[32m+[m[32mobs.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/'[m
+[32m+[m[32mfor(i in 1:length(years)){[m
+[32m+[m[41m  [m
+[32m+[m[32m  make_force_spinup([m
+[32m+[m[32m    do.hydroconstruct =F,[m
+[32m+[m[32m    out.dir = obs.dir,[m
+[32m+[m[32m    trans.prefix = 'GLORYS_Atlantis_Transport_',[m
+[32m+[m[32m    statevar.prefix = 'Obs_Hindcast_statevars_',[m
+[32m+[m[32m    anyvar.prefix = NA,[m
+[32m+[m[32m    transport.file = paste0(obs.dir,'Forcing_Files/Annual_Output/combined_years/transport_DOY_climatology.nc'),[m
+[32m+[m[32m    statevar.file = paste0(obs.dir,'Forcing_Files/Annual_Output/combined_years/Physics_DOY_climatology.nc'),[m
+[32m+[m[32m    anyvar.file = NA,[m
+[32m+[m[32m    anyvar.out = NA,[m
+[32m+[m[32m    force.dir =paste0(obs.dir,'Forcing_Files/'),[m
+[32m+[m[32m    start.year = 1964,[m
+[32m+[m[32m    new.year = years[i],[m
+[32m+[m[32m    param.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/obs_hindcast_hydroconstruct_template.prm',[m
+[32m+[m[32m    bat.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/hydroconstruct_run_template.bat'[m
+[32m+[m[32m  )[m
+[32m+[m[41m  [m
+[32m+[m[32m  # make_force_spinup([m
+[32m+[m[32m  #   do.hydroconstruct = F,[m
+[32m+[m[32m  #   out.dir = pasteo(obs.dir,'phys_statevars_alternate_DOY_spinup/'),[m
+[32m+[m[32m  #   trans.prefix = NA,[m
+[32m+[m[32m  #   statevar.prefix = NA,[m
+[32m+[m[32m  #   anyvar.prefix = 'GLORYS_tempsalt_force_',[m
+[32m+[m[32m  #   transport.file = NA,[m
+[32m+[m[32m  #   statevar.file = NA,[m
+[32m+[m[32m  #   anyvar.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years/Physics_DOY_Climatology.nc',[m
+[32m+[m[32m  #   # anyvar.out = paste0(final.force.dir,'phys_statevars_alternate/'),[m
+[32m+[m[32m  #   anyvar.out = paste0(obs.dir,'phys_statevars_alternate_DOY_spinup/'),[m
+[32m+[m[32m  #   # force.dir = paste0(obs.dir,'Forcing_Files/'),[m
+[32m+[m[32m  #   force.dir = paste0(obs.dir,'phys_statevars_alternate_DOY_spinup/'),[m
+[32m+[m[32m  #   start.year = 1964,[m
+[32m+[m[32m  #   new.year = years[i],[m
+[32m+[m[32m  #   param.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/obs_hindcast_hydroconstruct_template.prm',[m
+[32m+[m[32m  #   bat.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/hydroconstruct_run_template.bat'[m
+[32m+[m[32m  # )[m
+[32m+[m[32m  print(i)[m
+[32m+[m[41m  [m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# F) Copy files to Git Directory ------------------------------------------[m
+[32m+[m[32mfinal.transport = list.files(paste0(final.force.dir,'transport/'),'^flow.*\\.nc$',full.names = T)[m
+[32m+[m[32mfinal.tempsalt = list.files(paste0(final.force.dir,'phys_statevars_alternate/'),'GLORYS_tempsalt_force_*',full.names = T)[m
+[32m+[m
+[32m+[m[32mfile.copy(final.transport,git.force.dir,overwrite = T)[m
+[32m+[m[32mfile.copy(final.tempsalt,git.force.dir,overwrite = T)[m
+[1mdiff --git a/R/combine_GLORYS_allyears.R b/R/GLORYS/combine_GLORYS_allyears.R[m
+[1msimilarity index 100%[m
+[1mrename from R/combine_GLORYS_allyears.R[m
+[1mrename to R/GLORYS/combine_GLORYS_allyears.R[m
+[1mdiff --git a/R/make_GLORYS_files.R b/R/GLORYS/make_GLORYS_files.R[m
+[1msimilarity index 100%[m
+[1mrename from R/make_GLORYS_files.R[m
+[1mrename to R/GLORYS/make_GLORYS_files.R[m
+[1mdiff --git a/R/ROMS_Diagnostics.R b/R/ROMS_COBALT/ROMS_Diagnostics.R[m
+[1msimilarity index 100%[m
+[1mrename from R/ROMS_Diagnostics.R[m
+[1mrename to R/ROMS_COBALT/ROMS_Diagnostics.R[m
+[1mdiff --git a/R/call_ROMS_2D_Diagnostics.R b/R/ROMS_COBALT/call_ROMS_2D_Diagnostics.R[m
+[1msimilarity index 100%[m
+[1mrename from R/call_ROMS_2D_Diagnostics.R[m
+[1mrename to R/ROMS_COBALT/call_ROMS_2D_Diagnostics.R[m
+[1mdiff --git a/R/call_ROMS_summary.R b/R/ROMS_COBALT/call_ROMS_summary.R[m
+[1msimilarity index 100%[m
+[1mrename from R/call_ROMS_summary.R[m
+[1mrename to R/ROMS_COBALT/call_ROMS_summary.R[m
+[1mdiff --git a/R/call_force_chemphys.R b/R/ROMS_COBALT/call_force_chemphys.R[m
+[1msimilarity index 100%[m
+[1mrename from R/call_force_chemphys.R[m
+[1mrename to R/ROMS_COBALT/call_force_chemphys.R[m
+[1mdiff --git a/R/call_force_light.R b/R/ROMS_COBALT/call_force_light.R[m
+[1msimilarity index 100%[m
+[1mrename from R/call_force_light.R[m
+[1mrename to R/ROMS_COBALT/call_force_light.R[m
+[1mdiff --git a/R/call_force_ltl.R b/R/ROMS_COBALT/call_force_ltl.R[m
+[1msimilarity index 100%[m
+[1mrename from R/call_force_ltl.R[m
+[1mrename to R/ROMS_COBALT/call_force_ltl.R[m
+[1mdiff --git a/R/call_force_nutrients.R b/R/ROMS_COBALT/call_force_nutrients.R[m
+[1msimilarity index 100%[m
+[1mrename from R/call_force_nutrients.R[m
+[1mrename to R/ROMS_COBALT/call_force_nutrients.R[m
+[1mdiff --git a/R/call_make_ROMS_files.R b/R/ROMS_COBALT/call_make_ROMS_files.R[m
+[1msimilarity index 100%[m
+[1mrename from R/call_make_ROMS_files.R[m
+[1mrename to R/ROMS_COBALT/call_make_ROMS_files.R[m
+[1mdiff --git a/R/call_make_ROMS_files_new_levels.R b/R/ROMS_COBALT/call_make_ROMS_files_new_levels.R[m
+[1msimilarity index 100%[m
+[1mrename from R/call_make_ROMS_files_new_levels.R[m
+[1mrename to R/ROMS_COBALT/call_make_ROMS_files_new_levels.R[m
+[1mdiff --git a/R/call_make_ROMS_files_pre_aggregation.R b/R/ROMS_COBALT/call_make_ROMS_files_pre_aggregation.R[m
+[1msimilarity index 100%[m
+[1mrename from R/call_make_ROMS_files_pre_aggregation.R[m
+[1mrename to R/ROMS_COBALT/call_make_ROMS_files_pre_aggregation.R[m
+[1mdiff --git a/R/combine_ROMS_allyears.R b/R/ROMS_COBALT/combine_ROMS_allyears.R[m
+[1msimilarity index 100%[m
+[1mrename from R/combine_ROMS_allyears.R[m
+[1mrename to R/ROMS_COBALT/combine_ROMS_allyears.R[m
+[1mdiff --git a/R/cpolar_coupling_z_index_EastNorth_final.R b/R/ROMS_COBALT/cpolar_coupling_z_index_EastNorth_final.R[m
+[1msimilarity index 100%[m
+[1mrename from R/cpolar_coupling_z_index_EastNorth_final.R[m
+[1mrename to R/ROMS_COBALT/cpolar_coupling_z_index_EastNorth_final.R[m
+[1mdiff --git a/R/debias_forcing_temp.R b/R/ROMS_COBALT/debias_forcing_temp.R[m
+[1msimilarity index 100%[m
+[1mrename from R/debias_forcing_temp.R[m
+[1mrename to R/ROMS_COBALT/debias_forcing_temp.R[m
+[1mdiff --git a/R/fill_force_1980.R b/R/ROMS_COBALT/fill_force_1980.R[m
+[1msimilarity index 100%[m
+[1mrename from R/fill_force_1980.R[m
+[1mrename to R/ROMS_COBALT/fill_force_1980.R[m
+[1mdiff --git a/R/fix_ROMS_filename.R b/R/ROMS_COBALT/fix_ROMS_filename.R[m
+[1msimilarity index 100%[m
+[1mrename from R/fix_ROMS_filename.R[m
+[1mrename to R/ROMS_COBALT/fix_ROMS_filename.R[m
+[1mdiff --git a/R/fix_ROMS_time.R b/R/ROMS_COBALT/fix_ROMS_time.R[m
+[1msimilarity index 100%[m
+[1mrename from R/fix_ROMS_time.R[m
+[1mrename to R/ROMS_COBALT/fix_ROMS_time.R[m
+[1mdiff --git a/R/fix_force_negvalues.R b/R/ROMS_COBALT/fix_force_negvalues.R[m
+[1msimilarity index 100%[m
+[1mrename from R/fix_force_negvalues.R[m
+[1mrename to R/ROMS_COBALT/fix_force_negvalues.R[m
+[1mdiff --git a/R/fix_force_scalevars.R b/R/ROMS_COBALT/fix_force_scalevars.R[m
+[1msimilarity index 100%[m
+[1mrename from R/fix_force_scalevars.R[m
+[1mrename to R/ROMS_COBALT/fix_force_scalevars.R[m
+[1mdiff --git a/R/fix_force_time.R b/R/ROMS_COBALT/fix_force_time.R[m
+[1msimilarity index 100%[m
+[1mrename from R/fix_force_time.R[m
+[1mrename to R/ROMS_COBALT/fix_force_time.R[m
+[1mdiff --git a/R/fix_force_units.R b/R/ROMS_COBALT/fix_force_units.R[m
+[1msimilarity index 60%[m
+[1mrename from R/fix_force_units.R[m
+[1mrename to R/ROMS_COBALT/fix_force_units.R[m
+[1mindex c1d3662..32c43ed 100644[m
+[1m--- a/R/fix_force_units.R[m
+[1m+++ b/R/ROMS_COBALT/fix_force_units.R[m
+[36m@@ -2,14 +2,16 @@[m
+ library(RNetCDF)[m
+ roms.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/CurrentVersion/tsfiles/Annual_Files/'[m
+ [m
+[31m-ltl.files =  list.files(roms.dir,pattern = '^roms_ltl_force.*\\.nc$',full.names = T)[m
+[32m+[m[32mall.files =  list.files(roms.dir,pattern = '^GLORYS_tempsalt_force_.*\\.nc$',full.names = T)[m
+ # ltl.files = ltl.files[17][m
+ for(i in 1:length(ltl.files)){[m
+ # for(i in 17){[m
+ [m
+[31m-  nc.file = open.nc(ltl.files[i],write = T)[m
+[31m-[m
+[32m+[m[32m  nc.file = open.nc(all.files[i],write = T)[m
+[32m+[m[41m  [m
+   #_FillValue[m
+[32m+[m[32m  att.put.nc(nc.file, 'temperature', "_FillValue", "NC_DOUBLE", -999)[m
+[32m+[m[32m  att.put.nc(nc.file, 'salinity', "_FillValue", "NC_DOUBLE", -999)[m
+   # att.put.nc(nc.file, 'ndi', "_FillValue", "NC_DOUBLE", 0)[m
+   # att.put.nc(nc.file, 'Diatom_N', "_FillValue", "NC_DOUBLE", 0)[m
+   # att.put.nc(nc.file, 'Carniv_Zoo_N', "_FillValue", "NC_DOUBLE", 0)[m
+[36m@@ -20,6 +22,8 @@[m [mfor(i in 1:length(ltl.files)){[m
+   # att.put.nc(nc.file, 'Pelag_Bact_N', "_FillValue", "NC_DOUBLE", 0.2)[m
+   # [m
+   # #missing_value[m
+[32m+[m[32m  att.put.nc(nc.file, 'temperature', "missing_value", "NC_DOUBLE", -999)[m
+[32m+[m[32m  att.put.nc(nc.file, 'salinity', "missing_value", "NC_DOUBLE", -999)[m
+   # att.put.nc(nc.file, 'ndi', "missing_value", "NC_DOUBLE", 0)[m
+   # att.put.nc(nc.file, 'Diatom_N', "missing_value", "NC_DOUBLE", 0)[m
+   # att.put.nc(nc.file, 'Carniv_Zoo_N', "missing_value", "NC_DOUBLE", 0)[m
+[36m@@ -30,6 +34,8 @@[m [mfor(i in 1:length(ltl.files)){[m
+   # att.put.nc(nc.file, 'Pelag_Bact_N', "missing_value", "NC_DOUBLE", 0.2)[m
+ [m
+   #valid_min[m
+[32m+[m[32m  att.put.nc(nc.file, 'temperature', "valid_min", "NC_DOUBLE", 0)[m
+[32m+[m[32m  att.put.nc(nc.file, 'salinity', "valid_min", "NC_DOUBLE", 0)[m
+   # att.put.nc(nc.file, 'ndi', "valid_min", "NC_DOUBLE", 0)[m
+   # att.put.nc(nc.file, 'Diatom_N', "valid_min", "NC_DOUBLE", 0)[m
+   # att.put.nc(nc.file, 'Carniv_Zoo_N', "valid_min", "NC_DOUBLE", 0)[m
+[36m@@ -40,6 +46,8 @@[m [mfor(i in 1:length(ltl.files)){[m
+   # att.put.nc(nc.file, 'Pelag_Bact_N', "valid_min", "NC_DOUBLE", 0)[m
+ [m
+   #valid_max[m
+[32m+[m[32m  att.put.nc(nc.file, 'temperature', "valid_max", "NC_DOUBLE", 999)[m
+[32m+[m[32m  att.put.nc(nc.file, 'salinity', "valid_max", "NC_DOUBLE", 999)[m
+   # att.put.nc(nc.file, 'ndi', "valid_max", "NC_DOUBLE", 999)[m
+   # att.put.nc(nc.file, 'Diatom_N', "valid_max", "NC_DOUBLE", 999)[m
+   # att.put.nc(nc.file, 'Carniv_Zoo_N', "valid_max", "NC_DOUBLE", 999)[m
+[36m@@ -51,35 +59,35 @@[m [mfor(i in 1:length(ltl.files)){[m
+ [m
+   #units[m
+   # att.put.nc(nc.file, 'ndi', "units", "NC_CHAR", "mg N m-3")[m
+[31m-  att.put.nc(nc.file, 'Diatom_N', "units", "NC_CHAR", "mg N m-3")[m
+[31m-  att.put.nc(nc.file, 'Carniv_Zoo_N', "units", "NC_CHAR", "mg N m-3")[m
+[31m-  att.put.nc(nc.file, 'Zoo_N', "units", "NC_CHAR", "mg N m-3")[m
+[31m-  att.put.nc(nc.file, 'PicoPhytopl_N', "units", "NC_CHAR", "mg N m-3")[m
+[31m-  att.put.nc(nc.file, 'MicroZoo_N', "units", "NC_CHAR", "mg N m-3")[m
+[31m-  att.put.nc(nc.file, 'Diatom_S', "units", "NC_CHAR", "mg Si m-3")[m
+[31m-  att.put.nc(nc.file, 'Pelag_Bact_N', "units", "NC_CHAR", "mg N m-3")[m
+[31m-[m
+[31m-[m
+[31m-  close.nc(nc.file)[m
+[31m-  print(i)[m
+[31m-}[m
+[32m+[m[32m  # att.put.nc(nc.file, 'Diatom_N', "units", "NC_CHAR", "mg N m-3")[m
+[32m+[m[32m  # att.put.nc(nc.file, 'Carniv_Zoo_N', "units", "NC_CHAR", "mg N m-3")[m
+[32m+[m[32m  # att.put.nc(nc.file, 'Zoo_N', "units", "NC_CHAR", "mg N m-3")[m
+[32m+[m[32m  # att.put.nc(nc.file, 'PicoPhytopl_N', "units", "NC_CHAR", "mg N m-3")[m
+[32m+[m[32m  # att.put.nc(nc.file, 'MicroZoo_N', "units", "NC_CHAR", "mg N m-3")[m
+[32m+[m[32m  # att.put.nc(nc.file, 'Diatom_S', "units", "NC_CHAR", "mg Si m-3")[m
+[32m+[m[32m  # att.put.nc(nc.file, 'Pelag_Bact_N', "units", "NC_CHAR", "mg N m-3")[m
+ [m
+ [m
+[31m-nut.files =  list.files(roms.dir,pattern = '^roms_nut_force.*\\.nc$',full.names = T)[m
+[31m-# ltl.files = ltl.files[17][m
+[31m-for(i in 1:length(nut.files)){[m
+[31m-# for(i in 17){[m
+[31m-  [m
+[31m-  nc.file = open.nc(nut.files[i],write = T)[m
+[31m-[m
+[31m-  [m
+[31m-  #valid_max[m
+[31m-  att.put.nc(nc.file, 'NH3', "valid_max", "NC_DOUBLE", 99999)[m
+[31m-  att.put.nc(nc.file, 'NO3', "valid_max", "NC_DOUBLE", 99999)[m
+[31m-  att.put.nc(nc.file, 'Oxygen', "valid_max", "NC_DOUBLE", 99999)[m
+[31m-  att.put.nc(nc.file, 'Si', "valid_max", "NC_DOUBLE", 99999)[m
+[31m-[m
+[31m-  [m
+   close.nc(nc.file)[m
+   print(i)[m
+ }[m
+[32m+[m[32m#[m[41m [m
+[32m+[m[32m#[m[41m [m
+[32m+[m[32m# nut.files =  list.files(roms.dir,pattern = '^roms_nut_force.*\\.nc$',full.names = T)[m
+[32m+[m[32m# # ltl.files = ltl.files[17][m
+[32m+[m[32m# for(i in 1:length(nut.files)){[m
+[32m+[m[32m# # for(i in 17){[m
+[32m+[m[32m#[m[41m   [m
+[32m+[m[32m#   nc.file = open.nc(nut.files[i],write = T)[m
+[32m+[m[32m#[m[41m [m
+[32m+[m[32m#[m[41m   [m
+[32m+[m[32m#   #valid_max[m
+[32m+[m[32m#   att.put.nc(nc.file, 'NH3', "valid_max", "NC_DOUBLE", 99999)[m
+[32m+[m[32m#   att.put.nc(nc.file, 'NO3', "valid_max", "NC_DOUBLE", 99999)[m
+[32m+[m[32m#   att.put.nc(nc.file, 'Oxygen', "valid_max", "NC_DOUBLE", 99999)[m
+[32m+[m[32m#   att.put.nc(nc.file, 'Si', "valid_max", "NC_DOUBLE", 99999)[m
+[32m+[m[32m#[m[41m [m
+[32m+[m[32m#[m[41m   [m
+[32m+[m[32m#   close.nc(nc.file)[m
+[32m+[m[32m#   print(i)[m
+[32m+[m[32m# }[m
+[1mdiff --git a/R/fix_force_varnames.R b/R/ROMS_COBALT/fix_force_varnames.R[m
+[1msimilarity index 100%[m
+[1mrename from R/fix_force_varnames.R[m
+[1mrename to R/ROMS_COBALT/fix_force_varnames.R[m
+[1mdiff --git a/R/flatten_ROMS.R b/R/ROMS_COBALT/flatten_ROMS.R[m
+[1msimilarity index 100%[m
+[1mrename from R/flatten_ROMS.R[m
+[1mrename to R/ROMS_COBALT/flatten_ROMS.R[m
+[1mdiff --git a/R/get_ROMS_vars.R b/R/ROMS_COBALT/get_ROMS_vars.R[m
+[1msimilarity index 100%[m
+[1mrename from R/get_ROMS_vars.R[m
+[1mrename to R/ROMS_COBALT/get_ROMS_vars.R[m
+[1mdiff --git a/R/make_DF_forcing.R b/R/ROMS_COBALT/make_DF_forcing.R[m
+[1msimilarity index 100%[m
+[1mrename from R/make_DF_forcing.R[m
+[1mrename to R/ROMS_COBALT/make_DF_forcing.R[m
+[1mdiff --git a/R/make_ROMS_files.R b/R/ROMS_COBALT/make_ROMS_files.R[m
+[1msimilarity index 100%[m
+[1mrename from R/make_ROMS_files.R[m
+[1mrename to R/ROMS_COBALT/make_ROMS_files.R[m
+[1mdiff --git a/R/make_ROMS_files_2.R b/R/ROMS_COBALT/make_ROMS_files_2.R[m
+[1msimilarity index 100%[m
+[1mrename from R/make_ROMS_files_2.R[m
+[1mrename to R/ROMS_COBALT/make_ROMS_files_2.R[m
+[1mdiff --git a/R/make_ROMS_files_new_levels.R b/R/ROMS_COBALT/make_ROMS_files_new_levels.R[m
+[1msimilarity index 100%[m
+[1mrename from R/make_ROMS_files_new_levels.R[m
+[1mrename to R/ROMS_COBALT/make_ROMS_files_new_levels.R[m
+[1mdiff --git a/R/make_ROMS_files_nutrients.R b/R/ROMS_COBALT/make_ROMS_files_nutrients.R[m
+[1msimilarity index 100%[m
+[1mrename from R/make_ROMS_files_nutrients.R[m
+[1mrename to R/ROMS_COBALT/make_ROMS_files_nutrients.R[m
+[1mdiff --git a/R/make_ROMS_files_output_preaggregation.R b/R/ROMS_COBALT/make_ROMS_files_output_preaggregation.R[m
+[1msimilarity index 100%[m
+[1mrename from R/make_ROMS_files_output_preaggregation.R[m
+[1mrename to R/ROMS_COBALT/make_ROMS_files_output_preaggregation.R[m
+[1mdiff --git a/R/make_force_light.R b/R/ROMS_COBALT/make_force_light.R[m
+[1msimilarity index 100%[m
+[1mrename from R/make_force_light.R[m
+[1mrename to R/ROMS_COBALT/make_force_light.R[m
+[1mdiff --git a/R/make_force_ltl.R b/R/ROMS_COBALT/make_force_ltl.R[m
+[1msimilarity index 100%[m
+[1mrename from R/make_force_ltl.R[m
+[1mrename to R/ROMS_COBALT/make_force_ltl.R[m
+[1mdiff --git a/R/make_force_nutrients.R b/R/ROMS_COBALT/make_force_nutrients.R[m
+[1msimilarity index 100%[m
+[1mrename from R/make_force_nutrients.R[m
+[1mrename to R/ROMS_COBALT/make_force_nutrients.R[m
+[1mdiff --git a/R/move_ROMS_output.R b/R/ROMS_COBALT/move_ROMS_output.R[m
+[1msimilarity index 100%[m
+[1mrename from R/move_ROMS_output.R[m
+[1mrename to R/ROMS_COBALT/move_ROMS_output.R[m
+[1mdiff --git a/R/plot_ROMS_2D.R b/R/ROMS_COBALT/plot_ROMS_2D.R[m
+[1msimilarity index 100%[m
+[1mrename from R/plot_ROMS_2D.R[m
+[1mrename to R/ROMS_COBALT/plot_ROMS_2D.R[m
+[1mdiff --git a/R/plot_ROMS_2D_timeavg.R b/R/ROMS_COBALT/plot_ROMS_2D_timeavg.R[m
+[1msimilarity index 100%[m
+[1mrename from R/plot_ROMS_2D_timeavg.R[m
+[1mrename to R/ROMS_COBALT/plot_ROMS_2D_timeavg.R[m
+[1mdiff --git a/R/plot_ROMS_summary.R b/R/ROMS_COBALT/plot_ROMS_summary.R[m
+[1msimilarity index 100%[m
+[1mrename from R/plot_ROMS_summary.R[m
+[1mrename to R/ROMS_COBALT/plot_ROMS_summary.R[m
+[1mdiff --git a/R/plot_ROMS_surface_bottom_temp.R b/R/ROMS_COBALT/plot_ROMS_surface_bottom_temp.R[m
+[1msimilarity index 100%[m
+[1mrename from R/plot_ROMS_surface_bottom_temp.R[m
+[1mrename to R/ROMS_COBALT/plot_ROMS_surface_bottom_temp.R[m
+[1mdiff --git a/R/plot_ROMS_timeavg.R b/R/ROMS_COBALT/plot_ROMS_timeavg.R[m
+[1msimilarity index 100%[m
+[1mrename from R/plot_ROMS_timeavg.R[m
+[1mrename to R/ROMS_COBALT/plot_ROMS_timeavg.R[m
+[1mdiff --git a/R/plot_roms_boxvars.R b/R/ROMS_COBALT/plot_roms_boxvars.R[m
+[1msimilarity index 100%[m
+[1mrename from R/plot_roms_boxvars.R[m
+[1mrename to R/ROMS_COBALT/plot_roms_boxvars.R[m
+[1mdiff --git a/R/plot_roms_boxvars_allyears.R b/R/ROMS_COBALT/plot_roms_boxvars_allyears.R[m
+[1msimilarity index 100%[m
+[1mrename from R/plot_roms_boxvars_allyears.R[m
+[1mrename to R/ROMS_COBALT/plot_roms_boxvars_allyears.R[m
+[1mdiff --git a/R/plot_roms_hflux.R b/R/ROMS_COBALT/plot_roms_hflux.R[m
+[1msimilarity index 100%[m
+[1mrename from R/plot_roms_hflux.R[m
+[1mrename to R/ROMS_COBALT/plot_roms_hflux.R[m
+[1mdiff --git a/R/plot_roms_ltlvars.R b/R/ROMS_COBALT/plot_roms_ltlvars.R[m
+[1msimilarity index 100%[m
+[1mrename from R/plot_roms_ltlvars.R[m
+[1mrename to R/ROMS_COBALT/plot_roms_ltlvars.R[m
+[1mdiff --git a/R/plot_roms_statevars.R b/R/ROMS_COBALT/plot_roms_statevars.R[m
+[1msimilarity index 100%[m
+[1mrename from R/plot_roms_statevars.R[m
+[1mrename t

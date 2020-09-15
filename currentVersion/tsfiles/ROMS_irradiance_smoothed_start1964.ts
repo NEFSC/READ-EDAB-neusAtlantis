@@ -8,7 +8,7 @@
 ##
 ## COLUMN1.name  Time
 ## COLUMN1.long_name  Time
-## COLUMN1.units  days since 1980-02-01 00:00:00 +10
+## COLUMN1.units  days since 1964-01-01 00:00:00 +10
 ## COLUMN1.missing_value  -999.000000
 ##
 ## COLUMN2.name  swr
