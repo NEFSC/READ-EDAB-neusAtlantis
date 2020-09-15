@@ -17,32 +17,43 @@ make_force_path = function(force.dirs, ts.dir, years,var.names, pattern.names,ou
   write.csv(out.df,file = paste0(out.dir,out.name,'.csv'),row.names = F)
 }
 
+### For Hirata Model
 #All windows variables
 make_force_path(
-  var.names = c('hd','Temperature','Salinity'),
+  var.names = c('hd','Temperature','Salinity',
+                'Diatom_N','DinoFlag_N','PicoPhytopl_N','Diatom_S',
+                'Lab_Det_N'),
   force.dirs = c('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/transport/',
-                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phys_statevars/',2)
-                 ),
+                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phys_statevars_alternate/',2),
+                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars_dynamic_lower/',4),
+                 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/labile_detritus/'
+  ),
   years = 1964:2017,
   ts.dir = "\\tsfiles\\Annual_Files\\",
   pattern.names = c('^flow.*\\.nc$',
-                    '^temp_.*\\.nc$',
-                    '^salt_.*\\.nc$'),
+                    rep('GLORYS_tempsalt_force_*',2),
+                    rep('^Phyto_Forcing_.*\\.nc$',4),
+                    '^Satphyto_Forcing_DL_.*\\.nc$'),
   out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/',
   out.name = 'obs_hindcast_forcing_paths_WINDOWS'
 )
 
 #All LINUX variables
 make_force_path(
-  var.names = c('hd','Temperature','Salinity'),
+  var.names = c('hd','Temperature','Salinity',
+                'Diatom_N','DinoFlag_N','PicoPhytopl_N','Diatom_S',
+                'Lab_Det_N'),
   force.dirs = c('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/transport/',
-                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phys_statevars/',2)
+                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phys_statevars_alternate/',2),
+                 rep('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars_dynamic_lower/',4),
+                 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/labile_detritus/'
   ),
   years = 1964:2017,
   ts.dir = "/tsfiles/Annual_Files/",
   pattern.names = c('^flow.*\\.nc$',
-                    '^temp_.*\\.nc$',
-                    '^salt_.*\\.nc$'),
+                    rep('GLORYS_tempsalt_force_*',2),
+                    rep('^Phyto_Forcing_Hirata_.*\\.nc$',4),
+                    '^Satphyto_Forcing_DL_.*\\.nc$'),
   out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/',
   out.name = 'obs_hindcast_forcing_paths_LINUX'
 )

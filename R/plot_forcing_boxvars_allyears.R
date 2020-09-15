@@ -78,3 +78,34 @@ for(i in 1:length(all.vars)){
   )
   print(i)
 }
+
+# force.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_Files/combined_years/'
+force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years'
+out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Figures/boxvars_allyears/'
+
+all.vars = c('Diatom_N','DinoFlag_N','PicoPhytopl_N','Diatom_S')
+file.name = paste0(all.vars,'_allyears.R')
+units = rep('mg N m-3',4)
+
+for(i in 1:length(all.vars)){
+  
+  plot_roms_boxvars_allyears(force.dir = force.dir,
+                             out.dir = out.dir,
+                             file.name = file.name[i],
+                             var.name = all.vars[i],
+                             units = units[i],
+                             plot.name = '_daily',
+                             smooth.length = 1
+  )
+  
+  plot_roms_boxvars_allyears(force.dir = force.dir,
+                             out.dir = out.dir,
+                             file.name = file.name[i],
+                             var.name = all.vars[i],
+                             units = units[i],
+                             plot.name = '_annual',
+                             smooth.length = 365
+  )
+  
+  print(i)
+}

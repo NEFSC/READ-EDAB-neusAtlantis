@@ -9,8 +9,7 @@ orig.prm = readLines(paste0(atl.dir,'Forcing_Files/obs_hindcast_hydroconstruct_t
 orig.bat = readLines(paste0(atl.dir,'Forcing_Files/hydroconstruct_run_template.bat'))
 trans.prefix = 'GLORYS_Atlantis_'
 statevar.prefix = 'Obs_Hindcast_statevars_'
-# years = 1993:2017
-years = 1995
+years = 1993:2017
 yr=1
 for(yr in 1:length(years)){
   transport.file = paste0(trans.dir,'Atlantis_Format/',years[yr],'/',trans.prefix,'transport_',years[yr],'.nc')

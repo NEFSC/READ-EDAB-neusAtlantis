@@ -30,7 +30,7 @@
 # groups = NULL
 
 plot_run_comparisons = function(model1.dir,model2.dir,model1.name,model2.name,plot.raw = T,
-                             plot.diff = T, plot.out, table.out = F, groups = NULL){
+                             plot.diff = T, plot.out, table.out = F, groups = NULL,remove.init = F){
   `%>%` = dplyr::`%>%`
   
   model1.files = sort(list.files(model1.dir,'*.nc'))
@@ -73,6 +73,10 @@ plot_run_comparisons = function(model1.dir,model2.dir,model1.name,model2.name,pl
   bio2.long$Real.Time = as.Date(bio2.long$Time,origin = t.start2)
   
   bio.all = rbind(bio1.long,bio2.long)
+  
+  if(remove.init){
+    bio.all = bio.all %>% filter(Time != 0)
+  }
   
   if(is.null(groups)){
     plot.groups = sort(unique(bio.all$Group))  

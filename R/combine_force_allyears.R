@@ -1,14 +1,14 @@
 ### For Forcing Files
 
 transport.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/transport/'
-phys.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phys_statevars/'
+phys.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phys_statevars_alternate/'
 force.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/currentVersion/tsfiles/Annual_Files/'
 
 out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years/'
 
-file.dir = phys.dir
-var.name = 'temperature'
-file.pattern = '^temp_.*\\.nc$'
+# file.dir = phys.dir
+# var.name = 'temperature'
+# file.pattern = '^temp_.*\\.nc$'
 
 combine_years = function(file.dir,file.pattern,var.name,out.dir){
   
@@ -37,6 +37,36 @@ combine_years = function(file.dir,file.pattern,var.name,out.dir){
 combine_years(transport.dir,file.pattern = '^GLORYS_Atlantis.*\\.nc','transport',out.dir)
 
 # #Physics Statevariables
-combine_years(phys.dir,file.pattern = '^temp.*\\.nc','temperature',out.dir)
-combine_years(phys.dir,file.pattern = '^salt.*\\.nc','salinity',out.dir)
-# # combine_years(phys.dir,file.pattern = '*.nc','verticalflux',out.dir)
+combine_years(phys.dir,file.pattern = '^GLORYS_tempsalt_force_.*\\.nc','temperature',out.dir)
+combine_years(phys.dir,file.pattern = '^GLORYS_tempsalt_force_.*\\.nc','salinity',out.dir)
+combine_years('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/statevars/',file.pattern = '^ECCO_vflux_Atlantis_.*\\.nc','verticalflux',out.dir)
+
+phyto.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars_dynamic_lower/'
+dl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/labile_detritus/'
+
+#New Satellite Phytoplankton
+combine_years(file.dir = phyto.dir,
+              file.pattern = 'Phyto_Forcing_*',
+              var.name = 'Diatom_N',
+              out.dir = out.dir)
+
+combine_years(file.dir = phyto.dir,
+              file.pattern = 'Phyto_Forcing_*',
+              var.name = 'DinoFlag_N',
+              out.dir = out.dir)
+
+combine_years(file.dir = phyto.dir,
+              file.pattern = 'Phyto_Forcing_*',
+              var.name = 'PicoPhytopl_N',
+              out.dir = out.dir)
+
+combine_years(file.dir = phyto.dir,
+              file.pattern = 'Phyto_Forcing_*',
+              var.name = 'Diatom_S',
+              out.dir = out.dir)
+
+combine_years(file.dir = dl.dir,
+              file.pattern = 'Satphyto_Forcing_DL_*',
+              var.name = 'Lab_Det_N',
+              out.dir = out.dir)
+

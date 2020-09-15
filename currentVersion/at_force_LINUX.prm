@@ -742,8 +742,11 @@ DinoFlag_N_File48.name /tsfiles/Annual_Files/roms_largephyto_force_2012.nc
 DinoFlag_N_File49.name /tsfiles/Annual_Files/roms_largephyto_force_2013.nc
 DinoFlag_N_File50.name /tsfiles/Annual_Files/roms_largephyto_force_2014.nc
 
-DinoFlag_N_rewind 0
-DinoFlag_N_wgt_coefft 1.0
+
+
+
+Diatom_S_rewind 0
+Diatom_S_wgt_coefft 1.0
 #Pelag_Bact_N
 
 Pelag_Bact_N_nFiles 51

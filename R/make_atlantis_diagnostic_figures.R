@@ -165,7 +165,6 @@ make_atlantis_diagnostic_figures = function(
   
   #Select box for timeseries of all benthic groups
   if(plot.benthic){
-    
     benthic.biomass.spatial = dplyr::filter(result$biomass.spatial.stanza, layer == benthic.level & polygon == benthic.box)
     benthic.spp = unique(benthic.biomass.spatial$species)
     box.area = box.bgm$boxes[[benthic.box+1]]$area

@@ -7,16 +7,16 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Define local/git directories for atlantis output, parameter files, and desired location for figures/tables
 
-atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/GLORYS_Physics_1/'
+#Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
+run.name = 'Obs_Hindcast_LeapYearFix'
+
+atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
 param.dir = here::here('currentVersion')
-out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/GLORYS_Physics_1/Post_Processed/'
+out.dir = paste0(atl.dir,'Post_Processed/')
 
 
 #Run prefix is the filename prefix in the atlantis output (specified in run.bat)
 run.prefix = 'neus_output'
-#Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
-
-run.name = 'GLORYS_1'
 
 
 #Run function that retreives parameter files
@@ -27,8 +27,8 @@ param.ls= get_atl_paramfiles(param.dir = param.dir,
 #Run  post-processing function to generate "result" R object. 
 
 process_atl_output( param.dir = here::here('currentVersion'),
-  atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/GLORYS_Physics_1/',
-  out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/GLORYS_Physics_1/Post_Processed/',
+  atl.dir = atl.dir,
+  out.dir = out.dir,
 
   run.prefix = 'neus_output',
   include_catch = T,
@@ -57,9 +57,9 @@ make_atlantis_diagnostic_figures(
   out.dir = out.dir,
   param.dir = param.dir,
   run.prefix = 'neus_output_test',
-  run.name = 'GLORYS_1',
+  run.name = 'Obs_Hindcast_LeapYearFix',
   result = result,
-  benthic.box = 10,
+  benthic.box = 9,
   benthic.level = 4,
   
   bgm.file = param.ls$bgm,
@@ -70,18 +70,18 @@ make_atlantis_diagnostic_figures(
   
   #Turn these on/off for desired output
   plot.benthic = T,
-  plot.overall.biomass = T,
-  plot.biomass.timeseries = T,
-  plot.length.age=T,
-  plot.biomass.box=T,
-  plot.c.mum=T,
-  plot.sn.rn=T,
-  plot.recruits=T,
-  plot.numbers.timeseries=T,
-  plot.physics=T,
-  plot.growth.cons=T,
-  plot.cohort=T,
-  plot.diet=T,
-  plot.spatial.biomass=T,
-  plot.LTL=T
+  plot.overall.biomass = F,
+  plot.biomass.timeseries = F,
+  plot.length.age=F,
+  plot.biomass.box=F,
+  plot.c.mum=F,
+  plot.sn.rn=F,
+  plot.recruits=F,
+  plot.numbers.timeseries=F,
+  plot.physics=F,
+  plot.growth.cons=F,
+  plot.cohort=F,
+  plot.diet=F,
+  plot.spatial.biomass=F,
+  plot.LTL=F
 )
