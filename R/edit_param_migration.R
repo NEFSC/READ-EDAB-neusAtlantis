@@ -2,6 +2,10 @@
 # bio.file = here::here('currentVersion','at_biology.prm')
 # groups.file = here::here('currentVersion','neus_groups.csv')
 # spp.names = c('BFT','TUN')
+# mig.table = 'C:/Users/joseph.caracappa/Documents/Atlantis/Tuna_Test_Migration_Params_test.csv'
+# mig.box.io.table = 'C:/Users/joseph.caracappa/Documents/Atlantis/Tuna_Test_Migration_IO_Box_test.csv'
+# new.file.dir = here::here('currentVersion')
+# new.file.name = 'at_biology_test.prm'
 
 #Retreives migration related lines as a list. Line numbers and line contents
 get_migration_lines = function(bio.file){
@@ -19,7 +23,7 @@ get_migration_lines = function(bio.file){
 }
 
 #Formats migration table object
-get_param_migration = function(bio.file, groups.file, spp.names = NULL,write.output = F, out.dir = NA, out.prefix = NA){
+get_param_migration = function(bio.file, spp.names = NULL,write.output = F, out.dir = NA, out.prefix = NA){
   
    #Retreives migration parameter lines with get_migration_lines
    get.lines = get_migration_lines(bio.file)
@@ -28,14 +32,13 @@ get_param_migration = function(bio.file, groups.file, spp.names = NULL,write.out
    mig.lines = get.lines[[3]]
    
    #Retreive Functional Group Codes
-   fgs = read.csv(groups.file,as.is = T)
-   codes = fgs$Code
+   # fgs = read.csv(groups.file,as.is = T)
+   # codes = fgs$Code
    
-   if(is.null(spp.names)){
-      group.lines = mig.line.vals[[1]][-grep('#',mig.line.vals[[1]])]
-      codes =unname(sapply(group.lines,function(x)return(strsplit(x,'flag|Migrate| |  ')[[1]][2])))
-      
-   }else{
+   group.lines = mig.line.vals[[1]][-grep('#',mig.line.vals[[1]])]
+   codes =unname(sapply(group.lines,function(x)return(strsplit(x,'flag|Migrate| |  ')[[1]][2])))
+   
+   if(!is.null(spp.names)){
       spp.num = as.numeric(sapply(spp.names,function(x) return(grep(paste0('\\b',x,'\\b'),codes)))   )
       codes = codes[spp.num]
    }
@@ -184,13 +187,13 @@ get_param_migration = function(bio.file, groups.file, spp.names = NULL,write.out
       
       #Build Dataframe for main params
       mig.param.df.ls[[i]] = data.frame(spp.name = spp.i, 
-                                        flag_X_Mig = flag.mig.vals,
-                                        X_Mig_Time = mig.time.val,
-                                        jX_Mig_Time = jmig.time.val,
-                                        X_Mig_Period = mig.period.val,
-                                        jX_Mig_Period = jmig.period.val,
-                                        X_Mig_Return = mig.return.val,
-                                        jX_Mig_Return = mig.return.juv.val,
+                                        flagXMigrate = flag.mig.vals,
+                                        X_Migrate_Time = mig.time.val,
+                                        jX_Migrate_Time = jmig.time.val,
+                                        X_Migrate_Period = mig.period.val,
+                                        jX_Migrate_Period = jmig.period.val,
+                                        X_Migrate_Return = mig.return.val,
+                                        jX_Migrate_Return = mig.return.juv.val,
                                         X_FSM = mig.fsm.val,
                                         jX_FSM = mig.fsm.juv.val,
                                         X_FSMG = mig.fsmg.val,
@@ -223,21 +226,91 @@ get_param_migration = function(bio.file, groups.file, spp.names = NULL,write.out
    
 }
 
-#Test function
+#Edits biology.prm 
+#Uses table in same format as the output of get_param_migration
+edit_param_migration = function(bio.file,
+                                spp.names = NULL,
+                                mig.table,
+                                mig.io.box.table,
+                                overwrite = F,
+                                new.file.dir,
+                                new.file.name){
+   
+   #read in change files
+   new.mig.df = read.csv(mig.table,as.is =T)
+   new.mig.io.box.df = read.csv(mig.box.io.table,as.is =T)
+   
+   #read.in existing tables
+   current.params = get_param_migration(bio.file,spp.names,write.output = F)
+   old.mig.df = current.params[[1]]
+   old.mig.io.box.df = current.params[[2]]
+   
+   #Create a diff old vs new
+   mig.diff.df = cbind(spp.name=new.mig.df$spp.name,as.data.frame(new.mig.df[,-1] == old.mig.df[,-1]))
+   mig.io.box.diff.df = new.mig.io.box.df == old.mig.io.box.df
+   
+   #Remove rows where params unchanged
+   new.mig.df = new.mig.df[!apply(mig.diff.df[,-1],1,all),]
+   new.mig.io.box.df = new.mig.io.box.df[!apply(mig.io.box.diff.df[,-1],1,all),]
+   mig.diff.df = mig.diff.df[!apply(mig.diff.df[,-1],1,all),]
+   mig.io.box.diff.df = mig.io.box.diff.df[!apply(mig.io.box.diff.df,1,all),]
+   
+   #pull migration lines
+   mig.lines = get_migration_lines(bio.file)
+   mig.line.num = mig.lines[[1]]
+   mig.line.vals = mig.lines[[2]]
+   mig.lines = mig.lines[[3]]
+   
+   #edit possible MigIOBox Lines. List element 4
+   for(i in 1:nrow(new.mig.io.box.df)){
+      spp.i = new.mig.io.box.df$spp.name[i]
+      is.juv = ifelse(substring(spp.i,1,1)=='j',T,F)
+      
+      mig.io.box.lines = mig.line.num[[4]]
+      mig.io.box.vals = mig.line.vals[[4]]
+      if(is.juv){
+         mig.io.box.id = grep(paste0('MigIOBox_',spp.i,'juv'),mig.io.box.vals)
+      }else{
+         mig.io.box.id = grep(paste0('MigIOBox_',spp.i,'ad'),mig.io.box.vals)   
+      }
+      mig.lines[mig.io.box.lines[mig.io.box.id]+1] = paste(unname(new.mig.io.box.df[i,][-1]),collapse = ' ')
+   }
+   
+   #Edit other params
+   for(i in 1:nrow(new.mig.df)){
+      spp.i = new.mig.df$spp.name[i]
+      
+      for(p in 2:ncol(new.mig.df)){
+         
+         if(mig.diff.df[i,p]== T){
+            next()
+         }
+         var.name = paste(strsplit(colnames(new.mig.df)[p],'X')[[1]],collapse = spp.i)
+         if(colnames(new.mig.df)[p] == 'flagXMigrate'){
+            mig.lines[grep(var.name,mig.lines)] = paste(var.name,new.mig.df[i,p],sep = ' ')
+         }
+         mig.lines[grep(paste0('\\b',var.name),mig.lines)+1] = new.mig.df[i,p]
+         
+      }
+   }
+   
+   #Write to new file or overwrite (if T)
+   
+   if(overwrite){
+      writeLines(mig.lines, con = bio.file)
+   }else{
+      writeLines(mig.lines, paste0(new.file.dir,new.file.name))
+   }
+}
 
+
+#Test function
 ##with specified spp names
  get_param_migration(bio.file = here::here('currentVersion','at_biology.prm'),
-                    groups.file = here::here('currentVersion','neus_groups.csv'),
                     spp.names = c('BFT','TUN'),
                     write.output = T,
                     out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/',
                     out.prefix = 'Tuna_Test'
 )
-##With all groups
-get_param_migration(bio.file = here::here('currentVersion','at_biology.prm'),
-                               groups.file = here::here('currentVersion','neus_groups.csv'),
-                               spp.names = NULL,
-                               write.output = T,
-                               out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/',
-                               out.prefix = 'All_Groups'
-)
+ 
+
