@@ -34,7 +34,7 @@ masterList <- dplyr::left_join(data,SVSPPData, by=c("SVSPP"="SVSPPsv"))  %>%
   dplyr::arrange(Code) %>%
   dplyr::rename(Species = Name,Functional_Group = `Group Name`,Common_Name = COMNAME.y,Scientific_Name=SCIENTIFIC_NAME.y,Species_Itis=SPECIES_ITIS.y)  %>% 
   dplyr::mutate(Common_Name = utilities::capitalize_first_letter(Common_Name)) %>%
-  dplyr::select(Code,Functional_Group,Species,Common_Name,Scientific_Name,SVSPP,NESPP3,Species_Itis)
+  dplyr::select(Code,Functional_Group,Species,Scientific_Name,SVSPP,NESPP3,Species_Itis)
 
 
 # format to markdown table. Copy output to wiki

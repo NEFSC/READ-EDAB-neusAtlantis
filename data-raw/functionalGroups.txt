@@ -1,237 +1,237 @@
-|Code|Functional_Group|Species|Common_Name|Scientific_Name|SVSPP|NESPP3|Species_Itis|
-|---|---|---|---|---|---|---|---|
-|ANC|Anchovies|Bay anchovy|Bay anchovy|ANCHOA MITCHILLI|43|006|161839|
-|ANC|Anchovies|Striped anchovy|NA|NA|44| NA|NA|
-|BB|Sediment Bacteria|Sediment Bacteria|NA|NA|NA| NA|NA|
-|BC|Benthic Carnivore|Starfish|Sea star uncl|ASTEROIDEA|NA|828|156862|
-|BC|Benthic Carnivore|Common octopus|NA|NA|511| NA|NA|
-|BC|Benthic Carnivore|Octopus unclassified|NA|OCTOPODIDAE|510|786|082590|
-|BC|Benthic Carnivore|Spoonarm octopus|NA|NA|512| NA|NA|
-|BC|Benthic Carnivore|Unicorn octopus|NA|NA|513| NA|NA|
-|BD|Deposit Feeder|Deposit Feeder|NA|NA|NA| NA|NA|
-|BFF|Other benthic filter feeder|Bay scallop|Bay scallop|ARGOPECTEN IRRADIANS|402|799|079737|
-|BFF|Other benthic filter feeder|Atlantic calico scallop|Atlantic calico scallop|ARGOPECTEN GIBBUS|404|797|079734|
-|BFF|Other benthic filter feeder|Iceland scallop|Iceland scallop|CHLAMYS ISLANDICA|340|795|079619|
-|BFF|Other benthic filter feeder|Scallop unclassified|Scallop uncl|PECTINIDAE|NA|796|079611|
-|BFF|Other benthic filter feeder|Arctic surfclam|Arctic surfclam|MACTROMERIS POLYNYMA|407|765|080983|
-|BFT|Atlantic bluefin tuna|Atlantic bluefin tuna|Bluefin tuna|THUNNUS THYNNUS|747|467|172421|
-|BG|Benthic grazer|Benthic grazer|NA|NA|331| NA|NA|
-|BIL|Billfish|Blue marlin|Blue marlin|MAKAIRA NIGRICANS|707|217|172491|
-|BIL|Billfish|White marlin|White marlin|TETRAPTURUS ALBIDUS|708|216|172499|
-|BIL|Billfish|Swordfish|Swordfish|XIPHIAS GLADIUS|700|432|172482|
-|BLF|Bluefish|Bluefish|Bluefish|POMATOMUS SALTATRIX|135|023|168559|
-|BLS|Blue shark|Blue shark|Blue shark|PRIONACE GLAUCA|17|493|160424|
-|BMS|Shallow macrozoobenthos|Atantic rock crab|Atlantic rock crab|CANCER IRRORATUS|313|712|098679|
-|BMS|Shallow macrozoobenthos|Blue crab|Blue crab|CALLINECTES SAPIDUS|314|700|098696|
-|BMS|Shallow macrozoobenthos|Cancer crab|NA|CANCER|311|714|098671|
-|BMS|Shallow macrozoobenthos|Green crab|Green crab|CARCINUS MAENAS|327|708|098734|
-|BMS|Shallow macrozoobenthos|Hermit crab|NA|PAGURUS|NA|702|097775|
-|BMS|Shallow macrozoobenthos|Horseshoe crab|Horseshoe crab|LIMULUS POLYPHEMUS|318|724|082703|
-|BMS|Shallow macrozoobenthos|Jonah crab|Jonah crab|CANCER BOREALIS|312|711|098678|
-|BMS|Shallow macrozoobenthos|Lady crab|Lady crab|OVALIPES OCELLATUS|322|701|098714|
-|BMS|Shallow macrozoobenthos|Snow crab|Snow crab|CHIONOECETES OPILIO|325|718|098428|
-|BMS|Shallow macrozoobenthos|Spider crab|Spider crab uncl|MAJIDAE|317|715|098417|
-|BMS|Shallow macrozoobenthos|Knobbed whelk|Knobbed whelk|BUSYCON CARICA|337|777|074071|
-|BO|Meiobenthos|Meiobenthos|NA|NA|NA| NA|NA|
-|BPF|Other benthopelagic fish|Argentine|NA|NA|46| NA|NA|
-|BPF|Other benthopelagic fish|American sandlance|NA|AMMODYTES|734|206|171671|
-|BPF|Other benthopelagic fish|American sandlance|American sand lance|AMMODYTES AMERICANUS|734|206|171673|
-|BPF|Other benthopelagic fish|Harvest fish|NA|PEPRILUS|749|165|172564|
-|BPF|Other benthopelagic fish|Harvest fish|Harvestfish|PEPRILUS ALEPIDOTUS|749|165|172570|
-|BPF|Other benthopelagic fish|Atlantic silverside|Atlantic silverside|MENIDIA MENIDIA|113|362|165994|
-|BPF|Other benthopelagic fish|Round herring|Round herring|ETRUMEUS TERES|31|166|161743|
-|BPF|Other benthopelagic fish|Chub mackerel|NA|SCOMBER COLIAS|124|215|172413|
-|BPF|Other benthopelagic fish|Halfbeak|NA|HEMIRAMPHIDAE|NA|164|553172|
-|BSB|Black sea bass|Black sea bass|Black sea bass|CENTROPRISTIS STRIATA|141|335|167687|
-|BUT|Butterfish|Butterfish|Butterfish|PEPRILUS TRIACANTHUS|131|051|172567|
-|BWH|Baleen whales|Baleen whales|NA|NA|NA| NA|NA|
-|CLA|Atlantic surf clam|Atlantic surf clam|Atlantic surfclam|SPISULA SOLIDISSIMA|403|769|080944|
-|COD|Atlantic cod|Atlantic cod|Atlantic cod|GADUS MORHUA|73|081|164712|
-|COD|Atlantic cod|Atlantic cod|Atlantic cod|GADUS MORHUA|73|082|164712|
-|DC|Carrion|Carrion3|NA|NA|NA| NA|NA|
-|DF|Dinoflagellates|Dinoflagellates|NA|NA|NA| NA|NA|
-|DL|Labile detritus|Labile detritus|NA|NA|NA| NA|NA|
-|DOG|Spiny dogfish|Spiny dogfish|Spiny dogfish|SQUALUS ACANTHIAS|15|352|160617|
-|DR|Refractory detritus|Refractory detritus|NA|NA|NA| NA|NA|
-|DRM|Drums and croakers|Atlantic croaker|Atlantic croaker|MICROPOGONIAS UNDULATUS|136|090|169283|
-|DRM|Drums and croakers|Weakfish|Weakfish|CYNOSCION REGALIS|145|344|169241|
-|DRM|Drums and croakers|Northern kingfish|NA|MENTICIRRHUS SAXATILLIS|146|196|169276|
-|DRM|Drums and croakers|Black drum|Black drum|POGONIAS CROMIS|147|106|169288|
-|DRM|Drums and croakers|Silver perch|NA|NA|148| NA|NA|
-|DRM|Drums and croakers|Spot|Spot|LEIOSTOMUS XANTHURUS|149|406|169267|
-|DSH|Other demersal sharks|Chain dogfish|Chain dogfish|SCYLIORHINUS RETIFER|14|346|160060|
-|DSH|Other demersal sharks|Atlantic angel shark|Atlantic angel shark|SQUATINA DUMERIL|16|477|160787|
-|DSH|Other demersal sharks|Nurse shark|Nurse shark|GINGLYMOSTOMA CIRRATUM|350|348|159977|
-|DSH|Other demersal sharks|Sand tiger|Sand tiger|CARCHARIAS TAURUS|12|349|159888|
-|DSH|Other demersal sharks|Bull shark|Bull shark|CARCHARHINUS LEUCAS|356|489|160275|
-|DSH|Other demersal sharks|Lemon shark|Lemon shark|NEGAPRION BREVIROSTRIS|359|492|160433|
-|DSH|Other demersal sharks|Sharpnose shark|Atlantic sharpnose shark|RHIZOPRIONODON TERRAENOVAE|360|494|160200|
-|DSH|Other demersal sharks|Scalloped hammerhead|Scalloped hammerhead shark|SPHYRNA LEWINI|362|478|160508|
-|DSH|Other demersal sharks|Thresher shark|Thresher shark|ALOPIAS VULPINUS|925|353|159916|
-|FDE|Shallow demersal fish|Alewife|Alewife|ALOSA PSEUDOHARENGUS|33|001|161706|
-|FDE|Shallow demersal fish|Gizzard shad|Gizzard shad|DOROSOMA CEPEDIANUM|426|134|161737|
-|FDE|Shallow demersal fish|Blueback herring|Blueback herring|ALOSA AESTIVALIS|34|112|161703|
-|FDE|Shallow demersal fish|Hickory shad|Hickory shad|ALOSA MEDIOCRIS|37|173|161704|
-|FDE|Shallow demersal fish|American shad|American shad|ALOSA SAPIDISSIMA|35|347|161702|
-|FDE|Shallow demersal fish|Smelt|Smelt uncl|OSMERIDAE|NA|371|162028|
-|FDF|Miscellaneous demersal fish|Spotted hake|Spotted hake|UROPHYCIS REGIA|78|662|164731|
-|FDF|Miscellaneous demersal fish|Fourbeard rockling|Bony fish uncl|OSTEICHTHYES|83|526|161030|
-|FDF|Miscellaneous demersal fish|Threebeard rockling|NA|NA|85| NA|NA|
-|FDF|Miscellaneous demersal fish|Cusk|Cusk|BROSME BROSME|84|096|164740|
-|FDF|Miscellaneous demersal fish|Roughhead grenadier|Roughhead grenadier|MACROURUS BERGLAX|92|137|165421|
-|FDF|Miscellaneous demersal fish|Grenadier unclassified|Grenadier uncl|MACROURIDAE|90|138|165332|
-|FDF|Miscellaneous demersal fish|Longspine snipefish|NA|NA|111| NA|NA|
-|FDF|Miscellaneous demersal fish|John Dory|NA|ZENOPSIS OCELLATA|112|188|166283|
-|FDF|Miscellaneous demersal fish|Threespine stickleback|NA|NA|115| NA|NA|
-|FDF|Miscellaneous demersal fish|Fourspine stickleback|NA|NA|488| NA|NA|
-|FDF|Miscellaneous demersal fish|Ninespine stickleback|NA|Pungitius pungitius|902|522|166387|
-|FDF|Miscellaneous demersal fish|Blackspotted stickleback|NA|NA|901| NA|NA|
-|FDF|Miscellaneous demersal fish|Pipefish unclassified|NA|NA|421| NA|NA|
-|FDF|Miscellaneous demersal fish|Chain pipefish|NA|NA|495| NA|NA|
-|FDF|Miscellaneous demersal fish|Dusky pipefish|NA|NA|494| NA|NA|
-|FDF|Miscellaneous demersal fish|Northern pipefish|Bony fish uncl|OSTEICHTHYES|116|526|161030|
-|FDF|Miscellaneous demersal fish|Whitenose pipefish|NA|NA|491| NA|NA|
-|FDF|Miscellaneous demersal fish|Trumpetfish|NA|NA|119| NA|NA|
-|FDF|Miscellaneous demersal fish|Atlantic moonfish|NA|NA|132| NA|NA|
-|FDF|Miscellaneous demersal fish|Lookdown|Bony fish uncl|OSTEICHTHYES|133|526|161030|
-|FDF|Miscellaneous demersal fish|Longspine scorpionfish|NA|NA|154| NA|NA|
-|FDF|Miscellaneous demersal fish|Blackbelly rosefish|Blackbelly rosefish|HELICOLENUS DACTYLOPTERUS|156|242|166787|
-|FDF|Miscellaneous demersal fish|Longhorn sculpin|Sculpin uncl|COTTIDAE|163|326|167196|
-|FDF|Miscellaneous demersal fish|Moustache sculpin|NA|NA|161| NA|NA|
-|FDF|Miscellaneous demersal fish|Shorthorn sculpin|NA|NA|162| NA|NA|
-|FDF|Miscellaneous demersal fish|Sculpins unclassified|Sculpin uncl|COTTIDAE|160|326|167196|
-|FDF|Miscellaneous demersal fish|Sea raven|Sea raven|HEMITRIPTERUS AMERICANUS|164|327|167289|
-|FDF|Miscellaneous demersal fish|Armored searobin|Armored searobin|PERISTEDION MINIATUM|173|343|167010|
-|FDF|Miscellaneous demersal fish|Northern searobin|Northern searobin|PRIONOTUS CAROLINUS|171|340|166974|
-|FDF|Miscellaneous demersal fish|Striped searobin|Striped searobin|PRIONOTUS EVOLANS|172|342|166975|
-|FDF|Miscellaneous demersal fish|Searobin uncl|Searobin uncl|TRIGLIDAE|174|341|166972|
-|FDF|Miscellaneous demersal fish|Cunner|Cunner|TAUTOGOLABRUS ADSPERSUS|176|093|170481|
-|FDF|Miscellaneous demersal fish|Conger eel|Conger eel|CONGER OCEANICUS|63|116|161326|
-|FDF|Miscellaneous demersal fish|Eel unclassified|Eel uncl|ANGUILLIFORMES|60|117|161123|
-|FDF|Miscellaneous demersal fish|Northern puffer|Northern puffer|SPHOEROIDES MACULATUS|196|429|173290|
-|FDF|Miscellaneous demersal fish|Wrymouth|NA|NA|191| NA|NA|
-|FDF|Miscellaneous demersal fish|Garfish|NA|LEPISOSTEIDAE|NA|133|161092|
-|FDF|Miscellaneous demersal fish|Hagfish|Hagfish uncl|MYXINIDAE|NA|150|159753|
-|FDF|Miscellaneous demersal fish|Hogfish|Hogfish|LACHNOLAIMUS MAXIMUS|682|179|170566|
-|FDF|Miscellaneous demersal fish|Lumpfish|Lumpfish|CYCLOPTERUS LUMPUS|168|210|167612|
-|FDF|Miscellaneous demersal fish|Oyster toadfish|Toadfish uncl|BATRACHOIDIDAE|185|451|164412|
-|FDF|Miscellaneous demersal fish|Sand perch|Sand perch|DIPLECTRUM FORMOSUM|530|311|167793|
-|FDF|Miscellaneous demersal fish|Atlantic needlefish|Atlantic needlefish|STRONGYLURA MARINA|471|019|165551|
-|FDF|Miscellaneous demersal fish|Sheepshead|Sheepshead|ARCHOSARGUS PROBATOCEPHALUS|631|356|169189|
-|FDF|Miscellaneous demersal fish|Atlantic sturgeon|NA|ACIPENSER OXYRINCHUS|380|420|553269|
-|FDF|Miscellaneous demersal fish|Shortnose sturgeon|Shortnose sturgeon|ACIPENSER BREVIROSTRUM|379|422|161069|
-|FDF|Miscellaneous demersal fish|Sturgeon unclassified|NA|ACIPENSERIDAE|NA|421|161064|
-|FDF|Miscellaneous demersal fish|Tomcod|Atlantic tomcod|MICROGADUS TOMCOD|453|453|164720|
-|FDF|Miscellaneous demersal fish|Inshore lizardfish|Bony fish uncl|OSTEICHTHYES|435|526|161030|
-|FDF|Miscellaneous demersal fish|Largescale lizardfish|NA|NA|433| NA|NA|
-|FDF|Miscellaneous demersal fish|Lizardfish unclassified|NA|NA|852| NA|NA|
-|FDF|Miscellaneous demersal fish|Offshore lizardfish|NA|NA|437| NA|NA|
-|FDF|Miscellaneous demersal fish|Red lizardfish|NA|NA|438| NA|NA|
-|FDF|Miscellaneous demersal fish|Shortjaw lizardfish|NA|NA|434| NA|NA|
-|FLA|Other flatfish|Gulfstream flounder|NA|CITHARICTHYS ARCTIFRONS|109|129|172719|
-|FLA|Other flatfish|Hogchoker|Hogchoker|TRINECTES MACULATUS|118|128|172982|
-|FOU|Fourspot flounder|Fourspot flounder|Fourspot flounder|PARALICHTHYS OBLONGUS|104|127|172739|
-|GOO|Monkfish|Goosefish|Goosefish|LOPHIUS AMERICANUS|197|011|164499|
-|GOO|Monkfish|Goosefish|Goosefish|LOPHIUS AMERICANUS|197|012|164499|
-|HAD|Haddock|Haddock|Haddock|MELANOGRAMMUS AEGLEFINUS|74|147|164744|
-|HAD|Haddock|Haddock|Haddock|MELANOGRAMMUS AEGLEFINUS|74|148|164744|
-|HAL|Atlantic halibut|Atlantic halibut|Atlantic halibut|HIPPOGLOSSUS HIPPOGLOSSUS|101|159|172933|
-|HER|Atlantic herring|Atlantic herring|Atlantic herring|CLUPEA HARENGUS|32|168|161722|
-|INV|Invasive vertebrate species|Invasive vertebrate species|NA|NA|NA| NA|NA|
-|ISQ|Illex squid|Illex squid|Northern shortfin squid|ILLEX ILLECEBROSUS|502|802|082521|
-|LOB|Lobster|Lobster|American lobster|HOMARUS AMERICANUS|301|727|097314|
-|LSK|Little skate|Little skate|Little skate|LEUCORAJA ERINACEA|26|366|564130|
-|LSQ|Loligo squid|Loligo squid|Longfin squid|LOLIGO PEALEII|503|801|082372|
-|MA|Macroalgae|Macroalgae|NA|NA|NA| NA|NA|
-|MAK|Atlantic mackerel|Atlantic mackerel|Atlantic mackerel|SCOMBER SCOMBRUS|121|212|172414|
-|MB|Microphtybenthos|Microphtybenthos|NA|NA|NA| NA|NA|
-|MEN|Atlantic menhaden|Menhaden|NA|BREVOORTIA|36|221|161731|
-|MPF|Migratory mesopelagic fish|Lanternfish|Lanternfish uncl|MYCTOPHIDAE|56|655|162575|
-|MPF|Migratory mesopelagic fish|Weitzmans pearlsides|NA|NA|229| NA|NA|
-|NSH|Northern shrimp other pandalids|Northern shrimp other pandalids|Northern shrimp|PANDALUS BOREALIS|306|736|096967|
-|NSH|Northern shrimp other pandalids|Aesop shrimp|NA|NA|297| NA|NA|
-|NSH|Northern shrimp other pandalids|Bristled longbeak|NA|NA|296| NA|NA|
-|OHK|Offshore hake|Offshore hake|Offshore hake|MERLUCCIUS ALBIDUS|69|508|164793|
-|OPT|Ocean pout|Ocean pout|NA|ZOARCES AMERICANUS|193|250|630979|
-|OSH|Other shrimps|Pink shrimp|NA|NA|914| NA|NA|
-|OSH|Other shrimps|Brown shrimp|NA|NA|913| NA|NA|
-|OSH|Other shrimps|White shrimp|NA|NA|915| NA|NA|
-|OSH|Other shrimps|Other penaeids|NA|NA|307| NA|NA|
-|PB|Pelagic Bacteria|Pelagic Bacteria|NA|NA|NA| NA|NA|
-|PIN|Pinnipeds|Pinnipeds|NA|NA|NA| NA|NA|
-|PL|Diatom|Diatom|NA|NA|NA| NA|NA|
-|PLA|American plaice|American plaice|American plaice|HIPPOGLOSSOIDES PLATESSOIDES|102|124|172877|
-|POL|Pollock|Pollock|Pollock|POLLACHIUS VIRENS|75|269|164727|
-|POL|Pollock|Pollock|Pollock|POLLACHIUS VIRENS|75|270|164727|
-|POR|Porbeagle shark|Porbeagle shark|Porbeagle shark|LAMNA NASUS|353|481|159911|
-|PS|Pico-phytoplankton|Pico-phytoplankton|NA|NA|NA| NA|NA|
-|PSH|Other pelagic sharks|Dusky shark|Dusky shark|CARCHARHINUS OBSCURUS|3|484|160268|
-|PSH|Other pelagic sharks|Great hammerhead|Great hammerhead shark|SPHYRNA MOKARRAN|363|386|160515|
-|PSH|Other pelagic sharks|Shortfin mako|Shortfin mako|ISURUS OXYRINCHUS|352|355|159924|
-|PSH|Other pelagic sharks|White shark|White shark|CARCHARODON CARCHARIAS|351|480|159903|
-|PSH|Other pelagic sharks|Blacknose shark|Blacknose shark|CARCHARHINUS ACRONOTUS|354|503|160304|
-|PSH|Other pelagic sharks|Silky shark|Silky shark|CARCHARHINUS FALCIFORMIS|355|485|160310|
-|PSH|Other pelagic sharks|Blacktip shark|Blacktip shark|CARCHARHINUS LIMBATUS|357|487|160318|
-|PSH|Other pelagic sharks|Tiger shark|Tiger shark|GALEOCERDO CUVIER|358|491|160189|
-|PSH|Other pelagic sharks|Finetooth shark|Finetooth shark|CARCHARHINUS ISODON|928|499|160409|
-|PSH|Other pelagic sharks|Bignose shark|Bignose shark|CARCHARHINUS ALTIMUS|929|483|160307|
-|QHG|Ocean quahog|Ocean quahog|Ocean quahog|ARCTICA ISLANDICA|409|754|081343|
-|RCB|Red deep-sea crab|Red deep-sea crab|NA|CHACEON QUINQUEDENS|310|710|620992|
-|RED|Acadian redfish|Acadian redfish|Acadian redfish|SEBASTES FASCIATUS|155|240|166774|
-|REP|Marine turtles|Green seaturtle|Green seaturtle|CHELONIA MYDAS|951|809|173833|
-|REP|Marine turtles|Hawksbill seaturtle|Hawksbill seaturtle|ERETMOCHELYS IMBRICATA|953|814|173836|
-|REP|Marine turtles|Kemp’s Ridley seaturtle|Kemp's ridley seaturtle|LEPIDOCHELYS KEMPI|954|810|551770|
-|REP|Marine turtles|Leatherback seaturtle|Leatherback seaturtle|DERMOCHELYS CORIACEA|952|812|173843|
-|REP|Marine turtles|Loggerhead seaturtle|Loggerhead seaturtle|CARETTA CARETTA|950|813|173830|
-|REP|Marine turtles|Olive Ridley seaturtle|NA|LEPIDOCHELYS OLIVACEA|NA|818|173840|
-|REP|Marine turtles|Turtles unclassified|NA|TESTUDINES|NA|816|173749|
-|RHK|Red hake|Red hake|Red hake|UROPHYCIS CHUSS|77|152|164730|
-|RWH|Right whales|Right whales|NA|NA|NA| NA|NA|
-|SAL|Atlantic salmon|Atlantic salmon|Atlantic salmon|SALMO SALAR|894|305|161996|
-|SB|Seabirds|Seabirds|NA|NA|NA| NA|NA|
-|SCA|Sea scallop|Sea scallop|Sea scallop|PLACOPECTEN MAGELLANICUS|401|800|079718|
-|SCU|Scup|Scup|Scup|STENOTOMUS CHRYSOPS|143|329|169182|
-|SDF|Atlantic states demersal fish|American eel|American eel|ANGUILLA ROSTRATA|384|115|161127|
-|SG|Seagrass|Seagrass|NA|NA|NA| NA|NA|
-|SHK|Silver hake|Silver hake|Silver hake|MERLUCCIUS BILINEARIS|72|509|164791|
-|SK|Northeast skate complex|Barndoor skate|Barndoor skate|DIPTURUS LAEVIS|22|368|564139|
-|SK|Northeast skate complex|Clearnose skate|Clearnose skate|RAJA EGLANTERIA|24|372|160855|
-|SK|Northeast skate complex|Rosette skate|Rosette skate|LEUCORAJA GARMANI|25|364|564136|
-|SK|Northeast skate complex|Smooth skate|Smooth skate|MALACORAJA SENTA|27|369|564151|
-|SK|Northeast skate complex|Thorny skate|Thorny skate|AMBLYRAJA RADIATA|28|370|564149|
-|SK|Northeast skate complex|Atlantic torpedo|Bony fish uncl|OSTEICHTHYES|21|526|161030|
-|SK|Northeast skate complex|Bullnose ray|NA|NA|19| NA|NA|
-|SK|Northeast skate complex|Cownose ray|Cownose ray|RHINOPTERA BONASUS|270|285|160985|
-|SK|Northeast skate complex|Spotted eagle ray|NA|NA|271| NA|NA|
-|SK|Northeast skate complex|Bluntnose stingray|NA|NA|18| NA|NA|
-|SK|Northeast skate complex|Roughtail stingray|NA|NA|4| NA|NA|
-|SK|Northeast skate complex|Atlantic stingray|NA|DASYATIDAE|373|286|160946|
-|SK|Northeast skate complex|Yellow stingray|NA|NA|377| NA|NA|
-|SMO|Smooth dogfish|Smooth dogfish|Smooth dogfish|MUSTELUS CANIS|13|351|160230|
-|SSH|Sandbar shark|Sandbar shark|Sandbar shark|CARCHARHINUS PLUMBEUS|9|482|160289|
-|STB|Striped bass|Striped Bass|Striped bass|MORONE SAXATILIS|139|418|167680|
-|SUF|Summer flounder|Summer flounder|Summer flounder|PARALICHTHYS DENTATUS|103|121|172735|
-|SWH|Small toothed whales|Small toothed whales|NA|NA|NA| NA|NA|
-|TAU|Tautog|Tautog|Tautog|TAUTOGA ONITIS|177|438|170479|
-|TUN|Other tunas|Albacore|Albacore|THUNNUS ALALUNGA|703|470|172419|
-|TUN|Other tunas|Bigeye tuna|Bigeye tuna|THUNNUS OBESUS|706|469|172428|
-|TUN|Other tunas|Blackfin tuna|Blackfin tuna|THUNNUS ATLANTICUS|705|464|172427|
-|TUN|Other tunas|Little tunny|Little tunny|EUTHYNNUS ALLETTERATUS|743|468|172402|
-|TWH|Toothed whales|Toothed whales|NA|NA|NA| NA|NA|
-|TYL|Tilefish|Blueline tilefish|Blueline tilefish|CAULOLATILUS MICROPS|621|444|168543|
-|TYL|Tilefish|Tilefish|Tilefish|LOPHOLATILUS CHAMAELEONTICEPS|151|446|168546|
-|TYL|Tilefish|Tilefish unclassified|NA|MALACANTHIDAE|NA|447|168537|
-|WHK|White hake|White hake|White hake|UROPHYCIS TENUIS|76|153|164732|
-|WHK|White hake|White hake|White hake|UROPHYCIS TENUIS|76|154|164732|
-|WIF|Winter flounder|Winter flounder|Winter flounder|PSEUDOPLEURONECTES AMERICANUS|106|119|172905|
-|WIF|Winter flounder|Winter flounder|Winter flounder|PSEUDOPLEURONECTES AMERICANUS|106|120|172905|
-|WOL|Wolffish|Northern wolffish|NA|ANARHICHAS DENTICULATUS|NA|668|550561|
-|WOL|Wolffish|Spotted wolffish|NA|ANARHICHAS MINOR|NA|510|171342|
-|WPF|Windowpane flounder|Windowpane flounder|Windowpane|SCOPHTHALMUS AQUOSUS|108|125|172746|
-|WSK|Winter skate|Winter skate|Winter skate|LEUCORAJA OCELLATA|23|367|564145|
-|WTF|Witch flounder|Witch flounder|Witch flounder|GLYPTOCEPHALUS CYNOGLOSSUS|107|122|172873|
-|YTF|Yellowtail flounder|Yellowtail flounder|Yellowtail flounder|LIMANDA FERRUGINEA|105|123|172909|
-|ZG|Gelatinous zooplankton|Gelatinous zooplankton|NA|NA|NA| NA|NA|
-|ZL|Carnivorous zooplankton|Carnivorous zooplankton|NA|NA|NA| NA|NA|
-|ZM|Mesozooplankton|Mesozooplankton|NA|NA|NA| NA|NA|
-|ZS|Microzooplankton|Microzooplankton|NA|NA|NA| NA|NA|
+|Code|Functional_Group|Species|Scientific_Name|SVSPP|NESPP3|Species_Itis|
+|---|---|---|---|---|---|---|
+|ANC|Anchovies|Bay anchovy|ANCHOA MITCHILLI|43|006|161839|
+|ANC|Anchovies|Striped anchovy|NA|44| NA|NA|
+|BB|Sediment Bacteria|Sediment Bacteria|NA|NA| NA|NA|
+|BC|Benthic Carnivore|Starfish|ASTEROIDEA|NA|828|156862|
+|BC|Benthic Carnivore|Common octopus|NA|511| NA|NA|
+|BC|Benthic Carnivore|Octopus unclassified|OCTOPODIDAE|510|786|082590|
+|BC|Benthic Carnivore|Spoonarm octopus|NA|512| NA|NA|
+|BC|Benthic Carnivore|Unicorn octopus|NA|513| NA|NA|
+|BD|Deposit Feeder|Deposit Feeder|NA|NA| NA|NA|
+|BFF|Other benthic filter feeder|Bay scallop|ARGOPECTEN IRRADIANS|402|799|079737|
+|BFF|Other benthic filter feeder|Atlantic calico scallop|ARGOPECTEN GIBBUS|404|797|079734|
+|BFF|Other benthic filter feeder|Iceland scallop|CHLAMYS ISLANDICA|340|795|079619|
+|BFF|Other benthic filter feeder|Scallop unclassified|PECTINIDAE|NA|796|079611|
+|BFF|Other benthic filter feeder|Arctic surfclam|MACTROMERIS POLYNYMA|407|765|080983|
+|BFT|Atlantic bluefin tuna|Atlantic bluefin tuna|THUNNUS THYNNUS|747|467|172421|
+|BG|Benthic grazer|Benthic grazer|NA|331| NA|NA|
+|BIL|Billfish|Blue marlin|MAKAIRA NIGRICANS|707|217|172491|
+|BIL|Billfish|White marlin|TETRAPTURUS ALBIDUS|708|216|172499|
+|BIL|Billfish|Swordfish|XIPHIAS GLADIUS|700|432|172482|
+|BLF|Bluefish|Bluefish|POMATOMUS SALTATRIX|135|023|168559|
+|BLS|Blue shark|Blue shark|PRIONACE GLAUCA|17|493|160424|
+|BMS|Shallow macrozoobenthos|Atantic rock crab|CANCER IRRORATUS|313|712|098679|
+|BMS|Shallow macrozoobenthos|Blue crab|CALLINECTES SAPIDUS|314|700|098696|
+|BMS|Shallow macrozoobenthos|Cancer crab|CANCER|311|714|098671|
+|BMS|Shallow macrozoobenthos|Green crab|CARCINUS MAENAS|327|708|098734|
+|BMS|Shallow macrozoobenthos|Hermit crab|PAGURUS|NA|702|097775|
+|BMS|Shallow macrozoobenthos|Horseshoe crab|LIMULUS POLYPHEMUS|318|724|082703|
+|BMS|Shallow macrozoobenthos|Jonah crab|CANCER BOREALIS|312|711|098678|
+|BMS|Shallow macrozoobenthos|Lady crab|OVALIPES OCELLATUS|322|701|098714|
+|BMS|Shallow macrozoobenthos|Snow crab|CHIONOECETES OPILIO|325|718|098428|
+|BMS|Shallow macrozoobenthos|Spider crab|MAJIDAE|317|715|098417|
+|BMS|Shallow macrozoobenthos|Knobbed whelk|BUSYCON CARICA|337|777|074071|
+|BO|Meiobenthos|Meiobenthos|NA|NA| NA|NA|
+|BPF|Other benthopelagic fish|Argentine|NA|46| NA|NA|
+|BPF|Other benthopelagic fish|American sandlance|AMMODYTES|734|206|171671|
+|BPF|Other benthopelagic fish|American sandlance|AMMODYTES AMERICANUS|734|206|171673|
+|BPF|Other benthopelagic fish|Harvest fish|PEPRILUS|749|165|172564|
+|BPF|Other benthopelagic fish|Harvest fish|PEPRILUS ALEPIDOTUS|749|165|172570|
+|BPF|Other benthopelagic fish|Atlantic silverside|MENIDIA MENIDIA|113|362|165994|
+|BPF|Other benthopelagic fish|Round herring|ETRUMEUS TERES|31|166|161743|
+|BPF|Other benthopelagic fish|Chub mackerel|SCOMBER COLIAS|124|215|172413|
+|BPF|Other benthopelagic fish|Halfbeak|HEMIRAMPHIDAE|NA|164|553172|
+|BSB|Black sea bass|Black sea bass|CENTROPRISTIS STRIATA|141|335|167687|
+|BUT|Butterfish|Butterfish|PEPRILUS TRIACANTHUS|131|051|172567|
+|BWH|Baleen whales|Baleen whales|NA|NA| NA|NA|
+|CLA|Atlantic surf clam|Atlantic surf clam|SPISULA SOLIDISSIMA|403|769|080944|
+|COD|Atlantic cod|Atlantic cod|GADUS MORHUA|73|081|164712|
+|COD|Atlantic cod|Atlantic cod|GADUS MORHUA|73|082|164712|
+|DC|Carrion|Carrion3|NA|NA| NA|NA|
+|DF|Dinoflagellates|Dinoflagellates|NA|NA| NA|NA|
+|DL|Labile detritus|Labile detritus|NA|NA| NA|NA|
+|DOG|Spiny dogfish|Spiny dogfish|SQUALUS ACANTHIAS|15|352|160617|
+|DR|Refractory detritus|Refractory detritus|NA|NA| NA|NA|
+|DRM|Drums and croakers|Atlantic croaker|MICROPOGONIAS UNDULATUS|136|090|169283|
+|DRM|Drums and croakers|Weakfish|CYNOSCION REGALIS|145|344|169241|
+|DRM|Drums and croakers|Northern kingfish|MENTICIRRHUS SAXATILLIS|146|196|169276|
+|DRM|Drums and croakers|Black drum|POGONIAS CROMIS|147|106|169288|
+|DRM|Drums and croakers|Silver perch|NA|148| NA|NA|
+|DRM|Drums and croakers|Spot|LEIOSTOMUS XANTHURUS|149|406|169267|
+|DSH|Other demersal sharks|Chain dogfish|SCYLIORHINUS RETIFER|14|346|160060|
+|DSH|Other demersal sharks|Atlantic angel shark|SQUATINA DUMERIL|16|477|160787|
+|DSH|Other demersal sharks|Nurse shark|GINGLYMOSTOMA CIRRATUM|350|348|159977|
+|DSH|Other demersal sharks|Sand tiger|CARCHARIAS TAURUS|12|349|159888|
+|DSH|Other demersal sharks|Bull shark|CARCHARHINUS LEUCAS|356|489|160275|
+|DSH|Other demersal sharks|Lemon shark|NEGAPRION BREVIROSTRIS|359|492|160433|
+|DSH|Other demersal sharks|Sharpnose shark|RHIZOPRIONODON TERRAENOVAE|360|494|160200|
+|DSH|Other demersal sharks|Scalloped hammerhead|SPHYRNA LEWINI|362|478|160508|
+|DSH|Other demersal sharks|Thresher shark|ALOPIAS VULPINUS|925|353|159916|
+|FDE|Shallow demersal fish|Alewife|ALOSA PSEUDOHARENGUS|33|001|161706|
+|FDE|Shallow demersal fish|Gizzard shad|DOROSOMA CEPEDIANUM|426|134|161737|
+|FDE|Shallow demersal fish|Blueback herring|ALOSA AESTIVALIS|34|112|161703|
+|FDE|Shallow demersal fish|Hickory shad|ALOSA MEDIOCRIS|37|173|161704|
+|FDE|Shallow demersal fish|American shad|ALOSA SAPIDISSIMA|35|347|161702|
+|FDE|Shallow demersal fish|Smelt|OSMERIDAE|NA|371|162028|
+|FDF|Miscellaneous demersal fish|Spotted hake|UROPHYCIS REGIA|78|662|164731|
+|FDF|Miscellaneous demersal fish|Fourbeard rockling|OSTEICHTHYES|83|526|161030|
+|FDF|Miscellaneous demersal fish|Threebeard rockling|NA|85| NA|NA|
+|FDF|Miscellaneous demersal fish|Cusk|BROSME BROSME|84|096|164740|
+|FDF|Miscellaneous demersal fish|Roughhead grenadier|MACROURUS BERGLAX|92|137|165421|
+|FDF|Miscellaneous demersal fish|Grenadier unclassified|MACROURIDAE|90|138|165332|
+|FDF|Miscellaneous demersal fish|Longspine snipefish|NA|111| NA|NA|
+|FDF|Miscellaneous demersal fish|John Dory|ZENOPSIS OCELLATA|112|188|166283|
+|FDF|Miscellaneous demersal fish|Threespine stickleback|NA|115| NA|NA|
+|FDF|Miscellaneous demersal fish|Fourspine stickleback|NA|488| NA|NA|
+|FDF|Miscellaneous demersal fish|Ninespine stickleback|Pungitius pungitius|902|522|166387|
+|FDF|Miscellaneous demersal fish|Blackspotted stickleback|NA|901| NA|NA|
+|FDF|Miscellaneous demersal fish|Pipefish unclassified|NA|421| NA|NA|
+|FDF|Miscellaneous demersal fish|Chain pipefish|NA|495| NA|NA|
+|FDF|Miscellaneous demersal fish|Dusky pipefish|NA|494| NA|NA|
+|FDF|Miscellaneous demersal fish|Northern pipefish|OSTEICHTHYES|116|526|161030|
+|FDF|Miscellaneous demersal fish|Whitenose pipefish|NA|491| NA|NA|
+|FDF|Miscellaneous demersal fish|Trumpetfish|NA|119| NA|NA|
+|FDF|Miscellaneous demersal fish|Atlantic moonfish|NA|132| NA|NA|
+|FDF|Miscellaneous demersal fish|Lookdown|OSTEICHTHYES|133|526|161030|
+|FDF|Miscellaneous demersal fish|Longspine scorpionfish|NA|154| NA|NA|
+|FDF|Miscellaneous demersal fish|Blackbelly rosefish|HELICOLENUS DACTYLOPTERUS|156|242|166787|
+|FDF|Miscellaneous demersal fish|Longhorn sculpin|COTTIDAE|163|326|167196|
+|FDF|Miscellaneous demersal fish|Moustache sculpin|NA|161| NA|NA|
+|FDF|Miscellaneous demersal fish|Shorthorn sculpin|NA|162| NA|NA|
+|FDF|Miscellaneous demersal fish|Sculpins unclassified|COTTIDAE|160|326|167196|
+|FDF|Miscellaneous demersal fish|Sea raven|HEMITRIPTERUS AMERICANUS|164|327|167289|
+|FDF|Miscellaneous demersal fish|Armored searobin|PERISTEDION MINIATUM|173|343|167010|
+|FDF|Miscellaneous demersal fish|Northern searobin|PRIONOTUS CAROLINUS|171|340|166974|
+|FDF|Miscellaneous demersal fish|Striped searobin|PRIONOTUS EVOLANS|172|342|166975|
+|FDF|Miscellaneous demersal fish|Searobin uncl|TRIGLIDAE|174|341|166972|
+|FDF|Miscellaneous demersal fish|Cunner|TAUTOGOLABRUS ADSPERSUS|176|093|170481|
+|FDF|Miscellaneous demersal fish|Conger eel|CONGER OCEANICUS|63|116|161326|
+|FDF|Miscellaneous demersal fish|Eel unclassified|ANGUILLIFORMES|60|117|161123|
+|FDF|Miscellaneous demersal fish|Northern puffer|SPHOEROIDES MACULATUS|196|429|173290|
+|FDF|Miscellaneous demersal fish|Wrymouth|NA|191| NA|NA|
+|FDF|Miscellaneous demersal fish|Garfish|LEPISOSTEIDAE|NA|133|161092|
+|FDF|Miscellaneous demersal fish|Hagfish|MYXINIDAE|NA|150|159753|
+|FDF|Miscellaneous demersal fish|Hogfish|LACHNOLAIMUS MAXIMUS|682|179|170566|
+|FDF|Miscellaneous demersal fish|Lumpfish|CYCLOPTERUS LUMPUS|168|210|167612|
+|FDF|Miscellaneous demersal fish|Oyster toadfish|BATRACHOIDIDAE|185|451|164412|
+|FDF|Miscellaneous demersal fish|Sand perch|DIPLECTRUM FORMOSUM|530|311|167793|
+|FDF|Miscellaneous demersal fish|Atlantic needlefish|STRONGYLURA MARINA|471|019|165551|
+|FDF|Miscellaneous demersal fish|Sheepshead|ARCHOSARGUS PROBATOCEPHALUS|631|356|169189|
+|FDF|Miscellaneous demersal fish|Atlantic sturgeon|ACIPENSER OXYRINCHUS|380|420|553269|
+|FDF|Miscellaneous demersal fish|Shortnose sturgeon|ACIPENSER BREVIROSTRUM|379|422|161069|
+|FDF|Miscellaneous demersal fish|Sturgeon unclassified|ACIPENSERIDAE|NA|421|161064|
+|FDF|Miscellaneous demersal fish|Tomcod|MICROGADUS TOMCOD|453|453|164720|
+|FDF|Miscellaneous demersal fish|Inshore lizardfish|OSTEICHTHYES|435|526|161030|
+|FDF|Miscellaneous demersal fish|Largescale lizardfish|NA|433| NA|NA|
+|FDF|Miscellaneous demersal fish|Lizardfish unclassified|NA|852| NA|NA|
+|FDF|Miscellaneous demersal fish|Offshore lizardfish|NA|437| NA|NA|
+|FDF|Miscellaneous demersal fish|Red lizardfish|NA|438| NA|NA|
+|FDF|Miscellaneous demersal fish|Shortjaw lizardfish|NA|434| NA|NA|
+|FLA|Other flatfish|Gulfstream flounder|CITHARICTHYS ARCTIFRONS|109|129|172719|
+|FLA|Other flatfish|Hogchoker|TRINECTES MACULATUS|118|128|172982|
+|FOU|Fourspot flounder|Fourspot flounder|PARALICHTHYS OBLONGUS|104|127|172739|
+|GOO|Monkfish|Goosefish|LOPHIUS AMERICANUS|197|011|164499|
+|GOO|Monkfish|Goosefish|LOPHIUS AMERICANUS|197|012|164499|
+|HAD|Haddock|Haddock|MELANOGRAMMUS AEGLEFINUS|74|147|164744|
+|HAD|Haddock|Haddock|MELANOGRAMMUS AEGLEFINUS|74|148|164744|
+|HAL|Atlantic halibut|Atlantic halibut|HIPPOGLOSSUS HIPPOGLOSSUS|101|159|172933|
+|HER|Atlantic herring|Atlantic herring|CLUPEA HARENGUS|32|168|161722|
+|INV|Invasive vertebrate species|Invasive vertebrate species|NA|NA| NA|NA|
+|ISQ|Illex squid|Illex squid|ILLEX ILLECEBROSUS|502|802|082521|
+|LOB|Lobster|Lobster|HOMARUS AMERICANUS|301|727|097314|
+|LSK|Little skate|Little skate|LEUCORAJA ERINACEA|26|366|564130|
+|LSQ|Loligo squid|Loligo squid|LOLIGO PEALEII|503|801|082372|
+|MA|Macroalgae|Macroalgae|NA|NA| NA|NA|
+|MAK|Atlantic mackerel|Atlantic mackerel|SCOMBER SCOMBRUS|121|212|172414|
+|MB|Microphtybenthos|Microphtybenthos|NA|NA| NA|NA|
+|MEN|Atlantic menhaden|Menhaden|BREVOORTIA|36|221|161731|
+|MPF|Migratory mesopelagic fish|Lanternfish|MYCTOPHIDAE|56|655|162575|
+|MPF|Migratory mesopelagic fish|Weitzmans pearlsides|NA|229| NA|NA|
+|NSH|Northern shrimp other pandalids|Northern shrimp other pandalids|PANDALUS BOREALIS|306|736|096967|
+|NSH|Northern shrimp other pandalids|Aesop shrimp|NA|297| NA|NA|
+|NSH|Northern shrimp other pandalids|Bristled longbeak|NA|296| NA|NA|
+|OHK|Offshore hake|Offshore hake|MERLUCCIUS ALBIDUS|69|508|164793|
+|OPT|Ocean pout|Ocean pout|ZOARCES AMERICANUS|193|250|630979|
+|OSH|Other shrimps|Pink shrimp|NA|914| NA|NA|
+|OSH|Other shrimps|Brown shrimp|NA|913| NA|NA|
+|OSH|Other shrimps|White shrimp|NA|915| NA|NA|
+|OSH|Other shrimps|Other penaeids|NA|307| NA|NA|
+|PB|Pelagic Bacteria|Pelagic Bacteria|NA|NA| NA|NA|
+|PIN|Pinnipeds|Pinnipeds|NA|NA| NA|NA|
+|PL|Diatom|Diatom|NA|NA| NA|NA|
+|PLA|American plaice|American plaice|HIPPOGLOSSOIDES PLATESSOIDES|102|124|172877|
+|POL|Pollock|Pollock|POLLACHIUS VIRENS|75|269|164727|
+|POL|Pollock|Pollock|POLLACHIUS VIRENS|75|270|164727|
+|POR|Porbeagle shark|Porbeagle shark|LAMNA NASUS|353|481|159911|
+|PS|Pico-phytoplankton|Pico-phytoplankton|NA|NA| NA|NA|
+|PSH|Other pelagic sharks|Dusky shark|CARCHARHINUS OBSCURUS|3|484|160268|
+|PSH|Other pelagic sharks|Great hammerhead|SPHYRNA MOKARRAN|363|386|160515|
+|PSH|Other pelagic sharks|Shortfin mako|ISURUS OXYRINCHUS|352|355|159924|
+|PSH|Other pelagic sharks|White shark|CARCHARODON CARCHARIAS|351|480|159903|
+|PSH|Other pelagic sharks|Blacknose shark|CARCHARHINUS ACRONOTUS|354|503|160304|
+|PSH|Other pelagic sharks|Silky shark|CARCHARHINUS FALCIFORMIS|355|485|160310|
+|PSH|Other pelagic sharks|Blacktip shark|CARCHARHINUS LIMBATUS|357|487|160318|
+|PSH|Other pelagic sharks|Tiger shark|GALEOCERDO CUVIER|358|491|160189|
+|PSH|Other pelagic sharks|Finetooth shark|CARCHARHINUS ISODON|928|499|160409|
+|PSH|Other pelagic sharks|Bignose shark|CARCHARHINUS ALTIMUS|929|483|160307|
+|QHG|Ocean quahog|Ocean quahog|ARCTICA ISLANDICA|409|754|081343|
+|RCB|Red deep-sea crab|Red deep-sea crab|CHACEON QUINQUEDENS|310|710|620992|
+|RED|Acadian redfish|Acadian redfish|SEBASTES FASCIATUS|155|240|166774|
+|REP|Marine turtles|Green seaturtle|CHELONIA MYDAS|951|809|173833|
+|REP|Marine turtles|Hawksbill seaturtle|ERETMOCHELYS IMBRICATA|953|814|173836|
+|REP|Marine turtles|Kemp’s Ridley seaturtle|LEPIDOCHELYS KEMPI|954|810|551770|
+|REP|Marine turtles|Leatherback seaturtle|DERMOCHELYS CORIACEA|952|812|173843|
+|REP|Marine turtles|Loggerhead seaturtle|CARETTA CARETTA|950|813|173830|
+|REP|Marine turtles|Olive Ridley seaturtle|LEPIDOCHELYS OLIVACEA|NA|818|173840|
+|REP|Marine turtles|Turtles unclassified|TESTUDINES|NA|816|173749|
+|RHK|Red hake|Red hake|UROPHYCIS CHUSS|77|152|164730|
+|RWH|Right whales|Right whales|NA|NA| NA|NA|
+|SAL|Atlantic salmon|Atlantic salmon|SALMO SALAR|894|305|161996|
+|SB|Seabirds|Seabirds|NA|NA| NA|NA|
+|SCA|Sea scallop|Sea scallop|PLACOPECTEN MAGELLANICUS|401|800|079718|
+|SCU|Scup|Scup|STENOTOMUS CHRYSOPS|143|329|169182|
+|SDF|Atlantic states demersal fish|American eel|ANGUILLA ROSTRATA|384|115|161127|
+|SG|Seagrass|Seagrass|NA|NA| NA|NA|
+|SHK|Silver hake|Silver hake|MERLUCCIUS BILINEARIS|72|509|164791|
+|SK|Northeast skate complex|Barndoor skate|DIPTURUS LAEVIS|22|368|564139|
+|SK|Northeast skate complex|Clearnose skate|RAJA EGLANTERIA|24|372|160855|
+|SK|Northeast skate complex|Rosette skate|LEUCORAJA GARMANI|25|364|564136|
+|SK|Northeast skate complex|Smooth skate|MALACORAJA SENTA|27|369|564151|
+|SK|Northeast skate complex|Thorny skate|AMBLYRAJA RADIATA|28|370|564149|
+|SK|Northeast skate complex|Atlantic torpedo|OSTEICHTHYES|21|526|161030|
+|SK|Northeast skate complex|Bullnose ray|NA|19| NA|NA|
+|SK|Northeast skate complex|Cownose ray|RHINOPTERA BONASUS|270|285|160985|
+|SK|Northeast skate complex|Spotted eagle ray|NA|271| NA|NA|
+|SK|Northeast skate complex|Bluntnose stingray|NA|18| NA|NA|
+|SK|Northeast skate complex|Roughtail stingray|NA|4| NA|NA|
+|SK|Northeast skate complex|Atlantic stingray|DASYATIDAE|373|286|160946|
+|SK|Northeast skate complex|Yellow stingray|NA|377| NA|NA|
+|SMO|Smooth dogfish|Smooth dogfish|MUSTELUS CANIS|13|351|160230|
+|SSH|Sandbar shark|Sandbar shark|CARCHARHINUS PLUMBEUS|9|482|160289|
+|STB|Striped bass|Striped Bass|MORONE SAXATILIS|139|418|167680|
+|SUF|Summer flounder|Summer flounder|PARALICHTHYS DENTATUS|103|121|172735|
+|SWH|Small toothed whales|Small toothed whales|NA|NA| NA|NA|
+|TAU|Tautog|Tautog|TAUTOGA ONITIS|177|438|170479|
+|TUN|Other tunas|Albacore|THUNNUS ALALUNGA|703|470|172419|
+|TUN|Other tunas|Bigeye tuna|THUNNUS OBESUS|706|469|172428|
+|TUN|Other tunas|Blackfin tuna|THUNNUS ATLANTICUS|705|464|172427|
+|TUN|Other tunas|Little tunny|EUTHYNNUS ALLETTERATUS|743|468|172402|
+|TWH|Toothed whales|Toothed whales|NA|NA| NA|NA|
+|TYL|Tilefish|Blueline tilefish|CAULOLATILUS MICROPS|621|444|168543|
+|TYL|Tilefish|Tilefish|LOPHOLATILUS CHAMAELEONTICEPS|151|446|168546|
+|TYL|Tilefish|Tilefish unclassified|MALACANTHIDAE|NA|447|168537|
+|WHK|White hake|White hake|UROPHYCIS TENUIS|76|153|164732|
+|WHK|White hake|White hake|UROPHYCIS TENUIS|76|154|164732|
+|WIF|Winter flounder|Winter flounder|PSEUDOPLEURONECTES AMERICANUS|106|119|172905|
+|WIF|Winter flounder|Winter flounder|PSEUDOPLEURONECTES AMERICANUS|106|120|172905|
+|WOL|Wolffish|Northern wolffish|ANARHICHAS DENTICULATUS|NA|668|550561|
+|WOL|Wolffish|Spotted wolffish|ANARHICHAS MINOR|NA|510|171342|
+|WPF|Windowpane flounder|Windowpane flounder|SCOPHTHALMUS AQUOSUS|108|125|172746|
+|WSK|Winter skate|Winter skate|LEUCORAJA OCELLATA|23|367|564145|
+|WTF|Witch flounder|Witch flounder|GLYPTOCEPHALUS CYNOGLOSSUS|107|122|172873|
+|YTF|Yellowtail flounder|Yellowtail flounder|LIMANDA FERRUGINEA|105|123|172909|
+|ZG|Gelatinous zooplankton|Gelatinous zooplankton|NA|NA| NA|NA|
+|ZL|Carnivorous zooplankton|Carnivorous zooplankton|NA|NA| NA|NA|
+|ZM|Mesozooplankton|Mesozooplankton|NA|NA| NA|NA|
+|ZS|Microzooplankton|Microzooplankton|NA|NA| NA|NA|
