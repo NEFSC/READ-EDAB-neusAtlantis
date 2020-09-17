@@ -1,0 +1,90 @@
+Group Code,Group Name 
+MAK,Atlantic mackerel 
+HER,Atlantic herring 
+WHK,White hake 
+BLF,Bluefish 
+WPF,Windowpane flounder 
+SUF,Summer flounder 
+WIF,Winter flounder 
+WTF,Witch flounder 
+HAL,Atlantic halibut 
+PLA,American plaice 
+FOU,Fourspot flounder 
+FLA,Other flatfish 
+BFT,Atlantic bluefin tuna 
+TUN,Other tunas 
+BIL,Billfish 
+MPF,Migratory mesopelagic fish
+BUT,Butterfish 
+ANC,Anchovies 
+BPF,Other benthopelagic fish 
+GOO,Monkfish 
+MEN,Atlantic menhaden 
+FDE,Shallow demersal fish 
+COD,Atlantic cod 
+SHK,Silver hake 
+OHK,Offshore hake 
+POL,Pollock 
+RHK,Red hake 
+BSB,Black sea bass 
+SCU,Scup 
+TYL,Tilefish 
+RED,Acadian redfish 
+OPT,Ocean pout 
+SAL,Atlantic salmon 
+DRM,Drums and croakers 
+STB,Striped bass 
+TAU,Tautog 
+WOL,Wolffish 
+SDF,Atlantic states demersal fish 
+FDF,Miscellaneous demersal fish 
+HAD,Haddock 
+YTF,Yellowtail flounder 
+DOG,Spiny dogfish 
+SMO,Smooth dogfish 
+SSH,Sandbar shark 
+DSH,Other demersal sharks 
+BLS,Blue shark 
+POR,Porbeagle shark 
+PSH,Other pelagic sharks 
+WSK,Winter skate 
+LSK,Little skate 
+SK,Northeast skate complex 
+SB,Seabirds 
+PIN,Pinnipeds 
+REP,Marine turtles 
+RWH,Right whales 
+BWH,Baleen whales 
+SWH,Small toothed whales 
+TWH,Toothed whales 
+INV,Invasive vertebrate species 
+LSQ,Loligo squid 
+ISQ,Illex squid 
+SCA,Sea scallop 
+QHG,Ocean quahog 
+CLA,Atlantic surf clam 
+BFF,Other benthic filter feeder 
+BG,Benthic grazer 
+LOB,Lobster 
+RCB,Red deep-sea crab 
+BMS,Shallow macrozoobenthos 
+NSH,Northern shrimp other pandalids 
+OSH,Other shrimps 
+ZL,Carnivorous zooplankton 
+BD,Deposit Feeder 
+MA,Macroalgae 
+MB,Microphtybenthos 
+SG,Seagrass 
+BC,Benthic Carnivore 
+ZG,Gelatinous zooplankton 
+PL,Diatom 
+DF,Dinoflagellates 
+PS,Pico-phytoplankton 
+ZM,Mesozooplankton 
+ZS,Microzooplankton 
+PB,Pelagic Bacteria 
+BB,Sediment Bacteria 
+BO,Meiobenthos 
+DL,Labile detritus 
+DR,Refractory detritus 
+DC,Carrion 
