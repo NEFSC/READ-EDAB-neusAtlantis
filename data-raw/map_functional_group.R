@@ -2,7 +2,9 @@
 #' 
 #' Write the mapping to a file format (GitHub flavored markdown) that can used on the wiki. 
 #' 
-#'  Requires andybeet/utilities package for "capitalize_first_letter" function
+#'  Requires: andybeet/utilities package for "capitalize_first_letter" function
+#'            andybeet/dbutils package for create_species_lookup.r and connect_to_database  
+
 library(magrittr)
 
 # read in functional group codes and name
