@@ -75,7 +75,7 @@ plot_run_comparisons = function(model1.dir,model2.dir,model1.name,model2.name,pl
   bio.all = rbind(bio1.long,bio2.long)
   
   if(remove.init){
-    bio.all = bio.all %>% filter(Time != 0)
+    bio.all = bio.all %>% dplyr::filter(Time != 0)
   }
   
   if(is.null(groups)){
