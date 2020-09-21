@@ -115,7 +115,7 @@ get_pprey_vals = function(atl.dir,biol.file,fgs.file,spp.names,is.pred,remove.ze
 #Need to replace and reconstruct.
 #Find way to identify pred and prey row in biol.prm
 #Overwrite then save
-edit_param_pprey = function(atl.dir, biol.file, fgs.file){
+edit_param_pprey = function(atl.dir, biol.file, fgs.file,pred.list,prey.list,pprey.vals,overwrite=F,new.file.name){
   
   #Full File Lines
   con = file(biol.file)
@@ -154,14 +154,16 @@ edit_param_pprey = function(atl.dir, biol.file, fgs.file){
     pred.vals.new = paste(pred.vals,collapse =' ')
     
     #Overwrite biol.lines with new values
-    biol.lines[pprey.ls$line.num[pred.line]+1] = pred.vals.new
+    pprey.ls$line.chars[pred.line+1] = pred.vals.new
     
   }
+  biol.lines[pprey.ls$line.num] = pprey.ls$line.chars
+  
   #If overwriting overwrite existing file and save
   if(overwrite){
-    writeLines(biol.lines, con = paste0(biol.file))
+    writeLines(biol.lines, con = biol.file)
   }else{
-    file.copy(biol.file,paste0(atl.dir,new.file.name))
+    file.copy(biol.file,paste0(atl.dir,new.file.name),overwrite = T)
     writeLines(biol.lines,con = paste0(atl.dir,new.file.name))
   }
   
