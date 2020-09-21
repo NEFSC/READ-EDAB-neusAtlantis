@@ -92,3 +92,9 @@ This file is used to document steps made towards a new version/subversion
  * RG: 07-17-2020
  * BC: Increased growth rate
  * LOB: Increased growth rate
+
+## Migratory species move in and out of model as expected (ATLNTS-8)
+ * RG: 09-21-2020
+ * Migratory species were modified to have their leaving the model domain on day 1 and returning after a length of time equal to how long they were originally parameterized for
+ * All migratory species now persist to end of the model run in both juvenile and adult age classes
+ * Task not closed yet on Jira because the time period the species leave are not biologically accurate
