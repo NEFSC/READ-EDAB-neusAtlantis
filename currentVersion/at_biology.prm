@@ -5364,13 +5364,13 @@ jFLA_Migrate_Time 1
 0
  
 jBFT_Migrate_Time 1
-0
+1
  
 jTUN_Migrate_Time 1
-0
+1
  
 jBIL_Migrate_Time 1
-0
+1
  
 jMPF_Migrate_Time 1
 0
@@ -5463,13 +5463,13 @@ jDSH_Migrate_Time 1
 0
  
 jBLS_Migrate_Time 1
-0
+1
  
 jPOR_Migrate_Time 1
-0
+1
  
 jPSH_Migrate_Time 1
-0
+1
  
 jWSK_Migrate_Time 1
 0
@@ -5481,25 +5481,25 @@ jSK_Migrate_Time 1
 0
  
 jSB_Migrate_Time 1
-0
+1
  
 jPIN_Migrate_Time 1
 0
  
 jREP_Migrate_Time 1
-0
+1
  
 jRWH_Migrate_Time 1
-0
+1
  
 jBWH_Migrate_Time 1
-0
+1
  
 jSWH_Migrate_Time 1
-0
+1
  
 jTWH_Migrate_Time 1
-0
+1
  
 jINV_Migrate_Time 1
 0
@@ -5519,10 +5519,10 @@ jOSH_Migrate_Time 1
 
 # Adult migration times - days of the year adult stages of each group leave the model domain
 MAK_Migrate_Time 1
-300
+0
  
 HER_Migrate_Time 1
-300
+0
  
 WHK_Migrate_Time 1
 0
@@ -5555,13 +5555,13 @@ FLA_Migrate_Time 1
 0
  
 BFT_Migrate_Time 1
-260
+1
  
 TUN_Migrate_Time 1
-260
+1
  
 BIL_Migrate_Time 1
-260
+1
  
 MPF_Migrate_Time 1
 0
@@ -5642,7 +5642,7 @@ YTF_Migrate_Time 1
 0
  
 DOG_Migrate_Time 1
-300
+0
  
 SMO_Migrate_Time 1
 0
@@ -5654,13 +5654,13 @@ DSH_Migrate_Time 1
 0
  
 BLS_Migrate_Time 1
-270
+1
  
 POR_Migrate_Time 1
-270
+1
  
 PSH_Migrate_Time 1
-270
+1
  
 WSK_Migrate_Time 1
 0
@@ -5672,34 +5672,34 @@ SK_Migrate_Time 1
 0
  
 SB_Migrate_Time 1
-224
+1
  
 PIN_Migrate_Time 1
 0
  
 REP_Migrate_Time 1
-270
+1
  
 RWH_Migrate_Time 1
-300
+1
  
 BWH_Migrate_Time 1
-300
+1
  
 SWH_Migrate_Time 1
-330
+1
  
 TWH_Migrate_Time 1
-330
+1
  
 INV_Migrate_Time 1
 0
  
 LSQ_Migrate_Time 1
-330
+0
  
 ISQ_Migrate_Time 1
-330
+0
  
 LOB_Migrate_Time 1
 0
@@ -5753,13 +5753,13 @@ jFLA_Migrate_Return 1
 364
  
 jBFT_Migrate_Return 1
-364
+195
  
 jTUN_Migrate_Return 1
-364
+195
  
 jBIL_Migrate_Return 1
-364
+195
  
 jMPF_Migrate_Return 1
 364
@@ -5852,13 +5852,13 @@ jDSH_Migrate_Return 1
 364
  
 jBLS_Migrate_Return 1
-364
+245
  
 jPOR_Migrate_Return 1
-364
+245
  
 jPSH_Migrate_Return 1
-364
+245
  
 jWSK_Migrate_Return 1
 364
@@ -5870,25 +5870,25 @@ jSK_Migrate_Return 1
 364
  
 jSB_Migrate_Return 1
-364
+261
  
 jPIN_Migrate_Return 1
 364
  
 jREP_Migrate_Return 1
-364
+275
  
 jRWH_Migrate_Return 1
-364
+165
  
 jBWH_Migrate_Return 1
-364
+165
  
 jSWH_Migrate_Return 1
-364
+125
  
 jTWH_Migrate_Return 1
-364
+125
  
 jINV_Migrate_Return 1
 364
@@ -5909,10 +5909,10 @@ jOSH_Migrate_Return 1
 # Adult migration return times - days of the year adult stages of each group return the model domain
  
 MAK_Migrate_Return 1
-90
+364
  
 HER_Migrate_Return 1
-90
+364
  
 WHK_Migrate_Return 1
 364
@@ -5945,13 +5945,13 @@ FLA_Migrate_Return 1
 364
  
 BFT_Migrate_Return 1
-90
+195
  
 TUN_Migrate_Return 1
-90
+195
  
 BIL_Migrate_Return 1
-90
+195
  
 MPF_Migrate_Return 1
 364
@@ -6032,7 +6032,7 @@ YTF_Migrate_Return 1
 364
  
 DOG_Migrate_Return 1
-100
+364
  
 SMO_Migrate_Return 1
 364
@@ -6044,13 +6044,13 @@ DSH_Migrate_Return 1
 364
  
 BLS_Migrate_Return 1
-150
+245
  
 POR_Migrate_Return 1
-150
+245
  
 PSH_Migrate_Return 1
-150
+245
  
 WSK_Migrate_Return 1
 364
@@ -6062,34 +6062,34 @@ SK_Migrate_Return 1
 364
  
 SB_Migrate_Return 1
-120
+261
  
 PIN_Migrate_Return 1
 364
  
 REP_Migrate_Return 1
-180
+275
  
 RWH_Migrate_Return 1
-100
+165
  
 BWH_Migrate_Return 1
-100
+165
  
 SWH_Migrate_Return 1
-90
+125
  
 TWH_Migrate_Return 1
-90
+125
  
 INV_Migrate_Return 1
 364
  
 LSQ_Migrate_Return 1
-60
+364
  
 ISQ_Migrate_Return 1
-60
+364
  
 LOB_Migrate_Return 1
 364
@@ -6145,13 +6145,13 @@ jFLA_Migrate_Period 1
 0
  
 jBFT_Migrate_Period 1
-0
+1
  
 jTUN_Migrate_Period 1
-0
+1
  
 jBIL_Migrate_Period 1
-0
+1
  
 jMPF_Migrate_Period 1
 0
@@ -6262,7 +6262,7 @@ jSK_Migrate_Period 1
 0
  
 jSB_Migrate_Period 1
-0
+1
  
 jPIN_Migrate_Period 1
 0
@@ -6301,10 +6301,10 @@ jOSH_Migrate_Period 1
 # Adult migration periods - period of time migrating adult stages exit/enter over
  
 MAK_Migrate_Period 1
-14
+0
  
 HER_Migrate_Period 1
-14
+0
  
 WHK_Migrate_Period 1
 0
@@ -6424,7 +6424,7 @@ YTF_Migrate_Period 1
 0
  
 DOG_Migrate_Period 1
-21
+0
  
 SMO_Migrate_Period 1
 0
@@ -6460,37 +6460,37 @@ PIN_Migrate_Period 1
 0
  
 REP_Migrate_Period 1
-30
+10
  
 RWH_Migrate_Period 1
-21
+10
  
 BWH_Migrate_Period 1
-21
+10
  
 SWH_Migrate_Period 1
-14
+10
  
 TWH_Migrate_Period 1
-14
+10
  
 INV_Migrate_Period 1
 0
  
 LSQ_Migrate_Period 1
-14
+0
  
 ISQ_Migrate_Period 1
-14
+0
  
 LOB_Migrate_Period 1
 0
  
 NSH_Migrate_Period 1
-1
+0
  
 OSH_Migrate_Period 1
-1
+0
  
 ZL_Migrate_Period 1
 0
@@ -7781,7 +7781,7 @@ MigIOBox_YTFjuv 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_DOGjuv 30
-0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_SMOjuv 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -7973,7 +7973,7 @@ MigIOBox_YTFad 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_DOGad 30
-0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_SMOad 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -8027,10 +8027,10 @@ MigIOBox_INVad 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_LSQad 30
-0 0.05 0.05 0.2 0 0.1 0.1 0 0 0.2 0 0 0 0 0.2 0.05 0 0 0 0 0 0 0.05 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_ISQad 30
-0 0.05 0.05 0.2 0 0.1 0.1 0 0 0.2 0 0 0 0 0.2 0.05 0 0 0 0 0 0 0.05 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_NSHad 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -8263,7 +8263,7 @@ KMIGa_INV 10
 # Reserve weights for each age group
  
 KMIGa_MAKrn 10
-64.84 82.79 160.73 609.67 1160.21 1321.3 1541.12 1610.16 1866.37 2012.27
+0 0 0 0 0 0 0 0 0 0
  
 KMIGa_HERrn 10
 0 0 0 0 0 0 0 0 0 0
@@ -8443,7 +8443,7 @@ KMIGa_INVrn 10
 # Structural weights for each age group
  
 KMIGa_MAKsn 10
-24.46 31.24 60.65 230.06 437.81 498.6 581.55 607.61 704.28 759.34
+0 0 0 0 0 0 0 0 0 0
  
 KMIGa_HERsn 10
 0 0 0 0 0 0 0 0 0 0
@@ -8566,7 +8566,7 @@ KMIGa_YTFsn 10
 0 0 0 0 0 0 0 0 0 0
  
 KMIGa_DOGsn 10
-343.7793207 1944.830175 4816.663539 8564.458623 12752.8617 17035.09101 21167.19835 24995.30869 28445.11165 31491.08651
+0 0 0 0 0 0 0 0 0 0
  
 KMIGa_SMOsn 10
 0 0 0 0 0 0 0 0 0 0
@@ -14881,9 +14881,9 @@ HAL_Time_Spawn 180
 PLA_Time_Spawn 100             
 FOU_Time_Spawn 180             
 FLA_Time_Spawn 180             
-BFT_Time_Spawn 180           
-TUN_Time_Spawn 180           
-BIL_Time_Spawn 180           
+BFT_Time_Spawn 200           
+TUN_Time_Spawn 200           
+BIL_Time_Spawn 200           
 MPF_Time_Spawn 180           
 BUT_Time_Spawn 100           
 ANC_Time_Spawn 100           
@@ -14914,15 +14914,15 @@ DOG_Time_Spawn 180
 SMO_Time_Spawn 160           
 SSH_Time_Spawn 160           
 DSH_Time_Spawn 160           
-BLS_Time_Spawn 150           
-POR_Time_Spawn 150           
-PSH_Time_Spawn 150           
+BLS_Time_Spawn 250           
+POR_Time_Spawn 250           
+PSH_Time_Spawn 250           
 WSK_Time_Spawn 190            
 LSK_Time_Spawn 190           
 SK_Time_Spawn  190           
 SB_Time_Spawn  290           
 PIN_Time_Spawn 230           
-REP_Time_Spawn 270           
+REP_Time_Spawn 280           
 RWH_Time_Spawn 220           
 BWH_Time_Spawn 220           
 SWH_Time_Spawn 280           
@@ -15047,19 +15047,19 @@ DOG_Recruit_Time 270
 SMO_Recruit_Time 360             
 SSH_Recruit_Time 360             
 DSH_Recruit_Time 360             
-BLS_Recruit_Time 360             
-POR_Recruit_Time 360             
-PSH_Recruit_Time 360             
+BLS_Recruit_Time 1             
+POR_Recruit_Time 1             
+PSH_Recruit_Time 1             
 WSK_Recruit_Time 270             
 LSK_Recruit_Time 84             
 SK_Recruit_Time  84            
-SB_Recruit_Time  84             
+SB_Recruit_Time  1             
 PIN_Recruit_Time 330             
-REP_Recruit_Time 360             
-RWH_Recruit_Time 360             
-BWH_Recruit_Time 360             
-SWH_Recruit_Time 360             
-TWH_Recruit_Time 360             
+REP_Recruit_Time 1             
+RWH_Recruit_Time 1             
+BWH_Recruit_Time 1             
+SWH_Recruit_Time 1             
+TWH_Recruit_Time 1             
 INV_Recruit_Time 30
 LSQ_Recruit_Time 30             
 ISQ_Recruit_Time 30             
@@ -15081,9 +15081,9 @@ Recruit_Period_HAL 90
 Recruit_Period_PLA 90                
 Recruit_Period_FOU 90                
 Recruit_Period_FLA 90                
-Recruit_Period_BFT 60                
-Recruit_Period_TUN 60                
-Recruit_Period_BIL 60                
+Recruit_Period_BFT 10                
+Recruit_Period_TUN 10                
+Recruit_Period_BIL 10                
 Recruit_Period_MPF 30                
 Recruit_Period_BUT 40                
 Recruit_Period_ANC 40                
@@ -15114,19 +15114,19 @@ Recruit_Period_DOG 90
 Recruit_Period_SMO 90                
 Recruit_Period_SSH 90                
 Recruit_Period_DSH 90                
-Recruit_Period_BLS 40                
-Recruit_Period_POR 40                
-Recruit_Period_PSH 40                
+Recruit_Period_BLS 10                
+Recruit_Period_POR 10                
+Recruit_Period_PSH 10                
 Recruit_Period_WSK 90                
 Recruit_Period_LSK 90                
 Recruit_Period_SK  90                
-Recruit_Period_SB  50                
+Recruit_Period_SB  10                
 Recruit_Period_PIN 30                
-Recruit_Period_REP 60                
-Recruit_Period_RWH 40                
-Recruit_Period_BWH 40                
-Recruit_Period_SWH 30                
-Recruit_Period_TWH 30                
+Recruit_Period_REP 10                
+Recruit_Period_RWH 10                
+Recruit_Period_BWH 10                
+Recruit_Period_SWH 10                
+Recruit_Period_TWH 10                
 Recruit_Period_INV 90
 Recruit_Period_LSQ 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                
 Recruit_Period_ISQ 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                
