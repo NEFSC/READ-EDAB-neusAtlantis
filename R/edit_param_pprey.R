@@ -40,7 +40,7 @@ get_pprey_lines = function(atl.dir,biol.file){
   is.comment = sapply(biol.lines[pprey.lines],function(x) return(strsplit(x,'')[[1]][1] == '#'),USE.NAMES = F)
   #remove header lines
   pprey.names = biol.lines[pprey.lines[2]+1]
-  pprey.names = strsplit(pprey.names,'##| ')[[1]]
+  pprey.names = strsplit(pprey.names,'#|##| |\t')[[1]]
   pprey.names = pprey.names[which(nchar(pprey.names)>0)]
   
   pprey.lines = pprey.lines[!is.comment]
@@ -66,10 +66,10 @@ get_pprey_vals = function(atl.dir,biol.file,fgs.file,spp.names,is.pred,remove.ze
   name.id = seq(1,(length(pprey.lines)-1),2)
   val.id = seq(2,length(pprey.lines),2)
   
-  pred.names = sapply(pprey.lines[name.id],function(x) return(strsplit(x,'pPREY|pPREY1|pPREY2| ')[[1]][2]),USE.NAMES = F)
+  pred.names = sapply(pprey.lines[name.id],function(x) return(strsplit(x,'pPREY|pPREY1|pPREY2| |\t')[[1]][2]),USE.NAMES = F)
   pprey.mat = matrix(0,ncol = length(prey.names),nrow = length(pred.names))
   for(i in 1:length(pred.names)){
-    pprey.mat[i,]=as.numeric(strsplit(pprey.lines[val.id[i]]  ,' ')[[1]])
+    pprey.mat[i,]=as.numeric(strsplit(pprey.lines[val.id[i]]  ,' |\t')[[1]])
   }
   
   #If specifying predators, extract prey vals
