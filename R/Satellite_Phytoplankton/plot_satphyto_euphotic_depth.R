@@ -2,7 +2,7 @@
 library(dplyr)
 library(ggplot2)
 
-source(here::here('R','fill_satphyto_gaps.R'))
+source(here::here('R','Satellite_Phytoplankton','fill_satphyto_gaps.R'))
 
 satphyto.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Data/'
 years = 1997:2019
@@ -19,7 +19,7 @@ for(y in 1:length(years)){
   
   dat = read.csv(paste0(satphyto.dir,file.prefix,years[y],'.csv'),header = T,as.is = T) %>% 
     filter(PROD == 'ZEU') %>%
-    select(mid,mid.year,SUBAREA,PROD,MED) %>%
+    dplyr::select(mid,mid.year,SUBAREA,PROD,MED) %>%
     mutate(mid = as.Date(mid)) %>%
     right_join(date.index)
   colnames(dat) = c('date','ref.year','box','variable','values','doy')
@@ -42,6 +42,10 @@ zeu.year = zeu.year %>%
   filter(date >= as.Date('1997-09-07') & date <= as.Date('2019-12-27'))
 
 save(zeu.year, file = paste0(satphyto.dir,'euphotic_depth_allyears.R'))
+
+#Diagnostic
+x = zeu.year %>% group_by(box) %>% filter(variable == 'ZEU') %>% summarize(zeu = median(values))
+mean(x$zeu)
 #Plot by box
 boxes = 0:29
 
