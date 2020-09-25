@@ -11,34 +11,39 @@ source(here::here('R','plot_run_comparisons.R'))
 
 roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/'
 obs.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/'
-# orig.model = 'C:/Users/joseph.caracappa/Documents/Atlantis/Run_Files/atneus_v15_01272020/'
-# new.physics = paste0(roms.dir,'Atlantis_Output_2/')
-# new.ltl = paste0(roms.dir,'Atlantis_Output_LTLForce_1/')
-# new.ltl.fill1980 = paste0(roms.dir,'Atlantis_Output_LTLForce_1980Fill/')
-# ltl.noscale = paste0(roms.dir,'Atlantis_Output_noLTLscale/')
-# force.nutrients = paste0(roms.dir,'Atlantis_Output_NutrientForcing/')
+
 roms.cobalt = paste0(roms.dir,'Atlantis_Runs/Atlantis_Output_DinoFlag/')
-GLORYS = paste0(obs.dir,'Atlantis_Runs/GLORYS_Physics_1/')
-Satphyto = paste0(obs.dir,'Atlantis_Runs/SatPhyto_Forcing_1/')
-# satphyto.const.diatom = paste0(obs.dir,'Atlantis_RUns/SatPhyto_Forcing_Const_Diatom_Prop/')
-# satphyto.hirata.diatom = paste0(obs.dir,'Atlantis_RUns/SatPhyto_Forcing_Hirata_Diatom_Prop/')
-# satphyto.dyn.low = paste0(obs.dir,'Atlantis_Runs/SatPhyto_Forcing_Dynamic_Lower_with_DL/')
-leapyear.fix = paste0(obs.dir,'Atlantis_Runs/Obs_Hindcast_LeapYearFix/')
-satphyto.doy.spinup = paste0(obs.dir,'Atlantis_Runs/SatPhyto_Forcing_DOY_spinup/')
+
+new.obs = paste0(obs.dir,'Atlantis_Runs/Obs_Hindcast_NewForcing/')
+zoo.fix = paste0(obs.dir,'Atlantis_Runs/Obs_Hindcast_ZooFix_OldParams2/')
+upzl2 = paste0(obs.dir,'Atlantis_Runs/Obs_Hindcast_ZooFix_UpZL2/')
+upzl3 = paste0(obs.dir,'Atlantis_Runs/Obs_Hindcast_ZooFix_UpZL3/')
+
 figure.dir = paste0(obs.dir,'Diagnostic_Figures/Run_Comparisons/')
 
 plot_run_comparisons(
-  model1.dir = satphyto.doy.spinup,
-  model2.dir = leapyear.fix,
-  model1.name = 'DOY_Spinup',
-  model2.name = 'Final_Fix',
+  model1.dir = upzl2,
+  model2.dir = upzl3,
+  model1.name = 'UpZL2',
+  model2.name = 'UpZL3',
   plot.raw = T,
-  plot.diff = T,
-  plot.out = paste(figure.dir,'DOY_v_New_Obs'),
+  plot.diff = F,
+  plot.out = paste(figure.dir,'UpZL2_v_UpZL3'),
   table.out = T,
   groups = NULL,
   remove.init = T
 )
 
-
+plot_run_comparisons(
+  model1.dir = new.obs,
+  model2.dir = upzl3,
+  model1.name = 'Obs_Base',
+  model2.name = 'UpZL3',
+  plot.raw = T,
+  plot.diff = F,
+  plot.out = paste(figure.dir,'Obs_Base_v_UpZL3'),
+  table.out = T,
+  groups = NULL,
+  remove.init = T
+)
 
