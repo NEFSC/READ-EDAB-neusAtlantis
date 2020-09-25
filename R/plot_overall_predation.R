@@ -93,10 +93,11 @@ plot_overall_predation =function(data,min.fract = 0.1,fig.dir,file.prefix){
 }
 
 #Example
-data.sub = subset_diet(diet.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Obs_Hindcast_ZooFix_UpZL2/neus_outputDietCheck.txt',
-                   spp.names  = c('ZL','ZM','ZS','BO'),
+atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Obs_Hindcast_ZooFix_UpZL3/'
+data.sub = subset_diet(diet.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Obs_Hindcast_ZooFix_UpZL3/neus_outputDietCheck.txt',
+                   spp.names  = c('ZL','ZM','ZS','BO','CLA','SCA','QHG','BFF','BD','LOB','PB','BB','DL','DR'),
                    rm.zero = T)
 plot_overall_predation(data = data.sub,
                        min.fract = 0.1,
                        fig.dir = paste0(atl.dir,'Figures/'),
-                       file.prefix = 'ZooFix_UpZL2')
+                       file.prefix = 'ZooFix_UpZL3')
