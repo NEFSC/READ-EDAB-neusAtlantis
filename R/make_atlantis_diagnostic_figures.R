@@ -492,7 +492,7 @@ make_atlantis_diagnostic_figures = function(
       ggplot2::theme_classic()+
       ggplot2::theme(plot.title =  ggplot2::element_text(size = 14),
                      axis.title =  ggplot2::element_text(size = 14),
-                     axis.text =  ggplot2::element_text(size = 12)
+                     axis.text =  ggplot2::element_text(size = 12),
                      strip.text =  ggplot2::element_text(size = 14))+
       ggsave(filename = paste0(atl.dir,'Figures/','test.pdf'),width = 30, height = 30, units = 'in')
     
