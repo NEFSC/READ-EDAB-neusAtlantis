@@ -41,8 +41,8 @@ combine_years(phys.dir,file.pattern = '^GLORYS_tempsalt_force_.*\\.nc','temperat
 combine_years(phys.dir,file.pattern = '^GLORYS_tempsalt_force_.*\\.nc','salinity',out.dir)
 combine_years('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/statevars/',file.pattern = '^ECCO_vflux_Atlantis_.*\\.nc','verticalflux',out.dir)
 
-phyto.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars_dynamic_lower/'
-dl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/labile_detritus/'
+phyto.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars_DOY_spinup/'
+dl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/labile_detritus_DOY_spinup/'
 
 #New Satellite Phytoplankton
 combine_years(file.dir = phyto.dir,
