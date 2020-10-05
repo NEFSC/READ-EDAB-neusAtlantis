@@ -98,3 +98,10 @@ This file is used to document steps made towards a new version/subversion
  * Migratory species were modified to have their leaving the model domain on day 1 and returning after a length of time equal to how long they were originally parameterized for
  * All migratory species now persist to end of the model run in both juvenile and adult age classes
  * Task not closed yet on Jira because the time period the species leave are not biologically accurate
+
+## Retune previously tuned species (ATLNTS-155)
+ * RG: 10-04-2020
+ * Lowered TUN, BFT, and BIL C and mum parameters - still higher than most other fish groups.
+ * Lowered growth rates outside the model
+ * Lowered survivorship outside the model to take into account predation on juveniles and fishing.
+ * TUN and BIL now persist at reasonable levels.  BFT collapses and comes back eventually due to lowered fishing & constant recruitment
