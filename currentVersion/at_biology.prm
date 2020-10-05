@@ -6901,13 +6901,13 @@ jFLA_FSM 1
 1
  
 jBFT_FSM 1
-1
+0.975
  
 jTUN_FSM 1
-1
+0.875
  
 jBIL_FSM 1
-1
+0.975
  
 jMPF_FSM 1
 1
@@ -7093,13 +7093,13 @@ FLA_FSM 1
 1
  
 BFT_FSM 1
-1
+0.9
  
 TUN_FSM 1
-1
+0.8
  
 BIL_FSM 1
-1
+0.9
  
 MPF_FSM 1
 1
@@ -7299,13 +7299,13 @@ jFLA_FSMG 1
 0.425
  
 jBFT_FSMG 1
-0.825
+0.425
  
 jTUN_FSMG 1
-0.825
+0.125
  
 jBIL_FSMG 1
-0.825
+0.3
  
 jMPF_FSMG 1
 0.246
@@ -11646,13 +11646,13 @@ C_FLA	10
 0.046	0.203	0.476	0.836	1.245	1.671	2.089	2.483	2.844	3.166
 									
 C_BFT	10								
-22.329	804.628	2864.805	5671.752	8644.891	11415.503	13811.323	15787.421	17367.002	18602.776
+2.329	90.628	1006.805	2000.752	3040.891	3401.503	3801.323	4478.421	5567.002	6600.776
 									
 C_TUN	10								
-68.509	1905.560	4424.606	4435.570	5431.030	5970.427	6350.771	4651.200	2742.011	1529.154
+1.509	60.560	285.606	753.570	1063.030	1597.427	2335.771	2965.200	3704.011	3820.154
 									
 C_BIL	10								
-47.336	5139.470	19096.969	27169.468	44051.641	59807.620	74292.512	86041.038	95733.027	103551.085
+4.336	213.470	1600.969	2800.468	3905.641	4980.620	5029.512	6204.038	7573.027	10655.085
 									
 C_MPF	10								
 0.007	0.032	0.046	0.074	0.100	0.122	0.140	0.155	0.166	0.174
@@ -11870,13 +11870,13 @@ mum_FLA	10.00
 0.23	1.02	2.38	4.18	6.22	8.35	10.45	12.42	14.22	15.83
 									
 mum_BFT	10.00								
-111.64	4023.14	14324.03	28358.76	43224.45	57077.52	69056.62	78937.10	86835.01	93013.88
+12.02	190.14	360.03	805.76	1022.45	1570.52	2396.62	2887.10	3563.01	3930.88
 									
 mum_TUN	10.00								
-94.38	3175.94	7374.34	7392.61	9051.71	9950.71	10160.54	6407.92	5521.69	5505.87
+4.98	77.94	103.34	173.61	290.71	499.71	610.54	1087.92	1251.69	2305.87
 									
 mum_BIL	10.00								
-127.64	8565.79	31828.28	45282.45	73419.40	99679.37	123820.85	143401.73	159555.05	172585.14
+22.64	360.79	582.28	1522.45	2234.40	2967.37	3632.85	4131.73	4555.05	5225.14
 									
 mum_MPF	10.00								
 0.02	0.14	0.24	0.37	0.50	0.61	0.70	0.77	0.83	0.87
@@ -13015,9 +13015,9 @@ E_HAL 0.35
 E_PLA 0.3
 E_FOU 0.3
 E_FLA 0.3
-E_BFT 0.4
-E_TUN 0.4
-E_BIL 0.4
+E_BFT 0.15
+E_TUN 0.125
+E_BIL 0.15
 E_MPF 0.3
 E_BUT 0.35
 E_ANC 0.35
@@ -15131,7 +15131,7 @@ Recruit_Period_INV 90
 Recruit_Period_LSQ 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                
 Recruit_Period_ISQ 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                
 Recruit_Period_OSH 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                
-Recruit_Period_NSH 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                
+Recruit_Period_NSH 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                             
 
 # Cost of Spawn production, taken from N weight to produce spawn, not included in spawn calc
 # RM shouldn't these be a proportion of adult mass? E.g. X (0.01) * RN for cohort 5? -> changed to this 20190122
