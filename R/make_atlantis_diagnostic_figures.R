@@ -132,6 +132,7 @@ make_atlantis_diagnostic_figures = function(
   plot.growth.cons,
   plot.cohort,
   plot.diet,
+  plot.consumption,
   plot.spatial.biomass,
   plot.LTL
   ){
@@ -729,7 +730,6 @@ make_atlantis_diagnostic_figures = function(
   
   #Diet figures
   if(plot.diet){
-    source(here::here('R','plot_overall_predation.R'))
     
     if(!is.na(result$biomass.consumed)){
       
@@ -741,7 +741,11 @@ make_atlantis_diagnostic_figures = function(
       }
       dev.off()
     }
-    
+
+  }
+  
+  if(plot.consumption){
+    source(here::here('R','plot_overall_predation.R'))  
     consumption = get_consumption(prod.file = param.ls$prod.nc,
                                   fgs.file = param.ls$func.groups)
     data.sub = subset_diet(diet.file = param.ls$dietcheck,
@@ -753,6 +757,7 @@ make_atlantis_diagnostic_figures = function(
                            fig.dir = out.dir,
                            file.prefix = run.name)
   }
+  
   
 
 # Spatial biomass ---------------------------------------------------------
