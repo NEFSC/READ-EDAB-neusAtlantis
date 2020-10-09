@@ -110,7 +110,7 @@ plot_overall_predation =function(data,bioindex.file,min.fract = 0.1,fig.dir,file
                 RColorBrewer::brewer.pal(8,'Set2'),
                 RColorBrewer::brewer.pal(9,'Set1'))
   
-  plot.spp = unique(data.new$Prey)
+  plot.spp = sort(unique(as.character(data.new$Prey)))
   
   filename = paste0(fig.dir,file.prefix,'_TotalConsumption.pdf')
   pdf(file = filename,width = 16, height = 8, onefile = T)
@@ -173,16 +173,16 @@ plot_overall_predation =function(data,bioindex.file,min.fract = 0.1,fig.dir,file
 }
 
 #Example
-atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Obs_Hindcast_DLFix2/'
-prod.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Obs_Hindcast_DLFix2/neus_outputPROD.nc'
-fgs.file = here::here('currentVersion','neus_groups.csv')
-consumption = get_consumption(prod.file,fgs.file)
-data.sub = subset_diet(diet.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Obs_Hindcast_DLFix2/neus_outputDietCheck.txt',
-                       consumption = consumption,
-                   # spp.names  = c('ZL','ZM','ZS','BO','CLA','SCA','QHG','BFF','BD','LOB','PB','BB','DL','DR'),
-                   spp.names = c('ZL','ZM'))
-plot_overall_predation(data = data.sub,
-                       min.fract = 0.1,
-                       bioindex.file = paste0(atl.dir,'neus_outputBiomIndx.txt'),
-                       fig.dir = paste0(atl.dir,'Figures/'),
-                       file.prefix = 'Obs_Hindcast_DLFix2')
+# atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Obs_Hindcast_DLFix2/'
+# prod.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Obs_Hindcast_DLFix2/neus_outputPROD.nc'
+# fgs.file = here::here('currentVersion','neus_groups.csv')
+# consumption = get_consumption(prod.file,fgs.file)
+# data.sub = subset_diet(diet.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Obs_Hindcast_DLFix2/neus_outputDietCheck.txt',
+#                        consumption = consumption,
+#                    # spp.names  = c('ZL','ZM','ZS','BO','CLA','SCA','QHG','BFF','BD','LOB','PB','BB','DL','DR'),
+#                    spp.names = c('ZL','ZM'))
+# plot_overall_predation(data = data.sub,
+#                        min.fract = 0.1,
+#                        bioindex.file = paste0(atl.dir,'neus_outputBiomIndx.txt'),
+#                        fig.dir = paste0(atl.dir,'Figures/'),
+#                        file.prefix = 'Obs_Hindcast_DLFix2')
