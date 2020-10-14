@@ -19,10 +19,6 @@ recreate, at least in approximate terms, the biomass, catch, and effort
 trends in the NEUS from 1964 to the mid
 2000s.
 
-### The spatial domain
-
-![](https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/Geometry/AtlantisNeusDomain.PNG)<!-- -->
-
 ### Development team
 
 In alphabetical
