@@ -1,0 +1,47 @@
+---
+title: "Survey and Commercial Fishing"
+output: 
+  html_document:
+    keep_md: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Description of data
+
+The survey biomass and catch (landings) of the species modelled in Atlantis are extracted from the svdbs database (using survdat) cfdbs (using comlandr) and assembled as a single data frame in long format
+
+```{r code, echo = T,eval= F}
+library(magrittr)
+# Connect to the database
+channel <- dbutils::connect_to_database("sole","user")
+# list species of interest
+speciesList <- map_functional_group(channel)
+# grab data from databases and assemble
+data <- extract_landings_biomass(channel,species = speciesList)
+```
+```{r data, echo=F, eval = T}
+dplyr::as_tibble(readRDS(here::here("data-raw","survComData.RDS")))
+```
+
+
+## Methods
+
+Species assigned to the initial Atlantis functional group designations (from v1.0 - found in `initialFunctionalGroupNames.csv`) were used to look up SVSPP, NESPP3, Species_ITIS codes
+
+The `map_functional_groups.r` function extends these tables (from Atlantis v1.0)
+```{r initialcsv, echo=T,eval=T, message=F}
+readr::read_csv(here::here("data-raw","initialFunctionalGroupNames.csv"))
+readr::read_csv(here::here("data-raw","Atlantis_1_5_groups_svspp_nespp3.csv"))
+```
+to this table 
+```{r finalTable, echo=T,eval=T, message=F}
+readr::read_csv(here::here("data-raw","FunctionalGroupNames.csv"))
+```
+
+Each species is cross-referenced in the svdbs and cfdbs databases to obtain Species_itis codes and scientific names
+
+The list of species codes is then used to extract commercial landings (`comlandr`) and biomass (`survdat`) data using `extract_landings_biomass.r`
+
