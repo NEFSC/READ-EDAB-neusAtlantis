@@ -12,15 +12,15 @@
 #'@examples
 #'\dontrun{
 #'
-#'library(magrittr)
-#' # connect to the database
+#' library(magrittr)
+#' #connect to the database
 #'channel <- dbutils::connect_to_database("sole","user")
 #' # list species of interest
-#'species <- tolower(c("Yellowtail flounder","haddock","winter flounder","silver hake","goosefish","winter skate","spiny dogfish","atlantic cod","atlantic herring","atlantic mackerel"))
-#'extract_landings_biomass(channel,speciesNames = species)
+#' speciesList <- map_functional_group(channel)
+#' extract_landings_biomass(channel,species = speciesList)
 #'
 #'}
-
+library(magrittr)
 
 extract_landings_biomass <- function(channel,species) {
 
@@ -32,13 +32,13 @@ extract_landings_biomass <- function(channel,species) {
   landings <- comlandData %>% 
     dplyr::filter(NESPP3 %in% as.numeric(species$NESPP3),EPU != "OTHER") %>%
     dplyr::left_join(species,by="NESPP3") %>%
-    dplyr::group_by(YEAR,Species,EPU) %>%
+    dplyr::group_by(YEAR,Species,EPU,Code,Functional_Group) %>%
     dplyr::summarise(VALUE = sum(SPPLIVMT)) %>%
     dplyr::ungroup()
   landings$SEASON <- NA
   landings$TYPE <- "landings"
   landings$UNITS <- "mt"
-  
+
   # unique list of EPUs
   EPUs <- unique(landings$EPU)
   
@@ -72,6 +72,7 @@ extract_landings_biomass <- function(channel,species) {
     dplyr::mutate(TYPE = "survey",UNITS="biomass, mt") %>%
     dplyr::select(names(landings))
     
+
   data <- rbind(landings,survey)
   
   # expand grid (all species by all years) to include Zeros
