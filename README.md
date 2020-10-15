@@ -16,7 +16,8 @@ including the major functional groups from an ecosystem perspective. We
 have also parameterized and simulated the physiographic dynamics of the
 ecosystem, as well as the most important fleets. Our goal was to
 recreate, at least in approximate terms, the biomass, catch, and effort
-trends in the NEUS from 1964 to the mid 2000s.
+trends in the NEUS from 1964 to the mid
+2000s.
 
 ### Development team
 

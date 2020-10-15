@@ -5364,13 +5364,13 @@ jFLA_Migrate_Time 1
 0
  
 jBFT_Migrate_Time 1
-1
+0
  
 jTUN_Migrate_Time 1
-1
+0
  
 jBIL_Migrate_Time 1
-1
+0
  
 jMPF_Migrate_Time 1
 0
@@ -5463,13 +5463,13 @@ jDSH_Migrate_Time 1
 0
  
 jBLS_Migrate_Time 1
-1
+0
  
 jPOR_Migrate_Time 1
-1
+0
  
 jPSH_Migrate_Time 1
-1
+0
  
 jWSK_Migrate_Time 1
 0
@@ -5481,25 +5481,25 @@ jSK_Migrate_Time 1
 0
  
 jSB_Migrate_Time 1
-1
+0
  
 jPIN_Migrate_Time 1
 0
  
 jREP_Migrate_Time 1
-1
+0
  
 jRWH_Migrate_Time 1
-1
+0
  
 jBWH_Migrate_Time 1
-1
+0
  
 jSWH_Migrate_Time 1
-1
+0
  
 jTWH_Migrate_Time 1
-1
+0
  
 jINV_Migrate_Time 1
 0
@@ -5519,10 +5519,10 @@ jOSH_Migrate_Time 1
 
 # Adult migration times - days of the year adult stages of each group leave the model domain
 MAK_Migrate_Time 1
-0
+300
  
 HER_Migrate_Time 1
-0
+300
  
 WHK_Migrate_Time 1
 0
@@ -5555,13 +5555,13 @@ FLA_Migrate_Time 1
 0
  
 BFT_Migrate_Time 1
-1
+260
  
 TUN_Migrate_Time 1
-1
+260
  
 BIL_Migrate_Time 1
-1
+260
  
 MPF_Migrate_Time 1
 0
@@ -5642,7 +5642,7 @@ YTF_Migrate_Time 1
 0
  
 DOG_Migrate_Time 1
-0
+300
  
 SMO_Migrate_Time 1
 0
@@ -5654,13 +5654,13 @@ DSH_Migrate_Time 1
 0
  
 BLS_Migrate_Time 1
-1
+270
  
 POR_Migrate_Time 1
-1
+270
  
 PSH_Migrate_Time 1
-1
+270
  
 WSK_Migrate_Time 1
 0
@@ -5672,34 +5672,34 @@ SK_Migrate_Time 1
 0
  
 SB_Migrate_Time 1
-1
+224
  
 PIN_Migrate_Time 1
 0
  
 REP_Migrate_Time 1
-1
+270
  
 RWH_Migrate_Time 1
-1
+300
  
 BWH_Migrate_Time 1
-1
+300
  
 SWH_Migrate_Time 1
-1
+330
  
 TWH_Migrate_Time 1
-1
+330
  
 INV_Migrate_Time 1
 0
  
 LSQ_Migrate_Time 1
-0
+330
  
 ISQ_Migrate_Time 1
-0
+330
  
 LOB_Migrate_Time 1
 0
@@ -5753,13 +5753,13 @@ jFLA_Migrate_Return 1
 364
  
 jBFT_Migrate_Return 1
-195
+364
  
 jTUN_Migrate_Return 1
-195
+364
  
 jBIL_Migrate_Return 1
-195
+364
  
 jMPF_Migrate_Return 1
 364
@@ -5852,13 +5852,13 @@ jDSH_Migrate_Return 1
 364
  
 jBLS_Migrate_Return 1
-245
+364
  
 jPOR_Migrate_Return 1
-245
+364
  
 jPSH_Migrate_Return 1
-245
+364
  
 jWSK_Migrate_Return 1
 364
@@ -5870,25 +5870,25 @@ jSK_Migrate_Return 1
 364
  
 jSB_Migrate_Return 1
-261
+364
  
 jPIN_Migrate_Return 1
 364
  
 jREP_Migrate_Return 1
-275
+364
  
 jRWH_Migrate_Return 1
-165
+364
  
 jBWH_Migrate_Return 1
-165
+364
  
 jSWH_Migrate_Return 1
-125
+364
  
 jTWH_Migrate_Return 1
-125
+364
  
 jINV_Migrate_Return 1
 364
@@ -5909,10 +5909,10 @@ jOSH_Migrate_Return 1
 # Adult migration return times - days of the year adult stages of each group return the model domain
  
 MAK_Migrate_Return 1
-364
+90
  
 HER_Migrate_Return 1
-364
+90
  
 WHK_Migrate_Return 1
 364
@@ -5945,13 +5945,13 @@ FLA_Migrate_Return 1
 364
  
 BFT_Migrate_Return 1
-195
+90
  
 TUN_Migrate_Return 1
-195
+90
  
 BIL_Migrate_Return 1
-195
+90
  
 MPF_Migrate_Return 1
 364
@@ -6032,7 +6032,7 @@ YTF_Migrate_Return 1
 364
  
 DOG_Migrate_Return 1
-364
+100
  
 SMO_Migrate_Return 1
 364
@@ -6044,13 +6044,13 @@ DSH_Migrate_Return 1
 364
  
 BLS_Migrate_Return 1
-245
+150
  
 POR_Migrate_Return 1
-245
+150
  
 PSH_Migrate_Return 1
-245
+150
  
 WSK_Migrate_Return 1
 364
@@ -6062,34 +6062,34 @@ SK_Migrate_Return 1
 364
  
 SB_Migrate_Return 1
-261
+120
  
 PIN_Migrate_Return 1
 364
  
 REP_Migrate_Return 1
-275
+180
  
 RWH_Migrate_Return 1
-165
+100
  
 BWH_Migrate_Return 1
-165
+100
  
 SWH_Migrate_Return 1
-125
+90
  
 TWH_Migrate_Return 1
-125
+90
  
 INV_Migrate_Return 1
 364
  
 LSQ_Migrate_Return 1
-364
+60
  
 ISQ_Migrate_Return 1
-364
+60
  
 LOB_Migrate_Return 1
 364
@@ -6145,13 +6145,13 @@ jFLA_Migrate_Period 1
 0
  
 jBFT_Migrate_Period 1
-1
+0
  
 jTUN_Migrate_Period 1
-1
+0
  
 jBIL_Migrate_Period 1
-1
+0
  
 jMPF_Migrate_Period 1
 0
@@ -6262,7 +6262,7 @@ jSK_Migrate_Period 1
 0
  
 jSB_Migrate_Period 1
-1
+0
  
 jPIN_Migrate_Period 1
 0
@@ -6301,10 +6301,10 @@ jOSH_Migrate_Period 1
 # Adult migration periods - period of time migrating adult stages exit/enter over
  
 MAK_Migrate_Period 1
-0
+14
  
 HER_Migrate_Period 1
-0
+14
  
 WHK_Migrate_Period 1
 0
@@ -6424,7 +6424,7 @@ YTF_Migrate_Period 1
 0
  
 DOG_Migrate_Period 1
-0
+21
  
 SMO_Migrate_Period 1
 0
@@ -6460,37 +6460,37 @@ PIN_Migrate_Period 1
 0
  
 REP_Migrate_Period 1
-10
+30
  
 RWH_Migrate_Period 1
-10
+21
  
 BWH_Migrate_Period 1
-10
+21
  
 SWH_Migrate_Period 1
-10
+14
  
 TWH_Migrate_Period 1
-10
+14
  
 INV_Migrate_Period 1
 0
  
 LSQ_Migrate_Period 1
-0
+14
  
 ISQ_Migrate_Period 1
-0
+14
  
 LOB_Migrate_Period 1
 0
  
 NSH_Migrate_Period 1
-0
+1
  
 OSH_Migrate_Period 1
-0
+1
  
 ZL_Migrate_Period 1
 0
@@ -6901,13 +6901,13 @@ jFLA_FSM 1
 1
  
 jBFT_FSM 1
-0.975
+1
  
 jTUN_FSM 1
-0.875
+1
  
 jBIL_FSM 1
-0.975
+1
  
 jMPF_FSM 1
 1
@@ -7093,13 +7093,13 @@ FLA_FSM 1
 1
  
 BFT_FSM 1
-0.9
+1
  
 TUN_FSM 1
-0.8
+1
  
 BIL_FSM 1
-0.9
+1
  
 MPF_FSM 1
 1
@@ -7299,13 +7299,13 @@ jFLA_FSMG 1
 0.425
  
 jBFT_FSMG 1
-0.425
+0.825
  
 jTUN_FSMG 1
-0.125
+0.825
  
 jBIL_FSMG 1
-0.3
+0.825
  
 jMPF_FSMG 1
 0.246
@@ -7781,7 +7781,7 @@ MigIOBox_YTFjuv 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_DOGjuv 30
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
  
 MigIOBox_SMOjuv 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -7973,7 +7973,7 @@ MigIOBox_YTFad 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_DOGad 30
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
  
 MigIOBox_SMOad 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -8027,10 +8027,10 @@ MigIOBox_INVad 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  
 MigIOBox_LSQad 30
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0.05 0.05 0.2 0 0.1 0.1 0 0 0.2 0 0 0 0 0.2 0.05 0 0 0 0 0 0 0.05 0 0 0 0 0 0 0
  
 MigIOBox_ISQad 30
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0.05 0.05 0.2 0 0.1 0.1 0 0 0.2 0 0 0 0 0.2 0.05 0 0 0 0 0 0 0.05 0 0 0 0 0 0 0
  
 MigIOBox_NSHad 30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -8263,7 +8263,7 @@ KMIGa_INV 10
 # Reserve weights for each age group
  
 KMIGa_MAKrn 10
-0 0 0 0 0 0 0 0 0 0
+64.84 82.79 160.73 609.67 1160.21 1321.3 1541.12 1610.16 1866.37 2012.27
  
 KMIGa_HERrn 10
 0 0 0 0 0 0 0 0 0 0
@@ -8443,7 +8443,7 @@ KMIGa_INVrn 10
 # Structural weights for each age group
  
 KMIGa_MAKsn 10
-0 0 0 0 0 0 0 0 0 0
+24.46 31.24 60.65 230.06 437.81 498.6 581.55 607.61 704.28 759.34
  
 KMIGa_HERsn 10
 0 0 0 0 0 0 0 0 0 0
@@ -8566,7 +8566,7 @@ KMIGa_YTFsn 10
 0 0 0 0 0 0 0 0 0 0
  
 KMIGa_DOGsn 10
-0 0 0 0 0 0 0 0 0 0
+343.7793207 1944.830175 4816.663539 8564.458623 12752.8617 17035.09101 21167.19835 24995.30869 28445.11165 31491.08651
  
 KMIGa_SMOsn 10
 0 0 0 0 0 0 0 0 0 0
@@ -9155,27 +9155,27 @@ pPREYBFF  92
 pPREYBG  92
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0.05 0 0 0 0.1 0.015 0.05 0 0 0 0 0 0 0 0 0.25 0.1 0
 pPREYLOB  92
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.02 0.02 0.02 0.02 0.06 0.04 0.005 0.15 0.1 0.1 0.01 0.15 0.1 0.05 0 0.225 0 0 0 0 0 0 0 0 0.15 0 0 0.1 0.1 0.1 0.1
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.02 0.02 0.02 0.02 0.06 0.04 0.005 0.15 0.1 0.1 0.05 0.15 0.1 0.05 0 0.225 0 0 0 0 0 0 0 0 0.15 0 0 0.1 0.1 0.1 0.1
 pPREYRCB  92
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0.03375 0.03375 0.03375 0.01 0.005 0.05 0.1125 0.225 0.225 0 0.15 0.025 0.03 0 0.12 0.1 0 0 0 0 0 0 0 0.1 0.05 0.05 0 0.25 0.1 0.05
 pPREYBMS  92
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.02 0.02 0.02 0.02 0.09 0.115 0.1125 0.05 0.225 0.225 0 0.15 0.05 0 0 0.01 0 0 0 0 0 0 0 0 0.15 0 0 0 0.1 0.1 0.23
 pPREYZL 92                                                                                          
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0.08 0.1 0.1 0.1 0.1 0 0 0 0 0.05 0.01 0.01 1e-05 0.133 0.1 0 0 0.05 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0.08 0.1 0.1 0.35 0.1 0 0 0 0 0.05 0 0.01 0 0.2 0.01 0 0 0.05 0 0 0 0 0 0
 pPREYBD  92
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 5.1e-05 0.18 5.5e-05 0 0 0 0.3 0.23 0.057 0 0.345 0.23 0
 pPREYBC  92
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.02 0.003 0.003 0.003 0.045 0.1 0.1 0.05 0.05 0.05 0 0.1 0 0 0 0.025 0 0 0 0 0 0 0 0 0.15 0 0 0 0 0 0
 pPREYZG 92                                                                                          
-0.001 1e-04 0 0 0.01 0.001 0.01 0.01 0.01 0 1e-04 1e-04 0 0 0 0.001 0.001 0.001 0.001 0 0.001 0.001 0 0.001 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.001 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.01 0.01 0.01 0.01 0.08 0 0 0.05 0 0 0.02 0 0 0 0.05 0.01 0 0 0 0.005 0.2 0 0.01 0.01 0
+0.001 0.0001 0 0 0.01 0.001 0.01 0.01 0.01 0 0.0001 0.0001 0 0 0 0.001 0.001 0.001 0.001 0 0.001 0.001 0 0.001 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.001 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.01 0.01 0.01 0.01 0.25 0 0 0.05 0 0 0.02 0 0 0 0.1 0.001 0 0 0 0.005 0.2 0 0.01 0.01 0
 pPREYDF 92                                                                                          
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0.01 0 0 0.1 0 0 0.005 0 0 0.05 0 0
 pPREYZM 92                                                                                          
-0 0.01 0 0.01 0.01 0.01 0.01 0.01 0 0.05 0 0 0 0 0.05 0.01 0 0.01 0 0.05 0 0 0 0 0 0.05 0 0 0 0.05 0 0 0.05 0 0 0 0.05 0.01 0.01 0 0.01 0 0.05 0 0 0 0.01 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.01 0 0 0 0 0 0 0 0 0 0.05 0 0 0 0.05 0.01 0 1e-04 0.05 0.01 0 0.05 0.05 0.01 0 0.05 0.01 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0 0 0 0.01 0.002 0 0 0.002 0 0 0 0 0 0 0.05 0.01 0
 pPREYZS 92                                                                                          
-0 0.05 0 0.05 0.05 0.05 0.05 0.05 0 0.05 0 0 0 0 0.05 0.05 0 0.05 0 0 0 0 0 0 0 0.05 0 0 0 0.05 0 0 0.05 0 0 0 0.05 0.05 0.05 0 0.05 0 0 0 0 0 0.05 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0 0 0 0 0 0 0 0 0 0.01 0 0 0 0.1 0.05 0.1 0 0.01 0.01 0.01 0 0.05 0.05 0 0.05 0.05 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.01 0 0 0 0.0005 0.002 0.015 0 0.01 0.01 0.01 0 0 0 0 0.05 0.05 0
 pPREYBO  92
-0 0 0 0.1 0.1 0.1 0.1 0.1 0 0 0 0 0 0 0 0.1 0 0.1 0 0.005 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0.1 0 0.1 0 0.005 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0.1 0.01 0.0026 0 0 0 0.005 0 0 0 0.1 0.23 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0.0625 0.01 0.0026 0 0 0 0.05 0 0 0 0.1 0.23 0
 
 ## Ontogenetic diet preferences - one entry per age class, 1=use explicit values above, 0=use ontogenetic values below. 
 # For each group where the p_split value is set to 0 there will be a value for each cohort of the groups tagged below as age_structured_pred.    
@@ -11594,9 +11594,9 @@ C_jNSH_T15	0.0003
 C_OSH_T15	0.0003043
 C_jOSH_T15	0.0003
 C_ZG_T15	0.003
-C_ZL_T15	0.2 #NOBA
-C_ZM_T15	0.41 #NOBA
-C_ZS_T15	0.4 #NOBA
+C_ZL_T15	0.02
+C_ZM_T15	0.008
+C_ZS_T15	0.015
 C_BD_T15	0.0005
 C_BO_T15	0.001
 C_PB_T15	0.0001
@@ -11646,13 +11646,13 @@ C_FLA	10
 0.046	0.203	0.476	0.836	1.245	1.671	2.089	2.483	2.844	3.166
 									
 C_BFT	10								
-2.329	90.628	1006.805	2000.752	3040.891	3401.503	3801.323	4478.421	5567.002	6600.776
+22.329	804.628	2864.805	5671.752	8644.891	11415.503	13811.323	15787.421	17367.002	18602.776
 									
 C_TUN	10								
-1.509	60.560	285.606	753.570	1063.030	1597.427	2335.771	2965.200	3704.011	3820.154
+68.509	1905.560	4424.606	4435.570	5431.030	5970.427	6350.771	4651.200	2742.011	1529.154
 									
 C_BIL	10								
-4.336	213.470	1600.969	2800.468	3905.641	4980.620	5029.512	6204.038	7573.027	10655.085
+47.336	5139.470	19096.969	27169.468	44051.641	59807.620	74292.512	86041.038	95733.027	103551.085
 									
 C_MPF	10								
 0.007	0.032	0.046	0.074	0.100	0.122	0.140	0.155	0.166	0.174
@@ -11799,33 +11799,33 @@ mum_LSQ_T15	0.0044
 mum_jLSQ_T15	0.004
 mum_ISQ_T15	0.00444
 mum_jISQ_T15	0.004
-mum_SCA_T15	0.1
-mum_QHG_T15	0.1
-mum_CLA_T15	0.1 # From 0.05
-mum_BFF_T15	0.1  # From 0.2
-mum_BG_T15	0.5 #From 200000
+mum_SCA_T15	0.05
+mum_QHG_T15	0.05
+mum_CLA_T15	0.02 # From 0.05
+mum_BFF_T15	0.05  # From 0.2
+mum_BG_T15	200000
 mum_BC_T15	0.3
-mum_LOB_T15	0.6    # From 0.75
+mum_LOB_T15	0.7    # From 0.75
 mum_RCB_T15	0.1  
 mum_BMS_T15	0.33    # From 0.3, then 0.5
 mum_NSH_T15	0.003043
 mum_jNSH_T15	0.003
 mum_OSH_T15	0.003043
 mum_jOSH_T15	0.003
-mum_ZG_T15	0.005    # From 1.1 /500000
-mum_ZL_T15	0.1 #Orig 0.1
-mum_ZM_T15	0.02 #Orig
-mum_ZS_T15	0.8 #From 0.675
-mum_BD_T15	0.0004
-mum_BO_T15	0.2 #From 0.02	
-mum_PB_T15	0.1 #From 0.12
-mum_BB_T15	0.9 #From 0.8
-mum_DF_T15	0.001
-mum_PL_T15	0.001
-mum_PS_T15	0.001
+mum_ZG_T15	500000    # From 1.1
+mum_ZL_T15	0.3
+mum_ZM_T15	0.06
+mum_ZS_T15	0.675
+mum_BD_T15	0.0003
+mum_BO_T15	0.02
+mum_PB_T15	0.12
+mum_BB_T15	0.8
+mum_DF_T15	0.275
+mum_PL_T15	0.015
+mum_PS_T15	0.01
 mum_MA_T15	400
-mum_MB_T15	0.01 #From 0.4
-mum_SG_T15	0.07 #From 0.14
+mum_MB_T15	0.4
+mum_SG_T15	0.14
 
 
 
@@ -11870,13 +11870,13 @@ mum_FLA	10.00
 0.23	1.02	2.38	4.18	6.22	8.35	10.45	12.42	14.22	15.83
 									
 mum_BFT	10.00								
-12.02	190.14	360.03	805.76	1022.45	1570.52	2396.62	2887.10	3563.01	3930.88
+111.64	4023.14	14324.03	28358.76	43224.45	57077.52	69056.62	78937.10	86835.01	93013.88
 									
 mum_TUN	10.00								
-4.98	77.94	103.34	173.61	290.71	499.71	610.54	1087.92	1251.69	2305.87
+94.38	3175.94	7374.34	7392.61	9051.71	9950.71	10160.54	6407.92	5521.69	5505.87
 									
 mum_BIL	10.00								
-22.64	360.79	582.28	1522.45	2234.40	2967.37	3632.85	4131.73	4555.05	5225.14
+127.64	8565.79	31828.28	45282.45	73419.40	99679.37	123820.85	143401.73	159555.05	172585.14
 									
 mum_MPF	10.00								
 0.02	0.14	0.24	0.37	0.50	0.61	0.70	0.77	0.83	0.87
@@ -13015,9 +13015,9 @@ E_HAL 0.35
 E_PLA 0.3
 E_FOU 0.3
 E_FLA 0.3
-E_BFT 0.15
-E_TUN 0.125
-E_BIL 0.15
+E_BFT 0.4
+E_TUN 0.4
+E_BIL 0.4
 E_MPF 0.3
 E_BUT 0.35
 E_ANC 0.35
@@ -14881,9 +14881,9 @@ HAL_Time_Spawn 180
 PLA_Time_Spawn 100             
 FOU_Time_Spawn 180             
 FLA_Time_Spawn 180             
-BFT_Time_Spawn 200           
-TUN_Time_Spawn 200           
-BIL_Time_Spawn 200           
+BFT_Time_Spawn 180           
+TUN_Time_Spawn 180           
+BIL_Time_Spawn 180           
 MPF_Time_Spawn 180           
 BUT_Time_Spawn 100           
 ANC_Time_Spawn 100           
@@ -14914,15 +14914,15 @@ DOG_Time_Spawn 180
 SMO_Time_Spawn 160           
 SSH_Time_Spawn 160           
 DSH_Time_Spawn 160           
-BLS_Time_Spawn 250           
-POR_Time_Spawn 250           
-PSH_Time_Spawn 250           
+BLS_Time_Spawn 150           
+POR_Time_Spawn 150           
+PSH_Time_Spawn 150           
 WSK_Time_Spawn 190            
 LSK_Time_Spawn 190           
 SK_Time_Spawn  190           
 SB_Time_Spawn  290           
 PIN_Time_Spawn 230           
-REP_Time_Spawn 280           
+REP_Time_Spawn 270           
 RWH_Time_Spawn 220           
 BWH_Time_Spawn 220           
 SWH_Time_Spawn 280           
@@ -15047,19 +15047,19 @@ DOG_Recruit_Time 270
 SMO_Recruit_Time 360             
 SSH_Recruit_Time 360             
 DSH_Recruit_Time 360             
-BLS_Recruit_Time 1             
-POR_Recruit_Time 1             
-PSH_Recruit_Time 1             
+BLS_Recruit_Time 360             
+POR_Recruit_Time 360             
+PSH_Recruit_Time 360             
 WSK_Recruit_Time 270             
 LSK_Recruit_Time 84             
 SK_Recruit_Time  84            
-SB_Recruit_Time  1             
+SB_Recruit_Time  84             
 PIN_Recruit_Time 330             
-REP_Recruit_Time 1             
-RWH_Recruit_Time 1             
-BWH_Recruit_Time 1             
-SWH_Recruit_Time 1             
-TWH_Recruit_Time 1             
+REP_Recruit_Time 360             
+RWH_Recruit_Time 360             
+BWH_Recruit_Time 360             
+SWH_Recruit_Time 360             
+TWH_Recruit_Time 360             
 INV_Recruit_Time 30
 LSQ_Recruit_Time 30             
 ISQ_Recruit_Time 30             
@@ -15081,9 +15081,9 @@ Recruit_Period_HAL 90
 Recruit_Period_PLA 90                
 Recruit_Period_FOU 90                
 Recruit_Period_FLA 90                
-Recruit_Period_BFT 10                
-Recruit_Period_TUN 10                
-Recruit_Period_BIL 10                
+Recruit_Period_BFT 60                
+Recruit_Period_TUN 60                
+Recruit_Period_BIL 60                
 Recruit_Period_MPF 30                
 Recruit_Period_BUT 40                
 Recruit_Period_ANC 40                
@@ -15114,24 +15114,24 @@ Recruit_Period_DOG 90
 Recruit_Period_SMO 90                
 Recruit_Period_SSH 90                
 Recruit_Period_DSH 90                
-Recruit_Period_BLS 10                
-Recruit_Period_POR 10                
-Recruit_Period_PSH 10                
+Recruit_Period_BLS 40                
+Recruit_Period_POR 40                
+Recruit_Period_PSH 40                
 Recruit_Period_WSK 90                
 Recruit_Period_LSK 90                
 Recruit_Period_SK  90                
-Recruit_Period_SB  10                
+Recruit_Period_SB  50                
 Recruit_Period_PIN 30                
-Recruit_Period_REP 10                
-Recruit_Period_RWH 10                
-Recruit_Period_BWH 10                
-Recruit_Period_SWH 10                
-Recruit_Period_TWH 10                
+Recruit_Period_REP 60                
+Recruit_Period_RWH 40                
+Recruit_Period_BWH 40                
+Recruit_Period_SWH 30                
+Recruit_Period_TWH 30                
 Recruit_Period_INV 90
 Recruit_Period_LSQ 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                
 Recruit_Period_ISQ 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                
 Recruit_Period_OSH 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                
-Recruit_Period_NSH 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                             
+Recruit_Period_NSH 30       Length of time recruits arrive over for cephalopods     d          0 - 1  (use 30 so instantaneous like in old code)                
 
 # Cost of Spawn production, taken from N weight to produce spawn, not included in spawn calc
 # RM shouldn't these be a proportion of adult mass? E.g. X (0.01) * RN for cohort 5? -> changed to this 20190122

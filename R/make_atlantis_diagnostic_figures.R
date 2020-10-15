@@ -474,11 +474,34 @@ make_atlantis_diagnostic_figures = function(
     temp.plot.4 = atlantistools::plot_add_box(temp.plot.4)
     temp.plot.4 = add.title(temp.plot.4,'RN vs RN Init')
     
+    #SN/RN domain-wide
+    RN.SN = result$SN.box %>% 
+      rename('SN' = atoutput) %>%
+      left_join(result$RN.box) %>%
+      rename('RN' = atoutput) %>%
+      group_by(species,time) %>%
+      summarize(SN = sum(SN,na.rm=T),
+                RN = sum(RN,na.rm=T)) %>%
+      mutate(RN.SN = RN/SN) 
+    
+    
+    temp.plot.5 = ggplot2::ggplot(RN.SN, ggplot2::aes(x= time,y = RN.SN))+
+      ggplot2::geom_line()+
+      ggplot2::geom_hline(yintercept = 2.65,lty = 2)+
+      ggplot2::facet_wrap(~species)+
+      ggplot2::theme_classic()+
+      ggplot2::theme(plot.title =  ggplot2::element_text(size = 14),
+                     axis.title =  ggplot2::element_text(size = 14),
+                     axis.text =  ggplot2::element_text(size = 12),
+                     strip.text =  ggplot2::element_text(size = 14))+
+      ggsave(filename = paste0(atl.dir,'Figures/','test.pdf'),width = 30, height = 30, units = 'in')
+    
     pdf(file = paste0(out.dir,run.name,' SN RN Timeseries.pdf'),width = 60, height = 60, onefile = T)
     gridExtra::grid.arrange(temp.plot.1)
     gridExtra::grid.arrange(temp.plot.2)
     gridExtra::grid.arrange(temp.plot.3)
     gridExtra::grid.arrange(temp.plot.4)
+    gridExtra::grid.arrange(temp.plot.5)
     dev.off()
   }
   

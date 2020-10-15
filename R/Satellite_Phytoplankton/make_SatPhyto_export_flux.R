@@ -145,7 +145,8 @@ full.data.2 = full.data %>%
     #prod.box.c in mg C m-3 d-1
     prod.box.C = prod/50,
     #export.box.N in mg N m-3 d-1
-    export.box.N = prod * pe.r.2/50/5.7,
+    export.box.N = (prod * pe.r.2)/(50/5.7),
+    # export.box.N.2 = prod*pe.r.2/50/5.7,
     doy = as.numeric(format(date,format = '%j')),
     ref.year = as.numeric(format(date,format = '%Y')),
     variable = 'export_prod') %>%
@@ -155,7 +156,7 @@ full.data.2 = full.data %>%
 
 # first.day =full.data.2 %>% group_by(box) %>%
 #   summarize(first.day = date[min(which(!is.na(values)))])
-source(here::here('R','fill_satphyto_gaps.R'))
+source(here::here('R','Satellite_Phytoplankton','fill_satphyto_gaps.R'))
 
 #fill gaps in data
 full.data.3 = fill_satphyto_gaps(input.mat = full.data.2,
