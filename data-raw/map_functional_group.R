@@ -27,7 +27,7 @@ for (apack in packages$pkgName) {
 map_functional_group <- function(channel) {
 
   # read in functional group codes and name
-  fg <-  readr::read_csv(here::here("data-raw","functional_group_names.csv"))
+  fg <-  readr::read_csv(here::here("data-raw","initialFunctionalGroupNames.csv"))
   
   # read in species membership to group, then join with functional group names
   data <- readr::read_csv(here::here("data-raw","Atlantis_1_5_groups_svspp_nespp3.csv")) %>%
@@ -58,7 +58,7 @@ map_functional_group <- function(channel) {
   
   # format to markdown table. Copy output to wiki
   # open file and write
-  outputFile <- here::here("data-raw","functionalGroups.txt")
+  outputFile <- here::here("data-raw","functionalGroupNames.txt")
   fileConn<-file(outputFile,open="w")
   header <- paste0("|",paste0(names(masterList),collapse = "|"),"|")
   cat(header,file=fileConn,append=T)
@@ -74,6 +74,8 @@ map_functional_group <- function(channel) {
   }
   
   close(fileConn)
+  
+  readr::write_csv(masterList,here::here("data-raw","functionalGroupNames.csv"))
   
   return(masterList)
 }
