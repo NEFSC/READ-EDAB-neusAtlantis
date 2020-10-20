@@ -30,7 +30,7 @@
 # groups = NULL
 
 plot_run_comparisons = function(model1.dir,model2.dir,model1.name,model2.name,plot.raw = T,
-                             plot.diff = T, plot.out, table.out = F, groups = NULL,remove.init = F){
+                             plot.diff = T, plot.out, table.out = F, groups = NULL,remove.init = F,rm.rel = T){
   `%>%` = dplyr::`%>%`
   
   model1.files = sort(list.files(model1.dir,'*.nc'))
@@ -80,6 +80,10 @@ plot_run_comparisons = function(model1.dir,model2.dir,model1.name,model2.name,pl
   
   if(is.null(groups)){
     plot.groups = sort(unique(bio.all$Group))  
+    if(rm.rel){
+      plot.groups = plot.groups[-grep('Rel',plot.groups)]  
+    }
+    
   }else{
     plot.groups = groups
   }

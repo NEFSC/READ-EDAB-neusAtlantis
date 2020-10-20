@@ -206,6 +206,11 @@ plot_detailed_diet = function(data,plot.spp,min.fract,pred.prey,fig.dir,file.pre
     data.new = data_prey_detailed_diet(data,min.fract = 0.05)
   }
   
+  plot.cols = c(RColorBrewer::brewer.pal(12,'Set3'),
+                RColorBrewer::brewer.pal(8,'Dark2'),
+                RColorBrewer::brewer.pal(8,'Set2'),
+                RColorBrewer::brewer.pal(9,'Set1'))
+  
   boxes = unique(data.new$Box)
   
   #Loop through species
@@ -238,6 +243,7 @@ plot_detailed_diet = function(data,plot.spp,min.fract,pred.prey,fig.dir,file.pre
           #Plot prey
           fig = ggplot2::ggplot(data.spp.box, ggplot2::aes(x= Time, y = pct, fill = Prey))+
             ggplot2::geom_area(alpha = 0.6, size = 0.25, color = 'black')+
+            ggplot2::scale_fill_manual(values = plot.cols[1:length(unique(data.spp.box$Prey))])+
             ggplot2::ggtitle(paste0('Box ',boxes[b]))+
             ggplot2::xlab('Day')+
             ggplot2::ylab('% Consumption')+
@@ -273,6 +279,7 @@ plot_detailed_diet = function(data,plot.spp,min.fract,pred.prey,fig.dir,file.pre
         #Plot prey
         fig = ggplot2::ggplot(data.spp.box, ggplot2::aes(x= Time, y = pct, fill = Predator))+
           ggplot2::geom_area(alpha = 0.6, size = 0.25, color = 'black')+
+          ggplot2::scale_fill_manual(values = plot.cols[1:length(unique(data.spp.box$Predator))])+
           ggplot2::ggtitle(paste0('Box ',boxes[b]))+
           ggplot2::xlab('Day')+
           ggplot2::ylab('% Consumption')+
@@ -290,11 +297,12 @@ plot_detailed_diet = function(data,plot.spp,min.fract,pred.prey,fig.dir,file.pre
 # Example -----------------------------------------------------------------
 
 #Example Params
-detailed.diet.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Obs_Hindcast_DetailedDiet2/neus_outputDetailedDietCheck.txt'
-out.name = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Obs_Hindcast_DetailedDiet2/neus_outputDetailedDietCheck_2.txt'
+run.name = 'Obs_Hindcast_RetunePlanktiv6_DetDiet'
+detailed.diet.file = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/neus_outputDetailedDietCheck.txt')
+out.name = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/neus_outputDetailedDietCheck_2.txt')
 
 subset_detailed_diet(detailed.diet.file,
-                     spp.names = c('MAK','HER','BO'),
+                     spp.names = c('HER'),
                      pred.prey = 'both',
                      boxes = 0:9,
                      levels = -1:3,
@@ -307,13 +315,13 @@ gc()
 data.orig = data.table::fread(out.name)
 data2 = longform_detailed_diet(data.orig,rm.zero = T)
 plot_detailed_diet(data = data2,
-                   plot.spp = c('MAK','HER'),
-                   fig.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Obs_Hindcast_DetailedDiet2/Figures/Detailed_Diet/',
+                   plot.spp = c('HER'),
+                   fig.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/Figures/Detailed_Diet/'),
                    file.prefix = 'test_',
                    pred.prey = 'prey')
 plot_detailed_diet(data = data2,
-                   plot.spp = c('MAK','HER'),
-                   fig.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Obs_Hindcast_DetailedDiet2/Figures/Detailed_Diet/',
+                   plot.spp = c('HER'),
+                   fig.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/Figures/Detailed_Diet/'),
                    file.prefix = 'test_',
                    pred.prey = 'pred')
 

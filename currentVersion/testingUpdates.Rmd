@@ -105,3 +105,10 @@ This file is used to document steps made towards a new version/subversion
  * Lowered growth rates outside the model
  * Lowered survivorship outside the model to take into account predation on juveniles and fishing.
  * TUN and BIL now persist at reasonable levels.  BFT collapses and comes back eventually due to lowered fishing & constant recruitment
+
+## Retune previously tuned species (ATLNTS-155)
+ * RG: 10-18-2020
+ * Increased BFT C and mum parameters
+ * Increased growth rates outside the model
+ * Increased survivorship outside the model to take into account predation on juveniles and fishing.
+ * BFT currently crashes in the middle of the run but return near the end to normal levels.  Since they aren't a huge player in the model, I am calling this 'done' for now.
