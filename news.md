@@ -4,6 +4,55 @@
 
 ## Bug Fixes (patch)
 
+# neus-atlantis 1.0.0-9021 (in dev) 
+(built with altantis rev 6490.1)
+
+Data pulled from [comlandr](https://github.com/NOAA-EDAB/comlandr) and [survdat](https://github.com/NOAA-EDAB/survdat) packages. Merged and associated with functional group names for use in calibration.
+
+As described in [#68](https://github.com/NOAA-EDAB/neus-atlantis/pull/68)
+
+# neus-atlantis 1.0.0-9020 (in dev) 
+(built with altantis rev 6490.1)
+
+Parameter changes for migratory pelagics and plantivore persistence
+
+As described in [#65](https://github.com/NOAA-EDAB/neus-atlantis/pull/65)
+As described in [#66](https://github.com/NOAA-EDAB/neus-atlantis/pull/66)
+As described in [#67](https://github.com/NOAA-EDAB/neus-atlantis/pull/67)
+
+
+# neus-atlantis 1.0.0-9019 (in dev) 
+(built with altantis rev 6490.1)
+
+Fix for migratory species not returning after leaving the domain
+
+As described in [#61](https://github.com/NOAA-EDAB/neus-atlantis/pull/61)
+
+# neus-atlantis 1.0.0-9018 (in dev) 
+(built with altantis rev 6490.1)
+
+New detritus forcing
+
+As described in [#54](https://github.com/NOAA-EDAB/neus-atlantis/pull/54)
+
+# neus-atlantis 1.0.0-9017 (in dev) 
+(built with altantis rev 6490.1)
+
+New forcing files for phytoplankton
+
+As described in [#53](https://github.com/NOAA-EDAB/neus-atlantis/pull/53)
+
+# neus-atlantis 1.0.0-9016 (in dev) 
+(built with altantis rev 6490.1)
+
+* Use GLORYS 12v1 for physics forcing due to ROMS bug.
+(Temperature, Salinity, Horizontal advection
+
+* Use ECC 4v4 for Vertical advection
+
+As described in [#50](https://github.com/NOAA-EDAB/neus-atlantis/pull/50)
+
+
 # neus-atlantis 1.0.0-9015 (in dev) 
 (built with altantis rev 6490.1)
 
