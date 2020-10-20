@@ -9,9 +9,7 @@
 #'@run.prefix sring. Prefix specified in Atlantis.bat file that begins each output file
 #'@run.name string. Prefered name to use for output file names
 #'@result list. Output produced by process_atl_output(). Default name is 'result'. Should be loaded in first
-#'@bgm.file string. Full file name for bgm file
-#'@group.file string. Full file name for the functional groups file
-#'@biol.prm string. Full file name for the biology.prm parameter file
+#'@param.ls list. Output from get_atl_paramfiles
 #'
 #'@benthic.box numeric. Box ID for benthic plots
 #'@benthic.level numeric. Level for benthic plots (default is 4 for NEUS model)
@@ -60,7 +58,7 @@
 # #   bgm.file = param.ls$bgm,
 # #   groups.file = param.ls$func.groups,
 # #   init.file = param.ls$init.nofill,
-# #   biol.prm = param.ls$biol.prm,
+# #   param.ls$biol.prm = param.ls$param.ls$biol.prm,
 # #   run.prm = param.ls$run.prm,
 # #   main.nc = param.ls$main.nc,
 # #   prod.nc = param.ls$prod.nc,
@@ -80,9 +78,9 @@
 # benthic.level = 4
 # 
 # bgm.file = param.ls$bgm
-# group.file = param.ls$func.groups
+# param.ls$func.groups = param.ls$func.groups
 # run.prm = param.ls$run.prm
-# biol.prm = param.ls$biol.prm
+# param.ls$biol.prm = param.ls$biol.prm
 # phytopl.history = here::here('R','phytoplankton_timeseries_biomass_tonnes_1998_2016.csv')
 # zoopl.history = here::here('R','Zooplankton_total_biomass_tonnes_N_20yrs.csv')
 # 
@@ -111,10 +109,8 @@ make_atlantis_diagnostic_figures = function(
   run.name,
   
   result,
-  bgm.file,
-  group.file,
-  biol.prm,
-                                            
+  param.ls,
+  
   # fig.width,
   # fig.height,
   benthic.box,
@@ -136,10 +132,12 @@ make_atlantis_diagnostic_figures = function(
   plot.growth.cons,
   plot.cohort,
   plot.diet,
+  plot.consumption,
   plot.spatial.biomass,
   plot.LTL
   ){
   
+  `%>%` = dplyr::`%>%`
   #Utility function
   add.title = function(plot,title){
     plot = plot + ggplot2::ggtitle(title)+
@@ -148,13 +146,13 @@ make_atlantis_diagnostic_figures = function(
   }
   
   #Load groups data
-  group.code = atlantistools::get_age_acronyms(group.file)
-  group.data = atlantistools::load_fgs(group.file)
+  group.code = atlantistools::get_age_acronyms(param.ls$func.groups)
+  group.data = atlantistools::load_fgs(param.ls$func.groups)
   group.index = dplyr::select(group.data,c(Code,LongName))
   
   
   #Load BGM data
-  box.bgm = atlantistools::load_box(bgm.file)
+  box.bgm = atlantistools::load_box(param.ls$bgm)
   
   #plot parameters
   plot.labels = list(x = 'Time (years)',y = 'Biomass (tonnes)')
@@ -330,12 +328,12 @@ make_atlantis_diagnostic_figures = function(
     #Data processing
 
     #mum by age
-    mum.age = atlantistools::prm_to_df_ages(biol.prm, group.file,group = group.code,parameter = 'mum')
+    mum.age = atlantistools::prm_to_df_ages(param.ls$biol.prm, param.ls$func.groups,group = group.code,parameter = 'mum')
     mum.age = tidyr::spread(mum.age,agecl,mum)
     mum.age = dplyr::left_join(mum.age,group.index, by = c('species'='LongName'))
     
     #C by age
-    C.age = atlantistools::prm_to_df_ages(biol.prm,group.file,group = group.code,parameter = 'C')
+    C.age = atlantistools::prm_to_df_ages(param.ls$biol.prm,param.ls$func.groups,group = group.code,parameter = 'C')
     C.age = tidyr::spread(C.age,agecl,c)
     C.age = dplyr::left_join(C.age,group.index,by = c('species' = 'LongName'))
     
@@ -476,13 +474,13 @@ make_atlantis_diagnostic_figures = function(
     
     #SN/RN domain-wide
     RN.SN = result$SN.box %>% 
-      rename('SN' = atoutput) %>%
-      left_join(result$RN.box) %>%
-      rename('RN' = atoutput) %>%
-      group_by(species,time) %>%
-      summarize(SN = sum(SN,na.rm=T),
+      dplyr::rename('SN' = atoutput) %>%
+      dplyr::left_join(result$RN.box) %>%
+      dplyr::rename('RN' = atoutput) %>%
+      dplyr::group_by(species,time) %>%
+      dplyr::summarize(SN = sum(SN,na.rm=T),
                 RN = sum(RN,na.rm=T)) %>%
-      mutate(RN.SN = RN/SN) 
+      dplyr::mutate(RN.SN = RN/SN) 
     
     
     temp.plot.5 = ggplot2::ggplot(RN.SN, ggplot2::aes(x= time,y = RN.SN))+
@@ -493,8 +491,8 @@ make_atlantis_diagnostic_figures = function(
       ggplot2::theme(plot.title =  ggplot2::element_text(size = 14),
                      axis.title =  ggplot2::element_text(size = 14),
                      axis.text =  ggplot2::element_text(size = 12),
-                     strip.text =  ggplot2::element_text(size = 14))+
-      ggsave(filename = paste0(atl.dir,'Figures/','test.pdf'),width = 30, height = 30, units = 'in')
+                     strip.text =  ggplot2::element_text(size = 14))
+      # ggsave(filename = paste0(atl.dir,'Figures/','test.pdf'),width = 30, height = 30, units = 'in')
     
     pdf(file = paste0(out.dir,run.name,' SN RN Timeseries.pdf'),width = 60, height = 60, onefile = T)
     gridExtra::grid.arrange(temp.plot.1)
@@ -732,6 +730,7 @@ make_atlantis_diagnostic_figures = function(
   
   #Diet figures
   if(plot.diet){
+    
     if(!is.na(result$biomass.consumed)){
       
       diet.plots = atlantistools::plot_diet(result$biomass.consumed, wrap_col =  'agecl', combine_thresh =  3)
@@ -741,9 +740,24 @@ make_atlantis_diagnostic_figures = function(
         gridExtra::grid.arrange(diet.plots[[i]])
       }
       dev.off()
-      
     }
+
   }
+  
+  if(plot.consumption){
+    source(here::here('R','plot_overall_predation.R'))  
+    consumption = get_consumption(prod.file = param.ls$prod.nc,
+                                  fgs.file = param.ls$func.groups)
+    data.sub = subset_diet(diet.file = param.ls$dietcheck,
+                           consumption = consumption,
+                           spp.names  = group.index$Code)
+    plot_overall_predation(data = data.sub,
+                           bioindex.file = paste0(atl.dir,'neus_outputBiomIndx.txt'),
+                           min.fract = 0.1,
+                           fig.dir = out.dir,
+                           file.prefix = run.name)
+  }
+  
   
 
 # Spatial biomass ---------------------------------------------------------
@@ -753,7 +767,7 @@ make_atlantis_diagnostic_figures = function(
   if(plot.spatial.biomass){
     
     temp.plots = atlantistools::plot_spatial_box(result$biomass.spatial.stanza,
-                                                 bgm_as_df = atlantistools::convert_bgm(bgm = bgm.file), timesteps = 7)
+                                                 bgm_as_df = atlantistools::convert_bgm(bgm = param.ls$bgm), timesteps = 7)
     pdf(file = paste0(out.dir, run.name, ' Spatial Biomass Box Distribution.pdf'),width = 24, height =18 )
     for( i in seq_along(temp.plots)){
       gridExtra::grid.arrange(temp.plots[[i]])
@@ -761,7 +775,7 @@ make_atlantis_diagnostic_figures = function(
     dev.off()
     
     temp.plots.2 = atlantistools::plot_spatial_ts(result$biomass.spatial.stanza,
-                                                  bgm_as_df = atlantistools::convert_bgm(bgm = bgm.file), vol = result$volume )
+                                                  bgm_as_df = atlantistools::convert_bgm(bgm = param.ls$bgm), vol = result$volume )
     pdf(file = paste0(out.dir, run.name, ' Spatial Biomass Distribution Timeseries.pdf'),width =24, height =18 )
     for(i in seq_along(temp.plots.2)){
       gridExtra::grid.arrange(temp.plots.2[[i]])
