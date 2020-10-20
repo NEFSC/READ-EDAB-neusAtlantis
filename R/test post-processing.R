@@ -8,7 +8,7 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 #Define local/git directories for atlantis output, parameter files, and desired location for figures/tables
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
-run.name = 'Obs_Hindcast_LeapYearFix'
+run.name = 'Obs_Hindcast_RetunePlanktiv5'
 
 atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
 param.dir = here::here('currentVersion')
@@ -50,38 +50,42 @@ process_atl_output( param.dir = here::here('currentVersion'),
 
 #If result object saved to file or already exists load it into env.
 load(paste0(out.dir,'neus_output_postprocessed.rdata'))
-
+library(ncdf4)
+library(dplyr)
 #Run diagnostic figures/tables script. See function document for more detailed description of figures.
 make_atlantis_diagnostic_figures(
   atl.dir = atl.dir,
   out.dir = out.dir,
   param.dir = param.dir,
   run.prefix = 'neus_output_test',
-  run.name = 'Obs_Hindcast_LeapYearFix',
+  run.name = run.name,
   result = result,
   benthic.box = 9,
   benthic.level = 4,
   
-  bgm.file = param.ls$bgm,
-  group.file = param.ls$func.groups,
-  biol.prm = param.ls$biol.prm,
+  param.ls = param.ls,
+  
+  # bgm.file = param.ls$bgm,
+  # group.file = param.ls$func.groups,
+  # biol.prm = param.ls$biol.prm,
+  
   phytopl.history = here::here('R','phytoplankton_timeseries_biomass_tonnes_1998_2016.csv'),
   zoopl.history = here::here('R','Zooplankton_total_biomass_tonnes_N_20yrs.csv'),
-  
+ 
   #Turn these on/off for desired output
   plot.benthic = T,
-  plot.overall.biomass = F,
-  plot.biomass.timeseries = F,
-  plot.length.age=F,
-  plot.biomass.box=F,
-  plot.c.mum=F,
-  plot.sn.rn=F,
-  plot.recruits=F,
-  plot.numbers.timeseries=F,
-  plot.physics=F,
-  plot.growth.cons=F,
-  plot.cohort=F,
-  plot.diet=F,
-  plot.spatial.biomass=F,
-  plot.LTL=F
+  plot.overall.biomass = T,
+  plot.biomass.timeseries = T,
+  plot.length.age=T,
+  plot.biomass.box=T,
+  plot.c.mum=T,
+  plot.sn.rn=T,
+  plot.recruits=T,
+  plot.numbers.timeseries=T,
+  plot.physics=T,
+  plot.growth.cons=T,
+  plot.cohort=T,
+  plot.diet=T,
+  plot.spatial.biomass=T,
+  plot.LTL=T
 )
