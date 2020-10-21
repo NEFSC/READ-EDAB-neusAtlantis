@@ -1,6 +1,6 @@
 # Plot realized "food-web" based on dietcheck.txt
 
-plot_realized_foodweb = function(run.dir,diet.file,min.fract= 0.05,min.time,max.time){
+plot_realized_foodweb = function(run.dir,diet.file,min.fract= 0.05,min.time,max.time,rand.layout=T,seed = 25){
   
   library(dplyr)
   library(tidyr)
@@ -74,11 +74,24 @@ plot_realized_foodweb = function(run.dir,diet.file,min.fract= 0.05,min.time,max.
   # plot(diet.network, edge.arrow.size = 0.2)
   
   # visNetwork::visNetwork(nodes,edges)
-  p = visNetwork(nodes, edges) %>% 
-    visIgraphLayout(layout = "layout_with_fr") %>% 
-    visEdges(arrows = "middle")
+  p=visNetwork(nodes, edges) %>% 
+     visOptions(highlightNearest = list(enabled = T, hover = T),nodesIdSelection = T, collapse = T) %>%
+    visEdges(arrows = "middle", color = list(color = 'black', highlight = 'grey',hover = 'grey')) %>%
+    visNodes(color = list(background = 'brown',
+                          border = 'black',
+                          hover = list(border = 'black',background = 'lightblue')),
+             font = list(size= 24, face = 'bold'))
+  if(rand.layout){
+    p = p %>% visLayout(randomSeed = seed)
+  }else{
+    p = p %>% visHierarchicalLayout(direction = 'LR', levelSeparation = 75)
+  }
+    
+    
+    # visIgraphLayout(layout = "layout_with_fr") %>% 
+    
   print(p)
-  nodes$n.nodes = sapply(nodes$label, function(x) return(diet.long %>% filter(pred == x | prey == x) %>% nrow()))
+  # nodes$n.nodes = sapply(nodes$label, function(x) return(diet.long %>% filter(pred == x | prey == x) %>% nrow()))
   
 }
 
@@ -91,5 +104,6 @@ diet.file = paste0(run.dir,'neus_outputDietCheck.txt')
 plot_realized_foodweb(run.dir,
                       diet.file,
                       min.time = 0,
-                      max.time = 365,
-                      min.fract = 0.05)
+                      max.time = 74,
+                      min.fract = 0.1,
+                      rand.layout = F)
