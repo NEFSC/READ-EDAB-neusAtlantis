@@ -112,3 +112,10 @@ This file is used to document steps made towards a new version/subversion
  * Increased growth rates outside the model
  * Increased survivorship outside the model to take into account predation on juveniles and fishing.
  * BFT currently crashes in the middle of the run but return near the end to normal levels.  Since they aren't a huge player in the model, I am calling this 'done' for now.
+ 
+ ## Retune Charismatics and Benthic Groups (ATLNTS-155)
+ * RG: 10-30-2020
+ * Added back in quadratic mortality to BWH, RWH and REP, and raised over initial values
+ * Working with assimilation efficiency, growth rates and pprey values for benthic groups to get them to persist
+ * BWH, REP, and RWH all look reasonable (done)
+ - Benthic groups moving in right direction but not done yet.
