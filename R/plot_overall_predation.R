@@ -72,7 +72,7 @@ subset_diet = function(diet.file,consumption, spp.names){
 #Consolidate groups below threshold
 #Differs from existing plots since it doesn't differentiate age class or functional group type
 
-plot_overall_predation =function(data,bioindex.file,min.fract = 0.1,fig.dir,file.prefix){
+plot_overall_predation =function(data,bioindex.file,catch.file,min.fract = 0.1,fig.dir,file.prefix){
   
   
   #Collapse small contributors into "Rest"
@@ -101,8 +101,13 @@ plot_overall_predation =function(data,bioindex.file,min.fract = 0.1,fig.dir,file
     tidyr::tibble() %>%
     tidyr::complete(Predator,tidyr::nesting(Time,date,Prey),fill = list(consumed.pct = 0,consumed.prey = 0, consumed.tot = 0))
     
+  #Get Biomass Data
   biomass.data = read.table(bioindex.file,header = T,stringsAsFactors = F)
   biomass.colnames = colnames(biomass.data)
+  
+  #Get catch Data
+  catch.data = read.table(catch.file, header = T, stringsAsFactors = F)
+  catch.colnames = colnames(catch.data)
   
   #Loop through species
   plot.cols = c(RColorBrewer::brewer.pal(12,'Set3'),
@@ -136,8 +141,27 @@ plot_overall_predation =function(data,bioindex.file,min.fract = 0.1,fig.dir,file
     
     #Biomass Timeseries
     biomass.spp = biomass.data[,c(1,grep(paste0('\\b',plot.spp[i],'\\b'),biomass.colnames))]
-    colnames(biomass.spp)[2] = 'biomass'
+    colnames(biomass.spp)[2] = 'value'
+    biomass.spp$Metric = 'biomass'
     biomass.spp$date = as.POSIXct(biomass.spp$Time*86400,origin = '1964-01-01 00:00:00',tz = 'UTC')
+    
+    #Catch Timeseries
+    catch.match = grep(paste0('\\b',plot.spp[i],'\\b'),catch.colnames)
+    if(length(catch.match) == 0){
+      dum.dat = biomass.spp
+      dum.dat$value = NA
+      dum.dat$Metric = 'catch'
+      bio.catch.data = rbind(biomass.spp, dum.dat )  
+    }else{
+      catch.spp = catch.data[,c(1,catch.match)]
+      colnames(catch.spp)[2] = 'value'
+      catch.spp$Metric = 'catch'
+      catch.spp$date = as.POSIXct(catch.spp$Time*86400,origin = '1964-01-01 00:00:00',tz = 'UTC')
+      
+      #Combine Bio Catch
+      bio.catch.data = rbind(biomass.spp, catch.spp)
+    }
+
     
     #Plot prey
  
@@ -155,15 +179,18 @@ plot_overall_predation =function(data,bioindex.file,min.fract = 0.1,fig.dir,file
       ggplot2::xlab('')+
       ggplot2::ylab('Total consumption (mg N m-3 d-1)')+
       ggplot2::theme_classic()
-      
     
-    f3=ggplot2::ggplot(biomass.spp,ggplot2::aes(x=date,y=biomass))+
+
+    f3=ggplot2::ggplot(bio.catch.data,ggplot2::aes(x=date,y=value, lty = Metric))+
       ggplot2::geom_line(size = 1)+
+      ggplot2::scale_linetype(name = '')+
       ggplot2::xlab('')+
-      ggplot2::ylab('Biomass (tonnes)')+
+      ggplot2::ylab('Value (tonnes)')+
       ggplot2::ggtitle(plot.spp[i])+
       ggplot2::theme_classic()+
-      ggplot2::theme(plot.title = ggplot2::element_text(hjust = 0.5))
+      ggplot2::theme(plot.title = ggplot2::element_text(hjust = 0.5),
+                     legend.position = 'bottom')
+
     
     grid::grid.newpage()
     grid::grid.draw(gtable:::rbind.gtable(ggplot2::ggplotGrob(f3),ggplot2::ggplotGrob(f2),ggplot2::ggplotGrob(f1),size = 'last'))
@@ -173,16 +200,17 @@ plot_overall_predation =function(data,bioindex.file,min.fract = 0.1,fig.dir,file
 }
 
 #Example
-# atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Obs_Hindcast_DLFix2/'
-# prod.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Obs_Hindcast_DLFix2/neus_outputPROD.nc'
+# atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/ReducePred11/'
+# prod.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/ReducePred11/neus_outputPROD.nc'
 # fgs.file = here::here('currentVersion','neus_groups.csv')
 # consumption = get_consumption(prod.file,fgs.file)
-# data.sub = subset_diet(diet.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Obs_Hindcast_DLFix2/neus_outputDietCheck.txt',
+# data.sub = subset_diet(diet.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/ReducePred11/neus_outputDietCheck.txt',
 #                        consumption = consumption,
 #                    # spp.names  = c('ZL','ZM','ZS','BO','CLA','SCA','QHG','BFF','BD','LOB','PB','BB','DL','DR'),
-#                    spp.names = c('ZL','ZM'))
+#                    spp.names = c('MAK','ZL','PL'))
 # plot_overall_predation(data = data.sub,
 #                        min.fract = 0.1,
 #                        bioindex.file = paste0(atl.dir,'neus_outputBiomIndx.txt'),
+#                        catch.file = paste0(atl.dir,'neus_outputCatch.txt'),
 #                        fig.dir = paste0(atl.dir,'Figures/'),
 #                        file.prefix = 'Obs_Hindcast_DLFix2')
