@@ -11807,15 +11807,15 @@ mum_BG_T15	50000 #From 200000
 mum_BC_T15	0.05
 mum_LOB_T15	10    # From 0.75
 mum_RCB_T15	0.005 #From 0.1  
-mum_BMS_T15	3    # From 0.3, then 0.5
+mum_BMS_T15	.3    # From 0.3, then 0.5
 mum_NSH_T15	0.003043
 mum_jNSH_T15	0.003
 mum_OSH_T15	0.003043
 mum_jOSH_T15	0.003
 mum_ZG_T15	0.005    # From 1.1 /500000
-mum_ZL_T15	0.1 #Orig 0.1
-mum_ZM_T15	0.1 #Orig
-mum_ZS_T15	0.55
+mum_ZL_T15	0.01 #Orig 0.1
+mum_ZM_T15	0.01 #Orig
+mum_ZS_T15	0.055
 mum_BD_T15	0.0004
 mum_BO_T15	0.2 #From 0.02	
 mum_PB_T15	10 #From 0.12
