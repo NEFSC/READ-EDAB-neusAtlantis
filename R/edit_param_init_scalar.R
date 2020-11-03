@@ -2,7 +2,7 @@
 #' 1) Retrieve init_scalar params
 #' 2) Retrieve total initial condition biomass (tonnes)
 #' 3) edit init_scalar params
-
+#' 4) Calculate_init_scalar
 
 # get_param_init_scalar ---------------------------------------------------
 
@@ -58,7 +58,7 @@ get_init_biomass = function(bio.age.file, groups.file,write.output =F, output.di
 
 # edit_param_init_scalar --------------------------------------------------
 
-edit_param_init_scalar = function(run.prm,groups.file,init.scalar.file,overwrite = F, new.file.name){
+edit_param_init_scalar = function(run.prm,groups.file,new.init.scalar,overwrite = F, new.file.name){
   
   library(dplyr)
   #Read in groups file and run.prm
@@ -66,7 +66,16 @@ edit_param_init_scalar = function(run.prm,groups.file,init.scalar.file,overwrite
   run.prm.lines = readLines(run.prm)
   
   #Read in init_scalar .csv (edited)
-  new.init.scalar = read.csv(init.scalar.file,stringsAsFactors = F)
+  # new.init.scalar = read.csv(init.scalar.file,stringsAsFactors = F)
+  new.init.scalar$init.scalar = sapply(new.init.scalar$init.scalar,function(x){
+    if(x<1){
+      return(signif(x,3))
+    }else{
+      return(round(x,3))
+    }
+  })
+  new.init.scalar$init.scalar = as.character(new.init.scalar$init.scalar)
+  
   
   #Sort by Group Code Index and join with new data
   init.scalar.edit = fgs %>% 
@@ -87,6 +96,57 @@ edit_param_init_scalar = function(run.prm,groups.file,init.scalar.file,overwrite
 }
 
 
+# Calculate_init_scalar ---------------------------------------------------
+
+#Use survdat swept area to calculate initial biomass and init_scalar
+
+calculate_init_scalar = function(run.prm, groups.file, bio.age.file,exclude.invert = T,  write.output, output.dir){
+  library(dplyr)
+  #Read in functional groups
+  fgs = read.csv(groups.file,stringsAsFactors = F)
+  groups.inverts = fgs$Code[which(fgs$NumCohorts == 1)]
+  fgs.fullname = select(fgs, Code, LongName)
+  
+  #Read in swept area data
+  survdat =readRDS(here::here('data-raw','sweptAreaBiomass.RDS'))
+  survdat$YEAR = as.numeric(survdat$YEAR)
+  
+  #Filter to first 5 years of each group's data
+  survdat.agg=survdat %>%
+    group_by(Code, YEAR) %>%
+    summarize(tot.biomass = sum(tot.biomass,na.rm=T),
+              tot.bio.SE = mean(tot.bio.SE,na.rm=T),
+              tot.abundance = sum(tot.abundance,na.rm=T),
+              tot.abund.SE = mean(tot.abund.SE,na.rm=T)) %>%
+    group_by(Code) %>%
+    mutate(year.id = YEAR-YEAR[1]) %>%
+    # mutate(year.id = YEAR-1964)
+    filter(year.id <= 10) %>%
+    summarize(tot.biomass = mean(tot.biomass,na.rm=T),
+              tot.bio.SE = mean(tot.bio.SE,na.rm=T),
+              tot.abundance = mean(tot.abundance,na.rm=T),
+              tot.abund.SE = mean(tot.abund.SE,na.rm=T)) %>%
+    filter(!Code %in% groups.inverts)
+    
+  #Read in inital biomass from output file
+  init.biomass = get_init_biomass(bio.age.file,groups.file,write.output = F)
+  colnames(init.biomass) = c('Code','init.biomass.tonnes')
+  
+  #join init biomass & calc new scalar
+  survdat.init = survdat.agg %>%
+    left_join(init.biomass) %>%
+    mutate(new.init.scalar = tot.biomass/init.biomass.tonnes) %>%
+    left_join(fgs.fullname) %>%
+    select(Code, LongName,tot.biomass,tot.bio.SE, tot.abundance, tot.abund.SE,init.biomass.tonnes,new.init.scalar)
+    
+  
+  if(write.output){
+    write.csv(survdat.init, file = paste0(output.dir,'survdat_initial_conditions.csv'),row.names = F)
+  }else{
+    return(survdat.init)
+  }
+  
+}
 
 # Example -----------------------------------------------------------------
 
@@ -95,13 +155,21 @@ init.file = here::here('currentVersion','neus_init.nc')
 init.file.nofill = here::here('currentVersion','neus_init_nofill.nc')
 groups.file = here::here('currentVersion','neus_groups.csv')
 bgm.file = here::here('currentVersion','neus_tmerc_RM2.bgm')
-bio.age.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Master_10202020/neus_outputAgeBiomIndx.txt'
-init.scalar.file ='C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/init_scalar_test.csv'
-#get init
+# bio.age.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Master_10202020/neus_outputAgeBiomIndx.txt'
+bio.age.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Master_NoInitScalar/neus_outputAgeBiomIndx.txt'
+init.scalar.file ='C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/init_scalar_new.csv'
 
 get_param_init_scalar(run.prm,groups.file,write.output = T,
                       output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/')
 get_init_biomass(bio.age.file,groups.file,write.output = T,
                  output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/')
-edit_param_init_scalar(run.prm,groups.file,init.scalar.file,overwrite = F, 
+edit_param_init_scalar(run.prm,groups.file,
+                       new.init.scalar = read.csv(init.scalar.file,stringsAsFactors = F),
+                       overwrite = F, 
                        new.file.name = here::here('currentVersion','at_run_test.prm'))
+calculate_init_scalar(run.prm, groups.file, bio.age.file, write.output = T,
+                      output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/')
+
+edit_param_init_scalar(run.prm,groups.file,
+                       new.init.scalar = read.csv(init.scalar.file,stringsAsFactors = F),
+                       overwrite = T)
