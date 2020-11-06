@@ -1,6 +1,6 @@
 # Create box map color coded by depth
 
-setwd('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/')
+# setwd('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/')
 library(ggplot2)
 library(rbgm)
 library(dplyr)
@@ -8,8 +8,8 @@ library(maps)
 library(mapdata)
 library(ggmap)
 
-corners = read.csv('RM_allboxes_NEUS_corners.csv',as.is =T)
-bgm = bgmfile('neus_ll_WGS84.bgm')
+corners = read.csv(here::here('Geometry','RM_allboxes_NEUS_corners.csv'),as.is =T)
+bgm = rbgm::bgmfile(here::here('Geometry','neus_ll_WGS84.bgm'))
 corners$nrLayers = factor(corners$nrLayers)
 mids = bgm$boxes %>% select(.bx0,insideX,insideY)
 colnames(mids) = c('Area','midx','midy')
@@ -41,7 +41,7 @@ ggplot()+
   )+
   ggsave('Neus 1-5.pdf')
 
-neus = map('worldHires',xlim = c(-78,-62),ylim = c(34,46.5),plot = F)
+neus = maps::map('worldHires',xlim = c(-78,-62),ylim = c(34,46.5),plot = F)
 ggplot()+ 
   annotation_map(map_data('worldHires'),fill = 'grey70')+
   geom_polygon(data = corners2, aes(x= Lon1,y = Lat1,group = Area,fill = nrLayers),col = 'black',alpha = 0.75,size = 0.5)+
