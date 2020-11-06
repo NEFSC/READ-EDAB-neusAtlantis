@@ -34,7 +34,7 @@ edit_param_mum_age = function(bio.prm, new.mum.df, overwrite = F,new.file.name )
   bio.lines = readLines(bio.prm)
   bio.lines.id = grep('^mum.*10.00$',bio.lines)
   bio.lines.vals = bio.lines[bio.lines.id]
-  group.names =unname(sapply(bio.lines.vals1,function(x) strsplit(x,'mum_|\t10.00')[[1]][2]))
+  group.names =unname(sapply(bio.lines.vals,function(x) strsplit(x,'mum_|\t10.00')[[1]][2]))
   
   for(i in 1:nrow(new.mum.df)){
     
