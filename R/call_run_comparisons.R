@@ -19,31 +19,37 @@ master = paste0(obs.dir,'Atlantis_Runs/Master_10202020/')
 pred_mort = paste0(obs.dir,'Atlantis_Runs/Obs_Hindcast_addMort/')
 pred9 = paste0(obs.dir,'Atlantis_Runs/ReducePred9/')
 pred10 = paste0(obs.dir,'Atlantis_Runs/ReducePred10/')
+pred11 = paste0(obs.dir,'Atlantis_Runs/ReducePred11/')
+pred12 = paste0(obs.dir,'Atlantis_Runs/ReducePred12/')
+pred12b = paste0(obs.dir,'Atlantis_Runs/ReducePred12b/')
+pred13 = paste0(obs.dir,'Atlantis_Runs/ReducePred13/')
 
 figure.dir = paste0(obs.dir,'Diagnostic_Figures/Run_Comparisons/')
 
+
 plot_run_comparisons(
   model1.dir = master,
-  model2.dir = pred10,
+  model2.dir = pred13,
   model1.name = 'master',
-  model2.name = 'pred10',
+  model2.name = 'pred13',
   plot.raw = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'master_v_pred10'),
-  table.out = T,
+  plot.out = paste(figure.dir,'master_v_pred13'),
+  table.out = F,
   groups = NULL,
-  remove.init = T
+  remove.init = F
 )
 
 plot_run_comparisons(
-  model1.dir = pred9,
-  model2.dir = pred10,
-  model1.name = 'pred9',
-  model2.name = 'pred10',
+  model1.dir = pred12,
+  model2.dir = pred13,
+  model1.name = 'pred12',
+  model2.name = 'pred13',
   plot.raw = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'pred9_v_pred10'),
+  plot.out = paste(figure.dir,'pred12_v_pred13'),
   table.out = F,
   groups = NULL,
-  remove.init = T
+  remove.init = F
 )
+
