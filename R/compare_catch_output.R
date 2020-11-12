@@ -5,7 +5,7 @@ library(dplyr)
 library(ggplot2)
 library(ncdf4)
 
-atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/ReducePred13/'
+atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Master_10202020/'
 
 #read CATCH.nc
 catch.nc = nc_open(paste0(atl.dir,'neus_outputCATCH.nc'))
@@ -18,8 +18,8 @@ catch.txt =read.table(paste0(atl.dir,'neus_outputCatch.txt'),header = T, strings
 tot.catch.nc = nc_open(paste0(atl.dir,'neus_outputTOTCATCH.nc'))
 
 catch.varnames = names(catch.nc$var)
-group.name = 'Menhaden'
-group.code = 'SAL'
+group.name = 'Windowpane'
+group.code = 'WPF'
 
 group.varnames = catch.varnames[grep(paste0('^',group.name,'.*\\Catch'),catch.varnames)]
 
@@ -41,6 +41,7 @@ ggplot(data = catch.df, aes(x = Time, y= Catch,10, col = Cohort))+
 # tot.catch = apply(ncvar_get(tot.catch.nc, paste0('Tot_',group.code,'_Catch')),2,sum,na.rm=T)
 # tot.catch.df = data.frame(Time = 1:length(tot.catch), tot.catch = tot.catch)
 tot.catch.df = catch.df %>% group_by(Time) %>% summarize(tot.catch = sum(Catch,na.rm=T))
+plot(tot.catch~Time,tot.catch.df,type='l')
 
 break.catch = catch.df %>%
   left_join(tot.catch.df) %>%
@@ -48,5 +49,6 @@ break.catch = catch.df %>%
   arrange(Time, Cohort)
 
 ggplot(break.catch,aes(x= Time, y = age.prop, fill = Cohort))+
-  geom_area()
+  geom_area()+
+  scale_fill_manual(values = RColorBrewer::brewer.pal(10,'Set2'))
 
