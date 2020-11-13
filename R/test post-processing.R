@@ -8,7 +8,7 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 #Define local/git directories for atlantis output, parameter files, and desired location for figures/tables
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
-run.name = 'ReducePred10'
+run.name = 'ReducePred13'
 
 atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
 param.dir = here::here('currentVersion')
@@ -78,13 +78,13 @@ make_atlantis_diagnostic_figures(
   plot.biomass.timeseries = T,
   plot.length.age=F,
   plot.biomass.box=F,
-  plot.c.mum=F,
-  plot.sn.rn=F,
+  plot.c.mum=T,
+  plot.sn.rn=T,
   plot.recruits=F,
-  plot.numbers.timeseries=T,
+  plot.numbers.timeseries=F,
   plot.physics=F,
   plot.growth.cons=F,
-  plot.cohort=F,
+  plot.cohort=T,
   plot.diet=T,
   plot.consumption= T,
   plot.spatial.biomass=F,

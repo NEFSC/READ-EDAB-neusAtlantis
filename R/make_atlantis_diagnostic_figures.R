@@ -753,6 +753,7 @@ make_atlantis_diagnostic_figures = function(
                            spp.names  = group.index$Code)
     plot_overall_predation(data = data.sub,
                            bioindex.file = paste0(atl.dir,'neus_outputBiomIndx.txt'),
+                           catch.file = paste0(atl.dir,'neus_outputCatch.txt'),
                            min.fract = 0.1,
                            fig.dir = out.dir,
                            file.prefix = run.name)
