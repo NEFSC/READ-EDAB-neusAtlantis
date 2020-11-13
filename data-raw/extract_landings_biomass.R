@@ -25,7 +25,7 @@ library(magrittr)
 extract_landings_biomass <- function(channel,species) {
 
   # pull or process commercial landings pull from data base
-  #comlandData <- comlandr::comland(channel,use.existing = "y",out.dir = here::here("other"))
+  #comlandr::comland(channel,use.existing = "n",endyear = 2019,reftime = c(2019,1),landed="n",sum.by = "stat.area",out.dir = here::here("other"))
   comlandData <- readRDS(here::here("other","comland_meatwt_deflated_EPU.RDS"))
 
   # extract species of interest that have NESPP3 codes. time series of landings by species  
