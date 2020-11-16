@@ -604,34 +604,34 @@ tac_resetperiodDR       28
 tac_resetperiodDC       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
-flagmidwcISQday  2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagmidwcLSQday  2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagjigISQday    2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagjigLSQday    2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdredgeSCAday 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagtrapRCBday   2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdtrawlRCBday 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdtrawlISQday 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdtrawlLSQday 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdtrawlSHKday 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdtrawlHADday 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdseineSHKday 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdlineBLFday  2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdiveBGday    2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagpseineBLFday 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagcullPINday   2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagptrawlNSHday 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagptrawlOSHday 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdtrawlANCday 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdtrawlBPFday 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdtrawlBUTday 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagmidwcZLday   2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagtrapMENday   2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdlineMENday  2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagnetMENday    2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagmidwcNSHday  2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagmidwcOSHday  2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagmowMAday     2        Active: 2 = no preference, 1 = day, 0 = night             2
+flagmidwcISQday  1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagmidwcLSQday  1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagjigISQday    1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagjigLSQday    1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagdredgeSCAday 1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagtrapRCBday   1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagdtrawlRCBday 1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagdtrawlISQday 1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagdtrawlLSQday 1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagdtrawlSHKday 1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagdtrawlHADday 1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagdseineSHKday 1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagdlineBLFday  1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagdiveBGday    1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagpseineBLFday 1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagcullPINday   1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagptrawlNSHday 1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagptrawlOSHday 1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagdtrawlANCday 1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagdtrawlBPFday 1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagdtrawlBUTday 1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagmidwcZLday   1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagtrapMENday   1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagdlineMENday  1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagnetMENday    1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagmidwcNSHday  1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagmidwcOSHday  1        Active: 2 = no preference, 1 = day, 0 = night             2
+flagmowMAday     1        Active: 2 = no preference, 1 = day, 0 = night             2
 flagfinfish 1
 flagfishMAK 1
 flagfishHER 1
