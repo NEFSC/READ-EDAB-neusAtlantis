@@ -9,7 +9,7 @@ library(dplyr)
 library(ggplot2)
 
 #Read in yearly-aggregated data (made in "R/compare_catch_sources.R")
-data.dir = "C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/"
+data.dir = "C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Catch_Data/"
 fig.dir = "C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Figures/"
 load(paste0(data.dir,'Catch_Comparison.RData'))
 
@@ -32,14 +32,16 @@ catch.all  = new.comland.df %>%
 ratio.spp = catch.all %>%
   group_by(Group) %>%
   #really skewed use median
-  summarize(ratio = median(ratio,na.rm=T))
+  summarize(ss.comland.conv = median(ratio,na.rm=T))
 
-ratio.overall = median(ratio.spp$ratio,na.rm=T)
-
-png(paste0(fig.dir,'Catch/Stocksmart_Comland_Ratio.png'),width = 12, height = 5, units = 'in', res = 150)
-hist(ratio.spp$ratio, xlab = 'Stocksmart:Comland_EPU',main = '')
-abline(v=ratio.overall)
-dev.off()
+# saveRDS(ratio.spp,paste0(data.dir,'stocksmart_comland_ratio.Rds'))
+saveRDS(ratio.spp,here::here('data-raw','stocksmart_comland_ratio.Rds'))
+# ratio.overall = median(ratio.spp$ratio,na.rm=T)
+# 
+# png(paste0(fig.dir,'Catch/Stocksmart_Comland_Ratio.png'),width = 12, height = 5, units = 'in', res = 150)
+# hist(ratio.spp$ratio, xlab = 'Stocksmart:Comland_EPU',main = '')
+# abline(v=ratio.overall)
+# dev.off()
 
 # png(paste0(fig.dir,'Catch/Stocksmart_Comland_Ratio_Zoom.png'),width = 12, height = 5, units = 'in', res = 150)
 # hist(ratio.spp$ratio,breaks = seq(0,800,2), xlab = 'Stocksmart:Comland_EPU',main = '',xlim = c(0,60))
