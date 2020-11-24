@@ -140,30 +140,32 @@ stocksmart.df = dplyr::select(stocksmart.df,-Units)
 #Combine datasets
 
 save(catch.ts.raw,new.comland.epu.df,new.comland.stat.df,old.comland.df,stocksmart.df,file  = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/Catch_Comparison.RData')
-catch.all = bind_rows(catch.ts.df,atl.catch.df,new.comland.epu.df,new.comland.stat.df,old.comland.df,stocksmart.df)
+# catch.all = bind_rows(catch.ts.df,atl.catch.df,new.comland.epu.df,new.comland.stat.df,old.comland.df,stocksmart.df)
+catch.all = bind_rows(new.comland.epu.df,new.comland.stat.df,old.comland.df,stocksmart.df)
 # rm(list = ls()[!ls() %in% c('catch.ts.df','atl.catch.df','new.comland.df','old.comland.df','svspp.atl.index','stocksmart.df')])
 # rm(list = ls()[!ls() %in% c('catch.all')])
 
 groups = unique(catch.all$Group)
-groups = groups[-grep('TsAct',groups)]
+# groups = groups[-grep('TsAct',groups)]
 
-plot.cols = tibble(source = c('catch.ts','atl.catch','new.comland.epu','new.comland.stat','old.comland','stocksmart'),
-                       source.fullname = c('Catch_TS','Atl_Output','New_Comland_EPU','New_Comland_Stat','Old_Comland_StatArea','StockSmart'),
-                       color =RColorBrewer::brewer.pal(6,'Set2'))
+plot.cols = tibble(source = c('new.comland.epu','new.comland.stat','old.comland','stocksmart'),
+                       source.fullname = c('New_Comland_EPU','New_Comland_Stat','Old_Comland_Stat','StockSmart'),
+                       color =RColorBrewer::brewer.pal(4,'Set2'))
 catch.all  = catch.all %>%
   left_join(plot.cols)
 
 
-pdf('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Figures/Catch_Source_Comparisons.pdf',width = 16, height = 6, onefile = T)
+pdf('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Figures/Catch/Catch_Source_Comparisons.pdf',width = 16, height = 6, onefile = T)
 for(i in 1:length(groups)){
   
   dat = filter(catch.all,Group == groups[i])
   
   g= ggplot(data = dat,aes(x = as.numeric(Year),y = Catch, col = source.fullname))+
-    geom_line(size = 1.2)+
+    geom_line(size = 1.1)+
     scale_color_manual(values = plot.cols$color,name =NULL)+
     ylab('Catch ( MT/yr )')+
     xlab('')+
+    xlim(1964,2020)+
     ggtitle(groups[i])+
     theme_bw()+
     theme(
