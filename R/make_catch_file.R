@@ -36,7 +36,8 @@ hindcast_catch = comland %>%
   summarize(WGT = (sum(SPPLIVMT.scaled,na.rm=T)*CONVFACTOR)) %>%
   inner_join(spcodes,by = 'NESPP3') %>%
   left_join(ss.comland.rat, by = c('Code' = 'Group')) %>%
-  mutate(ss.comland.conv = ifelse(is.na(ss.comland.conv),1,ss.comland.conv)) %>%
+  mutate(ss.comland.conv = ifelse(is.na(ss.comland.conv),1,ss.comland.conv),
+         WGT = WGT * ss.comland.conv) %>%
   group_by(YEAR,Code) %>%
   summarize(grpWGT = sum(WGT,na.rm=T)) %>%
   filter(YEAR >= 1964)
