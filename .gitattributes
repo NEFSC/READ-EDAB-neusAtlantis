@@ -13,6 +13,8 @@
 *.csl text
 *.yml text
 *.md text
+*.prm text
+*.ts text
 
 # Declare files that will always have CRLF line endings on checkout.
 *.sln text eol=crlf
