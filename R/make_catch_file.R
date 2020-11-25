@@ -60,13 +60,15 @@ for(i in 1:length(header)){
     # plot(grpWGT~YEAR,dat,type='l')
     # lines(year.interp$x,year.interp$y,col=2,type='l')
     
-    hindcast_catch_ls[[i]] = data.frame(YEAR = year.interp$x,Code = header[i],grpWGT = exp(year.interp$y))
+    hindcast_catch_ls[[i]] = data.frame(YEAR = year.interp$x,Code = header[i],grpWGT = year.interp$y)
   }
 }
 hindcast_catch2 = dplyr::bind_rows(hindcast_catch_ls) %>%
   filter(YEAR >= 1964 & YEAR <=2018)
 hindcast_catch2$grpWGT[which(!is.finite(hindcast_catch2$grpWGT))] = 0
 
+x2 = filter(hindcast_catch2, Code == 'BFT')
+plot(grpWGT~YEAR,x2,type='l')
 timesteps <- 55 * 365
 
 # Set up catch tibble for time series file
@@ -104,6 +106,9 @@ for (sp in 2:91) {
   #   }
   # }    
 }
+
+#test mean catch by group
+sort(colMeans(catch,na.rm=T))
 
 # write.table(catch,"/home/rgamble/Desktop/Atlantis-Catch/catch_ts_all.txt",col.names = F, row.names = F, sep = " ")
 write.table(catch,here::here('currentVersion','CatchFiles','total_catch_new.txt'),col.names = F, row.names = F, sep = " ")
