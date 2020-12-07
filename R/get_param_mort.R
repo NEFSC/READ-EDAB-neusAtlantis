@@ -52,7 +52,7 @@ get_param_mort = function(bio.file){
 }
 
 #Test
-orig.kdner = get_param_mort(bio.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Parameter_Files/at_biol_neus_v15_scaled_diet_20181126_3.prm')
+# orig.mort = get_param_mort(bio.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Parameter_Files/at_biol_neus_v15_scaled_diet_20181126_3.prm')
 currentversion = get_param_mort(bio.file = here::here('currentVersion','at_biology.prm'))
-write.csv(currentversion, file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/New_Init_CatchTS_mort.csv',row.names = F)
+write.csv(currentversion, file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/New_Init_CatchTS_Revert_mort.csv',row.names = F)
 
