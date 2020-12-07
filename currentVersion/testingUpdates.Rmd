@@ -113,9 +113,20 @@ This file is used to document steps made towards a new version/subversion
  * Increased survivorship outside the model to take into account predation on juveniles and fishing.
  * BFT currently crashes in the middle of the run but return near the end to normal levels.  Since they aren't a huge player in the model, I am calling this 'done' for now.
  
- ## Retune Charismatics and Benthic Groups (ATLNTS-155)
+## Retune Charismatics and Benthic Groups (ATLNTS-155)
  * RG: 10-30-2020
  * Added back in quadratic mortality to BWH, RWH and REP, and raised over initial values
  * Working with assimilation efficiency, growth rates and pprey values for benthic groups to get them to persist
  * BWH, REP, and RWH all look reasonable (done)
  - Benthic groups moving in right direction but not done yet.
+
+## Retune Benthic Groups (ATLNTS-155)
+
+  * RG: 12-6-2020
+  * Updates to benthic groups: SCA, QHG, CLA, BFF, BG, BC, LOB, RCB, BMS
+  * LOB, QHG, BC still crash but much later
+  * BG and BFF persist but drop to 1% of starting levels by the end, they still persist at higher values for longer than previously.
+  * Zooplankton groups drop to almost nothing by end of run
+  
+  * Changes in biology file were to mum, clearance rates (for filter feeders) and assimilation efficiency as well as pprey values both for the groups above and the groups that prey on them.
+  * Changes in run file were to put the above groups back to an initial conditions multiplier of 1.
