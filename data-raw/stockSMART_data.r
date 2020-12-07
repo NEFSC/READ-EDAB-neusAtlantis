@@ -21,6 +21,6 @@ stockSMART_data <- function() {
     dplyr::filter(!grepl("ering",Region)) %>%
     dplyr::filter(!grepl("exico",Region))
   
-  saveRDS(stockData,here::here("data-raw","stockData.Rds"))
+  saveRDS(stockData,here::here("data-raw","stockSMARTData.Rds"))
           
 }
