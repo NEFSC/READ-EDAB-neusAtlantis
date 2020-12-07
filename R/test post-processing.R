@@ -8,7 +8,7 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 #Define local/git directories for atlantis output, parameter files, and desired location for figures/tables
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
-run.name = 'ReducePred13'
+run.name = 'Benthic_Fix_RG'
 
 atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
 param.dir = here::here('currentVersion')
@@ -16,7 +16,7 @@ out.dir = paste0(atl.dir,'Post_Processed/')
 
 
 #Run prefix is the filename prefix in the atlantis output (specified in run.bat)
-run.prefix = 'neus_output'
+run.prefix = 'atneus_v15_run_q_'
 
 
 #Run function that retreives parameter files
@@ -60,7 +60,7 @@ make_atlantis_diagnostic_figures(
   run.prefix = 'neus_output_test',
   run.name = run.name,
   result = result,
-  benthic.box = 9,
+  benthic.box =8,
   benthic.level = 4,
   
   param.ls = param.ls,
@@ -73,18 +73,18 @@ make_atlantis_diagnostic_figures(
   zoopl.history = here::here('R','Zooplankton_total_biomass_tonnes_N_20yrs.csv'),
  
   #Turn these on/off for desired output
-  plot.benthic = F,
+  plot.benthic =F,
   plot.overall.biomass = F,
   plot.biomass.timeseries = T,
   plot.length.age=F,
-  plot.biomass.box=F,
-  plot.c.mum=T,
-  plot.sn.rn=T,
+  plot.biomass.box=T,
+  plot.c.mum=F,
+  plot.sn.rn=F,
   plot.recruits=F,
-  plot.numbers.timeseries=F,
-  plot.physics=F,
+  plot.numbers.timeseries=T,
+  plot.physics=T,
   plot.growth.cons=F,
-  plot.cohort=T,
+  plot.cohort=F,
   plot.diet=T,
   plot.consumption= T,
   plot.spatial.biomass=F,
