@@ -27,7 +27,7 @@
 # new.file.name = 'at_biology_test.prm'
 
 
-get_pprey_lines = function(atl.dir,biol.file){
+get_pprey_lines = function(biol.file){
   #Open/close connection and read lines in .prm
   con = file(biol.file)
   biol.lines = readLines(con)
@@ -51,10 +51,10 @@ get_pprey_lines = function(atl.dir,biol.file){
   )
 }
 
-get_pprey_vals = function(atl.dir,biol.file,fgs.file,spp.names,is.pred,remove.zero){
+get_pprey_vals = function(atl.dir,biol.file,fgs.file,spp.names=NULL,is.pred,remove.zero){
   
   #Extract pprey lines  
-  pprey.ls = get_pprey_lines(atl.dir,biol.file)
+  pprey.ls = get_pprey_lines(biol.file)
   pprey.lines = pprey.ls$line.chars
   prey.names = pprey.ls$prey.names
   
@@ -71,7 +71,15 @@ get_pprey_vals = function(atl.dir,biol.file,fgs.file,spp.names,is.pred,remove.ze
 
   pprey.mat = matrix(0,ncol = length(prey.names),nrow = length(pred.names))
   for(i in 1:length(pred.names)){
+    # x = length(as.numeric(strsplit(pprey.lines[val.id[i]]  ,' |\t')[[1]]))
+    # if(x != 92){print(paste0(pprey.lines[val.id[i]-1],x))}
     pprey.mat[i,]=as.numeric(strsplit(pprey.lines[val.id[i]]  ,' |\t')[[1]])
+  }
+  
+  if(is.null(spp.names)){
+    pprey.out = as.data.frame(cbind(pred.names,pprey.mat))
+    colnames(pprey.out)[-1] = prey.names
+    return(pprey.out)
   }
   
   #If specifying predators, extract prey vals
