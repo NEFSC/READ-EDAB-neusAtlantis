@@ -54,14 +54,14 @@ edit_param_C_age = function(bio.prm, new.C.df, overwrite = F,new.file.name ){
 }
 
 # Example -----------------------------------------------------------------
-bio.prm = here::here('currentVersion','at_biology.prm')
-bio.orig = 'C:/Users/joseph.caracappa/Documents/Atlantis/Parameter_Files/at_biol_neus_v15_scaled_diet_20181126_3.prm'
-output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/'
-out.name = 'New_Init_CatchTS_C_age'
-# new.C.df = read.csv(paste0(output.dir,'C_age_test_new.csv'),stringsAsFactors = F)
-# new.file.name = here::here('currentVersion','at_biology_test.prm')
-
-get_param_C_age(bio.prm=bio.prm, write.output = T,output.dir = output.dir, out.name = out.name)
-get_param_C_age(bio.prm=bio.orig, write.output = T,output.dir = output.dir, out.name = 'Orig_C_RM')
-new.C.df = read.csv(paste0(output.dir,'Reset_C_New_Init.csv'),stringsAsFactors = F)
-edit_param_C_age(bio.prm, new.C.df,overwrite = T)
+# bio.prm = here::here('currentVersion','at_biology.prm')
+# bio.orig = 'C:/Users/joseph.caracappa/Documents/Atlantis/Parameter_Files/at_biol_neus_v15_scaled_diet_20181126_3.prm'
+# output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/'
+# out.name = 'New_Init_CatchTS_C_age'
+# # new.C.df = read.csv(paste0(output.dir,'C_age_test_new.csv'),stringsAsFactors = F)
+# # new.file.name = here::here('currentVersion','at_biology_test.prm')
+# 
+# get_param_C_age(bio.prm=bio.prm, write.output = T,output.dir = output.dir, out.name = out.name)
+# get_param_C_age(bio.prm=bio.orig, write.output = T,output.dir = output.dir, out.name = 'Orig_C_RM')
+# new.C.df = read.csv(paste0(output.dir,'Reset_C_New_Init.csv'),stringsAsFactors = F)
+# edit_param_C_age(bio.prm, new.C.df,overwrite = T)

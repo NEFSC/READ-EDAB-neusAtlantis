@@ -27,18 +27,19 @@ new.init.catch3 = paste0(obs.dir,'Atlantis_Runs/New_Init_CatchTS_3/')
 new.init.catch4 = paste0(obs.dir,'Atlantis_Runs/New_Init_CatchTS_4/')
 new.init.catch5 = paste0(obs.dir,'Atlantis_Runs/New_Init_CatchTS_5/')
 rg.benthic = paste0(obs.dir, 'Atlantis_Runs/Benthic_Fix_RG/')
+new.init.catch6 = paste0(obs.dir,'Atlantis_Runs/New_Init_CatchTS_6/')
 
 figure.dir = paste0(obs.dir,'Diagnostic_Figures/Run_Comparisons/')
 
 
 plot_run_comparisons(
   model1.dir = new.init.catch5,
-  model2.dir = rg.benthic,
+  model2.dir = new.init.catch6,
   model1.name = 'new init catch 5',
-  model2.name = 'new benthic',
+  model2.name = 'new init catch 6',
   plot.raw = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'newinitcatch_5_v_benthic'),
+  plot.out = paste(figure.dir,'newinitcatch_5_v_6'),
   table.out = F,
   groups = NULL,
   remove.init = F
@@ -46,12 +47,12 @@ plot_run_comparisons(
 
 plot_run_comparisons(
   model1.dir = master,
-  model2.dir = rg.benthic,
+  model2.dir = new.init.catch6,
   model1.name = 'master',
-  model2.name = 'RG Benthic',
+  model2.name = 'new init catch 6',
   plot.raw = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'master_v_RGBenthic'),
+  plot.out = paste(figure.dir,'master_v_newinitcatch6'),
   table.out = F,
   groups = NULL,
   remove.init = F

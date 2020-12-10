@@ -8,7 +8,7 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 #Define local/git directories for atlantis output, parameter files, and desired location for figures/tables
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
-run.name = 'Benthic_Fix_RG'
+run.name = 'New_Init_CatchTS_6'
 
 atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
 param.dir = here::here('currentVersion')
@@ -16,7 +16,7 @@ out.dir = paste0(atl.dir,'Post_Processed/')
 
 
 #Run prefix is the filename prefix in the atlantis output (specified in run.bat)
-run.prefix = 'atneus_v15_run_q_'
+run.prefix = 'neus_output'
 
 
 #Run function that retreives parameter files
@@ -30,7 +30,7 @@ process_atl_output( param.dir = here::here('currentVersion'),
   atl.dir = atl.dir,
   out.dir = out.dir,
 
-  run.prefix = 'neus_output',
+  run.prefix = 'atneus_v15_run_q_',
   include_catch = T,
   save.out = T, #If T, saves to file, if F returns to current environment
   bgm.file = param.ls$bgm,
@@ -49,7 +49,8 @@ process_atl_output( param.dir = here::here('currentVersion'),
 )
 
 #If result object saved to file or already exists load it into env.
-load(paste0(out.dir,'neus_output_postprocessed.rdata'))
+# load(paste0(out.dir,'neus_output_postprocessed.rdata'))
+load(paste0(out.dir,'atneus_v15_run_q__postprocessed.Rdata'))
 library(ncdf4)
 library(dplyr)
 #Run diagnostic figures/tables script. See function document for more detailed description of figures.
@@ -77,11 +78,11 @@ make_atlantis_diagnostic_figures(
   plot.overall.biomass = F,
   plot.biomass.timeseries = T,
   plot.length.age=F,
-  plot.biomass.box=T,
+  plot.biomass.box=F,
   plot.c.mum=F,
   plot.sn.rn=F,
   plot.recruits=F,
-  plot.numbers.timeseries=T,
+  plot.numbers.timeseries=F,
   plot.physics=T,
   plot.growth.cons=F,
   plot.cohort=F,
