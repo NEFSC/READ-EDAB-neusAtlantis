@@ -24,9 +24,10 @@ make_shape_cell_index = function(grid.file){
   lat = grid$dim$latitude$vals
   
   #convert coords to cell index
-  cell.index = data.frame(cell = 1:raster::ncell(x.length),raster::rowColFromCell(x.length,1:raster::ncell(x.length)))
-  cell.index$lon = lon[cell.index$col]
-  cell.index$lat = lat[cell.index$row]
+  cell.index = data.frame(cell = 1:raster::ncell(x.length),
+                          lat = raster::yFromCell(y.length,1:raster::ncell(y.length)),
+                          lon = raster::xFromCell(x.length,1:raster::ncell(x.length))
+                          )
   cell.index$cell.area = raster::extract(x.length,cell.index$cell) * raster::extract(y.length,cell.index$cell)
   
   return(cell.index)

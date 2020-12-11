@@ -32,8 +32,8 @@ plot_species_comp_rel = function(atl.dir,spp.name, bio.log = F, bio.rel = T){
     theme_bw()
 }
 
-plot_species_comp_rel(atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/ReducePred13/',
-                      spp.name = c('WOL'),
+plot_species_comp_rel(atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/New_Init_CatchTS_Revert/',
+                      spp.name = c('PLA'),
                       bio.log =T,
                       bio.rel = T)
   

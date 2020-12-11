@@ -9,7 +9,7 @@
 get_param_mum_age = function(bio.prm, write.output = F, output.dir, out.name ){
   
   bio.lines = readLines(bio.prm)
-  bio.lines.id = grep('^mum.*10.00$',bio.lines)
+  bio.lines.id = grep('^mum.*10\\.00',bio.lines)
   bio.lines.vals1 = bio.lines[bio.lines.id]
   
   group.names =unname(sapply(bio.lines.vals1,function(x) strsplit(x,'mum_|\t10.00')[[1]][2]))
@@ -32,9 +32,9 @@ edit_param_mum_age = function(bio.prm, new.mum.df, overwrite = F,new.file.name )
   
   #Get mum_XXX bio.prm lines
   bio.lines = readLines(bio.prm)
-  bio.lines.id = grep('^mum.*10.00$',bio.lines)
+  bio.lines.id = grep('^mum.*10\\.00',bio.lines)
   bio.lines.vals = bio.lines[bio.lines.id]
-  group.names =unname(sapply(bio.lines.vals,function(x) strsplit(x,'mum_|\t10.00')[[1]][2]))
+  group.names =unname(sapply(bio.lines.vals,function(x) strsplit(x,'mum_|\t10.00| 10.00')[[1]][2]))
   
   for(i in 1:nrow(new.mum.df)){
     
@@ -55,10 +55,13 @@ edit_param_mum_age = function(bio.prm, new.mum.df, overwrite = F,new.file.name )
 
 # Example -----------------------------------------------------------------
 # bio.prm = here::here('currentVersion','at_biology.prm')
+# bio.orig = 'C:/Users/joseph.caracappa/Documents/Atlantis/Parameter_Files/at_biol_neus_v15_scaled_diet_20181126_3.prm'
 # output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/'
-# out.name = 'mum_age_test'
-# new.mum.df = read.csv(paste0(output.dir,'mum_age_test_new.csv'),stringsAsFactors = F)
-# new.file.name = here::here('currentVersion','at_biology_test.prm')
+# out.name = 'New_Init_CatchTS_mum_age'
+# # new.mum.df = read.csv(paste0(output.dir,'mum_age_test_new.csv'),stringsAsFactors = F)
+# # new.file.name = here::here('currentVersion','at_biology_test.prm')
 # 
-# get_param_mum_age(bio.prm, write.output = T, output.dir, out.name = 'mum_age_test')
-# edit_param_mum_age(bio.prm, new.mum.df,overwrite = F, new.file.name)
+# get_param_mum_age(bio.prm=bio.prm, write.output = T,output.dir = output.dir, out.name = out.name)
+# get_param_mum_age(bio.prm=bio.orig, write.output = T,output.dir = output.dir, out.name = 'Orig_Mum_RM')
+# new.mum.df = read.csv(paste0(output.dir,'Reset_Mum_New_Init.csv'),stringsAsFactors = F)
+# edit_param_mum_age(bio.prm, new.mum.df,overwrite = T)

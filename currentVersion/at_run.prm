@@ -86,7 +86,7 @@ flagscaleinit     1  # Flag to indicate whether scaling initial vertebrate densi
 # Multiplicative scalar for vertebrate initial condition numbers and invert biomass (as read-in from cdf file)
 # MAK	HER	WHK	BLF	WPF	SUF	WIF	WTF	FOU	HAL	PLA	FLA	BFT	TUN	BIL	MPF	BUT	BPF	ANC	GOO	MEN	FDE	COD	SHK	OHK	POL	RHK	BSB	SCU	TYL	RED	OPT	SAL	DRM	STB	TAU	WOL	SDF	FDF	HAD	YTF	DOG	SMO	SSH	DSH	BLS	POR	PSH	WSK	LSK	SK	SB	PIN	REP	RWH	BWH	SWH	TWH	INV	LSQ	ISQ	SCA	QHG	CLA	BFF	BG	LOB	RCB	BMS	NSH	OSH	ZL	BD	MA	MB	SG	BC	ZG	PL	DF	PS	ZM	ZS	PB	BB	BO	DL	DR	DC
 init_scalar       89
-2.93	373.37	1	1.46	1.93	1.92	1.05	2.44	2.04	2.85	2.11	0.11	0.27	3.42	0.22	0.6	1	0.06	0.91	1	1.17	0.15	2.38	1	1.57	2.05	1.98	1.93	2.07	2.3	17.12	2.41	0.000004	1.61	0.0009	2.42	3.05	0.0003	0.7	1.65	1	2.9	1.67	0.03	0.001	1.7	0.62	0.46	3.15	2.16	2.82	3.17	0.2	0.69	0.31	1.36	2.08	0.02	0.003	1.98	2.31	1	1	1	1	1	1	1	1	1	1	1	4.826	1	1	1	0.41	0.61	1	7.84	1	1	1	1	1000.68	49.42	1	1	1
+264	350	4.706	86	4.97	14.75	15.395	10	3.998	24.61	6.496	0.347	0.27	5.629	6.667	60.54	12.3	1.253	125.479	3.5	742	2.855	13.601	4.571	15.58	4.045	11.473	6.75	81.874	28	3.415	1.4	0.001	1712.149	0.0174	5.578	3.05	0.000188	1.844	4.349	1.612	25.45	10.944	0.123	0.453	1.7	9.165	26.62	15.126	8.355	2.603	3.17	0.2	30.058	0.31	1.36	2.08	0.02	0.003	1.98	2.31	0.62	0.79	0.15	0.16	1.22	3.5	5	0.9	2.19	1.48	0.55	4.826	1	1	1	0.41	0.0549	1	7.84	1	0.6	0.6	1	1000.68	49.42	1	1	1
 
 trackAtomicRatio 0
 track_rugosity_arag 0  # flag indicating that rugosity and aragonite saturation to be tracked - needed for coral
@@ -102,3 +102,7 @@ external_box 0
 flagAllowLand 0
 flag_old_embryo_init 0  #This flag is to allow legacy models to have the same starting conditions under the new code as they did in older version
 flag_replicate_old_calendar 0 #This flag specifically allows for legacy models and the influence of environment on the distribution of recruits to be replicated in the newer code
+
+flag_use_deltaH 0
+store_aggregate_yoy 0
+store_mig_array 0
