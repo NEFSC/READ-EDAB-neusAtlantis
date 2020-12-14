@@ -130,10 +130,3 @@ This file is used to document steps made towards a new version/subversion
   
   * Changes in biology file were to mum, clearance rates (for filter feeders) and assimilation efficiency as well as pprey values both for the groups above and the groups that prey on them.
   * Changes in run file were to put the above groups back to an initial conditions multiplier of 1.
-  
-## Retune Benthic Groups (ATLNTS-155)
-
-  * RG: 12-6-2020
-  * Updates to benthic groups: BC, LOB, RCB, BMS, TWH and SWH
-  * Changes to LOB, RCB, BMS and BC mum, C and E values to try to get the benthic community to persist at reasonable levels.
-  * Decreases to quadratic mortality for TWH and SWH to allow them to persist at higher levels.
