@@ -147,7 +147,7 @@ edit_param_pprey = function(atl.dir, biol.file, fgs.file,pred.list,prey.list,ppr
   }
   
   for(i in 1:length(pred.list)){
-    
+
     #ID pred, prey, and new value
     pred = pred.list[i]
     prey = prey.list[i]
@@ -159,7 +159,7 @@ edit_param_pprey = function(atl.dir, biol.file, fgs.file,pred.list,prey.list,ppr
     pred.vals = as.numeric(strsplit(pred.vals,' ')[[1]])
     
     #Identify pPREY element for prey group
-    prey.el = grep(paste0("\\",prey,"\\b"),pprey.ls$prey.names)
+    prey.el = grep(paste0("\\b",prey,"\\b"),pprey.ls$prey.names)
     #Overwrite existing pprey value
     pred.vals[prey.el] = val
     #Convert back to space delimited character string
@@ -167,6 +167,7 @@ edit_param_pprey = function(atl.dir, biol.file, fgs.file,pred.list,prey.list,ppr
     
     #Overwrite biol.lines with new values
     pprey.ls$line.chars[pred.line+1] = pred.vals.new
+    
     
   }
   biol.lines[pprey.ls$line.num] = pprey.ls$line.chars
