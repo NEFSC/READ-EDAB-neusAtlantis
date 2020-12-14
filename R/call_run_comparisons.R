@@ -8,7 +8,6 @@
 # groups = NULL
 
 source(here::here('R','plot_run_comparisons.R'))
-source(here::here('R','plot_run_catch_comparisons.R'))
 
 roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/'
 obs.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/'
@@ -17,43 +16,40 @@ roms.cobalt = paste0(roms.dir,'Atlantis_Runs/Atlantis_Output_DinoFlag/')
 
 new.obs = paste0(obs.dir,'Atlantis_Runs/Obs_Hindcast_NewForcing/')
 master = paste0(obs.dir,'Atlantis_Runs/Master_10202020/')
-catch.6490 = paste0(obs.dir,'Atlantis_Runs/New_CatchTS_6490/')
-catch.6536 = paste0(obs.dir,'Atlantis_Runs/New_CatchTS_6536/')
-catch.6536.3 = paste0(obs.dir,'Atlantis_Runs/New_CatchTS_6536_3/')
-new.init.catch = paste0(obs.dir,'Atlantis_Runs/New_Init_CatchTS/')
-new.init.catch.revert = paste0(obs.dir,'Atlantis_Runs/New_Init_CatchTS_Revert/')
-new.init.catch2 = paste0(obs.dir,'Atlantis_Runs/New_Init_CatchTS_2/')
-new.init.catch3 = paste0(obs.dir,'Atlantis_Runs/New_Init_CatchTS_3/')
-new.init.catch4 = paste0(obs.dir,'Atlantis_Runs/New_Init_CatchTS_4/')
-new.init.catch5 = paste0(obs.dir,'Atlantis_Runs/New_Init_CatchTS_5/')
-rg.benthic = paste0(obs.dir, 'Atlantis_Runs/Benthic_Fix_RG/')
-new.init.catch6 = paste0(obs.dir,'Atlantis_Runs/New_Init_CatchTS_6/')
+pred_mort = paste0(obs.dir,'Atlantis_Runs/Obs_Hindcast_addMort/')
+pred9 = paste0(obs.dir,'Atlantis_Runs/ReducePred9/')
+pred10 = paste0(obs.dir,'Atlantis_Runs/ReducePred10/')
+pred11 = paste0(obs.dir,'Atlantis_Runs/ReducePred11/')
+pred12 = paste0(obs.dir,'Atlantis_Runs/ReducePred12/')
+pred12b = paste0(obs.dir,'Atlantis_Runs/ReducePred12b/')
+pred13 = paste0(obs.dir,'Atlantis_Runs/ReducePred13/')
 
 figure.dir = paste0(obs.dir,'Diagnostic_Figures/Run_Comparisons/')
 
 
 plot_run_comparisons(
-  model1.dir = new.init.catch5,
-  model2.dir = new.init.catch6,
-  model1.name = 'new init catch 5',
-  model2.name = 'new init catch 6',
+  model1.dir = master,
+  model2.dir = pred13,
+  model1.name = 'master',
+  model2.name = 'pred13',
   plot.raw = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'newinitcatch_5_v_6'),
+  plot.out = paste(figure.dir,'master_v_pred13'),
   table.out = F,
   groups = NULL,
   remove.init = F
 )
 
 plot_run_comparisons(
-  model1.dir = master,
-  model2.dir = new.init.catch6,
-  model1.name = 'master',
-  model2.name = 'new init catch 6',
+  model1.dir = pred12,
+  model2.dir = pred13,
+  model1.name = 'pred12',
+  model2.name = 'pred13',
   plot.raw = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'master_v_newinitcatch6'),
+  plot.out = paste(figure.dir,'pred12_v_pred13'),
   table.out = F,
   groups = NULL,
   remove.init = F
 )
+

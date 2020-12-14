@@ -8,7 +8,7 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 #Define local/git directories for atlantis output, parameter files, and desired location for figures/tables
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
-run.name = 'New_Init_CatchTS_6'
+run.name = 'ReducePred13'
 
 atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
 param.dir = here::here('currentVersion')
@@ -30,7 +30,7 @@ process_atl_output( param.dir = here::here('currentVersion'),
   atl.dir = atl.dir,
   out.dir = out.dir,
 
-  run.prefix = 'atneus_v15_run_q_',
+  run.prefix = 'neus_output',
   include_catch = T,
   save.out = T, #If T, saves to file, if F returns to current environment
   bgm.file = param.ls$bgm,
@@ -49,8 +49,7 @@ process_atl_output( param.dir = here::here('currentVersion'),
 )
 
 #If result object saved to file or already exists load it into env.
-# load(paste0(out.dir,'neus_output_postprocessed.rdata'))
-load(paste0(out.dir,'atneus_v15_run_q__postprocessed.Rdata'))
+load(paste0(out.dir,'neus_output_postprocessed.rdata'))
 library(ncdf4)
 library(dplyr)
 #Run diagnostic figures/tables script. See function document for more detailed description of figures.
@@ -61,7 +60,7 @@ make_atlantis_diagnostic_figures(
   run.prefix = 'neus_output_test',
   run.name = run.name,
   result = result,
-  benthic.box =8,
+  benthic.box = 9,
   benthic.level = 4,
   
   param.ls = param.ls,
@@ -74,18 +73,18 @@ make_atlantis_diagnostic_figures(
   zoopl.history = here::here('R','Zooplankton_total_biomass_tonnes_N_20yrs.csv'),
  
   #Turn these on/off for desired output
-  plot.benthic =F,
+  plot.benthic = F,
   plot.overall.biomass = F,
   plot.biomass.timeseries = T,
   plot.length.age=F,
   plot.biomass.box=F,
-  plot.c.mum=F,
-  plot.sn.rn=F,
+  plot.c.mum=T,
+  plot.sn.rn=T,
   plot.recruits=F,
   plot.numbers.timeseries=F,
-  plot.physics=T,
+  plot.physics=F,
   plot.growth.cons=F,
-  plot.cohort=F,
+  plot.cohort=T,
   plot.diet=T,
   plot.consumption= T,
   plot.spatial.biomass=F,
