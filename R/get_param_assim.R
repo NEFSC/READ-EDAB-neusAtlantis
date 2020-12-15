@@ -25,7 +25,7 @@ get_param_assim = function(atl.dir,bio.file,spp.names){
   for(i in 1:length(assim.prefixes)){
     
     assim.params = paste0(assim.prefixes[i], '_',spp.names)
-    assim.lines = sapply(assim.params,function(x) grep(paste0('\\b',x,'\\b'),bio.lines),USE.NAMES = F)
+    assim.lines = sapply(assim.params,function(x) grep(paste0('^\\b',x,'\\b'),bio.lines),USE.NAMES = F)
     assim.vals = bio.lines[assim.lines]
     assim.df.ls[[i]] = data.frame(spp = spp.names,
                           param = assim.prefixes[i],
@@ -70,3 +70,14 @@ compare_param_assim = function(model.1.dir,model.2.dir,bio.1,bio.2,spp.names,rm.
   
   return(both.model.df)
 }
+
+#Example
+fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T) %>%
+  dplyr::filter(NumCohorts >2)
+
+compare_param_assim(model.1.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/currentVersion/',
+  model.2.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Parameter_Files/',
+  bio.1 = 'at_biology.prm',
+  bio.2 = 'at_biol_neus_v15_scaled_diet_20181126_3.prm',
+  rm.same = T,
+  spp.names = fgs$Code)
