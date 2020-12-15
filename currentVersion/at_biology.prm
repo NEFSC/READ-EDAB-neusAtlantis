@@ -11801,13 +11801,13 @@ mum_ISQ_T15	0.00444
 mum_jISQ_T15	0.004
 mum_SCA_T15	50000
 mum_QHG_T15	500
-mum_CLA_T15	200 # From 0.05
-mum_BFF_T15	500  # From 0.2
-mum_BG_T15	100000 #From 200000
-mum_BC_T15	1
-mum_LOB_T15	0.008   # From 0.75
-mum_RCB_T15	0.004 #From 0.1  
-mum_BMS_T15	0.425    # From 0.3, then 0.5
+mum_CLA_T15	200
+mum_BFF_T15	500
+mum_BG_T15	100000
+mum_BC_T15 1
+mum_LOB_T15 0.008
+mum_RCB_T15 0.004
+mum_BMS_T15	0.425
 mum_NSH_T15	0.003043
 mum_jNSH_T15	0.003
 mum_OSH_T15	0.003043
