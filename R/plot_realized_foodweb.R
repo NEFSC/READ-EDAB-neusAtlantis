@@ -76,16 +76,15 @@ plot_realized_foodweb = function(run.dir,diet.file,min.fract= 0.05,min.time,max.
   # visNetwork::visNetwork(nodes,edges)
   p=visNetwork(nodes, edges) %>% 
      visOptions(highlightNearest = list(enabled = T, hover = T),nodesIdSelection = T, collapse = T) %>%
-    visEdges(arrows = "middle", color = list(color = 'grey', highlight = 'grey',hover = 'grey')) %>%
+    visEdges(arrows = "middle", color = list(color = 'black', highlight = 'grey',hover = 'grey')) %>%
     visNodes(color = list(background = 'brown',
-                          label = list(color = 'black',face = 'bold'),
                           border = 'black',
                           hover = list(border = 'black',background = 'lightblue')),
              font = list(size= 24, face = 'bold'))
   if(rand.layout){
     p = p %>% visLayout(randomSeed = seed)
   }else{
-    p = p %>% visHierarchicalLayout(direction = 'LR', levelSeparation = 100, nodeSpacing = 150)
+    p = p %>% visHierarchicalLayout(direction = 'LR', levelSeparation = 75)
   }
     
     
@@ -97,7 +96,7 @@ plot_realized_foodweb = function(run.dir,diet.file,min.fract= 0.05,min.time,max.
 }
 
 
-run.name = 'New_Init_CatchTS_3'
+run.name = 'Obs_Hindcast_RetunePlanktiv9'
 atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/'
 run.dir = paste0(atl.dir,run.name,'/')
 diet.file = paste0(run.dir,'neus_outputDietCheck.txt')
