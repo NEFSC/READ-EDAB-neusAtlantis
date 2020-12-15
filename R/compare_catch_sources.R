@@ -53,16 +53,16 @@ atl.catch.df = reshape2::melt(atl.catch.wide,id.var = 'Time',variable.name = 'Gr
   ungroup()
 
 
-# C) New Comlandr Pull by EPU  ----------------------------------------------------
+# C) New Comlandr Pull ----------------------------------------------------
 
-comland.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Catch_Data/'
-new.comland.epu.file = paste0(comland.dir,'comland_meatwt_deflated_EPU.Rds')
+comland.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/'
+new.comland.file = paste0(comland.dir,'comland_meatwt_deflated_EPU.Rds')
 
 #get NESPP3 to NEUS index
 svspp.atl.index = read.csv(here::here('data-raw','Atlantis_1_5_groups_svspp_nespp3.csv'))
 
 #Merge to get Atlantis codes, filter, aggregate by year
-new.comland.epu.df = readRDS(new.comland.epu.file) %>%
+new.comland.df = readRDS(new.comland.file) %>%
   left_join(svspp.atl.index,by = 'NESPP3') %>%
   filter(!(is.na(Code))) %>%
   rename(Year = 'YEAR') %>%
@@ -70,26 +70,10 @@ new.comland.epu.df = readRDS(new.comland.epu.file) %>%
   summarize(Catch = sum(SPPLIVMT,na.rm=T)) %>%
   rename(Group = 'Code') %>%
   arrange(Group,Year) %>%
-  mutate(source = 'new.comland.epu',
+  mutate(source = 'new.comland',
          Year = as.character(Year)) %>%
   ungroup()
 
-
-# # C.2 ) New Comlandr Pull by Stat Area ----------------------------------
-new.comland.stat.file = paste0(comland.dir,'comland_livewt_deflated_stat_areas.Rds')
-
-#Merge to get Atlantis codes, filter, aggregate by year
-new.comland.stat.df = readRDS(new.comland.stat.file) %>%
-  left_join(svspp.atl.index,by = 'NESPP3') %>%
-  filter(!(is.na(Code))) %>%
-  rename(Year = 'YEAR') %>%
-  group_by(Code,Year) %>%
-  summarize(Catch = sum(SPPLIVMT,na.rm=T)) %>%
-  rename(Group = 'Code') %>%
-  arrange(Group,Year) %>%
-  mutate(source = 'new.comland.stat',
-         Year = as.character(Year)) %>%
-  ungroup()
 
 # D) Old Comlandr Pull ----------------------------------------------------
 
@@ -139,33 +123,31 @@ stocksmart.df = dplyr::select(stocksmart.df,-Units)
 
 #Combine datasets
 
-save(catch.ts.raw,new.comland.epu.df,new.comland.stat.df,old.comland.df,stocksmart.df,file  = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/Catch_Comparison.RData')
-# catch.all = bind_rows(catch.ts.df,atl.catch.df,new.comland.epu.df,new.comland.stat.df,old.comland.df,stocksmart.df)
-catch.all = bind_rows(new.comland.epu.df,new.comland.stat.df,old.comland.df,stocksmart.df)
+save(catch.ts.raw,atl.catch.df,new.comland.df,old.comland.df,stocksmart.df,file  = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/Catch_Comparison.RData')
+catch.all = bind_rows(catch.ts.df,atl.catch.df,new.comland.df,old.comland.df,stocksmart.df)
 # rm(list = ls()[!ls() %in% c('catch.ts.df','atl.catch.df','new.comland.df','old.comland.df','svspp.atl.index','stocksmart.df')])
 # rm(list = ls()[!ls() %in% c('catch.all')])
 
 groups = unique(catch.all$Group)
-# groups = groups[-grep('TsAct',groups)]
+groups = groups[-grep('TsAct',groups)]
 
-plot.cols = tibble(source = c('new.comland.epu','new.comland.stat','old.comland','stocksmart'),
-                       source.fullname = c('New_Comland_EPU','New_Comland_Stat','Old_Comland_Stat','StockSmart'),
-                       color =RColorBrewer::brewer.pal(4,'Set2'))
+plot.cols = tibble(source = c('catch.ts','atl.catch','new.comland','old.comland','stocksmart'),
+                       source.fullname = c('Catch_TS','Atl_Output','Comland_EPU','Comland_StatArea','StockSmart'),
+                       color =RColorBrewer::brewer.pal(5,'Set2'))
 catch.all  = catch.all %>%
   left_join(plot.cols)
 
 
-pdf('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Figures/Catch/Catch_Source_Comparisons.pdf',width = 16, height = 6, onefile = T)
+pdf('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Figures/Catch_Source_Comparisons.pdf',width = 16, height = 6, onefile = T)
 for(i in 1:length(groups)){
   
   dat = filter(catch.all,Group == groups[i])
   
   g= ggplot(data = dat,aes(x = as.numeric(Year),y = Catch, col = source.fullname))+
-    geom_line(size = 1.1)+
+    geom_line(size = 1.2)+
     scale_color_manual(values = plot.cols$color,name =NULL)+
     ylab('Catch ( MT/yr )')+
     xlab('')+
-    xlim(1964,2020)+
     ggtitle(groups[i])+
     theme_bw()+
     theme(

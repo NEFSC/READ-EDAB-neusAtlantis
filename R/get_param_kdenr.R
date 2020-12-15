@@ -32,8 +32,8 @@ get_param_kdenr = function(bio.file){
 }
 
 #Test
-# orig.kdner = get_param_kdenr(bio.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Parameter_Files/at_biol_neus_v15_scaled_diet_20181126_3.prm')
-current.kdenr = get_param_kdenr(bio.file = here::here('currentVersion','at_biology.prm'))
-write.csv(current.kdenr, file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/New_Init_CatchTS_KDENR.csv')
+orig.kdner = get_param_kdenr(bio.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Parameter_Files/at_biol_neus_v15_scaled_diet_20181126_3.prm')
+removePred2.kdner = get_param_kdenr(bio.file = here::here('currentVersion','at_biology.prm'))
+write.csv(removePred2.kdner, file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/Master_10202020_KDENR.csv')
 
                                     
