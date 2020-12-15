@@ -71,6 +71,8 @@ get_pprey_vals = function(atl.dir,biol.file,fgs.file,spp.names,is.pred,remove.ze
 
   pprey.mat = matrix(0,ncol = length(prey.names),nrow = length(pred.names))
   for(i in 1:length(pred.names)){
+    # x =(length(strsplit(pprey.lines[val.id[i]]  ,' |\t')[[1]]))
+    # if(x!=92){print(pred.names[i])}
     pprey.mat[i,]=as.numeric(strsplit(pprey.lines[val.id[i]]  ,' |\t')[[1]])
   }
   
