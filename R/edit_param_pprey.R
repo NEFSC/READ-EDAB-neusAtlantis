@@ -135,7 +135,7 @@ edit_param_pprey = function(atl.dir, biol.file, fgs.file,pred.list,prey.list,ppr
   close(con)
   
   #Read in pPREY vals from biology.prm
-  pprey.ls = get_pprey_lines(biol.file)
+  pprey.ls = get_pprey_lines(atl.dir,biol.file)
   
   #Read in functional groups
   fgs = read.csv(fgs.file,stringsAsFactors = F)
