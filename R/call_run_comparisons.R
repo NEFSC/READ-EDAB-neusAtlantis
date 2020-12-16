@@ -17,29 +17,20 @@ roms.cobalt = paste0(roms.dir,'Atlantis_Runs/Atlantis_Output_DinoFlag/')
 
 new.obs = paste0(obs.dir,'Atlantis_Runs/Obs_Hindcast_NewForcing/')
 master = paste0(obs.dir,'Atlantis_Runs/Master_10202020/')
-catch.6490 = paste0(obs.dir,'Atlantis_Runs/New_CatchTS_6490/')
-catch.6536 = paste0(obs.dir,'Atlantis_Runs/New_CatchTS_6536/')
-catch.6536.3 = paste0(obs.dir,'Atlantis_Runs/New_CatchTS_6536_3/')
-new.init.catch = paste0(obs.dir,'Atlantis_Runs/New_Init_CatchTS/')
-new.init.catch.revert = paste0(obs.dir,'Atlantis_Runs/New_Init_CatchTS_Revert/')
-new.init.catch2 = paste0(obs.dir,'Atlantis_Runs/New_Init_CatchTS_2/')
-new.init.catch3 = paste0(obs.dir,'Atlantis_Runs/New_Init_CatchTS_3/')
-new.init.catch4 = paste0(obs.dir,'Atlantis_Runs/New_Init_CatchTS_4/')
-new.init.catch5 = paste0(obs.dir,'Atlantis_Runs/New_Init_CatchTS_5/')
-rg.benthic = paste0(obs.dir, 'Atlantis_Runs/Benthic_Fix_RG/')
 new.init.catch6 = paste0(obs.dir,'Atlantis_Runs/New_Init_CatchTS_6/')
+master2 = paste0(obs.dir,'Atlantis_Runs/Master_12152020/')
 
 figure.dir = paste0(obs.dir,'Diagnostic_Figures/Run_Comparisons/')
 
 
 plot_run_comparisons(
-  model1.dir = new.init.catch5,
-  model2.dir = new.init.catch6,
-  model1.name = 'new init catch 5',
-  model2.name = 'new init catch 6',
+  model1.dir = new.init.catch6,
+  model2.dir = master2,
+  model1.name = 'new init catch 6',
+  model2.name = 'master 12-15-2020',
   plot.raw = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'newinitcatch_5_v_6'),
+  plot.out = paste(figure.dir,'newinitcatch_6_v_master'),
   table.out = F,
   groups = NULL,
   remove.init = F
@@ -47,12 +38,12 @@ plot_run_comparisons(
 
 plot_run_comparisons(
   model1.dir = master,
-  model2.dir = new.init.catch6,
+  model2.dir = master2,
   model1.name = 'master',
-  model2.name = 'new init catch 6',
+  model2.name = 'master 12-15-2020',
   plot.raw = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'master_v_newinitcatch6'),
+  plot.out = paste(figure.dir,'master_v_new_master'),
   table.out = F,
   groups = NULL,
   remove.init = F

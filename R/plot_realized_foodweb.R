@@ -97,7 +97,7 @@ plot_realized_foodweb = function(run.dir,diet.file,min.fract= 0.05,min.time,max.
 }
 
 
-run.name = 'New_Init_CatchTS_3'
+run.name = 'Master_12152020'
 atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/'
 run.dir = paste0(atl.dir,run.name,'/')
 diet.file = paste0(run.dir,'neus_outputDietCheck.txt')
@@ -105,6 +105,6 @@ diet.file = paste0(run.dir,'neus_outputDietCheck.txt')
 plot_realized_foodweb(run.dir,
                       diet.file,
                       min.time = 0,
-                      max.time = 74,
+                      max.time = 3650,
                       min.fract = 0.1,
                       rand.layout = F)

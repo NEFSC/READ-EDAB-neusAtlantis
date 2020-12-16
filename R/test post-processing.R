@@ -8,7 +8,7 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 #Define local/git directories for atlantis output, parameter files, and desired location for figures/tables
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
-run.name = 'New_Init_CatchTS_6'
+run.name = 'Master_12152020'
 
 atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
 param.dir = here::here('currentVersion')
@@ -30,7 +30,7 @@ process_atl_output( param.dir = here::here('currentVersion'),
   atl.dir = atl.dir,
   out.dir = out.dir,
 
-  run.prefix = 'atneus_v15_run_q_',
+  run.prefix = 'neus_output',
   include_catch = T,
   save.out = T, #If T, saves to file, if F returns to current environment
   bgm.file = param.ls$bgm,
@@ -50,7 +50,7 @@ process_atl_output( param.dir = here::here('currentVersion'),
 
 #If result object saved to file or already exists load it into env.
 # load(paste0(out.dir,'neus_output_postprocessed.rdata'))
-load(paste0(out.dir,'atneus_v15_run_q__postprocessed.Rdata'))
+load(paste0(out.dir,'neus_output_postprocessed.Rdata'))
 library(ncdf4)
 library(dplyr)
 #Run diagnostic figures/tables script. See function document for more detailed description of figures.
