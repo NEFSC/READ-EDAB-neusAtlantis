@@ -107,6 +107,9 @@ for (sp in 2:91) {
   # }    
 }
 
+#Remove Salmon Catch
+catch[,which(colnames(catch)=='SAL')] = 0
+
 #test mean catch by group
 sort(colMeans(catch,na.rm=T))
 
