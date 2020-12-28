@@ -8,7 +8,7 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 #Define local/git directories for atlantis output, parameter files, and desired location for figures/tables
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
-run.name = 'New_Init_CatchTS_6'
+run.name = 'Master_12152020'
 
 atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
 param.dir = here::here('currentVersion')
@@ -76,18 +76,18 @@ make_atlantis_diagnostic_figures(
   #Turn these on/off for desired output
   plot.benthic =F,
   plot.overall.biomass = F,
-  plot.biomass.timeseries = T,
+  plot.biomass.timeseries = F,
   plot.length.age=F,
   plot.biomass.box=F,
   plot.c.mum=F,
   plot.sn.rn=F,
   plot.recruits=F,
   plot.numbers.timeseries=F,
-  plot.physics=T,
+  plot.physics=F,
   plot.growth.cons=F,
   plot.cohort=F,
-  plot.diet=T,
-  plot.consumption= T,
-  plot.spatial.biomass=F,
+  plot.diet=F,
+  plot.consumption= F,
+  plot.spatial.biomass=T,
   plot.LTL=F
 )
