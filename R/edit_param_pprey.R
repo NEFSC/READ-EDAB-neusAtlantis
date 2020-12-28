@@ -135,7 +135,7 @@ edit_param_pprey = function(atl.dir, biol.file, fgs.file,pred.list,prey.list,ppr
   close(con)
   
   #Read in pPREY vals from biology.prm
-  pprey.ls = get_pprey_lines(atl.dir,biol.file)
+  pprey.ls = get_pprey_lines(biol.file)
   
   #Read in functional groups
   fgs = read.csv(fgs.file,stringsAsFactors = F)
@@ -159,7 +159,7 @@ edit_param_pprey = function(atl.dir, biol.file, fgs.file,pred.list,prey.list,ppr
     pred.vals = as.numeric(strsplit(pred.vals,' ')[[1]])
     
     #Identify pPREY element for prey group
-    prey.el = grep(paste0("\\",prey,"\\b"),pprey.ls$prey.names)
+    prey.el = grep(paste0("\\b",prey,"\\b"),pprey.ls$prey.names)
     #Overwrite existing pprey value
     pred.vals[prey.el] = val
     #Convert back to space delimited character string
