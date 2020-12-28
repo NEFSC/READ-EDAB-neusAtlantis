@@ -8,6 +8,7 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 #Define local/git directories for atlantis output, parameter files, and desired location for figures/tables
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
+
 run.name = 'ReduceBenthicPred_6'
 
 atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
