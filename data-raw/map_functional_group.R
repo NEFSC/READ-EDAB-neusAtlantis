@@ -24,7 +24,7 @@ for (apack in packages$pkgName) {
 }
 
 
-map_functional_group <- function(channel) {
+map_functional_group <- function(channel,writeToFile=F) {
 
   # read in functional group codes and name
   fg <-  readr::read_csv(here::here("data-raw","initialFunctionalGroupNames.csv"))
@@ -75,7 +75,9 @@ map_functional_group <- function(channel) {
   
   close(fileConn)
   
-  readr::write_csv(masterList,here::here("data-raw","functionalGroupNames.csv"))
+  if(writeToFile){
+    readr::write_csv(masterList,here::here("data-raw","functionalGroupNames.csv"))
+  }
   
   return(masterList)
 }
