@@ -130,3 +130,8 @@ This file is used to document steps made towards a new version/subversion
   
   * Changes in biology file were to mum, clearance rates (for filter feeders) and assimilation efficiency as well as pprey values both for the groups above and the groups that prey on them.
   * Changes in run file were to put the above groups back to an initial conditions multiplier of 1.
+  
+## Retune Benthic Groups and Charismatics (ATLNTS-155)
+
+    * Changed pprey values on SCA, BFF, and LOB by their 'main' fish predators and decreased clearance rates for the benthic predators.  All benthic groups now persist.
+    * Increased growth rates and recruits for the benthic charismatics that were too low.  All are now in reasonable ranges compared to original biomasses, with most doubling to tripling biomass in the absence of human interactions.
