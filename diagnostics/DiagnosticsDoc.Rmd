@@ -2,7 +2,9 @@
 title: "Atlantis Diagnostics Development Documentation"
 author: "Sarah Gaichas"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: html_document
+output:
+  html_document:
+    code_fold: hide
 bibliography: modreview.bib
 csl: plos.csl
 link-citations: yes
@@ -56,27 +58,70 @@ library(ecotrend)
 library(tidyverse)
 library(atlantisom)
 library(here)
+library(googledrive)
 
 source("shift_legend.R")
 
 ```
 
-Configure files to be read in here (can have different files to source)
+Configure files to be read in here (can have different files to source).
 
-```{r config}
+January 2021: source output from google folder `EDABranch_Drive > Atlantis > Shared Data` where each set of outputs in its own folder.
+
+Source input files from this github repo in folder `here("currentVersion")`.
+
+
+```{r config, message=FALSE}
 # set up files to be read in
 # the below can go into a config file to be sourced
 
-d.name <- here("diagnostics", "testfiles") #folder with files below; e.g. here("atlantisoutput","currentrun")
-functional.groups.file <- "NeusGroups_v15_unix_RM.csv"
-biomass.pools.file <- "atneus_v15_test2008hydro_20180208.nc"
-biol.prm.file <- "at_biol_neus_v15_scaled_diet_20190924_2.xml"
+# input files directly from atlantis-neus repo
+functional.groups.file <- "neus_groups.csv"  
+biomass.pools.file <- "neus_init.nc"
 box.file <- "neus_tmerc_RM2.bgm"
-initial.conditions.file <- "RMinit4_2019.nc"
-run.prm.file <- "at_run_neus_v15_RM_scale_0503.xml"
-scenario.name <- "atneus_v15_test2008hydro_20180208"
-bioind.file <- "atneus_v15_test2008hydro_20180208BiomIndx.txt"
-catch.file <- "atneus_v15_test2008hydro_20180208Catch.txt"
+initial.conditions.file <- "neus_init.nc"
+fisheries.file <- "neus_fisheries.csv"
+biol.prm.file <- "at_biology.prm"
+
+# outputs from gdrive
+# location of files, have user pass to diag_init function
+g.name <- "https://drive.google.com/drive/folders/1CYLbZlrbjRnXQODeQKb5xUGo6Ry3DC23" # Master_20201020 gdrive folder name 
+
+#g.name <- "https://drive.google.com/drive/folders/1CECkhH80QqGQiHRKG-L7SW1v27VckhWD" # Output_11_13_2020_Rob
+
+#get scenario name from a file inside folder: SSB is unique
+scenario.name <- gsub("SSB.txt","",(drive_ls(path=g.name, pattern = "*SSB.txt")$name))
+
+d.name <- here("diagnostics", "temp")
+# need to download needed files to a temp folder because atlantisom functions dont read gdrive directly
+
+run.prm.file <- drive_ls(path=g.name, pattern = "*at_run*.xml")$name
+bioind.file <- paste0(scenario.name, "BiomIndx.txt")
+catch.file <- paste0(scenario.name, "Catch.txt")
+
+
+drive_download(file = drive_ls(path=g.name, pattern = "*at_run*.xml"),
+                        path = here("diagnostics", "temp", run.prm.file),
+                        type = NULL,
+                        overwrite = TRUE,
+                        verbose = TRUE
+)
+
+drive_download(file = drive_ls(path=g.name, pattern = paste0(scenario.name, "BiomIndx.txt")),
+                        path = here("diagnostics", "temp", bioind.file),
+                        type = NULL,
+                        overwrite = TRUE,
+                        verbose = TRUE
+)
+
+drive_download(file = drive_ls(path=g.name, pattern = paste0(scenario.name, "Catch.txt")),
+                        path = here("diagnostics", "temp", catch.file),
+                        type = NULL,
+                        overwrite = TRUE,
+                        verbose = TRUE
+)
+
+
 
 ```
 
@@ -84,7 +129,7 @@ Get functional group names for other functions
 
 ```{r get_names, message=FALSE, warning=FALSE}
 #Load functional groups
-funct.groups <- load_fgs(dir=d.name,
+funct.groups <- load_fgs(dir=here("currentVersion"),
                          file_fgs = functional.groups.file)
 #Get just the names of active functional groups
 funct.group.names <- funct.groups %>% 
@@ -98,7 +143,7 @@ Get basic output parameters
 
 ```{r modpars}
 # should return all model areas
-boxpars <- load_box(d.name, box.file)
+boxpars <- load_box(here("currentVersion"), box.file)
 boxall <- c(0:(boxpars$nbox - 1))
 
 # generalized timesteps all models
@@ -125,20 +170,12 @@ This should be run on an **unfished, unperturbed** run. Fishing or perturbations
 
 # read the output atlantis biom.txt file
 
-atBtxt <- read.table(file.path(d.name, paste0(scenario.name, "BiomIndx.txt")), header=T)
-groupslookup <- funct.groups %>%
-  filter(IsTurnedOn > 0)
-
-atBtxttidy <- atBtxt %>%
-  select(Time:DIN) %>%
-  rename_(.dots=with(groupslookup, setNames(as.list(as.character(Code)), Name))) %>%
-  gather(species, biomass, -Time) %>%
-  mutate(yr = ceiling(Time/365))  # assumes BiomInd.txt time unit is days leaves initial time 0 on its own
+atBtxt <- load_bioind(d.name, bioind.file, funct.groups)
 
 # visualize; hardcoded pages for ~89 group model
 
 plotB <-ggplot() +
-  geom_line(data=atBtxttidy, aes(x=Time/365,y=biomass, color="txt output B"),
+  geom_line(data=atBtxt, aes(x=time/365,y=atoutput, color="txt output B"),
              alpha = 10/10) + 
   ggthemes::theme_tufte() +
   theme(legend.position = "top") +
@@ -155,9 +192,9 @@ plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 6, scale
 # make safe for migratory species, assume that over the course of the year mean B > 0.
 # assumes biomass never goes negative in atlantis
 
-crash <- atBtxttidy %>%
-  group_by(species, yr) %>%
-  summarise(meanB = mean(biomass)) %>%
+crash <- atBtxt %>%
+  group_by(species, time) %>%
+  summarise(meanB = mean(atoutput)) %>%
   filter(meanB < 1e-4)
 
 # flag any groups with any mean annual biomass below a threshold
