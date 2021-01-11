@@ -52,6 +52,7 @@ We use these R libraries, with non-CRAN package installation instructions in com
 #remotes::install_github(\"noaa-edab/ecodata\",build_vignettes=TRUE)
 #remotes::install_github(\"r4atlantis/atlantisom\",build_vignettes=TRUE)
 #remotes::install_github(\"noaa-edab/ecotrend\",build_vignettes=TRUE)
+#remotes::install_github("andybeet/atlantisdrive")
 
 library(ecodata)
 library(ecotrend)
@@ -59,6 +60,7 @@ library(tidyverse)
 library(atlantisom)
 library(here)
 library(googledrive)
+library(atlantisdrive)
 
 source("shift_legend.R")
 
@@ -66,12 +68,146 @@ source("shift_legend.R")
 
 Configure files to be read in here (can have different files to source).
 
-January 2021: source output from google folder `EDABranch_Drive > Atlantis > Shared Data` where each set of outputs in its own folder.
+January 2021: source output from google folder `EDABranch_Drive > Atlantis > Shared Data` or `EDABranch_Drive > Atlantis > Shared Data` where each set of outputs in its own folder.  Source input files from this github repo in folder `here("currentVersion")`.
 
-Source input files from this github repo in folder `here("currentVersion")`.
+UPDATE: If files are pushed to google using `[atlantisdrive](https://github.com/andybeet/atlantisdrive)` then all relevant input and output files will be in the same google folder and will download to the temp folder under diagnostics (or wherever the user directs it).
+
+So the function below will set everything up using this DiagnosticConfig.R file, which loads all files using atlantisdrive:
+
+```{r, code = readLines("DiagnosticConfig.R"), eval=F}
+```
 
 
-```{r config, message=FALSE}
+```{r diag_init}
+
+diag_init <- function(config_file){
+  
+  source(config_file)
+  
+  #Load functional groups
+  fgs <- atlantisom::load_fgs(dir=d.name,
+                  file_fgs = functional.groups.file)
+  #Get just the names of active functional groups
+  fgs.names <- fgs %>% 
+    dplyr::filter(IsTurnedOn == 1) %>%
+    dplyr::select(Name) %>%
+    .$Name
+  
+  # should return all model areas
+  boxpars <- atlantisom::load_box(d.name, box.file)
+  boxall <- c(0:(boxpars$nbox - 1))
+  
+  # generalized timesteps all models
+  runpar <- atlantisom::load_runprm(d.name, run.prm.file)
+  noutsteps <- runpar$tstop/runpar$outputstep
+  stepperyr <- if(runpar$outputstepunit=="days") 365/runpar$toutinc
+  timeall <- c(0:noutsteps)
+  
+  # learned the hard way this can be different from ecosystem outputs
+  fstepperyr <- if(runpar$outputstepunit=="days") 365/runpar$toutfinc
+  
+  # load the biomass index results
+  atBtxt <- atlantisom::load_bioind(d.name, bioind.file, fgs)
+
+  #load the catch results
+  atCtxt <- atlantisom::load_catch(d.name, catch.file, fgs)
+  
+  # load YOY
+  YOY <- atlantisom::load_yoy(d.name, paste0(scenario.name, "YOY.txt"))
+
+  # load biol_prm
+  biol <- atlantisom::load_biolprm(d.name, biol.prm.file)
+
+  
+  diaglist <-list("fgs" = fgs,
+                "fgs.names" = fgs.names,
+                "atBtxt" = atBtxt,
+                "atCtxt" = atCtxt,
+                "runpar" = runpar,
+                "noutsteps" = noutsteps,
+                "stepperyr" = stepperyr,
+                "timeall" = timeall,
+                "fstepperyr" = fstepperyr,
+                "boxpars" = boxpars,
+                "boxall" = boxall,
+                "YOY" = YOY,
+                "biol" = biol)
+
+  return(diaglist)
+
+}
+
+```
+
+```{r test-diag-init}
+
+# clear the directory for safety if needed
+#f <- list.files(d.name, include.dirs = F, full.names = T, recursive = T)
+#file.remove(f)
+
+testdiag <- diag_init("DiagnosticConfig.R")
+
+```
+
+Now split the diagnostics into functions
+
+```{r persist}
+
+diag_persist <- function(atBtxt){
+  
+# need in annual units? Or fail when any output timestep below threshold?
+# make safe for migratory species, assume that over the course of the year mean B > 0.
+# assumes biomass never goes negative in atlantis
+
+crash <- atBtxt %>%
+  mutate(yr = floor(time/365)) %>%
+  group_by(species, time) %>%
+  summarise(meanB = mean(atoutput)) %>%
+  filter(meanB < 1e-4)
+
+# flag any groups with any mean annual biomass below a threshold
+
+ return(unique(crash$species))
+
+}
+
+diag_persist_plot <- function(atBtxt){
+  # visualize; hardcoded pages for ~89 group model
+  
+  plotB <-ggplot() +
+    geom_line(data=atBtxt, aes(x=time/365,y=atoutput, color="txt output B"),
+              alpha = 10/10) + 
+    ggthemes::theme_tufte() +
+    theme(legend.position = "top") +
+    labs(colour=scenario.name)
+  
+  print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 1, scales="free")) 
+  print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 2, scales="free")) 
+  print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 3, scales="free")) 
+  print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 4, scales="free")) 
+  print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 5, scales="free"))
+  print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 6, scales="free")) 
+}
+
+```
+
+```{r testdiag-persist}
+
+diag_persist(testdiag$atBtxt)
+
+```
+
+```{r testdiag-persist-plot}
+
+diag_persist_plot(testdiag$atBtxt)
+```
+
+
+# Old below here, archive only
+
+```{r config, message=FALSE, eval=FALSE}
+# This has now been moved to the DiagnosticConfig.R file and uses atlantisdrive
+
 # set up files to be read in
 # the below can go into a config file to be sourced
 
@@ -99,7 +235,7 @@ run.prm.file <- drive_ls(path=g.name, pattern = "*at_run*.xml")$name
 bioind.file <- paste0(scenario.name, "BiomIndx.txt")
 catch.file <- paste0(scenario.name, "Catch.txt")
 
-
+# use Andy's atlantisdrive functions instead, wrote this before 
 drive_download(file = drive_ls(path=g.name, pattern = "*at_run*.xml"),
                         path = here("diagnostics", "temp", run.prm.file),
                         type = NULL,
@@ -127,7 +263,7 @@ drive_download(file = drive_ls(path=g.name, pattern = paste0(scenario.name, "Cat
 
 Get functional group names for other functions
 
-```{r get_names, message=FALSE, warning=FALSE}
+```{r get_names, message=FALSE, warning=FALSE, eval=FALSE}
 #Load functional groups
 funct.groups <- load_fgs(dir=here("currentVersion"),
                          file_fgs = functional.groups.file)
@@ -141,7 +277,7 @@ funct.group.names <- funct.groups %>%
 
 Get basic output parameters
 
-```{r modpars}
+```{r modpars, eval=FALSE}
 # should return all model areas
 boxpars <- load_box(here("currentVersion"), box.file)
 boxall <- c(0:(boxpars$nbox - 1))
@@ -166,7 +302,7 @@ fstepperyr <- if(runpar$outputstepunit=="days") 365/runpar$toutfinc
 
 This should be run on an **unfished, unperturbed** run. Fishing or perturbations may legitimately drive groups extinct.
 
-```{r persist, warning=FALSE}
+```{r persistold, warning=FALSE, eval=FALSE}
 
 # read the output atlantis biom.txt file
 
@@ -209,8 +345,10 @@ Model reaches steady state for last ~20 years of an unperturbed, unfished ~100 y
 
 ```{r stability, warning=FALSE, message=FALSE, error=FALSE}
 
+scenario.name2 <- "atneus_v15_test2008hydro_20180208"
+
 # read in long run from separate folder
-longatBtxt <- read.table(file.path(here("diagnostics", "testfiles", "100_year_no_fishing"), paste0(scenario.name, "BiomIndx.txt")), header=T)
+longatBtxt <- read.table(file.path(here("diagnostics", "testfiles", "100_year_no_fishing"), paste0(scenario.name2, "BiomIndx.txt")), header=T)
 groupslookup <- funct.groups %>% #assumes we have the same functional groups in this run as the shorter ones
   filter(IsTurnedOn > 0)
 
