@@ -343,9 +343,10 @@ unique(crash$species)
 
 Model reaches steady state for last ~20 years of an unperturbed, unfished ~100 year run. Things at 0 shouldn't count, so run persistence test as well. For plotting, let's skip the first 20 model years so we only look after spinup.
 
-```{r stability, warning=FALSE, message=FALSE, error=FALSE}
+```{r stability, warning=FALSE, message=FALSE, error=FALSE, eval=FALSE}
 
 scenario.name2 <- "atneus_v15_test2008hydro_20180208"
+funct.groups <- testdiag$fgs
 
 # read in long run from separate folder
 longatBtxt <- read.table(file.path(here("diagnostics", "testfiles", "100_year_no_fishing"), paste0(scenario.name2, "BiomIndx.txt")), header=T)
@@ -353,7 +354,7 @@ groupslookup <- funct.groups %>% #assumes we have the same functional groups in 
   filter(IsTurnedOn > 0)
 
 # read in run pars for the long run too
-longrunpar <- load_runprm(here("diagnostics", "testfiles", "100_year_no_fishing"), run.prm.file) #assumes same name as above, it is
+longrunpar <- load_runprm(here("diagnostics", "testfiles", "100_year_no_fishing"), run.prm.file2) #assumes same name as above, it is
 longnoutsteps <- longrunpar$tstop/longrunpar$outputstep
 
 longtimeall <- c(0:longnoutsteps)
@@ -457,13 +458,13 @@ hibiosp <- stringr::str_to_sentence(survbio$comname[cumsum(survbio$prop)<0.81 & 
 # need comland, should be able to run similar code as above to get catch and revenue
 # NOTE: THIS FILE NOT TO BE POSTED ON GITHUB DUE TO POTENTIAL CONFIDENTIALITY CONCERNS
 # Use the comlandr package to create the comland data set or ask Sean for it
-comland <- readRDS(here::here("diagnostics", "comland_meatwt_deflated_stat_areas.RDS"))
+comland <- get(load(here::here("diagnostics", "comland_meatwt_deflated_stat_areas.RData")))
 
 # from https://github.com/NOAA-EDAB/Atlantis-Catch-Files/blob/master/Atlantis_1_5_groups_svspp_nespp3.csv
-spcodes <- readr::read_csv(here::here("diagnostics","Atlantis_1_5_groups_svspp_nespp3.csv"))
+spcodes <- as.data.frame(readr::read_csv(here::here("diagnostics","Atlantis_1_5_groups_svspp_nespp3.csv")))
 
 # time series in case we want to plot them
-comlandts <- merge(comland, spcodes) %>%
+comlandts <- merge(comland, spcodes, by = "NESPP3") %>%
   filter(YEAR %in% hindcast) %>%
   group_by(YEAR, Name) %>%
   summarise_at(vars(SPPLIVMT, SPPVALUE), sum) 
