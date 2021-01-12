@@ -13,7 +13,7 @@ Additional tools are from the atlantisom package in development at https://githu
 
 ### Diagnostics applied during development (in progress)
 
-<a href="https://noaa-edab.github.io/neus-atlantis/DiagnosticsDoc.html" target="_blank">Diagnostics testing as of 6 December 2019</a>
+<a href="https://noaa-edab.github.io/neus-atlantis/DiagnosticsDoc.html" target="_blank">Diagnostics testing as of 12 January 2021</a>
 
 
 ### More to come later!
