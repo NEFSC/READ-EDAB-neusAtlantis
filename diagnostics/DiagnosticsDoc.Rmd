@@ -70,13 +70,14 @@ Configure files to be read in here (can have different files to source).
 
 January 2021: source output from google folder `EDABranch_Drive > Atlantis > Shared Data` or `EDABranch_Drive > Atlantis > Shared Data` where each set of outputs in its own folder.  Source input files from this github repo in folder `here("currentVersion")`.
 
-UPDATE: If files are pushed to google using `[atlantisdrive](https://github.com/andybeet/atlantisdrive)` then all relevant input and output files will be in the same google folder and will download to the temp folder under diagnostics (or wherever the user directs it).
+UPDATE: If files are pushed to google using [`atlantisdrive`](https://github.com/andybeet/atlantisdrive) then all relevant input and output files will be in the same google folder and will download to the temp folder under diagnostics (or wherever the user directs it).
 
 So the function below will set everything up using this DiagnosticConfig.R file, which loads all files using atlantisdrive:
 
 ```{r, code = readLines("DiagnosticConfig.R"), eval=F}
 ```
 
+The function `diag_init` takes the user's config file as input, brings all Atlantis files into a local directory from google drive, and uses `atlantisom` functions to make a list of object including species names, functional group attributes, model boxes, run parameters, and biological parameters, and the biomass and catch time series outputs from .txt files. More can be added to this as needed. 
 
 ```{r diag_init}
 
@@ -84,11 +85,25 @@ diag_init <- function(config_file){
   
   source(config_file)
   
+  # pull all files from google
+  atlantisdrive::pull_from_drive(d.name,
+                                 fileList = NULL,
+                                 googledriveFolder = g.name)
+  
+  # get scenario name from a file inside folder: SSB is unique
+  scenario.name <- gsub("SSB.txt","",list.files(path=d.name, pattern = "*SSB.txt"))
+  
+  # output file names
+  run.prm.file <- list.files(path=d.name, pattern = "*at_run*.xml")
+  bioind.file <- paste0(scenario.name, "BiomIndx.txt")
+  catch.file <- paste0(scenario.name, "Catch.txt")
+  
+  
   #Load functional groups
   fgs <- atlantisom::load_fgs(dir=d.name,
-                  file_fgs = functional.groups.file)
+                              file_fgs = functional.groups.file)
   #Get just the names of active functional groups
-  fgs.names <- fgs %>% 
+  fgs.names <- fgs %>%
     dplyr::filter(IsTurnedOn == 1) %>%
     dplyr::select(Name) %>%
     .$Name
@@ -108,40 +123,42 @@ diag_init <- function(config_file){
   
   # load the biomass index results
   atBtxt <- atlantisom::load_bioind(d.name, bioind.file, fgs)
-
+  
   #load the catch results
   atCtxt <- atlantisom::load_catch(d.name, catch.file, fgs)
   
   # load YOY
   YOY <- atlantisom::load_yoy(d.name, paste0(scenario.name, "YOY.txt"))
-
+  
   # load biol_prm
   biol <- atlantisom::load_biolprm(d.name, biol.prm.file)
-
+  
   
   diaglist <-list("fgs" = fgs,
-                "fgs.names" = fgs.names,
-                "atBtxt" = atBtxt,
-                "atCtxt" = atCtxt,
-                "runpar" = runpar,
-                "noutsteps" = noutsteps,
-                "stepperyr" = stepperyr,
-                "timeall" = timeall,
-                "fstepperyr" = fstepperyr,
-                "boxpars" = boxpars,
-                "boxall" = boxall,
-                "YOY" = YOY,
-                "biol" = biol)
-
+                  "fgs.names" = fgs.names,
+                  "atBtxt" = atBtxt,
+                  "atCtxt" = atCtxt,
+                  "runpar" = runpar,
+                  "noutsteps" = noutsteps,
+                  "stepperyr" = stepperyr,
+                  "timeall" = timeall,
+                  "fstepperyr" = fstepperyr,
+                  "boxpars" = boxpars,
+                  "boxall" = boxall,
+                  "YOY" = YOY,
+                  "biol" = biol)
+  
   return(diaglist)
-
+  
 }
 
 ```
 
-```{r test-diag-init}
+Usage: this produces the list object `testdiag` to be used in subsequent functions.
 
-# clear the directory for safety if needed
+```{r test-diag-init, message=FALSE, warning=FALSE}
+
+# clear the local model output directory for safety if needed
 #f <- list.files(d.name, include.dirs = F, full.names = T, recursive = T)
 #file.remove(f)
 
@@ -149,57 +166,145 @@ testdiag <- diag_init("DiagnosticConfig.R")
 
 ```
 
-Now split the diagnostics into functions
+Now we define one function for each diagnostic.
+
+## Persistence Test
+
+This should be run on an **unfished, unperturbed** run. Fishing or perturbations may legitimately drive groups extinct. However, for our historical period, we don't expect anything to go extinct that is in the system now, so this test includes historical fishing, physics, and phytoplankton drivers. 
+
+This test assumes that initial (Time = 0) biomass does not count, and averages over a year to see if mean B is 0. Output is a list of species that have crashed and an optional set of plots where 0 biomass is red. The function `diag_persist` is called with the `atBtxt` and `fgs.names` output of the initialization function. Plots can be turned off with `plot=FALSE` added to the function call. 
 
 ```{r persist}
 
-diag_persist <- function(atBtxt){
+diag_persist <- function(atBtxt, fgs.names, plot=TRUE){
   
-# need in annual units? Or fail when any output timestep below threshold?
-# make safe for migratory species, assume that over the course of the year mean B > 0.
-# assumes biomass never goes negative in atlantis
-
-crash <- atBtxt %>%
-  mutate(yr = floor(time/365)) %>%
-  group_by(species, time) %>%
-  summarise(meanB = mean(atoutput)) %>%
-  filter(meanB < 1e-4)
-
-# flag any groups with any mean annual biomass below a threshold
-
- return(unique(crash$species))
-
-}
-
-diag_persist_plot <- function(atBtxt){
-  # visualize; hardcoded pages for ~89 group model
+  # need in annual units? Or fail when any output timestep below threshold?
+  # make safe for migratory species, assume that over the course of the year mean B > 0.
+  # assumes biomass never goes negative in atlantis
   
-  plotB <-ggplot() +
-    geom_line(data=atBtxt, aes(x=time/365,y=atoutput, color="txt output B"),
-              alpha = 10/10) + 
-    ggthemes::theme_tufte() +
-    theme(legend.position = "top") +
-    labs(colour=scenario.name)
+  crash <- atBtxt %>%
+    filter(species %in% fgs.names) %>%
+    mutate(yr = ceiling(time/365)) %>%
+    filter(yr > 0) %>%
+    group_by(species, yr) %>%
+    summarise(meanB = mean(atoutput)) %>%
+    filter(meanB == 0)
   
-  print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 1, scales="free")) 
-  print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 2, scales="free")) 
-  print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 3, scales="free")) 
-  print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 4, scales="free")) 
-  print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 5, scales="free"))
-  print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 4, page = 6, scales="free")) 
+  # flag any groups with any mean annual biomass below a threshold
+  
+  crashed <- crash %>%
+    group_by(species) %>%
+    count()
+  
+  names(crashed) <- c("Failed", "nYrs0B")
+  
+  # visualize; hardcoded pages for ~89 group NEUS model
+  
+  if(plot){
+    
+    atBtxt$col <- cut(atBtxt$atoutput,
+               breaks = c(-Inf, 0, Inf),
+               labels = c("crashed", ">0 B"))
+    
+    plotB <-ggplot() +
+      geom_line(data=atBtxt%>%filter(species %in% fgs.names), 
+                aes(x=time/365,y=atoutput, color=col),
+                alpha = 10/10) +
+      ggthemes::theme_tufte() +
+      theme(legend.position = "top") +
+      labs(colour=g.name)
+    
+    print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 3, page = 1, scales="free")) 
+    print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 3, page = 2, scales="free")) 
+    print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 3, page = 3, scales="free")) 
+    print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 3, page = 4, scales="free")) 
+    print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 3, page = 5, scales="free"))
+    print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 3, page = 6, scales="free")) 
+    print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 3, page = 7, scales="free")) 
+    print(plotB + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 3, page = 8, scales="free")) 
+  }
+  
+  return(as.data.frame(crashed))
+  
 }
 
 ```
+
+Usage, with output: 
 
 ```{r testdiag-persist}
 
-diag_persist(testdiag$atBtxt)
+diag_persist(testdiag$atBtxt, testdiag$fgs.names)
 
 ```
 
-```{r testdiag-persist-plot}
+## Stability test
 
-diag_persist_plot(testdiag$atBtxt)
+This test determines whether the model reaches steady state for last ~20 years of an **unperturbed, unfished ~100 year run**. I don't have a 100 year run right now so we will test with the 55 year run and look at the last 20 years, with the understanding that the test should use a different model run.
+
+This test evaluates the last 20 years of the input run for a significant slope using the `geom_gls` function from [`ecodata`](https://github.com/NOAA-EDAB/ecodata). The function `diag_stable` also checks for persistence and flags groups that have gone to 0 biomass--they don't count as stable. It takes the same inputs as `diag_persist` with the addition of the `runpar` object, and defaults to plotting, which can be turned off with `plot=FALSE` in the function call. 
+
+```{r stabilitytest}
+
+diag_stable <- function(atBtxt, fgs.names, runpar, plot=TRUE){
+  
+  # look for non-significant slope over last 20 years? 30 years would be better
+  nlast <- 20
+  
+  startlast <- floor(runpar$nyears)-nlast
+  
+  #warning, was getting different behavior with this code on my linux machine
+  
+  stable <- atBtxt%>%filter(species %in% fgs.names) %>%
+    filter(time %in% seq(startlast*365, floor(runpar$nyears)*365, by=365)) %>%
+    group_by(species) %>%
+    ggplot(aes(x=time/365, y=atoutput)) +
+    ggthemes::theme_tufte() +
+    geom_line(data=atBtxt%>%filter(species %in% fgs.names), 
+              aes(x=time/365, y=atoutput),
+                alpha = 5/10) +
+    geom_gls(warn = FALSE)
+  
+  
+  print(stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 3, page = 1, scales="free"))
+  print(stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 3, page = 2, scales="free"))
+  print(stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 3, page = 3, scales="free"))
+  print(stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 3, page = 4, scales="free"))
+  print(stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 3, page = 5, scales="free"))
+  print(stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 3, page = 6, scales="free"))
+  print(stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 3, page = 7, scales="free"))
+  print(stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 3, page = 8, scales="free"))
+  
+  # what I need is to extract the output of geom_gls that is NULL (no significant trend)
+  
+  # this may work eventually but blows up R right now, fix later
+  # # get results from ecotrend package
+  # stabletest <- atBtxt %>%
+  #   filter(species %in% fgs.names) %>%
+  #   #mutate(yr = ceiling(time/365)) %>%
+  #   filter(time %in% seq(startlast*365, floor(runpar$nyears)*365, by=365)) %>%
+  #   group_by(species) %>%
+  #   dplyr::do(ecotrend::glsMs(data = ., formula = time ~ atoutput))
+  # 
+   #ecotrend::glsMs(data = ., formula = yr ~ biomass)
+   
+   #ecotrend::glsMs(yr ~ biomass, stabletest)
+  
+  #test this run for persistence too
+  
+  # flag any groups with any mean annual biomass below a threshold
+
+  
+}
+
+```
+
+Usage:
+
+```{r}
+
+diag_stable(testdiag$atBtxt, testdiag$fgs.names, testdiag$runpar)
+
 ```
 
 
