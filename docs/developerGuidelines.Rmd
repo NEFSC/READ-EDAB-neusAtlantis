@@ -10,33 +10,31 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
 Once a task item has been created and assigned to a developer the following set of steps should be used as a guide.
 
-1. Create a branch from the [master](https://github.com/NOAA-EDAB/neus-atlantis) and name it. The naming convention should include the task item ID plus a description. For example,
+1.  Create a branch from the [master](https://github.com/NOAA-EDAB/neus-atlantis) and name it. The naming convention should include the task item ID plus a description. For example,
 
-  `migratorySpecies-ATLNTS-45` or `RealisticZoo-ATLNTS-43`
+`migratorySpecies-ATLNTS-45` or `RealisticZoo-ATLNTS-43`
 
-1. Create "archive" folder in the testing branch if developer needs to run multiple instances of Atlantis (for a given task) in parallel.
+1.  Create "archive" folder in the testing branch if developer needs to run multiple instances of Atlantis (for a given task) in parallel.
 
-1. When a task is complete:
+2.  When a task is complete:
 
-    i. Copy the contents of the .prm files to the appropriate at_xxx_test.prm file in the `testing` folder.
-    
+    i.  Copy the contents of the .prm files to the appropriate at_xxx_test.prm file in the `testing` folder.
+
     ii. Any R files created during this task should be made into a function with arguments and its directions for use should be well documented. All R code should reside in the `R` folder of the branch. For example: see [exampleFunction.R](https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/R/exampleFunction.R)
-    
 
-1. Commit the changes to the branch
+3.  Commit the changes to the branch
 
-1. Initiate a pull request and make sure the title of the pull request is descriptive. Since other team members will be reviewing the pull request please make detailed comments regarding what was changed.
+4.  Initiate a pull request and make sure the title of the pull request is descriptive. Since other team members will be reviewing the pull request please make detailed comments regarding what was changed.
 
-1. Make sure there a no conflicts.
+5.  Make sure there a no conflicts.
 
-1. Other team member will be notified of your request via email. They will be required to review the request, possibly test the changes (by running the code locally), and ultimately merge the pull request.
+6.  Other team member will be notified of your request via email. They will be required to review the request, possibly test the changes (by running the code locally), and ultimately merge the pull request.
 
-1. Delete branch on gitHub 
+7.  Delete branch on gitHub
 
-    > Note: The branch will remain on your PC even if you try to pull the deleted branch from gitHub. If you make changes to this branch locally in the future and then commit and push these changes,  the branch will be recreated.
+    > Note: The branch will remain on your PC even if you try to pull the deleted branch from gitHub. If you make changes to this branch locally in the future and then commit and push these changes, the branch will be recreated.
     >
     > To remove the branch locally type the following in the terminal:
     >
@@ -46,28 +44,27 @@ Once a task item has been created and assigned to a developer the following set 
     >
     > For more info see [here](https://www.freecodecamp.org/news/how-to-delete-a-git-branch-both-locally-and-remotely/)
 
-1. Repeat with additional tasks
+8.  Repeat with additional tasks
 
 ## Change the default editor
 
 You will find the terminal is needed for some git commands, mostly to "get out of trouble". A few steps for Rstudio
 
-* First change the environment in which you'll be making these commands. Change the terminal:
+-   First change the environment in which you'll be making these commands. Change the terminal:
 
     > `Tools -> Global Options -> Terminal`
 
-Select Git Bash from the dropdown under the `shell` header. 
+Select Git Bash from the dropdown under the `shell` header.
 
-* Open a new Terminal:
+-   Open a new Terminal:
 
     > `Tools -> Terminal -> New Terminal`
 
-* Check to see if you have `nano` editor installed
+-   Check to see if you have `nano` editor installed
 
-    > Type `nano test` in the terminal. 
-    > If it opens type Ctrl + X to close.
+    > Type `nano test` in the terminal. If it opens type Ctrl + X to close.
 
-* Change the default editor `VI` to [nano](https://www.oreilly.com/library/view/gitlab-cookbook/9781783986842/apas07.html)
+-   Change the default editor `VI` to [nano](https://www.oreilly.com/library/view/gitlab-cookbook/9781783986842/apas07.html)
 
     > Type `git config --global core.editor "nano"` in the terminal
 
@@ -77,9 +74,9 @@ You should now have a good editor for custom git commands.
 
 Git resources
 
-* [https://git-scm.com/docs](https://git-scm.com/docs)
-* [Undo stuff - 2015](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
-* [Pro Git book](https://git-scm.com/book/en/v2) and its [repo](https://github.com/progit/progit2)
+-   <https://git-scm.com/docs>
+-   [Undo stuff - 2015](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
+-   [Pro Git book](https://git-scm.com/book/en/v2) and its [repo](https://github.com/progit/progit2)
 
 ### git rebase
 
@@ -91,17 +88,17 @@ knitr::include_graphics(path="https://raw.githubusercontent.com/NOAA-EDAB/neus-a
 
 You now want to remove the commit for the large file and push all subsequent commits.
 
-1. Make sure you have no pending commits and that (in the following steps) you remove all commits related to the large file (for example, if you tried a git revert)
+1.  Make sure you have no pending commits and that (in the following steps) you remove all commits related to the large file (for example, if you tried a git revert)
 
-2. This removes the commit AND THE LARGE FILE from your local repo. Be sure to make a copy of the large file!
+2.  This removes the commit AND THE LARGE FILE from your local repo. Be sure to make a copy of the large file!
 
-  > git rebase -i \< commit SHA \>
-  >
-  > Select a commit message before the one you want to remove
-  >
-  > The \<commit SHA\> can be found in the history in RStudios commit window.
-    
-3. When the `nano` editor opens find the line that reflects the commit you want to delete (circled)
+> git rebase -i \< commit SHA \>
+>
+> Select a commit message before the one you want to remove
+>
+> The \<commit SHA\> can be found in the history in RStudios commit window.
+
+3.  When the `nano` editor opens find the line that reflects the commit you want to delete (circled)
 
 ```{r nano1, echo = FALSE}
 knitr::include_graphics(path="https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/docs/rebaseInNano-LargeFileSize.PNG")
@@ -109,26 +106,24 @@ knitr::include_graphics(path="https://raw.githubusercontent.com/NOAA-EDAB/neus-a
 
 Follow these steps
 
-  > Delete the line
-  >
-  > Ctrl + X to exit
-  >
-  > Save \"modified buffer\" to default location
+> Delete the line
+>
+> Ctrl + X to exit
+>
+> Save "modified buffer" to default location
 
 ### git reset
 
-Scenario: You just made a local commit and either: 
-  a. tried to push to GitHub and got an error message saying you can not push the changes (maybe due to file size) or
-  b. you just changed your mind and would like to "undo" the commit
-  
-  Follow these steps
-  
-  > Make sure you are in the correct branch
-  >
-  > Open the terminal window
-  >
-  > git reset --soft HEAD~1
-    
+Scenario: You just made a local commit and either: a. tried to push to GitHub and got an error message saying you can not push the changes (maybe due to file size) or b. you just changed your mind and would like to "undo" the commit
+
+Follow these steps
+
+> Make sure you are in the correct branch
+>
+> Open the terminal window
+>
+> git reset --soft HEAD\~1
+
 If you are in Rstudio, you will see the files reappear in your git tab assigned with check marks (ie. in the state right before you previously committed them)
 
 ### git revert
@@ -137,37 +132,35 @@ examples coming ...
 
 ### git lfs (large file storage)
 
-Scenario: Large files (> 100MB) get rejected by GitHub when trying to push from a repo. 
+Scenario: Large files (\> 100MB) get rejected by GitHub when trying to push from a repo.
 
-Download `git lfs` for [windows, mac, or linux](https://github.com/git-lfs/git-lfs/releases/tag/v2.10.0).
-This is a git extension called `lfs` which handles large files in need of tracking.
+Download `git lfs` for [windows, mac, or linux](https://github.com/git-lfs/git-lfs/releases/tag/v2.10.0). This is a git extension called `lfs` which handles large files in need of tracking.
 
 To track a file(s) use one of the following:
 
-  > git lfs track "*.nc"
-  >
-  > git lfs track "images/*.nc"
-  >
-  > git lfs track "images"
-    
+> git lfs track "\*.nc"
+>
+> git lfs track "images/\*.nc"
+>
+> git lfs track "images"
+
 To see which file types are being tracked by `lfs` and to list all files being tracked:
 
-  > git lfs track
-  > git lfs ls-files
+> git lfs track git lfs ls-files
 
 "Git LFS handles large files by storing references to the file in the repository, but not the actual file itself. To work around Git's architecture, Git LFS creates a pointer file which acts as a reference to the actual file (which is stored somewhere else). GitHub manages this pointer file in your repository. When you clone the repository down, GitHub uses the pointer file as a map to go and find the large file for you."
 
 The `.gitattributes` file is used to store information about the files being tracked by `lfs`. This file becomes part of the repo. Anyone who clones the repo is automatically configured to handle these large files.
 
-* There are a few [limitations](https://github.com/git-lfs/git-lfs/wiki/Limitations), the most important being a file size cap of 2GB 
+-   There are a few [limitations](https://github.com/git-lfs/git-lfs/wiki/Limitations), the most important being a file size cap of 2GB
 
-* Every account has 1 GB free. Or increments of 50GB for $5 a month. [Fee structure](https://help.github.com/en/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-git-large-file-storage)
+-   Every account has 1 GB free. Or increments of 50GB for \$5 a month. [Fee structure](https://help.github.com/en/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-git-large-file-storage)
 
-* Getting started [Video](https://www.youtube.com/watch?v=uLR1RNqJ1Mw)
-* Git lfs [site](https://git-lfs.github.com/)
+-   Getting started [Video](https://www.youtube.com/watch?v=uLR1RNqJ1Mw)
 
+-   Git lfs [site](https://git-lfs.github.com/)
 
-## Using Docker 
+## Using Docker
 
 Atlantis can be run inside a docker container and the output can be copied on to your local machine. The advantages are you don't need additional compilers and software installed on your local machine, you just need [docker desktop](https://www.docker.com/products/docker-desktop). (On a windows 10 machine you can use windows powershell to run all docker commands.)
 
@@ -175,21 +168,17 @@ Atlantis can be run inside a docker container and the output can be copied on to
 
 Getting help for docker functions:
 
-```
-docker --help
-docker run --help
-docker images --help
-```
+    docker --help
+    docker run --help
+    docker images --help
 
 Pull an ubuntu image
 
-```
-docker pull ubuntu
-```
+    docker pull ubuntu
 
 Display docker images, run them, stop them
 
-`docker images  # display all images `
+`docker images  # display all images`
 
 `docker run -it <image_name or image_id> bash #run an image and enter the container`
 
@@ -199,42 +188,58 @@ Display docker images, run them, stop them
 
 `docker stop <container_id>`
 
-
 Once inside the container, navigate as if you were on your local machine. Some commands may not be valid depending on what was installed in the container. This is configured in the docker image.
-
 
 Copy files from a container to local machine. The following example copies the file `at_biology.prm` from the directory `app/model` inside the container with id `bc0b994a06dd` to the local machine in the current directory as `at_biology_CONTAINER.prm`
 
-```
-docker cp bc0b994a06dd:/app/model/at_biology.prm at_biology_CONTAINER.prm
-```
+    docker cp bc0b994a06dd:/app/model/at_biology.prm at_biology_CONTAINER.prm
 
 To remove all images from your machine
 
-```
-docker rm -f $(docker ps -a -q)
-docker rmi -f $(docker images -q)
-```
+    docker rm -f $(docker ps -a -q)
+    docker rmi -f $(docker images -q)
 
 To view all containers running
 
-```
-docker container ls
-```
+    docker container ls
 
+## Using Google Drive to store output
 
+    # input files needed for diagnostics
+    inputFiles <- c("at_biology.prm",
+                    "at_harvest.prm",
+                    "neus_groups.csv",
+                    "neus_init.nc",
+                    "neus_fisheries.csv")
+
+    # push input files to Google drive
+    atlantisdrive::push_to_drive(localPath = here::here("currentVersion"),
+                  fileList=inputFiles,
+                  googledriveFolder = "Testing/OutForSarah",
+                  overwrite=T
+                  )
+    # push all output files to Google drive
+    atlantisdrive::push_to_drive(localPath = here::here("output"),
+                                 fileList=NULL,
+                                 googledriveFolder = "Testing/OutForSarah",
+                                 overwrite = T)
+
+    # pull all files from google drive
+    atlantisdrive::pull_from_drive(localPath = here::here("outputFolder"),
+                                 fileList=NULL,
+                                 googledriveFolder = "Testing/OutForSarah"
+                                 )
 
 ## Testing environment
 
-A test environment (repo) has been created called [atlantis_test](https://github.com/andybeet/atlantis_test) for developers to practive creating branches, conflicts, pull requests, and for merging pull requests. 
+A test environment (repo) has been created called [atlantis_test](https://github.com/andybeet/atlantis_test) for developers to practive creating branches, conflicts, pull requests, and for merging pull requests.
 
 This repo can be cloned in Rstudio.
 
-1. File -> New Project
-1. Select Version Control
-1. Select Git
-1. Enter the url of the gitHub repository
-1. Give the name of the directory to be created on your machine to hold the repo
-1. Select the location of the directory (named above)
-1. Click "Create Project"
-
+1.  File -\> New Project
+2.  Select Version Control
+3.  Select Git
+4.  Enter the url of the gitHub repository
+5.  Give the name of the directory to be created on your machine to hold the repo
+6.  Select the location of the directory (named above)
+7.  Click "Create Project"

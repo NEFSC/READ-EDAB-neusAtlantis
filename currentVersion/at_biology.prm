@@ -5364,13 +5364,13 @@ jFLA_Migrate_Time 1
 0
  
 jBFT_Migrate_Time 1
-1
+260
  
 jTUN_Migrate_Time 1
-1
+260
  
 jBIL_Migrate_Time 1
-1
+260
  
 jMPF_Migrate_Time 1
 0
@@ -5463,13 +5463,13 @@ jDSH_Migrate_Time 1
 0
  
 jBLS_Migrate_Time 1
-1
+270
  
 jPOR_Migrate_Time 1
-1
+270
  
 jPSH_Migrate_Time 1
-1
+270
  
 jWSK_Migrate_Time 1
 0
@@ -5481,25 +5481,25 @@ jSK_Migrate_Time 1
 0
  
 jSB_Migrate_Time 1
-1
+224
  
 jPIN_Migrate_Time 1
 0
  
 jREP_Migrate_Time 1
-1
+270
  
 jRWH_Migrate_Time 1
-1
+300
  
 jBWH_Migrate_Time 1
-1
+300
  
 jSWH_Migrate_Time 1
-1
+330
  
 jTWH_Migrate_Time 1
-1
+330
  
 jINV_Migrate_Time 1
 0
@@ -5555,13 +5555,13 @@ FLA_Migrate_Time 1
 0
  
 BFT_Migrate_Time 1
-1
+260
  
 TUN_Migrate_Time 1
-1
+260
  
 BIL_Migrate_Time 1
-1
+260
  
 MPF_Migrate_Time 1
 0
@@ -5654,13 +5654,13 @@ DSH_Migrate_Time 1
 0
  
 BLS_Migrate_Time 1
-1
+270
  
 POR_Migrate_Time 1
-1
+270
  
 PSH_Migrate_Time 1
-1
+270
  
 WSK_Migrate_Time 1
 0
@@ -5672,25 +5672,25 @@ SK_Migrate_Time 1
 0
  
 SB_Migrate_Time 1
-1
+224
  
 PIN_Migrate_Time 1
 0
  
 REP_Migrate_Time 1
-1
+270
  
 RWH_Migrate_Time 1
-1
+300
  
 BWH_Migrate_Time 1
-1
+300
  
 SWH_Migrate_Time 1
-1
+330
  
 TWH_Migrate_Time 1
-1
+330
  
 INV_Migrate_Time 1
 0
@@ -5753,13 +5753,13 @@ jFLA_Migrate_Return 1
 364
  
 jBFT_Migrate_Return 1
-195
+90
  
 jTUN_Migrate_Return 1
-195
+90
  
 jBIL_Migrate_Return 1
-195
+90
  
 jMPF_Migrate_Return 1
 364
@@ -5852,13 +5852,13 @@ jDSH_Migrate_Return 1
 364
  
 jBLS_Migrate_Return 1
-245
+150
  
 jPOR_Migrate_Return 1
-245
+150
  
 jPSH_Migrate_Return 1
-245
+150
  
 jWSK_Migrate_Return 1
 364
@@ -5870,25 +5870,25 @@ jSK_Migrate_Return 1
 364
  
 jSB_Migrate_Return 1
-261
+120
  
 jPIN_Migrate_Return 1
 364
  
 jREP_Migrate_Return 1
-275
+180
  
 jRWH_Migrate_Return 1
-165
+100
  
 jBWH_Migrate_Return 1
-165
+100
  
 jSWH_Migrate_Return 1
-125
+90
  
 jTWH_Migrate_Return 1
-125
+90
  
 jINV_Migrate_Return 1
 364
@@ -5945,13 +5945,13 @@ FLA_Migrate_Return 1
 364
  
 BFT_Migrate_Return 1
-195
+90
  
 TUN_Migrate_Return 1
-195
+90
  
 BIL_Migrate_Return 1
-195
+90
  
 MPF_Migrate_Return 1
 364
@@ -6044,13 +6044,13 @@ DSH_Migrate_Return 1
 364
  
 BLS_Migrate_Return 1
-245
+150
  
 POR_Migrate_Return 1
-245
+150
  
 PSH_Migrate_Return 1
-245
+150
  
 WSK_Migrate_Return 1
 364
@@ -6062,25 +6062,25 @@ SK_Migrate_Return 1
 364
  
 SB_Migrate_Return 1
-261
+120
  
 PIN_Migrate_Return 1
 364
  
 REP_Migrate_Return 1
-275
+180
  
 RWH_Migrate_Return 1
-165
+100
  
 BWH_Migrate_Return 1
-165
+100
  
 SWH_Migrate_Return 1
-125
+90
  
 TWH_Migrate_Return 1
-125
+90
  
 INV_Migrate_Return 1
 364
@@ -11584,10 +11584,10 @@ C_QHG_T15	0.75
 C_CLA_T15	0.75
 C_BFF_T15	0.75
 C_BG_T15	0.75
-C_BC_T15	0.0003
+C_BC_T15	0.00025
 C_LOB_T15	0.0006
-C_RCB_T15	0.00005
-C_BMS_T15	0.0006
+C_RCB_T15	0.0003
+C_BMS_T15	0.0003
 C_NSH_T15	0.001
 C_jNSH_T15	0.001
 C_OSH_T15	0.001
@@ -13906,17 +13906,17 @@ SK_mQ 2
 SB_mQ 2
 1.00E-08	3.00E-08
 PIN_mQ 2
-0.000000075	0.000000345
+0.00000000025	0.000000001
 REP_mQ	2
-0.0000088	0.000004
+0.0000125	0.000005
 RWH_mQ	2
-0.00015	0.00315
+0.000075	0.001575
 BWH_mQ	2
-0.0000625	0.001625
+0.000025	0.0008
 SWH_mQ 2
-0.00000005 	0.0000002
+0.0000000005 	0.000000002
 TWH_mQ 2
-0.0000025	0.00001
+0.00000008	0.0000003
 INV_mQ 2
 4.50E-13 4.50E-10
 
@@ -16006,7 +16006,7 @@ KDENR_SB
 21447617
 
 KDENR_PIN
-57797
+75000
 
 KDENR_REP
 749.8309955
@@ -16018,10 +16018,10 @@ KDENR_BWH
 470
 
 KDENR_SWH
-14992
+20000
 
 KDENR_TWH
-71.00476155
+100
 
 KDENR_INV
 500000

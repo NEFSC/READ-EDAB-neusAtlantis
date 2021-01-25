@@ -16,7 +16,7 @@ The survey biomass and catch (landings) of the species modelled in Atlantis are 
 ```{r code, echo = T,eval= F}
 library(magrittr)
 # Connect to the database
-channel <- dbutils::connect_to_database("sole","user")
+channel <- dbutils::connect_to_database("servername","user")
 # list species of interest
 speciesList <- map_functional_group(channel)
 # grab data from databases and assemble

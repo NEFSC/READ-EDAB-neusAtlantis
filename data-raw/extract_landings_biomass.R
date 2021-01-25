@@ -14,7 +14,7 @@
 #'
 #' library(magrittr)
 #' #connect to the database
-#'channel <- dbutils::connect_to_database("sole","user")
+#'channel <- dbutils::connect_to_database("servername","user")
 #' # list species of interest
 #' speciesList <- map_functional_group(channel)
 #' extract_landings_biomass(channel,species = speciesList)
