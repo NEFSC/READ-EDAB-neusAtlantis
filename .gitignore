@@ -51,6 +51,6 @@ R/desktop.ini
 #testing/at_force_WIN_test.prm
 testing/tsfiles/roms_cobalt_flows_03242020_1980_1989.nc
 testing/tsfiles/roms_cobalt_flows_03242020_1980_1989.nc
-diagnostics/Obs_Hindcast_Group_Progress.xlsx
-diagnostics/*.xlsx
+#diagnostics/Obs_Hindcast_Group_Progress.xlsx
+#diagnostics/*.xlsx
 
