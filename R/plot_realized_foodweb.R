@@ -1,6 +1,6 @@
 # Plot realized "food-web" based on dietcheck.txt
 
-plot_realized_foodweb = function(run.dir,diet.file,min.fract= 0.05,min.time,max.time,rand.layout=T,seed = 25){
+plot_realized_foodweb = function(run.dir,diet.file,min.fract= 0.05,min.time,max.time,rand.layout=T,seed = 25,phys.off = F){
   
   library(dplyr)
   library(tidyr)
@@ -83,9 +83,12 @@ plot_realized_foodweb = function(run.dir,diet.file,min.fract= 0.05,min.time,max.
                           hover = list(border = 'black',background = 'lightblue')),
              font = list(size= 24, face = 'bold'))
   if(rand.layout){
-    p = p %>% visLayout(randomSeed = seed)
+    p = p %>% visLayout(randomSeed = seed) %>% visPhysics(repulsion = list(nodeDistance = 400))
   }else{
     p = p %>% visHierarchicalLayout(direction = 'LR', levelSeparation = 100, nodeSpacing = 150)
+  }
+  if(phys.off){
+    p = p %>% visPhysics(stabilization = F) %>% visEdges(smooth = F)
   }
     
     
@@ -97,14 +100,15 @@ plot_realized_foodweb = function(run.dir,diet.file,min.fract= 0.05,min.time,max.
 }
 
 
-run.name = 'Master_12152020'
+run.name = 'ZooTuningRevisit_3'
 atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/'
 run.dir = paste0(atl.dir,run.name,'/')
 diet.file = paste0(run.dir,'neus_outputDietCheck.txt')
 
 plot_realized_foodweb(run.dir,
                       diet.file,
-                      min.time = 0,
-                      max.time = 3650,
-                      min.fract = 0.1,
-                      rand.layout = F)
+                      min.time = 16000,
+                      max.time = 19000,
+                      min.fract = 0.25,
+                      rand.layout = T,
+                      phys.off = F)
