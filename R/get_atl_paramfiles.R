@@ -78,8 +78,8 @@ get_atl_paramfiles = function(param.dir,atl.dir,include_catch){
                     dietcheck = dietcheck,
                     yoy =yoy,
                     ssb = ssb,
-                    catch = ifelse(include_catch,catch,NULL),
-                    catchtot = ifelse(include_catch,catchtot,NULL)
+                    catch = ifelse(include_catch,catch,NA),
+                    catchtot = ifelse(include_catch,catchtot,NA)
                     )
   
   return(param.list)
