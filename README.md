@@ -4,7 +4,7 @@
 # neus-atlantis
 
 <!-- badges: start -->
-
+![gitleaks](https://github.com/NOAA-EDAB/neus-atlantis/workflows/gitleaks/badge.svg)
 <!-- badges: end -->
 
 Atlantis is a series of submodels (biological, geophysical, fishing,
