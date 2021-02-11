@@ -270,7 +270,9 @@ process_atl_output = function(param.dir,atl.dir,out.dir,bgm.file,groups.file,ini
       'source.sink' = source.sink,
       'spatial.overlap' = spatial.overlap,
       'ssb.recruits' = data.ssb.recruit,
-      'volume' = vol.ts
+      'volume' = vol.ts,
+      'catch' = catch,
+      'totcatch' = totcatch
       )
   } else{
     result = list(
@@ -301,9 +303,7 @@ process_atl_output = function(param.dir,atl.dir,out.dir,bgm.file,groups.file,ini
       'source.sink' = source.sink,
       'spatial.overlap' = spatial.overlap,
       'ssb.recruits' = data.ssb.recruit,
-      'volume' = vol.ts,
-      'catch' = catch,
-      'totcatch' = totcatch
+      'volume' = vol.ts
     )
   }
   

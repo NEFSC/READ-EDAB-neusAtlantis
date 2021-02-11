@@ -67,7 +67,7 @@ get_pprey_vals = function(atl.dir,biol.file,fgs.file,spp.names=NULL,is.pred,remo
   val.id = seq(2,length(pprey.lines),2)
   
 
-  pred.names = sapply(pprey.lines[name.id],function(x) return(strsplit(x,'pPREY| |\t')[[1]][2]),USE.NAMES = F)
+  pred.names = sapply(pprey.lines[name.id],function(x) return(strsplit(x,'pPREY|  | |\t')[[1]][2]),USE.NAMES = F)
 
   pprey.mat = matrix(0,ncol = length(prey.names),nrow = length(pred.names))
   for(i in 1:length(pred.names)){

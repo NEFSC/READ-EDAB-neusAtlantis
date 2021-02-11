@@ -1,0 +1,51 @@
+Package: neus-atlantis
+Title: Atlantis model for the NEUS
+Version: 0.0.0.9000
+Authors@R: 
+    c(person(given = "Andy", family = "Beet", role = c("aut", "cre"), email = "andrew.beet@noaa.gov"),
+    person(given = "Joe", family = "Caracappa", role = c("aut"), email = "joseph.caracappa@noaa.gov"),
+    person(given = "Rob", family = "Gamble", role = c("aut"), email = "robert.gamble@noaa.gov"),
+    person(given = "Scott", family = "Large", role = c("aut"), email = "scott.large@noaa.gov"),
+    person(given = "Sarah", family = "Gaichas", role = c("aut"), email = "sarah.gaichase@noaa.gov"))Description: What the package does (one paragraph).
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    angstroms,
+    abind,
+    bgmfiles,
+    data.table,
+    devtools,
+    dplyr,
+    geosphere,
+    ggplot2,
+    grDevices,
+    grid,
+    gridExtra,
+    gtable,
+    here,
+    Hmisc,
+    ncdf4,
+    ncdump,
+    plyr,
+    profvis,
+    purrr,
+    raster,
+    rbgm,
+    RColorBrewer,
+    readr,
+    readxl,
+    reshape2,
+    rgdal,
+    RNetCDF,
+    sf,
+    sp,
+    tidyr,
+    tidyselect,
+    units,
+    visNetwork,
+    zoo
+Remotes:
+    alketh/atlantistools
