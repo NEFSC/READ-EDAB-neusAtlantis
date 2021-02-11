@@ -238,6 +238,17 @@ diag_persist(testdiag$atBtxt, testdiag$fgs.names)
 
 ```
 
+Test the package so far (should get same result--we do):
+
+```{r}
+
+library(atlantisdiagnostics)
+
+testdiag2 <- diag_init("DiagnosticConfig.R")
+
+diag_persist(testdiag2$atBtxt, testdiag2$fgs.names)
+```
+
 ## Stability test
 
 This test determines whether the model reaches steady state for last ~20 years of an **unperturbed, unfished ~100 year run**. I don't have a 100 year run right now so we will test with the 55 year run and look at the last 20 years, with the understanding that the test should use a different model run.
@@ -256,14 +267,20 @@ diag_stable <- function(atBtxt, fgs.names, runpar, plot=TRUE){
   #warning, was getting different behavior with this code on my linux machine
   
   stable <- atBtxt%>%filter(species %in% fgs.names) %>%
-    filter(time %in% seq(startlast*365, floor(runpar$nyears)*365, by=365)) %>%
+    mutate(yr = ceiling(time/365)) %>%
+    filter(yr > startlast-1) %>%
+    group_by(species, yr) %>%
+    summarise(meanB = mean(atoutput)) %>%
+    #filter(time %in% seq(startlast*365, floor(runpar$nyears)*365, by=365)) %>%
+    #filter(time %in% seq(startlast*365, floor(runpar$nyears)*365, by=73)) %>%
     group_by(species) %>%
-    ggplot(aes(x=time/365, y=atoutput)) +
+    ggplot(aes(x=yr, y=meanB)) +
+    geom_gls(aes(x=yr, y=meanB), warn = FALSE) +
     ggthemes::theme_tufte() +
     geom_line(data=atBtxt%>%filter(species %in% fgs.names), 
               aes(x=time/365, y=atoutput),
-                alpha = 5/10) +
-    geom_gls(warn = FALSE)
+                alpha = 5/10)
+
   
   
   print(stable + ggforce::facet_wrap_paginate(~species, ncol=4, nrow = 3, page = 1, scales="free"))
@@ -301,9 +318,9 @@ diag_stable <- function(atBtxt, fgs.names, runpar, plot=TRUE){
 
 Usage:
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 
-diag_stable(testdiag$atBtxt, testdiag$fgs.names, testdiag$runpar)
+diag_stable(testdiag2$atBtxt, testdiag2$fgs.names, testdiag2$runpar)
 
 ```
 
