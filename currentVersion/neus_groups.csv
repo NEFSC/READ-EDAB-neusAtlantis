@@ -66,7 +66,7 @@ CLA,63,1,Surf_Clam,Atlantic surf clam,1,1,1,1,1,1,0,0,1,1,1,SED_EP_FF,1,1,0,1,0,
 BFF,64,1,Filter_Other,Other benthic filter feeder,1,1,1,1,1,1,0,0,1,1,1,SED_EP_FF,1,1,0,1,0,0,0,0,4,0,0
 BG,65,1,Benthic_grazer,Benthic grazer,1,1,1,1,1,1,0,0,1,1,1,SED_EP_OTHER,1,0,0,1,0,0,0,0,4,0,0
 LOB,66,1,Lobster,Lobster,1,1,1,1,1,1,1,1,1,1,1,MOB_EP_OTHER,1,0,0,1,0,0,0,0,4,0,0
-RCB,67,1,Red_Crab,Red deep-sea crab,1,1,1,1,1,1,0,0,1,1,1,MOB_EP_OTHER,1,0,0,1,0,0,0,0,4,0,0
+RCB,67,0,Red_Crab,Red deep-sea crab,1,1,1,1,1,1,0,0,1,1,1,MOB_EP_OTHER,1,0,0,1,0,0,0,0,4,0,0
 BMS,68,1,Macrobenth_Shallow,Shallow macrozoobenthos,1,1,1,1,1,1,0,0,1,1,1,MOB_EP_OTHER,1,0,0,1,0,0,0,0,4,0,0
 NSH,69,1,Northern_Shrimp,Northern shrimp other pandalids,2,1,2,1,1,1,1,1,1,1,1,PWN,1,0,0,1,0,0,0,0,4,0,0
 OSH,70,1,Other_Shrimp,Other shrimps,2,1,2,1,1,1,1,1,1,1,1,PWN,1,0,0,1,0,0,0,0,4,0,0
