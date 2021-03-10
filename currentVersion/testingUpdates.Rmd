@@ -139,3 +139,7 @@ This file is used to document steps made towards a new version/subversion
 ## Check whether v6536 fixes migration issues (ATLNTS-277)
 
     * v6536 fixes the issues we were having with migration out of the model domain near the end of one year and returning in the next.  All migration parameters were reset to the original values.
+
+## ATLNTS-155 & 295
+    * Benthic groups (SCA, QHG, CLA, BFF, LOB) predator effect on them reduced.
+    * SUF and DRM have new biomass based recruitment + quadratic mortality which allows them to persist.
