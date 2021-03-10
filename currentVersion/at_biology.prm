@@ -346,7 +346,7 @@ flagrecruitHER 1
 flagrecruitWHK 1
 flagrecruitBLF 1
 flagrecruitWPF 1
-flagrecruitSUF 1
+flagrecruitSUF 11
 flagrecruitWIF 1
 flagrecruitWTF 1
 flagrecruitHAL 1
@@ -374,7 +374,7 @@ flagrecruitTYL 1
 flagrecruitRED 1
 flagrecruitOPT 1
 flagrecruitSAL 1
-flagrecruitDRM 1
+flagrecruitDRM 11
 flagrecruitSTB 1
 flagrecruitTAU 1
 flagrecruitWOL 1
@@ -13812,7 +13812,7 @@ BLF_mQ	2
 WPF_mQ	2
 0	0
 SUF_mQ	2
-0	0
+3.75e-9 3e-9
 WIF_mQ 2
 0	0
 WTF_mQ 2
@@ -13868,7 +13868,7 @@ OPT_mQ	2
 SAL_mQ	2
 0	0
 DRM_mQ	2
-1.00E-14	1.00E-14
+6.00E-13	6.00E-10
 STB_mQ	2
 3.00E-14	3.00E-11
 TAU_mQ	2
@@ -15195,7 +15195,7 @@ FSP_HER 0.246
 FSP_WHK 0.25  
 FSP_BLF 0.25  
 FSP_WPF 0.25  
-FSP_SUF 0.27 
+FSP_SUF 0.125
 FSP_WIF 0.27  
 FSP_WTF 0.25  
 FSP_HAL 0.25  
@@ -15223,7 +15223,7 @@ FSP_TYL 0.276
 FSP_RED 0.276  
 FSP_OPT 0.276  
 FSP_SAL 0.276  
-FSP_DRM 0.276  
+FSP_DRM 0.125 
 FSP_STB 0.276  
 FSP_TAU 0.276  
 FSP_WOL 0.276  
