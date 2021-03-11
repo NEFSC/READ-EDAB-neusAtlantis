@@ -28,7 +28,7 @@ get_param_mum_age = function(bio.prm, write.output = F, output.dir, out.name ){
 
 # edit_param_mum_age ------------------------------------------------------
 
-edit_param_mum_age = function(bio.prm, new.mum.df, overwrite = F,new.file.name ){
+edit_param_mum_age = function(bio.prm, new.mum, overwrite = F,new.file.name, single.group = F, group.name = NA ){
   
   #Get mum_XXX bio.prm lines
   bio.lines = readLines(bio.prm)
@@ -36,11 +36,18 @@ edit_param_mum_age = function(bio.prm, new.mum.df, overwrite = F,new.file.name )
   bio.lines.vals = bio.lines[bio.lines.id]
   group.names =unname(sapply(bio.lines.vals,function(x) strsplit(x,'mum_|\t10.00| 10.00')[[1]][2]))
   
-  for(i in 1:nrow(new.mum.df)){
+  if(single.group){
     
-    ind = which(new.mum.df$group == group.names[i])
-    mum.string = paste(new.mum.df[ind,2:11],collapse='\t')
+    ind = which(group.name == group.names)
+    mum.string = paste(new.mum,collapse = '\t')
     bio.lines[bio.lines.id[ind]+1] = mum.string
+  }else{
+    for(i in 1:nrow(new.mum.df)){
+      
+      ind = which(new.mum$group == group.names[i])
+      mum.string = paste(new.mum[ind,2:11],collapse='\t')
+      bio.lines[bio.lines.id[ind]+1] = mum.string
+    }
   }
   
   #overwrite or make copy of biology file
