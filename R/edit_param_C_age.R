@@ -28,19 +28,26 @@ get_param_C_age = function(bio.prm, write.output = F, output.dir, out.name ){
 
 # edit_param_C_age ------------------------------------------------------
 
-edit_param_C_age = function(bio.prm, new.C.df, overwrite = F,new.file.name ){
+edit_param_C_age = function(bio.prm, new.C, overwrite = F,new.file.name,single.group = F, group.name = NA ){
   
   #Get C_XXX bio.prm lines
   bio.lines = readLines(bio.prm)
-  bio.lines.id = grep('^C.*10.00',bio.lines)
+  bio.lines.id = grep('^C.*10',bio.lines)
   bio.lines.vals = bio.lines[bio.lines.id]
-  group.names =unname(sapply(bio.lines.vals,function(x) strsplit(x,'C_|\t10.00| 10.00')[[1]][2]))
+  group.names =unname(sapply(bio.lines.vals,function(x) strsplit(x,'C_|\t10| 10.00')[[1]][2]))
   
-  for(i in 1:nrow(new.C.df)){
+  if(single.group){
     
-    ind = which(new.C.df$group == group.names[i])
-    C.string = paste(new.C.df[ind,2:11],collapse='\t')
+    ind = which(group.name == group.names)
+    C.string = paste(new.C,collapse = '\t')
     bio.lines[bio.lines.id[ind]+1] = C.string
+  }else{
+    for(i in 1:nrow(new.C.df)){
+      
+      ind = which(new.C$group == group.names[i])
+      C.string = paste(new.C[ind,2:11],collapse='\t')
+      bio.lines[bio.lines.id[ind]+1] = C.string
+    }
   }
   
   #overwrite or make copy of biology file
