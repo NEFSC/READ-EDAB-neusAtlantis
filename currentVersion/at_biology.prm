@@ -11593,8 +11593,8 @@ C_jNSH_T15	0.001
 C_OSH_T15	0.001
 C_jOSH_T15	0.001
 C_ZG_T15	0.005
-C_ZL_T15	0.5
-C_ZM_T15	0.1
+C_ZL_T15	2
+C_ZM_T15	1
 C_ZS_T15	0.5
 C_BD_T15	0.0005
 C_BO_T15	0.001
@@ -11813,9 +11813,9 @@ mum_jNSH_T15 	0.01
 mum_OSH_T15	0.01
 mum_jOSH_T15 	0.01
 mum_ZG_T15	0.05
-mum_ZL_T15	5
-mum_ZM_T15	1
-mum_ZS_T15	5
+mum_ZL_T15	6
+mum_ZM_T15	3
+mum_ZS_T15	1.5
 mum_BD_T15	0.0004
 mum_BO_T15	0.04
 mum_PB_T15	0.05
@@ -13777,12 +13777,12 @@ BG_mQ 0
 LOB_mQ 0
 RCB_mQ 0
 BMS_mQ 0
-ZL_mQ 0.05 #0
+ZL_mQ 0.005 #0
 BD_mQ 0
 BC_mQ 0
 ZG_mQ 0
-ZM_mQ 0.2
-ZS_mQ 1E-3
+ZM_mQ 0.075
+ZS_mQ 0.09
 BO_mQ 0
 
 # Invertebrates with age structure

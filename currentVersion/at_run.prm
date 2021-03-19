@@ -19,8 +19,8 @@ checkNH       0        # Give detailed logged output for NH in checkbox
 checkDL       0        # Give detailed logged output for DL in checkbox
 checkDR       0        # Give detailed logged output for DR in checkbox
 checkbiom     0        # Give detailed logged output for biomasses in checkbox
-which_fleet   1       # ID number of fleet to track (if don't want to track anything set to 33), find number in fisheries input file.
-which_check   79       # ID number of group to track (if don't want to track anything set to 80), find number from functional group input file.
+which_fleet   33       # ID number of fleet to track (if don't want to track anything set to 33), find number in fisheries input file.
+which_check   80       # ID number of group to track (if don't want to track anything set to 80), find number from functional group input file.
 habitat_check 0
 move_check    20       # ID number of group where tracking movements
 fishmove      1        # Set to 0 to turn vertebrate movement off for debugging purposes
@@ -31,7 +31,7 @@ debug         0        # 0=debuging off, 1=debug fishing, 2=debug discards, 3=de
 
 title      NEUS v1.5 with fishing
 dt         24 hour     # 24 hour time step
-tstop      19724 day   # Stop time after the given period (18260)18260  , 4000   2191 7320 9120 3660 7320 (01-01-1964 to 12-31-2017 is 19724 d)
+tstop      12000 day   # Stop time after the given period (18260)18260  , 4000   2191 7320 9120 3660 7320 (01-01-1964 to 12-31-2017 is 19724 d)
 toutstart  0 day       # Output start time
 toutinc    73 day      # Write output with this periodicity
 toutfinc   73 day      # Write fisheries output with this periodicity
