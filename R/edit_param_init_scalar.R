@@ -108,7 +108,7 @@ edit_param_init_scalar = function(run.prm,groups.file,new.init.scalar,overwrite 
 # bgm.file = here::here('currentVersion','neus_tmerc_RM2.bgm')
 # # bio.age.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Master_10202020/neus_outputAgeBiomIndx.txt'
 # bio.age.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Master_NoInitScalar/neus_outputAgeBiomIndx.txt'
-# init.scalar.file ='C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/init_scalar_new.csv'
+# init.scalar.file ='C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/Initial_Scalars/init_scalar.csv'
 # output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/'
 # missing.cohorts = read.csv(paste0(output.dir,'missing_survdat_cohorts.csv'),stringsAsFactors = F)
 
