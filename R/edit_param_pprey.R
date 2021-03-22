@@ -51,7 +51,7 @@ get_pprey_lines = function(biol.file){
   )
 }
 
-get_pprey_vals = function(atl.dir,biol.file,fgs.file,spp.names=NULL,is.pred,remove.zero){
+get_pprey_vals = function(atl.dir,biol.file,fgs.file,spp.names=NULL,is.pred,remove.zero,export.mat = F){
   
   #Extract pprey lines  
   pprey.ls = get_pprey_lines(biol.file)
@@ -68,12 +68,24 @@ get_pprey_vals = function(atl.dir,biol.file,fgs.file,spp.names=NULL,is.pred,remo
   
 
   pred.names = sapply(pprey.lines[name.id],function(x) return(strsplit(x,'pPREY|  | |\t')[[1]][2]),USE.NAMES = F)
-
+  
   pprey.mat = matrix(0,ncol = length(prey.names),nrow = length(pred.names))
   for(i in 1:length(pred.names)){
     # x = length(as.numeric(strsplit(pprey.lines[val.id[i]]  ,' |\t')[[1]]))
     # if(x != 92){print(paste0(pprey.lines[val.id[i]-1],x))}
     pprey.mat[i,]=as.numeric(strsplit(pprey.lines[val.id[i]]  ,' |\t')[[1]])
+  }
+  
+  if(export.mat){
+    row.names(pprey.mat) = pred.names
+    colnames(pprey.mat) = prey.names
+    if(remove.zero){
+      row.zero = which(apply(pprey.mat,1,sum)==0)
+      col.zero = which(apply(pprey.mat,2,sum)==0)
+      if(length(row.zero) != 0){pprey.mat = pprey.mat[-row.zero,] }
+      if(length(col.zero) != 0){pprey.mat = pprey.mat[, -col.zero]}
+    }
+    return(pprey.mat)  
   }
   
   if(is.null(spp.names)){

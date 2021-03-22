@@ -9,7 +9,7 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'ReduceBenthicPred_6'
+run.name = 'Master_03192021'
 
 atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
 param.dir = here::here('currentVersion')
@@ -76,19 +76,19 @@ make_atlantis_diagnostic_figures(
  
   #Turn these on/off for desired output
   plot.benthic =T,
-  plot.overall.biomass = F,
+  plot.overall.biomass = T,
   plot.biomass.timeseries = T,
-  plot.length.age=F,
+  plot.length.age=T,
   plot.biomass.box=T,
-  plot.c.mum=F,
-  plot.sn.rn=F,
-  plot.recruits=F,
-  plot.numbers.timeseries=F,
+  plot.c.mum=T,
+  plot.sn.rn=T,
+  plot.recruits=T,
+  plot.numbers.timeseries=T,
   plot.physics=T,
-  plot.growth.cons=F,
-  plot.cohort=F,
+  plot.growth.cons=T,
+  plot.cohort=T,
   plot.diet=T,
   plot.consumption= T,
-  plot.spatial.biomass=F,
-  plot.LTL=F
+  plot.spatial.biomass=T,
+  plot.LTL=T
 )

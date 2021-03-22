@@ -18,19 +18,20 @@ roms.cobalt = paste0(roms.dir,'Atlantis_Runs/Atlantis_Output_DinoFlag/')
 new.obs = paste0(obs.dir,'Atlantis_Runs/Obs_Hindcast_NewForcing/')
 master = paste0(obs.dir,'Atlantis_Runs/Master_10202020/')
 new.init.catch6 = paste0(obs.dir,'Atlantis_Runs/New_Init_CatchTS_6/')
-master2 = paste0(obs.dir,'Atlantis_Runs/Master_12152020/')
+master2 = paste0(obs.dir,'Atlantis_Runs/Master_01252021/')
+master3 = paste0(obs.dir,'Atlantis_Runs/Master_03192021/')
 
 figure.dir = paste0(obs.dir,'Diagnostic_Figures/Run_Comparisons/')
 
 
 plot_run_comparisons(
-  model1.dir = new.init.catch6,
-  model2.dir = master2,
-  model1.name = 'new init catch 6',
-  model2.name = 'master 12-15-2020',
+  model1.dir = master2,
+  model2.dir = master3,
+  model1.name = 'master 12-15-2020',
+  model2.name = 'master 03-19-2021',
   plot.raw = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'newinitcatch_6_v_master'),
+  plot.out = paste(figure.dir,'master_v_new_master'),
   table.out = F,
   groups = NULL,
   remove.init = F
