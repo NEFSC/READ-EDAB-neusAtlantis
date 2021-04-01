@@ -42,10 +42,10 @@ edit_param_C_age = function(bio.prm, new.C, overwrite = F,new.file.name,single.g
     C.string = paste(new.C,collapse = '\t')
     bio.lines[bio.lines.id[ind]+1] = C.string
   }else{
-    for(i in 1:nrow(new.C.df)){
+    for(i in 1:nrow(new.C)){
       
-      ind = which(new.C$group == group.names[i])
-      C.string = paste(new.C[ind,2:11],collapse='\t')
+      ind = which(new.C$group[i] == group.names)
+      C.string = paste(new.C[i,2:11],collapse='\t')
       bio.lines[bio.lines.id[ind]+1] = C.string
     }
   }
