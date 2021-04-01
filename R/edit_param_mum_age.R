@@ -14,10 +14,14 @@ get_param_mum_age = function(bio.prm, write.output = F, output.dir, out.name ){
   
   group.names =unname(sapply(bio.lines.vals1,function(x) strsplit(x,'mum_|\t10.00')[[1]][2]))
   out.df = data.frame(group = group.names,
-                      mum1 = NA, mum2 = NA, mum3 = NA, mum4 = NA, mum5 = NA, mum6 = NA, mum7 = NA, mum8 = NA, mum9 = NA, mum10 = NA)
+                      mum1 = NA, mum2 = NA, mum3 = NA, mum4 = NA, mum5 = NA, mum6 = NA, mum7 = NA, mum8 = NA, mum9 = NA, mum10 = NA,
+                      stringsAsFactors = F)
   for(i in 1:length(bio.lines.id)){
     mum.group = bio.lines[bio.lines.id[i] + 1 ]
-    out.df[i,2:11] = strsplit(mum.group,split = "\t| ")[[1]]
+    mum.split = strsplit(mum.group,split = "\t| |  ")[[1]]
+    if(length(mum.split)>10){print(paste0(group.names[i],' has ',length(mum.split)-10,' trailing tabs'))}
+    if(length(mum.split)<10){print(paste0(group.names[i],' has only',10-length(mum.split),' values'))}
+    out.df[i,2:11] = mum.split
   }
   if(write.output){
     write.csv(out.df, file = paste0(output.dir,out.name,'.csv'),row.names = F)
@@ -42,10 +46,10 @@ edit_param_mum_age = function(bio.prm, new.mum, overwrite = F,new.file.name, sin
     mum.string = paste(new.mum,collapse = '\t')
     bio.lines[bio.lines.id[ind]+1] = mum.string
   }else{
-    for(i in 1:nrow(new.mum.df)){
+    for(i in 1:nrow(new.mum)){
       
-      ind = which(new.mum$group == group.names[i])
-      mum.string = paste(new.mum[ind,2:11],collapse='\t')
+      ind = which(group.names == new.mum$group[i])
+      mum.string = paste(new.mum[i,2:11],collapse='\t')
       bio.lines[bio.lines.id[ind]+1] = mum.string
     }
   }
