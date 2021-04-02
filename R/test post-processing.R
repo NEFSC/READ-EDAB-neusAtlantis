@@ -9,7 +9,7 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'Master_03192021'
+run.name = 'HER_Fix_1'
 
 atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
 param.dir = here::here('currentVersion')
@@ -89,6 +89,6 @@ make_atlantis_diagnostic_figures(
   plot.cohort=T,
   plot.diet=T,
   plot.consumption= T,
-  plot.spatial.biomass=T,
-  plot.LTL=T
+  plot.spatial.biomass=F,
+  plot.LTL=F
 )
