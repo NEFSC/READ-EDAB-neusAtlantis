@@ -4,17 +4,105 @@
 
 ## Bug Fixes (patch)
 
+
+# neus-atlantis 1.0.0-9029 (in dev) 
+(built with altantis rev 6490.1)
+
+* Atlantic salmon SAL, catch removed
+
+As described in [#85](https://github.com/NOAA-EDAB/neus-atlantis/pull/85)
+
+
+# neus-atlantis 1.0.0-9028 (in dev) 
+(built with altantis rev 6490.1)
+
+* Decreased quadratic mortality to TWH, SWH to allow higher levels
+* mum, C, E changes to LOB, RCB, BMS, BC for persistence
+
+As described in [#79](https://github.com/NOAA-EDAB/neus-atlantis/pull/79)
+
+# neus-atlantis 1.0.0-9027 (in dev) 
+(built with altantis rev 6490.1)
+
+Added new catch data using [comlandr](https://github.com/NOAA-EDAB/comlandr) output. This led to:
+
+* Updating  initial scalars
+* Additional changes to mum, C, KENDR, mL, mQ and pPrey across many age-structured groups due to new catch time series
+* Fisher active all day (at_harvest.prm)
+
+
+As described in [#78](https://github.com/NOAA-EDAB/neus-atlantis/pull/78)
+
+# neus-atlantis 1.0.0-9026 (in dev) 
+(built with altantis rev 6490.1)
+
+* Persistence (LOB, QHG, BC, SCA, CLA, BFF, BG, RCB, BMS)
+* mum, clearance rates for filter feeders, assimilation efficiency, pprey for these groups and their predators.
+* initial condition multiplier = 1
+
+
+As described in [#76](https://github.com/NOAA-EDAB/neus-atlantis/pull/76)
+
+# neus-atlantis 1.0.0-9025 (in dev) 
+(built with altantis rev 6490.1)
+
+* BWH, REP, RWH persist
+* Quadratic mortality added to BWH, RWH, REP
+* Assimilation efficiency, growth rates and pPREY values adjusted
+
+
+As described in [#72](https://github.com/NOAA-EDAB/neus-atlantis/pull/72)
+
+# neus-atlantis 1.0.0-9024 (in dev) 
+(built with altantis rev 6490.1)
+
+
+* mortality mL decreased for COD and MAK
+
+* mQ decrease, change in KDENR for predators crashing
+* mQ increase, change in KDENR for predators with rapis or sustained growth
+
+
+As described in [#71](https://github.com/NOAA-EDAB/neus-atlantis/pull/71)
+
+
+
+
+# neus-atlantis 1.0.0-9023 (in dev) 
+(built with altantis rev 6490.1)
+
+* Filter feeders, planktivores, and predators on bacteria pPREY reduced.
+
+* All planktivores pPREY changed to prefere zooplankton over detritus and bacteria
+
+* Assimilation efficiencies on live prey of HER, MAK,MEN,ANC,GOO reduced
+
+* Recruitment rates on ISQ, LSQ, NSH reduced
+
+* Recruitment for all higher predatory fish tuned to reduce all groups biomass to within 5x initial conditions for the first 15 years. Groups that had StockSmart recruitment timeseries available were tuned from median recruitment over all available data.
+
+
+As described in [#70](https://github.com/NOAA-EDAB/neus-atlantis/pull/70)
+
+# neus-atlantis 1.0.0-9022 (in dev) 
+(built with altantis rev 6490.1)
+
+* Retuned bluefin tuna (BFT). 
+* Deal with growth, survivorship outside of the model (HMS)
+
+As described in [#69](https://github.com/NOAA-EDAB/neus-atlantis/pull/69)
+
 # neus-atlantis 1.0.0-9021 (in dev) 
 (built with altantis rev 6490.1)
 
-Data pulled from [comlandr](https://github.com/NOAA-EDAB/comlandr) and [survdat](https://github.com/NOAA-EDAB/survdat) packages. Merged and associated with functional group names for use in calibration.
+* Data pulled from [comlandr](https://github.com/NOAA-EDAB/comlandr) and [survdat](https://github.com/NOAA-EDAB/survdat) packages. Merged and associated with functional group names for use in calibration.
 
 As described in [#68](https://github.com/NOAA-EDAB/neus-atlantis/pull/68)
 
 # neus-atlantis 1.0.0-9020 (in dev) 
 (built with altantis rev 6490.1)
 
-Parameter changes for migratory pelagics and plantivore persistence
+* Parameter changes for migratory pelagics and plantivore persistence
 
 As described in [#65](https://github.com/NOAA-EDAB/neus-atlantis/pull/65)
 As described in [#66](https://github.com/NOAA-EDAB/neus-atlantis/pull/66)
@@ -24,21 +112,21 @@ As described in [#67](https://github.com/NOAA-EDAB/neus-atlantis/pull/67)
 # neus-atlantis 1.0.0-9019 (in dev) 
 (built with altantis rev 6490.1)
 
-Fix for migratory species not returning after leaving the domain
+* Fix for migratory species not returning after leaving the domain
 
 As described in [#61](https://github.com/NOAA-EDAB/neus-atlantis/pull/61)
 
 # neus-atlantis 1.0.0-9018 (in dev) 
 (built with altantis rev 6490.1)
 
-New detritus forcing
+* New detritus forcing
 
 As described in [#54](https://github.com/NOAA-EDAB/neus-atlantis/pull/54)
 
 # neus-atlantis 1.0.0-9017 (in dev) 
 (built with altantis rev 6490.1)
 
-New forcing files for phytoplankton
+* New forcing files for phytoplankton
 
 As described in [#53](https://github.com/NOAA-EDAB/neus-atlantis/pull/53)
 
@@ -56,7 +144,7 @@ As described in [#50](https://github.com/NOAA-EDAB/neus-atlantis/pull/50)
 # neus-atlantis 1.0.0-9015 (in dev) 
 (built with altantis rev 6490.1)
 
-Species persistence tuning
+* Species persistence tuning
 
 ZG: Reduced predation on, increased assimilation efficiency, increased growth
 MEN: Increased assimilation efficiency and number of recruits
@@ -73,7 +161,7 @@ As described in [#49](https://github.com/NOAA-EDAB/neus-atlantis/pull/49)
 # neus-atlantis 1.0.0-9014 (in dev) 
 (built with altantis rev 6490.1)
 
-New script to break up COBALT's **nlg** and **silg** into Atlantis' Diatom_N, Diatiom_S, and DinoFlag_N. Addition of new annual forcing files "roms_largephyto_force_*.nc"
+* New script to break up COBALT's **nlg** and **silg** into Atlantis' Diatom_N, Diatiom_S, and DinoFlag_N. Addition of new annual forcing files "roms_largephyto_force_*.nc"
 
 As described in [#48](https://github.com/NOAA-EDAB/neus-atlantis/pull/48)
 
@@ -88,7 +176,7 @@ As described in [#47](https://github.com/NOAA-EDAB/neus-atlantis/pull/47)
 # neus-atlantis 1.0.0-9012 (in dev) 
 (built with altantis rev 6490.1)
 
-Work aimed at investigating why the temperature in the forcing files did not mirror observations well. The source of the discrepancy was outside of our model development/processing but other changes were made to the forcing that should improve Atlantis' representation of the ROMS_COBALT output.
+* Work aimed at investigating why the temperature in the forcing files did not mirror observations well. The source of the discrepancy was outside of our model development/processing but other changes were made to the forcing that should improve Atlantis' representation of the ROMS_COBALT output.
 
 * Temperature Diagnostics. Addition of EPU shape files for SOE comparisons
 Various scripts aimed at diagnosing temperature (or any forcing) issues with model (i.e. box-level_Scripts to plot NCEI temperature againts ROMS data on various temporal/spatial scales
