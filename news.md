@@ -5,6 +5,92 @@
 ## Bug Fixes (patch)
 
 
+# neus-atlantis 1.0.0-9037 (in dev) 
+(built with altantis rev 6536)
+
+All but HER persist. All but WHK above 50% starting biomass. SDF,ZM, ZS > 10x starting biomass
+
+* biomass recruitment for GOO
+* diet changes
+* reduce C, mum
+* benthic invertebrates tuning. prevent BC, LOB, BMS growing to high levels
+
+As described in [#93](https://github.com/NOAA-EDAB/neus-atlantis/pull/93)
+
+# neus-atlantis 1.0.0-9036 (in dev) 
+(built with altantis rev 6536)
+
+Stable lower trophic system
+
+* forage fish, flat fish, zoo diet change
+* C, mum, mQ fine tuning for zoo
+* C, mum, mQ fine tuning for HER
+* spawn based recruitment for HER
+* adjust catch-at-age distribution for HER (age class 2)
+
+As described in [#92](https://github.com/NOAA-EDAB/neus-atlantis/pull/92)
+
+# neus-atlantis 1.0.0-9035 (in dev) 
+(built with altantis rev 6536)
+
+* Add biomass based recruitment and quadratic mortality for SUF, DRM
+
+As described in [#91](https://github.com/NOAA-EDAB/neus-atlantis/pull/91)
+
+# neus-atlantis 1.0.0-9034 (in dev) 
+(built with altantis rev 6536)
+
+Improve biomass for fish groups over first 20 yrs by tuning zoo
+
+* update initial scalars for ZL, ZM, ZS
+* pPREY, C, mum for ZG, ZL, ZM, ZS
+
+As described in [#90](https://github.com/NOAA-EDAB/neus-atlantis/pull/90)
+
+# neus-atlantis 1.0.0-9033 (in dev) 
+(built with altantis rev 6536)
+
+forage fish and zoo rebalancing
+
+* mum and C reduced for ZG, ZL, ZM, ZS
+* mum and C tuned (between existing and Ryan M values) HER, MAK, MEN, ANC
+* predation of forage fish on themselves and zoo reduced
+* removed predators on ZL (GOO, WOL, POR, PSH)
+* cut all pPREY on ZL in half
+
+As described in [#89](https://github.com/NOAA-EDAB/neus-atlantis/pull/89)
+
+
+# neus-atlantis 1.0.0-9032 (in dev) 
+(built with altantis rev 6536)
+
+* New Atlantis version fixed migration hack
+* All migration parameters were reset
+
+
+As described in [#88](https://github.com/NOAA-EDAB/neus-atlantis/pull/88)
+
+# neus-atlantis 1.0.0-9031 (in dev) 
+(built with altantis rev 6490.1)
+
+* changed pPREY on SCA, BEF and LOB by main predators.
+* reduced clearance rates for benthic predators. All benthics now persist
+* increased growth rates and recruits for bencthic carnivores. All in reasonable ranges
+
+As described in [#87](https://github.com/NOAA-EDAB/neus-atlantis/pull/87)
+
+
+# neus-atlantis 1.0.0-9030 (in dev) 
+(built with altantis rev 6490.1)
+
+* increased clearance for benthic predators and zoo
+* reduced growth for benthic predators
+* reduced pPREY for zoo and shellfish
+* diet changes for epibenthic groups
+
+As described in [#86](https://github.com/NOAA-EDAB/neus-atlantis/pull/86)
+
+
 # neus-atlantis 1.0.0-9029 (in dev) 
 (built with altantis rev 6490.1)
 
