@@ -84,7 +84,7 @@ create_neus_map <- function(saveToFile=F){
   
   if (saveToFile){
     ggsave(file="Geometry/Neus 1-5.pdf",plot=p1,width = 5,height = 5, dpi = 350)
-    ggsave("Geometry/Neus 1-5 with Coastline.png",plot=p2,width = 5,height = 5, dpi = 350)
+    ggsave("Geometry/Neus_1_5_with_Coastline.png",plot=p2,width = 5,height = 5, dpi = 350)
     ggsave("Geometry/Neus Faces.pdf",plot=p3,width = 20,height = 20, units = 'in', dpi = 300)
   } else{
     print(p1)
