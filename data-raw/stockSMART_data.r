@@ -2,8 +2,10 @@
 #'
 #' Filters out all species that reside on the east coast from stock smart, and assign them with an atlantis functional group code
 #'
-#'
-#'
+#' saves RDS file
+#' 
+#' stockSMARTData.Rds"
+
 library(magrittr)
 
 stockSMART_data <- function() {
@@ -15,12 +17,12 @@ stockSMART_data <- function() {
   
   # join the two and filter. Species must have an NESPP3 code and be in NE region
   stockData <- saData %>%
-    dplyr::left_join(.,atlantis,by="Species") %>% 
+    dplyr::left_join(.,atlantis,by=c("StockName"="Species")) %>% 
     dplyr::filter(!is.na(Code),!is.na(NESPP3)) %>%
-    dplyr::filter(!grepl("acific",Region)) %>%
-    dplyr::filter(!grepl("ering",Region)) %>%
-    dplyr::filter(!grepl("exico",Region))
+    dplyr::filter(!grepl("acific",StockArea)) %>%
+    dplyr::filter(!grepl("ering",StockArea)) %>%
+    dplyr::filter(!grepl("exico",StockArea))
   
-  saveRDS(stockData,here::here("data-raw","stockSMARTData.Rds"))
+  saveRDS(stockData,here::here("data","stockSMARTData.Rds"))
           
 }
