@@ -1,6 +1,12 @@
 #' Extracts Landings and Biomass from comlandr, survdat
 #'
-#' \code{comlandr}: \link{github.com/NOAA-EDAB/comlandr} is an r package that aggregates landings (not catch) by EPU or stat area. You will need additional priviledges to access the underlying data tables. \code{survdat}:\link{github.com/NOAA-EDAB/survdat} is an r package that estimates survey biomass by expanding swept area. The latest data can be found in the repo \code{ecodata}: \link{github.com/NOAA-EDAB/ecodata}
+#' \code{comlandr}: \link{github.com/NOAA-EDAB/comlandr} is an r package that aggregates 
+#' landings (not catch) by EPU or stat area. You will need additional privileges 
+#' to access the underlying data tables.
+#' 
+#'\code{survdat}:\link{github.com/NOAA-EDAB/survdat} is an r package that estimates
+#'survey biomass by expanding swept area. The latest data can be found in the repo 
+#'\code{ecodata}: \link{github.com/NOAA-EDAB/ecodata}
 #'
 #' @param channel an Object inherited from \link[DBI]{DBIConnection-class}. This object is used to connect to communicate with the database engine. (see \code{\link[dbutils]{connect_to_database}})
 #' @param species data frame: Contains common name of species, SVSPP, NESPP3 codes
