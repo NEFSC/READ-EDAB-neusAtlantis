@@ -40,9 +40,9 @@ get_consumption = function(prod.file,fgs.file){
                                      stringsAsFactors = F)
       }
     }
-    consumption.all.ls[[i]] = dplyr::bind_rows(group.df.ls)
+    consumption.all.ls[[i]] = do.call('rbind',group.df.ls)
   }
-  consumption.all = dplyr::bind_rows(consumption.all.ls)
+  consumption.all = do.call('rbind',consumption.all.ls)
   return(consumption.all)
 }
 
