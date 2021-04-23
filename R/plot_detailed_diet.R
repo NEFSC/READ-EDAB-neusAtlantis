@@ -62,7 +62,8 @@ subset_detailed_diet = function(detailed.diet.file,
       data.slice = data.table::fread(detailed.diet.file,skip = line.seq[i],nrow = lines2read,)
       colnames(data.slice) = data.cols
       data.slice = data.slice %>%
-        dplyr::filter(Box %in% boxes & Layer %in% levels)
+        dplyr::filter(Box %in% boxes & Layer %in% levels) %>%
+        as.data.frame()
       prey.names = colnames(data.slice)[-c(1:5)]
       if(pred.prey == 'pred'){
         data.slice = data.slice %>% 
@@ -74,11 +75,16 @@ subset_detailed_diet = function(detailed.diet.file,
       
       if(rm.zero){
         if(pred.prey == 'pred'){
-          data.slice = data.slice[,apply(data.slice,2,function(x) return(!all(x==0)))]
+          data.slice = as.data.frame(data.slice)[,as.numeric(c(1:5,which(colSums(data.slice[,-c(1:5)]) != 0)+5))]
         }else if(pred.prey == 'prey'){
-          data.slice = data.slice[apply(data.slice[,-c(1:5)],1,function(x) return(!all(x==0))),]
+          if(length(prey.match == 1)){
+            data.slice = data.slice[which(data.slice[,-c(1:5)]!=0),]
+          }else{
+            data.slice = data.slice[apply(data.slice[,-c(1:5)],1,function(x) return(!all(x==0))),]  
+          }
         }else if(pred.prey == 'both'){
-          data.slice = data.slice[apply(data.slice[,-c(1:5)],1,function(x) return(!all(x==0))),apply(data.slice,2,function(x) return(!all(x==0)))]
+          data.slice = data.slice[apply(data.slice[,-c(1:5)],1,function(x) return(!all(x==0))),]
+          data.slice = as.data.frame(data.slice)[,as.numeric(c(1:5,which(colSums(data.slice[,-c(1:5)]) != 0)+5))]
         }
         print(paste0(round(100*line.seq[i+1]/nline,0),' %'))
       }
@@ -103,7 +109,8 @@ subset_detailed_diet = function(detailed.diet.file,
   mat.index = dplyr::bind_rows(mat.index.ls)
   
   data = data %>%
-    left_join(mat.index)
+    left_join(mat.index) %>%
+    mutate(age.class = as.character(age.class))
   #turn age.class NA into bio.pool
   age.class.na = which(is.na(data$age.class))
   if(length(age.class.na) != 0){
@@ -297,14 +304,14 @@ plot_detailed_diet = function(data,plot.spp,min.fract,pred.prey,fig.dir,file.pre
 # Example -----------------------------------------------------------------
 
 #Example Params
-run.name = 'Obs_Hindcast_RetunePlanktiv6_DetDiet'
+run.name = 'ReduceBenthicPred_1'
 detailed.diet.file = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/neus_outputDetailedDietCheck.txt')
 out.name = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/neus_outputDetailedDietCheck_2.txt')
 
 subset_detailed_diet(detailed.diet.file,
-                     spp.names = c('HER'),
+                     spp.names = c('ZL','HER','PL'),
                      pred.prey = 'both',
-                     boxes = 0:9,
+                     boxes = 0:22,
                      levels = -1:3,
                      rm.zero = T,
                      write.new = T,
@@ -315,13 +322,13 @@ gc()
 data.orig = data.table::fread(out.name)
 data2 = longform_detailed_diet(data.orig,rm.zero = T)
 plot_detailed_diet(data = data2,
-                   plot.spp = c('HER'),
-                   fig.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/Figures/Detailed_Diet/'),
+                   plot.spp = c('ZL','HER','PL'),
+                   fig.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/Post_Processed/'),
                    file.prefix = 'test_',
                    pred.prey = 'prey')
 plot_detailed_diet(data = data2,
-                   plot.spp = c('HER'),
-                   fig.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/Figures/Detailed_Diet/'),
+                   plot.spp = c('ZL','HER'),
+                   fig.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/Post_Processed/'),
                    file.prefix = 'test_',
                    pred.prey = 'pred')
 
