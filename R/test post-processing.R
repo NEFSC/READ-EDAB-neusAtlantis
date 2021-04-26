@@ -9,11 +9,15 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'Master_03192021'
+run.name = 'BalanceHerStart_Final'
+
 
 atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
+
+dir.create(paste0(atl.dir,'Post_Processed/'))
 param.dir = here::here('currentVersion')
 out.dir = paste0(atl.dir,'Post_Processed/')
+
 
 
 #Run prefix is the filename prefix in the atlantis output (specified in run.bat)
@@ -75,7 +79,7 @@ make_atlantis_diagnostic_figures(
   zoopl.history = here::here('R','Zooplankton_total_biomass_tonnes_N_20yrs.csv'),
  
   #Turn these on/off for desired output
-  plot.benthic =T,
+  plot.benthic =F,
   plot.overall.biomass = T,
   plot.biomass.timeseries = T,
   plot.length.age=T,
@@ -92,3 +96,4 @@ make_atlantis_diagnostic_figures(
   plot.spatial.biomass=T,
   plot.LTL=T
 )
+  

@@ -43,7 +43,7 @@ hindcast_catch = comland %>%
   filter(YEAR >= 1964)
 
 # Species names/catch_ts header
-header <- c("MAK","HER","WHK","BLF","WPF","SUF","WIF","WTF","FOU","HAL","PLA","FLA","BFT","TUN","BIL","MPF","BUT","BPF","ANC","GOO","MEN","FDE","COD","SHK","OHK","POL","RHK","BSB","SCU","TYL","RED","OPT","SAL","DRM","STB","TAU","WOL","SDF","FDF","HAD","YTF","DOG","SMO","SSH","DSH","BLS","POR","PSH","WSK","LSK","SK","SB","PIN","REP","RWH","BWH","SWH","TWH","INV","LSQ","ISQ","SCA","QHG","CLA","BFF","BG","LOB","RCB","BMS","NSH","OSH","ZL","BD","MA","MB","SG","BC","ZG","PL","DF","MB","MMM","ZS","PB","BB","BO","DL","DR","DC")
+header <- c("MAK","HER","WHK","BLF","WPF","SUF","WIF","WTF","FOU","HAL","PLA","FLA","BFT","TUN","BIL","MPF","BUT","BPF","ANC","GOO","MEN","FDE","COD","SHK","OHK","POL","RHK","BSB","SCU","TYL","RED","OPT","SAL","DRM","STB","TAU","WOL","SDF","FDF","HAD","YTF","DOG","SMO","SSH","DSH","BLS","POR","PSH","WSK","LSK","SK","SB","PIN","REP","RWH","BWH","SWH","TWH","INV","LSQ","ISQ","SCA","QHG","CLA","BFF","BG","LOB","RCB","BMS","NSH","OSH","ZL","BD","MA","MB","SG","BC","ZG","PL","DF","PS","ZM","ZS","PB","BB","BO","DL","DR","DC")
 
 #Fill gaps in timeseries
 hindcast_catch_ls = list()
@@ -67,7 +67,7 @@ hindcast_catch2 = dplyr::bind_rows(hindcast_catch_ls) %>%
   filter(YEAR >= 1964 & YEAR <=2018)
 hindcast_catch2$grpWGT[which(!is.finite(hindcast_catch2$grpWGT))] = 0
 
-x2 = filter(hindcast_catch2, Code == 'BFT')
+x2 = filter(hindcast_catch2, Code == 'PS')
 plot(grpWGT~YEAR,x2,type='l')
 timesteps <- 55 * 365
 
@@ -116,3 +116,24 @@ sort(colMeans(catch,na.rm=T))
 # write.table(catch,"/home/rgamble/Desktop/Atlantis-Catch/catch_ts_all.txt",col.names = F, row.names = F, sep = " ")
 write.table(catch,here::here('currentVersion','CatchFiles','total_catch_new.txt'),col.names = F, row.names = F, sep = " ")
     
+#Write Catch for spinup period
+spin.yr = 15
+
+catch.spinup = catch %>%
+  mutate(date = as.Date(as.POSIXct(time*86400, origin = '1964-01-01 00:00:00', tz = 'UTC')),
+         year = as.numeric(format(date, format = '%Y')) )
+
+date = as.Date(as.POSIXct(time*86400, origin = '1964-01-01 00:00:00', tz = 'UTC'))
+spinup.year = as.numeric(format(date, format = '%Y'))
+               
+date.spinup = which( date.year < 1964+spin.yr)
+date.rest = which( date.year >= 1964+spin.yr)
+
+spinup.mean = colMeans(catch[date.rest,])
+catch2 = as.data.frame(catch)
+for(i in 1:length(date.spinup)){
+  catch2[i,2:ncol(catch2)] = spinup.mean[2:length(spinup.mean)]
+}
+
+write.table(catch2,here::here('currentVersion','CatchFiles','total_catch_new_spinup.txt'),col.names = F, row.names = F, sep = " " )
+
