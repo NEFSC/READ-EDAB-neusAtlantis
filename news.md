@@ -4,6 +4,32 @@
 
 ## Bug Fixes (patch)
 
+# neus-atlantis 1.0.0-9039 (in dev) 
+(built with altantis rev 6536)
+
+* Changes to FSP, mQ and recruitmentFLag for MPF, WHK, BLF, MAK, WIF, BUT, COD, SHK,
+POL, RHK, BSB, SCU, RED, STB, HAD, YTL
+
+
+As described in [#99](https://github.com/NOAA-EDAB/neus-atlantis/pull/99)
+
+
+
+# neus-atlantis 1.0.0-9038 (in dev) 
+(built with altantis rev 6536)
+
+* HER persist. 
+* Benthic and pelagic grazers share prey 
+* catch spin up added to time series
+* changes to diets of HER, ZL, ZM (mum, C, pPREY) (at_biol.prm)
+* smoothed seasonal movement for ZL and OSH  (at_biol.prm)
+* Changes to HER_age_mat and FSP_HER  (at_biol.prm)
+* Reduced RN:SN for Herring and reset initial numbers (neus_init.nc)
+* changes to initial scalars for HER, QHG, CLA, SCA (at_run.prm)
+
+
+As described in [#98](https://github.com/NOAA-EDAB/neus-atlantis/pull/98)
+
 
 # neus-atlantis 1.0.0-9037 (in dev) 
 (built with altantis rev 6536)
