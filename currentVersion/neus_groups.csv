@@ -18,7 +18,7 @@ MPF,15,1,Mesopelagic_Mig_Fish,Migratory mesopelagic fish,10,1,2,1,1,1,1,1,1,1,1,
 BUT,16,1,Butterfish,Butterfish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 BPF,17,1,Benthopelagic_Fish,Other benthopelagic fish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 ANC,18,1,Anchovies,Anchovies,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
-GOO,19,1,Monkfish,Monkfish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
+GOO,19,1,Monkfish,Goosefish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 MEN,20,1,Menhaden,Atlantic menhaden,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 FDE,21,1,Shallow_Demersal_Fish,Shallow demersal fish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 COD,22,1,Cod,Atlantic cod,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
@@ -28,7 +28,7 @@ POL,25,1,Pollock,Pollock,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 RHK,26,1,Red_Hake,Red hake,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 BSB,27,1,Black_Sea_Bass,Black sea bass,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 SCU,28,1,Scup,Scup,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
-TYL,29,1,Tilefish,Tilefish,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
+TYL,29,1,Tilefish,All tilefish,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 RED,30,1,Redfish,Acadian redfish,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 OPT,31,1,Ocean_Pout,Ocean pout,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 SAL,32,1,Atlantic_Salmon,Atlantic salmon,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
