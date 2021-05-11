@@ -1,5 +1,5 @@
 Code,Index,IsTurnedOn,Name,LongName,NumCohorts,NumGeneTypes,NumStages,NumSpawns,NumAgeClassSize,NumStocks,VerticallyMigrates,HorizontallyMigrates,isFished,IsImpacted,isTAC,GroupType,IsPredator,IsCover,isSiliconDep,isAssessed,IsCatchGrazer,OverWinters,isCultured,isHabDepend,numMoveSeasons,isBioEroder,isSupplemented
-MAK,0,1,Mackerel,Mackerel,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
+MAK,0,1,Mackerel,Atlantic mackerel,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 HER,1,1,Herring,Atlantic herring,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 WHK,2,1,White_Hake,White hake,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 BLF,3,1,Bluefish,Bluefish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
@@ -7,18 +7,18 @@ WPF,4,1,Windowpane,Windowpane flounder,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0
 SUF,5,1,Summerflounder,Summer flounder,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 WIF,6,1,Winterflounder,Winter flounder,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 WTF,7,1,Witchflounder,Witch flounder,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
-FOU,8,1,Fourspotflounder,Fourspot Flounder,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
+FOU,8,1,Fourspotflounder,Fourspot flounder,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 HAL,9,1,Halibut,Atlantic halibut,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 PLA,10,1,Plaice,American plaice,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 FLA,11,1,Other_Flatfish,Other flatfish,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 BFT,12,1,BluefinTuna,Atlantic bluefin tuna,10,1,2,1,3,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 TUN,13,1,Tunas,Other tunas,10,1,2,1,3,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 BIL,14,1,Billfish,Billfish,10,1,2,1,3,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
-MPF,15,1,Mesopelagic_Mig_Fish,Migratory mesopelagic fish ,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
+MPF,15,1,Mesopelagic_Mig_Fish,Migratory mesopelagic fish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 BUT,16,1,Butterfish,Butterfish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 BPF,17,1,Benthopelagic_Fish,Other benthopelagic fish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 ANC,18,1,Anchovies,Anchovies,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
-GOO,19,1,Monkfish,Monkfish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
+GOO,19,1,Monkfish,Goosefish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 MEN,20,1,Menhaden,Atlantic menhaden,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 FDE,21,1,Shallow_Demersal_Fish,Shallow demersal fish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 COD,22,1,Cod,Atlantic cod,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
@@ -28,12 +28,12 @@ POL,25,1,Pollock,Pollock,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 RHK,26,1,Red_Hake,Red hake,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 BSB,27,1,Black_Sea_Bass,Black sea bass,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 SCU,28,1,Scup,Scup,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
-TYL,29,1,Tilefish,Tilefish,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
+TYL,29,1,Tilefish,All tilefish,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 RED,30,1,Redfish,Acadian redfish,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 OPT,31,1,Ocean_Pout,Ocean pout,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 SAL,32,1,Atlantic_Salmon,Atlantic salmon,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 DRM,33,1,Drums_Croakers,Drums and croakers,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
-STB,34,1,Striped_Bass,Striped Bass,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
+STB,34,1,Striped_Bass,Striped bass,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 TAU,35,1,Tautog,Tautog,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 WOL,36,1,Wolffish,Wolffish,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 SDF,37,1,Atlantic_States_Demersals,Atlantic states demersal fish,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
@@ -56,7 +56,7 @@ REP,53,1,Turtle,Marine turtles,10,1,2,1,8,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 RWH,54,1,Right_Whale,Right whales,10,1,2,1,9,1,1,1,1,1,1,MAMMAL,1,0,0,1,0,0,0,0,4,0,0
 BWH,55,1,Baleen_Whale,Baleen whales,10,1,2,1,9,1,1,1,1,1,1,MAMMAL,1,0,0,1,0,0,0,0,4,0,0
 SWH,56,1,Small_Whale,Small toothed whales,10,1,2,1,7,1,1,1,1,1,1,MAMMAL,1,0,0,1,0,0,0,0,4,0,0
-TWH,57,1,Tooth_Whale,Toothed whales ,10,1,2,1,7,1,1,1,1,1,1,MAMMAL,1,0,0,1,0,0,0,0,4,0,0
+TWH,57,1,Tooth_Whale,Toothed whales,10,1,2,1,7,1,1,1,1,1,1,MAMMAL,1,0,0,1,0,0,0,0,4,0,0
 INV,58,1,Invasive_Species,Invasive vertebrate species,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 LSQ,59,1,Loligo_Squid,Loligo squid,2,1,2,1,1,1,1,1,1,1,1,CEP,1,0,0,1,0,0,0,0,4,0,0
 ISQ,60,1,Illex_Squid,Illex squid,2,1,2,1,1,1,1,1,1,1,1,CEP,1,0,0,1,0,0,0,0,4,0,0
