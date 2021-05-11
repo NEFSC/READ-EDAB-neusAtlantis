@@ -36,7 +36,7 @@ ANC,Bay anchovy,43,6
 ANC,Striped anchovy,44,NA
 GOO,Goosefish,197,11
 GOO,Goosefish,197,12
-MEN,Menhaden,36,221
+MEN,Atlantic menhaden,36,221
 FDE,Alewife,33,1
 FDE,Gizzard shad,426,134
 FDE,Blueback herring,34,112
@@ -64,7 +64,7 @@ DRM,Northern kingfish,146,196
 DRM,Black drum,147,106
 DRM,Silver perch,148,NA
 DRM,Spot,149,406
-STB,Striped Bass,139,418
+STB,Striped bass,139,418
 TAU,Tautog,177,438
 WOL,Northern wolffish,NA,668
 WOL,Spotted wolffish,NA,510
@@ -166,7 +166,7 @@ SK,Roughtail stingray,4,NA
 SK,Atlantic stingray,373,286
 SK,Yellow stingray,377,NA
 SB,Seabirds,NA,NA
-PIN,Pinnipeds,NA,NA
+PIN,All Pinnipeds,NA,NA
 REP,Green seaturtle,951,809
 REP,Hawksbill seaturtle,953,814
 REP,Kemp’s Ridley seaturtle,954,810
@@ -178,7 +178,7 @@ RWH,Right whales,NA,NA
 BWH,Baleen whales,NA,NA
 SWH,Small toothed whales,NA,NA
 TWH,Toothed whales ,NA,NA
-INV,Invasive vertebrate species,NA,NA
+INV,All Invasive vertebrate species,NA,NA
 LSQ,Loligo squid,503,801
 ISQ,Illex squid,502,802
 SCA,Sea scallop,401,800
@@ -189,7 +189,7 @@ BFF,Atlantic calico scallop,404,797
 BFF,Iceland scallop,340,795
 BFF,Scallop unclassified,NA,796
 BFF,Arctic surfclam,407,765
-BG,Benthic grazer,331,NA
+BG,All Benthic grazers,331,NA
 LOB,Lobster,301,727
 RCB,Red deep-sea crab,310,710
 BMS,Atantic rock crab,313,712
@@ -203,15 +203,15 @@ BMS,Lady crab,322,701
 BMS,Snow crab,325,718
 BMS,Spider crab,317,715
 BMS,Knobbed whelk,337,777
-NSH,Northern shrimp other pandalids,306,736
+NSH,Northern shrimp and other pandalids,306,736
 NSH,Aesop shrimp,297,NA
 NSH,Bristled longbeak,296,NA
 OSH,Pink shrimp,914,NA
 OSH,Brown shrimp,913,NA
 OSH,White shrimp,915,NA
 OSH,Other penaeids,307,NA
-ZL,Carnivorous zooplankton,NA,NA
-BD,Deposit Feeder,NA,NA
+ZL,All carnivorous zooplankton,NA,NA
+BD,All Deposit Feeders,NA,NA
 MA,Macroalgae,NA,NA
 MB,Microphtybenthos,NA,NA
 SG,Seagrass,NA,NA
@@ -231,4 +231,4 @@ BB,Sediment Bacteria,NA,NA
 BO,Meiobenthos,NA,NA
 DL,Labile detritus,NA,NA
 DR,Refractory detritus,NA,NA
-DC,Carrion3,NA,NA
+DC,Carrion,NA,NA
