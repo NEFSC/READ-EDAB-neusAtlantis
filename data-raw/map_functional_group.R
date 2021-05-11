@@ -26,13 +26,16 @@ for (apack in packages$pkgName) {
 
 map_functional_group <- function(channel,writeToFile=F) {
 
-  # read in functional group codes and name
-  fg <-  readr::read_csv(here::here("data-raw","initialFunctionalGroupNames.csv"))
+  # read in functional group codes and name from Atlantis input file
+  fg <- atlantisom::load_fgs(here::here("currentVersion"),"neus_groups.csv") %>%
+    dplyr::select(Code,LongName,isFished)
+  
+  #fg <-  readr::read_csv(here::here("data-raw","initialFunctionalGroupNames.csv"))
   
   # read in species membership to group, then join with functional group names
   data <- readr::read_csv(here::here("data-raw","Atlantis_1_5_groups_svspp_nespp3.csv")) %>%
     dplyr::mutate(NESPP3 = sprintf("%03d",NESPP3)) %>%
-    dplyr::left_join(.,fg,by=c("Code"="Group Code"))
+    dplyr::left_join(.,fg,by="Code")
   
   
   # get info by looking up by svspp code
@@ -51,9 +54,11 @@ map_functional_group <- function(channel,writeToFile=F) {
   masterList <- dplyr::left_join(data,SVSPPData, by=c("SVSPP"="SVSPPsv"))  %>%
     dplyr::full_join(.,NESPP3Data, by="NESPP3") %>%
     dplyr::arrange(Code) %>%
-    dplyr::rename(Species = Name,Functional_Group = `Group Name`,Common_Name = COMNAME.y,Scientific_Name=SCIENTIFIC_NAME.y,Species_Itis=SPECIES_ITIS.y)  %>% 
+    dplyr::rename(Species = Name,Functional_Group = LongName,Common_Name = COMNAME.y,Scientific_Name=SCIENTIFIC_NAME.y,Species_Itis=SPECIES_ITIS.y)  %>% 
     dplyr::mutate(Common_Name = utilities::capitalize_first_letter(Common_Name),NESPP3=as.numeric(NESPP3),Species_Itis=as.numeric(Species_Itis)) %>%
-    dplyr::select(Code,Functional_Group,Species,Scientific_Name,SVSPP,NESPP3,Species_Itis)
+    dplyr::select(Code,Functional_Group,Species,Scientific_Name,SVSPP,NESPP3,Species_Itis,isFished) %>%
+    dplyr::mutate(isFishedSpecies = (Functional_Group==Species) & (isFished==T)) %>% 
+    dplyr::select(-isFished)
   
   
   # format to markdown table. Copy output to wiki
