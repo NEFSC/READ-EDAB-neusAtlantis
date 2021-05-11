@@ -13794,11 +13794,11 @@ BG_mQ 0
 LOB_mQ 0
 RCB_mQ 0
 BMS_mQ 0
-ZL_mQ 0.00001
+ZL_mQ 0.0001
 BD_mQ 0
 BC_mQ 0
 ZG_mQ 0
-ZM_mQ 0.000075
+ZM_mQ 0.00075
 ZS_mQ 0.1
 BO_mQ 0
 
@@ -15164,7 +15164,7 @@ KSPA_FOU	24.13
 KSPA_GOO	154.37
 KSPA_HAD	143.11
 KSPA_HAL	3825.02
-KSPA_HER	0
+KSPA_HER	10
 KSPA_INV	82.92
 KSPA_LSK	207.63
 KSPA_MAK	18.11
@@ -15208,7 +15208,7 @@ KSPA_YTF	27.42
 ## proportion of weight used for spawn production
 ####FSP_FPL          0.246     Fraction used in spawning formulation for large planktivores       0.246
 FSP_MAK 0.09  
-FSP_HER 0.2
+FSP_HER 0.07
 FSP_WHK 0.000001
 FSP_BLF 0.00003 
 FSP_WPF 0.25  
