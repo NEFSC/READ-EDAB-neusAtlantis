@@ -21,9 +21,9 @@
 #' 
 #' Author: J. Caracappa
 
-transport.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT_Output/transport/'
-statevars.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/ROMS_COBALT_Output/phys_statevars/'
-output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Pre Forcing Diagnostics/'
+transport.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/Atlantis_Format'
+vflux.dir = 'E:/ECCO/vflux_daily'
+output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Figures/Pre Forcing Diagnostics/'
 bgm.file = 'neus_tmerc_RM2.bgm'
 dz.file = 'dz.csv'
 
@@ -32,9 +32,20 @@ ROMS_Diagnostics = function(roms.dir,roms.prefix,bgm.file,dz.file,output.name,ou
 `%>%` = dplyr::`%>%`
 
 # Read in box-aggregated data ---------------------------------------------
+trans.years = list.dirs(transport.dir,full.names = T)[-1]
+vflux.years = list.dirs(vflux.dir,full.names = T)[-1]
 
-transport.files = list.files(transport.dir,glob2rx('roms_cobalt+*.nc'),full.names = T)
-statevar.files = list.files(statevars.dir,glob2rx('roms_cobalt+*.nc'),full.names = T)
+transport.files = sapply(trans.years, function(x) return(list.files(x,glob2rx('GLORYS_Atlantis_transport+*.nc'),full.names = T)),USE.NAMES = F)
+vflux.files = sapply(vflux.years, function(x) return(list.files(x,glob2rx('ECCO_vflux_Atlantis_+*.nc'),full.names = T)),USE.NAMES = F)
+
+overlap.trans = list.dirs(transport.dir,full.names = F)[-1] %in% list.dirs(vflux.dir,full.names = F)[-1]
+overlap.vflux =list.dirs(vflux.dir,full.names = F)[-1] %in% list.dirs(transport.dir,full.names = F)[-1]
+
+transport.files = transport.files[overlap.trans]
+vflux.files = vflux.files[overlap.vflux]
+
+# transport.files = list.files(transport.dir,glob2rx('roms_cobalt+*.nc'),full.names = T)
+# vflux.files = list.files(vflux.dir,glob2rx('roms_cobalt+*.nc'),full.names = T)
 
 #Pull variables from annual netCDF
 hflux.ls =vflux.ls = list()
@@ -47,9 +58,9 @@ for(i in 1:length(transport.files)){
   }
   ncdf4::nc_close(transport.nc)
   
-  statevar.nc = ncdf4::nc_open(statevar.files[i])
-  vflux.ls[[i]] = ncdf4::ncvar_get(statevar.nc,'verticalflux')
-  ncdf4::nc_close(statevar.nc)
+  vflux.nc = ncdf4::nc_open(vflux.files[i])
+  vflux.ls[[i]] = ncdf4::ncvar_get(vflux.nc,'verticalflux')
+  ncdf4::nc_close(vflux.nc)
 }
 
 #Combine years into single array/matrix for each variable. Last dimension is time (34 yrs ~ 12395 d)
@@ -209,6 +220,6 @@ ROMS_Diagnostics(roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_C
                  roms.prefix = 'roms_cobalt_v10_transport_1981*',
                  bgm.file = 'neus_tmerc_RM2.bgm',
                  dz.file = 'dz.csv',
-                 output.name = 'roms_diag_allyears',
+                 output.name = 'GLORYS_diag_allyears',
                  output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Diagnostic_Figures/Pre Forcing Diagnostics/'
 )
