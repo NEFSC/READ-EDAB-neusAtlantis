@@ -123,11 +123,11 @@ catch.spinup = catch %>%
   mutate(date = as.Date(as.POSIXct(time*86400, origin = '1964-01-01 00:00:00', tz = 'UTC')),
          year = as.numeric(format(date, format = '%Y')) )
 
-date = as.Date(as.POSIXct(time*86400, origin = '1964-01-01 00:00:00', tz = 'UTC'))
+date = as.Date(as.POSIXct(catch$time*86400, origin = '1964-01-01 00:00:00', tz = 'UTC'))
 spinup.year = as.numeric(format(date, format = '%Y'))
                
-date.spinup = which( date.year < 1964+spin.yr)
-date.rest = which( date.year >= 1964+spin.yr)
+date.spinup = which( spinup.year < 1964+spin.yr)
+date.rest = which( spinup.year >= 1964+spin.yr)
 
 spinup.mean = colMeans(catch[date.rest,])
 catch2 = as.data.frame(catch)
@@ -136,4 +136,17 @@ for(i in 1:length(date.spinup)){
 }
 
 write.table(catch2,here::here('currentVersion','CatchFiles','total_catch_new_spinup.txt'),col.names = F, row.names = F, sep = " " )
+
+#Spinup with fixed Herring catch 
+
+#catch in mt yr-1
+her.catch = 50000
+
+#Converted to mgN s-1
+her.catch2 = her.catch * CONVFACTOR
+
+catch3 = catch
+catch3[date.spinup,which(colnames(catch)=='HER')] = her.catch2
+
+write.table(catch3,here::here('currentVersion','CatchFiles','total_catch_new_HERspinup.txt'),col.names = F, row.names = F, sep = " " )
 
