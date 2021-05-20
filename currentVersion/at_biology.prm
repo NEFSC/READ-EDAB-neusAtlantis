@@ -140,7 +140,7 @@ flagstarve       1         Give starvation notices: 0 = no, 1 = yes             
 flagdegrade      0         Degrade coastal habitats (effects growth of MA, SG and BFS)         0
 flagroc          0         Density dependent drop off option: 0 = none, 1 = ratio drop off, 2 = exponential decline   0
 # gfay @nmfs 17 July 2014, following entry should probably change for base.
-flaghomog_sp     0         Body condition homogenised across the entire area: 0 = no, 1 = yes  0
+flaghomog_sp     1         Body condition homogenised across the entire area: 0 = no, 1 = yes  0
 flagagestruct    1         Age structure option: 0 = homogeneous cohorts, 1 = track cohorts    0
 flagsenesce      1         Oldest sub-part of final age group senesces, 1 = yes, 0 = no        0
 flagtsforcerecruit 0       Force recruitment of 1+ groups with environmental forcing           0
