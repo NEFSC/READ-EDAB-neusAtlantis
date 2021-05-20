@@ -140,7 +140,7 @@ flagstarve       1         Give starvation notices: 0 = no, 1 = yes             
 flagdegrade      0         Degrade coastal habitats (effects growth of MA, SG and BFS)         0
 flagroc          0         Density dependent drop off option: 0 = none, 1 = ratio drop off, 2 = exponential decline   0
 # gfay @nmfs 17 July 2014, following entry should probably change for base.
-flaghomog_sp     1         Body condition homogenised across the entire area: 0 = no, 1 = yes  0
+flaghomog_sp     0         Body condition homogenised across the entire area: 0 = no, 1 = yes  0
 flagagestruct    1         Age structure option: 0 = homogeneous cohorts, 1 = track cohorts    0
 flagsenesce      1         Oldest sub-part of final age group senesces, 1 = yes, 0 = no        0
 flagtsforcerecruit 0       Force recruitment of 1+ groups with environmental forcing           0
@@ -11628,8 +11628,6 @@ C_MAK	10
 
 C_HER	10
 .25	2.4	6.5	14	20	21	24	25	25.5	26
-#0.45	4.8	13.8	28.2	39.6	43.8	48.6	49.8	51	52.8
-#.056	1	3.6	6.8	10	12.8	15.2	17.2	18.8	19.9
 
 C_WHK	10								
 0.3375	2.1375	6.075	12.375	20.7	30.9375	42.6375	55.125	68.625	82.4625
@@ -11854,10 +11852,7 @@ mum_MAK	10.00
 4.5 48	138	282	396	438	486	498	510	528
 
 mum_HER	10.00	
-#2.5	24	70	140	198	219	243	250	255	265
-#4.5 48	138	282	396	438	486	498	510	528
 1.5	7.5	19	33	48	61	73	85	94	102	
-#0.14	2.6	9	17	25	32	38	43	47	49
 		
 mum_WHK	10.00		
 3.375	21.375	60.75	123.75	207	309.375	426.375	551.25	686.25	824.625
