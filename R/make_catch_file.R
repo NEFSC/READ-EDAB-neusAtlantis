@@ -140,7 +140,7 @@ write.table(catch2,here::here('currentVersion','CatchFiles','total_catch_new_spi
 #Spinup with fixed Herring catch 
 
 #catch in mt yr-1
-her.catch = 50000
+her.catch = 25000
 
 #Converted to mgN s-1
 her.catch2 = her.catch * CONVFACTOR
@@ -148,5 +148,5 @@ her.catch2 = her.catch * CONVFACTOR
 catch3 = catch
 catch3[date.spinup,which(colnames(catch)=='HER')] = her.catch2
 
-write.table(catch3,here::here('currentVersion','CatchFiles','total_catch_new_HERspinup.txt'),col.names = F, row.names = F, sep = " " )
+write.table(catch3,here::here('currentVersion','CatchFiles','total_catch_new_HERspinup_2.txt'),col.names = F, row.names = F, sep = " " )
 
