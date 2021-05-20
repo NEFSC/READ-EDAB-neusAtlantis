@@ -107,13 +107,16 @@ edit_param_init_scalar = function(run.prm,groups.file,new.init.scalar,overwrite 
 # groups.file = here::here('currentVersion','neus_groups.csv')
 # bgm.file = here::here('currentVersion','neus_tmerc_RM2.bgm')
 # # bio.age.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Master_10202020/neus_outputAgeBiomIndx.txt'
-# bio.age.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Master_NoInitScalar/neus_outputAgeBiomIndx.txt'
-# init.scalar.file ='C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/Initial_Scalars/init_scalar.csv'
-# output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/'
-# missing.cohorts = read.csv(paste0(output.dir,'missing_survdat_cohorts.csv'),stringsAsFactors = F)
-
+# bio.age.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HerZoo_24/neus_outputAgeBiomIndx.txt'
+# 
 # get_param_init_scalar(run.prm,groups.file,write.output = T,
-#                       output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/')
+#                       output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/Initial_Scalars/')
+# 
+# init.scalar.file ='C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/Initial_Scalars/init_scalar_HerZoo_25.csv'
+# output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/Initial_Scalars/'
+# # missing.cohorts = read.csv(paste0(output.dir,'missing_survdat_cohorts.csv'),stringsAsFactors = F)
+# 
+# 
 # get_init_biomass(bio.age.file,groups.file,write.output = T,
 #                  output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/')
 # edit_param_init_scalar(run.prm,groups.file,

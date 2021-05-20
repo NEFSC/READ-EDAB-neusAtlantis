@@ -1,5 +1,5 @@
-atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HerZoo_21/'
-atl.dir2 = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HerZoo_22/'
+atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HerZoo_32/'
+atl.dir2 = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HerZoo_33/'
 age.dat = read.table(paste0(atl.dir,'neus_outputAgeBiomIndx.txt'),header= T, stringsAsFactors = F)
 age.dat2 = read.table(paste0(atl.dir2,'neus_outputAgeBiomIndx.txt'),header= T, stringsAsFactors = F)
 
@@ -17,7 +17,7 @@ new.dat2 = reshape2::melt(new.dat2,id.var = 'Time',variable.name = 'Cohort',valu
 
 
 ggplot(new.dat2,aes(x= Time, y = biomass, col = Cohort))+
-  geom_line(size = 1.2)
+  geom_line(size = 1.2)+xlim(0,1500)
 
 recruits = dplyr::filter(new.dat, Cohort %in% as.character(0))
 recruits2 = dplyr::filter(new.dat2, Cohort %in% as.character(0))
