@@ -5,7 +5,7 @@ library(dplyr)
 library(ggplot2)
 library(ncdf4)
 
-atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/New_Init_CatchTS_Revert/'
+atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Update_HER_5/'
 
 #read CATCH.nc
 catch.nc = nc_open(paste0(atl.dir,'neus_outputCATCH.nc'))
@@ -18,9 +18,9 @@ catch.txt =read.table(paste0(atl.dir,'neus_outputCatch.txt'),header = T, strings
 tot.catch.nc = nc_open(paste0(atl.dir,'neus_outputTOTCATCH.nc'))
 
 catch.varnames = names(catch.nc$var)
-catch.varnames[grep('Winter',catch.varnames)]
-group.name = 'Winter_Skate'
-group.code = 'WSK'
+catch.varnames[grep('Herring',catch.varnames)]
+group.name = 'Herring'
+group.code = 'HER'
 
 group.varnames = catch.varnames[grep(paste0('^',group.name,'.*\\Catch'),catch.varnames)]
   
