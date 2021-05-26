@@ -731,13 +731,76 @@ make_atlantis_diagnostic_figures = function(
   #Diet figures
   if(plot.diet){
     
+    library(atlantistools)
     if(!is.na(result$biomass.consumed)){
       
-      diet.plots = atlantistools::plot_diet(result$biomass.consumed, wrap_col =  'agecl', combine_thresh =  3)
+      # diet.plots = atlantistools::plot_diet(result$biomass.consumed, wrap_col =  'agecl', combine_thresh =  3)
+      bio_consumed = result$biomass.consumed
+      wrap_col = 'agecl'
+      combine_thresh = 3
+      species = NULL
+      
+      check_df_names(data = bio_consumed, expect = c("pred", "agecl", 
+                                                     "time", "prey", "atoutput"), optional = "polygon")
+      agg_bio <- agg_data(bio_consumed, groups = c("time", "pred", 
+                                                   "agecl", "prey"), fun = sum)
+      preddata <- agg_perc(agg_bio, groups = c("time", "pred", 
+                                               "agecl"))
+      preydata <- agg_perc(agg_bio, groups = c("time", "prey", 
+                                               "agecl"))
+      pred_comb <- combine_groups(preddata, group_col = "prey", 
+                                  groups = c("time", "pred", "agecl"), combine_thresh = combine_thresh)
+      prey_comb <- combine_groups(preydata, group_col = "pred", 
+                                  groups = c("time", "prey", "agecl"), combine_thresh = combine_thresh)
+      plot_sp <- function(data, col, wrap_col) {
+        if (nrow(data) == 0) {
+          plot <- ggplot2::ggplot() + ggplot2::theme_void()
+        }
+        else {
+          agg_data <- agg_data(data, groups = col, out = "sum_diet", 
+                               fun = sum)
+          data[, col] <- factor(data[[col]], levels = agg_data[[1]][order(agg_data$sum_diet, 
+                                                                          decreasing = TRUE)])
+          plot <- ggplot2::ggplot(data, ggplot2::aes_(x = ~time, 
+                                                      y = ~atoutput, fill = lazyeval::interp(~var, 
+                                                                                             var = as.name(col)))) + ggplot2::geom_bar(stat = "identity") + 
+            ggplot2::scale_fill_manual(values = c(get_colpal(),RColorBrewer::brewer.pal(8,'Set1'))) + 
+            ggplot2::facet_wrap(lazyeval::interp(~var, var = as.name(wrap_col)), 
+                                ncol = 5, labeller = "label_both") + ggplot2::labs(x = NULL, 
+                                                                                   y = NULL, title = NULL) + theme_atlantis() + 
+            ggplot2::theme(legend.position = "right")
+          plot <- atlantistools:::ggplot_custom(plot)
+        }
+        return(plot)
+      }
+      if (is.null(species)) {
+        species <- sort(union(union(union(preddata$pred, preddata$prey), 
+                                    preydata$pred), preydata$prey))
+      }
+      grobs <- vector("list", length = length(species))
+      for (i in seq_along(grobs)) {
+        grobs[[i]] <- vector("list", length = 2)
+      }
+      for (i in seq_along(species)) {
+        df_pred <- dplyr::filter_(pred_comb, ~pred == species[i])
+        df_prey <- dplyr::filter_(prey_comb, ~prey == species[i])
+        grobs[[i]][[1]] <- plot_sp(df_pred, col = "prey", wrap_col = wrap_col)
+        grobs[[i]][[2]] <- plot_sp(df_prey, col = "pred", wrap_col = wrap_col)
+      }
+      for (i in seq_along(grobs)) {
+        heading <- grid::textGrob(paste("Diet proportions for species:", 
+                                        species[i]), gp = grid::gpar(fontsize = 14))
+        grobs[[i]][[1]] <- grobs[[i]][[1]] + ggplot2::labs(y = "Predator perspective")
+        grobs[[i]][[2]] <- grobs[[i]][[2]] + ggplot2::labs(y = "Prey perspective")
+        grobs[[i]] <- gridExtra::arrangeGrob(grobs = c(list(heading), 
+                                                       grobs[[i]]), heights = grid::unit(c(0.05, 0.475, 
+                                                                                           0.475), units = "npc"))
+      }
+      names(grobs) <- species
       
       pdf(file = paste0(out.dir,run.name, ' Diet Proportions.pdf'),paper = 'A4r',width = 22, height = 16, onefile = T)
-      for(i in seq_along(diet.plots)){
-        gridExtra::grid.arrange(diet.plots[[i]])
+      for(i in seq_along(grobs)){
+        gridExtra::grid.arrange(grobs[[i]])
       }
       dev.off()
     }
