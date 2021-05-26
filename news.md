@@ -4,6 +4,42 @@
 
 ## Bug Fixes (patch)
 
+
+# neus-atlantis 1.0.0-9042 (in dev) 
+(built with altantis rev 6536)
+
+Increase starting Herring biomass in at_run.prm. More herring actually dampens big peaks at start of run for ANC, HER, MAK, MEN, ZL, and ZM. Causes WIF to crash.
+
+As described in [#104](https://github.com/NOAA-EDAB/neus-atlantis/pull/104)
+
+# neus-atlantis 1.0.0-9041 (in dev) 
+(built with altantis rev 6536)
+
+FSP and mQ value changes to MPF, BUT, POL, RED, STB, YTF, INV
+
+As described in [#103](https://github.com/NOAA-EDAB/neus-atlantis/pull/103)
+
+# neus-atlantis 1.0.0-9040 (in dev) 
+(built with altantis rev 6536)
+
+### Summary 
+Several changes related to the growth rates, clearance rates, mortalities, diets, and recruitment for HER, ZL, ZM, ZS. Reduced initial Herring biomass and catch to be similar to 1970s rather than peak in 1960s.
+
+## Parameter Files
+1. total_catch.ts - Reduced Herring catch to 25,000 mt per year during spinup
+2. at_biology.prm:
+  -- shifted from benthic grazers to zooplankton grazers
+  -- Shifted ZL from eating PL to ZM
+  -- Fixed mismatch in adult/juv order for pPREYs
+  -- Balanced mum/C/mQ for ZL, ZM, ZS, and HER
+  -- Shift HER growth towards reserves over structure
+  -- Adjust assimilation efficiencies for ZL/ZM  
+  -- Tune FSP_HER/ KSPA_HER
+3. at_run.prm: Increase starting ZL, ZM, and ZS. Decreased starting HER
+
+
+As described in [#102](https://github.com/NOAA-EDAB/neus-atlantis/pull/102)
+
 # neus-atlantis 1.0.0-9039 (in dev) 
 (built with altantis rev 6536)
 
