@@ -403,6 +403,7 @@ flagrecruitINV 1
 
 
 
+
 # External reproduction - spawn is based on adult population within model domain, but actual reproduction           
 # occurs outside model domain (0 = no, 1 = yes) ADDED 20180228 RM
 flagext_reprodMAK 0
@@ -15220,8 +15221,8 @@ FSP_FLA 0.25
 FSP_BFT 0.25  
 FSP_TUN 0.25  
 FSP_BIL 0.25  
-FSP_MPF 0.1
-FSP_BUT 0.002
+FSP_MPF 0.09
+FSP_BUT 0.01
 FSP_ANC 0.246  
 FSP_BPF 0.246  
 FSP_GOO 0.005
@@ -15230,22 +15231,22 @@ FSP_FDE 0.276
 FSP_COD 0.005
 FSP_SHK 0.001 
 FSP_OHK 0.276  
-FSP_POL 0.0003 
+FSP_POL 0.001
 FSP_RHK 0.0002
 FSP_BSB 0.0039 
 FSP_SCU 0.001 
 FSP_TYL 0.276  
-FSP_RED 0.000255  
+FSP_RED 0.001
 FSP_OPT 0.276  
 FSP_SAL 0.276  
 FSP_DRM 0.0005 
-FSP_STB 0.0005 
+FSP_STB 0.01
 FSP_TAU 0.276  
 FSP_WOL 0.276  
 FSP_SDF 0.276  
 FSP_FDF 0.276  
 FSP_HAD 0.0001 
-FSP_YTF 0.001
+FSP_YTF 0.005
 FSP_DOG 0.3   
 FSP_SMO 0.27   
 FSP_SSH 0.27   
@@ -15263,7 +15264,7 @@ FSP_RWH 0.16
 FSP_BWH 0.16   
 FSP_SWH 0.16   
 FSP_TWH 0.16   
-FSP_INV 0.276  
+FSP_INV 0.276 
 
 ### added the following from SETAS 20180228 RM
 FSP_ISQ          1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
