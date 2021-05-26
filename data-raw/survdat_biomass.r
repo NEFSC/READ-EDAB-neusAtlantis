@@ -17,7 +17,7 @@ if (pullFromDB) {
   channel <- dbutils::connect_to_database(server,uid)
   survey <- survdat::get_survdat_data(channel)
 } else { # or read in previous pull
-  survey <- readRDS("C:/Users/andrew.beet/Documents/MyWork/gitHub_repos/survdat/survdat.RDS")
+  survey <- readRDS("C:/Users/andrew.beet/Documents/MyWork/gitHub_repos/survdat/testing/survdat2021.RDS")
 }
 
 ### read in atlantic surfclam data. Poorly sampled in bottom trawl survey
