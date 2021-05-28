@@ -118,7 +118,7 @@ make_atlantis_diagnostic_figures = function(
   
   phytopl.history,
   zoopl.history,
-                                            
+  
   plot.benthic,
   plot.overall.biomass,
   plot.biomass.timeseries,
@@ -135,7 +135,7 @@ make_atlantis_diagnostic_figures = function(
   plot.consumption,
   plot.spatial.biomass,
   plot.LTL
-  ){
+){
   
   `%>%` = dplyr::`%>%`
   #Utility function
@@ -157,9 +157,9 @@ make_atlantis_diagnostic_figures = function(
   #plot parameters
   plot.labels = list(x = 'Time (years)',y = 'Biomass (tonnes)')
   
-
-# Benthic box timeseries --------------------------------------------------
-
+  
+  # Benthic box timeseries --------------------------------------------------
+  
   
   #Select box for timeseries of all benthic groups
   if(plot.benthic){
@@ -177,9 +177,9 @@ make_atlantis_diagnostic_figures = function(
     dev.off()
   }
   
-
-# Overall biomass ---------------------------------------------------------
-
+  
+  # Overall biomass ---------------------------------------------------------
+  
   
   #Make overall biomass plot (stacked barplot of total biomass domain-wide)
   if(plot.overall.biomass){
@@ -201,9 +201,9 @@ make_atlantis_diagnostic_figures = function(
     dev.off()
   }
   
-
-# Biomass Timeseries ------------------------------------------------------
-
+  
+  # Biomass Timeseries ------------------------------------------------------
+  
   
   #Make biomass timeseries plots
   if(plot.biomass.timeseries){
@@ -224,14 +224,14 @@ make_atlantis_diagnostic_figures = function(
     temp.plot.3 = ggplot2::update_labels(temp.plot.3,list(x = 'Time (years)', y = expression(biomass/bio[init])))
     temp.plot.3 = atlantistools::plot_add_box(temp.plot.3)
     temp.plot.3 = add.title(temp.plot.3,'Biomass at Age Relatative to Initial Biomass')
-
+    
     #Biomass vs Bio init
     rel.biomass = atlantistools::convert_relative_initial(result$biomass)
     temp.plot.4 = atlantistools::plot_line(rel.biomass)
     temp.plot.4 = ggplot2::update_labels(temp.plot.4,list(x = 'Time (years)',y = expression (Biomass/Biomass[init])))
     temp.plot.4 = atlantistools::plot_add_box(temp.plot.4)
     temp.plot.4 = add.title(temp.plot.4,'Biomass Relatative to Initial Biomass')
-
+    
     #Invert bio timeseries
     temp.plot.5 = atlantistools::plot_line(result$biomass.age.invert)
     temp.plot.5 = ggplot2::update_labels(temp.plot.5, labels = plot.labels)
@@ -253,9 +253,9 @@ make_atlantis_diagnostic_figures = function(
     dev.off()
   }
   
-
-# Length-age plots --------------------------------------------------------
-
+  
+  # Length-age plots --------------------------------------------------------
+  
   
   #Make length.age plots
   if(plot.length.age){
@@ -280,7 +280,7 @@ make_atlantis_diagnostic_figures = function(
     temp.plot.1 = atlantistools::plot_line(result$length.age,col = 'agecl')
     temp.plot.1 = ggplot2::update_labels(temp.plot.1,labels = c(x = 'Time (years)',y = 'Length (cm)', colour = 'Ageclass'))
     temp.plot.1 = add.title(temp.plot.1,'Length-at-age')
-
+    
     #Length at age vs. length init
     rel.length.age = atlantistools::convert_relative_initial(result$length.age)
     temp.plot.2 = atlantistools::plot_line(rel.length.age,col = 'agecl')
@@ -294,9 +294,9 @@ make_atlantis_diagnostic_figures = function(
     dev.off()
   }
   
-
-# Biomass box plots -------------------------------------------------------
-
+  
+  # Biomass box plots -------------------------------------------------------
+  
   
   #Make Biomass Box plots
   if(plot.biomass.box){
@@ -319,14 +319,14 @@ make_atlantis_diagnostic_figures = function(
     dev.off()
   }
   
-
-# C/Mum tuning ------------------------------------------------------------
-
+  
+  # C/Mum tuning ------------------------------------------------------------
+  
   #C_Mum tuning
   if(plot.c.mum){
     
     #Data processing
-
+    
     #mum by age
     mum.age = atlantistools::prm_to_df_ages(param.ls$biol.prm, param.ls$func.groups,group = group.code,parameter = 'mum')
     mum.age = tidyr::spread(mum.age,agecl,mum)
@@ -363,7 +363,7 @@ make_atlantis_diagnostic_figures = function(
     #Write length-scaled C and mum to file
     write.csv(mum.scale, file = paste0(out.dir,run.name,'newMum_lengthbased.csv'),row.names =T)
     write.csv(C.scale,file = paste0(out.dir,run.name,'newC_lengthbased.csv'),row.names = T)
-            
+    
     ### Also scale mum/C relative to RN vs RN init
     RN.mn = dplyr::group_by(result$RN.age,species,agecl)
     RN.mn = dplyr::summarize(RN.mn,avg = mean(atoutput))
@@ -411,7 +411,7 @@ make_atlantis_diagnostic_figures = function(
     row.names(mum.C) = mum.age$Code
     mum.C = mum.C[order(row.names(mum.C)),]
     write.csv(mum.C, file = paste0(out.dir,run.name,'_mum_to_C_ratio.csv'),row.names = T)
-
+    
     #SN check
     SN.init = dplyr::filter(result$SN.age,time ==0 )
     SN.init$highMum = SN.init$atoutput*0.1
@@ -442,9 +442,9 @@ make_atlantis_diagnostic_figures = function(
     
   }
   
-
-# SN/RN plots -------------------------------------------------------------
-
+  
+  # SN/RN plots -------------------------------------------------------------
+  
   #SN/RN plots
   if(plot.sn.rn){
     
@@ -479,7 +479,7 @@ make_atlantis_diagnostic_figures = function(
       dplyr::rename('RN' = atoutput) %>%
       dplyr::group_by(species,time) %>%
       dplyr::summarize(SN = sum(SN,na.rm=T),
-                RN = sum(RN,na.rm=T)) %>%
+                       RN = sum(RN,na.rm=T)) %>%
       dplyr::mutate(RN.SN = RN/SN) 
     
     
@@ -492,7 +492,7 @@ make_atlantis_diagnostic_figures = function(
                      axis.title =  ggplot2::element_text(size = 14),
                      axis.text =  ggplot2::element_text(size = 12),
                      strip.text =  ggplot2::element_text(size = 14))
-      # ggsave(filename = paste0(atl.dir,'Figures/','test.pdf'),width = 30, height = 30, units = 'in')
+    # ggsave(filename = paste0(atl.dir,'Figures/','test.pdf'),width = 30, height = 30, units = 'in')
     
     pdf(file = paste0(out.dir,run.name,' SN RN Timeseries.pdf'),width = 60, height = 60, onefile = T)
     gridExtra::grid.arrange(temp.plot.1)
@@ -503,9 +503,9 @@ make_atlantis_diagnostic_figures = function(
     dev.off()
   }
   
-
-# Recruitment/SSB plots ---------------------------------------------------
-
+  
+  # Recruitment/SSB plots ---------------------------------------------------
+  
   
   #Plot recruits
   if(plot.recruits){
@@ -534,9 +534,9 @@ make_atlantis_diagnostic_figures = function(
     
   }
   
-
-# Numbers timeseries ------------------------------------------------------
-
+  
+  # Numbers timeseries ------------------------------------------------------
+  
   
   #Plot Numbers timeseries
   if(plot.numbers.timeseries){
@@ -603,9 +603,9 @@ make_atlantis_diagnostic_figures = function(
     
   }
   
-
-# Physics plots -----------------------------------------------------------
-
+  
+  # Physics plots -----------------------------------------------------------
+  
   
   #plot physics variables
   if(plot.physics){
@@ -626,7 +626,7 @@ make_atlantis_diagnostic_figures = function(
       phys.plots[[v]] = add.title(phys.plots[[v]],names(physics)[v])
       phys.plots[[v]] = ggplot2::update_labels(phys.plots[[v]], labels = list(x = 'time', y= names(phys.plots)[v]))
     }
-        
+    
     #fluxes 1
     temp.plot.2 = atlantistools::flip_layers(result$flux)
     temp.plot.2 = atlantistools::plot_line(temp.plot.2,wrap = NULL, col = 'variable')
@@ -655,17 +655,17 @@ make_atlantis_diagnostic_figures = function(
     gridExtra::grid.arrange(temp.plot.1)
     for(i in 1:length(phys.plots)){
       gridExtra::grid.arrange(phys.plots[[i]])
-      }
+    }
     gridExtra::grid.arrange(temp.plot.2)
     gridExtra::grid.arrange(temp.plot.3)
     gridExtra::grid.arrange(temp.plot.4)
     dev.off()
-      
+    
   }
   
-
-# Growth and Consumption --------------------------------------------------
-
+  
+  # Growth and Consumption --------------------------------------------------
+  
   
   #plot growth and consumption
   if(plot.growth.cons){
@@ -701,12 +701,12 @@ make_atlantis_diagnostic_figures = function(
     gridExtra::grid.arrange(temp.plot.4)
     dev.off()
     
-
+    
   }
   
-
-# Cohort timeseries -------------------------------------------------------
-
+  
+  # Cohort timeseries -------------------------------------------------------
+  
   
   #plot cohort timeseries
   if(plot.cohort){
@@ -724,24 +724,87 @@ make_atlantis_diagnostic_figures = function(
     
   }
   
-
-# Diet --------------------------------------------------------------------
-
+  
+  # Diet --------------------------------------------------------------------
+  
   
   #Diet figures
   if(plot.diet){
     
+    library(atlantistools)
     if(!is.na(result$biomass.consumed)){
       
-      diet.plots = atlantistools::plot_diet(result$biomass.consumed, wrap_col =  'agecl', combine_thresh =  3)
+      # diet.plots = atlantistools::plot_diet(result$biomass.consumed, wrap_col =  'agecl', combine_thresh =  3)
+      bio_consumed = result$biomass.consumed
+      wrap_col = 'agecl'
+      combine_thresh = 3
+      species = NULL
+      
+      check_df_names(data = bio_consumed, expect = c("pred", "agecl", 
+                                                     "time", "prey", "atoutput"), optional = "polygon")
+      agg_bio <- agg_data(bio_consumed, groups = c("time", "pred", 
+                                                   "agecl", "prey"), fun = sum)
+      preddata <- agg_perc(agg_bio, groups = c("time", "pred", 
+                                               "agecl"))
+      preydata <- agg_perc(agg_bio, groups = c("time", "prey", 
+                                               "agecl"))
+      pred_comb <- combine_groups(preddata, group_col = "prey", 
+                                  groups = c("time", "pred", "agecl"), combine_thresh = combine_thresh)
+      prey_comb <- combine_groups(preydata, group_col = "pred", 
+                                  groups = c("time", "prey", "agecl"), combine_thresh = combine_thresh)
+      plot_sp <- function(data, col, wrap_col) {
+        if (nrow(data) == 0) {
+          plot <- ggplot2::ggplot() + ggplot2::theme_void()
+        }
+        else {
+          agg_data <- agg_data(data, groups = col, out = "sum_diet", 
+                               fun = sum)
+          data[, col] <- factor(data[[col]], levels = agg_data[[1]][order(agg_data$sum_diet, 
+                                                                          decreasing = TRUE)])
+          plot <- ggplot2::ggplot(data, ggplot2::aes_(x = ~time, 
+                                                      y = ~atoutput, fill = lazyeval::interp(~var, 
+                                                                                             var = as.name(col)))) + ggplot2::geom_bar(stat = "identity") + 
+            ggplot2::scale_fill_manual(values = c(get_colpal(),RColorBrewer::brewer.pal(8,'Set1'))) + 
+            ggplot2::facet_wrap(lazyeval::interp(~var, var = as.name(wrap_col)), 
+                                ncol = 5, labeller = "label_both") + ggplot2::labs(x = NULL, 
+                                                                                   y = NULL, title = NULL) + theme_atlantis() + 
+            ggplot2::theme(legend.position = "right")
+          plot <- atlantistools:::ggplot_custom(plot)
+        }
+        return(plot)
+      }
+      if (is.null(species)) {
+        species <- sort(union(union(union(preddata$pred, preddata$prey), 
+                                    preydata$pred), preydata$prey))
+      }
+      grobs <- vector("list", length = length(species))
+      for (i in seq_along(grobs)) {
+        grobs[[i]] <- vector("list", length = 2)
+      }
+      for (i in seq_along(species)) {
+        df_pred <- dplyr::filter_(pred_comb, ~pred == species[i])
+        df_prey <- dplyr::filter_(prey_comb, ~prey == species[i])
+        grobs[[i]][[1]] <- plot_sp(df_pred, col = "prey", wrap_col = wrap_col)
+        grobs[[i]][[2]] <- plot_sp(df_prey, col = "pred", wrap_col = wrap_col)
+      }
+      for (i in seq_along(grobs)) {
+        heading <- grid::textGrob(paste("Diet proportions for species:", 
+                                        species[i]), gp = grid::gpar(fontsize = 14))
+        grobs[[i]][[1]] <- grobs[[i]][[1]] + ggplot2::labs(y = "Predator perspective")
+        grobs[[i]][[2]] <- grobs[[i]][[2]] + ggplot2::labs(y = "Prey perspective")
+        grobs[[i]] <- gridExtra::arrangeGrob(grobs = c(list(heading), 
+                                                       grobs[[i]]), heights = grid::unit(c(0.05, 0.475, 
+                                                                                           0.475), units = "npc"))
+      }
+      names(grobs) <- species
       
       pdf(file = paste0(out.dir,run.name, ' Diet Proportions.pdf'),paper = 'A4r',width = 22, height = 16, onefile = T)
-      for(i in seq_along(diet.plots)){
-        gridExtra::grid.arrange(diet.plots[[i]])
+      for(i in seq_along(grobs)){
+        gridExtra::grid.arrange(grobs[[i]])
       }
       dev.off()
     }
-
+    
   }
   
   if(plot.consumption){
@@ -760,9 +823,9 @@ make_atlantis_diagnostic_figures = function(
   }
   
   
-
-# Spatial biomass ---------------------------------------------------------
-
+  
+  # Spatial biomass ---------------------------------------------------------
+  
   
   #Spatial biomass
   if(plot.spatial.biomass){
@@ -785,9 +848,9 @@ make_atlantis_diagnostic_figures = function(
     
   }
   
-
-# LTL plots ---------------------------------------------------------------
-
+  
+  # LTL plots ---------------------------------------------------------------
+  
   
   #LTL plots
   if(plot.LTL){
@@ -842,6 +905,6 @@ make_atlantis_diagnostic_figures = function(
     mtext('ZG',3)
     
     dev.off()
-         
-    }
+    
+  }
 }
