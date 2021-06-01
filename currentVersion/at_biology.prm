@@ -140,7 +140,7 @@ flagstarve       1         Give starvation notices: 0 = no, 1 = yes             
 flagdegrade      0         Degrade coastal habitats (effects growth of MA, SG and BFS)         0
 flagroc          0         Density dependent drop off option: 0 = none, 1 = ratio drop off, 2 = exponential decline   0
 # gfay @nmfs 17 July 2014, following entry should probably change for base.
-flaghomog_sp     1         Body condition homogenised across the entire area: 0 = no, 1 = yes  0
+flaghomog_sp     0         Body condition homogenised across the entire area: 0 = no, 1 = yes  0
 flagagestruct    1         Age structure option: 0 = homogeneous cohorts, 1 = track cohorts    0
 flagsenesce      1         Oldest sub-part of final age group senesces, 1 = yes, 0 = no        0
 flagtsforcerecruit 0       Force recruitment of 1+ groups with environmental forcing           0
@@ -11594,13 +11594,13 @@ C_LSQ_T15	0.007
 C_jLSQ_T15	0.007
 C_ISQ_T15	0.01455
 C_jISQ_T15	0.01455
-C_SCA_T15	0.4
-C_QHG_T15	0.75
-C_CLA_T15	0.35
-C_BFF_T15	0.2
+C_SCA_T15	7
+C_QHG_T15	10
+C_CLA_T15	10
+C_BFF_T15	0.5
 C_BG_T15	0.75
 C_BC_T15	0.00012
-C_LOB_T15	0.00024
+C_LOB_T15	0.00025
 C_RCB_T15	0.0003
 C_BMS_T15	0.000075
 C_NSH_T15	0.001
@@ -11816,12 +11816,11 @@ mum_ISQ_T15	0.00444
 mum_jISQ_T15 	0.004
 mum_SCA_T15	45000
 mum_QHG_T15	500
-mum_QHG_T15	500
 mum_CLA_T15	200
 mum_BFF_T15	120
 mum_BG_T15	100000
-mum_BC_T15 	0.005
-mum_LOB_T15 0.00032
+mum_BC_T15 	0.0005
+mum_LOB_T15 0.0012
 mum_RCB_T15 0.00005
 mum_BMS_T15	0.005
 mum_NSH_T15	0.01
@@ -11973,7 +11972,7 @@ mum_YTF	10.00
 1.3	6.2	12.5	20	25.5	30.5	39.5	38	40	41.5
 									
 mum_DOG	10.00	
-2.65	93	290	500	660	770	850	855	920	940
+0.65	23	72.5	125	165	192.5	212.5	213.5	230	235
 									
 mum_SMO	10.00								
 7.18	239.83	368.425	402.295	410.125	411.885	412.28	412.365	412.385	412.39
@@ -11996,8 +11995,8 @@ mum_PSH	10.00
 mum_WSK	10.00								
 0.6	29	108	218.75	338.25	451	549.25	630.5	696	747
 										
-mum_LSK	10.00								
-4.6	144.4	381.58	584.82	722.58	806.8	855.72	883.4	898.86	907.4
+mum_LSK	10.00		
+1.2	38.5	95	148.5	180.5	201.5	213.5	220.5	224.5	226					
 									
 mum_SK	10.00								
 6.87	265.18	829.64	1451.58	1984.13	2388.14	2675.1	2871.27	3002.3	3088.58
