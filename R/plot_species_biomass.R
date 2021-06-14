@@ -1,11 +1,11 @@
-atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HerZoo_32/'
-atl.dir2 = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HerZoo_33/'
+atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/PersistCheck_2/'
+atl.dir2 = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/PersistCheck_3/'
 age.dat = read.table(paste0(atl.dir,'neus_outputAgeBiomIndx.txt'),header= T, stringsAsFactors = F)
 age.dat2 = read.table(paste0(atl.dir2,'neus_outputAgeBiomIndx.txt'),header= T, stringsAsFactors = F)
 
 library(ggplot2)
 
-spp.name = 'HER'
+spp.name = 'BLF'
 
 new.dat = age.dat[,c(1,grep(spp.name,colnames(age.dat)))]
 colnames(new.dat)[-1] = sapply(colnames(new.dat)[-1],function(x) strsplit(x,paste0(spp.name,'.'))[[1]][2])
@@ -28,6 +28,12 @@ ggplot(recruits2,aes(x= Time, y = biomass, col = Cohort))+
 
 plot(biomass~Time,recruits2,type='l')
 lines(biomass~Time,recruits,col = 'red')
+
+
+new.dat2 = new.dat2 %>% filter(Cohort != 0)
+ggplot(new.dat2,aes(x= Time, y = biomass, col = Cohort))+
+  geom_line(size = 1.2)
+  xlim(0,1500)
 
 xx = new.dat$`1`-new.dat$`0`
 plot(xx,type = 'l')
