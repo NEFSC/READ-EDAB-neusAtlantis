@@ -1,0 +1,90 @@
+code,Name,LongName,priority.ecological,priority.economic,priority.society,priority.overall,Notes
+MAK,Mackerel,Mackerel,L,M,,H,"GoM!, historically"
+HER,Herring,Atlantic herring,H,H,,H,declined
+WHK,White_Hake,White hake,L,H,,H,
+BLF,Bluefish,Bluefish,H,H,,H,Recreational
+WPF,Windowpane,Windowpane flounder,L,L,L,L,
+SUF,Summerflounder,Summer flounder,H,H,,H,declined
+WIF,Winterflounder,Winter flounder,H,H,,H,
+WTF,Witchflounder,Witch flounder,L,L,L,L,deep water - on shelf
+FOU,Fourspotflounder,Fourspot Flounder,H,L,L,L,
+HAL,Halibut,Atlantic halibut,L,L,L,L,
+PLA,Plaice,American plaice,H,L,L,L,
+FLA,Other_Flatfish,Other flatfish,L,L,,L,
+BFT,BluefinTuna,Atlantic bluefin tuna,L,L,,L,
+TUN,Tunas,Other tunas,L,L,,L,
+BIL,Billfish,Billfish,L,L,,L,
+MPF,Mesopelagic_Mig_Fish,Migratory mesopelagic fish ,H,L,,H,"No data, MAB"
+BUT,Butterfish,Butterfish,L,L,L,L,
+BPF,Benthopelagic_Fish,Other benthopelagic fish,L,L,L,L,
+ANC,Anchovies,Anchovies,L,L,L,L,
+GOO,Monkfish,Monkfish,H,H,,H,
+MEN,Menhaden,Atlantic menhaden,L,L,L,L,
+FDE,Shallow_Demersal_Fish,Shallow demersal fish,L,L,L,L,
+COD,Cod,Atlantic cod,L,L,H,H,
+SHK,Silver_Hake,Silver hake,H,H,,H,
+OHK,Offshore_Hake,Offshore hake,L,L,L,L,
+POL,Pollock,Pollock,H,H,,H,GOM more important
+RHK,Red_Hake,Red hake,H,L,,H,
+BSB,Black_Sea_Bass,Black sea bass,,H,,H,
+SCU,Scup,Scup,,H,,H,Mid economic
+TYL,Tilefish,Tilefish,L,L,,L,"No data, Lionfish"
+RED,Redfish,Acadian redfish,H,H,,H,GOM
+OPT,Ocean_Pout,Ocean pout,L,L,,L,
+SAL,Atlantic_Salmon,Atlantic salmon,L,L,L,L,Turn it off
+DRM,Drums_Croakers,Drums and croakers,H,M,,H,high vol in mid (croakers)
+STB,Striped_Bass,Striped Bass,M,H,,H,Recreational
+TAU,Tautog,Tautog,L,L,,L,
+WOL,Wolffish,Wolffish,L,L,,L,listed as endangered
+SDF,Atlantic_States_Demersals,Atlantic states demersal fish,L,L,,L,
+FDF,Misc_Demersal_Fish,Miscellaneous demersal fish,L,L,,L,
+HAD,Haddock,Haddock,H,H,H,H,
+YTF,Yellowtail_Flounder,Yellowtail flounder,L,L,H,H,
+DOG,Spiny_Dogfish,Spiny dogfish,H,L,,H,
+SMO,Smooth_Dogfish,Smooth dogfish,?,L,,L,
+SSH,Sandbar_Shark,Sandbar shark,?,L,,L,Data Poor
+DSH,Demersal_Shark,Other demersal sharks,?,L,,L,Data Poor
+BLS,Blue_Shark,Blue shark,?,L,,L,Data Poor
+POR,Porbeagle_Shark,Porbeagle shark,?,L,,L,Data Poor
+PSH,Pelagic_Shark,Other pelagic sharks,?,L,,L,Data Poor
+WSK,Winter_Skate,Winter skate,H,L,L,H,
+LSK,Little_Skate,Little skate,H,L,L,H,
+SK,Skate,Northeast skate complex,L,L,L,L,
+SB,Seabird,Seabirds,L,L,H,L,
+PIN,Pinniped,Pinnipeds,H,L,H,H,pop growth outside model. immigration
+REP,Turtle,Marine turtles,L,L,H,L,
+RWH,Right_Whale,Right whales,L,L,H,L,
+BWH,Baleen_Whale,Baleen whales,L,L,H,L,
+SWH,Small_Whale,Small toothed whales,L,L,H,L,
+TWH,Tooth_Whale,Toothed whales ,L,L,L,L,
+INV,Invasive_Species,Invasive vertebrate species,L,L,L,L,growing outside model (Lionfish)
+LSQ,Loligo_Squid,Loligo squid,H,H,,H,GoM
+ISQ,Illex_Squid,Illex squid,L,L,,L,Blowing up after 2018
+SCA,Scallop,Sea scallop,H,H,H,H,
+QHG,Quahog,Ocean quahog,H,M,H,H,
+CLA,Surf_Clam,Atlantic surf clam,H,H,,H,
+BFF,Filter_Other,Other benthic filter feeder,L,L,L,L,
+BG,Benthic_grazer,Benthic grazer,H,L,L,H,"starfish, urchins - low data"
+LOB,Lobster,Lobster,H,H,H,H,MAB
+RCB,Red_Crab,Red deep-sea crab,L,L,L,L,Only appears in boundary boxes - removed
+BMS,Macrobenth_Shallow,Shallow macrozoobenthos,L,L,L,L,
+NSH,Northern_Shrimp,Northern shrimp other pandalids,L,L,L,L,
+OSH,Other_Shrimp,Other shrimps,L,L,L,L,
+ZL,Carniv_Zoo,Carnivorous zooplankton,,,,,
+BD,Deposit_Feeder,Deposit Feeder,,,,,
+MA,Macroalgae,Macroalgae,,,,,
+MB,MicroPB,Microphtybenthos,,,,,
+SG,Seagrass,Seagrass,,,,,
+BC,Benthic_Carniv,Benthic Carnivore,,,,,
+ZG,Gelat_Zoo,Gelatinous zooplankton,H,L,L,L,No data
+PL,Diatom,Diatom,,,,,
+DF,DinoFlag,Dinoflagellates,,,,,
+PS,PicoPhytopl,Pico-phytoplankton,,,,,
+ZM,Zoo,Mesozooplankton,,,,,
+ZS,MicroZoo,Microzooplankton,,,,,
+PB,Pelag_Bact,Pelagic Bacteria,,,,,
+BB,Sed_Bact,Sediment Bacteria,,,,,
+BO,Meiobenth,Meiobenthos,,,,,
+DL,Lab_Det,Labile detritus,,,,,
+DR,Ref_Det,Refractory detritus,,,,,
+DC,Carrion,Carrion,,,,,
