@@ -7,10 +7,10 @@ library(dplyr)
 
 #### CHANGE THIS FOR EACH RUN ###
 #Set the "Name" of the run and the directory of output files
-run.name1 = 'InvertPersist_2'
+run.name1 = 'Master_06032021'
 run.dir1 = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name1)
 
-run.name2 = 'InvertPersist_3'
+run.name2 = 'PersistCheck_5'
 run.dir2 = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name2)
 
 #Timing
@@ -18,7 +18,7 @@ persist.nyr = 40
 stable.nyr = 20
 
 #Reasonability bounds
-surveyBounds = c(1,100)
+surveyBounds = c(0.5,2)
 initBioBounds = c(0.5,2)
 ####_________________________####
 
@@ -53,19 +53,16 @@ persist2 =diag_persistence(modelBiomass2,
                            nYrs = persist.nyr,
                            floor = 0
 )
-
 #Run Stability
 
 ##Run1
 stable1 = diag_stability(modelBiomass1,
                         speciesCodes=NULL,
-                        nYrs = stable.nyr,
-                        sigTest = 0.1) 
+                        nYrs = stable.nyr) 
 ##Run2
 stable2 = diag_stability(modelBiomass2,
                          speciesCodes=NULL,
-                         nYrs = stable.nyr,
-                         sigTest = 0.1) 
+                         nYrs = stable.nyr) 
 
 #Run Reasonability
 
@@ -74,15 +71,15 @@ reasonable1 = diag_reasonability(modelBiomass=modelBiomass1,
                                 initialYr = 1964,
                                 speciesCodes =NULL,
                                 realBiomass=realBiomass,
-                                surveyBounds = c(1,100),
-                                initBioBounds = c(0.5,2))
+                                surveyBounds,
+                                initBioBounds)
 ##Run2
 reasonable2 = diag_reasonability(modelBiomass=modelBiomass2,
                                 initialYr = 1964,
                                 speciesCodes =NULL,
                                 realBiomass=realBiomass,
-                                surveyBounds = c(1,100),
-                                initBioBounds = c(0.5,2))
+                                surveyBounds,
+                                initBioBounds)
 
 #Combine 3 outputs together
 diag.all.1 = diag_combine(persist1,stable1,reasonable1)
