@@ -71,8 +71,8 @@ make_SatPhyto_climatology = function(in.dir,
       var.array[1,b,] = var.box$STAT
     }
     
-    #Convert Chl to Nitrogen
-    var.array = var.array / chl.conv[v]
+    #Convert Chl to Nitrogen #Important to multiple
+    var.array = var.array * chl.conv[v]
     
     #Put into Prod.ls
     prod.ls[[v]] = var.array

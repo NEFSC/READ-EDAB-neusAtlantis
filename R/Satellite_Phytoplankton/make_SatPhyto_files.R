@@ -94,8 +94,8 @@ make_SatPhyto_files = function(in.dir,
         var.mat[b,date.match] = var.box$STAT
       }
       
-      #Convert Chl to Nitrogen
-      var.mat = var.mat / chl.conv[v]
+      #Convert Chl to Nitrogen #Important to multiply
+      var.mat = var.mat * chl.conv[v]
       
       #Put into Prod.ls
       prod.ls[[v]] = var.mat
