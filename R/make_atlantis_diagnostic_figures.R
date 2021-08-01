@@ -32,6 +32,8 @@
 #'@plot.diet logical. Plots showing predation of and consumption by each functional group
 #'@plot.spatial.biomass logical. Plots showing the spatial (box/level) structure of groups' biomass
 #'@plot.LTL logical. Plots comparing LTL groups (domain-wide) to data
+#'@plot.catch logical. Plots annual catch(mt) age based catch (numbers) and age based %ages
+
 #'
 #'@return A series of figures and tables based on output grouping flags
 #' 
@@ -134,7 +136,8 @@ make_atlantis_diagnostic_figures = function(
   plot.diet,
   plot.consumption,
   plot.spatial.biomass,
-  plot.LTL
+  plot.LTL,
+  plot.catch
 ){
   
   `%>%` = dplyr::`%>%`
@@ -177,6 +180,32 @@ make_atlantis_diagnostic_figures = function(
     dev.off()
   }
   
+  
+  if(plot.catch) {
+    #Catch by species time series (metric tonnes)
+    temp.plot.1 = atlantistools::plot_line(result$catchmt)
+    temp.plot.1 = ggplot2::update_labels(temp.plot.1,labels = plot.labels)
+    temp.plot.1 = ggplot2::update_labels(temp.plot.1,labels = list(x='Time (years)', y = 'Metric Tonnes'))
+    temp.plot.1 = add.title(temp.plot.1,'Catch')
+    
+    #Catch at age time series (numbers)
+    temp.plot.2 = atlantistools::plot_line(result$totcatch, col = 'agecl')
+    temp.plot.2 = ggplot2::update_labels(p = temp.plot.2, labels = c(plot.labels, list(colour = 'Ageclas')))
+    temp.plot.2 = ggplot2::update_labels(temp.plot.2,labels = list(x='Time (years)', y = 'Numbers'))
+    temp.plot.2 = add.title(temp.plot.2,'Catch at Age')
+    
+    #Catch at age - percent
+    catch.age.pct = atlantistools::agg_perc(result$totcatch, groups = c('time','species'))
+    temp.plot.6 = atlantistools::plot_bar(catch.age.pct, fill = 'agecl', wrap = 'species')
+    temp.plot.6 = ggplot2::update_labels(temp.plot.6,labels = list(x='Time (years)', y = 'Numbers (%)'))
+    temp.plot.6 = add.title(temp.plot.6, 'Catch at age - Percent')
+    
+    pdf(paste0(out.dir,run.name,' Catch Timeseries.pdf'),width = 20, height = 20, onefile = T)
+    gridExtra::grid.arrange(temp.plot.1)
+    gridExtra::grid.arrange(temp.plot.2)
+    gridExtra::grid.arrange(temp.plot.6)
+    dev.off()
+  }
   
   # Overall biomass ---------------------------------------------------------
   

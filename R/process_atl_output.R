@@ -235,6 +235,9 @@ process_atl_output = function(param.dir,atl.dir,out.dir,bgm.file,groups.file,ini
                                    select_variable = 'Catch',
                                    prm_run = run.prm, bboxes = bboxes)  
     totcatch = atlantistools::agg_data(catch, groups = c('species','time','agecl'), fun = sum)
+    catchmt <- atlantisom::load_catch(dir=atl.dir,file_catch=paste0(run.prefix,"Catch.txt"),fgs = groups.data) %>%
+      dplyr::select(species,time,atoutput) %>%
+      dplyr::mutate(time = time/365)
   }
   
   #Aggregate volume vertically
@@ -272,7 +275,8 @@ process_atl_output = function(param.dir,atl.dir,out.dir,bgm.file,groups.file,ini
       'ssb.recruits' = data.ssb.recruit,
       'volume' = vol.ts,
       'catch' = catch,
-      'totcatch' = totcatch
+      'totcatch' = totcatch,
+      'catchmt' = catchmt
       )
   } else{
     result = list(
