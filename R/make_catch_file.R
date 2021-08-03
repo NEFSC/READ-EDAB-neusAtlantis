@@ -1,6 +1,7 @@
 library(dplyr)
 library(data.table)
 library(stringr)
+library(ggplot2)
 # NOTE: comland_meatwt_deflated.RData NOT TO BE POSTED ON GITHUB DUE TO POTENTIAL CONFIDENTIALITY CONCERNS
 # ask Sean for it
 
@@ -112,6 +113,24 @@ catch[,which(colnames(catch)=='SAL')] = 0
 
 #test mean catch by group
 sort(colMeans(catch,na.rm=T))
+
+#plot catch forcing
+pdf(here::here('currentVersion','CatchFiles','Catch_Forcing.pdf'),width = 12 , height = 12,onefile = T)
+catch.long = catch %>% reshape2::melt(id.vars = 'time')
+p1= ggplot(catch.long,aes(x=time,y=value))+
+  geom_line()+
+  ylab('mgN/second')+
+  facet_wrap(~variable,scale = 'free_y')+
+  theme_bw()
+gridExtra::grid.arrange(p1)
+p2= ggplot(catch.long,aes(x=time,y=value*86400*5.7*20*1E-9))+
+  geom_line()+
+  ylab('mT/day')+
+  facet_wrap(~variable,scale = 'free_y')+
+  theme_bw()
+gridExtra::grid.arrange(p2)
+dev.off() 
+  
 
 # write.table(catch,"/home/rgamble/Desktop/Atlantis-Catch/catch_ts_all.txt",col.names = F, row.names = F, sep = " ")
 write.table(catch,here::here('currentVersion','CatchFiles','total_catch_new.txt'),col.names = F, row.names = F, sep = " ")
