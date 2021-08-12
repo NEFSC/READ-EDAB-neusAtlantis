@@ -29,50 +29,40 @@
 # # groups = c('HER','CLA','LOB')
 # groups = NULL
 
-plot_run_comparisons = function(model1.dir,model2.dir,model1.name,model2.name,plot.raw = T,
+plot_run_comparisons = function(model.dirs,model.names,plot.raw = T,
                              plot.diff = T, plot.out, table.out = F, groups = NULL,remove.init = F,rm.rel = T){
   `%>%` = dplyr::`%>%`
   
-  model1.files = sort(list.files(model1.dir,'*.nc'))
-  model2.files = sort(list.files(model2.dir,'*.nc'))
+  model.files =lapply(model.dirs,function(x) {return(sort(list.files(x,'*.nc')))})
   
-  model1.prefix = strsplit(model1.files[1],'\\.')[[1]][1]
-  model2.prefix = strsplit(model2.files[1],'\\.')[[1]][1]
+  model.prefix = lapply(model.files,function(x) {return(strsplit(x[1],'\\.')[[1]][1])})
   
-  model1.bio = paste0(model1.prefix,'BiomIndx.txt')
-  model2.bio = paste0(model2.prefix, 'BiomIndx.txt')
+  model.bio = lapply(model.prefix,function(x) {return(paste0(x,'BiomIndx.txt'))})
   
-  bio1 = read.table(file = paste0(model1.dir,model1.bio),header = T)
-  bio2 = read.table(file = paste0(model2.dir,model2.bio),header = T)
-  
-  fgs = colnames(bio1)[2:ncol(bio1)]
+  bio = lapply(paste0(model.dirs,model.bio),function(x) {return(read.table(file = x,header =T))})
+
+  fgs = colnames(bio[[1]])[2:ncol(bio[[1]])]
   
   #If specifying groups, subset only those
   if(!is.null(groups)){
-    bio1 = subset(bio1,select = c('Time',groups))
-    bio2 = subset(bio2,select = c('Time',groups))
+    bio = lapply(bio,function(x) {return(subset(x,select = c('Time',groups)))})
   }
   
   #convert each model to long format
-  bio1.long = tidyr::gather(bio1,key = 'Group','Biomass',-Time)
-  bio2.long = tidyr::gather(bio2,key = 'Group','Biomass',-Time)
+  bio.long = lapply(bio,function(x) {return(tidyr::gather(x,key = 'Group','Biomass',-Time))})
   
-  bio1.long$Model = 'model1'
-  bio2.long$Model = 'model2'
+  for(i in 1:length(bio.long)){bio.long[[i]]$Model = model.names[i]}
   
-  nc1 = ncdf4::nc_open(paste0(model1.dir,model1.prefix,'.nc'))
-  nc2 = ncdf4::nc_open(paste0(model2.dir,model2.prefix,'.nc'))
+  nc = lapply(paste0(model.dirs,model.prefix,'.nc'),function(x) return(ncdf4::nc_open(x)))
   
-  t.start1 = strsplit(ncdf4::ncatt_get(nc1,'t')$units,'\\ ')[[1]][3]
-  t.start2 = strsplit(ncdf4::ncatt_get(nc2,'t')$units,'\\ ')[[1]][3]
+  t.start = lapply(nc,function(x) return(strsplit(ncdf4::ncatt_get(x,'t')$units,'\\ ')[[1]][3]))
+ 
+  lapply(nc,function(x) ncdf4::nc_close(x)) 
   
-  ncdf4::nc_close(nc1)
-  ncdf4::nc_close(nc2)
-  
-  bio1.long$Real.Time = as.Date(bio1.long$Time,origin = t.start1)
-  bio2.long$Real.Time = as.Date(bio2.long$Time,origin = t.start2)
-  
-  bio.all = rbind(bio1.long,bio2.long)
+  for(i in 1:length(bio.long)){ bio.long[[i]]$Real.Time = as.Date(bio.long[[i]]$Time, origin = t.start[[i]])}
+
+  bio.all = dplyr::bind_rows(bio.long) %>%
+    dplyr::mutate(Model = factor(Model,levels= model.names))
   
   if(remove.init){
     bio.all = bio.all %>% dplyr::filter(Time != 0)
@@ -88,43 +78,46 @@ plot_run_comparisons = function(model1.dir,model2.dir,model1.name,model2.name,pl
     plot.groups = groups
   }
   
+  #need to create contingency for >2 comparisons
   if(plot.diff){
-
-    if(t.start1 != t.start2){
-      print('Error: models do not have the same start date. Difference function not applicable')
-    } else{
-      bio.diff = bio.all %>% dplyr::ungroup() %>%
-        dplyr::group_by(Time,Real.Time,Group) %>% 
-        dplyr::arrange(Group,Time,Model) %>%
-        dplyr::summarize(bio.diff = Biomass[1]-Biomass[2])
-      # bio.diff$Real.Time = as.Date(bio.diff$Time,origin = t.start1)
-      
-      pdf(paste0(plot.out,'Biomass_Difference.pdf'),width = 14,onefile = T)
-      for(i in 1:length(plot.groups)){
-        p= ggplot2::ggplot(data = subset(bio.diff,Group == plot.groups[i]), ggplot2::aes(x=Real.Time,y = bio.diff))+
-          ggplot2::geom_path()+
-          ggplot2::ylab('Difference in Model Biomass (Tonnes)')+
-          ggplot2::xlab('Date')+
-          ggplot2::ggtitle(plot.groups[i])+
-          ggplot2::theme_minimal()+
-          ggplot2::theme(
-            plot.title = ggplot2::element_text(hjust = 0.5)
-          )
-        gridExtra::grid.arrange(p)
-      }
-      dev.off()
-    }
+    print('Error: difference plot temporarily disabled')
   }
+  # if(plot.diff){
+  # 
+  #   if(length(unique(unlist(t.start)))!=1){
+  #     print('Error: models do not have the same start date. Difference function not applicable')
+  #   } else{
+  #     bio.diff = bio.all %>% dplyr::ungroup() %>%
+  #       dplyr::group_by(Time,Real.Time,Group) %>% 
+  #       dplyr::arrange(Group,Time,Model) %>%
+  #       dplyr::summarize(bio.diff = Biomass[1]-Biomass[2])
+  #     # bio.diff$Real.Time = as.Date(bio.diff$Time,origin = t.start1)
+  #     
+  #     pdf(paste0(plot.out,'Biomass_Difference.pdf'),width = 14,onefile = T)
+  #     for(i in 1:length(plot.groups)){
+  #       p= ggplot2::ggplot(data = subset(bio.diff,Group == plot.groups[i]), ggplot2::aes(x=Real.Time,y = bio.diff))+
+  #         ggplot2::geom_path()+
+  #         ggplot2::ylab('Difference in Model Biomass (Tonnes)')+
+  #         ggplot2::xlab('Date')+
+  #         ggplot2::ggtitle(plot.groups[i])+
+  #         ggplot2::theme_minimal()+
+  #         ggplot2::theme(
+  #           plot.title = ggplot2::element_text(hjust = 0.5)
+  #         )
+  #       gridExtra::grid.arrange(p)
+  #     }
+  #     dev.off()
+  #   }
+  # }
   
-  
-  
+  plot.cols = RColorBrewer::brewer.pal(12,'Paired')
   if(plot.raw){
       pdf(paste0(plot.out,'Model_Comparison_Biomass.pdf'),width = 14,onefile = T)
     for(i in 1:length(plot.groups)){
       p= ggplot2::ggplot(data = subset(bio.all,Group == plot.groups[i]),
                          ggplot2::aes(x=Real.Time,y = Biomass,color = Model))+
-        ggplot2::geom_path()+
-        ggplot2::scale_color_manual(name = 'Model',labels = c(model1.name,model2.name),values = c('red3','blue3'))+
+        ggplot2::geom_path(size = 1)+
+        ggplot2::scale_color_manual(name = 'Model',labels = model.names,values = plot.cols )+
         ggplot2::ylab('Group Biomass (Tonnes)')+
         ggplot2::xlab('Date')+
         ggplot2::ggtitle(plot.groups[i])+
