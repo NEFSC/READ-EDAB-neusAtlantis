@@ -7,7 +7,7 @@ library(dplyr)
 
 #### CHANGE THIS FOR EACH RUN ###
 #Set the "Name" of the run and the directory of output files
-run.name = 'PersistCheck_7'
+run.name = 'ZooRebalance_13'
 run.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name)
 ####_________________________####
 

@@ -9,7 +9,7 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'HerZoo_33'
+run.name = 'ZooRebalance_13'
 
 
 atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
@@ -80,20 +80,20 @@ make_atlantis_diagnostic_figures(
  
   #Turn these on/off for desired output
   plot.benthic =F,
-  plot.overall.biomass = T,
+  plot.overall.biomass = F,
   plot.biomass.timeseries = T,
-  plot.length.age=T,
-  plot.biomass.box=T,
+  plot.length.age=F,
+  plot.biomass.box=F,
   plot.c.mum=F,
-  plot.sn.rn=T,
-  plot.recruits=T,
-  plot.numbers.timeseries=T,
-  plot.physics=T,
+  plot.sn.rn=F,
+  plot.recruits=F,
+  plot.numbers.timeseries=F,
+  plot.physics=F,
   plot.growth.cons=F,
-  plot.cohort=T,
+  plot.cohort=F,
   plot.diet=T,
   plot.consumption= T,
-  plot.spatial.biomass=T,
+  plot.spatial.biomass=F,
   plot.LTL=F
 )
   
