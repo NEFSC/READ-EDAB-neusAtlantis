@@ -23,18 +23,25 @@ master3 = paste0(obs.dir,'Atlantis_Runs/Master_06032021/')
 persist1 = paste0(obs.dir,'Atlantis_Runs/PersistCheck_1/')
 persist2 = paste0(obs.dir,'Atlantis_Runs/PersistCheck_2/')
 persist3 = paste0(obs.dir,'Atlantis_Runs/PersistCheck_3/')
-orig = paste0(obs.dir,'Atlantis_Runs/Atlantis_Output/')
-
+Master_NewPhyto = paste0(obs.dir,'Atlantis_Runs/FixPhytoConversion_17/')
+zoo6 = paste0(obs.dir,'Atlantis_Runs/ZooRebalance_6/')
+zoo7 = paste0(obs.dir,'Atlantis_Runs/ZooRebalance_7/')
+zoo8 = paste0(obs.dir,'Atlantis_Runs/ZooRebalance_8/')
+zoo9 = paste0(obs.dir,'Atlantis_Runs/ZooRebalance_9/')
+zoo10 = paste0(obs.dir,'Atlantis_Runs/ZooRebalance_10/')
+zoo11 = paste0(obs.dir,'Atlantis_Runs/ZooRebalance_11/')
+zoo12 = paste0(obs.dir,'Atlantis_Runs/ZooRebalance_12/')
+zoo13 = paste0(obs.dir,'Atlantis_Runs/ZooRebalance_13/')
+zoo13b = paste0(obs.dir,'Atlantis_Runs/ZooRebalance_13b/')
 
 figure.dir = paste0(obs.dir,'Diagnostic_Figures/Run_Comparisons/')
+
 plot_run_comparisons(
-  model1.dir = persist2,
-  model2.dir = persist3,
-  model1.name = 'PersistCheck_2',
-  model2.name = 'PersistCheck_3',
+  model.dirs = c(zoo11,zoo12,zoo13,zoo13b),
+  model.names = c(paste0('zoo',11:13),'zoo13b'),
   plot.raw = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'PersistCheck_2_v_3_'),
+  plot.out = paste(figure.dir,'ZooRebalance_multi_'),
   table.out = F,
   groups = NULL,
   remove.init = F
