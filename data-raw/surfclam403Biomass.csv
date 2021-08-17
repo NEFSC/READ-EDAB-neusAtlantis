@@ -1,3 +1,11 @@
+#' Northeast US Surfclam 
+#'
+#' @description Total biomass (mt) fom 1963-2019. Assessment report list only 6+ age classes. This data set is an estimate of total population biomass (from assessment model)
+#'
+#' @source email communication April 6, 2021
+#'
+#' @contact Dan Hennen 
+#'
 Yr,Value,StdDev,CV,upper,lower
 1963,1956810,451274,0.230617178,2841307.04,1072312.96
 1964,1968280,451545,0.229410958,2853308.2,1083251.8
