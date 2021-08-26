@@ -4,6 +4,129 @@
 
 ## Bug Fixes (patch)
 
+# neus-atlantis 1.0.0-9052 (in dev) 
+(built with altantis rev 6536)
+
+ZM Spatial Patterns (issue: ZM depletion regionally)
+
+* All groups persisting (besides nutrient/detritus/macro-algae)
+* All but STB and SDF stable
+* Fixed issues with regional depletion in ZM
+* mum, C, FSP, mQ changes to planktivores.
+* Added seasonal movements to ZM similar to existing ZL
+
+As described in [#120](https://github.com/NOAA-EDAB/neus-atlantis/pull/120) 
+
+# neus-atlantis 1.0.0-9051 (in dev) 
+(built with altantis rev 6536)
+
+Benthic & Zooplankton Rebalancing
+
+* Decrease initial HER biomass
+* Reduce biomass of LSQ, ISQ, OSH, NSH, BG, BD, BO
+* More stable ZL and ZM timeseries
+* Attempts to get flatter HER, MAK, MEN, and BUT timeseries (not completely successful)
+
+As described in [#118](https://github.com/NOAA-EDAB/neus-atlantis/pull/118) 
+
+# neus-atlantis 1.0.0-9050 (in dev) 
+(built with altantis rev 6536)
+
+Rebalance and Stability.
+
+* General tuning of all groups not passing calibration criteria after changes to phytoplankton forcing. Started with focus on reaching stability with zooplankton, then planktivores, then rest.
+
+* Reverted HERinitial conditions back to stock SMART levels
+* Tuning of C, mum, mQ for Benthos, Demersals and Zoo
+
+
+As described in [#117](https://github.com/NOAA-EDAB/neus-atlantis/pull/117) 
+
+# neus-atlantis 1.0.0-9049 (in dev) 
+(built with altantis rev 6536)
+
+Updated phytoplankton (PL, PS, DF) forcing files to accurately convert from Chlorophyll. Established zooplankton and planktivore persistence.
+
+As described in [#114](https://github.com/NOAA-EDAB/neus-atlantis/pull/114) 
+
+
+# neus-atlantis 1.0.0-9048 (in dev) 
+(built with altantis rev 6536)
+
+Chlorophyll to Nitrogen ratio changed from 7 to 1/7. 
+
+* New forcing files generated.
+* Preliminary adjustments to biology.prm to get model to complete run. Needs further tuning.
+
+As described in [#111](https://github.com/NOAA-EDAB/neus-atlantis/pull/111) 
+
+
+
+# neus-atlantis 1.0.0-9047 (in dev) 
+(built with altantis rev 6536)
+
+Age structure fixes for WIF, SUF, RHK, POL, STB.
+Stable and persisting, with good age structures.
+
+* changes to c mum, FSP, mQ
+
+
+As described in [#109](https://github.com/NOAA-EDAB/neus-atlantis/pull/109) + [#110](https://github.com/NOAA-EDAB/neus-atlantis/pull/110)
+
+
+
+
+# neus-atlantis 1.0.0-9046 (in dev) 
+(built with altantis rev 6536)
+
+Improve Stability of REP, COD, CLA. (Remaining are other bivalves, WIF, and TAU.) 
+
+* growth rates, mortality, reduced dominant predators on TAU and WIF.
+
+As described in [#108](https://github.com/NOAA-EDAB/neus-atlantis/pull/108)
+
+
+# neus-atlantis 1.0.0-9045 (in dev) 
+(built with altantis rev 6536)
+
+All persist, but not at "reasonable" levels
+
+* Initial conditions changes and additional mum/C/mQ changes for MAK, WHK, BLF, MPF, BPF, FDE, and COD.
+* Decreased FSP_BLF.
+* Increased KDENR_BPF
+
+As described in [#107](https://github.com/NOAA-EDAB/neus-atlantis/pull/107)
+
+
+
+# neus-atlantis 1.0.0-9044 (in dev) 
+(built with altantis rev 6536)
+
+Persistence of fish group  GOO, COD, BUT, BLF, WHK
+
+* Increase mum and C.
+* Bracketed FSP based on mum and C
+
+All pass persistence, only FDE doesnt persist
+
+As described in [#106](https://github.com/NOAA-EDAB/neus-atlantis/pull/106)
+
+
+
+# neus-atlantis 1.0.0-9043 (in dev) 
+(built with altantis rev 6536)
+
+Improves shellfish persistence of SCA, QHG, CLA, and LOB.
+
+* Reduces DOG, LSK, and BC growth.
+* Increase LOB growth. 
+* Increased CLA, SCA, and QHG clearance rates.
+
+Passes persistence, but not stability/reasonability
+
+As described in [#105](https://github.com/NOAA-EDAB/neus-atlantis/pull/105)
+
+
 
 # neus-atlantis 1.0.0-9042 (in dev) 
 (built with altantis rev 6536)
