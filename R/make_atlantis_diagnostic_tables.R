@@ -7,7 +7,7 @@ library(dplyr)
 
 #### CHANGE THIS FOR EACH RUN ###
 #Set the "Name" of the run and the directory of output files
-run.name = 'ZooRebalance_13'
+run.name = 'ZM_Spatial_3'
 run.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name)
 ####_________________________####
 
@@ -33,7 +33,7 @@ initBioBounds = c(0.5,2)
 persist =diag_persistence(modelBiomass,
                           speciesCodes= NULL,
                           nYrs = 40,
-                          floor = 0
+                          floor = 0.1
 )
 
 test = modelBiomass %>% 
@@ -53,8 +53,8 @@ reasonable = diag_reasonability(modelBiomass=modelBiomass,
                                 initialYr = 1964,
                                 speciesCodes =NULL,
                                 realBiomass=realBiomass,
-                                surveyBounds = c(1,100),
-                                initBioBounds = c(0.04,2))
+                                surveyBounds = c(1,10),
+                                initBioBounds = c(0.1,10))
 reasonable.fail = reasonable %>%
   filter(pass == F) %>%
   arrange(maxExceedance) %>%
