@@ -27,7 +27,7 @@ Benthic & Zooplankton Rebalancing
 * More stable ZL and ZM timeseries
 * Attempts to get flatter HER, MAK, MEN, and BUT timeseries (not completely successful)
 
-As described in [#118](https://github.com/NOAA-EDAB/neus-atlantis/pull/118) 
+As described in [#118](https://github.com/NOAA-EDAB/neus-atlantis/pull/118) + [#119](https://github.com/NOAA-EDAB/neus-atlantis/pull/119) 
 
 # neus-atlantis 1.0.0-9050 (in dev) 
 (built with altantis rev 6536)
