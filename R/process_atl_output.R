@@ -13,7 +13,7 @@
 #' 
 #' Author: Ryan Morse, modified by Joseph Caracappa
 
-process_atl_output_fast = function(param.dir,
+process_atl_output = function(param.dir,
                               atl.dir,
                               out.dir,
                               run.prefix,
