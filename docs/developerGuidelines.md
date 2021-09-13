@@ -108,7 +108,7 @@ Follow these steps
 
 ### git reset
 
-Scenario: You just made a local commit and either: a. tried to push to GitHub and got an error message saying you can not push the changes (maybe due to file size) or b. you just changed your mind and would like to "undo" the commit
+*Scenario*: You just made a local commit and either: a. tried to push to GitHub and got an error message saying you can not push the changes (maybe due to file size) or b. you just changed your mind and would like to "undo" the commit
 
 Follow these steps
 
@@ -116,9 +116,21 @@ Follow these steps
 >
 > Open the terminal window
 >
-> git reset --soft HEAD\~1
+> `git reset --soft HEAD\~1`
 
 If you are in Rstudio, you will see the files reappear in your git tab assigned with check marks (ie. in the state right before you previously committed them)
+
+*Scenario*: You just pushed a commit to GitHub and now you want to remove it.
+
+Follow these steps, first find the SHA tag of the commit you want to revert to. For this example lets call it 94a5b60ad78929c38b2c30a74abecd7849587fce.
+
+> `git reset --hard 94a5b60ad78929c38b2c30a74abecd7849587fce`
+>
+> `git push origin +94a5b60ad78929c38b2c30a74abecd7849587fce^:branchName`
+>
+> `git push origin 94a5b60ad78929c38b2c30a74abecd7849587fce:branchName`
+
+Replace `branchName` with the name of the branch on which you are working
 
 ### git revert
 
