@@ -33,6 +33,7 @@
 #'@plot.spatial.biomass logical. Plots showing the spatial (box/level) structure of groups' biomass
 #'@plot.LTL logical. Plots comparing LTL groups (domain-wide) to data
 #'@plot.catch logical. Plots annual catch(mt) age based catch (numbers) and age based %ages
+#'@plot.mortality logical. Plots Mortality (F, M1, M2) from two output sources (Mort, SpecificMort)
 
 #'
 #'@return A series of figures and tables based on output grouping flags
@@ -136,7 +137,8 @@ make_atlantis_diagnostic_figures = function(
   plot.consumption,
   plot.spatial.biomass,
   plot.LTL,
-  plot.catch
+  plot.catch,
+  plot.mortality
 ){
   
   `%>%` = dplyr::`%>%`
@@ -182,6 +184,7 @@ make_atlantis_diagnostic_figures = function(
     rm(biomass.spatial.stanza)
   }
   
+  # Catch Timeseries ------------------------------------------------------
   
   if(plot.catch|plot.all) {
     
@@ -216,6 +219,46 @@ make_atlantis_diagnostic_figures = function(
     
     rm(totcatch,catchmt)
   }
+  
+  # Mortality Timeseries ------------------------------------------------------
+  
+  if(plot.mortality|plot.all) {
+    
+    specificmort <- readRDS(paste0(out.dir,'specificmort.rds'))
+    
+    # Mortality by age (M1, M2, F)  
+    plotMort <- list()
+    itype <- 0
+    for (atype in rev(unique(specificmort$mort))) {
+      itype <- itype + 1
+      mort <- specificmort %>% 
+        dplyr::filter(mort == atype)
+      temp.plot = atlantistools::plot_line(mort, col = 'agecl')
+      temp.plot = ggplot2::update_labels(p = temp.plot, labels = c(list(x='Time (years)', y = 'Mortality'), list(colour = 'Ageclas')))
+      temp.plot = add.title(temp.plot,paste0('Mortality at Age (',atype,')'))
+      
+      plotMort[[itype]] <- temp.plot
+    }
+    
+    mort = readRDS(paste0(out.dir,'mort.rds'))
+    
+    # Annual Mortality time series M, F by species on same plot
+    temp.plot.1 = atlantistools::plot_line(mort,col="source")
+    temp.plot.1 = ggplot2::update_labels(temp.plot.1,labels = list(x='Time (years)', y = 'Mortality'))
+    temp.plot.1 = add.title(temp.plot.1,'Mortality (F & M)')
+    plotMort[[itype+1]] <- temp.plot.1
+    
+    
+    pdf(paste0(fig.dir,run.name,' Specific Mortality Timeseries.pdf'),width = 20, height = 20, onefile = T)
+    for (iplot in 1:(itype+1)) {
+      gridExtra::grid.arrange(plotMort[[iplot]])
+    }
+    dev.off()
+    
+    
+    rm(mort,specificmort)
+  }
+  
   
   # Overall biomass ---------------------------------------------------------
   
