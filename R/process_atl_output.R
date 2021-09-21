@@ -589,6 +589,6 @@ process_atl_output = function(param.dir,
   #   dplyr::mutate(atoutput = ifelse(is.infinite(atoutput),NA,atoutput))
   saveRDS(mortality,paste0(out.dir,'mort.RDS'))
   
-  specificMortality <- atlantistools::load_spec_mort(param.ls$specificmort,prm_run=param.ls$run.prm,fgs=param.ls$groups.file,convert_names = T)
+  specificMortality <- atlantistools::load_spec_mort(param.ls$specificmort,prm_run=param.ls$run.prm,fgs=param.ls$groups.file,convert_names = T,removeZeros = F)
   saveRDS(specificMortality,paste0(out.dir,'specificmort.RDS'))
 }
