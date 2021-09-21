@@ -224,11 +224,20 @@ make_atlantis_diagnostic_figures = function(
   
   if(plot.mortality|plot.all) {
     
+    # plot mortality from Mort.txt
+    mort = readRDS(paste0(out.dir,'mort.rds'))
+    itype <- 1
+    plotMort <- list()
+    # Annual Mortality time series M, F by species on same plot
+    temp.plot.1 = atlantistools::plot_line(mort,col="source")
+    temp.plot.1 = ggplot2::update_labels(temp.plot.1,labels = list(x='Time (years)', y = 'Mortality'))
+    temp.plot.1 = add.title(temp.plot.1,'Mortality (F & M2)')
+    plotMort[[itype]] <- temp.plot.1
+    
+    # plot mortaliy from specificMort.txt
     specificmort <- readRDS(paste0(out.dir,'specificmort.rds'))
     
-    # Mortality by age (M1, M2, F)  
-    plotMort <- list()
-    itype <- 0
+    # plot absolute mortality. 3 pages, one page for F,M1,M2
     for (atype in rev(unique(specificmort$mort))) {
       itype <- itype + 1
       mort <- specificmort %>% 
@@ -238,27 +247,64 @@ make_atlantis_diagnostic_figures = function(
       temp.plot = add.title(temp.plot,paste0('Mortality at Age (',atype,')'))
       
       plotMort[[itype]] <- temp.plot
+      
     }
     
-    mort = readRDS(paste0(out.dir,'mort.rds'))
+    # plot relative mortality by age class
+    # select species with 10 age classes
+    for (iage in 1:max(specificmort$agecl)) {
+      mortality <- specificmort %>%
+        dplyr::filter(code %in% atlantistools::get_cohorts(param.ls$fgs,numCohorts = 10)) %>%
+        dplyr::filter(agecl == iage)
+      
+      pct = atlantistools::agg_perc(mortality, groups = c('time','species'))
+      temp.plot = atlantistools::plot_bar(pct, fill = 'mort', wrap = 'species')
+      temp.plot = ggplot2::update_labels(temp.plot,labels = list(x='Time (years)', y = 'Rate (proportion)'))+
+        ggplot2::scale_y_continuous(labels = scales::label_number(accuracy = 0.01))
+      temp.plot = add.title(temp.plot, paste0("Relative Mortality Rates for species with 10 age classes (Age ",iage, ")"))
+      
+      plotMort[[itype + iage]] <- temp.plot
+    }
     
-    # Annual Mortality time series M, F by species on same plot
-    temp.plot.1 = atlantistools::plot_line(mort,col="source")
-    temp.plot.1 = ggplot2::update_labels(temp.plot.1,labels = list(x='Time (years)', y = 'Mortality'))
-    temp.plot.1 = add.title(temp.plot.1,'Mortality (F & M)')
-    plotMort[[itype+1]] <- temp.plot.1
+    # select species with 2 age classes
+    for (i2age in 1:2) {
+      mortality <- specificmort %>%
+        dplyr::filter(code %in% atlantistools::get_cohorts(param.ls$fgs,numCohorts = 2)) %>%
+        dplyr::filter(agecl == i2age)
+      
+      pct = atlantistools::agg_perc(mortality, groups = c('time','species'))
+      temp.plot = atlantistools::plot_bar(pct, fill = 'mort', wrap = 'species')
+      temp.plot = ggplot2::update_labels(temp.plot,labels = list(x='Time (years)', y = 'Rate (proportion)'))+
+        ggplot2::scale_y_continuous(labels = scales::label_number(accuracy = 0.01))
+      temp.plot = add.title(temp.plot, paste0("Relative Mortality Rates for species with 2 age classes (Age ",i2age, ")"))
+      
+      plotMort[[itype + iage + i2age]] <- temp.plot
+    }
+    
+    # select species with 1 age classes (Biomass pool)
+    mortality <- specificmort %>%
+      dplyr::filter(code %in% atlantistools::get_cohorts(param.ls$fgs,numCohorts = 1)) %>%
+      dplyr::filter(agecl == 1)
+    
+    pct = atlantistools::agg_perc(mortality, groups = c('time','species'))
+    temp.plot = atlantistools::plot_bar(pct, fill = 'mort', wrap = 'species')
+    temp.plot = ggplot2::update_labels(temp.plot,labels = list(x='Time (years)', y = 'Rate (proportion)'))+
+      ggplot2::scale_y_continuous(labels = scales::label_number(accuracy = 0.01))
+    temp.plot = add.title(temp.plot, paste0("Relative Mortality Rates for species with 1 age class (Age 1) "))
+    
+    plotMort[[itype + iage + i2age + 1]] <- temp.plot
     
     
-    pdf(paste0(fig.dir,run.name,' Specific Mortality Timeseries.pdf'),width = 20, height = 20, onefile = T)
-    for (iplot in 1:(itype+1)) {
+    
+    pdf(paste0(fig.dir,run.name,' Specific Mortality Timeseries2.pdf'),width = 20, height = 20, onefile = T)
+    for (iplot in 1:(itype+iage+i2age+1)) {
       gridExtra::grid.arrange(plotMort[[iplot]])
     }
     dev.off()
     
     
     rm(mort,specificmort)
-  }
-  
+  } 
   
   # Overall biomass ---------------------------------------------------------
   
@@ -411,7 +457,7 @@ make_atlantis_diagnostic_figures = function(
     temp.plot.2 = atlantistools::custom_grid(temp.plot.2,grid_x = 'polygon',grid_y = 'species')
     temp.plot.2 = add.title(temp.plot.2, 'Invert Biomass by Box')
     
-    pdf(file = paste0(out.dir,run.name,' Biomass Box Timeseries.pdf'),width = 48, height = 60, onefile =T)
+    pdf(file = paste0(fig.dir,run.name,' Biomass Box Timeseries.pdf'),width = 48, height = 60, onefile =T)
     gridExtra::grid.arrange(temp.plot.1)
     gridExtra::grid.arrange(temp.plot.2)
     dev.off()
