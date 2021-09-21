@@ -296,7 +296,7 @@ make_atlantis_diagnostic_figures = function(
     
     
     
-    pdf(paste0(fig.dir,run.name,' Specific Mortality Timeseries2.pdf'),width = 20, height = 20, onefile = T)
+    pdf(paste0(fig.dir,run.name,' Specific Mortality Timeseries.pdf'),width = 20, height = 20, onefile = T)
     for (iplot in 1:(itype+iage+i2age+1)) {
       gridExtra::grid.arrange(plotMort[[iplot]])
     }
