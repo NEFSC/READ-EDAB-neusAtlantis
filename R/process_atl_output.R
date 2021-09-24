@@ -26,7 +26,7 @@ process_atl_output = function(param.dir,
   
   # memory.limit(size = 56000)
   source(here::here('R','load_nc_temp.R'))
-  
+
   #Utility function
   bind.save = function(x,name){
     x2 = dplyr::bind_rows(x)
@@ -581,4 +581,14 @@ process_atl_output = function(param.dir,
     
     rm(catch,totcatch,catchmt)
   }
+  
+  # Do mortality -------------------------------------------------------------------
+   mortality <- atlantistools::load_mort(param.ls$mort,prm_run=param.ls$run.prm,fgs=param.ls$groups.file,convert_names = T) #%>%
+  #   dplyr::group_by(species,time) %>% 
+  #   dplyr::summarise(atoutput = atoutput[source == "F"]/atoutput[source == "M"],.groups="drop") %>% 
+  #   dplyr::mutate(atoutput = ifelse(is.infinite(atoutput),NA,atoutput))
+  saveRDS(mortality,paste0(out.dir,'mort.RDS'))
+  
+  specificMortality <- atlantistools::load_spec_mort(param.ls$specificmort,prm_run=param.ls$run.prm,fgs=param.ls$groups.file,convert_names = T,removeZeros = F)
+  saveRDS(specificMortality,paste0(out.dir,'specificmort.RDS'))
 }
