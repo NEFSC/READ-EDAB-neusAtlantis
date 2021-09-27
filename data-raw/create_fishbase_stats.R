@@ -13,6 +13,14 @@ species <- allGroups %>%
   dplyr::count(Code) %>% 
   dplyr::filter(n == 1) 
 
+# additonal species which have 2 NESPP3 codes and are duplicated
+moreSpecies <- allGroups %>%
+  dplyr::count(Scientific_Name,Species,Code) %>%
+  dplyr::filter(n > 1) %>%
+  dplyr::select(Code,n)
+
+species <- rbind(species,moreSpecies)
+
 # get scientific names for species
 # hard code changes for species that have old names in SVDBS
 sciName <- allGroups %>% 
