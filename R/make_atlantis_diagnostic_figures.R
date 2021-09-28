@@ -33,6 +33,7 @@
 #'@plot.spatial.biomass logical. Plots showing the spatial (box/level) structure of groups' biomass
 #'@plot.LTL logical. Plots comparing LTL groups (domain-wide) to data
 #'@plot.catch logical. Plots annual catch(mt) age based catch (numbers) and age based %ages
+#'@plot.max.weight logical. Plots the maximum size of fish in each size class over the domain
 
 #'
 #'@return A series of figures and tables based on output grouping flags
@@ -136,7 +137,8 @@ make_atlantis_diagnostic_figures = function(
   plot.consumption,
   plot.spatial.biomass,
   plot.LTL,
-  plot.catch
+  plot.catch, 
+  plot.max.weight = T
 ){
   
   `%>%` = dplyr::`%>%`
@@ -346,6 +348,35 @@ make_atlantis_diagnostic_figures = function(
     
     rm(length.age)
   }
+  
+  # Max weight by age class
+  if(plot.max.weight|plot.all){
+    maxSize <- readRDS(paste0(out.dir,'max_weight.rds'))
+    maxSize <- maxSize %>% 
+      dplyr::group_by(species,agecl) %>%
+      dplyr::summarize(mm=max(maxMeanWeight)/1000,.groups="drop") %>% # convert to kilograms
+      dplyr::mutate(agecl = as.factor(agecl))
+    
+    weight.plot <- atlantistools:::custom_map(data = maxSize, x = "agecl", y = "mm") +
+      ggplot2::geom_bar(stat = "identity") +
+      atlantistools::theme_atlantis()
+    weight.plot <- atlantistools:::custom_wrap( weight.plot, col = "species", ncol = 7)
+    
+    weight.plot <- atlantistools:::ggplot_custom( weight.plot) +
+      ggplot2::scale_y_continuous(labels = scales::label_number(accuracy = 0.1)) 
+    weight.plot <- ggplot2::update_labels( weight.plot,labels = list(x='Age Class', y = 'Weight (Kg)'))
+    weight.plot <-  add.title( weight.plot, paste0("Maximum Weight"))
+    weight.plot <-  weight.plot + ggplot2::scale_x_discrete(labels = c("1","2","3","4","5","6","7","8","9","10"))
+    
+    
+    pdf(file = paste0(fig.dir,run.name,' Max Weight.pdf'),width = 20, height = 20, onefile = T)
+    gridExtra::grid.arrange(weight.plot)
+    dev.off()
+    
+    
+    rm(maxSize)
+  }
+  
   
   
   # Biomass box plots -------------------------------------------------------

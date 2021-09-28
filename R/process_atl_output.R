@@ -295,8 +295,6 @@ process_atl_output = function(param.dir,
     biomass.age.invert = dplyr::filter(spatial.biomass, !(species %in% data.age.mat$species))
     biomass.age.invert = atlantistools::agg_data(biomass.age.invert,groups = c('species','time'),fun = sum)
     
-    
-    
   }else{
     for(i in 1:nrow(group.types)){
       
@@ -406,6 +404,25 @@ process_atl_output = function(param.dir,
   }
  
 
+  # max age (mean) - biomass / numbers
+  # grab numbers in time and space
+  spatialNumbers = rawdata.main[[1]] %>%
+    dplyr::rename(numbers = atoutput)
+  # filter biomass for species with 10 cohorts and convert to kilograms
+  spatialBiomass <- spatial.biomass %>%
+    dplyr::filter(species %in% unique(spatialNumbers$species)) %>%
+    dplyr::rename(biomass = atoutput) %>%
+    dplyr::mutate(biomass = 1E6*biomass)
+  
+  # join numbers with biomass and calculate mean weight of an individivual in age, polygon, layer, time
+  weight <- spatialNumbers %>% dplyr::left_join(.,spatialBiomass,by = c("species", "agecl", "polygon", "layer", "time")) %>%
+    dplyr::filter(!is.na(biomass)) %>%
+    dplyr::mutate(meanWeight = biomass/numbers)
+  
+  weight <- weight %>% 
+    dplyr::group_by(species, polygon,layer, agecl, time) %>%
+    dplyr::summarise(maxMeanWeight = max(meanWeight),.groups="drop")  
+  
   #Calculate spatial overlap
   # if(spatial.overlap){
   #   spatial.biomass = dplyr::bind_rows(spatial.biomass)
@@ -418,6 +435,7 @@ process_atl_output = function(param.dir,
   bind.save(numbers,'numbers')
   bind.save(numbers.age,'numbers_age')
   bind.save(numbers.box,'numbers_box')
+  bind.save(weight,'max_weight')
   
   bind.save(RN.box,'RN_box')
   bind.save(SN.box,'SN_box')
