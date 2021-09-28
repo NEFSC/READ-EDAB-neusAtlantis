@@ -140,7 +140,7 @@ make_atlantis_diagnostic_figures = function(
   plot.spatial.biomass,
   plot.LTL,
   plot.catch, 
-  plot.max.weight = T
+  plot.max.weight = T,
   plot.mortality
 ){
   
