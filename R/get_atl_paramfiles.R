@@ -22,6 +22,8 @@ get_atl_paramfiles = function(param.dir,atl.dir,include_catch){
   dietcheck = paste0(atl.dir,run.prefix,'DietCheck.txt')
   yoy = paste0(atl.dir,run.prefix,'YOY.txt')
   ssb = paste0(atl.dir,run.prefix,'SSB.txt')
+  mort <- paste0(atl.dir,run.prefix,'Mort.txt')
+  specificmort <- paste0(atl.dir,run.prefix,'SpecificMort.txt')
   
   #If catch is turned on all generate paths for CATCH and TOTCATCH
   if(include_catch){
@@ -79,7 +81,9 @@ get_atl_paramfiles = function(param.dir,atl.dir,include_catch){
                     yoy =yoy,
                     ssb = ssb,
                     catch = ifelse(include_catch,catch,NA),
-                    catchtot = ifelse(include_catch,catchtot,NA)
+                    catchtot = ifelse(include_catch,catchtot,NA),
+                    mort = mort,
+                    specificmort = specificmort
                     )
   
   return(param.list)
