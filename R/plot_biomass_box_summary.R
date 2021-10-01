@@ -104,7 +104,8 @@ plot_biomass_box_season = function(bio.box,
   }
   
   if(save.fig){
-    p + theme(axis.text.x = element_text(size = 6))+ ggsave(plot.name,width = 24, height = 10, units = 'in',dpi = 350)
+    p + theme(axis.text.x = element_text(size = 6))
+    ggsave(plot.name,plot = p,width = 24, height = 10, units = 'in',dpi = 350)
   }else{
     return(p)
   }
@@ -217,14 +218,14 @@ plot_biomass_box_range = function(bio.box,
 #                        
 # )
 # 
-plot_biomass_box_season(bio.box = readRDS('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/ZM_Spatial_Final/Post_Processed/Data/biomass_box.rds'),
-                       bio.box.invert = readRDS('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/ZM_Spatial_Final/Post_Processed/Data/biomass_box_invert.rds'),
-                       fig.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/ZM_Spatial_Final/Post_Processed/' ,
-                       # species.list = c('Carnivorous zooplankton','Mesozooplankton','Microzooplankton','Gelatinous zooplankton'),
-                       species.list = NULL,
-                       plot.presence = T,
-                       save.fig = T
-
-)
+# plot_biomass_box_season(bio.box = readRDS('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/ZM_Spatial_Final/Post_Processed/Data/biomass_box.rds'),
+#                        bio.box.invert = readRDS('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/ZM_Spatial_Final/Post_Processed/Data/biomass_box_invert.rds'),
+#                        fig.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/ZM_Spatial_Final/Post_Processed/' ,
+#                        # species.list = c('Carnivorous zooplankton','Mesozooplankton','Microzooplankton','Gelatinous zooplankton'),
+#                        species.list = NULL,
+#                        plot.presence = T,
+#                        save.fig = T
+# 
+# )
 
 
