@@ -2,7 +2,7 @@
 #' 
 #' Write the mapping to a file format (GitHub flavored markdown) that can used on the wiki. 
 #' 
-#'  Requires: andybeet/utilities package for "capitalize_first_letter" function
+#'  Requires: andybeet/abutils package for "capitalize_first_letter" function
 #'            andybeet/dbutils package for create_species_lookup.r and connect_to_database  
 
 # list packages and check to see if needed to be installed
@@ -24,7 +24,7 @@ for (apack in packages$pkgName) {
 }
 
 
-map_functional_group <- function(channel,writeToFile=F) {
+create_map_functional_group <- function(channel,writeToFile=F) {
 
   # read in functional group codes and name from Atlantis input file
   fg <- atlantisom::load_fgs(here::here("currentVersion"),"neus_groups.csv") %>%
@@ -33,7 +33,7 @@ map_functional_group <- function(channel,writeToFile=F) {
   #fg <-  readr::read_csv(here::here("data-raw","initialFunctionalGroupNames.csv"))
   
   # read in species membership to group, then join with functional group names
-  data <- readr::read_csv(here::here("data-raw","Atlantis_1_5_groups_svspp_nespp3.csv")) %>%
+  data <- readr::read_csv(here::here("data-raw/data","Atlantis_1_5_groups_svspp_nespp3.csv")) %>%
     dplyr::mutate(NESPP3 = sprintf("%03d",NESPP3)) %>%
     dplyr::left_join(.,fg,by="Code")
   
@@ -55,7 +55,7 @@ map_functional_group <- function(channel,writeToFile=F) {
     dplyr::full_join(.,NESPP3Data, by="NESPP3") %>%
     dplyr::arrange(Code) %>%
     dplyr::rename(Species = Name,Functional_Group = LongName,Common_Name = COMNAME.y,Scientific_Name=SCIENTIFIC_NAME.y,Species_Itis=SPECIES_ITIS.y)  %>% 
-    dplyr::mutate(Common_Name = utilities::capitalize_first_letter(Common_Name),NESPP3=as.numeric(NESPP3),Species_Itis=as.numeric(Species_Itis)) %>%
+    dplyr::mutate(Common_Name = abutils::capitalize_first_letter(Common_Name),NESPP3=as.numeric(NESPP3),Species_Itis=as.numeric(Species_Itis)) %>%
     dplyr::select(Code,Functional_Group,Species,Scientific_Name,SVSPP,NESPP3,Species_Itis,isFished) %>%
     dplyr::mutate(isFishedSpecies = (Functional_Group==Species) & (isFished==T)) %>% 
     dplyr::select(-isFished)
@@ -63,7 +63,7 @@ map_functional_group <- function(channel,writeToFile=F) {
   
   # format to markdown table. Copy output to wiki
   # open file and write
-  outputFile <- here::here("data-raw","functionalGroupNames.txt")
+  outputFile <- here::here("data-raw/data","functionalGroupNames.txt")
   fileConn<-file(outputFile,open="w")
   header <- paste0("|",paste0(names(masterList),collapse = "|"),"|")
   cat(header,file=fileConn,append=T)
@@ -81,7 +81,7 @@ map_functional_group <- function(channel,writeToFile=F) {
   close(fileConn)
   
   if(writeToFile){
-    readr::write_csv(masterList,here::here("data-raw","functionalGroupNames.csv"))
+    readr::write_csv(masterList,here::here("data-raw/data","functionalGroupNames.csv"))
   }
   
   return(masterList)
