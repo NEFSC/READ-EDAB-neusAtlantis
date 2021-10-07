@@ -43,67 +43,6 @@
 #' Author: Ryan Morse, modified by J. Caracappa
 #' 
 
-# atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output_NutrientForcing/'
-# out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output_NutrientForcing/Post_Processed/'
-# param.dir = here::here('CurrentVersion')
-# run.prefix = 'neus_output_test'
-# run.name = 'NutrientForcing'
-# 
-# 
-# source(here::here('R','get_atl_paramfiles.R'))
-# source(here::here('R','process_atl_output.R'))
-# param.ls= get_atl_paramfiles(param.dir,atl.dir,include_catch=T)
-# 
-# # process_atl_output( param.dir = here::here('CurrentVersion'),
-# #   atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output_NutrientForcing/',
-# #   out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output_NutrientForcing/Post_Processed/',
-# #   run.prefix = 'neus_output_test',
-# #   include_catch = T,
-# #   save.out = T,
-# #   bgm.file = param.ls$bgm,
-# #   groups.file = param.ls$func.groups,
-# #   init.file = param.ls$init.nofill,
-# #   param.ls$biol.prm = param.ls$param.ls$biol.prm,
-# #   run.prm = param.ls$run.prm,
-# #   main.nc = param.ls$main.nc,
-# #   prod.nc = param.ls$prod.nc,
-# #   dietcheck = param.ls$dietcheck,
-# #   ssb = param.ls$ssb,
-# #   yoy = param.ls$yoy,
-# #   catch.file = param.ls$catch,
-# #   totcatch.file = param.ls$catchtot,
-# #   spatial.overlap = F
-# # )
-# 
-# load(paste0(out.dir,'neus_output_test_postprocessed.rdata'))
-# 
-# fig.width = 10
-# fig.height = 8
-# benthic.box = 10
-# benthic.level = 4
-# 
-# bgm.file = param.ls$bgm
-# param.ls$func.groups = param.ls$func.groups
-# run.prm = param.ls$run.prm
-# param.ls$biol.prm = param.ls$biol.prm
-# phytopl.history = here::here('R','phytoplankton_timeseries_biomass_tonnes_1998_2016.csv')
-# zoopl.history = here::here('R','Zooplankton_total_biomass_tonnes_N_20yrs.csv')
-# 
-# plot.benthic = T
-# plot.overall.biomass = T
-# plot.biomass.timeseries = T
-# plot.length.age=T
-# plot.biomass.box=T
-# plot.c.mum=T
-# plot.sn.rn=T
-# plot.recruits=T
-# plot.numbers.timeseries=T
-# plot.physics=T
-# plot.growth.cons=T
-# plot.cohort=T
-# plot.diet=T
-# plot.spatial.biomass=T
-# plot.LTL=T
 
 make_atlantis_diagnostic_figures = function(
   out.dir,
@@ -138,6 +77,7 @@ make_atlantis_diagnostic_figures = function(
   plot.diet,
   plot.consumption,
   plot.spatial.biomass,
+  plot.spatial.biomass.seasonal,
   plot.LTL,
   plot.catch, 
   plot.max.weight = T,
@@ -1128,5 +1068,16 @@ make_atlantis_diagnostic_figures = function(
     
     dev.off()
     
+  }
+  
+  if(plot.spatial.biomass.seasonal){
+    source(here::here('R','plot_biomass_box_summary.R'))
+    
+    plot_biomass_box_season(bio.box = readRDS(paste0(out.dir,'biomass_box.rds')),
+                           bio.box.invert = readRDS(paste0(out.dir,'biomass_box_invert.rds')),
+                           fig.dir = fig.dir,
+                           species.list = NULL,
+                           plot.presence = T,
+                           save.fig = T)
   }
 }

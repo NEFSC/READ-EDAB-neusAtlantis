@@ -13,18 +13,16 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 run.name = 'ZM_Spatial_Final'
 
-
 atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
 
-dir.create(paste0(atl.dir,'Post_Processed2/'))
-dir.create(paste0(atl.dir,'Post_Processed2/Data/'))
+dir.create(paste0(atl.dir,'Post_Processed/'))
+dir.create(paste0(atl.dir,'Post_Processed/Data/'))
 param.dir = here::here ('currentVersion')
-out.dir = paste0(atl.dir,'Post_Processed2/Data/')
-fig.dir = paste0(atl.dir,'Post_Processed2/')
+out.dir = paste0(atl.dir,'Post_Processed/Data/')
+fig.dir = paste0(atl.dir,'Post_Processed/')
 
 #Run prefix is the filename prefix in the atlantis output (specified in run.bat)
 run.prefix = 'neus_output'
-
 
 #Run function that retreives parameter files
 param.ls= get_atl_paramfiles(param.dir = param.dir,
@@ -43,7 +41,7 @@ process_atl_output(
   diet.agg.time = 'month',
   spatial.overlap = F,
   large.file = F
-  )
+)
 
 #If result object saved to file or already exists load it into env.
 # load(paste0(out.dir,'neus_output_postprocessed.rdata'))
@@ -69,7 +67,7 @@ make_atlantis_diagnostic_figures(
   phytopl.history = here::here('R','phytoplankton_timeseries_biomass_tonnes_1998_2016.csv'),
   zoopl.history = here::here('R','Zooplankton_total_biomass_tonnes_N_20yrs.csv'),
  
-  plot.all = T,
+  plot.all = F,
   #Turn these on/off for desired output
   plot.benthic =F,
   plot.overall.biomass = F,
@@ -86,7 +84,8 @@ make_atlantis_diagnostic_figures(
   plot.diet=F,
   plot.consumption= F,
   plot.spatial.biomass=F,
-  plot.LTL=T,
-  plot.catch =T
+  plot.spatial.biomass.seasonal = T,
+  plot.LTL=F,
+  plot.catch =F
 )
   
