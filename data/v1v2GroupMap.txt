@@ -1,0 +1,96 @@
+|GroupV1|Atcode|GroupV2|At2code|
+|---|---|---|---|
+|Sediment bacteria|BB|Sediment bacteria|BB|
+|Benthic carnivore|BC|Benthic carnivore|BC|
+|Benthic carnivore|BC|Shallow macrozoobenthos|BMS|
+|Deposit feeder|BD|Deposit feeder|BD|
+|Other benthic filter feeder|BFF|Other benthic filter feeder|BFF|
+|Other benthic filter feeder|BFF|Surf clam|CLA|
+|Other benthic filter feeder|BFF|Quahog|QHG|
+|Sea scallop|BFS|Scallop|SCA|
+|Benthic grazer|BG|Benthic grazer|BG|
+|Lobster|BML|Lobster|LOB|
+|Shallow macrozoobenthos|BMS|Shallow macrozoobenthos|BMS|
+|Shallow macrozoobenthos|BMS|Red Crab|RCB|
+|Meiobenthos|BO|Meiobenthos|BO|
+|Squid|CEP|Shallow macrozoobenthos|BMS|
+|Squid|CEP|Illex Squid|ISQ|
+|Squid|CEP|Loligo Squid|LSQ|
+|Dinoflagellates|DF|Dinoflagellates|DF|
+|Benthopelagics|FBP|Anchovies|ANC|
+|Benthopelagics|FBP|Benthopelagic Fish|BPF|
+|Benthopelagics|FBP|Butterfish|BUT|
+|Benthopelagics|FBP|Shallow demersal fish|FDE|
+|Silver hake|FDB|Silver Hake|SHK|
+|Miscellaneous demersals|FDC|Benthopelagic Fish|BPF|
+|Miscellaneous demersals|FDC|Black Sea Bass|BSB|
+|Miscellaneous demersals|FDC|Drums_croakers|DRM|
+|Miscellaneous demersals|FDC|Miscellaneous demersal Fish|FDF|
+|Miscellaneous demersals|FDC|Other Flatfish|FLA|
+|Miscellaneous demersals|FDC|Off shore Hake|OHK|
+|Miscellaneous demersals|FDC|Ocean Pout|OPT|
+|Miscellaneous demersals|FDC|Pollock|POL|
+|Miscellaneous demersals|FDC|Redfish|RED|
+|Miscellaneous demersals|FDC|Red Hake|RHK|
+|Miscellaneous demersals|FDC|Atlantic Salmon|SAL|
+|Miscellaneous demersals|FDC|Scup|SCU|
+|Miscellaneous demersals|FDC|Atlantic States Demersals|SDF|
+|Miscellaneous demersals|FDC|Striped Bass|STB|
+|Miscellaneous demersals|FDC|Tautog|TAU|
+|Miscellaneous demersals|FDC|Tilefish|TYL|
+|Miscellaneous demersals|FDC|Wolffish|WOL|
+|Goosefish|FDD|Goosefish|GOO|
+|Shallow demersal fish|FDE|Shallow demersal fish|FDE|
+|Shallow demersal fish|FDE|Menhaden|MEN|
+|Yellowtail flounder|FDF|Yellowtail Flounder|YTF|
+|Haddock|FDO|Haddock|HAD|
+|Atlantic cod|FDS|Cod|COD|
+|Migratory mesopelagics|FMM|Mesopelagic Migratory Fish|MPF|
+|Atlantic mackerel|FPL|Mackerel|MAK|
+|Atlantic herring|FPS|Herring|HER|
+|Other piscivores|FVB|Other Flatfish|FLA|
+|Other piscivores|FVB|Fourspot flounder|FOU|
+|Other piscivores|FVB|Halibut|HAL|
+|Other piscivores|FVB|Plaice|PLA|
+|Other piscivores|FVB|Summer Flounder|SUF|
+|Other piscivores|FVB|Winter Flounder|WIF|
+|Other piscivores|FVB|Windowpane Flounder|WPF|
+|Other piscivores|FVB|Witch Flounder|WTF|
+|White hake|FVD|White Hake|WHK|
+|Bluefish|FVS|Bluefish|BLF|
+|Large piscivores|FVT|Bluefin Tuna|BFT|
+|Large piscivores|FVT|Billfish|BIL|
+|Large piscivores|FVT|Tunas|TUN|
+|Pelagic bacteria|PB|Pelagic bacteria|PB|
+|Pinnipeds|PIN|Pinnipeds|PIN|
+|Diatoms|PL|Diatoms|PL|
+|Pico-phytoplankton|PS|Pico-phytoplankton|PS|
+|Shrimp|PWN|Northern Shrimp|NSH|
+|Shrimp|PWN|Other Shrimp|OSH|
+|Reptiles|REP|Reptiles|REP|
+|Seabirds|SB|Seabirds|SB|
+|Spiny dogfish|SHB|Spiny Dogfish|DOG|
+|Other demersal sharks|SHD|Demersal Shark|DSH|
+|Other demersal sharks|SHD|Porgeagle Shark|POR|
+|Other demersal sharks|SHD|Smooth Dogfish|SMO|
+|Other demersal sharks|SHD|Sandbar Shark|SSH|
+|Pelagic sharks|SHP|Blue Shark|BLS|
+|Pelagic sharks|SHP|Pelagic Shark|PSH|
+|Skates and rays|SSK|Little Skate|LSK|
+|Skates and rays|SSK|Skate|SK|
+|Skates and rays|SSK|Winter Skate|WSK|
+|Baleen whales|WHB|Baleen whales|BWH|
+|Toothed whales|WHT|Toothed whales|TWH|
+|Gelatinous zooplankton|ZG|Gelatinous zooplankton|ZG|
+|Carnivorous zooplankton|ZL|Carnivorous zooplankton|ZL|
+|Copepods|ZM|Copepods|ZM|
+|Microzooplankton|ZS|Microzooplankton|ZS|
+|NA|NA|Carrion|DC|
+|NA|NA|Lab Detritus|DL|
+|NA|NA|Ref Det|DR|
+|NA|NA|Invasive species|INV|
+|NA|NA|Macroalgae|MA|
+|NA|NA|MicroPB|MB|
+|NA|NA|Right Whale|RWH|
+|NA|NA|Seagrass|SG|
+|NA|NA|Small Whales|SWH|
