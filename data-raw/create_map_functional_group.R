@@ -63,7 +63,7 @@ create_map_functional_group <- function(channel,writeToFile=F) {
   
   # format to markdown table. Copy output to wiki
   # open file and write
-  outputFile <- here::here("data-raw/data","functionalGroupNames.txt")
+  outputFile <- here::here("data","functionalGroupNames.txt")
   fileConn<-file(outputFile,open="w")
   header <- paste0("|",paste0(names(masterList),collapse = "|"),"|")
   cat(header,file=fileConn,append=T)
@@ -81,7 +81,7 @@ create_map_functional_group <- function(channel,writeToFile=F) {
   close(fileConn)
   
   if(writeToFile){
-    readr::write_csv(masterList,here::here("data-raw/data","functionalGroupNames.csv"))
+    readr::write_csv(masterList,here::here("data","functionalGroupNames.csv"))
   }
   
   return(masterList)
