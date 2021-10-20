@@ -2,7 +2,7 @@
 #' 
 library(magrittr)
 # location of downloaded file
-file <- here::here("data-raw","foodHabitData.rdata")
+file <- here::here("data-raw/data","foodHabitData.rdata")
 download.file("https://github.com/NOAA-EDAB/ECSA/raw/master/data/allfhsg.RData",destfile=file)
 
 
@@ -70,7 +70,7 @@ find_prey <- function(datafile=file,predator,area=F) {
 find_predators <- function(datafile=file) {
   load(datafile) # load fh data
   # read in functional group data
-  fg <- readr::read_csv(here::here("data-raw","functionalGroupNames.csv"))
+  fg <- readr::read_csv(here::here("data","functionalGroupNames.csv"))
   preds <- allfhsg %>% 
     dplyr::distinct(svspp) %>%
     dplyr::rename(SVSPP = svspp) %>%

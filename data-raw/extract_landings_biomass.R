@@ -22,7 +22,7 @@
 #' #connect to the database
 #'channel <- dbutils::connect_to_database("servername","user")
 #' # list species of interest
-#' speciesList <- map_functional_group(channel)
+#' speciesList <- create_map_functional_group(channel)
 #' extract_landings_biomass(channel,species = speciesList)
 #'
 #'}
@@ -60,7 +60,12 @@ extract_landings_biomass <- function(channel,species) {
   for (aseason in seasons) {
     for (aregion in EPUs) {
       message(paste0("Region = ",aregion, ". Season = ",aseason))
-      surveyRegion <- survdat::swept_area_biomass(data = surveyData$survdat, areaPolygon = area,areaDescription = "EPU", filterByArea = aregion, filterBySeason = aseason, species = unique(species$SVSPP))
+      surveyRegion <- survdat::swept_area_biomass(data = surveyData$survdat,
+                                                  areaPolygon = area,
+                                                  areaDescription = "EPU",
+                                                  filterByArea = aregion,
+                                                  filterBySeason = aseason,
+                                                  species = unique(species$SVSPP))
       surveyRegion$EPU <- aregion
       surveyRegion$SEASON <- aseason
       
