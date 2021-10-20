@@ -8,13 +8,31 @@ output:
 
 
 
+## Contents
+
+* [Task related workflow](#workflow)
+* [Versioning Atlantis on GitHub](#version)
+* [Change the default editor](#nano)
+* [Useful git commands](#git)
+  * [rebase](#rebase)
+  * [reset](#reset)
+  * [revert](#revert)
+* [large file storage](#lfs)
+* [Using Docker/podman](#docker)
+* [Google Drive to store output](#drive)
+* [Testing environment](#testing)
+
+
+
+## Task related workflow {#workflow}
+
 Once a task item has been created and assigned to a developer the following set of steps should be used as a guide.
 
 1.  Create a branch from the [master](https://github.com/NOAA-EDAB/neus-atlantis) and name it. The naming convention should include the task item ID plus a description. For example,
 
 `migratorySpecies-ATLNTS-45` or `RealisticZoo-ATLNTS-43`
 
-1.  Create "archive" folder in the testing branch if developer needs to run multiple instances of Atlantis (for a given task) in parallel.
+  *  Create "archive" folder in the testing branch if developer needs to run multiple instances of Atlantis (for a given task) in parallel.
 
 2.  When a task is complete:
 
@@ -28,7 +46,9 @@ Once a task item has been created and assigned to a developer the following set 
 
 5.  Make sure there a no conflicts.
 
-6.  Other team member will be notified of your request via email. They will be required to review the request, possibly test the changes (by running the code locally), and ultimately merge the pull request.
+6.  Assign, as reviewers, at least two members of the team
+
+6.  These team members will be notified of your request via email. They will be required to review the request, possibly test the changes (by running the code locally), and ultimately merge the pull request.
 
 7.  Delete branch on gitHub
 
@@ -44,7 +64,22 @@ Once a task item has been created and assigned to a developer the following set 
 
 8.  Repeat with additional tasks
 
-## Change the default editor
+## Versioning Atlantis on GitHub {#version}
+
+After the first official release (neus 2.0.0) every pull request that results in changes to the way the model runs or is processed, whether that is a parameter file change, input data changes, box model changes, processing script addition/change  etc. a new release will need to be created. The versioning guidelines can be found on the [wiki](https://github.com/NOAA-EDAB/neus-atlantis/wiki/Versioning)
+
+### Steps to create a new release 
+
+* In DESCRIPTION file change `Version` to new version number
+* In `news.md` file write bullet lists of changes since last release
+* On main repo page click `create a new release`
+* `Tag` should have the form `vx.x.x`
+* `Release` title should have the form `neus-atlantis x.x.x`
+* `Target` should link to the appropriate commit (usually the most recent one)
+* `Write` should include brief list of updates since last release. Use text in `news.md` file.
+* Publish release
+
+## Change the default editor {#nano}
 
 You will find the terminal is needed for some git commands, mostly to "get out of trouble". A few steps for Rstudio
 
@@ -68,7 +103,7 @@ Select Git Bash from the dropdown under the `shell` header.
 
 You should now have a good editor for custom git commands.
 
-## Useful git commands
+## Useful git commands {#git}
 
 Git resources
 
@@ -76,7 +111,7 @@ Git resources
 -   [Undo stuff - 2015](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
 -   [Pro Git book](https://git-scm.com/book/en/v2) and its [repo](https://github.com/progit/progit2)
 
-### git rebase
+### git rebase {#rebase}
 
 Scenario: You commit a large file (100+MB) then subsequently make additional commits. When you push to GitHub, you recieve an error similar to this.
 
@@ -106,7 +141,7 @@ Follow these steps
 >
 > Save "modified buffer" to default location
 
-### git reset
+### git reset {#reset}
 
 *Scenario*: You just made a local commit and either: a. tried to push to GitHub and got an error message saying you can not push the changes (maybe due to file size) or b. you just changed your mind and would like to "undo" the commit
 
@@ -132,11 +167,11 @@ Follow these steps, first find the SHA tag of the commit you want to revert to. 
 
 Replace `branchName` with the name of the branch on which you are working
 
-### git revert
+### git revert {#revert}
 
 examples coming ...
 
-### git lfs (large file storage)
+### git lfs (large file storage) {#lfs}
 
 Scenario: Large files (\> 100MB) get rejected by GitHub when trying to push from a repo.
 
@@ -166,9 +201,9 @@ The `.gitattributes` file is used to store information about the files being tra
 
 -   Git lfs [site](https://git-lfs.github.com/)
 
-## Using Docker
+## Using Docker/podman {#docker}
 
-Atlantis can be run inside a docker container and the output can be copied on to your local machine. The advantages are you don't need additional compilers and software installed on your local machine, you just need [docker desktop](https://www.docker.com/products/docker-desktop). (On a windows 10 machine you can use windows powershell to run all docker commands.)
+Atlantis can be run inside a docker/podman container and the output can be copied on to your local machine. The advantages are you don't need additional compilers and software installed on your local machine, you just need [docker desktop](https://www.docker.com/products/docker-desktop). (On a windows 10 machine you can use windows powershell to run all docker commands). Podman can also be used locally (currently untested by dev team). However it is the installed on our servers. The word `docker` and `podman` can be used interchangably.
 
 ### Some useful commands
 
@@ -209,7 +244,7 @@ To view all containers running
 
     docker container ls
 
-## Using Google Drive to store output
+## Using Google Drive to store output {#drive}
 
     # input files needed for diagnostics
     inputFiles <- c("at_biology.prm",
@@ -236,7 +271,7 @@ To view all containers running
                                  googledriveFolder = "Testing/OutForSarah"
                                  )
 
-## Testing environment
+## Testing environment {#testing}
 
 A test environment (repo) has been created called [atlantis_test](https://github.com/andybeet/atlantis_test) for developers to practive creating branches, conflicts, pull requests, and for merging pull requests.
 
@@ -249,3 +284,4 @@ This repo can be cloned in Rstudio.
 5.  Give the name of the directory to be created on your machine to hold the repo
 6.  Select the location of the directory (named above)
 7.  Click "Create Project"
+
