@@ -1,9 +1,12 @@
 ---
 title: "Atlantis Development Workflow"
-output: 
-  html_document:
-    keep_md: true
-    css: styling.css
+# output: 
+#   html_document:
+#     keep_md: true
+#     css: styling.css
+output:
+  md_document:
+    variant: markdown_github
 ---
 
 ```{r setup, include=FALSE}

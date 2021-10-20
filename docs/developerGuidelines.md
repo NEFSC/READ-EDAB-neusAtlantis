@@ -1,58 +1,66 @@
----
-title: "Atlantis Development Workflow"
-output: 
-  html_document:
-    keep_md: true
-    css: styling.css
----
+Contents
+--------
 
+-   [Task related workflow](#workflow)
+-   [Versioning Atlantis on GitHub](#version)
+-   [Change the default editor](#nano)
+-   [Useful git commands](#git)
+    -   [rebase](#rebase)
+    -   [reset](#reset)
+    -   [revert](#revert)
+-   [large file storage](#lfs)
+-   [Using Docker/podman](#docker)
+-   [Google Drive to store output](#drive)
+-   [Testing environment](#testing)
 
+Task related workflow
+---------------------
 
-## Contents
+Once a task item has been created and assigned to a developer the
+following set of steps should be used as a guide.
 
-* [Task related workflow](#workflow)
-* [Versioning Atlantis on GitHub](#version)
-* [Change the default editor](#nano)
-* [Useful git commands](#git)
-  * [rebase](#rebase)
-  * [reset](#reset)
-  * [revert](#revert)
-* [large file storage](#lfs)
-* [Using Docker/podman](#docker)
-* [Google Drive to store output](#drive)
-* [Testing environment](#testing)
-
-
-
-## Task related workflow {#workflow}
-
-Once a task item has been created and assigned to a developer the following set of steps should be used as a guide.
-
-1.  Create a branch from the [master](https://github.com/NOAA-EDAB/neus-atlantis) and name it. The naming convention should include the task item ID plus a description. For example,
+1.  Create a branch from the
+    [master](https://github.com/NOAA-EDAB/neus-atlantis) and name it.
+    The naming convention should include the task item ID plus a
+    description. For example,
 
 `migratorySpecies-ATLNTS-45` or `RealisticZoo-ATLNTS-43`
 
-  *  Create "archive" folder in the testing branch if developer needs to run multiple instances of Atlantis (for a given task) in parallel.
+-   Create “archive” folder in the testing branch if developer needs to
+    run multiple instances of Atlantis (for a given task) in parallel.
 
-2.  When a task is complete:
+1.  When a task is complete:
 
-    i.  Copy the contents of the .prm files to the appropriate at_xxx_test.prm file in the `testing` folder.
+    1.  Copy the contents of the .prm files to the appropriate
+        at_xxx_test.prm file in the `testing` folder.
 
-    ii. Any R files created during this task should be made into a function with arguments and its directions for use should be well documented. All R code should reside in the `R` folder of the branch. For example: see [exampleFunction.R](https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/R/exampleFunction.R)
+    2.  Any R files created during this task should be made into a
+        function with arguments and its directions for use should be
+        well documented. All R code should reside in the `R` folder of
+        the branch. For example: see
+        [exampleFunction.R](https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/R/exampleFunction.R)
 
-3.  Commit the changes to the branch
+2.  Commit the changes to the branch
 
-4.  Initiate a pull request and make sure the title of the pull request is descriptive. Since other team members will be reviewing the pull request please make detailed comments regarding what was changed.
+3.  Initiate a pull request and make sure the title of the pull request
+    is descriptive. Since other team members will be reviewing the pull
+    request please make detailed comments regarding what was changed.
 
-5.  Make sure there a no conflicts.
+4.  Make sure there a no conflicts.
 
-6.  Assign, as reviewers, at least two members of the team
+5.  Assign, as reviewers, at least two members of the team
 
-6.  These team members will be notified of your request via email. They will be required to review the request, possibly test the changes (by running the code locally), and ultimately merge the pull request.
+6.  These team members will be notified of your request via email. They
+    will be required to review the request, possibly test the changes
+    (by running the code locally), and ultimately merge the pull
+    request.
 
 7.  Delete branch on gitHub
 
-    > Note: The branch will remain on your PC even if you try to pull the deleted branch from gitHub. If you make changes to this branch locally in the future and then commit and push these changes, the branch will be recreated.
+    > Note: The branch will remain on your PC even if you try to pull
+    > the deleted branch from gitHub. If you make changes to this branch
+    > locally in the future and then commit and push these changes, the
+    > branch will be recreated.
     >
     > To remove the branch locally type the following in the terminal:
     >
@@ -60,30 +68,42 @@ Once a task item has been created and assigned to a developer the following set 
     >
     > `git fetch -p`
     >
-    > For more info see [here](https://www.freecodecamp.org/news/how-to-delete-a-git-branch-both-locally-and-remotely/)
+    > For more info see
+    > [here](https://www.freecodecamp.org/news/how-to-delete-a-git-branch-both-locally-and-remotely/)
 
 8.  Repeat with additional tasks
 
-## Versioning Atlantis on GitHub {#version}
+Versioning Atlantis on GitHub
+-----------------------------
 
-After the first official release (neus 2.0.0) every pull request that results in changes to the way the model runs or is processed, whether that is a parameter file change, input data changes, box model changes, processing script addition/change  etc. a new release will need to be created. The versioning guidelines can be found on the [wiki](https://github.com/NOAA-EDAB/neus-atlantis/wiki/Versioning)
+After the first official release (neus 2.0.0) every pull request that
+results in changes to the way the model runs or is processed, whether
+that is a parameter file change, input data changes, box model changes,
+processing script addition/change etc. a new release will need to be
+created. The versioning guidelines can be found on the
+[wiki](https://github.com/NOAA-EDAB/neus-atlantis/wiki/Versioning)
 
-### Steps to create a new release 
+### Steps to create a new release
 
-* In DESCRIPTION file change `Version` to new version number
-* In `news.md` file write bullet lists of changes since last release
-* On main repo page click `create a new release`
-* `Tag` should have the form `vx.x.x`
-* `Release` title should have the form `neus-atlantis x.x.x`
-* `Target` should link to the appropriate commit (usually the most recent one)
-* `Write` should include brief list of updates since last release. Use text in `news.md` file.
-* Publish release
+-   In DESCRIPTION file change `Version` to new version number
+-   In `news.md` file write bullet lists of changes since last release
+-   On main repo page click `create a new release`
+-   `Tag` should have the form `vx.x.x`
+-   `Release` title should have the form `neus-atlantis x.x.x`
+-   `Target` should link to the appropriate commit (usually the most
+    recent one)
+-   `Write` should include brief list of updates since last release. Use
+    text in `news.md` file.
+-   Publish release
 
-## Change the default editor {#nano}
+Change the default editor
+-------------------------
 
-You will find the terminal is needed for some git commands, mostly to "get out of trouble". A few steps for Rstudio
+You will find the terminal is needed for some git commands, mostly to
+“get out of trouble”. A few steps for Rstudio
 
--   First change the environment in which you'll be making these commands. Change the terminal:
+-   First change the environment in which you’ll be making these
+    commands. Change the terminal:
 
     > `Tools -> Global Options -> Terminal`
 
@@ -95,43 +115,56 @@ Select Git Bash from the dropdown under the `shell` header.
 
 -   Check to see if you have `nano` editor installed
 
-    > Type `nano test` in the terminal. If it opens type Ctrl + X to close.
+    > Type `nano test` in the terminal. If it opens type Ctrl + X to
+    > close.
 
--   Change the default editor `VI` to [nano](https://www.oreilly.com/library/view/gitlab-cookbook/9781783986842/apas07.html)
+-   Change the default editor `VI` to
+    [nano](https://www.oreilly.com/library/view/gitlab-cookbook/9781783986842/apas07.html)
 
     > Type `git config --global core.editor "nano"` in the terminal
 
 You should now have a good editor for custom git commands.
 
-## Useful git commands {#git}
+Useful git commands
+-------------------
 
 Git resources
 
 -   <https://git-scm.com/docs>
--   [Undo stuff - 2015](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
--   [Pro Git book](https://git-scm.com/book/en/v2) and its [repo](https://github.com/progit/progit2)
+-   [Undo stuff -
+    2015](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
+-   [Pro Git book](https://git-scm.com/book/en/v2) and its
+    [repo](https://github.com/progit/progit2)
 
-### git rebase {#rebase}
+### git rebase
 
-Scenario: You commit a large file (100+MB) then subsequently make additional commits. When you push to GitHub, you recieve an error similar to this.
+Scenario: You commit a large file (100+MB) then subsequently make
+additional commits. When you push to GitHub, you recieve an error
+similar to this.
 
-![](https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/docs/GitError-LargeFileSize.PNG)<!-- -->
+![](https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/docs/GitError-LargeFileSize.PNG)
 
-You now want to remove the commit for the large file and push all subsequent commits.
+You now want to remove the commit for the large file and push all
+subsequent commits.
 
-1.  Make sure you have no pending commits and that (in the following steps) you remove all commits related to the large file (for example, if you tried a git revert)
+1.  Make sure you have no pending commits and that (in the following
+    steps) you remove all commits related to the large file (for
+    example, if you tried a git revert)
 
-2.  This removes the commit AND THE LARGE FILE from your local repo. Be sure to make a copy of the large file!
+2.  This removes the commit AND THE LARGE FILE from your local repo. Be
+    sure to make a copy of the large file!
 
 > git rebase -i \< commit SHA \>
 >
 > Select a commit message before the one you want to remove
 >
-> The \<commit SHA\> can be found in the history in RStudios commit window.
+> The \<commit SHA\> can be found in the history in RStudios commit
+> window.
 
-3.  When the `nano` editor opens find the line that reflects the commit you want to delete (circled)
+1.  When the `nano` editor opens find the line that reflects the commit
+    you want to delete (circled)
 
-![](https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/docs/rebaseInNano-LargeFileSize.PNG)<!-- -->
+![](https://raw.githubusercontent.com/NOAA-EDAB/neus-atlantis/master/docs/rebaseInNano-LargeFileSize.PNG)
 
 Follow these steps
 
@@ -139,11 +172,14 @@ Follow these steps
 >
 > Ctrl + X to exit
 >
-> Save "modified buffer" to default location
+> Save “modified buffer” to default location
 
-### git reset {#reset}
+### git reset
 
-*Scenario*: You just made a local commit and either: a. tried to push to GitHub and got an error message saying you can not push the changes (maybe due to file size) or b. you just changed your mind and would like to "undo" the commit
+*Scenario*: You just made a local commit and either: a. tried to push to
+GitHub and got an error message saying you can not push the changes
+(maybe due to file size) or b. you just changed your mind and would like
+to “undo” the commit
 
 Follow these steps
 
@@ -153,11 +189,16 @@ Follow these steps
 >
 > `git reset --soft HEAD\~1`
 
-If you are in Rstudio, you will see the files reappear in your git tab assigned with check marks (ie. in the state right before you previously committed them)
+If you are in Rstudio, you will see the files reappear in your git tab
+assigned with check marks (ie. in the state right before you previously
+committed them)
 
-*Scenario*: You just pushed a commit to GitHub and now you want to remove it.
+*Scenario*: You just pushed a commit to GitHub and now you want to
+remove it.
 
-Follow these steps, first find the SHA tag of the commit you want to revert to. For this example lets call it 94a5b60ad78929c38b2c30a74abecd7849587fce.
+Follow these steps, first find the SHA tag of the commit you want to
+revert to. For this example lets call it
+94a5b60ad78929c38b2c30a74abecd7849587fce.
 
 > `git reset --hard 94a5b60ad78929c38b2c30a74abecd7849587fce`
 >
@@ -165,45 +206,72 @@ Follow these steps, first find the SHA tag of the commit you want to revert to. 
 >
 > `git push origin 94a5b60ad78929c38b2c30a74abecd7849587fce:branchName`
 
-Replace `branchName` with the name of the branch on which you are working
+Replace `branchName` with the name of the branch on which you are
+working
 
-### git revert {#revert}
+### git revert
 
-examples coming ...
+examples coming …
 
-### git lfs (large file storage) {#lfs}
+### git lfs (large file storage)
 
-Scenario: Large files (\> 100MB) get rejected by GitHub when trying to push from a repo.
+Scenario: Large files (\> 100MB) get rejected by GitHub when trying to
+push from a repo.
 
-Download `git lfs` for [windows, mac, or linux](https://github.com/git-lfs/git-lfs/releases/tag/v2.10.0). This is a git extension called `lfs` which handles large files in need of tracking.
+Download `git lfs` for [windows, mac, or
+linux](https://github.com/git-lfs/git-lfs/releases/tag/v2.10.0). This is
+a git extension called `lfs` which handles large files in need of
+tracking.
 
 To track a file(s) use one of the following:
 
-> git lfs track "\*.nc"
+> git lfs track “\*.nc”
 >
-> git lfs track "images/\*.nc"
+> git lfs track “images/\*.nc”
 >
-> git lfs track "images"
+> git lfs track “images”
 
-To see which file types are being tracked by `lfs` and to list all files being tracked:
+To see which file types are being tracked by `lfs` and to list all files
+being tracked:
 
 > git lfs track git lfs ls-files
 
-"Git LFS handles large files by storing references to the file in the repository, but not the actual file itself. To work around Git's architecture, Git LFS creates a pointer file which acts as a reference to the actual file (which is stored somewhere else). GitHub manages this pointer file in your repository. When you clone the repository down, GitHub uses the pointer file as a map to go and find the large file for you."
+“Git LFS handles large files by storing references to the file in the
+repository, but not the actual file itself. To work around Git’s
+architecture, Git LFS creates a pointer file which acts as a reference
+to the actual file (which is stored somewhere else). GitHub manages this
+pointer file in your repository. When you clone the repository down,
+GitHub uses the pointer file as a map to go and find the large file for
+you.”
 
-The `.gitattributes` file is used to store information about the files being tracked by `lfs`. This file becomes part of the repo. Anyone who clones the repo is automatically configured to handle these large files.
+The `.gitattributes` file is used to store information about the files
+being tracked by `lfs`. This file becomes part of the repo. Anyone who
+clones the repo is automatically configured to handle these large files.
 
--   There are a few [limitations](https://github.com/git-lfs/git-lfs/wiki/Limitations), the most important being a file size cap of 2GB
+-   There are a few
+    [limitations](https://github.com/git-lfs/git-lfs/wiki/Limitations),
+    the most important being a file size cap of 2GB
 
--   Every account has 1 GB free. Or increments of 50GB for \$5 a month. [Fee structure](https://help.github.com/en/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-git-large-file-storage)
+-   Every account has 1 GB free. Or increments of 50GB for $5 a month.
+    [Fee
+    structure](https://help.github.com/en/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-git-large-file-storage)
 
 -   Getting started [Video](https://www.youtube.com/watch?v=uLR1RNqJ1Mw)
 
 -   Git lfs [site](https://git-lfs.github.com/)
 
-## Using Docker/podman {#docker}
+Using Docker/podman
+-------------------
 
-Atlantis can be run inside a docker/podman container and the output can be copied on to your local machine. The advantages are you don't need additional compilers and software installed on your local machine, you just need [docker desktop](https://www.docker.com/products/docker-desktop). (On a windows 10 machine you can use windows powershell to run all docker commands). Podman can also be used locally (currently untested by dev team). However it is the installed on our servers. The word `docker` and `podman` can be used interchangably.
+Atlantis can be run inside a docker/podman container and the output can
+be copied on to your local machine. The advantages are you don’t need
+additional compilers and software installed on your local machine, you
+just need [docker
+desktop](https://www.docker.com/products/docker-desktop). (On a windows
+10 machine you can use windows powershell to run all docker commands).
+Podman can also be used locally (currently untested by dev team).
+However it is the installed on our servers. The word `docker` and
+`podman` can be used interchangably.
 
 ### Some useful commands
 
@@ -229,9 +297,14 @@ Display docker images, run them, stop them
 
 `docker stop <container_id>`
 
-Once inside the container, navigate as if you were on your local machine. Some commands may not be valid depending on what was installed in the container. This is configured in the docker image.
+Once inside the container, navigate as if you were on your local
+machine. Some commands may not be valid depending on what was installed
+in the container. This is configured in the docker image.
 
-Copy files from a container to local machine. The following example copies the file `at_biology.prm` from the directory `app/model` inside the container with id `bc0b994a06dd` to the local machine in the current directory as `at_biology_CONTAINER.prm`
+Copy files from a container to local machine. The following example
+copies the file `at_biology.prm` from the directory `app/model` inside
+the container with id `bc0b994a06dd` to the local machine in the current
+directory as `at_biology_CONTAINER.prm`
 
     docker cp bc0b994a06dd:/app/model/at_biology.prm at_biology_CONTAINER.prm
 
@@ -244,7 +317,8 @@ To view all containers running
 
     docker container ls
 
-## Using Google Drive to store output {#drive}
+Using Google Drive to store output
+----------------------------------
 
     # input files needed for diagnostics
     inputFiles <- c("at_biology.prm",
@@ -271,9 +345,13 @@ To view all containers running
                                  googledriveFolder = "Testing/OutForSarah"
                                  )
 
-## Testing environment {#testing}
+Testing environment
+-------------------
 
-A test environment (repo) has been created called [atlantis_test](https://github.com/andybeet/atlantis_test) for developers to practive creating branches, conflicts, pull requests, and for merging pull requests.
+A test environment (repo) has been created called
+[atlantis_test](https://github.com/andybeet/atlantis_test) for
+developers to practive creating branches, conflicts, pull requests, and
+for merging pull requests.
 
 This repo can be cloned in Rstudio.
 
@@ -281,7 +359,7 @@ This repo can be cloned in Rstudio.
 2.  Select Version Control
 3.  Select Git
 4.  Enter the url of the gitHub repository
-5.  Give the name of the directory to be created on your machine to hold the repo
+5.  Give the name of the directory to be created on your machine to hold
+    the repo
 6.  Select the location of the directory (named above)
-7.  Click "Create Project"
-
+7.  Click “Create Project”
