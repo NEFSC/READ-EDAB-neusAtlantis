@@ -15,21 +15,21 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Contents
 
-* [Task related workflow](#workflow)
-* [Versioning Atlantis on GitHub](#version)
-* [Change the default editor](#nano)
-* [Useful git commands](#git)
-  * [rebase](#rebase)
-  * [reset](#reset)
-  * [revert](#revert)
-* [large file storage](#lfs)
-* [Using Docker/podman](#docker)
-* [Google Drive to store output](#drive)
-* [Testing environment](#testing)
+* [Task related workflow](developerGuidelines.md#task-related-workflow)
+* [Versioning Atlantis on GitHub](developerGuidelines.md#versioning-atlantis-on github)
+* [Change the default editor](developerGuidelines.md#change-the-default-editor)
+* [Useful git commands](developerGuidelines.md#useful-git-commands)
+  * [rebase](developerGuidelines.md#git-rebase)
+  * [reset](developerGuidelines.md#git-reset)
+  * [revert](developerGuidelines.md#git-revert)
+* [large file storage](developerGuidelines.md#git-lfs-large-file-storage)
+* [Using Docker/podman](developerGuidelines.md#using-dockerpodman)
+* [Google Drive to store output](developerGuidelines.md#using-google-drive-to-store-output)
+* [Testing environment](developerGuidelines.md#testing-environment)
 
 
 
-## Task related workflow {#workflow}
+## Task related workflow
 
 Once a task item has been created and assigned to a developer the following set of steps should be used as a guide.
 
@@ -69,7 +69,7 @@ Once a task item has been created and assigned to a developer the following set 
 
 8.  Repeat with additional tasks
 
-## Versioning Atlantis on GitHub {#version}
+## Versioning Atlantis on GitHub
 
 After the first official release (neus 2.0.0) every pull request that results in changes to the way the model runs or is processed, whether that is a parameter file change, input data changes, box model changes, processing script addition/change  etc. a new release will need to be created. The versioning guidelines can be found on the [wiki](https://github.com/NOAA-EDAB/neus-atlantis/wiki/Versioning)
 
@@ -84,7 +84,7 @@ After the first official release (neus 2.0.0) every pull request that results in
 * `Write` should include brief list of updates since last release. Use text in `news.md` file.
 * Publish release
 
-## Change the default editor {#nano}
+## Change the default editor
 
 You will find the terminal is needed for some git commands, mostly to "get out of trouble". A few steps for Rstudio
 
@@ -108,7 +108,7 @@ Select Git Bash from the dropdown under the `shell` header.
 
 You should now have a good editor for custom git commands.
 
-## Useful git commands {#git}
+## Useful git commands
 
 Git resources
 
@@ -116,7 +116,7 @@ Git resources
 -   [Undo stuff - 2015](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
 -   [Pro Git book](https://git-scm.com/book/en/v2) and its [repo](https://github.com/progit/progit2)
 
-### git rebase {#rebase}
+### git rebase 
 
 Scenario: You commit a large file (100+MB) then subsequently make additional commits. When you push to GitHub, you recieve an error similar to this.
 
@@ -150,7 +150,7 @@ Follow these steps
 >
 > Save "modified buffer" to default location
 
-### git reset {#reset}
+### git reset 
 
 *Scenario*: You just made a local commit and either: a. tried to push to GitHub and got an error message saying you can not push the changes (maybe due to file size) or b. you just changed your mind and would like to "undo" the commit
 
@@ -176,11 +176,11 @@ Follow these steps, first find the SHA tag of the commit you want to revert to. 
 
 Replace `branchName` with the name of the branch on which you are working
 
-### git revert {#revert}
+### git revert
 
 examples coming ...
 
-### git lfs (large file storage) {#lfs}
+### git lfs (large file storage)
 
 Scenario: Large files (\> 100MB) get rejected by GitHub when trying to push from a repo.
 
@@ -210,7 +210,7 @@ The `.gitattributes` file is used to store information about the files being tra
 
 -   Git lfs [site](https://git-lfs.github.com/)
 
-## Using Docker/podman {#docker}
+## Using Docker/podman 
 
 Atlantis can be run inside a docker/podman container and the output can be copied on to your local machine. The advantages are you don't need additional compilers and software installed on your local machine, you just need [docker desktop](https://www.docker.com/products/docker-desktop). (On a windows 10 machine you can use windows powershell to run all docker commands). Podman can also be used locally (currently untested by dev team). However it is the installed on our servers. The word `docker` and `podman` can be used interchangably.
 
@@ -253,7 +253,7 @@ To view all containers running
 
     docker container ls
 
-## Using Google Drive to store output {#drive}
+## Using Google Drive to store output
 
     # input files needed for diagnostics
     inputFiles <- c("at_biology.prm",
@@ -280,7 +280,7 @@ To view all containers running
                                  googledriveFolder = "Testing/OutForSarah"
                                  )
 
-## Testing environment {#testing}
+## Testing environment 
 
 A test environment (repo) has been created called [atlantis_test](https://github.com/andybeet/atlantis_test) for developers to practive creating branches, conflicts, pull requests, and for merging pull requests.
 

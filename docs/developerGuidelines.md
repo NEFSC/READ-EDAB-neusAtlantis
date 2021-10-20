@@ -1,17 +1,22 @@
 Contents
 --------
 
--   [Task related workflow](#workflow)
--   [Versioning Atlantis on GitHub](#version)
--   [Change the default editor](#nano)
--   [Useful git commands](#git)
-    -   [rebase](#rebase)
-    -   [reset](#reset)
-    -   [revert](#revert)
--   [large file storage](#lfs)
--   [Using Docker/podman](#docker)
--   [Google Drive to store output](#drive)
--   [Testing environment](#testing)
+-   [Task related
+    workflow](developerGuidelines.md#task-related-workflow)
+-   [Versioning Atlantis on
+    GitHub](developerGuidelines.md#versioning-atlantis-on%20github)
+-   [Change the default
+    editor](developerGuidelines.md#change-the-default-editor)
+-   [Useful git commands](developerGuidelines.md#useful-git-commands)
+    -   [rebase](developerGuidelines.md#git-rebase)
+    -   [reset](developerGuidelines.md#git-reset)
+    -   [revert](developerGuidelines.md#git-revert)
+-   [large file
+    storage](developerGuidelines.md#git-lfs-large-file-storage)
+-   [Using Docker/podman](developerGuidelines.md#using-dockerpodman)
+-   [Google Drive to store
+    output](developerGuidelines.md#using-google-drive-to-store-output)
+-   [Testing environment](developerGuidelines.md#testing-environment)
 
 Task related workflow
 ---------------------
