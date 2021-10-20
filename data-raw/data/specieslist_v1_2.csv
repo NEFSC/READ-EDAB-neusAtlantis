@@ -1,0 +1,293 @@
+# Reworked data from specieslist_v15.csv to map Atlantis v1 species to v2
+#
+# Contact: andrew.beet@noaa.gov
+#
+#
+GroupV1,Atcode,SVSPP,NESPP3,ORIGNAMES,GroupV2,COMNAME,At2code
+NA,NA,NA,NA,,Carrion,Carrion,DC
+NA,NA,NA,NA,,Macroalgae,Macroalgae,MA
+NA,NA,NA,NA,,Seagrass,Seagrass,SG
+NA,NA,NA,NA,,Lab Detritus,Lab Detritus,DL
+NA,NA,NA,NA,,Small Whales,Small Whales,SWH
+NA,NA,NA,NA,,MicroPB,MicroPB,MB
+NA,NA,NA,NA,,Ref Det,Ref Det,DR
+NA,NA,NA,NA,,Right Whale,Right Whale,RWH
+NA,NA,NA,NA,,Invasive species,Invasive species,INV
+Sediment bacteria,BB,NA,NA,,Sediment bacteria,Sediment bacteria,BB
+Benthic carnivore,BC,NA,NA,,Benthic carnivore,Selected Gastropds,BC
+Benthic carnivore,BC,NA,NA,,Benthic carnivore,Selected annelids,BC
+Benthic carnivore,BC,NA,NA,,Benthic carnivore,starfish,BC
+Deposit feeder,BD,NA,NA,,Deposit feeder,Deposit feeder,BD
+Other benthic filter feeder,BFF,NA,799,,Other benthic filter feeder,"SCALLOP,BAY",BFF
+Other benthic filter feeder,BFF,NA,NA,"Bay scallop, ocean quahog, surf clam, porifera, hydrozoa, anthozoa, selected annelids, other bivalves, cirripedia, bryozoa, brachiopoda, crinoidea, hemichordate, ascidians",Other benthic filter feeder,Other benthic filter feeder,BFF
+Other benthic filter feeder,BFF,403,769,,Surf clam,ATLANTIC SURFCLAM,CLA
+Other benthic filter feeder,BFF,406,769,,Surf clam,ATLANTIC SURFCLAM CLAPPER,CLA
+Other benthic filter feeder,BFF,407,765,,Surf clam,ARCTIC SURFCLAM,CLA
+Other benthic filter feeder,BFF,408,765,,Surf clam,ARCTIC SURFCLAM CLAPPER,CLA
+Other benthic filter feeder,BFF,409,754,,Quahog,OCEAN QUAHOG,QHG
+Other benthic filter feeder,BFF,410,754,,Quahog,OCEAN QUAHOG CLAPPER,QHG
+Sea scallop,BFS,401,800,,Scallop,SEA SCALLOP,SCA
+Benthic grazer,BG,NA,NA,,Benthic grazer,"Echinoids, amphipods, gastropods",BG
+Lobster,BML,301,727,,Lobster,AMERICAN LOBSTER,LOB
+Shallow macrozoobenthos,BMS,NA,NA," Crabs (blue, cancer, green, hermit, horseshoe, jonah, lady, queen snow, red, rock, spider), knobbed whelk, asteroids",Shallow macrozoobenthos,Other Crabs,BMS
+Benthic carnivore,BC,510,786,,Shallow macrozoobenthos,OCTOPUS UNCL,BMS
+Benthic carnivore,BC,511,NA,,Shallow macrozoobenthos,COMMON OCTOPUS,BMS
+Benthic carnivore,BC,512,NA,,Shallow macrozoobenthos,SPOONARM OCTOPUS,BMS
+Shallow macrozoobenthos,BMS,310,710,,Red Crab,"CRAB,RED AT",RCB
+Meiobenthos,BO,NA,NA,,Meiobenthos,Meiobenthos,BO
+Squid,CEP,501,803,NA,Shallow macrozoobenthos,"SQUID, CUTTLEFISH, AND OCTOPOD UNCL",BMS
+Squid,CEP,502,802,ilex,Illex Squid,NORTHERN SHORTFIN SQUID,ISQ
+Squid,CEP,503,801,loligo,Loligo Squid,LONGFIN SQUID,LSQ
+Dinoflagellates,DF,NA,NA,,Dinoflagellates,Dinoflagellates,DF
+Benthopelagics,FBP,43,NA,,Anchovies,BAY ANCHOVY,ANC
+Benthopelagics,FBP,44,NA,,Anchovies,STRIPED ANCHOVY,ANC
+Benthopelagics,FBP,38,361,,Benthopelagic Fish,CAPELIN,BPF
+Benthopelagics,FBP,66,NA,,Benthopelagic Fish,SILVERSTRIPE HALFBEAK,BPF
+Benthopelagics,FBP,124,NA,,Benthopelagic Fish,CHUB MACKEREL,BPF
+Benthopelagics,FBP,181,206,,Benthopelagic Fish,NORTHERN SAND LANCE,BPF
+Benthopelagics,FBP,205,319,,Benthopelagic Fish,ATLANTIC SAURY,BPF
+Benthopelagics,FBP,208,NA,,Benthopelagic Fish,MACKEREL SCAD,BPF
+Benthopelagics,FBP,209,NA,,Benthopelagic Fish,BIGEYE SCAD,BPF
+Benthopelagics,FBP,211,NA,,Benthopelagic Fish,ROUND SCAD,BPF
+Benthopelagics,FBP,212,76,,Benthopelagic Fish,ROUGH SCAD,BPF
+Benthopelagics,FBP,212,77,,Benthopelagic Fish,ROUGH SCAD,BPF
+Benthopelagics,FBP,212,331,,Benthopelagic Fish,ROUGH SCAD,BPF
+Benthopelagics,FBP,213,NA,,Benthopelagic Fish,SILVER RAG,BPF
+Benthopelagics,FBP,428,NA,,Benthopelagic Fish,ATLANTIC THREAD HERRING,BPF
+Benthopelagics,FBP,429,NA,,Benthopelagic Fish,SPANISH SARDINE,BPF
+Benthopelagics,FBP,466,NA,,Benthopelagic Fish,FLYING HALFBEAK,BPF
+Benthopelagics,FBP,689,234,,Benthopelagic Fish,STRIPED MULLET,BPF
+Benthopelagics,FBP,689,235,,Benthopelagic Fish,STRIPED MULLET,BPF
+Benthopelagics,FBP,690,NA,,Benthopelagic Fish,WHITE MULLET,BPF
+Benthopelagics,FBP,131,51,,Butterfish,BUTTERFISH,BUT
+Benthopelagics,FBP,31,NA,,Shallow demersal fish,ROUND HERRING,FDE
+Benthopelagics,FBP,749,165,,Benthopelagic Fish,HARVESTFISHES,BPF
+Benthopelagics,FBP,46,NA,,Benthopelagic Fish,ATLANTIC ARGENTINE,BPF
+Silver hake,FDB,72,509,,Silver Hake,SILVER HAKE,SHK
+Miscellaneous demersals,FDC,113,362,,Benthopelagic Fish,ATLANTIC SILVERSIDE,BPF
+Miscellaneous demersals,FDC,113,363,,Benthopelagic Fish,ATLANTIC SILVERSIDE,BPF
+Miscellaneous demersals,FDC,141,335,,Black Sea Bass,BLACK SEA BASS,BSB
+Miscellaneous demersals,FDC,136,90,,Drums_croakers,ATLANTIC CROAKER,DRM
+Miscellaneous demersals,FDC,147,106,,Drums_croakers,BLACK DRUM,DRM
+Miscellaneous demersals,FDC,149,406,,Drums_croakers,SPOT,DRM
+Miscellaneous demersals,FDC,78,NA,,Miscellaneous demersal Fish,SPOTTED HAKE,FDF
+Miscellaneous demersals,FDC,83,NA,,Miscellaneous demersal Fish,FOURBEARD ROCKLING,FDF
+Miscellaneous demersals,FDC,84,96,,Miscellaneous demersal Fish,CUSK,FDF
+Miscellaneous demersals,FDC,85,NA,,Miscellaneous demersal Fish,THREEBEARD ROCKLING,FDF
+Miscellaneous demersals,FDC,90,138,,Miscellaneous demersal Fish,GRENADIER UNCL,FDF
+Miscellaneous demersals,FDC,91,NA,,Miscellaneous demersal Fish,MARLIN-SPIKE,FDF
+Miscellaneous demersals,FDC,92,NA,,Miscellaneous demersal Fish,ROUGHHEAD GRENADIER,FDF
+Miscellaneous demersals,FDC,93,NA,,Miscellaneous demersal Fish,LONGNOSE GRENADIER,FDF
+Miscellaneous demersals,FDC,98,NA,,Miscellaneous demersal Fish,DEEPWATER DAB,FDF
+Miscellaneous demersals,FDC,99,158,,Miscellaneous demersal Fish,GREENLAND HALIBUT,FDF
+Miscellaneous demersals,FDC,111,NA,,Miscellaneous demersal Fish,LONGSPINE SNIPEFISH,FDF
+Miscellaneous demersals,FDC,112,188,,Miscellaneous demersal Fish,BUCKLER DORY,FDF
+Miscellaneous demersals,FDC,114,NA,,Miscellaneous demersal Fish,BLACKMOUTH BASS,FDF
+Miscellaneous demersals,FDC,115,NA,,Miscellaneous demersal Fish,THREESPINE STICKLEBACK,FDF
+Miscellaneous demersals,FDC,116,NA,,Miscellaneous demersal Fish,NORTHERN PIPEFISH,FDF
+Miscellaneous demersals,FDC,117,NA,,Miscellaneous demersal Fish,SMALLMOUTH FLOUNDER,FDF
+Miscellaneous demersals,FDC,119,NA,,Miscellaneous demersal Fish,TRUMPETFISH,FDF
+Miscellaneous demersals,FDC,120,NA,,Miscellaneous demersal Fish,BLUESPOTTED CORNETFISH,FDF
+Miscellaneous demersals,FDC,132,11,,Miscellaneous demersal Fish,ATLANTIC MOONFISH,FDF
+Miscellaneous demersals,FDC,132,12,,Miscellaneous demersal Fish,ATLANTIC MOONFISH,FDF
+Miscellaneous demersals,FDC,133,NA,,Miscellaneous demersal Fish,LOOKDOWN,FDF
+Miscellaneous demersals,FDC,145,344,,Miscellaneous demersal Fish,WEAKFISH,FDF
+Miscellaneous demersals,FDC,146,197,,Miscellaneous demersal Fish,NORTHERN KINGFISH,FDF
+Miscellaneous demersals,FDC,148,NA,,Miscellaneous demersal Fish,SILVER PERCH,FDF
+Miscellaneous demersals,FDC,150,NA,,Miscellaneous demersal Fish,SHERBORN'S CARDINALFISH,FDF
+Miscellaneous demersals,FDC,153,NA,,Miscellaneous demersal Fish,NA,FDF
+Miscellaneous demersals,FDC,154,NA,,Miscellaneous demersal Fish,LONGSPINE SCORPIONFISH,FDF
+Miscellaneous demersals,FDC,156,NA,,Miscellaneous demersal Fish,BLACKBELLY ROSEFISH,FDF
+Miscellaneous demersals,FDC,159,NA,,Miscellaneous demersal Fish,HOOKEAR SCULPIN UNCL,FDF
+Miscellaneous demersals,FDC,160,326,,Miscellaneous demersal Fish,SCULPIN UNCL,FDF
+Miscellaneous demersals,FDC,161,NA,,Miscellaneous demersal Fish,MOUSTACHE SCULPIN,FDF
+Miscellaneous demersals,FDC,162,NA,,Miscellaneous demersal Fish,SHORTHORN SCULPIN,FDF
+Miscellaneous demersals,FDC,163,NA,,Miscellaneous demersal Fish,LONGHORN SCULPIN,FDF
+Miscellaneous demersals,FDC,164,327,,Miscellaneous demersal Fish,SEA RAVEN,FDF
+Miscellaneous demersals,FDC,165,NA,,Miscellaneous demersal Fish,ALLIGATORFISH,FDF
+Miscellaneous demersals,FDC,166,NA,,Miscellaneous demersal Fish,GRUBBY,FDF
+Miscellaneous demersals,FDC,167,NA,,Miscellaneous demersal Fish,INQUILINE SNAILFISH,FDF
+Miscellaneous demersals,FDC,168,210,,Miscellaneous demersal Fish,LUMPFISH,FDF
+Miscellaneous demersals,FDC,169,NA,,Miscellaneous demersal Fish,ATLANTIC SPINY LUMPSUCKER,FDF
+Miscellaneous demersals,FDC,170,NA,,Miscellaneous demersal Fish,ATLANTIC SEASNAIL,FDF
+Miscellaneous demersals,FDC,171,340,,Miscellaneous demersal Fish,NORTHERN SEAROBIN,FDF
+Miscellaneous demersals,FDC,172,342,,Miscellaneous demersal Fish,STRIPED SEAROBIN,FDF
+Miscellaneous demersals,FDC,173,343,,Miscellaneous demersal Fish,ARMORED SEAROBIN,FDF
+Miscellaneous demersals,FDC,174,341,,Miscellaneous demersal Fish,SEAROBIN UNCL,FDF
+Miscellaneous demersals,FDC,175,NA,,Miscellaneous demersal Fish,FLYING GURNARD,FDF
+Miscellaneous demersals,FDC,176,93,,Miscellaneous demersal Fish,CUNNER,FDF
+Miscellaneous demersals,FDC,178,NA,,Miscellaneous demersal Fish,NA,FDF
+Miscellaneous demersals,FDC,179,12,,Miscellaneous demersal Fish,NORTHERN STARGAZER,FDF
+Miscellaneous demersals,FDC,180,NA,,Miscellaneous demersal Fish,ROCK GUNNEL,FDF
+Miscellaneous demersals,FDC,187,236,,Miscellaneous demersal Fish,RED GOATFISH,FDF
+Miscellaneous demersals,FDC,188,NA,,Miscellaneous demersal Fish,STRIPED CUSK-EEL,FDF
+Miscellaneous demersals,FDC,189,NA,,Miscellaneous demersal Fish,ARCTIC EELPOUT,FDF
+Miscellaneous demersals,FDC,190,NA,,Miscellaneous demersal Fish,WOLF EELPOUT,FDF
+Miscellaneous demersals,FDC,191,NA,,Miscellaneous demersal Fish,WRYMOUTH,FDF
+Miscellaneous demersals,FDC,194,NA,,Miscellaneous demersal Fish,FAWN CUSK-EEL,FDF
+Miscellaneous demersals,FDC,232,NA,,Miscellaneous demersal Fish,SHORTNOSE GREENEYE,FDF
+Miscellaneous demersals,FDC,433,NA,,Miscellaneous demersal Fish,LARGESCALE LIZARDFISH,FDF
+Miscellaneous demersals,FDC,434,NA,,Miscellaneous demersal Fish,SHORTJAW LIZARDFISH,FDF
+Miscellaneous demersals,FDC,435,NA,,Miscellaneous demersal Fish,INSHORE LIZARDFISH,FDF
+Miscellaneous demersals,FDC,436,NA,,Miscellaneous demersal Fish,SAND DIVER,FDF
+Miscellaneous demersals,FDC,437,NA,,Miscellaneous demersal Fish,OFFSHORE LIZARDFISH,FDF
+Miscellaneous demersals,FDC,438,NA,,Miscellaneous demersal Fish,RED LIZARDFISH,FDF
+Miscellaneous demersals,FDC,439,NA,,Miscellaneous demersal Fish,SNAKEFISH,FDF
+Miscellaneous demersals,FDC,440,NA,,Miscellaneous demersal Fish,LONGNOSE LANCETFISH,FDF
+Miscellaneous demersals,FDC,196,429,,Miscellaneous demersal Fish,NORTHERN PUFFER,FDF
+Miscellaneous demersals,FDC,876,133,,Miscellaneous demersal Fish,GARFISHES,FDF
+Miscellaneous demersals,FDC,1,150,,Miscellaneous demersal Fish,HAGFISH,FDF
+Miscellaneous demersals,FDC,682,179,,Miscellaneous demersal Fish,HOGFISH,FDF
+Miscellaneous demersals,FDC,185,451,,Miscellaneous demersal Fish,TOADFISHES,FDF
+Miscellaneous demersals,FDC,530,311,,Miscellaneous demersal Fish,"PERCH,SAND",FDF
+Miscellaneous demersals,FDC,471,19,,Miscellaneous demersal Fish,"NEEDLEFISH,ATLANTIC",FDF
+Miscellaneous demersals,FDC,631,356,,Miscellaneous demersal Fish,"SHEEPSHEAD,ATLANTIC",FDF
+Miscellaneous demersals,FDC,453,453,,Miscellaneous demersal Fish,ATLANTIC TOMCOD,FDF
+Miscellaneous demersals,FDC,63,116,,Atlantic States Demersals,CONGER EEL,SDF
+Miscellaneous demersals,FDC,390,NA,,Atlantic States Demersals,CONGER EEL UNCL,SDF
+Miscellaneous demersals,FDC,60,NA,,Atlantic States Demersals,EEL UNCL,SDF
+Miscellaneous demersals,FDC,384,115,,Atlantic States Demersals,AMERICAN EEL,SDF
+Miscellaneous demersals,FDC,380,420,,Atlantic States Demersals,"STURGEON,ATLANTIC",SDF
+Miscellaneous demersals,FDC,NA,421,,Atlantic States Demersals,"STURGEONS,UNC",SDF
+Miscellaneous demersals,FDC,NA,422,,Atlantic States Demersals,"STURGEON,SHORTNOSE",SDF
+Miscellaneous demersals,FDC,645,345,,Atlantic States Demersals,"SEA TROUT,SPOTTED",SDF
+Miscellaneous demersals,FDC,NA,305,,Atlantic Salmon,"SALMON,ATLANTIC",SAL
+Miscellaneous demersals,FDC,139,418,,Striped Bass,STRIPED BASS,STB
+Miscellaneous demersals,FDC,118,128,,Other Flatfish,HOGCHOKER,FLA
+Miscellaneous demersals,FDC,69,NA,,Off shore Hake,OFFSHORE HAKE,OHK
+Miscellaneous demersals,FDC,193,250,,Ocean Pout,OCEAN POUT,OPT
+Miscellaneous demersals,FDC,75,269,,Pollock,POLLOCK,POL
+Miscellaneous demersals,FDC,155,240,,Redfish,ACADIAN REDFISH,RED
+Miscellaneous demersals,FDC,77,152,,Red Hake,RED HAKE,RHK
+Miscellaneous demersals,FDC,143,329,,Scup,SCUP,SCU
+Miscellaneous demersals,FDC,177,438,,Tautog,TAUTOG,TAU
+Miscellaneous demersals,FDC,151,447,,Tilefish,TILEFISH,TYL
+Miscellaneous demersals,FDC,192,512,,Wolffish,ATLANTIC WOLFFISH,WOL
+Goosefish,FDD,197,12,,Goosefish,GOOSEFISH,GOO
+Shallow demersal fish,FDE,33,1,,Shallow demersal fish,ALEWIFE,FDE
+Shallow demersal fish,FDE,34,112,,Shallow demersal fish,BLUEBACK HERRING,FDE
+Shallow demersal fish,FDE,35,134,,Shallow demersal fish,AMERICAN SHAD,FDE
+Shallow demersal fish,FDE,35,347,,Shallow demersal fish,AMERICAN SHAD,FDE
+Shallow demersal fish,FDE,36,221,,Menhaden,ATLANTIC MENHADEN,MEN
+Shallow demersal fish,FDE,426,134,,Shallow demersal fish,GIZZARD SHAD,FDE
+Shallow demersal fish,FDE,37,173,,Shallow demersal fish,HICKORY SHAD,FDE
+Shallow demersal fish,FDE,NA,171,,Shallow demersal fish,HERRING SMELT,FDE
+Shallow demersal fish,FDE,NA,371,,Shallow demersal fish,SMELTS,FDE
+Yellowtail flounder,FDF,105,123,,Yellowtail Flounder,YELLOWTAIL FLOUNDER,YTF
+Haddock,FDO,74,147,,Haddock,HADDOCK,HAD
+Atlantic cod,FDS,73,81,,Cod,ATLANTIC COD,COD
+Atlantic cod,FDS,73,82,,Cod,ATLANTIC COD,COD
+Migratory mesopelagics,FMM,56,NA,,Mesopelagic Migratory Fish,LANTERNFISH UNCL,MPF
+Migratory mesopelagics,FMM,229,NA,,Mesopelagic Migratory Fish,WEITZMANS PEARLSIDES,MPF
+Migratory mesopelagics,FMM,53,NA,,Mesopelagic Migratory Fish,SPOTTED LANTERNFISH,MPF
+Migratory mesopelagics,FMM,54,NA,,Mesopelagic Migratory Fish,HORNED LANTERNFISH,MPF
+Atlantic mackerel,FPL,121,212,,Mackerel,ATLANTIC MACKEREL,MAK
+Atlantic mackerel,FPL,121,215,,Mackerel,ATLANTIC MACKEREL,MAK
+Atlantic herring,FPS,32,167,,Herring,ATLANTIC HERRING,HER
+Atlantic herring,FPS,32,168,,Herring,ATLANTIC HERRING,HER
+Other piscivores,FVB,109,129,,Other Flatfish,GULF STREAM FLOUNDER,FLA
+Other piscivores,FVB,110,NA,,Other Flatfish,DEEPWATER FLOUNDER,FLA
+Other piscivores,FVB,104,127,,Fourspot flounder,FOURSPOT FLOUNDER,FOU
+Other piscivores,FVB,101,159,,Halibut,ATLANTIC HALIBUT,HAL
+Other piscivores,FVB,102,124,,Plaice,AMERICAN PLAICE,PLA
+Other piscivores,FVB,103,121,,Summer Flounder,SUMMER FLOUNDER,SUF
+Other piscivores,FVB,106,120,,Winter Flounder,WINTER FLOUNDER,WIF
+Other piscivores,FVB,108,125,,Windowpane Flounder,WINDOWPANE,WPF
+Other piscivores,FVB,107,122,,Witch Flounder,WITCH FLOUNDER,WTF
+White hake,FVD,76,153,,White Hake,WHITE HAKE,WHK
+White hake,FVD,76,154,,White Hake,WHITE HAKE,WHK
+Bluefish,FVS,135,23,,Bluefish,BLUEFISH,BLF
+Large piscivores,FVT,NA,467,,Bluefin Tuna,"TUNA,BLUEFIN",BFT
+Large piscivores,FVT,747,NA,,Bluefin Tuna,BLUEFIN TUNA,BFT
+Large piscivores,FVT,NA,216,,Billfish,"MARLIN,WHITE",BIL
+Large piscivores,FVT,NA,217,,Billfish,"MARLIN,BLUE",BIL
+Large piscivores,FVT,NA,218,,Billfish,"MARLIN,UNC",BIL
+Large piscivores,FVT,700,432,,Billfish,SWORDFISH,BIL
+Large piscivores,FVT,NA,464,,Tunas,"TUNA,BLACKFIN",TUN
+Large piscivores,FVT,NA,465,,Tunas,"TUNA,UNC",TUN
+Large piscivores,FVT,NA,466,,Tunas,"TUNA,SKIPJACK",TUN
+Large piscivores,FVT,NA,468,,Tunas,"TUNA,LITTLE (TUNNY)",TUN
+Large piscivores,FVT,NA,469,,Tunas,"TUNA,BIGEYE",TUN
+Large piscivores,FVT,NA,470,,Tunas,"TUNA,ALBACORE",TUN
+Large piscivores,FVT,NA,471,,Tunas,"TUNA,YELLOWFIN",TUN
+Large piscivores,FVT,860,NA,,Tunas,MACKEREL AND TUNA UNCL,TUN
+Pelagic bacteria,PB,NA,NA,,Pelagic bacteria,Pelagic bacteria,PB
+Pinnipeds,PIN,NA,NA,,Pinnipeds,Pinnipeds,PIN
+Diatoms,PL,NA,NA,,Diatoms,Diatoms,PL
+Pico-phytoplankton,PS,NA,NA,,Pico-phytoplankton,Pico-phytoplankton,PS
+Shrimp,PWN,306,NA,,Northern Shrimp,NORTHERN SHRIMP,NSH
+Shrimp,PWN,305,736,,Other Shrimp,SHRIMP UNCL,OSH
+Shrimp,PWN,305,737,,Other Shrimp,SHRIMP UNCL,OSH
+Shrimp,PWN,305,738,,Other Shrimp,SHRIMP UNCL,OSH
+Shrimp,PWN,297,NA,,Northern Shrimp,AESOP SHRIMP,NSH
+Shrimp,PWN,307,NA,,Other Shrimp,SHRIMP (PINK -BROWN - WHITE),OSH
+Shrimp,PWN,913,NA,,Other Shrimp,BROWN SHRIMP,OSH
+Shrimp,PWN,914,NA,,Other Shrimp,PINK SHRIMP,OSH
+Shrimp,PWN,915,NA,,Other Shrimp,WHITE SHRIMP,OSH
+Reptiles,REP,NA,809,,Reptiles,"TURTLE,GREEN(SEA)",REP
+Reptiles,REP,NA,810,,Reptiles,"TURTLE, KEMPS RIDLEY",REP
+Reptiles,REP,NA,811,,Reptiles,"TURTLES,SLIDERS",REP
+Reptiles,REP,952,812,,Reptiles,"TURTLE, LEATHERBACK",REP
+Reptiles,REP,950,813,,Reptiles,"TURTLE,LOGGERHEAD(SEA)",REP
+Reptiles,REP,NA,814,,Reptiles,"TURTLE, HAWKBILL",REP
+Reptiles,REP,NA,815,,Reptiles,"TURTLES,SNAPPING",REP
+Reptiles,REP,NA,816,,Reptiles,"TURTLES,UNC",REP
+Reptiles,REP,NA,818,,Reptiles,"TURTLE, OLIVE RIDLEY",REP
+Seabirds,SB,NA,NA,,Seabirds,Seabirds,SB
+Spiny dogfish,SHB,15,352,,Spiny Dogfish,SPINY DOGFISH,DOG
+Other demersal sharks,SHD,7,NA,,Demersal Shark,BLACK DOGFISH,DSH
+Other demersal sharks,SHD,12,NA,,Demersal Shark,SAND TIGER,DSH
+Other demersal sharks,SHD,14,346,,Demersal Shark,CHAIN DOGFISH,DSH
+Other demersal sharks,SHD,16,475,,Demersal Shark,ATLANTIC ANGEL SHARK,DSH
+Other demersal sharks,SHD,16,477,,Demersal Shark,ATLANTIC ANGEL SHARK,DSH
+Other demersal sharks,SHD,11,NA,,Demersal Shark,SHARK UNCL,DSH
+Other demersal sharks,SHD,13,351,,Smooth Dogfish,SMOOTH DOGFISH,SMO
+Other demersal sharks,SHD,9,NA,,Sandbar Shark,SANDBAR SHARK,SSH
+Other demersal sharks,SHD,353,481,,Porgeagle Shark,"SHARK,PORBEAGLE",POR
+Other demersal sharks,SHD,NA,348,,Demersal Shark,"SHARK,NURSE",DSH
+Other demersal sharks,SHD,NA,489,,Demersal Shark,"SHARK,BULL",DSH
+Other demersal sharks,SHD,NA,492,,Demersal Shark,"SHARK,LEMON",DSH
+Other demersal sharks,SHD,360,494,,Demersal Shark,"SHARK,ATLANTIC SHARPNOSE",DSH
+Other demersal sharks,SHD,12,349,,Demersal Shark,SAND TIGER,DSH
+Other demersal sharks,SHD,362,478,,Demersal Shark,"SHARK,SCALLOPED HAMMERHEAD",DSH
+Other demersal sharks,SHD,925,353,,Demersal Shark,"SHARK,THRESHER",DSH
+Other demersal sharks,SHD,NA,354,,Demersal Shark,"SHARK,BIGEYE THRESHER",DSH
+Other demersal sharks,SHD,NA,360,,Demersal Shark,"SHARK,THRESHER UNC",DSH
+Pelagic sharks,SHP,3,484,,Pelagic Shark,DUSKY SHARK,PSH
+Pelagic sharks,SHP,NA,386,,Pelagic Shark,"SHARK,GREAT HAMMERHEAD",PSH
+Pelagic sharks,SHP,352,355,,Pelagic Shark,"SHARK,BONITO(SHORTFIN MAKO)",PSH
+Pelagic sharks,SHP,NA,480,,Pelagic Shark,"SHARK,WHITE",PSH
+Pelagic sharks,SHP,354,NA,,Pelagic Shark,BLACKNOSE SHARK,PSH
+Pelagic sharks,SHP,355,485,,Pelagic Shark,SILKY SHARK,PSH
+Pelagic sharks,SHP,357,487,,Pelagic Shark,"SHARK,BLACKTIP",PSH
+Pelagic sharks,SHP,NA,491,,Pelagic Shark,"SHARK,TIGER",PSH
+Pelagic sharks,SHP,NA,499,,Pelagic Shark,"SHARK,FINETOOTH",PSH
+Pelagic sharks,SHP,NA,483,,Pelagic Shark,"SHARK,BIGNOSE",PSH
+Pelagic sharks,SHP,NA,493,,Blue Shark,"SHARK,BLUE",BLS
+Skates and rays,SSK,26,366,,Little Skate,LITTLE SKATE,LSK
+Skates and rays,SSK,4,NA,,Skate,ROUGHTAIL STINGRAY,SK
+Skates and rays,SSK,18,NA,,Skate,BLUNTNOSE STINGRAY,SK
+Skates and rays,SSK,19,NA,,Skate,BULLNOSE RAY,SK
+Skates and rays,SSK,29,NA,,Skate,SOUTHERN STINGRAY,SK
+Skates and rays,SSK,270,NA,,Skate,COWNOSE RAY,SK
+Skates and rays,SSK,271,NA,,Skate,SPOTTED EAGLE RAY,SK
+Skates and rays,SSK,367,NA,,Skate,LESSER ELECTRIC RAY,SK
+Skates and rays,SSK,373,NA,,Skate,ATLANTIC STINGRAY,SK
+Skates and rays,SSK,375,NA,,Skate,SPINY BUTTERFLY RAY,SK
+Skates and rays,SSK,376,NA,,Skate,SMOOTH BUTTERFLY RAY,SK
+Skates and rays,SSK,378,NA,,Skate,SOUTHERN EAGLE RAY,SK
+Skates and rays,SSK,5,NA,,Skate,RAY AND SKATE UNCL,SK
+Skates and rays,SSK,20,365,,Skate,SKATE UNCL,SK
+Skates and rays,SSK,21,NA,,Skate,ATLANTIC TORPEDO,SK
+Skates and rays,SSK,22,368,,Skate,BARNDOOR SKATE,SK
+Skates and rays,SSK,24,372,,Skate,CLEARNOSE SKATE,SK
+Skates and rays,SSK,25,364,,Skate,ROSETTE SKATE,SK
+Skates and rays,SSK,27,369,,Skate,SMOOTH SKATE,SK
+Skates and rays,SSK,28,370,,Skate,THORNY SKATE,SK
+Skates and rays,SSK,23,367,,Winter Skate,WINTER SKATE,WSK
+Baleen whales,WHB,NA,NA,,Baleen whales,Baleen whales,BWH
+Toothed whales,WHT,NA,NA,,Toothed whales,Toothed whales,TWH
+Gelatinous zooplankton,ZG,NA,NA,,Gelatinous zooplankton,Gelatinous zooplankton,ZG
+Carnivorous zooplankton,ZL,NA,NA,,Carnivorous zooplankton,Carnivorous zooplankton,ZL
+Copepods,ZM,NA,NA,,Copepods,Copepods,ZM
+Microzooplankton,ZS,NA,NA,,Microzooplankton,Microzooplankton,ZS

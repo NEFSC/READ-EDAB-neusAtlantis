@@ -1,6 +1,10 @@
-#' Estimate swept area biomass over whole shelf for species in Atlantis present in survey
+#' Creates biomass datafiles needed for reasonability checks
 #' 
-#' Creats RDS files:
+#'  
+#' Estimate swept area biomass (with uncertainty measures) over whole shelf for species in Atlantis
+#' Bottom trawl Survey data is used (survdat) with 3 custom files for scallop, quahogs, surfclams
+#' 
+#' Creates RDS files saved in data folder:
 #' sweptAreaBiomassEPU.RDS
 #' sweptAreaBiomassNEUS_Box.RDS
 #' sweptAreaBiomassNEUS.RDS
@@ -17,12 +21,13 @@ if (pullFromDB) {
   channel <- dbutils::connect_to_database(server,uid)
   survey <- survdat::get_survdat_data(channel)
 } else { # or read in previous pull
+  # eventually this will reside on Github in version controlled package
   survey <- readRDS("C:/Users/andrew.beet/Documents/MyWork/gitHub_repos/survdat/testing/survdat2021.RDS")
 }
 
 ### read in atlantic surfclam data. Poorly sampled in bottom trawl survey
 
-clam <- readr::read_csv(file=here::here("data-raw","surfclam403Biomass.csv"),skip=8) 
+clam <- readr::read_csv(file=here::here("data-raw/data","surfclam403Biomass.csv"),skip=8) 
 # from Dan Hennen swept are biomass
 clam <- clam %>%
   dplyr::select(Yr,Value,StdDev) %>% 
@@ -37,7 +42,7 @@ clam <- clam %>%
 
 ### read in ocean quahog data. Poorly sampled in bottom trawl survey
 
-quahog <- readr::read_csv(file=here::here("data-raw","quahog754Biomass.csv"),skip=8) 
+quahog <- readr::read_csv(file=here::here("data-raw/data","quahog754Biomass.csv"),skip=8) 
 # from Dan Hennen swept are biomass
 quahog <- quahog %>%
   dplyr::select(Yr,Value,StdDev) %>% 
@@ -56,7 +61,7 @@ quahog <- quahog %>%
 #   dplyr::select(Year,Value,Metric, Description, Units)
 # # from 65 Stock assessment table A9.4 p80
 
-scallop <- readr::read_csv(file=here::here("data-raw","scallop401Biomass.csv"),skip=9) 
+scallop <- readr::read_csv(file=here::here("data-raw/data","scallop401Biomass.csv"),skip=9) 
 
 scallops <- scallop %>%
   dplyr::select(Year,Bms,CV_2) %>% 

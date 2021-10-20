@@ -1,14 +1,15 @@
-#' Combines the stock SMART data with the Atlantis functional group codes
-#'
-#' Filters out all species that reside on the east coast from stock smart, and assign them with an atlantis functional group code
-#'
+#' Filters stock smart data by Atlantis species
+#' 
+#' Needed for QC for fishing inputs and possibly for reasonability checks
+#' Filters out all species that reside on the east coast from stock smart
+#' 
 #' saves RDS file
 #' 
 #' stockSMARTData.Rds"
 
 library(magrittr)
 
-stockSMART_data <- function() {
+create_stockSMART_data <- function() {
 
   # pulls in all of stockSMART data
   saData <- dplyr::as_tibble(assessmentdata::stockAssessmentData)
