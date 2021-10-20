@@ -4,6 +4,48 @@
 
 ## Bug Fixes (patch)
 
+
+# neus-atlantis 2.0.0 
+(built with altantis rev 6536)
+
+First official release.
+
+* Reorganization of functional groups
+* Forcing of model physics (advection, temperature, salinity)
+* Forcing of phytoplankton groups
+* Recalibrated so all species persist
+
+See forthcoming publication for model details
+
+# neus-atlantis 1.0.0-9056 (in dev) 
+(built with altantis rev 6536)
+
+Reorganization of data-raw and data products 
+
+As described in [#125](https://github.com/NOAA-EDAB/neus-atlantis/pull/125) 
+
+# neus-atlantis 1.0.0-9055 (in dev) 
+(built with altantis rev 6536)
+
+Spatial biomass diagnostic: Added code to post processing files to create presence/absence plots of species movement. 
+
+As described in [#123](https://github.com/NOAA-EDAB/neus-atlantis/pull/123) 
+
+# neus-atlantis 1.0.0-9054 (in dev) 
+(built with altantis rev 6536)
+
+Large Fish diagnostic: Added code to post processing files to create plots of the largest fish (by weight) in the model
+
+As described in [#122](https://github.com/NOAA-EDAB/neus-atlantis/pull/122) 
+
+# neus-atlantis 1.0.0-9053 (in dev) 
+(built with altantis rev 6536)
+
+Mortality diagnostics: Added code to post processing files to create mortality plots
+
+As described in [#121](https://github.com/NOAA-EDAB/neus-atlantis/pull/121) 
+
+
 # neus-atlantis 1.0.0-9052 (in dev) 
 (built with altantis rev 6536)
 
