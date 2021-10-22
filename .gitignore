@@ -39,6 +39,8 @@ outputFolder
 # except altlantis
 !/CurrentVersion/*.exe
 !/CurrentVersion/run_command.txt
+# shell script to run
+!/CurrentVersion/RunAtlantis.sh
 
 #Geometry/NEUS 1-5 Map.R
 #Geometry/Neus 1-5.pdf
