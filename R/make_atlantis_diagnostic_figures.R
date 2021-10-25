@@ -31,6 +31,7 @@
 #'@plot.cohort logical. Plots showing timeseries of each cohort across age-structured groups
 #'@plot.diet logical. Plots showing predation of and consumption by each functional group
 #'@plot.spatial.biomass logical. Plots showing the spatial (box/level) structure of groups' biomass
+#'@plot.spatial.biomass.seasonal logical. Plots showing the spatial (box/level) structure of groups' biomass
 #'@plot.LTL logical. Plots comparing LTL groups (domain-wide) to data
 #'@plot.catch logical. Plots annual catch(mt) age based catch (numbers) and age based %ages
 #'@plot.max.weight logical. Plots the maximum size of fish in each size class over the domain
@@ -197,7 +198,7 @@ make_atlantis_diagnostic_figures = function(
     # select species with 10 age classes
     for (iage in 1:max(specificmort$agecl)) {
       mortality <- specificmort %>%
-        dplyr::filter(code %in% atlantistools::get_cohorts(param.ls$fgs,numCohorts = 10)) %>%
+        dplyr::filter(code %in% atlantistools::get_cohorts_acronyms(param.ls$groups.file,numCohorts = 10)) %>%
         dplyr::filter(agecl == iage)
       
       pct = atlantistools::agg_perc(mortality, groups = c('time','species'))
@@ -212,7 +213,7 @@ make_atlantis_diagnostic_figures = function(
     # select species with 2 age classes
     for (i2age in 1:2) {
       mortality <- specificmort %>%
-        dplyr::filter(code %in% atlantistools::get_cohorts(param.ls$fgs,numCohorts = 2)) %>%
+        dplyr::filter(code %in% atlantistools::get_cohorts_acronyms(param.ls$groups.file,numCohorts = 2)) %>%
         dplyr::filter(agecl == i2age)
       
       pct = atlantistools::agg_perc(mortality, groups = c('time','species'))
@@ -226,7 +227,7 @@ make_atlantis_diagnostic_figures = function(
     
     # select species with 1 age classes (Biomass pool)
     mortality <- specificmort %>%
-      dplyr::filter(code %in% atlantistools::get_cohorts(param.ls$fgs,numCohorts = 1)) %>%
+      dplyr::filter(code %in% atlantistools::get_cohorts_acronyms(param.ls$groups.file,numCohorts = 1)) %>%
       dplyr::filter(agecl == 1)
     
     pct = atlantistools::agg_perc(mortality, groups = c('time','species'))
