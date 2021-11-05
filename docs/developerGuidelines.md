@@ -4,7 +4,7 @@ Contents
 -   [Task related
     workflow](developerGuidelines.md#task-related-workflow)
 -   [Versioning Atlantis on
-    GitHub](developerGuidelines.md#versioning-atlantis-on%20github)
+    GitHub](developerGuidelines.md#versioning-atlantis-on-github)
 -   [Change the default
     editor](developerGuidelines.md#change-the-default-editor)
 -   [Useful git commands](developerGuidelines.md#useful-git-commands)
