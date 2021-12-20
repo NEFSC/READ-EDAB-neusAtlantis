@@ -341,13 +341,13 @@ flagseperateNSH  1         CEP, CEPj are: 1 = seperate groups (or single pool), 
 flagseperateOSH  1         CEP, CEPj are: 1 = seperate groups (or single pool), 0 = age structured single group
 
 # RM 20190103 changed all from 10 to 3
-flagrecruitMAK 3
-flagrecruitHER 3
-flagrecruitWHK 3
-flagrecruitBLF 3
+flagrecruitMAK 11
+flagrecruitHER 11
+flagrecruitWHK 11
+flagrecruitBLF 11
 flagrecruitWPF 1
-flagrecruitSUF 3
-flagrecruitWIF 3
+flagrecruitSUF 11
+flagrecruitWIF 11
 flagrecruitWTF 1
 flagrecruitHAL 1
 flagrecruitPLA 1
@@ -356,14 +356,14 @@ flagrecruitFLA 1
 flagrecruitBFT 1
 flagrecruitTUN 1
 flagrecruitBIL 1
-flagrecruitMPF 3
+flagrecruitMPF 11
 flagrecruitBUT 3
 flagrecruitANC 1
 flagrecruitBPF 1
-flagrecruitGOO 3
+flagrecruitGOO 11
 flagrecruitMEN 1
 flagrecruitFDE 1
-flagrecruitCOD 3
+flagrecruitCOD 11
 flagrecruitSHK 3
 flagrecruitOHK 1
 flagrecruitPOL 3
@@ -371,17 +371,17 @@ flagrecruitRHK 3
 flagrecruitBSB 3
 flagrecruitSCU 3
 flagrecruitTYL 1
-flagrecruitRED 3
+flagrecruitRED 11
 flagrecruitOPT 1
 flagrecruitSAL 1
 flagrecruitDRM 3
-flagrecruitSTB 3
+flagrecruitSTB 11
 flagrecruitTAU 1
 flagrecruitWOL 1
 flagrecruitSDF 1
 flagrecruitFDF 1
 flagrecruitHAD 3
-flagrecruitYTF 3
+flagrecruitYTF 11
 flagrecruitDOG 1
 flagrecruitSMO 1
 flagrecruitSSH 1
@@ -15195,13 +15195,13 @@ KSPA_YTF	27.42
 
 ## proportion of weight used for spawn production
 ####FSP_FPL          0.246     Fraction used in spawning formulation for large planktivores       0.246
-FSP_MAK 0.25
+FSP_MAK 0.125
 FSP_HER 0.15
 FSP_WHK 0.25
 FSP_BLF 0.25
 FSP_WPF 0.25  
-FSP_SUF 0.25
-FSP_WIF 0.25
+FSP_SUF 0.0064
+FSP_WIF 0.00075
 FSP_WTF 0.25  
 FSP_HAL 0.25  
 FSP_PLA 0.25  
@@ -15217,7 +15217,7 @@ FSP_BPF 0.246
 FSP_GOO 0.25
 FSP_MEN 0.276  
 FSP_FDE 0.25
-FSP_COD 0.25
+FSP_COD 0.005
 FSP_SHK 0.25
 FSP_OHK 0.276  
 FSP_POL 0.25
@@ -15229,13 +15229,13 @@ FSP_RED 0.25
 FSP_OPT 0.276  
 FSP_SAL 0.276  
 FSP_DRM 0.25
-FSP_STB 0.25
+FSP_STB 0.009
 FSP_TAU 0.276  
 FSP_WOL 0.276  
 FSP_SDF 0.276  
 FSP_FDF 0.276  
 FSP_HAD 0.25
-FSP_YTF 0.25
+FSP_YTF 0.005
 FSP_DOG 0.3   
 FSP_SMO 0.27   
 FSP_SSH 0.27   
