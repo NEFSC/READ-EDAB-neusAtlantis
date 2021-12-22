@@ -22,9 +22,36 @@ edit_param_BH = function(bio.prm,group.name,alpha,beta,overwrite = F, new.file.n
     file.copy(bio.prm, new.file.name, overwrite = T)
     writeLines(bio.lines, con = new.file.name )
   }
-  
-  
 }
+
+get_param_BH = function(bio.prm){
+  
+  bio.lines = readLines(bio.prm)
+  
+  alpha.line = bio.lines[grep(paste0('BHalpha_'),bio.lines)]
+  beta.line = bio.lines[grep(paste0('BHbeta_'),bio.lines)]
+  
+  alpha.group = sapply(alpha.line,function(x) strsplit(x,'_| ')[[1]][2],USE.NAMES = F)
+  alpha.vals =  sapply(alpha.line,function(x){
+    dum = strsplit(x,'_| ')[[1]]
+    return(dum[2+which(dum[-c(1:2)] != '')])
+  },USE.NAMES = F) 
+  
+  alpha.df = data.frame(group = alpha.group,alpha = alpha.vals)
+  
+  beta.group = sapply(beta.line,function(x) strsplit(x,'_| ')[[1]][2],USE.NAMES = F)
+  beta.vals =  sapply(beta.line,function(x){
+    dum = strsplit(x,'_| ')[[1]]
+    return(dum[2+which(dum[-c(1:2)] != '')])
+  },USE.NAMES = F) 
+  
+  beta.df = data.frame(group = beta.group,beta = beta.vals)
+  
+  out.df = dplyr::left_join(alpha.df,beta.df)
+  
+  return(out.df)
+}
+
 
 #Example
 
@@ -34,3 +61,5 @@ edit_param_BH = function(bio.prm,group.name,alpha,beta,overwrite = F, new.file.n
 #               beta = c(7.56E13,3E10),
 #               overwrite = F,
 #               new.file.name = here::here('currentVersion','at_biology_test.prm'))
+
+# get_param_BH(bio.prm = here::here('currentVersion','at_biology.prm'))
