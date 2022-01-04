@@ -1,23 +1,51 @@
 #Function to plot atlantis' stock-recruit relationship over output
 
-run.dir = "C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/BH_NEUSv1_2/"
+run.dir = "C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/BH_NEUSv1_Spawn_Debug2/"
 
 
 plot_neus_stock_recruit = function(run.dir){
   
+  library(rgl)
   library(dplyr)
   library(ggplot2)
+  library(grid)
   
   #Functions
-  source(here::here('R','edit_param_BH.R'))
-  source(here::here('R','get_recruit_params.R'))
+  source(here::here('R','make_recruit_calcs.R'))
   source(here::here('R','get_recruit_type.R'))
+  source(here::here('R','edit_param_BH.R'))
+  source(here::here('R','parse_spawn_log.R'))
+  source(here::here('R','parse_recruit_log.R'))
+
+  spawn.out = parse_spawn_log(run.dir) %>%
+    group_by(Time,Code,Box,Layer)%>%
+    summarise(spawn = max(TotSpawn),DEN = sum(DEN))
   
-  #Get species name index
-  fgs = read.csv(here::here('currentVersion','neus_groups.csv'))%>%
-    select(Code,LongName)%>%
-    rename(species = 'LongName',group = 'Code')
+  spawn.tot = spawn.out %>%
+    group_by(Time,Code)%>%
+    summarise(Spawn = sum(spawn),
+              DEN = sum(DEN))%>%
+    mutate(date = as.POSIXct(Time*86400,origin = '1964-01-01 00:00:00',tz = 'UTC'),
+           year = format(date,format = '%Y'))%>%
+    ungroup()%>%
+    select(year,Code,Spawn,DEN)
   
+  recruit.out = parse_recruit_log(run.dir) %>%
+    # mutate(test = (BHalpha*Larvae)/(BHbeta+totfish))
+    group_by(Time,Code)%>%
+    summarise(recruit = mean(temprec),
+              biomass = mean(totfish),
+              spawn = mean(Larvae),
+              BHalpha = mean(BHalpha),
+              BHbeta = mean(BHbeta))%>%
+    mutate(date = as.POSIXct(Time*86400,origin = '1964-01-01 00:00:00',tz = 'UTC'),
+           year = format(date,format = '%Y'))%>%
+    ungroup()%>%
+    select(year,Code,recruit,biomass,spawn,BHalpha,BHbeta)
+
+  
+  # spawn = make_recruit_calc(run.dir)
+
   #Get recriutment type
   group.names = get_recruit_type(bio.prm = here::here('currentVersion','at_biology.prm'))%>%
     filter(flagrecruit %in% c(3,11))
@@ -27,140 +55,52 @@ plot_neus_stock_recruit = function(run.dir){
     mutate(alpha = as.numeric(as.character(alpha)),
            beta = as.numeric(as.character(beta)))
   
-  #Get Other recruitment parameters
-  recruit.params = get_recruit_params(bio.prm = here::here('currentVersion','at_biology.prm'))
-  KSPA = recruit.params$KSPA
-  FSP = recruit.params$FSP
-  FSPB = recruit.params$FSPB
-  KWSR = recruit.params$KWSR
-  KWRR = recruit.params$KWRR
   
-  #Get SSB/Recrtuis output
-  # recruits.out = readRDS(paste0(run.dir,'Post_Processed/Data/ssb_recruits.RDS'))%>%
-  #   rename(group = 'species')%>%
-  #   left_join(KWSR)%>%
-  #   left_join(KWRR)%>%
-  #   mutate(ssb = ssb*1E9,
-  #          rec.wgt = KWSR+KWRR,
-  #          rec.mgN = (rec*1000)*rec.wgt)%>%filter(group == 'BUT')
-  # recruit2 = read.table(paste0(run.dir,'neus_outputYOY.txt'),header = T)
-  # names = colnames(recruit2)[2:length(colnames(recruit2))]
-  # names = sapply(names,function(x)strsplit(x,'\\.')[[1]][1],USE.NAMES = F)
-  # colnames(recruit2)[2:ncol(recruit2)] = names
-  # recruits.out = recruit2 %>%
-  #   reshape2::melt(id.vars = 'Time')%>%
-  #   rename(time = 'Time',group = 'variable',rec = 'value')%>%
-  #   filter(group %in% group.names$group)%>%
-  #   mutate(rec = rec*1E9/5.7/20)
-  
-  #Get SN by group
-  sn.rn = readRDS(paste0(run.dir,'Post_Processed/Data/SN_age_mean.RDS'))%>%
-    rename(SN = 'atoutput')%>%
-    left_join(readRDS(paste0(run.dir,'Post_Processed/Data/RN_age_mean.RDS')))%>%
-    rename(RN = 'atoutput',cohort = 'agecl')
-  
-  #Get Numbers by group
-  nums = readRDS(paste0(run.dir,'Post_Processed/Data/numbers_age.RDS'))%>%
-    rename(cohort = 'agecl',number = 'atoutput')
-  
-  #Get Biomass by group
-  wgt = read.table(paste0(run.dir,'neus_outputBiomIndx.txt'),header = T)%>%
-    select(Time:INV)%>%
-    reshape2::melt(id.vars= 'Time')%>%
-    rename(group = 'variable',biomass = 'value',time = "Time")%>%
-    mutate(biomass = biomass*1E9)
-           # year = format(date,format = '%Y'))%>%
-    
-  #Recalculate Spawning
-  spawn = nums %>%
-    left_join(sn.rn)%>%
-    left_join(fgs)%>%
-    left_join(FSPB)%>%
-    left_join(KSPA)%>%
-    left_join(FSP)%>%
-    left_join(bh)%>%
-    mutate(time = time*365,
-           spawn = (((3.65*SN*FSP)-KSPA)-(3.65*SN-(SN+RN)))*number*FSPB,
-           spawn = ifelse(spawn<0,0,spawn),
-           rec.calc = (alpha*spawn)/(beta+((SN+RN)*number)))%>%
-    group_by(species,group,time)%>%
-    summarise(spawn = sum(spawn,na.rm=T),
-              rec.calc = sum(rec.calc,na.rm=T))%>%
-    filter(group %in% group.names$group)%>%
-    left_join(wgt)
-  
-  par(mfrow= c(5,5))
+  pdf(paste0(run.dir,'Post_Processed/Stock_Recruit_BH.pdf'),width = 18, height = 12,onefile = T)
   for(i in 1:nrow(group.names)){
 
-    spawn.group = spawn %>%
-      mutate(group= as.character(group))%>%
-      filter(group == group.names$group[i])
+    spawn.group = spawn.tot %>%
+      mutate(Code= as.character(Code))%>%
+      filter(Code == group.names$group[i])
     
-    bh.sub =  mean.spawn%>%
-      left_join(bh)%>%
-      mutate(group = as.character(group))%>%
-      filter(group == group.names$group[i])
+    recruit.group = recruit.out %>%
+      mutate(Code= as.character(Code))%>%
+      filter(Code == group.names$group[i])
     
-    max.mean = bh.sub$alpha*mean(spawn.group$spawn,na.rm=T)/(bh.sub$beta+mean(spawn.group$biomass,na.rm=T))
-
-    plot(rec.calc~biomass,spawn.group,type='p',pch = 16,main = group.names$group[i], ylim = c(0,max(max.mean,max(spawn.group$rec.calc))))
-    curve((x*bh.sub$alpha)/(x+bh.sub$beta),0,1E18,add = T)
-
+    dat.group = left_join(spawn.group,recruit.group)
+   
+    alpha.group = mean(dat.group$BHalpha)
+    beta.group = mean(dat.group$BHbeta)
+    spawn.biomass = dat.group %>%
+      filter(Spawn != 0)%>%
+      mutate(spawn.biomass = Spawn/biomass)
+    spawn.biomass = mean(spawn.biomass$spawn.biomass,na.rm=T)
+    biomass.group = mean(dat.group$biomass)
+    
+    ymax = max(c(alpha.group*spawn.biomass),max(dat.group$recruit,na.rm=T))
+    
+    vp.Bottom <- grid::viewport(height=unit(0.33, "npc"), width=unit(1, "npc"), 
+                               just=c("left","top"), 
+                               y=0.33, x=0)
+    
+    par(mfrow= c(3,1))
+    plot(recruit~year,dat.group,type='b',pch = 16, main = group.names$group[i])
+    plot(biomass~year,dat.group,type='b',pch = 16)
+    p = ggplot(dat.group,aes(x=biomass,y=recruit,col = as.numeric(year)))+
+      geom_path(size=2)+
+      scale_color_gradientn(colors= rainbow(50))+
+      stat_function(fun = function(x) (x*spawn.biomass*alpha.group)/(x+beta.group) )+
+      theme_bw()+
+      theme(legend.position = 'bottom',
+            panel.grid = element_blank())
+    print(p,vp = vp.Bottom)
+    
+    # plot(recruit~biomass,dat.group,type='p',pch = 16,ylim = c(0,ymax),
+    #      main = group.names$group[i],xlab = 'Biomass (mgN)',ylab = 'Recruits (mgN)')
+    # curve((x*spawn.biomass*alpha.group)/(x+beta.group),0,1E15,add = T)
   }
+  dev.off()
   
-  
-  
-  #Recalculate Recruitment
-  # recruits.check = spawn %>%
-  #   left_join(recruits.out)%>%
-  #   mutate(time = time*365,
-  #          rec.ratio = rec.calc/rec.mgN)%>%
-  #   filter(!is.na(ssb),group == 'BUT')
-  
-  # ggplot(filter(spawn,species == 'Butterfish'),aes(x=time,y=spawn*1E-9))+
-  #   geom_line()
-  # 
-  # ggplot(recruits.check,aes(x=time,y=rec.mgN*1E-9))+
-  #   geom_line()
-    
-  
-  #Plot output vs calculated recruits
-  # rec.long = recruits.check%>%
-  #   ungroup()%>%
-  #   select(group,date,rec,rec.calc)%>%
-  #   reshape2::melt(id.vars = c('date','group'))
-  # 
-  # ggplot(rec.long,aes(x=date,y=value,color = variable))+
-  #   geom_line()+
-  #   facet_wrap(~group,nrow = 5,scale = 'free_y')+
-  #   ylab('Recruitment (mT)')+
-  #   xlab('')
-  # 
-  # #Plot B-H
-  # mean.spawn = spawn %>%
-  #   group_by(group)%>%
-  #   summarise(spawn = mean(spawn,na.rm=T),
-  #             wgt = mean(wgt,na.rm=T))
-  
-  
-  
-  
- 
-
-  
-  ##test
-  # ggplot(recruit2,aes(x=Time,y=rec))+geom_line()+facet_wrap(~group,scale = 'free_y')
   
 
-  # 
-  # 
-  # 
-
-  # 
-    
-
-  
-    
-    
-  
 }
