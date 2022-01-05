@@ -11625,7 +11625,7 @@ C_MAK	10
 0.0675	1.44	6.3	16.8	22.8	26.7	28.8	37.5	45.9	62.4
 
 C_HER	10
-0.0615	0.59	1.595	3.445	4.92	5.1675	5.905	6.15	6.27	6.398
+0.13	1.2	3	6.8	9.5	10.2	12	12.3	12.5	12.8
 
 C_WHK	10		
 0.048125	0.86	3.7185	5.833	11.375	18.55	25.141	38.86375	56.9625	85.4
@@ -11712,7 +11712,7 @@ C_TYL	10
 0.0052	0.19	0.725	1.45	2.35	3.25	4.05	4.75	5.35	5.8
 
 C_RED	10								
-0.00017	0.00731	0.04007	0.1125	0.196875	0.27	0.365	0.597	0.759	1.125
+0.00035	0.015	0.08	0.22	0.4	0.56	0.72	1.2	1.5	2.2
 									
 C_OPT	10			
 0.02625	0.15	0.525	1.125	1.8	2.625	3.375	4.125	4.725	5.325
@@ -16258,13 +16258,13 @@ Rbeta_OSH 2e+12
 
 # Beverton-Holt recruitment
 # Alpha in Beverton-Holt
-BHalpha_MAK 2523020946209.28
-BHalpha_HER 484617618846.9
-BHalpha_WHK 1095555144051.35
+BHalpha_MAK 2.5E12
+BHalpha_HER 4.8E11
+BHalpha_WHK 1.1E12
 BHalpha_BLF 5e+08   
 BHalpha_WPF 3e+09    
-BHalpha_SUF 63949172001.5867
-BHalpha_WIF 7192930172021.57
+BHalpha_SUF 6.4E10
+BHalpha_WIF 7.2E12
 BHalpha_WTF 1e+09    
 BHalpha_HAL 1e+08    
 BHalpha_PLA 1e+08    
@@ -16273,14 +16273,14 @@ BHalpha_FLA 1e+08
 BHalpha_BFT 6e+08    
 BHalpha_TUN 6e+08    
 BHalpha_BIL 6e+08    
-BHalpha_MPF 14867488993.6823
+BHalpha_MPF 3E10
 BHalpha_BUT 1e+09     
 BHalpha_ANC 1e+09    
 BHalpha_BPF 5e+07    
-BHalpha_GOO 465599449821.333
+BHalpha_GOO 4.7E11
 BHalpha_MEN 1e+09   
 BHalpha_FDE 1e+08   
-BHalpha_COD 1142009462948.86
+BHalpha_COD 1.1E12
 BHalpha_SHK 1e+08    
 BHalpha_OHK 1e+08   
 BHalpha_POL 1e+08  
@@ -16288,17 +16288,17 @@ BHalpha_RHK 1e+08
 BHalpha_BSB 1e+08   
 BHalpha_SCU 1e+08   
 BHalpha_TYL 1e+08   
-BHalpha_RED 28079387019.4272
+BHalpha_RED 2.8E10
 BHalpha_OPT 1e+08   
 BHalpha_SAL 1e+08   
 BHalpha_DRM 1e+08   
-BHalpha_STB 69205513399.727
+BHalpha_STB 6.9E10
 BHalpha_TAU 4e+08   
 BHalpha_WOL 2e+08   
 BHalpha_SDF 2e+06   
 BHalpha_FDF 2e+08   
 BHalpha_HAD 2e+08   
-BHalpha_YTF 1322808671615.61
+BHalpha_YTF 1.3E12
 BHalpha_DOG 4.4e+07    
 BHalpha_SMO 990000     
 BHalpha_SSH 990000     
@@ -16323,13 +16323,13 @@ BHalpha_NSH 9e+11
 BHalpha_OSH 9e+11      
 
 #Beta in Beverton-Holt 
-BHbeta_MAK 89260419379649.8
-BHbeta_HER 63852211109294.7
-BHbeta_WHK 55027211928507.6
+BHbeta_MAK 8.9E13
+BHbeta_HER 6.4E13
+BHbeta_WHK 1.1E14
 BHbeta_BLF 9e+14     
 BHbeta_WPF 9e+14     
-BHbeta_SUF 4478731769191.34
-BHbeta_WIF 78391972269802.2
+BHbeta_SUF 8.5E12
+BHbeta_WIF 7.8E13
 BHbeta_WTF 9e+14     
 BHbeta_HAL 3e+12     
 BHbeta_PLA 3e+12     
@@ -16338,14 +16338,14 @@ BHbeta_FLA 3e+12
 BHbeta_BFT 3e+12     
 BHbeta_TUN 3e+12     
 BHbeta_BIL 3e+12     
-BHbeta_MPF 301383590726.853
+BHbeta_MPF 3E11
 BHbeta_BUT 5e+11     
 BHbeta_ANC 1e+11     
 BHbeta_BPF 1e+12     
-BHbeta_GOO 34646315997028.9
+BHbeta_GOO 6.5E13
 BHbeta_MEN 1e+13     
 BHbeta_FDE 1e+13     
-BHbeta_COD 266421746019177
+BHbeta_COD 2.7E14
 BHbeta_SHK 5e+11     
 BHbeta_OHK 5e+11     
 BHbeta_POL 5e+11     
@@ -16353,17 +16353,17 @@ BHbeta_RHK 5e+11
 BHbeta_BSB 5e+11     
 BHbeta_SCU 5e+11     
 BHbeta_TYL 5e+11     
-BHbeta_RED 6084948093952.78
+BHbeta_RED 6.1E12
 BHbeta_OPT 5e+11     
 BHbeta_SAL 1e+14     
 BHbeta_DRM 1e+13     
-BHbeta_STB 5961532066687.71
+BHbeta_STB 5.9E12
 BHbeta_TAU 5e+12     
 BHbeta_WOL 2e+12    
 BHbeta_SDF 2e+12     
 BHbeta_FDF 2e+13     
 BHbeta_HAD 2e+13     
-BHbeta_YTF 21384380943553.2
+BHbeta_YTF 4.2E13
 BHbeta_DOG 3.27e+10   
 BHbeta_SMO 2e+10     
 BHbeta_SSH 2e+10     
