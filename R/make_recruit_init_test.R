@@ -3,6 +3,7 @@ library(ncdf4)
 library(dplyr)
 
 #Read in functions
+source(here::here('R','make_recruit_output.R'))
 source(here::here('R','get_recruit_type.R'))
 source(here::here('R','get_recruit_params.R'))
 source(here::here('R','edit_param_BH.R'))
@@ -26,41 +27,8 @@ fgs = read.csv(here::here('currentVersion','neus_groups.csv'))%>%
 group.names = get_recruit_type(here::here('currentVersion','at_biology.prm')) %>%
   filter(flagrecruit ==3)
 
-#Read initial conditions
-init.bio = readRDS(paste0(run.dir,'Post_Processed/Data/biomass_age.rds'))%>%
-  left_join(fgs)%>%
-  filter(time == 0 & group %in% group.names$group)%>%
-  rename(cohort = 'agecl',biomass = 'atoutput')%>%
-  select(group,cohort,biomass)
-
-init.sn =  readRDS(paste0(run.dir,'Post_Processed/Data/SN_age.rds'))%>%
-  left_join(fgs)%>%
-  filter(time == 0 & group %in% group.names$group)%>%
-  rename(cohort = 'agecl',SN = 'atoutput')%>%
-  select(group,cohort,SN)
-
-init.rn =  readRDS(paste0(run.dir,'Post_Processed/Data/RN_age.rds'))%>%
-  left_join(fgs)%>%
-  filter(time == 0 & group %in% group.names$group)%>%
-  rename(cohort = 'agecl',RN = 'atoutput')%>%
-  select(group,cohort,RN)
-
-init.nums = readRDS(paste0(run.dir,'Post_Processed/Data/numbers_age.rds'))%>%
-  left_join(fgs)%>%
-  filter(time == 0 & group %in% group.names$group)%>%
-  rename(cohort = 'agecl',number = 'atoutput')%>%
-  select(group,cohort,number)
-
-#Calculate Spawn and biomass
-init.bio = init.sn %>%
-  left_join(init.rn) %>%
-  left_join(init.nums)%>%
-  left_join(recruit.params$FSPB)%>%
-  left_join(recruit.params$FSP)%>%
-  left_join(recruit.params$KSPA)%>%
-  mutate(w.opt = 3.65*SN,
-         biomass = (SN+RN)*number,
-         spawn = (((w.opt-KSPA)*FSP)-(w.opt-(SN+RN)))*FSPB*number)
+#Get recruit data from outputs
+init.bio = make_recruit_output(run.dir)
 
 #Get adult aggregates
 adult.init.bio = init.bio %>%
@@ -95,12 +63,12 @@ new.bh = recruit.required%>%
   ungroup()%>%
   left_join(fgs)%>%
   select(index,group,alpha,beta)%>%
-  arrange(group)%>%
+  arrange(index)%>%
   filter(group %in% c('COD','GOO','HER','MAK','MPF','RED','STB','SUF','WHK','WIF','YTF'))
 
-edit_param_BH(bio.prm = here::here('currentVersion','at_biology.prm'),
-              group.name = new.bh$group,
-              alpha = new.bh$alpha,
-              beta = new.bh$beta,
-              overwrite = T)
+# edit_param_BH(bio.prm = here::here('currentVersion','at_biology.prm'),
+#               group.name = new.bh$group,
+#               alpha = new.bh$alpha,
+#               beta = new.bh$beta,
+#               overwrite = T)
 
