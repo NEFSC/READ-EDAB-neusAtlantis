@@ -25,7 +25,7 @@ parse_recruit_log = function(run.dir,spp= NULL){
     # dat.df$layer = sapply(as.character(dat.df$Location),function(x) return(strsplit(x,'box|-')[[1]][3]),USE.NAMES = F)
     
     if(!is.null(spp)){
-      dat.df= subset(dat.df,Code %in% spp)
+      dat.df= subset(dat.df,code %in% spp)
     }
     dat.df.ls[[i]] = dat.df
   }
