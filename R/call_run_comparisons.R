@@ -16,32 +16,22 @@ obs.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/'
 
 roms.cobalt = paste0(roms.dir,'Atlantis_Runs/Atlantis_Output_Base_06232020/')
 
-new.obs = paste0(obs.dir,'Atlantis_Runs/Obs_Hindcast_NewForcing/')
-master = paste0(obs.dir,'Atlantis_Runs/Master_05242021/')
-master2 = paste0(obs.dir,'Atlantis_Runs/NewHerInit/')
-master3 = paste0(obs.dir,'Atlantis_Runs/Master_06032021/')
-persist1 = paste0(obs.dir,'Atlantis_Runs/PersistCheck_1/')
-persist2 = paste0(obs.dir,'Atlantis_Runs/PersistCheck_2/')
-persist3 = paste0(obs.dir,'Atlantis_Runs/PersistCheck_3/')
-Master_NewPhyto = paste0(obs.dir,'Atlantis_Runs/FixPhytoConversion_17/')
-zoo6 = paste0(obs.dir,'Atlantis_Runs/ZooRebalance_6/')
-zoo7 = paste0(obs.dir,'Atlantis_Runs/ZooRebalance_7/')
-zoo8 = paste0(obs.dir,'Atlantis_Runs/ZooRebalance_8/')
-zoo9 = paste0(obs.dir,'Atlantis_Runs/ZooRebalance_9/')
-zoo10 = paste0(obs.dir,'Atlantis_Runs/ZooRebalance_10/')
-zoo11 = paste0(obs.dir,'Atlantis_Runs/ZooRebalance_11/')
-zoo12 = paste0(obs.dir,'Atlantis_Runs/ZooRebalance_12/')
-zoo13 = paste0(obs.dir,'Atlantis_Runs/ZooRebalance_13/')
-zoo13b = paste0(obs.dir,'Atlantis_Runs/ZooRebalance_13b/')
+# new.obs = paste0(obs.dir,'Atlantis_Runs/Obs_Hindcast_NewForcing/')
+master = paste0(obs.dir,'Atlantis_Runs/Master_12172021/')
+phase1 = paste0(obs.dir,'Atlantis_Runs/Phase_1_5day/')
+# rg.test = paste0(obs.dir,'Atlantis_Runs/Output_Rob_noFishing_10_8_21/')
+HAD.BH = paste0(obs.dir,'Atlantis_Runs/HAD_Test_BH_Up10X_UpMumC_UpFSP/')
+all.bh = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1/')
+all.bh2 = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1_2/')
 
 figure.dir = paste0(obs.dir,'Diagnostic_Figures/Run_Comparisons/')
 
 plot_run_comparisons(
-  model.dirs = c(zoo11,zoo12,zoo13,zoo13b),
-  model.names = c(paste0('zoo',11:13),'zoo13b'),
+  model.dirs = c(phase1,all.bh2),
+  model.names = c('Phase_1','All-Bev-Holt-2'),
   plot.raw = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'ZooRebalance_multi_'),
+  plot.out = paste(figure.dir,'All_BH_Test'),
   table.out = F,
   groups = NULL,
   remove.init = F
