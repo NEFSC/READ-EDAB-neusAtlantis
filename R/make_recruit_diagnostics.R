@@ -43,21 +43,27 @@ make_recruit_diagnostics = function(run.dir){
               kspa.flag = sum(kspa.flag,na.rm=T))%>%
     mutate(kspa.flag = ifelse(kspa.flag>0,1,0))
   
+  tot.year = length(unique(recruit.log$year))
+  
   recruit.check = recruit.log %>%
     left_join(bh)%>%
     left_join(kspa.check)%>%
+    mutate(is.present = ifelse(biomass>0,1,0))%>%
+    filter(is.present == 1)%>%
     mutate(spawn.check= ifelse(spawn<=0,1,0),
-           recruit.check = ifelse(recruits<=0,1,0),
-           alpha.check = ifelse(recruits<(alpha/2),1,0),
-           beta.check = ifelse(biomass<beta,1,0),
-           is.present = ifelse(biomass>0,1,0))%>%
+           alpha.check = recruits/alpha,
+           beta.check = biomass/beta,
+           spawn.biomass = spawn/biomass
+           )%>%
     group_by(group)%>%
-    summarise(n.years = n(),
-              kspa.check = sum(kspa.flag)/n.years,
+    summarise(biomass.check = sum(is.present)/tot.year,
+              n.years = sum(is.present),
+              # kspa.check = sum(kspa.flag)/n.years,
               spawn.check = sum(spawn.check)/n.years,
-              recruit.check = sum(recruit.check)/n.years,
-              alpha.check = sum(alpha.check)/n.years,
-              beta.check =sum(beta.check)/n.years)
+              alpha.check = mean(alpha.check,na.rm=T),
+              beta.check = mean(beta.check,na.rm=T),
+              spawn.biomass = mean(spawn.biomass,na.rm=T))%>%
+    select(-n.years)
            
   return(recruit.check)
 }
