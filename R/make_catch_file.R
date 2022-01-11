@@ -19,7 +19,7 @@ stat.neus = stat.neus %>%
   sf::st_drop_geometry()
 
 # spcodes <- readr::read_csv("C:/Users/robert.gamble/Desktop/Atlantis_Catch/Atlantis_1_5_groups_svspp_nespp3.csv")
-spcodes = readr::read_csv(here::here('data-raw','Atlantis_1_5_groups_svspp_nespp3.csv'))
+spcodes = readr::read_csv(here::here('diagnostics','Atlantis_1_5_groups_svspp_nespp3.csv'))
 spcodes <- filter(spcodes,!is.na(NESPP3))
 
 # Read StockSmart to Comland Conversion Factor
@@ -64,6 +64,8 @@ for(i in 1:length(header)){
     hindcast_catch_ls[[i]] = data.frame(YEAR = year.interp$x,Code = header[i],grpWGT = year.interp$y)
   }
 }
+
+
 hindcast_catch2 = dplyr::bind_rows(hindcast_catch_ls) %>%
   filter(YEAR >= 1964 & YEAR <=2018)
 hindcast_catch2$grpWGT[which(!is.finite(hindcast_catch2$grpWGT))] = 0
@@ -115,7 +117,7 @@ catch[,which(colnames(catch)=='SAL')] = 0
 sort(colMeans(catch,na.rm=T))
 
 #plot catch forcing
-pdf(here::here('currentVersion','CatchFiles','Catch_Forcing.pdf'),width = 12 , height = 12,onefile = T)
+pdf(here::here('currentVersion','CatchFiles','Catch_Forcing_Raw.pdf'),width = 12 , height = 12,onefile = T)
 catch.long = catch %>% reshape2::melt(id.vars = 'time')
 p1= ggplot(catch.long,aes(x=time,y=value))+
   geom_line()+
@@ -133,39 +135,5 @@ dev.off()
   
 
 # write.table(catch,"/home/rgamble/Desktop/Atlantis-Catch/catch_ts_all.txt",col.names = F, row.names = F, sep = " ")
-write.table(catch,here::here('currentVersion','CatchFiles','total_catch_new.txt'),col.names = F, row.names = F, sep = " ")
-    
-#Write Catch for spinup period
-spin.yr = 15
-
-catch.spinup = catch %>%
-  mutate(date = as.Date(as.POSIXct(time*86400, origin = '1964-01-01 00:00:00', tz = 'UTC')),
-         year = as.numeric(format(date, format = '%Y')) )
-
-date = as.Date(as.POSIXct(catch$time*86400, origin = '1964-01-01 00:00:00', tz = 'UTC'))
-spinup.year = as.numeric(format(date, format = '%Y'))
-               
-date.spinup = which( spinup.year < 1964+spin.yr)
-date.rest = which( spinup.year >= 1964+spin.yr)
-
-spinup.mean = colMeans(catch[date.rest,])
-catch2 = as.data.frame(catch)
-for(i in 1:length(date.spinup)){
-  catch2[i,2:ncol(catch2)] = spinup.mean[2:length(spinup.mean)]
-}
-
-write.table(catch2,here::here('currentVersion','CatchFiles','total_catch_new_spinup.txt'),col.names = F, row.names = F, sep = " " )
-
-#Spinup with fixed Herring catch 
-
-#catch in mt yr-1
-her.catch = 25000
-
-#Converted to mgN s-1
-her.catch2 = her.catch * CONVFACTOR
-
-catch3 = catch
-catch3[date.spinup,which(colnames(catch)=='HER')] = her.catch2
-
-write.table(catch3,here::here('currentVersion','CatchFiles','total_catch_new_HERspinup_2.txt'),col.names = F, row.names = F, sep = " " )
-
+write.table(catch,here::here('currentVersion','CatchFiles','total_catch_raw.txt'),col.names = F, row.names = F, sep = " ")
+ 

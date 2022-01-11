@@ -11625,22 +11625,22 @@ C_MAK	10
 0.0675	1.44	6.3	16.8	22.8	26.7	28.8	37.5	45.9	62.4
 
 C_HER	10
-0.0615	0.59	1.595	3.445	4.92	5.1675	5.905	6.15	6.27	6.398
+0.26	2.4	6	13.6	19	20.4	24	24.6	25	25.6
 
 C_WHK	10		
-0.048125	0.86	3.7185	5.833	11.375	18.55	25.141	38.86375	56.9625	85.4
+0.02	0.48	1.8	2.9	5.6	12.5	19	27.5
 
 C_BLF	10	
-0.92	1.7	2.2	4.1	4.9	5.4	6	7.4	8	9
-									
+0.92 1.7 2.2 4.1 4.9 5.4 6 7.4 8 9
+
 C_WPF	10								
 0.00875	0.13	0.35	0.6	0.8	0.95	1.1	1.15	1.225	1.27
 									
-C_SUF	10								
-0.04505	1.5215	6.18	13.69	18.29	21.79	24.29	32.525	40.77	55.92
+C_SUF	10							
+0.04505 1.5215 6.18 13.69 18.29 21.79 24.29 32.525 40.77 55.92
 
 C_WIF	10	
-0.055	0.43 6.03275	14.7805	20.02525	24.09425	28.11325 32.11875 40.12025 45
+0.055 0.43 6.03275 14.7805 20.02525 24.09425 28.11325 32.11875 40.12025 45
 
 C_WTF	10								
 0.013	0.27	0.95	2.9	3.25	4.65	6	7.35	8.5	9.5
@@ -11667,7 +11667,7 @@ C_BIL	10
 4.336	213.470	1600.969	2800.468	3905.641	4980.620	5029.512	6204.038	7573.027	10655.085
 									
 C_MPF	10	
-0.008	0.056	0.096	0.14	0.2	0.24	0.28	0.3	0.32	0.33
+0.01 0.07 0.12 0.175 0.25 0.3 0.35 0.375 0.4 0.4125
 
 C_BUT	10	
 0.00975	0.18	0.72	2.1	3	3.3	3.6	4.875	5.85	7.8
@@ -11679,7 +11679,7 @@ C_BPF	10
 0.48	3	6.6	11.8	4.5	6	7.5	9	10	11.5
 									
 C_GOO	10		
-0.0625	0.3125	0.5625	6.25	7.5	10	11.2	15	18.75	25
+0.0625 0.3125 0.5625 6.25 7.5 10 11.2 15 18.75 25
 	
 C_MEN	10								
 1.125	0.5625	1.5	2.475	3.6	4.5	5.7	6.375	7.05	7.65
@@ -11706,13 +11706,13 @@ C_BSB	10
 0.0030625	0.1575	0.65625	1.505	1.925	2.275	2.625	3.5875	4.4625	6.09
 
 C_SCU	10			
-0.035	0.55	1.75	3.2	4.65	5.9	6.95	7.75	8.35	8.8
+0.035 0.55 1.75 3.2 4.65 5.9 6.95 7.75 8.35 8.8
 									
 C_TYL	10				
 0.0052	0.19	0.725	1.45	2.35	3.25	4.05	4.75	5.35	5.8
 
 C_RED	10								
-0.00017	0.00731	0.04007	0.1125	0.196875	0.27	0.365	0.597	0.759	1.125
+0.00035	0.015	0.08	0.22	0.4	0.56	0.72	1.2	1.5	2.2
 									
 C_OPT	10			
 0.02625	0.15	0.525	1.125	1.8	2.625	3.375	4.125	4.725	5.325
@@ -11741,8 +11741,8 @@ C_FDF	10
 C_HAD	10							
 0.91	18.8	54.6	94	105	110	112.4	141.9	171	228.4
 									
-C_YTF	10								
-0.065	0.31	0.6	1	1.25	1.5	1.75	1.9	2	2.075	
+C_YTF	10		
+0.065 0.31 0.6 1 1.25 1.5 1.75 1.9 2 2.075
 									
 C_DOG	10								
 0.13	4.6	14.5	25	33	38.5	42.5	42.6	46	47
@@ -11841,23 +11841,23 @@ mum_SG_T15	0.1
 mum_MAK	10.00		
 0.675	14.4	63	168	228	267	288	375	459	624
 
-mum_HER	10.00	
-0.175	0.8	2.075	3.6	5.25	6.65	7.75	9.25	10.25	11
+mum_HER	10.00
+0.35	1.6	4	7.2	10.5	13.25	15.5	18.5	20.5	22	
 						
 mum_WHK	10.00		
-0.48125	8.6	37.185	58.33	113.75	185.5	251.41	388.6375	569.625	854
+0.24	4.3	18.5	29	56	92	125	195	284
 
 mum_BLF	10.00	
-0.6	13	16	27	33	36	41	50	56	62
+0.6 13 16 27 33 36 41 50 56 62
 
 mum_WPF	10.00		
 .0875	1.3	3.5	6	8	9.5	11	11.5	12.25	12.5
 										
-mum_SUF	10.00		
-0.4505	15.215	61.8	136.9	182.9	217.9	242.9	325.25	407.7	559.2
+mum_SUF	10.00
+0.4505 15.215 61.8 136.9 182.9 217.9 242.9 325.25 407.7 559.2	
 
 mum_WIF	10.00
-0.55	4.3 60.3275	147.805	200.2525	240.9425	281.1325 321.1875 401.2025 450
+0.55 4.3 60.3275 147.805 200.2525 240.9425 281.1325 321.1875 401.2025 450
 
 mum_WTF	10.00		
 0.135	2.7	9.5	29.5	32.5	46.5	60.5	73.5	86	97
@@ -11884,7 +11884,7 @@ mum_BIL	10.00
 3.21	25.8	79.43	168.15	291.26	445.3	625.4	826.16	1042.21	1268.51
 									
 mum_MPF	10.00								
-0.01	0.07	0.12	0.18	0.25	0.3	0.35	0.375	0.4	0.4
+0.0125 0.0875 0.15 0.225 0.3125 0.375 0.4375 0.46875 0.5 0.5
 									
 mum_BUT	10.00			
 0.0975	1.8	7.2	21	30	33	36	48.75	58.5	78
@@ -13887,7 +13887,7 @@ FDF_mQ	2
 HAD_mQ	2
 2.65E-10	0.0000000004
 YTF_mQ 2
-0	1.9E-09
+0	1.9E-9
 DOG_mQ 2
 1.00E-14	1.00E-13
 SMO_mQ 2
@@ -16258,13 +16258,13 @@ Rbeta_OSH 2e+12
 
 # Beverton-Holt recruitment
 # Alpha in Beverton-Holt
-BHalpha_MAK 3.7e+08   
-BHalpha_HER 3e+09   
-BHalpha_WHK 1e+07    
+BHalpha_MAK 2.5E12
+BHalpha_HER 4.8E12
+BHalpha_WHK 1.1E12
 BHalpha_BLF 5e+08   
 BHalpha_WPF 3e+09    
-BHalpha_SUF 2e+08    
-BHalpha_WIF 1e+09    
+BHalpha_SUF 2e+08
+BHalpha_WIF 1e+09
 BHalpha_WTF 1e+09    
 BHalpha_HAL 1e+08    
 BHalpha_PLA 1e+08    
@@ -16273,14 +16273,14 @@ BHalpha_FLA 1e+08
 BHalpha_BFT 6e+08    
 BHalpha_TUN 6e+08    
 BHalpha_BIL 6e+08    
-BHalpha_MPF 1e+09    
+BHalpha_MPF 3E10
 BHalpha_BUT 1e+09     
 BHalpha_ANC 1e+09    
-BHalpha_BPF 5e+07    
-BHalpha_GOO 1e+08    
+BHalpha_BPF 5e+07
+BHalpha_GOO 4.7E11
 BHalpha_MEN 1e+09   
 BHalpha_FDE 1e+08   
-BHalpha_COD 1e+07    
+BHalpha_COD 1.1E12
 BHalpha_SHK 1e+08    
 BHalpha_OHK 1e+08   
 BHalpha_POL 1e+08  
@@ -16288,17 +16288,17 @@ BHalpha_RHK 1e+08
 BHalpha_BSB 1e+08   
 BHalpha_SCU 1e+08   
 BHalpha_TYL 1e+08   
-BHalpha_RED 1e+08   
+BHalpha_RED 2.8E10
 BHalpha_OPT 1e+08   
 BHalpha_SAL 1e+08   
-BHalpha_DRM 1e+08   
-BHalpha_STB 1e+07   
+BHalpha_DRM 2e+08   
+BHalpha_STB 6.9E10
 BHalpha_TAU 4e+08   
 BHalpha_WOL 2e+08   
 BHalpha_SDF 2e+06   
 BHalpha_FDF 2e+08   
 BHalpha_HAD 2e+08   
-BHalpha_YTF 2e+08   
+BHalpha_YTF 2e+08
 BHalpha_DOG 4.4e+07    
 BHalpha_SMO 990000     
 BHalpha_SSH 990000     
@@ -16323,13 +16323,13 @@ BHalpha_NSH 9e+11
 BHalpha_OSH 9e+11      
 
 #Beta in Beverton-Holt 
-BHbeta_MAK 7.56e+12     
-BHbeta_HER 3e+09     
-BHbeta_WHK 5e+12   
+BHbeta_MAK 8.9E13
+BHbeta_HER 6.4E12
+BHbeta_WHK 2E14
 BHbeta_BLF 9e+14     
 BHbeta_WPF 9e+14     
-BHbeta_SUF 3e+14     
-BHbeta_WIF 9e+14    
+BHbeta_SUF 3e+14
+BHbeta_WIF 9e+14
 BHbeta_WTF 9e+14     
 BHbeta_HAL 3e+12     
 BHbeta_PLA 3e+12     
@@ -16338,32 +16338,32 @@ BHbeta_FLA 3e+12
 BHbeta_BFT 3e+12     
 BHbeta_TUN 3e+12     
 BHbeta_BIL 3e+12     
-BHbeta_MPF 5e+11     
+BHbeta_MPF 3E11
 BHbeta_BUT 5e+11     
 BHbeta_ANC 1e+11     
 BHbeta_BPF 1e+12     
-BHbeta_GOO 1e+12     
+BHbeta_GOO 13E13
 BHbeta_MEN 1e+13     
 BHbeta_FDE 1e+13     
-BHbeta_COD 1e+14   
+BHbeta_COD 2.7E14
 BHbeta_SHK 5e+11     
 BHbeta_OHK 5e+11     
 BHbeta_POL 5e+11     
 BHbeta_RHK 5e+11     
-BHbeta_BSB 5e+11     
+BHbeta_BSB 5e+11    
 BHbeta_SCU 5e+11     
 BHbeta_TYL 5e+11     
-BHbeta_RED 5e+11     
+BHbeta_RED 6.1E12
 BHbeta_OPT 5e+11     
 BHbeta_SAL 1e+14     
 BHbeta_DRM 1e+13     
-BHbeta_STB 5e+13     
+BHbeta_STB 5.9E12
 BHbeta_TAU 5e+12     
 BHbeta_WOL 2e+12    
 BHbeta_SDF 2e+12     
 BHbeta_FDF 2e+13     
 BHbeta_HAD 2e+13     
-BHbeta_YTF 2e+13    
+BHbeta_YTF 2e+13
 BHbeta_DOG 3.27e+10   
 BHbeta_SMO 2e+10     
 BHbeta_SSH 2e+10     
