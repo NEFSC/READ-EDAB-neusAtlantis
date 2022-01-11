@@ -11625,7 +11625,8 @@ C_MAK	10
 0.0675	1.44	6.3	16.8	22.8	26.7	28.8	37.5	45.9	62.4
 
 C_HER	10
-0.26	2.4	6	13.6	19	20.4	24	24.6	25	25.6
+0.0142	0.0994	0.6674	1.2354	1.7324	2.1584	2.4424	2.6554	2.7974	2.84
+
 
 C_WHK	10		
 0.02	0.48	1.8	2.9	5.6	12.5	19	27.5
@@ -11841,8 +11842,9 @@ mum_SG_T15	0.1
 mum_MAK	10.00		
 0.675	14.4	63	168	228	267	288	375	459	624
 
-mum_HER	10.00
-0.35	1.6	4	7.2	10.5	13.25	15.5	18.5	20.5	22	
+mum_HER	10.00	
+0.0568	0.3408	2.272	2.272	1.988	1.704	1.136	0.852	0.568	0.1704
+
 						
 mum_WHK	10.00		
 0.24	4.3	18.5	29	56	92	125	195	284
@@ -13809,7 +13811,7 @@ OSH_mQ 2
 MAK_mQ	2
 0	0.65E-11
 HER_mQ	2
-0	1E-11
+0	5E-13
 WHK_mQ	2
 0	3.75E-10
 BLF_mQ	2
@@ -16258,9 +16260,9 @@ Rbeta_OSH 2e+12
 
 # Beverton-Holt recruitment
 # Alpha in Beverton-Holt
-BHalpha_MAK 2.5E12
-BHalpha_HER 4.8E12
-BHalpha_WHK 1.1E12
+BHalpha_MAK 2.5E12 
+BHalpha_HER 3.6e+13 
+BHalpha_WHK 1.1E12 
 BHalpha_BLF 5e+08   
 BHalpha_WPF 3e+09    
 BHalpha_SUF 2e+08
@@ -16324,7 +16326,7 @@ BHalpha_OSH 9e+11
 
 #Beta in Beverton-Holt 
 BHbeta_MAK 8.9E13
-BHbeta_HER 6.4E12
+BHbeta_HER 5.0E+13  
 BHbeta_WHK 2E14
 BHbeta_BLF 9e+14     
 BHbeta_WPF 9e+14     
