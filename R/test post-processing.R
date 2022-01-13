@@ -11,7 +11,7 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'ZM_Spatial_Final'
+run.name = 'Dev_01112022'
 
 atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
 
@@ -71,7 +71,7 @@ make_atlantis_diagnostic_figures(
   #Turn these on/off for desired output
   plot.benthic =F,
   plot.overall.biomass = F,
-  plot.biomass.timeseries = F,
+  plot.biomass.timeseries = T,
   plot.length.age = F,
   plot.biomass.box=F,
   plot.c.mum=F,
@@ -84,8 +84,9 @@ make_atlantis_diagnostic_figures(
   plot.diet=F,
   plot.consumption= F,
   plot.spatial.biomass=F,
-  plot.spatial.biomass.seasonal = T,
+  plot.spatial.biomass.seasonal = F,
   plot.LTL=F,
-  plot.catch =F
+  plot.catch =F,
+  plot.mortality = F
 )
   
