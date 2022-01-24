@@ -11625,10 +11625,10 @@ C_MAK	10
 0.0675	1.44	6.3	16.8	22.8	26.7	28.8	37.5	45.9	62.4
 
 C_HER	10
-0.26	2.4	6	13.6	19	20.4	24	24.6	25	25.6
+0.0142	0.0994	0.6674	1.2354	1.7324	2.1584	2.4424	2.6554	2.7974	2.84
 
 C_WHK	10		
-0.02	0.48	1.8	2.9	5.6	12.5	19	27.5
+0.02	0.48	1.8	2.9	5.6	9.2 12.5	19	27.5	42.7
 
 C_BLF	10	
 0.92 1.7 2.2 4.1 4.9 5.4 6 7.4 8 9
@@ -11841,23 +11841,24 @@ mum_SG_T15	0.1
 mum_MAK	10.00		
 0.675	14.4	63	168	228	267	288	375	459	624
 
-mum_HER	10.00
-0.35	1.6	4	7.2	10.5	13.25	15.5	18.5	20.5	22	
+mum_HER	10.00	
+0.0568	0.3408	2.272	2.272	1.988	1.704	1.136	0.852	0.568	0.1704
+
 						
 mum_WHK	10.00		
-0.24	4.3	18.5	29	56	92	125	195	284
+0.24	4.3	18.5	29	56	92	125	195	284 427
 
 mum_BLF	10.00	
-0.6 13 16 27 33 36 41 50 56 62
+1.673	10.038	66.92	66.92	58.555	50.19	33.46	25.095	16.73	5.019
 
 mum_WPF	10.00		
 .0875	1.3	3.5	6	8	9.5	11	11.5	12.25	12.5
 										
 mum_SUF	10.00
-0.4505 15.215 61.8 136.9 182.9 217.9 242.9 325.25 407.7 559.2	
+10.7510775	64.506465	430.0431	430.0431	376.2877125	322.532325	215.02155	161.2661625	107.510775	32.2532325	
 
 mum_WIF	10.00
-0.55 4.3 60.3275 147.805 200.2525 240.9425 281.1325 321.1875 401.2025 450
+10.5385	63.231	421.54	421.54	368.8475	316.155	210.77	158.0775	105.385	31.6155
 
 mum_WTF	10.00		
 0.135	2.7	9.5	29.5	32.5	46.5	60.5	73.5	86	97
@@ -11959,7 +11960,7 @@ mum_HAD	10.00
 9	188	546	941	1049	1100	1124	1418	1709	2284
 									
 mum_YTF	10.00		
-1.3	6.2	12.5	20	25.5	30.5	39.5	38	40	41.5
+1.275	7.65	51	51	44.625	38.25	25.5	19.125	12.75	3.825
 									
 mum_DOG	10.00	
 0.65	23	72.5	125	165	192.5	212.5	213.5	230	235
@@ -13809,15 +13810,15 @@ OSH_mQ 2
 MAK_mQ	2
 0	0.65E-11
 HER_mQ	2
-0	1E-11
+0	5E-13
 WHK_mQ	2
 0	3.75E-10
 BLF_mQ	2
-0 1E-13
+0 0
 WPF_mQ	2
-0	1E-13
+0	0
 SUF_mQ	2
-0	1E-13
+0	0
 WIF_mQ 2
 0	0
 WTF_mQ 2
@@ -13885,9 +13886,9 @@ SDF_mQ	2
 FDF_mQ	2
 0	0
 HAD_mQ	2
-0	1E-9
+2.65E-10	0.0000000004
 YTF_mQ 2
-0	1E-13
+0	0
 DOG_mQ 2
 1.00E-14	1.00E-13
 SMO_mQ 2
@@ -16194,10 +16195,10 @@ Ralpha_OSH 9e+08
 Rbeta_MAK 2e+11    
 Rbeta_HER 3e+10    
 Rbeta_WHK 1e+12    
-Rbeta_BLF 1E13   
+Rbeta_BLF 1e+13    
 Rbeta_WPF 1e+12    
-Rbeta_SUF 1e+13    
-Rbeta_WIF 1e+12    
+Rbeta_SUF 1e+12    
+Rbeta_WIF 1e+13    
 Rbeta_WTF 1e+12    
 Rbeta_HAL 1e+12    
 Rbeta_PLA 1e+12    
@@ -16231,7 +16232,7 @@ Rbeta_WOL 1e+10
 Rbeta_SDF 1e+10    
 Rbeta_FDF 1e+10    
 Rbeta_HAD 7e+10    
-Rbeta_YTF 1e+11   
+Rbeta_YTF 1e+12    
 Rbeta_DOG 3.5e+11  
 Rbeta_SMO 2e+12    
 Rbeta_SSH 2e+12    
@@ -16258,13 +16259,13 @@ Rbeta_OSH 2e+12
 
 # Beverton-Holt recruitment
 # Alpha in Beverton-Holt
-BHalpha_MAK 2.5E12
-BHalpha_HER 4.8E12
-BHalpha_WHK 1.1E12
-BHalpha_BLF 1E10
+BHalpha_MAK 2.5E12 
+BHalpha_HER 3.6e+13 
+BHalpha_WHK 1.1E12 
+BHalpha_BLF 2E8
 BHalpha_WPF 3e+09    
-BHalpha_SUF 1E8
-BHalpha_WIF 1e+9
+BHalpha_SUF 2E8
+BHalpha_WIF 1E8
 BHalpha_WTF 1e+09    
 BHalpha_HAL 1e+08    
 BHalpha_PLA 1e+08    
@@ -16298,7 +16299,7 @@ BHalpha_WOL 2e+08
 BHalpha_SDF 2e+06   
 BHalpha_FDF 2e+08   
 BHalpha_HAD 2e+08   
-BHalpha_YTF 1E9
+BHalpha_YTF 2e+8
 BHalpha_DOG 4.4e+07    
 BHalpha_SMO 990000     
 BHalpha_SSH 990000     
@@ -16324,12 +16325,12 @@ BHalpha_OSH 9e+11
 
 #Beta in Beverton-Holt 
 BHbeta_MAK 8.9E13
-BHbeta_HER 6.4E12
+BHbeta_HER 5.0E+13  
 BHbeta_WHK 2E14
-BHbeta_BLF 4.6E13     
+BHbeta_BLF 1.8E10
 BHbeta_WPF 9e+14     
-BHbeta_SUF 1E10
-BHbeta_WIF 1E10
+BHbeta_SUF 6E10
+BHbeta_WIF 9E9
 BHbeta_WTF 9e+14     
 BHbeta_HAL 3e+12     
 BHbeta_PLA 3e+12     
@@ -16363,7 +16364,7 @@ BHbeta_WOL 2e+12
 BHbeta_SDF 2e+12     
 BHbeta_FDF 2e+13     
 BHbeta_HAD 2e+13     
-BHbeta_YTF 1E10
+BHbeta_YTF 2E9
 BHbeta_DOG 3.27e+10   
 BHbeta_SMO 2e+10     
 BHbeta_SSH 2e+10     
