@@ -59,6 +59,7 @@ make_recruit_output = function(run.dir){
     left_join(recruit.params$FSPB)%>%
     left_join(recruit.params$FSP)%>%
     left_join(recruit.params$KSPA)%>%
+    # filter(group == 'BLF')%>%
     mutate(w.opt = 3.65*SN,
            biomass = (SN+RN)*number,
            spawn = (((w.opt-KSPA)*FSP)-(w.opt-(SN+RN)))*FSPB*number)

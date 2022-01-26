@@ -20,35 +20,51 @@ roms.cobalt = paste0(roms.dir,'Atlantis_Runs/Atlantis_Output_Base_06232020/')
 master = paste0(obs.dir,'Atlantis_Runs/Master_12172021/')
 phase1 = paste0(obs.dir,'Atlantis_Runs/Phase_1_5day/')
 # rg.test = paste0(obs.dir,'Atlantis_Runs/Output_Rob_noFishing_10_8_21/')
-HAD.BH = paste0(obs.dir,'Atlantis_Runs/HAD_Test_BH_Up10X_UpMumC_UpFSP/')
-all.bh = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1/')
-all.bh2 = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1_2/')
+all.bh = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1_Spawn_Debug/')
+bh.ab2 = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1_RescaleAlphaBeta_2/')
+bh.ab3 = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1_RescaleAlphaBeta_3/')
+bh.ab4 = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1_RescaleAlphaBeta_4/')
+bh.ab5 = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1_RescaleAlphaBeta_5/')
+bh.newcatch = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1_NewCatchSpinup/')
+bh.newcatch.revert = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1_NewCatch_Reverted/')
 
 figure.dir = paste0(obs.dir,'Diagnostic_Figures/Run_Comparisons/')
 
 plot_run_comparisons(
-  model.dirs = c(phase1,all.bh2),
-  model.names = c('Phase_1','All-Bev-Holt-2'),
+  model.dirs = c(all.bh,bh.newcatch,bh.newcatch.revert),
+  model.names = c('Base_BH','Rescale_NewCatch','Rescale_NewCatch_Revert'),
   plot.raw = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'All_BH_Test'),
+  plot.out = paste(figure.dir,'BH_PreMerge_NewCatch_Revert'),
   table.out = F,
   groups = NULL,
   remove.init = F
 )
 
 plot_run_comparisons(
-  model1.dir = master3,
-  model2.dir = persist3,
-  model1.name = 'master_06032021',
-  model2.name = 'PersistCheck_3',
+  model.dirs = c(phase1,bh.newcatch.revert),
+  model.names = c('Phase1','NewCatch_BH'),
   plot.raw = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'Master_v_Persist3'),
+  plot.out = paste(figure.dir,'Phase1_v_NewCatcH_BH'),
   table.out = F,
   groups = NULL,
   remove.init = F
 )
+
+plot_run_catch_comparisons(
+  model1.dir = bh.ab5,
+  model2.dir = bh.newcatch,
+  model1.name = 'BH5',
+  model2.name = 'New Catch',
+  plot.raw = T,
+  plot.diff = F,
+  plot.out = paste(figure.dir,'All_BH_NewSpinup_Catch'),
+  table.out = F,
+  groups = NULL,
+  remove.init = F
+)
+
 
 plot_run_comparisons(
   model1.dir = roms.cobalt,
