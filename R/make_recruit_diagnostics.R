@@ -62,12 +62,13 @@ make_recruit_diagnostics = function(run.dir){
               spawn.check = sum(spawn.check)/n.years,
               alpha.check = mean(alpha.check,na.rm=T),
               beta.check = mean(beta.check,na.rm=T),
-              spawn.biomass = mean(spawn.biomass,na.rm=T))%>%
+              spawn.biomass = mean(spawn.biomass,na.rm=T),
+              mean.recruit = mean(recruits,na.rm=T))%>%
     select(-n.years)
            
   return(recruit.check)
 }
 
-make_recruit_diagnostics(run.dir = "C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/BH_NEUSv1_RescaleAlphaBeta_4/")
+# make_recruit_diagnostics(run.dir = "C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/BH_NEUSv1_RescaleAlphaBeta_4/")
 
 
