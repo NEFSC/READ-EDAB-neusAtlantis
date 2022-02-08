@@ -70,23 +70,24 @@ make_atlantis_diagnostic_figures(
   plot.all = F,
   #Turn these on/off for desired output
   plot.benthic =F,
-  plot.overall.biomass = F,
+  plot.overall.biomass = T,
   plot.biomass.timeseries = T,
   plot.length.age = F,
-  plot.biomass.box=F,
-  plot.c.mum=F,
-  plot.sn.rn=F,
-  plot.recruits=F,
-  plot.numbers.timeseries=F,
-  plot.physics=F,
-  plot.growth.cons=F,
-  plot.cohort=F,
-  plot.diet=F,
+  plot.biomass.box=T,
+  plot.c.mum=T,
+  plot.sn.rn=T,
+  plot.recruits=T,
+  plot.numbers.timeseries=T,
+  plot.physics=T,
+  plot.growth.cons=T,
+  plot.cohort=T,
+  plot.diet=T,
   plot.consumption= F,
   plot.spatial.biomass=F,
   plot.spatial.biomass.seasonal = F,
   plot.LTL=F,
-  plot.catch =F,
-  plot.mortality = F
+  plot.catch =T,
+  plot.mortality=F
+
 )
   
