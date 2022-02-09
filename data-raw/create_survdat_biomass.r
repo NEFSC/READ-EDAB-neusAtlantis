@@ -36,10 +36,10 @@ clam <- clam %>%
   dplyr::rename(YEAR = Yr) %>%
   dplyr::mutate(tot.biomass = Value*1000) %>% # convert to kg since all survdata is in kg
   dplyr::mutate(SVSPP=403) %>%
-  dplyr::mutate(tot.biomass.var = 1e6*(StdDev^2)) %>%
+  dplyr::mutate(tot.bio.var = 1e6*(StdDev^2)) %>%
   dplyr::mutate(units = "kg") %>%
   dplyr::select(-StdDev,-Value) %>% 
-  tidyr::pivot_longer(.,cols= c("tot.biomass","tot.biomass.var"),names_to = "variable",values_to = "value") %>%
+  tidyr::pivot_longer(.,cols= c("tot.biomass","tot.bio.var"),names_to = "variable",values_to = "value") %>%
   dplyr::mutate(variable = as.factor(variable))
 
 ### read in ocean quahog data. Poorly sampled in bottom trawl survey
@@ -51,10 +51,10 @@ quahog <- quahog %>%
   dplyr::rename(YEAR = Yr) %>%
   dplyr::mutate(tot.biomass = 1000*Value) %>%
   dplyr::mutate(SVSPP=409) %>%
-  dplyr::mutate(tot.biomass.var = 1e6*(StdDev^2)) %>%
+  dplyr::mutate(tot.bio.var = 1e6*(StdDev^2)) %>%
   dplyr::mutate(units = "kg") %>%
   dplyr::select(-StdDev,-Value) %>% 
-  tidyr::pivot_longer(.,cols= c("tot.biomass","tot.biomass.var"),names_to = "variable",values_to = "value") %>%
+  tidyr::pivot_longer(.,cols= c("tot.biomass","tot.bio.var"),names_to = "variable",values_to = "value") %>%
   dplyr::mutate(variable = as.factor(variable))
 
 #### scallop data from stock smart
@@ -70,10 +70,10 @@ scallops <- scallop %>%
   dplyr::rename(YEAR = Year) %>%
   dplyr::mutate(tot.biomass = 1000*Bms) %>%
   dplyr::mutate(SVSPP=401) %>%
-  dplyr::mutate(tot.biomass.var = 1e6*((Bms*CV_2)^2)) %>%
+  dplyr::mutate(tot.bio.var = 1e6*((Bms*CV_2)^2)) %>%
   dplyr::mutate(units = "kg") %>%
   dplyr::select(-Bms,-CV_2) %>% 
-  tidyr::pivot_longer(.,cols= c("tot.biomass","tot.biomass.var"),names_to = "variable",values_to = "value") %>%
+  tidyr::pivot_longer(.,cols= c("tot.biomass","tot.bio.var"),names_to = "variable",values_to = "value") %>%
   dplyr::mutate(variable = as.factor(variable))
 
 
@@ -113,7 +113,7 @@ biomassEPU <- rbind(biomassEPU,scallops)
 # pull out total bio, abund with standard error for each species over time
 sweptAreaBiomassEPU <- biomassEPU %>% 
   #dplyr::select(YEAR,SVSPP,tot.biomass,tot.bio.SE,tot.abundance,tot.abund.SE) %>%
-  dplyr::filter(variable %in% c("tot.biomass","tot.biomass.var","tot.abundance","tot.abundance.var")) %>%
+  dplyr::filter(variable %in% c("tot.biomass","tot.bio.var","tot.abundance","tot.abundance.var")) %>%
   dplyr::filter(SVSPP %in% atlantisSpecies) %>%
   #dplyr::mutate(SVSPP=as.numeric(SVSPP)) %>%
   dplyr::inner_join(.,speciesList,by="SVSPP") %>% 
@@ -160,7 +160,7 @@ biomassNEUS <- rbind(biomassNEUS,scallopbox)
 
 
 sweptAreaBiomassBox <- biomassNEUS %>% 
-  dplyr::filter(variable %in% c("tot.biomass","tot.biomass.var","tot.abundance","tot.abundance.var")) %>%
+  dplyr::filter(variable %in% c("tot.biomass","tot.bio.var","tot.abundance","tot.abundance.var")) %>%
   dplyr::filter(SVSPP %in% atlantisSpecies) %>%
   #dplyr::mutate(SVSPP=as.numeric(SVSPP)) %>%
   dplyr::inner_join(.,speciesList,by="SVSPP") %>% 
@@ -188,7 +188,7 @@ biomassAllNEUS <- rbind(biomassAllNEUS,quahog)
 biomassAllNEUS <- rbind(biomassAllNEUS,scallops)
 
 sweptAreaBiomassNEUS <- biomassAllNEUS %>% 
-  dplyr::filter(variable %in% c("tot.biomass","tot.biomass.var","tot.abundance","tot.abundance.var")) %>%
+  dplyr::filter(variable %in% c("tot.biomass","tot.bio.var","tot.abundance","tot.abundance.var")) %>%
   dplyr::filter(SVSPP %in% atlantisSpecies) %>%
   #dplyr::mutate(SVSPP=as.numeric(SVSPP)) %>%
   dplyr::inner_join(.,speciesList,by="SVSPP") %>% 
