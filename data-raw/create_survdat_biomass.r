@@ -113,7 +113,7 @@ biomassEPU <- rbind(biomassEPU,scallops)
 # pull out total bio, abund with standard error for each species over time
 sweptAreaBiomassEPU <- biomassEPU %>% 
   #dplyr::select(YEAR,SVSPP,tot.biomass,tot.bio.SE,tot.abundance,tot.abund.SE) %>%
-  dplyr::filter(variable %in% c("tot.biomass","tot.bio.var","tot.abundance","tot.abundance.var")) %>%
+  dplyr::filter(variable %in% c("tot.biomass","tot.biomass.var","tot.abundance","tot.abundance.var")) %>%
   dplyr::filter(SVSPP %in% atlantisSpecies) %>%
   #dplyr::mutate(SVSPP=as.numeric(SVSPP)) %>%
   dplyr::inner_join(.,speciesList,by="SVSPP") %>% 
@@ -160,7 +160,7 @@ biomassNEUS <- rbind(biomassNEUS,scallopbox)
 
 
 sweptAreaBiomassBox <- biomassNEUS %>% 
-  dplyr::filter(variable %in% c("tot.biomass","tot.bio.var","tot.abundance","tot.abundance.var")) %>%
+  dplyr::filter(variable %in% c("tot.biomass","tot.biomass.var","tot.abundance","tot.abundance.var")) %>%
   dplyr::filter(SVSPP %in% atlantisSpecies) %>%
   #dplyr::mutate(SVSPP=as.numeric(SVSPP)) %>%
   dplyr::inner_join(.,speciesList,by="SVSPP") %>% 
@@ -188,7 +188,7 @@ biomassAllNEUS <- rbind(biomassAllNEUS,quahog)
 biomassAllNEUS <- rbind(biomassAllNEUS,scallops)
 
 sweptAreaBiomassNEUS <- biomassAllNEUS %>% 
-  dplyr::filter(variable %in% c("tot.biomass","tot.bio.var","tot.abundance","tot.abundance.var")) %>%
+  dplyr::filter(variable %in% c("tot.biomass","tot.biomass.var","tot.abundance","tot.abundance.var")) %>%
   dplyr::filter(SVSPP %in% atlantisSpecies) %>%
   #dplyr::mutate(SVSPP=as.numeric(SVSPP)) %>%
   dplyr::inner_join(.,speciesList,by="SVSPP") %>% 
