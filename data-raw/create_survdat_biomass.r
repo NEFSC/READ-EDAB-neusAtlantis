@@ -87,7 +87,9 @@ data <- survey$survdat # data pull
 neusEPU <- sf::st_read(dsn = system.file("extdata","EPU.shp",package="survdat"),quiet=T) # EPU shape file
 
 # read in functional group/species relationship
-speciesList <- readr::read_csv(file=here::here("data","functionalGroupNames.csv"))
+speciesList <- readr::read_csv(file=here::here("data","functionalGroupNames.csv")) %>%
+  dplyr::select(-NESPP3) %>% 
+  dplyr::distinct()
 atlantisSpecies <- as.vector(na.omit(unique(speciesList$SVSPP)))
 # unique list of species codes in atlantis and survey formatted as a 3 character string
 #atlantisSpecies <- sprintf("%03d",atlantisSpecies)
