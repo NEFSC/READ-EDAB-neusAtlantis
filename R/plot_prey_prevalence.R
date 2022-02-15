@@ -1,9 +1,8 @@
-run.name = 'Rescale_Mum_2'
-run.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name)
-consume.thresh = 0.9
-plot_prey_prevalence = function(run.dir, run.name,consume.thresh = 0.9){
+#Function to plot the top pred and prey for each group based on the realized diets
+
+plot_prey_prevalence = function(run.dir, run.name,consume.thresh = 1){
   
-  library(dplyr, warm.conflicts = F)
+  library(dplyr)
   options(dplyr.summarise.inform = F)
   library(ggplot2)
   
@@ -49,7 +48,13 @@ plot_prey_prevalence = function(run.dir, run.name,consume.thresh = 0.9){
              consume.cum.prop = cumsum(consume.prop),
              consume.thresh = ifelse(consume.cum.prop <= consume.thresh, 1, 0)
              )
-    top.prey = prey.sub$prey[1:which(prey.sub$consume.thresh == 0)[1]]
+    
+    which.prey.zero = which(prey.sub$consume.thresh == 0)
+    if(length(which.prey.zero)>0){
+      top.prey = prey.sub$prey[1:which.prey.zero[1]]
+    }else{
+      top.prey = prey.sub$prey
+    }
     prey.mat[i,match(top.prey,groups)] = 1
     
     ##Prey Perspective
@@ -74,7 +79,14 @@ plot_prey_prevalence = function(run.dir, run.name,consume.thresh = 0.9){
              consume.cum.prop = cumsum(consume.prop),
              consume.thresh = ifelse(consume.cum.prop <= consume.thresh, 1, 0)
       )
-    top.pred = pred.sub$pred[1:which(pred.sub$consume.thresh == 0)[1]]
+    
+    which.pred.zero = which(pred.sub$consume.thresh == 0)
+    if(length(which.pred.zero)>0){
+      top.pred = pred.sub$pred[1:which.pred.zero[1]]  
+    }else{
+      top.pred = pred.sub$pred
+    }
+    
     pred.mat[i,match(top.pred,groups)] = 1
     
   }
@@ -127,3 +139,6 @@ plot_prey_prevalence = function(run.dir, run.name,consume.thresh = 0.9){
   #         axis.text = element_text(size = 16))+
   #   ggsave(paste0(run.dir,'/Post_Processed/All Prey.png'),width = 30, height = 20, units = 'in', dpi = 200)
 }
+plot_prey_prevalence(run.name = 'Dev_02082022',
+                     run.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Dev_02082022'),
+                     consume.thresh = 1)
