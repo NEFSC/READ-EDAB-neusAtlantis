@@ -36,10 +36,10 @@ clam <- clam %>%
   dplyr::rename(YEAR = Yr) %>%
   dplyr::mutate(tot.biomass = Value*1000) %>% # convert to kg since all survdata is in kg
   dplyr::mutate(SVSPP=403) %>%
-  dplyr::mutate(tot.biomass.var = 1e6*(StdDev^2)) %>%
+  dplyr::mutate(tot.bio.var = 1e6*(StdDev^2)) %>%
   dplyr::mutate(units = "kg") %>%
   dplyr::select(-StdDev,-Value) %>% 
-  tidyr::pivot_longer(.,cols= c("tot.biomass","tot.biomass.var"),names_to = "variable",values_to = "value") %>%
+  tidyr::pivot_longer(.,cols= c("tot.biomass","tot.bio.var"),names_to = "variable",values_to = "value") %>%
   dplyr::mutate(variable = as.factor(variable))
 
 ### read in ocean quahog data. Poorly sampled in bottom trawl survey
@@ -51,10 +51,10 @@ quahog <- quahog %>%
   dplyr::rename(YEAR = Yr) %>%
   dplyr::mutate(tot.biomass = 1000*Value) %>%
   dplyr::mutate(SVSPP=409) %>%
-  dplyr::mutate(tot.biomass.var = 1e6*(StdDev^2)) %>%
+  dplyr::mutate(tot.bio.var = 1e6*(StdDev^2)) %>%
   dplyr::mutate(units = "kg") %>%
   dplyr::select(-StdDev,-Value) %>% 
-  tidyr::pivot_longer(.,cols= c("tot.biomass","tot.biomass.var"),names_to = "variable",values_to = "value") %>%
+  tidyr::pivot_longer(.,cols= c("tot.biomass","tot.bio.var"),names_to = "variable",values_to = "value") %>%
   dplyr::mutate(variable = as.factor(variable))
 
 #### scallop data from stock smart
@@ -70,10 +70,10 @@ scallops <- scallop %>%
   dplyr::rename(YEAR = Year) %>%
   dplyr::mutate(tot.biomass = 1000*Bms) %>%
   dplyr::mutate(SVSPP=401) %>%
-  dplyr::mutate(tot.biomass.var = 1e6*((Bms*CV_2)^2)) %>%
+  dplyr::mutate(tot.bio.var = 1e6*((Bms*CV_2)^2)) %>%
   dplyr::mutate(units = "kg") %>%
   dplyr::select(-Bms,-CV_2) %>% 
-  tidyr::pivot_longer(.,cols= c("tot.biomass","tot.biomass.var"),names_to = "variable",values_to = "value") %>%
+  tidyr::pivot_longer(.,cols= c("tot.biomass","tot.bio.var"),names_to = "variable",values_to = "value") %>%
   dplyr::mutate(variable = as.factor(variable))
 
 
@@ -87,7 +87,9 @@ data <- survey$survdat # data pull
 neusEPU <- sf::st_read(dsn = system.file("extdata","EPU.shp",package="survdat"),quiet=T) # EPU shape file
 
 # read in functional group/species relationship
-speciesList <- readr::read_csv(file=here::here("data","functionalGroupNames.csv"))
+speciesList <- readr::read_csv(file=here::here("data","functionalGroupNames.csv")) %>%
+  dplyr::select(-NESPP3) %>% 
+  dplyr::distinct()
 atlantisSpecies <- as.vector(na.omit(unique(speciesList$SVSPP)))
 # unique list of species codes in atlantis and survey formatted as a 3 character string
 #atlantisSpecies <- sprintf("%03d",atlantisSpecies)
