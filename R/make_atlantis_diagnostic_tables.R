@@ -8,7 +8,7 @@ library(dplyr)
 source(here::here('R','make_recruit_diagnostics.R'))
 #### CHANGE THIS FOR EACH RUN ###
 #Set the "Name" of the run and the directory of output files
-run.name = 'Pre_Merge_MumC_4_Winners'
+run.name = 'Dev_02082022'
 run.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
 ####_________________________####
 
@@ -57,10 +57,11 @@ reasonable = diag_reasonability(fgs = fgs.file,
   rename(pass.reasonable = 'pass')
 
 #Run Cohort Test
-  cohort = diag_cohortBiomass(mortFile = paste0(run.dir,'neus_outputMort.txt'),
-                            agebiomind = paste0(run.dir,'neus_outputAgeBiomIndx.txt'),
-                            neusPriority =here::here('Diagnostics','neus_atlantis_group_priority.csv') )%>%
-    rename(pass.cohort = 'Status', code = 'Code')
+  cohort = diag_cohortBiomass(fgs = fgs.file,
+                              mortality = paste0(run.dir,'neus_outputMort.txt'),
+                              agebiomind = paste0(run.dir,'neus_outputAgeBiomIndx.txt'),
+                              neusPriority =here::here('Diagnostics','neus_atlantis_group_priority.csv') )%>%
+    rename(pass.cohort = 'pass')
 
 #Run recruit diagnostic
 recruit = make_recruit_diagnostics(run.dir = paste0(run.dir,'/'))%>%
@@ -71,8 +72,9 @@ recruit = make_recruit_diagnostics(run.dir = paste0(run.dir,'/'))%>%
 diag.all = select(persist, code,initialBiomass, pass.persist) %>%
   left_join(select(stable,code,pass.stable),by = 'code')%>%
   left_join(select(reasonable, code, minBiomass,maxBiomass,test,pass.reasonable),by = 'code')%>%
-  left_join(select(cohort, code, Max_Cohort, pass.cohort),by = 'code')%>%
+  left_join(select(cohort, code, maxCohort, pass.cohort),by = 'code')%>%
   left_join(select(recruit,code,mean.recruit,pass.recruit), by = 'code')%>%
-  select(code, initialBiomass,minBiomass,maxBiomass,Max_Cohort,test,mean.recruit,pass.persist,pass.stable,pass.reasonable,pass.cohort,pass.recruit)
+  select(code, initialBiomass,minBiomass,maxBiomass,maxCohort,test,mean.recruit,pass.persist,pass.stable,pass.reasonable,pass.cohort,pass.recruit)
 
+write.csv(diag.all,file = paste0(run.dir,'Post_Processed/',run.name,'_diagnostics.csv'),row.names = F)
 
