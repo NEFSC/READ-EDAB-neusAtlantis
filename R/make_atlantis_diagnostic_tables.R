@@ -8,7 +8,7 @@ library(dplyr)
 source(here::here('R','make_recruit_diagnostics.R'))
 #### CHANGE THIS FOR EACH RUN ###
 #Set the "Name" of the run and the directory of output files
-run.name = 'Dev_02082022'
+run.name = 'MultiSpp_Cleanup_1B'
 run.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
 ####_________________________####
 
@@ -22,9 +22,12 @@ fgs.file = here::here('currentVersion','neus_groups.csv')
 biomind.file = paste0(run.dir,'/neus_outputBiomIndx.txt')
 
 #Read in Survdat biomass data
-realBiomass <- readRDS(here::here('data',"sweptAreaBiomassNEUS.rds")) %>%
-  dplyr::filter(variable %in% c("tot.biomass")) %>%
+realBiomass <- readRDS(here::here("data/sweptAreaBiomassNEUS.rds")) %>%
+  dplyr::filter(variable %in% c("tot.biomass","tot.bio.var")) %>%
+  dplyr::mutate(variable = ifelse(as.character(variable)=="tot.biomass","biomass",as.character(variable))) %>%
+  dplyr::mutate(variable = ifelse(as.character(variable)=="tot.bio.var","var",as.character(variable))) %>%
   dplyr::mutate(value=ifelse(grepl("kg$",units),value/1000,value)) %>%
+  dplyr::mutate(value=ifelse(grepl("kg\\^2$",units),value/1e6,value)) %>%
   dplyr::select(-units)
 
 surveyBounds = c(0.5,2)
@@ -48,6 +51,15 @@ stable = diag_stability(fgs = fgs.file,
   rename(pass.stable = 'pass')
 
 #Run Reasonability
+reasonable <- atlantisdiagnostics::diag_reasonability(fgs.file,
+                                                     biomind.file, 
+                                                     initialYr = 1964, 
+                                                     speciesCodes=NULL, 
+                                                     realBiomass=realBiomass,
+                                                     useVariance = T,
+                                                     nYrs = 20,
+                                                     surveyBounds=surveyBounds,
+                                                     initBioBounds = initBioBounds)
 reasonable = diag_reasonability(fgs = fgs.file,
                                 biomind = biomind.file,
                                 speciesCodes = NULL,
