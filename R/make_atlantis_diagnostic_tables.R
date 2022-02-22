@@ -8,7 +8,7 @@ library(dplyr)
 source(here::here('R','make_recruit_diagnostics.R'))
 #### CHANGE THIS FOR EACH RUN ###
 #Set the "Name" of the run and the directory of output files
-run.name = 'MultiSpp_Cleanup_1B'
+run.name = 'PL_DF_SlowSink_3'
 run.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
 ####_________________________####
 
@@ -30,6 +30,8 @@ realBiomass <- readRDS(here::here("data/sweptAreaBiomassNEUS.rds")) %>%
   dplyr::mutate(value=ifelse(grepl("kg\\^2$",units),value/1e6,value)) %>%
   dplyr::select(-units)
 
+realBiomass %>%
+  filter(Code == 'MEN',variable == 'biomass')%>%View()
 surveyBounds = c(0.5,2)
 initBioBounds = c(0.5,10)
 
@@ -59,13 +61,7 @@ reasonable <- atlantisdiagnostics::diag_reasonability(fgs.file,
                                                      useVariance = T,
                                                      nYrs = 20,
                                                      surveyBounds=surveyBounds,
-                                                     initBioBounds = initBioBounds)
-reasonable = diag_reasonability(fgs = fgs.file,
-                                biomind = biomind.file,
-                                speciesCodes = NULL,
-                                realBiomass = realBiomass,
-                                surveyBounds = surveyBounds,
-                                initBioBounds = initBioBounds)%>%
+                                                     initBioBounds = initBioBounds)%>%
   rename(pass.reasonable = 'pass')
 
 #Run Cohort Test
