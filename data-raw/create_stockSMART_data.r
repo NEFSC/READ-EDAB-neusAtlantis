@@ -12,9 +12,9 @@ library(magrittr)
 create_stockSMART_data <- function() {
 
   # pulls in all of stockSMART data
-  saData <- dplyr::as_tibble(assessmentdata::stockAssessmentData)
+  saData <- dplyr::as_tibble(stocksmart::stockAssessmentData)
   # pulls in atlantis functional group codes and species names
-  atlantis <- readr::read_csv(here::here("data-raw","functionalGroupNames.csv"))
+  atlantis <- readr::read_csv(here::here("data","functionalGroupNames.csv"))
   
   # join the two and filter. Species must have an NESPP3 code and be in NE region
   stockData <- saData %>%
@@ -27,3 +27,5 @@ create_stockSMART_data <- function() {
   saveRDS(stockData,here::here("data","stockSMARTData.Rds"))
           
 }
+
+create_stockSMART_data()
