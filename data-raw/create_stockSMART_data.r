@@ -21,10 +21,11 @@ create_stockSMART_data <- function(exportFile = F) {
 
   stockData <- atlantis %>% 
     dplyr::inner_join(.,saData$data,by=c("Species_Itis"="ITIS"),na_matches = "never") %>% 
-    dplyr::filter(!grepl("acific",StockArea)) %>% # Pacific coast
-    dplyr::filter(!grepl("ering",StockArea)) %>% # Bering sea
-    dplyr::filter(!grepl("exico",StockArea)) %>% # Mexico
-    dplyr::filter(!grepl("awaii",StockName)) %>% # Hawaii
+    dplyr::filter(RegionalEcosystem %in% c("Northeast Shelf","Atlantic Highly Migratory")) %>%
+    # dplyr::filter(!grepl("acific",StockArea)) %>% # Pacific coast
+    # dplyr::filter(!grepl("ering",StockArea)) %>% # Bering sea
+    # dplyr::filter(!grepl("exico",StockArea)) %>% # Mexico
+    # dplyr::filter(!grepl("awaii",StockName)) %>% # Hawaii
     dplyr::select(Year,SVSPP,Metric,Value,Units, Code,Functional_Group,Species,ScientificName,Species_Itis,Description,StockArea) %>%
     dplyr::mutate(Value=dplyr::case_when(Units=="Thousand Metric Tons" ~ Value*1000, TRUE ~ Value)) %>%
     dplyr::mutate(Units=dplyr::case_when(Units=="Thousand Metric Tons" ~ "Metric Tons", TRUE ~ Units)) %>%
