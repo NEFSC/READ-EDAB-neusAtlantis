@@ -10,14 +10,14 @@
 #'
 #'Author: J.caracappa
 
-force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/transport/'
-hydro.name = 'flow_1993.nc'
-bgm.file = 'neus_tmerc_RM2.bgm'
-dz.file = 'dz.csv'
-level.key.file = 'box layer key rev.csv'
-level.key.rev.file = 'box layer key.csv'
+# force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/transport/'
+# hydro.name = 'flow_1993.nc'
+# bgm.file = here::here('Geometry','neus_tmerc_RM2.bgm')
+# dz.file = here::here('Geometry','dz.csv')
+# level.key.file = here::here('Geometry','box layer key rev.csv')
+# level.key.rev.file = here::here('Geometry','box layer key.csv')
 
-force_diagnostics = function(force.dir,hydro.name){
+force_diagnostics = function(force.dir,hydro.name,bgm.file,dz.file,level.key.file, level.key.rev.file,out.dir){
 
   `%>%` = dplyr::`%>%`
   
@@ -35,12 +35,12 @@ force_diagnostics = function(force.dir,hydro.name){
   # 4 dims in dest_b,dest_k, exchange: t number of tsteps; b (30) number of boxes; z (4) max num of layers; dest (32) max num of boxes any box can exchange with
   # dest is 32 (2 boxes exchange with Box 0) something weird here
 
-  bgm = rbgm::bgmfile(here::here('Geometry',bgm.file))
-  dz_box = read.csv(here::here('Geometry',dz.file),header=T)
+  bgm = rbgm::bgmfile(bgm.file)
+  dz_box = read.csv(dz.file,header=T)
   dz_box$nlevel = apply(dz_box[,2:5],1,function(x) sum(!is.na(x)))
   level_dz = dz_box[,5:2]
-  level_key = read.csv(here::here('Geometry',level.key.file))
-  level_key_rev = read.csv(here::here('Geometry',level.key.rev.file))
+  level_key = read.csv(level.key.file)
+  level_key_rev = read.csv(level.key.rev.file)
   
   boxes = 0:29
   t.tot = length(flux.nc$dim$t$vals)
@@ -137,7 +137,7 @@ force_diagnostics = function(force.dir,hydro.name){
   full.exchanges$source.b = factor(full.exchanges$source.b)
   full.exchanges$dest.b = factor(full.exchanges$dest.b)
   
-  save('full.exchanges', file = paste0(force.dir,'Long Format Net Exchanges.R'))
+  save('full.exchanges', file = paste0(out.dir,'Long Format Net Exchanges.R'))
   
   #Example plot
   # ggplot(data = subset(full.exchanges,source.b == 1), aes(x = time, y = exch, col = dest.b))+geom_path(stat = 'sum',size = 1)
@@ -180,7 +180,7 @@ force_diagnostics = function(force.dir,hydro.name){
     }
     print(t)
   }
-  save('box.connections', file = paste0(force.dir,'box connections full.R'))
+  save('box.connections', file = paste0(out.dir,'box connections full.R'))
   box.connections2 = dplyr::bind_rows(box.connections)
   all.connected = as.data.frame(box.connections2 %>% dplyr::group_by(box,all.connected) %>% dplyr::summarize(total = sum(all.connected)))
   
@@ -219,14 +219,14 @@ force_diagnostics = function(force.dir,hydro.name){
     box.level.all$pct.flux[i] = 100*abs(box.level.all$net.flux[i]) / box.level.all$volume[i]
     if( i %% 1000 == 0){print(i)}
   }
-  # save('box.level.all',file = paste0(force.dir,'box_level_all.R'))
+  # save('box.level.all',file = paste0(out.dir,'box_level_all.R'))
   box.level.all = box.level.all %>% dplyr::filter( !(box %in% c(23,24)))
   summary(box.level.all$pct.flux)
   
   output = list(full.exchanges = full.exchanges,
                 box.connections = box.connections2,
                 box.level.all = box.level.all)
-  save(full.exchanges,box.connections2,box.level.all,file = paste0(force.dir,'post_hydroconstruct_output.R'))
+  save(full.exchanges,box.connections2,box.level.all,file = paste0(out.dir,'post_hydroconstruct_output.R'))
 }
 
 # test = box.level.all %>% dplyr::group_by(box,at.level) %>% dplyr::summarise(pct = mean(pct.flux,na.rm=T))
