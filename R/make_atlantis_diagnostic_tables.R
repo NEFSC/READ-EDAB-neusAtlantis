@@ -8,7 +8,7 @@ library(dplyr)
 source(here::here('R','make_recruit_diagnostics.R'))
 #### CHANGE THIS FOR EACH RUN ###
 #Set the "Name" of the run and the directory of output files
-run.name = 'PL_DF_SlowSink_3'
+run.name = 'PL_DF_SlowSink_4'
 run.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
 ####_________________________####
 
@@ -30,8 +30,8 @@ realBiomass <- readRDS(here::here("data/sweptAreaBiomassNEUS.rds")) %>%
   dplyr::mutate(value=ifelse(grepl("kg\\^2$",units),value/1e6,value)) %>%
   dplyr::select(-units)
 
-realBiomass %>%
-  filter(Code == 'MEN',variable == 'biomass')%>%View()
+# realBiomass %>%
+#   filter(Code == 'MEN',variable == 'biomass')%>%View()
 surveyBounds = c(0.5,2)
 initBioBounds = c(0.5,10)
 
@@ -81,8 +81,9 @@ diag.all = select(persist, code,initialBiomass, pass.persist) %>%
   left_join(select(stable,code,pass.stable),by = 'code')%>%
   left_join(select(reasonable, code, minBiomass,maxBiomass,test,pass.reasonable),by = 'code')%>%
   left_join(select(cohort, code, maxCohort, pass.cohort),by = 'code')%>%
-  left_join(select(recruit,code,mean.recruit,pass.recruit), by = 'code')%>%
-  select(code, initialBiomass,minBiomass,maxBiomass,maxCohort,test,mean.recruit,pass.persist,pass.stable,pass.reasonable,pass.cohort,pass.recruit)
+  # left_join(select(recruit,code,mean.recruit,pass.recruit), by = 'code')%>%
+  # select(code, initialBiomass,minBiomass,maxBiomass,maxCohort,test,mean.recruit,pass.persist,pass.stable,pass.reasonable,pass.cohort,pass.recruit)
+  select(code, initialBiomass,minBiomass,maxBiomass,maxCohort,test,pass.persist,pass.stable,pass.reasonable,pass.cohort)
 
 write.csv(diag.all,file = paste0(run.dir,'Post_Processed/',run.name,'_diagnostics.csv'),row.names = F)
 
