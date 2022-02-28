@@ -6,7 +6,7 @@
 
 library(magrittr)
 # read in main species file
-allGroups <- readr::read_csv(file = here::here("data-raw","functionalGroupNames.csv"),show_col_types=FALSE)
+allGroups <- readr::read_csv(file = here::here("data","functionalGroupNames.csv"),show_col_types=FALSE)
 
 # select single species (omit functional groups)
 species <- allGroups %>%
@@ -38,7 +38,7 @@ rowAll <- function(x) rowSums(x) == ncol(x) -1
 
 # pull info from species table in fishbase
 fb <- rfishbase::species(sciName$Scientific_Name,server = "fishbase") %>%
-  dplyr::select(Species,Length,CommonLength,Weight) %>%
+  dplyr::select(Species,Length,CommonLength,Weight,LongevityWild) %>%
   dplyr::mutate(dplyr::across(Length:Weight,as.numeric)) %>%
   dplyr::distinct()
 
@@ -52,7 +52,7 @@ fb <- fb %>%
 
 # search sealife base for invertibrate info
 slb <- rfishbase::species(sciName$Scientific_Name,server = "sealifebase") %>%
-  dplyr::select(Species,Length,CommonLength,Weight) %>% 
+  dplyr::select(Species,Length,CommonLength,Weight,LongevityWild) %>% 
   dplyr::mutate(dplyr::across(Length:Weight,as.numeric)) %>%
   dplyr::distinct()
 
@@ -67,9 +67,11 @@ speciesStats <- rbind(fb,slb) %>%
   dplyr::rename(code=Code) %>% 
   dplyr::rename(scientificName=Species) %>%
   dplyr::rename(maxObsLength= Length) %>%
-  dplyr::rename(maxObsWeight= Weight)
+  dplyr::rename(maxObsWeight= Weight) %>%
+  dplyr::rename(maxObsAge = LongevityWild)
 
-missingData <- speciesStats %>% dplyr::filter(rowAll(dplyr::across(.cols = everything(),,.fns = ~ is.na(.x))))
+missingData <- speciesStats %>%
+  dplyr::filter(rowAll(dplyr::across(.cols = everything(),,.fns = ~ is.na(.x))))
 if (nrow(missingData)>0) {
   missingData %>% dplyr::select(Species)
 }
