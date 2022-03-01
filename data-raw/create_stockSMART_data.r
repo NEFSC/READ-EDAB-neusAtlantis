@@ -11,14 +11,10 @@ library(magrittr)
 
 create_stockSMART_data <- function(exportFile = F) {
 
-<<<<<<< HEAD
-  # pulls in all of stockSMART data
-  saData <- dplyr::as_tibble(stocksmart::stockAssessmentData)
-=======
   # pulls in all the most recent Abundance data from stockSMART data
   saData <- stocksmart::get_latest_metrics(metrics = "Abundance")
->>>>>>> e0cfd82a5db5321b2a823d3397b6912f5ee1d04f
-  # pulls in atlantis functional group codes and species names
+
+    # pulls in atlantis functional group codes and species names
   atlantis <- readr::read_csv(here::here("data","functionalGroupNames.csv"))
   
   # join the two and filter.
