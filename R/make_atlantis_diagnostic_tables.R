@@ -22,7 +22,7 @@ fgs.file = here::here('currentVersion','neus_groups.csv')
 biomind.file = paste0(run.dir,'/neus_outputBiomIndx.txt')
 
 #Read in Survdat biomass data
-realBiomass <- readRDS(here::here("data/sweptAreaBiomassNEUS.rds")) %>%
+realBiomass.survdat <- readRDS(here::here("data/sweptAreaBiomassNEUS.rds")) %>%
   dplyr::filter(variable %in% c("tot.biomass","tot.bio.var")) %>%
   dplyr::mutate(variable = ifelse(as.character(variable)=="tot.biomass","biomass",as.character(variable))) %>%
   dplyr::mutate(variable = ifelse(as.character(variable)=="tot.bio.var","var",as.character(variable))) %>%
@@ -30,10 +30,16 @@ realBiomass <- readRDS(here::here("data/sweptAreaBiomassNEUS.rds")) %>%
   dplyr::mutate(value=ifelse(grepl("kg\\^2$",units),value/1e6,value)) %>%
   dplyr::select(-units)
 
+realBiomass.stockSmart = readRDS(here::here('data/StockSMARTData.Rds'))%>%
+  dplyr::filter(variable == 'biomass')%>%
+  group_by(Code,YEAR,Species,Functional_Group,variable,isFishedSpecies)%>%
+  summarise(value = sum(value,na.rm=T))
+  
+
 # realBiomass %>%
 #   filter(Code == 'MEN',variable == 'biomass')%>%View()
-surveyBounds = c(0.5,2)
-initBioBounds = c(0.5,10)
+surveyBounds = c(0.1,1)
+initBioBounds = c(0.1,10)
 
 #Run Persistence
 persist =diag_persistence(fgs = fgs.file,
@@ -53,17 +59,34 @@ stable = diag_stability(fgs = fgs.file,
   rename(pass.stable = 'pass')
 
 #Run Reasonability
-reasonable <- atlantisdiagnostics::diag_reasonability(fgs.file,
+reasonable.survdat <- atlantisdiagnostics::diag_reasonability(fgs.file,
                                                      biomind.file, 
                                                      initialYr = 1964, 
                                                      speciesCodes=NULL, 
-                                                     realBiomass=realBiomass,
-                                                     useVariance = T,
+                                                     realBiomass=realBiomass.survdat,
+                                                     useVariance = F,
                                                      nYrs = 20,
                                                      surveyBounds=surveyBounds,
                                                      initBioBounds = initBioBounds)%>%
-  rename(pass.reasonable = 'pass')
+  rename(pass.reasonable.SD = 'pass',
+         maxExceedance.SD = 'maxExceedance')
 
+reasonable.stocksmart <- atlantisdiagnostics::diag_reasonability(fgs = fgs.file,
+                                                              biomind = biomind.file, 
+                                                              initialYr = 1964, 
+                                                              speciesCodes=NULL, 
+                                                              realBiomass=realBiomass.stockSmart,
+                                                              useVariance = F,
+                                                              nYrs = 20,
+                                                              surveyBounds=surveyBounds,
+                                                              initBioBounds = initBioBounds)%>%
+  rename(pass.reasonable.SS = 'pass',
+         maxExceedance.SS = 'maxExceedance')
+
+reasonable.all = select(reasonable.survdat,code,species,maxExceedance.SD,pass.reasonable.SD,test) %>%
+  left_join(select(reasonable.stocksmart,code,species,maxExceedance.SS,pass.reasonable.SS))
+
+write.csv(reasonable.all, file = paste0(run.dir,'Post_Processed/',run.name,'_reasonability.csv'),row.names = F)
 #Run Cohort Test
   cohort = diag_cohortBiomass(fgs = fgs.file,
                               mortality = paste0(run.dir,'neus_outputMort.txt'),
