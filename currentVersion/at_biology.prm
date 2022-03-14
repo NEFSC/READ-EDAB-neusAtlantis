@@ -382,18 +382,18 @@ flagrecruitSDF 1
 flagrecruitFDF 1
 flagrecruitHAD 3
 flagrecruitYTF 3
-flagrecruitDOG 1
+flagrecruitDOG 12
 flagrecruitSMO 1
 flagrecruitSSH 1
 flagrecruitDSH 1
 flagrecruitBLS 1
 flagrecruitPOR 1
 flagrecruitPSH 1
-flagrecruitWSK 1
-flagrecruitLSK 1
-flagrecruitSK 1
+flagrecruitWSK 12
+flagrecruitLSK 12
+flagrecruitSK 12
 flagrecruitSB 1
-flagrecruitPIN 1
+flagrecruitPIN 12
 flagrecruitREP 1
 flagrecruitRWH 1
 flagrecruitBWH 1
@@ -15980,7 +15980,7 @@ KDENR_YTF
 2.9E8
 
 KDENR_DOG
-592351267
+2
 
 KDENR_SMO
 250000
@@ -15998,19 +15998,19 @@ KDENR_PSH
 4273.905096
 
 KDENR_WSK
-61199186
+3
 
 KDENR_LSK
-30301950
+5
 
 KDENR_SK
-328703
+5
 
 KDENR_SB
 21447617
 
 KDENR_PIN
-75000
+3.25
 
 KDENR_REP
 350
