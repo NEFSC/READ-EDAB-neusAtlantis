@@ -3496,7 +3496,7 @@ CatchTS_agedistribHAD      10
 CatchTS_agedistribYTF      10
 0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
 CatchTS_agedistribDOG      10
-0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
+0 0 0 0 0.08 0.11 0.16 0.18 0.2 0.27
 CatchTS_agedistribSMO      10
 0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
 CatchTS_agedistribSSH      10
@@ -3510,7 +3510,7 @@ CatchTS_agedistribPOR      10
 CatchTS_agedistribPSH      10
 0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
 CatchTS_agedistribWSK      10
-0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
+0 0 0.005 0.01 0.08 0.11 0.16 0.18 0.2 0.255
 CatchTS_agedistribLSK      10
 0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
 CatchTS_agedistribSK       10
