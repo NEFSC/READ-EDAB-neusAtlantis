@@ -37,6 +37,29 @@ for(yr in 1:length(dir.names)){
   )
   print(paste0('##################  ',yr,'   #################'))
 }
+
+for(yr in 1:length(dir.names)){
+  
+  # Set from and to directories
+  in.dir = paste0(glorys.dir,'Data/',dir.names[yr],'/')
+  in.files = list.files(in.dir,paste0('GLORYS_REANALYSIS_*'),full.names = F)
+  
+  make_GLORYS_files(
+    glorys.dir = in.dir,
+    glorys.prefix = paste0('GLORYS_REANALYSIS_*'),
+    glorys.files = in.files,
+    out.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/Summary/NEUS_level_hflux/',
+    dz.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/dz.csv',
+    bgm.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/neus_tmerc_RM2.bgm',
+    bgm.ll.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/neus_ll_WGS84.bgm',
+    shp.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/gis/Neus_ll_0p01.shp',
+    name.out = 'GLORYS_Atlantis_',
+    make.hflux = T,
+    make.physvars = F
+  )
+  print(paste0('##################  ',yr,'   #################'))
+}
+
 # 
 # # B) run append_vflux from ECCO -------------------------------------------
 # #moves statevar files from glorys.atl.dir to Obs_Hindcast/statevars/
