@@ -21,19 +21,19 @@
 #' 
 #' #' Created by R. Morse and modified by J. Caracappa
 # 
-# glorys.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/Data/1993/'
-# glorys.prefix = 'GLORYS_REANALYSIS_*'
-# glorys.files = list.files(glorys.dir,glorys.prefix)
-# out.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/Atlantis_Format/'
-# dz.file = here::here('Geometry','dz.csv')
-# bgm.file = here::here('Geometry','neus_tmerc_RM2.bgm')
-# bgm.ll.file = here::here('Geometry','neus_ll_WGS84.bgm')
-# shp.file = here::here('Geometry','Neus_ll_0p01.shp')
-# name.out = 'GLORYS_Atlantis_'
-# make.hflux = F
-# make.physvars = T
-# out.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/Summary/NEUS_level_alt/'
-# 
+glorys.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/Data/1993/'
+glorys.prefix = 'GLORYS_REANALYSIS_*'
+glorys.files = list.files(glorys.dir,glorys.prefix)
+out.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/Atlantis_Format/'
+dz.file = here::here('Geometry','dz.csv')
+bgm.file = here::here('Geometry','neus_tmerc_RM2.bgm')
+bgm.ll.file = here::here('Geometry','neus_ll_WGS84.bgm')
+shp.file = here::here('Geometry','gis','Neus_ll_0p01.shp')
+name.out = 'GLORYS_Atlantis_'
+make.hflux = T
+make.physvars = F
+out.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/Summary/NEUS_level_alt/'
+
 
 
 make_GLORYS_files = function(glorys.dir,
@@ -513,6 +513,13 @@ make_GLORYS_files = function(glorys.dir,
   cell.index$box = sapply(as.character(cell.index$ID),function(x) return(strsplit(x,'Box')[[1]][2]))
   write.csv(cell.index,file = 'C:/Users/joseph.caracappa/Documents/GLORYS/GLORYS_NEUS_Index_2.csv',row.names = F)
   
+  cell.index.face = bind_rows(list_nc_z_index)%>%
+    filter(glorys_levels == 1 & grepl('face*',ID))%>%
+    select(ID,cell,lon,lat)
+  
+  cell.index.face$face = sapply(as.character(cell.index.face$ID),function(x) return(strsplit(x,'face')[[1]][2]))
+  write.csv(cell.index.face,file = 'C:/Users/joseph.caracappa/Documents/GLORYS/GLORYS_NEUS_face_index.csv',row.names = F)
+  
   #test cell index
   # ggplot(cell.index,aes(x= lon,y=lat,col = box))+geom_point()
   
@@ -593,7 +600,7 @@ make_GLORYS_files = function(glorys.dir,
     if(make.physvars){
       
       #Aggregate vertically weighted by z weights
-      box_z_index2 =x=box_z_index1 %>%
+      box_z_index2 =box_z_index1 %>%
         group_by(.bx0,atlantis_levels,cell,cell_area) %>%
         summarize(temp = weighted.mean(temp,z.wgt,na.rm=T),
                   salt = weighted.mean(salt,z.wgt,na.rm=T))%>%
@@ -601,6 +608,20 @@ make_GLORYS_files = function(glorys.dir,
       
       out.name = paste0(out.dir,'GLORYS_Statevars_NEUS_Level_',file_db$date[i_timeslice],'.csv')
       write.csv(box_z_index2,file = out.name,row.names = F)
+    }
+    
+    if(make.hflux){
+      
+      #Aggregate and output
+      face_z_index2 = face_z_index%>%
+        group_by(face,atlantis_levels,cell)%>%
+        summarize(u = weighted.mean(u,z.wgt,na.rm=T),
+                  v = weighted.mean(v,z.wgt,na.rm=T))%>%
+        mutate(date = file_db$date[i_timeslice])
+      
+      out.name = paste0(out.dir,'GLORYS_hflux_NEUS_level_',file_db$date[i_timeslice],'.csv')
+      write.csv(face_z_index2,file = out.name, row.names = F)
+        
     }
 
   }
@@ -610,5 +631,5 @@ make_GLORYS_files = function(glorys.dir,
 }
 
 # make_ROMS_files(glorys.dir,glorys.prefix,glorys.files,out.dir,dz.file,bgm.file,shp.file, name.out, make.hflux =T, make.physvars = T)
-x = left_join(x,cell.index)
-ggplot(x,aes(x=lon,y=lat,fill = temp))+geom_tile()
+# x = left_join(x,cell.index)
+# ggplot(x,aes(x=lon,y=lat,fill = temp))+geom_tile()
