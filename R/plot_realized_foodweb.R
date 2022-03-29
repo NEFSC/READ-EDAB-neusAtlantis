@@ -8,6 +8,7 @@ plot_realized_foodweb = function(run.dir,diet.file,min.fract= 0.05,min.time,max.
   library(igraph)
   library(visNetwork)
   library(networkD3)
+  library(NetIndices)
   
   #read in diet data
   diet.data = as.data.frame(data.table::fread(diet.file,stringsAsFactors = F))
@@ -31,11 +32,19 @@ plot_realized_foodweb = function(run.dir,diet.file,min.fract= 0.05,min.time,max.
   pred.names = diet.agg$Predator
   prey.names = colnames(diet.agg)[-1]
   
+  missing.prey = prey.names[which(!(prey.names %in% pred.names))]
+  
   #remove Predator column
   diet.mat= diet.agg %>% select(-Predator) %>% as.matrix()
   
   #filter out by min.fract
   diet.mat2 = apply(diet.mat,MARGIN = c(1,2),function(x) ifelse(x>=min.fract,x,0))
+  
+  missing.rows = matrix(0,ncol = ncol(diet.mat2),nrow = length(missing.prey))
+  pred.names = c(pred.names,missing.prey)
+  
+  diet.mat2 = rbind(diet.mat2,missing.rows)
+  
   #add back in Predators
   diet.agg =as.data.frame(diet.mat2)
   diet.agg$pred = pred.names
@@ -43,6 +52,7 @@ plot_realized_foodweb = function(run.dir,diet.file,min.fract= 0.05,min.time,max.
     filter(value != 0) %>%
     mutate(variable = as.character(variable)) 
   colnames(diet.long) = c('pred','prey','prop')
+  
   
   ##Format for network plot
   
@@ -73,6 +83,15 @@ plot_realized_foodweb = function(run.dir,diet.file,min.fract= 0.05,min.time,max.
   diet.network <- graph_from_data_frame(d = edges, vertices = nodes, directed = TRUE)
   # plot(diet.network, edge.arrow.size = 0.2)
   
+  layout = matrix(nrow = 88, ncol = 2)
+  layout[,1] = runif(88)
+  layout[,2] = TrophInd(diet.mat2)$TL-1
+  
+  png(paste0(run.dir,'Post_Processed/food_web.png'),width = 10, height = 10, units = 'in',res =350)
+  plot.igraph(diet.network,layout = layout)
+  dev.off()
+  
+  
   # visNetwork::visNetwork(nodes,edges)
   p=visNetwork(nodes, edges) %>% 
      visOptions(highlightNearest = list(enabled = T, hover = T),nodesIdSelection = T, collapse = T) %>%
@@ -100,7 +119,7 @@ plot_realized_foodweb = function(run.dir,diet.file,min.fract= 0.05,min.time,max.
 }
 
 
-run.name = 'ZooTuningRevisit_3'
+run.name = 'Dev_03242022'
 atl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/'
 run.dir = paste0(atl.dir,run.name,'/')
 diet.file = paste0(run.dir,'neus_outputDietCheck.txt')
@@ -109,6 +128,6 @@ plot_realized_foodweb(run.dir,
                       diet.file,
                       min.time = 16000,
                       max.time = 19000,
-                      min.fract = 0.25,
-                      rand.layout = T,
-                      phys.off = F)
+                      min.fract = 0.01,
+                      rand.layout =F,
+                      phys.off =T)

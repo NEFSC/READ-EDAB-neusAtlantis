@@ -4,7 +4,7 @@ library(ggplot2)
 
 data.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/Atlantis_Format/'
 out.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/Summary/'
-years = 1993:2018
+years = 1993:2017
 var.names = c('temperature','salinity')
 
 out.data.ls = list()
