@@ -4,6 +4,14 @@
 
 ## Bug Fixes (patch)
 
+# neus-atlantis 2.0.1
+* Change spawn=recruits parameterization to beverton-holt and fixed-per-individual
+* Changed growth-at-age curve to peak at intermediate age class
+* Changed catch spin-up to be fixed level for first 15 years
+* Changed catch-at-age proportions
+* Various R scripts and data file changes
+
+See release notes for full details
 
 # neus-atlantis 2.0.0 
 (built with altantis rev 6536)
