@@ -9,6 +9,8 @@
 #' sweptAreaBiomassNEUS_Box.RDS
 #' sweptAreaBiomassNEUS.RDS
 #'
+#'
+#' ALL BIOMASS VALUES ARE IN KG. 
 
 library(magrittr)
 pullFromDB <- F
@@ -22,7 +24,7 @@ if (pullFromDB) {
   survey <- survdat::get_survdat_data(channel)
 } else { # or read in previous pull
   # eventually this will reside on Github in version controlled package
-  survey <- readRDS("C:/Users/andrew.beet/Documents/MyWork/gitHub_repos/survdat/testing/survdat2021.RDS")
+  survey <- readRDS(here::here("data-raw/survdat2021.RDS"))
 }
 
 ### read in atlantic surfclam data. Poorly sampled in bottom trawl survey
@@ -32,12 +34,12 @@ clam <- readr::read_csv(file=here::here("data-raw/data","surfclam403Biomass.csv"
 clam <- clam %>%
   dplyr::select(Yr,Value,StdDev) %>% 
   dplyr::rename(YEAR = Yr) %>%
-  dplyr::mutate(tot.biomass = 1000*Value) %>%
+  dplyr::mutate(tot.biomass = Value*1000) %>% # convert to kg since all survdata is in kg
   dplyr::mutate(SVSPP=403) %>%
-  dplyr::mutate(tot.biomass.var = StdDev^2) %>%
+  dplyr::mutate(tot.bio.var = 1e6*(StdDev^2)) %>%
   dplyr::mutate(units = "kg") %>%
   dplyr::select(-StdDev,-Value) %>% 
-  tidyr::pivot_longer(.,cols= c("tot.biomass","tot.biomass.var"),names_to = "variable",values_to = "value") %>%
+  tidyr::pivot_longer(.,cols= c("tot.biomass","tot.bio.var"),names_to = "variable",values_to = "value") %>%
   dplyr::mutate(variable = as.factor(variable))
 
 ### read in ocean quahog data. Poorly sampled in bottom trawl survey
@@ -48,11 +50,11 @@ quahog <- quahog %>%
   dplyr::select(Yr,Value,StdDev) %>% 
   dplyr::rename(YEAR = Yr) %>%
   dplyr::mutate(tot.biomass = 1000*Value) %>%
-  dplyr::mutate(SVSPP=754) %>%
-  dplyr::mutate(tot.biomass.var = StdDev^2) %>%
+  dplyr::mutate(SVSPP=409) %>%
+  dplyr::mutate(tot.bio.var = 1e6*(StdDev^2)) %>%
   dplyr::mutate(units = "kg") %>%
   dplyr::select(-StdDev,-Value) %>% 
-  tidyr::pivot_longer(.,cols= c("tot.biomass","tot.biomass.var"),names_to = "variable",values_to = "value") %>%
+  tidyr::pivot_longer(.,cols= c("tot.biomass","tot.bio.var"),names_to = "variable",values_to = "value") %>%
   dplyr::mutate(variable = as.factor(variable))
 
 #### scallop data from stock smart
@@ -68,10 +70,10 @@ scallops <- scallop %>%
   dplyr::rename(YEAR = Year) %>%
   dplyr::mutate(tot.biomass = 1000*Bms) %>%
   dplyr::mutate(SVSPP=401) %>%
-  dplyr::mutate(tot.biomass.var = (Bms*CV_2)^2) %>%
+  dplyr::mutate(tot.bio.var = 1e6*((Bms*CV_2)^2)) %>%
   dplyr::mutate(units = "kg") %>%
   dplyr::select(-Bms,-CV_2) %>% 
-  tidyr::pivot_longer(.,cols= c("tot.biomass","tot.biomass.var"),names_to = "variable",values_to = "value") %>%
+  tidyr::pivot_longer(.,cols= c("tot.biomass","tot.bio.var"),names_to = "variable",values_to = "value") %>%
   dplyr::mutate(variable = as.factor(variable))
 
 
@@ -85,10 +87,12 @@ data <- survey$survdat # data pull
 neusEPU <- sf::st_read(dsn = system.file("extdata","EPU.shp",package="survdat"),quiet=T) # EPU shape file
 
 # read in functional group/species relationship
-speciesList <- readr::read_csv(file=here::here("data-raw","functionalGroupNames.csv"))
+speciesList <- readr::read_csv(file=here::here("data","functionalGroupNames.csv")) %>%
+  dplyr::select(-NESPP3) %>% 
+  dplyr::distinct()
 atlantisSpecies <- as.vector(na.omit(unique(speciesList$SVSPP)))
 # unique list of species codes in atlantis and survey formatted as a 3 character string
-atlantisSpecies <- sprintf("%03d",atlantisSpecies)
+#atlantisSpecies <- sprintf("%03d",atlantisSpecies)
 
 # estimate swept area biomass for entire region
 biomassEPU <- survdat::calc_swept_area(surveyData=data,
@@ -101,7 +105,7 @@ biomassEPU <- survdat::calc_swept_area(surveyData=data,
   
 
 # remove clams, quahogs, scallops
-biomassEPU <-  biomassEPU %>% dplyr::filter(!(SVSPP %in% c(403,754,401)))
+biomassEPU <-  biomassEPU %>% dplyr::filter(!(SVSPP %in% c(403,409,401)))
 
 ## join clam, quahog, scallop data from assessment
 biomassEPU <- rbind(biomassEPU,clam)
@@ -113,7 +117,7 @@ sweptAreaBiomassEPU <- biomassEPU %>%
   #dplyr::select(YEAR,SVSPP,tot.biomass,tot.bio.SE,tot.abundance,tot.abund.SE) %>%
   dplyr::filter(variable %in% c("tot.biomass","tot.bio.var","tot.abundance","tot.abundance.var")) %>%
   dplyr::filter(SVSPP %in% atlantisSpecies) %>%
-  dplyr::mutate(SVSPP=as.numeric(SVSPP)) %>%
+  #dplyr::mutate(SVSPP=as.numeric(SVSPP)) %>%
   dplyr::inner_join(.,speciesList,by="SVSPP") %>% 
   #units::drop_units() %>% 
   tibble::as_tibble()
@@ -145,18 +149,22 @@ for (boxid in boxids){
   biomassNEUS <- rbind(biomassNEUS,biomassBox)
 }
 # remove clams from survdat since poorly sampled in bottom trawl
-biomassNEUS <-  biomassNEUS %>% dplyr::filter(!(SVSPP %in% c(403,754,401)))
+biomassNEUS <-  biomassNEUS %>% dplyr::filter(!(SVSPP %in% c(403,409,401)))
 
 ## join clam, quahog , scallop data from assessment
-biomassNEUS <- rbind(biomassNEUS,clam)
-biomassNEUS <- rbind(biomassNEUS,quahog)
-biomassNEUS <- rbind(biomassNEUS,scallops)
+clambox <- clam %>% dplyr::mutate(box=NA)
+quahogbox <- quahog %>% dplyr::mutate(box=NA)
+scallopbox <- scallops %>% dplyr::mutate(box=NA)
+
+biomassNEUS <- rbind(biomassNEUS,clambox)
+biomassNEUS <- rbind(biomassNEUS,quahogbox)
+biomassNEUS <- rbind(biomassNEUS,scallopbox)
 
 
 sweptAreaBiomassBox <- biomassNEUS %>% 
   dplyr::filter(variable %in% c("tot.biomass","tot.bio.var","tot.abundance","tot.abundance.var")) %>%
   dplyr::filter(SVSPP %in% atlantisSpecies) %>%
-  dplyr::mutate(SVSPP=as.numeric(SVSPP)) %>%
+  #dplyr::mutate(SVSPP=as.numeric(SVSPP)) %>%
   dplyr::inner_join(.,speciesList,by="SVSPP") %>% 
   tibble::as_tibble()
 
@@ -164,7 +172,7 @@ saveRDS(sweptAreaBiomassBox,file = here::here("data","sweptAreaBiomassNEUSBox.RD
 
 
 #############################################################################
-######### Aggreate over Box but add in clams, quahog, scallop################
+######### Aggregate over Box but add in clams, quahog, scallop################
 #############################################################################
 
 biomass <- survdat::calc_swept_area(surveyData=data,
@@ -174,7 +182,7 @@ biomass <- survdat::calc_swept_area(surveyData=data,
                                        filterBySeason = "FALL",
                                        tidy=T)
 # remove clams from survdat since poorly sampled in bottom trawl
-biomassAllNEUS <-  biomass %>% dplyr::filter(!(SVSPP %in% c(403,754,401)))
+biomassAllNEUS <-  biomass %>% dplyr::filter(!(SVSPP %in% c(403,409,401)))
 
 ## join clam, quahog, scallop data from assessment
 biomassAllNEUS <- rbind(biomassAllNEUS,clam)
@@ -184,15 +192,15 @@ biomassAllNEUS <- rbind(biomassAllNEUS,scallops)
 sweptAreaBiomassNEUS <- biomassAllNEUS %>% 
   dplyr::filter(variable %in% c("tot.biomass","tot.bio.var","tot.abundance","tot.abundance.var")) %>%
   dplyr::filter(SVSPP %in% atlantisSpecies) %>%
-  dplyr::mutate(SVSPP=as.numeric(SVSPP)) %>%
+  #dplyr::mutate(SVSPP=as.numeric(SVSPP)) %>%
   dplyr::inner_join(.,speciesList,by="SVSPP") %>% 
   tibble::as_tibble()
 
 saveRDS(sweptAreaBiomassNEUS,file = here::here("data","sweptAreaBiomassNEUS.RDS"))
 
         
-
-ggplot2::ggplot(data = quahog) +
-  ggplot2::geom_line(mapping = ggplot2::aes(x=YEAR,y=value)) +
-  ggplot2::facet_wrap(~variable,scales="free")
-                       
+# 
+# ggplot2::ggplot(data = quahog) +
+#   ggplot2::geom_line(mapping = ggplot2::aes(x=YEAR,y=value)) +
+#   ggplot2::facet_wrap(~variable,scales="free")
+#                        
