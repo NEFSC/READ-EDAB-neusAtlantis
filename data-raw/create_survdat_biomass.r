@@ -13,7 +13,7 @@
 #' ALL BIOMASS VALUES ARE IN KG. 
 
 library(magrittr)
-pullFromDB <- F
+pullFromDB <- T
 uid <- "username" # change to your username
 server <- "server" # select server
 
@@ -130,7 +130,8 @@ saveRDS(sweptAreaBiomassEPU,file = here::here("data","sweptAreaBiomassEPU.RDS"))
 
 #### Do similar thing but for each box in Atlantis
 # sweptarea Biomass by NEUS BOx
-neusBox <- sf::st_read(here::here("Geometry","gis"),layer="Neus_ll_0p01",quiet=T)
+# neusBox <- sf::st_read(here::here("Geometry","gis"),layer="Neus_ll_0p01",quiet=T)
+neusBox <- sf::st_read(here::here('Geometry','gis'),layer = 'NEUS_NoInshore',quiet =T)
 
 # select boxes. remove islands
 boxids <- neusBox %>% 
