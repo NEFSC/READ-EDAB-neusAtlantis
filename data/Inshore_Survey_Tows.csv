@@ -1,0 +1,572 @@
+"","SOURCE","YEAR","NumTow"
+"1","NMFS_Trawl",1963,358
+"2","NMFS_Trawl",1964,549
+"3","NMFS_Trawl",1965,556
+"4","NMFS_Trawl",1966,382
+"5","NMFS_Trawl",1967,272
+"6","NMFS_Trawl",1968,536
+"7","NMFS_Trawl",1969,794
+"8","NMFS_Trawl",1970,587
+"9","NMFS_Trawl",1971,617
+"10","NMFS_Trawl",1972,989
+"11","NMFS_Trawl",1973,943
+"12","NMFS_Trawl",1974,790
+"13","NMFS_Trawl",1975,676
+"14","NMFS_Trawl",1976,724
+"15","NMFS_Trawl",1977,1058
+"16","NMFS_Trawl",1978,1341
+"17","NMFS_Trawl",1979,1321
+"18","NMFS_Trawl",1980,1172
+"19","NMFS_Trawl",1981,1055
+"20","NMFS_Trawl",1982,826
+"21","NMFS_Trawl",1983,799
+"22","NMFS_Trawl",1984,722
+"23","NMFS_Trawl",1985,708
+"24","NMFS_Trawl",1986,708
+"25","NMFS_Trawl",1987,650
+"26","NMFS_Trawl",1988,604
+"27","NMFS_Trawl",1989,611
+"28","NMFS_Trawl",1990,643
+"29","NMFS_Trawl",1991,653
+"30","NMFS_Trawl",1992,757
+"31","NMFS_Trawl",1993,836
+"32","NMFS_Trawl",1994,776
+"33","NMFS_Trawl",1995,832
+"34","NMFS_Trawl",1996,782
+"35","NMFS_Trawl",1997,775
+"36","NMFS_Trawl",1998,825
+"37","NMFS_Trawl",1999,799
+"38","NMFS_Trawl",2000,776
+"39","NMFS_Trawl",2001,808
+"40","NMFS_Trawl",2002,791
+"41","NMFS_Trawl",2003,739
+"42","NMFS_Trawl",2004,771
+"43","NMFS_Trawl",2005,746
+"44","NMFS_Trawl",2006,823
+"45","NMFS_Trawl",2007,828
+"46","NMFS_Trawl",2008,676
+"47","NMFS_Trawl",2009,703
+"48","NMFS_Trawl",2010,710
+"49","NMFS_Trawl",2011,664
+"50","NMFS_Trawl",2012,714
+"51","NMFS_Trawl",2013,744
+"52","NMFS_Trawl",2014,645
+"53","NMFS_Trawl",2015,742
+"54","NMFS_Trawl",2016,728
+"55","NMFS_Trawl",2017,483
+"56","NMFS_Trawl",2018,564
+"57","NMFS_Trawl",2019,706
+"58","NMFS_Trawl",2020,133
+"59","CT-DEEP",1984,200
+"60","CT-DEEP",1985,246
+"61","CT-DEEP",1986,316
+"62","CT-DEEP",1987,320
+"63","CT-DEEP",1988,320
+"64","CT-DEEP",1989,320
+"65","CT-DEEP",1990,297
+"66","CT-DEEP",1991,200
+"67","CT-DEEP",1992,160
+"68","CT-DEEP",1993,240
+"69","CT-DEEP",1994,240
+"70","CT-DEEP",1995,200
+"71","CT-DEEP",1996,200
+"72","CT-DEEP",1997,200
+"73","CT-DEEP",1998,200
+"74","CT-DEEP",1999,200
+"75","CT-DEEP",2000,200
+"76","CT-DEEP",2001,200
+"77","CT-DEEP",2002,200
+"78","CT-DEEP",2003,200
+"79","CT-DEEP",2004,199
+"80","CT-DEEP",2005,200
+"81","CT-DEEP",2006,120
+"82","CT-DEEP",2007,200
+"83","CT-DEEP",2008,160
+"84","CT-DEEP",2009,200
+"85","CT-DEEP",2010,78
+"86","CT-DEEP",2011,172
+"87","CT-DEEP",2012,200
+"88","CT-DEEP",2013,200
+"89","CT-DEEP",2014,199
+"90","CT-DEEP",2015,200
+"91","CT-DEEP",2016,196
+"92","CT-DEEP",2017,144
+"93","CT-DEEP",2018,172
+"94","CT-DEEP",2019,200
+"95","NEAMAP_Trawl",2007,150
+"96","NEAMAP_Trawl",2008,300
+"97","NEAMAP_Trawl",2009,320
+"98","NEAMAP_Trawl",2010,300
+"99","NEAMAP_Trawl",2011,300
+"100","NEAMAP_Trawl",2012,300
+"101","NEAMAP_Trawl",2013,300
+"102","NEAMAP_Trawl",2014,300
+"103","NEAMAP_Trawl",2015,300
+"104","NEAMAP_Trawl",2016,300
+"105","NEAMAP_Trawl",2017,213
+"106","NEAMAP_Trawl",2018,300
+"107","NEAMAP_Trawl",2019,299
+"108","ME-NH_Trawl",2000,78
+"109","ME-NH_Trawl",2001,132
+"110","ME-NH_Trawl",2002,119
+"111","ME-NH_Trawl",2003,112
+"112","ME-NH_Trawl",2004,121
+"113","ME-NH_Trawl",2005,107
+"114","ME-NH_Trawl",2006,163
+"115","ME-NH_Trawl",2007,162
+"116","ME-NH_Trawl",2008,158
+"117","ME-NH_Trawl",2009,170
+"118","ME-NH_Trawl",2010,171
+"119","ME-NH_Trawl",2011,169
+"120","ME-NH_Trawl",2012,185
+"121","ME-NH_Trawl",2013,182
+"122","ME-NH_Trawl",2014,190
+"123","ME-NH_Trawl",2015,203
+"124","ME-NH_Trawl",2016,205
+"125","ME-NH_Trawl",2017,222
+"126","ME-NH_Trawl",2018,213
+"127","ME-NH_Trawl",2019,219
+"128","ME-NH_Trawl",2020,91
+"129","MA_Trawl",1978,190
+"130","MA_Trawl",1979,199
+"131","MA_Trawl",1980,195
+"132","MA_Trawl",1981,192
+"133","MA_Trawl",1982,189
+"134","MA_Trawl",1983,186
+"135","MA_Trawl",1984,193
+"136","MA_Trawl",1985,187
+"137","MA_Trawl",1986,192
+"138","MA_Trawl",1987,189
+"139","MA_Trawl",1988,183
+"140","MA_Trawl",1989,183
+"141","MA_Trawl",1990,185
+"142","MA_Trawl",1991,187
+"143","MA_Trawl",1992,173
+"144","MA_Trawl",1993,172
+"145","MA_Trawl",1994,186
+"146","MA_Trawl",1995,196
+"147","MA_Trawl",1996,198
+"148","MA_Trawl",1997,190
+"149","MA_Trawl",1998,175
+"150","MA_Trawl",1999,189
+"151","MA_Trawl",2000,192
+"152","MA_Trawl",2001,198
+"153","MA_Trawl",2002,198
+"154","MA_Trawl",2003,191
+"155","MA_Trawl",2004,191
+"156","MA_Trawl",2005,191
+"157","MA_Trawl",2006,200
+"158","MA_Trawl",2007,206
+"159","MA_Trawl",2008,204
+"160","MA_Trawl",2009,200
+"161","MA_Trawl",2010,195
+"162","MA_Trawl",2011,200
+"163","MA_Trawl",2012,197
+"164","MA_Trawl",2013,201
+"165","MA_Trawl",2014,203
+"166","MA_Trawl",2015,194
+"167","MA_Trawl",2016,188
+"168","MA_Trawl",2017,195
+"169","MA_Trawl",2018,189
+"170","MA_Trawl",2019,192
+"171","RI_Trawl",1979,1
+"172","RI_Trawl",1980,1
+"173","RI_Trawl",1981,1
+"174","RI_Trawl",1982,1
+"175","RI_Trawl",1983,1
+"176","RI_Trawl",1984,1
+"177","RI_Trawl",1985,1
+"178","RI_Trawl",1986,1
+"179","RI_Trawl",1987,1
+"180","RI_Trawl",1988,1
+"181","RI_Trawl",1989,1
+"182","RI_Trawl",1990,1
+"183","RI_Trawl",1991,1
+"184","RI_Trawl",1992,1
+"185","RI_Trawl",1993,1
+"186","RI_Trawl",1994,1
+"187","RI_Trawl",1995,1
+"188","RI_Trawl",1996,1
+"189","RI_Trawl",1997,1
+"190","RI_Trawl",1998,1
+"191","RI_Trawl",1999,1
+"192","RI_Trawl",2000,1
+"193","RI_Trawl",2001,1
+"194","RI_Trawl",2002,1
+"195","RI_Trawl",2003,1
+"196","RI_Trawl",2004,1
+"197","RI_Trawl",2005,1
+"198","RI_Trawl",2006,1
+"199","RI_Trawl",2007,1
+"200","RI_Trawl",2008,1
+"201","RI_Trawl",2009,1
+"202","RI_Trawl",2010,1
+"203","RI_Trawl",2011,1
+"204","RI_Trawl",2012,1
+"205","RI_Trawl",2013,1
+"206","RI_Trawl",2014,1
+"207","RI_Trawl",2015,1
+"208","RI_Trawl",2016,1
+"209","RI_Trawl",2017,1
+"210","RI_Trawl",2018,1
+"211","RI_Trawl",2019,1
+"212","RI_Trawl",2020,1
+"213","RI_Trawl",2021,1
+"214","NJ_DEBAY_Trawl",1991,39
+"215","NJ_DEBAY_Trawl",1992,41
+"216","NJ_DEBAY_Trawl",1993,55
+"217","NJ_DEBAY_Trawl",1994,44
+"218","NJ_DEBAY_Trawl",1995,56
+"219","NJ_DEBAY_Trawl",1996,49
+"220","NJ_DEBAY_Trawl",1997,74
+"221","NJ_DEBAY_Trawl",1998,73
+"222","NJ_DEBAY_Trawl",1999,74
+"223","NJ_DEBAY_Trawl",2000,68
+"224","NJ_DEBAY_Trawl",2001,73
+"225","NJ_DEBAY_Trawl",2002,75
+"226","NJ_DEBAY_Trawl",2003,63
+"227","NJ_DEBAY_Trawl",2004,61
+"228","NJ_DEBAY_Trawl",2005,72
+"229","NJ_DEBAY_Trawl",2006,75
+"230","NJ_DEBAY_Trawl",2007,71
+"231","NJ_DEBAY_Trawl",2008,75
+"232","NJ_DEBAY_Trawl",2009,65
+"233","NJ_DEBAY_Trawl",2010,70
+"234","NJ_DEBAY_Trawl",2011,69
+"235","NJ_DEBAY_Trawl",2012,67
+"236","NJ_DEBAY_Trawl",2013,75
+"237","NJ_DEBAY_Trawl",2014,66
+"238","NJ_DEBAY_Trawl",2015,55
+"239","NJ_DEBAY_Trawl",2016,71
+"240","NJ_DEBAY_Trawl",2017,61
+"241","NJ_DEBAY_Trawl",2018,66
+"242","NJ_DEBAY_Trawl",2019,67
+"243","NJ_Trawl",1988,1
+"244","NJ_Trawl",1989,1
+"245","NJ_Trawl",1990,1
+"246","NJ_Trawl",1991,1
+"247","NJ_Trawl",1992,1
+"248","NJ_Trawl",1993,1
+"249","NJ_Trawl",1994,1
+"250","NJ_Trawl",1995,1
+"251","NJ_Trawl",1996,1
+"252","NJ_Trawl",1997,1
+"253","NJ_Trawl",1998,1
+"254","NJ_Trawl",1999,1
+"255","NJ_Trawl",2000,1
+"256","NJ_Trawl",2001,1
+"257","NJ_Trawl",2002,1
+"258","NJ_Trawl",2003,1
+"259","NJ_Trawl",2004,1
+"260","NJ_Trawl",2005,1
+"261","NJ_Trawl",2006,1
+"262","NJ_Trawl",2007,1
+"263","NJ_Trawl",2008,1
+"264","NJ_Trawl",2009,1
+"265","NJ_Trawl",2010,1
+"266","NJ_Trawl",2011,1
+"267","NJ_Trawl",2012,1
+"268","NJ_Trawl",2013,1
+"269","NJ_Trawl",2014,1
+"270","NJ_Trawl",2015,1
+"271","NJ_Trawl",2016,1
+"272","NJ_Trawl",2017,1
+"273","NJ_Trawl",2018,1
+"274","NJ_Trawl",2019,1
+"275","DE_River_Trawl",1980,18
+"276","DE_River_Trawl",1981,11
+"277","DE_River_Trawl",1982,20
+"278","DE_River_Trawl",1983,14
+"279","DE_River_Trawl",1984,28
+"280","DE_River_Trawl",1985,37
+"281","DE_River_Trawl",1986,32
+"282","DE_River_Trawl",1987,64
+"283","DE_River_Trawl",1988,82
+"284","DE_River_Trawl",1989,82
+"285","DE_River_Trawl",1990,97
+"286","DE_River_Trawl",1991,162
+"287","DE_River_Trawl",1992,194
+"288","DE_River_Trawl",1993,145
+"289","DE_River_Trawl",1994,146
+"290","DE_River_Trawl",1995,166
+"291","DE_River_Trawl",1996,137
+"292","DE_River_Trawl",1997,150
+"293","DE_River_Trawl",1998,149
+"294","DE_River_Trawl",1999,181
+"295","DE_River_Trawl",2000,162
+"296","DE_River_Trawl",2001,171
+"297","DE_River_Trawl",2002,219
+"298","DE_River_Trawl",2003,261
+"299","DE_River_Trawl",2004,286
+"300","DE_River_Trawl",2005,303
+"301","DE_River_Trawl",2006,256
+"302","DE_River_Trawl",2007,299
+"303","DE_River_Trawl",2008,261
+"304","DE_River_Trawl",2009,286
+"305","DE_River_Trawl",2010,285
+"306","DE_River_Trawl",2011,266
+"307","DE_River_Trawl",2012,267
+"308","DE_River_Trawl",2013,292
+"309","DE_River_Trawl",2014,272
+"310","DE_River_Trawl",2015,276
+"311","DE_River_Trawl",2016,252
+"312","DE_River_Trawl",2017,268
+"313","DE_River_Trawl",2018,247
+"314","DE_River_Trawl",2019,260
+"315","DE_Juv_Trawl",1986,65
+"316","DE_Juv_Trawl",1987,45
+"317","DE_Juv_Trawl",1988,57
+"318","DE_Juv_Trawl",1989,71
+"319","DE_Juv_Trawl",1990,50
+"320","DE_Juv_Trawl",1991,60
+"321","DE_Juv_Trawl",1992,69
+"322","DE_Juv_Trawl",1993,59
+"323","DE_Juv_Trawl",1994,70
+"324","DE_Juv_Trawl",1995,66
+"325","DE_Juv_Trawl",1996,56
+"326","DE_Juv_Trawl",1997,69
+"327","DE_Juv_Trawl",1998,71
+"328","DE_Juv_Trawl",1999,69
+"329","DE_Juv_Trawl",2000,66
+"330","DE_Juv_Trawl",2001,58
+"331","DE_Juv_Trawl",2002,46
+"332","DE_Juv_Trawl",2003,59
+"333","DE_Juv_Trawl",2004,76
+"334","DE_Juv_Trawl",2005,60
+"335","DE_Juv_Trawl",2006,70
+"336","DE_Juv_Trawl",2007,62
+"337","DE_Juv_Trawl",2008,63
+"338","DE_Juv_Trawl",2009,46
+"339","DE_Juv_Trawl",2010,71
+"340","DE_Juv_Trawl",2011,71
+"341","DE_Juv_Trawl",2012,66
+"342","DE_Juv_Trawl",2013,74
+"343","DE_Juv_Trawl",2014,74
+"344","DE_Juv_Trawl",2015,67
+"345","DE_Juv_Trawl",2016,75
+"346","DE_Juv_Trawl",2017,74
+"347","DE_Juv_Trawl",2018,75
+"348","DE_Juv_Trawl",2019,78
+"349","MD_Trawl",1989,98
+"350","MD_Trawl",1990,161
+"351","MD_Trawl",1991,152
+"352","MD_Trawl",1992,144
+"353","MD_Trawl",1993,131
+"354","MD_Trawl",1994,154
+"355","MD_Trawl",1995,158
+"356","MD_Trawl",1996,151
+"357","MD_Trawl",1997,156
+"358","MD_Trawl",1998,162
+"359","MD_Trawl",1999,151
+"360","MD_Trawl",2000,147
+"361","MD_Trawl",2001,159
+"362","MD_Trawl",2002,153
+"363","MD_Trawl",2003,154
+"364","MD_Trawl",2004,141
+"365","MD_Trawl",2005,136
+"366","MD_Trawl",2006,161
+"367","MD_Trawl",2007,155
+"368","MD_Trawl",2008,160
+"369","MD_Trawl",2009,147
+"370","MD_Trawl",2010,156
+"371","MD_Trawl",2011,141
+"372","MD_Trawl",2012,146
+"373","MD_Trawl",2013,144
+"374","MD_Trawl",2014,120
+"375","MD_Trawl",2015,112
+"376","MD_Trawl",2016,145
+"377","MD_Trawl",2017,137
+"378","MD_Trawl",2018,144
+"379","MD_Trawl",2019,153
+"380","NC120",1971,1
+"381","NC120",1972,1
+"382","NC120",1973,1
+"383","NC120",1974,1
+"384","NC120",1975,1
+"385","NC120",1976,1
+"386","NC120",1977,1
+"387","NC120",1978,1
+"388","NC120",1979,1
+"389","NC120",1980,1
+"390","NC120",1981,1
+"391","NC120",1982,1
+"392","NC120",1983,1
+"393","NC120",1984,1
+"394","NC120",1985,1
+"395","NC120",1986,1
+"396","NC120",1987,1
+"397","NC120",1988,1
+"398","NC120",1989,1
+"399","NC120",1990,1
+"400","NC120",1991,1
+"401","NC120",1992,1
+"402","NC120",1993,1
+"403","NC120",1994,1
+"404","NC120",1995,1
+"405","NC120",1996,1
+"406","NC120",1997,1
+"407","NC120",1998,1
+"408","NC120",1999,1
+"409","NC120",2010,1
+"410","NC120",2011,1
+"411","NC120",2012,1
+"412","NC120",2013,1
+"413","NC120",2014,1
+"414","NC120",2015,1
+"415","NC120",2016,1
+"416","NC120",2017,1
+"417","NC120",2018,1
+"418","NC120",2019,1
+"419","195-Pamlico Sound Survey",1987,1
+"420","195-Pamlico Sound Survey",1988,1
+"421","195-Pamlico Sound Survey",1989,1
+"422","195-Pamlico Sound Survey",1990,1
+"423","195-Pamlico Sound Survey",1991,1
+"424","195-Pamlico Sound Survey",1992,1
+"425","195-Pamlico Sound Survey",1993,1
+"426","195-Pamlico Sound Survey",1994,1
+"427","195-Pamlico Sound Survey",1995,1
+"428","195-Pamlico Sound Survey",1996,1
+"429","195-Pamlico Sound Survey",1997,1
+"430","195-Pamlico Sound Survey",1998,1
+"431","195-Pamlico Sound Survey",1999,1
+"432","195-Pamlico Sound Survey",2000,1
+"433","195-Pamlico Sound Survey",2001,1
+"434","195-Pamlico Sound Survey",2002,1
+"435","195-Pamlico Sound Survey",2003,1
+"436","195-Pamlico Sound Survey",2004,1
+"437","195-Pamlico Sound Survey",2005,1
+"438","195-Pamlico Sound Survey",2006,1
+"439","195-Pamlico Sound Survey",2007,1
+"440","195-Pamlico Sound Survey",2008,1
+"441","195-Pamlico Sound Survey",2009,1
+"442","195-Pamlico Sound Survey",2010,1
+"443","195-Pamlico Sound Survey",2011,1
+"444","195-Pamlico Sound Survey",2012,1
+"445","195-Pamlico Sound Survey",2013,1
+"446","195-Pamlico Sound Survey",2014,1
+"447","195-Pamlico Sound Survey",2015,1
+"448","195-Pamlico Sound Survey",2016,1
+"449","195-Pamlico Sound Survey",2017,1
+"450","195-Pamlico Sound Survey",2018,1
+"451","195-Pamlico Sound Survey",2019,1
+"452","NH_Juv Seine",1997,1
+"453","NH_Juv Seine",1998,1
+"454","NH_Juv Seine",1999,1
+"455","NH_Juv Seine",2000,1
+"456","NH_Juv Seine",2001,1
+"457","NH_Juv Seine",2002,1
+"458","NH_Juv Seine",2003,1
+"459","NH_Juv Seine",2004,1
+"460","NH_Juv Seine",2005,1
+"461","NH_Juv Seine",2006,1
+"462","NH_Juv Seine",2007,1
+"463","NH_Juv Seine",2008,1
+"464","NH_Juv Seine",2009,1
+"465","NH_Juv Seine",2010,1
+"466","NH_Juv Seine",2011,1
+"467","NH_Juv Seine",2012,1
+"468","NH_Juv Seine",2013,1
+"469","NH_Juv Seine",2014,1
+"470","NH_Juv Seine",2015,1
+"471","NH_Juv Seine",2016,1
+"472","NH_Juv Seine",2017,1
+"473","NH_Juv Seine",2018,1
+"474","NH_Juv Seine",2019,1
+"475","NY_WLI Seine",1984,1
+"476","NY_WLI Seine",1985,1
+"477","NY_WLI Seine",1986,1
+"478","NY_WLI Seine",1987,1
+"479","NY_WLI Seine",1988,1
+"480","NY_WLI Seine",1989,1
+"481","NY_WLI Seine",1990,1
+"482","NY_WLI Seine",1991,1
+"483","NY_WLI Seine",1992,1
+"484","NY_WLI Seine",1993,1
+"485","NY_WLI Seine",1994,1
+"486","NY_WLI Seine",1995,1
+"487","NY_WLI Seine",1996,1
+"488","NY_WLI Seine",1997,1
+"489","NY_WLI Seine",1998,1
+"490","NY_WLI Seine",1999,1
+"491","NY_WLI Seine",2000,1
+"492","NY_WLI Seine",2001,1
+"493","NY_WLI Seine",2002,1
+"494","NY_WLI Seine",2003,1
+"495","NY_WLI Seine",2004,1
+"496","NY_WLI Seine",2005,1
+"497","NY_WLI Seine",2006,1
+"498","NY_WLI Seine",2007,1
+"499","NY_WLI Seine",2008,1
+"500","NY_WLI Seine",2009,1
+"501","NY_WLI Seine",2010,1
+"502","NY_WLI Seine",2011,1
+"503","NY_WLI Seine",2012,1
+"504","NY_WLI Seine",2013,1
+"505","NY_WLI Seine",2014,1
+"506","NY_WLI Seine",2015,1
+"507","NY_WLI Seine",2016,1
+"508","NY_WLI Seine",2017,1
+"509","NY_WLI Seine",2018,1
+"510","NY_WLI Seine",2019,1
+"511","MD-BASS-SEINE",1959,51
+"512","MD-BASS-SEINE",1960,62
+"513","MD-BASS-SEINE",1961,85
+"514","MD-BASS-SEINE",1962,83
+"515","MD-BASS-SEINE",1963,68
+"516","MD-BASS-SEINE",1964,86
+"517","MD-BASS-SEINE",1965,64
+"518","MD-BASS-SEINE",1966,126
+"519","MD-BASS-SEINE",1967,106
+"520","MD-BASS-SEINE",1968,105
+"521","MD-BASS-SEINE",1969,98
+"522","MD-BASS-SEINE",1970,132
+"523","MD-BASS-SEINE",1971,123
+"524","MD-BASS-SEINE",1972,113
+"525","MD-BASS-SEINE",1973,115
+"526","MD-BASS-SEINE",1974,128
+"527","MD-BASS-SEINE",1975,157
+"528","MD-BASS-SEINE",1976,185
+"529","MD-BASS-SEINE",1977,201
+"530","MD-BASS-SEINE",1978,191
+"531","MD-BASS-SEINE",1979,187
+"532","MD-BASS-SEINE",1980,151
+"533","MD-BASS-SEINE",1981,143
+"534","MD-BASS-SEINE",1982,204
+"535","MD-BASS-SEINE",1983,299
+"536","MD-BASS-SEINE",1984,190
+"537","MD-BASS-SEINE",1985,192
+"538","MD-BASS-SEINE",1986,183
+"539","MD-BASS-SEINE",1987,173
+"540","MD-BASS-SEINE",1988,168
+"541","MD-BASS-SEINE",1989,193
+"542","MD-BASS-SEINE",1990,214
+"543","MD-BASS-SEINE",1991,194
+"544","MD-BASS-SEINE",1992,146
+"545","MD-BASS-SEINE",1993,167
+"546","MD-BASS-SEINE",1994,183
+"547","MD-BASS-SEINE",1995,167
+"548","MD-BASS-SEINE",1996,172
+"549","MD-BASS-SEINE",1997,163
+"550","MD-BASS-SEINE",1998,150
+"551","MD-BASS-SEINE",1999,158
+"552","MD-BASS-SEINE",2000,165
+"553","MD-BASS-SEINE",2001,170
+"554","MD-BASS-SEINE",2002,155
+"555","MD-BASS-SEINE",2003,165
+"556","MD-BASS-SEINE",2004,151
+"557","MD-BASS-SEINE",2005,158
+"558","MD-BASS-SEINE",2006,122
+"559","MD-BASS-SEINE",2007,147
+"560","MD-BASS-SEINE",2008,136
+"561","MD-BASS-SEINE",2009,142
+"562","MD-BASS-SEINE",2010,141
+"563","MD-BASS-SEINE",2011,163
+"564","MD-BASS-SEINE",2012,129
+"565","MD-BASS-SEINE",2013,151
+"566","MD-BASS-SEINE",2014,143
+"567","MD-BASS-SEINE",2015,159
+"568","MD-BASS-SEINE",2016,128
+"569","MD-BASS-SEINE",2017,147
+"570","MD-BASS-SEINE",2018,149
+"571","MD-BASS-SEINE",2019,145

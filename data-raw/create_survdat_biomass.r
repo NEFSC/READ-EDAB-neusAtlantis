@@ -14,8 +14,8 @@
 
 library(magrittr)
 pullFromDB <- T
-uid <- "username" # change to your username
-server <- "server" # select server
+uid <- "jcaracappa" # change to your username
+server <- "sole" # select server
 
 # pull survey data
 # either pull raw data 
@@ -134,32 +134,34 @@ saveRDS(sweptAreaBiomassEPU,file = here::here("data","sweptAreaBiomassEPU.RDS"))
 neusBox <- sf::st_read(here::here('Geometry','gis'),layer = 'NEUS_NoInshore',quiet =T)
 
 # select boxes. remove islands
-boxids <- neusBox %>% 
-  dplyr::filter(BOX_ID != c("23","24") ) %>%
-  dplyr::pull(BOX_ID)
+# boxids <- neusBox %>% 
+#   dplyr::filter(BOX_ID != c("23","24") ) %>%
+#   dplyr::pull(BOX_ID)
+# 
+# biomassNEUS <- NULL
+# for (boxid in boxids){ 
+#   biomassBox <- survdat::calc_swept_area(surveyData=data,
+#                                          areaPolygon = neusBox,
+#                                          areaDescription="BOX_ID", 
+#                                          filterByArea = boxid, 
+#                                          filterBySeason = "FALL",
+#                                          tidy=T)
+#   biomassBox$box <- boxid
+#   biomassNEUS <- rbind(biomassNEUS,biomassBox)
+# }
 
-biomassNEUS <- NULL
-for (boxid in boxids){ 
-  biomassBox <- survdat::calc_swept_area(surveyData=data,
-                                         areaPolygon = neusBox,
-                                         areaDescription="BOX_ID", 
-                                         filterByArea = boxid, 
-                                         filterBySeason = "FALL",
-                                         tidy=T)
-  biomassBox$box <- boxid
-  biomassNEUS <- rbind(biomassNEUS,biomassBox)
-}
+biomassNEUS = survdat::calc_swept_area(surveyData=data, areaPolygon = neusBox,areaDescription = 'rowid',filterBySeason = 'FALL',tidy =T)
 # remove clams from survdat since poorly sampled in bottom trawl
 biomassNEUS <-  biomassNEUS %>% dplyr::filter(!(SVSPP %in% c(403,409,401)))
 
 ## join clam, quahog , scallop data from assessment
-clambox <- clam %>% dplyr::mutate(box=NA)
-quahogbox <- quahog %>% dplyr::mutate(box=NA)
-scallopbox <- scallops %>% dplyr::mutate(box=NA)
+# clambox <- clam %>% dplyr::mutate(box=NA)
+# quahogbox <- quahog %>% dplyr::mutate(box=NA)
+# scallopbox <- scallops %>% dplyr::mutate(box=NA)
 
-biomassNEUS <- rbind(biomassNEUS,clambox)
-biomassNEUS <- rbind(biomassNEUS,quahogbox)
-biomassNEUS <- rbind(biomassNEUS,scallopbox)
+biomassNEUS <- rbind(biomassNEUS,clam)
+biomassNEUS <- rbind(biomassNEUS,quahog)
+biomassNEUS <- rbind(biomassNEUS,scallops)
 
 
 sweptAreaBiomassBox <- biomassNEUS %>% 
@@ -176,12 +178,17 @@ saveRDS(sweptAreaBiomassBox,file = here::here("data","sweptAreaBiomassNEUSBox.RD
 ######### Aggregate over Box but add in clams, quahog, scallop################
 #############################################################################
 
+# biomass <- survdat::calc_swept_area(surveyData=data,
+#                                        areaPolygon = neusBox,
+#                                        areaDescription="BOX_ID",
+#                                        filterByArea = boxids,
+#                                        filterBySeason = "FALL",
+#                                        tidy=T)
 biomass <- survdat::calc_swept_area(surveyData=data,
-                                       areaPolygon = neusBox,
-                                       areaDescription="BOX_ID", 
-                                       filterByArea = boxids, 
-                                       filterBySeason = "FALL",
-                                       tidy=T)
+                                    areaPolygon = neusBox,
+                                    areaDescription="rowid",
+                                    filterBySeason = "FALL",
+                                    tidy=T)
 # remove clams from survdat since poorly sampled in bottom trawl
 biomassAllNEUS <-  biomass %>% dplyr::filter(!(SVSPP %in% c(403,409,401)))
 
