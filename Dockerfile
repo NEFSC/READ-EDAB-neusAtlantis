@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM ubuntu:18.04
 RUN apt-get update && apt-get install -yq build-essential autoconf libnetcdf-dev libxml2-dev libproj-dev subversion valgrind dos2unix nano
 
 COPY .svn /app/.svn

@@ -319,6 +319,72 @@ flagplankfishSWH 0
 flagplankfishTWH 0
 flagplankfishINV 0
 
+## Ageing flags
+# Whether keep plus group - especially for migratory groups (1=yes, 0 = no)
+flagkeep_plusgroupMAK 0
+flagkeep_plusgroupHER 0
+flagkeep_plusgroupWHK 0
+flagkeep_plusgroupBLF 0
+flagkeep_plusgroupWPF 0
+flagkeep_plusgroupSUF 0
+flagkeep_plusgroupWIF 0
+flagkeep_plusgroupWTF 0
+flagkeep_plusgroupFOU 0
+flagkeep_plusgroupHAL 0
+flagkeep_plusgroupPLA 0
+flagkeep_plusgroupFLA 0
+flagkeep_plusgroupBFT 0
+flagkeep_plusgroupTUN 0
+flagkeep_plusgroupBIL 0
+flagkeep_plusgroupMPF 0
+flagkeep_plusgroupBUT 0
+flagkeep_plusgroupBPF 0
+flagkeep_plusgroupANC 0
+flagkeep_plusgroupGOO 0
+flagkeep_plusgroupMEN 0
+flagkeep_plusgroupFDE 0
+flagkeep_plusgroupCOD 0
+flagkeep_plusgroupSHK 0
+flagkeep_plusgroupOHK 0
+flagkeep_plusgroupPOL 0
+flagkeep_plusgroupRHK 0
+flagkeep_plusgroupBSB 0
+flagkeep_plusgroupSCU 0
+flagkeep_plusgroupTYL 0
+flagkeep_plusgroupRED 0
+flagkeep_plusgroupOPT 0
+flagkeep_plusgroupSAL 0
+flagkeep_plusgroupDRM 0
+flagkeep_plusgroupSTB 0
+flagkeep_plusgroupTAU 0
+flagkeep_plusgroupWOL 0
+flagkeep_plusgroupSDF 0
+flagkeep_plusgroupFDF 0
+flagkeep_plusgroupHAD 0
+flagkeep_plusgroupYTF 0
+flagkeep_plusgroupDOG 0
+flagkeep_plusgroupSMO 0
+flagkeep_plusgroupSSH 0
+flagkeep_plusgroupDSH 0
+flagkeep_plusgroupBLS 0
+flagkeep_plusgroupPOR 0
+flagkeep_plusgroupPSH 0
+flagkeep_plusgroupWSK 0
+flagkeep_plusgroupLSK 0
+flagkeep_plusgroupSK 0
+flagkeep_plusgroupSB 0
+flagkeep_plusgroupPIN 0
+flagkeep_plusgroupREP 0
+flagkeep_plusgroupRWH 0
+flagkeep_plusgroupBWH 0
+flagkeep_plusgroupSWH 0
+flagkeep_plusgroupTWH 0
+flagkeep_plusgroupINV 0
+flagkeep_plusgroupLSQ 0
+flagkeep_plusgroupISQ 0
+flagkeep_plusgroupNSH 0
+flagkeep_plusgroupOSH 0
+
 # Vertebrate reproduction related flags. 
 flagtrecruitdistrib 1      0=humped recruit arrival distrib, 1=flat distrib of recruits        1
 
@@ -1422,7 +1488,7 @@ flagLSKMigrate 0
 flagSKMigrate 0
 flagSBMigrate 1
 flagPINMigrate 0
-flagREPMigrate 0
+flagREPMigrate 1
 flagRWHMigrate 1
 flagBWHMigrate 1
 flagSWHMigrate 1
@@ -6512,6 +6578,8 @@ ZL_Migrate_Period 1
  
 
 k_migslow          1       0 = all migrators leave at once, 1 = migrators leave gradually  0  
+juv_transition_thresh 0.1
+mat_transition_thresh 0.99
  
 # Juvenile migration return stock - set value to the integer number identifiying the stock
 # the immigrating individuals enter. If set to 0 then the returning individuals will be
@@ -15061,6 +15129,72 @@ ISQ_Recruit_Time 30
 NSH_Recruit_Time 30             
 OSH_Recruit_Time 30             
 
+# Entry value for cohort where recruits turn up - in almost all instances this should be zero, except where there is a complicated life history like salmon
+MAK_cohort_recruit_entry  0
+HER_cohort_recruit_entry  0
+WHK_cohort_recruit_entry  0
+BLF_cohort_recruit_entry  0
+WPF_cohort_recruit_entry  0
+SUF_cohort_recruit_entry  0
+WIF_cohort_recruit_entry  0
+WTF_cohort_recruit_entry  0
+FOU_cohort_recruit_entry  0
+HAL_cohort_recruit_entry  0
+PLA_cohort_recruit_entry  0
+FLA_cohort_recruit_entry  0
+BFT_cohort_recruit_entry  0
+TUN_cohort_recruit_entry  0
+BIL_cohort_recruit_entry  0
+MPF_cohort_recruit_entry  0
+BUT_cohort_recruit_entry  0
+BPF_cohort_recruit_entry  0
+ANC_cohort_recruit_entry  0
+GOO_cohort_recruit_entry  0
+MEN_cohort_recruit_entry  0
+FDE_cohort_recruit_entry  0
+COD_cohort_recruit_entry  0
+SHK_cohort_recruit_entry  0
+OHK_cohort_recruit_entry  0
+POL_cohort_recruit_entry  0
+RHK_cohort_recruit_entry  0
+BSB_cohort_recruit_entry  0
+SCU_cohort_recruit_entry  0
+TYL_cohort_recruit_entry  0
+RED_cohort_recruit_entry  0
+OPT_cohort_recruit_entry  0
+SAL_cohort_recruit_entry  0
+DRM_cohort_recruit_entry  0
+STB_cohort_recruit_entry  0
+TAU_cohort_recruit_entry  0
+WOL_cohort_recruit_entry  0
+SDF_cohort_recruit_entry  0
+FDF_cohort_recruit_entry  0
+HAD_cohort_recruit_entry  0
+YTF_cohort_recruit_entry  0
+DOG_cohort_recruit_entry  0
+SMO_cohort_recruit_entry  0
+SSH_cohort_recruit_entry  0
+DSH_cohort_recruit_entry  0
+BLS_cohort_recruit_entry  0
+POR_cohort_recruit_entry  0
+PSH_cohort_recruit_entry  0
+WSK_cohort_recruit_entry  0
+LSK_cohort_recruit_entry  0
+SK_cohort_recruit_entry  0
+SB_cohort_recruit_entry  0
+PIN_cohort_recruit_entry  0
+REP_cohort_recruit_entry  0
+RWH_cohort_recruit_entry  0
+BWH_cohort_recruit_entry  0
+SWH_cohort_recruit_entry  0
+TWH_cohort_recruit_entry  0
+INV_cohort_recruit_entry  0
+LSQ_cohort_recruit_entry  0
+ISQ_cohort_recruit_entry  0
+NSH_cohort_recruit_entry  0
+OSH_cohort_recruit_entry  0
+
+
 ### added inverts RM 20180228
 # Recruitment window  
 ###Recruit_Period_FPL 60      Length of time recruits arrive over for large planktiv  d          15 - 90
@@ -18585,7 +18719,10 @@ flag_georugosity 0
 
 # Bozec model for rugosity
 rugosity_const 1.2    # was 0.88 from Bozec et al 2014 but to allow for box wide effects this has been retuned here.
-
+rugosity_bozec_a 16.0
+rugosity_bozec_b 1.5 
+rugosity_bozec_c 8.0
+rugosity_bozec_d 3.0
 
 flag_do_var_express 0
 flag_evolvar_capped 0

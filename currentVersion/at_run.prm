@@ -105,3 +105,6 @@ flag_replicate_old_calendar 0 #This flag specifically allows for legacy models a
 flag_use_deltaH 0
 store_aggregate_yoy 0
 store_mig_array 0
+
+flag_migration_on 1
+flag_pollutant_impacts 0

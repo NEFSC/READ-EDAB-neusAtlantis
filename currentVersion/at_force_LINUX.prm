@@ -323,6 +323,7 @@ inputs_tout 86400 seconds
 ## G.Fay added 09/20/16
 use_external_scaling 0
 
+use_pollutantfiles 0
 #JC Adding LTL Forcing
 
 # JC adding LTL forcing 
@@ -334,7 +335,12 @@ tracerNames 5
 Diatom_N PicoPhytopl_N Diatom_S DinoFlag_N Lab_Det_N
 
 #Diatom_N
+
 Diatom_N_nFiles 54
+Diatom_N_use_resets 0
+Diatom_N_ResetTol 0
+Diatom_N_rewind 1
+Diatom_N_wgt_coefft 1.0
 
 Diatom_N_File0.name /tsfiles/Annual_Files/Phyto_Forcing_1964.nc
 Diatom_N_File1.name /tsfiles/Annual_Files/Phyto_Forcing_1965.nc
@@ -391,12 +397,14 @@ Diatom_N_File51.name /tsfiles/Annual_Files/Phyto_Forcing_2015.nc
 Diatom_N_File52.name /tsfiles/Annual_Files/Phyto_Forcing_2016.nc
 Diatom_N_File53.name /tsfiles/Annual_Files/Phyto_Forcing_2017.nc
 
-Diatom_N_rewind 0
-Diatom_N_wgt_coefft 1.0
-
 #PicoPhytopl_N
 
 PicoPhytopl_N_nFiles 54
+PicoPhytopl_N_use_resets 0
+PicoPHytopl_N_ResetTol 0
+PicoPhytopl_N_rewind 1
+PicoPhytopl_N_wgt_coefft 1.0
+
 PicoPhytopl_N_File0.name /tsfiles/Annual_Files/Phyto_Forcing_1964.nc
 PicoPhytopl_N_File1.name /tsfiles/Annual_Files/Phyto_Forcing_1965.nc
 PicoPhytopl_N_File2.name /tsfiles/Annual_Files/Phyto_Forcing_1966.nc
@@ -452,16 +460,14 @@ PicoPhytopl_N_File51.name /tsfiles/Annual_Files/Phyto_Forcing_2015.nc
 PicoPhytopl_N_File52.name /tsfiles/Annual_Files/Phyto_Forcing_2016.nc
 PicoPhytopl_N_File53.name /tsfiles/Annual_Files/Phyto_Forcing_2017.nc
 
-
-
-PicoPhytopl_N_rewind 0
-PicoPhytopl_N_wgt_coefft 1.0
-
 #Diatom_S
 
 Diatom_S_nFiles 54
+Diatom_S_rewind 1
+Diatom_S_wgt_coefft 1.0
+Diatom_S_use_resets 0
+Diatom_S_ResetTol 0
 
-Diatom_S
 Diatom_S_File0.name /tsfiles/Annual_Files/Phyto_Forcing_1964.nc
 Diatom_S_File1.name /tsfiles/Annual_Files/Phyto_Forcing_1965.nc
 Diatom_S_File2.name /tsfiles/Annual_Files/Phyto_Forcing_1966.nc
@@ -517,11 +523,13 @@ Diatom_S_File51.name /tsfiles/Annual_Files/Phyto_Forcing_2015.nc
 Diatom_S_File52.name /tsfiles/Annual_Files/Phyto_Forcing_2016.nc
 Diatom_S_File53.name /tsfiles/Annual_Files/Phyto_Forcing_2017.nc
 
-Diatom_S_rewind 0
-Diatom_S_wgt_coefft 1.0
-
 #DinoFlag_N
+
 DinoFlag_N_nFiles 54
+DinoFlag_N_use_resets 0
+DinoFlag_N_rewind 1
+DinoFlag_N_wgt_coefft 1.0
+DinoFlag_N_ResetTol 0
 
 DinoFlag_N_File0.name /tsfiles/Annual_Files/Phyto_Forcing_1964.nc
 DinoFlag_N_File1.name /tsfiles/Annual_Files/Phyto_Forcing_1965.nc
@@ -578,11 +586,13 @@ DinoFlag_N_File51.name /tsfiles/Annual_Files/Phyto_Forcing_2015.nc
 DinoFlag_N_File52.name /tsfiles/Annual_Files/Phyto_Forcing_2016.nc
 DinoFlag_N_File53.name /tsfiles/Annual_Files/Phyto_Forcing_2017.nc
 
-DinoFlag_N_rewind 0
-DinoFlag_N_wgt_coefft 1.0
-
 #Lab_Det_N
+
 Lab_Det_N_nFiles 54
+Lab_Det_N_use_resets 0
+Lab_Det_N_ResetTol 0
+Lab_Det_N_rewind 1
+Lab_Det_N_wgt_coefft 1.0
 
 Lab_Det_N_File0.name /tsfiles/Annual_Files/Satphyto_Forcing_DL_1964.nc
 Lab_Det_N_File1.name /tsfiles/Annual_Files/Satphyto_Forcing_DL_1965.nc
@@ -639,5 +649,5 @@ Lab_Det_N_File51.name /tsfiles/Annual_Files/Satphyto_Forcing_DL_2015.nc
 Lab_Det_N_File52.name /tsfiles/Annual_Files/Satphyto_Forcing_DL_2016.nc
 Lab_Det_N_File53.name /tsfiles/Annual_Files/Satphyto_Forcing_DL_2017.nc
 
-Lab_Det_N_rewind 0
-Lab_Det_N_wgt_coefft 1.0
+
+
