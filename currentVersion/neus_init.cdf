@@ -41,7 +41,7 @@ variables:
 		Anchovies10_ResN:b_dens = 1000000000. ;
 		Anchovies10_ResN:i_conc = 200000000. ;
 		Anchovies10_ResN:f_conc = 200000000. ;
-		Anchovies10_ResN:_FillValue = 134.62 ;
+		Anchovies10_ResN:_FillValue = 200.2 ;
 	double Anchovies10_StructN(t, b, z) ;
 		Anchovies10_StructN:bmtype = "tracer" ;
 		Anchovies10_StructN:units = "mg N" ;
@@ -60,7 +60,7 @@ variables:
 		Anchovies10_StructN:b_dens = 1000000000. ;
 		Anchovies10_StructN:i_conc = 200000000. ;
 		Anchovies10_StructN:f_conc = 200000000. ;
-		Anchovies10_StructN:_FillValue = 50.8 ;
+		Anchovies10_StructN:_FillValue = 75.5 ;
 	double Anchovies1_Nums(t, b, z) ;
 		Anchovies1_Nums:bmtype = "tracer" ;
 		Anchovies1_Nums:units = "1" ;
@@ -98,7 +98,7 @@ variables:
 		Anchovies1_ResN:b_dens = 1000000000. ;
 		Anchovies1_ResN:i_conc = 200000000. ;
 		Anchovies1_ResN:f_conc = 200000000. ;
-		Anchovies1_ResN:_FillValue = 12.46 ;
+		Anchovies1_ResN:_FillValue = 15.7 ;
 	double Anchovies1_StructN(t, b, z) ;
 		Anchovies1_StructN:bmtype = "tracer" ;
 		Anchovies1_StructN:units = "mg N" ;
@@ -117,7 +117,7 @@ variables:
 		Anchovies1_StructN:b_dens = 1000000000. ;
 		Anchovies1_StructN:i_conc = 200000000. ;
 		Anchovies1_StructN:f_conc = 200000000. ;
-		Anchovies1_StructN:_FillValue = 4.7 ;
+		Anchovies1_StructN:_FillValue = 5.9 ;
 	double Anchovies2_Nums(t, b, z) ;
 		Anchovies2_Nums:bmtype = "tracer" ;
 		Anchovies2_Nums:units = "1" ;
@@ -155,7 +155,7 @@ variables:
 		Anchovies2_ResN:b_dens = 1000000000. ;
 		Anchovies2_ResN:i_conc = 200000000. ;
 		Anchovies2_ResN:f_conc = 200000000. ;
-		Anchovies2_ResN:_FillValue = 46.3 ;
+		Anchovies2_ResN:_FillValue = 34.3 ;
 	double Anchovies2_StructN(t, b, z) ;
 		Anchovies2_StructN:bmtype = "tracer" ;
 		Anchovies2_StructN:units = "mg N" ;
@@ -174,7 +174,7 @@ variables:
 		Anchovies2_StructN:b_dens = 1000000000. ;
 		Anchovies2_StructN:i_conc = 200000000. ;
 		Anchovies2_StructN:f_conc = 200000000. ;
-		Anchovies2_StructN:_FillValue = 17.47 ;
+		Anchovies2_StructN:_FillValue = 12.9 ;
 	double Anchovies3_Nums(t, b, z) ;
 		Anchovies3_Nums:bmtype = "tracer" ;
 		Anchovies3_Nums:units = "1" ;
@@ -212,7 +212,7 @@ variables:
 		Anchovies3_ResN:b_dens = 1000000000. ;
 		Anchovies3_ResN:i_conc = 200000000. ;
 		Anchovies3_ResN:f_conc = 200000000. ;
-		Anchovies3_ResN:_FillValue = 78.86 ;
+		Anchovies3_ResN:_FillValue = 57.3 ;
 	double Anchovies3_StructN(t, b, z) ;
 		Anchovies3_StructN:bmtype = "tracer" ;
 		Anchovies3_StructN:units = "mg N" ;
@@ -231,7 +231,7 @@ variables:
 		Anchovies3_StructN:b_dens = 1000000000. ;
 		Anchovies3_StructN:i_conc = 200000000. ;
 		Anchovies3_StructN:f_conc = 200000000. ;
-		Anchovies3_StructN:_FillValue = 29.76 ;
+		Anchovies3_StructN:_FillValue = 21.6 ;
 	double Anchovies4_Nums(t, b, z) ;
 		Anchovies4_Nums:bmtype = "tracer" ;
 		Anchovies4_Nums:units = "1" ;
@@ -269,7 +269,7 @@ variables:
 		Anchovies4_ResN:b_dens = 1000000000. ;
 		Anchovies4_ResN:i_conc = 200000000. ;
 		Anchovies4_ResN:f_conc = 200000000. ;
-		Anchovies4_ResN:_FillValue = 101.97 ;
+		Anchovies4_ResN:_FillValue = 82.1 ;
 	double Anchovies4_StructN(t, b, z) ;
 		Anchovies4_StructN:bmtype = "tracer" ;
 		Anchovies4_StructN:units = "mg N" ;
@@ -288,7 +288,7 @@ variables:
 		Anchovies4_StructN:b_dens = 1000000000. ;
 		Anchovies4_StructN:i_conc = 200000000. ;
 		Anchovies4_StructN:f_conc = 200000000. ;
-		Anchovies4_StructN:_FillValue = 38.48 ;
+		Anchovies4_StructN:_FillValue = 31.0 ;
 	double Anchovies5_Nums(t, b, z) ;
 		Anchovies5_Nums:bmtype = "tracer" ;
 		Anchovies5_Nums:units = "1" ;
@@ -326,7 +326,7 @@ variables:
 		Anchovies5_ResN:b_dens = 1000000000. ;
 		Anchovies5_ResN:i_conc = 200000000. ;
 		Anchovies5_ResN:f_conc = 200000000. ;
-		Anchovies5_ResN:_FillValue = 116.36 ;
+		Anchovies5_ResN:_FillValue = 106.7 ;
 	double Anchovies5_StructN(t, b, z) ;
 		Anchovies5_StructN:bmtype = "tracer" ;
 		Anchovies5_StructN:units = "mg N" ;
@@ -345,7 +345,7 @@ variables:
 		Anchovies5_StructN:b_dens = 1000000000. ;
 		Anchovies5_StructN:i_conc = 200000000. ;
 		Anchovies5_StructN:f_conc = 200000000. ;
-		Anchovies5_StructN:_FillValue = 43.91 ;
+		Anchovies5_StructN:_FillValue = 40.3 ;
 	double Anchovies6_Nums(t, b, z) ;
 		Anchovies6_Nums:bmtype = "tracer" ;
 		Anchovies6_Nums:units = "1" ;
@@ -383,7 +383,7 @@ variables:
 		Anchovies6_ResN:b_dens = 1000000000. ;
 		Anchovies6_ResN:i_conc = 200000000. ;
 		Anchovies6_ResN:f_conc = 200000000. ;
-		Anchovies6_ResN:_FillValue = 124.81 ;
+		Anchovies6_ResN:_FillValue = 130.0 ;
 	double Anchovies6_StructN(t, b, z) ;
 		Anchovies6_StructN:bmtype = "tracer" ;
 		Anchovies6_StructN:units = "mg N" ;
@@ -402,7 +402,7 @@ variables:
 		Anchovies6_StructN:b_dens = 1000000000. ;
 		Anchovies6_StructN:i_conc = 200000000. ;
 		Anchovies6_StructN:f_conc = 200000000. ;
-		Anchovies6_StructN:_FillValue = 47.1 ;
+		Anchovies6_StructN:_FillValue = 49.1 ;
 	double Anchovies7_Nums(t, b, z) ;
 		Anchovies7_Nums:bmtype = "tracer" ;
 		Anchovies7_Nums:units = "1" ;
@@ -440,7 +440,7 @@ variables:
 		Anchovies7_ResN:b_dens = 1000000000. ;
 		Anchovies7_ResN:i_conc = 200000000. ;
 		Anchovies7_ResN:f_conc = 200000000. ;
-		Anchovies7_ResN:_FillValue = 129.61 ;
+		Anchovies7_ResN:_FillValue = 151.2 ;
 	double Anchovies7_StructN(t, b, z) ;
 		Anchovies7_StructN:bmtype = "tracer" ;
 		Anchovies7_StructN:units = "mg N" ;
@@ -459,7 +459,7 @@ variables:
 		Anchovies7_StructN:b_dens = 1000000000. ;
 		Anchovies7_StructN:i_conc = 200000000. ;
 		Anchovies7_StructN:f_conc = 200000000. ;
-		Anchovies7_StructN:_FillValue = 48.91 ;
+		Anchovies7_StructN:_FillValue = 57.0 ;
 	double Anchovies8_Nums(t, b, z) ;
 		Anchovies8_Nums:bmtype = "tracer" ;
 		Anchovies8_Nums:units = "1" ;
@@ -497,7 +497,7 @@ variables:
 		Anchovies8_ResN:b_dens = 1000000000. ;
 		Anchovies8_ResN:i_conc = 200000000. ;
 		Anchovies8_ResN:f_conc = 200000000. ;
-		Anchovies8_ResN:_FillValue = 132.31 ;
+		Anchovies8_ResN:_FillValue = 169.9 ;
 	double Anchovies8_StructN(t, b, z) ;
 		Anchovies8_StructN:bmtype = "tracer" ;
 		Anchovies8_StructN:units = "mg N" ;
@@ -516,7 +516,7 @@ variables:
 		Anchovies8_StructN:b_dens = 1000000000. ;
 		Anchovies8_StructN:i_conc = 200000000. ;
 		Anchovies8_StructN:f_conc = 200000000. ;
-		Anchovies8_StructN:_FillValue = 49.93 ;
+		Anchovies8_StructN:_FillValue = 64.1 ;
 	double Anchovies9_Nums(t, b, z) ;
 		Anchovies9_Nums:bmtype = "tracer" ;
 		Anchovies9_Nums:units = "1" ;
@@ -554,7 +554,7 @@ variables:
 		Anchovies9_ResN:b_dens = 1000000000. ;
 		Anchovies9_ResN:i_conc = 200000000. ;
 		Anchovies9_ResN:f_conc = 200000000. ;
-		Anchovies9_ResN:_FillValue = 133.8 ;
+		Anchovies9_ResN:_FillValue = 186.2 ;
 	double Anchovies9_StructN(t, b, z) ;
 		Anchovies9_StructN:bmtype = "tracer" ;
 		Anchovies9_StructN:units = "mg N" ;
@@ -573,7 +573,7 @@ variables:
 		Anchovies9_StructN:b_dens = 1000000000. ;
 		Anchovies9_StructN:i_conc = 200000000. ;
 		Anchovies9_StructN:f_conc = 200000000. ;
-		Anchovies9_StructN:_FillValue = 50.49 ;
+		Anchovies9_StructN:_FillValue = 70.3 ;
 	double Anchovies_N(t, b, z) ;
 		Anchovies_N:bmtype = "tracer" ;
 		Anchovies_N:units = "mg N m-3" ;
@@ -623,7 +623,7 @@ variables:
 		Atlantic_Salmon10_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon10_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon10_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon10_ResN:_FillValue = 149688.14 ;
+		Atlantic_Salmon10_ResN:_FillValue = 159012.5 ;
 	double Atlantic_Salmon10_StructN(t, b, z) ;
 		Atlantic_Salmon10_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon10_StructN:units = "mg N" ;
@@ -642,7 +642,7 @@ variables:
 		Atlantic_Salmon10_StructN:b_dens = 1000000000. ;
 		Atlantic_Salmon10_StructN:i_conc = 200000000. ;
 		Atlantic_Salmon10_StructN:f_conc = 200000000. ;
-		Atlantic_Salmon10_StructN:_FillValue = 56486.09 ;
+		Atlantic_Salmon10_StructN:_FillValue = 60004.7 ;
 	double Atlantic_Salmon1_Nums(t, b, z) ;
 		Atlantic_Salmon1_Nums:bmtype = "tracer" ;
 		Atlantic_Salmon1_Nums:units = "1" ;
@@ -680,7 +680,7 @@ variables:
 		Atlantic_Salmon1_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon1_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon1_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon1_ResN:_FillValue = 954.19 ;
+		Atlantic_Salmon1_ResN:_FillValue = 14714.3 ;
 	double Atlantic_Salmon1_StructN(t, b, z) ;
 		Atlantic_Salmon1_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon1_StructN:units = "mg N" ;
@@ -699,7 +699,7 @@ variables:
 		Atlantic_Salmon1_StructN:b_dens = 1000000000. ;
 		Atlantic_Salmon1_StructN:i_conc = 200000000. ;
 		Atlantic_Salmon1_StructN:f_conc = 200000000. ;
-		Atlantic_Salmon1_StructN:_FillValue = 360.07 ;
+		Atlantic_Salmon1_StructN:_FillValue = 5552.6 ;
 	double Atlantic_Salmon2_Nums(t, b, z) ;
 		Atlantic_Salmon2_Nums:bmtype = "tracer" ;
 		Atlantic_Salmon2_Nums:units = "1" ;
@@ -737,7 +737,7 @@ variables:
 		Atlantic_Salmon2_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon2_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon2_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon2_ResN:_FillValue = 14714.26 ;
+		Atlantic_Salmon2_ResN:_FillValue = 54668.1 ;
 	double Atlantic_Salmon2_StructN(t, b, z) ;
 		Atlantic_Salmon2_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon2_StructN:units = "mg N" ;
@@ -756,7 +756,7 @@ variables:
 		Atlantic_Salmon2_StructN:b_dens = 1000000000. ;
 		Atlantic_Salmon2_StructN:i_conc = 200000000. ;
 		Atlantic_Salmon2_StructN:f_conc = 200000000. ;
-		Atlantic_Salmon2_StructN:_FillValue = 5552.55 ;
+		Atlantic_Salmon2_StructN:_FillValue = 20629.5 ;
 	double Atlantic_Salmon3_Nums(t, b, z) ;
 		Atlantic_Salmon3_Nums:bmtype = "tracer" ;
 		Atlantic_Salmon3_Nums:units = "1" ;
@@ -794,7 +794,7 @@ variables:
 		Atlantic_Salmon3_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon3_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon3_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon3_ResN:_FillValue = 40463.62 ;
+		Atlantic_Salmon3_ResN:_FillValue = 93166.1 ;
 	double Atlantic_Salmon3_StructN(t, b, z) ;
 		Atlantic_Salmon3_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon3_StructN:units = "mg N" ;
@@ -813,7 +813,7 @@ variables:
 		Atlantic_Salmon3_StructN:b_dens = 1000000000. ;
 		Atlantic_Salmon3_StructN:i_conc = 200000000. ;
 		Atlantic_Salmon3_StructN:f_conc = 200000000. ;
-		Atlantic_Salmon3_StructN:_FillValue = 15269.29 ;
+		Atlantic_Salmon3_StructN:_FillValue = 35157.0 ;
 	double Atlantic_Salmon4_Nums(t, b, z) ;
 		Atlantic_Salmon4_Nums:bmtype = "tracer" ;
 		Atlantic_Salmon4_Nums:units = "1" ;
@@ -851,7 +851,7 @@ variables:
 		Atlantic_Salmon4_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon4_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon4_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon4_ResN:_FillValue = 68508.89 ;
+		Atlantic_Salmon4_ResN:_FillValue = 120437.2 ;
 	double Atlantic_Salmon4_StructN(t, b, z) ;
 		Atlantic_Salmon4_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon4_StructN:units = "mg N" ;
@@ -870,7 +870,7 @@ variables:
 		Atlantic_Salmon4_StructN:b_dens = 1000000000. ;
 		Atlantic_Salmon4_StructN:i_conc = 200000000. ;
 		Atlantic_Salmon4_StructN:f_conc = 200000000. ;
-		Atlantic_Salmon4_StructN:_FillValue = 25852.41 ;
+		Atlantic_Salmon4_StructN:_FillValue = 45448.0 ;
 	double Atlantic_Salmon5_Nums(t, b, z) ;
 		Atlantic_Salmon5_Nums:bmtype = "tracer" ;
 		Atlantic_Salmon5_Nums:units = "1" ;
@@ -908,7 +908,7 @@ variables:
 		Atlantic_Salmon5_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon5_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon5_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon5_ResN:_FillValue = 93166.08 ;
+		Atlantic_Salmon5_ResN:_FillValue = 137444.6 ;
 	double Atlantic_Salmon5_StructN(t, b, z) ;
 		Atlantic_Salmon5_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon5_StructN:units = "mg N" ;
@@ -927,7 +927,7 @@ variables:
 		Atlantic_Salmon5_StructN:b_dens = 1000000000. ;
 		Atlantic_Salmon5_StructN:i_conc = 200000000. ;
 		Atlantic_Salmon5_StructN:f_conc = 200000000. ;
-		Atlantic_Salmon5_StructN:_FillValue = 35157.01 ;
+		Atlantic_Salmon5_StructN:_FillValue = 51865.9 ;
 	double Atlantic_Salmon6_Nums(t, b, z) ;
 		Atlantic_Salmon6_Nums:bmtype = "tracer" ;
 		Atlantic_Salmon6_Nums:units = "1" ;
@@ -965,7 +965,7 @@ variables:
 		Atlantic_Salmon6_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon6_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon6_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon6_ResN:_FillValue = 112631.17 ;
+		Atlantic_Salmon6_ResN:_FillValue = 147424.6 ;
 	double Atlantic_Salmon6_StructN(t, b, z) ;
 		Atlantic_Salmon6_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon6_StructN:units = "mg N" ;
@@ -984,7 +984,7 @@ variables:
 		Atlantic_Salmon6_StructN:b_dens = 1000000000. ;
 		Atlantic_Salmon6_StructN:i_conc = 200000000. ;
 		Atlantic_Salmon6_StructN:f_conc = 200000000. ;
-		Atlantic_Salmon6_StructN:_FillValue = 42502.33 ;
+		Atlantic_Salmon6_StructN:_FillValue = 55631.9 ;
 	double Atlantic_Salmon7_Nums(t, b, z) ;
 		Atlantic_Salmon7_Nums:bmtype = "tracer" ;
 		Atlantic_Salmon7_Nums:units = "1" ;
@@ -1022,7 +1022,7 @@ variables:
 		Atlantic_Salmon7_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon7_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon7_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon7_ResN:_FillValue = 127090.42 ;
+		Atlantic_Salmon7_ResN:_FillValue = 153101.5 ;
 	double Atlantic_Salmon7_StructN(t, b, z) ;
 		Atlantic_Salmon7_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon7_StructN:units = "mg N" ;
@@ -1041,7 +1041,7 @@ variables:
 		Atlantic_Salmon7_StructN:b_dens = 1000000000. ;
 		Atlantic_Salmon7_StructN:i_conc = 200000000. ;
 		Atlantic_Salmon7_StructN:f_conc = 200000000. ;
-		Atlantic_Salmon7_StructN:_FillValue = 47958.65 ;
+		Atlantic_Salmon7_StructN:_FillValue = 57774.1 ;
 	double Atlantic_Salmon8_Nums(t, b, z) ;
 		Atlantic_Salmon8_Nums:bmtype = "tracer" ;
 		Atlantic_Salmon8_Nums:units = "1" ;
@@ -1079,7 +1079,7 @@ variables:
 		Atlantic_Salmon8_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon8_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon8_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon8_ResN:_FillValue = 137444.61 ;
+		Atlantic_Salmon8_ResN:_FillValue = 156278.1 ;
 	double Atlantic_Salmon8_StructN(t, b, z) ;
 		Atlantic_Salmon8_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon8_StructN:units = "mg N" ;
@@ -1098,7 +1098,7 @@ variables:
 		Atlantic_Salmon8_StructN:b_dens = 1000000000. ;
 		Atlantic_Salmon8_StructN:i_conc = 200000000. ;
 		Atlantic_Salmon8_StructN:f_conc = 200000000. ;
-		Atlantic_Salmon8_StructN:_FillValue = 51865.89 ;
+		Atlantic_Salmon8_StructN:_FillValue = 58972.9 ;
 	double Atlantic_Salmon9_Nums(t, b, z) ;
 		Atlantic_Salmon9_Nums:bmtype = "tracer" ;
 		Atlantic_Salmon9_Nums:units = "1" ;
@@ -1136,7 +1136,7 @@ variables:
 		Atlantic_Salmon9_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon9_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon9_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon9_ResN:_FillValue = 144690.93 ;
+		Atlantic_Salmon9_ResN:_FillValue = 158040.0 ;
 	double Atlantic_Salmon9_StructN(t, b, z) ;
 		Atlantic_Salmon9_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon9_StructN:units = "mg N" ;
@@ -1155,7 +1155,7 @@ variables:
 		Atlantic_Salmon9_StructN:b_dens = 1000000000. ;
 		Atlantic_Salmon9_StructN:i_conc = 200000000. ;
 		Atlantic_Salmon9_StructN:f_conc = 200000000. ;
-		Atlantic_Salmon9_StructN:_FillValue = 54600.35 ;
+		Atlantic_Salmon9_StructN:_FillValue = 59637.7 ;
 	double Atlantic_Salmon_N(t, b, z) ;
 		Atlantic_Salmon_N:bmtype = "tracer" ;
 		Atlantic_Salmon_N:units = "mg N m-3" ;
@@ -1205,7 +1205,7 @@ variables:
 		Atlantic_States_Demersals10_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals10_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals10_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals10_ResN:_FillValue = 127733.95 ;
+		Atlantic_States_Demersals10_ResN:_FillValue = 315254.3 ;
 	double Atlantic_States_Demersals10_StructN(t, b, z) ;
 		Atlantic_States_Demersals10_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals10_StructN:units = "mg N" ;
@@ -1224,7 +1224,7 @@ variables:
 		Atlantic_States_Demersals10_StructN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals10_StructN:i_conc = 200000000. ;
 		Atlantic_States_Demersals10_StructN:f_conc = 200000000. ;
-		Atlantic_States_Demersals10_StructN:_FillValue = 48201.49 ;
+		Atlantic_States_Demersals10_StructN:_FillValue = 118963.9 ;
 	double Atlantic_States_Demersals1_Nums(t, b, z) ;
 		Atlantic_States_Demersals1_Nums:bmtype = "tracer" ;
 		Atlantic_States_Demersals1_Nums:units = "1" ;
@@ -1262,7 +1262,7 @@ variables:
 		Atlantic_States_Demersals1_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals1_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals1_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals1_ResN:_FillValue = 419.12 ;
+		Atlantic_States_Demersals1_ResN:_FillValue = 9007.4 ;
 	double Atlantic_States_Demersals1_StructN(t, b, z) ;
 		Atlantic_States_Demersals1_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals1_StructN:units = "mg N" ;
@@ -1281,7 +1281,7 @@ variables:
 		Atlantic_States_Demersals1_StructN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals1_StructN:i_conc = 200000000. ;
 		Atlantic_States_Demersals1_StructN:f_conc = 200000000. ;
-		Atlantic_States_Demersals1_StructN:_FillValue = 158.16 ;
+		Atlantic_States_Demersals1_StructN:_FillValue = 3399.0 ;
 	double Atlantic_States_Demersals2_Nums(t, b, z) ;
 		Atlantic_States_Demersals2_Nums:bmtype = "tracer" ;
 		Atlantic_States_Demersals2_Nums:units = "1" ;
@@ -1319,7 +1319,7 @@ variables:
 		Atlantic_States_Demersals2_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals2_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals2_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals2_ResN:_FillValue = 3029.8 ;
+		Atlantic_States_Demersals2_ResN:_FillValue = 31713.0 ;
 	double Atlantic_States_Demersals2_StructN(t, b, z) ;
 		Atlantic_States_Demersals2_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals2_StructN:units = "mg N" ;
@@ -1338,7 +1338,7 @@ variables:
 		Atlantic_States_Demersals2_StructN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals2_StructN:i_conc = 200000000. ;
 		Atlantic_States_Demersals2_StructN:f_conc = 200000000. ;
-		Atlantic_States_Demersals2_StructN:_FillValue = 1143.32 ;
+		Atlantic_States_Demersals2_StructN:_FillValue = 11967.2 ;
 	double Atlantic_States_Demersals3_Nums(t, b, z) ;
 		Atlantic_States_Demersals3_Nums:bmtype = "tracer" ;
 		Atlantic_States_Demersals3_Nums:units = "1" ;
@@ -1376,7 +1376,7 @@ variables:
 		Atlantic_States_Demersals3_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals3_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals3_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals3_ResN:_FillValue = 9007.43 ;
+		Atlantic_States_Demersals3_ResN:_FillValue = 65888.4 ;
 	double Atlantic_States_Demersals3_StructN(t, b, z) ;
 		Atlantic_States_Demersals3_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals3_StructN:units = "mg N" ;
@@ -1395,7 +1395,7 @@ variables:
 		Atlantic_States_Demersals3_StructN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals3_StructN:i_conc = 200000000. ;
 		Atlantic_States_Demersals3_StructN:f_conc = 200000000. ;
-		Atlantic_States_Demersals3_StructN:_FillValue = 3399.03 ;
+		Atlantic_States_Demersals3_StructN:_FillValue = 24863.6 ;
 	double Atlantic_States_Demersals4_Nums(t, b, z) ;
 		Atlantic_States_Demersals4_Nums:bmtype = "tracer" ;
 		Atlantic_States_Demersals4_Nums:units = "1" ;
@@ -1433,7 +1433,7 @@ variables:
 		Atlantic_States_Demersals4_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals4_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals4_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals4_ResN:_FillValue = 18648.79 ;
+		Atlantic_States_Demersals4_ResN:_FillValue = 106492.1 ;
 	double Atlantic_States_Demersals4_StructN(t, b, z) ;
 		Atlantic_States_Demersals4_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals4_StructN:units = "mg N" ;
@@ -1452,7 +1452,7 @@ variables:
 		Atlantic_States_Demersals4_StructN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals4_StructN:i_conc = 200000000. ;
 		Atlantic_States_Demersals4_StructN:f_conc = 200000000. ;
-		Atlantic_States_Demersals4_StructN:_FillValue = 7037.28 ;
+		Atlantic_States_Demersals4_StructN:_FillValue = 40185.7 ;
 	double Atlantic_States_Demersals5_Nums(t, b, z) ;
 		Atlantic_States_Demersals5_Nums:bmtype = "tracer" ;
 		Atlantic_States_Demersals5_Nums:units = "1" ;
@@ -1490,7 +1490,7 @@ variables:
 		Atlantic_States_Demersals5_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals5_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals5_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals5_ResN:_FillValue = 31712.97 ;
+		Atlantic_States_Demersals5_ResN:_FillValue = 148976.4 ;
 	double Atlantic_States_Demersals5_StructN(t, b, z) ;
 		Atlantic_States_Demersals5_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals5_StructN:units = "mg N" ;
@@ -1509,7 +1509,7 @@ variables:
 		Atlantic_States_Demersals5_StructN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals5_StructN:i_conc = 200000000. ;
 		Atlantic_States_Demersals5_StructN:f_conc = 200000000. ;
-		Atlantic_States_Demersals5_StructN:_FillValue = 11967.16 ;
+		Atlantic_States_Demersals5_StructN:_FillValue = 56217.5 ;
 	double Atlantic_States_Demersals6_Nums(t, b, z) ;
 		Atlantic_States_Demersals6_Nums:bmtype = "tracer" ;
 		Atlantic_States_Demersals6_Nums:units = "1" ;
@@ -1547,7 +1547,7 @@ variables:
 		Atlantic_States_Demersals6_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals6_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals6_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals6_ResN:_FillValue = 47674.08 ;
+		Atlantic_States_Demersals6_ResN:_FillValue = 190107.8 ;
 	double Atlantic_States_Demersals6_StructN(t, b, z) ;
 		Atlantic_States_Demersals6_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals6_StructN:units = "mg N" ;
@@ -1566,7 +1566,7 @@ variables:
 		Atlantic_States_Demersals6_StructN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals6_StructN:i_conc = 200000000. ;
 		Atlantic_States_Demersals6_StructN:f_conc = 200000000. ;
-		Atlantic_States_Demersals6_StructN:_FillValue = 17990.22 ;
+		Atlantic_States_Demersals6_StructN:_FillValue = 71738.8 ;
 	double Atlantic_States_Demersals7_Nums(t, b, z) ;
 		Atlantic_States_Demersals7_Nums:bmtype = "tracer" ;
 		Atlantic_States_Demersals7_Nums:units = "1" ;
@@ -1604,7 +1604,7 @@ variables:
 		Atlantic_States_Demersals7_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals7_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals7_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals7_ResN:_FillValue = 65888.43 ;
+		Atlantic_States_Demersals7_ResN:_FillValue = 227940.4 ;
 	double Atlantic_States_Demersals7_StructN(t, b, z) ;
 		Atlantic_States_Demersals7_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals7_StructN:units = "mg N" ;
@@ -1623,7 +1623,7 @@ variables:
 		Atlantic_States_Demersals7_StructN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals7_StructN:i_conc = 200000000. ;
 		Atlantic_States_Demersals7_StructN:f_conc = 200000000. ;
-		Atlantic_States_Demersals7_StructN:_FillValue = 24863.56 ;
+		Atlantic_States_Demersals7_StructN:_FillValue = 86015.2 ;
 	double Atlantic_States_Demersals8_Nums(t, b, z) ;
 		Atlantic_States_Demersals8_Nums:bmtype = "tracer" ;
 		Atlantic_States_Demersals8_Nums:units = "1" ;
@@ -1661,7 +1661,7 @@ variables:
 		Atlantic_States_Demersals8_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals8_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals8_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals8_ResN:_FillValue = 85698.38 ;
+		Atlantic_States_Demersals8_ResN:_FillValue = 261522.8 ;
 	double Atlantic_States_Demersals8_StructN(t, b, z) ;
 		Atlantic_States_Demersals8_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals8_StructN:units = "mg N" ;
@@ -1680,7 +1680,7 @@ variables:
 		Atlantic_States_Demersals8_StructN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals8_StructN:i_conc = 200000000. ;
 		Atlantic_States_Demersals8_StructN:f_conc = 200000000. ;
-		Atlantic_States_Demersals8_StructN:_FillValue = 32339.01 ;
+		Atlantic_States_Demersals8_StructN:_FillValue = 98687.8 ;
 	double Atlantic_States_Demersals9_Nums(t, b, z) ;
 		Atlantic_States_Demersals9_Nums:bmtype = "tracer" ;
 		Atlantic_States_Demersals9_Nums:units = "1" ;
@@ -1718,7 +1718,7 @@ variables:
 		Atlantic_States_Demersals9_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals9_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals9_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals9_ResN:_FillValue = 106492.08 ;
+		Atlantic_States_Demersals9_ResN:_FillValue = 290580.5 ;
 	double Atlantic_States_Demersals9_StructN(t, b, z) ;
 		Atlantic_States_Demersals9_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals9_StructN:units = "mg N" ;
@@ -1737,7 +1737,7 @@ variables:
 		Atlantic_States_Demersals9_StructN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals9_StructN:i_conc = 200000000. ;
 		Atlantic_States_Demersals9_StructN:f_conc = 200000000. ;
-		Atlantic_States_Demersals9_StructN:_FillValue = 40185.69 ;
+		Atlantic_States_Demersals9_StructN:_FillValue = 109653.0 ;
 	double Atlantic_States_Demersals_N(t, b, z) ;
 		Atlantic_States_Demersals_N:bmtype = "tracer" ;
 		Atlantic_States_Demersals_N:units = "mg N m-3" ;
@@ -2965,7 +2965,7 @@ variables:
 		Billfish10_ResN:b_dens = 1000000000. ;
 		Billfish10_ResN:i_conc = 200000000. ;
 		Billfish10_ResN:f_conc = 200000000. ;
-		Billfish10_ResN:_FillValue = 3933215.36 ;
+		Billfish10_ResN:_FillValue = 4922065.3 ;
 	double Billfish10_StructN(t, b, z) ;
 		Billfish10_StructN:bmtype = "tracer" ;
 		Billfish10_StructN:units = "mg N" ;
@@ -2984,7 +2984,7 @@ variables:
 		Billfish10_StructN:b_dens = 1000000000. ;
 		Billfish10_StructN:i_conc = 200000000. ;
 		Billfish10_StructN:f_conc = 200000000. ;
-		Billfish10_StructN:_FillValue = 1484232.21 ;
+		Billfish10_StructN:_FillValue = 1857383.2 ;
 	double Billfish1_Nums(t, b, z) ;
 		Billfish1_Nums:bmtype = "tracer" ;
 		Billfish1_Nums:units = "1" ;
@@ -3022,7 +3022,7 @@ variables:
 		Billfish1_ResN:b_dens = 1000000000. ;
 		Billfish1_ResN:i_conc = 200000000. ;
 		Billfish1_ResN:f_conc = 200000000. ;
-		Billfish1_ResN:_FillValue = 3720.47 ;
+		Billfish1_ResN:_FillValue = 708716.1 ;
 	double Billfish1_StructN(t, b, z) ;
 		Billfish1_StructN:bmtype = "tracer" ;
 		Billfish1_StructN:units = "mg N" ;
@@ -3041,7 +3041,7 @@ variables:
 		Billfish1_StructN:b_dens = 1000000000. ;
 		Billfish1_StructN:i_conc = 200000000. ;
 		Billfish1_StructN:f_conc = 200000000. ;
-		Billfish1_StructN:_FillValue = 1403.95 ;
+		Billfish1_StructN:_FillValue = 267440.0 ;
 	double Billfish2_Nums(t, b, z) ;
 		Billfish2_Nums:bmtype = "tracer" ;
 		Billfish2_Nums:units = "1" ;
@@ -3079,7 +3079,7 @@ variables:
 		Billfish2_ResN:b_dens = 1000000000. ;
 		Billfish2_ResN:i_conc = 200000000. ;
 		Billfish2_ResN:f_conc = 200000000. ;
-		Billfish2_ResN:_FillValue = 152085.49 ;
+		Billfish2_ResN:_FillValue = 1898438.4 ;
 	double Billfish2_StructN(t, b, z) ;
 		Billfish2_StructN:bmtype = "tracer" ;
 		Billfish2_StructN:units = "mg N" ;
@@ -3098,7 +3098,7 @@ variables:
 		Billfish2_StructN:b_dens = 1000000000. ;
 		Billfish2_StructN:i_conc = 200000000. ;
 		Billfish2_StructN:f_conc = 200000000. ;
-		Billfish2_StructN:_FillValue = 57390.75 ;
+		Billfish2_StructN:_FillValue = 716391.9 ;
 	double Billfish3_Nums(t, b, z) ;
 		Billfish3_Nums:bmtype = "tracer" ;
 		Billfish3_Nums:units = "1" ;
@@ -3136,7 +3136,7 @@ variables:
 		Billfish3_ResN:b_dens = 1000000000. ;
 		Billfish3_ResN:i_conc = 200000000. ;
 		Billfish3_ResN:f_conc = 200000000. ;
-		Billfish3_ResN:_FillValue = 548242.18 ;
+		Billfish3_ResN:_FillValue = 2968591.6 ;
 	double Billfish3_StructN(t, b, z) ;
 		Billfish3_StructN:bmtype = "tracer" ;
 		Billfish3_StructN:units = "mg N" ;
@@ -3155,7 +3155,7 @@ variables:
 		Billfish3_StructN:b_dens = 1000000000. ;
 		Billfish3_StructN:i_conc = 200000000. ;
 		Billfish3_StructN:f_conc = 200000000. ;
-		Billfish3_StructN:_FillValue = 206883.84 ;
+		Billfish3_StructN:_FillValue = 1120223.2 ;
 	double Billfish4_Nums(t, b, z) ;
 		Billfish4_Nums:bmtype = "tracer" ;
 		Billfish4_Nums:units = "1" ;
@@ -3193,7 +3193,7 @@ variables:
 		Billfish4_ResN:b_dens = 1000000000. ;
 		Billfish4_ResN:i_conc = 200000000. ;
 		Billfish4_ResN:f_conc = 200000000. ;
-		Billfish4_ResN:_FillValue = 1103986.05 ;
+		Billfish4_ResN:_FillValue = 3735389.9 ;
 	double Billfish4_StructN(t, b, z) ;
 		Billfish4_StructN:bmtype = "tracer" ;
 		Billfish4_StructN:units = "mg N" ;
@@ -3212,7 +3212,7 @@ variables:
 		Billfish4_StructN:b_dens = 1000000000. ;
 		Billfish4_StructN:i_conc = 200000000. ;
 		Billfish4_StructN:f_conc = 200000000. ;
-		Billfish4_StructN:_FillValue = 416598.51 ;
+		Billfish4_StructN:_FillValue = 1409581.1 ;
 	double Billfish5_Nums(t, b, z) ;
 		Billfish5_Nums:bmtype = "tracer" ;
 		Billfish5_Nums:units = "1" ;
@@ -3250,7 +3250,7 @@ variables:
 		Billfish5_ResN:b_dens = 1000000000. ;
 		Billfish5_ResN:i_conc = 200000000. ;
 		Billfish5_ResN:f_conc = 200000000. ;
-		Billfish5_ResN:_FillValue = 1712140.43 ;
+		Billfish5_ResN:_FillValue = 4231195.4 ;
 	double Billfish5_StructN(t, b, z) ;
 		Billfish5_StructN:bmtype = "tracer" ;
 		Billfish5_StructN:units = "mg N" ;
@@ -3269,7 +3269,7 @@ variables:
 		Billfish5_StructN:b_dens = 1000000000. ;
 		Billfish5_StructN:i_conc = 200000000. ;
 		Billfish5_StructN:f_conc = 200000000. ;
-		Billfish5_StructN:_FillValue = 646090.73 ;
+		Billfish5_StructN:_FillValue = 1596677.5 ;
 	double Billfish6_Nums(t, b, z) ;
 		Billfish6_Nums:bmtype = "tracer" ;
 		Billfish6_Nums:units = "1" ;
@@ -3307,7 +3307,7 @@ variables:
 		Billfish6_ResN:b_dens = 1000000000. ;
 		Billfish6_ResN:i_conc = 200000000. ;
 		Billfish6_ResN:f_conc = 200000000. ;
-		Billfish6_ResN:_FillValue = 2298107.8 ;
+		Billfish6_ResN:_FillValue = 4535505.1 ;
 	double Billfish6_StructN(t, b, z) ;
 		Billfish6_StructN:bmtype = "tracer" ;
 		Billfish6_StructN:units = "mg N" ;
@@ -3326,7 +3326,7 @@ variables:
 		Billfish6_StructN:b_dens = 1000000000. ;
 		Billfish6_StructN:i_conc = 200000000. ;
 		Billfish6_StructN:f_conc = 200000000. ;
-		Billfish6_StructN:_FillValue = 867210.49 ;
+		Billfish6_StructN:_FillValue = 1711511.3 ;
 	double Billfish7_Nums(t, b, z) ;
 		Billfish7_Nums:bmtype = "tracer" ;
 		Billfish7_Nums:units = "1" ;
@@ -3364,7 +3364,7 @@ variables:
 		Billfish7_ResN:b_dens = 1000000000. ;
 		Billfish7_ResN:i_conc = 200000000. ;
 		Billfish7_ResN:f_conc = 200000000. ;
-		Billfish7_ResN:_FillValue = 2821877.22 ;
+		Billfish7_ResN:_FillValue = 4717125.4 ;
 	double Billfish7_StructN(t, b, z) ;
 		Billfish7_StructN:bmtype = "tracer" ;
 		Billfish7_StructN:units = "mg N" ;
@@ -3383,7 +3383,7 @@ variables:
 		Billfish7_StructN:b_dens = 1000000000. ;
 		Billfish7_StructN:i_conc = 200000000. ;
 		Billfish7_StructN:f_conc = 200000000. ;
-		Billfish7_StructN:_FillValue = 1064859.33 ;
+		Billfish7_StructN:_FillValue = 1780047.3 ;
 	double Billfish8_Nums(t, b, z) ;
 		Billfish8_Nums:bmtype = "tracer" ;
 		Billfish8_Nums:units = "1" ;
@@ -3421,7 +3421,7 @@ variables:
 		Billfish8_ResN:b_dens = 1000000000. ;
 		Billfish8_ResN:i_conc = 200000000. ;
 		Billfish8_ResN:f_conc = 200000000. ;
-		Billfish8_ResN:_FillValue = 3268125.43 ;
+		Billfish8_ResN:_FillValue = 4823853.7 ;
 	double Billfish8_StructN(t, b, z) ;
 		Billfish8_StructN:bmtype = "tracer" ;
 		Billfish8_StructN:units = "mg N" ;
@@ -3440,7 +3440,7 @@ variables:
 		Billfish8_StructN:b_dens = 1000000000. ;
 		Billfish8_StructN:i_conc = 200000000. ;
 		Billfish8_StructN:f_conc = 200000000. ;
-		Billfish8_StructN:_FillValue = 1233254.88 ;
+		Billfish8_StructN:_FillValue = 1820322.2 ;
 	double Billfish9_Nums(t, b, z) ;
 		Billfish9_Nums:bmtype = "tracer" ;
 		Billfish9_Nums:units = "1" ;
@@ -3478,7 +3478,7 @@ variables:
 		Billfish9_ResN:b_dens = 1000000000. ;
 		Billfish9_ResN:i_conc = 200000000. ;
 		Billfish9_ResN:f_conc = 200000000. ;
-		Billfish9_ResN:_FillValue = 3636259.46 ;
+		Billfish9_ResN:_FillValue = 4886026.8 ;
 	double Billfish9_StructN(t, b, z) ;
 		Billfish9_StructN:bmtype = "tracer" ;
 		Billfish9_StructN:units = "mg N" ;
@@ -3497,7 +3497,7 @@ variables:
 		Billfish9_StructN:b_dens = 1000000000. ;
 		Billfish9_StructN:i_conc = 200000000. ;
 		Billfish9_StructN:f_conc = 200000000. ;
-		Billfish9_StructN:_FillValue = 1372173.38 ;
+		Billfish9_StructN:_FillValue = 1843783.7 ;
 	double Billfish_N(t, b, z) ;
 		Billfish_N:bmtype = "tracer" ;
 		Billfish_N:units = "mg N m-3" ;
@@ -3547,7 +3547,7 @@ variables:
 		Black_Sea_Bass10_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass10_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass10_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass10_ResN:_FillValue = 18597.54 ;
+		Black_Sea_Bass10_ResN:_FillValue = 19437.0 ;
 	double Black_Sea_Bass10_StructN(t, b, z) ;
 		Black_Sea_Bass10_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass10_StructN:units = "mg N" ;
@@ -3566,7 +3566,7 @@ variables:
 		Black_Sea_Bass10_StructN:b_dens = 1000000000. ;
 		Black_Sea_Bass10_StructN:i_conc = 200000000. ;
 		Black_Sea_Bass10_StructN:f_conc = 200000000. ;
-		Black_Sea_Bass10_StructN:_FillValue = 7017.94 ;
+		Black_Sea_Bass10_StructN:_FillValue = 7334.7 ;
 	double Black_Sea_Bass1_Nums(t, b, z) ;
 		Black_Sea_Bass1_Nums:bmtype = "tracer" ;
 		Black_Sea_Bass1_Nums:units = "1" ;
@@ -3604,7 +3604,7 @@ variables:
 		Black_Sea_Bass1_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass1_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass1_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass1_ResN:_FillValue = 80.08 ;
+		Black_Sea_Bass1_ResN:_FillValue = 1888.5 ;
 	double Black_Sea_Bass1_StructN(t, b, z) ;
 		Black_Sea_Bass1_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass1_StructN:units = "mg N" ;
@@ -3623,7 +3623,7 @@ variables:
 		Black_Sea_Bass1_StructN:b_dens = 1000000000. ;
 		Black_Sea_Bass1_StructN:i_conc = 200000000. ;
 		Black_Sea_Bass1_StructN:f_conc = 200000000. ;
-		Black_Sea_Bass1_StructN:_FillValue = 30.22 ;
+		Black_Sea_Bass1_StructN:_FillValue = 712.6 ;
 	double Black_Sea_Bass2_Nums(t, b, z) ;
 		Black_Sea_Bass2_Nums:bmtype = "tracer" ;
 		Black_Sea_Bass2_Nums:units = "1" ;
@@ -3661,7 +3661,7 @@ variables:
 		Black_Sea_Bass2_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass2_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass2_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass2_ResN:_FillValue = 1888.5 ;
+		Black_Sea_Bass2_ResN:_FillValue = 7298.6 ;
 	double Black_Sea_Bass2_StructN(t, b, z) ;
 		Black_Sea_Bass2_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass2_StructN:units = "mg N" ;
@@ -3680,7 +3680,7 @@ variables:
 		Black_Sea_Bass2_StructN:b_dens = 1000000000. ;
 		Black_Sea_Bass2_StructN:i_conc = 200000000. ;
 		Black_Sea_Bass2_StructN:f_conc = 200000000. ;
-		Black_Sea_Bass2_StructN:_FillValue = 712.64 ;
+		Black_Sea_Bass2_StructN:_FillValue = 2754.2 ;
 	double Black_Sea_Bass3_Nums(t, b, z) ;
 		Black_Sea_Bass3_Nums:bmtype = "tracer" ;
 		Black_Sea_Bass3_Nums:units = "1" ;
@@ -3718,7 +3718,7 @@ variables:
 		Black_Sea_Bass3_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass3_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass3_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass3_ResN:_FillValue = 5400.91 ;
+		Black_Sea_Bass3_ResN:_FillValue = 12222.0 ;
 	double Black_Sea_Bass3_StructN(t, b, z) ;
 		Black_Sea_Bass3_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass3_StructN:units = "mg N" ;
@@ -3737,7 +3737,7 @@ variables:
 		Black_Sea_Bass3_StructN:b_dens = 1000000000. ;
 		Black_Sea_Bass3_StructN:i_conc = 200000000. ;
 		Black_Sea_Bass3_StructN:f_conc = 200000000. ;
-		Black_Sea_Bass3_StructN:_FillValue = 2038.08 ;
+		Black_Sea_Bass3_StructN:_FillValue = 4612.1 ;
 	double Black_Sea_Bass4_Nums(t, b, z) ;
 		Black_Sea_Bass4_Nums:bmtype = "tracer" ;
 		Black_Sea_Bass4_Nums:units = "1" ;
@@ -3775,7 +3775,7 @@ variables:
 		Black_Sea_Bass4_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass4_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass4_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass4_ResN:_FillValue = 9108.55 ;
+		Black_Sea_Bass4_ResN:_FillValue = 15465.1 ;
 	double Black_Sea_Bass4_StructN(t, b, z) ;
 		Black_Sea_Bass4_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass4_StructN:units = "mg N" ;
@@ -3794,7 +3794,7 @@ variables:
 		Black_Sea_Bass4_StructN:b_dens = 1000000000. ;
 		Black_Sea_Bass4_StructN:i_conc = 200000000. ;
 		Black_Sea_Bass4_StructN:f_conc = 200000000. ;
-		Black_Sea_Bass4_StructN:_FillValue = 3437.19 ;
+		Black_Sea_Bass4_StructN:_FillValue = 5835.9 ;
 	double Black_Sea_Bass5_Nums(t, b, z) ;
 		Black_Sea_Bass5_Nums:bmtype = "tracer" ;
 		Black_Sea_Bass5_Nums:units = "1" ;
@@ -3832,7 +3832,7 @@ variables:
 		Black_Sea_Bass5_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass5_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass5_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass5_ResN:_FillValue = 12221.99 ;
+		Black_Sea_Bass5_ResN:_FillValue = 17345.8 ;
 	double Black_Sea_Bass5_StructN(t, b, z) ;
 		Black_Sea_Bass5_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass5_StructN:units = "mg N" ;
@@ -3851,7 +3851,7 @@ variables:
 		Black_Sea_Bass5_StructN:b_dens = 1000000000. ;
 		Black_Sea_Bass5_StructN:i_conc = 200000000. ;
 		Black_Sea_Bass5_StructN:f_conc = 200000000. ;
-		Black_Sea_Bass5_StructN:_FillValue = 4612.07 ;
+		Black_Sea_Bass5_StructN:_FillValue = 6545.6 ;
 	double Black_Sea_Bass6_Nums(t, b, z) ;
 		Black_Sea_Bass6_Nums:bmtype = "tracer" ;
 		Black_Sea_Bass6_Nums:units = "1" ;
@@ -3889,7 +3889,7 @@ variables:
 		Black_Sea_Bass6_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass6_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass6_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass6_ResN:_FillValue = 14561.78 ;
+		Black_Sea_Bass6_ResN:_FillValue = 18375.0 ;
 	double Black_Sea_Bass6_StructN(t, b, z) ;
 		Black_Sea_Bass6_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass6_StructN:units = "mg N" ;
@@ -3908,7 +3908,7 @@ variables:
 		Black_Sea_Bass6_StructN:b_dens = 1000000000. ;
 		Black_Sea_Bass6_StructN:i_conc = 200000000. ;
 		Black_Sea_Bass6_StructN:f_conc = 200000000. ;
-		Black_Sea_Bass6_StructN:_FillValue = 5495.01 ;
+		Black_Sea_Bass6_StructN:_FillValue = 6934.0 ;
 	double Black_Sea_Bass7_Nums(t, b, z) ;
 		Black_Sea_Bass7_Nums:bmtype = "tracer" ;
 		Black_Sea_Bass7_Nums:units = "1" ;
@@ -3946,7 +3946,7 @@ variables:
 		Black_Sea_Bass7_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass7_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass7_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass7_ResN:_FillValue = 16216.46 ;
+		Black_Sea_Bass7_ResN:_FillValue = 18922.6 ;
 	double Black_Sea_Bass7_StructN(t, b, z) ;
 		Black_Sea_Bass7_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass7_StructN:units = "mg N" ;
@@ -3965,7 +3965,7 @@ variables:
 		Black_Sea_Bass7_StructN:b_dens = 1000000000. ;
 		Black_Sea_Bass7_StructN:i_conc = 200000000. ;
 		Black_Sea_Bass7_StructN:f_conc = 200000000. ;
-		Black_Sea_Bass7_StructN:_FillValue = 6119.42 ;
+		Black_Sea_Bass7_StructN:_FillValue = 7140.6 ;
 	double Black_Sea_Bass8_Nums(t, b, z) ;
 		Black_Sea_Bass8_Nums:bmtype = "tracer" ;
 		Black_Sea_Bass8_Nums:units = "1" ;
@@ -4003,7 +4003,7 @@ variables:
 		Black_Sea_Bass8_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass8_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass8_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass8_ResN:_FillValue = 17345.84 ;
+		Black_Sea_Bass8_ResN:_FillValue = 19209.8 ;
 	double Black_Sea_Bass8_StructN(t, b, z) ;
 		Black_Sea_Bass8_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass8_StructN:units = "mg N" ;
@@ -4022,7 +4022,7 @@ variables:
 		Black_Sea_Bass8_StructN:b_dens = 1000000000. ;
 		Black_Sea_Bass8_StructN:i_conc = 200000000. ;
 		Black_Sea_Bass8_StructN:f_conc = 200000000. ;
-		Black_Sea_Bass8_StructN:_FillValue = 6545.6 ;
+		Black_Sea_Bass8_StructN:_FillValue = 7249.0 ;
 	double Black_Sea_Bass9_Nums(t, b, z) ;
 		Black_Sea_Bass9_Nums:bmtype = "tracer" ;
 		Black_Sea_Bass9_Nums:units = "1" ;
@@ -4060,7 +4060,7 @@ variables:
 		Black_Sea_Bass9_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass9_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass9_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass9_ResN:_FillValue = 18100.27 ;
+		Black_Sea_Bass9_ResN:_FillValue = 19359.4 ;
 	double Black_Sea_Bass9_StructN(t, b, z) ;
 		Black_Sea_Bass9_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass9_StructN:units = "mg N" ;
@@ -4079,7 +4079,7 @@ variables:
 		Black_Sea_Bass9_StructN:b_dens = 1000000000. ;
 		Black_Sea_Bass9_StructN:i_conc = 200000000. ;
 		Black_Sea_Bass9_StructN:f_conc = 200000000. ;
-		Black_Sea_Bass9_StructN:_FillValue = 6830.29 ;
+		Black_Sea_Bass9_StructN:_FillValue = 7305.4 ;
 	double Black_Sea_Bass_N(t, b, z) ;
 		Black_Sea_Bass_N:bmtype = "tracer" ;
 		Black_Sea_Bass_N:units = "mg N m-3" ;
@@ -4711,7 +4711,7 @@ variables:
 		BluefinTuna10_ResN:b_dens = 1000000000. ;
 		BluefinTuna10_ResN:i_conc = 200000000. ;
 		BluefinTuna10_ResN:f_conc = 200000000. ;
-		BluefinTuna10_ResN:_FillValue = 4929735.51 ;
+		BluefinTuna10_ResN:_FillValue = 5888768.6 ;
 	double BluefinTuna10_StructN(t, b, z) ;
 		BluefinTuna10_StructN:bmtype = "tracer" ;
 		BluefinTuna10_StructN:units = "mg N" ;
@@ -4730,7 +4730,7 @@ variables:
 		BluefinTuna10_StructN:b_dens = 1000000000. ;
 		BluefinTuna10_StructN:i_conc = 200000000. ;
 		BluefinTuna10_StructN:f_conc = 200000000. ;
-		BluefinTuna10_StructN:_FillValue = 1860277.55 ;
+		BluefinTuna10_StructN:_FillValue = 2222176.8 ;
 	double BluefinTuna1_Nums(t, b, z) ;
 		BluefinTuna1_Nums:bmtype = "tracer" ;
 		BluefinTuna1_Nums:units = "1" ;
@@ -4768,7 +4768,7 @@ variables:
 		BluefinTuna1_ResN:b_dens = 1000000000. ;
 		BluefinTuna1_ResN:i_conc = 200000000. ;
 		BluefinTuna1_ResN:f_conc = 200000000. ;
-		BluefinTuna1_ResN:_FillValue = 5917.11 ;
+		BluefinTuna1_ResN:_FillValue = 618768.1 ;
 	double BluefinTuna1_StructN(t, b, z) ;
 		BluefinTuna1_StructN:bmtype = "tracer" ;
 		BluefinTuna1_StructN:units = "mg N" ;
@@ -4787,7 +4787,7 @@ variables:
 		BluefinTuna1_StructN:b_dens = 1000000000. ;
 		BluefinTuna1_StructN:i_conc = 200000000. ;
 		BluefinTuna1_StructN:f_conc = 200000000. ;
-		BluefinTuna1_StructN:_FillValue = 2232.87 ;
+		BluefinTuna1_StructN:_FillValue = 233497.4 ;
 	double BluefinTuna2_Nums(t, b, z) ;
 		BluefinTuna2_Nums:bmtype = "tracer" ;
 		BluefinTuna2_Nums:units = "1" ;
@@ -4825,7 +4825,7 @@ variables:
 		BluefinTuna2_ResN:b_dens = 1000000000. ;
 		BluefinTuna2_ResN:i_conc = 200000000. ;
 		BluefinTuna2_ResN:f_conc = 200000000. ;
-		BluefinTuna2_ResN:_FillValue = 213226.39 ;
+		BluefinTuna2_ResN:_FillValue = 1953000.0 ;
 	double BluefinTuna2_StructN(t, b, z) ;
 		BluefinTuna2_StructN:bmtype = "tracer" ;
 		BluefinTuna2_StructN:units = "mg N" ;
@@ -4844,7 +4844,7 @@ variables:
 		BluefinTuna2_StructN:b_dens = 1000000000. ;
 		BluefinTuna2_StructN:i_conc = 200000000. ;
 		BluefinTuna2_StructN:f_conc = 200000000. ;
-		BluefinTuna2_StructN:_FillValue = 80462.79 ;
+		BluefinTuna2_StructN:_FillValue = 736981.1 ;
 	double BluefinTuna3_Nums(t, b, z) ;
 		BluefinTuna3_Nums:bmtype = "tracer" ;
 		BluefinTuna3_Nums:units = "1" ;
@@ -4882,7 +4882,7 @@ variables:
 		BluefinTuna3_ResN:b_dens = 1000000000. ;
 		BluefinTuna3_ResN:i_conc = 200000000. ;
 		BluefinTuna3_ResN:f_conc = 200000000. ;
-		BluefinTuna3_ResN:_FillValue = 759173.43 ;
+		BluefinTuna3_ResN:_FillValue = 3262912.3 ;
 	double BluefinTuna3_StructN(t, b, z) ;
 		BluefinTuna3_StructN:bmtype = "tracer" ;
 		BluefinTuna3_StructN:units = "mg N" ;
@@ -4901,7 +4901,7 @@ variables:
 		BluefinTuna3_StructN:b_dens = 1000000000. ;
 		BluefinTuna3_StructN:i_conc = 200000000. ;
 		BluefinTuna3_StructN:f_conc = 200000000. ;
-		BluefinTuna3_StructN:_FillValue = 286480.54 ;
+		BluefinTuna3_StructN:_FillValue = 1231287.7 ;
 	double BluefinTuna4_Nums(t, b, z) ;
 		BluefinTuna4_Nums:bmtype = "tracer" ;
 		BluefinTuna4_Nums:units = "1" ;
@@ -4939,7 +4939,7 @@ variables:
 		BluefinTuna4_ResN:b_dens = 1000000000. ;
 		BluefinTuna4_ResN:i_conc = 200000000. ;
 		BluefinTuna4_ResN:f_conc = 200000000. ;
-		BluefinTuna4_ResN:_FillValue = 1503014.15 ;
+		BluefinTuna4_ResN:_FillValue = 4251068.6 ;
 	double BluefinTuna4_StructN(t, b, z) ;
 		BluefinTuna4_StructN:bmtype = "tracer" ;
 		BluefinTuna4_StructN:units = "mg N" ;
@@ -4958,7 +4958,7 @@ variables:
 		BluefinTuna4_StructN:b_dens = 1000000000. ;
 		BluefinTuna4_StructN:i_conc = 200000000. ;
 		BluefinTuna4_StructN:f_conc = 200000000. ;
-		BluefinTuna4_StructN:_FillValue = 567175.15 ;
+		BluefinTuna4_StructN:_FillValue = 1604176.8 ;
 	double BluefinTuna5_Nums(t, b, z) ;
 		BluefinTuna5_Nums:bmtype = "tracer" ;
 		BluefinTuna5_Nums:units = "1" ;
@@ -4996,7 +4996,7 @@ variables:
 		BluefinTuna5_ResN:b_dens = 1000000000. ;
 		BluefinTuna5_ResN:i_conc = 200000000. ;
 		BluefinTuna5_ResN:f_conc = 200000000. ;
-		BluefinTuna5_ResN:_FillValue = 2290896.04 ;
+		BluefinTuna5_ResN:_FillValue = 4913893.0 ;
 	double BluefinTuna5_StructN(t, b, z) ;
 		BluefinTuna5_StructN:bmtype = "tracer" ;
 		BluefinTuna5_StructN:units = "mg N" ;
@@ -5015,7 +5015,7 @@ variables:
 		BluefinTuna5_StructN:b_dens = 1000000000. ;
 		BluefinTuna5_StructN:i_conc = 200000000. ;
 		BluefinTuna5_StructN:f_conc = 200000000. ;
-		BluefinTuna5_StructN:_FillValue = 864489.07 ;
+		BluefinTuna5_StructN:_FillValue = 1854299.2 ;
 	double BluefinTuna6_Nums(t, b, z) ;
 		BluefinTuna6_Nums:bmtype = "tracer" ;
 		BluefinTuna6_Nums:units = "1" ;
@@ -5053,7 +5053,7 @@ variables:
 		BluefinTuna6_ResN:b_dens = 1000000000. ;
 		BluefinTuna6_ResN:i_conc = 200000000. ;
 		BluefinTuna6_ResN:f_conc = 200000000. ;
-		BluefinTuna6_ResN:_FillValue = 3025108.4 ;
+		BluefinTuna6_ResN:_FillValue = 5332757.0 ;
 	double BluefinTuna6_StructN(t, b, z) ;
 		BluefinTuna6_StructN:bmtype = "tracer" ;
 		BluefinTuna6_StructN:units = "mg N" ;
@@ -5072,7 +5072,7 @@ variables:
 		BluefinTuna6_StructN:b_dens = 1000000000. ;
 		BluefinTuna6_StructN:i_conc = 200000000. ;
 		BluefinTuna6_StructN:f_conc = 200000000. ;
-		BluefinTuna6_StructN:_FillValue = 1141550.34 ;
+		BluefinTuna6_StructN:_FillValue = 2012361.1 ;
 	double BluefinTuna7_Nums(t, b, z) ;
 		BluefinTuna7_Nums:bmtype = "tracer" ;
 		BluefinTuna7_Nums:units = "1" ;
@@ -5110,7 +5110,7 @@ variables:
 		BluefinTuna7_ResN:b_dens = 1000000000. ;
 		BluefinTuna7_ResN:i_conc = 200000000. ;
 		BluefinTuna7_ResN:f_conc = 200000000. ;
-		BluefinTuna7_ResN:_FillValue = 3660000.6 ;
+		BluefinTuna7_ResN:_FillValue = 5589043.0 ;
 	double BluefinTuna7_StructN(t, b, z) ;
 		BluefinTuna7_StructN:bmtype = "tracer" ;
 		BluefinTuna7_StructN:units = "mg N" ;
@@ -5129,7 +5129,7 @@ variables:
 		BluefinTuna7_StructN:b_dens = 1000000000. ;
 		BluefinTuna7_StructN:i_conc = 200000000. ;
 		BluefinTuna7_StructN:f_conc = 200000000. ;
-		BluefinTuna7_StructN:_FillValue = 1381132.3 ;
+		BluefinTuna7_StructN:_FillValue = 2109072.8 ;
 	double BluefinTuna8_Nums(t, b, z) ;
 		BluefinTuna8_Nums:bmtype = "tracer" ;
 		BluefinTuna8_Nums:units = "1" ;
@@ -5167,7 +5167,7 @@ variables:
 		BluefinTuna8_ResN:b_dens = 1000000000. ;
 		BluefinTuna8_ResN:i_conc = 200000000. ;
 		BluefinTuna8_ResN:f_conc = 200000000. ;
-		BluefinTuna8_ResN:_FillValue = 4183666.51 ;
+		BluefinTuna8_ResN:_FillValue = 5743042.1 ;
 	double BluefinTuna8_StructN(t, b, z) ;
 		BluefinTuna8_StructN:bmtype = "tracer" ;
 		BluefinTuna8_StructN:units = "mg N" ;
@@ -5186,7 +5186,7 @@ variables:
 		BluefinTuna8_StructN:b_dens = 1000000000. ;
 		BluefinTuna8_StructN:i_conc = 200000000. ;
 		BluefinTuna8_StructN:f_conc = 200000000. ;
-		BluefinTuna8_StructN:_FillValue = 1578742.08 ;
+		BluefinTuna8_StructN:_FillValue = 2167185.7 ;
 	double BluefinTuna9_Nums(t, b, z) ;
 		BluefinTuna9_Nums:bmtype = "tracer" ;
 		BluefinTuna9_Nums:units = "1" ;
@@ -5224,7 +5224,7 @@ variables:
 		BluefinTuna9_ResN:b_dens = 1000000000. ;
 		BluefinTuna9_ResN:i_conc = 200000000. ;
 		BluefinTuna9_ResN:f_conc = 200000000. ;
-		BluefinTuna9_ResN:_FillValue = 4602255.53 ;
+		BluefinTuna9_ResN:_FillValue = 5834626.6 ;
 	double BluefinTuna9_StructN(t, b, z) ;
 		BluefinTuna9_StructN:bmtype = "tracer" ;
 		BluefinTuna9_StructN:units = "mg N" ;
@@ -5243,7 +5243,7 @@ variables:
 		BluefinTuna9_StructN:b_dens = 1000000000. ;
 		BluefinTuna9_StructN:i_conc = 200000000. ;
 		BluefinTuna9_StructN:f_conc = 200000000. ;
-		BluefinTuna9_StructN:_FillValue = 1736700.2 ;
+		BluefinTuna9_StructN:_FillValue = 2201745.9 ;
 	double BluefinTuna_N(t, b, z) ;
 		BluefinTuna_N:bmtype = "tracer" ;
 		BluefinTuna_N:units = "mg N m-3" ;
@@ -5293,7 +5293,7 @@ variables:
 		Bluefish10_ResN:b_dens = 1000000000. ;
 		Bluefish10_ResN:i_conc = 200000000. ;
 		Bluefish10_ResN:f_conc = 200000000. ;
-		Bluefish10_ResN:_FillValue = 24682.18 ;
+		Bluefish10_ResN:_FillValue = 21650.7 ;
 	double Bluefish10_StructN(t, b, z) ;
 		Bluefish10_StructN:bmtype = "tracer" ;
 		Bluefish10_StructN:units = "mg N" ;
@@ -5312,7 +5312,7 @@ variables:
 		Bluefish10_StructN:b_dens = 1000000000. ;
 		Bluefish10_StructN:i_conc = 200000000. ;
 		Bluefish10_StructN:f_conc = 200000000. ;
-		Bluefish10_StructN:_FillValue = 9314.03 ;
+		Bluefish10_StructN:_FillValue = 8170.1 ;
 	double Bluefish1_Nums(t, b, z) ;
 		Bluefish1_Nums:bmtype = "tracer" ;
 		Bluefish1_Nums:units = "1" ;
@@ -5350,7 +5350,7 @@ variables:
 		Bluefish1_ResN:b_dens = 1000000000. ;
 		Bluefish1_ResN:i_conc = 200000000. ;
 		Bluefish1_ResN:f_conc = 200000000. ;
-		Bluefish1_ResN:_FillValue = 265.87 ;
+		Bluefish1_ResN:_FillValue = 996.3 ;
 	double Bluefish1_StructN(t, b, z) ;
 		Bluefish1_StructN:bmtype = "tracer" ;
 		Bluefish1_StructN:units = "mg N" ;
@@ -5369,7 +5369,7 @@ variables:
 		Bluefish1_StructN:b_dens = 1000000000. ;
 		Bluefish1_StructN:i_conc = 200000000. ;
 		Bluefish1_StructN:f_conc = 200000000. ;
-		Bluefish1_StructN:_FillValue = 100.33 ;
+		Bluefish1_StructN:_FillValue = 376.0 ;
 	double Bluefish2_Nums(t, b, z) ;
 		Bluefish2_Nums:bmtype = "tracer" ;
 		Bluefish2_Nums:units = "1" ;
@@ -5407,7 +5407,7 @@ variables:
 		Bluefish2_ResN:b_dens = 1000000000. ;
 		Bluefish2_ResN:i_conc = 200000000. ;
 		Bluefish2_ResN:f_conc = 200000000. ;
-		Bluefish2_ResN:_FillValue = 1506.58 ;
+		Bluefish2_ResN:_FillValue = 3465.7 ;
 	double Bluefish2_StructN(t, b, z) ;
 		Bluefish2_StructN:bmtype = "tracer" ;
 		Bluefish2_StructN:units = "mg N" ;
@@ -5426,7 +5426,7 @@ variables:
 		Bluefish2_StructN:b_dens = 1000000000. ;
 		Bluefish2_StructN:i_conc = 200000000. ;
 		Bluefish2_StructN:f_conc = 200000000. ;
-		Bluefish2_StructN:_FillValue = 568.52 ;
+		Bluefish2_StructN:_FillValue = 1307.8 ;
 	double Bluefish3_Nums(t, b, z) ;
 		Bluefish3_Nums:bmtype = "tracer" ;
 		Bluefish3_Nums:units = "1" ;
@@ -5464,7 +5464,7 @@ variables:
 		Bluefish3_ResN:b_dens = 1000000000. ;
 		Bluefish3_ResN:i_conc = 200000000. ;
 		Bluefish3_ResN:f_conc = 200000000. ;
-		Bluefish3_ResN:_FillValue = 3742.52 ;
+		Bluefish3_ResN:_FillValue = 6716.4 ;
 	double Bluefish3_StructN(t, b, z) ;
 		Bluefish3_StructN:bmtype = "tracer" ;
 		Bluefish3_StructN:units = "mg N" ;
@@ -5483,7 +5483,7 @@ variables:
 		Bluefish3_StructN:b_dens = 1000000000. ;
 		Bluefish3_StructN:i_conc = 200000000. ;
 		Bluefish3_StructN:f_conc = 200000000. ;
-		Bluefish3_StructN:_FillValue = 1412.27 ;
+		Bluefish3_StructN:_FillValue = 2534.5 ;
 	double Bluefish4_Nums(t, b, z) ;
 		Bluefish4_Nums:bmtype = "tracer" ;
 		Bluefish4_Nums:units = "1" ;
@@ -5521,7 +5521,7 @@ variables:
 		Bluefish4_ResN:b_dens = 1000000000. ;
 		Bluefish4_ResN:i_conc = 200000000. ;
 		Bluefish4_ResN:f_conc = 200000000. ;
-		Bluefish4_ResN:_FillValue = 6669.78 ;
+		Bluefish4_ResN:_FillValue = 10063.4 ;
 	double Bluefish4_StructN(t, b, z) ;
 		Bluefish4_StructN:bmtype = "tracer" ;
 		Bluefish4_StructN:units = "mg N" ;
@@ -5540,7 +5540,7 @@ variables:
 		Bluefish4_StructN:b_dens = 1000000000. ;
 		Bluefish4_StructN:i_conc = 200000000. ;
 		Bluefish4_StructN:f_conc = 200000000. ;
-		Bluefish4_StructN:_FillValue = 2516.9 ;
+		Bluefish4_StructN:_FillValue = 3797.5 ;
 	double Bluefish5_Nums(t, b, z) ;
 		Bluefish5_Nums:bmtype = "tracer" ;
 		Bluefish5_Nums:units = "1" ;
@@ -5578,7 +5578,7 @@ variables:
 		Bluefish5_ResN:b_dens = 1000000000. ;
 		Bluefish5_ResN:i_conc = 200000000. ;
 		Bluefish5_ResN:f_conc = 200000000. ;
-		Bluefish5_ResN:_FillValue = 9950.51 ;
+		Bluefish5_ResN:_FillValue = 13109.1 ;
 	double Bluefish5_StructN(t, b, z) ;
 		Bluefish5_StructN:bmtype = "tracer" ;
 		Bluefish5_StructN:units = "mg N" ;
@@ -5597,7 +5597,7 @@ variables:
 		Bluefish5_StructN:b_dens = 1000000000. ;
 		Bluefish5_StructN:i_conc = 200000000. ;
 		Bluefish5_StructN:f_conc = 200000000. ;
-		Bluefish5_StructN:_FillValue = 3754.91 ;
+		Bluefish5_StructN:_FillValue = 4946.8 ;
 	double Bluefish6_Nums(t, b, z) ;
 		Bluefish6_Nums:bmtype = "tracer" ;
 		Bluefish6_Nums:units = "1" ;
@@ -5635,7 +5635,7 @@ variables:
 		Bluefish6_ResN:b_dens = 1000000000. ;
 		Bluefish6_ResN:i_conc = 200000000. ;
 		Bluefish6_ResN:f_conc = 200000000. ;
-		Bluefish6_ResN:_FillValue = 13309.41 ;
+		Bluefish6_ResN:_FillValue = 15689.1 ;
 	double Bluefish6_StructN(t, b, z) ;
 		Bluefish6_StructN:bmtype = "tracer" ;
 		Bluefish6_StructN:units = "mg N" ;
@@ -5654,7 +5654,7 @@ variables:
 		Bluefish6_StructN:b_dens = 1000000000. ;
 		Bluefish6_StructN:i_conc = 200000000. ;
 		Bluefish6_StructN:f_conc = 200000000. ;
-		Bluefish6_StructN:_FillValue = 5022.42 ;
+		Bluefish6_StructN:_FillValue = 5920.4 ;
 	double Bluefish7_Nums(t, b, z) ;
 		Bluefish7_Nums:bmtype = "tracer" ;
 		Bluefish7_Nums:units = "1" ;
@@ -5692,7 +5692,7 @@ variables:
 		Bluefish7_ResN:b_dens = 1000000000. ;
 		Bluefish7_ResN:i_conc = 200000000. ;
 		Bluefish7_ResN:f_conc = 200000000. ;
-		Bluefish7_ResN:_FillValue = 16554.05 ;
+		Bluefish7_ResN:_FillValue = 17778.8 ;
 	double Bluefish7_StructN(t, b, z) ;
 		Bluefish7_StructN:bmtype = "tracer" ;
 		Bluefish7_StructN:units = "mg N" ;
@@ -5711,7 +5711,7 @@ variables:
 		Bluefish7_StructN:b_dens = 1000000000. ;
 		Bluefish7_StructN:i_conc = 200000000. ;
 		Bluefish7_StructN:f_conc = 200000000. ;
-		Bluefish7_StructN:_FillValue = 6246.81 ;
+		Bluefish7_StructN:_FillValue = 6709.0 ;
 	double Bluefish8_Nums(t, b, z) ;
 		Bluefish8_Nums:bmtype = "tracer" ;
 		Bluefish8_Nums:units = "1" ;
@@ -5749,7 +5749,7 @@ variables:
 		Bluefish8_ResN:b_dens = 1000000000. ;
 		Bluefish8_ResN:i_conc = 200000000. ;
 		Bluefish8_ResN:f_conc = 200000000. ;
-		Bluefish8_ResN:_FillValue = 19565.77 ;
+		Bluefish8_ResN:_FillValue = 19421.9 ;
 	double Bluefish8_StructN(t, b, z) ;
 		Bluefish8_StructN:bmtype = "tracer" ;
 		Bluefish8_StructN:units = "mg N" ;
@@ -5768,7 +5768,7 @@ variables:
 		Bluefish8_StructN:b_dens = 1000000000. ;
 		Bluefish8_StructN:i_conc = 200000000. ;
 		Bluefish8_StructN:f_conc = 200000000. ;
-		Bluefish8_StructN:_FillValue = 7383.31 ;
+		Bluefish8_StructN:_FillValue = 7329.0 ;
 	double Bluefish9_Nums(t, b, z) ;
 		Bluefish9_Nums:bmtype = "tracer" ;
 		Bluefish9_Nums:units = "1" ;
@@ -5806,7 +5806,7 @@ variables:
 		Bluefish9_ResN:b_dens = 1000000000. ;
 		Bluefish9_ResN:i_conc = 200000000. ;
 		Bluefish9_ResN:f_conc = 200000000. ;
-		Bluefish9_ResN:_FillValue = 22282.55 ;
+		Bluefish9_ResN:_FillValue = 20688.3 ;
 	double Bluefish9_StructN(t, b, z) ;
 		Bluefish9_StructN:bmtype = "tracer" ;
 		Bluefish9_StructN:units = "mg N" ;
@@ -5825,7 +5825,7 @@ variables:
 		Bluefish9_StructN:b_dens = 1000000000. ;
 		Bluefish9_StructN:i_conc = 200000000. ;
 		Bluefish9_StructN:f_conc = 200000000. ;
-		Bluefish9_StructN:_FillValue = 8408.51 ;
+		Bluefish9_StructN:_FillValue = 7806.9 ;
 	double Bluefish_N(t, b, z) ;
 		Bluefish_N:bmtype = "tracer" ;
 		Bluefish_N:units = "mg N m-3" ;
@@ -6507,7 +6507,7 @@ variables:
 		Cod10_ResN:b_dens = 1000000000. ;
 		Cod10_ResN:i_conc = 200000000. ;
 		Cod10_ResN:f_conc = 200000000. ;
-		Cod10_ResN:_FillValue = 175744.77 ;
+		Cod10_ResN:_FillValue = 234355.0 ;
 	double Cod10_StructN(t, b, z) ;
 		Cod10_StructN:bmtype = "tracer" ;
 		Cod10_StructN:units = "mg N" ;
@@ -6526,7 +6526,7 @@ variables:
 		Cod10_StructN:b_dens = 1000000000. ;
 		Cod10_StructN:i_conc = 200000000. ;
 		Cod10_StructN:f_conc = 200000000. ;
-		Cod10_StructN:_FillValue = 66318.78 ;
+		Cod10_StructN:_FillValue = 88435.8 ;
 	double Cod1_Nums(t, b, z) ;
 		Cod1_Nums:bmtype = "tracer" ;
 		Cod1_Nums:units = "1" ;
@@ -6564,7 +6564,7 @@ variables:
 		Cod1_ResN:b_dens = 1000000000. ;
 		Cod1_ResN:i_conc = 200000000. ;
 		Cod1_ResN:f_conc = 200000000. ;
-		Cod1_ResN:_FillValue = 199.73 ;
+		Cod1_ResN:_FillValue = 5213.5 ;
 	double Cod1_StructN(t, b, z) ;
 		Cod1_StructN:bmtype = "tracer" ;
 		Cod1_StructN:units = "mg N" ;
@@ -6583,7 +6583,7 @@ variables:
 		Cod1_StructN:b_dens = 1000000000. ;
 		Cod1_StructN:i_conc = 200000000. ;
 		Cod1_StructN:f_conc = 200000000. ;
-		Cod1_StructN:_FillValue = 75.37 ;
+		Cod1_StructN:_FillValue = 1967.3 ;
 	double Cod2_Nums(t, b, z) ;
 		Cod2_Nums:bmtype = "tracer" ;
 		Cod2_Nums:units = "1" ;
@@ -6621,7 +6621,7 @@ variables:
 		Cod2_ResN:b_dens = 1000000000. ;
 		Cod2_ResN:i_conc = 200000000. ;
 		Cod2_ResN:f_conc = 200000000. ;
-		Cod2_ResN:_FillValue = 5213.45 ;
+		Cod2_ResN:_FillValue = 28285.8 ;
 	double Cod2_StructN(t, b, z) ;
 		Cod2_StructN:bmtype = "tracer" ;
 		Cod2_StructN:units = "mg N" ;
@@ -6640,7 +6640,7 @@ variables:
 		Cod2_StructN:b_dens = 1000000000. ;
 		Cod2_StructN:i_conc = 200000000. ;
 		Cod2_StructN:f_conc = 200000000. ;
-		Cod2_StructN:_FillValue = 1967.34 ;
+		Cod2_StructN:_FillValue = 10673.9 ;
 	double Cod3_Nums(t, b, z) ;
 		Cod3_Nums:bmtype = "tracer" ;
 		Cod3_Nums:units = "1" ;
@@ -6678,7 +6678,7 @@ variables:
 		Cod3_ResN:b_dens = 1000000000. ;
 		Cod3_ResN:i_conc = 200000000. ;
 		Cod3_ResN:f_conc = 200000000. ;
-		Cod3_ResN:_FillValue = 18745.01 ;
+		Cod3_ResN:_FillValue = 63558.0 ;
 	double Cod3_StructN(t, b, z) ;
 		Cod3_StructN:bmtype = "tracer" ;
 		Cod3_StructN:units = "mg N" ;
@@ -6697,7 +6697,7 @@ variables:
 		Cod3_StructN:b_dens = 1000000000. ;
 		Cod3_StructN:i_conc = 200000000. ;
 		Cod3_StructN:f_conc = 200000000. ;
-		Cod3_StructN:_FillValue = 7073.59 ;
+		Cod3_StructN:_FillValue = 23984.1 ;
 	double Cod4_Nums(t, b, z) ;
 		Cod4_Nums:bmtype = "tracer" ;
 		Cod4_Nums:units = "1" ;
@@ -6735,7 +6735,7 @@ variables:
 		Cod4_ResN:b_dens = 1000000000. ;
 		Cod4_ResN:i_conc = 200000000. ;
 		Cod4_ResN:f_conc = 200000000. ;
-		Cod4_ResN:_FillValue = 39189.15 ;
+		Cod4_ResN:_FillValue = 101805.1 ;
 	double Cod4_StructN(t, b, z) ;
 		Cod4_StructN:bmtype = "tracer" ;
 		Cod4_StructN:units = "mg N" ;
@@ -6754,7 +6754,7 @@ variables:
 		Cod4_StructN:b_dens = 1000000000. ;
 		Cod4_StructN:i_conc = 200000000. ;
 		Cod4_StructN:f_conc = 200000000. ;
-		Cod4_StructN:_FillValue = 14788.36 ;
+		Cod4_StructN:_FillValue = 38417.0 ;
 	double Cod5_Nums(t, b, z) ;
 		Cod5_Nums:bmtype = "tracer" ;
 		Cod5_Nums:units = "1" ;
@@ -6792,7 +6792,7 @@ variables:
 		Cod5_ResN:b_dens = 1000000000. ;
 		Cod5_ResN:i_conc = 200000000. ;
 		Cod5_ResN:f_conc = 200000000. ;
-		Cod5_ResN:_FillValue = 63557.97 ;
+		Cod5_ResN:_FillValue = 137164.5 ;
 	double Cod5_StructN(t, b, z) ;
 		Cod5_StructN:bmtype = "tracer" ;
 		Cod5_StructN:units = "mg N" ;
@@ -6811,7 +6811,7 @@ variables:
 		Cod5_StructN:b_dens = 1000000000. ;
 		Cod5_StructN:i_conc = 200000000. ;
 		Cod5_StructN:f_conc = 200000000. ;
-		Cod5_StructN:_FillValue = 23984.14 ;
+		Cod5_StructN:_FillValue = 51760.2 ;
 	double Cod6_Nums(t, b, z) ;
 		Cod6_Nums:bmtype = "tracer" ;
 		Cod6_Nums:units = "1" ;
@@ -6849,7 +6849,7 @@ variables:
 		Cod6_ResN:b_dens = 1000000000. ;
 		Cod6_ResN:i_conc = 200000000. ;
 		Cod6_ResN:f_conc = 200000000. ;
-		Cod6_ResN:_FillValue = 89166.86 ;
+		Cod6_ResN:_FillValue = 167095.2 ;
 	double Cod6_StructN(t, b, z) ;
 		Cod6_StructN:bmtype = "tracer" ;
 		Cod6_StructN:units = "mg N" ;
@@ -6868,7 +6868,7 @@ variables:
 		Cod6_StructN:b_dens = 1000000000. ;
 		Cod6_StructN:i_conc = 200000000. ;
 		Cod6_StructN:f_conc = 200000000. ;
-		Cod6_StructN:_FillValue = 33647.87 ;
+		Cod6_StructN:_FillValue = 63054.8 ;
 	double Cod7_Nums(t, b, z) ;
 		Cod7_Nums:bmtype = "tracer" ;
 		Cod7_Nums:units = "1" ;
@@ -6906,7 +6906,7 @@ variables:
 		Cod7_ResN:b_dens = 1000000000. ;
 		Cod7_ResN:i_conc = 200000000. ;
 		Cod7_ResN:f_conc = 200000000. ;
-		Cod7_ResN:_FillValue = 114094.4 ;
+		Cod7_ResN:_FillValue = 191109.9 ;
 	double Cod7_StructN(t, b, z) ;
 		Cod7_StructN:bmtype = "tracer" ;
 		Cod7_StructN:units = "mg N" ;
@@ -6925,7 +6925,7 @@ variables:
 		Cod7_StructN:b_dens = 1000000000. ;
 		Cod7_StructN:i_conc = 200000000. ;
 		Cod7_StructN:f_conc = 200000000. ;
-		Cod7_StructN:_FillValue = 43054.49 ;
+		Cod7_StructN:_FillValue = 72116.9 ;
 	double Cod8_Nums(t, b, z) ;
 		Cod8_Nums:bmtype = "tracer" ;
 		Cod8_Nums:units = "1" ;
@@ -6963,7 +6963,7 @@ variables:
 		Cod8_ResN:b_dens = 1000000000. ;
 		Cod8_ResN:i_conc = 200000000. ;
 		Cod8_ResN:f_conc = 200000000. ;
-		Cod8_ResN:_FillValue = 137164.45 ;
+		Cod8_ResN:_FillValue = 209726.7 ;
 	double Cod8_StructN(t, b, z) ;
 		Cod8_StructN:bmtype = "tracer" ;
 		Cod8_StructN:units = "mg N" ;
@@ -6982,7 +6982,7 @@ variables:
 		Cod8_StructN:b_dens = 1000000000. ;
 		Cod8_StructN:i_conc = 200000000. ;
 		Cod8_StructN:f_conc = 200000000. ;
-		Cod8_StructN:_FillValue = 51760.17 ;
+		Cod8_StructN:_FillValue = 79142.1 ;
 	double Cod9_Nums(t, b, z) ;
 		Cod9_Nums:bmtype = "tracer" ;
 		Cod9_Nums:units = "1" ;
@@ -7020,7 +7020,7 @@ variables:
 		Cod9_ResN:b_dens = 1000000000. ;
 		Cod9_ResN:i_conc = 200000000. ;
 		Cod9_ResN:f_conc = 200000000. ;
-		Cod9_ResN:_FillValue = 157780.44 ;
+		Cod9_ResN:_FillValue = 223832.5 ;
 	double Cod9_StructN(t, b, z) ;
 		Cod9_StructN:bmtype = "tracer" ;
 		Cod9_StructN:units = "mg N" ;
@@ -7039,7 +7039,7 @@ variables:
 		Cod9_StructN:b_dens = 1000000000. ;
 		Cod9_StructN:i_conc = 200000000. ;
 		Cod9_StructN:f_conc = 200000000. ;
-		Cod9_StructN:_FillValue = 59539.79 ;
+		Cod9_StructN:_FillValue = 84465.1 ;
 	double Cod_N(t, b, z) ;
 		Cod_N:bmtype = "tracer" ;
 		Cod_N:units = "mg N m-3" ;
@@ -7826,7 +7826,7 @@ variables:
 		Drums_Croakers10_ResN:b_dens = 1000000000. ;
 		Drums_Croakers10_ResN:i_conc = 200000000. ;
 		Drums_Croakers10_ResN:f_conc = 200000000. ;
-		Drums_Croakers10_ResN:_FillValue = 9905.62 ;
+		Drums_Croakers10_ResN:_FillValue = 9911.6 ;
 	double Drums_Croakers10_StructN(t, b, z) ;
 		Drums_Croakers10_StructN:bmtype = "tracer" ;
 		Drums_Croakers10_StructN:units = "mg N" ;
@@ -7845,7 +7845,7 @@ variables:
 		Drums_Croakers10_StructN:b_dens = 1000000000. ;
 		Drums_Croakers10_StructN:i_conc = 200000000. ;
 		Drums_Croakers10_StructN:f_conc = 200000000. ;
-		Drums_Croakers10_StructN:_FillValue = 3737.97 ;
+		Drums_Croakers10_StructN:_FillValue = 3740.2 ;
 	double Drums_Croakers1_Nums(t, b, z) ;
 		Drums_Croakers1_Nums:bmtype = "tracer" ;
 		Drums_Croakers1_Nums:units = "1" ;
@@ -7883,7 +7883,7 @@ variables:
 		Drums_Croakers1_ResN:b_dens = 1000000000. ;
 		Drums_Croakers1_ResN:i_conc = 200000000. ;
 		Drums_Croakers1_ResN:f_conc = 200000000. ;
-		Drums_Croakers1_ResN:_FillValue = 466.66 ;
+		Drums_Croakers1_ResN:_FillValue = 4003.4 ;
 	double Drums_Croakers1_StructN(t, b, z) ;
 		Drums_Croakers1_StructN:bmtype = "tracer" ;
 		Drums_Croakers1_StructN:units = "mg N" ;
@@ -7902,7 +7902,7 @@ variables:
 		Drums_Croakers1_StructN:b_dens = 1000000000. ;
 		Drums_Croakers1_StructN:i_conc = 200000000. ;
 		Drums_Croakers1_StructN:f_conc = 200000000. ;
-		Drums_Croakers1_StructN:_FillValue = 176.1 ;
+		Drums_Croakers1_StructN:_FillValue = 1510.7;
 	double Drums_Croakers2_Nums(t, b, z) ;
 		Drums_Croakers2_Nums:bmtype = "tracer" ;
 		Drums_Croakers2_Nums:units = "1" ;
@@ -7940,7 +7940,7 @@ variables:
 		Drums_Croakers2_ResN:b_dens = 1000000000. ;
 		Drums_Croakers2_ResN:i_conc = 200000000. ;
 		Drums_Croakers2_ResN:f_conc = 200000000. ;
-		Drums_Croakers2_ResN:_FillValue = 4003.41 ;
+		Drums_Croakers2_ResN:_FillValue = 8023.6 ;
 	double Drums_Croakers2_StructN(t, b, z) ;
 		Drums_Croakers2_StructN:bmtype = "tracer" ;
 		Drums_Croakers2_StructN:units = "mg N" ;
@@ -7959,7 +7959,7 @@ variables:
 		Drums_Croakers2_StructN:b_dens = 1000000000. ;
 		Drums_Croakers2_StructN:i_conc = 200000000. ;
 		Drums_Croakers2_StructN:f_conc = 200000000. ;
-		Drums_Croakers2_StructN:_FillValue = 1510.72 ;
+		Drums_Croakers2_StructN:_FillValue = 3027.8 ;
 	double Drums_Croakers3_Nums(t, b, z) ;
 		Drums_Croakers3_Nums:bmtype = "tracer" ;
 		Drums_Croakers3_Nums:units = "1" ;
@@ -7997,7 +7997,7 @@ variables:
 		Drums_Croakers3_ResN:b_dens = 1000000000. ;
 		Drums_Croakers3_ResN:i_conc = 200000000. ;
 		Drums_Croakers3_ResN:f_conc = 200000000. ;
-		Drums_Croakers3_ResN:_FillValue = 7071.1 ;
+		Drums_Croakers3_ResN:_FillValue = 9393.4 ;
 	double Drums_Croakers3_StructN(t, b, z) ;
 		Drums_Croakers3_StructN:bmtype = "tracer" ;
 		Drums_Croakers3_StructN:units = "mg N" ;
@@ -8016,7 +8016,7 @@ variables:
 		Drums_Croakers3_StructN:b_dens = 1000000000. ;
 		Drums_Croakers3_StructN:i_conc = 200000000. ;
 		Drums_Croakers3_StructN:f_conc = 200000000. ;
-		Drums_Croakers3_StructN:_FillValue = 2668.34 ;
+		Drums_Croakers3_StructN:_FillValue = 3544.7 ;
 	double Drums_Croakers4_Nums(t, b, z) ;
 		Drums_Croakers4_Nums:bmtype = "tracer" ;
 		Drums_Croakers4_Nums:units = "1" ;
@@ -8054,7 +8054,7 @@ variables:
 		Drums_Croakers4_ResN:b_dens = 1000000000. ;
 		Drums_Croakers4_ResN:i_conc = 200000000. ;
 		Drums_Croakers4_ResN:f_conc = 200000000. ;
-		Drums_Croakers4_ResN:_FillValue = 8674.77 ;
+		Drums_Croakers4_ResN:_FillValue = 9774.7 ;
 	double Drums_Croakers4_StructN(t, b, z) ;
 		Drums_Croakers4_StructN:bmtype = "tracer" ;
 		Drums_Croakers4_StructN:units = "mg N" ;
@@ -8073,7 +8073,7 @@ variables:
 		Drums_Croakers4_StructN:b_dens = 1000000000. ;
 		Drums_Croakers4_StructN:i_conc = 200000000. ;
 		Drums_Croakers4_StructN:f_conc = 200000000. ;
-		Drums_Croakers4_StructN:_FillValue = 3273.5 ;
+		Drums_Croakers4_StructN:_FillValue = 3688.6 ;
 	double Drums_Croakers5_Nums(t, b, z) ;
 		Drums_Croakers5_Nums:bmtype = "tracer" ;
 		Drums_Croakers5_Nums:units = "1" ;
@@ -8111,7 +8111,7 @@ variables:
 		Drums_Croakers5_ResN:b_dens = 1000000000. ;
 		Drums_Croakers5_ResN:i_conc = 200000000. ;
 		Drums_Croakers5_ResN:f_conc = 200000000. ;
-		Drums_Croakers5_ResN:_FillValue = 9393.43 ;
+		Drums_Croakers5_ResN:_FillValue = 9875.8 ;
 	double Drums_Croakers5_StructN(t, b, z) ;
 		Drums_Croakers5_StructN:bmtype = "tracer" ;
 		Drums_Croakers5_StructN:units = "mg N" ;
@@ -8130,7 +8130,7 @@ variables:
 		Drums_Croakers5_StructN:b_dens = 1000000000. ;
 		Drums_Croakers5_StructN:i_conc = 200000000. ;
 		Drums_Croakers5_StructN:f_conc = 200000000. ;
-		Drums_Croakers5_StructN:_FillValue = 3544.69 ;
+		Drums_Croakers5_StructN:_FillValue = 3726.7 ;
 	double Drums_Croakers6_Nums(t, b, z) ;
 		Drums_Croakers6_Nums:bmtype = "tracer" ;
 		Drums_Croakers6_Nums:units = "1" ;
@@ -8168,7 +8168,7 @@ variables:
 		Drums_Croakers6_ResN:b_dens = 1000000000. ;
 		Drums_Croakers6_ResN:i_conc = 200000000. ;
 		Drums_Croakers6_ResN:f_conc = 200000000. ;
-		Drums_Croakers6_ResN:_FillValue = 9697.83 ;
+		Drums_Croakers6_ResN:_FillValue = 9902.2 ;
 	double Drums_Croakers6_StructN(t, b, z) ;
 		Drums_Croakers6_StructN:bmtype = "tracer" ;
 		Drums_Croakers6_StructN:units = "mg N" ;
@@ -8187,7 +8187,7 @@ variables:
 		Drums_Croakers6_StructN:b_dens = 1000000000. ;
 		Drums_Croakers6_StructN:i_conc = 200000000. ;
 		Drums_Croakers6_StructN:f_conc = 200000000. ;
-		Drums_Croakers6_StructN:_FillValue = 3659.56 ;
+		Drums_Croakers6_StructN:_FillValue = 3736.7 ;
 	double Drums_Croakers7_Nums(t, b, z) ;
 		Drums_Croakers7_Nums:bmtype = "tracer" ;
 		Drums_Croakers7_Nums:units = "1" ;
@@ -8225,7 +8225,7 @@ variables:
 		Drums_Croakers7_ResN:b_dens = 1000000000. ;
 		Drums_Croakers7_ResN:i_conc = 200000000. ;
 		Drums_Croakers7_ResN:f_conc = 200000000. ;
-		Drums_Croakers7_ResN:_FillValue = 9823.97 ;
+		Drums_Croakers7_ResN:_FillValue = 9909.2 ;
 	double Drums_Croakers7_StructN(t, b, z) ;
 		Drums_Croakers7_StructN:bmtype = "tracer" ;
 		Drums_Croakers7_StructN:units = "mg N" ;
@@ -8244,7 +8244,7 @@ variables:
 		Drums_Croakers7_StructN:b_dens = 1000000000. ;
 		Drums_Croakers7_StructN:i_conc = 200000000. ;
 		Drums_Croakers7_StructN:f_conc = 200000000. ;
-		Drums_Croakers7_StructN:_FillValue = 3707.16 ;
+		Drums_Croakers7_StructN:_FillValue = 3739.3 ;
 	double Drums_Croakers8_Nums(t, b, z) ;
 		Drums_Croakers8_Nums:bmtype = "tracer" ;
 		Drums_Croakers8_Nums:units = "1" ;
@@ -8282,7 +8282,7 @@ variables:
 		Drums_Croakers8_ResN:b_dens = 1000000000. ;
 		Drums_Croakers8_ResN:i_conc = 200000000. ;
 		Drums_Croakers8_ResN:f_conc = 200000000. ;
-		Drums_Croakers8_ResN:_FillValue = 9875.75 ;
+		Drums_Croakers8_ResN:_FillValue = 9911.0 ;
 	double Drums_Croakers8_StructN(t, b, z) ;
 		Drums_Croakers8_StructN:bmtype = "tracer" ;
 		Drums_Croakers8_StructN:units = "mg N" ;
@@ -8301,7 +8301,7 @@ variables:
 		Drums_Croakers8_StructN:b_dens = 1000000000. ;
 		Drums_Croakers8_StructN:i_conc = 200000000. ;
 		Drums_Croakers8_StructN:f_conc = 200000000. ;
-		Drums_Croakers8_StructN:_FillValue = 3726.7 ;
+		Drums_Croakers8_StructN:_FillValue = 3740.0 ;
 	double Drums_Croakers9_Nums(t, b, z) ;
 		Drums_Croakers9_Nums:bmtype = "tracer" ;
 		Drums_Croakers9_Nums:units = "1" ;
@@ -8339,7 +8339,7 @@ variables:
 		Drums_Croakers9_ResN:b_dens = 1000000000. ;
 		Drums_Croakers9_ResN:i_conc = 200000000. ;
 		Drums_Croakers9_ResN:f_conc = 200000000. ;
-		Drums_Croakers9_ResN:_FillValue = 9896.95 ;
+		Drums_Croakers9_ResN:_FillValue = 9911.4 ;
 	double Drums_Croakers9_StructN(t, b, z) ;
 		Drums_Croakers9_StructN:bmtype = "tracer" ;
 		Drums_Croakers9_StructN:units = "mg N" ;
@@ -8358,7 +8358,7 @@ variables:
 		Drums_Croakers9_StructN:b_dens = 1000000000. ;
 		Drums_Croakers9_StructN:i_conc = 200000000. ;
 		Drums_Croakers9_StructN:f_conc = 200000000. ;
-		Drums_Croakers9_StructN:_FillValue = 3734.7 ;
+		Drums_Croakers9_StructN:_FillValue = 3740.2 ;
 	double Drums_Croakers_N(t, b, z) ;
 		Drums_Croakers_N:bmtype = "tracer" ;
 		Drums_Croakers_N:units = "mg N m-3" ;
@@ -8422,7 +8422,7 @@ variables:
 		Fourspotflounder10_ResN:b_dens = 1000000000. ;
 		Fourspotflounder10_ResN:i_conc = 200000000. ;
 		Fourspotflounder10_ResN:f_conc = 200000000. ;
-		Fourspotflounder10_ResN:_FillValue = 3883.57 ;
+		Fourspotflounder10_ResN:_FillValue = 4296.4 ;
 	double Fourspotflounder10_StructN(t, b, z) ;
 		Fourspotflounder10_StructN:bmtype = "tracer" ;
 		Fourspotflounder10_StructN:units = "mg N" ;
@@ -8441,7 +8441,7 @@ variables:
 		Fourspotflounder10_StructN:b_dens = 1000000000. ;
 		Fourspotflounder10_StructN:i_conc = 200000000. ;
 		Fourspotflounder10_StructN:f_conc = 200000000. ;
-		Fourspotflounder10_StructN:_FillValue = 1465.5 ;
+		Fourspotflounder10_StructN:_FillValue = 1621.3 ;
 	double Fourspotflounder1_Nums(t, b, z) ;
 		Fourspotflounder1_Nums:bmtype = "tracer" ;
 		Fourspotflounder1_Nums:units = "1" ;
@@ -8479,7 +8479,7 @@ variables:
 		Fourspotflounder1_ResN:b_dens = 1000000000. ;
 		Fourspotflounder1_ResN:i_conc = 200000000. ;
 		Fourspotflounder1_ResN:f_conc = 200000000. ;
-		Fourspotflounder1_ResN:_FillValue = 18.34 ;
+		Fourspotflounder1_ResN:_FillValue = 292.0 ;
 	double Fourspotflounder1_StructN(t, b, z) ;
 		Fourspotflounder1_StructN:bmtype = "tracer" ;
 		Fourspotflounder1_StructN:units = "mg N" ;
@@ -8498,7 +8498,7 @@ variables:
 		Fourspotflounder1_StructN:b_dens = 1000000000. ;
 		Fourspotflounder1_StructN:i_conc = 200000000. ;
 		Fourspotflounder1_StructN:f_conc = 200000000. ;
-		Fourspotflounder1_StructN:_FillValue = 6.92 ;
+		Fourspotflounder1_StructN:_FillValue = 110.2 ;
 	double Fourspotflounder2_Nums(t, b, z) ;
 		Fourspotflounder2_Nums:bmtype = "tracer" ;
 		Fourspotflounder2_Nums:units = "1" ;
@@ -8536,7 +8536,7 @@ variables:
 		Fourspotflounder2_ResN:b_dens = 1000000000. ;
 		Fourspotflounder2_ResN:i_conc = 200000000. ;
 		Fourspotflounder2_ResN:f_conc = 200000000. ;
-		Fourspotflounder2_ResN:_FillValue = 292.03 ;
+		Fourspotflounder2_ResN:_FillValue = 1169.4 ;
 	double Fourspotflounder2_StructN(t, b, z) ;
 		Fourspotflounder2_StructN:bmtype = "tracer" ;
 		Fourspotflounder2_StructN:units = "mg N" ;
@@ -8555,7 +8555,7 @@ variables:
 		Fourspotflounder2_StructN:b_dens = 1000000000. ;
 		Fourspotflounder2_StructN:i_conc = 200000000. ;
 		Fourspotflounder2_StructN:f_conc = 200000000. ;
-		Fourspotflounder2_StructN:_FillValue = 110.2 ;
+		Fourspotflounder2_StructN:_FillValue = 441.3 ;
 	double Fourspotflounder3_Nums(t, b, z) ;
 		Fourspotflounder3_Nums:bmtype = "tracer" ;
 		Fourspotflounder3_Nums:units = "1" ;
@@ -8593,7 +8593,7 @@ variables:
 		Fourspotflounder3_ResN:b_dens = 1000000000. ;
 		Fourspotflounder3_ResN:i_conc = 200000000. ;
 		Fourspotflounder3_ResN:f_conc = 200000000. ;
-		Fourspotflounder3_ResN:_FillValue = 844.45 ;
+		Fourspotflounder3_ResN:_FillValue = 2129.6 ;
 	double Fourspotflounder3_StructN(t, b, z) ;
 		Fourspotflounder3_StructN:bmtype = "tracer" ;
 		Fourspotflounder3_StructN:units = "mg N" ;
@@ -8612,7 +8612,7 @@ variables:
 		Fourspotflounder3_StructN:b_dens = 1000000000. ;
 		Fourspotflounder3_StructN:i_conc = 200000000. ;
 		Fourspotflounder3_StructN:f_conc = 200000000. ;
-		Fourspotflounder3_StructN:_FillValue = 318.66 ;
+		Fourspotflounder3_StructN:_FillValue = 803.6 ;
 	double Fourspotflounder4_Nums(t, b, z) ;
 		Fourspotflounder4_Nums:bmtype = "tracer" ;
 		Fourspotflounder4_Nums:units = "1" ;
@@ -8650,7 +8650,7 @@ variables:
 		Fourspotflounder4_ResN:b_dens = 1000000000. ;
 		Fourspotflounder4_ResN:i_conc = 200000000. ;
 		Fourspotflounder4_ResN:f_conc = 200000000. ;
-		Fourspotflounder4_ResN:_FillValue = 1500.48 ;
+		Fourspotflounder4_ResN:_FillValue = 2900.6 ;
 	double Fourspotflounder4_StructN(t, b, z) ;
 		Fourspotflounder4_StructN:bmtype = "tracer" ;
 		Fourspotflounder4_StructN:units = "mg N" ;
@@ -8669,7 +8669,7 @@ variables:
 		Fourspotflounder4_StructN:b_dens = 1000000000. ;
 		Fourspotflounder4_StructN:i_conc = 200000000. ;
 		Fourspotflounder4_StructN:f_conc = 200000000. ;
-		Fourspotflounder4_StructN:_FillValue = 566.22 ;
+		Fourspotflounder4_StructN:_FillValue = 1094.5 ;
 	double Fourspotflounder5_Nums(t, b, z) ;
 		Fourspotflounder5_Nums:bmtype = "tracer" ;
 		Fourspotflounder5_Nums:units = "1" ;
@@ -8707,7 +8707,7 @@ variables:
 		Fourspotflounder5_ResN:b_dens = 1000000000. ;
 		Fourspotflounder5_ResN:i_conc = 200000000. ;
 		Fourspotflounder5_ResN:f_conc = 200000000. ;
-		Fourspotflounder5_ResN:_FillValue = 2129.59 ;
+		Fourspotflounder5_ResN:_FillValue = 3441.8 ;
 	double Fourspotflounder5_StructN(t, b, z) ;
 		Fourspotflounder5_StructN:bmtype = "tracer" ;
 		Fourspotflounder5_StructN:units = "mg N" ;
@@ -8726,7 +8726,7 @@ variables:
 		Fourspotflounder5_StructN:b_dens = 1000000000. ;
 		Fourspotflounder5_StructN:i_conc = 200000000. ;
 		Fourspotflounder5_StructN:f_conc = 200000000. ;
-		Fourspotflounder5_StructN:_FillValue = 803.62 ;
+		Fourspotflounder5_StructN:_FillValue = 1298.8 ;
 	double Fourspotflounder6_Nums(t, b, z) ;
 		Fourspotflounder6_Nums:bmtype = "tracer" ;
 		Fourspotflounder6_Nums:units = "1" ;
@@ -8764,7 +8764,7 @@ variables:
 		Fourspotflounder6_ResN:b_dens = 1000000000. ;
 		Fourspotflounder6_ResN:i_conc = 200000000. ;
 		Fourspotflounder6_ResN:f_conc = 200000000. ;
-		Fourspotflounder6_ResN:_FillValue = 2669.9 ;
+		Fourspotflounder6_ResN:_FillValue = 3796.8 ;
 	double Fourspotflounder6_StructN(t, b, z) ;
 		Fourspotflounder6_StructN:bmtype = "tracer" ;
 		Fourspotflounder6_StructN:units = "mg N" ;
@@ -8783,7 +8783,7 @@ variables:
 		Fourspotflounder6_StructN:b_dens = 1000000000. ;
 		Fourspotflounder6_StructN:i_conc = 200000000. ;
 		Fourspotflounder6_StructN:f_conc = 200000000. ;
-		Fourspotflounder6_StructN:_FillValue = 1007.51 ;
+		Fourspotflounder6_StructN:_FillValue = 1432.8 ;
 	double Fourspotflounder7_Nums(t, b, z) ;
 		Fourspotflounder7_Nums:bmtype = "tracer" ;
 		Fourspotflounder7_Nums:units = "1" ;
@@ -8821,7 +8821,7 @@ variables:
 		Fourspotflounder7_ResN:b_dens = 1000000000. ;
 		Fourspotflounder7_ResN:i_conc = 200000000. ;
 		Fourspotflounder7_ResN:f_conc = 200000000. ;
-		Fourspotflounder7_ResN:_FillValue = 3105.08 ;
+		Fourspotflounder7_ResN:_FillValue = 4021.2 ;
 	double Fourspotflounder7_StructN(t, b, z) ;
 		Fourspotflounder7_StructN:bmtype = "tracer" ;
 		Fourspotflounder7_StructN:units = "mg N" ;
@@ -8840,7 +8840,7 @@ variables:
 		Fourspotflounder7_StructN:b_dens = 1000000000. ;
 		Fourspotflounder7_StructN:i_conc = 200000000. ;
 		Fourspotflounder7_StructN:f_conc = 200000000. ;
-		Fourspotflounder7_StructN:_FillValue = 1171.73 ;
+		Fourspotflounder7_StructN:_FillValue = 1517.4 ;
 	double Fourspotflounder8_Nums(t, b, z) ;
 		Fourspotflounder8_Nums:bmtype = "tracer" ;
 		Fourspotflounder8_Nums:units = "1" ;
@@ -8878,7 +8878,7 @@ variables:
 		Fourspotflounder8_ResN:b_dens = 1000000000. ;
 		Fourspotflounder8_ResN:i_conc = 200000000. ;
 		Fourspotflounder8_ResN:f_conc = 200000000. ;
-		Fourspotflounder8_ResN:_FillValue = 3441.79 ;
+		Fourspotflounder8_ResN:_FillValue = 4160.0 ;
 	double Fourspotflounder8_StructN(t, b, z) ;
 		Fourspotflounder8_StructN:bmtype = "tracer" ;
 		Fourspotflounder8_StructN:units = "mg N" ;
@@ -8897,7 +8897,7 @@ variables:
 		Fourspotflounder8_StructN:b_dens = 1000000000. ;
 		Fourspotflounder8_StructN:i_conc = 200000000. ;
 		Fourspotflounder8_StructN:f_conc = 200000000. ;
-		Fourspotflounder8_StructN:_FillValue = 1298.79 ;
+		Fourspotflounder8_StructN:_FillValue = 1569.8 ;
 	double Fourspotflounder9_Nums(t, b, z) ;
 		Fourspotflounder9_Nums:bmtype = "tracer" ;
 		Fourspotflounder9_Nums:units = "1" ;
@@ -8935,7 +8935,7 @@ variables:
 		Fourspotflounder9_ResN:b_dens = 1000000000. ;
 		Fourspotflounder9_ResN:i_conc = 200000000. ;
 		Fourspotflounder9_ResN:f_conc = 200000000. ;
-		Fourspotflounder9_ResN:_FillValue = 3695.58 ;
+		Fourspotflounder9_ResN:_FillValue = 4244.9 ;
 	double Fourspotflounder9_StructN(t, b, z) ;
 		Fourspotflounder9_StructN:bmtype = "tracer" ;
 		Fourspotflounder9_StructN:units = "mg N" ;
@@ -8954,7 +8954,7 @@ variables:
 		Fourspotflounder9_StructN:b_dens = 1000000000. ;
 		Fourspotflounder9_StructN:i_conc = 200000000. ;
 		Fourspotflounder9_StructN:f_conc = 200000000. ;
-		Fourspotflounder9_StructN:_FillValue = 1394.56 ;
+		Fourspotflounder9_StructN:_FillValue = 1601.9 ;
 	double Fourspotflounder_N(t, b, z) ;
 		Fourspotflounder_N:bmtype = "tracer" ;
 		Fourspotflounder_N:units = "mg N m-3" ;
@@ -9023,7 +9023,7 @@ variables:
 		Haddock10_ResN:b_dens = 1000000000. ;
 		Haddock10_ResN:i_conc = 200000000. ;
 		Haddock10_ResN:f_conc = 200000000. ;
-		Haddock10_ResN:_FillValue = 15131.77 ;
+		Haddock10_ResN:_FillValue = 15115.0 ;
 	double Haddock10_StructN(t, b, z) ;
 		Haddock10_StructN:bmtype = "tracer" ;
 		Haddock10_StructN:units = "mg N" ;
@@ -9042,7 +9042,7 @@ variables:
 		Haddock10_StructN:b_dens = 1000000000. ;
 		Haddock10_StructN:i_conc = 200000000. ;
 		Haddock10_StructN:f_conc = 200000000. ;
-		Haddock10_StructN:_FillValue = 5710.1 ;
+		Haddock10_StructN:_FillValue = 5718.9 ;
 	double Haddock1_Nums(t, b, z) ;
 		Haddock1_Nums:bmtype = "tracer" ;
 		Haddock1_Nums:units = "1" ;
@@ -9080,7 +9080,7 @@ variables:
 		Haddock1_ResN:b_dens = 1000000000. ;
 		Haddock1_ResN:i_conc = 200000000. ;
 		Haddock1_ResN:f_conc = 200000000. ;
-		Haddock1_ResN:_FillValue = 486.01 ;
+		Haddock1_ResN:_FillValue = 4989.6 ;
 	double Haddock1_StructN(t, b, z) ;
 		Haddock1_StructN:bmtype = "tracer" ;
 		Haddock1_StructN:units = "mg N" ;
@@ -9099,7 +9099,7 @@ variables:
 		Haddock1_StructN:b_dens = 1000000000. ;
 		Haddock1_StructN:i_conc = 200000000. ;
 		Haddock1_StructN:f_conc = 200000000. ;
-		Haddock1_StructN:_FillValue = 183.4 ;
+		Haddock1_StructN:_FillValue = 1882.9 ;
 	double Haddock2_Nums(t, b, z) ;
 		Haddock2_Nums:bmtype = "tracer" ;
 		Haddock2_Nums:units = "1" ;
@@ -9137,7 +9137,7 @@ variables:
 		Haddock2_ResN:b_dens = 1000000000. ;
 		Haddock2_ResN:i_conc = 200000000. ;
 		Haddock2_ResN:f_conc = 200000000. ;
-		Haddock2_ResN:_FillValue = 4989.63 ;
+		Haddock2_ResN:_FillValue = 11285.7 ;
 	double Haddock2_StructN(t, b, z) ;
 		Haddock2_StructN:bmtype = "tracer" ;
 		Haddock2_StructN:units = "mg N" ;
@@ -9156,7 +9156,7 @@ variables:
 		Haddock2_StructN:b_dens = 1000000000. ;
 		Haddock2_StructN:i_conc = 200000000. ;
 		Haddock2_StructN:f_conc = 200000000. ;
-		Haddock2_StructN:_FillValue = 1882.88 ;
+		Haddock2_StructN:_FillValue = 4258.8 ;
 	double Haddock3_Nums(t, b, z) ;
 		Haddock3_Nums:bmtype = "tracer" ;
 		Haddock3_Nums:units = "1" ;
@@ -9194,7 +9194,7 @@ variables:
 		Haddock3_ResN:b_dens = 1000000000. ;
 		Haddock3_ResN:i_conc = 200000000. ;
 		Haddock3_ResN:f_conc = 200000000. ;
-		Haddock3_ResN:_FillValue = 9655.88 ;
+		Haddock3_ResN:_FillValue = 13908.0 ;
 	double Haddock3_StructN(t, b, z) ;
 		Haddock3_StructN:bmtype = "tracer" ;
 		Haddock3_StructN:units = "mg N" ;
@@ -9213,7 +9213,7 @@ variables:
 		Haddock3_StructN:b_dens = 1000000000. ;
 		Haddock3_StructN:i_conc = 200000000. ;
 		Haddock3_StructN:f_conc = 200000000. ;
-		Haddock3_StructN:_FillValue = 3643.73 ;
+		Haddock3_StructN:_FillValue = 5248.3 ;
 	double Haddock4_Nums(t, b, z) ;
 		Haddock4_Nums:bmtype = "tracer" ;
 		Haddock4_Nums:units = "1" ;
@@ -9251,7 +9251,7 @@ variables:
 		Haddock4_ResN:b_dens = 1000000000. ;
 		Haddock4_ResN:i_conc = 200000000. ;
 		Haddock4_ResN:f_conc = 200000000. ;
-		Haddock4_ResN:_FillValue = 12476.68 ;
+		Haddock4_ResN:_FillValue = 14772.0 ;
 	double Haddock4_StructN(t, b, z) ;
 		Haddock4_StructN:bmtype = "tracer" ;
 		Haddock4_StructN:units = "mg N" ;
@@ -9270,7 +9270,7 @@ variables:
 		Haddock4_StructN:b_dens = 1000000000. ;
 		Haddock4_StructN:i_conc = 200000000. ;
 		Haddock4_StructN:f_conc = 200000000. ;
-		Haddock4_StructN:_FillValue = 4708.18 ;
+		Haddock4_StructN:_FillValue = 5574.3 ;
 	double Haddock5_Nums(t, b, z) ;
 		Haddock5_Nums:bmtype = "tracer" ;
 		Haddock5_Nums:units = "1" ;
@@ -9308,7 +9308,7 @@ variables:
 		Haddock5_ResN:b_dens = 1000000000. ;
 		Haddock5_ResN:i_conc = 200000000. ;
 		Haddock5_ResN:f_conc = 200000000. ;
-		Haddock5_ResN:_FillValue = 13908.02 ;
+		Haddock5_ResN:_FillValue = 15039.1 ;
 	double Haddock5_StructN(t, b, z) ;
 		Haddock5_StructN:bmtype = "tracer" ;
 		Haddock5_StructN:units = "mg N" ;
@@ -9327,7 +9327,7 @@ variables:
 		Haddock5_StructN:b_dens = 1000000000. ;
 		Haddock5_StructN:i_conc = 200000000. ;
 		Haddock5_StructN:f_conc = 200000000. ;
-		Haddock5_StructN:_FillValue = 5248.31 ;
+		Haddock5_StructN:_FillValue = 5675.1 ;
 	double Haddock6_Nums(t, b, z) ;
 		Haddock6_Nums:bmtype = "tracer" ;
 		Haddock6_Nums:units = "1" ;
@@ -9365,7 +9365,7 @@ variables:
 		Haddock6_ResN:b_dens = 1000000000. ;
 		Haddock6_ResN:i_conc = 200000000. ;
 		Haddock6_ResN:f_conc = 200000000. ;
-		Haddock6_ResN:_FillValue = 14585.86 ;
+		Haddock6_ResN:_FillValue = 15120.2 ;
 	double Haddock6_StructN(t, b, z) ;
 		Haddock6_StructN:bmtype = "tracer" ;
 		Haddock6_StructN:units = "mg N" ;
@@ -9384,7 +9384,7 @@ variables:
 		Haddock6_StructN:b_dens = 1000000000. ;
 		Haddock6_StructN:i_conc = 200000000. ;
 		Haddock6_StructN:f_conc = 200000000. ;
-		Haddock6_StructN:_FillValue = 5504.1 ;
+		Haddock6_StructN:_FillValue = 5705.7 ;
 	double Haddock7_Nums(t, b, z) ;
 		Haddock7_Nums:bmtype = "tracer" ;
 		Haddock7_Nums:units = "1" ;
@@ -9422,7 +9422,7 @@ variables:
 		Haddock7_ResN:b_dens = 1000000000. ;
 		Haddock7_ResN:i_conc = 200000000. ;
 		Haddock7_ResN:f_conc = 200000000. ;
-		Haddock7_ResN:_FillValue = 14897.58 ;
+		Haddock7_ResN:_FillValue = 15144.7 ;
 	double Haddock7_StructN(t, b, z) ;
 		Haddock7_StructN:bmtype = "tracer" ;
 		Haddock7_StructN:units = "mg N" ;
@@ -9441,7 +9441,7 @@ variables:
 		Haddock7_StructN:b_dens = 1000000000. ;
 		Haddock7_StructN:i_conc = 200000000. ;
 		Haddock7_StructN:f_conc = 200000000. ;
-		Haddock7_StructN:_FillValue = 5621.73 ;
+		Haddock7_StructN:_FillValue = 5715.0 ;
 	double Haddock8_Nums(t, b, z) ;
 		Haddock8_Nums:bmtype = "tracer" ;
 		Haddock8_Nums:units = "1" ;
@@ -9479,7 +9479,7 @@ variables:
 		Haddock8_ResN:b_dens = 1000000000. ;
 		Haddock8_ResN:i_conc = 200000000. ;
 		Haddock8_ResN:f_conc = 200000000. ;
-		Haddock8_ResN:_FillValue = 15039.12 ;
+		Haddock8_ResN:_FillValue = 15152.1 ;
 	double Haddock8_StructN(t, b, z) ;
 		Haddock8_StructN:bmtype = "tracer" ;
 		Haddock8_StructN:units = "mg N" ;
@@ -9498,7 +9498,7 @@ variables:
 		Haddock8_StructN:b_dens = 1000000000. ;
 		Haddock8_StructN:i_conc = 200000000. ;
 		Haddock8_StructN:f_conc = 200000000. ;
-		Haddock8_StructN:_FillValue = 5675.14 ;
+		Haddock8_StructN:_FillValue = 5717.8 ;
 	double Haddock9_Nums(t, b, z) ;
 		Haddock9_Nums:bmtype = "tracer" ;
 		Haddock9_Nums:units = "1" ;
@@ -9536,7 +9536,7 @@ variables:
 		Haddock9_ResN:b_dens = 1000000000. ;
 		Haddock9_ResN:i_conc = 200000000. ;
 		Haddock9_ResN:f_conc = 200000000. ;
-		Haddock9_ResN:_FillValue = 15102.99 ;
+		Haddock9_ResN:_FillValue = 15154.3 ;
 	double Haddock9_StructN(t, b, z) ;
 		Haddock9_StructN:bmtype = "tracer" ;
 		Haddock9_StructN:units = "mg N" ;
@@ -9555,7 +9555,7 @@ variables:
 		Haddock9_StructN:b_dens = 1000000000. ;
 		Haddock9_StructN:i_conc = 200000000. ;
 		Haddock9_StructN:f_conc = 200000000. ;
-		Haddock9_StructN:_FillValue = 5699.24 ;
+		Haddock9_StructN:_FillValue = 5718.6 ;
 	double Haddock_N(t, b, z) ;
 		Haddock_N:bmtype = "tracer" ;
 		Haddock_N:units = "mg N m-3" ;
@@ -9605,7 +9605,7 @@ variables:
 		Halibut10_ResN:b_dens = 1000000000. ;
 		Halibut10_ResN:i_conc = 200000000. ;
 		Halibut10_ResN:f_conc = 200000000. ;
-		Halibut10_ResN:_FillValue = 1286539.75 ;
+		Halibut10_ResN:_FillValue = 2253135.5 ;
 	double Halibut10_StructN(t, b, z) ;
 		Halibut10_StructN:bmtype = "tracer" ;
 		Halibut10_StructN:units = "mg N" ;
@@ -9624,7 +9624,7 @@ variables:
 		Halibut10_StructN:b_dens = 1000000000. ;
 		Halibut10_StructN:i_conc = 200000000. ;
 		Halibut10_StructN:f_conc = 200000000. ;
-		Halibut10_StructN:_FillValue = 485486.7 ;
+		Halibut10_StructN:_FillValue = 850239.8 ;
 	double Halibut1_Nums(t, b, z) ;
 		Halibut1_Nums:bmtype = "tracer" ;
 		Halibut1_Nums:units = "1" ;
@@ -9662,7 +9662,7 @@ variables:
 		Halibut1_ResN:b_dens = 1000000000. ;
 		Halibut1_ResN:i_conc = 200000000. ;
 		Halibut1_ResN:f_conc = 200000000. ;
-		Halibut1_ResN:_FillValue = 311.96 ;
+		Halibut1_ResN:_FillValue = 15050.8 ;
 	double Halibut1_StructN(t, b, z) ;
 		Halibut1_StructN:bmtype = "tracer" ;
 		Halibut1_StructN:units = "mg N" ;
@@ -9681,7 +9681,7 @@ variables:
 		Halibut1_StructN:b_dens = 1000000000. ;
 		Halibut1_StructN:i_conc = 200000000. ;
 		Halibut1_StructN:f_conc = 200000000. ;
-		Halibut1_StructN:_FillValue = 117.72 ;
+		Halibut1_StructN:_FillValue = 5679.5 ;
 	double Halibut2_Nums(t, b, z) ;
 		Halibut2_Nums:bmtype = "tracer" ;
 		Halibut2_Nums:units = "1" ;
@@ -9719,7 +9719,7 @@ variables:
 		Halibut2_ResN:b_dens = 1000000000. ;
 		Halibut2_ResN:i_conc = 200000000. ;
 		Halibut2_ResN:f_conc = 200000000. ;
-		Halibut2_ResN:_FillValue = 15050.81 ;
+		Halibut2_ResN:_FillValue = 109985.8 ;
 	double Halibut2_StructN(t, b, z) ;
 		Halibut2_StructN:bmtype = "tracer" ;
 		Halibut2_StructN:units = "mg N" ;
@@ -9738,7 +9738,7 @@ variables:
 		Halibut2_StructN:b_dens = 1000000000. ;
 		Halibut2_StructN:i_conc = 200000000. ;
 		Halibut2_StructN:f_conc = 200000000. ;
-		Halibut2_StructN:_FillValue = 5679.55 ;
+		Halibut2_StructN:_FillValue = 41504.1 ;
 	double Halibut3_Nums(t, b, z) ;
 		Halibut3_Nums:bmtype = "tracer" ;
 		Halibut3_Nums:units = "1" ;
@@ -9776,7 +9776,7 @@ variables:
 		Halibut3_ResN:b_dens = 1000000000. ;
 		Halibut3_ResN:i_conc = 200000000. ;
 		Halibut3_ResN:f_conc = 200000000. ;
-		Halibut3_ResN:_FillValue = 67201.54 ;
+		Halibut3_ResN:_FillValue = 301099.4 ;
 	double Halibut3_StructN(t, b, z) ;
 		Halibut3_StructN:bmtype = "tracer" ;
 		Halibut3_StructN:units = "mg N" ;
@@ -9795,7 +9795,7 @@ variables:
 		Halibut3_StructN:b_dens = 1000000000. ;
 		Halibut3_StructN:i_conc = 200000000. ;
 		Halibut3_StructN:f_conc = 200000000. ;
-		Halibut3_StructN:_FillValue = 25359.07 ;
+		Halibut3_StructN:_FillValue = 113622.4 ;
 	double Halibut4_Nums(t, b, z) ;
 		Halibut4_Nums:bmtype = "tracer" ;
 		Halibut4_Nums:units = "1" ;
@@ -9833,7 +9833,7 @@ variables:
 		Halibut4_ResN:b_dens = 1000000000. ;
 		Halibut4_ResN:i_conc = 200000000. ;
 		Halibut4_ResN:f_conc = 200000000. ;
-		Halibut4_ResN:_FillValue = 163755.95 ;
+		Halibut4_ResN:_FillValue = 564615.6 ;
 	double Halibut4_StructN(t, b, z) ;
 		Halibut4_StructN:bmtype = "tracer" ;
 		Halibut4_StructN:units = "mg N" ;
@@ -9852,7 +9852,7 @@ variables:
 		Halibut4_StructN:b_dens = 1000000000. ;
 		Halibut4_StructN:i_conc = 200000000. ;
 		Halibut4_StructN:f_conc = 200000000. ;
-		Halibut4_StructN:_FillValue = 61794.7 ;
+		Halibut4_StructN:_FillValue = 213062.5 ;
 	double Halibut5_Nums(t, b, z) ;
 		Halibut5_Nums:bmtype = "tracer" ;
 		Halibut5_Nums:units = "1" ;
@@ -9890,7 +9890,7 @@ variables:
 		Halibut5_ResN:b_dens = 1000000000. ;
 		Halibut5_ResN:i_conc = 200000000. ;
 		Halibut5_ResN:f_conc = 200000000. ;
-		Halibut5_ResN:_FillValue = 301099.39 ;
+		Halibut5_ResN:_FillValue = 867969.9 ;
 	double Halibut5_StructN(t, b, z) ;
 		Halibut5_StructN:bmtype = "tracer" ;
 		Halibut5_StructN:units = "mg N" ;
@@ -9909,7 +9909,7 @@ variables:
 		Halibut5_StructN:b_dens = 1000000000. ;
 		Halibut5_StructN:i_conc = 200000000. ;
 		Halibut5_StructN:f_conc = 200000000. ;
-		Halibut5_StructN:_FillValue = 113622.41 ;
+		Halibut5_StructN:_FillValue = 327535.8 ;
 	double Halibut6_Nums(t, b, z) ;
 		Halibut6_Nums:bmtype = "tracer" ;
 		Halibut6_Nums:units = "1" ;
@@ -9947,7 +9947,7 @@ variables:
 		Halibut6_ResN:b_dens = 1000000000. ;
 		Halibut6_ResN:i_conc = 200000000. ;
 		Halibut6_ResN:f_conc = 200000000. ;
-		Halibut6_ResN:_FillValue = 470758.64 ;
+		Halibut6_ResN:_FillValue = 1182808.2 ;
 	double Halibut6_StructN(t, b, z) ;
 		Halibut6_StructN:bmtype = "tracer" ;
 		Halibut6_StructN:units = "mg N" ;
@@ -9966,7 +9966,7 @@ variables:
 		Halibut6_StructN:b_dens = 1000000000. ;
 		Halibut6_StructN:i_conc = 200000000. ;
 		Halibut6_StructN:f_conc = 200000000. ;
-		Halibut6_StructN:_FillValue = 177644.77 ;
+		Halibut6_StructN:_FillValue = 446342.7 ;
 	double Halibut7_Nums(t, b, z) ;
 		Halibut7_Nums:bmtype = "tracer" ;
 		Halibut7_Nums:units = "1" ;
@@ -10004,7 +10004,7 @@ variables:
 		Halibut7_ResN:b_dens = 1000000000. ;
 		Halibut7_ResN:i_conc = 200000000. ;
 		Halibut7_ResN:f_conc = 200000000. ;
-		Halibut7_ResN:_FillValue = 662855.23 ;
+		Halibut7_ResN:_FillValue = 1488688.0 ;
 	double Halibut7_StructN(t, b, z) ;
 		Halibut7_StructN:bmtype = "tracer" ;
 		Halibut7_StructN:units = "mg N" ;
@@ -10023,7 +10023,7 @@ variables:
 		Halibut7_StructN:b_dens = 1000000000. ;
 		Halibut7_StructN:i_conc = 200000000. ;
 		Halibut7_StructN:f_conc = 200000000. ;
-		Halibut7_StructN:_FillValue = 250134.05 ;
+		Halibut7_StructN:_FillValue = 561769.0 ;
 	double Halibut8_Nums(t, b, z) ;
 		Halibut8_Nums:bmtype = "tracer" ;
 		Halibut8_Nums:units = "1" ;
@@ -10061,7 +10061,7 @@ variables:
 		Halibut8_ResN:b_dens = 1000000000. ;
 		Halibut8_ResN:i_conc = 200000000. ;
 		Halibut8_ResN:f_conc = 200000000. ;
-		Halibut8_ResN:_FillValue = 867969.92 ;
+		Halibut8_ResN:_FillValue = 1772816.1 ;
 	double Halibut8_StructN(t, b, z) ;
 		Halibut8_StructN:bmtype = "tracer" ;
 		Halibut8_StructN:units = "mg N" ;
@@ -10080,7 +10080,7 @@ variables:
 		Halibut8_StructN:b_dens = 1000000000. ;
 		Halibut8_StructN:i_conc = 200000000. ;
 		Halibut8_StructN:f_conc = 200000000. ;
-		Halibut8_StructN:_FillValue = 327535.82 ;
+		Halibut8_StructN:_FillValue = 668987.2 ;
 	double Halibut9_Nums(t, b, z) ;
 		Halibut9_Nums:bmtype = "tracer" ;
 		Halibut9_Nums:units = "1" ;
@@ -10118,7 +10118,7 @@ variables:
 		Halibut9_ResN:b_dens = 1000000000. ;
 		Halibut9_ResN:i_conc = 200000000. ;
 		Halibut9_ResN:f_conc = 200000000. ;
-		Halibut9_ResN:_FillValue = 1078017.14 ;
+		Halibut9_ResN:_FillValue = 2028451.7 ;
 	double Halibut9_StructN(t, b, z) ;
 		Halibut9_StructN:bmtype = "tracer" ;
 		Halibut9_StructN:units = "mg N" ;
@@ -10137,7 +10137,7 @@ variables:
 		Halibut9_StructN:b_dens = 1000000000. ;
 		Halibut9_StructN:i_conc = 200000000. ;
 		Halibut9_StructN:f_conc = 200000000. ;
-		Halibut9_StructN:_FillValue = 406798.92 ;
+		Halibut9_StructN:_FillValue = 765453.5 ;
 	double Halibut_N(t, b, z) ;
 		Halibut_N:bmtype = "tracer" ;
 		Halibut_N:units = "mg N m-3" ;
@@ -10187,7 +10187,7 @@ variables:
 		Herring10_ResN:b_dens = 1000000000. ;
 		Herring10_ResN:i_conc = 200000000. ;
 		Herring10_ResN:f_conc = 200000000. ;
-		Herring10_ResN:_FillValue = 1980;
+		Herring10_ResN:_FillValue = 2623.8;
 	double Herring10_StructN(t, b, z) ;
 		Herring10_StructN:bmtype = "tracer" ;
 		Herring10_StructN:units = "mg N" ;
@@ -10206,7 +10206,7 @@ variables:
 		Herring10_StructN:b_dens = 1000000000. ;
 		Herring10_StructN:i_conc = 200000000. ;
 		Herring10_StructN:f_conc = 200000000. ;
-		Herring10_StructN:_FillValue = 990.11 ;
+		Herring10_StructN:_FillValue = 990.1 ;
 	double Herring1_Nums(t, b, z) ;
 		Herring1_Nums:bmtype = "tracer" ;
 		Herring1_Nums:units = "1" ;
@@ -10244,7 +10244,7 @@ variables:
 		Herring1_ResN:b_dens = 1000000000. ;
 		Herring1_ResN:i_conc = 200000000. ;
 		Herring1_ResN:f_conc = 200000000. ;
-		Herring1_ResN:_FillValue = 5.54 ;
+		Herring1_ResN:_FillValue = 7.3 ;
 	double Herring1_StructN(t, b, z) ;
 		Herring1_StructN:bmtype = "tracer" ;
 		Herring1_StructN:units = "mg N" ;
@@ -10263,7 +10263,7 @@ variables:
 		Herring1_StructN:b_dens = 1000000000. ;
 		Herring1_StructN:i_conc = 200000000. ;
 		Herring1_StructN:f_conc = 200000000. ;
-		Herring1_StructN:_FillValue = 2.77 ;
+		Herring1_StructN:_FillValue = 2.8 ;
 	double Herring2_Nums(t, b, z) ;
 		Herring2_Nums:bmtype = "tracer" ;
 		Herring2_Nums:units = "1" ;
@@ -10301,7 +10301,7 @@ variables:
 		Herring2_ResN:b_dens = 1000000000. ;
 		Herring2_ResN:i_conc = 200000000. ;
 		Herring2_ResN:f_conc = 200000000. ;
-		Herring2_ResN:_FillValue = 117.64 ;
+		Herring2_ResN:_FillValue = 115.9 ;
 	double Herring2_StructN(t, b, z) ;
 		Herring2_StructN:bmtype = "tracer" ;
 		Herring2_StructN:units = "mg N" ;
@@ -10320,7 +10320,7 @@ variables:
 		Herring2_StructN:b_dens = 1000000000. ;
 		Herring2_StructN:i_conc = 200000000. ;
 		Herring2_StructN:f_conc = 200000000. ;
-		Herring2_StructN:_FillValue = 58.82 ;
+		Herring2_StructN:_FillValue = 58.8 ;
 	double Herring3_Nums(t, b, z) ;
 		Herring3_Nums:bmtype = "tracer" ;
 		Herring3_Nums:units = "1" ;
@@ -10358,7 +10358,7 @@ variables:
 		Herring3_ResN:b_dens = 1000000000. ;
 		Herring3_ResN:i_conc = 200000000. ;
 		Herring3_ResN:f_conc = 200000000. ;
-		Herring3_ResN:_FillValue = 369 ;
+		Herring3_ResN:_FillValue = 488.9 ;
 	double Herring3_StructN(t, b, z) ;
 		Herring3_StructN:bmtype = "tracer" ;
 		Herring3_StructN:units = "mg N" ;
@@ -10377,7 +10377,7 @@ variables:
 		Herring3_StructN:b_dens = 1000000000. ;
 		Herring3_StructN:i_conc = 200000000. ;
 		Herring3_StructN:f_conc = 200000000. ;
-		Herring3_StructN:_FillValue = 184.51 ;
+		Herring3_StructN:_FillValue = 184.5 ;
 	double Herring4_Nums(t, b, z) ;
 		Herring4_Nums:bmtype = "tracer" ;
 		Herring4_Nums:units = "1" ;
@@ -10415,7 +10415,7 @@ variables:
 		Herring4_ResN:b_dens = 1000000000. ;
 		Herring4_ResN:i_conc = 200000000. ;
 		Herring4_ResN:f_conc = 200000000. ;
-		Herring4_ResN:_FillValue = 686.84 ;
+		Herring4_ResN:_FillValue = 910.1 ;
 	double Herring4_StructN(t, b, z) ;
 		Herring4_StructN:bmtype = "tracer" ;
 		Herring4_StructN:units = "mg N" ;
@@ -10472,7 +10472,7 @@ variables:
 		Herring5_ResN:b_dens = 1000000000. ;
 		Herring5_ResN:i_conc = 200000000. ;
 		Herring5_ResN:f_conc = 200000000. ;
-		Herring5_ResN:_FillValue = 1006.44 ;
+		Herring5_ResN:_FillValue = 1333.5 ;
 	double Herring5_StructN(t, b, z) ;
 		Herring5_StructN:bmtype = "tracer" ;
 		Herring5_StructN:units = "mg N" ;
@@ -10529,7 +10529,7 @@ variables:
 		Herring6_ResN:b_dens = 1000000000. ;
 		Herring6_ResN:i_conc = 200000000. ;
 		Herring6_ResN:f_conc = 200000000. ;
-		Herring6_ResN:_FillValue = 1292 ;
+		Herring6_ResN:_FillValue = 1712.0 ;
 	double Herring6_StructN(t, b, z) ;
 		Herring6_StructN:bmtype = "tracer" ;
 		Herring6_StructN:units = "mg N" ;
@@ -10586,7 +10586,7 @@ variables:
 		Herring7_ResN:b_dens = 1000000000. ;
 		Herring7_ResN:i_conc = 200000000. ;
 		Herring7_ResN:f_conc = 200000000. ;
-		Herring7_ResN:_FillValue = 1530 ;
+		Herring7_ResN:_FillValue = 2027.6 ;
 	double Herring7_StructN(t, b, z) ;
 		Herring7_StructN:bmtype = "tracer" ;
 		Herring7_StructN:units = "mg N" ;
@@ -10643,7 +10643,7 @@ variables:
 		Herring8_ResN:b_dens = 1000000000. ;
 		Herring8_ResN:i_conc = 200000000. ;
 		Herring8_ResN:f_conc = 200000000. ;
-		Herring8_ResN:_FillValue = 1720 ;
+		Herring8_ResN:_FillValue = 2279.5 ;
 	double Herring8_StructN(t, b, z) ;
 		Herring8_StructN:bmtype = "tracer" ;
 		Herring8_StructN:units = "mg N" ;
@@ -10700,7 +10700,7 @@ variables:
 		Herring9_ResN:b_dens = 1000000000. ;
 		Herring9_ResN:i_conc = 200000000. ;
 		Herring9_ResN:f_conc = 200000000. ;
-		Herring9_ResN:_FillValue = 1867.94 ;
+		Herring9_ResN:_FillValue = 2475.0 ;
 	double Herring9_StructN(t, b, z) ;
 		Herring9_StructN:bmtype = "tracer" ;
 		Herring9_StructN:units = "mg N" ;
@@ -10719,7 +10719,7 @@ variables:
 		Herring9_StructN:b_dens = 1000000000. ;
 		Herring9_StructN:i_conc = 200000000. ;
 		Herring9_StructN:f_conc = 200000000. ;
-		Herring9_StructN:_FillValue = 933.97 ;
+		Herring9_StructN:_FillValue = 934.0 ;
 	double Herring_N(t, b, z) ;
 		Herring_N:bmtype = "tracer" ;
 		Herring_N:units = "mg N m-3" ;
@@ -10807,7 +10807,7 @@ variables:
 		Invasive_Species10_ResN:b_dens = 1000000000. ;
 		Invasive_Species10_ResN:i_conc = 200000000. ;
 		Invasive_Species10_ResN:f_conc = 200000000. ;
-		Invasive_Species10_ResN:_FillValue = 8532.05 ;
+		Invasive_Species10_ResN:_FillValue = 8535.6 ;
 	double Invasive_Species10_StructN(t, b, z) ;
 		Invasive_Species10_StructN:bmtype = "tracer" ;
 		Invasive_Species10_StructN:units = "mg N" ;
@@ -10826,7 +10826,7 @@ variables:
 		Invasive_Species10_StructN:b_dens = 1000000000. ;
 		Invasive_Species10_StructN:i_conc = 200000000. ;
 		Invasive_Species10_StructN:f_conc = 200000000. ;
-		Invasive_Species10_StructN:_FillValue = 3219.64 ;
+		Invasive_Species10_StructN:_FillValue = 3221.0 ;
 	double Invasive_Species1_Nums(t, b, z) ;
 		Invasive_Species1_Nums:bmtype = "tracer" ;
 		Invasive_Species1_Nums:units = "1" ;
@@ -10864,7 +10864,7 @@ variables:
 		Invasive_Species1_ResN:b_dens = 1000000000. ;
 		Invasive_Species1_ResN:i_conc = 200000000. ;
 		Invasive_Species1_ResN:f_conc = 200000000. ;
-		Invasive_Species1_ResN:_FillValue = 359.98 ;
+		Invasive_Species1_ResN:_FillValue = 3499.6 ;
 	double Invasive_Species1_StructN(t, b, z) ;
 		Invasive_Species1_StructN:bmtype = "tracer" ;
 		Invasive_Species1_StructN:units = "mg N" ;
@@ -10883,7 +10883,7 @@ variables:
 		Invasive_Species1_StructN:b_dens = 1000000000. ;
 		Invasive_Species1_StructN:i_conc = 200000000. ;
 		Invasive_Species1_StructN:f_conc = 200000000. ;
-		Invasive_Species1_StructN:_FillValue = 135.84 ;
+		Invasive_Species1_StructN:_FillValue = 1320.6 ;
 	double Invasive_Species2_Nums(t, b, z) ;
 		Invasive_Species2_Nums:bmtype = "tracer" ;
 		Invasive_Species2_Nums:units = "1" ;
@@ -10921,7 +10921,7 @@ variables:
 		Invasive_Species2_ResN:b_dens = 1000000000. ;
 		Invasive_Species2_ResN:i_conc = 200000000. ;
 		Invasive_Species2_ResN:f_conc = 200000000. ;
-		Invasive_Species2_ResN:_FillValue = 3499.59 ;
+		Invasive_Species2_ResN:_FillValue = 7022.1 ;
 	double Invasive_Species2_StructN(t, b, z) ;
 		Invasive_Species2_StructN:bmtype = "tracer" ;
 		Invasive_Species2_StructN:units = "mg N" ;
@@ -10940,7 +10940,7 @@ variables:
 		Invasive_Species2_StructN:b_dens = 1000000000. ;
 		Invasive_Species2_StructN:i_conc = 200000000. ;
 		Invasive_Species2_StructN:f_conc = 200000000. ;
-		Invasive_Species2_StructN:_FillValue = 1320.6 ;
+		Invasive_Species2_StructN:_FillValue = 2649.8 ;
 	double Invasive_Species3_Nums(t, b, z) ;
 		Invasive_Species3_Nums:bmtype = "tracer" ;
 		Invasive_Species3_Nums:units = "1" ;
@@ -10978,7 +10978,7 @@ variables:
 		Invasive_Species3_ResN:b_dens = 1000000000. ;
 		Invasive_Species3_ResN:i_conc = 200000000. ;
 		Invasive_Species3_ResN:f_conc = 200000000. ;
-		Invasive_Species3_ResN:_FillValue = 6207.52 ;
+		Invasive_Species3_ResN:_FillValue = 8147.5 ;
 	double Invasive_Species3_StructN(t, b, z) ;
 		Invasive_Species3_StructN:bmtype = "tracer" ;
 		Invasive_Species3_StructN:units = "mg N" ;
@@ -10997,7 +10997,7 @@ variables:
 		Invasive_Species3_StructN:b_dens = 1000000000. ;
 		Invasive_Species3_StructN:i_conc = 200000000. ;
 		Invasive_Species3_StructN:f_conc = 200000000. ;
-		Invasive_Species3_StructN:_FillValue = 2342.46 ;
+		Invasive_Species3_StructN:_FillValue = 3074.5 ;
 	double Invasive_Species4_Nums(t, b, z) ;
 		Invasive_Species4_Nums:bmtype = "tracer" ;
 		Invasive_Species4_Nums:units = "1" ;
@@ -11035,7 +11035,7 @@ variables:
 		Invasive_Species4_ResN:b_dens = 1000000000. ;
 		Invasive_Species4_ResN:i_conc = 200000000. ;
 		Invasive_Species4_ResN:f_conc = 200000000. ;
-		Invasive_Species4_ResN:_FillValue = 7566.28 ;
+		Invasive_Species4_ResN:_FillValue = 8439.7 ;
 	double Invasive_Species4_StructN(t, b, z) ;
 		Invasive_Species4_StructN:bmtype = "tracer" ;
 		Invasive_Species4_StructN:units = "mg N" ;
@@ -11054,7 +11054,7 @@ variables:
 		Invasive_Species4_StructN:b_dens = 1000000000. ;
 		Invasive_Species4_StructN:i_conc = 200000000. ;
 		Invasive_Species4_StructN:f_conc = 200000000. ;
-		Invasive_Species4_StructN:_FillValue = 2855.2 ;
+		Invasive_Species4_StructN:_FillValue = 3184.8 ;
 	double Invasive_Species5_Nums(t, b, z) ;
 		Invasive_Species5_Nums:bmtype = "tracer" ;
 		Invasive_Species5_Nums:units = "1" ;
@@ -11092,7 +11092,7 @@ variables:
 		Invasive_Species5_ResN:b_dens = 1000000000. ;
 		Invasive_Species5_ResN:i_conc = 200000000. ;
 		Invasive_Species5_ResN:f_conc = 200000000. ;
-		Invasive_Species5_ResN:_FillValue = 8147.53 ;
+		Invasive_Species5_ResN:_FillValue = 8512.1 ;
 	double Invasive_Species5_StructN(t, b, z) ;
 		Invasive_Species5_StructN:bmtype = "tracer" ;
 		Invasive_Species5_StructN:units = "mg N" ;
@@ -11111,7 +11111,7 @@ variables:
 		Invasive_Species5_StructN:b_dens = 1000000000. ;
 		Invasive_Species5_StructN:i_conc = 200000000. ;
 		Invasive_Species5_StructN:f_conc = 200000000. ;
-		Invasive_Species5_StructN:_FillValue = 3074.54 ;
+		Invasive_Species5_StructN:_FillValue = 3212.1 ;
 	double Invasive_Species6_Nums(t, b, z) ;
 		Invasive_Species6_Nums:bmtype = "tracer" ;
 		Invasive_Species6_Nums:units = "1" ;
@@ -11149,7 +11149,7 @@ variables:
 		Invasive_Species6_ResN:b_dens = 1000000000. ;
 		Invasive_Species6_ResN:i_conc = 200000000. ;
 		Invasive_Species6_ResN:f_conc = 200000000. ;
-		Invasive_Species6_ResN:_FillValue = 8382.56 ;
+		Invasive_Species6_ResN:_FillValue = 8529.9 ;
 	double Invasive_Species6_StructN(t, b, z) ;
 		Invasive_Species6_StructN:bmtype = "tracer" ;
 		Invasive_Species6_StructN:units = "mg N" ;
@@ -11168,7 +11168,7 @@ variables:
 		Invasive_Species6_StructN:b_dens = 1000000000. ;
 		Invasive_Species6_StructN:i_conc = 200000000. ;
 		Invasive_Species6_StructN:f_conc = 200000000. ;
-		Invasive_Species6_StructN:_FillValue = 3163.23 ;
+		Invasive_Species6_StructN:_FillValue = 3218.8 ;
 	double Invasive_Species7_Nums(t, b, z) ;
 		Invasive_Species7_Nums:bmtype = "tracer" ;
 		Invasive_Species7_Nums:units = "1" ;
@@ -11206,7 +11206,7 @@ variables:
 		Invasive_Species7_ResN:b_dens = 1000000000. ;
 		Invasive_Species7_ResN:i_conc = 200000000. ;
 		Invasive_Species7_ResN:f_conc = 200000000. ;
-		Invasive_Species7_ResN:_FillValue = 8475.6 ;
+		Invasive_Species7_ResN:_FillValue = 8534.2 ;
 	double Invasive_Species7_StructN(t, b, z) ;
 		Invasive_Species7_StructN:bmtype = "tracer" ;
 		Invasive_Species7_StructN:units = "mg N" ;
@@ -11225,7 +11225,7 @@ variables:
 		Invasive_Species7_StructN:b_dens = 1000000000. ;
 		Invasive_Species7_StructN:i_conc = 200000000. ;
 		Invasive_Species7_StructN:f_conc = 200000000. ;
-		Invasive_Species7_StructN:_FillValue = 3198.34 ;
+		Invasive_Species7_StructN:_FillValue = 3220.5 ;
 	double Invasive_Species8_Nums(t, b, z) ;
 		Invasive_Species8_Nums:bmtype = "tracer" ;
 		Invasive_Species8_Nums:units = "1" ;
@@ -11263,7 +11263,7 @@ variables:
 		Invasive_Species8_ResN:b_dens = 1000000000. ;
 		Invasive_Species8_ResN:i_conc = 200000000. ;
 		Invasive_Species8_ResN:f_conc = 200000000. ;
-		Invasive_Species8_ResN:_FillValue = 8512.14 ;
+		Invasive_Species8_ResN:_FillValue = 8535.3 ;
 	double Invasive_Species8_StructN(t, b, z) ;
 		Invasive_Species8_StructN:bmtype = "tracer" ;
 		Invasive_Species8_StructN:units = "mg N" ;
@@ -11282,7 +11282,7 @@ variables:
 		Invasive_Species8_StructN:b_dens = 1000000000. ;
 		Invasive_Species8_StructN:i_conc = 200000000. ;
 		Invasive_Species8_StructN:f_conc = 200000000. ;
-		Invasive_Species8_StructN:_FillValue = 3212.13 ;
+		Invasive_Species8_StructN:_FillValue = 3220.9 ;
 	double Invasive_Species9_Nums(t, b, z) ;
 		Invasive_Species9_Nums:bmtype = "tracer" ;
 		Invasive_Species9_Nums:units = "1" ;
@@ -11320,7 +11320,7 @@ variables:
 		Invasive_Species9_ResN:b_dens = 1000000000. ;
 		Invasive_Species9_ResN:i_conc = 200000000. ;
 		Invasive_Species9_ResN:f_conc = 200000000. ;
-		Invasive_Species9_ResN:_FillValue = 8526.45 ;
+		Invasive_Species9_ResN:_FillValue = 8535.5 ;
 	double Invasive_Species9_StructN(t, b, z) ;
 		Invasive_Species9_StructN:bmtype = "tracer" ;
 		Invasive_Species9_StructN:units = "mg N" ;
@@ -11339,7 +11339,7 @@ variables:
 		Invasive_Species9_StructN:b_dens = 1000000000. ;
 		Invasive_Species9_StructN:i_conc = 200000000. ;
 		Invasive_Species9_StructN:f_conc = 200000000. ;
-		Invasive_Species9_StructN:_FillValue = 3217.53 ;
+		Invasive_Species9_StructN:_FillValue = 3221.0 ;
 	double Invasive_Species_N(t, b, z) ;
 		Invasive_Species_N:bmtype = "tracer" ;
 		Invasive_Species_N:units = "mg N m-3" ;
@@ -11468,7 +11468,7 @@ variables:
 		Little_Skate10_ResN:b_dens = 1000000000. ;
 		Little_Skate10_ResN:i_conc = 200000000. ;
 		Little_Skate10_ResN:f_conc = 200000000. ;
-		Little_Skate10_ResN:_FillValue = 24046.26 ;
+		Little_Skate10_ResN:_FillValue = 17598.1 ;
 	double Little_Skate10_StructN(t, b, z) ;
 		Little_Skate10_StructN:bmtype = "tracer" ;
 		Little_Skate10_StructN:units = "mg N" ;
@@ -11487,7 +11487,7 @@ variables:
 		Little_Skate10_StructN:b_dens = 1000000000. ;
 		Little_Skate10_StructN:i_conc = 200000000. ;
 		Little_Skate10_StructN:f_conc = 200000000. ;
-		Little_Skate10_StructN:_FillValue = 9074.06 ;
+		Little_Skate10_StructN:_FillValue = 6640.8 ;
 	double Little_Skate1_Nums(t, b, z) ;
 		Little_Skate1_Nums:bmtype = "tracer" ;
 		Little_Skate1_Nums:units = "1" ;
@@ -11525,7 +11525,7 @@ variables:
 		Little_Skate1_ResN:b_dens = 1000000000. ;
 		Little_Skate1_ResN:i_conc = 200000000. ;
 		Little_Skate1_ResN:f_conc = 200000000. ;
-		Little_Skate1_ResN:_FillValue = 122.14 ;
+		Little_Skate1_ResN:_FillValue = 12572.6 ;
 	double Little_Skate1_StructN(t, b, z) ;
 		Little_Skate1_StructN:bmtype = "tracer" ;
 		Little_Skate1_StructN:units = "mg N" ;
@@ -11544,7 +11544,7 @@ variables:
 		Little_Skate1_StructN:b_dens = 1000000000. ;
 		Little_Skate1_StructN:i_conc = 200000000. ;
 		Little_Skate1_StructN:f_conc = 200000000. ;
-		Little_Skate1_StructN:_FillValue = 46.09 ;
+		Little_Skate1_StructN:_FillValue = 4744.4 ;
 	double Little_Skate2_Nums(t, b, z) ;
 		Little_Skate2_Nums:bmtype = "tracer" ;
 		Little_Skate2_Nums:units = "1" ;
@@ -11582,7 +11582,7 @@ variables:
 		Little_Skate2_ResN:b_dens = 1000000000. ;
 		Little_Skate2_ResN:i_conc = 200000000. ;
 		Little_Skate2_ResN:f_conc = 200000000. ;
-		Little_Skate2_ResN:_FillValue = 3826.49 ;
+		Little_Skate2_ResN:_FillValue = 16920.4 ;
 	double Little_Skate2_StructN(t, b, z) ;
 		Little_Skate2_StructN:bmtype = "tracer" ;
 		Little_Skate2_StructN:units = "mg N" ;
@@ -11601,7 +11601,7 @@ variables:
 		Little_Skate2_StructN:b_dens = 1000000000. ;
 		Little_Skate2_StructN:i_conc = 200000000. ;
 		Little_Skate2_StructN:f_conc = 200000000. ;
-		Little_Skate2_StructN:_FillValue = 1443.96 ;
+		Little_Skate2_StructN:_FillValue = 6385.0 ;
 	double Little_Skate3_Nums(t, b, z) ;
 		Little_Skate3_Nums:bmtype = "tracer" ;
 		Little_Skate3_Nums:units = "1" ;
@@ -11639,7 +11639,7 @@ variables:
 		Little_Skate3_ResN:b_dens = 1000000000. ;
 		Little_Skate3_ResN:i_conc = 200000000. ;
 		Little_Skate3_ResN:f_conc = 200000000. ;
-		Little_Skate3_ResN:_FillValue = 10111.6 ;
+		Little_Skate3_ResN:_FillValue = 17514.1 ;
 	double Little_Skate3_StructN(t, b, z) ;
 		Little_Skate3_StructN:bmtype = "tracer" ;
 		Little_Skate3_StructN:units = "mg N" ;
@@ -11658,7 +11658,7 @@ variables:
 		Little_Skate3_StructN:b_dens = 1000000000. ;
 		Little_Skate3_StructN:i_conc = 200000000. ;
 		Little_Skate3_StructN:f_conc = 200000000. ;
-		Little_Skate3_StructN:_FillValue = 3815.7 ;
+		Little_Skate3_StructN:_FillValue = 6609.1 ;
 	double Little_Skate4_Nums(t, b, z) ;
 		Little_Skate4_Nums:bmtype = "tracer" ;
 		Little_Skate4_Nums:units = "1" ;
@@ -11696,7 +11696,7 @@ variables:
 		Little_Skate4_ResN:b_dens = 1000000000. ;
 		Little_Skate4_ResN:i_conc = 200000000. ;
 		Little_Skate4_ResN:f_conc = 200000000. ;
-		Little_Skate4_ResN:_FillValue = 15497.54 ;
+		Little_Skate4_ResN:_FillValue = 17587.8 ;
 	double Little_Skate4_StructN(t, b, z) ;
 		Little_Skate4_StructN:bmtype = "tracer" ;
 		Little_Skate4_StructN:units = "mg N" ;
@@ -11715,7 +11715,7 @@ variables:
 		Little_Skate4_StructN:b_dens = 1000000000. ;
 		Little_Skate4_StructN:i_conc = 200000000. ;
 		Little_Skate4_StructN:f_conc = 200000000. ;
-		Little_Skate4_StructN:_FillValue = 5848.13 ;
+		Little_Skate4_StructN:_FillValue = 6636.9 ;
 	double Little_Skate5_Nums(t, b, z) ;
 		Little_Skate5_Nums:bmtype = "tracer" ;
 		Little_Skate5_Nums:units = "1" ;
@@ -11753,7 +11753,7 @@ variables:
 		Little_Skate5_ResN:b_dens = 1000000000. ;
 		Little_Skate5_ResN:i_conc = 200000000. ;
 		Little_Skate5_ResN:f_conc = 200000000. ;
-		Little_Skate5_ResN:_FillValue = 19148.34 ;
+		Little_Skate5_ResN:_FillValue = 17596.8 ;
 	double Little_Skate5_StructN(t, b, z) ;
 		Little_Skate5_StructN:bmtype = "tracer" ;
 		Little_Skate5_StructN:units = "mg N" ;
@@ -11772,7 +11772,7 @@ variables:
 		Little_Skate5_StructN:b_dens = 1000000000. ;
 		Little_Skate5_StructN:i_conc = 200000000. ;
 		Little_Skate5_StructN:f_conc = 200000000. ;
-		Little_Skate5_StructN:_FillValue = 7225.79 ;
+		Little_Skate5_StructN:_FillValue = 6640.3 ;
 	double Little_Skate6_Nums(t, b, z) ;
 		Little_Skate6_Nums:bmtype = "tracer" ;
 		Little_Skate6_Nums:units = "1" ;
@@ -11810,7 +11810,7 @@ variables:
 		Little_Skate6_ResN:b_dens = 1000000000. ;
 		Little_Skate6_ResN:i_conc = 200000000. ;
 		Little_Skate6_ResN:f_conc = 200000000. ;
-		Little_Skate6_ResN:_FillValue = 21379.93 ;
+		Little_Skate6_ResN:_FillValue = 17597.9 ;
 	double Little_Skate6_StructN(t, b, z) ;
 		Little_Skate6_StructN:bmtype = "tracer" ;
 		Little_Skate6_StructN:units = "mg N" ;
@@ -11829,7 +11829,7 @@ variables:
 		Little_Skate6_StructN:b_dens = 1000000000. ;
 		Little_Skate6_StructN:i_conc = 200000000. ;
 		Little_Skate6_StructN:f_conc = 200000000. ;
-		Little_Skate6_StructN:_FillValue = 8067.9 ;
+		Little_Skate6_StructN:_FillValue = 6640.7 ;
 	double Little_Skate7_Nums(t, b, z) ;
 		Little_Skate7_Nums:bmtype = "tracer" ;
 		Little_Skate7_Nums:units = "1" ;
@@ -11867,7 +11867,7 @@ variables:
 		Little_Skate7_ResN:b_dens = 1000000000. ;
 		Little_Skate7_ResN:i_conc = 200000000. ;
 		Little_Skate7_ResN:f_conc = 200000000. ;
-		Little_Skate7_ResN:_FillValue = 22676.45 ;
+		Little_Skate7_ResN:_FillValue = 17598.0 ;
 	double Little_Skate7_StructN(t, b, z) ;
 		Little_Skate7_StructN:bmtype = "tracer" ;
 		Little_Skate7_StructN:units = "mg N" ;
@@ -11886,7 +11886,7 @@ variables:
 		Little_Skate7_StructN:b_dens = 1000000000. ;
 		Little_Skate7_StructN:i_conc = 200000000. ;
 		Little_Skate7_StructN:f_conc = 200000000. ;
-		Little_Skate7_StructN:_FillValue = 8557.15 ;
+		Little_Skate7_StructN:_FillValue = 6640.8 ;
 	double Little_Skate8_Nums(t, b, z) ;
 		Little_Skate8_Nums:bmtype = "tracer" ;
 		Little_Skate8_Nums:units = "1" ;
@@ -11924,7 +11924,7 @@ variables:
 		Little_Skate8_ResN:b_dens = 1000000000. ;
 		Little_Skate8_ResN:i_conc = 200000000. ;
 		Little_Skate8_ResN:f_conc = 200000000. ;
-		Little_Skate8_ResN:_FillValue = 23410.13 ;
+		Little_Skate8_ResN:_FillValue = 17598.1 ;
 	double Little_Skate8_StructN(t, b, z) ;
 		Little_Skate8_StructN:bmtype = "tracer" ;
 		Little_Skate8_StructN:units = "mg N" ;
@@ -11943,7 +11943,7 @@ variables:
 		Little_Skate8_StructN:b_dens = 1000000000. ;
 		Little_Skate8_StructN:i_conc = 200000000. ;
 		Little_Skate8_StructN:f_conc = 200000000. ;
-		Little_Skate8_StructN:_FillValue = 8834.01 ;
+		Little_Skate8_StructN:_FillValue = 6640.8 ;
 	double Little_Skate9_Nums(t, b, z) ;
 		Little_Skate9_Nums:bmtype = "tracer" ;
 		Little_Skate9_Nums:units = "1" ;
@@ -11981,7 +11981,7 @@ variables:
 		Little_Skate9_ResN:b_dens = 1000000000. ;
 		Little_Skate9_ResN:i_conc = 200000000. ;
 		Little_Skate9_ResN:f_conc = 200000000. ;
-		Little_Skate9_ResN:_FillValue = 23819.52 ;
+		Little_Skate9_ResN:_FillValue = 17598.1 ;
 	double Little_Skate9_StructN(t, b, z) ;
 		Little_Skate9_StructN:bmtype = "tracer" ;
 		Little_Skate9_StructN:units = "mg N" ;
@@ -12000,7 +12000,7 @@ variables:
 		Little_Skate9_StructN:b_dens = 1000000000. ;
 		Little_Skate9_StructN:i_conc = 200000000. ;
 		Little_Skate9_StructN:f_conc = 200000000. ;
-		Little_Skate9_StructN:_FillValue = 8988.5 ;
+		Little_Skate9_StructN:_FillValue = 6640.8 ;
 	double Little_Skate_N(t, b, z) ;
 		Little_Skate_N:bmtype = "tracer" ;
 		Little_Skate_N:units = "mg N m-3" ;
@@ -12095,7 +12095,7 @@ variables:
 		Mackerel10_ResN:b_dens = 1000000000. ;
 		Mackerel10_ResN:i_conc = 200000000. ;
 		Mackerel10_ResN:f_conc = 200000000. ;
-		Mackerel10_ResN:_FillValue = 4709.05 ;
+		Mackerel10_ResN:_FillValue = 5785.8 ;
 	double Mackerel10_StructN(t, b, z) ;
 		Mackerel10_StructN:bmtype = "tracer" ;
 		Mackerel10_StructN:units = "mg N" ;
@@ -12114,7 +12114,7 @@ variables:
 		Mackerel10_StructN:b_dens = 1000000000. ;
 		Mackerel10_StructN:i_conc = 200000000. ;
 		Mackerel10_StructN:f_conc = 200000000. ;
-		Mackerel10_StructN:_FillValue = 1777. ;
+		Mackerel10_StructN:_FillValue = 2183.3 ;
 	double Mackerel1_Nums(t, b, z) ;
 		Mackerel1_Nums:bmtype = "tracer" ;
 		Mackerel1_Nums:units = "1" ;
@@ -12152,7 +12152,7 @@ variables:
 		Mackerel1_ResN:b_dens = 1000000000. ;
 		Mackerel1_ResN:i_conc = 200000000. ;
 		Mackerel1_ResN:f_conc = 200000000. ;
-		Mackerel1_ResN:_FillValue = 40.12 ;
+		Mackerel1_ResN:_FillValue = 854.0 ;
 	double Mackerel1_StructN(t, b, z) ;
 		Mackerel1_StructN:bmtype = "tracer" ;
 		Mackerel1_StructN:units = "mg N" ;
@@ -12171,7 +12171,7 @@ variables:
 		Mackerel1_StructN:b_dens = 1000000000. ;
 		Mackerel1_StructN:i_conc = 200000000. ;
 		Mackerel1_StructN:f_conc = 200000000. ;
-		Mackerel1_StructN:_FillValue = 15.14 ;
+		Mackerel1_StructN:_FillValue = 322.3 ;
 	double Mackerel2_Nums(t, b, z) ;
 		Mackerel2_Nums:bmtype = "tracer" ;
 		Mackerel2_Nums:units = "1" ;
@@ -12209,7 +12209,7 @@ variables:
 		Mackerel2_ResN:b_dens = 1000000000. ;
 		Mackerel2_ResN:i_conc = 200000000. ;
 		Mackerel2_ResN:f_conc = 200000000. ;
-		Mackerel2_ResN:_FillValue = 248.73 ;
+		Mackerel2_ResN:_FillValue = 1591.4 ;
 	double Mackerel2_StructN(t, b, z) ;
 		Mackerel2_StructN:bmtype = "tracer" ;
 		Mackerel2_StructN:units = "mg N" ;
@@ -12228,7 +12228,7 @@ variables:
 		Mackerel2_StructN:b_dens = 1000000000. ;
 		Mackerel2_StructN:i_conc = 200000000. ;
 		Mackerel2_StructN:f_conc = 200000000. ;
-		Mackerel2_StructN:_FillValue = 93.86 ;
+		Mackerel2_StructN:_FillValue = 600.5 ;
 	double Mackerel3_Nums(t, b, z) ;
 		Mackerel3_Nums:bmtype = "tracer" ;
 		Mackerel3_Nums:units = "1" ;
@@ -12266,7 +12266,7 @@ variables:
 		Mackerel3_ResN:b_dens = 1000000000. ;
 		Mackerel3_ResN:i_conc = 200000000. ;
 		Mackerel3_ResN:f_conc = 200000000. ;
-		Mackerel3_ResN:_FillValue = 647.66 ;
+		Mackerel3_ResN:_FillValue = 2379.0 ;
 	double Mackerel3_StructN(t, b, z) ;
 		Mackerel3_StructN:bmtype = "tracer" ;
 		Mackerel3_StructN:units = "mg N" ;
@@ -12285,7 +12285,7 @@ variables:
 		Mackerel3_StructN:b_dens = 1000000000. ;
 		Mackerel3_StructN:i_conc = 200000000. ;
 		Mackerel3_StructN:f_conc = 200000000. ;
-		Mackerel3_StructN:_FillValue = 244.4 ;
+		Mackerel3_StructN:_FillValue = 897.7 ;
 	double Mackerel4_Nums(t, b, z) ;
 		Mackerel4_Nums:bmtype = "tracer" ;
 		Mackerel4_Nums:units = "1" ;
@@ -12323,7 +12323,7 @@ variables:
 		Mackerel4_ResN:b_dens = 1000000000. ;
 		Mackerel4_ResN:i_conc = 200000000. ;
 		Mackerel4_ResN:f_conc = 200000000. ;
-		Mackerel4_ResN:_FillValue = 1189.24 ;
+		Mackerel4_ResN:_FillValue = 3131.5 ;
 	double Mackerel4_StructN(t, b, z) ;
 		Mackerel4_StructN:bmtype = "tracer" ;
 		Mackerel4_StructN:units = "mg N" ;
@@ -12342,7 +12342,7 @@ variables:
 		Mackerel4_StructN:b_dens = 1000000000. ;
 		Mackerel4_StructN:i_conc = 200000000. ;
 		Mackerel4_StructN:f_conc = 200000000. ;
-		Mackerel4_StructN:_FillValue = 448.77 ;
+		Mackerel4_StructN:_FillValue = 1181.7 ;
 	double Mackerel5_Nums(t, b, z) ;
 		Mackerel5_Nums:bmtype = "tracer" ;
 		Mackerel5_Nums:units = "1" ;
@@ -12380,7 +12380,7 @@ variables:
 		Mackerel5_ResN:b_dens = 1000000000. ;
 		Mackerel5_ResN:i_conc = 200000000. ;
 		Mackerel5_ResN:f_conc = 200000000. ;
-		Mackerel5_ResN:_FillValue = 1811.3 ;
+		Mackerel5_ResN:_FillValue = 3803.0 ;
 	double Mackerel5_StructN(t, b, z) ;
 		Mackerel5_StructN:bmtype = "tracer" ;
 		Mackerel5_StructN:units = "mg N" ;
@@ -12399,7 +12399,7 @@ variables:
 		Mackerel5_StructN:b_dens = 1000000000. ;
 		Mackerel5_StructN:i_conc = 200000000. ;
 		Mackerel5_StructN:f_conc = 200000000. ;
-		Mackerel5_StructN:_FillValue = 683.51 ;
+		Mackerel5_StructN:_FillValue = 1435.1 ;
 	double Mackerel6_Nums(t, b, z) ;
 		Mackerel6_Nums:bmtype = "tracer" ;
 		Mackerel6_Nums:units = "1" ;
@@ -12437,7 +12437,7 @@ variables:
 		Mackerel6_ResN:b_dens = 1000000000. ;
 		Mackerel6_ResN:i_conc = 200000000. ;
 		Mackerel6_ResN:f_conc = 200000000. ;
-		Mackerel6_ResN:_FillValue = 2459.44 ;
+		Mackerel6_ResN:_FillValue = 4376.3 ;
 	double Mackerel6_StructN(t, b, z) ;
 		Mackerel6_StructN:bmtype = "tracer" ;
 		Mackerel6_StructN:units = "mg N" ;
@@ -12456,7 +12456,7 @@ variables:
 		Mackerel6_StructN:b_dens = 1000000000. ;
 		Mackerel6_StructN:i_conc = 200000000. ;
 		Mackerel6_StructN:f_conc = 200000000. ;
-		Mackerel6_StructN:_FillValue = 928.09 ;
+		Mackerel6_StructN:_FillValue = 1651.4 ;
 	double Mackerel7_Nums(t, b, z) ;
 		Mackerel7_Nums:bmtype = "tracer" ;
 		Mackerel7_Nums:units = "1" ;
@@ -12494,7 +12494,7 @@ variables:
 		Mackerel7_ResN:b_dens = 1000000000. ;
 		Mackerel7_ResN:i_conc = 200000000. ;
 		Mackerel7_ResN:f_conc = 200000000. ;
-		Mackerel7_ResN:_FillValue = 3093.72 ;
+		Mackerel7_ResN:_FillValue = 4851.1 ;
 	double Mackerel7_StructN(t, b, z) ;
 		Mackerel7_StructN:bmtype = "tracer" ;
 		Mackerel7_StructN:units = "mg N" ;
@@ -12513,7 +12513,7 @@ variables:
 		Mackerel7_StructN:b_dens = 1000000000. ;
 		Mackerel7_StructN:i_conc = 200000000. ;
 		Mackerel7_StructN:f_conc = 200000000. ;
-		Mackerel7_StructN:_FillValue = 1167.44 ;
+		Mackerel7_StructN:_FillValue = 1830.6 ;
 	double Mackerel8_Nums(t, b, z) ;
 		Mackerel8_Nums:bmtype = "tracer" ;
 		Mackerel8_Nums:units = "1" ;
@@ -12551,7 +12551,7 @@ variables:
 		Mackerel8_ResN:b_dens = 1000000000. ;
 		Mackerel8_ResN:i_conc = 200000000. ;
 		Mackerel8_ResN:f_conc = 200000000. ;
-		Mackerel8_ResN:_FillValue = 3688.32 ;
+		Mackerel8_ResN:_FillValue = 5236.0 ;
 	double Mackerel8_StructN(t, b, z) ;
 		Mackerel8_StructN:bmtype = "tracer" ;
 		Mackerel8_StructN:units = "mg N" ;
@@ -12570,7 +12570,7 @@ variables:
 		Mackerel8_StructN:b_dens = 1000000000. ;
 		Mackerel8_StructN:i_conc = 200000000. ;
 		Mackerel8_StructN:f_conc = 200000000. ;
-		Mackerel8_StructN:_FillValue = 1391.82 ;
+		Mackerel8_StructN:_FillValue = 1975.8 ;
 	double Mackerel9_Nums(t, b, z) ;
 		Mackerel9_Nums:bmtype = "tracer" ;
 		Mackerel9_Nums:units = "1" ;
@@ -12608,7 +12608,7 @@ variables:
 		Mackerel9_ResN:b_dens = 1000000000. ;
 		Mackerel9_ResN:i_conc = 200000000. ;
 		Mackerel9_ResN:f_conc = 200000000. ;
-		Mackerel9_ResN:_FillValue = 4228.82 ;
+		Mackerel9_ResN:_FillValue = 5543.2 ;
 	double Mackerel9_StructN(t, b, z) ;
 		Mackerel9_StructN:bmtype = "tracer" ;
 		Mackerel9_StructN:units = "mg N" ;
@@ -12624,10 +12624,11 @@ variables:
 		Mackerel9_StructN:svel = 0. ;
 		Mackerel9_StructN:xvel = 0. ;
 		Mackerel9_StructN:psize = 10. ;
+		Mackerel9_StructN:psize = 10. ;
 		Mackerel9_StructN:b_dens = 1000000000. ;
 		Mackerel9_StructN:i_conc = 200000000. ;
 		Mackerel9_StructN:f_conc = 200000000. ;
-		Mackerel9_StructN:_FillValue = 1595.78 ;
+		Mackerel9_StructN:_FillValue = 2091.8 ;
 	double Mackerel_N(t, b, z) ;
 		Mackerel_N:bmtype = "tracer" ;
 		Mackerel_N:units = "mg N m-3" ;
@@ -14539,7 +14540,7 @@ variables:
 		Monkfish10_ResN:b_dens = 1000000000. ;
 		Monkfish10_ResN:i_conc = 200000000. ;
 		Monkfish10_ResN:f_conc = 200000000. ;
-		Monkfish10_ResN:_FillValue = 67231.11 ;
+		Monkfish10_ResN:_FillValue = 67231.1 ;
 	double Monkfish10_StructN(t, b, z) ;
 		Monkfish10_StructN:bmtype = "tracer" ;
 		Monkfish10_StructN:units = "mg N" ;
@@ -14558,7 +14559,7 @@ variables:
 		Monkfish10_StructN:b_dens = 1000000000. ;
 		Monkfish10_StructN:i_conc = 200000000. ;
 		Monkfish10_StructN:f_conc = 200000000. ;
-		Monkfish10_StructN:_FillValue = 25370.23 ;
+		Monkfish10_StructN:_FillValue = 25370.2 ;
 	double Monkfish1_Nums(t, b, z) ;
 		Monkfish1_Nums:bmtype = "tracer" ;
 		Monkfish1_Nums:units = "1" ;
@@ -15195,7 +15196,7 @@ variables:
 		Ocean_Pout10_ResN:b_dens = 1000000000. ;
 		Ocean_Pout10_ResN:i_conc = 200000000. ;
 		Ocean_Pout10_ResN:f_conc = 200000000. ;
-		Ocean_Pout10_ResN:_FillValue = 30252.03 ;
+		Ocean_Pout10_ResN:_FillValue = 41138.1 ;
 	double Ocean_Pout10_StructN(t, b, z) ;
 		Ocean_Pout10_StructN:bmtype = "tracer" ;
 		Ocean_Pout10_StructN:units = "mg N" ;
@@ -15214,7 +15215,7 @@ variables:
 		Ocean_Pout10_StructN:b_dens = 1000000000. ;
 		Ocean_Pout10_StructN:i_conc = 200000000. ;
 		Ocean_Pout10_StructN:f_conc = 200000000. ;
-		Ocean_Pout10_StructN:_FillValue = 11415.86 ;
+		Ocean_Pout10_StructN:_FillValue = 15523.8 ;
 	double Ocean_Pout1_Nums(t, b, z) ;
 		Ocean_Pout1_Nums:bmtype = "tracer" ;
 		Ocean_Pout1_Nums:units = "1" ;
@@ -15252,7 +15253,7 @@ variables:
 		Ocean_Pout1_ResN:b_dens = 1000000000. ;
 		Ocean_Pout1_ResN:i_conc = 200000000. ;
 		Ocean_Pout1_ResN:f_conc = 200000000. ;
-		Ocean_Pout1_ResN:_FillValue = 38.85 ;
+		Ocean_Pout1_ResN:_FillValue = 850.3 ;
 	double Ocean_Pout1_StructN(t, b, z) ;
 		Ocean_Pout1_StructN:bmtype = "tracer" ;
 		Ocean_Pout1_StructN:units = "mg N" ;
@@ -15271,7 +15272,7 @@ variables:
 		Ocean_Pout1_StructN:b_dens = 1000000000. ;
 		Ocean_Pout1_StructN:i_conc = 200000000. ;
 		Ocean_Pout1_StructN:f_conc = 200000000. ;
-		Ocean_Pout1_StructN:_FillValue = 14.66 ;
+		Ocean_Pout1_StructN:_FillValue = 320.9 ;
 	double Ocean_Pout2_Nums(t, b, z) ;
 		Ocean_Pout2_Nums:bmtype = "tracer" ;
 		Ocean_Pout2_Nums:units = "1" ;
@@ -15309,7 +15310,7 @@ variables:
 		Ocean_Pout2_ResN:b_dens = 1000000000. ;
 		Ocean_Pout2_ResN:i_conc = 200000000. ;
 		Ocean_Pout2_ResN:f_conc = 200000000. ;
-		Ocean_Pout2_ResN:_FillValue = 850.28 ;
+		Ocean_Pout2_ResN:_FillValue = 4612.5 ;
 	double Ocean_Pout2_StructN(t, b, z) ;
 		Ocean_Pout2_StructN:bmtype = "tracer" ;
 		Ocean_Pout2_StructN:units = "mg N" ;
@@ -15328,7 +15329,7 @@ variables:
 		Ocean_Pout2_StructN:b_dens = 1000000000. ;
 		Ocean_Pout2_StructN:i_conc = 200000000. ;
 		Ocean_Pout2_StructN:f_conc = 200000000. ;
-		Ocean_Pout2_StructN:_FillValue = 320.86 ;
+		Ocean_Pout2_StructN:_FillValue = 1740.6 ;
 	double Ocean_Pout3_Nums(t, b, z) ;
 		Ocean_Pout3_Nums:bmtype = "tracer" ;
 		Ocean_Pout3_Nums:units = "1" ;
@@ -15366,7 +15367,7 @@ variables:
 		Ocean_Pout3_ResN:b_dens = 1000000000. ;
 		Ocean_Pout3_ResN:i_conc = 200000000. ;
 		Ocean_Pout3_ResN:f_conc = 200000000. ;
-		Ocean_Pout3_ResN:_FillValue = 3044.24 ;
+		Ocean_Pout3_ResN:_FillValue = 10527.4 ;
 	double Ocean_Pout3_StructN(t, b, z) ;
 		Ocean_Pout3_StructN:bmtype = "tracer" ;
 		Ocean_Pout3_StructN:units = "mg N" ;
@@ -15385,7 +15386,7 @@ variables:
 		Ocean_Pout3_StructN:b_dens = 1000000000. ;
 		Ocean_Pout3_StructN:i_conc = 200000000. ;
 		Ocean_Pout3_StructN:f_conc = 200000000. ;
-		Ocean_Pout3_StructN:_FillValue = 1148.77 ;
+		Ocean_Pout3_StructN:_FillValue = 3972.6 ;
 	double Ocean_Pout4_Nums(t, b, z) ;
 		Ocean_Pout4_Nums:bmtype = "tracer" ;
 		Ocean_Pout4_Nums:units = "1" ;
@@ -15423,7 +15424,7 @@ variables:
 		Ocean_Pout4_ResN:b_dens = 1000000000. ;
 		Ocean_Pout4_ResN:i_conc = 200000000. ;
 		Ocean_Pout4_ResN:f_conc = 200000000. ;
-		Ocean_Pout4_ResN:_FillValue = 6422.83 ;
+		Ocean_Pout4_ResN:_FillValue = 17106.8 ;
 	double Ocean_Pout4_StructN(t, b, z) ;
 		Ocean_Pout4_StructN:bmtype = "tracer" ;
 		Ocean_Pout4_StructN:units = "mg N" ;
@@ -15442,7 +15443,7 @@ variables:
 		Ocean_Pout4_StructN:b_dens = 1000000000. ;
 		Ocean_Pout4_StructN:i_conc = 200000000. ;
 		Ocean_Pout4_StructN:f_conc = 200000000. ;
-		Ocean_Pout4_StructN:_FillValue = 2423.71 ;
+		Ocean_Pout4_StructN:_FillValue = 6455.4 ;
 	double Ocean_Pout5_Nums(t, b, z) ;
 		Ocean_Pout5_Nums:bmtype = "tracer" ;
 		Ocean_Pout5_Nums:units = "1" ;
@@ -15480,7 +15481,7 @@ variables:
 		Ocean_Pout5_ResN:b_dens = 1000000000. ;
 		Ocean_Pout5_ResN:i_conc = 200000000. ;
 		Ocean_Pout5_ResN:f_conc = 200000000. ;
-		Ocean_Pout5_ResN:_FillValue = 10527.42 ;
+		Ocean_Pout5_ResN:_FillValue = 23323.0 ;
 	double Ocean_Pout5_StructN(t, b, z) ;
 		Ocean_Pout5_StructN:bmtype = "tracer" ;
 		Ocean_Pout5_StructN:units = "mg N" ;
@@ -15499,7 +15500,7 @@ variables:
 		Ocean_Pout5_StructN:b_dens = 1000000000. ;
 		Ocean_Pout5_StructN:i_conc = 200000000. ;
 		Ocean_Pout5_StructN:f_conc = 200000000. ;
-		Ocean_Pout5_StructN:_FillValue = 3972.61 ;
+		Ocean_Pout5_StructN:_FillValue = 8801.1 ;
 	double Ocean_Pout6_Nums(t, b, z) ;
 		Ocean_Pout6_Nums:bmtype = "tracer" ;
 		Ocean_Pout6_Nums:units = "1" ;
@@ -15537,7 +15538,7 @@ variables:
 		Ocean_Pout6_ResN:b_dens = 1000000000. ;
 		Ocean_Pout6_ResN:i_conc = 200000000. ;
 		Ocean_Pout6_ResN:f_conc = 200000000. ;
-		Ocean_Pout6_ResN:_FillValue = 14915.55 ;
+		Ocean_Pout6_ResN:_FillValue = 28684.6 ;
 	double Ocean_Pout6_StructN(t, b, z) ;
 		Ocean_Pout6_StructN:bmtype = "tracer" ;
 		Ocean_Pout6_StructN:units = "mg N" ;
@@ -15556,7 +15557,7 @@ variables:
 		Ocean_Pout6_StructN:b_dens = 1000000000. ;
 		Ocean_Pout6_StructN:i_conc = 200000000. ;
 		Ocean_Pout6_StructN:f_conc = 200000000. ;
-		Ocean_Pout6_StructN:_FillValue = 5628.51 ;
+		Ocean_Pout6_StructN:_FillValue = 10824.4 ;
 	double Ocean_Pout7_Nums(t, b, z) ;
 		Ocean_Pout7_Nums:bmtype = "tracer" ;
 		Ocean_Pout7_Nums:units = "1" ;
@@ -15594,7 +15595,7 @@ variables:
 		Ocean_Pout7_ResN:b_dens = 1000000000. ;
 		Ocean_Pout7_ResN:i_conc = 200000000. ;
 		Ocean_Pout7_ResN:f_conc = 200000000. ;
-		Ocean_Pout7_ResN:_FillValue = 19253.02 ;
+		Ocean_Pout7_ResN:_FillValue = 33058.1 ;
 	double Ocean_Pout7_StructN(t, b, z) ;
 		Ocean_Pout7_StructN:bmtype = "tracer" ;
 		Ocean_Pout7_StructN:units = "mg N" ;
@@ -15613,7 +15614,7 @@ variables:
 		Ocean_Pout7_StructN:b_dens = 1000000000. ;
 		Ocean_Pout7_StructN:i_conc = 200000000. ;
 		Ocean_Pout7_StructN:f_conc = 200000000. ;
-		Ocean_Pout7_StructN:_FillValue = 7265.29 ;
+		Ocean_Pout7_StructN:_FillValue = 12474.8 ;
 	double Ocean_Pout8_Nums(t, b, z) ;
 		Ocean_Pout8_Nums:bmtype = "tracer" ;
 		Ocean_Pout8_Nums:units = "1" ;
@@ -15651,7 +15652,7 @@ variables:
 		Ocean_Pout8_ResN:b_dens = 1000000000. ;
 		Ocean_Pout8_ResN:i_conc = 200000000. ;
 		Ocean_Pout8_ResN:f_conc = 200000000. ;
-		Ocean_Pout8_ResN:_FillValue = 23323.02 ;
+		Ocean_Pout8_ResN:_FillValue = 36499.2 ;
 	double Ocean_Pout8_StructN(t, b, z) ;
 		Ocean_Pout8_StructN:bmtype = "tracer" ;
 		Ocean_Pout8_StructN:units = "mg N" ;
@@ -15670,7 +15671,7 @@ variables:
 		Ocean_Pout8_StructN:b_dens = 1000000000. ;
 		Ocean_Pout8_StructN:i_conc = 200000000. ;
 		Ocean_Pout8_StructN:f_conc = 200000000. ;
-		Ocean_Pout8_StructN:_FillValue = 8801.14 ;
+		Ocean_Pout8_StructN:_FillValue = 13773.3 ;
 	double Ocean_Pout9_Nums(t, b, z) ;
 		Ocean_Pout9_Nums:bmtype = "tracer" ;
 		Ocean_Pout9_Nums:units = "1" ;
@@ -15708,7 +15709,7 @@ variables:
 		Ocean_Pout9_ResN:b_dens = 1000000000. ;
 		Ocean_Pout9_ResN:i_conc = 200000000. ;
 		Ocean_Pout9_ResN:f_conc = 200000000. ;
-		Ocean_Pout9_ResN:_FillValue = 27005.88 ;
+		Ocean_Pout9_ResN:_FillValue = 39141.9 ;
 	double Ocean_Pout9_StructN(t, b, z) ;
 		Ocean_Pout9_StructN:bmtype = "tracer" ;
 		Ocean_Pout9_StructN:units = "mg N" ;
@@ -15727,7 +15728,7 @@ variables:
 		Ocean_Pout9_StructN:b_dens = 1000000000. ;
 		Ocean_Pout9_StructN:i_conc = 200000000. ;
 		Ocean_Pout9_StructN:f_conc = 200000000. ;
-		Ocean_Pout9_StructN:_FillValue = 10190.9 ;
+		Ocean_Pout9_StructN:_FillValue = 14770.5 ;
 	double Ocean_Pout_N(t, b, z) ;
 		Ocean_Pout_N:bmtype = "tracer" ;
 		Ocean_Pout_N:units = "mg N m-3" ;
@@ -15777,7 +15778,7 @@ variables:
 		Offshore_Hake10_ResN:b_dens = 1000000000. ;
 		Offshore_Hake10_ResN:i_conc = 200000000. ;
 		Offshore_Hake10_ResN:f_conc = 200000000. ;
-		Offshore_Hake10_ResN:_FillValue = 3340.06 ;
+		Offshore_Hake10_ResN:_FillValue = 3341.1 ;
 	double Offshore_Hake10_StructN(t, b, z) ;
 		Offshore_Hake10_StructN:bmtype = "tracer" ;
 		Offshore_Hake10_StructN:units = "mg N" ;
@@ -15796,7 +15797,7 @@ variables:
 		Offshore_Hake10_StructN:b_dens = 1000000000. ;
 		Offshore_Hake10_StructN:i_conc = 200000000. ;
 		Offshore_Hake10_StructN:f_conc = 200000000. ;
-		Offshore_Hake10_StructN:_FillValue = 1260.4 ;
+		Offshore_Hake10_StructN:_FillValue = 1260.8 ;
 	double Offshore_Hake1_Nums(t, b, z) ;
 		Offshore_Hake1_Nums:bmtype = "tracer" ;
 		Offshore_Hake1_Nums:units = "1" ;
@@ -15834,7 +15835,7 @@ variables:
 		Offshore_Hake1_ResN:b_dens = 1000000000. ;
 		Offshore_Hake1_ResN:i_conc = 200000000. ;
 		Offshore_Hake1_ResN:f_conc = 200000000. ;
-		Offshore_Hake1_ResN:_FillValue = 224.48 ;
+		Offshore_Hake1_ResN:_FillValue = 1567.0 ;
 	double Offshore_Hake1_StructN(t, b, z) ;
 		Offshore_Hake1_StructN:bmtype = "tracer" ;
 		Offshore_Hake1_StructN:units = "mg N" ;
@@ -15853,7 +15854,7 @@ variables:
 		Offshore_Hake1_StructN:b_dens = 1000000000. ;
 		Offshore_Hake1_StructN:i_conc = 200000000. ;
 		Offshore_Hake1_StructN:f_conc = 200000000. ;
-		Offshore_Hake1_StructN:_FillValue = 84.71 ;
+		Offshore_Hake1_StructN:_FillValue = 591.3 ;
 	double Offshore_Hake2_Nums(t, b, z) ;
 		Offshore_Hake2_Nums:bmtype = "tracer" ;
 		Offshore_Hake2_Nums:units = "1" ;
@@ -15891,7 +15892,7 @@ variables:
 		Offshore_Hake2_ResN:b_dens = 1000000000. ;
 		Offshore_Hake2_ResN:i_conc = 200000000. ;
 		Offshore_Hake2_ResN:f_conc = 200000000. ;
-		Offshore_Hake2_ResN:_FillValue = 1567. ;
+		Offshore_Hake2_ResN:_FillValue = 2842.1 ;
 	double Offshore_Hake2_StructN(t, b, z) ;
 		Offshore_Hake2_StructN:bmtype = "tracer" ;
 		Offshore_Hake2_StructN:units = "mg N" ;
@@ -15910,7 +15911,7 @@ variables:
 		Offshore_Hake2_StructN:b_dens = 1000000000. ;
 		Offshore_Hake2_StructN:i_conc = 200000000. ;
 		Offshore_Hake2_StructN:f_conc = 200000000. ;
-		Offshore_Hake2_StructN:_FillValue = 591.32 ;
+		Offshore_Hake2_StructN:_FillValue = 1072.5 ;
 	double Offshore_Hake3_Nums(t, b, z) ;
 		Offshore_Hake3_Nums:bmtype = "tracer" ;
 		Offshore_Hake3_Nums:units = "1" ;
@@ -15948,7 +15949,7 @@ variables:
 		Offshore_Hake3_ResN:b_dens = 1000000000. ;
 		Offshore_Hake3_ResN:i_conc = 200000000. ;
 		Offshore_Hake3_ResN:f_conc = 200000000. ;
-		Offshore_Hake3_ResN:_FillValue = 2560.03 ;
+		Offshore_Hake3_ResN:_FillValue = 3218.2 ;
 	double Offshore_Hake3_StructN(t, b, z) ;
 		Offshore_Hake3_StructN:bmtype = "tracer" ;
 		Offshore_Hake3_StructN:units = "mg N" ;
@@ -15967,7 +15968,7 @@ variables:
 		Offshore_Hake3_StructN:b_dens = 1000000000. ;
 		Offshore_Hake3_StructN:i_conc = 200000000. ;
 		Offshore_Hake3_StructN:f_conc = 200000000. ;
-		Offshore_Hake3_StructN:_FillValue = 966.05 ;
+		Offshore_Hake3_StructN:_FillValue = 1214.4 ;
 	double Offshore_Hake4_Nums(t, b, z) ;
 		Offshore_Hake4_Nums:bmtype = "tracer" ;
 		Offshore_Hake4_Nums:units = "1" ;
@@ -16005,7 +16006,7 @@ variables:
 		Offshore_Hake4_ResN:b_dens = 1000000000. ;
 		Offshore_Hake4_ResN:i_conc = 200000000. ;
 		Offshore_Hake4_ResN:f_conc = 200000000. ;
-		Offshore_Hake4_ResN:_FillValue = 3026.19 ;
+		Offshore_Hake4_ResN:_FillValue = 3311.7 ;
 	double Offshore_Hake4_StructN(t, b, z) ;
 		Offshore_Hake4_StructN:bmtype = "tracer" ;
 		Offshore_Hake4_StructN:units = "mg N" ;
@@ -16024,7 +16025,7 @@ variables:
 		Offshore_Hake4_StructN:b_dens = 1000000000. ;
 		Offshore_Hake4_StructN:i_conc = 200000000. ;
 		Offshore_Hake4_StructN:f_conc = 200000000. ;
-		Offshore_Hake4_StructN:_FillValue = 1141.96 ;
+		Offshore_Hake4_StructN:_FillValue = 1249.7 ;
 	double Offshore_Hake5_Nums(t, b, z) ;
 		Offshore_Hake5_Nums:bmtype = "tracer" ;
 		Offshore_Hake5_Nums:units = "1" ;
@@ -16062,7 +16063,7 @@ variables:
 		Offshore_Hake5_ResN:b_dens = 1000000000. ;
 		Offshore_Hake5_ResN:i_conc = 200000000. ;
 		Offshore_Hake5_ResN:f_conc = 200000000. ;
-		Offshore_Hake5_ResN:_FillValue = 3218.16 ;
+		Offshore_Hake5_ResN:_FillValue = 3334.1 ;
 	double Offshore_Hake5_StructN(t, b, z) ;
 		Offshore_Hake5_StructN:bmtype = "tracer" ;
 		Offshore_Hake5_StructN:units = "mg N" ;
@@ -16081,7 +16082,7 @@ variables:
 		Offshore_Hake5_StructN:b_dens = 1000000000. ;
 		Offshore_Hake5_StructN:i_conc = 200000000. ;
 		Offshore_Hake5_StructN:f_conc = 200000000. ;
-		Offshore_Hake5_StructN:_FillValue = 1214.4 ;
+		Offshore_Hake5_StructN:_FillValue = 1258.2 ;
 	double Offshore_Hake6_Nums(t, b, z) ;
 		Offshore_Hake6_Nums:bmtype = "tracer" ;
 		Offshore_Hake6_Nums:units = "1" ;
@@ -16119,7 +16120,7 @@ variables:
 		Offshore_Hake6_ResN:b_dens = 1000000000. ;
 		Offshore_Hake6_ResN:i_conc = 200000000. ;
 		Offshore_Hake6_ResN:f_conc = 200000000. ;
-		Offshore_Hake6_ResN:_FillValue = 3293.66 ;
+		Offshore_Hake6_ResN:_FillValue = 3339.4 ;
 	double Offshore_Hake6_StructN(t, b, z) ;
 		Offshore_Hake6_StructN:bmtype = "tracer" ;
 		Offshore_Hake6_StructN:units = "mg N" ;
@@ -16138,7 +16139,7 @@ variables:
 		Offshore_Hake6_StructN:b_dens = 1000000000. ;
 		Offshore_Hake6_StructN:i_conc = 200000000. ;
 		Offshore_Hake6_StructN:f_conc = 200000000. ;
-		Offshore_Hake6_StructN:_FillValue = 1242.89 ;
+		Offshore_Hake6_StructN:_FillValue = 1260.2 ;
 	double Offshore_Hake7_Nums(t, b, z) ;
 		Offshore_Hake7_Nums:bmtype = "tracer" ;
 		Offshore_Hake7_Nums:units = "1" ;
@@ -16176,7 +16177,7 @@ variables:
 		Offshore_Hake7_ResN:b_dens = 1000000000. ;
 		Offshore_Hake7_ResN:i_conc = 200000000. ;
 		Offshore_Hake7_ResN:f_conc = 200000000. ;
-		Offshore_Hake7_ResN:_FillValue = 3322.89 ;
+		Offshore_Hake7_ResN:_FillValue = 3340.7 ;
 	double Offshore_Hake7_StructN(t, b, z) ;
 		Offshore_Hake7_StructN:bmtype = "tracer" ;
 		Offshore_Hake7_StructN:units = "mg N" ;
@@ -16195,7 +16196,7 @@ variables:
 		Offshore_Hake7_StructN:b_dens = 1000000000. ;
 		Offshore_Hake7_StructN:i_conc = 200000000. ;
 		Offshore_Hake7_StructN:f_conc = 200000000. ;
-		Offshore_Hake7_StructN:_FillValue = 1253.92 ;
+		Offshore_Hake7_StructN:_FillValue = 1260.6 ;
 	double Offshore_Hake8_Nums(t, b, z) ;
 		Offshore_Hake8_Nums:bmtype = "tracer" ;
 		Offshore_Hake8_Nums:units = "1" ;
@@ -16233,7 +16234,7 @@ variables:
 		Offshore_Hake8_ResN:b_dens = 1000000000. ;
 		Offshore_Hake8_ResN:i_conc = 200000000. ;
 		Offshore_Hake8_ResN:f_conc = 200000000. ;
-		Offshore_Hake8_ResN:_FillValue = 3334.1 ;
+		Offshore_Hake8_ResN:_FillValue = 3341.0 ;
 	double Offshore_Hake8_StructN(t, b, z) ;
 		Offshore_Hake8_StructN:bmtype = "tracer" ;
 		Offshore_Hake8_StructN:units = "mg N" ;
@@ -16252,7 +16253,7 @@ variables:
 		Offshore_Hake8_StructN:b_dens = 1000000000. ;
 		Offshore_Hake8_StructN:i_conc = 200000000. ;
 		Offshore_Hake8_StructN:f_conc = 200000000. ;
-		Offshore_Hake8_StructN:_FillValue = 1258.15 ;
+		Offshore_Hake8_StructN:_FillValue = 1260.8 ;
 	double Offshore_Hake9_Nums(t, b, z) ;
 		Offshore_Hake9_Nums:bmtype = "tracer" ;
 		Offshore_Hake9_Nums:units = "1" ;
@@ -16290,7 +16291,7 @@ variables:
 		Offshore_Hake9_ResN:b_dens = 1000000000. ;
 		Offshore_Hake9_ResN:i_conc = 200000000. ;
 		Offshore_Hake9_ResN:f_conc = 200000000. ;
-		Offshore_Hake9_ResN:_FillValue = 3338.42 ;
+		Offshore_Hake9_ResN:_FillValue = 3341.1 ;
 	double Offshore_Hake9_StructN(t, b, z) ;
 		Offshore_Hake9_StructN:bmtype = "tracer" ;
 		Offshore_Hake9_StructN:units = "mg N" ;
@@ -16309,7 +16310,7 @@ variables:
 		Offshore_Hake9_StructN:b_dens = 1000000000. ;
 		Offshore_Hake9_StructN:i_conc = 200000000. ;
 		Offshore_Hake9_StructN:f_conc = 200000000. ;
-		Offshore_Hake9_StructN:_FillValue = 1259.78 ;
+		Offshore_Hake9_StructN:_FillValue = 1260.8 ;
 	double Offshore_Hake_N(t, b, z) ;
 		Offshore_Hake_N:bmtype = "tracer" ;
 		Offshore_Hake_N:units = "mg N m-3" ;
@@ -17567,7 +17568,7 @@ variables:
 		PicoPhytopl_N:decay = 0. ;
 		PicoPhytopl_N:partic = 1 ;
 		PicoPhytopl_N:passive = 1 ;
-		PicoPhytopl_N:svel = 0 ;
+		PicoPhytopl_N:svel = 0. ;
 		PicoPhytopl_N:xvel = 0. ;
 		PicoPhytopl_N:psize = 1.e-05 ;
 		PicoPhytopl_N:b_dens = 1000000000. ;
@@ -18193,7 +18194,7 @@ variables:
 		Plaice10_ResN:b_dens = 1000000000. ;
 		Plaice10_ResN:i_conc = 200000000. ;
 		Plaice10_ResN:f_conc = 200000000. ;
-		Plaice10_ResN:_FillValue = 13085.57 ;
+		Plaice10_ResN:_FillValue = 14643.7 ;
 	double Plaice10_StructN(t, b, z) ;
 		Plaice10_StructN:bmtype = "tracer" ;
 		Plaice10_StructN:units = "mg N" ;
@@ -18212,7 +18213,7 @@ variables:
 		Plaice10_StructN:b_dens = 1000000000. ;
 		Plaice10_StructN:i_conc = 200000000. ;
 		Plaice10_StructN:f_conc = 200000000. ;
-		Plaice10_StructN:_FillValue = 4937.95 ;
+		Plaice10_StructN:_FillValue = 5525.9 ;
 	double Plaice1_Nums(t, b, z) ;
 		Plaice1_Nums:bmtype = "tracer" ;
 		Plaice1_Nums:units = "1" ;
@@ -18250,7 +18251,7 @@ variables:
 		Plaice1_ResN:b_dens = 1000000000. ;
 		Plaice1_ResN:i_conc = 200000000. ;
 		Plaice1_ResN:f_conc = 200000000. ;
-		Plaice1_ResN:_FillValue = 33.63 ;
+		Plaice1_ResN:_FillValue = 733.5 ;
 	double Plaice1_StructN(t, b, z) ;
 		Plaice1_StructN:bmtype = "tracer" ;
 		Plaice1_StructN:units = "mg N" ;
@@ -18269,7 +18270,7 @@ variables:
 		Plaice1_StructN:b_dens = 1000000000. ;
 		Plaice1_StructN:i_conc = 200000000. ;
 		Plaice1_StructN:f_conc = 200000000. ;
-		Plaice1_StructN:_FillValue = 12.69 ;
+		Plaice1_StructN:_FillValue = 276.8 ;
 	double Plaice2_Nums(t, b, z) ;
 		Plaice2_Nums:bmtype = "tracer" ;
 		Plaice2_Nums:units = "1" ;
@@ -18307,7 +18308,7 @@ variables:
 		Plaice2_ResN:b_dens = 1000000000. ;
 		Plaice2_ResN:i_conc = 200000000. ;
 		Plaice2_ResN:f_conc = 200000000. ;
-		Plaice2_ResN:_FillValue = 733.44 ;
+		Plaice2_ResN:_FillValue = 3438.3 ;
 	double Plaice2_StructN(t, b, z) ;
 		Plaice2_StructN:bmtype = "tracer" ;
 		Plaice2_StructN:units = "mg N" ;
@@ -18326,7 +18327,7 @@ variables:
 		Plaice2_StructN:b_dens = 1000000000. ;
 		Plaice2_StructN:i_conc = 200000000. ;
 		Plaice2_StructN:f_conc = 200000000. ;
-		Plaice2_StructN:_FillValue = 276.77 ;
+		Plaice2_StructN:_FillValue = 1297.5 ;
 	double Plaice3_Nums(t, b, z) ;
 		Plaice3_Nums:bmtype = "tracer" ;
 		Plaice3_Nums:units = "1" ;
@@ -18364,7 +18365,7 @@ variables:
 		Plaice3_ResN:b_dens = 1000000000. ;
 		Plaice3_ResN:i_conc = 200000000. ;
 		Plaice3_ResN:f_conc = 200000000. ;
-		Plaice3_ResN:_FillValue = 2392.66 ;
+		Plaice3_ResN:_FillValue = 6702.4 ;
 	double Plaice3_StructN(t, b, z) ;
 		Plaice3_StructN:bmtype = "tracer" ;
 		Plaice3_StructN:units = "mg N" ;
@@ -18383,7 +18384,7 @@ variables:
 		Plaice3_StructN:b_dens = 1000000000. ;
 		Plaice3_StructN:i_conc = 200000000. ;
 		Plaice3_StructN:f_conc = 200000000. ;
-		Plaice3_StructN:_FillValue = 902.89 ;
+		Plaice3_StructN:_FillValue = 2529.2 ;
 	double Plaice4_Nums(t, b, z) ;
 		Plaice4_Nums:bmtype = "tracer" ;
 		Plaice4_Nums:units = "1" ;
@@ -18421,7 +18422,7 @@ variables:
 		Plaice4_ResN:b_dens = 1000000000. ;
 		Plaice4_ResN:i_conc = 200000000. ;
 		Plaice4_ResN:f_conc = 200000000. ;
-		Plaice4_ResN:_FillValue = 4538.28 ;
+		Plaice4_ResN:_FillValue = 9454.7 ;
 	double Plaice4_StructN(t, b, z) ;
 		Plaice4_StructN:bmtype = "tracer" ;
 		Plaice4_StructN:units = "mg N" ;
@@ -18440,7 +18441,7 @@ variables:
 		Plaice4_StructN:b_dens = 1000000000. ;
 		Plaice4_StructN:i_conc = 200000000. ;
 		Plaice4_StructN:f_conc = 200000000. ;
-		Plaice4_StructN:_FillValue = 1712.56 ;
+		Plaice4_StructN:_FillValue = 3567.8 ;
 	double Plaice5_Nums(t, b, z) ;
 		Plaice5_Nums:bmtype = "tracer" ;
 		Plaice5_Nums:units = "1" ;
@@ -18478,7 +18479,7 @@ variables:
 		Plaice5_ResN:b_dens = 1000000000. ;
 		Plaice5_ResN:i_conc = 200000000. ;
 		Plaice5_ResN:f_conc = 200000000. ;
-		Plaice5_ResN:_FillValue = 6702.35 ;
+		Plaice5_ResN:_FillValue = 11439.0 ;
 	double Plaice5_StructN(t, b, z) ;
 		Plaice5_StructN:bmtype = "tracer" ;
 		Plaice5_StructN:units = "mg N" ;
@@ -18497,7 +18498,7 @@ variables:
 		Plaice5_StructN:b_dens = 1000000000. ;
 		Plaice5_StructN:i_conc = 200000000. ;
 		Plaice5_StructN:f_conc = 200000000. ;
-		Plaice5_StructN:_FillValue = 2529.19 ;
+		Plaice5_StructN:_FillValue = 4316.6 ;
 	double Plaice6_Nums(t, b, z) ;
 		Plaice6_Nums:bmtype = "tracer" ;
 		Plaice6_Nums:units = "1" ;
@@ -18535,7 +18536,7 @@ variables:
 		Plaice6_ResN:b_dens = 1000000000. ;
 		Plaice6_ResN:i_conc = 200000000. ;
 		Plaice6_ResN:f_conc = 200000000. ;
-		Plaice6_ResN:_FillValue = 8621.38 ;
+		Plaice6_ResN:_FillValue = 12760.3 ;
 	double Plaice6_StructN(t, b, z) ;
 		Plaice6_StructN:bmtype = "tracer" ;
 		Plaice6_StructN:units = "mg N" ;
@@ -18554,7 +18555,7 @@ variables:
 		Plaice6_StructN:b_dens = 1000000000. ;
 		Plaice6_StructN:i_conc = 200000000. ;
 		Plaice6_StructN:f_conc = 200000000. ;
-		Plaice6_StructN:_FillValue = 3253.35 ;
+		Plaice6_StructN:_FillValue = 4815.2 ;
 	double Plaice7_Nums(t, b, z) ;
 		Plaice7_Nums:bmtype = "tracer" ;
 		Plaice7_Nums:units = "1" ;
@@ -18592,7 +18593,7 @@ variables:
 		Plaice7_ResN:b_dens = 1000000000. ;
 		Plaice7_ResN:i_conc = 200000000. ;
 		Plaice7_ResN:f_conc = 200000000. ;
-		Plaice7_ResN:_FillValue = 10200.01 ;
+		Plaice7_ResN:_FillValue = 13602.8 ;
 	double Plaice7_StructN(t, b, z) ;
 		Plaice7_StructN:bmtype = "tracer" ;
 		Plaice7_StructN:units = "mg N" ;
@@ -18611,7 +18612,7 @@ variables:
 		Plaice7_StructN:b_dens = 1000000000. ;
 		Plaice7_StructN:i_conc = 200000000. ;
 		Plaice7_StructN:f_conc = 200000000. ;
-		Plaice7_StructN:_FillValue = 3849.06 ;
+		Plaice7_StructN:_FillValue = 5133.1 ;
 	double Plaice8_Nums(t, b, z) ;
 		Plaice8_Nums:bmtype = "tracer" ;
 		Plaice8_Nums:units = "1" ;
@@ -18649,7 +18650,7 @@ variables:
 		Plaice8_ResN:b_dens = 1000000000. ;
 		Plaice8_ResN:i_conc = 200000000. ;
 		Plaice8_ResN:f_conc = 200000000. ;
-		Plaice8_ResN:_FillValue = 11439.02 ;
+		Plaice8_ResN:_FillValue = 14126.9 ;
 	double Plaice8_StructN(t, b, z) ;
 		Plaice8_StructN:bmtype = "tracer" ;
 		Plaice8_StructN:units = "mg N" ;
@@ -18668,7 +18669,7 @@ variables:
 		Plaice8_StructN:b_dens = 1000000000. ;
 		Plaice8_StructN:i_conc = 200000000. ;
 		Plaice8_StructN:f_conc = 200000000. ;
-		Plaice8_StructN:_FillValue = 4316.61 ;
+		Plaice8_StructN:_FillValue = 5330.9 ;
 	double Plaice9_Nums(t, b, z) ;
 		Plaice9_Nums:bmtype = "tracer" ;
 		Plaice9_Nums:units = "1" ;
@@ -18706,7 +18707,7 @@ variables:
 		Plaice9_ResN:b_dens = 1000000000. ;
 		Plaice9_ResN:i_conc = 200000000. ;
 		Plaice9_ResN:f_conc = 200000000. ;
-		Plaice9_ResN:_FillValue = 12382.2 ;
+		Plaice9_ResN:_FillValue = 14448.3 ;
 	double Plaice9_StructN(t, b, z) ;
 		Plaice9_StructN:bmtype = "tracer" ;
 		Plaice9_StructN:units = "mg N" ;
@@ -18725,7 +18726,7 @@ variables:
 		Plaice9_StructN:b_dens = 1000000000. ;
 		Plaice9_StructN:i_conc = 200000000. ;
 		Plaice9_StructN:f_conc = 200000000. ;
-		Plaice9_StructN:_FillValue = 4672.53 ;
+		Plaice9_StructN:_FillValue = 5452.2 ;
 	double Plaice_N(t, b, z) ;
 		Plaice_N:bmtype = "tracer" ;
 		Plaice_N:units = "mg N m-3" ;
@@ -18775,7 +18776,7 @@ variables:
 		Pollock10_ResN:b_dens = 1000000000. ;
 		Pollock10_ResN:i_conc = 200000000. ;
 		Pollock10_ResN:f_conc = 200000000. ;
-		Pollock10_ResN:_FillValue = 100802.45 ;
+		Pollock10_ResN:_FillValue = 111709.3 ;
 	double Pollock10_StructN(t, b, z) ;
 		Pollock10_StructN:bmtype = "tracer" ;
 		Pollock10_StructN:units = "mg N" ;
@@ -18794,7 +18795,7 @@ variables:
 		Pollock10_StructN:b_dens = 1000000000. ;
 		Pollock10_StructN:i_conc = 200000000. ;
 		Pollock10_StructN:f_conc = 200000000. ;
-		Pollock10_StructN:_FillValue = 38038.66 ;
+		Pollock10_StructN:_FillValue = 42154.5 ;
 	double Pollock1_Nums(t, b, z) ;
 		Pollock1_Nums:bmtype = "tracer" ;
 		Pollock1_Nums:units = "1" ;
@@ -18832,7 +18833,7 @@ variables:
 		Pollock1_ResN:b_dens = 1000000000. ;
 		Pollock1_ResN:i_conc = 200000000. ;
 		Pollock1_ResN:f_conc = 200000000. ;
-		Pollock1_ResN:_FillValue = 434.73 ;
+		Pollock1_ResN:_FillValue = 7254.7 ;
 	double Pollock1_StructN(t, b, z) ;
 		Pollock1_StructN:bmtype = "tracer" ;
 		Pollock1_StructN:units = "mg N" ;
@@ -18851,7 +18852,7 @@ variables:
 		Pollock1_StructN:b_dens = 1000000000. ;
 		Pollock1_StructN:i_conc = 200000000. ;
 		Pollock1_StructN:f_conc = 200000000. ;
-		Pollock1_StructN:_FillValue = 164.05 ;
+		Pollock1_StructN:_FillValue = 2737.6 ;
 	double Pollock2_Nums(t, b, z) ;
 		Pollock2_Nums:bmtype = "tracer" ;
 		Pollock2_Nums:units = "1" ;
@@ -18889,7 +18890,7 @@ variables:
 		Pollock2_ResN:b_dens = 1000000000. ;
 		Pollock2_ResN:i_conc = 200000000. ;
 		Pollock2_ResN:f_conc = 200000000. ;
-		Pollock2_ResN:_FillValue = 7254.75 ;
+		Pollock2_ResN:_FillValue = 29743.0 ;
 	double Pollock2_StructN(t, b, z) ;
 		Pollock2_StructN:bmtype = "tracer" ;
 		Pollock2_StructN:units = "mg N" ;
@@ -18908,7 +18909,7 @@ variables:
 		Pollock2_StructN:b_dens = 1000000000. ;
 		Pollock2_StructN:i_conc = 200000000. ;
 		Pollock2_StructN:f_conc = 200000000. ;
-		Pollock2_StructN:_FillValue = 2737.64 ;
+		Pollock2_StructN:_FillValue = 11223.8 ;
 	double Pollock3_Nums(t, b, z) ;
 		Pollock3_Nums:bmtype = "tracer" ;
 		Pollock3_Nums:units = "1" ;
@@ -18946,7 +18947,7 @@ variables:
 		Pollock3_ResN:b_dens = 1000000000. ;
 		Pollock3_ResN:i_conc = 200000000. ;
 		Pollock3_ResN:f_conc = 200000000. ;
-		Pollock3_ResN:_FillValue = 21358.81 ;
+		Pollock3_ResN:_FillValue = 54716.0 ;
 	double Pollock3_StructN(t, b, z) ;
 		Pollock3_StructN:bmtype = "tracer" ;
 		Pollock3_StructN:units = "mg N" ;
@@ -18965,7 +18966,7 @@ variables:
 		Pollock3_StructN:b_dens = 1000000000. ;
 		Pollock3_StructN:i_conc = 200000000. ;
 		Pollock3_StructN:f_conc = 200000000. ;
-		Pollock3_StructN:_FillValue = 8059.93 ;
+		Pollock3_StructN:_FillValue = 20647.6 ;
 	double Pollock4_Nums(t, b, z) ;
 		Pollock4_Nums:bmtype = "tracer" ;
 		Pollock4_Nums:units = "1" ;
@@ -19003,7 +19004,7 @@ variables:
 		Pollock4_ResN:b_dens = 1000000000. ;
 		Pollock4_ResN:i_conc = 200000000. ;
 		Pollock4_ResN:f_conc = 200000000. ;
-		Pollock4_ResN:_FillValue = 38323.96 ;
+		Pollock4_ResN:_FillValue = 74915.5 ;
 	double Pollock4_StructN(t, b, z) ;
 		Pollock4_StructN:bmtype = "tracer" ;
 		Pollock4_StructN:units = "mg N" ;
@@ -19022,7 +19023,7 @@ variables:
 		Pollock4_StructN:b_dens = 1000000000. ;
 		Pollock4_StructN:i_conc = 200000000. ;
 		Pollock4_StructN:f_conc = 200000000. ;
-		Pollock4_StructN:_FillValue = 14461.87 ;
+		Pollock4_StructN:_FillValue = 28270.0 ;
 	double Pollock5_Nums(t, b, z) ;
 		Pollock5_Nums:bmtype = "tracer" ;
 		Pollock5_Nums:units = "1" ;
@@ -19060,7 +19061,7 @@ variables:
 		Pollock5_ResN:b_dens = 1000000000. ;
 		Pollock5_ResN:i_conc = 200000000. ;
 		Pollock5_ResN:f_conc = 200000000. ;
-		Pollock5_ResN:_FillValue = 54716.03 ;
+		Pollock5_ResN:_FillValue = 89152.7 ;
 	double Pollock5_StructN(t, b, z) ;
 		Pollock5_StructN:bmtype = "tracer" ;
 		Pollock5_StructN:units = "mg N" ;
@@ -19079,7 +19080,7 @@ variables:
 		Pollock5_StructN:b_dens = 1000000000. ;
 		Pollock5_StructN:i_conc = 200000000. ;
 		Pollock5_StructN:f_conc = 200000000. ;
-		Pollock5_StructN:_FillValue = 20647.56 ;
+		Pollock5_StructN:_FillValue = 33642.5 ;
 	double Pollock6_Nums(t, b, z) ;
 		Pollock6_Nums:bmtype = "tracer" ;
 		Pollock6_Nums:units = "1" ;
@@ -19117,7 +19118,7 @@ variables:
 		Pollock6_ResN:b_dens = 1000000000. ;
 		Pollock6_ResN:i_conc = 200000000. ;
 		Pollock6_ResN:f_conc = 200000000. ;
-		Pollock6_ResN:_FillValue = 68861.68 ;
+		Pollock6_ResN:_FillValue = 98512.0 ;
 	double Pollock6_StructN(t, b, z) ;
 		Pollock6_StructN:bmtype = "tracer" ;
 		Pollock6_StructN:units = "mg N" ;
@@ -19136,7 +19137,7 @@ variables:
 		Pollock6_StructN:b_dens = 1000000000. ;
 		Pollock6_StructN:i_conc = 200000000. ;
 		Pollock6_StructN:f_conc = 200000000. ;
-		Pollock6_StructN:_FillValue = 25985.54 ;
+		Pollock6_StructN:_FillValue = 37174.3 ;
 	double Pollock7_Nums(t, b, z) ;
 		Pollock7_Nums:bmtype = "tracer" ;
 		Pollock7_Nums:units = "1" ;
@@ -19174,7 +19175,7 @@ variables:
 		Pollock7_ResN:b_dens = 1000000000. ;
 		Pollock7_ResN:i_conc = 200000000. ;
 		Pollock7_ResN:f_conc = 200000000. ;
-		Pollock7_ResN:_FillValue = 80290.68 ;
+		Pollock7_ResN:_FillValue = 104435.2 ;
 	double Pollock7_StructN(t, b, z) ;
 		Pollock7_StructN:bmtype = "tracer" ;
 		Pollock7_StructN:units = "mg N" ;
@@ -19193,7 +19194,7 @@ variables:
 		Pollock7_StructN:b_dens = 1000000000. ;
 		Pollock7_StructN:i_conc = 200000000. ;
 		Pollock7_StructN:f_conc = 200000000. ;
-		Pollock7_StructN:_FillValue = 30298.37 ;
+		Pollock7_StructN:_FillValue = 39409.5 ;
 	double Pollock8_Nums(t, b, z) ;
 		Pollock8_Nums:bmtype = "tracer" ;
 		Pollock8_Nums:units = "1" ;
@@ -19231,7 +19232,7 @@ variables:
 		Pollock8_ResN:b_dens = 1000000000. ;
 		Pollock8_ResN:i_conc = 200000000. ;
 		Pollock8_ResN:f_conc = 200000000. ;
-		Pollock8_ResN:_FillValue = 89152.68 ;
+		Pollock8_ResN:_FillValue = 108103.6 ;
 	double Pollock8_StructN(t, b, z) ;
 		Pollock8_StructN:bmtype = "tracer" ;
 		Pollock8_StructN:units = "mg N" ;
@@ -19250,7 +19251,7 @@ variables:
 		Pollock8_StructN:b_dens = 1000000000. ;
 		Pollock8_StructN:i_conc = 200000000. ;
 		Pollock8_StructN:f_conc = 200000000. ;
-		Pollock8_StructN:_FillValue = 33642.52 ;
+		Pollock8_StructN:_FillValue = 40793.8 ;
 	double Pollock9_Nums(t, b, z) ;
 		Pollock9_Nums:bmtype = "tracer" ;
 		Pollock9_Nums:units = "1" ;
@@ -19288,7 +19289,7 @@ variables:
 		Pollock9_ResN:b_dens = 1000000000. ;
 		Pollock9_ResN:i_conc = 200000000. ;
 		Pollock9_ResN:f_conc = 200000000. ;
-		Pollock9_ResN:_FillValue = 95842.42 ;
+		Pollock9_ResN:_FillValue = 110347.2 ;
 	double Pollock9_StructN(t, b, z) ;
 		Pollock9_StructN:bmtype = "tracer" ;
 		Pollock9_StructN:units = "mg N" ;
@@ -19307,7 +19308,7 @@ variables:
 		Pollock9_StructN:b_dens = 1000000000. ;
 		Pollock9_StructN:i_conc = 200000000. ;
 		Pollock9_StructN:f_conc = 200000000. ;
-		Pollock9_StructN:_FillValue = 36166.95 ;
+		Pollock9_StructN:_FillValue = 41640.5 ;
 	double Pollock_N(t, b, z) ;
 		Pollock_N:bmtype = "tracer" ;
 		Pollock_N:units = "mg N m-3" ;
@@ -19960,7 +19961,7 @@ variables:
 		Red_Hake10_ResN:b_dens = 1000000000. ;
 		Red_Hake10_ResN:i_conc = 200000000. ;
 		Red_Hake10_ResN:f_conc = 200000000. ;
-		Red_Hake10_ResN:_FillValue = 16636.04 ;
+		Red_Hake10_ResN:_FillValue = 17881.9 ;
 	double Red_Hake10_StructN(t, b, z) ;
 		Red_Hake10_StructN:bmtype = "tracer" ;
 		Red_Hake10_StructN:units = "mg N" ;
@@ -19979,7 +19980,7 @@ variables:
 		Red_Hake10_StructN:b_dens = 1000000000. ;
 		Red_Hake10_StructN:i_conc = 200000000. ;
 		Red_Hake10_StructN:f_conc = 200000000. ;
-		Red_Hake10_StructN:_FillValue = 6277.75 ;
+		Red_Hake10_StructN:_FillValue = 6747.9 ;
 	double Red_Hake1_Nums(t, b, z) ;
 		Red_Hake1_Nums:bmtype = "tracer" ;
 		Red_Hake1_Nums:units = "1" ;
@@ -20017,7 +20018,7 @@ variables:
 		Red_Hake1_ResN:b_dens = 1000000000. ;
 		Red_Hake1_ResN:i_conc = 200000000. ;
 		Red_Hake1_ResN:f_conc = 200000000. ;
-		Red_Hake1_ResN:_FillValue = 93.6 ;
+		Red_Hake1_ResN:_FillValue = 1481.4 ;
 	double Red_Hake1_StructN(t, b, z) ;
 		Red_Hake1_StructN:bmtype = "tracer" ;
 		Red_Hake1_StructN:units = "mg N" ;
@@ -20036,7 +20037,7 @@ variables:
 		Red_Hake1_StructN:b_dens = 1000000000. ;
 		Red_Hake1_StructN:i_conc = 200000000. ;
 		Red_Hake1_StructN:f_conc = 200000000. ;
-		Red_Hake1_StructN:_FillValue = 35.32 ;
+		Red_Hake1_StructN:_FillValue = 559.0 ;
 	double Red_Hake2_Nums(t, b, z) ;
 		Red_Hake2_Nums:bmtype = "tracer" ;
 		Red_Hake2_Nums:units = "1" ;
@@ -20074,7 +20075,7 @@ variables:
 		Red_Hake2_ResN:b_dens = 1000000000. ;
 		Red_Hake2_ResN:i_conc = 200000000. ;
 		Red_Hake2_ResN:f_conc = 200000000. ;
-		Red_Hake2_ResN:_FillValue = 1481.4 ;
+		Red_Hake2_ResN:_FillValue = 5684.0 ;
 	double Red_Hake2_StructN(t, b, z) ;
 		Red_Hake2_StructN:bmtype = "tracer" ;
 		Red_Hake2_StructN:units = "mg N" ;
@@ -20093,7 +20094,7 @@ variables:
 		Red_Hake2_StructN:b_dens = 1000000000. ;
 		Red_Hake2_StructN:i_conc = 200000000. ;
 		Red_Hake2_StructN:f_conc = 200000000. ;
-		Red_Hake2_StructN:_FillValue = 559.02 ;
+		Red_Hake2_StructN:_FillValue = 2144.9 ;
 	double Red_Hake3_Nums(t, b, z) ;
 		Red_Hake3_Nums:bmtype = "tracer" ;
 		Red_Hake3_Nums:units = "1" ;
@@ -20131,7 +20132,7 @@ variables:
 		Red_Hake3_ResN:b_dens = 1000000000. ;
 		Red_Hake3_ResN:i_conc = 200000000. ;
 		Red_Hake3_ResN:f_conc = 200000000. ;
-		Red_Hake3_ResN:_FillValue = 4165.93 ;
+		Red_Hake3_ResN:_FillValue = 9927.6 ;
 	double Red_Hake3_StructN(t, b, z) ;
 		Red_Hake3_StructN:bmtype = "tracer" ;
 		Red_Hake3_StructN:units = "mg N" ;
@@ -20150,7 +20151,7 @@ variables:
 		Red_Hake3_StructN:b_dens = 1000000000. ;
 		Red_Hake3_StructN:i_conc = 200000000. ;
 		Red_Hake3_StructN:f_conc = 200000000. ;
-		Red_Hake3_StructN:_FillValue = 1572.05 ;
+		Red_Hake3_StructN:_FillValue = 3746.3 ;
 	double Red_Hake4_Nums(t, b, z) ;
 		Red_Hake4_Nums:bmtype = "tracer" ;
 		Red_Hake4_Nums:units = "1" ;
@@ -20188,7 +20189,7 @@ variables:
 		Red_Hake4_ResN:b_dens = 1000000000. ;
 		Red_Hake4_ResN:i_conc = 200000000. ;
 		Red_Hake4_ResN:f_conc = 200000000. ;
-		Red_Hake4_ResN:_FillValue = 7187.36 ;
+		Red_Hake4_ResN:_FillValue = 13067.7 ;
 	double Red_Hake4_StructN(t, b, z) ;
 		Red_Hake4_StructN:bmtype = "tracer" ;
 		Red_Hake4_StructN:units = "mg N" ;
@@ -20207,7 +20208,7 @@ variables:
 		Red_Hake4_StructN:b_dens = 1000000000. ;
 		Red_Hake4_StructN:i_conc = 200000000. ;
 		Red_Hake4_StructN:f_conc = 200000000. ;
-		Red_Hake4_StructN:_FillValue = 2712.21 ;
+		Red_Hake4_StructN:_FillValue = 4931.2 ;
 	double Red_Hake5_Nums(t, b, z) ;
 		Red_Hake5_Nums:bmtype = "tracer" ;
 		Red_Hake5_Nums:units = "1" ;
@@ -20245,7 +20246,7 @@ variables:
 		Red_Hake5_ResN:b_dens = 1000000000. ;
 		Red_Hake5_ResN:i_conc = 200000000. ;
 		Red_Hake5_ResN:f_conc = 200000000. ;
-		Red_Hake5_ResN:_FillValue = 9927.64 ;
+		Red_Hake5_ResN:_FillValue = 15106.0 ;
 	double Red_Hake5_StructN(t, b, z) ;
 		Red_Hake5_StructN:bmtype = "tracer" ;
 		Red_Hake5_StructN:units = "mg N" ;
@@ -20264,7 +20265,7 @@ variables:
 		Red_Hake5_StructN:b_dens = 1000000000. ;
 		Red_Hake5_StructN:i_conc = 200000000. ;
 		Red_Hake5_StructN:f_conc = 200000000. ;
-		Red_Hake5_StructN:_FillValue = 3746.28 ;
+		Red_Hake5_StructN:_FillValue = 5700.4 ;
 	double Red_Hake6_Nums(t, b, z) ;
 		Red_Hake6_Nums:bmtype = "tracer" ;
 		Red_Hake6_Nums:units = "1" ;
@@ -20302,7 +20303,7 @@ variables:
 		Red_Hake6_ResN:b_dens = 1000000000. ;
 		Red_Hake6_ResN:i_conc = 200000000. ;
 		Red_Hake6_ResN:f_conc = 200000000. ;
-		Red_Hake6_ResN:_FillValue = 12155.1 ;
+		Red_Hake6_ResN:_FillValue = 16347.4 ;
 	double Red_Hake6_StructN(t, b, z) ;
 		Red_Hake6_StructN:bmtype = "tracer" ;
 		Red_Hake6_StructN:units = "mg N" ;
@@ -20321,7 +20322,7 @@ variables:
 		Red_Hake6_StructN:b_dens = 1000000000. ;
 		Red_Hake6_StructN:i_conc = 200000000. ;
 		Red_Hake6_StructN:f_conc = 200000000. ;
-		Red_Hake6_StructN:_FillValue = 4586.83 ;
+		Red_Hake6_StructN:_FillValue = 6168.8 ;
 	double Red_Hake7_Nums(t, b, z) ;
 		Red_Hake7_Nums:bmtype = "tracer" ;
 		Red_Hake7_Nums:units = "1" ;
@@ -20359,7 +20360,7 @@ variables:
 		Red_Hake7_ResN:b_dens = 1000000000. ;
 		Red_Hake7_ResN:i_conc = 200000000. ;
 		Red_Hake7_ResN:f_conc = 200000000. ;
-		Red_Hake7_ResN:_FillValue = 13855.92 ;
+		Red_Hake7_ResN:_FillValue = 17078.6 ;
 	double Red_Hake7_StructN(t, b, z) ;
 		Red_Hake7_StructN:bmtype = "tracer" ;
 		Red_Hake7_StructN:units = "mg N" ;
@@ -20378,7 +20379,7 @@ variables:
 		Red_Hake7_StructN:b_dens = 1000000000. ;
 		Red_Hake7_StructN:i_conc = 200000000. ;
 		Red_Hake7_StructN:f_conc = 200000000. ;
-		Red_Hake7_StructN:_FillValue = 5228.65 ;
+		Red_Hake7_StructN:_FillValue = 6444.8 ;
 	double Red_Hake8_Nums(t, b, z) ;
 		Red_Hake8_Nums:bmtype = "tracer" ;
 		Red_Hake8_Nums:units = "1" ;
@@ -20416,7 +20417,7 @@ variables:
 		Red_Hake8_ResN:b_dens = 1000000000. ;
 		Red_Hake8_ResN:i_conc = 200000000. ;
 		Red_Hake8_ResN:f_conc = 200000000. ;
-		Red_Hake8_ResN:_FillValue = 15105.98 ;
+		Red_Hake8_ResN:_FillValue = 17501.6 ;
 	double Red_Hake8_StructN(t, b, z) ;
 		Red_Hake8_StructN:bmtype = "tracer" ;
 		Red_Hake8_StructN:units = "mg N" ;
@@ -20435,7 +20436,7 @@ variables:
 		Red_Hake8_StructN:b_dens = 1000000000. ;
 		Red_Hake8_StructN:i_conc = 200000000. ;
 		Red_Hake8_StructN:f_conc = 200000000. ;
-		Red_Hake8_StructN:_FillValue = 5700.37 ;
+		Red_Hake8_StructN:_FillValue = 6604.4 ;
 	double Red_Hake9_Nums(t, b, z) ;
 		Red_Hake9_Nums:bmtype = "tracer" ;
 		Red_Hake9_Nums:units = "1" ;
@@ -20473,7 +20474,7 @@ variables:
 		Red_Hake9_ResN:b_dens = 1000000000. ;
 		Red_Hake9_ResN:i_conc = 200000000. ;
 		Red_Hake9_ResN:f_conc = 200000000. ;
-		Red_Hake9_ResN:_FillValue = 16002.77 ;
+		Red_Hake9_ResN:_FillValue = 17743.9 ;
 	double Red_Hake9_StructN(t, b, z) ;
 		Red_Hake9_StructN:bmtype = "tracer" ;
 		Red_Hake9_StructN:units = "mg N" ;
@@ -20492,7 +20493,7 @@ variables:
 		Red_Hake9_StructN:b_dens = 1000000000. ;
 		Red_Hake9_StructN:i_conc = 200000000. ;
 		Red_Hake9_StructN:f_conc = 200000000. ;
-		Red_Hake9_StructN:_FillValue = 6038.78 ;
+		Red_Hake9_StructN:_FillValue = 6695.8 ;
 	double Red_Hake_N(t, b, z) ;
 		Red_Hake_N:bmtype = "tracer" ;
 		Red_Hake_N:units = "mg N m-3" ;
@@ -20542,7 +20543,7 @@ variables:
 		Redfish10_ResN:b_dens = 1000000000. ;
 		Redfish10_ResN:i_conc = 200000000. ;
 		Redfish10_ResN:f_conc = 200000000. ;
-		Redfish10_ResN:_FillValue = 2190.41 ;
+		Redfish10_ResN:_FillValue = 1655.0;
 	double Redfish10_StructN(t, b, z) ;
 		Redfish10_StructN:bmtype = "tracer" ;
 		Redfish10_StructN:units = "mg N" ;
@@ -20561,7 +20562,7 @@ variables:
 		Redfish10_StructN:b_dens = 1000000000. ;
 		Redfish10_StructN:i_conc = 200000000. ;
 		Redfish10_StructN:f_conc = 200000000. ;
-		Redfish10_StructN:_FillValue = 826.57 ;
+		Redfish10_StructN:_FillValue = 624.5;
 	double Redfish1_Nums(t, b, z) ;
 		Redfish1_Nums:bmtype = "tracer" ;
 		Redfish1_Nums:units = "1" ;
@@ -20599,7 +20600,7 @@ variables:
 		Redfish1_ResN:b_dens = 1000000000. ;
 		Redfish1_ResN:i_conc = 200000000. ;
 		Redfish1_ResN:f_conc = 200000000. ;
-		Redfish1_ResN:_FillValue = 2.46 ;
+		Redfish1_ResN:_FillValue = 212.4;
 	double Redfish1_StructN(t, b, z) ;
 		Redfish1_StructN:bmtype = "tracer" ;
 		Redfish1_StructN:units = "mg N" ;
@@ -20618,7 +20619,7 @@ variables:
 		Redfish1_StructN:b_dens = 1000000000. ;
 		Redfish1_StructN:i_conc = 200000000. ;
 		Redfish1_StructN:f_conc = 200000000. ;
-		Redfish1_StructN:_FillValue = 0.93 ;
+		Redfish1_StructN:_FillValue = 80.2;
 	double Redfish2_Nums(t, b, z) ;
 		Redfish2_Nums:bmtype = "tracer" ;
 		Redfish2_Nums:units = "1" ;
@@ -20656,7 +20657,7 @@ variables:
 		Redfish2_ResN:b_dens = 1000000000. ;
 		Redfish2_ResN:i_conc = 200000000. ;
 		Redfish2_ResN:f_conc = 200000000. ;
-		Redfish2_ResN:_FillValue = 55.07 ;
+		Redfish2_ResN:_FillValue = 616.9;
 	double Redfish2_StructN(t, b, z) ;
 		Redfish2_StructN:bmtype = "tracer" ;
 		Redfish2_StructN:units = "mg N" ;
@@ -20675,7 +20676,7 @@ variables:
 		Redfish2_StructN:b_dens = 1000000000. ;
 		Redfish2_StructN:i_conc = 200000000. ;
 		Redfish2_StructN:f_conc = 200000000. ;
-		Redfish2_StructN:_FillValue = 20.78 ;
+		Redfish2_StructN:_FillValue = 232.8;
 	double Redfish3_Nums(t, b, z) ;
 		Redfish3_Nums:bmtype = "tracer" ;
 		Redfish3_Nums:units = "1" ;
@@ -20713,7 +20714,7 @@ variables:
 		Redfish3_ResN:b_dens = 1000000000. ;
 		Redfish3_ResN:i_conc = 200000000. ;
 		Redfish3_ResN:f_conc = 200000000. ;
-		Redfish3_ResN:_FillValue = 200.84 ;
+		Redfish3_ResN:_FillValue = 989.4;
 	double Redfish3_StructN(t, b, z) ;
 		Redfish3_StructN:bmtype = "tracer" ;
 		Redfish3_StructN:units = "mg N" ;
@@ -20732,7 +20733,7 @@ variables:
 		Redfish3_StructN:b_dens = 1000000000. ;
 		Redfish3_StructN:i_conc = 200000000. ;
 		Redfish3_StructN:f_conc = 200000000. ;
-		Redfish3_StructN:_FillValue = 75.79 ;
+		Redfish3_StructN:_FillValue = 373.3;
 	double Redfish4_Nums(t, b, z) ;
 		Redfish4_Nums:bmtype = "tracer" ;
 		Redfish4_Nums:units = "1" ;
@@ -20770,7 +20771,7 @@ variables:
 		Redfish4_ResN:b_dens = 1000000000. ;
 		Redfish4_ResN:i_conc = 200000000. ;
 		Redfish4_ResN:f_conc = 200000000. ;
-		Redfish4_ResN:_FillValue = 431.13 ;
+		Redfish4_ResN:_FillValue = 1255.7;
 	double Redfish4_StructN(t, b, z) ;
 		Redfish4_StructN:bmtype = "tracer" ;
 		Redfish4_StructN:units = "mg N" ;
@@ -20789,7 +20790,7 @@ variables:
 		Redfish4_StructN:b_dens = 1000000000. ;
 		Redfish4_StructN:i_conc = 200000000. ;
 		Redfish4_StructN:f_conc = 200000000. ;
-		Redfish4_StructN:_FillValue = 162.69 ;
+		Redfish4_StructN:_FillValue = 473.8;
 	double Redfish5_Nums(t, b, z) ;
 		Redfish5_Nums:bmtype = "tracer" ;
 		Redfish5_Nums:units = "1" ;
@@ -20827,7 +20828,7 @@ variables:
 		Redfish5_ResN:b_dens = 1000000000. ;
 		Redfish5_ResN:i_conc = 200000000. ;
 		Redfish5_ResN:f_conc = 200000000. ;
-		Redfish5_ResN:_FillValue = 717.94 ;
+		Redfish5_ResN:_FillValue = 1425.8;
 	double Redfish5_StructN(t, b, z) ;
 		Redfish5_StructN:bmtype = "tracer" ;
 		Redfish5_StructN:units = "mg N" ;
@@ -20846,7 +20847,7 @@ variables:
 		Redfish5_StructN:b_dens = 1000000000. ;
 		Redfish5_StructN:i_conc = 200000000. ;
 		Redfish5_StructN:f_conc = 200000000. ;
-		Redfish5_StructN:_FillValue = 270.92 ;
+		Redfish5_StructN:_FillValue = 538.0;
 	double Redfish6_Nums(t, b, z) ;
 		Redfish6_Nums:bmtype = "tracer" ;
 		Redfish6_Nums:units = "1" ;
@@ -20884,7 +20885,7 @@ variables:
 		Redfish6_ResN:b_dens = 1000000000. ;
 		Redfish6_ResN:i_conc = 200000000. ;
 		Redfish6_ResN:f_conc = 200000000. ;
-		Redfish6_ResN:_FillValue = 1032.04 ;
+		Redfish6_ResN:_FillValue = 1528.7;
 	double Redfish6_StructN(t, b, z) ;
 		Redfish6_StructN:bmtype = "tracer" ;
 		Redfish6_StructN:units = "mg N" ;
@@ -20903,7 +20904,7 @@ variables:
 		Redfish6_StructN:b_dens = 1000000000. ;
 		Redfish6_StructN:i_conc = 200000000. ;
 		Redfish6_StructN:f_conc = 200000000. ;
-		Redfish6_StructN:_FillValue = 389.45 ;
+		Redfish6_StructN:_FillValue = 576.9;
 	double Redfish7_Nums(t, b, z) ;
 		Redfish7_Nums:bmtype = "tracer" ;
 		Redfish7_Nums:units = "1" ;
@@ -20941,7 +20942,7 @@ variables:
 		Redfish7_ResN:b_dens = 1000000000. ;
 		Redfish7_ResN:i_conc = 200000000. ;
 		Redfish7_ResN:f_conc = 200000000. ;
-		Redfish7_ResN:_FillValue = 1349.8 ;
+		Redfish7_ResN:_FillValue = 1589.0;
 	double Redfish7_StructN(t, b, z) ;
 		Redfish7_StructN:bmtype = "tracer" ;
 		Redfish7_StructN:units = "mg N" ;
@@ -20960,7 +20961,7 @@ variables:
 		Redfish7_StructN:b_dens = 1000000000. ;
 		Redfish7_StructN:i_conc = 200000000. ;
 		Redfish7_StructN:f_conc = 200000000. ;
-		Redfish7_StructN:_FillValue = 509.36 ;
+		Redfish7_StructN:_FillValue = 599.6;
 	double Redfish8_Nums(t, b, z) ;
 		Redfish8_Nums:bmtype = "tracer" ;
 		Redfish8_Nums:units = "1" ;
@@ -20998,7 +20999,7 @@ variables:
 		Redfish8_ResN:b_dens = 1000000000. ;
 		Redfish8_ResN:i_conc = 200000000. ;
 		Redfish8_ResN:f_conc = 200000000. ;
-		Redfish8_ResN:_FillValue = 1654.71 ;
+		Redfish8_ResN:_FillValue = 1623.8;
 	double Redfish8_StructN(t, b, z) ;
 		Redfish8_StructN:bmtype = "tracer" ;
 		Redfish8_StructN:units = "mg N" ;
@@ -21017,7 +21018,7 @@ variables:
 		Redfish8_StructN:b_dens = 1000000000. ;
 		Redfish8_StructN:i_conc = 200000000. ;
 		Redfish8_StructN:f_conc = 200000000. ;
-		Redfish8_StructN:_FillValue = 624.42 ;
+		Redfish8_StructN:_FillValue = 612.7;
 	double Redfish9_Nums(t, b, z) ;
 		Redfish9_Nums:bmtype = "tracer" ;
 		Redfish9_Nums:units = "1" ;
@@ -21055,7 +21056,7 @@ variables:
 		Redfish9_ResN:b_dens = 1000000000. ;
 		Redfish9_ResN:i_conc = 200000000. ;
 		Redfish9_ResN:f_conc = 200000000. ;
-		Redfish9_ResN:_FillValue = 1936.67 ;
+		Redfish9_ResN:_FillValue = 1643.7;
 	double Redfish9_StructN(t, b, z) ;
 		Redfish9_StructN:bmtype = "tracer" ;
 		Redfish9_StructN:units = "mg N" ;
@@ -21074,7 +21075,7 @@ variables:
 		Redfish9_StructN:b_dens = 1000000000. ;
 		Redfish9_StructN:i_conc = 200000000. ;
 		Redfish9_StructN:f_conc = 200000000. ;
-		Redfish9_StructN:_FillValue = 730.82 ;
+		Redfish9_StructN:_FillValue = 620.3;
 	double Redfish_N(t, b, z) ;
 		Redfish_N:bmtype = "tracer" ;
 		Redfish_N:units = "mg N m-3" ;
@@ -22321,7 +22322,7 @@ variables:
 		Scup10_ResN:b_dens = 1000000000. ;
 		Scup10_ResN:i_conc = 200000000. ;
 		Scup10_ResN:f_conc = 200000000. ;
-		Scup10_ResN:_FillValue = 9346.21 ;
+		Scup10_ResN:_FillValue = 10393.0 ;
 	double Scup10_StructN(t, b, z) ;
 		Scup10_StructN:bmtype = "tracer" ;
 		Scup10_StructN:units = "mg N" ;
@@ -22340,7 +22341,7 @@ variables:
 		Scup10_StructN:b_dens = 1000000000. ;
 		Scup10_StructN:i_conc = 200000000. ;
 		Scup10_StructN:f_conc = 200000000. ;
-		Scup10_StructN:_FillValue = 3526.87 ;
+		Scup10_StructN:_FillValue = 3921.9 ;
 	double Scup1_Nums(t, b, z) ;
 		Scup1_Nums:bmtype = "tracer" ;
 		Scup1_Nums:units = "1" ;
@@ -22378,7 +22379,7 @@ variables:
 		Scup1_ResN:b_dens = 1000000000. ;
 		Scup1_ResN:i_conc = 200000000. ;
 		Scup1_ResN:f_conc = 200000000. ;
-		Scup1_ResN:_FillValue = 33.63 ;
+		Scup1_ResN:_FillValue = 616.2 ;
 	double Scup1_StructN(t, b, z) ;
 		Scup1_StructN:bmtype = "tracer" ;
 		Scup1_StructN:units = "mg N" ;
@@ -22397,7 +22398,7 @@ variables:
 		Scup1_StructN:b_dens = 1000000000. ;
 		Scup1_StructN:i_conc = 200000000. ;
 		Scup1_StructN:f_conc = 200000000. ;
-		Scup1_StructN:_FillValue = 12.69 ;
+		Scup1_StructN:_FillValue = 232.5 ;
 	double Scup2_Nums(t, b, z) ;
 		Scup2_Nums:bmtype = "tracer" ;
 		Scup2_Nums:units = "1" ;
@@ -22435,7 +22436,7 @@ variables:
 		Scup2_ResN:b_dens = 1000000000. ;
 		Scup2_ResN:i_conc = 200000000. ;
 		Scup2_ResN:f_conc = 200000000. ;
-		Scup2_ResN:_FillValue = 616.15 ;
+		Scup2_ResN:_FillValue = 2647.8 ;
 	double Scup2_StructN(t, b, z) ;
 		Scup2_StructN:bmtype = "tracer" ;
 		Scup2_StructN:units = "mg N" ;
@@ -22454,7 +22455,7 @@ variables:
 		Scup2_StructN:b_dens = 1000000000. ;
 		Scup2_StructN:i_conc = 200000000. ;
 		Scup2_StructN:f_conc = 200000000. ;
-		Scup2_StructN:_FillValue = 232.51 ;
+		Scup2_StructN:_FillValue = 999.2 ;
 	double Scup3_Nums(t, b, z) ;
 		Scup3_Nums:bmtype = "tracer" ;
 		Scup3_Nums:units = "1" ;
@@ -22492,7 +22493,7 @@ variables:
 		Scup3_ResN:b_dens = 1000000000. ;
 		Scup3_ResN:i_conc = 200000000. ;
 		Scup3_ResN:f_conc = 200000000. ;
-		Scup3_ResN:_FillValue = 1880.52 ;
+		Scup3_ResN:_FillValue = 4970.9 ;
 	double Scup3_StructN(t, b, z) ;
 		Scup3_StructN:bmtype = "tracer" ;
 		Scup3_StructN:units = "mg N" ;
@@ -22511,7 +22512,7 @@ variables:
 		Scup3_StructN:b_dens = 1000000000. ;
 		Scup3_StructN:i_conc = 200000000. ;
 		Scup3_StructN:f_conc = 200000000. ;
-		Scup3_StructN:_FillValue = 709.63 ;
+		Scup3_StructN:_FillValue = 1875.8 ;
 	double Scup4_Nums(t, b, z) ;
 		Scup4_Nums:bmtype = "tracer" ;
 		Scup4_Nums:units = "1" ;
@@ -22549,7 +22550,7 @@ variables:
 		Scup4_ResN:b_dens = 1000000000. ;
 		Scup4_ResN:i_conc = 200000000. ;
 		Scup4_ResN:f_conc = 200000000. ;
-		Scup4_ResN:_FillValue = 3440.6 ;
+		Scup4_ResN:_FillValue = 6877.6 ;
 	double Scup4_StructN(t, b, z) ;
 		Scup4_StructN:bmtype = "tracer" ;
 		Scup4_StructN:units = "mg N" ;
@@ -22568,7 +22569,7 @@ variables:
 		Scup4_StructN:b_dens = 1000000000. ;
 		Scup4_StructN:i_conc = 200000000. ;
 		Scup4_StructN:f_conc = 200000000. ;
-		Scup4_StructN:_FillValue = 1298.34 ;
+		Scup4_StructN:_FillValue = 2595.3 ;
 	double Scup5_Nums(t, b, z) ;
 		Scup5_Nums:bmtype = "tracer" ;
 		Scup5_Nums:units = "1" ;
@@ -22606,7 +22607,7 @@ variables:
 		Scup5_ResN:b_dens = 1000000000. ;
 		Scup5_ResN:i_conc = 200000000. ;
 		Scup5_ResN:f_conc = 200000000. ;
-		Scup5_ResN:_FillValue = 4970.87 ;
+		Scup5_ResN:_FillValue = 8232.3 ;
 	double Scup5_StructN(t, b, z) ;
 		Scup5_StructN:bmtype = "tracer" ;
 		Scup5_StructN:units = "mg N" ;
@@ -22625,7 +22626,7 @@ variables:
 		Scup5_StructN:b_dens = 1000000000. ;
 		Scup5_StructN:i_conc = 200000000. ;
 		Scup5_StructN:f_conc = 200000000. ;
-		Scup5_StructN:_FillValue = 1875.8 ;
+		Scup5_StructN:_FillValue = 3106.5 ;
 	double Scup6_Nums(t, b, z) ;
 		Scup6_Nums:bmtype = "tracer" ;
 		Scup6_Nums:units = "1" ;
@@ -22663,7 +22664,7 @@ variables:
 		Scup6_ResN:b_dens = 1000000000. ;
 		Scup6_ResN:i_conc = 200000000. ;
 		Scup6_ResN:f_conc = 200000000. ;
-		Scup6_ResN:_FillValue = 6304.14 ;
+		Scup6_ResN:_FillValue = 9126.8 ;
 	double Scup6_StructN(t, b, z) ;
 		Scup6_StructN:bmtype = "tracer" ;
 		Scup6_StructN:units = "mg N" ;
@@ -22682,7 +22683,7 @@ variables:
 		Scup6_StructN:b_dens = 1000000000. ;
 		Scup6_StructN:i_conc = 200000000. ;
 		Scup6_StructN:f_conc = 200000000. ;
-		Scup6_StructN:_FillValue = 2378.92 ;
+		Scup6_StructN:_FillValue = 3444.1 ;
 	double Scup7_Nums(t, b, z) ;
 		Scup7_Nums:bmtype = "tracer" ;
 		Scup7_Nums:units = "1" ;
@@ -22720,7 +22721,7 @@ variables:
 		Scup7_ResN:b_dens = 1000000000. ;
 		Scup7_ResN:i_conc = 200000000. ;
 		Scup7_ResN:f_conc = 200000000. ;
-		Scup7_ResN:_FillValue = 7388.15 ;
+		Scup7_ResN:_FillValue = 9126.8 ;
 	double Scup7_StructN(t, b, z) ;
 		Scup7_StructN:bmtype = "tracer" ;
 		Scup7_StructN:units = "mg N" ;
@@ -22739,7 +22740,7 @@ variables:
 		Scup7_StructN:b_dens = 1000000000. ;
 		Scup7_StructN:i_conc = 200000000. ;
 		Scup7_StructN:f_conc = 200000000. ;
-		Scup7_StructN:_FillValue = 2787.98 ;
+		Scup7_StructN:_FillValue = 3658.3 ;
 	double Scup8_Nums(t, b, z) ;
 		Scup8_Nums:bmtype = "tracer" ;
 		Scup8_Nums:units = "1" ;
@@ -22777,7 +22778,7 @@ variables:
 		Scup8_ResN:b_dens = 1000000000. ;
 		Scup8_ResN:i_conc = 200000000. ;
 		Scup8_ResN:f_conc = 200000000. ;
-		Scup8_ResN:_FillValue = 8232.28 ;
+		Scup8_ResN:_FillValue = 10046.5 ;
 	double Scup8_StructN(t, b, z) ;
 		Scup8_StructN:bmtype = "tracer" ;
 		Scup8_StructN:units = "mg N" ;
@@ -22796,7 +22797,7 @@ variables:
 		Scup8_StructN:b_dens = 1000000000. ;
 		Scup8_StructN:i_conc = 200000000. ;
 		Scup8_StructN:f_conc = 200000000. ;
-		Scup8_StructN:_FillValue = 3106.52 ;
+		Scup8_StructN:_FillValue = 3791.1 ;
 	double Scup9_Nums(t, b, z) ;
 		Scup9_Nums:bmtype = "tracer" ;
 		Scup9_Nums:units = "1" ;
@@ -22834,7 +22835,7 @@ variables:
 		Scup9_ResN:b_dens = 1000000000. ;
 		Scup9_ResN:i_conc = 200000000. ;
 		Scup9_ResN:f_conc = 200000000. ;
-		Scup9_ResN:_FillValue = 8871.38 ;
+		Scup9_ResN:_FillValue = 10262.1 ;
 	double Scup9_StructN(t, b, z) ;
 		Scup9_StructN:bmtype = "tracer" ;
 		Scup9_StructN:units = "mg N" ;
@@ -22853,7 +22854,7 @@ variables:
 		Scup9_StructN:b_dens = 1000000000. ;
 		Scup9_StructN:i_conc = 200000000. ;
 		Scup9_StructN:f_conc = 200000000. ;
-		Scup9_StructN:_FillValue = 3347.69 ;
+		Scup9_StructN:_FillValue = 3872.5 ;
 	double Scup_N(t, b, z) ;
 		Scup_N:bmtype = "tracer" ;
 		Scup_N:units = "mg N m-3" ;
@@ -24694,7 +24695,7 @@ variables:
 		Skate10_ResN:b_dens = 1000000000. ;
 		Skate10_ResN:i_conc = 200000000. ;
 		Skate10_ResN:f_conc = 200000000. ;
-		Skate10_ResN:_FillValue = 163694.69 ;
+		Skate10_ResN:_FillValue = 172068.1 ;
 	double Skate10_StructN(t, b, z) ;
 		Skate10_StructN:bmtype = "tracer" ;
 		Skate10_StructN:units = "mg N" ;
@@ -24713,7 +24714,7 @@ variables:
 		Skate10_StructN:b_dens = 1000000000. ;
 		Skate10_StructN:i_conc = 200000000. ;
 		Skate10_StructN:f_conc = 200000000. ;
-		Skate10_StructN:_FillValue = 61771.58 ;
+		Skate10_StructN:_FillValue = 64931.4 ;
 	double Skate1_Nums(t, b, z) ;
 		Skate1_Nums:bmtype = "tracer" ;
 		Skate1_Nums:units = "1" ;
@@ -24751,7 +24752,7 @@ variables:
 		Skate1_ResN:b_dens = 1000000000. ;
 		Skate1_ResN:i_conc = 200000000. ;
 		Skate1_ResN:f_conc = 200000000. ;
-		Skate1_ResN:_FillValue = 363.95 ;
+		Skate1_ResN:_FillValue = 45716.3 ;
 	double Skate1_StructN(t, b, z) ;
 		Skate1_StructN:bmtype = "tracer" ;
 		Skate1_StructN:units = "mg N" ;
@@ -24770,7 +24771,7 @@ variables:
 		Skate1_StructN:b_dens = 1000000000. ;
 		Skate1_StructN:i_conc = 200000000. ;
 		Skate1_StructN:f_conc = 200000000. ;
-		Skate1_StructN:_FillValue = 137.34 ;
+		Skate1_StructN:_FillValue = 17251.4 ;
 	double Skate2_Nums(t, b, z) ;
 		Skate2_Nums:bmtype = "tracer" ;
 		Skate2_Nums:units = "1" ;
@@ -24808,7 +24809,7 @@ variables:
 		Skate2_ResN:b_dens = 1000000000. ;
 		Skate2_ResN:i_conc = 200000000. ;
 		Skate2_ResN:f_conc = 200000000. ;
-		Skate2_ResN:_FillValue = 14054.41 ;
+		Skate2_ResN:_FillValue = 106447.3 ;
 	double Skate2_StructN(t, b, z) ;
 		Skate2_StructN:bmtype = "tracer" ;
 		Skate2_StructN:units = "mg N" ;
@@ -24827,7 +24828,7 @@ variables:
 		Skate2_StructN:b_dens = 1000000000. ;
 		Skate2_StructN:i_conc = 200000000. ;
 		Skate2_StructN:f_conc = 200000000. ;
-		Skate2_StructN:_FillValue = 5303.55 ;
+		Skate2_StructN:_FillValue = 40168.8 ;
 	double Skate3_Nums(t, b, z) ;
 		Skate3_Nums:bmtype = "tracer" ;
 		Skate3_Nums:units = "1" ;
@@ -24865,7 +24866,7 @@ variables:
 		Skate3_ResN:b_dens = 1000000000. ;
 		Skate3_ResN:i_conc = 200000000. ;
 		Skate3_ResN:f_conc = 200000000. ;
-		Skate3_ResN:_FillValue = 43971.13 ;
+		Skate3_ResN:_FillValue = 142429.8 ;
 	double Skate3_StructN(t, b, z) ;
 		Skate3_StructN:bmtype = "tracer" ;
 		Skate3_StructN:units = "mg N" ;
@@ -24884,7 +24885,7 @@ variables:
 		Skate3_StructN:b_dens = 1000000000. ;
 		Skate3_StructN:i_conc = 200000000. ;
 		Skate3_StructN:f_conc = 200000000. ;
-		Skate3_StructN:_FillValue = 16592.88 ;
+		Skate3_StructN:_FillValue = 53747.1 ;
 	double Skate4_Nums(t, b, z) ;
 		Skate4_Nums:bmtype = "tracer" ;
 		Skate4_Nums:units = "1" ;
@@ -24922,7 +24923,7 @@ variables:
 		Skate4_ResN:b_dens = 1000000000. ;
 		Skate4_ResN:i_conc = 200000000. ;
 		Skate4_ResN:f_conc = 200000000. ;
-		Skate4_ResN:_FillValue = 76933.95 ;
+		Skate4_ResN:_FillValue = 159411.4 ;
 	double Skate4_StructN(t, b, z) ;
 		Skate4_StructN:bmtype = "tracer" ;
 		Skate4_StructN:units = "mg N" ;
@@ -24941,7 +24942,7 @@ variables:
 		Skate4_StructN:b_dens = 1000000000. ;
 		Skate4_StructN:i_conc = 200000000. ;
 		Skate4_StructN:f_conc = 200000000. ;
-		Skate4_StructN:_FillValue = 29031.68 ;
+		Skate4_StructN:_FillValue = 60155.2 ;
 	double Skate5_Nums(t, b, z) ;
 		Skate5_Nums:bmtype = "tracer" ;
 		Skate5_Nums:units = "1" ;
@@ -24979,7 +24980,7 @@ variables:
 		Skate5_ResN:b_dens = 1000000000. ;
 		Skate5_ResN:i_conc = 200000000. ;
 		Skate5_ResN:f_conc = 200000000. ;
-		Skate5_ResN:_FillValue = 105158.97 ;
+		Skate5_ResN:_FillValue = 166802.1 ;
 	double Skate5_StructN(t, b, z) ;
 		Skate5_StructN:bmtype = "tracer" ;
 		Skate5_StructN:units = "mg N" ;
@@ -24998,7 +24999,7 @@ variables:
 		Skate5_StructN:b_dens = 1000000000. ;
 		Skate5_StructN:i_conc = 200000000. ;
 		Skate5_StructN:f_conc = 200000000. ;
-		Skate5_StructN:_FillValue = 39682.63 ;
+		Skate5_StructN:_FillValue = 62944.2 ;
 	double Skate6_Nums(t, b, z) ;
 		Skate6_Nums:bmtype = "tracer" ;
 		Skate6_Nums:units = "1" ;
@@ -25036,7 +25037,7 @@ variables:
 		Skate6_ResN:b_dens = 1000000000. ;
 		Skate6_ResN:i_conc = 200000000. ;
 		Skate6_ResN:f_conc = 200000000. ;
-		Skate6_ResN:_FillValue = 126571.53 ;
+		Skate6_ResN:_FillValue = 169918.9 ;
 	double Skate6_StructN(t, b, z) ;
 		Skate6_StructN:bmtype = "tracer" ;
 		Skate6_StructN:units = "mg N" ;
@@ -25055,7 +25056,7 @@ variables:
 		Skate6_StructN:b_dens = 1000000000. ;
 		Skate6_StructN:i_conc = 200000000. ;
 		Skate6_StructN:f_conc = 200000000. ;
-		Skate6_StructN:_FillValue = 47762.84 ;
+		Skate6_StructN:_FillValue = 64120.3 ;
 	double Skate7_Nums(t, b, z) ;
 		Skate7_Nums:bmtype = "tracer" ;
 		Skate7_Nums:units = "1" ;
@@ -25093,7 +25094,7 @@ variables:
 		Skate7_ResN:b_dens = 1000000000. ;
 		Skate7_ResN:i_conc = 200000000. ;
 		Skate7_ResN:f_conc = 200000000. ;
-		Skate7_ResN:_FillValue = 141780.49 ;
+		Skate7_ResN:_FillValue = 171216.6 ;
 	double Skate7_StructN(t, b, z) ;
 		Skate7_StructN:bmtype = "tracer" ;
 		Skate7_StructN:units = "mg N" ;
@@ -25112,7 +25113,7 @@ variables:
 		Skate7_StructN:b_dens = 1000000000. ;
 		Skate7_StructN:i_conc = 200000000. ;
 		Skate7_StructN:f_conc = 200000000. ;
-		Skate7_StructN:_FillValue = 53502.07 ;
+		Skate7_StructN:_FillValue = 64610.0 ;
 	double Skate8_Nums(t, b, z) ;
 		Skate8_Nums:bmtype = "tracer" ;
 		Skate8_Nums:units = "1" ;
@@ -25150,7 +25151,7 @@ variables:
 		Skate8_ResN:b_dens = 1000000000. ;
 		Skate8_ResN:i_conc = 200000000. ;
 		Skate8_ResN:f_conc = 200000000. ;
-		Skate8_ResN:_FillValue = 152177.26 ;
+		Skate8_ResN:_FillValue = 171754.2 ;
 	double Skate8_StructN(t, b, z) ;
 		Skate8_StructN:bmtype = "tracer" ;
 		Skate8_StructN:units = "mg N" ;
@@ -25169,7 +25170,7 @@ variables:
 		Skate8_StructN:b_dens = 1000000000. ;
 		Skate8_StructN:i_conc = 200000000. ;
 		Skate8_StructN:f_conc = 200000000. ;
-		Skate8_StructN:_FillValue = 57425.38 ;
+		Skate8_StructN:_FillValue = 64812.9 ;
 	double Skate9_Nums(t, b, z) ;
 		Skate9_Nums:bmtype = "tracer" ;
 		Skate9_Nums:units = "1" ;
@@ -25207,7 +25208,7 @@ variables:
 		Skate9_ResN:b_dens = 1000000000. ;
 		Skate9_ResN:i_conc = 200000000. ;
 		Skate9_ResN:f_conc = 200000000. ;
-		Skate9_ResN:_FillValue = 159121.85 ;
+		Skate9_ResN:_FillValue = 171976.4 ;
 	double Skate9_StructN(t, b, z) ;
 		Skate9_StructN:bmtype = "tracer" ;
 		Skate9_StructN:units = "mg N" ;
@@ -25226,7 +25227,7 @@ variables:
 		Skate9_StructN:b_dens = 1000000000. ;
 		Skate9_StructN:i_conc = 200000000. ;
 		Skate9_StructN:f_conc = 200000000. ;
-		Skate9_StructN:_FillValue = 60045.98 ;
+		Skate9_StructN:_FillValue = 64896.7 ;
 	double Skate_N(t, b, z) ;
 		Skate_N:bmtype = "tracer" ;
 		Skate_N:units = "mg N m-3" ;
@@ -25858,7 +25859,7 @@ variables:
 		Smooth_Dogfish10_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish10_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish10_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish10_ResN:_FillValue = 43713.39 ;
+		Smooth_Dogfish10_ResN:_FillValue = 76983.0 ;
 	double Smooth_Dogfish10_StructN(t, b, z) ;
 		Smooth_Dogfish10_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish10_StructN:units = "mg N" ;
@@ -25877,7 +25878,7 @@ variables:
 		Smooth_Dogfish10_StructN:b_dens = 1000000000. ;
 		Smooth_Dogfish10_StructN:i_conc = 200000000. ;
 		Smooth_Dogfish10_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish10_StructN:_FillValue = 16495.62 ;
+		Smooth_Dogfish10_StructN:_FillValue = 29050.2 ;
 	double Smooth_Dogfish1_Nums(t, b, z) ;
 		Smooth_Dogfish1_Nums:bmtype = "tracer" ;
 		Smooth_Dogfish1_Nums:units = "1" ;
@@ -25915,7 +25916,7 @@ variables:
 		Smooth_Dogfish1_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish1_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish1_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish1_ResN:_FillValue = 761.08 ;
+		Smooth_Dogfish1_ResN:_FillValue = 14085.1 ;
 	double Smooth_Dogfish1_StructN(t, b, z) ;
 		Smooth_Dogfish1_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish1_StructN:units = "mg N" ;
@@ -25934,7 +25935,7 @@ variables:
 		Smooth_Dogfish1_StructN:b_dens = 1000000000. ;
 		Smooth_Dogfish1_StructN:i_conc = 200000000. ;
 		Smooth_Dogfish1_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish1_StructN:_FillValue = 287.2 ;
+		Smooth_Dogfish1_StructN:_FillValue = 5315.1 ;
 	double Smooth_Dogfish2_Nums(t, b, z) ;
 		Smooth_Dogfish2_Nums:bmtype = "tracer" ;
 		Smooth_Dogfish2_Nums:units = "1" ;
@@ -25972,7 +25973,7 @@ variables:
 		Smooth_Dogfish2_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish2_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish2_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish2_ResN:_FillValue = 25421.93 ;
+		Smooth_Dogfish2_ResN:_FillValue = 34745.5 ;
 	double Smooth_Dogfish2_StructN(t, b, z) ;
 		Smooth_Dogfish2_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish2_StructN:units = "mg N" ;
@@ -25991,7 +25992,7 @@ variables:
 		Smooth_Dogfish2_StructN:b_dens = 1000000000. ;
 		Smooth_Dogfish2_StructN:i_conc = 200000000. ;
 		Smooth_Dogfish2_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish2_StructN:_FillValue = 9593.18 ;
+		Smooth_Dogfish2_StructN:_FillValue = 13111.5 ;
 	double Smooth_Dogfish3_Nums(t, b, z) ;
 		Smooth_Dogfish3_Nums:bmtype = "tracer" ;
 		Smooth_Dogfish3_Nums:units = "1" ;
@@ -26029,7 +26030,7 @@ variables:
 		Smooth_Dogfish3_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish3_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish3_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish3_ResN:_FillValue = 39052.84 ;
+		Smooth_Dogfish3_ResN:_FillValue = 51547.0 ;
 	double Smooth_Dogfish3_StructN(t, b, z) ;
 		Smooth_Dogfish3_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish3_StructN:units = "mg N" ;
@@ -26048,7 +26049,7 @@ variables:
 		Smooth_Dogfish3_StructN:b_dens = 1000000000. ;
 		Smooth_Dogfish3_StructN:i_conc = 200000000. ;
 		Smooth_Dogfish3_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish3_StructN:_FillValue = 14736.92 ;
+		Smooth_Dogfish3_StructN:_FillValue = 19451.7 ;
 	double Smooth_Dogfish4_Nums(t, b, z) ;
 		Smooth_Dogfish4_Nums:bmtype = "tracer" ;
 		Smooth_Dogfish4_Nums:units = "1" ;
@@ -26086,7 +26087,7 @@ variables:
 		Smooth_Dogfish4_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish4_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish4_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish4_ResN:_FillValue = 42643.11 ;
+		Smooth_Dogfish4_ResN:_FillValue = 62548.8 ;
 	double Smooth_Dogfish4_StructN(t, b, z) ;
 		Smooth_Dogfish4_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish4_StructN:units = "mg N" ;
@@ -26105,7 +26106,7 @@ variables:
 		Smooth_Dogfish4_StructN:b_dens = 1000000000. ;
 		Smooth_Dogfish4_StructN:i_conc = 200000000. ;
 		Smooth_Dogfish4_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish4_StructN:_FillValue = 16091.74 ;
+		Smooth_Dogfish4_StructN:_FillValue = 23603.3 ;
 	double Smooth_Dogfish5_Nums(t, b, z) ;
 		Smooth_Dogfish5_Nums:bmtype = "tracer" ;
 		Smooth_Dogfish5_Nums:units = "1" ;
@@ -26143,7 +26144,7 @@ variables:
 		Smooth_Dogfish5_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish5_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish5_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish5_ResN:_FillValue = 43473.14 ;
+		Smooth_Dogfish5_ResN:_FillValue = 69100.5 ;
 	double Smooth_Dogfish5_StructN(t, b, z) ;
 		Smooth_Dogfish5_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish5_StructN:units = "mg N" ;
@@ -26162,7 +26163,7 @@ variables:
 		Smooth_Dogfish5_StructN:b_dens = 1000000000. ;
 		Smooth_Dogfish5_StructN:i_conc = 200000000. ;
 		Smooth_Dogfish5_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish5_StructN:_FillValue = 16404.96 ;
+		Smooth_Dogfish5_StructN:_FillValue = 26075.7 ;
 	double Smooth_Dogfish6_Nums(t, b, z) ;
 		Smooth_Dogfish6_Nums:bmtype = "tracer" ;
 		Smooth_Dogfish6_Nums:units = "1" ;
@@ -26200,7 +26201,7 @@ variables:
 		Smooth_Dogfish6_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish6_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish6_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish6_ResN:_FillValue = 43659.81 ;
+		Smooth_Dogfish6_ResN:_FillValue = 72825.9 ;
 	double Smooth_Dogfish6_StructN(t, b, z) ;
 		Smooth_Dogfish6_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish6_StructN:units = "mg N" ;
@@ -26219,7 +26220,7 @@ variables:
 		Smooth_Dogfish6_StructN:b_dens = 1000000000. ;
 		Smooth_Dogfish6_StructN:i_conc = 200000000. ;
 		Smooth_Dogfish6_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish6_StructN:_FillValue = 16475.4 ;
+		Smooth_Dogfish6_StructN:_FillValue = 27481.5 ;
 	double Smooth_Dogfish7_Nums(t, b, z) ;
 		Smooth_Dogfish7_Nums:bmtype = "tracer" ;
 		Smooth_Dogfish7_Nums:units = "1" ;
@@ -26257,7 +26258,7 @@ variables:
 		Smooth_Dogfish7_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish7_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish7_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish7_ResN:_FillValue = 43701.52 ;
+		Smooth_Dogfish7_ResN:_FillValue = 74894.7 ;
 	double Smooth_Dogfish7_StructN(t, b, z) ;
 		Smooth_Dogfish7_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish7_StructN:units = "mg N" ;
@@ -26276,7 +26277,7 @@ variables:
 		Smooth_Dogfish7_StructN:b_dens = 1000000000. ;
 		Smooth_Dogfish7_StructN:i_conc = 200000000. ;
 		Smooth_Dogfish7_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish7_StructN:_FillValue = 16491.14 ;
+		Smooth_Dogfish7_StructN:_FillValue = 28262.1 ;
 	double Smooth_Dogfish8_Nums(t, b, z) ;
 		Smooth_Dogfish8_Nums:bmtype = "tracer" ;
 		Smooth_Dogfish8_Nums:units = "1" ;
@@ -26314,7 +26315,7 @@ variables:
 		Smooth_Dogfish8_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish8_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish8_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish8_ResN:_FillValue = 43710.85 ;
+		Smooth_Dogfish8_ResN:_FillValue = 76029.3 ;
 	double Smooth_Dogfish8_StructN(t, b, z) ;
 		Smooth_Dogfish8_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish8_StructN:units = "mg N" ;
@@ -26333,7 +26334,7 @@ variables:
 		Smooth_Dogfish8_StructN:b_dens = 1000000000. ;
 		Smooth_Dogfish8_StructN:i_conc = 200000000. ;
 		Smooth_Dogfish8_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish8_StructN:_FillValue = 16494.66 ;
+		Smooth_Dogfish8_StructN:_FillValue = 28690.3 ;
 	double Smooth_Dogfish9_Nums(t, b, z) ;
 		Smooth_Dogfish9_Nums:bmtype = "tracer" ;
 		Smooth_Dogfish9_Nums:units = "1" ;
@@ -26371,7 +26372,7 @@ variables:
 		Smooth_Dogfish9_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish9_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish9_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish9_ResN:_FillValue = 43712.92 ;
+		Smooth_Dogfish9_ResN:_FillValue = 76647.4 ;
 	double Smooth_Dogfish9_StructN(t, b, z) ;
 		Smooth_Dogfish9_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish9_StructN:units = "mg N" ;
@@ -26390,7 +26391,7 @@ variables:
 		Smooth_Dogfish9_StructN:b_dens = 1000000000. ;
 		Smooth_Dogfish9_StructN:i_conc = 200000000. ;
 		Smooth_Dogfish9_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish9_StructN:_FillValue = 16495.44 ;
+		Smooth_Dogfish9_StructN:_FillValue = 28923.6 ;
 	double Smooth_Dogfish_N(t, b, z) ;
 		Smooth_Dogfish_N:bmtype = "tracer" ;
 		Smooth_Dogfish_N:units = "mg N m-3" ;
@@ -26440,7 +26441,7 @@ variables:
 		Spiny_Dogfish10_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish10_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish10_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish10_ResN:_FillValue = 99815.75 ;
+		Spiny_Dogfish10_ResN:_FillValue = 102696.2 ;
 	double Spiny_Dogfish10_StructN(t, b, z) ;
 		Spiny_Dogfish10_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish10_StructN:units = "mg N" ;
@@ -26459,7 +26460,7 @@ variables:
 		Spiny_Dogfish10_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish10_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish10_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish10_StructN:_FillValue = 37666.32 ;
+		Spiny_Dogfish10_StructN:_FillValue = 38753.3 ;
 	double Spiny_Dogfish1_Nums(t, b, z) ;
 		Spiny_Dogfish1_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish1_Nums:units = "1" ;
@@ -26497,7 +26498,7 @@ variables:
 		Spiny_Dogfish1_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish1_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish1_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish1_ResN:_FillValue = 140.53 ;
+		Spiny_Dogfish1_ResN:_FillValue = 36915.4 ;
 	double Spiny_Dogfish1_StructN(t, b, z) ;
 		Spiny_Dogfish1_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish1_StructN:units = "mg N" ;
@@ -26516,7 +26517,7 @@ variables:
 		Spiny_Dogfish1_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish1_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish1_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish1_StructN:_FillValue = 53.03 ;
+		Spiny_Dogfish1_StructN:_FillValue = 13930.3 ;
 	double Spiny_Dogfish2_Nums(t, b, z) ;
 		Spiny_Dogfish2_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish2_Nums:units = "1" ;
@@ -26554,7 +26555,7 @@ variables:
 		Spiny_Dogfish2_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish2_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish2_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish2_ResN:_FillValue = 9873.87 ;
+		Spiny_Dogfish2_ResN:_FillValue = 79566.0 ;
 	double Spiny_Dogfish2_StructN(t, b, z) ;
 		Spiny_Dogfish2_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish2_StructN:units = "mg N" ;
@@ -26573,7 +26574,7 @@ variables:
 		Spiny_Dogfish2_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish2_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish2_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish2_StructN:_FillValue = 3725.99 ;
+		Spiny_Dogfish2_StructN:_FillValue = 30024.9 ;
 	double Spiny_Dogfish3_Nums(t, b, z) ;
 		Spiny_Dogfish3_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish3_Nums:units = "1" ;
@@ -26611,7 +26612,7 @@ variables:
 		Spiny_Dogfish3_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish3_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish3_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish3_ResN:_FillValue = 31190.45 ;
+		Spiny_Dogfish3_ResN:_FillValue = 95788.5 ;
 	double Spiny_Dogfish3_StructN(t, b, z) ;
 		Spiny_Dogfish3_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish3_StructN:units = "mg N" ;
@@ -26630,7 +26631,7 @@ variables:
 		Spiny_Dogfish3_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish3_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish3_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish3_StructN:_FillValue = 11769.98 ;
+		Spiny_Dogfish3_StructN:_FillValue = 36146.6 ;
 	double Spiny_Dogfish4_Nums(t, b, z) ;
 		Spiny_Dogfish4_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish4_Nums:units = "1" ;
@@ -26668,7 +26669,7 @@ variables:
 		Spiny_Dogfish4_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish4_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish4_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish4_ResN:_FillValue = 53009.59 ;
+		Spiny_Dogfish4_ResN:_FillValue = 100722.0 ;
 	double Spiny_Dogfish4_StructN(t, b, z) ;
 		Spiny_Dogfish4_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish4_StructN:units = "mg N" ;
@@ -26687,7 +26688,7 @@ variables:
 		Spiny_Dogfish4_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish4_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish4_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish4_StructN:_FillValue = 20003.62 ;
+		Spiny_Dogfish4_StructN:_FillValue = 38008.3 ;
 	double Spiny_Dogfish5_Nums(t, b, z) ;
 		Spiny_Dogfish5_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish5_Nums:units = "1" ;
@@ -26725,7 +26726,7 @@ variables:
 		Spiny_Dogfish5_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish5_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish5_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish5_ResN:_FillValue = 70163.81 ;
+		Spiny_Dogfish5_ResN:_FillValue = 102139.3 ;
 	double Spiny_Dogfish5_StructN(t, b, z) ;
 		Spiny_Dogfish5_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish5_StructN:units = "mg N" ;
@@ -26744,7 +26745,7 @@ variables:
 		Spiny_Dogfish5_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish5_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish5_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish5_StructN:_FillValue = 26476.91 ;
+		Spiny_Dogfish5_StructN:_FillValue = 38543.1 ;
 	double Spiny_Dogfish6_Nums(t, b, z) ;
 		Spiny_Dogfish6_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish6_Nums:units = "1" ;
@@ -26782,7 +26783,7 @@ variables:
 		Spiny_Dogfish6_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish6_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish6_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish6_ResN:_FillValue = 82115.52 ;
+		Spiny_Dogfish6_ResN:_FillValue = 102540.1 ;
 	double Spiny_Dogfish6_StructN(t, b, z) ;
 		Spiny_Dogfish6_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish6_StructN:units = "mg N" ;
@@ -26801,7 +26802,7 @@ variables:
 		Spiny_Dogfish6_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish6_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish6_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish6_StructN:_FillValue = 30986.99 ;
+		Spiny_Dogfish6_StructN:_FillValue = 38694.4 ;
 	double Spiny_Dogfish7_Nums(t, b, z) ;
 		Spiny_Dogfish7_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish7_Nums:units = "1" ;
@@ -26839,7 +26840,7 @@ variables:
 		Spiny_Dogfish7_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish7_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish7_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish7_ResN:_FillValue = 89936.04 ;
+		Spiny_Dogfish7_ResN:_FillValue = 102653.0 ;
 	double Spiny_Dogfish7_StructN(t, b, z) ;
 		Spiny_Dogfish7_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish7_StructN:units = "mg N" ;
@@ -26858,7 +26859,7 @@ variables:
 		Spiny_Dogfish7_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish7_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish7_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish7_StructN:_FillValue = 33938.13 ;
+		Spiny_Dogfish7_StructN:_FillValue = 38737.0 ;
 	double Spiny_Dogfish8_Nums(t, b, z) ;
 		Spiny_Dogfish8_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish8_Nums:units = "1" ;
@@ -26896,7 +26897,7 @@ variables:
 		Spiny_Dogfish8_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish8_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish8_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish8_ResN:_FillValue = 94878.59 ;
+		Spiny_Dogfish8_ResN:_FillValue = 102684.7 ;
 	double Spiny_Dogfish8_StructN(t, b, z) ;
 		Spiny_Dogfish8_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish8_StructN:units = "mg N" ;
@@ -26915,7 +26916,7 @@ variables:
 		Spiny_Dogfish8_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish8_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish8_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish8_StructN:_FillValue = 35803.24 ;
+		Spiny_Dogfish8_StructN:_FillValue = 38749.0 ;
 	double Spiny_Dogfish9_Nums(t, b, z) ;
 		Spiny_Dogfish9_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish9_Nums:units = "1" ;
@@ -26953,7 +26954,7 @@ variables:
 		Spiny_Dogfish9_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish9_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish9_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish9_ResN:_FillValue = 97940.66 ;
+		Spiny_Dogfish9_ResN:_FillValue = 102693.6 ;
 	double Spiny_Dogfish9_StructN(t, b, z) ;
 		Spiny_Dogfish9_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish9_StructN:units = "mg N" ;
@@ -26972,7 +26973,7 @@ variables:
 		Spiny_Dogfish9_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish9_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish9_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish9_StructN:_FillValue = 36958.74 ;
+		Spiny_Dogfish9_StructN:_FillValue = 38752.3 ;
 	double Spiny_Dogfish_N(t, b, z) ;
 		Spiny_Dogfish_N:bmtype = "tracer" ;
 		Spiny_Dogfish_N:units = "mg N m-3" ;
@@ -27034,7 +27035,7 @@ variables:
 		Striped_Bass10_ResN:b_dens = 1000000000. ;
 		Striped_Bass10_ResN:i_conc = 200000000. ;
 		Striped_Bass10_ResN:f_conc = 200000000. ;
-		Striped_Bass10_ResN:_FillValue = 60617.93 ;
+		Striped_Bass10_ResN:_FillValue = 46453.0 ;
 	double Striped_Bass10_StructN(t, b, z) ;
 		Striped_Bass10_StructN:bmtype = "tracer" ;
 		Striped_Bass10_StructN:units = "mg N" ;
@@ -27053,7 +27054,7 @@ variables:
 		Striped_Bass10_StructN:b_dens = 1000000000. ;
 		Striped_Bass10_StructN:i_conc = 200000000. ;
 		Striped_Bass10_StructN:f_conc = 200000000. ;
-		Striped_Bass10_StructN:_FillValue = 22874.69 ;
+		Striped_Bass10_StructN:_FillValue = 17529.4 ;
 	double Striped_Bass1_Nums(t, b, z) ;
 		Striped_Bass1_Nums:bmtype = "tracer" ;
 		Striped_Bass1_Nums:units = "1" ;
@@ -27091,7 +27092,7 @@ variables:
 		Striped_Bass1_ResN:b_dens = 1000000000. ;
 		Striped_Bass1_ResN:i_conc = 200000000. ;
 		Striped_Bass1_ResN:f_conc = 200000000. ;
-		Striped_Bass1_ResN:_FillValue = 273.45 ;
+		Striped_Bass1_ResN:_FillValue = 11257.5 ;
 	double Striped_Bass1_StructN(t, b, z) ;
 		Striped_Bass1_StructN:bmtype = "tracer" ;
 		Striped_Bass1_StructN:units = "mg N" ;
@@ -27110,7 +27111,7 @@ variables:
 		Striped_Bass1_StructN:b_dens = 1000000000. ;
 		Striped_Bass1_StructN:i_conc = 200000000. ;
 		Striped_Bass1_StructN:f_conc = 200000000. ;
-		Striped_Bass1_StructN:_FillValue = 103.19 ;
+		Striped_Bass1_StructN:_FillValue = 4248.1 ;
 	double Striped_Bass2_Nums(t, b, z) ;
 		Striped_Bass2_Nums:bmtype = "tracer" ;
 		Striped_Bass2_Nums:units = "1" ;
@@ -27148,7 +27149,7 @@ variables:
 		Striped_Bass2_ResN:b_dens = 1000000000. ;
 		Striped_Bass2_ResN:i_conc = 200000000. ;
 		Striped_Bass2_ResN:f_conc = 200000000. ;
-		Striped_Bass2_ResN:_FillValue = 4263.19 ;
+		Striped_Bass2_ResN:_FillValue = 21071.9 ;
 	double Striped_Bass2_StructN(t, b, z) ;
 		Striped_Bass2_StructN:bmtype = "tracer" ;
 		Striped_Bass2_StructN:units = "mg N" ;
@@ -27167,7 +27168,7 @@ variables:
 		Striped_Bass2_StructN:b_dens = 1000000000. ;
 		Striped_Bass2_StructN:i_conc = 200000000. ;
 		Striped_Bass2_StructN:f_conc = 200000000. ;
-		Striped_Bass2_StructN:_FillValue = 1608.75 ;
+		Striped_Bass2_StructN:_FillValue = 7951.7 ;
 	double Striped_Bass3_Nums(t, b, z) ;
 		Striped_Bass3_Nums:bmtype = "tracer" ;
 		Striped_Bass3_Nums:units = "1" ;
@@ -27205,7 +27206,7 @@ variables:
 		Striped_Bass3_ResN:b_dens = 1000000000. ;
 		Striped_Bass3_ResN:i_conc = 200000000. ;
 		Striped_Bass3_ResN:f_conc = 200000000. ;
-		Striped_Bass3_ResN:_FillValue = 12385.76 ;
+		Striped_Bass3_ResN:_FillValue = 29348.2 ;
 	double Striped_Bass3_StructN(t, b, z) ;
 		Striped_Bass3_StructN:bmtype = "tracer" ;
 		Striped_Bass3_StructN:units = "mg N" ;
@@ -27224,7 +27225,7 @@ variables:
 		Striped_Bass3_StructN:b_dens = 1000000000. ;
 		Striped_Bass3_StructN:i_conc = 200000000. ;
 		Striped_Bass3_StructN:f_conc = 200000000. ;
-		Striped_Bass3_StructN:_FillValue = 4673.87 ;
+		Striped_Bass3_StructN:_FillValue = 11074.8 ;
 	double Striped_Bass4_Nums(t, b, z) ;
 		Striped_Bass4_Nums:bmtype = "tracer" ;
 		Striped_Bass4_Nums:units = "1" ;
@@ -27262,7 +27263,7 @@ variables:
 		Striped_Bass4_ResN:b_dens = 1000000000. ;
 		Striped_Bass4_ResN:i_conc = 200000000. ;
 		Striped_Bass4_ResN:f_conc = 200000000. ;
-		Striped_Bass4_ResN:_FillValue = 22229.31 ;
+		Striped_Bass4_ResN:_FillValue = 35440.3 ;
 	double Striped_Bass4_StructN(t, b, z) ;
 		Striped_Bass4_StructN:bmtype = "tracer" ;
 		Striped_Bass4_StructN:units = "mg N" ;
@@ -27281,7 +27282,7 @@ variables:
 		Striped_Bass4_StructN:b_dens = 1000000000. ;
 		Striped_Bass4_StructN:i_conc = 200000000. ;
 		Striped_Bass4_StructN:f_conc = 200000000. ;
-		Striped_Bass4_StructN:_FillValue = 8388.42 ;
+		Striped_Bass4_StructN:_FillValue = 13373.7 ;
 	double Striped_Bass5_Nums(t, b, z) ;
 		Striped_Bass5_Nums:bmtype = "tracer" ;
 		Striped_Bass5_Nums:units = "1" ;
@@ -27319,7 +27320,7 @@ variables:
 		Striped_Bass5_ResN:b_dens = 1000000000. ;
 		Striped_Bass5_ResN:i_conc = 200000000. ;
 		Striped_Bass5_ResN:f_conc = 200000000. ;
-		Striped_Bass5_ResN:_FillValue = 31898.92 ;
+		Striped_Bass5_ResN:_FillValue = 39620.9 ;
 	double Striped_Bass5_StructN(t, b, z) ;
 		Striped_Bass5_StructN:bmtype = "tracer" ;
 		Striped_Bass5_StructN:units = "mg N" ;
@@ -27338,7 +27339,7 @@ variables:
 		Striped_Bass5_StructN:b_dens = 1000000000. ;
 		Striped_Bass5_StructN:i_conc = 200000000. ;
 		Striped_Bass5_StructN:f_conc = 200000000. ;
-		Striped_Bass5_StructN:_FillValue = 12037.33 ;
+		Striped_Bass5_StructN:_FillValue = 14951.3 ;
 	double Striped_Bass6_Nums(t, b, z) ;
 		Striped_Bass6_Nums:bmtype = "tracer" ;
 		Striped_Bass6_Nums:units = "1" ;
@@ -27376,7 +27377,7 @@ variables:
 		Striped_Bass6_ResN:b_dens = 1000000000. ;
 		Striped_Bass6_ResN:i_conc = 200000000. ;
 		Striped_Bass6_ResN:f_conc = 200000000. ;
-		Striped_Bass6_ResN:_FillValue = 40416.18 ;
+		Striped_Bass6_ResN:_FillValue = 42379.6 ;
 	double Striped_Bass6_StructN(t, b, z) ;
 		Striped_Bass6_StructN:bmtype = "tracer" ;
 		Striped_Bass6_StructN:units = "mg N" ;
@@ -27395,7 +27396,7 @@ variables:
 		Striped_Bass6_StructN:b_dens = 1000000000. ;
 		Striped_Bass6_StructN:i_conc = 200000000. ;
 		Striped_Bass6_StructN:f_conc = 200000000. ;
-		Striped_Bass6_StructN:_FillValue = 15251.39 ;
+		Striped_Bass6_StructN:_FillValue = 15992.3 ;
 	double Striped_Bass7_Nums(t, b, z) ;
 		Striped_Bass7_Nums:bmtype = "tracer" ;
 		Striped_Bass7_Nums:units = "1" ;
@@ -27433,7 +27434,7 @@ variables:
 		Striped_Bass7_ResN:b_dens = 1000000000. ;
 		Striped_Bass7_ResN:i_conc = 200000000. ;
 		Striped_Bass7_ResN:f_conc = 200000000. ;
-		Striped_Bass7_ResN:_FillValue = 47452.52 ;
+		Striped_Bass7_ResN:_FillValue = 44158.8 ;
 	double Striped_Bass7_StructN(t, b, z) ;
 		Striped_Bass7_StructN:bmtype = "tracer" ;
 		Striped_Bass7_StructN:units = "mg N" ;
@@ -27452,7 +27453,7 @@ variables:
 		Striped_Bass7_StructN:b_dens = 1000000000. ;
 		Striped_Bass7_StructN:i_conc = 200000000. ;
 		Striped_Bass7_StructN:f_conc = 200000000. ;
-		Striped_Bass7_StructN:_FillValue = 17906.61 ;
+		Striped_Bass7_StructN:_FillValue = 16663.7 ;
 	double Striped_Bass8_Nums(t, b, z) ;
 		Striped_Bass8_Nums:bmtype = "tracer" ;
 		Striped_Bass8_Nums:units = "1" ;
@@ -27490,7 +27491,7 @@ variables:
 		Striped_Bass8_ResN:b_dens = 1000000000. ;
 		Striped_Bass8_ResN:i_conc = 200000000. ;
 		Striped_Bass8_ResN:f_conc = 200000000. ;
-		Striped_Bass8_ResN:_FillValue = 53034.87 ;
+		Striped_Bass8_ResN:_FillValue = 45290.7 ;
 	double Striped_Bass8_StructN(t, b, z) ;
 		Striped_Bass8_StructN:bmtype = "tracer" ;
 		Striped_Bass8_StructN:units = "mg N" ;
@@ -27509,7 +27510,7 @@ variables:
 		Striped_Bass8_StructN:b_dens = 1000000000. ;
 		Striped_Bass8_StructN:i_conc = 200000000. ;
 		Striped_Bass8_StructN:f_conc = 200000000. ;
-		Striped_Bass8_StructN:_FillValue = 20013.16 ;
+		Striped_Bass8_StructN:_FillValue = 17090.8 ;
 	double Striped_Bass9_Nums(t, b, z) ;
 		Striped_Bass9_Nums:bmtype = "tracer" ;
 		Striped_Bass9_Nums:units = "1" ;
@@ -27547,7 +27548,7 @@ variables:
 		Striped_Bass9_ResN:b_dens = 1000000000. ;
 		Striped_Bass9_ResN:i_conc = 200000000. ;
 		Striped_Bass9_ResN:f_conc = 200000000. ;
-		Striped_Bass9_ResN:_FillValue = 57346.95 ;
+		Striped_Bass9_ResN:_FillValue = 46004.8 ;
 	double Striped_Bass9_StructN(t, b, z) ;
 		Striped_Bass9_StructN:bmtype = "tracer" ;
 		Striped_Bass9_StructN:units = "mg N" ;
@@ -27566,7 +27567,7 @@ variables:
 		Striped_Bass9_StructN:b_dens = 1000000000. ;
 		Striped_Bass9_StructN:i_conc = 200000000. ;
 		Striped_Bass9_StructN:f_conc = 200000000. ;
-		Striped_Bass9_StructN:_FillValue = 21640.36 ;
+		Striped_Bass9_StructN:_FillValue = 17360.3 ;
 	double Striped_Bass_N(t, b, z) ;
 		Striped_Bass_N:bmtype = "tracer" ;
 		Striped_Bass_N:units = "mg N m-3" ;
@@ -27616,7 +27617,7 @@ variables:
 		Summerflounder10_ResN:b_dens = 1000000000. ;
 		Summerflounder10_ResN:i_conc = 200000000. ;
 		Summerflounder10_ResN:f_conc = 200000000. ;
-		Summerflounder10_ResN:_FillValue = 57469.2 ;
+		Summerflounder10_ResN:_FillValue = 60230.1 ;
 	double Summerflounder10_StructN(t, b, z) ;
 		Summerflounder10_StructN:bmtype = "tracer" ;
 		Summerflounder10_StructN:units = "mg N" ;
@@ -27635,7 +27636,7 @@ variables:
 		Summerflounder10_StructN:b_dens = 1000000000. ;
 		Summerflounder10_StructN:i_conc = 200000000. ;
 		Summerflounder10_StructN:f_conc = 200000000. ;
-		Summerflounder10_StructN:_FillValue = 21686.49 ;
+		Summerflounder10_StructN:_FillValue = 22728.3 ;
 	double Summerflounder1_Nums(t, b, z) ;
 		Summerflounder1_Nums:bmtype = "tracer" ;
 		Summerflounder1_Nums:units = "1" ;
@@ -27673,7 +27674,7 @@ variables:
 		Summerflounder1_ResN:b_dens = 1000000000. ;
 		Summerflounder1_ResN:i_conc = 200000000. ;
 		Summerflounder1_ResN:f_conc = 200000000. ;
-		Summerflounder1_ResN:_FillValue = 403.65 ;
+		Summerflounder1_ResN:_FillValue = 6262.7 ;
 	double Summerflounder1_StructN(t, b, z) ;
 		Summerflounder1_StructN:bmtype = "tracer" ;
 		Summerflounder1_StructN:units = "mg N" ;
@@ -27692,7 +27693,7 @@ variables:
 		Summerflounder1_StructN:b_dens = 1000000000. ;
 		Summerflounder1_StructN:i_conc = 200000000. ;
 		Summerflounder1_StructN:f_conc = 200000000. ;
-		Summerflounder1_StructN:_FillValue = 152.32 ;
+		Summerflounder1_StructN:_FillValue = 2363.3 ;
 	double Summerflounder2_Nums(t, b, z) ;
 		Summerflounder2_Nums:bmtype = "tracer" ;
 		Summerflounder2_Nums:units = "1" ;
@@ -27730,7 +27731,7 @@ variables:
 		Summerflounder2_ResN:b_dens = 1000000000. ;
 		Summerflounder2_ResN:i_conc = 200000000. ;
 		Summerflounder2_ResN:f_conc = 200000000. ;
-		Summerflounder2_ResN:_FillValue = 6262.74 ;
+		Summerflounder2_ResN:_FillValue = 22669.6 ;
 	double Summerflounder2_StructN(t, b, z) ;
 		Summerflounder2_StructN:bmtype = "tracer" ;
 		Summerflounder2_StructN:units = "mg N" ;
@@ -27749,7 +27750,7 @@ variables:
 		Summerflounder2_StructN:b_dens = 1000000000. ;
 		Summerflounder2_StructN:i_conc = 200000000. ;
 		Summerflounder2_StructN:f_conc = 200000000. ;
-		Summerflounder2_StructN:_FillValue = 2363.3 ;
+		Summerflounder2_StructN:_FillValue = 8554.6 ;
 	double Summerflounder3_Nums(t, b, z) ;
 		Summerflounder3_Nums:bmtype = "tracer" ;
 		Summerflounder3_Nums:units = "1" ;
@@ -27787,7 +27788,7 @@ variables:
 		Summerflounder3_ResN:b_dens = 1000000000. ;
 		Summerflounder3_ResN:i_conc = 200000000. ;
 		Summerflounder3_ResN:f_conc = 200000000. ;
-		Summerflounder3_ResN:_FillValue = 16939.89 ;
+		Summerflounder3_ResN:_FillValue = 37609.4 ;
 	double Summerflounder3_StructN(t, b, z) ;
 		Summerflounder3_StructN:bmtype = "tracer" ;
 		Summerflounder3_StructN:units = "mg N" ;
@@ -27806,7 +27807,7 @@ variables:
 		Summerflounder3_StructN:b_dens = 1000000000. ;
 		Summerflounder3_StructN:i_conc = 200000000. ;
 		Summerflounder3_StructN:f_conc = 200000000. ;
-		Summerflounder3_StructN:_FillValue = 6392.41 ;
+		Summerflounder3_StructN:_FillValue = 14192.2 ;
 	double Summerflounder4_Nums(t, b, z) ;
 		Summerflounder4_Nums:bmtype = "tracer" ;
 		Summerflounder4_Nums:units = "1" ;
@@ -27844,7 +27845,7 @@ variables:
 		Summerflounder4_ResN:b_dens = 1000000000. ;
 		Summerflounder4_ResN:i_conc = 200000000. ;
 		Summerflounder4_ResN:f_conc = 200000000. ;
-		Summerflounder4_ResN:_FillValue = 28142.76 ;
+		Summerflounder4_ResN:_FillValue = 47591.8 ;
 	double Summerflounder4_StructN(t, b, z) ;
 		Summerflounder4_StructN:bmtype = "tracer" ;
 		Summerflounder4_StructN:units = "mg N" ;
@@ -27863,7 +27864,7 @@ variables:
 		Summerflounder4_StructN:b_dens = 1000000000. ;
 		Summerflounder4_StructN:i_conc = 200000000. ;
 		Summerflounder4_StructN:f_conc = 200000000. ;
-		Summerflounder4_StructN:_FillValue = 10619.91 ;
+		Summerflounder4_StructN:_FillValue = 17959.2 ;
 	double Summerflounder5_Nums(t, b, z) ;
 		Summerflounder5_Nums:bmtype = "tracer" ;
 		Summerflounder5_Nums:units = "1" ;
@@ -27901,7 +27902,7 @@ variables:
 		Summerflounder5_ResN:b_dens = 1000000000. ;
 		Summerflounder5_ResN:i_conc = 200000000. ;
 		Summerflounder5_ResN:f_conc = 200000000. ;
-		Summerflounder5_ResN:_FillValue = 37609.44 ;
+		Summerflounder5_ResN:_FillValue = 53477.7 ;
 	double Summerflounder5_StructN(t, b, z) ;
 		Summerflounder5_StructN:bmtype = "tracer" ;
 		Summerflounder5_StructN:units = "mg N" ;
@@ -27920,7 +27921,7 @@ variables:
 		Summerflounder5_StructN:b_dens = 1000000000. ;
 		Summerflounder5_StructN:i_conc = 200000000. ;
 		Summerflounder5_StructN:f_conc = 200000000. ;
-		Summerflounder5_StructN:_FillValue = 14192.24 ;
+		Summerflounder5_StructN:_FillValue = 20180.3 ;
 	double Summerflounder6_Nums(t, b, z) ;
 		Summerflounder6_Nums:bmtype = "tracer" ;
 		Summerflounder6_Nums:units = "1" ;
@@ -27958,7 +27959,7 @@ variables:
 		Summerflounder6_ResN:b_dens = 1000000000. ;
 		Summerflounder6_ResN:i_conc = 200000000. ;
 		Summerflounder6_ResN:f_conc = 200000000. ;
-		Summerflounder6_ResN:_FillValue = 44794.41 ;
+		Summerflounder6_ResN:_FillValue = 56752.8 ;
 	double Summerflounder6_StructN(t, b, z) ;
 		Summerflounder6_StructN:bmtype = "tracer" ;
 		Summerflounder6_StructN:units = "mg N" ;
@@ -27977,7 +27978,7 @@ variables:
 		Summerflounder6_StructN:b_dens = 1000000000. ;
 		Summerflounder6_StructN:i_conc = 200000000. ;
 		Summerflounder6_StructN:f_conc = 200000000. ;
-		Summerflounder6_StructN:_FillValue = 16903.55 ;
+		Summerflounder6_StructN:_FillValue = 21416.2 ;
 	double Summerflounder7_Nums(t, b, z) ;
 		Summerflounder7_Nums:bmtype = "tracer" ;
 		Summerflounder7_Nums:units = "1" ;
@@ -28015,7 +28016,7 @@ variables:
 		Summerflounder7_ResN:b_dens = 1000000000. ;
 		Summerflounder7_ResN:i_conc = 200000000. ;
 		Summerflounder7_ResN:f_conc = 200000000. ;
-		Summerflounder7_ResN:_FillValue = 49931.72 ;
+		Summerflounder7_ResN:_FillValue = 58523.8 ;
 	double Summerflounder7_StructN(t, b, z) ;
 		Summerflounder7_StructN:bmtype = "tracer" ;
 		Summerflounder7_StructN:units = "mg N" ;
@@ -28034,7 +28035,7 @@ variables:
 		Summerflounder7_StructN:b_dens = 1000000000. ;
 		Summerflounder7_StructN:i_conc = 200000000. ;
 		Summerflounder7_StructN:f_conc = 200000000. ;
-		Summerflounder7_StructN:_FillValue = 18842.16 ;
+		Summerflounder7_StructN:_FillValue = 22084.5 ;
 	double Summerflounder8_Nums(t, b, z) ;
 		Summerflounder8_Nums:bmtype = "tracer" ;
 		Summerflounder8_Nums:units = "1" ;
@@ -28072,7 +28073,7 @@ variables:
 		Summerflounder8_ResN:b_dens = 1000000000. ;
 		Summerflounder8_ResN:i_conc = 200000000. ;
 		Summerflounder8_ResN:f_conc = 200000000. ;
-		Summerflounder8_ResN:_FillValue = 53477.72 ;
+		Summerflounder8_ResN:_FillValue = 59467.7 ;
 	double Summerflounder8_StructN(t, b, z) ;
 		Summerflounder8_StructN:bmtype = "tracer" ;
 		Summerflounder8_StructN:units = "mg N" ;
@@ -28091,7 +28092,7 @@ variables:
 		Summerflounder8_StructN:b_dens = 1000000000. ;
 		Summerflounder8_StructN:i_conc = 200000000. ;
 		Summerflounder8_StructN:f_conc = 200000000. ;
-		Summerflounder8_StructN:_FillValue = 20180.27 ;
+		Summerflounder8_StructN:_FillValue = 22440.6 ;
 	double Summerflounder9_Nums(t, b, z) ;
 		Summerflounder9_Nums:bmtype = "tracer" ;
 		Summerflounder9_Nums:units = "1" ;
@@ -28129,7 +28130,7 @@ variables:
 		Summerflounder9_ResN:b_dens = 1000000000. ;
 		Summerflounder9_ResN:i_conc = 200000000. ;
 		Summerflounder9_ResN:f_conc = 200000000. ;
-		Summerflounder9_ResN:_FillValue = 55872.97 ;
+		Summerflounder9_ResN:_FillValue = 59967.0 ;
 	double Summerflounder9_StructN(t, b, z) ;
 		Summerflounder9_StructN:bmtype = "tracer" ;
 		Summerflounder9_StructN:units = "mg N" ;
@@ -28148,7 +28149,7 @@ variables:
 		Summerflounder9_StructN:b_dens = 1000000000. ;
 		Summerflounder9_StructN:i_conc = 200000000. ;
 		Summerflounder9_StructN:f_conc = 200000000. ;
-		Summerflounder9_StructN:_FillValue = 21084.14 ;
+		Summerflounder9_StructN:_FillValue = 22728.3 ;
 	double Summerflounder_N(t, b, z) ;
 		Summerflounder_N:bmtype = "tracer" ;
 		Summerflounder_N:units = "mg N m-3" ;
@@ -28212,7 +28213,7 @@ variables:
 		Tautog10_ResN:b_dens = 1000000000. ;
 		Tautog10_ResN:i_conc = 200000000. ;
 		Tautog10_ResN:f_conc = 200000000. ;
-		Tautog10_ResN:_FillValue = 23045.72 ;
+		Tautog10_ResN:_FillValue = 32146.6 ;
 	double Tautog10_StructN(t, b, z) ;
 		Tautog10_StructN:bmtype = "tracer" ;
 		Tautog10_StructN:units = "mg N" ;
@@ -28231,7 +28232,7 @@ variables:
 		Tautog10_StructN:b_dens = 1000000000. ;
 		Tautog10_StructN:i_conc = 200000000. ;
 		Tautog10_StructN:f_conc = 200000000. ;
-		Tautog10_StructN:_FillValue = 8696.5 ;
+		Tautog10_StructN:_FillValue = 12130.8 ;
 	double Tautog1_Nums(t, b, z) ;
 		Tautog1_Nums:bmtype = "tracer" ;
 		Tautog1_Nums:units = "1" ;
@@ -28269,7 +28270,7 @@ variables:
 		Tautog1_ResN:b_dens = 1000000000. ;
 		Tautog1_ResN:i_conc = 200000000. ;
 		Tautog1_ResN:f_conc = 200000000. ;
-		Tautog1_ResN:_FillValue = 32.28 ;
+		Tautog1_ResN:_FillValue = 652.4 ;
 	double Tautog1_StructN(t, b, z) ;
 		Tautog1_StructN:bmtype = "tracer" ;
 		Tautog1_StructN:units = "mg N" ;
@@ -28288,7 +28289,7 @@ variables:
 		Tautog1_StructN:b_dens = 1000000000. ;
 		Tautog1_StructN:i_conc = 200000000. ;
 		Tautog1_StructN:f_conc = 200000000. ;
-		Tautog1_StructN:_FillValue = 12.18 ;
+		Tautog1_StructN:_FillValue = 246.2 ;
 	double Tautog2_Nums(t, b, z) ;
 		Tautog2_Nums:bmtype = "tracer" ;
 		Tautog2_Nums:units = "1" ;
@@ -28326,7 +28327,7 @@ variables:
 		Tautog2_ResN:b_dens = 1000000000. ;
 		Tautog2_ResN:i_conc = 200000000. ;
 		Tautog2_ResN:f_conc = 200000000. ;
-		Tautog2_ResN:_FillValue = 652.35 ;
+		Tautog2_ResN:_FillValue = 3441.5 ;
 	double Tautog2_StructN(t, b, z) ;
 		Tautog2_StructN:bmtype = "tracer" ;
 		Tautog2_StructN:units = "mg N" ;
@@ -28345,7 +28346,7 @@ variables:
 		Tautog2_StructN:b_dens = 1000000000. ;
 		Tautog2_StructN:i_conc = 200000000. ;
 		Tautog2_StructN:f_conc = 200000000. ;
-		Tautog2_StructN:_FillValue = 246.17 ;
+		Tautog2_StructN:_FillValue = 246.2 ;
 	double Tautog3_Nums(t, b, z) ;
 		Tautog3_Nums:bmtype = "tracer" ;
 		Tautog3_Nums:units = "1" ;
@@ -28383,7 +28384,7 @@ variables:
 		Tautog3_ResN:b_dens = 1000000000. ;
 		Tautog3_ResN:i_conc = 200000000. ;
 		Tautog3_ResN:f_conc = 200000000. ;
-		Tautog3_ResN:_FillValue = 2282.47 ;
+		Tautog3_ResN:_FillValue = 3441.5 ;
 	double Tautog3_StructN(t, b, z) ;
 		Tautog3_StructN:bmtype = "tracer" ;
 		Tautog3_StructN:units = "mg N" ;
@@ -28402,7 +28403,7 @@ variables:
 		Tautog3_StructN:b_dens = 1000000000. ;
 		Tautog3_StructN:i_conc = 200000000. ;
 		Tautog3_StructN:f_conc = 200000000. ;
-		Tautog3_StructN:_FillValue = 861.31 ;
+		Tautog3_StructN:_FillValue = 1298.7 ;
 	double Tautog4_Nums(t, b, z) ;
 		Tautog4_Nums:bmtype = "tracer" ;
 		Tautog4_Nums:units = "1" ;
@@ -28440,7 +28441,7 @@ variables:
 		Tautog4_ResN:b_dens = 1000000000. ;
 		Tautog4_ResN:i_conc = 200000000. ;
 		Tautog4_ResN:f_conc = 200000000. ;
-		Tautog4_ResN:_FillValue = 4780.26 ;
+		Tautog4_ResN:_FillValue = 12786.2 ;
 	double Tautog4_StructN(t, b, z) ;
 		Tautog4_StructN:bmtype = "tracer" ;
 		Tautog4_StructN:units = "mg N" ;
@@ -28459,7 +28460,7 @@ variables:
 		Tautog4_StructN:b_dens = 1000000000. ;
 		Tautog4_StructN:i_conc = 200000000. ;
 		Tautog4_StructN:f_conc = 200000000. ;
-		Tautog4_StructN:_FillValue = 1803.87 ;
+		Tautog4_StructN:_FillValue = 4825.0 ;
 	double Tautog5_Nums(t, b, z) ;
 		Tautog5_Nums:bmtype = "tracer" ;
 		Tautog5_Nums:units = "1" ;
@@ -28497,7 +28498,7 @@ variables:
 		Tautog5_ResN:b_dens = 1000000000. ;
 		Tautog5_ResN:i_conc = 200000000. ;
 		Tautog5_ResN:f_conc = 200000000. ;
-		Tautog5_ResN:_FillValue = 7830.35 ;
+		Tautog5_ResN:_FillValue = 17567.8 ;
 	double Tautog5_StructN(t, b, z) ;
 		Tautog5_StructN:bmtype = "tracer" ;
 		Tautog5_StructN:units = "mg N" ;
@@ -28516,7 +28517,7 @@ variables:
 		Tautog5_StructN:b_dens = 1000000000. ;
 		Tautog5_StructN:i_conc = 200000000. ;
 		Tautog5_StructN:f_conc = 200000000. ;
-		Tautog5_StructN:_FillValue = 2954.85 ;
+		Tautog5_StructN:_FillValue = 6629.4 ;
 	double Tautog6_Nums(t, b, z) ;
 		Tautog6_Nums:bmtype = "tracer" ;
 		Tautog6_Nums:units = "1" ;
@@ -28554,7 +28555,7 @@ variables:
 		Tautog6_ResN:b_dens = 1000000000. ;
 		Tautog6_ResN:i_conc = 200000000. ;
 		Tautog6_ResN:f_conc = 200000000. ;
-		Tautog6_ResN:_FillValue = 11125.04 ;
+		Tautog6_ResN:_FillValue = 21790.4 ;
 	double Tautog6_StructN(t, b, z) ;
 		Tautog6_StructN:bmtype = "tracer" ;
 		Tautog6_StructN:units = "mg N" ;
@@ -28573,7 +28574,7 @@ variables:
 		Tautog6_StructN:b_dens = 1000000000. ;
 		Tautog6_StructN:i_conc = 200000000. ;
 		Tautog6_StructN:f_conc = 200000000. ;
-		Tautog6_StructN:_FillValue = 4198.13 ;
+		Tautog6_StructN:_FillValue = 8222.8 ;
 	double Tautog7_Nums(t, b, z) ;
 		Tautog7_Nums:bmtype = "tracer" ;
 		Tautog7_Nums:units = "1" ;
@@ -28611,7 +28612,7 @@ variables:
 		Tautog7_ResN:b_dens = 1000000000. ;
 		Tautog7_ResN:i_conc = 200000000. ;
 		Tautog7_ResN:f_conc = 200000000. ;
-		Tautog7_ResN:_FillValue = 14424.96 ;
+		Tautog7_ResN:_FillValue = 25320.9 ;
 	double Tautog7_StructN(t, b, z) ;
 		Tautog7_StructN:bmtype = "tracer" ;
 		Tautog7_StructN:units = "mg N" ;
@@ -28630,7 +28631,7 @@ variables:
 		Tautog7_StructN:b_dens = 1000000000. ;
 		Tautog7_StructN:i_conc = 200000000. ;
 		Tautog7_StructN:f_conc = 200000000. ;
-		Tautog7_StructN:_FillValue = 5443.38 ;
+		Tautog7_StructN:_FillValue = 9555.0 ;
 	double Tautog8_Nums(t, b, z) ;
 		Tautog8_Nums:bmtype = "tracer" ;
 		Tautog8_Nums:units = "1" ;
@@ -28668,7 +28669,7 @@ variables:
 		Tautog8_ResN:b_dens = 1000000000. ;
 		Tautog8_ResN:i_conc = 200000000. ;
 		Tautog8_ResN:f_conc = 200000000. ;
-		Tautog8_ResN:_FillValue = 17567.8 ;
+		Tautog8_ResN:_FillValue = 28168.8 ;
 	double Tautog8_StructN(t, b, z) ;
 		Tautog8_StructN:bmtype = "tracer" ;
 		Tautog8_StructN:units = "mg N" ;
@@ -28687,7 +28688,7 @@ variables:
 		Tautog8_StructN:b_dens = 1000000000. ;
 		Tautog8_StructN:i_conc = 200000000. ;
 		Tautog8_StructN:f_conc = 200000000. ;
-		Tautog8_StructN:_FillValue = 6629.36 ;
+		Tautog8_StructN:_FillValue = 10629.7 ;
 	double Tautog9_Nums(t, b, z) ;
 		Tautog9_Nums:bmtype = "tracer" ;
 		Tautog9_Nums:units = "1" ;
@@ -28725,7 +28726,7 @@ variables:
 		Tautog9_ResN:b_dens = 1000000000. ;
 		Tautog9_ResN:i_conc = 200000000. ;
 		Tautog9_ResN:f_conc = 200000000. ;
-		Tautog9_ResN:_FillValue = 20457.07 ;
+		Tautog9_ResN:_FillValue = 30411.0 ;
 	double Tautog9_StructN(t, b, z) ;
 		Tautog9_StructN:bmtype = "tracer" ;
 		Tautog9_StructN:units = "mg N" ;
@@ -28744,7 +28745,7 @@ variables:
 		Tautog9_StructN:b_dens = 1000000000. ;
 		Tautog9_StructN:i_conc = 200000000. ;
 		Tautog9_StructN:f_conc = 200000000. ;
-		Tautog9_StructN:_FillValue = 7719.65 ;
+		Tautog9_StructN:_FillValue = 11475.8 ;
 	double Tautog_N(t, b, z) ;
 		Tautog_N:bmtype = "tracer" ;
 		Tautog_N:units = "mg N m-3" ;
@@ -28806,7 +28807,7 @@ variables:
 		Tilefish10_ResN:b_dens = 1000000000. ;
 		Tilefish10_ResN:i_conc = 200000000. ;
 		Tilefish10_ResN:f_conc = 200000000. ;
-		Tilefish10_ResN:_FillValue = 99925.19 ;
+		Tilefish10_ResN:_FillValue = 124146.4;
 	double Tilefish10_StructN(t, b, z) ;
 		Tilefish10_StructN:bmtype = "tracer" ;
 		Tilefish10_StructN:units = "mg N" ;
@@ -28825,7 +28826,7 @@ variables:
 		Tilefish10_StructN:b_dens = 1000000000. ;
 		Tilefish10_StructN:i_conc = 200000000. ;
 		Tilefish10_StructN:f_conc = 200000000. ;
-		Tilefish10_StructN:_FillValue = 37707.62 ;
+		Tilefish10_StructN:_FillValue = 46847.7;
 	double Tilefish1_Nums(t, b, z) ;
 		Tilefish1_Nums:bmtype = "tracer" ;
 		Tilefish1_Nums:units = "1" ;
@@ -28863,7 +28864,7 @@ variables:
 		Tilefish1_ResN:b_dens = 1000000000. ;
 		Tilefish1_ResN:i_conc = 200000000. ;
 		Tilefish1_ResN:f_conc = 200000000. ;
-		Tilefish1_ResN:_FillValue = 94.05 ;
+		Tilefish1_ResN:_FillValue = 3281.5;
 	double Tilefish1_StructN(t, b, z) ;
 		Tilefish1_StructN:bmtype = "tracer" ;
 		Tilefish1_StructN:units = "mg N" ;
@@ -28882,7 +28883,7 @@ variables:
 		Tilefish1_StructN:b_dens = 1000000000. ;
 		Tilefish1_StructN:i_conc = 200000000. ;
 		Tilefish1_StructN:f_conc = 200000000. ;
-		Tilefish1_StructN:_FillValue = 35.49 ;
+		Tilefish1_StructN:_FillValue = 1238.3;
 	double Tilefish2_Nums(t, b, z) ;
 		Tilefish2_Nums:bmtype = "tracer" ;
 		Tilefish2_Nums:units = "1" ;
@@ -28920,7 +28921,7 @@ variables:
 		Tilefish2_ResN:b_dens = 1000000000. ;
 		Tilefish2_ResN:i_conc = 200000000. ;
 		Tilefish2_ResN:f_conc = 200000000. ;
-		Tilefish2_ResN:_FillValue = 3281.52 ;
+		Tilefish2_ResN:_FillValue = 18331.1;
 	double Tilefish2_StructN(t, b, z) ;
 		Tilefish2_StructN:bmtype = "tracer" ;
 		Tilefish2_StructN:units = "mg N" ;
@@ -28939,7 +28940,7 @@ variables:
 		Tilefish2_StructN:b_dens = 1000000000. ;
 		Tilefish2_StructN:i_conc = 200000000. ;
 		Tilefish2_StructN:f_conc = 200000000. ;
-		Tilefish2_StructN:_FillValue = 1238.31 ;
+		Tilefish2_StructN:_FillValue = 6917.4;
 	double Tilefish3_Nums(t, b, z) ;
 		Tilefish3_Nums:bmtype = "tracer" ;
 		Tilefish3_Nums:units = "1" ;
@@ -28977,7 +28978,7 @@ variables:
 		Tilefish3_ResN:b_dens = 1000000000. ;
 		Tilefish3_ResN:i_conc = 200000000. ;
 		Tilefish3_ResN:f_conc = 200000000. ;
-		Tilefish3_ResN:_FillValue = 12162.31 ;
+		Tilefish3_ResN:_FillValue = 40206.3;
 	double Tilefish3_StructN(t, b, z) ;
 		Tilefish3_StructN:bmtype = "tracer" ;
 		Tilefish3_StructN:units = "mg N" ;
@@ -28996,7 +28997,7 @@ variables:
 		Tilefish3_StructN:b_dens = 1000000000. ;
 		Tilefish3_StructN:i_conc = 200000000. ;
 		Tilefish3_StructN:f_conc = 200000000. ;
-		Tilefish3_StructN:_FillValue = 4589.55 ;
+		Tilefish3_StructN:_FillValue = 15172.2;
 	double Tilefish4_Nums(t, b, z) ;
 		Tilefish4_Nums:bmtype = "tracer" ;
 		Tilefish4_Nums:units = "1" ;
@@ -29034,7 +29035,7 @@ variables:
 		Tilefish4_ResN:b_dens = 1000000000. ;
 		Tilefish4_ResN:i_conc = 200000000. ;
 		Tilefish4_ResN:f_conc = 200000000. ;
-		Tilefish4_ResN:_FillValue = 25251.66 ;
+		Tilefish4_ResN:_FillValue = 62266.3;
 	double Tilefish4_StructN(t, b, z) ;
 		Tilefish4_StructN:bmtype = "tracer" ;
 		Tilefish4_StructN:units = "mg N" ;
@@ -29053,7 +29054,7 @@ variables:
 		Tilefish4_StructN:b_dens = 1000000000. ;
 		Tilefish4_StructN:i_conc = 200000000. ;
 		Tilefish4_StructN:f_conc = 200000000. ;
-		Tilefish4_StructN:_FillValue = 9528.93 ;
+		Tilefish4_StructN:_FillValue = 23496.7;
 	double Tilefish5_Nums(t, b, z) ;
 		Tilefish5_Nums:bmtype = "tracer" ;
 		Tilefish5_Nums:units = "1" ;
@@ -29091,7 +29092,7 @@ variables:
 		Tilefish5_ResN:b_dens = 1000000000. ;
 		Tilefish5_ResN:i_conc = 200000000. ;
 		Tilefish5_ResN:f_conc = 200000000. ;
-		Tilefish5_ResN:_FillValue = 40206.3 ;
+		Tilefish5_ResN:_FillValue = 81125.8;
 	double Tilefish5_StructN(t, b, z) ;
 		Tilefish5_StructN:bmtype = "tracer" ;
 		Tilefish5_StructN:units = "mg N" ;
@@ -29110,7 +29111,7 @@ variables:
 		Tilefish5_StructN:b_dens = 1000000000. ;
 		Tilefish5_StructN:i_conc = 200000000. ;
 		Tilefish5_StructN:f_conc = 200000000. ;
-		Tilefish5_StructN:_FillValue = 15172.19 ;
+		Tilefish5_StructN:_FillValue = 30316.5;
 	double Tilefish6_Nums(t, b, z) ;
 		Tilefish6_Nums:bmtype = "tracer" ;
 		Tilefish6_Nums:units = "1" ;
@@ -29148,7 +29149,7 @@ variables:
 		Tilefish6_ResN:b_dens = 1000000000. ;
 		Tilefish6_ResN:i_conc = 200000000. ;
 		Tilefish6_ResN:f_conc = 200000000. ;
-		Tilefish6_ResN:_FillValue = 55166.35 ;
+		Tilefish6_ResN:_FillValue = 95882.0;
 	double Tilefish6_StructN(t, b, z) ;
 		Tilefish6_StructN:bmtype = "tracer" ;
 		Tilefish6_StructN:units = "mg N" ;
@@ -29167,7 +29168,7 @@ variables:
 		Tilefish6_StructN:b_dens = 1000000000. ;
 		Tilefish6_StructN:i_conc = 200000000. ;
 		Tilefish6_StructN:f_conc = 200000000. ;
-		Tilefish6_StructN:_FillValue = 20817.49 ;
+		Tilefish6_StructN:_FillValue = 36181.9;
 	double Tilefish7_Nums(t, b, z) ;
 		Tilefish7_Nums:bmtype = "tracer" ;
 		Tilefish7_Nums:units = "1" ;
@@ -29205,7 +29206,7 @@ variables:
 		Tilefish7_ResN:b_dens = 1000000000. ;
 		Tilefish7_ResN:i_conc = 200000000. ;
 		Tilefish7_ResN:f_conc = 200000000. ;
-		Tilefish7_ResN:_FillValue = 68990.23 ;
+		Tilefish7_ResN:_FillValue = 106842.8;
 	double Tilefish7_StructN(t, b, z) ;
 		Tilefish7_StructN:bmtype = "tracer" ;
 		Tilefish7_StructN:units = "mg N" ;
@@ -29224,7 +29225,7 @@ variables:
 		Tilefish7_StructN:b_dens = 1000000000. ;
 		Tilefish7_StructN:i_conc = 200000000. ;
 		Tilefish7_StructN:f_conc = 200000000. ;
-		Tilefish7_StructN:_FillValue = 26034.05 ;
+		Tilefish7_StructN:_FillValue = 40318.0;
 	double Tilefish8_Nums(t, b, z) ;
 		Tilefish8_Nums:bmtype = "tracer" ;
 		Tilefish8_Nums:units = "1" ;
@@ -29262,7 +29263,7 @@ variables:
 		Tilefish8_ResN:b_dens = 1000000000. ;
 		Tilefish8_ResN:i_conc = 200000000. ;
 		Tilefish8_ResN:f_conc = 200000000. ;
-		Tilefish8_ResN:_FillValue = 81125.75 ;
+		Tilefish8_ResN:_FillValue = 114726.9;
 	double Tilefish8_StructN(t, b, z) ;
 		Tilefish8_StructN:bmtype = "tracer" ;
 		Tilefish8_StructN:units = "mg N" ;
@@ -29281,7 +29282,7 @@ variables:
 		Tilefish8_StructN:b_dens = 1000000000. ;
 		Tilefish8_StructN:i_conc = 200000000. ;
 		Tilefish8_StructN:f_conc = 200000000. ;
-		Tilefish8_StructN:_FillValue = 30613.49 ;
+		Tilefish8_StructN:_FillValue = 43293.2;
 	double Tilefish9_Nums(t, b, z) ;
 		Tilefish9_Nums:bmtype = "tracer" ;
 		Tilefish9_Nums:units = "1" ;
@@ -29319,7 +29320,7 @@ variables:
 		Tilefish9_ResN:b_dens = 1000000000. ;
 		Tilefish9_ResN:i_conc = 200000000. ;
 		Tilefish9_ResN:f_conc = 200000000. ;
-		Tilefish9_ResN:_FillValue = 91414.11 ;
+		Tilefish9_ResN:_FillValue = 120283.0;
 	double Tilefish9_StructN(t, b, z) ;
 		Tilefish9_StructN:bmtype = "tracer" ;
 		Tilefish9_StructN:units = "mg N" ;
@@ -29338,7 +29339,7 @@ variables:
 		Tilefish9_StructN:b_dens = 1000000000. ;
 		Tilefish9_StructN:i_conc = 200000000. ;
 		Tilefish9_StructN:f_conc = 200000000. ;
-		Tilefish9_StructN:_FillValue = 34495.89 ;
+		Tilefish9_StructN:_FillValue = 45389.8;
 	double Tilefish_N(t, b, z) ;
 		Tilefish_N:bmtype = "tracer" ;
 		Tilefish_N:units = "mg N m-3" ;
@@ -29970,7 +29971,7 @@ variables:
 		Tunas10_ResN:b_dens = 1000000000. ;
 		Tunas10_ResN:i_conc = 200000000. ;
 		Tunas10_ResN:f_conc = 200000000. ;
-		Tunas10_ResN:_FillValue = 265548.13 ;
+		Tunas10_ResN:_FillValue = 268195.5 ;
 	double Tunas10_StructN(t, b, z) ;
 		Tunas10_StructN:bmtype = "tracer" ;
 		Tunas10_StructN:units = "mg N" ;
@@ -29989,7 +29990,7 @@ variables:
 		Tunas10_StructN:b_dens = 1000000000. ;
 		Tunas10_StructN:i_conc = 200000000. ;
 		Tunas10_StructN:f_conc = 200000000. ;
-		Tunas10_StructN:_FillValue = 100206.84 ;
+		Tunas10_StructN:_FillValue = 101205.8 ;
 	double Tunas1_Nums(t, b, z) ;
 		Tunas1_Nums:bmtype = "tracer" ;
 		Tunas1_Nums:units = "1" ;
@@ -30027,7 +30028,7 @@ variables:
 		Tunas1_ResN:b_dens = 1000000000. ;
 		Tunas1_ResN:i_conc = 200000000. ;
 		Tunas1_ResN:f_conc = 200000000. ;
-		Tunas1_ResN:_FillValue = 4928.58 ;
+		Tunas1_ResN:_FillValue = 157102.6 ;
 	double Tunas1_StructN(t, b, z) ;
 		Tunas1_StructN:bmtype = "tracer" ;
 		Tunas1_StructN:units = "mg N" ;
@@ -30046,7 +30047,7 @@ variables:
 		Tunas1_StructN:b_dens = 1000000000. ;
 		Tunas1_StructN:i_conc = 200000000. ;
 		Tunas1_StructN:f_conc = 200000000. ;
-		Tunas1_StructN:_FillValue = 1859.84 ;
+		Tunas1_StructN:_FillValue = 59284.0 ;
 	double Tunas2_Nums(t, b, z) ;
 		Tunas2_Nums:bmtype = "tracer" ;
 		Tunas2_Nums:units = "1" ;
@@ -30084,7 +30085,7 @@ variables:
 		Tunas2_ResN:b_dens = 1000000000. ;
 		Tunas2_ResN:i_conc = 200000000. ;
 		Tunas2_ResN:f_conc = 200000000. ;
-		Tunas2_ResN:_FillValue = 57230.33 ;
+		Tunas2_ResN:_FillValue = 239961.5 ;
 	double Tunas2_StructN(t, b, z) ;
 		Tunas2_StructN:bmtype = "tracer" ;
 		Tunas2_StructN:units = "mg N" ;
@@ -30103,7 +30104,7 @@ variables:
 		Tunas2_StructN:b_dens = 1000000000. ;
 		Tunas2_StructN:i_conc = 200000000. ;
 		Tunas2_StructN:f_conc = 200000000. ;
-		Tunas2_StructN:_FillValue = 21596.35 ;
+		Tunas2_StructN:_FillValue = 90551.5 ;
 	double Tunas3_Nums(t, b, z) ;
 		Tunas3_Nums:bmtype = "tracer" ;
 		Tunas3_Nums:units = "1" ;
@@ -30141,7 +30142,7 @@ variables:
 		Tunas3_ResN:b_dens = 1000000000. ;
 		Tunas3_ResN:i_conc = 200000000. ;
 		Tunas3_ResN:f_conc = 200000000. ;
-		Tunas3_ResN:_FillValue = 127023.06 ;
+		Tunas3_ResN:_FillValue = 261714.9 ;
 	double Tunas3_StructN(t, b, z) ;
 		Tunas3_StructN:bmtype = "tracer" ;
 		Tunas3_StructN:units = "mg N" ;
@@ -30160,7 +30161,7 @@ variables:
 		Tunas3_StructN:b_dens = 1000000000. ;
 		Tunas3_StructN:i_conc = 200000000. ;
 		Tunas3_StructN:f_conc = 200000000. ;
-		Tunas3_StructN:_FillValue = 47933.23 ;
+		Tunas3_StructN:_FillValue = 98760.4 ;
 	double Tunas4_Nums(t, b, z) ;
 		Tunas4_Nums:bmtype = "tracer" ;
 		Tunas4_Nums:units = "1" ;
@@ -30198,7 +30199,7 @@ variables:
 		Tunas4_ResN:b_dens = 1000000000. ;
 		Tunas4_ResN:i_conc = 200000000. ;
 		Tunas4_ResN:f_conc = 200000000. ;
-		Tunas4_ResN:_FillValue = 182191.05 ;
+		Tunas4_ResN:_FillValue = 266740.5 ;
 	double Tunas4_StructN(t, b, z) ;
 		Tunas4_StructN:bmtype = "tracer" ;
 		Tunas4_StructN:units = "mg N" ;
@@ -30217,7 +30218,7 @@ variables:
 		Tunas4_StructN:b_dens = 1000000000. ;
 		Tunas4_StructN:i_conc = 200000000. ;
 		Tunas4_StructN:f_conc = 200000000. ;
-		Tunas4_StructN:_FillValue = 68751.34 ;
+		Tunas4_StructN:_FillValue = 100656.8 ;
 	double Tunas5_Nums(t, b, z) ;
 		Tunas5_Nums:bmtype = "tracer" ;
 		Tunas5_Nums:units = "1" ;
@@ -30255,7 +30256,7 @@ variables:
 		Tunas5_ResN:b_dens = 1000000000. ;
 		Tunas5_ResN:i_conc = 200000000. ;
 		Tunas5_ResN:f_conc = 200000000. ;
-		Tunas5_ResN:_FillValue = 218282.14 ;
+		Tunas5_ResN:_FillValue = 267870.5 ;
 	double Tunas5_StructN(t, b, z) ;
 		Tunas5_StructN:bmtype = "tracer" ;
 		Tunas5_StructN:units = "mg N" ;
@@ -30274,7 +30275,7 @@ variables:
 		Tunas5_StructN:b_dens = 1000000000. ;
 		Tunas5_StructN:i_conc = 200000000. ;
 		Tunas5_StructN:f_conc = 200000000. ;
-		Tunas5_StructN:_FillValue = 82370.62 ;
+		Tunas5_StructN:_FillValue = 101083.2 ;
 	double Tunas6_Nums(t, b, z) ;
 		Tunas6_Nums:bmtype = "tracer" ;
 		Tunas6_Nums:units = "1" ;
@@ -30312,7 +30313,7 @@ variables:
 		Tunas6_ResN:b_dens = 1000000000. ;
 		Tunas6_ResN:i_conc = 200000000. ;
 		Tunas6_ResN:f_conc = 200000000. ;
-		Tunas6_ResN:_FillValue = 239961.45 ;
+		Tunas6_ResN:_FillValue = 268123.1 ;
 	double Tunas6_StructN(t, b, z) ;
 		Tunas6_StructN:bmtype = "tracer" ;
 		Tunas6_StructN:units = "mg N" ;
@@ -30331,7 +30332,7 @@ variables:
 		Tunas6_StructN:b_dens = 1000000000. ;
 		Tunas6_StructN:i_conc = 200000000. ;
 		Tunas6_StructN:f_conc = 200000000. ;
-		Tunas6_StructN:_FillValue = 90551.49 ;
+		Tunas6_StructN:_FillValue = 101178.5 ;
 	double Tunas7_Nums(t, b, z) ;
 		Tunas7_Nums:bmtype = "tracer" ;
 		Tunas7_Nums:units = "1" ;
@@ -30369,7 +30370,7 @@ variables:
 		Tunas7_ResN:b_dens = 1000000000. ;
 		Tunas7_ResN:i_conc = 200000000. ;
 		Tunas7_ResN:f_conc = 200000000. ;
-		Tunas7_ResN:_FillValue = 252443.13 ;
+		Tunas7_ResN:_FillValue = 268179.5 ;
 	double Tunas7_StructN(t, b, z) ;
 		Tunas7_StructN:bmtype = "tracer" ;
 		Tunas7_StructN:units = "mg N" ;
@@ -30388,7 +30389,7 @@ variables:
 		Tunas7_StructN:b_dens = 1000000000. ;
 		Tunas7_StructN:i_conc = 200000000. ;
 		Tunas7_StructN:f_conc = 200000000. ;
-		Tunas7_StructN:_FillValue = 95261.56 ;
+		Tunas7_StructN:_FillValue = 101199.8 ;
 	double Tunas8_Nums(t, b, z) ;
 		Tunas8_Nums:bmtype = "tracer" ;
 		Tunas8_Nums:units = "1" ;
@@ -30426,7 +30427,7 @@ variables:
 		Tunas8_ResN:b_dens = 1000000000. ;
 		Tunas8_ResN:i_conc = 200000000. ;
 		Tunas8_ResN:f_conc = 200000000. ;
-		Tunas8_ResN:_FillValue = 259472.34 ;
+		Tunas8_ResN:_FillValue = 268192.0 ;
 	double Tunas8_StructN(t, b, z) ;
 		Tunas8_StructN:bmtype = "tracer" ;
 		Tunas8_StructN:units = "mg N" ;
@@ -30445,7 +30446,7 @@ variables:
 		Tunas8_StructN:b_dens = 1000000000. ;
 		Tunas8_StructN:i_conc = 200000000. ;
 		Tunas8_StructN:f_conc = 200000000. ;
-		Tunas8_StructN:_FillValue = 97914.09 ;
+		Tunas8_StructN:_FillValue = 101204.5 ;
 	double Tunas9_Nums(t, b, z) ;
 		Tunas9_Nums:bmtype = "tracer" ;
 		Tunas9_Nums:units = "1" ;
@@ -30483,7 +30484,7 @@ variables:
 		Tunas9_ResN:b_dens = 1000000000. ;
 		Tunas9_ResN:i_conc = 200000000. ;
 		Tunas9_ResN:f_conc = 200000000. ;
-		Tunas9_ResN:_FillValue = 263384.56 ;
+		Tunas9_ResN:_FillValue = 268194.8 ;
 	double Tunas9_StructN(t, b, z) ;
 		Tunas9_StructN:bmtype = "tracer" ;
 		Tunas9_StructN:units = "mg N" ;
@@ -30502,7 +30503,7 @@ variables:
 		Tunas9_StructN:b_dens = 1000000000. ;
 		Tunas9_StructN:i_conc = 200000000. ;
 		Tunas9_StructN:f_conc = 200000000. ;
-		Tunas9_StructN:_FillValue = 99390.4 ;
+		Tunas9_StructN:_FillValue = 101205.6 ;
 	double Tunas_N(t, b, z) ;
 		Tunas_N:bmtype = "tracer" ;
 		Tunas_N:units = "mg N m-3" ;
@@ -31716,7 +31717,7 @@ variables:
 		Windowpane10_ResN:b_dens = 1000000000. ;
 		Windowpane10_ResN:i_conc = 200000000. ;
 		Windowpane10_ResN:f_conc = 200000000. ;
-		Windowpane10_ResN:_FillValue = 5437.99 ;
+		Windowpane10_ResN:_FillValue = 5765.1 ;
 	double Windowpane10_StructN(t, b, z) ;
 		Windowpane10_StructN:bmtype = "tracer" ;
 		Windowpane10_StructN:units = "mg N" ;
@@ -31735,7 +31736,7 @@ variables:
 		Windowpane10_StructN:b_dens = 1000000000. ;
 		Windowpane10_StructN:i_conc = 200000000. ;
 		Windowpane10_StructN:f_conc = 200000000. ;
-		Windowpane10_StructN:_FillValue = 2052.07 ;
+		Windowpane10_StructN:_FillValue = 2175.5 ;
 	double Windowpane1_Nums(t, b, z) ;
 		Windowpane1_Nums:bmtype = "tracer" ;
 		Windowpane1_Nums:units = "1" ;
@@ -31773,7 +31774,7 @@ variables:
 		Windowpane1_ResN:b_dens = 1000000000. ;
 		Windowpane1_ResN:i_conc = 200000000. ;
 		Windowpane1_ResN:f_conc = 200000000. ;
-		Windowpane1_ResN:_FillValue = 41.02 ;
+		Windowpane1_ResN:_FillValue = 577.5 ;
 	double Windowpane1_StructN(t, b, z) ;
 		Windowpane1_StructN:bmtype = "tracer" ;
 		Windowpane1_StructN:units = "mg N" ;
@@ -31792,7 +31793,7 @@ variables:
 		Windowpane1_StructN:b_dens = 1000000000. ;
 		Windowpane1_StructN:i_conc = 200000000. ;
 		Windowpane1_StructN:f_conc = 200000000. ;
-		Windowpane1_StructN:_FillValue = 15.48 ;
+		Windowpane1_StructN:_FillValue = 217.9 ;
 	double Windowpane2_Nums(t, b, z) ;
 		Windowpane2_Nums:bmtype = "tracer" ;
 		Windowpane2_Nums:units = "1" ;
@@ -31830,7 +31831,7 @@ variables:
 		Windowpane2_ResN:b_dens = 1000000000. ;
 		Windowpane2_ResN:i_conc = 200000000. ;
 		Windowpane2_ResN:f_conc = 200000000. ;
-		Windowpane2_ResN:_FillValue = 577.51 ;
+		Windowpane2_ResN:_FillValue = 2053.8 ;
 	double Windowpane2_StructN(t, b, z) ;
 		Windowpane2_StructN:bmtype = "tracer" ;
 		Windowpane2_StructN:units = "mg N" ;
@@ -31849,7 +31850,7 @@ variables:
 		Windowpane2_StructN:b_dens = 1000000000. ;
 		Windowpane2_StructN:i_conc = 200000000. ;
 		Windowpane2_StructN:f_conc = 200000000. ;
-		Windowpane2_StructN:_FillValue = 217.93 ;
+		Windowpane2_StructN:_FillValue = 775.0 ;
 	double Windowpane3_Nums(t, b, z) ;
 		Windowpane3_Nums:bmtype = "tracer" ;
 		Windowpane3_Nums:units = "1" ;
@@ -31887,7 +31888,7 @@ variables:
 		Windowpane3_ResN:b_dens = 1000000000. ;
 		Windowpane3_ResN:i_conc = 200000000. ;
 		Windowpane3_ResN:f_conc = 200000000. ;
-		Windowpane3_ResN:_FillValue = 1535.52 ;
+		Windowpane3_ResN:_FillValue = 3438.5 ;
 	double Windowpane3_StructN(t, b, z) ;
 		Windowpane3_StructN:bmtype = "tracer" ;
 		Windowpane3_StructN:units = "mg N" ;
@@ -31906,7 +31907,7 @@ variables:
 		Windowpane3_StructN:b_dens = 1000000000. ;
 		Windowpane3_StructN:i_conc = 200000000. ;
 		Windowpane3_StructN:f_conc = 200000000. ;
-		Windowpane3_StructN:_FillValue = 579.44 ;
+		Windowpane3_StructN:_FillValue = 1297.6 ;
 	double Windowpane4_Nums(t, b, z) ;
 		Windowpane4_Nums:bmtype = "tracer" ;
 		Windowpane4_Nums:units = "1" ;
@@ -31944,7 +31945,7 @@ variables:
 		Windowpane4_ResN:b_dens = 1000000000. ;
 		Windowpane4_ResN:i_conc = 200000000. ;
 		Windowpane4_ResN:f_conc = 200000000. ;
-		Windowpane4_ResN:_FillValue = 2554.55 ;
+		Windowpane4_ResN:_FillValue = 4407.2 ;
 	double Windowpane4_StructN(t, b, z) ;
 		Windowpane4_StructN:bmtype = "tracer" ;
 		Windowpane4_StructN:units = "mg N" ;
@@ -31963,7 +31964,7 @@ variables:
 		Windowpane4_StructN:b_dens = 1000000000. ;
 		Windowpane4_StructN:i_conc = 200000000. ;
 		Windowpane4_StructN:f_conc = 200000000. ;
-		Windowpane4_StructN:_FillValue = 963.98 ;
+		Windowpane4_StructN:_FillValue = 1663.1 ;
 	double Windowpane5_Nums(t, b, z) ;
 		Windowpane5_Nums:bmtype = "tracer" ;
 		Windowpane5_Nums:units = "1" ;
@@ -32001,7 +32002,7 @@ variables:
 		Windowpane5_ResN:b_dens = 1000000000. ;
 		Windowpane5_ResN:i_conc = 200000000. ;
 		Windowpane5_ResN:f_conc = 200000000. ;
-		Windowpane5_ResN:_FillValue = 3438.53 ;
+		Windowpane5_ResN:_FillValue = 5007.4 ;
 	double Windowpane5_StructN(t, b, z) ;
 		Windowpane5_StructN:bmtype = "tracer" ;
 		Windowpane5_StructN:units = "mg N" ;
@@ -32020,7 +32021,7 @@ variables:
 		Windowpane5_StructN:b_dens = 1000000000. ;
 		Windowpane5_StructN:i_conc = 200000000. ;
 		Windowpane5_StructN:f_conc = 200000000. ;
-		Windowpane5_StructN:_FillValue = 1297.56 ;
+		Windowpane5_StructN:_FillValue = 1889.6 ;
 	double Windowpane6_Nums(t, b, z) ;
 		Windowpane6_Nums:bmtype = "tracer" ;
 		Windowpane6_Nums:units = "1" ;
@@ -32058,7 +32059,7 @@ variables:
 		Windowpane6_ResN:b_dens = 1000000000. ;
 		Windowpane6_ResN:i_conc = 200000000. ;
 		Windowpane6_ResN:f_conc = 200000000. ;
-		Windowpane6_ResN:_FillValue = 4130.74 ;
+		Windowpane6_ResN:_FillValue = 5358.5 ;
 	double Windowpane6_StructN(t, b, z) ;
 		Windowpane6_StructN:bmtype = "tracer" ;
 		Windowpane6_StructN:units = "mg N" ;
@@ -32077,7 +32078,7 @@ variables:
 		Windowpane6_StructN:b_dens = 1000000000. ;
 		Windowpane6_StructN:i_conc = 200000000. ;
 		Windowpane6_StructN:f_conc = 200000000. ;
-		Windowpane6_StructN:_FillValue = 1558.77 ;
+		Windowpane6_StructN:_FillValue = 2022.1 ;
 	double Windowpane7_Nums(t, b, z) ;
 		Windowpane7_Nums:bmtype = "tracer" ;
 		Windowpane7_Nums:units = "1" ;
@@ -32115,7 +32116,7 @@ variables:
 		Windowpane7_ResN:b_dens = 1000000000. ;
 		Windowpane7_ResN:i_conc = 200000000. ;
 		Windowpane7_ResN:f_conc = 200000000. ;
-		Windowpane7_ResN:_FillValue = 4642.3 ;
+		Windowpane7_ResN:_FillValue = 5557.8 ;
 	double Windowpane7_StructN(t, b, z) ;
 		Windowpane7_StructN:bmtype = "tracer" ;
 		Windowpane7_StructN:units = "mg N" ;
@@ -32134,7 +32135,7 @@ variables:
 		Windowpane7_StructN:b_dens = 1000000000. ;
 		Windowpane7_StructN:i_conc = 200000000. ;
 		Windowpane7_StructN:f_conc = 200000000. ;
-		Windowpane7_StructN:_FillValue = 1751.81 ;
+		Windowpane7_StructN:_FillValue = 2097.3 ;
 	double Windowpane8_Nums(t, b, z) ;
 		Windowpane8_Nums:bmtype = "tracer" ;
 		Windowpane8_Nums:units = "1" ;
@@ -32172,7 +32173,7 @@ variables:
 		Windowpane8_ResN:b_dens = 1000000000. ;
 		Windowpane8_ResN:i_conc = 200000000. ;
 		Windowpane8_ResN:f_conc = 200000000. ;
-		Windowpane8_ResN:_FillValue = 5007.41 ;
+		Windowpane8_ResN:_FillValue = 5669.2 ;
 	double Windowpane8_StructN(t, b, z) ;
 		Windowpane8_StructN:bmtype = "tracer" ;
 		Windowpane8_StructN:units = "mg N" ;
@@ -32191,7 +32192,7 @@ variables:
 		Windowpane8_StructN:b_dens = 1000000000. ;
 		Windowpane8_StructN:i_conc = 200000000. ;
 		Windowpane8_StructN:f_conc = 200000000. ;
-		Windowpane8_StructN:_FillValue = 1889.59 ;
+		Windowpane8_StructN:_FillValue = 2139.3 ;
 	double Windowpane9_Nums(t, b, z) ;
 		Windowpane9_Nums:bmtype = "tracer" ;
 		Windowpane9_Nums:units = "1" ;
@@ -32229,7 +32230,7 @@ variables:
 		Windowpane9_ResN:b_dens = 1000000000. ;
 		Windowpane9_ResN:i_conc = 200000000. ;
 		Windowpane9_ResN:f_conc = 200000000. ;
-		Windowpane9_ResN:_FillValue = 5262.4 ;
+		Windowpane9_ResN:_FillValue = 5731.0 ;
 	double Windowpane9_StructN(t, b, z) ;
 		Windowpane9_StructN:bmtype = "tracer" ;
 		Windowpane9_StructN:units = "mg N" ;
@@ -32248,7 +32249,7 @@ variables:
 		Windowpane9_StructN:b_dens = 1000000000. ;
 		Windowpane9_StructN:i_conc = 200000000. ;
 		Windowpane9_StructN:f_conc = 200000000. ;
-		Windowpane9_StructN:_FillValue = 1985.81 ;
+		Windowpane9_StructN:_FillValue = 2162.6 ;
 	double Windowpane_N(t, b, z) ;
 		Windowpane_N:bmtype = "tracer" ;
 		Windowpane_N:units = "mg N m-3" ;
@@ -32298,7 +32299,7 @@ variables:
 		Winter_Skate10_ResN:b_dens = 1000000000. ;
 		Winter_Skate10_ResN:i_conc = 200000000. ;
 		Winter_Skate10_ResN:f_conc = 200000000. ;
-		Winter_Skate10_ResN:_FillValue = 158413.63 ;
+		Winter_Skate10_ResN:_FillValue = 190948.2 ;
 	double Winter_Skate10_StructN(t, b, z) ;
 		Winter_Skate10_StructN:bmtype = "tracer" ;
 		Winter_Skate10_StructN:units = "mg N" ;
@@ -32317,7 +32318,7 @@ variables:
 		Winter_Skate10_StructN:b_dens = 1000000000. ;
 		Winter_Skate10_StructN:i_conc = 200000000. ;
 		Winter_Skate10_StructN:f_conc = 200000000. ;
-		Winter_Skate10_StructN:_FillValue = 59778.73 ;
+		Winter_Skate10_StructN:_FillValue = 72055.9 ;
 	double Winter_Skate1_Nums(t, b, z) ;
 		Winter_Skate1_Nums:bmtype = "tracer" ;
 		Winter_Skate1_Nums:units = "1" ;
@@ -32355,7 +32356,7 @@ variables:
 		Winter_Skate1_ResN:b_dens = 1000000000. ;
 		Winter_Skate1_ResN:i_conc = 200000000. ;
 		Winter_Skate1_ResN:f_conc = 200000000. ;
-		Winter_Skate1_ResN:_FillValue = 131.07 ;
+		Winter_Skate1_ResN:_FillValue = 16321.7 ;
 	double Winter_Skate1_StructN(t, b, z) ;
 		Winter_Skate1_StructN:bmtype = "tracer" ;
 		Winter_Skate1_StructN:units = "mg N" ;
@@ -32374,7 +32375,7 @@ variables:
 		Winter_Skate1_StructN:b_dens = 1000000000. ;
 		Winter_Skate1_StructN:i_conc = 200000000. ;
 		Winter_Skate1_StructN:f_conc = 200000000. ;
-		Winter_Skate1_StructN:_FillValue = 49.46 ;
+		Winter_Skate1_StructN:_FillValue = 6159.1 ;
 	double Winter_Skate2_Nums(t, b, z) ;
 		Winter_Skate2_Nums:bmtype = "tracer" ;
 		Winter_Skate2_Nums:units = "1" ;
@@ -32412,7 +32413,7 @@ variables:
 		Winter_Skate2_ResN:b_dens = 1000000000. ;
 		Winter_Skate2_ResN:i_conc = 200000000. ;
 		Winter_Skate2_ResN:f_conc = 200000000. ;
-		Winter_Skate2_ResN:_FillValue = 6170.84 ;
+		Winter_Skate2_ResN:_FillValue = 63352.3 ;
 	double Winter_Skate2_StructN(t, b, z) ;
 		Winter_Skate2_StructN:bmtype = "tracer" ;
 		Winter_Skate2_StructN:units = "mg N" ;
@@ -32431,7 +32432,7 @@ variables:
 		Winter_Skate2_StructN:b_dens = 1000000000. ;
 		Winter_Skate2_StructN:i_conc = 200000000. ;
 		Winter_Skate2_StructN:f_conc = 200000000. ;
-		Winter_Skate2_StructN:_FillValue = 2328.62 ;
+		Winter_Skate2_StructN:_FillValue = 23906.5 ;
 	double Winter_Skate3_Nums(t, b, z) ;
 		Winter_Skate3_Nums:bmtype = "tracer" ;
 		Winter_Skate3_Nums:units = "1" ;
@@ -32469,7 +32470,7 @@ variables:
 		Winter_Skate3_ResN:b_dens = 1000000000. ;
 		Winter_Skate3_ResN:i_conc = 200000000. ;
 		Winter_Skate3_ResN:f_conc = 200000000. ;
-		Winter_Skate3_ResN:_FillValue = 22920.67 ;
+		Winter_Skate3_ResN:_FillValue = 109901.3 ;
 	double Winter_Skate3_StructN(t, b, z) ;
 		Winter_Skate3_StructN:bmtype = "tracer" ;
 		Winter_Skate3_StructN:units = "mg N" ;
@@ -32488,7 +32489,7 @@ variables:
 		Winter_Skate3_StructN:b_dens = 1000000000. ;
 		Winter_Skate3_StructN:i_conc = 200000000. ;
 		Winter_Skate3_StructN:f_conc = 200000000. ;
-		Winter_Skate3_StructN:_FillValue = 8649.31 ;
+		Winter_Skate3_StructN:_FillValue = 41472.2 ;
 	double Winter_Skate4_Nums(t, b, z) ;
 		Winter_Skate4_Nums:bmtype = "tracer" ;
 		Winter_Skate4_Nums:units = "1" ;
@@ -32526,7 +32527,7 @@ variables:
 		Winter_Skate4_ResN:b_dens = 1000000000. ;
 		Winter_Skate4_ResN:i_conc = 200000000. ;
 		Winter_Skate4_ResN:f_conc = 200000000. ;
-		Winter_Skate4_ResN:_FillValue = 46423.36 ;
+		Winter_Skate4_ResN:_FillValue = 143292.2 ;
 	double Winter_Skate4_StructN(t, b, z) ;
 		Winter_Skate4_StructN:bmtype = "tracer" ;
 		Winter_Skate4_StructN:units = "mg N" ;
@@ -32545,7 +32546,7 @@ variables:
 		Winter_Skate4_StructN:b_dens = 1000000000. ;
 		Winter_Skate4_StructN:i_conc = 200000000. ;
 		Winter_Skate4_StructN:f_conc = 200000000. ;
-		Winter_Skate4_StructN:_FillValue = 17518.25 ;
+		Winter_Skate4_StructN:_FillValue = 54072.5 ;
 	double Winter_Skate5_Nums(t, b, z) ;
 		Winter_Skate5_Nums:bmtype = "tracer" ;
 		Winter_Skate5_Nums:units = "1" ;
@@ -32583,7 +32584,7 @@ variables:
 		Winter_Skate5_ResN:b_dens = 1000000000. ;
 		Winter_Skate5_ResN:i_conc = 200000000. ;
 		Winter_Skate5_ResN:f_conc = 200000000. ;
-		Winter_Skate5_ResN:_FillValue = 71759.67 ;
+		Winter_Skate5_ResN:_FillValue = 164248.7 ;
 	double Winter_Skate5_StructN(t, b, z) ;
 		Winter_Skate5_StructN:bmtype = "tracer" ;
 		Winter_Skate5_StructN:units = "mg N" ;
@@ -32602,7 +32603,7 @@ variables:
 		Winter_Skate5_StructN:b_dens = 1000000000. ;
 		Winter_Skate5_StructN:i_conc = 200000000. ;
 		Winter_Skate5_StructN:f_conc = 200000000. ;
-		Winter_Skate5_StructN:_FillValue = 27079.12 ;
+		Winter_Skate5_StructN:_FillValue = 61980.6 ;
 	double Winter_Skate6_Nums(t, b, z) ;
 		Winter_Skate6_Nums:bmtype = "tracer" ;
 		Winter_Skate6_Nums:units = "1" ;
@@ -32640,7 +32641,7 @@ variables:
 		Winter_Skate6_ResN:b_dens = 1000000000. ;
 		Winter_Skate6_ResN:i_conc = 200000000. ;
 		Winter_Skate6_ResN:f_conc = 200000000. ;
-		Winter_Skate6_ResN:_FillValue = 95640.2 ;
+		Winter_Skate6_ResN:_FillValue = 176587.0;
 	double Winter_Skate6_StructN(t, b, z) ;
 		Winter_Skate6_StructN:bmtype = "tracer" ;
 		Winter_Skate6_StructN:units = "mg N" ;
@@ -32659,7 +32660,7 @@ variables:
 		Winter_Skate6_StructN:b_dens = 1000000000. ;
 		Winter_Skate6_StructN:i_conc = 200000000. ;
 		Winter_Skate6_StructN:f_conc = 200000000. ;
-		Winter_Skate6_StructN:_FillValue = 36090.64 ;
+		Winter_Skate6_StructN:_FillValue = 66636.6 ;
 	double Winter_Skate7_Nums(t, b, z) ;
 		Winter_Skate7_Nums:bmtype = "tracer" ;
 		Winter_Skate7_Nums:units = "1" ;
@@ -32697,7 +32698,7 @@ variables:
 		Winter_Skate7_ResN:b_dens = 1000000000. ;
 		Winter_Skate7_ResN:i_conc = 200000000. ;
 		Winter_Skate7_ResN:f_conc = 200000000. ;
-		Winter_Skate7_ResN:_FillValue = 116449.77 ;
+		Winter_Skate7_ResN:_FillValue = 183618.0 ;
 	double Winter_Skate7_StructN(t, b, z) ;
 		Winter_Skate7_StructN:bmtype = "tracer" ;
 		Winter_Skate7_StructN:units = "mg N" ;
@@ -32716,7 +32717,7 @@ variables:
 		Winter_Skate7_StructN:b_dens = 1000000000. ;
 		Winter_Skate7_StructN:i_conc = 200000000. ;
 		Winter_Skate7_StructN:f_conc = 200000000. ;
-		Winter_Skate7_StructN:_FillValue = 43943.31 ;
+		Winter_Skate7_StructN:_FillValue = 69289.8 ;
 	double Winter_Skate8_Nums(t, b, z) ;
 		Winter_Skate8_Nums:bmtype = "tracer" ;
 		Winter_Skate8_Nums:units = "1" ;
@@ -32754,7 +32755,7 @@ variables:
 		Winter_Skate8_ResN:b_dens = 1000000000. ;
 		Winter_Skate8_ResN:i_conc = 200000000. ;
 		Winter_Skate8_ResN:f_conc = 200000000. ;
-		Winter_Skate8_ResN:_FillValue = 133705.86 ;
+		Winter_Skate8_ResN:_FillValue = 187556.1 ;
 	double Winter_Skate8_StructN(t, b, z) ;
 		Winter_Skate8_StructN:bmtype = "tracer" ;
 		Winter_Skate8_StructN:units = "mg N" ;
@@ -32773,7 +32774,7 @@ variables:
 		Winter_Skate8_StructN:b_dens = 1000000000. ;
 		Winter_Skate8_StructN:i_conc = 200000000. ;
 		Winter_Skate8_StructN:f_conc = 200000000. ;
-		Winter_Skate8_StructN:_FillValue = 50455.04 ;
+		Winter_Skate8_StructN:_FillValue = 70775.9 ;
 	double Winter_Skate9_Nums(t, b, z) ;
 		Winter_Skate9_Nums:bmtype = "tracer" ;
 		Winter_Skate9_Nums:units = "1" ;
@@ -32811,7 +32812,7 @@ variables:
 		Winter_Skate9_ResN:b_dens = 1000000000. ;
 		Winter_Skate9_ResN:i_conc = 200000000. ;
 		Winter_Skate9_ResN:f_conc = 200000000. ;
-		Winter_Skate9_ResN:_FillValue = 147551.81 ;
+		Winter_Skate9_ResN:_FillValue = 189741.5 ;
 	double Winter_Skate9_StructN(t, b, z) ;
 		Winter_Skate9_StructN:bmtype = "tracer" ;
 		Winter_Skate9_StructN:units = "mg N" ;
@@ -32830,7 +32831,7 @@ variables:
 		Winter_Skate9_StructN:b_dens = 1000000000. ;
 		Winter_Skate9_StructN:i_conc = 200000000. ;
 		Winter_Skate9_StructN:f_conc = 200000000. ;
-		Winter_Skate9_StructN:_FillValue = 55679.93 ;
+		Winter_Skate9_StructN:_FillValue = 71600.6 ;
 	double Winter_Skate_N(t, b, z) ;
 		Winter_Skate_N:bmtype = "tracer" ;
 		Winter_Skate_N:units = "mg N m-3" ;
@@ -32880,7 +32881,7 @@ variables:
 		Winterflounder10_ResN:b_dens = 1000000000. ;
 		Winterflounder10_ResN:i_conc = 200000000. ;
 		Winterflounder10_ResN:f_conc = 200000000. ;
-		Winterflounder10_ResN:_FillValue = 21455.59 ;
+		Winterflounder10_ResN:_FillValue = 21450.1 ;
 	double Winterflounder10_StructN(t, b, z) ;
 		Winterflounder10_StructN:bmtype = "tracer" ;
 		Winterflounder10_StructN:units = "mg N" ;
@@ -32899,7 +32900,7 @@ variables:
 		Winterflounder10_StructN:b_dens = 1000000000. ;
 		Winterflounder10_StructN:i_conc = 200000000. ;
 		Winterflounder10_StructN:f_conc = 200000000. ;
-		Winterflounder10_StructN:_FillValue = 8096.45 ;
+		Winterflounder10_StructN:_FillValue = 8094.4 ;
 	double Winterflounder1_Nums(t, b, z) ;
 		Winterflounder1_Nums:bmtype = "tracer" ;
 		Winterflounder1_Nums:units = "1" ;
@@ -32937,7 +32938,7 @@ variables:
 		Winterflounder1_ResN:b_dens = 1000000000. ;
 		Winterflounder1_ResN:i_conc = 200000000. ;
 		Winterflounder1_ResN:f_conc = 200000000. ;
-		Winterflounder1_ResN:_FillValue = 2266.33 ;
+		Winterflounder1_ResN:_FillValue = 4906.5 ;
 	double Winterflounder1_StructN(t, b, z) ;
 		Winterflounder1_StructN:bmtype = "tracer" ;
 		Winterflounder1_StructN:units = "mg N" ;
@@ -32956,7 +32957,7 @@ variables:
 		Winterflounder1_StructN:b_dens = 1000000000. ;
 		Winterflounder1_StructN:i_conc = 200000000. ;
 		Winterflounder1_StructN:f_conc = 200000000. ;
-		Winterflounder1_StructN:_FillValue = 855.22 ;
+		Winterflounder1_StructN:_FillValue = 1851.5 ;
 	double Winterflounder2_Nums(t, b, z) ;
 		Winterflounder2_Nums:bmtype = "tracer" ;
 		Winterflounder2_Nums:units = "1" ;
@@ -32994,7 +32995,7 @@ variables:
 		Winterflounder2_ResN:b_dens = 1000000000. ;
 		Winterflounder2_ResN:i_conc = 200000000. ;
 		Winterflounder2_ResN:f_conc = 200000000. ;
-		Winterflounder2_ResN:_FillValue = 13335.04 ;
+		Winterflounder2_ResN:_FillValue = 13024.8 ;
 	double Winterflounder2_StructN(t, b, z) ;
 		Winterflounder2_StructN:bmtype = "tracer" ;
 		Winterflounder2_StructN:units = "mg N" ;
@@ -33013,7 +33014,7 @@ variables:
 		Winterflounder2_StructN:b_dens = 1000000000. ;
 		Winterflounder2_StructN:i_conc = 200000000. ;
 		Winterflounder2_StructN:f_conc = 200000000. ;
-		Winterflounder2_StructN:_FillValue = 5032.09 ;
+		Winterflounder2_StructN:_FillValue = 4915.0 ;
 	double Winterflounder3_Nums(t, b, z) ;
 		Winterflounder3_Nums:bmtype = "tracer" ;
 		Winterflounder3_Nums:units = "1" ;
@@ -33051,7 +33052,7 @@ variables:
 		Winterflounder3_ResN:b_dens = 1000000000. ;
 		Winterflounder3_ResN:i_conc = 200000000. ;
 		Winterflounder3_ResN:f_conc = 200000000. ;
-		Winterflounder3_ResN:_FillValue = 18937.64 ;
+		Winterflounder3_ResN:_FillValue = 17793.9 ;
 	double Winterflounder3_StructN(t, b, z) ;
 		Winterflounder3_StructN:bmtype = "tracer" ;
 		Winterflounder3_StructN:units = "mg N" ;
@@ -33070,7 +33071,7 @@ variables:
 		Winterflounder3_StructN:b_dens = 1000000000. ;
 		Winterflounder3_StructN:i_conc = 200000000. ;
 		Winterflounder3_StructN:f_conc = 200000000. ;
-		Winterflounder3_StructN:_FillValue = 7146.28 ;
+		Winterflounder3_StructN:_FillValue = 6714.7 ;
 	double Winterflounder4_Nums(t, b, z) ;
 		Winterflounder4_Nums:bmtype = "tracer" ;
 		Winterflounder4_Nums:units = "1" ;
@@ -33108,7 +33109,7 @@ variables:
 		Winterflounder4_ResN:b_dens = 1000000000. ;
 		Winterflounder4_ResN:i_conc = 200000000. ;
 		Winterflounder4_ResN:f_conc = 200000000. ;
-		Winterflounder4_ResN:_FillValue = 20734.66 ;
+		Winterflounder4_ResN:_FillValue = 19956.4 ;
 	double Winterflounder4_StructN(t, b, z) ;
 		Winterflounder4_StructN:bmtype = "tracer" ;
 		Winterflounder4_StructN:units = "mg N" ;
@@ -33127,7 +33128,7 @@ variables:
 		Winterflounder4_StructN:b_dens = 1000000000. ;
 		Winterflounder4_StructN:i_conc = 200000000. ;
 		Winterflounder4_StructN:f_conc = 200000000. ;
-		Winterflounder4_StructN:_FillValue = 7824.4 ;
+		Winterflounder4_StructN:_FillValue = 7530.7 ;
 	double Winterflounder5_Nums(t, b, z) ;
 		Winterflounder5_Nums:bmtype = "tracer" ;
 		Winterflounder5_Nums:units = "1" ;
@@ -33165,7 +33166,7 @@ variables:
 		Winterflounder5_ResN:b_dens = 1000000000. ;
 		Winterflounder5_ResN:i_conc = 200000000. ;
 		Winterflounder5_ResN:f_conc = 200000000. ;
-		Winterflounder5_ResN:_FillValue = 21253.74 ;
+		Winterflounder5_ResN:_FillValue = 20855.6 ;
 	double Winterflounder5_StructN(t, b, z) ;
 		Winterflounder5_StructN:bmtype = "tracer" ;
 		Winterflounder5_StructN:units = "mg N" ;
@@ -33184,7 +33185,7 @@ variables:
 		Winterflounder5_StructN:b_dens = 1000000000. ;
 		Winterflounder5_StructN:i_conc = 200000000. ;
 		Winterflounder5_StructN:f_conc = 200000000. ;
-		Winterflounder5_StructN:_FillValue = 8020.28 ;
+		Winterflounder5_StructN:_FillValue = 7870.0 ;
 	double Winterflounder6_Nums(t, b, z) ;
 		Winterflounder6_Nums:bmtype = "tracer" ;
 		Winterflounder6_Nums:units = "1" ;
@@ -33222,7 +33223,7 @@ variables:
 		Winterflounder6_ResN:b_dens = 1000000000. ;
 		Winterflounder6_ResN:i_conc = 200000000. ;
 		Winterflounder6_ResN:f_conc = 200000000. ;
-		Winterflounder6_ResN:_FillValue = 21399.6 ;
+		Winterflounder6_ResN:_FillValue = 21217.7 ;
 	double Winterflounder6_StructN(t, b, z) ;
 		Winterflounder6_StructN:bmtype = "tracer" ;
 		Winterflounder6_StructN:units = "mg N" ;
@@ -33241,7 +33242,7 @@ variables:
 		Winterflounder6_StructN:b_dens = 1000000000. ;
 		Winterflounder6_StructN:i_conc = 200000000. ;
 		Winterflounder6_StructN:f_conc = 200000000. ;
-		Winterflounder6_StructN:_FillValue = 8075.32 ;
+		Winterflounder6_StructN:_FillValue = 8006.7 ;
 	double Winterflounder7_Nums(t, b, z) ;
 		Winterflounder7_Nums:bmtype = "tracer" ;
 		Winterflounder7_Nums:units = "1" ;
@@ -33279,7 +33280,7 @@ variables:
 		Winterflounder7_ResN:b_dens = 1000000000. ;
 		Winterflounder7_ResN:i_conc = 200000000. ;
 		Winterflounder7_ResN:f_conc = 200000000. ;
-		Winterflounder7_ResN:_FillValue = 21440.25 ;
+		Winterflounder7_ResN:_FillValue = 21361.7 ;
 	double Winterflounder7_StructN(t, b, z) ;
 		Winterflounder7_StructN:bmtype = "tracer" ;
 		Winterflounder7_StructN:units = "mg N" ;
@@ -33298,7 +33299,7 @@ variables:
 		Winterflounder7_StructN:b_dens = 1000000000. ;
 		Winterflounder7_StructN:i_conc = 200000000. ;
 		Winterflounder7_StructN:f_conc = 200000000. ;
-		Winterflounder7_StructN:_FillValue = 8090.66 ;
+		Winterflounder7_StructN:_FillValue = 8061.0 ;
 	double Winterflounder8_Nums(t, b, z) ;
 		Winterflounder8_Nums:bmtype = "tracer" ;
 		Winterflounder8_Nums:units = "1" ;
@@ -33336,7 +33337,7 @@ variables:
 		Winterflounder8_ResN:b_dens = 1000000000. ;
 		Winterflounder8_ResN:i_conc = 200000000. ;
 		Winterflounder8_ResN:f_conc = 200000000. ;
-		Winterflounder8_ResN:_FillValue = 21451.56 ;
+		Winterflounder8_ResN:_FillValue = 21418.7 ;
 	double Winterflounder8_StructN(t, b, z) ;
 		Winterflounder8_StructN:bmtype = "tracer" ;
 		Winterflounder8_StructN:units = "mg N" ;
@@ -33355,7 +33356,7 @@ variables:
 		Winterflounder8_StructN:b_dens = 1000000000. ;
 		Winterflounder8_StructN:i_conc = 200000000. ;
 		Winterflounder8_StructN:f_conc = 200000000. ;
-		Winterflounder8_StructN:_FillValue = 8094.93 ;
+		Winterflounder8_StructN:_FillValue = 8082.5 ;
 	double Winterflounder9_Nums(t, b, z) ;
 		Winterflounder9_Nums:bmtype = "tracer" ;
 		Winterflounder9_Nums:units = "1" ;
@@ -33393,7 +33394,7 @@ variables:
 		Winterflounder9_ResN:b_dens = 1000000000. ;
 		Winterflounder9_ResN:i_conc = 200000000. ;
 		Winterflounder9_ResN:f_conc = 200000000. ;
-		Winterflounder9_ResN:_FillValue = 21454.72 ;
+		Winterflounder9_ResN:_FillValue = 21441.2 ;
 	double Winterflounder9_StructN(t, b, z) ;
 		Winterflounder9_StructN:bmtype = "tracer" ;
 		Winterflounder9_StructN:units = "mg N" ;
@@ -33412,7 +33413,7 @@ variables:
 		Winterflounder9_StructN:b_dens = 1000000000. ;
 		Winterflounder9_StructN:i_conc = 200000000. ;
 		Winterflounder9_StructN:f_conc = 200000000. ;
-		Winterflounder9_StructN:_FillValue = 8096.12 ;
+		Winterflounder9_StructN:_FillValue = 8091.0 ;
 	double Winterflounder_N(t, b, z) ;
 		Winterflounder_N:bmtype = "tracer" ;
 		Winterflounder_N:units = "mg N m-3" ;
@@ -33462,7 +33463,7 @@ variables:
 		Witchflounder10_ResN:b_dens = 1000000000. ;
 		Witchflounder10_ResN:i_conc = 200000000. ;
 		Witchflounder10_ResN:f_conc = 200000000. ;
-		Witchflounder10_ResN:_FillValue = 10304.1 ;
+		Witchflounder10_ResN:_FillValue = 14450.3 ;
 	double Witchflounder10_StructN(t, b, z) ;
 		Witchflounder10_StructN:bmtype = "tracer" ;
 		Witchflounder10_StructN:units = "mg N" ;
@@ -33481,7 +33482,7 @@ variables:
 		Witchflounder10_StructN:b_dens = 1000000000. ;
 		Witchflounder10_StructN:i_conc = 200000000. ;
 		Witchflounder10_StructN:f_conc = 200000000. ;
-		Witchflounder10_StructN:_FillValue = 3888.34 ;
+		Witchflounder10_StructN:_FillValue = 5453.0 ;
 	double Witchflounder1_Nums(t, b, z) ;
 		Witchflounder1_Nums:bmtype = "tracer" ;
 		Witchflounder1_Nums:units = "1" ;
@@ -33519,7 +33520,7 @@ variables:
 		Witchflounder1_ResN:b_dens = 1000000000. ;
 		Witchflounder1_ResN:i_conc = 200000000. ;
 		Witchflounder1_ResN:f_conc = 200000000. ;
-		Witchflounder1_ResN:_FillValue = 14.18 ;
+		Witchflounder1_ResN:_FillValue = 287.1 ;
 	double Witchflounder1_StructN(t, b, z) ;
 		Witchflounder1_StructN:bmtype = "tracer" ;
 		Witchflounder1_StructN:units = "mg N" ;
@@ -33538,7 +33539,7 @@ variables:
 		Witchflounder1_StructN:b_dens = 1000000000. ;
 		Witchflounder1_StructN:i_conc = 200000000. ;
 		Witchflounder1_StructN:f_conc = 200000000. ;
-		Witchflounder1_StructN:_FillValue = 5.35 ;
+		Witchflounder1_StructN:_FillValue = 108.3 ;
 	double Witchflounder2_Nums(t, b, z) ;
 		Witchflounder2_Nums:bmtype = "tracer" ;
 		Witchflounder2_Nums:units = "1" ;
@@ -33576,7 +33577,7 @@ variables:
 		Witchflounder2_ResN:b_dens = 1000000000. ;
 		Witchflounder2_ResN:i_conc = 200000000. ;
 		Witchflounder2_ResN:f_conc = 200000000. ;
-		Witchflounder2_ResN:_FillValue = 287.13 ;
+		Witchflounder2_ResN:_FillValue = 1520.5 ;
 	double Witchflounder2_StructN(t, b, z) ;
 		Witchflounder2_StructN:bmtype = "tracer" ;
 		Witchflounder2_StructN:units = "mg N" ;
@@ -33595,7 +33596,7 @@ variables:
 		Witchflounder2_StructN:b_dens = 1000000000. ;
 		Witchflounder2_StructN:i_conc = 200000000. ;
 		Witchflounder2_StructN:f_conc = 200000000. ;
-		Witchflounder2_StructN:_FillValue = 108.35 ;
+		Witchflounder2_StructN:_FillValue = 573.8 ;
 	double Witchflounder3_Nums(t, b, z) ;
 		Witchflounder3_Nums:bmtype = "tracer" ;
 		Witchflounder3_Nums:units = "1" ;
@@ -33633,7 +33634,7 @@ variables:
 		Witchflounder3_ResN:b_dens = 1000000000. ;
 		Witchflounder3_ResN:i_conc = 200000000. ;
 		Witchflounder3_ResN:f_conc = 200000000. ;
-		Witchflounder3_ResN:_FillValue = 1007.21 ;
+		Witchflounder3_ResN:_FillValue = 3471.4 ;
 	double Witchflounder3_StructN(t, b, z) ;
 		Witchflounder3_StructN:bmtype = "tracer" ;
 		Witchflounder3_StructN:units = "mg N" ;
@@ -33652,7 +33653,7 @@ variables:
 		Witchflounder3_StructN:b_dens = 1000000000. ;
 		Witchflounder3_StructN:i_conc = 200000000. ;
 		Witchflounder3_StructN:f_conc = 200000000. ;
-		Witchflounder3_StructN:_FillValue = 380.08 ;
+		Witchflounder3_StructN:_FillValue = 1310.0 ;
 	double Witchflounder4_Nums(t, b, z) ;
 		Witchflounder4_Nums:bmtype = "tracer" ;
 		Witchflounder4_Nums:units = "1" ;
@@ -33690,7 +33691,7 @@ variables:
 		Witchflounder4_ResN:b_dens = 1000000000. ;
 		Witchflounder4_ResN:i_conc = 200000000. ;
 		Witchflounder4_ResN:f_conc = 200000000. ;
-		Witchflounder4_ResN:_FillValue = 2114.54 ;
+		Witchflounder4_ResN:_FillValue = 5685.5 ;
 	double Witchflounder4_StructN(t, b, z) ;
 		Witchflounder4_StructN:bmtype = "tracer" ;
 		Witchflounder4_StructN:units = "mg N" ;
@@ -33709,7 +33710,7 @@ variables:
 		Witchflounder4_StructN:b_dens = 1000000000. ;
 		Witchflounder4_StructN:i_conc = 200000000. ;
 		Witchflounder4_StructN:f_conc = 200000000. ;
-		Witchflounder4_StructN:_FillValue = 797.94 ;
+		Witchflounder4_StructN:_FillValue = 2145.5 ;
 	double Witchflounder5_Nums(t, b, z) ;
 		Witchflounder5_Nums:bmtype = "tracer" ;
 		Witchflounder5_Nums:units = "1" ;
@@ -33747,7 +33748,7 @@ variables:
 		Witchflounder5_ResN:b_dens = 1000000000. ;
 		Witchflounder5_ResN:i_conc = 200000000. ;
 		Witchflounder5_ResN:f_conc = 200000000. ;
-		Witchflounder5_ResN:_FillValue = 3471.45 ;
+		Witchflounder5_ResN:_FillValue = 7832.0 ;
 	double Witchflounder5_StructN(t, b, z) ;
 		Witchflounder5_StructN:bmtype = "tracer" ;
 		Witchflounder5_StructN:units = "mg N" ;
@@ -33766,7 +33767,7 @@ variables:
 		Witchflounder5_StructN:b_dens = 1000000000. ;
 		Witchflounder5_StructN:i_conc = 200000000. ;
 		Witchflounder5_StructN:f_conc = 200000000. ;
-		Witchflounder5_StructN:_FillValue = 1309.98 ;
+		Witchflounder5_StructN:_FillValue = 2955.5 ;
 	double Witchflounder6_Nums(t, b, z) ;
 		Witchflounder6_Nums:bmtype = "tracer" ;
 		Witchflounder6_Nums:units = "1" ;
@@ -33804,7 +33805,7 @@ variables:
 		Witchflounder6_ResN:b_dens = 1000000000. ;
 		Witchflounder6_ResN:i_conc = 200000000. ;
 		Witchflounder6_ResN:f_conc = 200000000. ;
-		Witchflounder6_ResN:_FillValue = 4942.14 ;
+		Witchflounder6_ResN:_FillValue = 9736.3 ;
 	double Witchflounder6_StructN(t, b, z) ;
 		Witchflounder6_StructN:bmtype = "tracer" ;
 		Witchflounder6_StructN:units = "mg N" ;
@@ -33823,7 +33824,7 @@ variables:
 		Witchflounder6_StructN:b_dens = 1000000000. ;
 		Witchflounder6_StructN:i_conc = 200000000. ;
 		Witchflounder6_StructN:f_conc = 200000000. ;
-		Witchflounder6_StructN:_FillValue = 1864.96 ;
+		Witchflounder6_StructN:_FillValue = 3674.1 ;
 	double Witchflounder7_Nums(t, b, z) ;
 		Witchflounder7_Nums:bmtype = "tracer" ;
 		Witchflounder7_Nums:units = "1" ;
@@ -33861,7 +33862,7 @@ variables:
 		Witchflounder7_ResN:b_dens = 1000000000. ;
 		Witchflounder7_ResN:i_conc = 200000000. ;
 		Witchflounder7_ResN:f_conc = 200000000. ;
-		Witchflounder7_ResN:_FillValue = 6420. ;
+		Witchflounder7_ResN:_FillValue = 11335.4 ;
 	double Witchflounder7_StructN(t, b, z) ;
 		Witchflounder7_StructN:bmtype = "tracer" ;
 		Witchflounder7_StructN:units = "mg N" ;
@@ -33880,7 +33881,7 @@ variables:
 		Witchflounder7_StructN:b_dens = 1000000000. ;
 		Witchflounder7_StructN:i_conc = 200000000. ;
 		Witchflounder7_StructN:f_conc = 200000000. ;
-		Witchflounder7_StructN:_FillValue = 2422.64 ;
+		Witchflounder7_StructN:_FillValue = 4277.5 ;
 	double Witchflounder8_Nums(t, b, z) ;
 		Witchflounder8_Nums:bmtype = "tracer" ;
 		Witchflounder8_Nums:units = "1" ;
@@ -33918,7 +33919,7 @@ variables:
 		Witchflounder8_ResN:b_dens = 1000000000. ;
 		Witchflounder8_ResN:i_conc = 200000000. ;
 		Witchflounder8_ResN:f_conc = 200000000. ;
-		Witchflounder8_ResN:_FillValue = 7832. ;
+		Witchflounder8_ResN:_FillValue = 12630.8 ;
 	double Witchflounder8_StructN(t, b, z) ;
 		Witchflounder8_StructN:bmtype = "tracer" ;
 		Witchflounder8_StructN:units = "mg N" ;
@@ -33937,7 +33938,7 @@ variables:
 		Witchflounder8_StructN:b_dens = 1000000000. ;
 		Witchflounder8_StructN:i_conc = 200000000. ;
 		Witchflounder8_StructN:f_conc = 200000000. ;
-		Witchflounder8_StructN:_FillValue = 2955.47 ;
+		Witchflounder8_StructN:_FillValue = 4766.3 ;
 	double Witchflounder9_Nums(t, b, z) ;
 		Witchflounder9_Nums:bmtype = "tracer" ;
 		Witchflounder9_Nums:units = "1" ;
@@ -33975,7 +33976,7 @@ variables:
 		Witchflounder9_ResN:b_dens = 1000000000. ;
 		Witchflounder9_ResN:i_conc = 200000000. ;
 		Witchflounder9_ResN:f_conc = 200000000. ;
-		Witchflounder9_ResN:_FillValue = 9134.05 ;
+		Witchflounder9_ResN:_FillValue = 13654.7 ;
 	double Witchflounder9_StructN(t, b, z) ;
 		Witchflounder9_StructN:bmtype = "tracer" ;
 		Witchflounder9_StructN:units = "mg N" ;
@@ -33994,7 +33995,7 @@ variables:
 		Witchflounder9_StructN:b_dens = 1000000000. ;
 		Witchflounder9_StructN:i_conc = 200000000. ;
 		Witchflounder9_StructN:f_conc = 200000000. ;
-		Witchflounder9_StructN:_FillValue = 3446.81 ;
+		Witchflounder9_StructN:_FillValue = 5152.7 ;
 	double Witchflounder_N(t, b, z) ;
 		Witchflounder_N:bmtype = "tracer" ;
 		Witchflounder_N:units = "mg N m-3" ;
@@ -34044,7 +34045,7 @@ variables:
 		Wolffish10_ResN:b_dens = 1000000000. ;
 		Wolffish10_ResN:i_conc = 200000000. ;
 		Wolffish10_ResN:f_conc = 200000000. ;
-		Wolffish10_ResN:_FillValue = 31911.43 ;
+		Wolffish10_ResN:_FillValue = 67670.1 ;
 	double Wolffish10_StructN(t, b, z) ;
 		Wolffish10_StructN:bmtype = "tracer" ;
 		Wolffish10_StructN:units = "mg N" ;
@@ -34063,7 +34064,7 @@ variables:
 		Wolffish10_StructN:b_dens = 1000000000. ;
 		Wolffish10_StructN:i_conc = 200000000. ;
 		Wolffish10_StructN:f_conc = 200000000. ;
-		Wolffish10_StructN:_FillValue = 12042.05 ;
+		Wolffish10_StructN:_FillValue = 25535.9 ;
 	double Wolffish1_Nums(t, b, z) ;
 		Wolffish1_Nums:bmtype = "tracer" ;
 		Wolffish1_Nums:units = "1" ;
@@ -34101,7 +34102,7 @@ variables:
 		Wolffish1_ResN:b_dens = 1000000000. ;
 		Wolffish1_ResN:i_conc = 200000000. ;
 		Wolffish1_ResN:f_conc = 200000000. ;
-		Wolffish1_ResN:_FillValue = 18.66 ;
+		Wolffish1_ResN:_FillValue = 390.6 ;
 	double Wolffish1_StructN(t, b, z) ;
 		Wolffish1_StructN:bmtype = "tracer" ;
 		Wolffish1_StructN:units = "mg N" ;
@@ -34120,7 +34121,7 @@ variables:
 		Wolffish1_StructN:b_dens = 1000000000. ;
 		Wolffish1_StructN:i_conc = 200000000. ;
 		Wolffish1_StructN:f_conc = 200000000. ;
-		Wolffish1_StructN:_FillValue = 7.04 ;
+		Wolffish1_StructN:_FillValue = 147.4 ;
 	double Wolffish2_Nums(t, b, z) ;
 		Wolffish2_Nums:bmtype = "tracer" ;
 		Wolffish2_Nums:units = "1" ;
@@ -34158,7 +34159,7 @@ variables:
 		Wolffish2_ResN:b_dens = 1000000000. ;
 		Wolffish2_ResN:i_conc = 200000000. ;
 		Wolffish2_ResN:f_conc = 200000000. ;
-		Wolffish2_ResN:_FillValue = 390.64 ;
+		Wolffish2_ResN:_FillValue = 2402.6 ;
 	double Wolffish2_StructN(t, b, z) ;
 		Wolffish2_StructN:bmtype = "tracer" ;
 		Wolffish2_StructN:units = "mg N" ;
@@ -34177,7 +34178,7 @@ variables:
 		Wolffish2_StructN:b_dens = 1000000000. ;
 		Wolffish2_StructN:i_conc = 200000000. ;
 		Wolffish2_StructN:f_conc = 200000000. ;
-		Wolffish2_StructN:_FillValue = 147.41 ;
+		Wolffish2_StructN:_FillValue = 906.6 ;
 	double Wolffish3_Nums(t, b, z) ;
 		Wolffish3_Nums:bmtype = "tracer" ;
 		Wolffish3_Nums:units = "1" ;
@@ -34215,7 +34216,7 @@ variables:
 		Wolffish3_ResN:b_dens = 1000000000. ;
 		Wolffish3_ResN:i_conc = 200000000. ;
 		Wolffish3_ResN:f_conc = 200000000. ;
-		Wolffish3_ResN:_FillValue = 1508.22 ;
+		Wolffish3_ResN:_FillValue = 6478.4 ;
 	double Wolffish3_StructN(t, b, z) ;
 		Wolffish3_StructN:bmtype = "tracer" ;
 		Wolffish3_StructN:units = "mg N" ;
@@ -34234,7 +34235,7 @@ variables:
 		Wolffish3_StructN:b_dens = 1000000000. ;
 		Wolffish3_StructN:i_conc = 200000000. ;
 		Wolffish3_StructN:f_conc = 200000000. ;
-		Wolffish3_StructN:_FillValue = 569.14 ;
+		Wolffish3_StructN:_FillValue = 2444.7 ;
 	double Wolffish4_Nums(t, b, z) ;
 		Wolffish4_Nums:bmtype = "tracer" ;
 		Wolffish4_Nums:units = "1" ;
@@ -34272,7 +34273,7 @@ variables:
 		Wolffish4_ResN:b_dens = 1000000000. ;
 		Wolffish4_ResN:i_conc = 200000000. ;
 		Wolffish4_ResN:f_conc = 200000000. ;
-		Wolffish4_ResN:_FillValue = 3530.52 ;
+		Wolffish4_ResN:_FillValue = 12493.1 ;
 	double Wolffish4_StructN(t, b, z) ;
 		Wolffish4_StructN:bmtype = "tracer" ;
 		Wolffish4_StructN:units = "mg N" ;
@@ -34291,7 +34292,7 @@ variables:
 		Wolffish4_StructN:b_dens = 1000000000. ;
 		Wolffish4_StructN:i_conc = 200000000. ;
 		Wolffish4_StructN:f_conc = 200000000. ;
-		Wolffish4_StructN:_FillValue = 1332.27 ;
+		Wolffish4_StructN:_FillValue = 4714.4 ;
 	double Wolffish5_Nums(t, b, z) ;
 		Wolffish5_Nums:bmtype = "tracer" ;
 		Wolffish5_Nums:units = "1" ;
@@ -34329,7 +34330,7 @@ variables:
 		Wolffish5_ResN:b_dens = 1000000000. ;
 		Wolffish5_ResN:i_conc = 200000000. ;
 		Wolffish5_ResN:f_conc = 200000000. ;
-		Wolffish5_ResN:_FillValue = 6478.43 ;
+		Wolffish5_ResN:_FillValue = 20084.3 ;
 	double Wolffish5_StructN(t, b, z) ;
 		Wolffish5_StructN:bmtype = "tracer" ;
 		Wolffish5_StructN:units = "mg N" ;
@@ -34348,7 +34349,7 @@ variables:
 		Wolffish5_StructN:b_dens = 1000000000. ;
 		Wolffish5_StructN:i_conc = 200000000. ;
 		Wolffish5_StructN:f_conc = 200000000. ;
-		Wolffish5_StructN:_FillValue = 2444.69 ;
+		Wolffish5_StructN:_FillValue = 7579.0 ;
 	double Wolffish6_Nums(t, b, z) ;
 		Wolffish6_Nums:bmtype = "tracer" ;
 		Wolffish6_Nums:units = "1" ;
@@ -34386,7 +34387,7 @@ variables:
 		Wolffish6_ResN:b_dens = 1000000000. ;
 		Wolffish6_ResN:i_conc = 200000000. ;
 		Wolffish6_ResN:f_conc = 200000000. ;
-		Wolffish6_ResN:_FillValue = 10292.52 ;
+		Wolffish6_ResN:_FillValue = 28819.3 ;
 	double Wolffish6_StructN(t, b, z) ;
 		Wolffish6_StructN:bmtype = "tracer" ;
 		Wolffish6_StructN:units = "mg N" ;
@@ -34405,7 +34406,7 @@ variables:
 		Wolffish6_StructN:b_dens = 1000000000. ;
 		Wolffish6_StructN:i_conc = 200000000. ;
 		Wolffish6_StructN:f_conc = 200000000. ;
-		Wolffish6_StructN:_FillValue = 3883.97 ;
+		Wolffish6_StructN:_FillValue = 10875.2 ;
 	double Wolffish7_Nums(t, b, z) ;
 		Wolffish7_Nums:bmtype = "tracer" ;
 		Wolffish7_Nums:units = "1" ;
@@ -34443,7 +34444,7 @@ variables:
 		Wolffish7_ResN:b_dens = 1000000000. ;
 		Wolffish7_ResN:i_conc = 200000000. ;
 		Wolffish7_ResN:f_conc = 200000000. ;
-		Wolffish7_ResN:_FillValue = 14869.28 ;
+		Wolffish7_ResN:_FillValue = 38278.9 ;
 	double Wolffish7_StructN(t, b, z) ;
 		Wolffish7_StructN:bmtype = "tracer" ;
 		Wolffish7_StructN:units = "mg N" ;
@@ -34462,7 +34463,7 @@ variables:
 		Wolffish7_StructN:b_dens = 1000000000. ;
 		Wolffish7_StructN:i_conc = 200000000. ;
 		Wolffish7_StructN:f_conc = 200000000. ;
-		Wolffish7_StructN:_FillValue = 5611.05 ;
+		Wolffish7_StructN:_FillValue = 14444.9 ;
 	double Wolffish8_Nums(t, b, z) ;
 		Wolffish8_Nums:bmtype = "tracer" ;
 		Wolffish8_Nums:units = "1" ;
@@ -34500,7 +34501,7 @@ variables:
 		Wolffish8_ResN:b_dens = 1000000000. ;
 		Wolffish8_ResN:i_conc = 200000000. ;
 		Wolffish8_ResN:f_conc = 200000000. ;
-		Wolffish8_ResN:_FillValue = 20084.3 ;
+		Wolffish8_ResN:_FillValue = 48096.3 ;
 	double Wolffish8_StructN(t, b, z) ;
 		Wolffish8_StructN:bmtype = "tracer" ;
 		Wolffish8_StructN:units = "mg N" ;
@@ -34519,7 +34520,7 @@ variables:
 		Wolffish8_StructN:b_dens = 1000000000. ;
 		Wolffish8_StructN:i_conc = 200000000. ;
 		Wolffish8_StructN:f_conc = 200000000. ;
-		Wolffish8_StructN:_FillValue = 7578.98 ;
+		Wolffish8_StructN:_FillValue = 18149.5 ;
 	double Wolffish9_Nums(t, b, z) ;
 		Wolffish9_Nums:bmtype = "tracer" ;
 		Wolffish9_Nums:units = "1" ;
@@ -34557,7 +34558,7 @@ variables:
 		Wolffish9_ResN:b_dens = 1000000000. ;
 		Wolffish9_ResN:i_conc = 200000000. ;
 		Wolffish9_ResN:f_conc = 200000000. ;
-		Wolffish9_ResN:_FillValue = 25807.29 ;
+		Wolffish9_ResN:_FillValue = 57971.1 ;
 	double Wolffish9_StructN(t, b, z) ;
 		Wolffish9_StructN:bmtype = "tracer" ;
 		Wolffish9_StructN:units = "mg N" ;
@@ -34576,7 +34577,7 @@ variables:
 		Wolffish9_StructN:b_dens = 1000000000. ;
 		Wolffish9_StructN:i_conc = 200000000. ;
 		Wolffish9_StructN:f_conc = 200000000. ;
-		Wolffish9_StructN:_FillValue = 9738.6 ;
+		Wolffish9_StructN:_FillValue = 21875.9 ;
 	double Wolffish_N(t, b, z) ;
 		Wolffish_N:bmtype = "tracer" ;
 		Wolffish_N:units = "mg N m-3" ;
