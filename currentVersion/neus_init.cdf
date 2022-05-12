@@ -7744,7 +7744,7 @@ variables:
 		Diatom_N:decay = 0. ;
 		Diatom_N:partic = 1 ;
 		Diatom_N:passive = 1 ;
-		Diatom_N:svel = -5.e-06 ;
+		Diatom_N:svel = -1.55e-06 ;
 		Diatom_N:xvel = 0. ;
 		Diatom_N:psize = 0.0001 ;
 		Diatom_N:b_dens = 1000000000. ;
@@ -7763,7 +7763,7 @@ variables:
 		Diatom_S:decay = 0. ;
 		Diatom_S:partic = 1 ;
 		Diatom_S:passive = 1 ;
-		Diatom_S:svel = -5.e-06 ;
+		Diatom_S:svel = -1.55e-06 ;
 		Diatom_S:xvel = 0. ;
 		Diatom_S:psize = 0.0001 ;
 		Diatom_S:b_dens = 1000000000. ;
@@ -7782,7 +7782,7 @@ variables:
 		DinoFlag_N:decay = 0. ;
 		DinoFlag_N:partic = 1 ;
 		DinoFlag_N:passive = 1 ;
-		DinoFlag_N:svel = -2.89e-05 ;
+		DinoFlag_N:svel = -8.99e-07 ;
 		DinoFlag_N:xvel = 0. ;
 		DinoFlag_N:psize = 7.5e-05 ;
 		DinoFlag_N:b_dens = 1000000000. ;
@@ -17567,7 +17567,7 @@ variables:
 		PicoPhytopl_N:decay = 0. ;
 		PicoPhytopl_N:partic = 1 ;
 		PicoPhytopl_N:passive = 1 ;
-		PicoPhytopl_N:svel = -2.89e-06 ;
+		PicoPhytopl_N:svel = 0 ;
 		PicoPhytopl_N:xvel = 0. ;
 		PicoPhytopl_N:psize = 1.e-05 ;
 		PicoPhytopl_N:b_dens = 1000000000. ;
