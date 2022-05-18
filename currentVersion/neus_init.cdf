@@ -26441,7 +26441,7 @@ variables:
 		Spiny_Dogfish10_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish10_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish10_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish10_ResN:_FillValue = 102696.2 ;
+		Spiny_Dogfish10_ResN:_FillValue = 99815.75 ;
 	double Spiny_Dogfish10_StructN(t, b, z) ;
 		Spiny_Dogfish10_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish10_StructN:units = "mg N" ;
@@ -26460,7 +26460,7 @@ variables:
 		Spiny_Dogfish10_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish10_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish10_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish10_StructN:_FillValue = 38753.3 ;
+		Spiny_Dogfish10_StructN:_FillValue = 37666.32 ;
 	double Spiny_Dogfish1_Nums(t, b, z) ;
 		Spiny_Dogfish1_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish1_Nums:units = "1" ;
@@ -26498,7 +26498,7 @@ variables:
 		Spiny_Dogfish1_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish1_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish1_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish1_ResN:_FillValue = 36915.4 ;
+		Spiny_Dogfish1_ResN:_FillValue = 140.53 ;
 	double Spiny_Dogfish1_StructN(t, b, z) ;
 		Spiny_Dogfish1_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish1_StructN:units = "mg N" ;
@@ -26517,7 +26517,7 @@ variables:
 		Spiny_Dogfish1_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish1_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish1_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish1_StructN:_FillValue = 13930.3 ;
+		Spiny_Dogfish1_StructN:_FillValue = 53.03 ;
 	double Spiny_Dogfish2_Nums(t, b, z) ;
 		Spiny_Dogfish2_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish2_Nums:units = "1" ;
@@ -26555,7 +26555,7 @@ variables:
 		Spiny_Dogfish2_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish2_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish2_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish2_ResN:_FillValue = 79566.0 ;
+		Spiny_Dogfish2_ResN:_FillValue = 9873.87 ;
 	double Spiny_Dogfish2_StructN(t, b, z) ;
 		Spiny_Dogfish2_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish2_StructN:units = "mg N" ;
@@ -26574,7 +26574,7 @@ variables:
 		Spiny_Dogfish2_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish2_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish2_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish2_StructN:_FillValue = 30024.9 ;
+		Spiny_Dogfish2_StructN:_FillValue = 3725.99 ;
 	double Spiny_Dogfish3_Nums(t, b, z) ;
 		Spiny_Dogfish3_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish3_Nums:units = "1" ;
@@ -26612,7 +26612,7 @@ variables:
 		Spiny_Dogfish3_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish3_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish3_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish3_ResN:_FillValue = 95788.5 ;
+		Spiny_Dogfish3_ResN:_FillValue = 11769.98 ;
 	double Spiny_Dogfish3_StructN(t, b, z) ;
 		Spiny_Dogfish3_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish3_StructN:units = "mg N" ;
@@ -26631,7 +26631,7 @@ variables:
 		Spiny_Dogfish3_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish3_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish3_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish3_StructN:_FillValue = 36146.6 ;
+		Spiny_Dogfish3_StructN:_FillValue = 53009.59 ;
 	double Spiny_Dogfish4_Nums(t, b, z) ;
 		Spiny_Dogfish4_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish4_Nums:units = "1" ;
@@ -26669,7 +26669,7 @@ variables:
 		Spiny_Dogfish4_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish4_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish4_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish4_ResN:_FillValue = 100722.0 ;
+		Spiny_Dogfish4_ResN:_FillValue = 53009.59 ;
 	double Spiny_Dogfish4_StructN(t, b, z) ;
 		Spiny_Dogfish4_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish4_StructN:units = "mg N" ;
@@ -26688,7 +26688,7 @@ variables:
 		Spiny_Dogfish4_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish4_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish4_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish4_StructN:_FillValue = 38008.3 ;
+		Spiny_Dogfish4_StructN:_FillValue = 20003.62 ;
 	double Spiny_Dogfish5_Nums(t, b, z) ;
 		Spiny_Dogfish5_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish5_Nums:units = "1" ;
@@ -26726,7 +26726,7 @@ variables:
 		Spiny_Dogfish5_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish5_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish5_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish5_ResN:_FillValue = 102139.3 ;
+		Spiny_Dogfish5_ResN:_FillValue = 70163.81 ;
 	double Spiny_Dogfish5_StructN(t, b, z) ;
 		Spiny_Dogfish5_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish5_StructN:units = "mg N" ;
@@ -26745,7 +26745,7 @@ variables:
 		Spiny_Dogfish5_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish5_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish5_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish5_StructN:_FillValue = 38543.1 ;
+		Spiny_Dogfish5_StructN:_FillValue = 26476.91 ;
 	double Spiny_Dogfish6_Nums(t, b, z) ;
 		Spiny_Dogfish6_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish6_Nums:units = "1" ;
@@ -26783,7 +26783,7 @@ variables:
 		Spiny_Dogfish6_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish6_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish6_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish6_ResN:_FillValue = 102540.1 ;
+		Spiny_Dogfish6_ResN:_FillValue = 82115.52 ;
 	double Spiny_Dogfish6_StructN(t, b, z) ;
 		Spiny_Dogfish6_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish6_StructN:units = "mg N" ;
@@ -26802,7 +26802,7 @@ variables:
 		Spiny_Dogfish6_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish6_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish6_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish6_StructN:_FillValue = 38694.4 ;
+		Spiny_Dogfish6_StructN:_FillValue = 30986.99 ;
 	double Spiny_Dogfish7_Nums(t, b, z) ;
 		Spiny_Dogfish7_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish7_Nums:units = "1" ;
@@ -26840,7 +26840,7 @@ variables:
 		Spiny_Dogfish7_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish7_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish7_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish7_ResN:_FillValue = 102653.0 ;
+		Spiny_Dogfish7_ResN:_FillValue = 89936.04 ;
 	double Spiny_Dogfish7_StructN(t, b, z) ;
 		Spiny_Dogfish7_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish7_StructN:units = "mg N" ;
@@ -26859,7 +26859,7 @@ variables:
 		Spiny_Dogfish7_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish7_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish7_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish7_StructN:_FillValue = 38737.0 ;
+		Spiny_Dogfish7_StructN:_FillValue = 33938.13 ;
 	double Spiny_Dogfish8_Nums(t, b, z) ;
 		Spiny_Dogfish8_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish8_Nums:units = "1" ;
@@ -26897,7 +26897,7 @@ variables:
 		Spiny_Dogfish8_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish8_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish8_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish8_ResN:_FillValue = 102684.7 ;
+		Spiny_Dogfish8_ResN:_FillValue = 94878.59 ;
 	double Spiny_Dogfish8_StructN(t, b, z) ;
 		Spiny_Dogfish8_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish8_StructN:units = "mg N" ;
@@ -26916,7 +26916,7 @@ variables:
 		Spiny_Dogfish8_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish8_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish8_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish8_StructN:_FillValue = 38749.0 ;
+		Spiny_Dogfish8_StructN:_FillValue = 35803.24 ;
 	double Spiny_Dogfish9_Nums(t, b, z) ;
 		Spiny_Dogfish9_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish9_Nums:units = "1" ;
@@ -26954,7 +26954,7 @@ variables:
 		Spiny_Dogfish9_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish9_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish9_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish9_ResN:_FillValue = 102693.6 ;
+		Spiny_Dogfish9_ResN:_FillValue = 97940.66 ;
 	double Spiny_Dogfish9_StructN(t, b, z) ;
 		Spiny_Dogfish9_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish9_StructN:units = "mg N" ;
@@ -26973,7 +26973,7 @@ variables:
 		Spiny_Dogfish9_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish9_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish9_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish9_StructN:_FillValue = 38752.3 ;
+		Spiny_Dogfish9_StructN:_FillValue = 36958.74 ;
 	double Spiny_Dogfish_N(t, b, z) ;
 		Spiny_Dogfish_N:bmtype = "tracer" ;
 		Spiny_Dogfish_N:units = "mg N m-3" ;
@@ -28346,7 +28346,7 @@ variables:
 		Tautog2_StructN:b_dens = 1000000000. ;
 		Tautog2_StructN:i_conc = 200000000. ;
 		Tautog2_StructN:f_conc = 200000000. ;
-		Tautog2_StructN:_FillValue = 246.2 ;
+		Tautog2_StructN:_FillValue = 1298.7 ;
 	double Tautog3_Nums(t, b, z) ;
 		Tautog3_Nums:bmtype = "tracer" ;
 		Tautog3_Nums:units = "1" ;
@@ -28384,7 +28384,7 @@ variables:
 		Tautog3_ResN:b_dens = 1000000000. ;
 		Tautog3_ResN:i_conc = 200000000. ;
 		Tautog3_ResN:f_conc = 200000000. ;
-		Tautog3_ResN:_FillValue = 3441.5 ;
+		Tautog3_ResN:_FillValue = 7830.4 ;
 	double Tautog3_StructN(t, b, z) ;
 		Tautog3_StructN:bmtype = "tracer" ;
 		Tautog3_StructN:units = "mg N" ;
