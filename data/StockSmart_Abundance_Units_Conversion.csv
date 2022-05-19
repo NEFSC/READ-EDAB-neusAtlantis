@@ -1,0 +1,37 @@
+Code,Description,Units,AssessmentYear,Case,min.cohort,sex.ratio.mf,in.stocksmart
+BFT,"Mature Biomass, Age 9+",Thousand Metric Tons,2014,Adult,4,NA,1
+BIL,Initial Annual Biomass,Metric Tons,2013,Total,NA,NA,1
+BLF,Biomass,Metric Tons,2005,Total,NA,NA,1
+BLF,Spawning Stock Biomass,Metric Tons,2021,SSB,NA,NA,1
+BSB,Spawning Stock Biomass - Restrospective Adjusted,Metric Tons,2021,SSB,NA,NA,1
+BUT,Spawning Stock Biomass,Metric Tons,2020,SSB,NA,NA,1
+CLA,Biomass,Thousand Metric Tons,2013,Total,NA,NA,1
+COD,"Mature Biomass, Age 3+ (Mean)",Metric Tons,2017,Adult,2,NA,1
+DOG,Female Biomass,Metric Tons,2015,Female,NA,1.08,1
+GOO,Survey Estimated Area-Swept Biomass,Metric Tons,2019,Total,NA,NA,1
+HAD,Retrospective Adjusted Spawning Stock Biomass,Metric Tons,2019,SSB,NA,NA,1
+HAL,Total Biomass (Mean),Metric Tons,2012,Total,NA,NA,1
+HER,Spawning Stock Biomass,Metric Tons,2020,SSB,NA,NA,1
+LSQ,"Survey Biomass, Annualized NEFSC Spring/Fall Surveys",Thousand Metric Tons,2011,Total,NA,NA,1
+MAK,Spawning Stock Biomass,Metric Tons,2021,SSB,NA,NA,1
+PLA,Retrospective Adjusted Spawning Stock Biomass,Metric Tons,2019,SSB,NA,NA,1
+POL,Retrospective Adjusted Spawning Stock Biomass,Metric Tons,2019,SSB,NA,NA,1
+PSH,Total Abundance,Number of Sharks,2007,Number,NA,NA,1
+QHG,Exploitable Biomass - Meat Weight,Metric Tons,2017,Total,NA,NA,1
+RED,Mature Biomass Retro Adjusted 2019 (Mean),Metric Tons,2020,Total,NA,NA,1
+RHK,Survey Estimated Total Stock Biomass,Metric Tons,2020,Total,NA,NA,1
+SAL,Count of Total Returns,Adult Fish,2020,Number,NA,NA,1
+SCA,Total Stock Biomass - Meat Weight,Metric Tons,2020,Total,NA,NA,1
+SCU,Spawning Stock Biomass,Metric Tons,2021,SSB,NA,NA,1
+SSH,Abundance,"Number x 1,000",2006,Number,NA,NA,1
+SUF,Spawning Stock Biomass,Metric Tons,2021,SSB,NA,NA,1
+TUN,Total Biomass (Median),Metric Tons,2010,Total,NA,NA,1
+TYL,Mature Biomass,Metric Tons,2021,SSB,NA,NA,1
+WHK,Retrospective Adjusted Spawning Stock Biomass,Metric Tons,2019,SSB,NA,NA,1
+WIF,Spawning Stock Biomass,Metric Tons,2020,SSB,NA,NA,1
+WPF,Area-Swept Total Stock Biomass,Metric Tons,2020,Total,NA,NA,1
+WTF,Mature Biomass (Retro Adjusted 2014),Metric Tons,2015,SSB,NA,NA,1
+YTF,Retrospective Adjusted Spawning Stock Biomass,Metric Tons,2019,SSB,NA,NA,1
+MEN,Biomass Age 1+,Metric Tons,2020,Adult,2,NA,0
+STB,Biomass Age 1+,Metric Tons,2018,Adult,2,NA,0
+LOB,Female Biomass,Metric Tons,2020,Female,NA,1,0

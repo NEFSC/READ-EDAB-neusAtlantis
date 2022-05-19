@@ -1,0 +1,34 @@
+Code,Description,Units,AssessmentYear,year.min,year.max
+BFT,"Mature Biomass, Age 9+",Thousand Metric Tons,2014,1970,2013
+BIL,Initial Annual Biomass,Metric Tons,2013,1950,2011
+BLF,Biomass,Metric Tons,2005,1982,2004
+BLF,Spawning Stock Biomass,Metric Tons,2021,1985,2019
+BSB,Spawning Stock Biomass - Restrospective Adjusted,Metric Tons,2021,1989,2019
+BUT,Spawning Stock Biomass,Metric Tons,2020,1989,2019
+CLA,Biomass,Thousand Metric Tons,2013,1982,2011
+COD,"Mature Biomass, Age 3+ (Mean)",Metric Tons,2017,1978,2017
+DOG,Female Biomass,Metric Tons,2015,1991,2015
+GOO,Survey Estimated Area-Swept Biomass,Metric Tons,2019,2009,2018
+HAD,Retrospective Adjusted Spawning Stock Biomass,Metric Tons,2019,1977,2018
+HAL,Total Biomass (Mean),Metric Tons,2012,1893,2010
+HER,Spawning Stock Biomass,Metric Tons,2020,1965,2019
+LSQ,"Survey Biomass, Annualized NEFSC Spring/Fall Surveys",Thousand Metric Tons,2011,1977,2009
+MAK,Spawning Stock Biomass,Metric Tons,2021,1968,2019
+PLA,Retrospective Adjusted Spawning Stock Biomass,Metric Tons,2019,1980,2018
+POL,Retrospective Adjusted Spawning Stock Biomass,Metric Tons,2019,1970,2018
+PSH,Total Abundance,Number of Sharks,2007,1976,2005
+QHG,Exploitable Biomass - Meat Weight,Metric Tons,2017,1982,2016
+RED,Mature Biomass Retro Adjusted 2019 (Mean),Metric Tons,2020,1913,2019
+RHK,Survey Estimated Total Stock Biomass,Metric Tons,2020,1981,2019
+SAL,Count of Total Returns,Adult Fish,2020,1967,2019
+SCA,Total Stock Biomass - Meat Weight,Metric Tons,2020,1975,2019
+SCU,Spawning Stock Biomass,Metric Tons,2021,1984,2019
+SSH,Abundance,"Number x 1,000",2006,1981,2004
+SUF,Spawning Stock Biomass,Metric Tons,2021,1982,2019
+TUN,Total Biomass (Median),Metric Tons,2010,1950,2009
+TYL,Mature Biomass,Metric Tons,2021,1971,2019
+WHK,Retrospective Adjusted Spawning Stock Biomass,Metric Tons,2019,1963,2018
+WIF,Spawning Stock Biomass,Metric Tons,2020,1981,2019
+WPF,Area-Swept Total Stock Biomass,Metric Tons,2020,1975,2019
+WTF,Mature Biomass (Retro Adjusted 2014),Metric Tons,2015,1982,2014
+YTF,Retrospective Adjusted Spawning Stock Biomass,Metric Tons,2019,1973,2018
