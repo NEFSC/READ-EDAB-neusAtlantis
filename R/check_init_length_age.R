@@ -5,17 +5,8 @@ library(ncdf4)
 
 fgs = read.csv(here::here('currentVersion','neus_groups.csv'))
 
-age.key = data.frame(variable = paste0('X',1:10),agecl = 1:10)
-
-length.age.ref = read.csv(here::here('currentVersion','vertebrate_init_length_cm.csv')) %>%
-  select(Long.Name:X10)%>%
-  reshape2::melt(id.vars = 'Long.Name')%>%
-  left_join(age.key)%>%
-  rename(species = 'Long.Name',
-         length.ref = 'value')%>%
-  select(species,agecl,length.ref,-variable)%>%
-  arrange(species,agecl,length.ref)
-  
+length.age.ref = read.csv(here::here('diagnostics','vertebrate_init_length_cm_Adjusted.csv')) %>%
+  select(Code,agecl,new.length.ref)
 
 run.name = 'New_LengthAge_Init'
 run.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/Post_Processed/Data/')
@@ -28,23 +19,23 @@ length.age = length.age.init %>%
   rename('length.age.init' = 'atoutput')%>%
   left_join(length.age.ref)%>%
   select(-time)%>%
-  mutate(diff = ifelse( length.age.init < length.ref*1.05 & length.age.init > length.ref*0.95,0,1))
+  mutate(diff = ifelse( length.age.init < new.length.ref*1.05 & length.age.init > new.length.ref*0.95,0,1))
 
 spp.names = unique(length.age$species)
 
-pdf(file =  paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/Post_Processed/Length_Age_Init_Diagnostic.pdf'),width = 8, height = 5)
-for(i in 1:length(spp.names)){
-  
-  length.age.spp = length.age %>% filter(species == spp.names[i])
-  
-  y.range = range(c(length.age.spp$length.age.init, length.age.spp$length.ref),na.rm=T)
-  
-  plot(length.ref~agecl,data = length.age.spp, type = 'p',col = 2, pch = 17, cex = 2, ylim = c(y.range[1]*0.8, y.range[2]*1.2),xlab = 'Age Class',ylab = 'Length cm', main = spp.names[i])
-  points(length.age.init~agecl,data = length.age.spp, col = 3, pch = 16, cex = 2)
-  
-} 
-
-dev.off()
+# pdf(file =  paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/Post_Processed/Length_Age_Init_Diagnostic.pdf'),width = 8, height = 5)
+# for(i in 1:length(spp.names)){
+#   
+#   length.age.spp = length.age %>% filter(species == spp.names[i])
+#   
+#   y.range = range(c(length.age.spp$length.age.init, length.age.spp$length.ref),na.rm=T)
+#   
+#   plot(length.ref~agecl,data = length.age.spp, type = 'p',col = 2, pch = 17, cex = 2, ylim = c(y.range[1]*0.8, y.range[2]*1.2),xlab = 'Age Class',ylab = 'Length cm', main = spp.names[i])
+#   points(length.age.init~agecl,data = length.age.spp, col = 3, pch = 16, cex = 2)
+#   
+# } 
+# 
+# dev.off()
 
 
 #Make length-age initial conditions in terms of RN and SN
@@ -64,19 +55,22 @@ nochange = c('Atlantic menhaden','Baleen whales','Butterfish','Marine turtles','
              'Other flatfish','Right whales','Shallow demersal fish','Silver hake','Small toothed whales','Toothed whales','White hake','Yellowfail flounder')
 
 length.age.init.new = length.age.ref %>%
-  left_join(select(fgs,Code,LongName,Name), by = c('species' = 'LongName'))%>%
+  left_join(select(fgs,Code,LongName,Name))%>%
   left_join(a.df)%>%
   left_join(b.df)%>%
   mutate(
-    wgt = li_a * length.ref^li_b,
+    wgt = li_a * new.length.ref^li_b,
     tot.N =  (wgt * 1000)/(5.7*20),
     RN = 2.65 * tot.N / 3.65,
     SN = tot.N / 3.65
   )%>%
-  left_join(dplyr::select(length.age,species,agecl,diff))%>%
-  filter(diff==1 & !(species %in% nochange))%>%
-  tidyr::unite(nc.name,c('Name','agecl'),sep = '')%>%
-  select(nc.name,Code,RN,SN)
+  # left_join(dplyr::select(length.age,LongName,agecl,diff))%>%
+  # left_join(length.age)%>%
+  filter(!(LongName %in% nochange))%>%
+  tidyr::unite(nc.name,c('Name','agecl'),sep = '',remove = F)%>%
+  select(nc.name,Code,agecl,RN,SN)
+
+write.csv(length.age.init.new, file = here::here('diagnostics','Initial_RN_SN_from_reference_length_age.csv'),row.names = F)
 
 #Loop through species/agecl and edit init.nc fill attributes
 init.nc = nc_open(here::here('currentVersion','neus_init.nc'),write = T)
@@ -87,12 +81,19 @@ for(i in 1:nrow(length.age.init.new)){
   sn.name = paste0(length.age.init.new$nc.name[i],'_StructN')
   
   # ncatt_get(init.nc,rn.name,'_FillValue')$value
-  ncatt_put(init.nc,rn.name,'_FillValue',round(length.age.init.new$RN[i],2),prec = 'double',verbose = T)
+  ncatt_put(init.nc,rn.name,'_FillValue',round(length.age.init.new$RN[i],2),prec = 'double',verbose = F)
   # ncatt_get(init.nc,sn.name,'_FillValue')$value
   ncatt_put(init.nc,sn.name,'_FillValue',round(length.age.init.new$SN[i],2),verbose = F)
+  
+  # ncvar_get(init.nc,rn.name,verbose = T)
+  # ncvar_get(init.nc,sn.name,verbose = T)
+  # new.rn.dat = matrix(round(length.age.init.new$RN[i],2),nrow = 5, ncol = 30)
+  blank.dat = matrix(NA,nrow = 5,ncol =30)
+  ncvar_put(init.nc,rn.name,blank.dat, verbose = F)
+  ncvar_put(init.nc,sn.name,blank.dat,verbose = F)
   
 }
 
 nc_close(init.nc)
 
-# write.csv(length.age.init.new, file = here::here('diagnostics','Initial_RN_SN_from_reference_length_age.csv'),row.names = F)
+
