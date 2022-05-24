@@ -5,8 +5,8 @@
 library(dplyr)
 
 ##Scale mum and/or C based on difference from length-at-age reference
-scale.mum = T
-scale.C = T
+scale.mum = F
+scale.C = F
 
 ##
 
@@ -24,16 +24,11 @@ ref.length.bound = 0.2
 #Read in reference values for length.age and determine upper and lower bounds
 age.key = data.frame(variable = paste0('X',1:10),agecl = 1:10)
 
-length.age.ref = read.csv(here::here('currentVersion','vertebrate_init_length_cm.csv')) %>%
-  select(Long.Name:X10)%>%
-  reshape2::melt(id.vars = 'Long.Name')%>%
-  left_join(age.key)%>%
-  rename(species = 'Long.Name',
-         length.ref = 'value')%>%
-  select(species,agecl,length.ref,-variable)%>%
-  arrange(species,agecl,length.ref)%>%
-  mutate(length.ref.min = length.ref*(1-ref.length.bound),
-         length.ref.max = length.ref*(1+ref.length.bound))
+length.age.ref = read.csv(here::here('diagnostics','vertebrate_init_length_cm_Adjusted.csv')) %>%
+  select(Code,agecl,new.length.ref)%>%
+  mutate(length.ref.min = new.length.ref*(1-ref.length.bound),
+         length.ref.max = new.length.ref*(1+ref.length.bound))%>%
+  left_join(fgs)
 
 #Read in post-processed length.age data
 #Determine whether output values fall within bounds of reference values
@@ -43,7 +38,7 @@ length.age = readRDS(paste0(run.dir,'length_age.rds'))%>%
   left_join(length.age.ref)%>%
   mutate(length.high = ifelse(length > length.ref.max,1,0),
          length.low = ifelse(length < length.ref.min,1,0),
-         length.scalar = ifelse((length.high == 0&length.low == 0)|is.na(length.high),1,length.ref/length))
+         length.scalar = ifelse((length.high == 0&length.low == 0)|is.na(length.high),1,new.length.ref/length))
   
 #Pull mum-age and C-age data
 current.mum = get_param_mum_age(bio.prm = here::here('currentVersion','at_biology.prm'),write.output = F) %>% as.data.frame()
