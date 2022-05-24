@@ -28,7 +28,7 @@ stb.dat = read.csv(here::here('data-raw','data','StripedBassBiomass.csv'),as.is 
 lob.dat = read.csv(here::here('data-raw','data','LobsterBiomass.csv'),as.is =T)%>%rename(Value = 'Biomass') %>% mutate(Code = 'LOB')
 non.ss.all = bind_rows(men.dat,stb.dat,lob.dat)
 
-run.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Dev_03242022/Post_Processed/Data/'
+run.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/New_LengthAge_Revised/Post_Processed/Data/'
 
 #Get initial biomass in mT
 init.biomass.age = readRDS(paste0(run.dir,'biomass_age.rds'))%>%
@@ -55,6 +55,13 @@ init.rn.sn = init.rn %>%
   left_join(init.sn)%>%
   mutate(tot.n = rn+sn)
 
+# init.rn.sn = read.csv( here::here('diagnostics','Initial_RN_SN_from_reference_length_age.csv')) %>%
+#   left_join(fgs)%>%
+#   select(LongName,agecl,RN,SN)%>%
+#   rename(species = 'LongName',rn = 'RN',sn = 'SN')%>%
+#   mutate(tot.n = rn + sn)
+#     
+
 ss.neus = readr::read_csv(here::here("data","functionalGroupNames.csv"))
 # data.ss.raw = ss.neus %>%
 #   dplyr::inner_join(stocksmart::stockAssessmentData,by=c("Species_Itis"="ITIS"),na_matches = "never") %>% 
@@ -80,7 +87,7 @@ data.ss = ss.unit.cases %>%
   left_join(ss.raw)%>%
   bind_rows(data.no.ss)%>%
   filter(Year >= 1990)%>%
-  group_by(Code,Description,Units,AssessmentYear,Case,min.cohort,sex.ratio.mf)%>%
+  group_by(Code,Units,AssessmentYear,Case,min.cohort,sex.ratio.mf)%>%
   summarise(Value = mean(Value,na.rm=T))%>%
   filter(Case %in% c('Total','SSB','Adult','Female'))%>%
   left_join(ss.unit.conv)%>%
@@ -146,6 +153,7 @@ for(i in 1:nrow(data.ss)){
 
 }
 
+
 #Clean up SS data reference table
 data.ss.final = data.ss %>%
   group_by(Code)%>%
@@ -209,7 +217,7 @@ for(i in 1:nrow(data.age)){
   if(is.na(data.age$biomass.N[i])){
     ref.nums = round(data.age$numbers[i]*dat.age.prop)
   }else{
-    ref.nums = round(data.age$biomass.N[i]*dat.age.prop/ind.n.age)  
+    ref.nums = round(data.age$biomass.N[i]/ind.n.age*dat.age.prop)  
   }
   
   ref.data.ls[[i]] = data.frame(Code = data.age$Code[i],agecl = 1:10,ref.nums = ref.nums)
@@ -255,23 +263,23 @@ edit_param_init_scalar(run.prm = here::here('currentVersion','at_run.prm'),
                        )
 
 #Write new box-age numbers values to init.nc
-# init.nc = nc_open(here::here('currentVersion','neus_init.nc'),write = T)
-# varnames = names(init.nc$var)
-# 
-# for(i in 1:length(age.groups)){
-#   
-#   for(j in 1:10){
-#     num.age.group = num.box.age.all %>%
-#       filter(Code == age.groups[i],agecl == j)%>%
-#       left_join(fgs)
-#     
-#     nc.name = grep(paste0(num.age.group$Name[i],j,'_Num'),varnames,value = T)  
-#     
-#     new.init = matrix(NA,nrow = 5, ncol = 30)
-#     new.init[1,] = num.age.group$measurement
-#     ncvar_put(nc = init.nc,varid = nc.name, vals = new.init)
-#     # ncvar_get(init.nc,nc.name)
-#   }
-# }
-# nc_close(init.nc)
+init.nc = nc_open(here::here('currentVersion','neus_init.nc'),write = T)
+varnames = names(init.nc$var)
+
+for(i in 1:length(age.groups)){
+
+  for(j in 1:10){
+    num.age.group = num.box.age.all %>%
+      filter(Code == age.groups[i],agecl == j)%>%
+      left_join(fgs)
+
+    nc.name = grep(paste0(num.age.group$Name[i],j,'_Num'),varnames,value = T)
+
+    new.init = matrix(NA,nrow = 5, ncol = 30)
+    new.init[1,] = num.age.group$measurement
+    ncvar_put(nc = init.nc,varid = nc.name, vals = new.init)
+    # ncvar_get(init.nc,nc.name)
+  }
+}
+nc_close(init.nc)
 
