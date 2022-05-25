@@ -1,0 +1,256 @@
+"Code","Description","Units","AssessmentYear","year.min","year.max"
+"BFT","Mature Biomass","Metric Tons",2006,1970,2004
+"BFT","Mature Biomass - Age 9+ (Median)","Metric Tons",2010,1973,2009
+"BFT","Mature Biomass - Age 9+ (Median)","Thousand Metric Tons",2012,1970,2011
+"BFT","Mature Biomass, Age 9+","Thousand Metric Tons",2014,1970,2013
+"BIL","Biomass","Metric Tons",2006,1950,2006
+"BIL","Total Biomass Start of Year (Mean)","Metric Tons",2009,1950,2009
+"BIL","Initial Annual Biomass","Metric Tons",2013,1950,2011
+"BLF","Biomass","Metric Tons",2005,1982,2004
+"BLF","Total Biomass (Mean)","Metric Tons",2010,1982,2009
+"BLF","Total Biomass (Mean)","Metric Tons",2011,1982,2010
+"BLF","Total Biomass (Mean)","Metric Tons",2012,1982,2011
+"BLF","Total Biomass (Mean)","Metric Tons",2013,1982,2012
+"BLF","Total Biomass (Mean)","Metric Tons",2014,1982,2013
+"BLF","Spawning Stock Biomass","Metric Tons",2019,1985,2018
+"BLF","Spawning Stock Biomass","Metric Tons",2021,1985,2019
+"BSB","Survey Exploitable Biomass, Size 22cm+","Kilograms/Tow",2006,1981,2006
+"BSB","Spawning Stock Biomass","Metric Tons",2009,1968,2008
+"BSB","Spawning Stock Biomass","Metric Tons",2010,1968,2009
+"BSB","Spawning Stock Biomass","Metric Tons",2012,1968,2011
+"BSB","Spawning Stock Biomass","Metric Tons",2017,1989,2015
+"BSB","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,1989,2018
+"BSB","Spawning Stock Biomass - Restrospective Adjusted","Metric Tons",2021,1989,2019
+"BUT","Spawning Stock Biomass - Age 1+","Metric Tons",2014,1989,2012
+"BUT","Spawning Stock Biomass - Age 1+","Metric Tons",2017,1989,2016
+"BUT","Spawning Stock Biomass","Metric Tons",2020,1989,2019
+"CLA","Biomass","Thousand Metric Tons",2006,1981,2005
+"CLA","Biomass","Thousand Metric Tons",2009,1981,2008
+"CLA","Biomass","Thousand Metric Tons",2013,1982,2011
+"CLA","Spawning Stock Biomass / Blim","Ratio",2020,1982,2019
+"COD","Spawning Stock Biomass","Metric Tons",2005,1978,2004
+"COD","Mature Biomass (Mean)","Metric Tons",2008,1978,2007
+"COD","Mature Biomass","Metric Tons",2012,1978,2010
+"COD","Mature Biomass (Mean)","Metric Tons",2012,1982,2010
+"COD","Mature Biomass - Retrospective Adjusted","Metric Tons",2013,1978,2011
+"COD","Mature Biomass, Age 3+ (Mean)","Metric Tons",2015,1978,2015
+"COD","Biomass (Mean)","Kilograms/Tow",2017,2007,2016
+"COD","Mature Biomass, Age 3+ (Mean)","Metric Tons",2017,1978,2017
+"COD","Summary Biomass, Age 3+ (Mean; Retro Adjusted Terminal Year)","Metric Tons",2018,1978,2018
+"COD","Smoothed Survey CPUE","kg / tow",2019,1987,2019
+"COD","Survey-Estimated Biomass - Smoothed","kg / tow",2021,1987,2020
+"DOG","Female Biomass","Thousand Metric Tons",2006,1990,2005
+"DOG","Female SSB","Metri ton",2010,1991,2009
+"DOG","Female Biomass Mid-Year","Metric Tons",2011,1990,2010
+"DOG","Female Biomass Mid-Year","Metric Tons",2013,1991,2012
+"DOG","Female Biomass","Metric Tons",2015,1991,2015
+"DOG","Female Mature Biomass (Mean)","Metric Tons",2018,1991,2018
+"DSH","Spawning Stock Fecundity - Number at Age * Pup Production at Age","Number of Pups",2013,1950,2011
+"GOO","Survey Index - 3-Year Moving Average","kg/Tow",2005,1965,2003
+"GOO","Total Biomass","Thousand Metric Tons",2007,1980,2006
+"GOO","Total Biomass","Thousand Metric Tons",2010,1980,2009
+"GOO","Total Biomass","Thousand Metric Tons",2013,1980,2011
+"GOO","Area-Swept Biomass","Metric Tons",2016,2009,2015
+"GOO","Survey Estimated Area-Swept Biomass","Metric Tons",2016,2009,2015
+"GOO","Survey Estimated Area-Swept Biomass","Metric Tons",2019,2009,2018
+"HAD","Spawning Stock Biomass","Metric Tons",2005,1963,2004
+"HAD","Survey Biomass, NEFSC Fall Survey (Terminal Year 3-Year Average)","Kilograms/Tow",2005,1963,2004
+"HAD","Mature Biomass (Mean)","Metric Tons",2008,1931,2007
+"HAD","Mature Biomass (Mean)","Metric Tons",2012,1960,2010
+"HAD","Mature Biomass (Mean)","Metric Tons",2014,1977,2013
+"HAD","Mature Biomass (Mean)","Metric Tons",2015,1977,2015
+"HAD","Mature Biomass (Retro Adjusted 2014)","Metric Tons",2015,1960,2014
+"HAD","Mature Biomass (Mean)","Metric Tons",2017,1977,2016
+"HAD","Mature Biomass, Age 3+ (Mean)","Metric Tons",2017,1969,2017
+"HAD","Mature Biomass, Retro Adjusted Terminal Year (Mean)","Metric Tons",2017,1964,2016
+"HAD","Retrospective Adjusted Spawning Stock Biomass","Metric Tons",2019,1977,2018
+"HAD","2-Survey Biomass Estimate","Thousand Metric Tons",2020,2010,2019
+"HAL","Survey Biomass, NEFSC Fall Survey (5-Year MA)","Metric Tons",2005,1967,2004
+"HAL","Total Biomass (Mean)","Metric Tons",2008,1893,2007
+"HAL","Total Biomass (Mean)","Metric Tons",2012,1893,2010
+"HAL","Catch Multiplier","Rate",2020,2006,2019
+"HER","Spawning Stock Biomass","Thousand Metric Tons",2012,1965,2011
+"HER","Spawning Stock Biomass (Retro Adjusted 2014)","Metric Tons",2015,1965,2014
+"HER","Spawning Stock Biomass","Metric Tons",2018,1965,2017
+"HER","Spawning Stock Biomass","Metric Tons",2020,1965,2019
+"ISQ","Survey Biomass, NEFSC Fall Survey (Delta Transformed)","Kilograms/Tow",2005,1967,2004
+"LSK","3-Year Average Survey CPUE","Kilograms / Tow",2011,1984,2010
+"LSK","3-Year Average Survey CPUE","Kilograms / Tow",2012,1984,2012
+"LSK","3-Year Average Survey CPUE","Kilograms / Tow",2013,1984,2013
+"LSK","3-Year Average Survey CPUE","Kilograms / Tow",2014,1984,2014
+"LSK","3-Year Average Survey CPUE","Kilograms / Tow",2015,1984,2015
+"LSK","3-Year Average Survey CPUE","Kilograms / Tow",2016,1984,2016
+"LSK","3-Year Average Survey CPUE","Kilograms / Tow",2017,1984,2017
+"LSK","3 Year Average Survey CPUE","Kilograms/Tow",2018,1984,2018
+"LSK","3-Year Average Survey CPUE","Kilograms / Tow",2019,1984,2019
+"LSQ","Survey Biomass, Annualized NEFSC Spring/Fall Surveys","Thousand Metric Tons",2011,1977,2009
+"LSQ","Two-Year Average Survey Abundance Index","Thousand Metric Tons",2017,1977,2016
+"LSQ","Two-year Moving Average of Annualized B (Avg. Fall and Spring Survey Biomass)","Thousand Metric Tons",2020,1977,2019
+"MAK","Biomass","Metric Tons",2018,1968,2016
+"MAK","Spawning Stock Biomass","Metric Tons",2021,1968,2019
+"OPT","Survey Biomass, NEFSC Spring Survey","Kilograms/Tow",2005,1968,2005
+"OPT","NEFSC Spring Survey Index (3-Year Moving Average)","Kilograms/Tow",2008,1968,2007
+"OPT","NEFSC Spring Survey Index (3-Year Moving Average)","Kilograms/Tow",2012,1968,2010
+"OPT","NEFSC Spring Survey Index (3-Year Moving Average)","Kilograms/Tow",2015,1968,2014
+"OPT","Survey Biomass NEFSC Spring Survey (Mean)","Kilograms/Tow",2017,1968,2016
+"OPT","3-Year Survey Biomass Index","kg / tow",2020,1968,2019
+"PLA","Spawning Stock Biomass","Metric Tons",2005,1980,2004
+"PLA","Spawning Stock Biomass (Retro Adjusted 2014)","Metric Tons",2015,1980,2014
+"PLA","Retrospective Adjusted Spawning Stock Biomass","Metric Tons",2017,1980,2016
+"PLA","Retrospective Adjusted Spawning Stock Biomass","Metric Tons",2019,1980,2018
+"POL","NEFSC Fall Survey Index - 3 Year Average Terminal Year","Kilograms/Tow",2005,1963,2004
+"POL","Mature Biomass (Mean)","Metric Tons",2010,1970,2009
+"POL","Mature Biomass (Mean)","Metric Tons",2014,1970,2013
+"POL","Mature Biomass (Retro Adjusted 2014)","Metric Tons",2015,1970,2014
+"POL","Mature Biomass, Retro Adjusted 2016","Metric Tons",2017,1970,2016
+"POL","Retrospective Adjusted Spawning Stock Biomass","Metric Tons",2019,1970,2018
+"PSH","Total Abundance","Number of Sharks",2007,1976,2005
+"PSH","Relative Spawning Stock Fecundity (SSF / SSF_0) (Median)","Rate",2011,1960,2009
+"PSH","Spawning Stock Fecundity - Numbers at Age * Pups at Ate","Number of Pups",2012,1981,2010
+"QHG","Exploitable Biomass","Thousand Metric Tons",2006,1978,2005
+"QHG","Exploitable Biomass (Mean)","Thousand Metric Tons Meat Weight",2009,1978,2008
+"QHG","Exploitable Biomass","Thousand Metric Tons",2013,1978,2011
+"QHG","Exploitable Biomass - Meat Weight","Metric Tons",2017,1982,2016
+"QHG","Spawning Stock Biomass / Blim","Ratio",2020,1982,2019
+"RED","Spawning Stock Biomass","Thousand Metric Tons",2005,1934,2004
+"RED","Spawning Stock Biomass - Retro Adjusted Terminal Year","Metric Tons",2008,1913,2007
+"RED","Spawning Stock Biomass","Metric Tons",2012,1934,2010
+"RED","Mature Biomass (Mean Retro Adjusted 2014)","Metric Tons",2015,1913,2014
+"RED","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,1913,2016
+"RED","Mature Biomass Retro Adjusted 2019 (Mean)","Metric Tons",2020,1913,2019
+"RHK","Survey Biomass, NEFSC Spring Survey (3-Year MA)","Kilograms/Tow",2011,1980,2009
+"RHK","Survey Biomass, NEFSC Spring Survey (3-Year MA)","Kilograms/Tow",2014,1980,2014
+"RHK","NEFSC Spring Survey Index (3-Year Moving Average)","Kilograms/Tow",2015,1980,2015
+"RHK","Survey Biomass NEFSC Spring Survey (3-Year Moving Average)","Kilograms/Tow",2017,1970,2017
+"RHK","Area-Swept Biomass","Metric Tons",2020,1981,2019
+"RHK","Survey Estimated Total Stock Biomass","Metric Tons",2020,1981,2019
+"SAL","US Total Returns, Natural + Hatchery","Number",2016,1967,2015
+"SAL","Hatchery and Natural Returns (Mean)","Number",2017,1967,2016
+"SAL","Count of Total Returns","Adult Fish",2019,1967,2018
+"SAL","Count of Total Returns","Adult Fish",2020,1967,2019
+"SCA","Biomass, Size = 40mm SL","Metric Tons",2007,1982,2006
+"SCA","Spawning Stock Biomass, SH > 40mm","Metric Tons Meat Weight",2010,1975,2009
+"SCA","Spawning Stock Biomass, SH > 40mm","Metric Tons Meat Weight",2014,1975,2013
+"SCA","Biomass, SH > 40mm SH","Metric Tons Meat Weight",2015,1975,2013
+"SCA","Biomass - meat weight","mt",2018,1975,2017
+"SCA","Total Stock Biomass - Meat Weight","Metric Tons",2020,1975,2019
+"SCU","Spawning Stock Biomass Age 1+","Metric Tons",2009,1984,2008
+"SCU","Mature Biomass (Mean)","Metric Tons",2010,1984,2009
+"SCU","Mature Biomass (Mean)","Metric Tons",2011,1984,2010
+"SCU","Mature Biomass (Mean)","Metric Tons",2012,1984,2011
+"SCU","Mature Biomass (Mean)","Metric Tons",2015,1984,2014
+"SCU","Mature Biomass (Mean)","Metric Tons",2017,1984,2016
+"SCU","Spawning Stock Biomass","Metric Tons",2019,1984,2018
+"SCU","Spawning Stock Biomass","Metric Tons",2021,1984,2019
+"SHK","Survey Biomass, NEFSC Fall Survey (3-Year MA)","Kilograms/Tow",2005,1966,2004
+"SHK","NEFSC Fall Survey Index - Terminal Year 3-Year Average","Kilograms/Tow",2014,1963,2013
+"SHK","Survey Biomass NEFSC Fall Survey (Arithmetic Mean) - Terminal Year 3-Year Average","Kilograms/Tow",2017,1963,2016
+"SHK","Survey Estimated Catch-per-unit Effort - 3-Year Average","kg / tow",2020,1973,2019
+"SK","3-Year Average Survey CPUE","Kilograms / Tow",2011,1965,2010
+"SK","3 Year Average Survey CPUE","Kilograms/Tow",2011,1965,2010
+"SK","3-Year Average Survey CPUE","Kilograms / Tow",2012,1965,2011
+"SK","3 Year Average Survey CPUE","Kilograms/Tow",2012,1965,2011
+"SK","3-Year Average Survey CPUE","Kilograms / Tow",2013,1965,2012
+"SK","3 Year Average Survey CPUE","Kilograms/Tow",2013,1965,2012
+"SK","3-Year Average Survey CPUE","Kilograms / Tow",2014,1965,2013
+"SK","3 Year Average Survey CPUE","Kilograms/Tow",2014,1965,2013
+"SK","3-Year Average Survey CPUE","Kilograms / Tow",2015,1965,2014
+"SK","3 Year Average Survey CPUE","Kilograms/Tow",2015,1965,2014
+"SK","3-Year Average Survey CPUE","Kilograms / Tow",2016,1965,2015
+"SK","3 Year Average Survey CPUE","Kilograms/Tow",2016,1965,2015
+"SK","3-Year Average Survey CPUE","Kilograms / Tow",2017,1965,2016
+"SK","3-Year Average Survey CPUE","Kilograms/Tow",2017,1965,2016
+"SK","3 Year Average Survey CPUE","Kilograms/Tow",2017,1977,2016
+"SK","3-Year Average Survey CPUE","Kilograms / Tow",2018,1965,2017
+"SK","Survey CPUE - 3 Year Average","Kilograms/Tow",2018,1965,2017
+"SK","3-Year Average Survey CPUE","Average Kilograms / Tow",2019,1977,2018
+"SK","3-Year Average Survey CPUE","Kilograms / Tow",2019,1965,2018
+"SK","3-YR Average Survey CPUE","Kilograms / Tow",2019,1965,2018
+"SK","3-Year Average Survey CPUE","Average Kilograms / Tow",2020,1977,2019
+"SK","3-Year Average Survey CPUE","Kilograms / Tow",2020,1965,2019
+"SK","3-YR Average Survey CPUE","Kilograms / Tow",2020,1965,2019
+"SMO","Spawning Stock Fecundity, Pups (Mean)","Number x 1,000",2015,1981,2012
+"SSH","Abundance","Number x 1,000",2006,1981,2004
+"SSH","Spawning Stock Fecundity, Pups (Median)","Number",2011,1960,2009
+"SSH","Spawning Stock Fecundity (Mean)","Number x 1,000",2018,1960,2015
+"SUF","Spawning Stock Biomass Age 0+","Metric Tons",2009,1982,2008
+"SUF","Mature Biomass (Mean)","Metric Tons",2010,1982,2009
+"SUF","Mature Biomass (Mean)","Metric Tons",2011,1982,2010
+"SUF","Mature Biomass (Mean)","Metric Tons",2012,1982,2011
+"SUF","Mature Biomass (Mean)","Metric Tons",2013,1982,2012
+"SUF","Mature Biomass (Mean)","Metric Tons",2015,1982,2014
+"SUF","Mature Biomass (Mean)","Metric Tons",2016,1982,2015
+"SUF","Mature Biomass (Mean)","Metric Tons",2019,1982,2017
+"SUF","Spawning Stock Biomass","Metric Tons",2021,1982,2019
+"TUN","Biomass","Metric Tons",2007,1950,2006
+"TUN","Total Biomass","Metric Tons",2007,1930,2005
+"TUN","Mature Biomass (Mean)","Metric Tons",2009,1930,2007
+"TUN","Total Biomass (Median)","Metric Tons",2010,1950,2009
+"TUN","B/Bmsy","Rate",2020,1930,2019
+"TYL","B/Bmsy","Rate",2005,1973,2005
+"TYL","Total Biomass","Metric Tons",2009,1973,2008
+"TYL","Mature Biomass","Metric Tons",2014,1971,2012
+"TYL","Mature Biomass","Metric Tons",2017,1971,2016
+"TYL","Mature Biomass","Metric Tons",2021,1971,2019
+"WHK","NEFSC Fall Survey Index, 60cm+ (3-Year Moving Average)","Kilograms/Tow",2005,1965,2004
+"WHK","Mature Biomass (Mean)","Metric Tons",2008,1963,2007
+"WHK","Mature Biomass (Mean)","Metric Tons",2013,1963,2011
+"WHK","Mature Biomass (Mean)","Metric Tons",2015,1963,2014
+"WHK","Mature Biomass, Retro Adjusted Terminal Year (Mean)","Metric Tons",2017,1963,2016
+"WHK","Retrospective Adjusted Spawning Stock Biomass","Metric Tons",2019,1963,2018
+"WIF","B/Bmsy","Rate",2005,1964,2005
+"WIF","Spawning Stock Biomass","Metric Tons",2005,1981,2004
+"WIF","Spawning Stock Biomass, Age 1","Metric Tons",2005,1982,2004
+"WIF","Mature Biomass (Mean)","Metric Tons",2008,1981,2007
+"WIF","Mature Biomass (Mean)","Metric Tons",2011,1981,2010
+"WIF","Mature Biomass (Mean)","Metric Tons",2014,1982,2013
+"WIF","Mature Biomass (Retro Adjusted 2014)","Metric Tons",2015,1982,2014
+"WIF","Survey Mature Biomass","Metric Tons",2015,2009,2014
+"WIF","Survey Mature Biomass, = 30cm (Mean)","Metric Tons",2015,1981,2014
+"WIF","Mature Biomass (Mean; Retro Adjusted Terminal Year)","Metric Tons",2017,1982,2016
+"WIF","Survey Biomass, 30cm+ (Mean)","Metric Tons",2017,1981,2016
+"WIF","Survey Mature Biomass","Metric Tons",2017,2009,2016
+"WIF","Retrospective Adjusted Spawning Stock Biomass","Metric Tons",2019,1982,2018
+"WIF","Retrospective Adjusted Spawning Stock Biomass","Metric Tons",2020,1982,2019
+"WIF","Spawning Stock Biomass","Metric Tons",2020,1981,2019
+"WIF","Survey Biomass Index","Metric Tons",2020,2009,2019
+"WPF","Survey Biomass NEFSC Fall Survey - Terminal Year 3-Year Average","Kilograms/Tow",2005,1975,2004
+"WPF","Survey CPUE NEFSC Fall Survey - 3-Year Average Terminal Year","Kilograms/Tow",2005,1975,2004
+"WPF","NEFSC Fall Survey Index - 3 Year Average","Kilograms/Tow",2008,1975,2007
+"WPF","NEFSC Fall Survey Index (Mean)","Kilograms/Tow",2008,1975,2007
+"WPF","NEFSC Fall Survey Index - 3-Year Average Terminal Year","Kilograms/Tow",2012,1975,2010
+"WPF","NEFSC Fall Survey Index (Mean) - Terminal Year 3-Year Average","Kilograms/Tow",2012,1977,2010
+"WPF","NEFSC Fall Survey 3-Year Average Index","Average Kilograms/Tow",2015,2005,2014
+"WPF","NEFSC Fall Survey Index - Terminal Year 3-Year Average","Kilograms/Tow",2015,1975,2014
+"WPF","NEFSC Fall Survey 3-Year Average Index","Average Kilograms/Tow",2017,2005,2016
+"WPF","Survey Biomass NEFSC Fall Survey - Terminal Year 3-Year Average","Kilograms/Tow",2017,1975,2016
+"WPF","3-Year Average Survey CPUE","kg / tow",2019,1977,2018
+"WPF","3-Year Average Survey CPUE","kg/tow",2019,1977,2018
+"WPF","3-Year Average Survey CPUE","kg / tow",2020,1977,2019
+"WPF","Area-Swept Total Stock Biomass","Metric Tons",2020,1975,2019
+"WSK","3-Year Average Survey CPUE","Kilograms / Tow",2011,1969,2010
+"WSK","3-Year Average Survey CPUE","Kilograms / Tow",2012,1969,2011
+"WSK","3-Year Average Survey CPUE","Kilograms / Tow",2013,1969,2012
+"WSK","3-Year Average Survey CPUE","Kilograms / Tow",2014,1969,2013
+"WSK","3-Year Average Survey CPUE","Kilograms / Tow",2015,1969,2014
+"WSK","3-Year Average Survey CPUE","Kilograms / Tow",2016,1969,2015
+"WSK","3-Year Average Survey CPUE","Kilograms / Tow",2017,1969,2016
+"WSK","3-Year Average Survey CPUE","Kilograms / Tow",2018,1969,2017
+"WSK","3-Year Average Survey CPUE","Kilograms / Tow",2019,1969,2018
+"WSK","3-Year Average Survey CPUE","Kilograms / Tow",2020,1969,2019
+"WTF","Spawning Stock Biomass","Metric Tons",2005,1982,2004
+"WTF","Mature Biomass (Mean)","Metric Tons",2008,1982,2007
+"WTF","Mature Biomass (Mean)","Metric Tons",2012,1982,2010
+"WTF","Mature Biomass (Retro Adjusted 2014)","Metric Tons",2015,1982,2014
+"WTF","Exploitable Biomass","Metric Tons",2019,1968,2019
+"YTF","Spawning Stock Biomass","Metric Tons",2005,1973,2004
+"YTF","Mature Biomass (Mean)","Metric Tons",2008,1973,2007
+"YTF","Mature Biomass (Mean)","Metric Tons",2010,1973,2009
+"YTF","Mature Biomass (Mean)","Metric Tons",2011,1973,2010
+"YTF","Mature Biomass (Mean)","Metric Tons",2012,1973,2011
+"YTF","Mature Biomass (Retro Adjusted 2014)","Metric Tons",2015,1973,2014
+"YTF","Mature Biomass, Retro Adjusted Terminal Year (Mean)","Metric Tons",2017,1973,2016
+"YTF","Survey Biomass - Three Survey Average","Metric Tons",2018,2010,2018
+"YTF","Retrospective Adjusted Spawning Stock Biomass","Metric Tons",2019,1973,2018
+"YTF","Survey-Estimated Biomass","Metric Tons",2020,2010,2020
+"YTF","Survey-Estimated Biomass","Metric Tons",2021,2010,2021

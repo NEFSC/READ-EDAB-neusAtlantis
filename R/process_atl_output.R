@@ -247,24 +247,24 @@ process_atl_output = function(param.dir,
     numbers.age = atlantistools::agg_data(data = rawdata.main[[1]], groups = c('species','agecl','time'), fun = sum)
     numbers.box[[i]] = atlantistools::agg_data(data = rawdata.main[[1]], groups = c('species','polygon','time'), fun = sum)
     
-    RN.box[[i]] = atlantistools::agg_data(data = rawdata.main[[3]], groups = c('species','polygon','time'), fun = sum)
-    SN.box[[i]] = atlantistools::agg_data(data = rawdata.main[[2]], groups = c('species','polygon','time'), fun = sum)
-    RN.age[[i]] = atlantistools::agg_data(data = rawdata.main[[3]], groups = c('species','agecl','time'), fun = sum)
-    SN.age[[i]] = atlantistools::agg_data(data = rawdata.main[[2]], groups = c('species','agecl','time'), fun = sum)
+    RN.box = atlantistools::agg_data(data = rawdata.main[[3]], groups = c('species','polygon','time'), fun = sum)
+    SN.box = atlantistools::agg_data(data = rawdata.main[[2]], groups = c('species','polygon','time'), fun = sum)
+    RN.age = atlantistools::agg_data(data = rawdata.main[[3]], groups = c('species','agecl','time'), fun = sum)
+    SN.age = atlantistools::agg_data(data = rawdata.main[[2]], groups = c('species','agecl','time'), fun = sum)
     
-    SN.age.mean[[i]] = atlantistools::agg_data(data = rawdata.main[[2]], groups = c('species','time','agecl'), fun = mean)
-    RN.age.mean[[i]] = atlantistools::agg_data(data = rawdata.main[[3]], groups = c('species','time','agecl'), fun = mean)
+    SN.age.mean = atlantistools::agg_data(data = rawdata.main[[2]], groups = c('species','time','agecl'), fun = mean)
+    RN.age.mean = atlantistools::agg_data(data = rawdata.main[[3]], groups = c('species','time','agecl'), fun = mean)
     
     #make length.age
     #Use mean RN+SN per age for each species, convert to weight, get length w/Von Bert.
-    RN.SN.age = dplyr::left_join(RN.age[[i]],SN.age[[i]],by = c('species','agecl','time'))
-    colnames(RN.SN.age) = c('species','agecl','time','RN','SN')
+    RN.SN.age = dplyr::left_join(RN.age.mean,SN.age.mean,by = c('species','agecl','time'))
+    colnames(RN.SN.age) = c('species','time','agecl','RN','SN')
     
     biomass.age2 = dplyr::left_join(RN.SN.age, tempmat3[,2:4], by = c('species'='LongName'))
     biomass.age2$grams_N_Ind = (biomass.age2$RN+biomass.age2$SN)*5.7*20/1000
     biomass.age2$length_age = (as.numeric(as.character(biomass.age2$grams_N_Ind))/as.numeric(as.character(biomass.age2$li_a)))^(1/as.numeric(as.character(biomass.age2$li_b)))
-    length.age[[i]] = biomass.age2[,c('species','agecl','time','length_age')]
-    colnames(length.age[[i]])[4] = 'atoutput'
+    length.age = biomass.age2[,c('species','agecl','time','length_age')]
+    colnames(length.age)[4] = 'atoutput'
     
     spatial.biomass = atlantistools::calculate_biomass_spatial(nums = rawdata.main[[1]],
                                                                     sn = rawdata.main[[2]],

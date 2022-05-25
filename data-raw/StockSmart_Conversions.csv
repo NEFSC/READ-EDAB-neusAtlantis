@@ -1,0 +1,72 @@
+Units,conversion,new.units
+Metric Tons,1,mt
+Number,1,num
+mt,1,mt
+lbs x 1000000,4.50E+02,mt
+mt x 1000,1.00E+03,mt
+Thousand Metric Tons,1.00E+03,mt
+"Number x 10,000,000,000",1.00E+10,num
+Number x 10000000000,1.00E+10,num
+Kilograms/Tow,1.00E+00,kg/tow
+kg / tow,1.00E+00,kg/tow
+Thousand Pups,1.00E+00,num
+Metri ton,1.00E+00,mt
+Thousands of Sharks,1.00E+03,num
+Number x 1000000,1.00E+06,num
+kg/Tow,1.00E+00,kg/tow
+Rate,1.00E+00,rate
+Kilograms / Tow,1.00E+00,kg/tow
+"Number x 1,000,000",1.00E+06,num
+lbs,0.00045,mt
+Pounds,4.50E-04,mt
+Number/Hectare,1.00E+00,num/hectare
+"Number x 1,000",1.00E+03,num
+Number of Sharks,1.00E+00,num
+Number of Pups,1.00E+00,num
+Thousand Metric Tons Meat Weight,1.00E+03,mt
+Ratio,1.00E+00,ratio
+Adult Fish,1.00E+00,num
+Metric Tons Meat Weight,1.00E+00,mt
+Average Kilograms / Tow,1.00E+00,kg/tow
+Thousand Pounds,4.50E+02,mt
+Hundred Trillion Eggs,1.00E+14,eggs
+Number x 100000000000000,1.00E+14,eggs
+Million Eggs,1.00E+06,eggs
+"Number x 1,000,000,000,000",1.00E+12,num
+"Number x 1,000,000,000",1.00E+09,num
+Billion Eggs,1.00E+09,eggs
+"Number x 100,000,000",1.00E+08,num
+Eggs,1.00E+00,eggs
+Number x 0.01,1.00E-02,num
+Eggs X 10000000,1.00E+07,eggs
+Number x 100000000,1.00E+08,num
+Number x 1000000000000,1.00E+12,num
+Million Pounds,450,mt
+1E8 Eggs,1.00E+08,eggs
+Million Larvae,1.00E+06,eggs
+Number X 1000000000,1.00E+09,num
+Thousand lbs.,0.45,mt
+Trillion Eggs,1.00E+12,eggs
+Million Metric Tons,1.00E+06,mt
+Number of Fish,1.00E+00,num
+Thousand Fish,1.00E+03,num
+Thousand Salmon,1.00E+03,num
+Metric Tons Gutted Weight,1.00E+00,mt
+Million Recruits,1.00E+06,recruit
+Thousand Eggs,1.00E+03,eggs
+Fish,1.00E+00,num
+Fish / Mile,1.00E+00,num/mile
+kg/tow,1.00E+00,kg/tow
+Spawners,1.00E+00,recruit
+lbs x 1000001,450,mt
+1000 mt,1.00E+03,mt
+Adult Spawners - Hatchery,1.00E+00,num
+Adult Fish - Hatchery + Natural,1.00E+00,num
+Thousand  Metric Tons,1.00E+03,mt
+Grams,1.00E-06,mt
+Thousand Pounds Gutted Weight,0.45,mt
+Spawners per Mile,1.00E+00,num/mile
+Spawners Per Mile,1.00E+00,num/mile
+Million lbs.,4.50E+02,mt
+Million Net Pounds,4.50E+02,mt
+Average Kilograms/Tow,1.00E+00,kg/tow
