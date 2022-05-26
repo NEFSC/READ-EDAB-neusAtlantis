@@ -345,15 +345,18 @@ make_atlantis_diagnostic_figures = function(
     length.age = readRDS(paste0(out.dir,'length_age.rds'))
     
     #Length at age ts by spp
-    init.length = read.csv(paste0(param.dir,'/vertebrate_init_length_cm.csv'),header =T, stringsAsFactors = F)
-    init.length = init.length[order(init.length$Long.Name),]
+    # init.length.old = read.csv(paste0(param.dir,'/vertebrate_init_length_cm.csv'),header =T, stringsAsFactors = F)
+    init.length = read.csv(paste0(param.dir,'/vertebrate_init_length_cm_Adjusted.csv'),header =T, stringsAsFactors = F)%>%
+      select(Code,species,agecl,new.length.ref)%>%
+      tidyr::spread(agecl,new.length.ref)
+    init.length = init.length[order(init.length$species),]
     spp.names = unique(length.age$species)
     
     pdf(file = paste0(fig.dir,run.name,' tuning length at age by species.pdf'),width = 12, height = 6, onefile = T)
     for(x in 1:length(spp.names)){
       spp.id = spp.names[x]
       length.age.spp = dplyr::filter(length.age, species == spp.id & time >0)
-      init.length.age.spp = dplyr::filter(init.length[,3:13],Long.Name == spp.id)
+      init.length.age.spp = dplyr::filter(init.length[,2:12],species == spp.id)
       boxplot(length.age.spp$atoutput ~ length.age.spp$agecl, ylab = 'cm',xlab = 'cohort',
               main = spp.id, ylim = c(0,max(length.age.spp$atoutput)))
       points(seq(1:10),init.length.age.spp[2:11],col = 'red',pch= 17)
@@ -468,7 +471,7 @@ make_atlantis_diagnostic_figures = function(
     
     #Mean length at age divided by initial length at age
     #Used to scale mum and C
-    length.v.length.init = length.age.mn[,2:11]/init.length[,4:13]
+    length.v.length.init = length.age.mn[,2:11]/init.length[,2:12]
     row.names(length.v.length.init) =mum.age$Code
     
     #Scale mum and C by difference between length at age relative to initial conditions
