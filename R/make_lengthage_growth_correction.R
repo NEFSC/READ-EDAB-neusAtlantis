@@ -13,7 +13,7 @@ scale.C = F
 source(here::here('R','edit_param_mum_age.R'))
 source(here::here('R','edit_param_C_age.R'))
 
-run.name = 'Rescale_LengthAge_mumC'
+run.name = 'New_Init_Inverts'
 run.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/Post_Processed/Data/')
 
 fgs = read.csv(here::here('currentVersion','neus_groups.csv'))%>%select(Code,LongName)%>%rename(species = 'LongName')
@@ -24,7 +24,7 @@ ref.length.bound = 0.2
 #Read in reference values for length.age and determine upper and lower bounds
 age.key = data.frame(variable = paste0('X',1:10),agecl = 1:10)
 
-length.age.ref = read.csv(here::here('diagnostics','vertebrate_init_length_cm_Adjusted.csv')) %>%
+length.age.ref = read.csv(here::here('currentVersion','vertebrate_init_length_cm_Adjusted.csv')) %>%
   select(Code,agecl,new.length.ref)%>%
   mutate(length.ref.min = new.length.ref*(1-ref.length.bound),
          length.ref.max = new.length.ref*(1+ref.length.bound))%>%
@@ -40,6 +40,11 @@ length.age = readRDS(paste0(run.dir,'length_age.rds'))%>%
          length.low = ifelse(length < length.ref.min,1,0),
          length.scalar = ifelse((length.high == 0&length.low == 0)|is.na(length.high),1,new.length.ref/length))
   
+length.age.check = length.age %>%
+  group_by(Code)%>%
+  summarise(length.high = sum(length.high,na.rm=T),
+            length.low = sum(length.low,na.rm=T))
+            
 #Pull mum-age and C-age data
 current.mum = get_param_mum_age(bio.prm = here::here('currentVersion','at_biology.prm'),write.output = F) %>% as.data.frame()
 current.mum[,2:11] = apply(current.mum[,2:11],2,as.numeric)
