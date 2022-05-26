@@ -41,6 +41,7 @@ outputFolder
 !/CurrentVersion/run_command.txt
 # shell script to run
 !/CurrentVersion/RunAtlantis.sh
+!/CurrentVersion/vertebrate_init_length_cm_Adjusted.csv
 
 #Geometry/NEUS 1-5 Map.R
 #Geometry/Neus 1-5.pdf
