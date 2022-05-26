@@ -34,4 +34,4 @@ WTF,Mature Biomass (Retro Adjusted 2014),Metric Tons,2015,SSB,NA,NA,1
 YTF,Retrospective Adjusted Spawning Stock Biomass,Metric Tons,2019,SSB,NA,NA,1
 MEN,Biomass Age 1+,Thousand Metric Tons,2020,Adult,2,NA,0
 STB,Biomass Age 1+,Metric Tons,2018,Adult,2,NA,0
-LOB,Female Biomass,Metric Tons,2020,Female,NA,1,0
+LOB,Female Biomass,Metric Tons,2020,Female,NA,0.85,0
