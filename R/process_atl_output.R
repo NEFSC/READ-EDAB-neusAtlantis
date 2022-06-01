@@ -144,6 +144,13 @@ process_atl_output = function(param.dir,
                                   fgs = param.ls$groups.file,
                                   prm_run = param.ls$run.prm,
                                   convert_names = T)
+    
+    data.dietcheck.tot = data.dietcheck %>% group_by(time,pred,agecl)%>% summarise(atoutput.tot = sum(atoutput,na.rm=T))
+    data.dietcheck.adj = data.dietcheck %>%
+      left_join(data.dietcheck.tot) %>%
+      mutate(atoutput = atoutput/ atoutput.tot) %>%
+      select(-atoutput.tot)
+    
     saveRDS(data.dietcheck,file = paste0(out.dir,'data_dietcheck.rds'))
   }else{
     `%>%` = dplyr::`%>%`
@@ -197,6 +204,13 @@ process_atl_output = function(param.dir,
     }
     
     data.dietcheck = dplyr::bind_rows(diet.agg)
+    
+    data.dietcheck.tot = data.dietcheck %>% group_by(time,pred,agecl)%>% summarise(atoutput.tot = sum(atoutput,na.rm=T))
+    data.dietcheck.adj = data.dietcheck %>%
+      left_join(data.dietcheck.tot) %>%
+      mutate(atoutput = atoutput/ atoutput.tot) %>%
+      select(-atoutput.tot)
+    
     rm(diet.agg)
     saveRDS(data.dietcheck,file = paste0(out.dir,'data_dietcheck.rds'))
   }
@@ -488,7 +502,7 @@ process_atl_output = function(param.dir,
     
     bio.consumed = atlantistools::calculate_consumed_biomass(eat = rawdata.prod[[1]],
                                                              grazing = rawdata.prod[[2]],
-                                                             dm = data.dietcheck,
+                                                             dm = data.dietcheck.adj,
                                                              vol = vol,
                                                              bio_conv = bio.conv)
     
