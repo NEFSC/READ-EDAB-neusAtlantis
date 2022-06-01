@@ -49,8 +49,10 @@ plot_run_catch_comparisons = function(model1.dir,model2.dir,model1.name,model2.n
     catch1 = subset(catch1,select = c('Time',groups))
     catch2 = subset(catch2,select = c('Time',groups))
   } else{
-    catch1 = dplyr::select(catch1,Time,tidyselect::all_of(fgs))
-    catch2 = dplyr::select(catch2,Time,tidyselect::all_of(fgs))
+    groups1 = fgs[fgs %in% colnames(catch1)]
+    groups2 = fgs[fgs %in% colnames(catch2)]
+    catch1 = dplyr::select(catch1,Time,tidyselect::all_of(groups1))
+    catch2 = dplyr::select(catch2,Time,tidyselect::all_of(groups2))
   }
   
   #convert each model to long format
