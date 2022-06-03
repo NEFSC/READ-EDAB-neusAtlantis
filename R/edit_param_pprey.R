@@ -168,7 +168,7 @@ edit_param_pprey = function(atl.dir, biol.file, fgs.file,pred.list,prey.list,ppr
     #Identify pPREY line for pred group and convert to numeric
     pred.line = grep(pred,pprey.ls$line.chars)
     pred.vals = pprey.ls$line.chars[pred.line+1]
-    pred.vals = as.numeric(strsplit(pred.vals,' ')[[1]])
+    pred.vals = as.numeric(strsplit(pred.vals,split = ' |\t')[[1]])
     
     #Identify pPREY element for prey group
     prey.el = grep(paste0("\\b",prey,"\\b"),pprey.ls$prey.names)
