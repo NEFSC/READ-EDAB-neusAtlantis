@@ -11693,7 +11693,7 @@ C_MAK	10
 0.0675	1.44	6.3	16.8	22.8	26.7	28.8	37.5	45.9	62.4
 
 C_HER	10
-0.04	0.3	1.4	2.8	3.8	4.8	5.2	5.6	6	6.2	
+0.03 0.225 1.05 2.1 2.85 3.6 3.9 4.2 4.5 4.65
 
 C_WHK	10		
 0.02	0.48	1.8	2.9	5.6	9.2 12.5	19	27.5	42.7
@@ -13876,7 +13876,7 @@ OSH_mQ 2
 MAK_mQ	2
 0	0.65E-11
 HER_mQ	2
-0	0
+0	1E-13
 WHK_mQ	2
 0	3.75E-10
 BLF_mQ	2
@@ -16410,7 +16410,7 @@ BHalpha_MPF 3E10
 BHalpha_BUT 1e+09     
 BHalpha_ANC 1e+09    
 BHalpha_BPF 5e+07
-BHalpha_GOO 4.7E11
+BHalpha_GOO 9E11
 BHalpha_MEN 1e+09   
 BHalpha_FDE 1e+08   
 BHalpha_COD 5.5E11
