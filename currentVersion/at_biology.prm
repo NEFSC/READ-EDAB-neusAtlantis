@@ -13746,7 +13746,7 @@ FLA_mL	2
 BFT_mL	2
 4.00E-12	4.00E-12
 TUN_mL	2
-1.50E-13	1.50E-13
+0.75E-13	0.75E-13
 BIL_mL	2
 2.00E-11	4.00E-11
 MPF_mL	2
@@ -13876,7 +13876,7 @@ OSH_mQ 2
 MAK_mQ	2
 0	1E-12
 HER_mQ	2
-0	1.05E-13
+0	0.5E-13
 WHK_mQ	2
 0	3.75E-10
 BLF_mQ	2
@@ -13900,7 +13900,7 @@ FLA_mQ 2
 BFT_mQ 2
 0.00000016	0.00000064
 TUN_mQ	2
-0.000000015	0.00000006
+0.000000007	0.00000003
 BIL_mQ	2
 0.0000032	0.0000048
 MPF_mQ	2
@@ -16141,10 +16141,10 @@ KDENR_SK
 5
 
 KDENR_SB
-5000000
+500000
 
 KDENR_PIN
-3.5
+4
 
 KDENR_REP
 350
@@ -16392,7 +16392,7 @@ Rbeta_OSH 2e+12
 # Beverton-Holt recruitment
 # Alpha in Beverton-Holt
 BHalpha_MAK 4E12 
-BHalpha_HER 5e+13 
+BHalpha_HER 7.5e+13 
 BHalpha_WHK 1.1E12 
 BHalpha_BLF 4E8
 BHalpha_WPF 3e+09    
@@ -16406,25 +16406,25 @@ BHalpha_FLA 1e+08
 BHalpha_BFT 6e+08    
 BHalpha_TUN 6e+08    
 BHalpha_BIL 6e+08    
-BHalpha_MPF 8E10
+BHalpha_MPF 6.4E10
 BHalpha_BUT 1e+09
 BHalpha_ANC 1e+09    
 BHalpha_BPF 5e+07
-BHalpha_GOO 13E11
+BHalpha_GOO 11E11
 BHalpha_MEN 1e+09   
 BHalpha_FDE 1e+08   
-BHalpha_COD 5E10
+BHalpha_COD 4E10
 BHalpha_SHK 1e+08    
 BHalpha_OHK 1e+08   
-BHalpha_POL 1e+08  
+BHalpha_POL 0.75e+08  
 BHalpha_RHK 1e+08   
 BHalpha_BSB 1e+08   
 BHalpha_SCU 1e+08   
 BHalpha_TYL 1e+08   
-BHalpha_RED 5E10
+BHalpha_RED 1E11
 BHalpha_OPT 1e+08   
 BHalpha_SAL 1e+08   
-BHalpha_DRM 6e+08   
+BHalpha_DRM 12e+08   
 BHalpha_STB 3E10
 BHalpha_TAU 4e+08   
 BHalpha_WOL 2e+08
