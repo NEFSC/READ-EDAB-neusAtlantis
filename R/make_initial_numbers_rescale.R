@@ -28,7 +28,13 @@ stb.dat = read.csv(here::here('data-raw','data','StripedBassBiomass.csv'),as.is 
 lob.dat = read.csv(here::here('data-raw','data','LobsterBiomass.csv'),as.is =T)%>%rename(Value = 'Biomass') %>% mutate(Code = 'LOB')
 non.ss.all = bind_rows(men.dat,stb.dat,lob.dat)
 
-run.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/New_LengthAge_Revised/Post_Processed/Data/'
+####Flag for predefined size at age####
+prescribed.age.scale = T
+age.scale = c(0.005,0.03,0.2,0.2,0.175,0.15,0.1,0.075,0.05,0.015)
+####
+
+# run.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/New_LengthAge_Revised/Post_Processed/Data/'
+run.dir = 'C:/Users/joe92/Documents/Atlantis/Dev_06212022/Post_Processed/Data/'
 
 #Get initial biomass in mT
 init.biomass.age = readRDS(paste0(run.dir,'biomass_age.rds'))%>%
@@ -45,15 +51,20 @@ init.biomass.all = bind_rows(init.biomass.age,init.biomass.invert)%>%
   left_join(fgs,by = c('species'='LongName'))
 
 #Get initial RN and SN for age groups
-init.rn = readRDS(paste0(run.dir,'RN_age_mean.rds'))%>%
-  filter(time == 0)%>%
-  rename(rn = 'atoutput')
-init.sn = readRDS(paste0(run.dir,'sN_age_mean.rds'))%>%
-  filter(time == 0)%>%
-  rename(sn = 'atoutput')
-init.rn.sn = init.rn %>%
-  left_join(init.sn)%>%
-  mutate(tot.n = rn+sn)
+# init.rn = readRDS(paste0(run.dir,'RN_age_mean.rds'))%>%
+#   filter(time == 0)%>%
+#   rename(rn = 'atoutput')
+# init.sn = readRDS(paste0(run.dir,'sN_age_mean.rds'))%>%
+#   filter(time == 0)%>%
+#   rename(sn = 'atoutput')
+# init.rn.sn = init.rn %>%
+#   left_join(init.sn)%>%
+#   mutate(tot.n = rn+sn)
+init.rn.sn = read.csv(here::here('diagnostics','Initial_Size_Age.csv'))%>%
+  left_join(fgs)%>%
+  mutate(tot.n = rn + sn)
+
+
 
 # init.rn.sn = read.csv( here::here('diagnostics','Initial_RN_SN_from_reference_length_age.csv')) %>%
 #   left_join(fgs)%>%
@@ -99,7 +110,7 @@ data.ss$biomass.tot = NA
 i=1
 for(i in 1:nrow(data.ss)){
   
-  #Convert different cases to biomass (expect for numbers)
+  #Convert different cases to biomass (except for numbers)
   if(fgs$NumCohorts[which(fgs$Code == data.ss$Code[i])] == 1){
     data.ss$biomass.tot[i] = data.ss$Value.new[i]
     next()
@@ -197,12 +208,13 @@ data.age = data.combined %>%
 
 init.nc = nc_open(here::here('currentVersion','neus_init.nc'))
 varnames = names(init.nc$var)
+
 #Pull proportion at age and the size at age from initial conditions and apply to the reference biomass.n
 
 ref.data.ls = list()
 for(i in 1:nrow(data.age)){
   
-  ind.n = init.rn.sn %>% filter(species == data.age$LongName[i]) 
+  ind.n = init.rn.sn %>% filter(LongName == data.age$LongName[i]) 
   ind.n.age = ind.n$tot.n
   
   #Get prop at age
@@ -210,14 +222,19 @@ for(i in 1:nrow(data.age)){
   for(j in 1:10){
     group.name = grep(paste0(data.age$Name[i],j,'_Nums'),varnames,value = T)
     dat.age[j] = sum(ncvar_get(init.nc,group.name)[1,],na.rm=T)
-    }
+  }
   
-  dat.age.prop = dat.age/sum(dat.age)
-  
+  #option to use fixed age-structure
+  if(prescribed.age.scale == T){
+    dat.age.prop = age.scale
+  }else{
+    dat.age.prop = dat.age/sum(dat.age)
+  }
+
   if(is.na(data.age$biomass.N[i])){
     ref.nums = round(data.age$numbers[i]*dat.age.prop)
   }else{
-    ref.nums = round(data.age$biomass.N[i]/ind.n.age*dat.age.prop)  
+    ref.nums = round((data.age$biomass.N[i]/ind.n.age)*dat.age.prop)  
   }
   
   ref.data.ls[[i]] = data.frame(Code = data.age$Code[i],agecl = 1:10,ref.nums = ref.nums)
@@ -245,6 +262,7 @@ for(i in 1:length(age.groups)){
 }
 
 num.box.age.all = bind_rows(num.box.age.all.ls)
+# x = num.box.age.all %>% filter(Code == 'COD')%>%group_by(agecl)%>%summarise(ref.num = sum(measurement))
 
 write.csv(num.box.age.all, here::here('Diagnostics','StockSmart_Numbers_Initial_Conditions.csv'),row.names = F)
 
@@ -283,3 +301,8 @@ for(i in 1:length(age.groups)){
 }
 nc_close(init.nc)
 
+
+#Check
+# test = num.box.age.all %>% filter(Code == 'COD')%>% group_by(agecl) %>% summarise(ref.nums = sum(measurement))
+# size = init.rn.sn %>% filter(LongName == 'Atlantic cod')
+# sum(test$ref.nums*size$tot.n*5.7*20*1E-9)
