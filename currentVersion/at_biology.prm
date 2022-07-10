@@ -11675,7 +11675,7 @@ C_NSH_T15	0.0005
 C_jNSH_T15	0.0005
 C_OSH_T15	0.0005
 C_jOSH_T15	0.0005
-C_ZG_T15	0.48
+C_ZG_T15	0.24
 C_ZL_T15	0.12
 C_ZM_T15	0.64
 C_ZS_T15	0.12
@@ -11885,7 +11885,7 @@ mum_NSH_T15	0.005
 mum_jNSH_T15 	0.005
 mum_OSH_T15	0.005
 mum_jOSH_T15 	0.005
-mum_ZG_T15	0.16
+mum_ZG_T15	0.08
 mum_ZL_T15	0.018
 mum_ZM_T15	0.004
 mum_ZS_T15	0.5
@@ -11964,7 +11964,7 @@ mum_BPF	10.00
 1.2	7	16	29	43.5	59	74	88.5	102	114				
 									
 mum_GOO	10.00	
-18 45 90 148 122 104 99 67.5 45 24.8
+1.8	4.5	9	14.8	12.2	10.4	9.9	6.75	4.5	2.48
 
 mum_MEN	10.00					
 1.125	5.625	14.625	24.75	36	46.125	55.125	64.125	70.875	76.5
@@ -13841,12 +13841,12 @@ INV_mL	2
 
 ## Quadratic mortality 
 # Invertebrates
-SCA_mQ 5E-10
+SCA_mQ 5E-9
 QHG_mQ 1E-8
 CLA_mQ 2E-7
 BFF_mQ 0
 BG_mQ 1E-6
-LOB_mQ 5E-12
+LOB_mQ 1E-11
 RCB_mQ 0
 BMS_mQ 0
 ZL_mQ 4.5E-4	#0.0001
@@ -13902,7 +13902,7 @@ BFT_mQ 2
 TUN_mQ	2
 0	1.5E-8
 BIL_mQ	2
-0	1.5E-6
+0	9E-7
 MPF_mQ	2
 0	0
 BUT_mQ	2
@@ -13912,7 +13912,7 @@ ANC_mQ	2
 BPF_mQ	2
 0	1.80E-10
 GOO_mQ	2
-1E-13	1E-13
+1E-12	1E-12
 MEN_mQ	2
 0	0
 FDE_mQ	2
@@ -13942,7 +13942,7 @@ SAL_mQ	2
 DRM_mQ	2
 0	3.00E-10
 STB_mQ	2
-0	0  
+1E-13	1E-13 
 TAU_mQ	2
 0	0
 WOL_mQ 2
@@ -16392,7 +16392,7 @@ Rbeta_OSH 2e+12
 # Beverton-Holt recruitment
 # Alpha in Beverton-Holt
 BHalpha_MAK 2E12 
-BHalpha_HER 5.5e+13 
+BHalpha_HER 6e+13 
 BHalpha_WHK 1.1E12 
 BHalpha_BLF 4E8
 BHalpha_WPF 3e+09    
@@ -16410,7 +16410,7 @@ BHalpha_MPF 6.4E10
 BHalpha_BUT 1e+09
 BHalpha_ANC 1e+09    
 BHalpha_BPF 5e+07
-BHalpha_GOO 1E12
+BHalpha_GOO 1E11
 BHalpha_MEN 5e+09   
 BHalpha_FDE 1e+08   
 BHalpha_COD 4.5E10
@@ -16425,7 +16425,7 @@ BHalpha_RED 4E12
 BHalpha_OPT 1e+08   
 BHalpha_SAL 1e+08   
 BHalpha_DRM 1.2e+09   
-BHalpha_STB 5.25E12
+BHalpha_STB 1E12
 BHalpha_TAU 4e+08   
 BHalpha_WOL 2e+08
 BHalpha_SDF 2e+06   
