@@ -67,7 +67,7 @@ edit_param_init_scalar = function(run.prm,groups.file,new.init.scalar,overwrite 
   
   #Read in init_scalar .csv (edited)
   # new.init.scalar = read.csv(init.scalar.file,stringsAsFactors = F)
-  new.init.scalar$init.scalar = sapply(new.init.scalar$init.scalar,function(x){
+  new.init.scalar$init.scalar = sapply(as.numeric(new.init.scalar$init.scalar),function(x){
     if(x<1){
       return(signif(x,3))
     }else{
