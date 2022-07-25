@@ -1,0 +1,6 @@
+Group,Start_Time,End_Time,Change,Type
+HER,10,7665,0.01,Scalar
+MAK,12775,13140,5000,Replace
+SUF,1095,7665,10,Scalar
+HER,10950,13140,1000,Replace
+COD,3650,5475,500,Replace
