@@ -1185,7 +1185,7 @@ flagtempsensitiveMPF 1
 flagtempsensitiveBUT 1
 flagtempsensitiveANC 1
 flagtempsensitiveBPF 1
-flagtempsensitiveGOO 1
+flagtempsensitiveGOO 0
 flagtempsensitiveMEN 1
 flagtempsensitiveFDE 1
 flagtempsensitiveCOD 1
@@ -11910,7 +11910,7 @@ mum_MAK	10.00
 3.5 21 140 140 122 105 70 52.5 35 10.5
 
 mum_HER	10.00
-0.0338 0.0237 1.37 1.22 0.608 0.486 0.333 0.0912
+0.0338 0.252 1.06 2.12 2.88 3.65 3.95 4.25 4.55 4.71
 						
 mum_WHK	10.00		
 2.31 6.95 23 123 108 92.4 61.6 46.2 30.8 9.24
