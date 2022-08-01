@@ -278,8 +278,6 @@ process_atl_output = function(param.dir,
     
     #spatial biomass
     
-    rm(rawdata.spp)
-    
     ##Biomass Groups and spatial overlap
     
     biomass <- atlantistools::agg_data(spatial.biomass,groups = c('species','time'),fun = sum)
@@ -571,7 +569,7 @@ process_atl_output = function(param.dir,
   
   saveRDS(bio.consumed,paste0(out.dir,'biomass_consumed.rds'))
 
-  rm(grazing,eat.age,growth.age,bio.consumed,growth.rel.init)
+  rm(grazing,eat.age,bio.consumed)
 
 # Do Recruitment ----------------------------------------------------------
   ssb.recruits = atlantistools::load_rec(yoy = param.ls$yoy, ssb = param.ls$ssb,prm_biol = param.ls$biol.prm )

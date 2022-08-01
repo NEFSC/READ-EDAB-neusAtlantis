@@ -132,7 +132,7 @@ make_atlantis_diagnostic_figures = function(
   
   if(plot.catch|plot.all) {
     
-    catchmt = readRDS(paste0(out.dir,'catchmt.rds'))
+    catchmt = readRDS(paste0(out.dir,'catchmt.RDS'))
     
     #Catch by species time series (metric tonnes)
     temp.plot.1 = atlantistools::plot_line(catchmt)
@@ -142,7 +142,7 @@ make_atlantis_diagnostic_figures = function(
     
     #Catch at age time series (numbers)
     
-    totcatch = readRDS(paste0(out.dir,'totcatch.rds'))
+    totcatch = readRDS(paste0(out.dir,'totcatch.RDS'))
     
     temp.plot.2 = atlantistools::plot_line(totcatch, col = 'agecl')
     temp.plot.2 = ggplot2::update_labels(p = temp.plot.2, labels = c(plot.labels, list(colour = 'Ageclas')))
@@ -169,7 +169,7 @@ make_atlantis_diagnostic_figures = function(
   if(plot.mortality|plot.all) {
     
     # plot mortality from Mort.txt
-    mort = readRDS(paste0(out.dir,'mort.rds'))
+    mort = readRDS(paste0(out.dir,'mort.RDS'))
     itype <- 1
     plotMort <- list()
     # Annual Mortality time series M, F by species on same plot
@@ -179,7 +179,7 @@ make_atlantis_diagnostic_figures = function(
     plotMort[[itype]] <- temp.plot.1
     
     # plot mortaliy from specificMort.txt
-    specificmort <- readRDS(paste0(out.dir,'specificmort.rds'))
+    specificmort <- readRDS(paste0(out.dir,'specificmort.RDS'))
     
     # plot absolute mortality. 3 pages, one page for F,M1,M2
     for (atype in rev(unique(specificmort$mort))) {
@@ -471,14 +471,18 @@ make_atlantis_diagnostic_figures = function(
     
     #Mean length at age divided by initial length at age
     #Used to scale mum and C
-    length.v.length.init = length.age.mn[,2:11]/init.length[,2:12]
-    row.names(length.v.length.init) =mum.age$Code
+    match.id = which(!(init.length$Long.Name %in% length.age.mn$species))
+    init.length = init.length[-match.id,]
+    length.v.length.init = length.age.mn[,2:11]/init.length[,4:13]
+    row.names(length.v.length.init) =init.length$Code
     
     #Scale mum and C by difference between length at age relative to initial conditions
+    mum.age = mum.age[-match.id,]
     mum.scale = mum.age[,2:11]/length.v.length.init
     rownames(mum.scale) = mum.age$Code
     mum.scale = mum.scale[order(row.names(mum.scale)),]
     
+    C.age = C.age[-match.id,]
     C.scale = C.age[,2:11]/length.v.length.init
     row.names(C.scale) = C.age$Code
     C.scale = C.scale[order(row.names(C.scale)),]
@@ -644,7 +648,7 @@ make_atlantis_diagnostic_figures = function(
   if(plot.recruits|plot.all){
     
     # Recruits TS
-    ssb.recruits = readRDS(paste0(out.dir,'ssb_recruits.rds'))
+    ssb.recruits = readRDS(paste0(out.dir,'ssb_recruits.RDS'))
     
     temp.plot.1 = atlantistools::plot_line(ssb.recruits, y = 'rec')
     temp.plot.1 = ggplot2::update_labels(temp.plot.1,labels = list(x = 'Time (days)', y = 'Numbers'))
