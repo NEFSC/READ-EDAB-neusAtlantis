@@ -34,7 +34,7 @@ age.scale = c(0.005,0.03,0.2,0.2,0.175,0.15,0.1,0.075,0.05,0.015)
 ####
 
 # run.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/New_LengthAge_Revised/Post_Processed/Data/'
-run.dir = 'C:/Users/joe92/Documents/Atlantis/Dev_06212022/Post_Processed/Data/'
+run.dir = here::here('Atlantis_Runs','Dev_07282022','Post_Processed','Data/')
 
 #Get initial biomass in mT
 init.biomass.age = readRDS(paste0(run.dir,'biomass_age.rds'))%>%
@@ -62,7 +62,8 @@ init.biomass.all = bind_rows(init.biomass.age,init.biomass.invert)%>%
 #   mutate(tot.n = rn+sn)
 init.rn.sn = read.csv(here::here('diagnostics','Initial_Size_Age.csv'))%>%
   left_join(fgs)%>%
-  mutate(tot.n = rn + sn)
+  mutate(tot.n = rn + sn,
+         ratio = rn/sn)
 
 
 
@@ -153,6 +154,7 @@ for(i in 1:nrow(data.ss)){
       group_by(Code)%>%
       summarise(biomass.mt.tot = sum(biomass.mt,na.rm=T))%>%
       left_join(init.bio.age)%>%
+      
       mutate(biomass.age.prop = biomass.mt.tot/biomass.mt.age.tot)
     
     data.ss$biomass.tot[i] = data.ss$Value.new[i] * init.bio.age.prop$biomass.age.prop[1]
@@ -264,7 +266,7 @@ for(i in 1:length(age.groups)){
 num.box.age.all = bind_rows(num.box.age.all.ls)
 # x = num.box.age.all %>% filter(Code == 'COD')%>%group_by(agecl)%>%summarise(ref.num = sum(measurement))
 
-write.csv(num.box.age.all, here::here('Diagnostics','StockSmart_Numbers_Initial_Conditions.csv'),row.names = F)
+write.csv(num.box.age.all, here::here('diagnostics','StockSmart_Numbers_Initial_Conditions.csv'),row.names = F)
 
 #Reset Init Scalar to 1 for changed groups
 source(here::here('R','edit_param_init_scalar.R'))
