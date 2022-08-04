@@ -18,7 +18,7 @@ MPF,15,1,Mesopelagic_Mig_Fish,Migratory mesopelagic fish,10,1,2,1,1,1,1,1,1,1,1,
 BUT,16,1,Butterfish,Butterfish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 BPF,17,1,Benthopelagic_Fish,Other benthopelagic fish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 ANC,18,1,Anchovies,Anchovies,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
-GOO,19,1,Monkfish,Goosefish,10,1,2,1,1,1,1,1,0,0,1,FISH,1,0,0,1,0,0,0,0,4,0,0
+GOO,19,1,Monkfish,Goosefish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 MEN,20,1,Menhaden,Atlantic menhaden,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 FDE,21,1,Shallow_Demersal_Fish,Shallow demersal fish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 COD,22,1,Cod,Atlantic cod,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0

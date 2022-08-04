@@ -1185,7 +1185,7 @@ flagtempsensitiveMPF 1
 flagtempsensitiveBUT 1
 flagtempsensitiveANC 1
 flagtempsensitiveBPF 1
-flagtempsensitiveGOO 0
+flagtempsensitiveGOO 1
 flagtempsensitiveMEN 1
 flagtempsensitiveFDE 1
 flagtempsensitiveCOD 1
@@ -11662,12 +11662,12 @@ C_LSQ_T15	0.000215
 C_jLSQ_T15	0.000215
 C_ISQ_T15	0.000485
 C_jISQ_T15	0.000485
-C_SCA_T15	0.3
+C_SCA_T15	0.432
 C_QHG_T15	0.1
 C_CLA_T15	0.11
 C_BFF_T15	0.125
 C_BG_T15	0.09
-C_BC_T15	0.00105
+C_BC_T15	0.00115
 C_LOB_T15	0.0006
 C_RCB_T15	0.0003
 C_BMS_T15	0.0003
@@ -11690,7 +11690,7 @@ flagfishrates    0         Switch to show whether clearance and growth rates are
 # Clearance rate of each vertebrate group, per age class       (m3 Ind-1 day-1)
 # updated 20180814 as 0.1 * mum (which is RN+SN * [max % body weight consumption per day] /365)
 C_MAK	10	
-0.2 5 15 29.4 40 47.1 50.7 65.8 81 110
+0.368	9.2	27.6	54.096	73.6	86.664	93.288	121.072	149.04	202.4
 
 C_HER	10
 0.127 2.7 11.8 31.5 42.8 50.1 54 70.4 86.1 117
@@ -11872,7 +11872,7 @@ mum_LSQ_T15	0.000045
 mum_jLSQ_T15 	0.000045
 mum_ISQ_T15	0.0000675
 mum_jISQ_T15 0.0000675
-mum_SCA_T15	0.03
+mum_SCA_T15	0.0432
 mum_QHG_T15	0.9
 mum_CLA_T15	0.11
 mum_BFF_T15	0.015
@@ -11907,7 +11907,7 @@ mum_SG_T15	0.1
 # are chosen as absolute (=0), or as proportion of body mass (=1)  
 # modified 20180814 based on RN+SN * percent consumption (.10 - 0.30 ) per day / 365
 mum_MAK	10.00		
-3.5 21 140 140 122 105 70 52.5 35 10.5
+6.44	38.64	257.6	257.6	224.48	193.2	128.8	96.6	64.4	19.32
 
 mum_HER	10.00
 0.0338 0.252 1.06 2.12 2.88 3.65 3.95 4.25 4.55 4.71
