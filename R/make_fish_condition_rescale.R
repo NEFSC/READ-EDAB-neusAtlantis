@@ -2,7 +2,7 @@
 library(ncdf4)
 library(dplyr)
 
-new.scale =2
+new.scale =1
 
 fgs = read.csv(here::here('currentVersion','neus_groups.csv'))
 
