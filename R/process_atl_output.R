@@ -140,10 +140,22 @@ process_atl_output = function(param.dir,
 # Process DietCheck -------------------------------------------------------
 
   if(large.file==F){
-    data.dietcheck = atlantistools::load_dietcheck(dietcheck = param.ls$dietcheck,
+    data.dietcheck.orig = atlantistools::load_dietcheck(dietcheck = param.ls$dietcheck,
                                   fgs = param.ls$groups.file,
                                   prm_run = param.ls$run.prm,
                                   convert_names = T)
+    #Normalize proprotions so they always sum to 1
+    dietcheck.tot = data.dietcheck %>%
+      group_by(time,pred,agecl)%>%
+      summarise(atoutput.tot = sum(atoutput,na.rm=T))
+    
+    data.dietcheck = data.dietcheck.orig %>%
+      left_join(dietcheck.tot)%>%
+      rename(atoutput.old = 'atoutput')%>%
+      mutate(atoutput = atoutput.old/atoutput.tot)%>%
+      select(time,pred,agecl,prey,atoutput)
+      
+    
     saveRDS(data.dietcheck,file = paste0(out.dir,'data_dietcheck.rds'))
   }else{
     `%>%` = dplyr::`%>%`
