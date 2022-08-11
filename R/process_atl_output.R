@@ -84,7 +84,7 @@ process_atl_output = function(param.dir,
   
   
   rm(flux,source.sink,phys.statevars,vol.ts)
-  
+  gc()
 
 # Other Parameter Objects -------------------------------------------------
 
@@ -213,6 +213,7 @@ process_atl_output = function(param.dir,
     saveRDS(data.dietcheck,file = paste0(out.dir,'data_dietcheck.rds'))
   }
   
+  gc()
   
 # Main NetCDF objects -----------------------------------------------------
 
@@ -585,7 +586,7 @@ process_atl_output = function(param.dir,
 
 # Do Recruitment ----------------------------------------------------------
   ssb.recruits = atlantistools::load_rec(yoy = param.ls$yoy, ssb = param.ls$ssb,prm_biol = param.ls$biol.prm )
-  saveRDS(ssb.recruits,paste0(out.dir,'ssb_recruits.RDS'))
+  saveRDS(ssb.recruits,paste0(out.dir,'ssb_recruits.rds'))
   rm(ssb.recruits)
 
 # Do catch -------------------------------------------------------------------
@@ -603,9 +604,9 @@ process_atl_output = function(param.dir,
       dplyr::select(species,time,atoutput) %>%
       dplyr::mutate(time = time/365)
     
-    # saveRDS(catch,paste0(out.dir,'catch.RDS'))
-    saveRDS(totcatch,paste0(out.dir,'totcatch.RDS'))
-    saveRDS(catchmt,paste0(out.dir,'catchmt.RDS'))
+    # saveRDS(catch,paste0(out.dir,'catch.rds'))
+    saveRDS(totcatch,paste0(out.dir,'totcatch.rds'))
+    saveRDS(catchmt,paste0(out.dir,'catchmt.rds'))
     
     rm(catch,totcatch,catchmt)
   }
@@ -615,8 +616,8 @@ process_atl_output = function(param.dir,
   #   dplyr::group_by(species,time) %>% 
   #   dplyr::summarise(atoutput = atoutput[source == "F"]/atoutput[source == "M"],.groups="drop") %>% 
   #   dplyr::mutate(atoutput = ifelse(is.infinite(atoutput),NA,atoutput))
-  saveRDS(mortality,paste0(out.dir,'mort.RDS'))
+  saveRDS(mortality,paste0(out.dir,'mort.rds'))
   
   specificMortality <- atlantistools::load_spec_mort(param.ls$specificmort,prm_run=param.ls$run.prm,fgs=param.ls$groups.file,convert_names = T,removeZeros = F)
-  saveRDS(specificMortality,paste0(out.dir,'specificmort.RDS'))
+  saveRDS(specificMortality,paste0(out.dir,'specificmort.rds'))
 }
