@@ -179,7 +179,7 @@ plot_migrations <- function(eachgroup, thisdataset, mig.file, fg.file){
              age = as.factor(age)) %>% 
       ggplot(aes(x= day_year, y = variable, colour = age)) +
       geom_line()+
-      facet_wrap(year_sim ~ age, scales = "free_y") +
+      facet_wrap(year_sim ~ age, scales = "free_y",ncol = 10) +
       labs(title=group.name, subtitle = "Rows are simulation years,columns are age classes \n 
        Lines: red = migration, green = return") +
       scale_y_continuous(limits = c(0,NA)) +
@@ -201,7 +201,7 @@ plot_migrations <- function(eachgroup, thisdataset, mig.file, fg.file){
     # geom_vline(xintercept = 198,  
     #            color = "darkorange2", linetype = "dashed", size=0.7, alpha = 0.5)
     # 
-    ggsave(paste0(out.dir, '/',eachgroup,"_daily_numbers.png"),sp.nums.plot, dpi= 300, width = 12, height = 10)
+    ggsave(paste0(out.dir, '/',eachgroup,"_daily_numbers.png"),sp.nums.plot, dpi= 300, width = 26, height = 10)
     
   }
   
@@ -214,7 +214,7 @@ plot_migrations <- function(eachgroup, thisdataset, mig.file, fg.file){
              age = as.factor(age)) %>% 
       ggplot(aes(x= day_year, y = variable, colour = age)) +
       geom_line()+
-      facet_wrap(year_sim ~ age, scales = "free_y") +
+      facet_wrap(year_sim ~ age, scales = "free_y",ncol =10) +
       labs(title=group.name, subtitle = "Rows are simulation years,columns are age classes \n 
        Lines: red = migration, green = return, blue = second migration, orange = second return") +
       scale_y_continuous(limits = c(0,NA)) +
@@ -235,7 +235,7 @@ plot_migrations <- function(eachgroup, thisdataset, mig.file, fg.file){
     # geom_vline(xintercept = 198,  
     #           color = "darkorange2", linetype = "dashed", size=0.7, alpha = 0.5)
     # 
-    ggsave(here(paste0(eachgroup,"_daily_numbers.png")),sp.nums.plot, dpi= 300, width = 12, height = 10)
+    ggsave(paste0(out.dir, '/',eachgroup,"_daily_numbers.png"),sp.nums.plot, dpi= 300, width = 26, height = 10)
   }
   
 }
