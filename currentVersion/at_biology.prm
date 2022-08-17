@@ -16411,7 +16411,7 @@ BHalpha_MPF 2E10
 BHalpha_BUT 1e+09
 BHalpha_ANC 1e+09    
 BHalpha_BPF 5e+07
-BHalpha_GOO 1E10
+BHalpha_GOO 3.2E10
 BHalpha_MEN 5e+09   
 BHalpha_FDE 1e+08   
 BHalpha_COD 4.5E10
@@ -16476,7 +16476,7 @@ BHbeta_MPF 1E11
 BHbeta_BUT 5e+11     
 BHbeta_ANC 1e+11     
 BHbeta_BPF 1e+12     
-BHbeta_GOO 1E9
+BHbeta_GOO 1.1E10
 BHbeta_MEN 1e+13     
 BHbeta_FDE 1e+13     
 BHbeta_COD 2.7E14
