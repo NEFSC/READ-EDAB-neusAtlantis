@@ -1,4 +1,6 @@
-
+#' @title Function to plot daily output and migration dates 
+#' @author Hem Nalini Morzaria-Luna hmorzaria@hotmail.com
+#' @description Function to extract Number, weight-at-age, SN and RN and plot numbers from run with daily output  
 #function cannot be parallelized because of how R holds NC in memory, read only one file at a time
 
 
@@ -15,21 +17,25 @@ if(length(.packages[!.inst]) > 0) install.packages(.packages[!.inst])
 # Load packages into session 
 lapply(.packages, require, character.only=TRUE)
 
-foldername <- "Atlantis_mv_1_6645_5yr_fprintfsp34_out1dy"
-output_foldername  <- "outputFolder"
-yearsrun  <- 5
+foldername <- "Migration_1yr_1d"
+output_foldername  <- here::here('Atlantis_Runs',foldername,'Post_Processed')
+yearsrun  <- 1
 output_freqyrs <- 1
-this.output.nc <- "AMPS_OUT.nc"
-func_grouplist <- "PugetSoundAtlantisFunctionalGroups.csv"
-mig.file <- "PugetMigrations.csv"
+thisncfile <- RNetCDF::open.nc(here::here('Atlantis_Runs',foldername,'neus_output.nc'))
+#next two files should be saved in the working directory
+fg.file <- here::here('currentVersion','neus_groups.csv')
+mig.file <- here::here('currentVersion','neus_migrations.csv')
+thisvariabletype <- "Nums"
+thistimestep <- (yearsrun*365)/output_freqyrs #this is max number of timesteps/73 output frequency
+eachgroup = 'BluefinTuna'
+eachgroup = 'BFT'
 
-
-get.nc.data <- function(eachgroup,thisncfile){
+get.nc.data <- function(eachgroup,thisncfile,fg.file){
   
   print(paste("Analyzing this group",eachgroup))
   
-  this.sprow <- fg.list %>% 
-    filter(name==eachgroup) 
+  this.sprow <- read.csv(fg.file) %>% 
+    filter(Name==eachgroup) 
   
   print(this.sprow)
   
@@ -78,7 +84,7 @@ get.nc.data <- function(eachgroup,thisncfile){
         }
         
         thisData[thisData==0]<-NA  # Replace 0's with NA
-        thisData <- thisData[1:7,2:89,1:thistimestep]
+        thisData <- thisData[1:4,2:30,1:thistimestep]
         thisDataMeanMg <-apply(thisData,3,mean,na.rm = TRUE) #Get mean size over time, averaging over depth and location 
         
         thisY <-tibble(variable=thisDataMeanMg/thisDataMeanMg[1]) %>%  # Normalize by initial value
@@ -106,7 +112,7 @@ get.nc.data <- function(eachgroup,thisncfile){
         thisData <- var.get.nc(thisncfile, eachvariable)
         thisData[thisData==0]<-NA  # Replace 0's with NA
         print(dim(thisData))
-        thisData <- thisData[1:7,2:89,1:thistimestep]
+        thisData <- thisData[1:4,2:30,1:thistimestep]
         #thisData <- thisData[1:7,2:89,1:51] #use this for 10 year runs
         thisDataNums<-apply(thisData,3,sum,na.rm = TRUE)#Get nums over time, summing over depth and location  
         thisY <-tibble(variable=thisDataNums) %>%  # Normalize by initial value
@@ -119,12 +125,11 @@ get.nc.data <- function(eachgroup,thisncfile){
     }
   }
   
-  
   thissp.data <- var.listdata %>% 
     bind_rows() %>% 
     mutate(code = this.sprow$Code, longname = this.sprow$longname) %>% 
     dplyr::rename(atlantis_group = group) %>% 
-    mutate(Year=(time*73)/365)
+    mutate(Year=(time*output_freqyrs)/365)
   
   
   print(paste("Done with group",eachgroup))
@@ -133,102 +138,132 @@ get.nc.data <- function(eachgroup,thisncfile){
   return(thissp.data)
 }
 
+thisdataset = get.nc.data('BluefinTuna',thisncfile,fg.file)
 
-year_plot <- function(foldername, output_foldername, yearsrun, output_freqyrs, this.output.nc, func_grouplist, mig.file){
+plot_migrations <- function(eachgroup, thisdataset, mig.table, fg.list){
+  
+  group.nums <- thisdataset %>% 
+    filter(code==eachgroup,variable_type == 'Nums')
+  
+  mig.params <- read.csv(mig.file) %>% 
+    filter(GroupCode==eachgroup)
+  
+  group.params <- fg.list %>% 
+    filter(Code==eachgroup)
+  
+  group.name <- fg.list %>% 
+    filter(Code==eachgroup) %>% 
+    pull(LongName)
+  
+  if(nrow(mig.params)==2){
+    
+    sp.nums.plot <- group.nums %>% 
+      mutate(year_sim = rep(1:yearsrun,each = 365, times = group.params$NumCohorts),
+             day_year = rep(1:365,each = 1, times = (yearsrun*group.params$NumCohorts)),
+             age = as.factor(age)) %>% 
+      ggplot(aes(x= day_year, y = variable, colour = age)) +
+      geom_line()+
+      facet_wrap(year_sim ~ age, scales = "free_y") +
+      labs(title=group.name, subtitle = "Rows are simulation years,columns are age classes \n 
+       Lines: red = migration, green = return") +
+      scale_y_continuous(limits = c(0,NA)) +
+      geom_vline(xintercept = mig.params$StartTofY[1],  
+                 color = "coral4", size=0.7) +
+      geom_vline(xintercept = (mig.params$StartTofY[1] + mig.params$Return_Period[1]),  
+                 color = "coral4",  size=0.7) +
+      geom_vline(xintercept = mig.params$EndTofY[1],  
+                 color = "forestgreen",  size=0.7, alpha = 0.5) +
+      geom_vline(xintercept = mig.params$EndTofY[1]+mig.params$Return_Period[1],  
+                 color = "forestgreen",  size=0.7, alpha = 0.5) 
+    #can be used for spawning, need table
+    # geom_vline(xintercept = 197,  
+    #            color = "dodgerblue3",  linetype = "dashed", size=0.7, alpha = 0.5) +
+    # geom_vline(xintercept = 243,  
+    #            color = "dodgerblue3", linetype = "dashed", size=0.7, alpha = 0.5) +
+    # geom_vline(xintercept = 152,  
+    #            color = "darkorange2",  linetype = "dashed", size=0.7, alpha = 0.5) +
+    # geom_vline(xintercept = 198,  
+    #            color = "darkorange2", linetype = "dashed", size=0.7, alpha = 0.5)
+    # 
+    ggsave(paste0(output_foldername, '/',eachgroup,"_daily_numbers.png"),sp.nums.plot, dpi= 300, width = 12, height = 10)
+    
+  }
+  
+  if(nrow(mig.params)==4){
+    
+    
+    sp.nums.plot <- group.nums %>% 
+      mutate(year_sim = rep(1:yearsrun,each = 365, times = group.params$NumCohorts),
+             day_year = rep(1:365,each = 1, times = (yearsrun*group.params$NumCohorts)),
+             age = as.factor(age)) %>% 
+      ggplot(aes(x= day_year, y = variable, colour = age)) +
+      geom_line()+
+      facet_wrap(year_sim ~ age, scales = "free_y") +
+      labs(title=group.name, subtitle = "Rows are simulation years,columns are age classes \n 
+       Lines: red = migration, green = return, blue = second migration, orange = second return") +
+      scale_y_continuous(limits = c(0,NA)) +
+      geom_vline(xintercept = mig.params$StartTofY[1],  
+                 color = "coral4", size=0.7) +
+      geom_vline(xintercept = (mig.params$StartTofY[1] + mig.params$Return_Period[1]),  
+                 color = "coral4",  size=0.7) +
+      geom_vline(xintercept = mig.params$EndTofY[1],  
+                 color = "forestgreen",  size=0.7, alpha = 0.5) +
+      geom_vline(xintercept = mig.params$EndTofY[1]+mig.params$Return_Period[1],  
+                 color = "forestgreen",  size=0.7, alpha = 0.5) +
+      geom_vline(xintercept = mig.params$StartTofY[3],  
+                 color = "dodgerblue3",  linetype = "dashed", size=0.7, alpha = 0.5) +
+      geom_vline(xintercept = mig.params$StartTofY[3] + mig.params$Return_Period[3],  
+                 color = "dodgerblue3", linetype = "dashed", size=0.7, alpha = 0.5) #+
+    # geom_vline(xintercept = 152,  
+    #            color = "darkorange2",  linetype = "dashed", size=0.7, alpha = 0.5) +
+    # geom_vline(xintercept = 198,  
+    #           color = "darkorange2", linetype = "dashed", size=0.7, alpha = 0.5)
+    # 
+    ggsave(here(paste0(eachgroup,"_daily_numbers.png")),sp.nums.plot, dpi= 300, width = 12, height = 10)
+  }
+  
+}
+
+
+
+
+year_plot <- function(foldername, output_foldername, yearsrun, output_freqyrs, thisncfile, fg.list, mig.file, thisvariabletype){
   
   #read functional group file
-  fg.list <- read_csv(here(func_grouplist)) %>% 
-    dplyr::select(Code, IsTurnedOn, GroupType, NumCohorts, name, longname) %>% 
+  fg.list <- read_csv(fg.file) %>% 
+    dplyr::select(Code, IsTurnedOn, GroupType, NumCohorts, Name, LongName) %>% 
     filter(!Code %in% c("DIN","DL"))
   
   #get vertebrate names for nc file
   vert.groups <- fg.list %>% 
     filter(IsTurnedOn==1) %>% 
+    filter(Code == 'BFT')%>%
     filter(GroupType == "FISH" | GroupType == "SHARK" | GroupType == "BIRD"| GroupType == "MAMMAL") %>% 
-    dplyr::select(name) %>% .$name
+    dplyr::select(Name) %>% .$Name
   
   #open nc file
-  nc <- open.nc(this.output.nc)
-  nc.data <- read.nc(nc)
+  # nc <- open.nc(here(foldername,output_foldername, this.output.nc))
+  # nc.data <- read.nc(nc)
   
-  group.atlantis.data <- lapply(vert.groups, get.nc.data, thisncfile = nc) %>% 
+  group.atlantis.data <- lapply(vert.groups, get.nc.data, thisncfile , fg.file = fg.file ) %>% 
     bind_rows()
   
   #this can be changed, right now just plotting numbers
   
-  thisvariabletype <- "Nums"
+  
   thisdataset <- group.atlantis.data %>% 
     filter(!code %in% c("DIN","DL")) %>% 
     filter(variable_type==thisvariabletype) %>% 
     mutate(age = as.factor(age))
   
-  write_csv(thisdataset, file=paste0(thisvariabletype,".csv"))
+  write_csv(thisdataset, file=paste0(output_foldername,'/',thisvariabletype,".csv"))
 
-  folder.paths <- here(paste0(c(foldername)),output_foldername)
-  
-  model.ver <- 1:length(folder.paths)
-  
-  theseyears <- 1:yearsrun
-  
-  thistimestep <- (yearsrun*365)/output_freqyrs #this is max number of timesteps/73 output frequency
-  
-  maxtimestep <- yearsrun*365
-  
-  mig.table <- read_csv(mig.file)
-  
-  mig.species <- mig.table %>% 
+ 
+  mig.species <- read.csv(mig.file) %>% 
     distinct(GroupCode) %>% 
     pull(GroupCode)
   
   lapply(mig.species, plot_migrations, thisdataset, mig.table, fg.list)
     
 }
-
-plot_migrations <- function(eachgroup, thisdataset, mig.table, fg.list){
-  
-  group.nums <- thisdataset %>% 
-    filter(code==eachgroup)
-  
- mig.params <- mig.table %>% 
-   filter(GroupCode==eachgroup)
- 
- group.params <- fg.list %>% 
-   filter(GroupCode==eachgroup)
- 
- group.name <- fg.list %>% 
-   filter(GroupCode==eachgroup) %>% 
-   pull(longname)
-    
-  sp.nums.plot <- group.nums %>% 
-    mutate(year_sim = rep(1:yearsrun,each = 365, times = group.params$NumCohorts),
-           day_year = rep(1:365,each = 1, times = (yearsrun*group.params$NumCohorts)),
-           age = as.factor(age)) %>% 
-    ggplot(aes(x= day_year, y = variable, colour = age)) +
-    geom_line()+
-    facet_wrap(year_sim ~ age, scales = "free_y") +
-    labs(title=group.name, subtitle = "Rows are simulation years,columns are age classes \n 
-       Lines: red = migration, green = return, orange = spawning") +
-    scale_y_continuous(limits = c(0,NA)) +
-    geom_vline(xintercept = mig.params$StartTofY,  
-               color = "coral4", size=0.7) +
-    geom_vline(xintercept = (mig.params$startTofY + mig.params$Return_Period),  
-               color = "coral4",  size=0.7) +
-    geom_vline(xintercept = mig.params$EndTofY,  
-               color = "forestgreen",  size=0.7, alpha = 0.5) +
-    geom_vline(xintercept = mig.params$EndTofY+ReturnPeriod,  
-               color = "forestgreen",  size=0.7, alpha = 0.5) +
-    geom_vline(xintercept = 197,  
-               color = "dodgerblue3",  linetype = "dashed", size=0.7, alpha = 0.5) +
-    geom_vline(xintercept = 243,  
-               color = "dodgerblue3", linetype = "dashed", size=0.7, alpha = 0.5) +
-    geom_vline(xintercept = 152,  
-               color = "darkorange2",  linetype = "dashed", size=0.7, alpha = 0.5) +
-    geom_vline(xintercept = 198,  
-               color = "darkorange2", linetype = "dashed", size=0.7, alpha = 0.5)
-  
-  ggsave(here("chc_daily_numbers.png"),chc.nums.plot, dpi= 300, width = 12, height = 10)
-  
-  
-}
-
 
