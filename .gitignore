@@ -7,13 +7,10 @@
 /Run_Code/
 /Setup_Files/
 /Figures/
-
 #files
 *.html
-
 # restricted files
 comland*.rds
-
 # folders
 researchDocs
 other
@@ -21,7 +18,6 @@ output
 .svn
 atlantis
 outputFolder
-
 # ignore all files in testing except prm
 /currentVersion/*.*
 !/currentVersion/at_biology.prm
@@ -46,7 +42,6 @@ outputFolder
 # shell script to run
 !/currentVersion/RunAtlantis.sh
 !/currentVersion/vertebrate_init_length_cm_Adjusted.csv
-
 #Geometry/NEUS 1-5 Map.R
 #Geometry/Neus 1-5.pdf
 #Geometry/Neus Faces.pdf
@@ -60,4 +55,5 @@ testing/tsfiles/roms_cobalt_flows_03242020_1980_1989.nc
 testing/tsfiles/roms_cobalt_flows_03242020_1980_1989.nc
 diagnostics/Obs_Hindcast_Group_Progress.xlsx
 #diagnostics/*.xlsx
-
+Dockerfile
+Dockerfile_6645
