@@ -648,7 +648,7 @@ make_atlantis_diagnostic_figures = function(
   if(plot.recruits|plot.all){
     
     # Recruits TS
-    ssb.recruits = readRDS(paste0(out.dir,'ssb_recruits.RDS'))
+    ssb.recruits = readRDS(paste0(out.dir,'ssb_recruits.rds'))
     
     temp.plot.1 = atlantistools::plot_line(ssb.recruits, y = 'rec')
     temp.plot.1 = ggplot2::update_labels(temp.plot.1,labels = list(x = 'Time (days)', y = 'Numbers'))

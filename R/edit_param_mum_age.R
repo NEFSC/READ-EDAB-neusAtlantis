@@ -19,8 +19,8 @@ get_param_mum_age = function(bio.prm, write.output = F, output.dir, out.name ){
   for(i in 1:length(bio.lines.id)){
     mum.group = bio.lines[bio.lines.id[i] + 1 ]
     mum.split = strsplit(mum.group,split = "\t| |  ")[[1]]
-    if(length(mum.split)>10){print(paste0(group.names[i],' has ',length(mum.split)-10,' trailing tabs'))}
-    if(length(mum.split)<10){print(paste0(group.names[i],' has only',10-length(mum.split),' values'))}
+    if(length(mum.split)>10){print(paste0(group.names[i],' has ',length(mum.split)-10,' trailing tabs ',i))}
+    if(length(mum.split)<10){print(paste0(group.names[i],' has only',10-length(mum.split),' values ',i))}
     out.df[i,2:11] = mum.split
   }
   if(write.output){

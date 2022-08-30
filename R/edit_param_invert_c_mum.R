@@ -1,4 +1,15 @@
 #Function to edit C/mum parameters from biology.prm
+get_param_invert_c_mum = function(bio.file,group){
+  
+  bio.lines = readLines(bio.file)
+  mum.line = grep(paste0('mum_',group),bio.lines)
+  C.line = grep(paste0('C_',group),bio.lines)
+  
+  mum.out = strsplit(bio.lines[mum.line],' |\t')[[1]][2]
+  c.out = strsplit(bio.lines[C.line],' |\t')[[1]][2]
+  
+  return(data.frame(mum = as.numeric(mum.out), c = as.numeric(c.out),stringsAsFactors = F))
+}
 
 edit_param_invert_c_mum = function(bio.file,group,C = NA, mum = NA, scalar = 10,new.file = F, new.name = NA){
   
@@ -21,7 +32,7 @@ edit_param_invert_c_mum = function(bio.file,group,C = NA, mum = NA, scalar = 10,
   bio.lines[C.line] = new.C
   
   if(new.file == F){
-    writeLines(bio.lines, con = bio.prm)
+    writeLines(bio.lines, con = bio.file)
   }else{
     file.copy(bio.file, new.name, overwrite = T)
     writeLines(bio.lines, con = new.name )

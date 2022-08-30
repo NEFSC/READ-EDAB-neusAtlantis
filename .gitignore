@@ -3,6 +3,10 @@
 .RData
 .Ruserdata
 *.Rproj
+/Atlantis_Runs/
+/Run_Code/
+/Setup_Files/
+/Figures/
 
 #files
 *.html
@@ -19,29 +23,29 @@ atlantis
 outputFolder
 
 # ignore all files in testing except prm
-/CurrentVersion/*.*
-!/CurrentVersion/at_biology.prm
-!/CurrentVersion/at_economics.prm
-!/CurrentVersion/at_force_LINUX.prm
-!/CurrentVersion/at_force_WIN.prm
-!/CurrentVersion/at_harvest.prm
-!/CurrentVersion/at_physics.prm
-!/CurrentVersion/at_run.prm
+/currentVersion/*.*
+!/currentVersion/at_biology.prm
+!/currentVersion/at_economics.prm
+!/currentVersion/at_force_LINUX.prm
+!/currentVersion/at_force_WIN.prm
+!/currentVersion/at_harvest.prm
+!/currentVersion/at_physics.prm
+!/currentVersion/at_run.prm
 # except nc
-!/CurrentVersion/neus_init_nc
+!/currentVersion/neus_init_nc
 # except csv
-!/CurrentVersion/neus_fisheries.csv
-!/CurrentVersion/neus_groups.csv
+!/currentVersion/neus_fisheries.csv
+!/currentVersion/neus_groups.csv
 # except bgm
-!/CurrentVersion/neus_boxes.bgm
+!/currentVersion/neus_boxes.bgm
 # except rmd
-!/CurrentVersion/*.Rmd
+!/currentVersion/*.Rmd
 # except altlantis
-!/CurrentVersion/*.exe
-!/CurrentVersion/run_command.txt
+!/currentVersion/*.exe
+!/currentVersion/run_command.txt
 # shell script to run
-!/CurrentVersion/RunAtlantis.sh
-!/CurrentVersion/vertebrate_init_length_cm_Adjusted.csv
+!/currentVersion/RunAtlantis.sh
+!/currentVersion/vertebrate_init_length_cm_Adjusted.csv
 
 #Geometry/NEUS 1-5 Map.R
 #Geometry/Neus 1-5.pdf
