@@ -145,7 +145,7 @@ process_atl_output = function(param.dir,
                                   prm_run = param.ls$run.prm,
                                   convert_names = T)
     #Normalize proprotions so they always sum to 1
-    dietcheck.tot = data.dietcheck.orig %>%
+    dietcheck.tot = data.dietcheck %>%
       group_by(time,pred,agecl)%>%
       summarise(atoutput.tot = sum(atoutput,na.rm=T))
     
