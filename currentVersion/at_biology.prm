@@ -16103,7 +16103,7 @@ KDENR_WOL
 1500000
 
 KDENR_SDF
-30000000
+120000000
 
 KDENR_FDF
 8.6E8
@@ -16414,7 +16414,7 @@ BHalpha_BPF 1e+08
 BHalpha_GOO 12E10
 BHalpha_MEN 5e+09   
 BHalpha_FDE 1e+08   
-BHalpha_COD 4.5E10
+BHalpha_COD 6E10
 BHalpha_SHK 8e+09    
 BHalpha_OHK 1e+08   
 BHalpha_POL 5e+08  
@@ -16470,6 +16470,7 @@ BHbeta_PLA 3e+12
 BHbeta_FOU 3e+12     
 BHbeta_FLA 3e+12     
 BHbeta_BFT 3e+12     
+BHbeta_TUN 3e+12   
 BHbeta_TUN 3e+12     
 BHbeta_BIL 3e+12     
 BHbeta_MPF 1E11
