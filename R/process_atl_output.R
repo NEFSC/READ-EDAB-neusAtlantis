@@ -213,6 +213,7 @@ process_atl_output = function(param.dir,
     saveRDS(data.dietcheck,file = paste0(out.dir,'data_dietcheck.rds'))
   }
   
+  rm(data.dietcheck.orig,dietcheck.tot)
   gc()
   
 # Main NetCDF objects -----------------------------------------------------
@@ -466,13 +467,17 @@ process_atl_output = function(param.dir,
   bind.save(spatial.biomass.stanza,'biomass_spatial_stanza')
   
   rm(numbers,numbers.age,numbers.box,
-     RN.box,SN.box,RN.age,SN.age,
+     RN.SN.age,RN.box,SN.box,RN.age,SN.age,
      SN.age.mean,RN.age.mean,length.age,
      biomass,biomass.box,biomass.box.invert,
      biomass.age,biomass.age.invert,
-     spatial.biomass.stanza)
+     spatial.biomass.stanza,
+     spatial.biomass,spatialBiomass,
+     spatialNumbers, weight,
+     rawdata.main)
   
-# PROD netCDF objects -----------------------------------------------------
+  gc()
+# PROD netCDF objectsspatialBiomass# PROD netCDF objects -----------------------------------------------------
   
   #Read in raw untransformed data from prod.nc file
   
@@ -497,11 +502,37 @@ process_atl_output = function(param.dir,
                                        fgs = param.ls$groups.file, prm_run = param.ls$run.prm,
                                        bboxes = bboxes))
     
-    bio.consumed = atlantistools::calculate_consumed_biomass(eat = rawdata.prod[[1]],
-                                                             grazing = rawdata.prod[[2]],
-                                                             dm = data.dietcheck,
-                                                             vol = vol,
-                                                             bio_conv = bio.conv)
+    ##Recreate bio.consumed manually without full_join
+    data_eat = bind_rows(rawdata.prod[[1]], rawdata.prod[[2]])
+    ts_eat = sort(unique(data_eat$time))
+    ts_dm = sort(unique(data.dietcheck$time))
+    matching = sum(ts_eat %in% ts_dm)/length(ts_eat)
+    boxvol = agg_data(vol, groups = c('polygon','time'),out = 'vol', fun = sum)
+    
+    pred.names = unique(data.dietcheck$pred)
+    bio.consumed = list()
+    
+    for(i in 1:length(pred.names)){
+      bio.consumed[[i]] = data_eat %>%
+        filter(species == pred.names[i])%>%
+        left_join(boxvol, by = c('polygon','time')) %>%
+        dplyr::mutate_(.dots = stats::setNames(list(~atoutput * vol), "atoutput")) %>%
+        dplyr::mutate_(.dots = stats::setNames(list(~atoutput * bio.conv), "atoutput"))%>%
+        dplyr::full_join(filter(data.dietcheck,pred == pred.names[i]),by = c(species = "pred","time", "agecl"))%>%
+        dplyr::filter_(~time %in% ts_eat) %>%
+        dplyr::rename_(.dots = c(pred = "species"))
+      print(pred.names[i])
+      gc()
+    }
+    bio.consumed = bind_rows(bio.consumed)
+    saveRDS(bio.consumed,paste0(out.dir,'biomass_consumed.rds'))
+    rm(bio.consumed)
+    gc()
+    # bio.consumed = atlantistools::calculate_consumed_biomass(eat = rawdata.prod[[1]],
+    #                                                          grazing = rawdata.prod[[2]],
+    #                                                          dm = data.dietcheck,
+    #                                                          vol = vol,
+    #                                                          bio_conv = bio.conv)
     
     eat.age = atlantistools::agg_data(data = rawdata.prod[[1]], groups = c('species','time','agecl'),fun = mean)
     grazing = atlantistools::agg_data(data = rawdata.prod[[2]], groups = c('species','time'),fun = mean)
@@ -580,9 +611,9 @@ process_atl_output = function(param.dir,
   saveRDS(grazing,paste0(out.dir,'grazing.rds'))
   saveRDS(eat.age,paste0(out.dir,'eat_age.rds'))
   
-  saveRDS(bio.consumed,paste0(out.dir,'biomass_consumed.rds'))
+  
 
-  rm(grazing,eat.age,bio.consumed)
+  rm(grazing,eat.age)
 
 # Do Recruitment ----------------------------------------------------------
   ssb.recruits = atlantistools::load_rec(yoy = param.ls$yoy, ssb = param.ls$ssb,prm_biol = param.ls$biol.prm )
