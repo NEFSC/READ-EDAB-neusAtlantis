@@ -259,7 +259,7 @@ process_atl_output = function(param.dir,
     #numbers
     numbers = atlantistools::agg_data(data = rawdata.main[[1]], groups = c('species','time'), fun = sum)
     numbers.age = atlantistools::agg_data(data = rawdata.main[[1]], groups = c('species','agecl','time'), fun = sum)
-    numbers.box[[i]] = atlantistools::agg_data(data = rawdata.main[[1]], groups = c('species','polygon','time'), fun = sum)
+    numbers.box = atlantistools::agg_data(data = rawdata.main[[1]], groups = c('species','polygon','time'), fun = sum)
     
     RN.box = atlantistools::agg_data(data = rawdata.main[[3]], groups = c('species','polygon','time'), fun = sum)
     SN.box = atlantistools::agg_data(data = rawdata.main[[2]], groups = c('species','polygon','time'), fun = sum)
@@ -513,7 +513,7 @@ process_atl_output = function(param.dir,
     bio.consumed = list()
     
     for(i in 1:length(pred.names)){
-      bio.consumed[[i]] = data_eat %>%
+       consumed_bio = data_eat %>%
         filter(species == pred.names[i])%>%
         left_join(boxvol, by = c('polygon','time')) %>%
         dplyr::mutate_(.dots = stats::setNames(list(~atoutput * vol), "atoutput")) %>%
@@ -521,6 +521,13 @@ process_atl_output = function(param.dir,
         dplyr::full_join(filter(data.dietcheck,pred == pred.names[i]),by = c(species = "pred","time", "agecl"))%>%
         dplyr::filter_(~time %in% ts_eat) %>%
         dplyr::rename_(.dots = c(pred = "species"))
+       bio.consumed[[i]] = consumed_bio %>%
+         dplyr::filter_(~!is.na(atoutput.x)) %>% 
+         dplyr::filter_(~!is.na(atoutput.y)) %>%
+         dplyr::mutate_(.dots = stats::setNames(list(~atoutput.x * atoutput.y), "atoutput")) %>%
+         dplyr::select_(.dots = names(.)[!names(.) %in% c("atoutput.x", "vol", "atoutput.y")])%>%
+         ungroup()
+       
       print(pred.names[i])
       gc()
     }
