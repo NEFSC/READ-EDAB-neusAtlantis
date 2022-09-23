@@ -37,32 +37,31 @@ plot_run_comparisons = function(model.dirs,model.names,plot.raw = T,
   
   model.prefix = lapply(model.files,function(x) {return(strsplit(x[1],'\\.')[[1]][1])})
   
-  model.bio = sapply(model.prefix,function(x) {return(paste0(x,'BiomIndx.txt'))})
+  model.bio = lapply(model.prefix,function(x) {return(paste0(x,'BiomIndx.txt'))})
   
-  bio.ls = list()
-  for(i in 1:length(model.dirs)){
-    
-    bio.run = read.table(file = paste0(model.dirs[i],model.bio[i]), header = T)  
-    
-    if(!is.null(groups)){
-      bio = lapply(bio,function(x) {return(subset(x,select = c('Time',groups)))})
-    }
-    
-    bio.long.run = tidyr::gather(bio.run,key = 'Group', 'Biomass', -Time)
-    
-    bio.long.run$Model = model.names[i]
-    
-    nc = ncdf4::nc_open(paste0(model.dirs,model.prefix,'.nc'))
-    t.start = strsplit(ncdf4::ncatt_get(nc,'t')$units,'\\ ')[[1]][3]
-    
-    ncdf4::nc_close(nc)
-    
-    bio.long.run$Real.Time = as.Date(bio.long.run$Time, origin = t.start)
-    
-    bio.ls[[i]] = bio.long.run
-  }
+  bio = lapply(paste0(model.dirs,model.bio),function(x) {return(read.table(file = x,header =T))})
 
-  bio.all = dplyr::bind_rows(bio.ls) %>%
+  fgs = colnames(bio[[1]])[2:ncol(bio[[1]])]
+  
+  #If specifying groups, subset only those
+  if(!is.null(groups)){
+    bio = lapply(bio,function(x) {return(subset(x,select = c('Time',groups)))})
+  }
+  
+  #convert each model to long format
+  bio.long = lapply(bio,function(x) {return(tidyr::gather(x,key = 'Group','Biomass',-Time))})
+  
+  for(i in 1:length(bio.long)){bio.long[[i]]$Model = model.names[i]}
+  
+  nc = lapply(paste0(model.dirs,model.prefix,'.nc'),function(x) return(ncdf4::nc_open(x)))
+  
+  t.start = lapply(nc,function(x) return(strsplit(ncdf4::ncatt_get(x,'t')$units,'\\ ')[[1]][3]))
+ 
+  lapply(nc,function(x) ncdf4::nc_close(x)) 
+  
+  for(i in 1:length(bio.long)){ bio.long[[i]]$Real.Time = as.Date(bio.long[[i]]$Time, origin = t.start[[i]])}
+
+  bio.all = dplyr::bind_rows(bio.long) %>%
     dplyr::mutate(Model = factor(Model,levels= model.names))
   
   if(remove.init){
