@@ -8,8 +8,9 @@ library(dplyr)
 source(here::here('R','make_recruit_diagnostics.R'))
 #### CHANGE THIS FOR EACH RUN ###
 #Set the "Name" of the run and the directory of output files
-run.name = 'PL_DF_SlowSink_4'
-run.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
+run.name = 'GOO_etc_24b'
+# run.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
+run.dir = here::here('Atlantis_Runs',run.name,'')
 ####_________________________####
 
 #Set Parameter file names
@@ -22,7 +23,7 @@ fgs.file = here::here('currentVersion','neus_groups.csv')
 biomind.file = paste0(run.dir,'/neus_outputBiomIndx.txt')
 
 #Read in Survdat biomass data
-realBiomass.survdat <- readRDS(here::here("data/sweptAreaBiomassNEUS.rds")) %>%
+realBiomass.survdat <- readRDS(here::here("data/sweptAreaBiomassNEUS.RDS")) %>%
   dplyr::filter(variable %in% c("tot.biomass","tot.bio.var")) %>%
   dplyr::mutate(variable = ifelse(as.character(variable)=="tot.biomass","biomass",as.character(variable))) %>%
   dplyr::mutate(variable = ifelse(as.character(variable)=="tot.bio.var","var",as.character(variable))) %>%
@@ -30,7 +31,7 @@ realBiomass.survdat <- readRDS(here::here("data/sweptAreaBiomassNEUS.rds")) %>%
   dplyr::mutate(value=ifelse(grepl("kg\\^2$",units),value/1e6,value)) %>%
   dplyr::select(-units)
 
-realBiomass.stockSmart = readRDS(here::here('data/StockSMARTData.Rds'))%>%
+realBiomass.stockSmart = readRDS(here::here('data/stockSMARTData.RDS'))%>%
   dplyr::filter(variable == 'biomass')%>%
   group_by(Code,YEAR,Species,Functional_Group,variable,isFishedSpecies)%>%
   summarise(value = sum(value,na.rm=T))
@@ -91,7 +92,7 @@ write.csv(reasonable.all, file = paste0(run.dir,'Post_Processed/',run.name,'_rea
   cohort = diag_cohortBiomass(fgs = fgs.file,
                               mortality = paste0(run.dir,'neus_outputMort.txt'),
                               agebiomind = paste0(run.dir,'neus_outputAgeBiomIndx.txt'),
-                              neusPriority =here::here('Diagnostics','neus_atlantis_group_priority.csv') )%>%
+                              neusPriority =here::here('diagnostics','neus_atlantis_group_priority.csv') )%>%
     rename(pass.cohort = 'pass')
 
 #Run recruit diagnostic
