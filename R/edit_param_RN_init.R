@@ -5,7 +5,7 @@
 # group.change = 'MAK'
 # new.filename = here::here('currentVersion','neus_init_test2.nc')
 # out.file = here::here('diagnostics','Initial_Size_Age_test.csv')
-edit_param_RN_init = function(init.file,fgs.file,group.change = NULL, new.scale = 2,overwrite = F, new.filename,out.file){
+edit_param_RN_init = function(init.file,fgs.file,group.change = NULL, new.scale = NA,overwrite = F, new.filename,out.file){
   library(ncdf4)
   library(dplyr)
   
@@ -77,3 +77,11 @@ edit_param_RN_init = function(init.file,fgs.file,group.change = NULL, new.scale 
   write.csv(init.rn.sn, out.file,row.names = F)
   
 }
+edit_param_RN_init(
+  init.file =  here::here('currentVersion','neus_init.nc'),
+  fgs.file =  here::here('currentVersion','neus_groups.csv'),
+  group.change = NULL,
+  new.scale = 2,
+  overwrite = T,
+  out.file = here::here('diagnostics','Initial_Size_Age.csv')
+)
