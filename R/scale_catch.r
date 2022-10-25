@@ -1,7 +1,7 @@
 library(dplyr)
 library(here)
 
-source(here::here('R','scale_catch.R'))
+source(here::here('R','scale_catch_functions.r'))
 # Data file (sep = ',') follows the following format:
 
 # Col 1: 'Group' - Atlantis group name, e.g HER, MAK, etc.  If the first row says "ALL", the changes will be applied to all groups
