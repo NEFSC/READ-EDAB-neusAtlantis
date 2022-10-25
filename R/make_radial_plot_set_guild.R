@@ -13,9 +13,9 @@ end.time = 19724
 set.names = paste0('Run_Set_',1:3)
 
 set.dirs = c(
-  here::here('Atlantis_Runs/misc_mumC_1'),
-  here::here('Atlantis_Runs/misc_mumC_2'),
-  here::here('Atlantis_Runs/misc_mumC_3')
+  here::here('Atlantis_Runs/HER_CatchSpinup_1'),
+  here::here('Atlantis_Runs/HER_BHalpha_1'),
+  here::here('Atlantis_Runs/HER_mumC_1')
 )
 
 #Define Guild definitions
@@ -66,14 +66,16 @@ for(i in 1:length(set.names)){
   bio.all.ls[[i]] = bind_rows(set.bio.ls)
 }
 bio.all = bind_rows(bio.all.ls)
+saveRDS(bio.all,here::here('diagnostics','run_set_test_data_raw.RDS'))
 
 bio.diff = bio.all %>%
   left_join(spp2guild)%>%
   group_by(set.name,run.name,FuncGroup)%>%
   summarise(Value = sum(Value,na.rm=T))%>%
   left_join(bio.base.guild) %>%
-  mutate(Value.diff = Value/Value.base)
+  mutate(Value.diff = Value-Value.base)
 
+saveRDS(bio.diff,here::here('diagnostics','run_set_test_data_diff.RDS'))
 
 # par(mfrow = c(1,3),oma = c(0,0,0,0))
 p.list = list()
@@ -86,7 +88,7 @@ for(i in 1:length(set.names)){
   
   p.list[[i]] = make_radar_plot(
     data = bio.diff.set,
-    plot.max = 1,
+    plot.max = 2,
     plot.min = 0,
     ngrid = 3,
     plot.cols = RColorBrewer::brewer.pal(4,'Set2')

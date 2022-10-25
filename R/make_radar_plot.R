@@ -1,8 +1,12 @@
-# data = bio.diff.set
+# data = readRDS(here::here('diagnostics','run_set_test_data_diff.RDS'))%>%
+#   filter(set.name == 'Run_Set_1')%>%
+#   ungroup()%>%
+#   select(run.name,FuncGroup,Value.diff)%>%
+#   rename(Group = 'run.name')
 # plot.cols = RColorBrewer::brewer.pal(4,'Set2')
-# plot.max = 1
+# plot.max = 2
 # plot.min = 0
-# ngrid = 4
+# ngrid = 3
 # margin.scale = 1.5
 
 make_radar_plot = function(data,plot.max,plot.min,ngrid,margin.scale = 1.5,plot.cols){
@@ -11,11 +15,21 @@ make_radar_plot = function(data,plot.max,plot.min,ngrid,margin.scale = 1.5,plot.
   set.min = min(data$Value.diff)
   set.max = max(data$Value.diff)
   
-  data = data %>%
-    mutate(Value.diff = (Value.diff-set.min)/(set.max-set.min))
-  
+  data$Value.diff.norm = NA
+  for(i in 1:nrow(data)){
+    pos = data$Value.diff[data$Value.diff>=0]
+    neg = data$Value.diff[data$Value.diff<=0]
+    
+    if(data$Value.diff[i]<0){
+      data$Value.diff.norm[i] = ((data$Value.diff[i]-min(neg))/(max(neg)-min(neg))) -1
+    }else if(data$Value.diff[i]>0){
+      data$Value.diff.norm[i] = ((data$Value.diff[i]-min(pos))/(max(pos)-min(pos)))
+    }else{
+      data$Value.diff.norm[i] = 0
+    }
+  }
+  data$Value.diff.norm = data$Value.diff.norm +1
 
-  
   run.names = unique(data$Group)
   group.names = sort(unique(data$FuncGroup))
   group.names.plot = sapply(group.names,function(x){
@@ -29,19 +43,21 @@ make_radar_plot = function(data,plot.max,plot.min,ngrid,margin.scale = 1.5,plot.
   grid.seq = seq(plot.min, plot.max,length.out = ngrid)
   group.seq = seq(0,2*pi,length.out = ngroup+1)[-(ngroup+1)]
   
-  grid.ls = list()
-  for(i in 1:ngrid){
-    x.seq = grid.seq[i]*cos(group.seq)
-    y.seq = grid.seq[i]*sin(group.seq)
-    grid.ls[[i]] = data.frame(x = x.seq, y = y.seq,group = i)
-  }
-  grid.df = bind_rows(grid.ls)
+  # grid.ls = list()
+  # for(i in 1:ngrid){
+  #   x.seq = grid.seq[i]*cos(group.seq)
+  #   y.seq = grid.seq[i]*sin(group.seq)
+  #   grid.ls[[i]] = data.frame(x = x.seq, y = y.seq,group = i)
+  # }
+  # grid.df = bind_rows(grid.ls)
+  mid.grid = data.frame(x = cos(group.seq),y = sin(group.seq))
+  upper.grid = data.frame(x = plot.max*cos(group.seq),y = plot.max*sin(group.seq))
   
   radii.df = data.frame(
     x.0 = rep(0,ngroup),
     y.0 = rep(0,ngroup),
-    x.1 = cos(group.seq),
-    y.1 = sin(group.seq)
+    x.1 = plot.max*cos(group.seq),
+    y.1 = plot.max*sin(group.seq)
   )
   
   plot.data.ls = list()
@@ -50,8 +66,8 @@ make_radar_plot = function(data,plot.max,plot.min,ngrid,margin.scale = 1.5,plot.
       filter(Group == run.names[i])%>%
       mutate(
         grid.pos = group.seq,
-        x = Value.diff*cos(grid.pos),
-        y = Value.diff*sin(grid.pos)
+        x = Value.diff.norm*cos(grid.pos),
+        y = Value.diff.norm*sin(grid.pos)
         )
   }
   plot.data.df = bind_rows(plot.data.ls)
@@ -79,11 +95,12 @@ make_radar_plot = function(data,plot.max,plot.min,ngrid,margin.scale = 1.5,plot.
     }
     )
    
-  p =ggplot()+
+  p=ggplot()+
     coord_fixed()+
-    geom_polygon(data = grid.df, aes(x=x,y=y,group = group),fill = 'transparent',color = 'grey',lty=2)+
+    geom_polygon(data = mid.grid, aes(x=x,y=y),fill = 'transparent',color = 'black',lty = 1, lwd = 1)+
+    geom_polygon(data = upper.grid, aes(x=x,y=y),fill = 'transparent',color = 'grey',lty = 1, lwd = 1)+
     geom_segment(data = radii.df,aes(x = x.0, y = y.0, xend = x.1, yend = y.1),lty = 2, color = 'black')+
-    geom_polygon(data = plot.data.df,aes(x=x,y=y,color = Group),fill = 'transparent')+
+    geom_polygon(data = plot.data.df,aes(x=x,y=y,color = Group),fill = 'transparent',lwd = 1.25)+
     geom_text(data = label.df,aes(x=x,y=y,label = label,angle = label.angle2,hjust = label.hjust),size = 3,parse =F)+
     ylim(-margin.scale*plot.max,margin.scale*plot.max)+
     xlim(-margin.scale*plot.max,margin.scale*plot.max)+
