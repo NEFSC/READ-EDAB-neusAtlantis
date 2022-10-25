@@ -10,20 +10,29 @@
 # steepness = 1.5
 # ref.run.dir = here::here('Atlantis_Runs','Dev_07282022','Post_Processed','Data/')
 # prescribed.age.scale = T
+# age.scale =  c(0.005,0.03,0.2,0.2,0.175,0.15,0.1,0.075,0.05,0.015)
 # # init.size.age =  here::here('currentVersion','vertebrate_init_length_cm.csv')
 # init.size.age = here::here('diagnostics','Initial_Size_Age.csv')
 # ss.adj.abund.file =  here::here('diagnostics','StockSmart_Adjusted_Abundance.csv')
+# overwrite = F
+# new.init.file = here::here('currentVersion','neus_init_test.nc')
 
 edit_init_age_distribution = function(bio.prm,
                                       fgs.file,
                                       ss.conv.file,
                                       ss.cat.file,
+                                      box.prop.file,
                                       peak.age,
                                       steepness,
-                                      presecriped.age.scale = F,
+                                      prescribed.age.scale = F,
+                                      age.scale = NA,
                                       ref.run.dir,
                                       init.size.age,
-                                      ss.adj.abund.file){
+                                      ss.adj.abund.file,
+                                      groups = NA,
+                                      init.file,
+                                      overwrite,
+                                      new.init.file){
     
   library(dplyr)
   library(ncdf4)
@@ -52,7 +61,10 @@ edit_init_age_distribution = function(bio.prm,
   
   ####Flag for predefined size at age####
   
-  age.scale = make_age_distribution(peak.age,steepness)
+  if(is.na(age.scale)){
+    age.scale = make_age_distribution(peak.age,steepness)
+  }
+  
   # plot(ages.scale,type='l')
   # age.scale = c(0.005,0.03,0.2,0.2,0.175,0.15,0.1,0.075,0.05,0.015)
   ####
@@ -168,7 +180,7 @@ edit_init_age_distribution = function(bio.prm,
     group_by(Code)%>%
     summarise(numbers = mean(numbers,na.rm=T),
               biomass.tot = mean(biomass.tot,na.rm=T))
-  write.csv(data.ss.final,file = ss.adj.abund.file,row.names = F)
+  # write.csv(data.ss.final,file = ss.adj.abund.file,row.names = F)
   
   data.combined = data.ss.final %>%
     left_join(fgs)
@@ -186,7 +198,13 @@ edit_init_age_distribution = function(bio.prm,
     filter(NumCohorts ==10)%>%
     mutate(biomass.N = biomass.tot * 1E9/20/5.7)
   
-  init.nc = nc_open(init.file)
+  if(overwrite == T){
+    init.nc = nc_open(init.file)  
+  }else{
+    file.copy(init.file,new.init.file,overwrite = T)
+    init.nc = nc_open(new.init.file)
+  }
+  
   varnames = names(init.nc$var)
   
   #Pull proportion at age and the size at age from initial conditions and apply to the reference biomass.n
@@ -223,10 +241,15 @@ edit_init_age_distribution = function(bio.prm,
   nc_close(init.nc)
   ref.num.age = bind_rows(ref.data.ls)
   
-  write.csv(ref.num.age, file = here::here('diagnostics','StockSmart_Initial_Numbers.csv'),row.names = F)
+  # write.csv(ref.num.age, file = here::here('diagnostics','StockSmart_Initial_Numbers.csv'),row.names = F)
   
   #Calculate box-level numbers based on box proportions
-  age.groups = unique(ref.num.age$Code)
+  if(is.na(groups)){
+    age.groups = unique(ref.num.age$Code)  
+  }else{
+    age.groups = groups
+  }
+  
   num.box.age.all.ls = list()
   for(i in 1:length(age.groups)){
     group.num = ref.num.age %>%
@@ -243,7 +266,7 @@ edit_init_age_distribution = function(bio.prm,
   
   num.box.age.all = bind_rows(num.box.age.all.ls)
   
-  write.csv(num.box.age.all, here::here('diagnostics','StockSmart_Numbers_Initial_Conditions.csv'),row.names = F)
+  # write.csv(num.box.age.all, here::here('diagnostics','StockSmart_Numbers_Initial_Conditions.csv'),row.names = F)
   
   #Reset Init Scalar to 1 for changed groups
   source(here::here('R','edit_param_init_scalar.R'))
@@ -260,7 +283,12 @@ edit_init_age_distribution = function(bio.prm,
                          )
   
   #Write new box-age numbers values to init.nc
-  init.nc = nc_open(here::here('currentVersion','neus_init.nc'),write = T)
+  
+  if(overwrite==T){
+    init.nc = nc_open(init.file,write = T)
+  }else{
+    init.nc = nc_open(new.init.file,write = T)
+  }
   varnames = names(init.nc$var)
   
   for(i in 1:length(age.groups)){
@@ -270,7 +298,7 @@ edit_init_age_distribution = function(bio.prm,
         filter(Code == age.groups[i],agecl == j)%>%
         left_join(fgs)
   
-      nc.name = grep(paste0(num.age.group$Name[i],j,'_Num'),varnames,value = T)
+      nc.name = grep(paste0(num.age.group$Name[i],j,'_Nums'),varnames,value = T)
   
       new.init = matrix(NA,nrow = 5, ncol = 30)
       new.init[1,] = num.age.group$measurement
