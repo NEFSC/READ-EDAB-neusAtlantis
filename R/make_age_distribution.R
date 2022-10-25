@@ -1,7 +1,7 @@
 #Function to generate an age distrubtion
 
-peak.age = 7
-steepness = 10
+# peak.age = 7
+# steepness = 10
 make_age_distribution = function(peak.age,steepness){
   
   peak.age2 = peak.age/10
@@ -10,7 +10,7 @@ make_age_distribution = function(peak.age,steepness){
   alpha = ((2*peak.age2)-1-(peak.age2*steepness))/(peak.age2 - 1)
   
   age.props = dbeta(ages,alpha,steepness)
-  age.props = signif(age.props/sum(age.props),2)
+  age.props = age.props/sum(age.props)
   
   # plot(ages,age.props,type = 'l')
   return(age.props)
