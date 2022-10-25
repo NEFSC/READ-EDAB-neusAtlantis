@@ -77,11 +77,12 @@ edit_param_RN_init = function(init.file,fgs.file,group.change = NULL, new.scale 
   write.csv(init.rn.sn, out.file,row.names = F)
   
 }
-edit_param_RN_init(
-  init.file =  here::here('currentVersion','neus_init.nc'),
-  fgs.file =  here::here('currentVersion','neus_groups.csv'),
-  group.change = NULL,
-  new.scale = 2,
-  overwrite = T,
-  out.file = here::here('diagnostics','Initial_Size_Age.csv')
-)
+
+# edit_param_RN_init(
+#   init.file =  here::here('currentVersion','neus_init.nc'),
+#   fgs.file =  here::here('currentVersion','neus_groups.csv'),
+#   group.change = NULL,
+#   new.scale = 2,
+#   overwrite = T,
+#   out.file = here::here('diagnostics','Initial_Size_Age.csv')
+# )

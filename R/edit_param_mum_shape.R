@@ -60,11 +60,11 @@ reshape_mumC = function(bio.prm, groups, mum.shape,overwrite = F, new.file.name,
   }
 }
 
-reshape_mumC(bio.prm = here::here('currentVersion','at_biology.prm'),
-             groups = c('MAK','WHK','MPF','BUT','GOO','COD','SHK','POL','RHK','BSB','SCU','RED','DRM','STB','HAD'),
-             mum.shape = c(0.05,0.3,2,2,1.75,1.5,1,0.75,0.5,0.15),
-             overwrite = T,
-             new.file.name = NA,
-             change.mum = T,
-             change.C = F
-             )
+# reshape_mumC(bio.prm = here::here('currentVersion','at_biology.prm'),
+#              groups = c('MAK','WHK','MPF','BUT','GOO','COD','SHK','POL','RHK','BSB','SCU','RED','DRM','STB','HAD'),
+#              mum.shape = c(0.05,0.3,2,2,1.75,1.5,1,0.75,0.5,0.15),
+#              overwrite = T,
+#              new.file.name = NA,
+#              change.mum = T,
+#              change.C = F
+#              )
