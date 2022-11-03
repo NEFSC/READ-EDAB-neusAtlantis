@@ -61,7 +61,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
     logData$Status[n] <- "Not complete"
     
     Sys.sleep(120)  
-    file.copy(paste0(param.dir,'/RunAtlantis_base.sh'),paste0(param.dir,'/RunAtlantis.sh'),overwrite = T)
+    file.copy(paste0(param.dir,'/RunAtlantis_base.sh'),paste0(param.dir,'/RunAtlantis.sh'),overwrite = T) 
   }
   
   while (notFinished) {
