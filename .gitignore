@@ -7,6 +7,7 @@
 /Run_Code/
 /Setup_Files/
 /Figures/
+/currentVersion/archive/
 
 #files
 *.html
@@ -46,6 +47,7 @@ outputFolder
 # shell script to run
 !/currentVersion/RunAtlantis.sh
 !/currentVersion/vertebrate_init_length_cm_Adjusted.csv
+
 
 #Geometry/NEUS 1-5 Map.R
 #Geometry/Neus 1-5.pdf

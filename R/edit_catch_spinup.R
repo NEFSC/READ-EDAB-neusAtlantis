@@ -46,7 +46,7 @@ edit_catch_spinup = function(catch.file,fgs.file, spinup.years = 20,groups,scala
 # edit_catch_spinup(catch.file = here::here('currentVersion','CatchFiles','total_catch.ts'),
 #                   fgs.file= here::here('currentVersion','neus_groups.csv'),
 #                   groups = 'HER',
-#                   scalar = 1,
-#                   overwrite = F,
+#                   scalar = 0,
+#                   overwrite = T,
 #                   new.filename = here::here('currentVersion','CatchFiles','total_catch_test.ts'),
 #                   spinup.years = 20)
