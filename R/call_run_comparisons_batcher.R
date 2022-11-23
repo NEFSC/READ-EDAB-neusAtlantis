@@ -3,7 +3,7 @@ library(dplyr)
 library(ggplot2)
 source(here::here('R','plot_run_comparisons_batcher.R'))
 
-batch.dir = here::here('Atlantis_Runs','Batcher_10312022')
+batch.dir = here::here('Atlantis_Runs','Batcher_MaxCohort_1')
 set.dirs = list.dirs(batch.dir,recursive = F)
 set.names = list.dirs(batch.dir,full.names = F,recursive = F)
 
