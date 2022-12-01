@@ -2,14 +2,15 @@
 library(dplyr)
 library(ggplot2)
 library(gridExtra)
+library(patchwork)
 
 run.dir = here::here('Atlantis_Runs','misc_BHalpha_2b','')
 run.bio.age = readRDS(paste0(run.dir,'/Post_Processed/Data/biomass_age.rds'))
 run.num.age = readRDS(paste0(run.dir,'/Post_Processed/Data/numbers_age.rds'))
 
 expected.age.prop = read.csv(here::here('diagnostics','expected_age_structure.csv'),as.is = T,header = T)
-colnames(expected.age.prop)[3:12] = 1:10
-expected.age.prop=reshape2::melt(expected.age.prop,id.vars = c('variable','fishing.level'),variable.name = 'agecl')
+colnames(expected.age.prop)[4:13] = 1:10
+expected.age.prop=reshape2::melt(expected.age.prop,id.vars = c('variable','fishing.level','fishing.level.label'),variable.name = 'agecl')
 
 fishing.intesity.df = read.csv(here::here('diagnostics','fishing_intensity.csv'),as.is = T)
 fishing.intesity.df$fishing.intensity[which(fishing.intesity.df$fishing.intensity %in% c('L','N'))] = 'L'
@@ -38,8 +39,8 @@ bio.age.prop = mean.bio.age %>%
          variable = 'Biomass')%>%
   left_join(spp2guild, by = c('species' = 'LongName'))%>%
   filter(!(FuncGroup %in% c('Other', 'NA','Shrimp')))%>%
-  ungroup()%>%
-  arrange(FuncGroup,fishing.intensity,species,agecl)
+  ungroup()
+  
 
 #Generate mean numbers at age for last 20 years of run
 mean.num.age = run.num.age %>%
@@ -60,7 +61,8 @@ num.age.prop = mean.num.age %>%
   ungroup()
 
 #Combine
-data.age.prop = bind_rows(bio.age.prop,num.age.prop)
+data.age.prop = bind_rows(bio.age.prop,num.age.prop)%>%
+  arrange(FuncGroup,fishing.intensity,species,agecl)
 ## Make header with ideal age structure
 
 header.unfished = expected.age.prop %>% filter(fishing.level == 'unfished')
@@ -70,27 +72,27 @@ header.unfished.plot = ggplot(expected.age.prop,aes(x = variable, y = value, fil
   geom_bar(stat = 'identity',position = position_stack(reverse = T))+
   coord_flip()+
   scale_fill_manual(name = 'Age Class',values = RColorBrewer::brewer.pal(10,'Paired'))+
-  ggtitle('Minimal Fishing')+
+  ggtitle('Minimally Fished (L)')+
   guides(fill = 'none')+
   theme(
     panel.grid = element_blank(),
     panel.background = element_rect(fill = 'transparent'),
-    plot.title = element_text(hjust = 0.5,size = 12),
+    plot.title = element_text(hjust = 0.5,size = 20),
     axis.title = element_blank(),
     axis.text.x = element_blank(),
     axis.ticks = element_blank(),
-    axis.text.y = element_text(size = 16)
+    axis.text.y = element_text(size = 18)
   )
 header.medium.plot = ggplot(header.medium,aes(x = variable, y = value, fill = agecl))+
   geom_bar(stat = 'identity',position = position_stack(reverse = T))+
   coord_flip()+
   scale_fill_manual(name = 'Age Class',values = RColorBrewer::brewer.pal(10,'Paired'))+
-  ggtitle('Moderately Fished')+
+  ggtitle('Moderately Fished (M)')+
   guides(fill = 'none')+
   theme(
     panel.grid = element_blank(),
     panel.background = element_rect(fill = 'transparent'),
-    plot.title = element_text(hjust = 0.5,size = 12),
+    plot.title = element_text(hjust = 0.5,size = 20),
     axis.title = element_blank(),
     axis.text = element_blank(),
     axis.ticks = element_blank()
@@ -99,157 +101,85 @@ header.high.plot = ggplot(header.high,aes(x = variable, y = value, fill = agecl)
   geom_bar(stat = 'identity',position = position_stack(reverse = T))+
   coord_flip()+
   scale_fill_manual(name = 'Age Class',values = RColorBrewer::brewer.pal(10,'Paired'))+
-  ggtitle('Highly Fished')+
+  ggtitle('Highly Fished (H)')+
   guides(fill = 'none')+
   theme(
     panel.grid = element_blank(),
     panel.background = element_rect(fill = 'transparent'),
-    plot.title = element_text(hjust = 0.5,size = 12),
+    plot.title = element_text(hjust = 0.5,size = 20),
     axis.title = element_blank(),
     axis.text = element_blank(),
     axis.ticks = element_blank()
   )
 
+#Try as single facet plot
+
 guild.names = sort(unique(bio.age.prop$FuncGroup))
 plot.ls = list()
 for(i in 1:length(guild.names)){
-  
-  
-  # bio.prop.guild = bio.age.prop %>%
-  #   filter(FuncGroup == guild.names[i])%>%
-  #   ungroup()%>%
-  #   arrange(fishing.intensity,species)
-  # bio.prop.guild$species = factor(bio.prop.guild$species,levels = unique(bio.prop.guild$species))
-  # 
-  # spp.guild = unique(bio.prop.guild$species)
-  #   
-  # bio.fishing.labs = data.frame(species = spp.guild,x = 1:length(spp.guild),y = 1.1) %>%
-  #   left_join(select(spp2guild,LongName,fishing.intensity),by = c('species' = 'LongName'))
-  # 
-  # #Format for numbers
-  # num.prop.guild = num.age.prop %>%
-  #   filter(FuncGroup == guild.names[i])%>%
-  #   ungroup()%>%
-  #   arrange(fishing.intensity,species)
-  # 
-  # num.prop.guild$species = factor(num.prop.guild$species,levels = unique(num.prop.guild$species))
-  # 
-  # spp.guild = unique(num.prop.guild$species)
-  # 
-  # num.fishing.labs = data.frame(species = spp.guild,x = 1:length(spp.guild),y = 1.1) %>%
-  #   left_join(select(spp2guild,LongName,fishing.intensity),by = c('species' = 'LongName'))
-  
+
   data.age.guild = data.age.prop %>%
     filter(FuncGroup == guild.names[i])
+  
+  data.age.guild$species = factor(data.age.guild$species, levels = rev(unique(data.age.guild$species)))
+  
   spp.guild = unique(data.age.guild$species)
-  fishing.labs = data.frame(species = spp.guild,x = 1:length(spp.guild),y = 1.1,variable = 'Numbers') %>%
+  fishing.labs = data.frame(species = rev(spp.guild),x = 1:length(spp.guild),y = 1.1,variable = 'Numbers') %>%
       left_join(select(spp2guild,LongName,fishing.intensity),by = c('species' = 'LongName'))
+  
 
   p = ggplot()+
-    geom_bar(data = data.age.guild,aes(x=species,y=value.prop,fill = factor(agecl),group = species),stat = 'identity',position = position_stack())+
-    geom_text(data = fishing.labs,aes(x=x,y=y,label = fishing.intensity))+
+    geom_bar(data = data.age.guild,aes(x=species,y=value.prop,fill = factor(agecl),group = species),stat = 'identity',position = position_stack(),width = 0.8)+
+    geom_text(data = fishing.labs,aes(x=x,y=y,label = fishing.intensity),size = 6)+
     facet_wrap(~variable)+
     scale_fill_manual(name = 'Age Class',values = RColorBrewer::brewer.pal(10,'Paired'))+
     scale_y_continuous(breaks = c(0,0.5,1),labels = c('0','0.5','1'))+
     ylab('')+
     xlab('')+
     ggtitle(guild.names[i])+
+    coord_fixed()+
     coord_flip()+
-    theme(axis.text.x = element_text(hjust = 1,size = 12),
+    theme(axis.text.x = element_text(hjust = 1,size = 15),
         panel.background = element_blank(),
-        plot.title = element_text(hjust = 0.5,size = 13),
-        axis.text.y = element_text(size = 10),
+        plot.title = element_text(hjust = 0.5,size = 22),
+        axis.text.y = element_text(size = 17),
+        strip.text = element_text(size = 18),
+        strip.background = element_rect(fill = 'transparent')
+        
         )
   if(i  == length(guild.names)){
     plot.ls[[i]] = p +
           guides(fill = guide_legend(nrow =1))+
-          theme(legend.position = 'bottom')
+          theme(legend.position = 'bottom',
+                legend.key.size = unit(1, 'cm'), #change legend key size
+                legend.key.height = unit(1, 'cm'), #change legend key height
+                legend.key.width = unit(1, 'cm'), #change legend key width
+                legend.title = element_text(size=18), #change legend title font size
+                legend.text = element_text(size=16))
   }else{
       plot.ls[[i]] = p +
         guides(fill = 'none')
   }
   
-  # p = ggplot()+
-  #   geom_bar(data = bio.prop.guild,aes(x=species,y=value.prop,fill = factor(agecl),group = species),stat = 'identity',position = position_stack())+
-  #   geom_text(data = bio.fishing.labs,aes(x=x,y=y,label = fishing.intensity))+
-  #   scale_fill_manual(name = 'Age Class',values = RColorBrewer::brewer.pal(10,'Paired'))+
-  # 
-  #   scale_y_continuous(breaks = c(0,0.5,1))+
-  #   ylab('')+
-  #   xlab('')+
-  #   ggtitle(guild.names[i])+
-  #   coord_flip()
-  #   theme(axis.text.x = element_text(hjust = 1,size = 12),
-  #         panel.background = element_blank(),
-  #         plot.title = element_text(hjust = 0.5,size = 13),
-  #         axis.text.y = element_text(size = 10)
-  #         )
-    
-  
-
-  # q = ggplot()+
-  #   geom_bar(data = num.prop.guild,aes(x=species,y=value.prop,fill = factor(agecl),group = species),stat = 'identity',position = position_stack())+
-  #   geom_text(data = num.fishing.labs,aes(x=x,y=y,label = fishing.intensity))+
-  #   scale_fill_manual(name = 'Age Class',values = RColorBrewer::brewer.pal(10,'Paired'))+
-  #   scale_y_continuous(breaks = c(0,0.5,1))+
-  #   ylab('')+
-  #   xlab('')+
-  #   ggtitle(guild.names[i])+
-  #   coord_flip()+
-  #   theme(axis.text.x = element_text(hjust = 1,size = 12),
-  #       panel.background = element_blank(),
-  #       plot.title = element_text(hjust = 0.5,size = 13),
-  #       axis.text.y = element_text(size = 10)
-  # )
-    
-  # if(i == length(guild.names)){
-  #   p = p +
-  #     guides(fill = guide_legend(nrow =1))+
-  #     theme(legend.position = 'bottom')
-  #   
-  #   q = q +
-  #     guides(fill = guide_legend(nrow =1))+
-  #     theme(legend.position = 'bottom')
-  #     
-  # }else{
-  #   p = p + 
-  #     guides(fill = 'none')
-  #   
-  #   q = q + 
-  #     guides(fill = 'none')
-  # }
-  # 
-  # bio.plot.bar.ls[[i]] = p
-  # num.plot.bar.ls[[i]] = q
-  
-  # bio.plot.line.ls[[i]] = ggplot(data=bio.prop.guild,aes(x=agecl,y=value.prop,color = species))+
-  #   geom_line()+
-  #   scale_x_continuous(breaks = 1:10)+
-  #   ylab('Proportion')+
-  #   xlab('Age class')+
-  #   ggtitle(guild.names[i])+
-  #   theme_bw()+
-  #   theme(panel.grid = element_blank())
-    
 }
 
-grob1 = arrangeGrob(header.unfished.plot,header.medium.plot,header.high.plot,ncol = 3)
-grob2 = gridExtra::grid.arrange(plot.ls[[1]],plot.ls[[2]],plot.ls[[3]],plot.ls[[4]],plot.ls[[5]], ncol = 1, heights = c(6,13,7,17,8))
-png(here::here('Figures','biomass_age_prop_guild_bar_test.png'),width = 9, height = 18,units = 'in',res = 300)
-gridExtra::grid.arrange(grob1,grob2,heights = 
-                          c(1,8))
+grob1 = arrangeGrob(header.unfished.plot,header.medium.plot,header.high.plot,ncol = 3,widths = c(0.5,0.3,0.3))
+# grob2 = gridExtra::grid.arrange(plot.ls[[1]],plot.ls[[2]],plot.ls[[3]],plot.ls[[4]],plot.ls[[5]], ncol = 1, heights = c(5,10,5,13,8))
+grob2 = ggplotGrob(plot.ls[[1]]+plot.ls[[2]]+plot.ls[[3]]+plot.ls[[4]]+plot.ls[[5]]+plot_layout(ncol = 1, byrow = FALSE, heights  = c(4,10,7,15,7)))
+
+layout = "ABC
+          DDD
+          EEE
+          FFF
+          GGG
+          HHH"
+
+png(here::here('Figures','biomass_age_prop_guild_bar_test.png'),width = 15, height = 20,units = 'in',res = 150)
+# gridExtra::grid.arrange(grob1,grob2,heights = c(0.75,9))
+header.unfished.plot + header.medium.plot + header.high.plot+
+  plot.ls[[1]]+plot.ls[[2]]+plot.ls[[3]]+plot.ls[[4]]+plot.ls[[5]]+
+  plot_layout(ncol = 1, byrow = FALSE, design = layout,heights = c(3,4,13,7,17,7))
 dev.off()
 
-
-png(here::here('Figures','biomass_age_prop_guild_bar_test.png'),width = 9, height = 18,units = 'in',res = 300)
-do.call('grid.arrange',c(bio.plot.bar.ls,ncol = 1))
-dev.off()
-
-png(here::here('Figures','numbers_age_prop_guild_bar_test.png'),width = 9, height = 18,units = 'in',res = 300)
-do.call('grid.arrange',c(num.plot.bar.ls,ncol = 1))
-dev.off()
-# png(here::here('Figures','biomass_age_prop_guild_line_test.png'),width = 24, height = 9,units = 'in',res = 300)
-# do.call('grid.arrange',c(bio.plot.line.ls,nrow = 3))
-# dev.off()
 
 
