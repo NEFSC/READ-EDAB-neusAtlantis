@@ -32,11 +32,12 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
     biolPrm <- batcherFile$BiolPrm[n]
     runPrm <- batcherFile$RunPrm[n]
     harvestPrm <- batcherFile$HarvestPrm[n]
+    forcePrm <- batcherFile$ForcePrm[n]
     
     system(paste0("mkdir -p ",paste0(output.dir,folders[n])))
     
     run.atlantis.sh = readLines(paste0(param.dir,'RunAtlantis_base.sh'))
-    new.line = paste0('atlantisMerged -i ', initFile, ' 0 -o neus_output.nc -r ', runPrm, ' -f at_force_LINUX.prm -p at_physics.prm -b ',biolPrm,' -h ', harvestPrm, ' -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -t . -d output')
+    new.line = paste0('atlantisMerged -i ', initFile, ' 0 -o neus_output.nc -r ', runPrm, ' -f ', forcePrm,' -p at_physics.prm -b ',biolPrm,' -h ', harvestPrm, ' -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -t . -d output')
     print(new.line)
     run.atlantis.sh[3] = new.line
     writeLines(run.atlantis.sh, con = paste0(param.dir,'RunAtlantis.sh'))
@@ -96,17 +97,18 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
           print(paste0("n = ", n))
           # param.dir <- paste0(here(),"/Rob_Project_Template/Project_Name_Version/")
           # output.dir <- paste0(here(),"/Rob_Project_Template/Project_Name_Version/Atlantis_Runs/")
-          param.dir = here::here('currentVersion','')
-          output.dir = here::here('Atlantis_Runs','')
+          # param.dir = here::here('currentVersion','')
+          # output.dir = here::here('Atlantis_Runs','')
           initFile <- batcherFile$InitNC[n]
           biolPrm <- batcherFile$BiolPrm[n]
           runPrm <- batcherFile$RunPrm[n]
           harvestPrm <- batcherFile$HarvestPrm[n]
+          forcePrm <- batcherFile$ForcePrm[n]
           
           system(paste0("mkdir -p ",paste0('"',output.dir,folders[n],'"')))
           
           run.atlantis.sh = readLines(paste0(param.dir,'RunAtlantis_base.sh'))
-          new.line = paste0('atlantisMerged -i ', initFile, ' 0 -o neus_output.nc -r ', runPrm, ' -f at_force_LINUX.prm -p at_physics.prm -b ',biolPrm,' -h ', harvestPrm, ' -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -t . -d output')
+          new.line = paste0('atlantisMerged -i ', initFile, ' 0 -o neus_output.nc -r ', runPrm, ' -f ',forcePrm,' -p at_physics.prm -b ',biolPrm,' -h ', harvestPrm, ' -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -t . -d output')
           print(new.line)
           run.atlantis.sh[3] = new.line
           writeLines(run.atlantis.sh, con = paste0(param.dir,'RunAtlantis.sh'))
