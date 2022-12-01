@@ -49,14 +49,14 @@ make_catch_scale_scenarios = function(original_catch_file,
   
 }
 
-make_catch_scale_scenarios(
-  original_catch_file = here::here('currentVersion','CatchFiles','total_catch.ts'),
-  fgs.file = here::here('currentVersion','neus_groups.csv'),
-  groups = c('MAK','HER','MEN','BUT'),
-  new_catch_file = here::here('currentVersion','CatchFiles','total_catch_planktivore_2x.ts'),
-  setup.filename = here::here('currentVersion','CatchFiles','planktivore_2x.csv'),
-  start.time = 365*20,
-  end.time = 19724,
-  type = 'Scalar',
-  change = 2
-)
+# make_catch_scale_scenarios(
+#   original_catch_file = here::here('currentVersion','CatchFiles','total_catch.ts'),
+#   fgs.file = here::here('currentVersion','neus_groups.csv'),
+#   groups = c('MAK','HER','MEN','BUT'),
+#   new_catch_file = here::here('currentVersion','CatchFiles','total_catch_planktivore_2x.ts'),
+#   setup.filename = here::here('currentVersion','CatchFiles','planktivore_2x.csv'),
+#   start.time = 365*20,
+#   end.time = 19724,
+#   type = 'Scalar',
+#   change = 2
+# )
