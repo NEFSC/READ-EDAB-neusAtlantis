@@ -1,7 +1,7 @@
 #Script to generate batcher runs with multiple groups of parameter changes
 
 #Define Batch Directory
-batch.dir = 'Batcher_MaxCohort_1'
+batch.dir = 'Batcher_MaxCohort_3'
 dir.create(here::here('Atlantis_Runs',batch.dir))
 
 base.bio.prm = here::here('currentVersion','at_biology.prm')
@@ -65,18 +65,19 @@ base.init = here::here('neus_init.nc')
 source(here::here('R/edit_param_mum_shape.R'))
 source(here::here('R/make_age_distribution.R'))
 
-run.prefix = 'misc_mumC_shape'
-steepness = seq(2,5,length.out =5)
+run.prefix = 'MaxCohort_Fix_2'
+# steepness = seq(2,5,length.out =5)
+peak.age = seq(2,5,length.out =5)
 mumC_shape_files = character()
 
 set.dir = here::here('Atlantis_Runs',batch.dir,run.prefix)
 dir.create(set.dir)
 
 # plot(0,0,type='n',ylim = c(0,0.5),xlim = c(1,10))
-for(i in 1:length(steepness)){
+for(i in 1:length(peak.age)){
   
-  # new.age.dist =sn::dsn(x =1:10,xi = peak.age[i],omega = peak.age[i],alpha =-peak.age[i]/2)
-  new.age.dist = make_age_distribution(peak.age = 3.5,steepness = steepness[i] )
+  # # new.age.dist =sn::dsn(x =1:10,xi = peak.age[i],omega = peak.age[i],alpha =-peak.age[i]/2)
+  new.age.dist = make_age_distribution(peak.age = peak.age[i],steepness = 2.2 )
   # lines(new.age.dist,col = i)
   new.age.dist = new.age.dist/mean(new.age.dist)
   mumC_shape_files[i] = paste0('at_biology_',run.prefix,'_',i-1,'.prm')
@@ -91,7 +92,7 @@ for(i in 1:length(steepness)){
   )
 }
 
-run.dirs = paste0(run.prefix,'_',0:(length(steepness)-1))
+run.dirs = paste0(run.prefix,'_',0:(length(peak.age)-1))
 mumC.shape.setup = data.frame(
   Run = run.dirs ,
   OutputDir = paste0(batch.dir,'/',run.prefix,'/',run.dirs,'/'),
@@ -226,7 +227,7 @@ atlantis_batcher(
   batcherFilename = here::here('Setup_Files',paste0(batch.dir,'.csv')),
   userName            = 'jcara',
   CHECK_TIME_INTERVAL = 60,
-  NUM_TO_RUN          = 4,
+  NUM_TO_RUN          = 5,
   CONTAINER_TYPE      = 'podman',
   param.dir = here::here('currentVersion',''),
   output.dir = here::here('Atlantis_Runs','')
