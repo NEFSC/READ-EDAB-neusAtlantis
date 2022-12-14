@@ -17,6 +17,7 @@ get_param_C_age = function(bio.prm, write.output = F, output.dir, out.name ){
                       C1 = NA, C2 = NA, C3 = NA, C4 = NA, C5 = NA, C6 = NA, C7 = NA, C8 = NA, C9 = NA, C10 = NA)
   for(i in 1:length(bio.lines.id)){
     C.group = bio.lines[bio.lines.id[i] + 1 ]
+    # if(length(strsplit(C.group,split = "\t| ")[[1]])!=10){print(group.names[i])}
     out.df[i,2:11] = strsplit(C.group,split = "\t| ")[[1]]
   }
   if(write.output){
