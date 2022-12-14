@@ -116,7 +116,7 @@ get.nc.data <- function(eachgroup,nc.file,fg.file,thistimestep){
 
 # thisdataset = get.nc.data(eachgroup = 'BLF',nc.file,fg.file,thistimestep)
 
-year_plot <- function(run.dir, out.dir, yearsrun, output_freqyrs, thisncfile, fg.list, mig.file, thisvariabletype){
+year_plot <- function(run.dir, out.dir, yearsrun, output_freqyrs, thisncfile, fg.file, mig.file, thisvariabletype){
   
   #read functional group file
   fg.list <- read_csv(fg.file) %>% 
@@ -136,6 +136,8 @@ year_plot <- function(run.dir, out.dir, yearsrun, output_freqyrs, thisncfile, fg
   group.atlantis.data <- lapply(vert.groups, get.nc.data, nc.file = nc.file , fg.file = fg.file, thistimestep = thistimestep ) %>% 
     bind_rows()
   
+  group.atlantis.data <- lapply('COD', get.nc.data, nc.file = nc.file , fg.file = fg.file, thistimestep = thistimestep ) %>% 
+    bind_rows()
   #this can be changed, right now just plotting numbers
   
   thisdataset <- group.atlantis.data %>% 
@@ -152,7 +154,8 @@ year_plot <- function(run.dir, out.dir, yearsrun, output_freqyrs, thisncfile, fg
   mig.species = as.character(mig.species)
   mig.species = mig.species[mig.species %in% vert.groups]
   
-  lapply(mig.species, plot_migrations, thisdataset = thisdataset, mig.file = mig.file, fg.file = fg.file)
+  # lapply(mig.species, plot_migrations, thisdataset = thisdataset, mig.file = mig.file, fg.file = fg.file)
+  lapply('COD', plot_migrations, thisdataset = thisdataset, mig.file = mig.file, fg.file = fg.file)
     
 }
 
@@ -163,6 +166,8 @@ plot_migrations <- function(eachgroup, thisdataset, mig.file, fg.file){
   
   mig.params <- read.csv(mig.file) %>% 
     filter(GroupCode==eachgroup)
+  
+  fg.list = read.csv(fg.file)
   
   group.params <- fg.list %>% 
     filter(Code==eachgroup)

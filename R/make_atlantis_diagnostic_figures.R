@@ -81,7 +81,7 @@ make_atlantis_diagnostic_figures = function(
   plot.spatial.biomass.seasonal,
   plot.LTL,
   plot.catch, 
-  plot.max.weight = T,
+  plot.max.weight,
   plot.mortality
 ){
   
@@ -132,7 +132,7 @@ make_atlantis_diagnostic_figures = function(
   
   if(plot.catch|plot.all) {
     
-    catchmt = readRDS(paste0(out.dir,'catchmt.RDS'))
+    catchmt = readRDS(paste0(out.dir,'catchmt.rds'))
     
     #Catch by species time series (metric tonnes)
     temp.plot.1 = atlantistools::plot_line(catchmt)
@@ -142,7 +142,7 @@ make_atlantis_diagnostic_figures = function(
     
     #Catch at age time series (numbers)
     
-    totcatch = readRDS(paste0(out.dir,'totcatch.RDS'))
+    totcatch = readRDS(paste0(out.dir,'totcatch.rds'))
     
     temp.plot.2 = atlantistools::plot_line(totcatch, col = 'agecl')
     temp.plot.2 = ggplot2::update_labels(p = temp.plot.2, labels = c(plot.labels, list(colour = 'Ageclas')))
@@ -169,7 +169,7 @@ make_atlantis_diagnostic_figures = function(
   if(plot.mortality|plot.all) {
     
     # plot mortality from Mort.txt
-    mort = readRDS(paste0(out.dir,'mort.RDS'))
+    mort = readRDS(paste0(out.dir,'mort.rds'))
     itype <- 1
     plotMort <- list()
     # Annual Mortality time series M, F by species on same plot
@@ -179,7 +179,7 @@ make_atlantis_diagnostic_figures = function(
     plotMort[[itype]] <- temp.plot.1
     
     # plot mortaliy from specificMort.txt
-    specificmort <- readRDS(paste0(out.dir,'specificmort.RDS'))
+    specificmort <- readRDS(paste0(out.dir,'specificmort.rds'))
     
     # plot absolute mortality. 3 pages, one page for F,M1,M2
     for (atype in rev(unique(specificmort$mort))) {
@@ -648,7 +648,7 @@ make_atlantis_diagnostic_figures = function(
   if(plot.recruits|plot.all){
     
     # Recruits TS
-    ssb.recruits = readRDS(paste0(out.dir,'ssb_recruits.rds'))
+    ssb.recruits = readRDS(paste0(out.dir,'ssb_recruits.RDS'))
     
     temp.plot.1 = atlantistools::plot_line(ssb.recruits, y = 'rec')
     temp.plot.1 = ggplot2::update_labels(temp.plot.1,labels = list(x = 'Time (days)', y = 'Numbers'))

@@ -27,8 +27,8 @@ DSH,44,Demersal_Shark,Other demersal sharks,10,SHARK,Other
 FDE,21,Shallow_Demersal_Fish,Shallow demersal fish,10,FISH,Planktivore
 FDF,38,Misc_Demersal_Fish,Miscellaneous demersal fish,10,FISH,Other
 FLA,11,Other_Flatfish,Other flatfish,10,FISH,Other
-FOU,8,Fourspotflounder,Fourspot Flounder,10,FISH,Piscivore
-GOO,19,Monkfish,Monkfish,10,FISH,Piscivore
+FOU,8,Fourspotflounder,Fourspot flounder,10,FISH,Piscivore
+GOO,19,Monkfish,Goosefish,10,FISH,Piscivore
 HAD,39,Haddock,Haddock,10,FISH,Benthivore
 HAL,9,Halibut,Atlantic halibut,10,FISH,Piscivore
 HER,1,Herring,Atlantic herring,10,FISH,Planktivore
@@ -41,7 +41,7 @@ MA,73,Macroalgae,Macroalgae,1,PHYTOBEN,Other
 MAK,0,Mackerel,Mackerel,10,FISH,Planktivore
 MB,74,MicroPB,Microphtybenthos,1,MICROPHTYBENTHOS,Other
 MEN,20,Menhaden,Atlantic menhaden,10,FISH,Planktivore
-MPF,15,Mesopelagic_Mig_Fish,Migratory mesopelagic fish ,10,FISH,Other
+MPF,15,Mesopelagic_Mig_Fish,Migratory mesopelagic fish,10,FISH,Other
 NSH,69,Northern_Shrimp,Northern shrimp other pandalids,2,PWN,Other
 OHK,24,Offshore_Hake,Offshore hake,10,FISH,Piscivore
 OPT,31,Ocean_Pout,Ocean pout,10,FISH,Benthivore
@@ -70,13 +70,13 @@ SHK,23,Silver_Hake,Silver hake,10,FISH,Piscivore
 SK,50,Skate,Northeast skate complex,10,SHARK,Piscivore
 SMO,42,Smooth_Dogfish,Smooth dogfish,10,SHARK,Benthivore
 SSH,43,Sandbar_Shark,Sandbar shark,10,SHARK,Other
-STB,34,Striped_Bass,Striped Bass,10,FISH,Piscivore
+STB,34,Striped_Bass,Striped bass,10,FISH,Piscivore
 SUF,5,Summerflounder,Summer flounder,10,FISH,Piscivore
 SWH,56,Small_Whale,Small toothed whales,10,MAMMAL,Mammals
 TAU,35,Tautog,Tautog,10,FISH,Benthivore
 TUN,13,Tunas,Other tunas,10,FISH,Apex Predator
-TWH,57,Tooth_Whale,Toothed whales ,10,MAMMAL,Mammals
-TYL,29,Tilefish,Tilefish,10,FISH,Benthivore
+TWH,57,Tooth_Whale,Toothed whales,10,MAMMAL,Mammals
+TYL,29,Tilefish,All tilefish,10,FISH,Benthivore
 WHK,2,White_Hake,White hake,10,FISH,Piscivore
 WIF,6,Winterflounder,Winter flounder,10,FISH,Benthivore
 WOL,36,Wolffish,Wolffish,10,FISH,Other

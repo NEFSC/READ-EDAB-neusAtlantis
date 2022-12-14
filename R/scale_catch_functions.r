@@ -6,9 +6,16 @@
 # Col 4: 'Change' - Scalar/Replacement of original catch for a group in the start and end times specified
 # Col 5: 'Type' - 'Scalar' or 'Replace'.  If Scalar, multiply Change by original catch.  If Change, replace original catch
 
-scale_catch <- function(original_catch, filename) {
+scale_catch <- function(original_catch_file,filename,fgs.file) {
+  
+  fgs = read.csv(fgs.file,as.is = T)
+  group.names = fgs$Code
+  
+  original_catch = read.table(original_catch_file)
+  colnames(original_catch) = c('Time',group.names)
   
   catch_new <- original_catch
+  
   group_changes <- read.csv(filename, sep = ",", stringsAsFactors = FALSE, header=TRUE)
   
   if (group_changes$Group[1] == "ALL") {
@@ -28,7 +35,7 @@ scale_catch <- function(original_catch, filename) {
       print(groupName)
       scalar <- group_changes$Change[i]
       if (group_changes$Type[i] == "Scalar") {
-        catch_new[[groupName]][start_time:end_time] <- original_catch[[groupName]] * scalar
+        catch_new[[groupName]][start_time:end_time] <- original_catch[[groupName]][start_time:end_time] * scalar
       } else if (group_changes$Type[i] == "Replace") {
         catch_new[[groupName]][start_time:end_time] <- scalar
       } 
