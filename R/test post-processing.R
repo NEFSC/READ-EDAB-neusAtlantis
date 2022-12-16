@@ -11,11 +11,11 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'misc_mumC_5b'
+run.name = 'Extended_Constant_Catch'
 
 # atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HER_CatchSpinup_1/',run.name,'/')
 # atl.dir = here::here('Atlantis_Runs/HER_CatchSpinup_1',run.name,'')
-atl.dir = here::here('Atlantis_Runs',run.name,'')
+atl.dir = here::here('Atlantis_Runs',run.name,'/')
 
 dir.create(paste0(atl.dir,'Post_Processed/'))
 dir.create(paste0(atl.dir,'Post_Processed/Data/'))
@@ -32,6 +32,7 @@ param.ls= get_atl_paramfiles(param.dir = param.dir,
                              include_catch=T)
 
 #Run  post-processing function to generate "result" R object. 
+tictoc::tic()
 process_atl_output(
   param.dir = here::here('currentVersion'),
   atl.dir = atl.dir,
@@ -40,11 +41,11 @@ process_atl_output(
   param.ls = param.ls,
   include_catch = T,
   save.out = T,
-  diet.agg.time = 'month',
+  agg.scale = 'year',
   spatial.overlap = F,
-  large.file = F
+  large.file = T
 )
-
+tictoc::tic()
 #If result object saved to file or already exists load it into env.
 # load(paste0(out.dir,'neus_output_postprocessed.rdata'))
 # load(paste0(out.dir,'neus_output_postprocessed.Rdata'))
