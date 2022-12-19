@@ -7,22 +7,29 @@ library(Kendall)
 #Stability = relativized slope of last x years of timeseries
 
 TS_LENGTH = 20
-reasonability.output.dir <- 'currentVersion/output_dev'
+reference.dir = here('Atlantis_Runs','Dev_11032022')
+output.dir <- here('Atlantis_Runs','Dev_11032022','Post_Processed')
 
 #Read in survdat
 data = readRDS(here::here('data',"sweptAreaBiomassNEUS.rds")) %>%
   dplyr::filter(variable %in% c("tot.biomass")) %>%
   dplyr::mutate(value=ifelse(grepl("kg$",units),value/1000,value)) %>%
-  dplyr::select(-units)
-
-data <- select(data, YEAR,value,Code)
-data <- group_by(data,Code,YEAR)
-data <- summarise(data, sum(value) )
+  dplyr::select(-units)%>%
+  select(YEAR,value,Code)%>%
+  group_by(Code,YEAR)%>%
+  summarise(value = sum(value,na.rm=T) )
 
 data_var = readRDS(here::here('data',"sweptAreaBiomassNEUS.rds")) %>%
-  dplyr::filter(variable %in% c("tot.bio.var")) %>%
-  dplyr::mutate(value=ifelse(grepl("kg$",units),value/1000,value)) %>%
-  dplyr::select(-units)
+  dplyr::filter(variable %in% c("tot.bio.var"))%>%
+  dplyr::mutate(value=ifelse(grepl("kg\\^2$",units),value/1e6,value)) %>%
+  dplyr::select(-units) %>%
+  select(YEAR,value,Code)%>%
+  rename(value.var = value)
+
+data = left_join(data,data_var)%>%
+  mutate(value.min = value - 3*sqrt(value.var),
+         value.min = ifelse(value.min < 0, 0, value.min),
+         value.max = value + 3*sqrt(value.var))
 
 #Read in q's
 q_data <- readRDS(here::here('data',"emax_qs.rds"))
@@ -32,7 +39,24 @@ q_data <- distinct(q_data)
 q_data <- group_by(q_data,Code)
 q_data <- summarise(q_data,Avg.q = mean(Avg.q))
 
-biom_atl <- read.csv(here::here('currentVersion/output_dev','neus_outputBiomIndx.txt'), sep = ' ')
+
+#Adjusted for q and aggregate by atlantis group
+data.obs.lim = data %>%
+  left_join(q_data)%>%
+  mutate(value.min.q = value.min/Avg.q,
+         value.max.q = value.max/Avg.q)%>%
+  group_by(Code,YEAR)%>%
+  summarise(value.min.q = sum(value.min.q),
+            value.max.q = sum(value.max.q)) %>%
+  group_by(Code)%>%
+  summarise(obs.min = min(value.min.q),
+            obs.max = max(value.max.q))
+
+
+#Find the absolute min/max for each species
+
+#Read in atlantis data
+biom_atl <- read.csv(paste0(reference.dir,'/neus_outputBiomIndx.txt'),sep = ' ')
 
 groups = unique(data$Code)
 numGroups <- length(groups)
@@ -45,36 +69,40 @@ atl_groupnames <- colnames(biom_atl)
 for(i in 1:numGroups) {
   
   groupCode <- groups[i]
-  q_data_for_group <- filter(q_data,Code == groupCode)
-  group_bio_data <- filter(data,Code == groupCode)
-  group_sd <- sd(group_bio_data$`sum(value)`)
-  q <- q_data_for_group$Avg.q[1]
+  # q_data_for_group <- filter(q_data,Code == groupCode)
+  # group_bio_data <- filter(data,Code == groupCode)
+  # group_sd <- sd(group_bio_data$value)
+  # q <- q_data_for_group$Avg.q[1]
   if (groupCode %in% atl_groupnames) {
-    groupData_obs <- filter(data,Code == groupCode)
-
-    minBiom_Obs <- (min(groupData_obs$`sum(value)`) - 3 * group_sd) / q
-
-    maxBiom_Obs <- (max(groupData_obs$`sum(value)`) + 3 * group_sd) / q
     
+    groupData_obs = filter(data.obs.lim, Code == groupCode)
+    # groupData_obs <- filter(data,Code == groupCode)
+
+    # minBiom_Obs <- min((groupData_obs$value - 3 * sqrt(groupData_obs$value.var)) / q)
+    minBiom_Obs = groupData_obs$obs.min[1]
+    
+    # maxBiom_Obs <- max((groupData_obs$value + 3 * sqrt(groupData_obs$value.var)) / q)
+    maxBiom_Obs = groupData_obs$obs.max[1]
+
     groupData_atl_full <- select(biom_atl,(contains(groupCode) & !contains("rel")))
     groupData_atl <- tail(groupData_atl_full, n=TS_LENGTH)
-    
+
     pct_BelowMin <- 0
     pct_AboveMax <- 0
     pct_BelowMinInitial <- 0
     pct_AboveMaxInitial <- 0
-    
+
     minBiom_atl <- min(groupData_atl[,1])
     maxBiom_atl <- max(groupData_atl[,1])
     avgBiom_atl <- mean(groupData_atl[,1])
     initBiom_atl <- groupData_atl_full[1,1]
-    
+
     magnitude_initial <- "TRUE"
     magnitude <- "TRUE"
-    if (is.na(group_sd)) {
-      magnitude_initial <- "UNKNOWN"
-      magnitude <- "UNKNOWN"
-    } else {
+    # if (is.na(group_sd)) {
+    #   magnitude_initial <- "UNKNOWN"
+    #   magnitude <- "UNKNOWN"
+    # } else {
       if (avgBiom_atl < minBiom_Obs) {
         pct_BelowMin <- minBiom_atl / minBiom_Obs
         magnitude <- "FALSE"
@@ -96,7 +124,7 @@ for(i in 1:numGroups) {
       }
       
       
-    }
+    # }
     
     numBelowMin <- 0
     numAboveMax <- 0
@@ -106,7 +134,7 @@ for(i in 1:numGroups) {
     numOutsideRange <- 0
     
     length_TS_atl <- nrow(groupData_atl)
-    if (!is.na(group_sd)) {
+    # if (!is.na(group_sd)) {
       for (j in 1:length_TS_atl) {
         if (groupData_atl[j,1] < minBiom_Obs) {
           numBelowMin <- numBelowMin + 1
@@ -114,7 +142,7 @@ for(i in 1:numGroups) {
           numAboveMax <- numAboveMax + 1
         }
       }
-    }
+    # }
 #    if (minBiom_Obs < 0) {
 #      minBiom_Obs <- 0
 #    }
@@ -152,7 +180,7 @@ for(i in 1:rows_in_reasonability_df) {
     
   groupData_obs <- tail(groupData_obs, n = TS_LENGTH)
 
-  avgBiom_obs <- mean(groupData_obs$`sum(value)`)
+  avgBiom_obs <- mean(groupData_obs$value)
   avgBiom_atl <- mean(groupData_atl[,1])
     
     
@@ -181,7 +209,7 @@ for(i in 1:rows_in_reasonability_df) {
   trend_obs <- 0
     
   if (!(length_obs_ts < 3)) {
-    ts_obs <- ts(groupData_obs$`sum(value)`, start = c(1, TS_LENGTH), frequency = 1)
+    ts_obs <- ts(groupData_obs$value, start = c(1, TS_LENGTH), frequency = 1)
     fit_obs <- tslm(ts_obs ~ trend)
     coef_obs <- fit_obs$coefficients
     trend_obs <- coef_obs[[2]]
@@ -220,4 +248,4 @@ for(i in 1:rows_in_reasonability_df) {
 
 reasonability_df <- filter(reasonability_df, !is.na(Group))
 
-write.table(reasonability_df, file = here::here(reasonability.output.dir, 'output_diag_reasonability.csv'), row.names = FALSE, col.names = TRUE, append = FALSE, sep = ",")
+write.table(reasonability_df, file = paste0(output.dir, '/output_diag_reasonability.csv'), row.names = FALSE, col.names = TRUE, append = FALSE, sep = ",")
