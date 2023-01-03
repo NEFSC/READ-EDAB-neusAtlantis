@@ -28,14 +28,17 @@ bh.ab5 = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1_RescaleAlphaBeta_5/')
 bh.newcatch = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1_NewCatchSpinup/')
 bh.newcatch.revert = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1_NewCatch_Reverted/')
 
+v6536.nfnm = paste0(obs.dir,'Atlantis_Runs/dev07052022_165_6536_noMigration_noFishing/')
+v6645.nfnm = paste0(obs.dir,'Atlantis_Runs/dev07052022_165_6645_noMigration_noFishing/')
+
 figure.dir = paste0(obs.dir,'Diagnostic_Figures/Run_Comparisons/')
 
 plot_run_comparisons(
-  model.dirs = c(all.bh,bh.newcatch,bh.newcatch.revert),
-  model.names = c('Base_BH','Rescale_NewCatch','Rescale_NewCatch_Revert'),
+  model.dirs = c(v6536.nfnm,v6645.nfnm),
+  model.names = c('dev07052022_165_6536_noMigration_noFishing','dev07052022_165_6645_noMigration_noFishing'),
   plot.raw = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'BH_PreMerge_NewCatch_Revert'),
+  plot.out = paste(figure.dir,'v6645_v6536_nfnm'),
   table.out = F,
   groups = NULL,
   remove.init = F
