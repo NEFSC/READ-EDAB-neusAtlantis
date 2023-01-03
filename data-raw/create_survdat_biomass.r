@@ -161,7 +161,7 @@ biomassEPU <- survdat::calc_swept_area(surveyData=data,
   
 
 # remove clams, quahogs, scallops
-biomassEPU <-  biomassEPU %>% dplyr::filter(!(SVSPP %in% c(403,409,401)))
+biomassEPU <-  biomassEPU %>% dplyr::filter(!(SVSPP %in% c(403,409,401,36,135,103)))
 
 ## join clam, quahog, scallop data from assessment
 biomassEPU <- rbind(biomassEPU,clam)
@@ -208,7 +208,7 @@ for (boxid in boxids){
   biomassNEUS <- rbind(biomassNEUS,biomassBox)
 }
 # remove clams from survdat since poorly sampled in bottom trawl
-biomassNEUS <-  biomassNEUS %>% dplyr::filter(!(SVSPP %in% c(403,409,401)))
+biomassNEUS <-  biomassNEUS %>% dplyr::filter(!(SVSPP %in%c(403,409,401,36,135,103)))
 
 ## join clam, quahog , scallop data from assessment
 clambox <- clam %>% dplyr::mutate(box=NA)
@@ -248,7 +248,7 @@ biomass <- survdat::calc_swept_area(surveyData=data,
                                        filterBySeason = "FALL",
                                        tidy=T)
 # remove clams from survdat since poorly sampled in bottom trawl
-biomassAllNEUS <-  biomass %>% dplyr::filter(!(SVSPP %in% c(403,409,401)))
+biomassAllNEUS <-  biomass %>% dplyr::filter(!(SVSPP %in%c(403,409,401,36,135,103)))
 
 ## join clam, quahog, scallop data from assessment
 biomassAllNEUS <- rbind(biomassAllNEUS,clam)
