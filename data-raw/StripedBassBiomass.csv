@@ -1,0 +1,88 @@
+#' Northeast Atlantic Striped Bass,,,
+#' ,,,
+"#' @description spawning stock biomass (mt) and abundance (millions), Table 8. This data is an estimate from the 2022 ASFMC stock assessment update report",,,
+#',,,
+#' @source 2022 Atlantic Striped Bass Stock Assessment Update Report,,,
+#',,,
+#',,,
+Year,Value,Variable,Units
+1982,18498,SSB,Metric Tons
+1983,15614,SSB,Metric Tons
+1984,15783,SSB,Metric Tons
+1985,16452,SSB,Metric Tons
+1986,14838,SSB,Metric Tons
+1987,18247,SSB,Metric Tons
+1988,24125,SSB,Metric Tons
+1989,36060,SSB,Metric Tons
+1990,42017,SSB,Metric Tons
+1991,49377,SSB,Metric Tons
+1992,62663,SSB,Metric Tons
+1993,70390,SSB,Metric Tons
+1994,79213,SSB,Metric Tons
+1995,85457,SSB,Metric Tons
+1996,95380,SSB,Metric Tons
+1997,90227,SSB,Metric Tons
+1998,83863,SSB,Metric Tons
+1999,83024,SSB,Metric Tons
+2000,95101,SSB,Metric Tons
+2001,99421,SSB,Metric Tons
+2002,111329,SSB,Metric Tons
+2003,113506,SSB,Metric Tons
+2004,109337,SSB,Metric Tons
+2005,108416,SSB,Metric Tons
+2006,102105,SSB,Metric Tons
+2007,99830,SSB,Metric Tons
+2008,106075,SSB,Metric Tons
+2009,104599,SSB,Metric Tons
+2010,104749,SSB,Metric Tons
+2011,97556,SSB,Metric Tons
+2012,95936,SSB,Metric Tons
+2013,84750,SSB,Metric Tons
+2014,73346,SSB,Metric Tons
+2015,63415,SSB,Metric Tons
+2016,64227,SSB,Metric Tons
+2017,57106,SSB,Metric Tons
+2018,55120,SSB,Metric Tons
+2019,56634,SSB,Metric Tons
+2020,59980,SSB,Metric Tons
+2021,64805,SSB,Metric Tons
+1982,54.5,Abundance,Millions
+1983,92.4,Abundance,Millions
+1984,95.8,Abundance,Millions
+1985,106.2,Abundance,Millions
+1986,109,Abundance,Millions
+1987,118.9,Abundance,Millions
+1988,145.2,Abundance,Millions
+1989,167.5,Abundance,Millions
+1990,201.1,Abundance,Millions
+1991,186.7,Abundance,Millions
+1992,190.7,Abundance,Millions
+1993,217.9,Abundance,Millions
+1994,382.5,Abundance,Millions
+1995,336.1,Abundance,Millions
+1996,378.2,Abundance,Millions
+1997,422.4,Abundance,Millions
+1998,325.8,Abundance,Millions
+1999,304,Abundance,Millions
+2000,263.3,Abundance,Millions
+2001,318.3,Abundance,Millions
+2002,369.2,Abundance,Millions
+2003,276.1,Abundance,Millions
+2004,453.8,Abundance,Millions
+2005,340.1,Abundance,Millions
+2006,293.5,Abundance,Millions
+2007,216.9,Abundance,Millions
+2008,240.7,Abundance,Millions
+2009,181.2,Abundance,Millions
+2010,182,Abundance,Millions
+2011,203,Abundance,Millions
+2012,297.5,Abundance,Millions
+2013,182.7,Abundance,Millions
+2014,162.6,Abundance,Millions
+2015,228,Abundance,Millions
+2016,333,Abundance,Millions
+2017,231.5,Abundance,Millions
+2018,234.8,Abundance,Millions
+2019,263.7,Abundance,Millions
+2020,223.1,Abundance,Millions
+2021,218.9,Abundance,Millions

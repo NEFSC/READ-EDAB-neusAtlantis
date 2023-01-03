@@ -14,8 +14,8 @@
 
 library(magrittr)
 pullFromDB <- F
-uid <- "username" # change to your username
-server <- "server" # select server
+uid <- "" # change to your username
+server <- "" # select server
 
 # pull survey data
 # either pull raw data 
@@ -24,12 +24,12 @@ if (pullFromDB) {
   survey <- survdat::get_survdat_data(channel)
 } else { # or read in previous pull
   # eventually this will reside on Github in version controlled package
-  survey <- readRDS(here::here("data-raw/survdat2021.RDS"))
+  survey <- readRDS(here::here("data-raw/survdat2021.rds"))
 }
 
 ### read in atlantic surfclam data. Poorly sampled in bottom trawl survey
 
-clam <- readr::read_csv(file=here::here("data-raw/data","surfclam403Biomass.csv"),skip=8) 
+clam <- readr::read_csv(file=here::here("data-raw","surfclam403Biomass.csv"),skip=8) 
 # from Dan Hennen swept are biomass
 clam <- clam %>%
   dplyr::select(Yr,Value,StdDev) %>% 
@@ -44,7 +44,7 @@ clam <- clam %>%
 
 ### read in ocean quahog data. Poorly sampled in bottom trawl survey
 
-quahog <- readr::read_csv(file=here::here("data-raw/data","quahog754Biomass.csv"),skip=8) 
+quahog <- readr::read_csv(file=here::here("data-raw","quahog754Biomass.csv"),skip=8) 
 # from Dan Hennen swept are biomass
 quahog <- quahog %>%
   dplyr::select(Yr,Value,StdDev) %>% 
@@ -63,7 +63,7 @@ quahog <- quahog %>%
 #   dplyr::select(Year,Value,Metric, Description, Units)
 # # from 65 Stock assessment table A9.4 p80
 
-scallop <- readr::read_csv(file=here::here("data-raw/data","scallop401Biomass.csv"),skip=9) 
+scallop <- readr::read_csv(file=here::here("data-raw","scallop401Biomass.csv"),skip=9) 
 
 scallops <- scallop %>%
   dplyr::select(Year,Bms,CV_2) %>% 
@@ -76,6 +76,62 @@ scallops <- scallop %>%
   tidyr::pivot_longer(.,cols= c("tot.biomass","tot.bio.var"),names_to = "variable",values_to = "value") %>%
   dplyr::mutate(variable = as.factor(variable))
 
+#### Bluefish data from ASMFC_2015
+
+bluefish = readRDS(here::here('data-raw','BLF_asfmc_biomass.rds'))
+
+#Create variance that is based on a CV = 0.3 so sigma = 0.3*mu
+bluefish.var = bluefish %>%
+  mutate(value = (biomass*0.3)^2,
+         variable = 'tot.bio.var',
+         units = 'mt')%>%
+  select(year,variable,units,value)
+  
+bluefish = bluefish %>%
+  rename(value = 'biomass')%>%
+  mutate(variable = 'tot.biomass')%>%
+  bind_rows(bluefish.var)%>%
+  mutate(SVSPP = 135,
+         units = 'mt')%>%
+  rename(YEAR = 'year')
+
+### Menhaden data from ASFMC_2020
+
+menhaden =  readRDS(here::here('data-raw','MEN_asfmc_biomass.rds'))
+
+#Create variance that is based on a CV = 0.3 so sigma = 0.3*mu
+menhaden.var = menhaden %>%
+  mutate(value = (biomass*0.3)^2,
+         variable = 'tot.bio.var',
+         units = 'mt')%>%
+  select(year,variable,units,value)
+
+menhaden = menhaden %>%
+  rename(value = 'biomass')%>%
+  mutate(variable = 'tot.biomass')%>%
+  bind_rows(menhaden.var)%>%
+  mutate(SVSPP = 36,
+         units = 'mt')%>%
+  rename(YEAR = 'year')
+
+### SummerFlounder data from ASFMC_2020
+
+summer.flounder =  readRDS(here::here('data-raw','SUF_asfmc_biomass.rds'))
+
+#Create variance that is based on a CV = 0.3 so sigma = 0.3*mu
+summer.flounder.var = summer.flounder %>%
+  mutate(value = (biomass*0.3)^2,
+         variable = 'tot.bio.var',
+         units = 'mt')%>%
+  select(year,variable,units,value)
+
+summer.flounder = summer.flounder %>%
+  rename(value = 'biomass')%>%
+  mutate(variable = 'tot.biomass')%>%
+  bind_rows(summer.flounder.var)%>%
+  mutate(SVSPP = 103,
+         units = 'mt')%>%
+  rename(YEAR = 'year')
 
 
 ##############################################################################
@@ -111,6 +167,9 @@ biomassEPU <-  biomassEPU %>% dplyr::filter(!(SVSPP %in% c(403,409,401)))
 biomassEPU <- rbind(biomassEPU,clam)
 biomassEPU <- rbind(biomassEPU,quahog)
 biomassEPU <- rbind(biomassEPU,scallops)
+biomassEPU <- rbind(biomassEPU,menhaden)
+biomassEPU <- rbind(biomassEPU,bluefish)
+biomassEPU <- rbind(biomassEPU,summer.flounder)
 
 # pull out total bio, abund with standard error for each species over time
 sweptAreaBiomassEPU <- biomassEPU %>% 
@@ -155,10 +214,17 @@ biomassNEUS <-  biomassNEUS %>% dplyr::filter(!(SVSPP %in% c(403,409,401)))
 clambox <- clam %>% dplyr::mutate(box=NA)
 quahogbox <- quahog %>% dplyr::mutate(box=NA)
 scallopbox <- scallops %>% dplyr::mutate(box=NA)
+menhadenbox = menhaden %>% dplyr::mutate(box = NA)
+summer.flounderbox = summer.flounder %>% dplyr::mutate(box = NA)
+bluefishbox = bluefish %>% dplyr::mutate(box = NA)
+
 
 biomassNEUS <- rbind(biomassNEUS,clambox)
 biomassNEUS <- rbind(biomassNEUS,quahogbox)
 biomassNEUS <- rbind(biomassNEUS,scallopbox)
+biomassNEUS <- rbind(biomassNEUS,menhadenbox)
+biomassNEUS <- rbind(biomassNEUS,bluefishbox)
+biomassNEUS <- rbind(biomassNEUS,summer.flounderbox)
 
 
 sweptAreaBiomassBox <- biomassNEUS %>% 
@@ -188,6 +254,9 @@ biomassAllNEUS <-  biomass %>% dplyr::filter(!(SVSPP %in% c(403,409,401)))
 biomassAllNEUS <- rbind(biomassAllNEUS,clam)
 biomassAllNEUS <- rbind(biomassAllNEUS,quahog)
 biomassAllNEUS <- rbind(biomassAllNEUS,scallops)
+biomassAllNEUS <- rbind(biomassAllNEUS,menhaden)
+biomassAllNEUS <- rbind(biomassAllNEUS,bluefish)
+biomassAllNEUS <- rbind(biomassAllNEUS,summer.flounder)
 
 sweptAreaBiomassNEUS <- biomassAllNEUS %>% 
   dplyr::filter(variable %in% c("tot.biomass","tot.bio.var","tot.abundance","tot.abundance.var")) %>%
