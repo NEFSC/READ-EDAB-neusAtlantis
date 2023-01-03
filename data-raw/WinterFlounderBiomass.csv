@@ -1,0 +1,47 @@
+#' Northeast Winter Flounder,,,
+#' ,,,
+#' @description spawning stock biomass (mt; digitized Figure 3) ,,,
+#',,,
+#' @source Winter Flounder Stcok Assessment Overview 2021,,,
+#',,,
+#',,,
+Year,Value,Variable,Units
+1981,52,SSB,Million Pounds
+1982,54.8,SSB,Million Pounds
+1983,49.4,SSB,Million Pounds
+1984,44.4,SSB,Million Pounds
+1985,30.4,SSB,Million Pounds
+1986,24.5,SSB,Million Pounds
+1987,19.9,SSB,Million Pounds
+1988,17.5,SSB,Million Pounds
+1989,14.5,SSB,Million Pounds
+1990,14.7,SSB,Million Pounds
+1991,15.1,SSB,Million Pounds
+1992,13.7,SSB,Million Pounds
+1993,10.4,SSB,Million Pounds
+1994,10.9,SSB,Million Pounds
+1995,15.5,SSB,Million Pounds
+1996,17.4,SSB,Million Pounds
+1997,20.1,SSB,Million Pounds
+1998,20.7,SSB,Million Pounds
+1999,21.4,SSB,Million Pounds
+2000,22.7,SSB,Million Pounds
+2001,20.5,SSB,Million Pounds
+2002,15.2,SSB,Million Pounds
+2003,13.5,SSB,Million Pounds
+2004,12.1,SSB,Million Pounds
+2005,10.5,SSB,Million Pounds
+2006,12,SSB,Million Pounds
+2007,13.1,SSB,Million Pounds
+2008,11.6,SSB,Million Pounds
+2009,10.6,SSB,Million Pounds
+2010,12.2,SSB,Million Pounds
+2011,14.1,SSB,Million Pounds
+2012,14,SSB,Million Pounds
+2013,13.7,SSB,Million Pounds
+2014,11.8,SSB,Million Pounds
+2015,9.7,SSB,Million Pounds
+2016,8.4,SSB,Million Pounds
+2017,8.1,SSB,Million Pounds
+2018,8.2,SSB,Million Pounds
+2019,7.6,SSB,Million Pounds
