@@ -69,7 +69,8 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
     logData$End_time[n] < "Unfinished"
     logData$Status[n] <- "Started"
     batcherFile$Status[n] <- "Started"
-    try(write.csv(logData,paste0("/net/work3/EDAB/atlantis/Rob_Project_Template/Project_Name_Version/Atlantis_Runs/",logfileName), row.names = FALSE, append = FALSE))
+    write.csv(logData,paste0(output.dir,'logFile.csv'), row.names = FALSE)
+    try(write.csv(logData,paste0(output.dir,logfileName), row.names = FALSE, append = FALSE))
     try(write.csv(batcherFile,batcherFilename, row.names = FALSE, append = FALSE))
     
     Sys.sleep(120)  
@@ -174,7 +175,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
           logData$End_time[i] < "Unfinished"
           logData$Status[i] <- "Started"
           batcherFile$Status[i] <- "Started"
-          try(write.csv(logData,paste0("/net/work3/EDAB/atlantis/Rob_Project_Template/Project_Name_Version/Atlantis_Runs/",logfileName), row.names = FALSE, append = FALSE))
+          try(write.csv(logData,paste0(output.dir,logfileName), row.names = FALSE, append = FALSE))
           try(write.csv(batcherFile,batcherFilename, row.names = FALSE, append = FALSE))
           
           Sys.sleep(120)
@@ -184,7 +185,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
       }
    }
   }
-  try(write.csv(logData,paste0("/net/work3/EDAB/atlantis/Rob_Project_Template/Project_Name_Version/Atlantis_Runs/",logfileName), row.names = FALSE, append = FALSE))
+  try(write.csv(logData,paste0(output.dir,logfileName), row.names = FALSE, append = FALSE))
   try(write.csv(batcherFile,batcherFilename, row.names = FALSE, append = FALSE))
   
 }
