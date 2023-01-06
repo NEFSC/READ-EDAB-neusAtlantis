@@ -5,7 +5,7 @@ options(warn = F)
 
 #### Extract data and calculate biomass for ASFMC SUmmer Flounder assessment ####
 
-MEN.file = here::here('data-raw','/Menhaden_ASMFC_2020.pdf')
+MEN.file = here::here('data-raw','/Menhaden_ASFMC_2020.pdf')
 
 #biomass-at-age
 

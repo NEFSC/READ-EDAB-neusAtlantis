@@ -5,7 +5,7 @@ options(warn = F)
 
 #### Extract data and calculate biomass for ASFMC SUmmer Flounder assessment ####
 
-SUF.file = here::here('data-raw','/SummerFlounder_ASMFC_2019.pdf')
+SUF.file = here::here('data-raw','/SummerFlounder_ASFMC_2019.pdf')
 
 #numbers-at-age
 

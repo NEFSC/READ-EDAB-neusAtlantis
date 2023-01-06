@@ -5,7 +5,7 @@ options(warn = F)
 
 #### Extract data and calculate biomass for ASFMC SUmmer Flounder assessment ####
 
-BLF.file = here::here('data-raw','/Bluefish_ASMFC_2015.pdf')
+BLF.file = here::here('data-raw','/Bluefish_ASFMC_2015.pdf')
 
 #numbers-at-age
 
