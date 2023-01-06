@@ -20,7 +20,7 @@ data = readRDS(here::here('data',"sweptAreaBiomassNEUS.rds")) %>%
   group_by(Code,YEAR)%>%
   summarise(value = sum(value,na.rm=T) )
 
-data_var = readRDS(here::here('data',"sweptAreaBiomassNEUS.rds")) %>%
+data_var = readRDS(here::here('data',"sweptAreaBiomassNEUS.rds")) %>% 
   dplyr::filter(variable %in% c("tot.bio.var"))%>%
   dplyr::mutate(value=ifelse(grepl("kg\\^2$",units),value/1e6,value)) %>%
   dplyr::select(-units) %>%
@@ -32,9 +32,10 @@ data = left_join(data,data_var)%>%
          value.min = ifelse(value.min < 0, 0, value.min),
          value.max = value + 3*sqrt(value.var))
 
-#Read in q's
+#Read in q's, Set spp with assessment-based estimates to q=1
 q_data <- readRDS(here::here('data',"emax_qs.rds"))
 q_data <- mutate(q_data,Avg.q = (Fall.q + Spring.q) / 2)
+q_data <- mutate(q_data,Avg.q = ifelse(Code %in% c('BLF','MEN','SUF','STB'),1,Avg.q))
 q_data <- select(q_data,Code,Avg.q)
 q_data <- distinct(q_data)
 q_data <- group_by(q_data,Code)

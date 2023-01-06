@@ -78,59 +78,78 @@ scallops <- scallop %>%
 
 #### Bluefish data from ASMFC_2015
 
-bluefish = readRDS(here::here('data-raw','BLF_asfmc_biomass.rds'))
+bluefish = readRDS(here::here('data-raw','BLF_asfmc_biomass.rds'))%>%
+  mutate(biomass = biomass*1E3)
 
 #Create variance that is based on a CV = 0.3 so sigma = 0.3*mu
 bluefish.var = bluefish %>%
   mutate(value = (biomass*0.3)^2,
          variable = 'tot.bio.var',
-         units = 'mt')%>%
+         units = 'kg^2')%>%
   select(year,variable,units,value)
   
 bluefish = bluefish %>%
   rename(value = 'biomass')%>%
-  mutate(variable = 'tot.biomass')%>%
+  mutate(variable = 'tot.biomass',units = 'kg')%>%
   bind_rows(bluefish.var)%>%
-  mutate(SVSPP = 135,
-         units = 'mt')%>%
+  mutate(SVSPP = 135)%>%
   rename(YEAR = 'year')
 
 ### Menhaden data from ASFMC_2020
 
-menhaden =  readRDS(here::here('data-raw','MEN_asfmc_biomass.rds'))
+menhaden =  readRDS(here::here('data-raw','MEN_asfmc_biomass.rds'))%>%
+  mutate(biomass = biomass*1E3)
 
 #Create variance that is based on a CV = 0.3 so sigma = 0.3*mu
 menhaden.var = menhaden %>%
   mutate(value = (biomass*0.3)^2,
          variable = 'tot.bio.var',
-         units = 'mt')%>%
+         units = 'kg^2')%>%
   select(year,variable,units,value)
 
 menhaden = menhaden %>%
   rename(value = 'biomass')%>%
-  mutate(variable = 'tot.biomass')%>%
+  mutate(variable = 'tot.biomass',units = 'kg')%>%
   bind_rows(menhaden.var)%>%
-  mutate(SVSPP = 36,
-         units = 'mt')%>%
+  mutate(SVSPP = 36)%>%
   rename(YEAR = 'year')
 
 ### SummerFlounder data from ASFMC_2020
 
-summer.flounder =  readRDS(here::here('data-raw','SUF_asfmc_biomass.rds'))
+summer.flounder =  readRDS(here::here('data-raw','SUF_asfmc_biomass.rds'))%>%
+  mutate(biomass = biomass*1E3)
 
 #Create variance that is based on a CV = 0.3 so sigma = 0.3*mu
 summer.flounder.var = summer.flounder %>%
   mutate(value = (biomass*0.3)^2,
          variable = 'tot.bio.var',
-         units = 'mt')%>%
+         units = 'kg^2')%>%
   select(year,variable,units,value)
 
 summer.flounder = summer.flounder %>%
   rename(value = 'biomass')%>%
-  mutate(variable = 'tot.biomass')%>%
+  mutate(variable = 'tot.biomass',units = 'kg')%>%
   bind_rows(summer.flounder.var)%>%
-  mutate(SVSPP = 103,
-         units = 'mt')%>%
+  mutate(SVSPP = 103)%>%
+  rename(YEAR = 'year')
+
+### Striped Bass data from ASFMC_2020
+
+striped.bass =  readRDS(here::here('data-raw','STB_asfmc_biomass.rds'))%>%
+  mutate(biomass = as.numeric(biomass)*1E3)
+
+#Create variance that is based on a CV = 0.3 so sigma = 0.3*mu
+striped.bass.var = striped.bass %>%
+  mutate(value = (biomass*0.3)^2,
+         variable = 'tot.bio.var',
+         units = 'kg^2')%>%
+  select(year,variable,units,value)
+
+striped.bass = striped.bass %>%
+  rename(value = 'biomass')%>%
+  mutate(variable = 'tot.biomass',units = 'kg')%>%
+  bind_rows(striped.bass.var)%>%
+  mutate(SVSPP = 139)%>%
   rename(YEAR = 'year')
 
 
@@ -161,7 +180,7 @@ biomassEPU <- survdat::calc_swept_area(surveyData=data,
   
 
 # remove clams, quahogs, scallops
-biomassEPU <-  biomassEPU %>% dplyr::filter(!(SVSPP %in% c(403,409,401,36,135,103)))
+biomassEPU <-  biomassEPU %>% dplyr::filter(!(SVSPP %in% c(403,409,401,36,135,103,139)))
 
 ## join clam, quahog, scallop data from assessment
 biomassEPU <- rbind(biomassEPU,clam)
@@ -170,6 +189,7 @@ biomassEPU <- rbind(biomassEPU,scallops)
 biomassEPU <- rbind(biomassEPU,menhaden)
 biomassEPU <- rbind(biomassEPU,bluefish)
 biomassEPU <- rbind(biomassEPU,summer.flounder)
+biomassEPU <- rbind(biomassEPU,striped.bass)
 
 # pull out total bio, abund with standard error for each species over time
 sweptAreaBiomassEPU <- biomassEPU %>% 
@@ -208,7 +228,7 @@ for (boxid in boxids){
   biomassNEUS <- rbind(biomassNEUS,biomassBox)
 }
 # remove clams from survdat since poorly sampled in bottom trawl
-biomassNEUS <-  biomassNEUS %>% dplyr::filter(!(SVSPP %in%c(403,409,401,36,135,103)))
+biomassNEUS <-  biomassNEUS %>% dplyr::filter(!(SVSPP %in%c(403,409,401,36,135,103,139)))
 
 ## join clam, quahog , scallop data from assessment
 clambox <- clam %>% dplyr::mutate(box=NA)
@@ -217,6 +237,7 @@ scallopbox <- scallops %>% dplyr::mutate(box=NA)
 menhadenbox = menhaden %>% dplyr::mutate(box = NA)
 summer.flounderbox = summer.flounder %>% dplyr::mutate(box = NA)
 bluefishbox = bluefish %>% dplyr::mutate(box = NA)
+striped.bassbox = striped.bass %>% dplyr::mutate(box = NA)
 
 
 biomassNEUS <- rbind(biomassNEUS,clambox)
@@ -225,6 +246,7 @@ biomassNEUS <- rbind(biomassNEUS,scallopbox)
 biomassNEUS <- rbind(biomassNEUS,menhadenbox)
 biomassNEUS <- rbind(biomassNEUS,bluefishbox)
 biomassNEUS <- rbind(biomassNEUS,summer.flounderbox)
+biomassNEUS <- rbind(biomassNEUS,striped.bassbox)
 
 
 sweptAreaBiomassBox <- biomassNEUS %>% 
@@ -248,7 +270,7 @@ biomass <- survdat::calc_swept_area(surveyData=data,
                                        filterBySeason = "FALL",
                                        tidy=T)
 # remove clams from survdat since poorly sampled in bottom trawl
-biomassAllNEUS <-  biomass %>% dplyr::filter(!(SVSPP %in%c(403,409,401,36,135,103)))
+biomassAllNEUS <-  biomass %>% dplyr::filter(!(SVSPP %in%c(403,409,401,36,135,103,139)))
 
 ## join clam, quahog, scallop data from assessment
 biomassAllNEUS <- rbind(biomassAllNEUS,clam)
@@ -257,6 +279,7 @@ biomassAllNEUS <- rbind(biomassAllNEUS,scallops)
 biomassAllNEUS <- rbind(biomassAllNEUS,menhaden)
 biomassAllNEUS <- rbind(biomassAllNEUS,bluefish)
 biomassAllNEUS <- rbind(biomassAllNEUS,summer.flounder)
+biomassAllNEUS <- rbind(biomassAllNEUS,striped.bass)
 
 sweptAreaBiomassNEUS <- biomassAllNEUS %>% 
   dplyr::filter(variable %in% c("tot.biomass","tot.bio.var","tot.abundance","tot.abundance.var")) %>%
