@@ -5,11 +5,11 @@ library(ggplot2)
 source(here::here('R','plot_run_comparisons.R'))
 source(here::here('R','plot_run_catch_comparisons.R'))
 
-batch.prefix = 'fishing_sensitivity_1'
-guild.names = c('Apex_Predator','Benthivore','Benthos','Piscivore','Planktivore','Other')
-fishing.levels = c('0_1','0_25','0_5','0_75','1_1','1_25','1_33','1_5','2','2_5','3','4','5','6','7','10')
+batch.prefix =  'fishing_sensitivity_extended_constant_2'
+guild.names =  c('Apex_Predator','Benthivore','Benthos','Piscivore','Planktivore')
+fishing.levels = c('0','0_5','1_5','2_5','5','10','15','20','40','60','100')
 
-batch.dir = '/media/jcaracappa/06b7679b-9bac-4c53-9cf3-9abecb801e6d/home.orig/jcaracappa/Documents/GitHub/neus-atlantis/Atlantis_Runs/fishing_sensitivity_scenarios_1/'
+batch.dir = '/media/jcaracappa/06b7679b-9bac-4c53-9cf3-9abecb801e6d/home.orig/jcaracappa/Documents/GitHub/neus-atlantis/Atlantis_Runs/fishing_sensitivity_extended_constant_2/'
 
 run.dirs = list.dirs(batch.dir,recursive = F)
 run.names = list.dirs(batch.dir,full.names = F,recursive = F)
