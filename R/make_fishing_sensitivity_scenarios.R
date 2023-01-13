@@ -9,7 +9,7 @@ library(dplyr)
 
 #Define guild names that are used for catch scenarios
 guild.names = c('Apex_Predator','Benthivore','Benthos','Piscivore','Planktivore','Other')
-batch.prefix = 'fishing_sensitivity_1'
+batch.prefix = 'fishing_sensitivity_2'
 
 #Read in Functional Group to guild match
 spp2guild = read.csv(here::here('diagnostics','functional_groups_match.csv'),as.is = T)%>%
@@ -17,8 +17,8 @@ spp2guild = read.csv(here::here('diagnostics','functional_groups_match.csv'),as.
   filter(Guild %in% guild.names)
 
 #define fishing levels
-fishing.levels = c(1.1,1.25,1.5,2.5,3,5,6,7)
-fishing.levels.text = c('1_1','1_25','1_5','2_5','3','5','6','7')
+fishing.levels = c(1.1,1.25,1.33,1.5,2.5,5,10)
+fishing.levels.text = c('1_1','1_25','1_33','1_5','2_5','5','10')
 
 #Define guild and fishing level combinations
 scenario.combs = expand.grid('guild.names' = guild.names, 'fishing.levels' = fishing.levels) %>%
@@ -26,8 +26,9 @@ scenario.combs = expand.grid('guild.names' = guild.names, 'fishing.levels' = fis
   left_join(data.frame(fishing.levels = fishing.levels,fishing.levels.text = fishing.levels.text))
 
 #### Create Parameter Files for each Scenario ####
+dir.create(here::here('currentVersion','CatchFiles',batch.prefix))
 
-#Functions to make new catch files
+#Functions to make new catch files#Functions to makebatch.prefix new catch files
 source(here::here('R','make_catch_scale_scenarios.R'))
 new.catch.names = character()
 i=1
@@ -41,8 +42,8 @@ for(i in 1:nrow(scenario.combs)){
     original_catch_file = here::here('currentVersion','CatchFiles','total_catch.ts'),
     fgs.file = here::here('currentVersion','neus_groups.csv'),
     groups =spp.guild,
-    new_catch_file = here::here('currentVersion','CatchFiles','fishing_sensitivity_scenarios',paste0(new.catch.name,'.ts')),
-    setup.filename = here::here('currentVersion','CatchFiles','fishing_sensitivity_scenarios',paste0(new.catch.name,'.csv')),
+    new_catch_file = here::here('currentVersion','CatchFiles',batch.prefix,paste0(new.catch.name,'.ts')),
+    setup.filename = here::here('currentVersion','CatchFiles',batch.prefix,paste0(new.catch.name,'.csv')),
     start.time = 365*20,
     end.time = 19724,
     type = 'Scalar',
@@ -63,7 +64,7 @@ for(i in 1:length(new.catch.names)){
   file.copy(force.file.orig, force.file.new,overwrite = T)
 
   force.file.new.lines = readLines(force.file.new)
-  catch.file.line.new = paste0('Catchts0.data CatchFiles/fishing_sensitivity_scenarios/',paste0(new.catch.names[i],'.ts'))
+  catch.file.line.new = paste0('Catchts0.data CatchFiles/',batch.prefix,'/',paste0(new.catch.names[i],'.ts'))
   force.file.new.lines[catch.file.line] = catch.file.line.new
 
   writeLines(force.file.new.lines, con = force.file.new )
@@ -73,7 +74,7 @@ for(i in 1:length(new.catch.names)){
 #### Create Batcher Setup ####
 setup.df = data.frame(
   Run = new.catch.names,
-  OutputDir = paste0('fishing_sensitivity_scenarios_1/',new.catch.names,'/'),
+  OutputDir = paste0(batch.prefix,'/',new.catch.names,'/'),
   BiolPrm = 'at_biology.prm',
   RunPrm = 'at_run.prm',
   HarvestPrm = 'at_harvest.prm',
@@ -81,18 +82,18 @@ setup.df = data.frame(
   ForcePrm = paste0('at_force_LINUX_',new.catch.names,'.prm')
 )
 
-write.csv(setup.df,here::here('Setup_Files','fishing_sensitivity_scenarios_1f.csv'),row.names =F)
+write.csv(setup.df,here::here('Setup_Files',paste0(batch.prefix,'.csv')),row.names =F)
 
-batch.dir = 'fishing_sensitivity_scenarios_1'
+batch.dir = batch.prefix
 dir.create(here::here('Atlantis_Runs',batch.dir))
 
-source(here::here('R','atlantis_batcher.r'))
+source(here::here('R','atlantis_batcher_11_30_22.r'))
 
 atlantis_batcher(
-  batcherFilename = here::here('Setup_Files','fishing_sensitivity_scenarios_1f.csv'),
+  batcherFilename = here::here('Setup_Files',paste0(batch.prefix,'c.csv')),
   userName            = 'jcara',
   CHECK_TIME_INTERVAL = 60,
-  NUM_TO_RUN          = 5,
+  NUM_TO_RUN          = 8,
   CONTAINER_TYPE      = 'podman',
   param.dir = here::here('currentVersion',''),
   output.dir = paste0('/media/jcaracappa/06b7679b-9bac-4c53-9cf3-9abecb801e6d/home.orig/jcaracappa/Documents/GitHub/neus-atlantis/Atlantis_Runs/')
