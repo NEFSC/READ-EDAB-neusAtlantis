@@ -22,7 +22,8 @@ process_atl_output = function(param.dir,
                               include_catch,
                               diet.agg.time,
                               save.out,
-                              large.file = F){
+                              large.file = F,
+                              system){
   
   # memory.limit(size = 56000)
   source(here::here('R','load_nc_temp.R'))
@@ -163,8 +164,13 @@ process_atl_output = function(param.dir,
     ##NEUS only 613 diet obs per timestep
     nsteps =  365/extract_prm(prm_biol = param.ls$run.prm, variables = "toutinc") 
     line.incr = 613 * nsteps
-    nline.str = system(paste0('find /c /v "" ',param.ls$dietcheck),intern = T)[2]
-    nline = as.numeric(strsplit(nline.str,' ')[[1]][3])
+    if(system == 'windows'){
+      nline.str = system(paste0('find /c /v "" ',param.ls$dietcheck),intern = T)[2]  
+      nline = as.numeric(strsplit(nline.str,' ')[[1]][3])
+    }else{
+      nline.str = system(paste0('wc -l ',param.ls$dietcheck),intern = T)
+      nline = as.numeric(strsplit(nline.str,' ')[[1]][1])  
+    }
     line.seq = c(seq(0,nline,line.incr),nline)
     
     diet.agg = list()
@@ -195,9 +201,9 @@ process_atl_output = function(param.dir,
         dplyr::select(Time,Predator,Cohort,Stock,Updated,MAK:DC)%>%
         dplyr::arrange(Time,Predator,Cohort,Stock,Updated)
       
-      pred.sum =apply(diet.slice[,6:93],1,sum,na.rm=T)
+      pred.sum =apply(diet.slice[,6:ncol(diet.slice)],1,sum,na.rm=T)
       
-      diet.slice[,6:93] = diet.slice[,6:93]/pred.sum
+      diet.slice[,6:ncol(diet.slice)] = diet.slice[,6:ncol(diet.slice)]/pred.sum
       diet.slice = diet.slice[which(pred.sum !=0),]
       
       write.table(diet.slice,file = paste0(out.dir,'dietcheck_temp.txt'))
@@ -231,6 +237,7 @@ process_atl_output = function(param.dir,
   {numbers = list()
   numbers.age = list()
   numbers.box = list()
+  spatial.numbers = list()
   RN.box = list()
   SN.box = list()
   RN.age = list()
@@ -321,6 +328,7 @@ process_atl_output = function(param.dir,
       #Read in raw untransformed data from main.nc file
       if(load_fgs(param.ls$groups.file)$IsTurnedOn[i] == 0){
         rawdata.spp = list(data.frame(species = group.types$species[i], polygon =NA, agecl = NA,layer = NA, time = 0, atoutput = NA))
+        next()
       }else{
         rawdata.spp =Map(load_nc_temp,
                          select_variable = main.vars,
@@ -344,7 +352,8 @@ process_atl_output = function(param.dir,
         numbers[[i]] = atlantistools::agg_data(data = rawdata.spp[[1]], groups = c('species','time'), fun = sum)
         numbers.age[[i]] = atlantistools::agg_data(data = rawdata.spp[[1]], groups = c('species','agecl','time'), fun = sum)
         numbers.box[[i]] = atlantistools::agg_data(data = rawdata.spp[[1]], groups = c('species','polygon','time'), fun = sum)
-        
+        spatial.numbers[[i]] = atlantistools::agg_data(data = rawdata.spp[[1]], groups = c("species", "agecl", "polygon", "layer", "time"), fun = sum)
+          
         RN.box[[i]] = atlantistools::agg_data(data = rawdata.spp[[3]], groups = c('species','polygon','time'), fun = sum)
         SN.box[[i]] = atlantistools::agg_data(data = rawdata.spp[[2]], groups = c('species','polygon','time'), fun = sum)
         RN.age[[i]] = atlantistools::agg_data(data = rawdata.spp[[3]], groups = c('species','agecl','time'), fun = sum)
@@ -415,11 +424,20 @@ process_atl_output = function(param.dir,
     }
   }
  
-
   # max age (mean) - biomass / numbers
   # grab numbers in time and space
-  spatialNumbers = rawdata.main[[1]] %>%
-    dplyr::rename(numbers = atoutput)
+  
+  if(large.file == T){
+    
+    spatialNumbers = dplyr::bind_rows(spatial.numbers)%>%
+      dplyr::rename(numbers = atoutput)  
+    
+    spatial.biomass = dplyr::bind_rows(spatial.biomass)
+  }else{
+    spatialNumbers = rawdata.main[[1]] %>%
+      dplyr::rename(numbers = atoutput)  
+    
+  }
   # filter biomass for species with 10 cohorts and convert to kilograms
   spatialBiomass <- spatial.biomass %>%
     dplyr::filter(species %in% unique(spatialNumbers$species)) %>%
