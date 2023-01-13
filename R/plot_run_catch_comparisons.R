@@ -70,7 +70,7 @@ plot_run_catch_comparisons = function(model.dirs,model.names,plot.raw = T,
     plot.groups = groups
   }
   
-  plot.cols = c(RColorBrewer::brewer.pal(12,'Paired'),RColorBrewer::brewer.pal(9,'Set2'))
+  plot.cols = c(RColorBrewer::brewer.pal(12,'Paired'),RColorBrewer::brewer.pal(8,'Set2'))
   if(plot.diff){
     
     
