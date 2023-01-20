@@ -11,11 +11,12 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'misc_mumC_5b'
+run.name = 'Dev_New_Clams'
 
 # atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HER_CatchSpinup_1/',run.name,'/')
 # atl.dir = here::here('Atlantis_Runs/HER_CatchSpinup_1',run.name,'')
-atl.dir = here::here('Atlantis_Runs',run.name,'')
+# atl.dir = here::here('Atlantis_Runs',run.name,'')
+atl.dir = '/home/jcaracappa/Documents/GitHub/neus-atlantis_2/Atlantis_Runs/Dev_New_Clams/'
 
 dir.create(paste0(atl.dir,'Post_Processed/'))
 dir.create(paste0(atl.dir,'Post_Processed/Data/'))
@@ -42,7 +43,8 @@ process_atl_output(
   save.out = T,
   diet.agg.time = 'month',
   spatial.overlap = F,
-  large.file = F
+  large.file = T,
+  system = 'linux'
 )
 
 #If result object saved to file or already exists load it into env.
@@ -74,7 +76,7 @@ make_atlantis_diagnostic_figures(
   plot.benthic =F,
   plot.overall.biomass = T,
   plot.biomass.timeseries = T,
-  plot.length.age = T,
+  plot.length.age = F,
   plot.biomass.box=F,
   plot.c.mum=F,
   plot.sn.rn=F,
@@ -83,8 +85,8 @@ make_atlantis_diagnostic_figures(
   plot.physics=F,
   plot.growth.cons=F,
   plot.cohort=F,
-  plot.diet=T,
-  plot.consumption= T,
+  plot.diet=F,
+  plot.consumption= F,
   plot.spatial.biomass=F,
   plot.spatial.biomass.seasonal = F,
   plot.LTL=F,

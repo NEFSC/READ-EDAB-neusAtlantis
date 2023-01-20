@@ -584,7 +584,7 @@ process_atl_output = function(param.dir,
                                            fgs = param.ls$groups.file, prm_run = param.ls$run.prm,
                                            bboxes = bboxes))
       }
-      if(is.null(nrow(proddata.spp[[1]]))){
+      if(is.null(nrow(proddata.spp[[1]]))|is.null(nrow(proddata.spp[[2]]))){
         print(i)
         next()
       }else if(group.types$group[i] != 'age'){
