@@ -8,9 +8,14 @@ library(dplyr)
 library(ggplot2)
 library(gridExtra)
 
+source(here::here('R','get_recruit_type.R'))
+recruit.type = get_recruit_type(here::here('currentVersion','at_biology.prm'))%>%
+  rename(Code = 'group')
+
 fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T) %>% select(Code, LongName) %>% arrange(LongName)
 spp2guild = read.csv(here::here('diagnostics','functional_groups_match.csv'),as.is = T)%>%
-  select(Code,Guild)
+  select(Code,Guild)%>%
+  left_join(recruit.type)
 
 
 # (1) Pull all fishing sensitivity biomass output
@@ -27,6 +32,15 @@ fishing.levels.text = c('0','0_5','1_5','2_5','5','10','15','20','40','60','100'
 scenario.combs = expand.grid('guild.names' = guild.names, 'fishing.levels.scalar' = fishing.levels.scalar) %>%
   arrange(guild.names)%>%
   left_join(data.frame(fishing.levels.scalar = fishing.levels.scalar,fishing.levels.text = fishing.levels.text))
+
+#Filter a setby removing unfished groups
+catch.base = read.table(here::here('currentVersion','CatchFiles','total_catch_extended_mean.ts'))
+colnames(catch.base) = c('Time',read.csv(here::here('currentVersion','neus_groups.csv'),stringsAsFactors = F)$Code)
+catch.base = catch.base %>%
+  tidyr::gather('Code','Catch',-Time)%>%
+  group_by(Code)%>%
+  summarise(Catch = sum(Catch,na.rm=T))
+groups.fished = catch.base$Code[which(catch.base$Catch > 0)]
 
 bio.ls = catch.ls = bio.age.ls = list()
 i=1
@@ -73,21 +87,75 @@ base.run = 'Extended_Constant_Catch'
 base.biomass = read.table(here::here('Atlantis_Runs',base.run,'neus_outputBiomIndx.txt'),as.is  =T, header = T)%>%
   select(Time:DC)%>%
   tidyr::gather(Code,Biomass.baseline,-Time)
+
+base.biomass.fished = base.biomass %>%
+  filter(Code %in% groups.fished)
+
+base.biomass.bh = base.biomass %>%
+  left_join(spp2guild)%>%
+  filter(flagrecruit == 3)
+
 base.biomass.age = read.table(here::here('Atlantis_Runs',base.run,'neus_outputAgeBiomIndx.txt'),as.is  =T, header = T)%>%
   tidyr::gather(ID,Biomass.baseline,-Time)%>%
   tidyr::separate(ID,c('Code','agecl'))
+
+
+base.biomass.age.fished = base.biomass.age %>%
+  filter(Code %in% groups.fished)
+
 base.catch = read.table(here::here('Atlantis_Runs',base.run,'neus_outputCatch.txt'),as.is  =T, header = T)%>%
   select(Time:ZG)%>%
   tidyr::gather(Code,Catch.baseline,-Time)
 
+base.catch.fished = base.catch %>%
+  filter(Code %in% groups.fished)
+
+base.catch.bh = base.catch %>%
+  left_join(spp2guild)%>%
+  filter(flagrecruit == 3)
+
 # (3) Calculate difference to baseline
+
+bio.all.fished= bio.all %>%
+  filter(Code %in% groups.fished)%>%
+  left_join(base.biomass.fished)%>%
+  mutate(Biomass.diff = Biomass - Biomass.baseline)
+
+bio.all.bh = bio.all %>%
+  left_join(spp2guild) %>%
+  filter(flagrecruit == 3)%>% 
+  left_join(base.biomass.bh)%>%
+  mutate(Biomass.diff = Biomass - Biomass.baseline)
+  
 bio.all = bio.all %>% 
   left_join(base.biomass)%>%
+  mutate(Biomass.diff = Biomass - Biomass.baseline)
+
+bio.age.all.fished = bio.age.all %>%
+  filter(Code %in% groups.fished)%>%
+  left_join(base.biomass.age.fished) %>%
+  mutate(Biomass.diff = Biomass - Biomass.baseline)
+
+bio.age.all.bh = bio.age.all %>%
+  left_join(spp2guild)%>%
+  filter(flagrecruit == 3)%>% 
+  left_join(base.biomass.age.fished) %>%
   mutate(Biomass.diff = Biomass - Biomass.baseline)
 
 bio.age.all = bio.age.all %>%
   left_join(base.biomass.age)%>%
   mutate(Biomass.diff = Biomass - Biomass.baseline)
+
+catch.all.fished = catch.all%>%
+  filter(Code %in% groups.fished)%>%
+  left_join(base.catch.fished)%>%
+  mutate(Catch.diff = Catch - Catch.baseline)
+
+catch.all.bh = catch.all %>%
+  left_join(spp2guild)%>%
+  filter(flagrecruit == 3)%>% 
+  left_join(base.catch.bh)%>%
+  mutate(Catch.diff = Catch - Catch.baseline)
 
 catch.all = catch.all %>%
   left_join(base.catch)%>%
@@ -114,23 +182,9 @@ catch.scalar.summ = catch.scalar.test %>%
   group_by(run.name,guild.name)%>%
   summarise(N.spp.missing = n())%>%
   left_join(spp.per.guild,by = c('guild.name' = 'Guild'))
-  
-  
+
 sort(unique(catch.scalar.test$run.name))
 
-#Filter a setby removing unfished groups
-catch.base = read.table(here::here('currentVersion','CatchFiles','total_catch_extended_mean.ts'))
-colnames(catch.base) = c('Time',read.csv(here::here('currentVersion','neus_groups.csv'),stringsAsFactors = F)$Code)
-catch.base = catch.base %>%
-  tidyr::gather('Code','Catch',-Time)%>%
-  group_by(Code)%>%
-  summarise(Catch = sum(Catch,na.rm=T))
-groups.fished = catch.base$Code[which(catch.base$Catch > 0)]
-
-bio.all.fished = bio.all %>%
-  filter(Code %in% groups.fished)
-bio.age.all.fished = bio.age.all %>%
-  filter(Code %in% groups.fished)
 catch.all.fished = catch.all %>%
   filter(Code %in% groups.fished)
 
@@ -142,9 +196,23 @@ saveRDS(bio.all.fished,here::here('data',paste0(batch.prefix,'_biomass_fished.RD
 saveRDS(bio.age.all.fished,here::here('data',paste0(batch.prefix,'_biomass_age_fished.RDS')))
 saveRDS(catch.all.fished,here::here('data',paste0(batch.prefix,'_catch_fished.RDS')))
 
+saveRDS(bio.all.bh,here::here('data',paste0(batch.prefix,'_biomass_BH.RDS')))
+saveRDS(bio.age.all.bh,here::here('data',paste0(batch.prefix,'_biomass_age_BH.RDS')))
+saveRDS(catch.all.bh,here::here('data',paste0(batch.prefix,'_catch_BH.RDS')))
+
 bio.all = readRDS(here::here('data',paste0(batch.prefix,'_biomass.RDS')))
+bio.age.all = readRDS(here::here('data',paste0(batch.prefix,'_biomass_age.RDS')))
 catch.all = readRDS(here::here('data',paste0(batch.prefix,'_catch.RDS')))
 
+bio.all.fished = readRDS(here::here('data',paste0(batch.prefix,'_biomass_fished.RDS')))
+bio.age.all.fished = readRDS(here::here('data',paste0(batch.prefix,'_biomass_age_fished.RDS')))
+catch.all.fished = readRDS(here::here('data',paste0(batch.prefix,'_catch_fished.RDS')))
+
+bio.all.bh = readRDS(here::here('data',paste0(batch.prefix,'_biomass_BH.RDS')))
+bio.age.all.bh = readRDS(here::here('data',paste0(batch.prefix,'_biomass_age_BH.RDS')))
+catch.all.bh = readRDS(here::here('data',paste0(batch.prefix,'_catch_BH.RDS')))
+
+rm(base.biomass,base.biomass.fished,base.biomass.age,base.biomass.age.fished,base.catch,base.catch.fished)
 # (4) Plot difference as function of fishing manipulation per spp per guild manipulation
 end.time = max(bio.all$Time)
 start.time = end.time - (365*20)
@@ -212,6 +280,27 @@ bio.all.guild.fished = bio.all.fished %>%
   mutate(Biomass.diff = Biomass/Biomass.baseline)%>%
   filter(!is.na(Guild))
 
+bio.all.guild.bh = bio.all.bh %>%
+  left_join(spp2guild)%>%
+  rename(Guild.scenario = 'guild.name')%>%
+  filter(Time >= start.time & Time <= end.time)%>%
+  group_by(run.name, Guild.scenario,fishing.scalar, Guild,Code)%>%
+  summarise(Biomass = mean(Biomass,na.rm=T),
+            Biomass.baseline = mean(Biomass.baseline))%>%
+  group_by(run.name,Guild.scenario,fishing.scalar,Guild)%>%
+  summarise(Biomass = mean(Biomass,na.rm=T),
+            Biomass.baseline = mean(Biomass.baseline))%>%
+  mutate(Biomass.diff = Biomass/Biomass.baseline)%>%
+  filter(!is.na(Guild))
+
+
+test = bio.all.fished %>% 
+  left_join(spp2guild) %>% 
+  left_join(catch.all)%>%
+  filter(fishing.scalar == 100 & Guild == guild.name & Time == 27023) %>% 
+  mutate(biomass.scalar = Biomass/Biomass.baseline)%>%
+  select(Guild,Code,Biomass,Biomass.baseline,biomass.scalar,Catch)
+
 plot.guilds = sort(unique(bio.all.guild$Guild))
 
 pdf(here::here('Figures',batch.prefix,paste0(batch.prefix,'_relative_difference_by_guild.pdf')),onefile = T)
@@ -237,6 +326,55 @@ for(i in 1:length(plot.guilds)){
   grid.arrange(p)
 }
 dev.off()
+
+bio.guild.match = bio.all.guild %>%
+  filter(Guild == Guild.scenario & fishing.scalar >1)
+
+bio.guild.match.fished = bio.all.guild.fished %>%
+  filter(Guild == Guild.scenario & fishing.scalar >1)
+
+bio.guild.match.bh = bio.all.guild.bh %>%
+  filter(Guild == Guild.scenario & fishing.scalar >1)
+
+ggplot(bio.guild.match, aes(x=fishing.scalar,y=Biomass.diff,color = Guild))+
+  geom_line()+
+  geom_hline(yintercept = 0)+
+  xlab('Fishing Scalar')+
+  ylab('Biomass Difference (mT)')+
+  theme_bw()+
+  theme(
+    panel.grid = element_blank(),
+    plot.title = element_text(hjust = 0.5),
+    legend.position = 'bottom'
+  )+
+  ggsave(here::here('Figures',batch.prefix,paste0(batch.prefix,'_realtive_difference_combined.png')),width = 8, height = 6, units = 'in',dpi = 250)
+
+ggplot(bio.guild.match.fished, aes(x=fishing.scalar,y=Biomass.diff,color = Guild))+
+  geom_line()+
+  geom_hline(yintercept = 0)+
+  xlab('Fishing Scalar')+
+  ylab('Biomass Difference (mT)')+
+  theme_bw()+
+  theme(
+    panel.grid = element_blank(),
+    plot.title = element_text(hjust = 0.5),
+    legend.position = 'bottom'
+  )+
+  ggsave(here::here('Figures',batch.prefix,paste0(batch.prefix,'_realtive_difference_fished_combined.png')),width = 8, height = 6, units = 'in',dpi = 250)
+
+ggplot(bio.guild.match.bh, aes(x=fishing.scalar,y=Biomass.diff,color = Guild))+
+  geom_line()+
+  geom_hline(yintercept = 0)+
+  xlab('Fishing Scalar')+
+  ylab('Biomass Difference (mT)')+
+  theme_bw()+
+  theme(
+    panel.grid = element_blank(),
+    plot.title = element_text(hjust = 0.5),
+    legend.position = 'bottom'
+  )+
+  ggsave(here::here('Figures',batch.prefix,paste0(batch.prefix,'_realtive_difference_BH_combined.png')),width = 8, height = 6, units = 'in',dpi = 250)
+
 
 pdf(here::here('Figures',batch.prefix,paste0(batch.prefix,'_relative_difference_by_guild_fished.pdf')),onefile = T)
 for(i in 1:length(plot.guilds)){
