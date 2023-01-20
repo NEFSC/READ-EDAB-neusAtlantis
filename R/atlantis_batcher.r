@@ -6,8 +6,10 @@ library(here)
 # CHECK_TIME_INTERVAL = interval in seconds between checks for a container finishing
 # NUM_TO_RUN          = number of containers to run simultaneously
 # CONTAINER_TYPE      = 'podman' or 'docker'
+# param.dir           = location of parameter files (example /GitHub/neus-atlantis/currentVersion)
+# output.dir          = directory where batch of runs are to be written (example /GitHub/neus-atlantis/Atlantis_Runs/test_1)
 
-atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30, NUM_TO_RUN = 3, CONTAINER_TYPE = 'docker') {
+atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30, NUM_TO_RUN = 3, CONTAINER_TYPE = 'docker',param.dir,output.dir) {
   
   batcherFile <- read.csv(batcherFilename, as.is = T)
   
@@ -37,8 +39,8 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
   startedContainers <- vector(mode="character")
   containersToRun <- folders
 
-  param.dir <- paste0(here(),"/Rob_Project_Template/Project_Name_Version/")
-  output.dir <- paste0(here(),"/Rob_Project_Template/Project_Name_Version/Atlantis_Runs")
+  # param.dir <- paste0(here(),"/Rob_Project_Template/Project_Name_Version/")
+  # output.dir <- paste0(here(),"/Rob_Project_Template/Project_Name_Version/Atlantis_Runs")
   
   
   for (n in 1:numContainersToCreate) {
