@@ -22,7 +22,8 @@ process_atl_output = function(param.dir,
                               include_catch,
                               agg.scale = 'day',
                               save.out,
-                              large.file = F){
+                              large.file = F,
+                              system){
   
   # memory.limit(size = 56000)
   source(here::here('R','load_nc_temp.R'))
@@ -220,10 +221,15 @@ process_atl_output = function(param.dir,
     
     ##NEUS only 613 diet obs per timestep
     nsteps =  365/extract_prm(prm_biol = param.ls$run.prm, variables = "toutinc") 
-    line.incr = 603
-    nline.str = system(paste0('find /c /v "" ',param.ls$dietcheck),intern = T)[2]
-    nline = as.numeric(strsplit(nline.str,' ')[[1]][3])
-    line.seq = c(0,line.incr*(nsteps-1),seq(line.incr*(nsteps-1),nline,line.incr*nsteps)[-1],nline)
+    line.incr = 613 * nsteps
+    if(system == 'windows'){
+      nline.str = system(paste0('find /c /v "" ',param.ls$dietcheck),intern = T)[2]  
+      nline = as.numeric(strsplit(nline.str,' ')[[1]][3])
+    }else{
+      nline.str = system(paste0('wc -l ',param.ls$dietcheck),intern = T)
+      nline = as.numeric(strsplit(nline.str,' ')[[1]][1])  
+    }
+    line.seq = c(seq(0,nline,line.incr),nline)								   
     
     
     diet.agg = list()
