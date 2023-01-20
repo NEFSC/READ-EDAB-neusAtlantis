@@ -14,18 +14,25 @@ batch.dir = '/media/jcaracappa/06b7679b-9bac-4c53-9cf3-9abecb801e6d/home.orig/jc
 run.dirs = list.dirs(batch.dir,recursive = F)
 run.names = list.dirs(batch.dir,full.names = F,recursive = F)
 
+fgs = read.csv(here::here('currentVersion','neus_groups.csv'),stringsAsFactors = F) %>%
+  filter(IsTurnedOn == T) %>%
+  select(Code)
+  
+
 spp2guild = read.csv(here::here('diagnostics','functional_groups_match.csv'),as.is = T)%>%
   select(Code,Guild)%>%
-  filter(Guild %in% guild.names)
+  filter(Guild %in% guild.names & Code %in% fgs$Code)
 
 #make output figure directory
 figure.dir = here::here('Figures',batch.prefix,'')
 dir.create(figure.dir)
 
-for( i in 1:length(guild.names)){
+for( i in 4:length(guild.names)){
   
   model.names = paste0(batch.prefix,'_',guild.names[i],'_',fishing.levels)
   model.dirs = paste0(batch.dir,model.names,'/')
+  
+  guild.match = spp2guild$Code[which(spp2guild$Guild == guild.names[i])]
   
   plot_run_comparisons(
     model.dirs = model.dirs,
@@ -48,4 +55,28 @@ for( i in 1:length(guild.names)){
     groups = NULL,
     remove.init = F
   )
+  
+  plot_run_comparisons(
+    model.dirs = model.dirs,
+    model.names = model.names,
+    plot.raw = T,
+    plot.diff = F,
+    plot.out = paste(figure.dir,guild.names[i],'_WITHIN_GUILD_'),
+    table.out = F,
+    groups = guild.match,
+    remove.init = F
+  )
+  
+  plot_run_catch_comparisons(
+    model.dirs = model.dirs,
+    model.names = model.names,
+    plot.raw = T,
+    plot.diff = F,
+    plot.out = paste(figure.dir,guild.names[i],'_WITHIN_GUILD_'),
+    table.out = F,
+    groups = guild.match,
+    remove.init = F
+  )
+  
+  
 }
