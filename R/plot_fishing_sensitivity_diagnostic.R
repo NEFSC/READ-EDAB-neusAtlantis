@@ -168,19 +168,61 @@ x = 1:length(used.levels)
 plot.levels = 8*x^-0.8
 plot(plot.levels)
 
-ggplot(data = plot.df,aes(y=min.collapse,x= mean.f.mort.exploitable,label = Code))+
+plot.df.long = plot.df %>%
+  select(Code,Guild,min.collapse,mean.f.mort.exploitable,mean.bio,mean.catch)%>%
+  tidyr::gather('variable','value',-Code,-Guild,-min.collapse)
+
+ggplot(data = plot.df.long,aes(x= value,y= min.collapse,label = Code,color = Guild))+
   geom_point()+
-  facet_wrap(~Guild,scales = 'free')+
-  geom_text_repel(color = 'black',family = 'mono',fontface = 'bold',max.overlaps = 20)+
-  xlab('Mean Proportion of Exploitable Biomass Caught Annually')+
+  geom_text_repel(color = 'black',family = 'mono',fontface = 'bold',max.overlaps = 30)+
+  facet_grid(Guild~variable,scales = 'free')+
   ylab('Fishing Capacity')+
+  xlab('')+
   theme_bw()+
   theme(legend.position = 'bottom',
         panel.grid.major.y  = element_blank(),
-        panel.grid.minor.y  = element_blank())+
-  ggsave(filename = here::here('Figures',batch.prefix,paste0(batch.prefix,'_diagnostic_exploitation_v_fishing_capacity.png')),width = 14, height = 7.5, units = 'in', dpi = 300)
+        panel.grid.minor.y  = element_blank(),
+        strip.text = element_text(size = 18),
+        axis.text =element_text(size = 18),
+        axis.title = element_text(size = 18))+
+  ggsave(filename = here::here('Figures',batch.prefix,paste0(batch.prefix,'_diagnostic_variables_v_fishing_capacity.png')),width = 14, height = 14, units = 'in', dpi = 300)
 
   
+# ggplot(data = plot.df,aes(y=min.collapse,x= mean.f.mort.exploitable,label = Code))+
+#   geom_point()+
+#   facet_wrap(~Guild,scales = 'free')+
+#   geom_text_repel(color = 'black',family = 'mono',fontface = 'bold',max.overlaps = 20)+
+#   xlab('Mean Proportion of Exploitable Biomass Caught Annually')+
+#   ylab('Fishing Capacity')+
+#   theme_bw()+
+#   theme(legend.position = 'bottom',
+#         panel.grid.major.y  = element_blank(),
+#         panel.grid.minor.y  = element_blank())+
+#   ggsave(filename = here::here('Figures',batch.prefix,paste0(batch.prefix,'_diagnostic_exploitation_v_fishing_capacity.png')),width = 14, height = 7.5, units = 'in', dpi = 300)
+# 
+# ggplot(data = plot.df,aes(y=min.collapse,x= mean.catch,label = Code))+
+#   geom_point()+
+#   facet_wrap(~Guild,scales = 'free')+
+#   geom_text_repel(color = 'black',family = 'mono',fontface = 'bold',max.overlaps = 20)+
+#   xlab('Mean Proportion of Exploitable Biomass Caught Annually')+
+#   ylab('Fishing Capacity')+
+#   theme_bw()+
+#   theme(legend.position = 'bottom',
+#         panel.grid.major.y  = element_blank(),
+#         panel.grid.minor.y  = element_blank())+
+#   ggsave(filename = here::here('Figures',batch.prefix,paste0(batch.prefix,'_diagnostic_catch_v_fishing_capacity.png')),width = 14, height = 7.5, units = 'in', dpi = 300)
+# 
+# ggplot(data = plot.df,aes(y=min.collapse,x= mean.bio,label = Code))+
+#   geom_point()+
+#   facet_wrap(~Guild,scales = 'free')+
+#   geom_text_repel(color = 'black',family = 'mono',fontface = 'bold',max.overlaps = 20)+
+#   xlab('Mean Proportion of Exploitable Biomass Caught Annually')+
+#   ylab('Fishing Capacity')+
+#   theme_bw()+
+#   theme(legend.position = 'bottom',
+#         panel.grid.major.y  = element_blank(),
+#         panel.grid.minor.y  = element_blank())+
+#   ggsave(filename = here::here('Figures',batch.prefix,paste0(batch.prefix,'_diagnostic_biomass_v_fishing_capacity.png')),width = 14, height = 7.5, units = 'in', dpi = 300)
 
 ggplot(data=plot.df, aes(x = mean.catch,y = mean.f.mort.exploitable,label = Code))+
   # geom_errorbar(data= plot.df, aes(x = min.collapses,ymin = mean.f.mort - F.mort.sd, ymax = mean.f.mort + F.mort.sd))+
@@ -200,6 +242,7 @@ ggplot(data=plot.df, aes(x = mean.catch,y = mean.f.mort.exploitable,label = Code
         panel.grid.minor.y  = element_blank())+
   ggsave(filename = here::here('Figures',batch.prefix,paste0(batch.prefix,'_diagnostic_exploitable_biomass_log.png')),width = 14, height = 7.5, units = 'in', dpi = 300)
 
+ggplot(data=plot.df, aes(x = mean.catch,y = mean.f.mort.exploitable,label = Code))+
   # geom_errorbar(data= plot.df, aes(x = min.collapses,ymin = mean.f.mort - F.mort.sd, ymax = mean.f.mort + F.mort.sd))+
   geom_point(aes(fill = Guild,size = factor(min.collapse.log)),alpha = 0.75,pch = 21,color = 'black')+
   scale_size_manual(name = 'Fishing Capacity',values = seq(10,3,length.out = length(used.levels)), labels = fishing.levels.scalar[match(used.levels,fishing.levels.scalar)])+
@@ -235,4 +278,3 @@ ggplot(data=plot.df, aes(x = mean.catch,y = mean.f.mort.exploitable,label = Code
         panel.grid.minor.y  = element_blank())+
   ggsave(filename = here::here('Figures',batch.prefix,paste0(batch.prefix,'_diagnostic_exploitable_biomass_log_facet_unified_scale.png')),width = 14, height = 7.5, units = 'in', dpi = 300)
 
-ggplot
