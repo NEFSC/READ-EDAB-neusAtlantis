@@ -41,7 +41,8 @@ plot_run_catch_comparisons = function(model.dirs,model.names,plot.raw = T,
   
   #If specifying groups, subset only those
   if(!is.null(groups)){
-    catch = lapply(catch,function(x) {return(subset(x,select = c('Time',groups)))})
+    catch.match = colnames(catch[[1]])[which(colnames(catch[[1]]) %in% groups)]
+    catch = lapply(catch,function(x) {return(dplyr::select(x,Time,dplyr::all_of(catch.match)))})
   }
   
   #convert each model to long format
