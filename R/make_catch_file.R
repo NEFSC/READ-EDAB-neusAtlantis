@@ -9,12 +9,17 @@ library(ggplot2)
 # load("C:/Users/robert.gamble/Desktop/Atlantis_Catch/comland_meatwt_deflated.RData")
 #load('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/comland_meatwt_deflated_stat_areas.RData')
 # from https://github.com/NOAA-EDAB/Atlantis-Catch-Files/blob/master/Atlantis_1_5_groups_svspp_nespp3.csv
-
+library(dplyr)
 ##New Comland Pull
-comland = readRDS('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Catch_Data/comland_livewt_deflated_stat_areas.Rds')
+load('/home/jcaracappa/Documents/Atlantis/data/comland_meatwt_deflated_stat_areas.RData')
+# comland = readRDS('/home/jcaracappa/Documents/Atlantis/data/comland_livewt_deflated_stat_areas.Rds')
+comland$AREA = as.numeric(as.character(comland$AREA))
 
+# test2 = comland %>% filter(NESPP3 == 23) %>% group_by(YEAR) %>% summarise(val = sum(SPPLIVMT))
+# plot(val~YEAR,test,'l')
 #Read stat areas
-load('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/strata_stat_box.Rdata')
+# load('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/strata_stat_box.Rdata')
+load('/home/jcaracappa/Documents/Atlantis/data/strata_stat_box.Rdata')
 stat.neus = stat.neus %>%
   sf::st_drop_geometry()
 
@@ -42,7 +47,7 @@ hindcast_catch = comland %>%
   group_by(YEAR,Code) %>%
   summarize(grpWGT = sum(WGT,na.rm=T)) %>%
   filter(YEAR >= 1964)
-
+  
 # Species names/catch_ts header
 header <- c("MAK","HER","WHK","BLF","WPF","SUF","WIF","WTF","FOU","HAL","PLA","FLA","BFT","TUN","BIL","MPF","BUT","BPF","ANC","GOO","MEN","FDE","COD","SHK","OHK","POL","RHK","BSB","SCU","TYL","RED","OPT","SAL","DRM","STB","TAU","WOL","SDF","FDF","HAD","YTF","DOG","SMO","SSH","DSH","BLS","POR","PSH","WSK","LSK","SK","SB","PIN","REP","RWH","BWH","SWH","TWH","INV","LSQ","ISQ","SCA","QHG","CLA","BFF","BG","LOB","RCB","BMS","NSH","OSH","ZL","BD","MA","MB","SG","BC","ZG","PL","DF","PS","ZM","ZS","PB","BB","BO","DL","DR","DC")
 
@@ -70,8 +75,8 @@ hindcast_catch2 = dplyr::bind_rows(hindcast_catch_ls) %>%
   filter(YEAR >= 1964 & YEAR <=2018)
 hindcast_catch2$grpWGT[which(!is.finite(hindcast_catch2$grpWGT))] = 0
 
-x2 = filter(hindcast_catch2, Code == 'PS')
-plot(grpWGT~YEAR,x2,type='l')
+# x2 = filter(hindcast_catch2, Code == 'PS')
+# plot(grpWGT~YEAR,x2,type='l')
 timesteps <- 55 * 365
 
 # Set up catch tibble for time series file
