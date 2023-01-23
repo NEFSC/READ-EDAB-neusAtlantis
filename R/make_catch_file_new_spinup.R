@@ -37,7 +37,7 @@ for(i in 1:length(nonzero.groups)){
   orig.catch = orig.catch[which(orig.catch > 0)]
   #Carve-out for HER (needs to be much lower)
   if(nonzero.groups[i] == 'HER'){
-    spinup.catch = min(orig.catch) * 0.25
+    spinup.catch = min(orig.catch) * 0
   }else{
     spinup.catch = quantile(orig.catch,catch.p,names = F)  
   }
@@ -57,7 +57,7 @@ for(i in 1:length(nonzero.groups)){
 #Zero out any group in with spinup catch less than 10 mT/yr
 spinup.mean = colMeans(catch[date.spinup,])[-1]*86400*1E-9*5.7*20
 zero.spinup = which(spinup.mean <= 0.0274)
-catch[date.spinup,zero.spinup] = 0
+catch[date.spinup,zero.spinup+1] = 0
 
 for(i in 2:ncol(catch)){
   catch[,i] = round(catch[,i],2)

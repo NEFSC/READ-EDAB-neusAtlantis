@@ -121,6 +121,9 @@ catch[,which(colnames(catch)=='SAL')] = 0
 #test mean catch by group
 sort(colMeans(catch,na.rm=T))
 
+# write.table(catch,"/home/rgamble/Desktop/Atlantis-Catch/catch_ts_all.txt",col.names = F, row.names = F, sep = " ")
+write.table(catch,here::here('currentVersion','CatchFiles','total_catch_raw.txt'),col.names = F, row.names = F, sep = " ")
+
 #plot catch forcing
 pdf(here::here('currentVersion','CatchFiles','Catch_Forcing_Raw.pdf'),width = 12 , height = 12,onefile = T)
 catch.long = catch %>% reshape2::melt(id.vars = 'time')
@@ -139,6 +142,5 @@ gridExtra::grid.arrange(p2)
 dev.off() 
   
 
-# write.table(catch,"/home/rgamble/Desktop/Atlantis-Catch/catch_ts_all.txt",col.names = F, row.names = F, sep = " ")
-write.table(catch,here::here('currentVersion','CatchFiles','total_catch_raw.txt'),col.names = F, row.names = F, sep = " ")
+
  
