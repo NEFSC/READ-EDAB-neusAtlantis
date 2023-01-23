@@ -6,10 +6,16 @@ library(here)
 # CHECK_TIME_INTERVAL = interval in seconds between checks for a container finishing
 # NUM_TO_RUN          = number of containers to run simultaneously
 # CONTAINER_TYPE      = 'podman' or 'docker'
+# param.dir           = location of parameter files (example /GitHub/neus-atlantis/currentVersion)
+# output.dir          = directory where batch of runs are to be written (example /GitHub/neus-atlantis/Atlantis_Runs/test_1)
 
-atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30, NUM_TO_RUN = 3, CONTAINER_TYPE = 'docker') {
+atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30, NUM_TO_RUN = 3, CONTAINER_TYPE = 'docker',param.dir,output.dir) {
   
   batcherFile <- read.csv(batcherFilename, as.is = T)
+  
+  batcherFile_completed <- filter(batcherFile, Status == "Completed")
+  batcherFile <- filter (batcherFile, Status != "Completed")
+  
   numRuns <- nrow(batcherFile)
   
   folders <- batcherFile$OutputDir
@@ -32,11 +38,9 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
   # Create a list of run directories to be instantiated
   startedContainers <- vector(mode="character")
   containersToRun <- folders
-  
-  param.dir <- paste0("/net/work3/EDAB/atlantis/Rob_Project_Template/Project_Name_Version/")
-  output.dir <- paste0("/net/work3/EDAB/atlantis/Rob_Project_Template/Project_Name_Version/Atlantis_Runs")
-  #    param.dir <- paste0(here(),"/Rob_Project_Template/Project_Name_Version/")
-  #    output.dir <- paste0(here(),"/Rob_Project_Template/Project_Name_Version/Atlantis_Runs")
+
+  # param.dir <- paste0(here(),"/Rob_Project_Template/Project_Name_Version/")
+  # output.dir <- paste0(here(),"/Rob_Project_Template/Project_Name_Version/Atlantis_Runs")
   
   
   for (n in 1:numContainersToCreate) {
@@ -56,7 +60,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
     # run docker
     
     #build run command string
-    containerName <- paste0(userName, '_Batcher_Test_', n )
+    containerName <- paste0(userName, '_Batcher_', batcherFile$Run[n] )
     startedContainers <- append(startedContainers, containerName)
     print(containerName)
     outputFolder <- paste0('"',output.dir,folders[n],'"')
@@ -69,11 +73,38 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
     logData$End_time[n] < "Unfinished"
     logData$Status[n] <- "Started"
     batcherFile$Status[n] <- "Started"
-    write.csv(logData,paste0(output.dir,'logFile.csv'), row.names = FALSE)
-    try(write.csv(logData,paste0(output.dir,logfileName), row.names = FALSE, append = FALSE))
-    try(write.csv(batcherFile,batcherFilename, row.names = FALSE, append = FALSE))
+    current_batcherFile <- rbind(batcherFile_completed, batcherFile)
+
+    try(write.csv(logData,paste0(output.dir,"/",logfileName), row.names = FALSE, append = FALSE))
+    try(write.csv(current_batcherFile,batcherFilename, row.names = FALSE, append = FALSE))
     
-    Sys.sleep(120)  
+
+    runStarted <- FALSE
+    waitIndex <- 1
+    logfile <- "NA"
+    print(paste0("folders[n] =", folders[n]))
+    while (!runStarted) {
+      logfile_exists <- file.exists(paste0(output.dir,folders[n],"/log.txt"))
+      Sys.sleep(1)
+      waitIndex <- waitIndex + 1
+      if (logfile_exists) {
+        Sys.sleep(5)
+        waitIndex <- waitIndex + 5
+        logfile_path <- paste0(output.dir,folders[n],"/log.txt")
+        print(logfile_path)
+        logfile <- read.csv(logfile_path, header=FALSE)      
+        print(logfile)
+        if (sum(str_detect(logfile$V1, 'Time: 1')) > 0) {
+          runStarted <- TRUE
+        } else if (waitIndex >= 600) {
+          runStarted <- TRUE
+        } else {
+          logfile <- ""
+        }
+      }
+      print(waitIndex)
+    } 
+    print(paste0("WaitIndex = ", waitIndex))
   }
   notFinished <- TRUE
   
@@ -162,7 +193,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
           # run docker
           
           #build run command string
-          containerName <- paste0(userName, '_Batcher_Test_', i )
+          containerName <- paste0(userName, '_Batcher_', batcherFile$Run[n] )
           startedContainers <- append(startedContainers, containerName)
           print(containerName)
           outputFolder <- paste0('"',output.dir,folders[i],'"')
@@ -175,17 +206,45 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
           logData$End_time[i] < "Unfinished"
           logData$Status[i] <- "Started"
           batcherFile$Status[i] <- "Started"
-          try(write.csv(logData,paste0(output.dir,logfileName), row.names = FALSE, append = FALSE))
-          try(write.csv(batcherFile,batcherFilename, row.names = FALSE, append = FALSE))
+          current_batcherFile <- rbind(batcherFile_completed, batcherFile)
+          try(write.csv(logData,paste0(output.dir,"/",logfileName), row.names = FALSE, append = FALSE))
+          try(write.csv(current_batcherFile,batcherFilename, row.names = FALSE, append = FALSE))
           
-          Sys.sleep(120)
-          
+          runStarted <- FALSE
+          waitIndex <- 1
+          logfile <- "NA"
+          print(paste0("folders[n] =", folders[n]))
+          while (!runStarted) {
+            logfile_exists <- file.exists(paste0(output.dir,folders[n],"/log.txt"))
+            Sys.sleep(1)
+            waitIndex <- waitIndex + 1
+            if (logfile_exists) {
+              Sys.sleep(5)
+              waitIndex <- waitIndex + 5
+              logfile_path <- paste0(output.dir,folders[n],"/log.txt")
+              print(logfile_path)
+              logfile <- read.csv(logfile_path, header=FALSE)      
+              print(logfile)
+              if (sum(str_detect(logfile$V1, 'Time: 1')) > 0) {
+                runStarted <- TRUE
+              } else if (waitIndex >= 600) {
+                runStarted <- TRUE
+              } else {
+                logfile <- ""
+              }
+            }
+            print(waitIndex)
+          } 
+          print(paste0("WaitIndex = ", waitIndex))
         }
+        notFinished <- TRUE
         n <- i
+        }
       }
    }
-  }
-  try(write.csv(logData,paste0(output.dir,logfileName), row.names = FALSE, append = FALSE))
+
+  batcherFile <- rbind(batcherFile_completed, batcherFile)
+  try(write.csv(logData,paste0(output.dir,"/",logfileName), row.names = FALSE, append = FALSE))
   try(write.csv(batcherFile,batcherFilename, row.names = FALSE, append = FALSE))
   
 }
