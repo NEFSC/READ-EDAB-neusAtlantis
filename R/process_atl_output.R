@@ -22,7 +22,8 @@ process_atl_output = function(param.dir,
                               include_catch,
                               agg.scale = 'day',
                               save.out,
-                              large.file = F){
+                              large.file = F,
+                              system){
   
   # memory.limit(size = 56000)
   source(here::here('R','load_nc_temp.R'))
@@ -46,10 +47,10 @@ process_atl_output = function(param.dir,
     }
     
     if(load_fgs(param.ls$groups.file)$IsTurnedOn[which(load_fgs(param.ls$groups.file)$Name == group)] == 0){
-      rawdata.spp = list(data.frame(species = group.types$species[i], polygon =NA, agecl = NA,layer = NA, time = 0, atoutput = NA))
+      rawdata.spp.f = list(data.frame(species = group.types$species[i], polygon =NA, agecl = NA,layer = NA, time = 0, atoutput = NA))
       next()
     }else{
-      rawdata.spp =Map(load_nc_temp,
+      rawdata.spp.f =Map(load_nc_temp,
                        select_variable = main.vars,
                        select_groups = group,
                        MoreArgs = list(nc = param.ls$main.nc, bps = bio.pools,
@@ -58,9 +59,9 @@ process_atl_output = function(param.dir,
     }
     
     if(group.types$group[i] == 'bp'){
-      rawdata.spp[[1]]$agecl =1
+      rawdata.spp.f[[1]]$agecl =1
     }
-    return(rawdata.spp)
+    return(rawdata.spp.f)
   }
   
   agg_custom = function(data, groups, fun, agg.scale){
@@ -78,7 +79,7 @@ process_atl_output = function(param.dir,
     match.cols = c(groups[-which(groups == 'time')],'time.agg')
     out.agg = out %>%
       group_by_at(match.cols)%>%
-      summarise(time = ceiling(time),
+      summarise(time = floor(min(time)),
                 atoutput = mean(atoutput,na.rm=T))%>%
       ungroup()%>%
       dplyr::select(all_of(c(groups,'atoutput')))
@@ -88,7 +89,7 @@ process_atl_output = function(param.dir,
   
   #Read in groups file
   fgs = load_fgs(param.ls$groups.file)%>%
-    dplyr::select(Code,Name)
+    dplyr::select(Code,Name,LongName)
   
   #Get boundary box
   bboxes =  atlantistools::get_boundary(boxinfo = atlantistools::load_box(param.ls$bgm.file)) 
@@ -220,10 +221,15 @@ process_atl_output = function(param.dir,
     
     ##NEUS only 613 diet obs per timestep
     nsteps =  365/extract_prm(prm_biol = param.ls$run.prm, variables = "toutinc") 
-    line.incr = 603
-    nline.str = system(paste0('find /c /v "" ',param.ls$dietcheck),intern = T)[2]
-    nline = as.numeric(strsplit(nline.str,' ')[[1]][3])
-    line.seq = c(0,line.incr*(nsteps-1),seq(line.incr*(nsteps-1),nline,line.incr*nsteps)[-1],nline)
+    line.incr = 613 * nsteps
+    if(system == 'windows'){
+      nline.str = system(paste0('find /c /v "" ',param.ls$dietcheck),intern = T)[2]  
+      nline = as.numeric(strsplit(nline.str,' ')[[1]][3])
+    }else{
+      nline.str = system(paste0('wc -l ',param.ls$dietcheck),intern = T)
+      nline = as.numeric(strsplit(nline.str,' ')[[1]][1])  
+    }
+    line.seq = c(seq(0,nline,line.incr),nline)								   
     
     
     diet.agg = list()
@@ -248,23 +254,27 @@ process_atl_output = function(param.dir,
       diet.slice = diet.slice %>%
         # dplyr::mutate(Time = Time)%>%
         dplyr::select(-Stock,-Updated)%>%
-        dplyr::group_by(time.agg,Predator,Cohort)%>%
-        dplyr::summarise(time = ceiling(Time/365),
-                         dplyr::across(MAK:DC,mean))%>%
+        tidyr::gather('prey','atoutput',-Time,-time.agg,-Predator,-Cohort)%>%
+        dplyr::mutate(atoutput = as.numeric(atoutput))%>%
+        dplyr::group_by(time.agg,Predator,Cohort,prey)%>%
+        dplyr::summarise(time = floor(min(Time/365)),
+                         atoutput = mean(atoutput,na.rm=T))%>%
         dplyr::ungroup()%>%
         dplyr::select(-time.agg)%>%
-          left_join(fgs,by = c('Predator' = 'Code'))%>%
+          left_join(select(fgs,'Code','Name'),by = c('Predator' = 'Code'))%>%
           select(-Predator)%>%
           rename(Predator = 'Name')%>%
-          tidyr::gather('prey','atoutput',-time,-Predator,-Cohort)%>%
-        filter(atoutput != 0)%>%
-          left_join(fgs,by = c('prey' = 'Code'))%>%
+          filter(atoutput != 0)%>%
+          left_join(select(fgs,'Code','Name'),by = c('prey' = 'Code'))%>%
           select(-prey)%>%
         rename(prey = 'Name',agecl = 'Cohort',pred = 'Predator')%>%
         select(time,pred,agecl,prey,atoutput)%>%
         arrange(time,pred,agecl,prey)
       
-
+      # test = diet.slice %>%
+      #   group_by(time,pred,agecl)%>%
+      #   summarise(atoutput = sum(as.numeric(atoutput),na.rm=T))
+        
       # pred.sum =apply(diet.slice[,6:ncol(diet.slice)],1,sum,na.rm=T)
       # 
       # diet.slice[,6:ncol(diet.slice)] = diet.slice[,6:ncol(diet.slice)]/pred.sum
@@ -275,11 +285,12 @@ process_atl_output = function(param.dir,
     }
 
     
-    data.dietcheck = dplyr::bind_rows(diet.agg)
+    data.dietcheck = dplyr::bind_rows(diet.agg)%>%
+      mutate(atoutput  = as.numeric(atoutput))
     
     pred.sum = data.dietcheck %>%
       group_by(time,pred,agecl)%>%
-      summarise(atoutput.sum = sum(atoutput,na.rm=T))
+     summarise(atoutput.sum = sum(atoutput,na.rm=T))
     
     data.dietcheck = data.dietcheck %>%
       left_join(pred.sum)%>%
@@ -453,13 +464,19 @@ process_atl_output = function(param.dir,
         length.age[[i]] = biomass.age2[,c('species','agecl','time','length_age')]
         colnames(length.age[[i]])[4] = 'atoutput'
         
-        spatial.biomass[[i]] = atlantistools::calculate_biomass_spatial(nums = rawdata.spp[[1]],
-                                                                        sn = rawdata.spp[[2]],
-                                                                        rn = rawdata.spp[[3]],
-                                                                        n = rawdata.spp[[4]],
-                                                                        vol_dz = vol.dz,
-                                                                        bio_conv = bio.conv,
-                                                                        bps = bio.pools)
+        spatial.biomass[[i]] =rename(rawdata.spp[[1]],nums = 'atoutput')%>%
+          left_join(rename(rawdata.spp[[2]],sn = 'atoutput'))%>%
+          left_join(rename(rawdata.spp[[3]],rn = 'atoutput'))%>%
+          mutate(atoutput = nums*(sn+rn)*bio.conv) %>%
+          select(species,agecl,polygon,layer,time,atoutput)
+          
+          # test=atlantistools::calculate_biomass_spatial(nums = rawdata.spp[[1]],
+          #                                                               sn = rawdata.spp[[2]],
+          #                                                               rn = rawdata.spp[[3]],
+          #                                                               n = rawdata.spp[[4]],
+          #                                                               vol_dz = NA,
+          #                                                               bio_conv = NA,
+          #                                                               bps = NA)
         spatial.numbers[[i]] = agg_custom(data = rawdata.spp[[1]], groups = c('species','agecl','polygon','layer','time'),fun= mean, agg.scale)%>%
           dplyr::rename(numbers = 'atoutput')
         
@@ -469,7 +486,7 @@ process_atl_output = function(param.dir,
         spatial.biomass.stanza[[i]] = atlantistools::combine_ages(spatial.biomass[[i]],grp_col = 'species',agemat = data.age.mat)
         
       }else{
-        blank.df = data.frame(species = group.types$species[i], polygon =NA, agecl = NA,layer = NA, time = 0, atoutput = NA)
+        blank.df = data.frame(species = fgs$LongName[which(fgs$Name == group.types$species[i])], polygon =NA, agecl = NA,layer = NA, time = 0, atoutput = NA)
         
         rawdata.spp = get_rawdata(group = group.types$species[i],group.type = group.types$group[i])
         
@@ -539,6 +556,7 @@ process_atl_output = function(param.dir,
   #   rm(spatial.biomass,sp.overlap)
   # }
   
+  test = bind_rows(biomass)
   #bind, save and delete objects
   bind.save(numbers,'numbers'); rm('numbers')
   bind.save(numbers.age,'numbers_age'); rm('numbers.age')

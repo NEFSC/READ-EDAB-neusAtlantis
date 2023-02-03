@@ -20,13 +20,8 @@ roms.cobalt = paste0(roms.dir,'Atlantis_Runs/Atlantis_Output_Base_06232020/')
 master = paste0(obs.dir,'Atlantis_Runs/Master_12172021/')
 phase1 = paste0(obs.dir,'Atlantis_Runs/Phase_1_5day/')
 # rg.test = paste0(obs.dir,'Atlantis_Runs/Output_Rob_noFishing_10_8_21/')
-all.bh = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1_Spawn_Debug/')
-bh.ab2 = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1_RescaleAlphaBeta_2/')
-bh.ab3 = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1_RescaleAlphaBeta_3/')
-bh.ab4 = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1_RescaleAlphaBeta_4/')
-bh.ab5 = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1_RescaleAlphaBeta_5/')
-bh.newcatch = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1_NewCatchSpinup/')
-bh.newcatch.revert = paste0(obs.dir,'Atlantis_Runs/BH_NEUSv1_NewCatch_Reverted/')
+dev = '/home/jcaracappa/Doucments/GitHub/neus-atlantis/Atlantis_Runs/Dev_11032022/'
+new.clams = here::here('Atlantis_Runs','Dev_New_Clams','')
 
 v6536.nfnm = paste0(obs.dir,'Atlantis_Runs/dev07052022_165_6536_noMigration_noFishing/')
 v6645.nfnm = paste0(obs.dir,'Atlantis_Runs/dev07052022_165_6645_noMigration_noFishing/')
@@ -34,54 +29,24 @@ v6645.nfnm = paste0(obs.dir,'Atlantis_Runs/dev07052022_165_6645_noMigration_noFi
 figure.dir = paste0(obs.dir,'Diagnostic_Figures/Run_Comparisons/')
 
 plot_run_comparisons(
-  model.dirs = c(v6536.nfnm,v6645.nfnm),
-  model.names = c('dev07052022_165_6536_noMigration_noFishing','dev07052022_165_6645_noMigration_noFishing'),
+  model.dirs = c(dev,new.clams),
+  model.names = c('dev_11032022','Dev_New_Clams'),
   plot.raw = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'v6645_v6536_nfnm'),
-  table.out = F,
-  groups = NULL,
-  remove.init = F
-)
-
-plot_run_comparisons(
-  model.dirs = c(phase1,bh.newcatch.revert),
-  model.names = c('Phase1','NewCatch_BH'),
-  plot.raw = T,
-  plot.diff = F,
-  plot.out = paste(figure.dir,'Phase1_v_NewCatcH_BH'),
+  plot.out = paste(figure.dir,'Dev_New_Clams'),
   table.out = F,
   groups = NULL,
   remove.init = F
 )
 
 plot_run_catch_comparisons(
-  model1.dir = bh.ab5,
-  model2.dir = bh.newcatch,
-  model1.name = 'BH5',
-  model2.name = 'New Catch',
+  model.dirs = c(dev,new.clams),
+  model.names = c('dev_11032022','Dev_New_Clams'),
   plot.raw = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'All_BH_NewSpinup_Catch'),
+  plot.out = paste(figure.dir,'Dev_New_Clams'),
   table.out = F,
   groups = NULL,
   remove.init = F
 )
-
-
-plot_run_comparisons(
-  model1.dir = roms.cobalt,
-  model2.dir = master3,
-  model1.name = 'ROMS_COBALT',
-  model2.name = 'Master',
-  plot.raw = T,
-  plot.diff = F,
-  plot.out = paste(figure.dir,'ROMS_COBALT_v_Master'),
-  table.out = F,
-  groups = NULL,
-  remove.init = F
-)
-
-
-
 

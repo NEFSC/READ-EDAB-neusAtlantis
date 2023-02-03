@@ -49,4 +49,4 @@ create_stockSMART_data <- function(exportFile = F) {
   
 }
 
-create_stockSMART_data()
+create_stockSMART_data(exportFile = F)
