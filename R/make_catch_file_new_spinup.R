@@ -4,6 +4,7 @@
 #Set catch to fixed catch rate during spinup
 
 library(dplyr)
+library(ggplot2)
 
 header <- c("MAK","HER","WHK","BLF","WPF","SUF","WIF","WTF","FOU","HAL","PLA","FLA","BFT","TUN","BIL","MPF","BUT","BPF","ANC","GOO","MEN","FDE","COD","SHK","OHK","POL","RHK","BSB","SCU","TYL","RED","OPT","SAL","DRM","STB","TAU","WOL","SDF","FDF","HAD","YTF","DOG","SMO","SSH","DSH","BLS","POR","PSH","WSK","LSK","SK","SB","PIN","REP","RWH","BWH","SWH","TWH","INV","LSQ","ISQ","SCA","QHG","CLA","BFF","BG","LOB","RCB","BMS","NSH","OSH","ZL","BD","MA","MB","SG","BC","ZG","PL","DF","PS","ZM","ZS","PB","BB","BO","DL","DR","DC")
 
@@ -34,7 +35,12 @@ for(i in 1:length(nonzero.groups)){
   ind = which(header == nonzero.groups[i])
   orig.catch = catch[,ind+1]
   orig.catch = orig.catch[which(orig.catch > 0)]
-  spinup.catch = quantile(orig.catch,catch.p,names = F)
+  #Carve-out for HER (needs to be much lower)
+  if(nonzero.groups[i] == 'HER'){
+    spinup.catch = min(orig.catch) * 0
+  }else{
+    spinup.catch = quantile(orig.catch,catch.p,names = F)  
+  }
   catch[1:length(date.spinup),ind+1] = spinup.catch
 }
 
@@ -51,7 +57,11 @@ for(i in 1:length(nonzero.groups)){
 #Zero out any group in with spinup catch less than 10 mT/yr
 spinup.mean = colMeans(catch[date.spinup,])[-1]*86400*1E-9*5.7*20
 zero.spinup = which(spinup.mean <= 0.0274)
-catch[date.spinup,zero.spinup] = 0
+catch[date.spinup,zero.spinup+1] = 0
+
+for(i in 2:ncol(catch)){
+  catch[,i] = round(catch[,i],2)
+}
 
 write.table(catch,here::here('currentVersion','CatchFiles','total_catch_new_spinup.txt'),col.names = F, row.names = F, sep = " " )
 

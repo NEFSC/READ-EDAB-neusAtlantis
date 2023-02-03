@@ -33,6 +33,7 @@ param.ls= get_atl_paramfiles(param.dir = param.dir,
                              include_catch=T)
 
 #Run  post-processing function to generate "result" R object. 
+# tictoc::tic()
 process_atl_output(
   param.dir = here::here('currentVersion'),
   atl.dir = atl.dir,
@@ -41,12 +42,12 @@ process_atl_output(
   param.ls = param.ls,
   include_catch = T,
   save.out = T,
-  diet.agg.time = 'month',
+  agg.scale = 'year',
   spatial.overlap = F,
   large.file = T,
   system = 'linux'
 )
-
+# tictoc::tic()
 #If result object saved to file or already exists load it into env.
 # load(paste0(out.dir,'neus_output_postprocessed.rdata'))
 # load(paste0(out.dir,'neus_output_postprocessed.Rdata'))
