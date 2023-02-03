@@ -1,13 +1,13 @@
 #Script to scale Mum_C for age groups
-source(here::here('R','edit_param_mum_age.R'))
-source(here::here('R','edit_param_C_age.R'))
+source(here::here('Joe_Proj','R','edit_param_mum_age.R'))
+source(here::here('Joe_Proj','R','edit_param_C_age.R'))
 
-group.names = 'MAK'
+group.names = 'COD'
 
-mum.scale = 1.84
-C.scale = 1.84
+mum.scale = 1.216
+C.scale = 1.216
 
-bio.prm = here::here('currentVersion','at_biology.prm')
+bio.prm = here::here('Joe_Proj','currentVersion','at_biology.prm')
 
 mum.base.age = get_param_mum_age(bio.prm) %>%
   filter(group %in% group.names)%>%
