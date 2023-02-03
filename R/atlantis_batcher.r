@@ -1,4 +1,4 @@
-library(tidyverse)
+library(dplyr)
 library(here)
 
 # batcherFilename     = csv file containing the information to run the batcher
@@ -9,7 +9,7 @@ library(here)
 # param.dir           = location of parameter files (example /GitHub/neus-atlantis/currentVersion)
 # output.dir          = directory where batch of runs are to be written (example /GitHub/neus-atlantis/Atlantis_Runs/test_1)
 
-atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30, NUM_TO_RUN = 3, CONTAINER_TYPE = 'docker',param.dir,output.dir) {
+atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30, NUM_TO_RUN = 3, CONTAINER_TYPE = 'podman',param.dir,output.dir) {
   
   batcherFile <- read.csv(batcherFilename, as.is = T)
   
@@ -94,7 +94,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
         print(logfile_path)
         logfile <- read.csv(logfile_path, header=FALSE)      
         print(logfile)
-        if (sum(str_detect(logfile$V1, 'Time: 1')) > 0) {
+        if (sum(grepl('Time: 1', logfile$V1)) > 0) {
           runStarted <- TRUE
         } else if (waitIndex >= 600) {
           runStarted <- TRUE
@@ -225,7 +225,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
               print(logfile_path)
               logfile <- read.csv(logfile_path, header=FALSE)      
               print(logfile)
-              if (sum(str_detect(logfile$V1, 'Time: 1')) > 0) {
+        if (sum(grepl('Time: 1', logfile$V1)) > 0) {
                 runStarted <- TRUE
               } else if (waitIndex >= 600) {
                 runStarted <- TRUE
@@ -248,3 +248,4 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
   try(write.csv(batcherFile,batcherFilename, row.names = FALSE, append = FALSE))
   
 }
+
