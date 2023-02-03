@@ -67,7 +67,7 @@ make_fishing_sensitivity_scenario_post_processing = function(base.bio.prm,
   #Read in baseline run catch file
   base.catch = read.table(base.catch.file,header =T)
   base.catch = base.catch %>%
-    dplyr::select(tidyr::all_of(colnames(base.catch)[-grep('TsAct',colnames(base.catch))]))%>%
+    dplyr::select(all_of(colnames(base.catch)[-grep('TsAct',colnames(base.catch))]))%>%
     tidyr::gather('Code','Catch.baseline',-Time)
 
   if(filter.type %in% c('fished','fished_BH')){
@@ -75,9 +75,9 @@ make_fishing_sensitivity_scenario_post_processing = function(base.bio.prm,
   }
   
   #Read in scenario output data from make_fishing_sensitivity_combined_data()
-  bio.all = readRDS(paste0(data.dir,'biomass_all.rds'))
-  bio.age.all = readRDS(paste0(data.dir,'biomass_age_all.rds'))
-  catch.all = readRDS(paste0(data.dir,'catch_all.rds'))
+  bio.all = readRDS(paste0(data.dir,'/biomass_all.rds'))
+  bio.age.all = readRDS(paste0(data.dir,'/biomass_age_all.rds'))
+  catch.all = readRDS(paste0(data.dir,'/catch_all.rds'))
     
   #Optional filters of base biomass and catch based on filter.type
   if(filter.type == 'fished'){
@@ -149,9 +149,9 @@ make_fishing_sensitivity_scenario_post_processing = function(base.bio.prm,
   rm(base.biomass,base.biomass.age,base.catch)
   
   #Write to file
-  saveRDS(bio.all,paste0(data.dir,'biomass_baseline_',filter.type,'.rds'))
-  saveRDS(bio.age.all,paste0(data.dir,'biomass_age_baseline_',filter.type,'.rds'))
-  saveRDS(catch.all,paste0(data.dir,'catch_baseline_',filter.type,'.rds'))
+  saveRDS(bio.all,paste0(data.dir,'/biomass_baseline_',filter.type,'.rds'))
+  saveRDS(bio.age.all,paste0(data.dir,'/biomass_age_baseline_',filter.type,'.rds'))
+  saveRDS(catch.all,paste0(data.dir,'/catch_baseline_',filter.type,'.rds'))
   
   rm(bio.age.all)
   gc()
@@ -170,7 +170,7 @@ make_fishing_sensitivity_scenario_post_processing = function(base.bio.prm,
     mutate(Biomass.diff = Biomass/Biomass.baseline)%>%
     filter(!is.na(Guild))
   
-  saveRDS(bio.all.guild,paste0(data.dir,'biomass_baseline_guild_',filter.type,'.rds'))
+  saveRDS(bio.all.guild,paste0(data.dir,'/biomass_baseline_guild_',filter.type,'.rds'))
   
   #Filter bio.all.guild#Filter only data points where guild are manipulated directly
   bio.all.guild.match = bio.all.guild %>%
@@ -193,7 +193,7 @@ make_fishing_sensitivity_scenario_post_processing = function(base.bio.prm,
     left_join(spp2guild)%>%
     mutate(in.guild = ifelse(Guild == guild.name,T,F))
   
-  saveRDS(f.mort.all,paste0(data.dir,'biomass_baseline_mortality_',filter.type,'.rds'))
+  saveRDS(f.mort.all,paste0(data.dir,'/biomass_baseline_mortality_',filter.type,'.rds'))
   
 }
 

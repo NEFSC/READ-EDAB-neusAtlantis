@@ -81,11 +81,11 @@ plot_fishing_sensitivity_timeseries = function(run.index.file,
               plot.title = element_text(hjust = 0.5)
         )
     }
-    pdf(file = paste0(fig.dir,'Raw_Biomass_Timeseries_',guild.names[i],'.pdf'),onefile = T)
+    pdf(file = paste0(fig.dir,'/Raw_Biomass_Timeseries_',guild.names[i],'.pdf'),onefile = T)
     for(k in 1:length(bio.plot.ls)){grid.arrange(bio.plot.ls[[k]])}
     dev.off()
     
-    pdf(file = paste0(fig.dir,'Raw_Catch_Timeseries_',guild.names[i],'.pdf'),onefile = T)
+    pdf(file = paste0(fig.dir,'/Raw_Catch_Timeseries_',guild.names[i],'.pdf'),onefile = T)
     for(k in 1:length(catch.plot.ls)){grid.arrange(catch.plot.ls[[k]])}
     dev.off()
     

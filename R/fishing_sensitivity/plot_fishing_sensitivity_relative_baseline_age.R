@@ -19,7 +19,7 @@ plot_fishing_sensitivity_relative_baseline_age = function(data.dir,
   
   fgs = read.csv(fgs.file,as.is = T)%>%select(Code,LongName)
   
-  bio.age.all = readRDS(paste0(data.dir,'biomass_age_baseline_',filter.type,'.rds'))
+  bio.age.all = readRDS(paste0(data.dir,'/biomass_age_baseline_',filter.type,'.rds'))
   
   end.time = max(bio.age.all$Time)
   start.time = end.time - (365*ref.years)
@@ -37,7 +37,7 @@ plot_fishing_sensitivity_relative_baseline_age = function(data.dir,
 
   guild.names= sort(unique(bio.age.all$guild.name))
   
-  pdf( paste0(fig.dir,'relative_baseline_age_species_',filter.type,'.pdf'),onefile =T, width =12, height = 10)
+  pdf( paste0(fig.dir,'/relative_baseline_age_species_',filter.type,'.pdf'),onefile =T, width =12, height = 10)
   for(i in 1:length(guild.names)){
     
     bio.age.guild = bio.age.all %>%
@@ -67,6 +67,6 @@ plot_fishing_sensitivity_relative_baseline_age = function(data.dir,
       xlab('Fishing Scalar')+
       ylab('Relative Biomass')+
       theme_bw()+
-    ggsave(paste0(fig.dir,'relative_baseline_age_guild_',filter.type,'.pdf'),width = 12, height =10,units = 'in',dpi = 300)
+    ggsave(paste0(fig.dir,'/relative_baseline_age_guild_',filter.type,'.pdf'),width = 12, height =10,units = 'in',dpi = 300)
   
 }

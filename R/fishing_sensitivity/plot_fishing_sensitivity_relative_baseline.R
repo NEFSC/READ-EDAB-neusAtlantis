@@ -35,7 +35,7 @@ plot_fishing_sensitivity_relative_baseline = function(fgs.file,
   #Plot species-level relative biomass to baseline over last $ref.years of runs
   if(plot.species){
     
-    pdf(paste0(fig.dir,'relative_baseline_species_',filter.type,'.pdf'),onefile = T)
+    pdf(paste0(fig.dir,'/relative_baseline_species_',filter.type,'.pdf'),onefile = T)
     for(i in 1:nrow(fgs)){
       
       bio.spp = bio.all %>%
@@ -76,7 +76,7 @@ plot_fishing_sensitivity_relative_baseline = function(fgs.file,
     
     plot.guilds = sort(unique(bio.all.guild$Guild))
     
-    pdf(paste0(fig.dir,'relative_baseline_guild_',filter.type,'.pdf'),onefile = T)
+    pdf(paste0(fig.dir,'/relative_baseline_guild_',filter.type,'.pdf'),onefile = T)
     for(i in 1:length(plot.guilds)){
       
       bio.guild = bio.all.guild %>%
@@ -103,7 +103,7 @@ plot_fishing_sensitivity_relative_baseline = function(fgs.file,
   
   if(plot.guild.match){
     
-    bio.guild.match = readRDS(paste0(data.dir,'biomass_baseline_guild_match_',filter.type,'.rds'))
+    bio.guild.match = readRDS(paste0(data.dir,'/biomass_baseline_guild_match_',filter.type,'.rds'))
    
     ggplot(bio.guild.match, aes(x=fishing.scalar,y=Biomass.diff,color = Guild))+
       geom_line()+
@@ -116,13 +116,13 @@ plot_fishing_sensitivity_relative_baseline = function(fgs.file,
         plot.title = element_text(hjust = 0.5),
         legend.position = 'bottom'
       )+
-      ggsave(paste0(fig.dir,'biomass_baseline_guild_match_',filter.type,'.png'),width = 8, height = 6, units = 'in',dpi = 250)
+      ggsave(paste0(fig.dir,'/biomass_baseline_guild_match_',filter.type,'.png'),width = 8, height = 6, units = 'in',dpi = 250)
     
   }
   
   if(plot.exploitation){
     
-    f.mort.all = readRDS(paste0(data.dir,'biomass_baseline_mortality_',filter.type,'.rds'))%>%
+    f.mort.all = readRDS(paste0(data.dir,'/biomass_baseline_mortality_',filter.type,'.rds'))%>%
       left_join(dplyr::select(fgs,Code,LongName))%>%
       filter(Catch>0 & in.guild ==T)
       
@@ -139,7 +139,7 @@ plot_fishing_sensitivity_relative_baseline = function(fgs.file,
         panel.grid = element_blank(),
         plot.title = element_text(hjust = 0.5)
       )+
-      ggsave(paste0(fig.dir,'fishing_explotation_species_',filter.type,'.png'),width= 14, height = 12, units = 'in',dpi = 250)
+      ggsave(paste0(fig.dir,'/fishing_explotation_species_',filter.type,'.png'),width= 14, height = 12, units = 'in',dpi = 250)
 
   }
   

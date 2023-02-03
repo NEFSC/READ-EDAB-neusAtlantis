@@ -1,11 +1,11 @@
 #Function to plot biomass composition per guild (by species)
 
-data.dir = here::here('data','fishing_sensitivity_extended_constant_2','')
-fig.dir = here::here('Figures','fishing_sensitivity_extended_constant_2','')
-filter.type = 'fished'
-ref.years = 20
-guild.match = here::here('diagnostics','functional_groups_match.csv')
-fgs.file = fgs.file = here::here('currentVersion','neus_groups.csv')
+# data.dir = here::here('data','fishing_sensitivity_extended_constant_2','')
+# fig.dir = here::here('Figures','fishing_sensitivity_extended_constant_2','')
+# filter.type = 'fished'
+# ref.years = 20
+# guild.match = here::here('diagnostics','functional_groups_match.csv')
+# fgs.file = fgs.file = here::here('currentVersion','neus_groups.csv')
 
 plot_fishing_sensitivity_guild_composition = function(data.dir,
                                                       fig.dir,
@@ -19,7 +19,7 @@ plot_fishing_sensitivity_guild_composition = function(data.dir,
   
   fgs = read.csv(fgs.file,as.is = T)%>%select(Code,LongName)
   
-  bio.all = readRDS(paste0(data.dir,'biomass_baseline_',filter.type,'.rds'))
+  bio.all = readRDS(paste0(data.dir,'/biomass_baseline_',filter.type,'.rds'))
   
   end.time = max(bio.all$Time)
   start.time = end.time - (365*ref.years)
@@ -42,7 +42,7 @@ plot_fishing_sensitivity_guild_composition = function(data.dir,
   
   plot.cols = c(RColorBrewer::brewer.pal(12,'Paired'),RColorBrewer::brewer.pal(12,'Set3'))
   i=1
-  pdf(paste0(fig.dir,'biomass_guild_composition_',filter.type,'.pdf'),onefile = T,width = 14, height = 10)
+  pdf(paste0(fig.dir,'/biomass_guild_composition_',filter.type,'.pdf'),onefile = T,width = 14, height = 10)
   for(i in 1:length(guild.names)){
     bio.guild = bio.all %>%
       filter(guild.name == guild.names[i]) %>%
@@ -68,3 +68,10 @@ plot_fishing_sensitivity_guild_composition = function(data.dir,
   
   
 }
+
+# plot_fishing_sensitivity_guild_composition(data.dir = here::here('data','fishing_sensitivity_extended_constant_2',''),
+#                                            fig.dir = here::here('Figures','fishing_sensitivity_extended_constant_2',''),
+#                                            filter.type = 'fished',
+#                                            ref.years = 20,
+#                                            guild.match = here::here('diagnostics','functional_groups_match.csv'),
+#                                            fgs.file = here::here('currentVersion','neus_groups.csv'))

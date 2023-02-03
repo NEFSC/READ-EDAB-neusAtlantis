@@ -5,22 +5,31 @@ library(gridExtra)
 #Source functions
 source(here::here('R','fishing_sensitivity','make_fishing_sensitivity_run_index.R'))
 source(here::here('R','fishing_sensitivity','make_fishing_sensitivity_combined_output.R'))
+source(here::here('R','fishing_sensitivity','make_fishing_sensitivity_diet_connections.R'))
 source(here::here('R','fishing_sensitivity','make_fishing_sensitivity_post_processing.R'))
 source(here::here('R','fishing_sensitivity','plot_fishing_sensitivity_timeseries.R'))
 source(here::here('R','fishing_sensitivity','plot_fishing_sensitivity_relative_baseline.R'))
 source(here::here('R','fishing_sensitivity','plot_fishing_sensitivity_relative_baseline_age.R'))
-#Create run index
-make_fishing_sensitivity_run_index(out.name = here::here('data','fishing_sensitivity_extended_constant_2','run_index.rds'),
+source(here::here('R','fishing_sensitivity','plot_fishing_sensitivity_guild_composition.R'))
+source(here::here('R','fishing_sensitivity','plot_fishing_sensitivity_age_distribution.R'))
+#Create run index=
+make_fishing_sensitivity_run_index(out.file= here::here('data','fishing_sensitivity_extended_constant_2','run_index.rds'),
                                    guild.names = c('Apex_Predator','Benthivore','Benthos','Piscivore','Planktivore'),
                                    fishing.levels.scalar = c(0,0.5,1.5,2.5,5,10,15,20,40,60,100),
                                    fishing.levels.text = c('0','0_5','1_5','2_5','5','10','15','20','40','60','100'))
 
 #Create scenario data object
-make_fishing_sensitivity_combined_output(batch.dir = '/media/jcaracappa/06b7679b-9bac-4c53-9cf3-9abecb801e6d/home.orig/jcaracappa/Documents/GitHub/neus-atlantis/Atlantis_Runs/fishing_sensitivity_extended_constant_2/',
+make_fishing_sensitivity_combined_output(batch.dir = 'D:/Atlantis_Runs/fishing_sensitivity_extended_constant_2/',
                                          batch.prefix = 'fishing_sensitivity_extended_constant_2',
-                                         out.dir = here::here('data','fishing_sensitivity_extended_constant_2',''), #output directory
+                                         out.dir = here::here('data','fishing_sensitivity_extended_constant_2/'), #output directory
                                          run.index.file = here::here('data','fishing_sensitivity_extended_constant_2','run_index.rds')
 )
+
+
+make_fishing_sensitivity_diet_connections(batch.dir = 'D:/Atlantis_Runs/fishing_sensitivity_extended_constant_2/',
+                                          batch.prefix = 'fishing_sensitivity_extended_constant_2',
+                                          out.dir = here::here('data','fishing_sensitivity_extended_constant_2',''),
+                                          run.index.file = here::here('data','fishing_sensitivity_extended_constant_2','run_index.rds'))
 
 ####Create baseline referenced data###
 
@@ -29,7 +38,7 @@ make_fishing_sensitivity_scenario_post_processing(base.bio.prm = here::here('cur
                                                   filter.type = 'all',
                                                   fgs.file = here::here('currentVersion','neus_groups.csv'), 
                                                   guild.match = here::here('diagnostics','functional_groups_match.csv'), 
-                                                  batch.dir = '/media/jcaracappa/06b7679b-9bac-4c53-9cf3-9abecb801e6d/home.orig/jcaracappa/Documents/GitHub/neus-atlantis/Atlantis_Runs/fishing_sensitivity_extended_constant_2/',
+                                                  batch.dir = 'D:/Atlantis_Runs/fishing_sensitivity_extended_constant_2/',
                                                   batch.prefix = 'fishing_sensitivity_extended_constant_2',
                                                   data.dir = here::here('data','fishing_sensitivity_extended_constant_2',''),
                                                   base.biomass.file = here::here('Atlantis_Runs','Extended_Constant_Catch','neus_outputBiomIndx.txt'),
@@ -44,7 +53,7 @@ make_fishing_sensitivity_scenario_post_processing(base.bio.prm = here::here('cur
                                                   filter.type = 'fished',
                                                   fgs.file = here::here('currentVersion','neus_groups.csv'), 
                                                   guild.match = here::here('diagnostics','functional_groups_match.csv'), 
-                                                  batch.dir = '/media/jcaracappa/06b7679b-9bac-4c53-9cf3-9abecb801e6d/home.orig/jcaracappa/Documents/GitHub/neus-atlantis/Atlantis_Runs/fishing_sensitivity_extended_constant_2/',
+                                                  batch.dir = 'D:/Atlantis_Runs/fishing_sensitivity_extended_constant_2/',
                                                   batch.prefix = 'fishing_sensitivity_extended_constant_2',
                                                   data.dir = here::here('data','fishing_sensitivity_extended_constant_2',''),
                                                   base.biomass.file = here::here('Atlantis_Runs','Extended_Constant_Catch','neus_outputBiomIndx.txt'),
@@ -59,7 +68,7 @@ make_fishing_sensitivity_scenario_post_processing(base.bio.prm = here::here('cur
                                                   filter.type = 'fished_BH',
                                                   fgs.file = here::here('currentVersion','neus_groups.csv'), 
                                                   guild.match = here::here('diagnostics','functional_groups_match.csv'), 
-                                                  batch.dir = '/media/jcaracappa/06b7679b-9bac-4c53-9cf3-9abecb801e6d/home.orig/jcaracappa/Documents/GitHub/neus-atlantis/Atlantis_Runs/fishing_sensitivity_extended_constant_2/',
+                                                  batch.dir = 'D:/Atlantis_Runs\fishing_sensitivity_extended_constant_2/',
                                                   batch.prefix = 'fishing_sensitivity_extended_constant_2',
                                                   data.dir = here::here('data','fishing_sensitivity_extended_constant_2',''),
                                                   base.biomass.file = here::here('Atlantis_Runs','Extended_Constant_Catch','neus_outputBiomIndx.txt'),
@@ -69,7 +78,7 @@ make_fishing_sensitivity_scenario_post_processing(base.bio.prm = here::here('cur
                                                   ref.years = 20
 )
 
-#Raw Timeseries Plots of Biomass/Catch
+0#Raw Timeseries Plots of Biomass/Catch
 plot_fishing_sensitivity_timeseries(batch.prefix =  'fishing_sensitivity_extended_constant_2',
                                     run.index.file = here::here('data','fishing_sensitivity_extended_constant_2','run_index.rds'),
                                     data.dir = here::here('data','fishing_sensitivity_extended_constant_2',''),
@@ -91,10 +100,31 @@ plot_fishing_sensitivity_relative_baseline(fgs.file = here::here('currentVersion
                                            guild.match = here::here('diagnostics','functional_groups_match.csv')
 )
 
+#plot age structure relative to baseline
+
+#As a line chart
 plot_fishing_sensitivity_relative_baseline_age(data.dir = here::here('data','fishing_sensitivity_extended_constant_2',''),
                                                fig.dir = here::here('Figures','fishing_sensitivity_extended_constant_2','relative_baseline',''),
                                                filter.type = 'all',
                                                ref.years = 20,
                                                guild.match = here::here('diagnostics','functional_groups_match.csv'),
-                                               fgs.file = fgs.file = here::here('currentVersion','neus_groups.csv')
+                                               fgs.file = here::here('currentVersion','neus_groups.csv')
 )
+#As a bubble plot
+plot_fishing_sensitivity_age_distribution(data.dir = here::here('data','fishing_sensitivity_extended_constant_2',''),
+                                          fig.dir = here::here('Figures','fishing_sensitivity_extended_constant_2','age_distribution',''),
+                                          filter.type = 'all',
+                                          ref.years = 20,
+                                          guild.match = here::here('diagnostics','functional_groups_match.csv'),
+                                          fgs.file = fgs.file = here::here('currentVersion','neus_groups.csv')
+)
+
+#plot guild composition by speciess
+plot_fishing_sensitivity_guild_composition(data.dir = here::here('data','fishing_sensitivity_extended_constant_2',''),
+                                           fig.dir = here::here('Figures','fishing_sensitivity_extended_constant_2',''),
+                                           filter.type = 'fished',
+                                           ref.years = 20,
+                                           guild.match = here::here('diagnostics','functional_groups_match.csv'),
+                                           fgs.file = here::here('currentVersion','neus_groups.csv'))
+
+

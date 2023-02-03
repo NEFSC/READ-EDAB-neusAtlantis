@@ -47,9 +47,9 @@ make_fishing_sensitivity_combined_output = function(batch.dir,
   catch.ls = bind_rows(catch.ls)
   bio.age.ls = bind_rows(bio.age.ls)
   
-  saveRDS(bio.ls,paste0(out.dir,'biomass_all.rds'))
-  saveRDS(bio.age.ls,paste0(out.dir,'biomass_age_all.rds'))
-  saveRDS(catch.ls,paste0(out.dir,'catch_all.rds'))
+  saveRDS(bio.ls,paste0(out.dir,'/biomass_all.rds'))
+  saveRDS(bio.age.ls,paste0(out.dir,'/biomass_age_all.rds'))
+  saveRDS(catch.ls,paste0(out.dir,'/catch_all.rds'))
   
 }
 
