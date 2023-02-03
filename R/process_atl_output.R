@@ -230,8 +230,7 @@ process_atl_output = function(param.dir,
       nline = as.numeric(strsplit(nline.str,' ')[[1]][1])  
     }
     line.seq = c(seq(0,nline,line.incr),nline)								   
-    
-    
+
     diet.agg = list()
 
     diet.colnames = colnames(data.table::fread(param.ls$dietcheck,nrow = 1))
@@ -324,6 +323,7 @@ process_atl_output = function(param.dir,
   {numbers = list()
   numbers.age = list()
   numbers.box = list()
+  spatial.numbers = list()
   RN.box = list()
   SN.box = list()
   RN.age = list()
@@ -438,6 +438,7 @@ process_atl_output = function(param.dir,
       if(group.types$group[i] == 'age'){
         
         #numbers
+
         
         rawdata.spp = get_rawdata(group = group.types$species[i],group.type = group.types$group[i])
         
@@ -675,6 +676,7 @@ process_atl_output = function(param.dir,
                                          bboxes = bboxes))
       
       if(is.null(nrow(proddata.spp[[1]]))){
+
         print(i)
         next()
       }else if(group.types$group[i] != 'age'){

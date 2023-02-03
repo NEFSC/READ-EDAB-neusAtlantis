@@ -110,7 +110,7 @@ plot_run_comparisons = function(model.dirs,model.names,plot.raw = T,
   #   }
   # }
   
-  plot.cols = RColorBrewer::brewer.pal(12,'Paired')
+  plot.cols = c(RColorBrewer::brewer.pal(12,'Paired'),RColorBrewer::brewer.pal(8,'Set2'))
   if(plot.raw){
       pdf(paste0(plot.out,'Model_Comparison_Biomass.pdf'),width = 14,onefile = T)
     for(i in 1:length(plot.groups)){

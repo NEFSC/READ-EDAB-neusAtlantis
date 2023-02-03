@@ -70,13 +70,30 @@ edit_param_catch_age = function(harvest.file,group,new.value=NA,max.prop=NA, min
 
 }
 
-edit_param_catch_age(harvest.file = here::here('currentVersion','at_harvest.prm'),
-                     group = 'COD',
-                     new.value = c(0,0,.05,.05,.1,.1,.15,.15,.2,.2),
-                     min.prop = NA,
-                     max.prop = NA,
-                     overwrite = F, 
-                     new.file.name = here::here('currentVersion','at_harvest_test.prm')
-                     
-                     
-)
+get_param_catch_age = function(harvest.file){
+  
+  harvest.lines = readLines(harvest.file)
+  
+  catchTS.line = grep('CatchTS_agedistrib',harvest.lines)
+  
+  catchTS.names = harvest.lines[catchTS.line]
+  catchTS.line.vals = harvest.lines[catchTS.line+1]
+  
+  group.names = sapply(catchTS.names,function(x) return(strsplit(x,'CatchTS_agedistrib|\t| ')[[1]][2]),USE.NAMES = F)
+  vals.mat = do.call('rbind',lapply(catchTS.line.vals,function(x) return(as.numeric(strsplit(x,'\t| ')[[1]]))))
+  out.df = as.data.frame(vals.mat)
+  colnames(out.df) = paste0('age.',1:10)
+  out.df = cbind(group.names,out.df)
+  return(out.df)
+}
+
+# edit_param_catch_age(harvest.file = here::here('currentVersion','at_harvest.prm'),
+#                      group = 'COD',
+#                      new.value = c(0,0,.05,.05,.1,.1,.15,.15,.2,.2),
+#                      min.prop = NA,
+#                      max.prop = NA,
+#                      overwrite = F, 
+#                      new.file.name = here::here('currentVersion','at_harvest_test.prm')
+#                      
+#                      
+# )

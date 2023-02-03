@@ -15,7 +15,8 @@ run.name = 'Dev_New_Clams'
 
 # atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HER_CatchSpinup_1/',run.name,'/')
 # atl.dir = here::here('Atlantis_Runs/HER_CatchSpinup_1',run.name,'')
-atl.dir = here::here('Atlantis_Runs',run.name,'')
+# atl.dir = here::here('Atlantis_Runs',run.name,'')
+atl.dir = '/home/jcaracappa/Documents/GitHub/neus-atlantis_2/Atlantis_Runs/Dev_New_Clams/'
 
 dir.create(paste0(atl.dir,'Post_Processed/'))
 dir.create(paste0(atl.dir,'Post_Processed/Data/'))
@@ -76,7 +77,7 @@ make_atlantis_diagnostic_figures(
   plot.benthic =F,
   plot.overall.biomass = T,
   plot.biomass.timeseries = T,
-  plot.length.age = T,
+  plot.length.age = F,
   plot.biomass.box=F,
   plot.c.mum=F,
   plot.sn.rn=F,
@@ -85,8 +86,8 @@ make_atlantis_diagnostic_figures(
   plot.physics=F,
   plot.growth.cons=F,
   plot.cohort=F,
-  plot.diet=T,
-  plot.consumption= T,
+  plot.diet=F,
+  plot.consumption= F,
   plot.spatial.biomass=F,
   plot.spatial.biomass.seasonal = F,
   plot.LTL=F,
