@@ -8,7 +8,7 @@
 #' @save.out logical. If TRUE, saves .R file, if F returns result object
 #' @spatial.overlap logical. Should it include spatial.overlap data?
 #' @param.s list generated from get_atl_paramfiles()
-#' @diet.agg.time Scale to aggregate dietcheck biomass from (either 'raw','month', or 'year' )
+#' @agg.scale Scale to aggregate dietcheck biomass from (either 'raw','month', or 'year' )
 #' @return Either saves an R object or returns a list called "result"
 #' 
 #' Author: Ryan Morse, modified by Joseph Caracappa
@@ -20,19 +20,76 @@ process_atl_output = function(param.dir,
                               param.ls,
                               spatial.overlap,
                               include_catch,
-                              diet.agg.time,
+                              agg.scale = 'day',
                               save.out,
                               large.file = F,
                               system){
   
   # memory.limit(size = 56000)
   source(here::here('R','load_nc_temp.R'))
+  
+  
+  if(large.file){
+    dir.create(paste0(atl.dir,'/Aggregated/'))
+  }
 
   #Utility function
   bind.save = function(x,name){
     x2 = dplyr::bind_rows(x)
     saveRDS(x2,paste0(out.dir,name,'.rds'))
   }
+  
+  get_rawdata = function(group,group.type){
+    if(group.type == 'age'){
+      main.vars = age.vars
+    }else{
+      main.vars = bp.vars
+    }
+    
+    if(load_fgs(param.ls$groups.file)$IsTurnedOn[which(load_fgs(param.ls$groups.file)$Name == group)] == 0){
+      rawdata.spp.f = list(data.frame(species = group.types$species[i], polygon =NA, agecl = NA,layer = NA, time = 0, atoutput = NA))
+      next()
+    }else{
+      rawdata.spp.f =Map(load_nc_temp,
+                       select_variable = main.vars,
+                       select_groups = group,
+                       MoreArgs = list(nc = param.ls$main.nc, bps = bio.pools,
+                                       fgs = param.ls$groups.file,prm_run = param.ls$run.prm,
+                                       bboxes = bboxes ))
+    }
+    
+    if(group.types$group[i] == 'bp'){
+      rawdata.spp.f[[1]]$agecl =1
+    }
+    return(rawdata.spp.f)
+  }
+  
+  agg_custom = function(data, groups, fun, agg.scale){
+    out = atlantistools::agg_data(data = data, groups = groups, fun = fun) %>%
+      mutate(date = as.POSIXct(time*365*86400, origin = '1964-01-01 00:00:00',tz = 'UTC'))
+    
+    if(agg.scale == 'month') {
+      out$time.agg = as.numeric(factor(format(out$date,format = '%m')))
+    }else if(agg.scale == 'year'){
+      out$time.agg = as.numeric(factor(format(out$date, format = '%Y')))
+    }else{
+      out$time.agg = out$time*365
+    }
+    
+    match.cols = c(groups[-which(groups == 'time')],'time.agg')
+    out.agg = out %>%
+      group_by_at(match.cols)%>%
+      summarise(time = floor(min(time)),
+                atoutput = mean(atoutput,na.rm=T))%>%
+      ungroup()%>%
+      dplyr::select(all_of(c(groups,'atoutput')))
+    
+    return(out.agg)
+  }
+  
+  #Read in groups file
+  fgs = load_fgs(param.ls$groups.file)%>%
+    dplyr::select(Code,Name,LongName)
   
   #Get boundary box
   bboxes =  atlantistools::get_boundary(boxinfo = atlantistools::load_box(param.ls$bgm.file)) 
@@ -159,6 +216,7 @@ process_atl_output = function(param.dir,
     
     saveRDS(data.dietcheck,file = paste0(out.dir,'data_dietcheck.rds'))
   }else{
+    
     `%>%` = dplyr::`%>%`
     
     ##NEUS only 613 diet obs per timestep
@@ -171,50 +229,78 @@ process_atl_output = function(param.dir,
       nline.str = system(paste0('wc -l ',param.ls$dietcheck),intern = T)
       nline = as.numeric(strsplit(nline.str,' ')[[1]][1])  
     }
-    line.seq = c(seq(0,nline,line.incr),nline)
-    
+    line.seq = c(seq(0,nline,line.incr),nline)								   
+
     diet.agg = list()
-    
+
     diet.colnames = colnames(data.table::fread(param.ls$dietcheck,nrow = 1))
     for(i in 1:(length(line.seq)-1)){
-      
+
       #read chunk and aggregate by specified interval
       lines2read = line.seq[i+1]-line.seq[i]
       diet.slice = data.table::fread(param.ls$dietcheck,skip = line.seq[i]+1,nrow = lines2read)
       colnames(diet.slice) = diet.colnames
-      
+
       diet.slice.dates = as.POSIXct(diet.slice$Time*86400, origin = '1964-01-01')
-      if(diet.agg.time == 'month') {
+      if(agg.scale == 'month') {
         diet.slice$time.agg = as.numeric(factor(format(diet.slice.dates,format = '%m')))
-      }else if(diet.agg.time == 'year'){
+      }else if(agg.scale == 'year'){
         diet.slice$time.agg = as.numeric(factor(format(diet.slice.dates, format = '%Y')))
       }else{
         diet.slice$time.agg = 1:nrow(diet.slice)
       }
-      
+
       diet.slice = diet.slice %>%
-        dplyr::group_by(time.agg,Predator,Cohort,Stock,Updated)%>%
-        dplyr::summarise(Time = max(Time),
-                         dplyr::across(MAK:DC,mean))%>%
+        # dplyr::mutate(Time = Time)%>%
+        dplyr::select(-Stock,-Updated)%>%
+        tidyr::gather('prey','atoutput',-Time,-time.agg,-Predator,-Cohort)%>%
+        dplyr::mutate(atoutput = as.numeric(atoutput))%>%
+        dplyr::group_by(time.agg,Predator,Cohort,prey)%>%
+        dplyr::summarise(time = floor(min(Time/365)),
+                         atoutput = mean(atoutput,na.rm=T))%>%
         dplyr::ungroup()%>%
         dplyr::select(-time.agg)%>%
-        dplyr::select(Time,Predator,Cohort,Stock,Updated,MAK:DC)%>%
-        dplyr::arrange(Time,Predator,Cohort,Stock,Updated)
+          left_join(select(fgs,'Code','Name'),by = c('Predator' = 'Code'))%>%
+          select(-Predator)%>%
+          rename(Predator = 'Name')%>%
+          filter(atoutput != 0)%>%
+          left_join(select(fgs,'Code','Name'),by = c('prey' = 'Code'))%>%
+          select(-prey)%>%
+        rename(prey = 'Name',agecl = 'Cohort',pred = 'Predator')%>%
+        select(time,pred,agecl,prey,atoutput)%>%
+        arrange(time,pred,agecl,prey)
       
-      pred.sum =apply(diet.slice[,6:ncol(diet.slice)],1,sum,na.rm=T)
-      
-      diet.slice[,6:ncol(diet.slice)] = diet.slice[,6:ncol(diet.slice)]/pred.sum
-      diet.slice = diet.slice[which(pred.sum !=0),]
-      
-      write.table(diet.slice,file = paste0(out.dir,'dietcheck_temp.txt'))
-      diet.agg[[i]] = atlantistools::load_dietcheck(dietcheck = paste0(out.dir,'dietcheck_temp.txt'),
-                                                    fgs = param.ls$groups.file,
-                                                    prm_run = param.ls$run.prm,
-                                                    convert_names = T)
+      # test = diet.slice %>%
+      #   group_by(time,pred,agecl)%>%
+      #   summarise(atoutput = sum(as.numeric(atoutput),na.rm=T))
+        
+      # pred.sum =apply(diet.slice[,6:ncol(diet.slice)],1,sum,na.rm=T)
+      # 
+      # diet.slice[,6:ncol(diet.slice)] = diet.slice[,6:ncol(diet.slice)]/pred.sum
+      # diet.slice = diet.slice[which(pred.sum !=0),]
+
+      diet.agg[[i]] = diet.slice
       print(i)
     }
+
     
-    data.dietcheck = dplyr::bind_rows(diet.agg)
+    data.dietcheck = dplyr::bind_rows(diet.agg)%>%
+      mutate(atoutput  = as.numeric(atoutput))
+    
+    pred.sum = data.dietcheck %>%
+      group_by(time,pred,agecl)%>%
+     summarise(atoutput.sum = sum(atoutput,na.rm=T))
+    
+    data.dietcheck = data.dietcheck %>%
+      left_join(pred.sum)%>%
+      mutate(atoutput = atoutput/atoutput.sum)%>%
+      select(-atoutput.sum)
+    
+    # data.dietcheck = atlantistools::load_dietcheck(dietcheck = paste0(atl.dir,run.prefix,'DietCheck.txt'),
+    #                                                fgs = param.ls$groups.file,
+    #                                                prm_run = param.ls$run.prm,
+    #                                                convert_names = T)
+    
     rm(diet.agg)
     saveRDS(data.dietcheck,file = paste0(out.dir,'data_dietcheck.rds'))
   }
@@ -228,7 +314,7 @@ process_atl_output = function(param.dir,
   group.types = dplyr::bind_rows(list(data.frame(species = groups.age,group = 'age'),
        data.frame(species = groups.bp, group = 'bp'))
   )
-  age.vars = c('Nums','StructN','ResN','N')
+  age.vars= c('Nums','StructN','ResN','N')
   bp.vars = 'N'
   
   #Loop by species to save on memory
@@ -247,6 +333,7 @@ process_atl_output = function(param.dir,
   biomass.age = list()
   biomass.age.invert = list()
   spatial.biomass = list()
+  spatial.numbers = list()
   spatial.biomass.stanza = list()
   biomass = list()
   biomass.box = list()
@@ -314,53 +401,58 @@ process_atl_output = function(param.dir,
     biomass.age.invert = dplyr::filter(spatial.biomass, !(species %in% data.age.mat$species))
     biomass.age.invert = atlantistools::agg_data(biomass.age.invert,groups = c('species','time'),fun = sum)
     
+    # max age (mean) - biomass / numbers
+    # grab numbers in time and space
+    spatialNumbers = rawdata.main[[1]] %>%
+      dplyr::rename(numbers = atoutput)
+    # filter biomass for species with 10 cohorts and convert to kilograms
+    spatialBiomass <- spatial.biomass %>%
+      dplyr::filter(species %in% unique(spatialNumbers$species)) %>%
+      dplyr::rename(biomass = atoutput) %>%
+      dplyr::mutate(biomass = 1E6*biomass)
+    
+    # join numbers with biomass and calculate mean weight of an individivual in age, polygon, layer, time
+    weight <- spatialNumbers %>% dplyr::left_join(.,spatialBiomass,by = c("species", "agecl", "polygon", "layer", "time")) %>%
+      dplyr::filter(!is.na(biomass)) %>%
+      dplyr::mutate(meanWeight = biomass/numbers)
+    
+    weight <- weight %>% 
+      dplyr::group_by(species, polygon,layer, agecl, time) %>%
+      dplyr::summarise(maxMeanWeight = max(meanWeight),.groups="drop")  
+    
   }else{
+    
+    #large file size accomodations: Pre-aggregate and then run normal routine
+    
+    # tictoc::tic()
+    
     for(i in 1:nrow(group.types)){
       
-      blank.df = data.frame(species = group.types$species[i], polygon =NA, agecl = NA,layer = NA, time = 0, atoutput = NA)
-      if(group.types$group[i] == 'age'){
-        main.vars = age.vars
-      }else{
-        main.vars = bp.vars
-      }
-      
-      ## (1) Process Raw Data
-      #Read in raw untransformed data from main.nc file
-      if(load_fgs(param.ls$groups.file)$IsTurnedOn[i] == 0){
-        rawdata.spp = list(data.frame(species = group.types$species[i], polygon =NA, agecl = NA,layer = NA, time = 0, atoutput = NA))
+      if(load_fgs(param.ls$groups.file)$IsTurnedOn[which(load_fgs(param.ls$groups.file)$Name == group.types$species[i])] == 0){
         next()
-      }else{
-        rawdata.spp =Map(load_nc_temp,
-                         select_variable = main.vars,
-                         select_groups = group.types$species[i],
-                         MoreArgs = list(nc = param.ls$main.nc, bps = bio.pools,
-                                         fgs = param.ls$groups.file,prm_run = param.ls$run.prm,
-                                         bboxes = bboxes ))
       }
-      
-      if(group.types$group[i] == 'bp'){
-        rawdata.spp[[1]]$agecl =1
-      }
-      
       ## (2) create 1st level objects( Spatial Biomass, Numbers, RN/SN,)
       
-      
+    
       #SN/RN
       if(group.types$group[i] == 'age'){
         
         #numbers
-        numbers[[i]] = atlantistools::agg_data(data = rawdata.spp[[1]], groups = c('species','time'), fun = sum)
-        numbers.age[[i]] = atlantistools::agg_data(data = rawdata.spp[[1]], groups = c('species','agecl','time'), fun = sum)
-        numbers.box[[i]] = atlantistools::agg_data(data = rawdata.spp[[1]], groups = c('species','polygon','time'), fun = sum)
-        spatial.numbers[[i]] = atlantistools::agg_data(data = rawdata.spp[[1]], groups = c("species", "agecl", "polygon", "layer", "time"), fun = sum)
-          
-        RN.box[[i]] = atlantistools::agg_data(data = rawdata.spp[[3]], groups = c('species','polygon','time'), fun = sum)
-        SN.box[[i]] = atlantistools::agg_data(data = rawdata.spp[[2]], groups = c('species','polygon','time'), fun = sum)
-        RN.age[[i]] = atlantistools::agg_data(data = rawdata.spp[[3]], groups = c('species','agecl','time'), fun = sum)
-        SN.age[[i]] = atlantistools::agg_data(data = rawdata.spp[[2]], groups = c('species','agecl','time'), fun = sum)
+
         
-        SN.age.mean[[i]] = atlantistools::agg_data(data = rawdata.spp[[2]], groups = c('species','time','agecl'), fun = mean)
-        RN.age.mean[[i]] = atlantistools::agg_data(data = rawdata.spp[[3]], groups = c('species','time','agecl'), fun = mean)
+        rawdata.spp = get_rawdata(group = group.types$species[i],group.type = group.types$group[i])
+        
+        numbers[[i]] = agg_custom(data = rawdata.spp[[1]], groups = c('species','time'),fun = sum,agg.scale)
+        numbers.age[[i]] = agg_custom(data = rawdata.spp[[1]], groups = c('species','agecl','time'), fun = sum,agg.scale)
+        numbers.box[[i]] = agg_custom(data = rawdata.spp[[1]], groups = c('species','polygon','time'), fun = sum,agg.scale)
+        
+        RN.box[[i]] = agg_custom(data = rawdata.spp[[3]], groups = c('species','polygon','time'), fun = sum, agg.scale)
+        SN.box[[i]] = agg_custom(data = rawdata.spp[[2]], groups = c('species','polygon','time'), fun = sum,agg.scale)
+        RN.age[[i]] = agg_custom(data = rawdata.spp[[3]], groups = c('species','agecl','time'), fun = sum,agg.scale)
+        SN.age[[i]] = agg_custom(data = rawdata.spp[[2]], groups = c('species','agecl','time'), fun = sum,agg.scale)
+        
+        SN.age.mean[[i]] = agg_custom(data = rawdata.spp[[2]], groups = c('species','time','agecl'), fun = mean,agg.scale)
+        RN.age.mean[[i]] = agg_custom(data = rawdata.spp[[3]], groups = c('species','time','agecl'), fun = mean,agg.scale)
         
         #make length.age
         #Use mean RN+SN per age for each species, convert to weight, get length w/Von Bert.
@@ -373,14 +465,32 @@ process_atl_output = function(param.dir,
         length.age[[i]] = biomass.age2[,c('species','agecl','time','length_age')]
         colnames(length.age[[i]])[4] = 'atoutput'
         
-        spatial.biomass[[i]] = atlantistools::calculate_biomass_spatial(nums = rawdata.spp[[1]],
-                                                                        sn = rawdata.spp[[2]],
-                                                                        rn = rawdata.spp[[3]],
-                                                                        n = rawdata.spp[[4]],
-                                                                        vol_dz = vol.dz,
-                                                                        bio_conv = bio.conv,
-                                                                        bps = bio.pools)
+        spatial.biomass[[i]] =rename(rawdata.spp[[1]],nums = 'atoutput')%>%
+          left_join(rename(rawdata.spp[[2]],sn = 'atoutput'))%>%
+          left_join(rename(rawdata.spp[[3]],rn = 'atoutput'))%>%
+          mutate(atoutput = nums*(sn+rn)*bio.conv) %>%
+          select(species,agecl,polygon,layer,time,atoutput)
+          
+          # test=atlantistools::calculate_biomass_spatial(nums = rawdata.spp[[1]],
+          #                                                               sn = rawdata.spp[[2]],
+          #                                                               rn = rawdata.spp[[3]],
+          #                                                               n = rawdata.spp[[4]],
+          #                                                               vol_dz = NA,
+          #                                                               bio_conv = NA,
+          #                                                               bps = NA)
+        spatial.numbers[[i]] = agg_custom(data = rawdata.spp[[1]], groups = c('species','agecl','polygon','layer','time'),fun= mean, agg.scale)%>%
+          dplyr::rename(numbers = 'atoutput')
+        
+        spatial.biomass[[i]] = agg_custom(data = spatial.biomass[[i]],groups = c('species','agecl','polygon','layer','time'),fun = mean,agg.scale)
+        
+        #Aggregate spatial biomass based on stanzas
+        spatial.biomass.stanza[[i]] = atlantistools::combine_ages(spatial.biomass[[i]],grp_col = 'species',agemat = data.age.mat)
+        
       }else{
+        blank.df = data.frame(species = fgs$LongName[which(fgs$Name == group.types$species[i])], polygon =NA, agecl = NA,layer = NA, time = 0, atoutput = NA)
+        
+        rawdata.spp = get_rawdata(group = group.types$species[i],group.type = group.types$group[i])
+        
         spatial.biomass[[i]] = atlantistools::calculate_biomass_spatial(nums = blank.df,
                                                                         sn = blank.df,
                                                                         rn = blank.df,
@@ -389,11 +499,6 @@ process_atl_output = function(param.dir,
                                                                         bio_conv = bio.conv,
                                                                         bps = bio.pools)
       }
-      
-      
-      
-      #Aggregate spatial biomass based on stanzas
-      spatial.biomass.stanza[[i]] = atlantistools::combine_ages(spatial.biomass[[i]],grp_col = 'species',agemat = data.age.mat)
       
       print(group.types$species[i])
       
@@ -407,52 +512,43 @@ process_atl_output = function(param.dir,
       
       ##Biomass Groups and spatial overlap
       
-      biomass[[i]] <- atlantistools::agg_data(spatial.biomass[[i]],groups = c('species','time'),fun = sum)
+      biomass[[i]] <- agg_custom(spatial.biomass[[i]],groups = c('species','time'),fun = sum,agg.scale)
       
       #Aggregate biomass by box
-      biomass.box[[i]] = atlantistools::agg_data(spatial.biomass[[i]], groups = c('species','polygon','time'), fun = sum)
+      biomass.box[[i]] = agg_custom(spatial.biomass[[i]], groups = c('species','polygon','time'), fun = sum,agg.scale)
       biomass.box.invert[[i]] = dplyr::filter(biomass.box[[i]], !(species %in% data.age.mat$species))
       
       #Aggregate by ageclass
       biomass.age[[i]] = dplyr::filter(spatial.biomass[[i]], species %in% data.age.mat$species)
-      biomass.age[[i]] = atlantistools::agg_data(biomass.age[[i]], groups = c('species','agecl','time'),fun = sum)  
+      biomass.age[[i]] =agg_custom(biomass.age[[i]], groups = c('species','agecl','time'),fun = sum,agg.scale)  
       
       biomass.age.invert[[i]] = dplyr::filter(spatial.biomass[[i]], !(species %in% data.age.mat$species))
-      biomass.age.invert[[i]] = atlantistools::agg_data(biomass.age.invert[[i]],groups = c('species','time'),fun = sum)
+      biomass.age.invert[[i]] = agg_custom(biomass.age.invert[[i]],groups = c('species','time'),fun = sum,agg.scale)
       
+
       gc()
     }
+    
+    # max age (mean) - biomass / numbers
+    
+    spatialNumbers = dplyr::bind_rows(spatial.numbers)
+    # filter biomass for species with 10 cohorts and convert to kilograms
+    spatialBiomass <- dplyr::bind_rows(spatial.biomass) %>%
+      dplyr::filter(species %in% unique(spatialNumbers$species)) %>%
+      dplyr::rename(biomass = atoutput) %>%
+      dplyr::mutate(biomass = 1E6*biomass)
+    
+    # join numbers with biomass and calculate mean weight of an individivual in age, polygon, layer, time
+    weight <- spatialNumbers %>% dplyr::left_join(.,spatialBiomass,by = c("species", "agecl", "polygon", "layer", "time")) %>%
+      dplyr::filter(!is.na(biomass)) %>%
+      dplyr::mutate(meanWeight = biomass/numbers)
+    
+    weight <- weight %>% 
+      dplyr::group_by(species, polygon,layer, agecl, time) %>%
+      dplyr::summarise(maxMeanWeight = max(meanWeight),.groups="drop")  
+    # tictoc::toc()
   }
  
-  # max age (mean) - biomass / numbers
-  # grab numbers in time and space
-  
-  if(large.file == T){
-    
-    spatialNumbers = dplyr::bind_rows(spatial.numbers)%>%
-      dplyr::rename(numbers = atoutput)  
-    
-    spatial.biomass = dplyr::bind_rows(spatial.biomass)
-  }else{
-    spatialNumbers = rawdata.main[[1]] %>%
-      dplyr::rename(numbers = atoutput)  
-    
-  }
-  # filter biomass for species with 10 cohorts and convert to kilograms
-  spatialBiomass <- spatial.biomass %>%
-    dplyr::filter(species %in% unique(spatialNumbers$species)) %>%
-    dplyr::rename(biomass = atoutput) %>%
-    dplyr::mutate(biomass = 1E6*biomass)
-  
-  # join numbers with biomass and calculate mean weight of an individivual in age, polygon, layer, time
-  weight <- spatialNumbers %>% dplyr::left_join(.,spatialBiomass,by = c("species", "agecl", "polygon", "layer", "time")) %>%
-    dplyr::filter(!is.na(biomass)) %>%
-    dplyr::mutate(meanWeight = biomass/numbers)
-  
-  weight <- weight %>% 
-    dplyr::group_by(species, polygon,layer, agecl, time) %>%
-    dplyr::summarise(maxMeanWeight = max(meanWeight),.groups="drop")  
-  
   #Calculate spatial overlap
   # if(spatial.overlap){
   #   spatial.biomass = dplyr::bind_rows(spatial.biomass)
@@ -461,38 +557,31 @@ process_atl_output = function(param.dir,
   #   rm(spatial.biomass,sp.overlap)
   # }
   
+  test = bind_rows(biomass)
   #bind, save and delete objects
-  bind.save(numbers,'numbers')
-  bind.save(numbers.age,'numbers_age')
-  bind.save(numbers.box,'numbers_box')
-  bind.save(weight,'max_weight')
+  bind.save(numbers,'numbers'); rm('numbers')
+  bind.save(numbers.age,'numbers_age'); rm('numbers.age')
+  bind.save(numbers.box,'numbers_box'); rm('numbers.box')
+  bind.save(weight,'max_weight'); rm('weight')
   
-  bind.save(RN.box,'RN_box')
-  bind.save(SN.box,'SN_box')
-  bind.save(RN.age,'RN_age')
-  bind.save(SN.age,'SN_age')
+  bind.save(RN.box,'RN_box'); rm('RN.box')
+  bind.save(SN.box,'SN_box'); rm('SN.box')
+  bind.save(RN.age,'RN_age'); rm('RN.age')
+  bind.save(SN.age,'SN_age'); rm('SN.age')
 
-  bind.save(SN.age.mean,'SN_age_mean')
-  bind.save(RN.age.mean,'RN_age_mean')
+  bind.save(SN.age.mean,'SN_age_mean'); rm('SN.age.mean')
+  bind.save(RN.age.mean,'RN_age_mean'); rm('RN.age.mean')
   
-  bind.save(length.age,'length_age')
+  bind.save(length.age,'length_age'); rm('length.age')
   
-  bind.save(biomass,'biomass')
-  bind.save(biomass.box,'biomass_box')
-  bind.save(biomass.box.invert,'biomass_box_invert')
-  bind.save(biomass.age,'biomass_age')
-  bind.save(biomass.age.invert,'biomass_age_invert')
-  bind.save(spatial.biomass.stanza,'biomass_spatial_stanza')
+  bind.save(biomass,'biomass'); rm('biomass')
+  bind.save(biomass.box,'biomass_box'); rm('biomass.box')
+  bind.save(biomass.box.invert,'biomass_box_invert'); rm('biomass.box.invert')
+  bind.save(biomass.age,'biomass_age'); rm('biomass.age')
+  bind.save(biomass.age.invert,'biomass_age_invert'); rm('biomass.age.invert')
+  bind.save(spatial.biomass.stanza,'biomass_spatial_stanza'); rm('spatial.biomass.stanza')
   
-  rm(numbers,numbers.age,numbers.box,
-     RN.SN.age,RN.box,SN.box,RN.age,SN.age,
-     SN.age.mean,RN.age.mean,length.age,
-     biomass,biomass.box,biomass.box.invert,
-     biomass.age,biomass.age.invert,
-     spatial.biomass.stanza,
-     spatial.biomass,spatialBiomass,
-     spatialNumbers, weight,
-     rawdata.main)
+  rm(spatial.biomass,spatialBiomass,spatialNumbers,rawdata.main)
   
   gc()
 # PROD netCDF objectsspatialBiomass# PROD netCDF objects -----------------------------------------------------
@@ -500,8 +589,8 @@ process_atl_output = function(param.dir,
   #Read in raw untransformed data from prod.nc file
   
   #Set up biological variable groups
-  age.vars = c('Eat','Growth')
-  bp.vars = 'Grazing'
+  age.vars.prod = c('Eat','Growth')
+  bp.vars.prod = 'Grazing'
   
   #Setup spaces for objects
   eat.age = list()
@@ -553,11 +642,11 @@ process_atl_output = function(param.dir,
     saveRDS(bio.consumed,paste0(out.dir,'biomass_consumed.rds'))
     rm(bio.consumed)
     gc()
-    # bio.consumed = atlantistools::calculate_consumed_biomass(eat = rawdata.prod[[1]],
-    #                                                          grazing = rawdata.prod[[2]],
-    #                                                          dm = data.dietcheck,
-    #                                                          vol = vol,
-    #                                                          bio_conv = bio.conv)
+    bio.consumed = atlantistools::calculate_consumed_biomass(eat = rawdata.prod[[1]],
+                                                             grazing = rawdata.prod[[2]],
+                                                             dm = data.dietcheck,
+                                                             vol = vol,
+                                                             bio_conv = bio.conv)
     
     eat.age = atlantistools::agg_data(data = rawdata.prod[[1]], groups = c('species','time','agecl'),fun = mean)
     grazing = atlantistools::agg_data(data = rawdata.prod[[2]], groups = c('species','time'),fun = mean)
@@ -565,35 +654,38 @@ process_atl_output = function(param.dir,
     
     
   }else{
+    
     for(i in 1:nrow(group.types)){
       
+      if(load_fgs(param.ls$groups.file)$IsTurnedOn[which(load_fgs(param.ls$groups.file)$Name == group.types$species[i])] == 0){
+        next()
+      }
+      
       if(group.types$group[i] == 'age'){
-        prod.vars = age.vars
+        prod.vars = age.vars.prod
       }else{
-        prod.vars = bp.vars
+        prod.vars = bp.vars.prod
       }
       
       ## Process PROD Data by spp
-      if(load_fgs(param.ls$groups.file)$IsTurnedOn[i] == 0){
-        proddata.spp = list(data.frame(species = group.types$species[i], polygon =NA, agecl = NA,layer = NA, time = 0, atoutput = NA))
-      }else{
-        proddata.spp = Map(load_nc_temp,
-                           select_variable = prod.vars,
-                           select_groups = group.types$species[i],
-                           MoreArgs = list(nc = param.ls$prod.nc, bps = bio.pools,
-                                           fgs = param.ls$groups.file, prm_run = param.ls$run.prm,
-                                           bboxes = bboxes))
-      }
-      if(is.null(nrow(proddata.spp[[1]]))|is.null(nrow(proddata.spp[[2]]))){
+      proddata.spp = Map(load_nc_temp,
+                         select_variable = prod.vars,
+                         select_groups = group.types$species[i],
+                         MoreArgs = list(nc = param.ls$prod.nc, bps = bio.pools,
+                                         fgs = param.ls$groups.file, prm_run = param.ls$run.prm,
+                                         bboxes = bboxes))
+      
+      if(is.null(nrow(proddata.spp[[1]]))){
+
         print(i)
         next()
       }else if(group.types$group[i] != 'age'){
-        grazing[[i]] = proddata.spp[[1]] %>%
+        grazing[[i]] =  agg_custom(proddata.spp[[1]],groups = c('species','agecl','polygon','time'),fun = mean ,agg.scale) %>%
           filter(time %in% unique(data.dietcheck$time))
       }else{
-        eat.age[[i]] = proddata.spp[[1]] %>%
+        eat.age[[i]] = agg_custom(proddata.spp[[1]],groups = c('species','agecl','polygon','time'),fun = mean ,agg.scale) %>%
           filter(time %in% unique(data.dietcheck$time))
-        growth.age[[i]] = proddata.spp[[2]] %>%
+        growth.age[[i]] = agg_custom(proddata.spp[[2]],groups = c('species','agecl','polygon','time'),fun = mean ,agg.scale) %>%
           filter(time %in% unique(data.dietcheck$time))
       }
       
@@ -604,11 +696,13 @@ process_atl_output = function(param.dir,
     eat.age = dplyr::bind_rows(eat.age)
     
     vol.temp = dplyr::filter(vol,time %in% unique(data.dietcheck$time))
-    bio.consumed = atlantistools::calculate_consumed_biomass(eat = eat.age,
+    
+    bio.consumed = calculate_consumed_biomass(eat = eat.age,
                                                              grazing = grazing,
                                                              dm = data.dietcheck,
                                                              vol = vol.temp,
                                                              bio_conv = bio.conv)
+    
   }
 
 

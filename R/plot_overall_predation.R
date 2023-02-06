@@ -106,8 +106,13 @@ plot_overall_predation =function(data,bioindex.file,catch.file,min.fract = 0.1,f
   biomass.colnames = colnames(biomass.data)
   
   #Get catch Data
-  catch.data = read.table(catch.file, header = T, stringsAsFactors = F)
-  catch.colnames = colnames(catch.data)
+  if(file.exists(catch.file)){
+    catch.data = read.table(catch.file, header = T, stringsAsFactors = F)  
+    catch.colnames = colnames(catch.data)
+  }else{
+    catch.data = NULL
+    catch.colnames = NULL
+  }
   
   #Loop through species
   plot.cols = c(RColorBrewer::brewer.pal(12,'Set3'),
