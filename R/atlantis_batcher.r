@@ -27,7 +27,8 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
   columns_logfile <- c("Run_name", "Start_time", "End_time", "Status")
   logData <- data.frame(matrix(nrow = numRuns, ncol = length(columns_logfile)))
   colnames(logData) = columns_logfile
-
+  
+  
   # Check for already running containers
   container_ps_output <- system(paste0(CONTAINER_TYPE, " ps"), intern = TRUE)
   # Set number of containers to be removed from original Number to Run and subtract from original Number to Run
@@ -37,7 +38,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
   # Create a list of run directories to be instantiated
   startedContainers <- vector(mode="character")
   containersToRun <- folders
-
+  
   # param.dir <- paste0(here(),"/Rob_Project_Template/Project_Name_Version/")
   # output.dir <- paste0(here(),"/Rob_Project_Template/Project_Name_Version/Atlantis_Runs")
   
@@ -47,12 +48,11 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
     biolPrm <- batcherFile$BiolPrm[n]
     runPrm <- batcherFile$RunPrm[n]
     harvestPrm <- batcherFile$HarvestPrm[n]
-    forcePrm <- batcherFile$ForcePrm[n]
     
     system(paste0("mkdir -p ",paste0('"',output.dir,folders[n],'"')))
     
     run.atlantis.sh = readLines(paste0(param.dir,'RunAtlantis_base.sh'))
-    new.line = paste0('atlantisMerged -i ', initFile, ' 0 -o neus_output.nc -r ', runPrm, ' -f ', forcePrm,' -p at_physics.prm -b ',biolPrm,' -h ', harvestPrm, ' -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -t . -d output')
+    new.line = paste0('atlantisMerged -i ', initFile, ' 0 -o neus_output.nc -r ', runPrm, ' -f at_force_LINUX.prm -p at_physics.prm -b ',biolPrm,' -h ', harvestPrm, ' -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -t . -d output')
     print(new.line)
     run.atlantis.sh[3] = new.line
     writeLines(run.atlantis.sh, con = paste0(param.dir,'RunAtlantis.sh'))
@@ -74,11 +74,11 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
     logData$Status[n] <- "Started"
     batcherFile$Status[n] <- "Started"
     current_batcherFile <- rbind(batcherFile_completed, batcherFile)
-
+    
     try(write.csv(logData,paste0(output.dir,"/",logfileName), row.names = FALSE, append = FALSE))
     try(write.csv(current_batcherFile,batcherFilename, row.names = FALSE, append = FALSE))
     
-
+    
     runStarted <- FALSE
     waitIndex <- 1
     logfile <- "NA"
@@ -129,7 +129,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
     }
     # For each container created (startedContainers) check to see if the container is still running (activeContainers)
     numStartedRuns <- length(startedContainers)
-
+    
     
     endedIndices <- c()
     for (j in 1:numStartedRuns) {
@@ -157,7 +157,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
     if (length(endedIndices) > 0) {
       startedContainers <- startedContainers[-endedIndices]
     }
-
+    
     # Check for finished status (startedContainers empty and number started (n) equal or greater to number of containers in the batcher file (numRuns))
     if ((length(startedContainers) == 0) && (n >= numRuns)) {
       notFinished <- FALSE
@@ -176,6 +176,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
         endRun <- n + numToSetup
         n <- n + 1
         for (i in n:endRun) {
+          
           initFile <- batcherFile$InitNC[i]
           biolPrm <- batcherFile$BiolPrm[i]
           runPrm <- batcherFile$RunPrm[i]
@@ -184,7 +185,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
           system(paste0("mkdir -p ",paste0('"',output.dir,folders[i],'"')))
           
           run.atlantis.sh = readLines(paste0(param.dir,'RunAtlantis_base.sh'))
-          new.line = paste0('atlantisMerged -i ', initFile, ' 0 -o neus_output.nc -r ', runPrm, ' -f ',forcePrm,' -p at_physics.prm -b ',biolPrm,' -h ', harvestPrm, ' -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -t . -d output')
+          new.line = paste0('atlantisMerged -i ', initFile, ' 0 -o neus_output.nc -r ', runPrm, ' -f at_force_LINUX.prm -p at_physics.prm -b ',biolPrm,' -h ', harvestPrm, ' -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -t . -d output')
           print(new.line)
           run.atlantis.sh[3] = new.line
           writeLines(run.atlantis.sh, con = paste0(param.dir,'RunAtlantis.sh'))
@@ -224,7 +225,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
               print(logfile_path)
               logfile <- read.csv(logfile_path, header=FALSE)      
               print(logfile)
-        if (sum(grepl('Time: 1', logfile$V1)) > 0) {
+              if (sum(grepl('Time: 1', logfile$V1)) > 0) {
                 runStarted <- TRUE
               } else if (waitIndex >= 600) {
                 runStarted <- TRUE
@@ -238,12 +239,12 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
         }
         notFinished <- TRUE
         n <- i
-        }
       }
-   }
-
+    }
+  }
+  
   batcherFile <- rbind(batcherFile_completed, batcherFile)
   try(write.csv(logData,paste0(output.dir,"/",logfileName), row.names = FALSE, append = FALSE))
   try(write.csv(batcherFile,batcherFilename, row.names = FALSE, append = FALSE))
+  
 }
-
