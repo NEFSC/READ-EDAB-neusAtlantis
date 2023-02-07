@@ -55,7 +55,7 @@
 |DR|Refractory detritus|Refractory detritus|NA|NA|NA|NA|FALSE|
 |DRM|Drums and croakers|Atlantic croaker|MICROPOGONIAS UNDULATUS|136|90|169283|FALSE|
 |DRM|Drums and croakers|Weakfish|CYNOSCION REGALIS|145|344|169241|FALSE|
-|DRM|Drums and croakers|Northern kingfish|MENTICIRRHUS SAXATILLIS|146|196|169276|FALSE|
+|DRM|Drums and croakers|Northern kingfish|MENTICIRRHUS SAXATILIS|146|196|169276|FALSE|
 |DRM|Drums and croakers|Black drum|POGONIAS CROMIS|147|106|169288|FALSE|
 |DRM|Drums and croakers|Silver perch|NA|148|NA|NA|FALSE|
 |DRM|Drums and croakers|Spot|LEIOSTOMUS XANTHURUS|149|406|169267|FALSE|
@@ -128,7 +128,7 @@
 |FDF|Miscellaneous demersal fish|Offshore lizardfish|NA|437|NA|NA|FALSE|
 |FDF|Miscellaneous demersal fish|Red lizardfish|NA|438|NA|NA|FALSE|
 |FDF|Miscellaneous demersal fish|Shortjaw lizardfish|NA|434|NA|NA|FALSE|
-|FLA|Other flatfish|Gulfstream flounder|CITHARICTHYS ARCTIFRONS|109|129|172719|FALSE|
+|FLA|Other flatfish|Gulfstream flounder|CITHARICHTHYS ARCTIFRONS|109|129|172719|FALSE|
 |FLA|Other flatfish|Hogchoker|TRINECTES MACULATUS|118|128|172982|FALSE|
 |FOU|Fourspot flounder|Fourspot flounder|PARALICHTHYS OBLONGUS|104|127|172739|TRUE|
 |GOO|Goosefish|Goosefish|LOPHIUS AMERICANUS|197|11|164499|TRUE|
@@ -180,7 +180,7 @@
 |RED|Acadian redfish|Acadian redfish|SEBASTES FASCIATUS|155|240|166774|TRUE|
 |REP|Marine turtles|Green seaturtle|CHELONIA MYDAS|951|809|173833|FALSE|
 |REP|Marine turtles|Hawksbill seaturtle|ERETMOCHELYS IMBRICATA|953|814|173836|FALSE|
-|REP|Marine turtles|Kemp’s Ridley seaturtle|LEPIDOCHELYS KEMPI|954|810|551770|FALSE|
+|REP|Marine turtles|Kempâ€™s Ridley seaturtle|LEPIDOCHELYS KEMPI|954|810|551770|FALSE|
 |REP|Marine turtles|Leatherback seaturtle|DERMOCHELYS CORIACEA|952|812|173843|FALSE|
 |REP|Marine turtles|Loggerhead seaturtle|CARETTA CARETTA|950|813|173830|FALSE|
 |REP|Marine turtles|Olive Ridley seaturtle|LEPIDOCHELYS OLIVACEA|NA|818|173840|FALSE|
