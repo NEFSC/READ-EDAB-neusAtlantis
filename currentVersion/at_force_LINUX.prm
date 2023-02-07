@@ -283,8 +283,8 @@ typeCatchts 1
 
 Catchts0.name totcatch
 Catchts0.location 52965.5227 2474675.803 0
-Catchts0.data CatchFiles/total_catch_new_clams.ts
-Catchts0.rewind 0
+Catchts0.data CatchFiles/total_catch.ts
+Catchts0.rewind 1
 #############################################
 # Historical discard lists
 nDiscardts 0
