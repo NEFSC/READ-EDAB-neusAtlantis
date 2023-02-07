@@ -50,8 +50,8 @@ plot_fishing_sensitivity_age_distribution = function(data.dir,
       left_join(fgs)
     
     p = ggplot(data = bio.age.spp, aes(x=factor(fishing.scalar),y=agecl))+
-      geom_point(pch = 1,aes(size = Biomass.prop))+
-      scale_size(range = c(1,10),name = '')+
+      geom_point(pch = 21,aes(size = Biomass.prop,fill = Biomass.prop))+
+      scale_size(range = c(1,15),name = '')+
       ggtitle(spp.names[i])+
       xlab('Fishing Scalar')+
       ylab('Age class')+
@@ -64,7 +64,7 @@ plot_fishing_sensitivity_age_distribution = function(data.dir,
   }
   dev.off()
   
-  pdf(file = paste0(fig.dir,'/age_distributionz_guild_',filter.type,'.pdf'),width = 10, height =24,onefile = T)
+  pdf(file = paste0(fig.dir,'/age_distributionz_guild_',filter.type,'.pdf'),onefile = T)
   for(i in 1:length(guild.names)){
     
     bio.age.guild = bio.age.all %>% 
@@ -78,8 +78,8 @@ plot_fishing_sensitivity_age_distribution = function(data.dir,
       
     
     p = ggplot(data = bio.age.guild, aes(x=factor(fishing.scalar),y=agecl))+
-      geom_point(pch = 1,aes(size = Biomass.prop))+
-      scale_size(range = c(1,10),name = '')+
+      geom_point(pch = 21,aes(size = Biomass.prop,fill = Biomass.prop))+
+      scale_size(range = c(1,15),name = '')+
       ggtitle(guild.names[i])+
       xlab('Fishing Scalar')+
       ylab('Age class')+
@@ -93,10 +93,10 @@ plot_fishing_sensitivity_age_distribution = function(data.dir,
   dev.off()
 }
 
-plot_fishing_sensitivity_age_distribution(data.dir = here::here('data','fishing_sensitivity_extended_constant_2',''),
-                                          fig.dir = here::here('Figures','fishing_sensitivity_extended_constant_2','age_distribution',''),
-                                          filter.type = 'all',
-                                          ref.years = 20,
-                                          guild.match = here::here('diagnostics','functional_groups_match.csv'),
-                                          fgs.file = fgs.file = here::here('currentVersion','neus_groups.csv')
-                                          )
+# plot_fishing_sensitivity_age_distribution(data.dir = here::here('data','fishing_sensitivity_extended_constant_2',''),
+#                                           fig.dir = here::here('Figures','fishing_sensitivity_extended_constant_2','age_distribution',''),
+#                                           filter.type = 'all',
+#                                           ref.years = 20,
+#                                           guild.match = here::here('diagnostics','functional_groups_match.csv'),
+#                                           fgs.file = here::here('currentVersion','neus_groups.csv')
+#                                           )
