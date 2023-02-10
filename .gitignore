@@ -47,7 +47,7 @@ outputFolder
 # shell script to run
 !/currentVersion/RunAtlantis.sh
 !/currentVersion/vertebrate_init_length_cm_Adjusted.csv
-/currentVersion/CatchFiles/fishing_sensitivity_scenarios/*
+/currentVersion/CatchFiles/fishing_sensitivity_extended_constant_3/*
 
 
 #Geometry/NEUS 1-5 Map.R
@@ -65,4 +65,3 @@ diagnostics/Obs_Hindcast_Group_Progress.xlsx
 data/fishing_sensitivity_extended_constant_2/*
 #diagnostics/*.xlsx
 
-data/fishing_sensitivity_extended_constant_2/*

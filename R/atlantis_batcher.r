@@ -85,7 +85,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
     logfile <- "NA"
     print(paste0("folders[n] =", folders[n]))
     while (!runStarted) {
-      logfile_exists <- file.exists(paste0(output.dir,folders[n],"/log.txt"))
+      logfile_exists <- file.exists(paste0(output.dir,folders[n],"log.txt"))
       Sys.sleep(1)
       waitIndex <- waitIndex + 1
       if (logfile_exists) {
@@ -94,7 +94,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
         logfile_path <- paste0(output.dir,folders[n],"/log.txt")
         print(logfile_path)
         logfile <- read.csv(logfile_path, header=FALSE)      
-        print(logfile)
+        # print(logfile)
         if (sum(grepl('Time: 1', logfile$V1)) > 0) {
           runStarted <- TRUE
         } else if (waitIndex >= 600) {
@@ -102,6 +102,8 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
         } else {
           logfile <- ""
         }
+      # } else if(waitIndex >= 600){
+      #   runStarted <- TRUE
       }
       print(waitIndex)
     } 
@@ -217,7 +219,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
           logfile <- "NA"
           print(paste0("folders[n] =", folders[n]))
           while (!runStarted) {
-            logfile_exists <- file.exists(paste0(output.dir,folders[n],"/log.txt"))
+            logfile_exists <- file.exists(paste0(output.dir,folders[n],"log.txt"))
             Sys.sleep(1)
             waitIndex <- waitIndex + 1
             if (logfile_exists) {
@@ -226,16 +228,16 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
               logfile_path <- paste0(output.dir,folders[n],"/log.txt")
               print(logfile_path)
               logfile <- read.csv(logfile_path, header=FALSE)      
-              print(logfile)
-              if (sum(grepl('Time: 1', logfile$V1)) > 0) {
+              # print(logfile)
+              if (sum(grepl('Time: 1.0', logfile$V1)) > 0) {
                 runStarted <- TRUE
               } else if (waitIndex >= 600) {
                 runStarted <- TRUE
               } else {
                 logfile <- ""
               }
-            } else if(waitIndex >= 600){
-              runStarted <- TRUE
+            # } else if(waitIndex >= 600){
+            #   runStarted <- TRUE
             }
             print(waitIndex)
           } 

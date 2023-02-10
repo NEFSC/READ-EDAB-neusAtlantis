@@ -9,7 +9,8 @@ make_catch_scale_scenarios = function(original_catch_file,
                                       type,
                                       overwrite =F,
                                       fgs.file,
-                                      new_catch_file ){
+                                      new_catch_file,
+                                      repo.dir){
   
   #Get header from original 
   catch.lines = readLines(original_catch_file)
@@ -25,7 +26,7 @@ make_catch_scale_scenarios = function(original_catch_file,
   )
   write.csv(setup.df,file = setup.filename,row.names = F)
   
-  source(here::here('R','scale_catch_functions.r'))
+  source(paste0(repo.dir,'R/scale_catch_functions.r'))
   
   new.catch.data = scale_catch(
     filename = setup.filename,

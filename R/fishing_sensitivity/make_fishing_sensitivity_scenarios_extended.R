@@ -5,20 +5,24 @@
 
 library(dplyr)
 
+batch.prefix = 'fishing_sensitivity_extended_constant_3'
+
+repo.dir = '/net/work3/EDAB/atlantis/Joe_Proj/'
+# repo.dir = '/home/jcaracappa/atlantis/Joe_Proj/'
 #### Generate Guild and Fishing Scalar Combinations ####
 
-#Define guild names that are used for catch scenarios
+# #Define guild names that are used for catch scenarios
 guild.names = c('Apex_Predator','Benthivore','Benthos','Piscivore','Planktivore')
-batch.prefix = 'fishing_sensitivity_extended_constant_2'
+
 
 #Read in Functional Group to guild match
-spp2guild = read.csv(here::here('diagnostics','functional_groups_match.csv'),as.is = T)%>%
+spp2guild = read.csv(paste0(repo.dir,'diagnostics/functional_groups_match.csv'),as.is = T)%>%
   select(Code,Guild)%>%
   filter(Guild %in% guild.names)
 
 #define fishing levels c(1.1,1.25,1.33,1.5,2.5,5,10)
-fishing.levels = c(0,0.5,1.5,2.5,5,10,15,20,40,60,100)
-fishing.levels.text = c('0','0_5','1_5','2_5','5','10','15','20','40','60','100')
+fishing.levels = c(0,0.1,0.5,1.1,1.25,1.5,2,5,10,25,50,100)
+fishing.levels.text = c('0','0_1','0_5','1_1','1_25','1_5','2','5','10','25','50','100')
 
 #Define guild and fishing level combinations
 scenario.combs = expand.grid('guild.names' = guild.names, 'fishing.levels' = fishing.levels) %>%
@@ -26,10 +30,10 @@ scenario.combs = expand.grid('guild.names' = guild.names, 'fishing.levels' = fis
   left_join(data.frame(fishing.levels = fishing.levels,fishing.levels.text = fishing.levels.text))
 
 #### Create Parameter Files for each Scenario ####
-dir.create(here::here('currentVersion','CatchFiles',batch.prefix))
+dir.create(paste0(repo.dir,'currentVersion/CatchFiles/',batch.prefix,'/'))
 
 #Functions to make new catch files#Functions to makebatch.prefix new catch files
-source(here::here('R','make_catch_scale_scenarios.R'))
+source(paste0(repo.dir,'R/fishing_sensitivity/make_catch_scale_scenarios.R'))
 new.catch.names = character()
 i=1
 for(i in 1:nrow(scenario.combs)){
@@ -39,27 +43,29 @@ for(i in 1:nrow(scenario.combs)){
   new.catch.names[i] = new.catch.name
 
   make_catch_scale_scenarios(
-    original_catch_file = here::here('currentVersion','CatchFiles','total_catch_extended_mean.ts'),
-    fgs.file = here::here('currentVersion','neus_groups.csv'),
+    repo.dir = repo.dir,
+    original_catch_file = paste0(repo.dir,'currentVersion/CatchFiles/total_catch_extended.ts'),
+    fgs.file = paste0(repo.dir,'/currentVersion/neus_groups.csv'),
     groups =spp.guild,
-    new_catch_file = here::here('currentVersion','CatchFiles',batch.prefix,paste0(new.catch.name,'.ts')),
-    setup.filename = here::here('currentVersion','CatchFiles',batch.prefix,paste0(new.catch.name,'.csv')),
-    start.time = 19724,
-    end.time = 19724 + (365*20),
+    new_catch_file = paste0(repo.dir,'currentVersion/CatchFiles/',batch.prefix,'/',new.catch.name,'.ts'),
+    setup.filename = paste0(repo.dir,'currentVersion/CatchFiles/',batch.prefix,'/',new.catch.name,'.csv'),
+    start.time = 19709,
+    end.time = 19709 + (365*20),
     type = 'Scalar',
     change = scenario.combs$fishing.levels[i]
   )
 }
 
 # Create at_force_LINUX.prm
-force.file.orig = here::here('currentVersion','at_force_LINUX.prm')
+force.file.orig = paste0(repo.dir,'currentVersion/at_force_LINUX.prm')
 force.lines = readLines(force.file.orig)
 catch.file.line = grep('Catchts0.data',force.lines)
 
 force.files.new = character()
+i=1
 for(i in 1:length(new.catch.names)){
 
-  force.file.new = here::here('currentVersion',paste0('at_force_LINUX_',new.catch.names[i],'.prm'))
+  force.file.new = paste0(repo.dir,'currentVersion/',paste0('at_force_LINUX_',new.catch.names[i],'.prm'))
 
   file.copy(force.file.orig, force.file.new,overwrite = T)
 
@@ -74,28 +80,28 @@ for(i in 1:length(new.catch.names)){
 #### Create Batcher Setup ####
 setup.df = data.frame(
   Run = new.catch.names,
-  OutputDir = paste0(batch.prefix,'/',new.catch.names,'/'),
+  OutputDir = paste0('/',batch.prefix,'/',new.catch.names,'/'),
   BiolPrm = 'at_biology.prm',
   RunPrm = 'at_run.prm',
   HarvestPrm = 'at_harvest.prm',
   InitNC = 'neus_init.nc',
-  ForcePrm = paste0('at_force_LINUX_',new.catch.names,'.prm')
+  ForcePrm = paste0('at_force_LINUX_',new.catch.names,'.prm'),
+  Status = 'not started'
 )
 
-write.csv(setup.df,here::here('Setup_Files',paste0(batch.prefix,'.csv')),row.names =F)
+write.csv(setup.df,paste0(repo.dir,'Setup_Files/',paste0(batch.prefix,'.csv')),row.names =F)
 
-batch.dir = batch.prefix
-dir.create(here::here('Atlantis_Runs',batch.dir))
+dir.create(paste0('/net/work3/EDAB/atlantis/Shared_Data/',batch.prefix,'/'))
 
-source(here::here('R','atlantis_batcher_11_30_22.r'))
+source(paste0(repo.dir,'R/atlantis_batcher.r'))
 
 atlantis_batcher(
-  batcherFilename = here::here('Setup_Files',paste0(batch.prefix,'f.csv')),
+  batcherFilename = paste0(repo.dir,'Setup_Files/',paste0(batch.prefix,'.csv')),
   userName            = 'jcara',
-  CHECK_TIME_INTERVAL = 600,
-  NUM_TO_RUN          = 1,
+  CHECK_TIME_INTERVAL = 10,
+  NUM_TO_RUN          = 12,
   CONTAINER_TYPE      = 'podman',
-  param.dir = here::here('currentVersion',''),
-  output.dir = paste0('/media/jcaracappa/06b7679b-9bac-4c53-9cf3-9abecb801e6d/home.orig/jcaracappa/Documents/GitHub/neus-atlantis/Atlantis_Runs/')
+  param.dir = paste0(repo.dir,'currentVersion/'),
+  output.dir = paste0('/net/work3/EDAB/atlantis/Shared_Data')
 )
- 
+
