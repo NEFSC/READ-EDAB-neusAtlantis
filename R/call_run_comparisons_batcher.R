@@ -1,11 +1,14 @@
 #Script to run multiple batcher run comparisons
 library(dplyr)
 library(ggplot2)
+
 source(here::here('R','plot_run_comparisons_batcher.R'))
 
-batch.dir = here::here('Atlantis_Runs','Batcher_10312022')
-set.dirs = list.dirs(batch.dir,recursive = F)
-set.names = list.dirs(batch.dir,full.names = F,recursive = F)
+batch.dir = here::here('Atlantis_Runs','batcher_test')
+# set.dirs = list.dirs(batch.dir,recursive = F)
+set.dirs = batch.dir
+# set.names = list.dirs(batch.dir,full.names = F,recursive = F)
+set.names = 'batcher_test'
 
 x = read.csv(here::here('currentVersion','neus_groups.csv'),header = T, as.is = T) %>% filter(IsTurnedOn == T)
 group.names = sort(x$Code)

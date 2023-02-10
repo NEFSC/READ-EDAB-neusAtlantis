@@ -2,7 +2,9 @@
 library(ncdf4)
 library(dplyr)
 library(atlantistools)
+library(RNetCDF)
 ##Loads post-processing functions
+
 source(here::here('R','get_atl_paramfiles.R'))
 source(here::here('R','process_atl_output.R'))
 source(here::here('R','make_atlantis_diagnostic_figures.R'))
@@ -11,12 +13,12 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'Dev_New_Clams'
+run.name = 'Dev_11032022'
 
 # atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HER_CatchSpinup_1/',run.name,'/')
 # atl.dir = here::here('Atlantis_Runs/HER_CatchSpinup_1',run.name,'')
 # atl.dir = here::here('Atlantis_Runs',run.name,'')
-atl.dir = '/home/jcaracappa/Documents/GitHub/neus-atlantis_2/Atlantis_Runs/Dev_New_Clams/'
+atl.dir = '/home/jcaracappa/atlantis/Shared_Data/Dev_Runs/Dev_11032022/'
 
 dir.create(paste0(atl.dir,'Post_Processed/'))
 dir.create(paste0(atl.dir,'Post_Processed/Data/'))
@@ -33,7 +35,7 @@ param.ls= get_atl_paramfiles(param.dir = param.dir,
                              include_catch=T)
 
 #Run  post-processing function to generate "result" R object. 
-# tictoc::tic()
+tictoc::tic()
 process_atl_output(
   param.dir = here::here('currentVersion'),
   atl.dir = atl.dir,
@@ -44,15 +46,16 @@ process_atl_output(
   save.out = T,
   agg.scale = 'year',
   spatial.overlap = F,
-  large.file = T,
+  large.file = F,
   system = 'linux'
 )
-# tictoc::tic()
+tictoc::toc()
 #If result object saved to file or already exists load it into env.
 # load(paste0(out.dir,'neus_output_postprocessed.rdata'))
 # load(paste0(out.dir,'neus_output_postprocessed.Rdata'))
 
 #Run diagnostic figures/tables script. See function document for more detailed description of figures.
+tictoc::tic()
 make_atlantis_diagnostic_figures(
   atl.dir = atl.dir,
   fig.dir = fig.dir,
@@ -74,26 +77,26 @@ make_atlantis_diagnostic_figures(
  
   plot.all = F,
   #Turn these on/off for desired output
-  plot.benthic =F,
+  plot.benthic =T,
   plot.overall.biomass = T,
   plot.biomass.timeseries = T,
-  plot.length.age = F,
-  plot.biomass.box=F,
-  plot.c.mum=F,
-  plot.sn.rn=F,
-  plot.recruits=F,
+  plot.length.age = T,
+  plot.biomass.box=T,
+  plot.c.mum=T,
+  plot.sn.rn=T,
+  plot.recruits=T,
   plot.numbers.timeseries=T,
-  plot.physics=F,
-  plot.growth.cons=F,
-  plot.cohort=F,
-  plot.diet=F,
-  plot.consumption= F,
+  plot.physics=T,
+  plot.growth.cons=T,
+  plot.cohort=T,
+  plot.diet=T,
+  plot.consumption= T,
   plot.spatial.biomass=F,
   plot.spatial.biomass.seasonal = F,
-  plot.LTL=F,
+  plot.LTL=T,
   plot.catch =T,
-  plot.mortality=F,
-  plot.max.weight = F
+  plot.mortality=T,
+  plot.max.weight = T
 
 )
-  
+tictoc::toc()
