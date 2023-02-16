@@ -4,7 +4,8 @@
 # C) make tempsalt files using alternative method (make_force_statevar) 1993-2017
 # D) create spinup forcing w/ alternative tempsalt and hydroconstruct transport (make_force_spinup) 1964-1992
 
-glorys.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/'
+# glorys.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/'
+glorys.dir = 'D:/GLORYS/'
 glorys.atl.dir = paste0(glorys.dir,'Atlantis_Format/')
 obs.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/'
 final.force.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/'
@@ -13,7 +14,7 @@ git.force.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/curren
 # A) Make GLORYS Atlantis Format (make_GLORYS_files) 1993-2017 ------------
 
 source(here::here('R','GLORYS','make_GLORYS_files.R'))
-dir.names = 1993:2018
+dir.names = 2020
 
 for(yr in 1:length(dir.names)){
   
@@ -30,10 +31,11 @@ for(yr in 1:length(dir.names)){
     dz.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/dz.csv',
     bgm.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/neus_tmerc_RM2.bgm',
     bgm.ll.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/neus_ll_WGS84.bgm',
-    shp.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/Neus_ll_0p01.shp',
+    shp.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/gis/Neus_ll_0p01.shp',
     name.out = 'GLORYS_Atlantis_',
     make.hflux = T,
-    make.physvars = T
+    make.physvars = T,
+    rerun = T
   )
   print(paste0('##################  ',yr,'   #################'))
 }
@@ -62,7 +64,7 @@ miss.val = c(15,0)
 valid.min = c(-2,0)
 valid.max = c(999,999)
 
-years = 1993:2017
+years = 2018:2021
 
 for(yr in 1:length(years)){
   in.dir = paste0(obs.dir,'statevars/')

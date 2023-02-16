@@ -47,7 +47,8 @@ make_GLORYS_files = function(glorys.dir,
                            shp.file,
                            name.out,
                            make.hflux,
-                           make.physvars){
+                           make.physvars,
+                           rerun){
   # Packages ----------------------------------------------------------------
   library(angstroms)
   library(rbgm)
@@ -527,116 +528,121 @@ make_GLORYS_files = function(glorys.dir,
   
   # for(i in 1:nrow(file_db)){model_time[i] = ncvar_get(nc_open(file_db$fullname[i]),'model_time')}
   
-  
-  for (i_timeslice in seq(nrow(file_db))) {
-  # for(i_timeslice in 300){
-  
-    print(i_timeslice)
-    
-    #glorys file name and band name
-    roms_file <-file_db$fullname[i_timeslice]
-
-    model_time[i_timeslice] = file_db$time[i_timeslice]
-    
-    level <- file_db$band_level[i_timeslice]
-    
-    #Sets extent of u,v,w, temp, and salt
-    if(make.hflux){
-      r_u <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "uo", lvar = 4, level = level, ncdf=T))
-      r_v <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "vo", lvar = 4, level = level, ncdf=T))
-    }
-    if(make.physvars){
-      # r_w <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "w", lvar = 4, level = level, ncdf=T))
-      r_temp <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "thetao", lvar = 4, level = level, ncdf=T))
-      r_salt <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "so", lvar = 4, level = level, ncdf=T))
-    }
-    
-    # tic()
-    if(make.hflux){
-      face_z_index$u <- extract_at_level(readAll(r_u), face_cell)
+  if(rerun | !file.exists(paste0(glorys.dir,'Test Dump.R'))){
+    for (i_timeslice in seq(nrow(file_db))) {
+      # for(i_timeslice in 300){
+      
+      print(i_timeslice)
+      
+      #glorys file name and band name
+      roms_file <-file_db$fullname[i_timeslice]
+      
+      model_time[i_timeslice] = file_db$time[i_timeslice]
+      
+      level <- file_db$band_level[i_timeslice]
+      
+      #Sets extent of u,v,w, temp, and salt
+      if(make.hflux){
+        r_u <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "uo", lvar = 4, level = level, ncdf=T))
+        r_v <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "vo", lvar = 4, level = level, ncdf=T))
+      }
+      if(make.physvars){
+        # r_w <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "w", lvar = 4, level = level, ncdf=T))
+        r_temp <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "thetao", lvar = 4, level = level, ncdf=T))
+        r_salt <- set_indextent(brick(paste0(glorys.dir,roms_file), varname = "so", lvar = 4, level = level, ncdf=T))
+      }
+      
+      # tic()
+      if(make.hflux){
+        face_z_index$u <- extract_at_level(readAll(r_u), face_cell)
         rm(r_u)
-      face_z_index$v <- extract_at_level(readAll(r_v), face_cell)
+        face_z_index$v <- extract_at_level(readAll(r_v), face_cell)
         rm(r_v)
-    }
-    
-    if(make.physvars){
-      box_z_index$temp <- extract_at_level(readAll(r_temp), box_cell)
+      }
+      
+      if(make.physvars){
+        box_z_index$temp <- extract_at_level(readAll(r_temp), box_cell)
         rm(r_temp)
-      box_z_index$salt <- extract_at_level(readAll(r_salt), box_cell)
+        box_z_index$salt <- extract_at_level(readAll(r_salt), box_cell)
         rm(r_salt)
+      }
+      
+      ### added to get missing data back in as NA dimensions should be 30x4=120 for each date
+      
+      ##WHICH ONE?
+      # note - ungroup and complete (both vars) needed to get to desired dimension, works now
+      ## add proper box number to sort on
+      box_z_index1=left_join(box_z_index, bgm$boxes[c("label", ".bx0")], by=c("box"="label")) 
+      
+      ### RM 20180320 drop data (set NA) in boxes deeper than atlantis_depth by box numberusing NEUSz (above)
+      ##Add number of total NEUS Atlantis levels per box
+      box_z_index1=left_join(box_z_index1, NEUSz, by='.bx0') 
+      
+      if(make.physvars){
+        
+        #Aggregate vertically weighted by z weights
+        box_z_index2 = box_z_index1 %>%
+          group_by(.bx0,atlantis_levels,cell,cell_area) %>%
+          summarize(temp = weighted.mean(temp,z.wgt,na.rm=T),
+                    salt = weighted.mean(salt,z.wgt,na.rm=T))
+        #get total area of all cells within Atlantis box
+        box_cell_wgt = box_z_index2 %>% 
+          group_by(.bx0,atlantis_levels) %>%
+          summarize(tot_area = sum(cell_area,na.rm=T))
+        #add area totals and calculate area weigths
+        box_z_index2 = box_z_index2 %>% 
+          inner_join(box_cell_wgt) %>%
+          mutate(cell_wgt = cell_area/tot_area)
+        
+        #aggregate over boxes and weight by cell area
+        box_props[[i_timeslice]] <- box_z_index2 %>% 
+          group_by(atlantis_levels, .bx0) %>% 
+          summarize(temp = weighted.mean(temp, cell_wgt, na.rm = TRUE),
+                    salt = weighted.mean(salt, cell_wgt,na.rm = TRUE)) %>% 
+          ungroup()%>%
+          complete(atlantis_levels, .bx0) %>%
+          filter(!is.na(atlantis_levels))
+        box_props[[i_timeslice]]$band_level = file_db$time_id[i_timeslice]
+      }
+      
+      if(make.hflux){
+        
+        face_z_index1 = left_join(face_z_index, bgm$faces[c("label", ".fx0")], by=c("face"="label") )
+        
+        #Aggregate vertically weighted by z weights
+        face_z_index2 = face_z_index1 %>%
+          group_by(.fx0, atlantis_levels, cell, cell_area) %>%
+          summarize(u = weighted.mean(u, z.wgt,na.rm=T),
+                    v = weighted.mean(v,z.wgt,na.rm=T))
+        ####Not weighted by cell_area because can't determine how exactly transect crosses cells
+        ####Should be proportional to the prop. of linear distance each cell compromises the face...
+        
+        
+        ### RM mod 20180320 *** MEAN *** -> good, direction is same as previous, drop complete cases to reduce NAs -> 379(5) per time
+        #face_props: summary of face-level flow magnitudes and direction, grouped by box/faceID with magnitude mean velocity as stat. and direction
+        # Might revisit summary statistic (mean,median, sum,etc.)
+        face_props[[i_timeslice]] <-  face_z_index2 %>%
+          group_by(atlantis_levels, .fx0) %>% 
+          # filter(.fx0==20) %>%
+          summarize(velocity = sqrt((mean(u, na.rm=T)^2) + (mean(v, na.rm = TRUE)^2)), 
+                    dir.uv=atan2(mean(v, na.rm=T),mean(u, na.rm=T))) %>% 
+          ungroup() %>%
+          complete(atlantis_levels, .fx0) %>%
+          filter(!is.na(atlantis_levels))
+        # mutate(band_level = level)
+        face_props[[i_timeslice]]$band_level = file_db$time_id[i_timeslice]
+        
+      }
+      #profile stop
+      # })
+      
+      # toc()
     }
-
-    ### added to get missing data back in as NA dimensions should be 30x4=120 for each date
     
-    ##WHICH ONE?
-    # note - ungroup and complete (both vars) needed to get to desired dimension, works now
-    ## add proper box number to sort on
-    box_z_index1=left_join(box_z_index, bgm$boxes[c("label", ".bx0")], by=c("box"="label")) 
-    
-    ### RM 20180320 drop data (set NA) in boxes deeper than atlantis_depth by box numberusing NEUSz (above)
-    ##Add number of total NEUS Atlantis levels per box
-    box_z_index1=left_join(box_z_index1, NEUSz, by='.bx0') 
-
-    if(make.physvars){
-      
-      #Aggregate vertically weighted by z weights
-      box_z_index2 = box_z_index1 %>%
-        group_by(.bx0,atlantis_levels,cell,cell_area) %>%
-        summarize(temp = weighted.mean(temp,z.wgt,na.rm=T),
-                  salt = weighted.mean(salt,z.wgt,na.rm=T))
-      #get total area of all cells within Atlantis box
-      box_cell_wgt = box_z_index2 %>% 
-        group_by(.bx0,atlantis_levels) %>%
-        summarize(tot_area = sum(cell_area,na.rm=T))
-      #add area totals and calculate area weigths
-      box_z_index2 = box_z_index2 %>% 
-        inner_join(box_cell_wgt) %>%
-        mutate(cell_wgt = cell_area/tot_area)
-    
-      #aggregate over boxes and weight by cell area
-      box_props[[i_timeslice]] <- box_z_index2 %>% group_by(atlantis_levels, .bx0) %>% 
-        summarize(temp = weighted.mean(temp, cell_wgt, na.rm = TRUE),
-                  salt = weighted.mean(salt, cell_wgt,na.rm = TRUE)) %>% 
-        ungroup(box_z_index2)%>%
-        complete(atlantis_levels, .bx0) %>%
-        filter(!is.na(atlantis_levels))
-      box_props[[i_timeslice]]$band_level = file_db$time_id[i_timeslice]
-    }
-    
-    if(make.hflux){
-      
-      face_z_index1 = left_join(face_z_index, bgm$faces[c("label", ".fx0")], by=c("face"="label") )
-      
-      #Aggregate vertically weighted by z weights
-      face_z_index2 = face_z_index1 %>%
-        group_by(.fx0, atlantis_levels, cell, cell_area) %>%
-        summarize(u = weighted.mean(u, z.wgt,na.rm=T),
-                  v = weighted.mean(v,z.wgt,na.rm=T))
-      ####Not weighted by cell_area because can't determine how exactly transect crosses cells
-      ####Should be proportional to the prop. of linear distance each cell compromises the face...
-      
-      
-      ### RM mod 20180320 *** MEAN *** -> good, direction is same as previous, drop complete cases to reduce NAs -> 379(5) per time
-      #face_props: summary of face-level flow magnitudes and direction, grouped by box/faceID with magnitude mean velocity as stat. and direction
-      # Might revisit summary statistic (mean,median, sum,etc.)
-      face_props[[i_timeslice]] <-  face_z_index2 %>% group_by(atlantis_levels, .fx0) %>% 
-        # filter(.fx0==20) %>%
-        summarize(velocity = sqrt((mean(u, na.rm=T)^2) + (mean(v, na.rm = TRUE)^2)), 
-                  dir.uv=atan2(mean(v, na.rm=T),mean(u, na.rm=T))) %>% 
-        ungroup(face_z_uvindex2) %>%
-        complete(atlantis_levels, .fx0) %>%
-        filter(!is.na(atlantis_levels))
-      # mutate(band_level = level)
-      face_props[[i_timeslice]]$band_level = file_db$time_id[i_timeslice]
-      
-    }
-    #profile stop
-    # })
-   
-    # toc()
+    save(box_props,face_props,file = paste0(glorys.dir,'Test Dump.R'))
   }
   
-  save(box_props,face_props,file = paste0(glorys.dir,'Test Dump.R'))
+  
   load(paste0(glorys.dir,'Test Dump.R'))
   
   # Combine box and face properties
