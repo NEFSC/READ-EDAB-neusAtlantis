@@ -79,7 +79,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
     try(write.csv(logData,paste0(output.dir,"/",logfileName), row.names = FALSE, append = FALSE))
     try(write.csv(current_batcherFile,batcherFilename, row.names = FALSE, append = FALSE))
     
-    
+    Sys.sleep(120)
     runStarted <- FALSE
     waitIndex <- 1
     logfile <- "NA"
@@ -218,6 +218,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
           waitIndex <- 1
           logfile <- "NA"
           print(paste0("folders[n] =", folders[n]))
+          Sys.sleep(120)
           while (!runStarted) {
             logfile_exists <- file.exists(paste0(output.dir,folders[n],"log.txt"))
             Sys.sleep(1)
