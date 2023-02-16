@@ -65,3 +65,4 @@ diagnostics/Obs_Hindcast_Group_Progress.xlsx
 data/fishing_sensitivity_extended_constant_2/*
 #diagnostics/*.xlsx
 
+nohup.out
