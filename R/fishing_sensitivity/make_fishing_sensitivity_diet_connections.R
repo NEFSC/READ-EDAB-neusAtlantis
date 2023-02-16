@@ -16,7 +16,7 @@ make_fishing_sensitivity_diet_connections = function(batch.dir,
       {
         run.name = paste0(batch.prefix,'_',scenario.combs$guild.names[i],'_',scenario.combs$fishing.levels.text[i])  
         
-        diet.ls[[i]] = data.table::fread(paste0(batch.dir,run.name,'/neus_outputDietcheck.txt'),header = T) %>%
+        diet.ls[[i]] = data.table::fread(paste0(batch.dir,run.name,'/neus_outputDietCheck.txt'),header = T) %>%
           select(-Stock,-Updated) %>%
           tidyr::gather('Prey','Proportion',-Time,-Predator,-Cohort)%>%
           group_by(Time,Predator,Prey)%>%

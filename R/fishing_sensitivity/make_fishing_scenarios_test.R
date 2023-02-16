@@ -3,7 +3,7 @@ library(dplyr)
 start.time = 19724
 end.time = start.time + (365*20)
 
-batch.prefix = 'fishing_sensitivity_extended_constant_2'
+batch.prefix = 'fishing_sensitivity_extended_constant_3'
 catch.dir = here::here('currentVersion','CatchFiles',batch.prefix,'')
 
 spp2guild = read.csv(here::here('diagnostics','functional_groups_match.csv'),as.is = T)
@@ -11,8 +11,8 @@ spp2guild = read.csv(here::here('diagnostics','functional_groups_match.csv'),as.
 fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T)
 guild.names = c('Apex_Predator','Benthivore','Benthos','Piscivore','Planktivore')
 
-fishing.levels = c(0,0.5,1.5,2.5,5,10,15,20,40,60,100)
-fishing.levels.text = c('0','0_5','1_5','2_5','5','10','15','20','40','60','100')
+fishing.levels = c(0,0.1,0.5,1.1,1.25,1.5,2,5,10,25,50,100)
+fishing.levels.text = c('0','0_1','0_5','1_1','1_25','1_5','2','5','10','25','50','100')
 
 scenario.combs = expand.grid('guild.names' = guild.names, 'fishing.levels' = fishing.levels) %>%
   arrange(guild.names)%>%
@@ -24,7 +24,7 @@ diag.df = data.frame(run.name = paste0(batch.prefix,'_',scenario.combs$guild.nam
                      present = NA,
                      pass = NA)
 group.names = fgs$Code
-catch.orig = read.table(here::here('currentVersion','CatchFiles','total_catch_extended_mean.ts'))
+catch.orig = read.table(here::here('currentVersion','CatchFiles','total_catch_extended.ts'))
 colnames(catch.orig) = c('Time',group.names)
 
 mean.catch = catch.orig %>%
@@ -64,7 +64,7 @@ for(i in 1:nrow(diag.df)){
 
 
 #Test that force.prm catch file matches the expected one
-file.prefix = 'at_force_LINUX_fishing_sensitivity_extended_constant_2_'
+file.prefix = 'at_force_LINUX_fishing_sensitivity_extended_constant_3_'
 
 out = scenario.combs
 out$catch.ts = NA
@@ -85,7 +85,7 @@ for(i in 1:nrow(scenario.combs)){
 }
 
 #Test that force.prm referenced in log.txt matches the expected one
-batch.dir = paste0('/media/jcaracappa/06b7679b-9bac-4c53-9cf3-9abecb801e6d/home.orig/jcaracappa/Documents/GitHub/neus-atlantis/Atlantis_Runs/',batch.prefix,'/')
+batch.dir =  paste0('/home/jcaracappa/atlantis/Shared_Data/',batch.prefix,'/run_data/')
 
 log.df = scenario.combs %>% mutate(expected.file = NA,actual.file = NA, file.match = NA)
 
@@ -94,13 +94,22 @@ for(i in 1:nrow(scenario.combs)){
   run.name = paste0(batch.prefix,'_',scenario.combs$guild.names[i],'_',scenario.combs$fishing.levels.text[i])
   expected.file = paste0(file.prefix,scenario.combs$guild.names[i],'_',scenario.combs$fishing.levels.text[i],'.prm')
   log.file = paste0(batch.dir,run.name,'/log.txt')
-  log.lines = readLines(log.file)
-  run.str = grep('atlantisMerged',log.lines,value = T)
-  actual.file = strsplit(run.str,' ')[[1]][10]
-  
-  log.df$expected.file[i] = expected.file
-  log.df$actual.file[i] = actual.file
-  log.df$file.match[i] = expected.file == actual.file
+  if(file.exists(log.file)){
+    log.lines = readLines(log.file)
+    run.str = grep('atlantisMerged',log.lines,value = T)
+    actual.file = strsplit(run.str,' ')[[1]][10]
+    
+    log.df$expected.file[i] = expected.file
+    log.df$actual.file[i] = actual.file
+    log.df$file.match[i] = expected.file == actual.file
+  }else{
+    log.df$expected.file[i] = expected.file
+    log.df$actual.file[i] = NA
+    log.df$file.match[i] = expected.file == actual.file
+  }
+
 }
 
-log.df %>% filter(file.match == F) %>% View()
+# log.df %>% filter(file.match == F) %>% View()
+
+#test which runs have missing data
