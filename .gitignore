@@ -66,6 +66,6 @@ data/fishing_sensitivity_extended_constant_2/*
 #diagnostics/*.xlsx
 
 data/fishing_sensitivity_extended_constant_2/*
-currentVersion/CatchFiles/fishing_sensitivity_extgended_constant_3/*
-currentVersion/fishing_sensitivity_extgended_constant_3/*
+currentVersion/CatchFiles/fishing_sensitivity_extended_constant_3/*
+currentVersion/fishing_sensitivity_extended_constant_3/*
 nohup.out
