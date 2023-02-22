@@ -109,7 +109,6 @@ store_mig_array 1
 flag_migration_on 1
 flag_pollutant_impacts 0
 
-
 # 6626
 flag_contam_sanity_check 0
 
@@ -122,3 +121,5 @@ flagIsPolar 0 # Flag indicating polar - so there will be 24 hrs of daylight/nigh
 
 # 6645
 K_num_basket 1 # Relevant to Australia model. Maxiumum number of species in basket quota
+flag_pollutant_factors 0
+
