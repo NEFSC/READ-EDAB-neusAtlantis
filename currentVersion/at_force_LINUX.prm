@@ -3,7 +3,7 @@
 #
 # Hydrodynamic files - new hydro from roms doppio
 # this is created from 2008-2010 daily files
-nhdfiles 58
+nhdfiles 57
 
 hd0.name /tsfiles/Annual_Files/flow_1964.nc
 hd1.name /tsfiles/Annual_Files/flow_1965.nc
@@ -62,7 +62,7 @@ hd53.name /tsfiles/Annual_Files/flow_2017.nc
 hd54.name /tsfiles/Annual_Files/flow_2018.nc
 hd55.name /tsfiles/Annual_Files/flow_2019.nc
 hd56.name /tsfiles/Annual_Files/flow_2020.nc
-hd57.name /tsfiles/Annual_Files/flow_2021.nc
+
 
 
 # Bottom stress
@@ -146,7 +146,7 @@ Solar_radiation_rewind 1
 
 # Temperature time series data file
 use_tempfiles 1
-ntempfiles 58
+ntempfiles 57
 Temperature0.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_1964.nc
 Temperature1.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_1965.nc
 Temperature2.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_1966.nc
@@ -204,13 +204,13 @@ Temperature53.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2017.nc
 Temperature54.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2018.nc
 Temperature55.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2019.nc
 Temperature56.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2020.nc
-Temperature57.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2021.nc
+
 
 temp_rewind 1
 
 # Salinity time series data file
 use_saltfiles 1
-nsaltfiles 58
+nsaltfiles 57
 
 Salinity0.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_1964.nc
 Salinity1.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_1965.nc
@@ -269,7 +269,6 @@ Salinity53.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2017.nc
 Salinity54.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2018.nc
 Salinity55.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2019.nc
 Salinity56.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2020.nc
-Salinity57.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2021.nc
 
 salt_rewind 1
 
