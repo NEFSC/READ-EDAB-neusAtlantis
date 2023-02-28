@@ -11,12 +11,12 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'Dev_New_Clams'
+run.name = 'update_physics_2021'
 
 # atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HER_CatchSpinup_1/',run.name,'/')
 # atl.dir = here::here('Atlantis_Runs/HER_CatchSpinup_1',run.name,'')
-# atl.dir = here::here('Atlantis_Runs',run.name,'')
-atl.dir = '/home/jcaracappa/Documents/GitHub/neus-atlantis_2/Atlantis_Runs/Dev_New_Clams/'
+atl.dir = here::here('Atlantis_Runs',run.name,'')
+# atl.dir = paste0('/home/jcaracappa/Documents/GitHub/neus-atlantis_2/Atlantis_Runs/',run.name,'/')
 
 dir.create(paste0(atl.dir,'Post_Processed/'))
 dir.create(paste0(atl.dir,'Post_Processed/Data/'))
@@ -44,7 +44,7 @@ process_atl_output(
   save.out = T,
   agg.scale = 'year',
   spatial.overlap = F,
-  large.file = T,
+  large.file = F,
   system = 'linux'
 )
 # tictoc::tic()
@@ -83,7 +83,7 @@ make_atlantis_diagnostic_figures(
   plot.sn.rn=F,
   plot.recruits=F,
   plot.numbers.timeseries=T,
-  plot.physics=F,
+  plot.physics=T,
   plot.growth.cons=F,
   plot.cohort=F,
   plot.diet=F,
