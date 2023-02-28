@@ -21,21 +21,21 @@
 #' 
 #' #' Created by R. Morse and modified by J. Caracappa
 # 
-glorys.dir = 'D:/GLORYS/Data_PSY/2021/'
-glorys.prefix = 'GLORYS_REANALYSIS_PSY_*'
-glorys.files = list.files(glorys.dir,glorys.prefix)
-out.dir = 'D:/GLORYS/Atlantis_Format/2021'
-dz.file = here::here('Geometry','dz.csv')
-bgm.file = here::here('Geometry','neus_tmerc_RM2.bgm')
-bgm.ll.file = here::here('Geometry','neus_ll_WGS84.bgm')
-shp.file = here::here('Geometry','gis','Neus_ll_0p01.shp')
-name.out = 'GLORYS_Atlantis_'
-make.hflux = T
-make.physvars = T
+# glorys.dir = 'D:/GLORYS/Data_PSY/2020/'
+# glorys.prefix = 'GLORYS_REANALYSIS_PSY_*'
+# glorys.files = list.files(glorys.dir,glorys.prefix)
+# out.dir = 'D:/GLORYS/Atlantis_Format/2021'
+# dz.file = here::here('Geometry','dz.csv')
+# bgm.file = here::here('Geometry','neus_tmerc_RM2.bgm')
+# bgm.ll.file = here::here('Geometry','neus_ll_WGS84.bgm')
+# shp.file = here::here('Geometry','gis','Neus_ll_0p01.shp')
+# name.out = 'GLORYS_Atlantis_'
+# make.hflux = T
+# make.physvars = T
 
 
 
-make_GLORYS_files = function(glorys.dir,
+make_PSY_files = function(glorys.dir,
                            glorys.prefix,
                            glorys.files,
                            out.dir,
@@ -945,4 +945,19 @@ make_GLORYS_files = function(glorys.dir,
   
 }
 
-# make_ROMS_files(glorys.dir,glorys.prefix,glorys.files,out.dir,dz.file,bgm.file,shp.file, name.out, make.hflux =T, make.physvars = T)
+glorys.dir = 'D:/GLORYS/Data_PSY/2020/'
+glorys.prefix = 'GLORYS_REANALYSIS_PSY_*'
+glorys.files = list.files(glorys.dir,glorys.prefix)
+
+make_PSY_files(glorys.dir = glorys.dir,
+               glorys.prefix = glorys.prefix,
+               glorys.files = glorys.files,
+               out.dir = 'D:/GLORYS/Atlantis_Format/2020b',
+               dz.file = here::here('Geometry','dz.csv'),
+               bgm.file = here::here('Geometry','neus_tmerc_RM2.bgm'),
+               bgm.ll.file = here::here('Geometry','neus_ll_WGS84.bgm'),
+               shp.file = here::here('Geometry','gis','Neus_ll_0p01.shp'),
+               name.out = 'GLORYS_Atlantis_',
+               make.hflux = T,
+               make.physvars = T
+)
