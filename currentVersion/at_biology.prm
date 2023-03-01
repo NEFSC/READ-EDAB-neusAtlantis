@@ -13189,7 +13189,7 @@ EPlant_TUN 0
 EPlant_BIL 0
 EPlant_MPF 0
 EPlant_BUT 0
-EPlant_ANC 0.05
+EPlant_ANC 0.025
 EPlant_BPF 0
 EPlant_GOO 0
 EPlant_MEN 0.25
