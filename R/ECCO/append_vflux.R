@@ -1,6 +1,8 @@
-ecco.dir = 'C:/Users/joseph.caracappa/Documents/ECCO/vflux_daily/'
-glorys.dir = 'C:/USers/joseph.caracappa/Documents/GLORYS/Atlantis_Format/'
-years = 1993:2017
+# ecco.dir = 'C:/Users/joseph.caracappa/Documents/ECCO/vflux_daily/'
+ecco.dir = 'D:/ECCO/vflux_daily/'
+# glorys.dir = 'C:/USers/joseph.caracappa/Documents/GLORYS/Atlantis_Format/'
+glorys.dir = 'D:/GLORYS/Atlantis_Format/'
+years = 2018:2021
 out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/statevars/'
 ecco.prefix = 'ECCO_vflux_Atlantis_'
 glorys.prefix = 'GLORYS_Atlantis_statevars_'
