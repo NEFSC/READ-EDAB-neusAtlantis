@@ -54,7 +54,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
     
     run.atlantis.sh = readLines(paste0(param.dir,'RunAtlantis_base.sh'))
     new.line = paste0('atlantisMerged -i ', initFile, ' 0 -o neus_output.nc -r ', runPrm, ' -f ',forcePrm,' -p at_physics.prm -b ',biolPrm,' -h ', harvestPrm, ' -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -t . -d output')
-    print(new.line)
+#    print(new.line)
     run.atlantis.sh[3] = new.line
     writeLines(run.atlantis.sh, con = paste0(param.dir,'RunAtlantis.sh'))
     
@@ -63,7 +63,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
     #build run command string
     containerName <- paste0(userName, '_Batcher_', batcherFile$Run[n] )
     startedContainers <- append(startedContainers, containerName)
-    print(containerName)
+#    print(containerName)
     outputFolder <- paste0('"',output.dir,folders[n],'"')
     print(paste0(CONTAINER_TYPE," run -d --name ",  containerName, " --rm --mount \"type=bind,src=",param.dir,",dst=/app/model\" --mount \"type=bind,src=",outputFolder,"/,","dst=/app/model/output/\" atlantis_6536"))
     run <- paste0(CONTAINER_TYPE," run -d --name ",  containerName, " --rm --mount \"type=bind,src=",param.dir,",dst=/app/model\" --mount \"type=bind,src=",outputFolder,"/,","dst=/app/model/output/\" atlantis_6536")
@@ -83,7 +83,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
     runStarted <- FALSE
     waitIndex <- 1
     logfile <- "NA"
-    print(paste0("folders[n] =", folders[n]))
+#    print(paste0("folders[n] =", folders[n]))
     while (!runStarted) {
       logfile_exists <- file.exists(paste0(output.dir,folders[n],"/log.txt"))
       Sys.sleep(1)
@@ -92,9 +92,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
         Sys.sleep(5)
         waitIndex <- waitIndex + 5
         logfile_path <- paste0(output.dir,folders[n],"/log.txt")
-        print(logfile_path)
         logfile <- read.csv(logfile_path, header=FALSE)      
-        print(logfile)
         if (sum(grepl('Time: 1', logfile$V1)) > 0) {
           runStarted <- TRUE
         } else if (waitIndex >= 600) {
@@ -103,7 +101,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
           logfile <- ""
         }
       }
-      print(waitIndex)
+#      print(waitIndex)
     } 
     print(paste0("WaitIndex = ", waitIndex))
   }
@@ -188,7 +186,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
           
           run.atlantis.sh = readLines(paste0(param.dir,'RunAtlantis_base.sh'))
           new.line = paste0('atlantisMerged -i ', initFile, ' 0 -o neus_output.nc -r ', runPrm, ' -f ',forcePrm,' -p at_physics.prm -b ',biolPrm,' -h ', harvestPrm, ' -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -t . -d output')
-          print(new.line)
+#          print(new.line)
           run.atlantis.sh[3] = new.line
           writeLines(run.atlantis.sh, con = paste0(param.dir,'RunAtlantis.sh'))
           
@@ -197,7 +195,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
           #build run command string
           containerName <- paste0(userName, '_Batcher_', batcherFile$Run[n] )
           startedContainers <- append(startedContainers, containerName)
-          print(containerName)
+#          print(containerName)
           outputFolder <- paste0('"',output.dir,folders[i],'"')
           print(paste0(CONTAINER_TYPE," run -d --name ",  containerName, " --rm --mount \"type=bind,src=",param.dir,",dst=/app/model\" --mount \"type=bind,src=",outputFolder,"/,","dst=/app/model/output/\" atlantis_6536"))
           run <- paste0(CONTAINER_TYPE," run -d --name ",  containerName, " --rm --mount \"type=bind,src=",param.dir,",dst=/app/model\" --mount \"type=bind,src=",outputFolder,"/,","dst=/app/model/output/\" atlantis_6536")
@@ -215,7 +213,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
           runStarted <- FALSE
           waitIndex <- 1
           logfile <- "NA"
-          print(paste0("folders[n] =", folders[n]))
+#          print(paste0("folders[n] =", folders[n]))
           while (!runStarted) {
             logfile_exists <- file.exists(paste0(output.dir,folders[n],"/log.txt"))
             Sys.sleep(1)
@@ -226,7 +224,6 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
               logfile_path <- paste0(output.dir,folders[n],"/log.txt")
               print(logfile_path)
               logfile <- read.csv(logfile_path, header=FALSE)      
-              print(logfile)
               if (sum(grepl('Time: 1', logfile$V1)) > 0) {
                 runStarted <- TRUE
               } else if (waitIndex >= 600) {
@@ -237,7 +234,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
             } else if(waitIndex >= 600){
               runStarted <- TRUE
             }
-            print(waitIndex)
+ #           print(waitIndex)
           } 
           print(paste0("WaitIndex = ", waitIndex))
         }
