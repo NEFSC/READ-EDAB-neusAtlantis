@@ -83,16 +83,18 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
     runStarted <- FALSE
     waitIndex <- 1
     logfile <- "NA"
-#    print(paste0("folders[n] =", folders[n]))
+    print(paste0("folders[n] =", folders[n]))
     while (!runStarted) {
+      Sys.sleep(waitIndex)
       logfile_exists <- file.exists(paste0(output.dir,folders[n],"/log.txt"))
-      Sys.sleep(1)
       waitIndex <- waitIndex + 1
       if (logfile_exists) {
         Sys.sleep(5)
         waitIndex <- waitIndex + 5
         logfile_path <- paste0(output.dir,folders[n],"/log.txt")
+        print(logfile_path)
         logfile <- read.csv(logfile_path, header=FALSE)      
+        print(logfile)
         if (sum(grepl('Time: 1', logfile$V1)) > 0) {
           runStarted <- TRUE
         } else if (waitIndex >= 600) {
@@ -101,7 +103,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
           logfile <- ""
         }
       }
-#      print(waitIndex)
+      print(waitIndex)
     } 
     print(paste0("WaitIndex = ", waitIndex))
   }
@@ -213,10 +215,10 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
           runStarted <- FALSE
           waitIndex <- 1
           logfile <- "NA"
-#          print(paste0("folders[n] =", folders[n]))
+          print(paste0("folders[n] =", folders[n]))
           while (!runStarted) {
+            Sys.sleep(waitIndex)
             logfile_exists <- file.exists(paste0(output.dir,folders[n],"/log.txt"))
-            Sys.sleep(1)
             waitIndex <- waitIndex + 1
             if (logfile_exists) {
               Sys.sleep(5)
@@ -224,6 +226,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
               logfile_path <- paste0(output.dir,folders[n],"/log.txt")
               print(logfile_path)
               logfile <- read.csv(logfile_path, header=FALSE)      
+              print(logfile)
               if (sum(grepl('Time: 1', logfile$V1)) > 0) {
                 runStarted <- TRUE
               } else if (waitIndex >= 600) {
@@ -231,15 +234,13 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
               } else {
                 logfile <- ""
               }
-            } else if(waitIndex >= 600){
-              runStarted <- TRUE
             }
- #           print(waitIndex)
+            print(waitIndex)
           } 
           print(paste0("WaitIndex = ", waitIndex))
+          n <- i
         }
         notFinished <- TRUE
-        n <- i
       }
     }
   }
@@ -249,3 +250,4 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
   try(write.csv(batcherFile,batcherFilename, row.names = FALSE, append = FALSE))
   
 }
+
