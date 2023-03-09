@@ -13,7 +13,7 @@ library(magrittr)
 # you'll need to install sf, here, ggplot2
 ###################################################
 
-plot_box_statarea <- function(crs=4269L){
+plot_box_statarea <- function(crs=4269L,saveFigure = F){
   
   options(warn = -1)
   sf::sf_use_s2(FALSE)
@@ -94,11 +94,13 @@ plot_box_statarea <- function(crs=4269L){
   p <- cowplot::plot_grid(p1, p2)
   print(p)
 
-  cowplot::save_plot(here::here("Geometry/spatialFootprints.png"),p,base_height=7,base_width=12)
+  if (saveFigure) {
+    cowplot::save_plot(here::here("Geometry/spatialFootprints.png"),p,base_height=7,base_width=12)
+  }
   
   
 
-  return(statAreasIntersection)
+  return(list(p1,p2))
 
   
   
