@@ -83,7 +83,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
     batcherFile_orig$Status[which(batcherFile_orig$Run == batcherFile$Run[n])] = 'Started'
     
     try(write.csv(logData,paste0(output.dir,"/",logfileName), row.names = FALSE, append = FALSE))
-    try(write.csv(current_batcherFile,batcherFilename, row.names = FALSE, append = FALSE))
+    try(write.csv(batcherFile_orig,batcherFilename, row.names = FALSE, append = FALSE))
     
     
     runStarted <- FALSE
@@ -100,7 +100,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
         logfile_path <- paste0(output.dir,folders[n],"/log.txt")
         print(logfile_path)
         logfile <- read.csv(logfile_path, header=FALSE)      
-        print(logfile)
+        # print(logfile)
         if (sum(grepl('Time: 1', logfile$V1)) > 0) {
           runStarted <- TRUE
         } else if (waitIndex >= 600) {
@@ -218,10 +218,10 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
           
           # batcherFile$Status[i] <- "Started"
           # current_batcherFile <- rbind(batcherFile_completed, batcherFile)
-          batcherFile_orig[which(batcherFile_orig$Run == batcherFile$Run[i])]= 'Started'
+          batcherFile_orig$Status[which(batcherFile_orig$Run == batcherFile$Run[i])]= 'Started'
           
           try(write.csv(logData,paste0(output.dir,"/",logfileName), row.names = FALSE, append = FALSE))
-          try(write.csv(current_batcherFile,batcherFilename, row.names = FALSE, append = FALSE))
+          try(write.csv(batcherFile_orig,batcherFilename, row.names = FALSE, append = FALSE))
           
           runStarted <- FALSE
           waitIndex <- 1
@@ -237,7 +237,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
               logfile_path <- paste0(output.dir,folders[n],"/log.txt")
               print(logfile_path)
               logfile <- read.csv(logfile_path, header=FALSE)      
-              print(logfile)
+              # print(logfile)
               if (sum(grepl('Time: 1', logfile$V1)) > 0) {
                 runStarted <- TRUE
               } else if (waitIndex >= 600) {
