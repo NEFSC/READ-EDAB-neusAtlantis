@@ -18,7 +18,7 @@ plot_box_statarea <- function(crs=4269L,saveFigure = F){
   options(warn = -1)
   sf::sf_use_s2(FALSE)
   # define EPUs
-  mab <- data.frame(Id = cfdbs::EPUs$data$MAB,EPU = "MAB")
+  mab <- data.frame(Id = c(cfdbs::EPUs$data$MAB,533,534,541),EPU = "MAB")
   gb <- data.frame(Id = cfdbs::EPUs$data$GB, EPU = "GB")
   gom <- data.frame(Id = cfdbs::EPUs$data$GOM, EPU = "GOM")
   ss <- data.frame(Id = cfdbs::EPUs$data$SS, EPU = "SS")
