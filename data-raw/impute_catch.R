@@ -3,9 +3,10 @@
 #' Fill in missing data from ends of time series either by taking mean of first/last few years
 #' or by scaling up comlandr (Assumes trend is similar over time
 #'
-#' @param YEAR Numeric vector. 
-#' @param value Numeric vector. 
-#' @param value Character. 
+#' @param Code Numeric vector. 
+#' @param Year Numeric vector. 
+#' @param comlandr
+#' @param stocksmart Character. 
 #' @param Catch_Source Character.
 #' @param Imputation_Type Character. How to impute "scalar" or "mean"
 #' @param nyrs Numeric scalar. window of running mean centered at target, with weights 1/nyrs
@@ -69,33 +70,8 @@ impute_catch <- function(Code,YEAR,comlandr,stocksmart,Catch_Source,Imputation_T
     newValue <- newV
   }
     
-    
-    
-    
-  
-  
+
   
   return(newValue)
-  # 
-  # alpha <- exp(as.double(lengthWeightParams$logAlpha))
-  # beta <- as.double(lengthWeightParams$betas)
-  # sigma2 <- as.double(lengthWeightParams$var)
-  # 
-  # # vector of total weight for the number of fish (in the sample) of a given length
-  # fishWeight <- (alpha*fishLength^beta)*exp(sigma2/2)*numAtLength
-  # 
-  # #mean Sample Weight
-  # sampleWeight <- sum(fishWeight)
-  # # proportion of total landed weight
-  # expansionFactor <- landings/sampleWeight
-  # 
-  # # scaled weight to landings total.
-  # fishWeight <- fishWeight * expansionFactor
-  # 
-  # # if length samples are missing, just assign the landings as the weight.
-  # if(anyNA(fishWeight)) {
-  #   fishWeight <- landings
-  # }
-  # 
-  # return(fishWeight)
+ 
 }

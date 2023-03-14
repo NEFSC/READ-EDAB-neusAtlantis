@@ -3,6 +3,9 @@
 #' 
 #' https://www.nafo.int/Data/STATLANT-21A
 #' 
+#' Requires 21A data to be pulled and saved as a csv directly from website.
+#' Currently no way to access API
+#' 
 #' 
 #' 
 #' @return data frame
@@ -53,7 +56,7 @@ create_nafo21a_catch_data <- function(exportFile = F){
     dplyr::distinct(Speciescode,Speciesname)
   
   #reads in species which have data post 1984
-  nafoneus <- readr::read_csv(here::here("data/nafo_neus_codes.csv")) %>% 
+  nafoneus <- readr::read_csv(here::here("data-raw/data/nafo_neus_codes.csv")) %>% 
     dplyr::filter(post1984 == T)
   
   # groups with not specified catch (catch all groups)
@@ -66,7 +69,7 @@ create_nafo21a_catch_data <- function(exportFile = F){
     ggplot2::geom_point(ggplot2::aes(x=Year,y=mt,color=Division),size=0.5) +
     ggplot2::facet_wrap(ggplot2::vars(Speciesname))
   
-  ggplot2::ggsave(here::here("data/nafo_ns_catch.png"),height=7,width=12)
+  ggplot2::ggsave(here::here("data-raw/figures/nafo_ns_catch.png"),height=7,width=12)
   
   # filter out codes that can't be mapped
   nafoneuscodes <- nafoneus %>%
@@ -89,7 +92,7 @@ create_nafo21a_catch_data <- function(exportFile = F){
     ggplot2::geom_point(ggplot2::aes(x=Year,y=mt,color=Division),size=0.5) +
     ggplot2::facet_wrap(ggplot2::vars(Code),scales = "free_y")
   
-  ggplot2::ggsave(here::here("data/nafo_catch.png"),height=7,width=12)
+  ggplot2::ggsave(here::here("data-raw/figures/nafo_catch.png"),height=7,width=12)
   
   nafoExport <- nafo %>% 
     dplyr::rename(YEAR = Year) %>%

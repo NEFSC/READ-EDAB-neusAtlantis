@@ -10,6 +10,11 @@
 #' \item{comlandrmeat}{meat weight filtered by start year with NA Codes removed. Species in data but not mapped to atlantis}
 #' \item{same set of data frames but for live weight}{differnces in CLA, QHG, SCA, BFF}
 #' 
+#' @section Notes:
+#' 
+#' Requires comlandr data to be pulled by stat area, for both meatwet and live wt
+#'  and reside in data-raw/data
+#' 
 
 library(magrittr)
 
@@ -31,7 +36,7 @@ create_comlandr_US_catch_data <- function(exportFile = F) {
   startYear <- 1985
   
   # comlandr meat weight data for all other species not defined in stocksmart
-  comlandrmeat <- readRDS(here::here("data/comlandr_stat_area_meat.rds"))$comland %>% 
+  comlandrmeat <- readRDS(here::here("data-raw/data/comlandr_stat_area_meat.rds"))$comland %>% 
     dplyr::filter(US == TRUE,
                   AREA %in% allareas) %>%
     assign("meatArea",.,envir = myenv) %>%
@@ -49,7 +54,7 @@ create_comlandr_US_catch_data <- function(exportFile = F) {
   
     
   # comlandr live weight data for all other species not defined in stocksmart
-  comlandrlive <- readRDS(here::here("data/comlandr_stat_area_live.rds"))$comland %>%
+  comlandrlive <- readRDS(here::here("data-raw/data/comlandr_stat_area_live.rds"))$comland %>%
     dplyr::filter(US == TRUE,
                   AREA %in% allareas) %>%
     assign("liveArea",.,envir = myenv) %>%
@@ -102,7 +107,7 @@ create_comlandr_US_catch_data <- function(exportFile = F) {
   ggiraph::ggiraph(code=print(a))
   
   
-  channel <- dbutils::connect_to_database("sole","abeet")
+  channel <- dbutils::connect_to_database("","")
   gg <- comlandr::get_species(channel,missingspp)$data %>%
     dplyr::distinct(NESPP3,SPPNM) 
   
