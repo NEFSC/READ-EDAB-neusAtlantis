@@ -81,7 +81,7 @@ WHK,White hake,TRUE,stocksmart,
 WIF,Winter flounder,TRUE,stocksmart,
 WOL,Wolffish,FALSE,,
 WPF,Windowpane flounder,TRUE,stocksmart,scalar
-WSK,Winter skate,TRUE,stocksmart,
+WSK,Winter skate,TRUE,stocksmart,scalar
 WTF,Witch flounder,TRUE,stocksmart,
 YTF,Yellowtail flounder,TRUE,stocksmart,
 ZG,Gelatinous zooplankton,FALSE,,
