@@ -5,6 +5,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(magrittr)
 ```
 
 ## Assembling the catch data from Atlantis
@@ -85,3 +86,23 @@ knitr::include_graphics("../data-raw/figures/nafo_ns_catch.png")
 * Some species in NAFO can not be accurately mapped to Atlantis groups
 
 * Spatial footprints of NAFO, stat areas, Atlantis do not line up
+
+
+## Resulting Catch data
+
+```{r final, echo = F,fig.width=12,fig.height=7}
+finalData <- readRDS(here::here("data/neusCatchData.rds"))
+ p <- ggplot2::ggplot(finalData) +
+    ggplot2::geom_line(ggplot2::aes(x=YEAR,y=value)) + 
+    ggplot2::facet_wrap(ggplot2::vars(Code),scales="free_y") +
+    ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90)) 
+print(p)
+
+```
+
+## Species data sources
+```{r datasource, echo=F}
+d <- readr::read_csv(here::here("data/functionalGroupNames_catchSource.csv")) 
+flextable::flextable(d)
+
+```
