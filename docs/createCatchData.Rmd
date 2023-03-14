@@ -1,7 +1,6 @@
 ---
 title: "Creating catch data for Atlantis"
 output: html_document
-date: "2023-03-13"
 ---
 
 ```{r setup, include=FALSE}
@@ -49,7 +48,7 @@ Note: the footprint is for each stock is different and may lie outside our defin
 Some of the species in stocksmart don't cover the span from 1985-2020. Some are often missing a year or two from either the start or the end of the time series. To remedy this the time series is supplemented using one of two methods
 
 * If the comlandr data has a similar trend over this period, then the mean difference (over the whole avaiable time series) between the stocksmart and comlandr data is used to scale the comlandr data.
-* If the trends do not look similar the mean of the first/last n years of the stocksmart time series is used.
+* If the trends do not look similar the mean of the first/last n years of the stocksmart time series is used. (n = 3)
 
 ### Footprint 
 
@@ -62,24 +61,27 @@ knitr::include_graphics("../Geometry/spatialFootprints.png")
 
 ## Pulling all sources together.
 
-Each function used to process a data stream has the option to save the processed data as an rds file. These data files are then read in to `create_neus_catch_data.r` where the stocksmart data is analysed for "missing" data. The method for imputing missing data is defined in `functionalGroupNames_catchsource.csv`
+Each function used to process a data stream has the option to save the processed data as an rds file. These data files are then read in to `create_neus_catch_data.r` where the stocksmart data is analysed for "missing" data (at start or end of time series). The method for imputing missing data is defined in `functionalGroupNames_catchsource.csv`
 
 The NAFO codes are mapped to NEUS groups as specified in `nafo_neus_codes.csv`
+
+The NAFO shellfish codes are then scaled from live weight to meat weight by a single time invariant scalar. This scalar is calculated using the comlandr data and is defined by the mean proportion of meat weight/live weight
+
+The missing data in comlandr (definedby NAs) are then linearly interpolated. Missing endpoints are replace by a 3 yr average as described is the stocksmart section  
+
 
 Note: some species codes, in particular groups of species identified as "Not Specified", were not included in the foreign landings since they could not be confidently assigned to any one group.
 
 ```{r nafons, echo = F}
-knitr::include_graphics("../data/nafo_ns_catch.png")
+knitr::include_graphics("../data-raw/figures/nafo_ns_catch.png")
 ```
 
 ## Caveats
 
 * No Discards or rec data for species using comlandr data
 
-* NAFO (Foreign) data uses live weight. Need to use comlandr meat and live weight for shellfish to scale foreign data for certain species
-
 * Species codes in comlandr not present in Atlantis species list. So some species catch are not being accounted for in Atlantis model
 
-* Some species in NAFO can npt be accurately mapped to Atlantis groups
+* Some species in NAFO can not be accurately mapped to Atlantis groups
 
 * Spatial footprints of NAFO, stat areas, Atlantis do not line up
