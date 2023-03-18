@@ -20,6 +20,10 @@ source(here::here("data-raw/select_source.R"))
 create_neus_catch_data <- function(exportFile = F){
 
   myenv <- environment()
+
+
+# Read in all data --------------------------------------------------------
+
   # read in atlantis codes
   atlantis <- read.csv(here::here("data/functionalGroupNames.csv")) %>%
     dplyr::select(Code,NESPP3,Species) 
@@ -52,12 +56,20 @@ create_neus_catch_data <- function(exportFile = F){
   comlandrmeat <- comlandrData$comlandrmeat
   comlandrlive <- comlandrData$comlandrlive
   
+  # other species data - custom, Menhaden
+  other <- readRDS(here::here("data/neusOtherSpeciesCatchData.rds")) %>%
+    dplyr::mutate(units = "Metric Tons",
+                  source = "manual")
+  
+
+# Process the data --------------------------------------------------------
+
   ## for stocksmart stocks that have catch data missing at start or
   # end of time series 1985-2020. We either use comlandr data to scale or 
   # take the mean of last n yrs
   ssComlandr <- atlantis %>% 
     dplyr::distinct(Code) %>% 
-    dplyr::left_join(.,rbind(ss,comlandrmeat),by = "Code")
+    dplyr::left_join(.,rbind(ss,other,comlandrmeat),by = "Code")
   
   # number of years to take mean of
   nyrs <- 3
@@ -72,7 +84,7 @@ create_neus_catch_data <- function(exportFile = F){
   
   # plot the extended time series with the original stocksmart and comlandr
   p <- a %>% 
-    dplyr::select(YEAR,Code,stocksmart,comlandr,newvalue) %>%
+    dplyr::select(YEAR,Code,stocksmart,comlandr,manual,newvalue) %>%
     tidyr::pivot_longer(.,cols = c(-YEAR,-Code),names_to = "source",values_to = "value") %>%
     ggplot2::ggplot(data=.) +
     ggplot2::geom_line(ggplot2::aes(x=YEAR,y=value,color = source)) +
@@ -85,8 +97,9 @@ create_neus_catch_data <- function(exportFile = F){
     print(p)
   }
   
+  # plot just the imputed time series
   p1 <- a %>% 
-    dplyr::select(YEAR,Code,stocksmart,comlandr,newvalue) %>%
+    dplyr::select(YEAR,Code,stocksmart,comlandr,manual,newvalue) %>%
     tidyr::pivot_longer(.,cols = c(-YEAR,-Code),names_to = "source",values_to = "value") %>%
     dplyr::filter(source == "newvalue") %>%
     ggplot2::ggplot(data=.) +
@@ -104,6 +117,7 @@ create_neus_catch_data <- function(exportFile = F){
   ## Scale nafo data to meat weight for shellfish
   
   # obtain ratio of meat to live weight
+  # first pplot the ratio to see what it looks like over time
   comlandData <- rbind(comlandrmeat,comlandrlive)
 
   scalarts <- comlandData %>% 
@@ -127,8 +141,6 @@ create_neus_catch_data <- function(exportFile = F){
     print(p2)
   }
   
-  
-  
   # obtain mean scalar (over time) for each shellfish Code
   scalars <- scalarts %>%
     dplyr::group_by(Code) %>% 
@@ -141,20 +153,23 @@ create_neus_catch_data <- function(exportFile = F){
                                            TRUE ~ value)) %>% 
     dplyr::select(-meanScalar,-units,-source,-value)
   
+  p3 <- ggplot2::ggplot(nafoAdjusted) +
+    ggplot2::geom_line(ggplot2::aes(x=YEAR,y=nafo)) + 
+    ggplot2::facet_wrap(ggplot2::vars(Code),scales="free_y") +
+    ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90)) 
+
   # Combine nafo and comland data and select data source for each species
   nafoAdjustedData <- a %>% 
     dplyr::left_join(.,nafoAdjusted,by = c("YEAR","Code")) %>%
     dplyr::group_by(YEAR,Code) %>%
-    dplyr::mutate(value = select_source(stocksmart,comlandr,newvalue,nafo,Catch_Source)) %>%
+    dplyr::mutate(value = select_source(stocksmart,comlandr,manual,newvalue,nafo,Catch_Source)) %>%
     dplyr::select(YEAR,Code,value)
   
+  # 3plot nafo adjusted data
   p3 <- ggplot2::ggplot(nafoAdjustedData) +
     ggplot2::geom_line(ggplot2::aes(x=YEAR,y=value)) + 
     ggplot2::facet_wrap(ggplot2::vars(Code),scales="free_y") +
     ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90)) 
-  
-  
-  
   
   if(exportFile) {
     ggplot2::ggsave(here::here("data-raw/figures/2nafoAdjusted.png"),height=7,width=12)
