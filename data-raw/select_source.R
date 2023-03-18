@@ -14,10 +14,12 @@
 #'
 #' @noRd
 
-select_source <- function(stocksmart,comlandr,newstocksmart,nafo,Catch_Source) {
+select_source <- function(stocksmart,comlandr,manual,newstocksmart,nafo,Catch_Source) {
   
   if (Catch_Source == "stocksmart") {
     value = newstocksmart
+  } else if (Catch_Source == "manual") {
+    value = manual
   } else {
     if (is.na(comlandr) & is.na(nafo)) {
       value <- NA
