@@ -47,7 +47,6 @@
 |BWH|Baleen whales|Baleen whales|NA|NA|NA|NA|TRUE|
 |CLA|Atlantic surf clam|Atlantic surf clam|SPISULA SOLIDISSIMA|403|769|80944|TRUE|
 |COD|Atlantic cod|Atlantic cod|GADUS MORHUA|73|81|164712|TRUE|
-|COD|Atlantic cod|Atlantic cod|GADUS MORHUA|73|82|164712|TRUE|
 |DC|Carrion|Carrion|NA|NA|NA|NA|FALSE|
 |DF|Dinoflagellates|Dinoflagellates|NA|NA|NA|NA|FALSE|
 |DL|Labile detritus|Labile detritus|NA|NA|NA|NA|FALSE|
@@ -131,10 +130,8 @@
 |FLA|Other flatfish|Gulfstream flounder|CITHARICHTHYS ARCTIFRONS|109|129|172719|FALSE|
 |FLA|Other flatfish|Hogchoker|TRINECTES MACULATUS|118|128|172982|FALSE|
 |FOU|Fourspot flounder|Fourspot flounder|PARALICHTHYS OBLONGUS|104|127|172739|TRUE|
-|GOO|Goosefish|Goosefish|LOPHIUS AMERICANUS|197|11|164499|TRUE|
 |GOO|Goosefish|Goosefish|LOPHIUS AMERICANUS|197|12|164499|TRUE|
 |HAD|Haddock|Haddock|MELANOGRAMMUS AEGLEFINUS|74|147|164744|TRUE|
-|HAD|Haddock|Haddock|MELANOGRAMMUS AEGLEFINUS|74|148|164744|TRUE|
 |HAL|Atlantic halibut|Atlantic halibut|HIPPOGLOSSUS HIPPOGLOSSUS|101|159|172933|TRUE|
 |HER|Atlantic herring|Atlantic herring|CLUPEA HARENGUS|32|168|161722|TRUE|
 |INV|Invasive vertebrate species|All Invasive vertebrate species|NA|NA|NA|NA|FALSE|
@@ -162,7 +159,6 @@
 |PL|Diatom|Diatom|NA|NA|NA|NA|FALSE|
 |PLA|American plaice|American plaice|HIPPOGLOSSOIDES PLATESSOIDES|102|124|172877|TRUE|
 |POL|Pollock|Pollock|POLLACHIUS VIRENS|75|269|164727|TRUE|
-|POL|Pollock|Pollock|POLLACHIUS VIRENS|75|270|164727|TRUE|
 |POR|Porbeagle shark|Porbeagle shark|LAMNA NASUS|353|481|159911|TRUE|
 |PS|Pico-phytoplankton|Pico-phytoplankton|NA|NA|NA|NA|FALSE|
 |PSH|Other pelagic sharks|Dusky shark|CARCHARHINUS OBSCURUS|3|484|160268|FALSE|
@@ -223,7 +219,6 @@
 |TYL|All tilefish|Tilefish unclassified|MALACANTHIDAE|NA|447|168537|FALSE|
 |WHK|White hake|White hake|UROPHYCIS TENUIS|76|153|164732|TRUE|
 |WHK|White hake|White hake|UROPHYCIS TENUIS|76|154|164732|TRUE|
-|WIF|Winter flounder|Winter flounder|PSEUDOPLEURONECTES AMERICANUS|106|119|172905|TRUE|
 |WIF|Winter flounder|Winter flounder|PSEUDOPLEURONECTES AMERICANUS|106|120|172905|TRUE|
 |WOL|Wolffish|Northern wolffish|ANARHICHAS DENTICULATUS|NA|668|550561|FALSE|
 |WOL|Wolffish|Spotted wolffish|ANARHICHAS MINOR|NA|510|171342|FALSE|
