@@ -40,6 +40,8 @@ The spatial [footprint](#footprint) for the NAFO data is on a more coarse footpr
 
 The function `create_nafo21a_catch_data` is used to achieve this.
 
+Note: About 10 spurious records were removed. Appears that maybe data entry errors 
+
 ### Federally managed stocks: `stocksmart`
 
 `data-raw/create_stockSMART_catch_data.r` is used to pull the stocksmart data and associate species with atlantis groups (using functionalGroupNames.csv which can be found on the [wiki](https://github.com/NOAA-EDAB/neus-atlantis/wiki/Functional-Groups)).
@@ -50,6 +52,13 @@ Some of the species in stocksmart don't cover the span from 1985-2020. Some are 
 
 * If the comlandr data has a similar trend over this period, then the mean difference (over the whole avaiable time series) between the stocksmart and comlandr data is used to scale the comlandr data.
 * If the trends do not look similar the mean of the first/last n years of the stocksmart time series is used. (n = 3)
+
+### Other species
+
+Some species do not fit into either category. The Menhaden stock assessment is the entire eastern seaboard. Comlandr is incomplete. Data that describes the "northern" part of the stock (north of Chesapeake Bay) were used as Mendaden catch. This data was manually pulled from the stock assessment report.
+
+Highly migratory species, such as Bluefin Tuna, Other Tunas, Billfish, and shark species also have a larger assessed range (for those that are assessed) than the NEUS footprint. Because of this `stocksmart` data was replace with `comlandr` data accepting that the catch is probably too low.
+
 
 ### Footprint 
 
