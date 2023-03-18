@@ -48,7 +48,16 @@ create_nafo21a_catch_data <- function(exportFile = F){
     dplyr::mutate(Division = as.factor(Division)) %>%
     dplyr::filter(!grepl("USA",Country)) %>% 
     dplyr::group_by(Year,Division,Speciesname,Speciescode) %>%
-    dplyr::summarise(mt = sum(MetricTonnes),.groups="drop")
+    dplyr::summarise(mt = sum(MetricTonnes),.groups="drop") 
+  
+  ### filter out duplicated data 1111 mt appears
+  # for many species in 2013 area 4X. set as NA
+  # american eel also has spurious data in same year + another year
+  # pink shrimp spurious too
+  db21a <- db21a %>% 
+    dplyr::filter(mt != 1111) %>% 
+    dplyr::filter(!(Speciescode == 308 & mt %in% c(1131,1133))) %>% 
+    dplyr::filter(!(Speciescode == 639 & mt == 498))
   
   # nafo codes in data set
   nafoCodes <- db21a %>%
@@ -90,7 +99,8 @@ create_nafo21a_catch_data <- function(exportFile = F){
     ggplot2::ggplot(.) +
     ggplot2::geom_line(ggplot2::aes(x=Year,y=mt,color=Division)) +
     ggplot2::geom_point(ggplot2::aes(x=Year,y=mt,color=Division),size=0.5) +
-    ggplot2::facet_wrap(ggplot2::vars(Code),scales = "free_y")
+    ggplot2::facet_wrap(ggplot2::vars(Code),scales = "free_y")+
+    ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90)) 
   
   ggplot2::ggsave(here::here("data-raw/figures/nafo_catch.png"),height=7,width=12)
   
