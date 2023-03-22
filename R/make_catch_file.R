@@ -47,7 +47,7 @@ hindcast_catch2$grpWGT[which(!is.finite(hindcast_catch2$grpWGT))] = 0
 
 # x2 = filter(hindcast_catch2, Code == 'PS')
 # plot(grpWGT~YEAR,x2,type='l')
-timesteps <- 55 * 365
+timesteps <- (2022-1964) * 365
 
 # Set up catch tibble for time series file
 
