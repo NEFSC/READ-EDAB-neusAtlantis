@@ -14,17 +14,18 @@ source(here::here('R','plot_run_catch_comparisons.R'))
 
 # new.obs = paste0(obs.dir,'Atlantis_Runs/Obs_Hindcast_NewForcing/')
 # dev = here::here('Atlantis_Runs','Dev_11032022','')
-dev = '/home/jcaracappa/atlantis/Shared_Data/Dev_Runs/Dev_20230213/'
-misc_fix_5 = here::here('Atlantis_Runs','misc_fix_5','')
+dev = '/home/jcaracappa/atlantis/Shared_Data/Dev_Runs/Dev_20230313/'
+new.catch = here::here('Atlantis_Runs','beet_catch','')
+
 
 figure.dir = here::here('Figures','Run_Comparisons','')
 
 plot_run_comparisons(
-  model.dirs = c(dev,misc_fix_5),
-  model.names = c('Dev_20230213','misc_fix_5'),
+  model.dirs = c(dev,new.catch),
+  model.names = c('Dev_20230213','beet_catch'),
   plot.raw = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'Reduce_System_Biomass_v_Dev_'),
+  plot.out = paste(figure.dir,'beet_catch_v_Dev_'),
   table.out = F,
   groups = NULL,
   remove.init = F
