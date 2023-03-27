@@ -3,8 +3,6 @@ source(here::here('R','plot_run_comparisons.R'))
 source(here::here('R','plot_run_catch_comparisons.R'))
 
 dev = '/home/jcaracappa/atlantis/Shared_Data/Dev_Runs/Dev_20230324/'
-bh.g = here::here('Atlantis_Runs','BH_convert_2_final_g','')
-bh.h = here::here('Atlantis_Runs','BH_convert_2_final_h','')
 
 figure.dir = here::here('Figures','Run_Comparisons','')
 

@@ -12,11 +12,16 @@ header <- c("MAK","HER","WHK","BLF","WPF","SUF","WIF","WTF","FOU","HAL","PLA","F
 catch = read.table(here::here('currentVersion','CatchFiles','total_catch_raw.txt'),header = F)
 colnames(catch) = c('time',header)
 
+#Get header from original 
+original_catch_file = here::here('currentVersion','CatchFiles','total_catch.ts')
+catch.lines = readLines(original_catch_file)
+header.text = grep('#',catch.lines,value = T)
+
 date = as.Date(as.POSIXct(catch$time*86400, origin = '1964-01-01 00:00:00', tz = 'UTC'))
 year = as.numeric(format(date, format = '%Y'))
 
 #Write Catch for spinup period
-spin.yr = 20
+spin.yr = 21
 
 date.spinup = which( year < 1964+spin.yr)
 date.rest = which( year >= 1964+spin.yr)
@@ -64,6 +69,11 @@ for(i in 2:ncol(catch)){
 }
 
 write.table(catch,here::here('currentVersion','CatchFiles','total_catch_new_spinup.txt'),col.names = F, row.names = F, sep = " " )
+
+con = file(original_catch_file)
+writeLines(header.text,con)
+write.table(catch,row.names = F, col.names = F, file = original_catch_file,append = T)
+
 
 #plot catch forcing
 pdf(here::here('currentVersion','CatchFiles','Catch_Forcing_New_Spinup.pdf'),width = 12 , height = 12,onefile = T)
