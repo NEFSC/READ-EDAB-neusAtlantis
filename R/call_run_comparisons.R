@@ -1,30 +1,19 @@
-# model1.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Run_Files/atneus_v15_01272020/'
-# model2.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output/'
-# plot.raw = T
-# plot.diff = T
-# plot.out = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output/Figures/'
-# table.out = T
-# # groups = c('HER','CLA','LOB')
-# groups = NULL
 
 source(here::here('R','plot_run_comparisons.R'))
 source(here::here('R','plot_run_catch_comparisons.R'))
 
-# roms.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/'
-
-# new.obs = paste0(obs.dir,'Atlantis_Runs/Obs_Hindcast_NewForcing/')
-# dev = here::here('Atlantis_Runs','Dev_11032022','')
-dev1 = '/home/jcaracappa/atlantis/Shared_Data/Dev_Runs/Dev_20230213/'
-dev2 = '/home/jcaracappa/atlantis/Shared_Data/Dev_Runs/Dev_20230301/'
+dev = '/home/jcaracappa/atlantis/Shared_Data/Dev_Runs/Dev_20230324/'
+bh.g = here::here('Atlantis_Runs','BH_convert_2_final_g','')
+bh.h = here::here('Atlantis_Runs','BH_convert_2_final_h','')
 
 figure.dir = here::here('Figures','Run_Comparisons','')
 
 plot_run_comparisons(
-  model.dirs = c(dev1,dev2),
-  model.names = c('Dev_20230213','Dev_20230301'),
-  plot.raw = T,
+  model.dirs = c(dev,bh.g,bh.h),
+  model.names = c('Dev_20230324','BH_convert_2_final_g','BH_convert_2_final_h'),
+  plot.rel = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'Dev_20230301_'),
+  plot.out = paste(figure.dir,'BH_convert_2_final_h_'),
   table.out = F,
   groups = NULL,
   remove.init = F
