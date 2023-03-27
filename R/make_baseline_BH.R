@@ -7,7 +7,7 @@ source(here::here('R','get_recruit_type.R'))
 fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T) %>% select(Code,LongName,NumAgeClassSize,GroupType)
 
 recruit.type = get_recruit_type(here::here('currentVersion','at_biology.prm'))%>%
-  filter(flagrecruit == 1)%>%
+  # filter(flagrecruit == 1)%>%
   left_join(fgs,by = c('group' = 'Code'))
 
 ref.bio.file = '/home/jcaracappa/atlantis/Shared_Data/Dev_Runs/Dev_20230213/Post_Processed/Data/biomass_age.rds'
@@ -23,7 +23,7 @@ ref.alpha = ref.bio %>%
   select(Code,alpha)
 
 #get maturity at age
-mat.age = read.csv(here::here('R','group_mature_age.csv'),as.is = T)
+mat.age = read.csv(here::here('data','group_mature_age.csv'),as.is = T)
 
 ref.beta = ref.bio %>%
   left_join(mat.age, by = c('Code' = 'spp'))%>%

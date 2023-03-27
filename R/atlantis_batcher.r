@@ -259,8 +259,7 @@ atlantis_batcher = function(batcherFilename, userName, CHECK_TIME_INTERVAL = 30,
   # batcherFile <- rbind(batcherFile_completed, batcherFile)
   try(write.csv(logData,paste0(output.dir,"/",logfileName), row.names = FALSE, append = FALSE))
   try(write.csv(batcherFile_orig,batcherFilename, row.names = FALSE, append = FALSE))
-  
-  
+
   file.copy(paste0(param.dir,'RunAtlantis_base.sh'),paste0(param.dir,'RunAtlantis.sh'),overwrite =T)
-  
+
 }
