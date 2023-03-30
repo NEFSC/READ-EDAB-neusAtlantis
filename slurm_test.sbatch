@@ -2,7 +2,8 @@
 
 #SBATCH --job-name=neus_test_1
 #SBATCH --clusters=compute1
-#SBATCH -N=1
-#SBATCH --n-tasks-per-node=1
+#SBATCH --nodes=1
+#SBATCH --ntaks=1
+#SBATCH --cpus-per-task=1  
 
 Rscript slurm_test.R
