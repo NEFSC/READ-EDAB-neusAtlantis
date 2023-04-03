@@ -1,5 +1,5 @@
 # Run parameters
-verbose      0 	# Detailed logged output, 1 = 2x messages, 3/4 = slightly more, 5 = every routine
+verbose      5 	# Detailed logged output, 1 = 2x messages, 3/4 = slightly more, 5 = every routine
 
 flagecon_on        0   # Flag showing whether want economics loaded and submodel run (1) or not (0)
 flag_fisheries_on  1  # Flag showing whether want fisheries loaded and submodel run (1) or not (0)
@@ -31,16 +31,16 @@ debug         0       # 0=debuging off, 1=debug fishing, 2=debug discards, 3=deb
 
 title      NEUS v1.5 with fishing
 dt         24 hour     # 24 hour time step
-tstop      19724 day   # Stop time after the given period (18260)18260  , 4000   2191 7320 9120 3660 7320 (01-01-1964 to 12-31-2017 is 19724 d)
+tstop      10 day   # Stop time after the given period (18260)18260  , 4000   2191 7320 9120 3660 7320 (01-01-1964 to 12-31-2017 is 19724 d)
 toutstart  0 day       # Output start time
-toutinc    73 day      # Write output with this periodicity
-toutfinc   73 day      # Write fisheries output with this periodicity
+toutinc    1 day      # Write output with this periodicity
+toutfinc   1 day      # Write fisheries output with this periodicity
 tburnday   0 day
 
 check_dups 0    # 1 to check for duplicates in your prm files. Turning this on will make file read in very very slow. Only turn on every once in a while and turn off once the duplicates have been removed.
 
 
-tsumout    73 day      # Write stock state summary with this periodicity
+tsumout    1 day      # Write stock state summary with this periodicity
 flagannual_Mest 1      # Whether to write out estimates of mortality per predator annually (1) or not (0)
 fishout    	1           # Switch to turn fisheries output on = 1, off = 0
 flagreusefile 	2        # Switch to show want to append output file no = 0, yes = 1, replace = 2
@@ -106,5 +106,24 @@ flag_use_deltaH 0
 store_aggregate_yoy 0
 store_mig_array 0
 
-flag_migration_on 1
+#6599
 flag_pollutant_impacts 0
+flag_pollutant_factors 0
+
+# 6626
+flag_contam_sanity_check 0
+flag_migration_on 0
+
+# 6631
+flagIsPolar 0 # Flag indicating polar - so there will be 24 hrs of daylight/night seasonally
+
+# 6638
+flagenviro_warn 0 # Flag indicating whether warning messages about spawn and movement being environmentally constrained are activated
+
+
+# 6645
+K_num_basket 1 # Relevant to Australia model. Maxiumum number of species in basket quota
+
+#6665
+# Dumps total biomass (across every MIGID entry) from migration array into biomindx.txt. Previously while migrators were outside the model, their biomass was not reported inn the NetCDF output file
+flag_mig_in_bioindx 0
