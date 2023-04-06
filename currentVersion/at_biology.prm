@@ -16392,7 +16392,7 @@ Rbeta_OSH 2e+12
 
 # Beverton-Holt recruitment
 # Alpha in Beverton-Holt
-BHalpha_MAK 6.0352e+11
+BHalpha_MAK 3.0176e+12
 BHalpha_HER 6.075e+12
 BHalpha_WHK 6.6825e+11
 BHalpha_BLF 604846087.022962
