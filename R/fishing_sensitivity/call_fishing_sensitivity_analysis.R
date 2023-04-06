@@ -78,7 +78,7 @@ make_fishing_sensitivity_scenario_post_processing(base.bio.prm = here::here('cur
                                                   ref.years = 20
 )
 
-0#Raw Timeseries Plots of Biomass/Catch
+#Raw Timeseries Plots of Biomass/Catch
 plot_fishing_sensitivity_timeseries(batch.prefix =  'fishing_sensitivity_extended_constant_2',
                                     run.index.file = here::here('data','fishing_sensitivity_extended_constant_2','run_index.rds'),
                                     data.dir = here::here('data','fishing_sensitivity_extended_constant_2',''),
