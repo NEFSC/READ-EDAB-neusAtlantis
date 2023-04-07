@@ -13,11 +13,11 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'BH_convert_2_g_BH2_5'
+run.name = 'ZL_restore_7'
 
 # atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HER_CatchSpinup_1/',run.name,'/')
-atl.dir = here::here('Atlantis_Runs','BH_convert_2_g_BH2',run.name,'')
-# atl.dir = here::here('Atlantis_Runs',run.name,'')
+# atl.dir = here::here('Atlantis_Runs','BH_convert_2_g_BH2',run.name,'')
+atl.dir = here::here('Atlantis_Runs',run.name,'')
 # atl.dir = '/home/jcaracappa/atlantis/Shared_Data/Dev_Runs/Dev_11032022/'
 
 
@@ -79,25 +79,25 @@ make_atlantis_diagnostic_figures(
   plot.all = F,
   #Turn these on/off for desired output
   plot.benthic =F,
-  plot.overall.biomass = F,
+  plot.overall.biomass =F,
   plot.biomass.timeseries = T,
-  plot.length.age = F,
-  plot.biomass.box=F,
+  plot.length.age = T,
+  plot.biomass.box=T,
   plot.c.mum=F,
-  plot.sn.rn=F,
+  plot.sn.rn=T,
   plot.recruits=F,
-  plot.numbers.timeseries=F,
-  plot.physics=F,
+  plot.numbers.timeseries=T,
+  plot.physics=T,
   plot.growth.cons=F,
   plot.cohort=F,
-  plot.diet=F,
+  plot.diet=T,
   plot.consumption= T,
   plot.spatial.biomass=F,
   plot.spatial.biomass.seasonal = F,
   plot.LTL=F,
-  plot.catch =F,
-  plot.mortality=F,
-  plot.max.weight = F
+  plot.catch =T,
+  plot.mortality=T,
+  plot.max.weight = T
 
 )
 tictoc::toc()
