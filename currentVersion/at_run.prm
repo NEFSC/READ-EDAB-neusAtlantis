@@ -1,5 +1,5 @@
 # Run parameters
-verbose      5 	# Detailed logged output, 1 = 2x messages, 3/4 = slightly more, 5 = every routine
+verbose      0 	# Detailed logged output, 1 = 2x messages, 3/4 = slightly more, 5 = every routine
 
 flagecon_on        0   # Flag showing whether want economics loaded and submodel run (1) or not (0)
 flag_fisheries_on  1  # Flag showing whether want fisheries loaded and submodel run (1) or not (0)
