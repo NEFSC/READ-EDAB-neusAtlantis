@@ -13,10 +13,10 @@ base.BH = get_param_BH(bio.prm = here::here('currentVersion','at_biology.prm'))%
 #               beta = base.BH$beta,
 #               overwrite = T)
 
-group.name = 'GOO'
+group.name = 'MAK'
 
-alpha.scale = 2
-beta.scale =0.5
+alpha.scale = 5
+beta.scale =1
 
 new.alpha = base.BH$alpha[which(base.BH$group == group.name)]*alpha.scale
 new.beta = base.BH$beta[which(base.BH$group == group.name)]*beta.scale
