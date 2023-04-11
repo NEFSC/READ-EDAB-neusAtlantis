@@ -6,15 +6,16 @@ dev = '/home/jcaracappa/atlantis/Shared_Data/Dev_Runs/Dev_20230327/'
 v6665 = here::here('Atlantis_Runs','v6665_test','')
 v6665.nm = here::here('Atlantis_Runs','v6665_test_nomig','')
 v6665.cal = here::here('Atlantis_Runs','v6665_calibrated','')
+v6665.noQ = here::here('Atlantis_Runs','v6665_cal_noQ10','')
 
 figure.dir = here::here('Figures','Run_Comparisons','')
 
 plot_run_comparisons(
-  model.dirs = c(dev,v6665,v6665.cal),
-  model.names = c('Dev_20230327','v6665_test','v6665_calibrated'),
+  model.dirs = c(dev,v6665,v6665.cal,v6665.noQ),
+  model.names = c('Dev_20230327','v6665_test','v6665_calibrated','v6665_cal_noQ10'),
   plot.rel = F,
   plot.diff = F,
-  plot.out = paste(figure.dir,'v6536_v_v6665_calibrated_'),
+  plot.out = paste(figure.dir,'v6536_v_v6665_cal_noQ10_'),
   table.out = F,
   groups = NULL,
   remove.init = F
