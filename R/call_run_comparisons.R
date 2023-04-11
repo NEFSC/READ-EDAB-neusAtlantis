@@ -13,17 +13,22 @@ zl.5 = here::here('Atlantis_Runs','ZL_restore_5','')
 zl.6 = here::here('Atlantis_Runs','ZL_restore_6','')
 zl.6b = here::here('Atlantis_Runs','ZL_restore_6b','')
 zl.7 = here::here('Atlantis_Runs','ZL_restore_7','')
+zl.8 = here::here('Atlantis_Runs','ZL_restore_8','')
+mak1 = here::here('Atlantis_Runs','MAK_fix_1','')
+mak2 = here::here('Atlantis_Runs','MAK_fix_2','')
+mak2.pred = here::here('Atlantis_Runs','MAK_fix_2_redDiet','')
+mak3 = here::here('Atlantis_Runs','MAK_fix_3','')
 
 figure.dir = here::here('Figures','Run_Comparisons','')
 
 plot_run_comparisons(
-  model.dirs = c(zl.6,zl.7),
-  model.names = c('ZL_restore_6','ZL_restore_7'),
+  model.dirs = c(mak1,mak2,mak3),
+  model.names = c('MAK_fix_1','MAK_fix_2','MAK_fix_3'),
   plot.rel = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'ZL_restore_7'),
+  plot.out = paste(figure.dir,'MAK_fix_3_'),
   table.out = F,
-  groups = NULL,
+  groups = "MAK",
   remove.init = F
 )
 
