@@ -2,10 +2,10 @@
 source(here::here('R','edit_param_mum_age.R'))
 source(here::here('R','edit_param_C_age.R'))
 
-group.names = 'SUF'
+group.names = 'MAK'
 
-mum.scale = 0.05
-C.scale = 0.33
+mum.scale = 50 
+C.scale = 50
 
 bio.prm = here::here('currentVersion','at_biology.prm')
 

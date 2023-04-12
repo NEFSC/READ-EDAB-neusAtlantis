@@ -6,7 +6,7 @@ source(here::here('R','edit_param_pprey.R'))
 atl.dir  = here::here('currentVersion','/')
 
 # diet.change = read.csv('C:/Users/joe92/Documents/Atlantis/Diet Changes/Diet_Adjust_07082022.csv')
-diet.change = read.csv(here::here('Setup_Files','MAK_diet.csv'))
+diet.change = read.csv(here::here('Setup_Files','MAK_fix_2.csv'))
 
 
 X=get_pprey_vals(atl.dir = atl.dir,
@@ -15,9 +15,9 @@ X=get_pprey_vals(atl.dir = atl.dir,
                spp.names = 'MAK',
                is.pred = F,
                remove.zero = T)
-write.csv(X, 'C:/Users/joe92/Documents/Atlantis/Diet Changes/LOB.csv',row.names = F)
+write.csv(X, here::here('Setup_Files','MAK_fix_2.csv'),row.names = F)
 
-group = 'WOL'
+group = 'MAK'
 pred.names = c(paste0(1,group,1),paste0(2,group,1),paste0(1,group,2),paste0(2,group,2))
 pred.ls = list()
 for(i in 1:length(pred.names)){
