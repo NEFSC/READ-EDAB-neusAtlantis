@@ -9435,7 +9435,7 @@ flagfishrates    0         Switch to show whether clearance and growth rates are
 # Clearance rate of each vertebrate group, per age class       (m3 Ind-1 day-1)
 # updated 20180814 as 0.1 * mum (which is RN+SN * [max % body weight consumption per day] /365)
 C_MAK	10	
-1.4	29.4	92.25	171.7	251.6	323	382.55	430.1	467	495.05
+0.069	1.725	5.175	10.143	13.8	16.2495	17.4915	22.701	27.945	37.95
 
 C_HER	10
 0.0194529169107	0.41356595007	1.80743637438	4.82493608415	6.55578617148	7.67394596241	8.2713190014	10.78334921664	13.18815863001	17.9211911697
@@ -9652,7 +9652,7 @@ mum_SG_T15	0.1
 # are chosen as absolute (=0), or as proportion of body mass (=1)  
 # modified 20180814 based on RN+SN * percent consumption (.10 - 0.30 ) per day / 365
 mum_MAK	10.00		
-150.9375	905.625	6037.5	6037.5	5261.25	4528.125	3018.75	2264.0625	1509.375	452.8125
+0.60375	3.6225	24.15	24.15	21.045	18.1125	12.075	9.05625	6.0375	1.81125
 
 mum_HER	10.00
 3.49380864	20.9618409	139.762455	139.762455	122.273193	104.834478	69.855954	52.417239	34.9380864	10.4834478
@@ -10822,7 +10822,7 @@ EDR_BO 0.1
 #EDR_BG           0.0       Assim efficiency of benthic grazers on refractory detritus       0.0 - 0.05
 
 # Assimilation efficiencies of vertebrate consumers 
-E_MAK 0.45
+E_MAK 0.35
 E_HER 0.6
 E_WHK 0.3
 E_BLF 0.35
@@ -14137,7 +14137,7 @@ Rbeta_OSH 2e+12
 
 # Beverton-Holt recruitment
 # Alpha in Beverton-Holt
-BHalpha_MAK 1E13
+BHalpha_MAK 3E12
 BHalpha_HER 6.075e+12
 BHalpha_WHK 6.6825e+11
 BHalpha_BLF 604846087.022962
@@ -14202,7 +14202,7 @@ BHalpha_NSH 9e+11
 BHalpha_OSH 9e+11      
 
 #Beta in Beverton-Holt 
-BHbeta_MAK 7E11
+BHbeta_MAK 2E12
 BHbeta_HER 5e+13
 BHbeta_WHK 2e+14
 BHbeta_BLF 9e+09
