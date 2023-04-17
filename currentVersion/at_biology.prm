@@ -11907,7 +11907,7 @@ mum_SG_T15	0.1
 # are chosen as absolute (=0), or as proportion of body mass (=1)  
 # modified 20180814 based on RN+SN * percent consumption (.10 - 0.30 ) per day / 365
 mum_MAK	10.00		
-1.7	10.8	72	72	63	54	36	27	18	5.4
+3.4	21.6	144	144	126	108	72	54	36	10.8
 
 mum_HER	10.00
 3.49380864	20.9618409	139.762455	139.762455	122.273193	104.834478	69.855954	52.417239	34.9380864	10.4834478
