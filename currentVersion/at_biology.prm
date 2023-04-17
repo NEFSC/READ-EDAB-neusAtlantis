@@ -11690,7 +11690,7 @@ flagfishrates    0         Switch to show whether clearance and growth rates are
 # Clearance rate of each vertebrate group, per age class       (m3 Ind-1 day-1)
 # updated 20180814 as 0.1 * mum (which is RN+SN * [max % body weight consumption per day] /365)
 C_MAK	10	
-0.06 0.42 2.8 5.2 7.3 9.1 10.3 11.2 11.8 12.0
+0.17 1.25 8.45 15.65 21.95 27.35 30.95 33.65 35.45 35.99
 
 C_HER	10
 0.0194529169107	0.41356595007	1.80743637438	4.82493608415	6.55578617148	7.67394596241	8.2713190014	10.78334921664	13.18815863001	17.9211911697
@@ -11907,7 +11907,7 @@ mum_SG_T15	0.1
 # are chosen as absolute (=0), or as proportion of body mass (=1)  
 # modified 20180814 based on RN+SN * percent consumption (.10 - 0.30 ) per day / 365
 mum_MAK	10.00		
-0.60375	3.6225	24.15	24.15	21.045	18.1125	12.075	9.05625	6.0375	1.81125
+1.7	10.8	72	72	63	54	36	27	18	5.4
 
 mum_HER	10.00
 3.49380864	20.9618409	139.762455	139.762455	122.273193	104.834478	69.855954	52.417239	34.9380864	10.4834478
