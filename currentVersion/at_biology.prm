@@ -16457,7 +16457,7 @@ BHalpha_NSH 9e+11
 BHalpha_OSH 9e+11      
 
 #Beta in Beverton-Holt 
-BHbeta_MAK 2E12
+BHbeta_MAK 5E12
 BHbeta_HER 5e+13
 BHbeta_WHK 2e+14
 BHbeta_BLF 9e+09
