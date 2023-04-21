@@ -11885,9 +11885,9 @@ mum_NSH_T15 0.006
 mum_jNSH_T15 	0.006
 mum_OSH_T15	0.006
 mum_jOSH_T15 	0.006
-mum_ZG_T15	0.075
-mum_ZL_T15	0.0475
-mum_ZM_T15	0.0275
+mum_ZG_T15	0.09
+mum_ZL_T15	0.04
+mum_ZM_T15	0.0225
 mum_ZS_T15	0.5
 mum_BD_T15	0.0000675
 mum_BO_T15	0.00025
@@ -14793,7 +14793,7 @@ Fben_den         0.5      Fraction of NH release from OB and BD used in nitrif e
 # Age class size 
 #####Number of years represented in each age class
 MAK_AgeClassSize 1               
-HER_AgeClassSize 1               
+HER_AgeClassSize 1       
 WHK_AgeClassSize 1               
 BLF_AgeClassSize 1               
 WPF_AgeClassSize 2               
