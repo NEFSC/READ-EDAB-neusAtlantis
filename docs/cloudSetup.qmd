@@ -7,34 +7,28 @@ editor: visual
 ## Contents
 
 1.  [NOAA Cloud](#noaa-cloud)
-1.  [Log into Parallel works](#login)
-1.  [Create a snapshot](#create-a-snapshot)
-2.  [Create a Resource](#create-a-resource)
-3.  [Add code in User Bootstrap section of resource](#bootstrap)
-4.  [Create a compute partition (to run the model)](#partition)
-5.  [Boot the resource](#boot-the-resource)
-6.  [Add/Run Rstudio workflow from marketplace](#add-workflow)
-7.  [Using the Parallel Works IDE](#ide)
-8.  [Clone the neus-atlantis repo in /contrib](#clone-repo)
-9.  [Run Atlantis](#run-atlantis)
+2.  [Log into Parallel works](#login)
+3.  [Create a snapshot](#create-a-snapshot)
+4.  [Create a Resource](#create-a-resource)
+5.  [Add code in User Bootstrap section of resource](#bootstrap)
+6.  [Create a compute partition (to run the model)](#partition)
+7.  [Boot the resource](#boot-the-resource)
+8.  [Add/Run Rstudio workflow from marketplace](#add-workflow)
+9.  [Using the Parallel Works IDE](#ide)
+10. [Clone the neus-atlantis repo in /contrib](#clone-repo)
+11. [Run Atlantis](#run-atlantis)
 
-## NOAA Cloud
+## NOAA Cloud {#noaa-cloud}
 
-NOAA RDHHPCS Cloud access is via a gateway developed by Parallel works.
-Currently the underlying operating system on Azure is RHEL7/Centos7 which reaches end of life in June 2024.
-"There is no plan for OS upgrade until 09/30/2023.  We have suggested an OS version upgrade to RL8, which is being reviewed by NOAA RDHPCS."
-At which point some of the environment set up below will break since it is dependent on Centos7
+NOAA RDHHPCS Cloud access is via a gateway developed by Parallel works. Currently the underlying operating system on Azure is RHEL7/Centos7 which reaches end of life in June 2024. "There is no plan for OS upgrade until 09/30/2023. We have suggested an OS version upgrade to RL8, which is being reviewed by NOAA RDHPCS." At which point some of the environment set up below will break since it is dependent on Centos7
 
 ## Log into Parallel works {#login}
 
-[Parallel works](https://noaa.parallel.works/login) requires a CAC card and an account on the cloud.
-To request an account you'll need to log in to [AIM](https://aim.rdhpcs.noaa.gov/), the Account Information Management System.
+[Parallel works](https://noaa.parallel.works/login) requires a CAC card and an account on the cloud. To request an account you'll need to log in to [AIM](https://aim.rdhpcs.noaa.gov/), the Account Information Management System.
 
 ## Create a snapshot {#create-a-snapshot}
 
-A snapshot results in a running container that is used to spin up your resource.
-By including code in the snapshot it saves you having to install software on the resource
-when it is up an running.
+A snapshot results in a running container that is used to spin up your resource. By including code in the snapshot it saves you having to install software on the resource when it is up an running.
 
 -   Click on yourName-\>account-\>cloud snapshots
 
@@ -55,13 +49,13 @@ when it is up an running.
         sudo podman login --username=andybeet --password=secretKey docker.io; 
         sudo podman pull docker.io/andybeet/atlantis:6665;
         sudo yum-config-manager --add-repo
-        
+
         https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-rhel7.repo;
         sudo -n yum install tigervnc-server -y;
         sudo -n yum install python3 -y;
         sudo -n yum groupinstall "Server with GUI" -y;
         sudo -n yum install epel-release -y;
-        
+
         # install custom R and symlink where RPM package would go
         export R_VERSION=4.2.2;
         # download and install R packages
@@ -81,19 +75,19 @@ This script will install podman, git, netcdf, nco. It will then log in to Docker
 
 -   Confirm it built successfully. This can take 10-15 minutes
 
-## Create a resource
+## Create a resource {#create-a-resource}
 
 -   Click on the Resource tab
 
 -   Click "+Add Resource"
 
--   Give your Resource a name and select "Azure Slurm V2" 
+-   Give your Resource a name and select "Azure Slurm V2"
 
 -   Alternatively you can duplicate a resource already listed and then change the configurations (recommended)
 
 ## Add code in User Bootstrap {#bootstrap}
 
-The User bootstrap text field (found in the resource properties) is a location to add linux command line operations that will get executed after the cluster is booted up. 
+The User bootstrap text field (found in the resource properties) is a location to add linux command line operations that will get executed after the cluster is booted up.
 
      > cp -R /contrib/neus-atlantis /home/First.Last/neus-atlantis;
      > cp /contrib/slurm.sh /home/First.Last/slurm.sh;
@@ -102,20 +96,19 @@ The User bootstrap text field (found in the resource properties) is a location t
      > Rscript -e "install.packages('remotes', repos='http://cran.rstudio.com/')";
      > Rscript -e "install.packages('here', repos='http://cran.rstudio.com/')";
      > Rscript -e "install.packages('dplyr', repos='http://cran.rstudio.com/')";
-    
-This will copy the atlantis repo from \contrib (permanent storage location) to your user profile. You can also copy any other content you like. It will then install R packages to your environment
 
+This will copy the atlantis repo from \contrib (permanent storage location) to your user profile. You can also copy any other content you like. It will then install R packages to your environment
 
 ## Create a compute partition (to run the model) {#partition}
 
-In the resource properties 
-  
-- Click "+ partition"
+In the resource properties
 
-- Select Instance Type (This is the type of machine that will be booted up)
+-   Click "+ partition"
 
-- Max Nodes (This is the number of these machines that you want available)
-    
+-   Select Instance Type (This is the type of machine that will be booted up)
+
+-   Max Nodes (This is the number of these machines that you want available)
+
 Note: You do not get charged for any of these machines unless you send a job to the SLURM resource manager. At that point a node will be booted up and the job run. After the job has finished, the node will remain idle for a small amount of time before being shut
 
 ## Boot the resource {#boot-the-resource}
@@ -124,12 +117,11 @@ On the compute tab
 
 -   Click the big button. The resource will boot up. This can take up 5-15 mins
 
-
-## Add/Run Rstudio workflow from marketplace](#add-workflow)
+## Add/Run Rstudio workflow from marketplace\](#add-workflow)
 
 You will need to first get the workflow from the "marketplace" then you'll need to apply it to the active resource
 
--   Click your username -> marketplace
+-   Click your username -\> marketplace
 
 -   Click "Add Parallel workflow" button on the Rstudio workflow.
 
@@ -147,7 +139,6 @@ You will need to first get the workflow from the "marketplace" then you'll need 
 
 -   From the compute tab you should see the RSTUDIO_CLOUD workflow in a running status. After a minute or so click the blue eye icon to launch Rstudio.
 
-
 ## Using the IDE (#ide)
 
 Once the resource has fully booted, the "power" button next to the resource will turn bright green and a line (bright green) will appear under the resource. You will also see an ip address.
@@ -160,8 +151,7 @@ Once the resource has fully booted, the "power" button next to the resource will
 
 You are now logged into the resource and can use any linux command to explore the environment
 
-
-## Clone the neus-atlantis repo in /contrib]() {#clone-repo}
+## Clone the neus-atlantis repo in /contrib\]() {#clone-repo}
 
 The neus-atlantis dev branch is stored in the \contrib directory, which is permanent storage, and is accessible to anyone in the atlantis cloud team. It is then copied to your personal environment in the [User Bootrap](#bootstrap) script.
 
@@ -172,7 +162,7 @@ If the dev branch is updated on GitHub, it will need to be pulled again.
 
 It will then clone a single branch of the neus-atlantis repo into the folder `/contrib/neus-atlantis` folder. In this example it will clone the `dev_branch`
 
-## Run atlantis
+## Run atlantis {#run-atlantis}
 
 ### From the command line
 
@@ -192,20 +182,19 @@ It will then clone a single branch of the neus-atlantis repo into the folder `/c
 
 -   Create a file with the .sh extension (for this example, job.sh) and copy the following
 
-      > #!/bin/bash
-      >
-      > sudo podman run --rm  --name scenario1 --mount "type=bind,src=/contrib/neus-atlantis/currentVersion/,dst=/app/model" --mount "type=bind,src=/home/Andrew.Beet/out1,dst=/app/model/output/" atlantis:6536
+    > #!/bin/bash
+    >
+    > sudo podman run --rm --name scenario1 --mount "type=bind,src=/contrib/neus-atlantis/currentVersion/,dst=/app/model" --mount "type=bind,src=/home/Andrew.Beet/out1,dst=/app/model/output/" atlantis:6536
 
 Note: The `-d` flag is omitted.
 
 -   [Log in to the resource](#ide) either using the Parallel Works IDE or your preferred shell.
 
-- On the command line type
+-   On the command line type
 
     > sbatch -N 1 job.sh
-    
-This will request a single node from the partition and run the commands found in `job.sh`
-If this is run again it will run an addition job on the next free core on the node. If all cores are used a new node will be launched. Use commands `sinfo`, `cancel`, `squeue` to inspect resource usage and cancel jobs
+
+This will request a single node from the partition and run the commands found in `job.sh` If this is run again it will run an addition job on the next free core on the node. If all cores are used a new node will be launched. Use commands `sinfo`, `cancel`, `squeue` to inspect resource usage and cancel jobs
 
 ### using **srun**
 
