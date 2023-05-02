@@ -13,7 +13,7 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'MAK_fix_1'
+run.name = 'MAK_pers_23'
 
 # atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HER_CatchSpinup_1/',run.name,'/')
 # atl.dir = here::here('Atlantis_Runs','ZL_restore_7_mumC',run.name,'')
@@ -86,17 +86,17 @@ make_atlantis_diagnostic_figures(
   plot.c.mum=F,
   plot.sn.rn=F,
   plot.recruits=F,
-  plot.numbers.timeseries=F,
+  plot.numbers.timeseries=T,
   plot.physics=F,
   plot.growth.cons=F,
   plot.cohort=F,
-  plot.diet=T,
-  plot.consumption= T,
+  plot.diet=F,
+  plot.consumption= F,
   plot.spatial.biomass=F,
   plot.spatial.biomass.seasonal = F,
   plot.LTL=F, 
   plot.catch =F,
-  plot.mortality=T,
+  plot.mortality=F,
   plot.max.weight = F
 
 )
