@@ -11886,8 +11886,8 @@ mum_jNSH_T15 	0.006
 mum_OSH_T15	0.006
 mum_jOSH_T15 	0.006
 mum_ZG_T15	0.275
-mum_ZL_T15	0.02
-mum_ZM_T15	0.0065
+mum_ZL_T15	0.021
+mum_ZM_T15	0.007
 mum_ZS_T15	0.5
 mum_BD_T15	0.0000675
 mum_BO_T15	0.00025
@@ -16393,7 +16393,7 @@ Rbeta_OSH 2e+12
 # Beverton-Holt recruitment
 # Alpha in Beverton-Holt
 BHalpha_MAK 5.0e+12
-BHalpha_HER 6.075e+12
+BHalpha_HER 5.75e+12
 BHalpha_WHK 6.6825e+11
 BHalpha_BLF 604846087.022962
 BHalpha_WPF 245957762.469888
@@ -16458,7 +16458,7 @@ BHalpha_OSH 9e+11
 
 #Beta in Beverton-Holt 
 BHbeta_MAK 6e+13
-BHbeta_HER 5e+13
+BHbeta_HER 7e+13
 BHbeta_WHK 2e+14
 BHbeta_BLF 9e+09
 BHbeta_WPF 66224678176.26
