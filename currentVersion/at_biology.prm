@@ -11886,8 +11886,8 @@ mum_jNSH_T15 	0.006
 mum_OSH_T15	0.006
 mum_jOSH_T15 	0.006
 mum_ZG_T15	0.275
-mum_ZL_T15	0.020
-mum_ZM_T15	0.006
+mum_ZL_T15	0.02
+mum_ZM_T15	0.0065
 mum_ZS_T15	0.5
 mum_BD_T15	0.0000675
 mum_BO_T15	0.00025
@@ -13078,7 +13078,7 @@ EDR_BO 0.1
 
 # Assimilation efficiencies of vertebrate consumers 
 E_MAK 0.35
-E_HER 0.6
+E_HER 0.55
 E_WHK 0.3
 E_BLF 0.35
 E_WPF 0.3
