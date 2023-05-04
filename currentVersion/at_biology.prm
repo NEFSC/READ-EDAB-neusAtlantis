@@ -13078,7 +13078,7 @@ EDR_BO 0.1
 
 # Assimilation efficiencies of vertebrate consumers 
 E_MAK 0.35
-E_HER 0.45
+E_HER 0.55
 E_WHK 0.3
 E_BLF 0.35
 E_WPF 0.3
