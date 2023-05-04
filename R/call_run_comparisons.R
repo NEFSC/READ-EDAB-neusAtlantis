@@ -18,17 +18,19 @@ mak1 = here::here('Atlantis_Runs','MAK_fix_1','')
 mak2 = here::here('Atlantis_Runs','MAK_fix_2','')
 mak2.pred = here::here('Atlantis_Runs','MAK_fix_2_redDiet','')
 mak3 = here::here('Atlantis_Runs','MAK_fix_3','')
+mak23 = here::here('Atlantis_Runs','MAK_pers_23','')
+dev = here::here('Atlantis_Runs','dev_4_14_23','')
 
 figure.dir = here::here('Figures','Run_Comparisons','')
 
 plot_run_comparisons(
-  model.dirs = c(mak1,mak2,mak3),
-  model.names = c('MAK_fix_1','MAK_fix_2','MAK_fix_3'),
+  model.dirs = c(dev,mak23),
+  model.names = c('dev','MAK_pers_23'),
   plot.rel = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'MAK_fix_3_'),
+  plot.out = paste(figure.dir,'MAK_pers_23_'),
   table.out = F,
-  groups = "MAK",
+  groups = c('MAK','HER','WHK','BLF','WPF','SUF','WIF','WTF','FOU','HAL','PLA','FLA','BFT','TUN','BIL','MPF','BUT','BPF','ANC','GOO','MEN','FDE','COD','SHK','OHK','NSH','OSH','LSQ','ISQ','ZL','ZM','ZS','ZG'),
   remove.init = F
 )
 
