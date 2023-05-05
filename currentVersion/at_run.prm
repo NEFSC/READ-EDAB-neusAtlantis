@@ -26,7 +26,7 @@ move_check    20       # ID number of group where tracking movements
 fishmove      1        # Set to 0 to turn vertebrate movement off for debugging purposes
 debug         0       # 0=debuging off, 1=debug fishing, 2=debug discards, 3=debug histfishing,
                        # 4=debug assessments, 5=debug mpas, 6=debug effort, 7=debug econ, 8=debug aging,
-                       # 9=debug_spawning, 10=debug migration, 11=debug movement, 12=debug stocks,
+                       # 9=debug_spawning, 10=dug migration, 11=debug movement, 12=debug stocks,
                        # 13=debug biomass calcs, 14=debug feeding, 15=debug everything
 
 title      NEUS v1.5 with fishing
@@ -118,7 +118,7 @@ flag_migration_on 1
 flagIsPolar 0 # Flag indicating polar - so there will be 24 hrs of daylight/night seasonally
 
 # 6638
-flagenviro_warn 0 # Flag indicating whether warning messages about spawn and movement being environmentally constrained are activated
+flagenviro_warn 1 # Flag indicating whether warning messages about spawn and movement being environmentally constrained are activated
 
 
 # 6645

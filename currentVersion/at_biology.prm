@@ -1579,92 +1579,92 @@ TWH_ddepend_move 0
 INV_ddepend_move 0
 
 ## Mystery parameters (no documentation). Required if flagtempdepend >0
-MAK_K_temp_const 0
-HER_K_temp_const 0
-WHK_K_temp_const 0
-BLF_K_temp_const 0
-WPF_K_temp_const 0
-SUF_K_temp_const 0
-WIF_K_temp_const 0
-WTF_K_temp_const 0
-HAL_K_temp_const 0
-PLA_K_temp_const 0
-FOU_K_temp_const 0
-FLA_K_temp_const 0
-BFT_K_temp_const 0
-TUN_K_temp_const 0
-BIL_K_temp_const 0
-MPF_K_temp_const 0
-BUT_K_temp_const 0
-ANC_K_temp_const 0
-BPF_K_temp_const 0
-GOO_K_temp_const 0
-MEN_K_temp_const 0
-FDE_K_temp_const 0
-COD_K_temp_const 0
-SHK_K_temp_const 0
-OHK_K_temp_const 0
-POL_K_temp_const 0
-RHK_K_temp_const 0
-BSB_K_temp_const 0
-SCU_K_temp_const 0
-TYL_K_temp_const 0
-RED_K_temp_const 0
-OPT_K_temp_const 0
-SAL_K_temp_const 0
-DRM_K_temp_const 0
-STB_K_temp_const 0
-TAU_K_temp_const 0
-WOL_K_temp_const 0
-SDF_K_temp_const 0
-FDF_K_temp_const 0
-HAD_K_temp_const 0
-YTF_K_temp_const 0
-DOG_K_temp_const 0
-SMO_K_temp_const 0
-SSH_K_temp_const 0
-DSH_K_temp_const 0
-BLS_K_temp_const 0
-POR_K_temp_const 0
-PSH_K_temp_const 0
-WSK_K_temp_const 0
-LSK_K_temp_const 0
-SK_K_temp_const 0
-SB_K_temp_const 0
-PIN_K_temp_const 0
-REP_K_temp_const 0
-RWH_K_temp_const 0
-BWH_K_temp_const 0
-SWH_K_temp_const 0
-TWH_K_temp_const 0
-INV_K_temp_const 0
-LSQ_K_temp_const 0
-ISQ_K_temp_const 0
-SCA_K_temp_const 0
-QHG_K_temp_const 0
-CLA_K_temp_const 0
-LOB_K_temp_const 0
-BFF_K_temp_const 0
-BG_K_temp_const 0
-RCB_K_temp_const 0
-BMS_K_temp_const 0
-OSH_K_temp_const 0
-NSH_K_temp_const 0
-ZL_K_temp_const 0
-BD_K_temp_const 0
-MA_K_temp_const 0
-MB_K_temp_const 0
-SG_K_temp_const 0
-BC_K_temp_const 0
-ZG_K_temp_const 0
-PL_K_temp_const 0
-DF_K_temp_const 0
-PS_K_temp_const 0
-ZM_K_temp_const 0
-ZS_K_temp_const 0
-BO_K_temp_const 0
-PB_K_temp_const 0
-BB_K_temp_const 0
+MAK_K_temp_const 2
+HER_K_temp_const 2
+WHK_K_temp_const 2
+BLF_K_temp_const 2
+WPF_K_temp_const 2
+SUF_K_temp_const 2
+WIF_K_temp_const 2
+WTF_K_temp_const 2
+HAL_K_temp_const 2
+PLA_K_temp_const 2
+FOU_K_temp_const 2
+FLA_K_temp_const 2
+BFT_K_temp_const 2
+TUN_K_temp_const 2
+BIL_K_temp_const 2
+MPF_K_temp_const 2
+BUT_K_temp_const 2
+ANC_K_temp_const 2
+BPF_K_temp_const 2
+GOO_K_temp_const 2
+MEN_K_temp_const 2
+FDE_K_temp_const 2
+COD_K_temp_const 2
+SHK_K_temp_const 2
+OHK_K_temp_const 2
+POL_K_temp_const 2
+RHK_K_temp_const 2
+BSB_K_temp_const 2
+SCU_K_temp_const 2
+TYL_K_temp_const 2
+RED_K_temp_const 2
+OPT_K_temp_const 2
+SAL_K_temp_const 2
+DRM_K_temp_const 2
+STB_K_temp_const 2
+TAU_K_temp_const 2
+WOL_K_temp_const 2
+SDF_K_temp_const 2
+FDF_K_temp_const 2
+HAD_K_temp_const 2
+YTF_K_temp_const 2
+DOG_K_temp_const 2
+SMO_K_temp_const 2
+SSH_K_temp_const 2
+DSH_K_temp_const 2
+BLS_K_temp_const 2
+POR_K_temp_const 2
+PSH_K_temp_const 2
+WSK_K_temp_const 2
+LSK_K_temp_const 2
+SK_K_temp_const 2
+SB_K_temp_const 2
+PIN_K_temp_const 2
+REP_K_temp_const 2
+RWH_K_temp_const 2
+BWH_K_temp_const 2
+SWH_K_temp_const 2
+TWH_K_temp_const 2
+INV_K_temp_const 2
+LSQ_K_temp_const 2
+ISQ_K_temp_const 2
+SCA_K_temp_const 2
+QHG_K_temp_const 2
+CLA_K_temp_const 2
+LOB_K_temp_const 2
+BFF_K_temp_const 2
+BG_K_temp_const 2
+RCB_K_temp_const 2
+BMS_K_temp_const 2
+OSH_K_temp_const 2
+NSH_K_temp_const 2
+ZL_K_temp_const 2
+BD_K_temp_const 2
+MA_K_temp_const 2
+MB_K_temp_const 2
+SG_K_temp_const 2
+BC_K_temp_const 2
+ZG_K_temp_const 2
+PL_K_temp_const 2
+DF_K_temp_const 2
+PS_K_temp_const 2
+ZM_K_temp_const 2
+ZS_K_temp_const 2
+BO_K_temp_const 2
+PB_K_temp_const 2
+BB_K_temp_const 2
 
 
 ### June 24 2015, Gavin Fay @UmassD, Invertebrate entries copied from v1
@@ -9705,7 +9705,7 @@ C_MAK	10
 0.069	1.725	5.175	10.143	13.8	16.2495	17.4915	22.701	27.945	37.95
 
 C_HER	10
-0.0194529169107	0.41356595007	1.80743637438	4.82493608415	6.55578617148	7.67394596241	8.2713190014	10.78334921664	13.18815863001	17.9211911697
+0.02917937536605	0.620348925105	2.71115456157	7.237404126225	9.83367925722	11.510918943615	12.4069785021	16.17502382496	19.782237945015	26.88178675455
 
 C_WHK	10		
 0.0008960109375	0.02097046875	0.0800690625	0.343153125	0.6672421875	1.0485234375	1.4298046875	2.2876875	3.240890625	4.0987734375
@@ -9922,7 +9922,7 @@ mum_MAK	10.00
 0.60375	3.6225	24.15	24.15	21.045	18.1125	12.075	9.05625	6.0375	1.81125
 
 mum_HER	10.00
-3.49380864	20.9618409	139.762455	139.762455	122.273193	104.834478	69.855954	52.417239	34.9380864	10.4834478
+0.49131684	2.9477588765625	19.654095234375	19.654095234375	17.194667765625	14.74234846875	9.82349353125	7.371174234375	4.9131684	1.474234846875
 						
 mum_WHK	10.00		
 0.21923671875	0.6672421875	2.1923671875	11.7243984375	10.29459375	8.76946875	5.87173125	4.384734375	2.859609375	0.953203125
@@ -14127,7 +14127,7 @@ KDENR_YTF
 2.9E8
 
 KDENR_DOG
-5
+0.1
 
 KDENR_SMO
 200000
@@ -14145,7 +14145,7 @@ KDENR_PSH
 4273.905096
 
 KDENR_WSK
-2.75
+0.1
 
 KDENR_LSK
 4
@@ -14157,7 +14157,7 @@ KDENR_SB
 30000
 
 KDENR_PIN
-4
+0.1
 
 KDENR_REP
 350
@@ -14405,11 +14405,11 @@ Rbeta_OSH 2e+12
 # Beverton-Holt recruitment
 # Alpha in Beverton-Holt
 BHalpha_MAK 3.0176e+12
-BHalpha_HER 6.075e+12
+BHalpha_HER 6.075e+10
 BHalpha_WHK 6.6825e+11
 BHalpha_BLF 604846087.022962
 BHalpha_WPF 245957762.469888
-BHalpha_SUF 5.925e+09
+BHalpha_SUF 5.925e+08
 BHalpha_WIF 69750000
 BHalpha_WTF 36508603021.8
 BHalpha_HAL 29274822.9675
@@ -14423,7 +14423,7 @@ BHalpha_MPF 2E10
 BHalpha_BUT 7.5E8
 BHalpha_ANC 94660704569.64
 BHalpha_BPF 2778840113.97642
-BHalpha_GOO 12141684000
+BHalpha_GOO 1.2E9
 BHalpha_MEN 1728554233187.38
 BHalpha_FDE 892865378.024942
 BHalpha_COD 5.2245e+10
@@ -14470,7 +14470,7 @@ BHalpha_OSH 9e+11
 
 #Beta in Beverton-Holt 
 BHbeta_MAK 2e+12
-BHbeta_HER 5e+13
+BHbeta_HER 1e+12
 BHbeta_WHK 2e+14
 BHbeta_BLF 9e+09
 BHbeta_WPF 66224678176.26
