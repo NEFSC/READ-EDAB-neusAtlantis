@@ -1,11 +1,13 @@
 #Script to scale Mum_C for age groups
+library(dplyr)
 source(here::here('R','edit_param_mum_age.R'))
 source(here::here('R','edit_param_C_age.R'))
 
-group.names = 'MAK'
+group.names = 'HER'
 
-mum.scale = 50 
-C.scale = 50
+mum.scale = 0.75
+C.scale = 1.5
+
 
 bio.prm = here::here('currentVersion','at_biology.prm')
 
