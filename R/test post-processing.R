@@ -13,10 +13,10 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'v6665_MiscCalib_4'
+run.name = 'ZL_revert_3'
 
 # atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HER_CatchSpinup_1/',run.name,'/')
-# atl.dir = here::here('Atlantis_Runs','BH_convert_2_g_BH2',run.name,'')
+# atl.dir = here::here('Atlantis_Runs','ZL_restore_7_mumC',run.name,'')
 atl.dir = here::here('Atlantis_Runs',run.name,'')
 # atl.dir = '/home/jcaracappa/atlantis/Shared_Data/Dev_Runs/Dev_11032022/'
 
