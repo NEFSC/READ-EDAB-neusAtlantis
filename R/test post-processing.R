@@ -79,13 +79,13 @@ make_atlantis_diagnostic_figures(
   plot.all = F,
   #Turn these on/off for desired output
   plot.benthic =F,
-  plot.overall.biomass =F,
-  plot.biomass.timeseries = F,
-  plot.length.age = F,
+  plot.overall.biomass = F,
+  plot.biomass.timeseries = T,
+  plot.length.age = T,
   plot.biomass.box=F,
   plot.c.mum=F,
   plot.sn.rn=F,
-  plot.recruits=F,
+  plot.recruits=T,
   plot.numbers.timeseries=T,
   plot.physics=F,
   plot.growth.cons=F,
@@ -94,10 +94,10 @@ make_atlantis_diagnostic_figures(
   plot.consumption= T,
   plot.spatial.biomass=F,
   plot.spatial.biomass.seasonal = F,
-  plot.LTL=F, 
+  plot.LTL=F,
   plot.catch =F,
-  plot.mortality=F,
-  plot.max.weight = F
+  plot.mortality=T,
+  plot.max.weight = T
 
 )
 tictoc::toc()
