@@ -5,7 +5,7 @@ library(dplyr)
 library(ggplot2)
 
 #Read in data from CSV
-data = read.csv('C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Climatology/DOY-OCCCI-ATLANTIS_NEUS-HIRATA-DIATOM-PROP.csv',
+data = read.csv('C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Climatology/v6/DOY-OCCCI-ATLANTIS_NEUS-PSC_FDIATOM-HIRATA.csv',
                 header = T, as.is = T)
 
 #Extract DOY
@@ -27,9 +27,9 @@ for(b in 1:30){
   dat = data %>% 
     filter(SUBAREA == boxes[b]) %>%
     arrange(DOY)
-  dat = reshape2::dcast(dat,DOY~PROD,value.var = 'MED')
-  dat$DIATOM.PROP = dat$DIATOM/dat$MICRO
-  dat$PLDF = dat$DIATOM/dat$DINOFLAGELLATE
+  dat = reshape2::dcast(dat,DOY~PROD,value.var = 'MED')%>%
+    rename(DIATOM.PROP = 'PSC_FDIATOM')%>%
+    mutate(PLDF = DIATOM.PROP/(1-DIATOM.PROP))
   
   #make Diatom proportion plot
   fig.diatom.prop[[b]] = ggplot(dat,aes(x = as.numeric(DOY), y = DIATOM.PROP))+

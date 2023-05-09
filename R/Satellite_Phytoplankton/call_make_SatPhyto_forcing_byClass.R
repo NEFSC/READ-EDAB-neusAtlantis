@@ -21,20 +21,32 @@ satphyto.force.dir = paste0(satphyto.dir,'Forcing_dynamic_lower_v6/')
 atl.varname =  c('Diatom_N','DinoFlag_N','PicoPhytopl_N','Diatom_S')
 atl.longname = c('Diatom Nitrogen','Dinoflagellate Nitrogen','PicoPhytoplankton Nitrogen','Diatom Silicate')
 
-years = 1997:2022
-raw.files = paste0('D8-OCCCI-ATLANTIS_',years,'.csv')
+years = 1998:2021
+hirata.file = 'D8-OCCCI-ATLANTIS_NEUS-PSC_FDIATOM-HIRATA.CSV'
 
-# #Make Forcing using Hirata Diatom Proportion
-load('C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Data/diatom_proportion_DOY.R')
+# Make Forcing using Hirata Diatom Proportion
+diatom.pct = read.csv(paste0(rawdata.dir,'/',hirata.file),as.is = T)%>% 
+  select(PERIOD,SUBAREA,MED)%>%
+  tidyr::separate(PERIOD,c('DURATION','DATE.START','DATE.END'),sep = '_')%>%
+  mutate(DATE = as.Date(DATE.END,'%Y%m%d'),
+         DOY = format(DATE,'%j'))%>%
+  group_by(DOY,SUBAREA)%>%
+  summarise(MED = mean(MED,na.rm=T))
+
+saveRDS(diatom.pct, paste0(rawdata.dir,'/Diatom_Pct_Hirata_DOY.rds'))
+
+diatom.pct.mat = diatom.pct %>%
+  tidyr::spread(DOY,MED)%>%
+  ungroup()%>%
+  select(-SUBAREA)%>%
+  as.matrix()
+  
 phyto.fract.ls = list()
-for(f in 1:length(raw.files)){
+for(f in 1:length(years)){
   if(years[f] %% 4 == 0){
-    x = matrix(NA,nrow = 30, ncol = 366)
-    x[,1:365] = diatom.prop
-    x[,366] = x[,365]
-    phyto.fract.ls[[f]] = x
+    phyto.fract.ls[[f]] = diatom.pct.mat
   }else{
-    phyto.fract.ls[[f]] = diatom.prop
+    phyto.fract.ls[[f]] = diatom.pct.mat[,1:365]
   }
 }
 
@@ -53,36 +65,6 @@ make_SatPhyto_files(in.dir = rawdata.dir,
                     chl.conv = rep(7,3)
 )
 
-
-# B) make forcing files w/ make_force_statevar ----------------------------
-# .packages = c("devtools","tidyverse","stringi","RNetCDF", "data.table")
-# lapply(.packages, require, character.only=TRUE)
-# 
-# var.units = c(rep('mg N m-3',3),'mg Si m-3')
-# fill.val = miss.val = rep(-999,4)
-# valid.min = rep(-999,4)
-# valid.max = rep(9999,4)
-# 
-# years = 1997:2019
-# 
-# for(yr in 1:length(years)){
-#   
-#   make_force_statevar(roms.dir = satphyto.atl.dir,
-#                       roms.file = paste0(satphyto.atl.dir,'Phyto_Atlantis_',years[yr],'.nc'),
-#                       out.dir = satphyto.force.dir,
-#                       force.vars = atl.varname,
-#                       var.units = var.units,
-#                       final.vars = atl.varname,
-#                       fill.val = fill.val,
-#                       long.names = atl.longname,
-#                       miss.val = miss.val,
-#                       valid.min = valid.min,
-#                       valid.max = valid.max,
-#                       out.prefix = 'Phyto_Forcing_',
-#                       dupe.bottom = F)
-#   
-# }
-# 
 
 # C) Make Spinup ----------------------------------------------------------
 
