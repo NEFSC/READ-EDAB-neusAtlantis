@@ -1253,181 +1253,6 @@ flagtempsensitivePB 1
 flagtempsensitiveBB 1
 flagtempsensitiveBO 1
 
-#pH sensitivity
-flagpHsensitive_MAK 0
-flagpHsensitive_HER 0
-flagpHsensitive_WHK 0
-flagpHsensitive_BLF 0
-flagpHsensitive_WPF 0
-flagpHsensitive_SUF 0
-flagpHsensitive_WIF 0
-flagpHsensitive_WTF 0
-flagpHsensitive_HAL 0
-flagpHsensitive_PLA 0
-flagpHsensitive_FOU 0
-flagpHsensitive_FLA 0
-flagpHsensitive_BFT 0
-flagpHsensitive_TUN 0
-flagpHsensitive_BIL 0
-flagpHsensitive_MPF 0
-flagpHsensitive_BUT 0
-flagpHsensitive_ANC 0
-flagpHsensitive_BPF 0
-flagpHsensitive_GOO 0
-flagpHsensitive_MEN 0
-flagpHsensitive_FDE 0
-flagpHsensitive_COD 0
-flagpHsensitive_SHK 0
-flagpHsensitive_OHK 0
-flagpHsensitive_POL 0
-flagpHsensitive_RHK 0
-flagpHsensitive_BSB 0
-flagpHsensitive_SCU 0
-flagpHsensitive_TYL 0
-flagpHsensitive_RED 0
-flagpHsensitive_OPT 0
-flagpHsensitive_SAL 0
-flagpHsensitive_DRM 0
-flagpHsensitive_STB 0
-flagpHsensitive_TAU 0
-flagpHsensitive_WOL 0
-flagpHsensitive_SDF 0
-flagpHsensitive_FDF 0
-flagpHsensitive_HAD 0
-flagpHsensitive_YTF 0
-flagpHsensitive_DOG 0
-flagpHsensitive_SMO 0
-flagpHsensitive_SSH 0
-flagpHsensitive_DSH 0
-flagpHsensitive_BLS 0
-flagpHsensitive_POR 0
-flagpHsensitive_PSH 0
-flagpHsensitive_WSK 0
-flagpHsensitive_LSK 0
-flagpHsensitive_SK 0
-flagpHsensitive_SB 0
-flagpHsensitive_PIN 0
-flagpHsensitive_REP 0
-flagpHsensitive_RWH 0
-flagpHsensitive_BWH 0
-flagpHsensitive_SWH 0
-flagpHsensitive_TWH 0
-flagpHsensitive_INV 0
-flagpHsensitive_LSQ 0
-flagpHsensitive_ISQ 0
-flagpHsensitive_SCA 0
-flagpHsensitive_QHG 0
-flagpHsensitive_CLA 0
-flagpHsensitive_BFF 0
-flagpHsensitive_BG 0
-flagpHsensitive_LOB 0
-flagpHsensitive_RCB 0
-flagpHsensitive_BMS 0
-flagpHsensitive_NSH 0
-flagpHsensitive_OSH 0
-flagpHsensitive_ZL 0
-flagpHsensitive_BD 0
-flagpHsensitive_MA 0
-flagpHsensitive_MB 0
-flagpHsensitive_SG 0
-flagpHsensitive_BC 0
-flagpHsensitive_ZG 0
-flagpHsensitive_PL 0
-flagpHsensitive_DF 0
-flagpHsensitive_PS 0
-flagpHsensitive_ZM 0
-flagpHsensitive_ZS 0
-flagpHsensitive_PB 0
-flagpHsensitive_BB 0
-flagpHsensitive_BO 0
-
-#The thermal tolerance decreases according to contract_tol_XXX parameter which defined the number of degrees to contract the temperature tolerances by as pH drops
-flagcontract_tol_MAK 0
-flagcontract_tol_HER 0
-flagcontract_tol_WHK 0
-flagcontract_tol_BLF 0
-flagcontract_tol_WPF 0
-flagcontract_tol_SUF 0
-flagcontract_tol_WIF 0
-flagcontract_tol_WTF 0
-flagcontract_tol_HAL 0
-flagcontract_tol_PLA 0
-flagcontract_tol_FOU 0
-flagcontract_tol_FLA 0
-flagcontract_tol_BFT 0
-flagcontract_tol_TUN 0
-flagcontract_tol_BIL 0
-flagcontract_tol_MPF 0
-flagcontract_tol_BUT 0
-flagcontract_tol_ANC 0
-flagcontract_tol_BPF 0
-flagcontract_tol_GOO 0
-flagcontract_tol_MEN 0
-flagcontract_tol_FDE 0
-flagcontract_tol_COD 0
-flagcontract_tol_SHK 0
-flagcontract_tol_OHK 0
-flagcontract_tol_POL 0
-flagcontract_tol_RHK 0
-flagcontract_tol_BSB 0
-flagcontract_tol_SCU 0
-flagcontract_tol_TYL 0
-flagcontract_tol_RED 0
-flagcontract_tol_OPT 0
-flagcontract_tol_SAL 0
-flagcontract_tol_DRM 0
-flagcontract_tol_STB 0
-flagcontract_tol_TAU 0
-flagcontract_tol_WOL 0
-flagcontract_tol_SDF 0
-flagcontract_tol_FDF 0
-flagcontract_tol_HAD 0
-flagcontract_tol_YTF 0
-flagcontract_tol_DOG 0
-flagcontract_tol_SMO 0
-flagcontract_tol_SSH 0
-flagcontract_tol_DSH 0
-flagcontract_tol_BLS 0
-flagcontract_tol_POR 0
-flagcontract_tol_PSH 0
-flagcontract_tol_WSK 0
-flagcontract_tol_LSK 0
-flagcontract_tol_SK 0
-flagcontract_tol_SB 0
-flagcontract_tol_PIN 0
-flagcontract_tol_REP 0
-flagcontract_tol_RWH 0
-flagcontract_tol_BWH 0
-flagcontract_tol_SWH 0
-flagcontract_tol_TWH 0
-flagcontract_tol_INV 0
-flagcontract_tol_LSQ 0
-flagcontract_tol_ISQ 0
-flagcontract_tol_SCA 0
-flagcontract_tol_QHG 0
-flagcontract_tol_CLA 0
-flagcontract_tol_BFF 0
-flagcontract_tol_BG 0
-flagcontract_tol_LOB 0
-flagcontract_tol_RCB 0
-flagcontract_tol_BMS 0
-flagcontract_tol_NSH 0
-flagcontract_tol_OSH 0
-flagcontract_tol_ZL 0
-flagcontract_tol_BD 0
-flagcontract_tol_MA 0
-flagcontract_tol_MB 0
-flagcontract_tol_SG 0
-flagcontract_tol_BC 0
-flagcontract_tol_ZG 0
-flagcontract_tol_PL 0
-flagcontract_tol_DF 0
-flagcontract_tol_PS 0
-flagcontract_tol_ZM 0
-flagcontract_tol_ZS 0
-flagcontract_tol_PB 0
-flagcontract_tol_BB 0
-flagcontract_tol_BO 0
 
 # Habitat dependency
 flaghabdepend    0         general vertebrate demersal habitat dependency: 0 = no, 1 = yes     0
@@ -1666,7 +1491,6 @@ BO_K_temp_const 2
 PB_K_temp_const 2
 BB_K_temp_const 2
 
-
 ### June 24 2015, Gavin Fay @UmassD, Invertebrate entries copied from v1
 # values changed to 2, updated seasonal movement with vertebrates below (turn back, need more density dependant inputs)
 LSQ_ddepend_move 0         0 = off, 1 = sedentary, 2 = on, 3 = sticky, 4 = no explicit movement 4
@@ -1682,82 +1506,82 @@ RCB_ddepend_move 0
 # Flags for invertebrate migration out of model domain (enter juveniles and adults              
 # separately for CEP and PWN - as may be separate groups, rather than age groups)
 ### added 20180228 RM based on SETAS           
-#flagZLMigrate  0  0=always remain within the model domain, 1+=migrate in/out of the model              
-#flagLOBMigrate  0  0=always remain within the model domain, 1+=migrate in/out of the model              
-#flagjISQMigrate 0  0=always remain within the model domain, 1+=migrate in/out of the model              
-#flagISQMigrate 0  0=always remain within the model domain, 1+=migrate in/out of the model              
-#flagjLSQMigrate 0  0=always remain within the model domain, 1+=migrate in/out of the model              
-#flagLSQMigrate  0  0=always remain within the model domain, 1+=migrate in/out of the model              
-#flagjOSHMigrate 0  0=always remain within the model domain, 1+=migrate in/out of the model              
-#flagOSHMigrate  0  0=always remain within the model domain, 1+=migrate in/out of the model 
-#flagjNSHMigrate 0  0=always remain within the model domain, 1+=migrate in/out of the model              
-#flagNSHMigrate  0  0=always remain within the model domain, 1+=migrate in/out of the model 
-#flagRCBMigrate  0
+flagZLMigrate  0  0=always remain within the model domain, 1+=migrate in/out of the model              
+flagLOBMigrate  0  0=always remain within the model domain, 1+=migrate in/out of the model              
+flagjISQMigrate 0  0=always remain within the model domain, 1+=migrate in/out of the model              
+flagISQMigrate 0  0=always remain within the model domain, 1+=migrate in/out of the model              
+flagjLSQMigrate 0  0=always remain within the model domain, 1+=migrate in/out of the model              
+flagLSQMigrate  0  0=always remain within the model domain, 1+=migrate in/out of the model              
+flagjOSHMigrate 0  0=always remain within the model domain, 1+=migrate in/out of the model              
+flagOSHMigrate  0  0=always remain within the model domain, 1+=migrate in/out of the model 
+flagjNSHMigrate 0  0=always remain within the model domain, 1+=migrate in/out of the model              
+flagNSHMigrate  0  0=always remain within the model domain, 1+=migrate in/out of the model 
+flagRCBMigrate  0
 
 # Flags for migration out of model domain (maximum number of times juvenile OR 
 # adult stages must leave the model domain). For example if juvenile FVT leave once,
 # but adults leave 3 times then enter 3 here
 # 0=always remain within the model domain, 1+=migrate in/out of the model 0
 # 0=always remain within the model domain, 1+=migrate in/out of the model 0
-#flagMAKMigrate 0
-#flagHERMigrate 0
-#flagWHKMigrate 0
-#flagBLFMigrate 0
-#flagWPFMigrate 0
-#flagSUFMigrate 0
-#flagWIFMigrate 0
-#flagWTFMigrate 0
-#flagHALMigrate 0
-#flagPLAMigrate 0
-#flagFOUMigrate 0
-#flagFLAMigrate 0
-#flagBFTMigrate 1
-#flagTUNMigrate 1
-##flagBILMigrate 1
-#flagMPFMigrate 0
-#flagBUTMigrate 0
-#flagANCMigrate 0
-#flagBPFMigrate 0
-#flagGOOMigrate 0
-#flagMENMigrate 0
-#flagFDEMigrate 0
-#flagCODMigrate 0
-#flagSHKMigrate 0
-#flagOHKMigrate 0
-#flagPOLMigrate 0
-#flagRHKMigrate 0
-#flagBSBMigrate 0
-#flagSCUMigrate 0
-#flagTYLMigrate 0
-#flagREDMigrate 0
-#flagOPTMigrate 0
-#flagSALMigrate 0
-#flagDRMMigrate 0
-#flagSTBMigrate 0
-#flagTAUMigrate 0
-#flagWOLMigrate 0
-#flagSDFMigrate 0
-#flagFDFMigrate 0
-#flagHADMigrate 0
-#flagYTFMigrate 0
-#flagDOGMigrate 0
-#flagSMOMigrate 0
-#flagSSHMigrate 0
-#flagDSHMigrate 0
-#flagBLSMigrate 1
-#flagPORMigrate 1
-#flagPSHMigrate 1
-#flagWSKMigrate 0
-#flagLSKMigrate 0
-#flagSKMigrate 0
-#flagSBMigrate 1
-#flagPINMigrate 0
-#flagREPMigrate 1
-#flagRWHMigrate 1
-#flagBWHMigrate 1
-#flagSWHMigrate 1
-#flagTWHMigrate 1
-#flagINVMigrate 0
+flagMAKMigrate 0
+flagHERMigrate 0
+flagWHKMigrate 0
+flagBLFMigrate 0
+flagWPFMigrate 0
+flagSUFMigrate 0
+flagWIFMigrate 0
+flagWTFMigrate 0
+flagHALMigrate 0
+flagPLAMigrate 0
+flagFOUMigrate 0
+flagFLAMigrate 0
+flagBFTMigrate 1
+flagTUNMigrate 1
+flagBILMigrate 1
+flagMPFMigrate 0
+flagBUTMigrate 0
+flagANCMigrate 0
+flagBPFMigrate 0
+flagGOOMigrate 0
+flagMENMigrate 0
+flagFDEMigrate 0
+flagCODMigrate 0
+flagSHKMigrate 0
+flagOHKMigrate 0
+flagPOLMigrate 0
+flagRHKMigrate 0
+flagBSBMigrate 0
+flagSCUMigrate 0
+flagTYLMigrate 0
+flagREDMigrate 0
+flagOPTMigrate 0
+flagSALMigrate 0
+flagDRMMigrate 0
+flagSTBMigrate 0
+flagTAUMigrate 0
+flagWOLMigrate 0
+flagSDFMigrate 0
+flagFDFMigrate 0
+flagHADMigrate 0
+flagYTFMigrate 0
+flagDOGMigrate 0
+flagSMOMigrate 0
+flagSSHMigrate 0
+flagDSHMigrate 0
+flagBLSMigrate 1
+flagPORMigrate 1
+flagPSHMigrate 1
+flagWSKMigrate 0
+flagLSKMigrate 0
+flagSKMigrate 0
+flagSBMigrate 1
+flagPINMigrate 0
+flagREPMigrate 1
+flagRWHMigrate 1
+flagBWHMigrate 1
+flagSWHMigrate 1
+flagTWHMigrate 1
+flagINVMigrate 0
 
 # Predation formulation switches. 0=Holling type II, 1=Holling type I, 2=Holling type III, 
 # 3=ECOSIM (currently disabled), 4=min-max, 5=Size specific Holling type III, 8 Standard Holling Type II,
@@ -5672,33 +5496,1175 @@ BB_max_move_temp 30
 
 # Juvenile migration times - days of the year juvenile stages of each group leave the model domain
  
-
+jMAK_Migrate_Time 1
+0
+ 
+jHER_Migrate_Time 1
+0
+ 
+jWHK_Migrate_Time 1
+0
+ 
+jBLF_Migrate_Time 1
+0
+ 
+jWPF_Migrate_Time 1
+0
+ 
+jSUF_Migrate_Time 1
+0
+ 
+jWIF_Migrate_Time 1
+0
+ 
+jWTF_Migrate_Time 1
+0
+ 
+jHAL_Migrate_Time 1
+0
+ 
+jPLA_Migrate_Time 1
+0
+ 
+jFOU_Migrate_Time 1
+0
+ 
+jFLA_Migrate_Time 1
+0
+ 
+jBFT_Migrate_Time 1
+260
+ 
+jTUN_Migrate_Time 1
+260
+ 
+jBIL_Migrate_Time 1
+260
+ 
+jMPF_Migrate_Time 1
+0
+ 
+jBUT_Migrate_Time 1
+0
+ 
+jANC_Migrate_Time 1
+0
+ 
+jBPF_Migrate_Time 1
+0
+ 
+jGOO_Migrate_Time 1
+0
+ 
+jMEN_Migrate_Time 1
+0
+ 
+jFDE_Migrate_Time 1
+0
+ 
+jCOD_Migrate_Time 1
+0
+ 
+jSHK_Migrate_Time 1
+0
+ 
+jOHK_Migrate_Time 1
+0
+ 
+jPOL_Migrate_Time 1
+0
+ 
+jRHK_Migrate_Time 1
+0
+ 
+jBSB_Migrate_Time 1
+0
+ 
+jSCU_Migrate_Time 1
+0
+ 
+jTYL_Migrate_Time 1
+0
+ 
+jRED_Migrate_Time 1
+0
+ 
+jOPT_Migrate_Time 1
+0
+ 
+jSAL_Migrate_Time 1
+0
+ 
+jDRM_Migrate_Time 1
+0
+ 
+jSTB_Migrate_Time 1
+0
+ 
+jTAU_Migrate_Time 1
+0
+ 
+jWOL_Migrate_Time 1
+0
+ 
+jSDF_Migrate_Time 1
+0
+ 
+jFDF_Migrate_Time 1
+0
+ 
+jHAD_Migrate_Time 1
+0
+ 
+jYTF_Migrate_Time 1
+0
+ 
+jDOG_Migrate_Time 1
+0
+ 
+jSMO_Migrate_Time 1
+0
+ 
+jSSH_Migrate_Time 1
+0
+ 
+jDSH_Migrate_Time 1
+0
+ 
+jBLS_Migrate_Time 1
+270
+ 
+jPOR_Migrate_Time 1
+270
+ 
+jPSH_Migrate_Time 1
+270
+ 
+jWSK_Migrate_Time 1
+0
+ 
+jLSK_Migrate_Time 1
+0
+ 
+jSK_Migrate_Time 1
+0
+ 
+jSB_Migrate_Time 1
+224
+ 
+jPIN_Migrate_Time 1
+0
+ 
+jREP_Migrate_Time 1
+270
+ 
+jRWH_Migrate_Time 1
+300
+ 
+jBWH_Migrate_Time 1
+300
+ 
+jSWH_Migrate_Time 1
+330
+ 
+jTWH_Migrate_Time 1
+330
+ 
+jINV_Migrate_Time 1
+0
+ 
+jLSQ_Migrate_Time 1
+0
+ 
+jISQ_Migrate_Time 1
+0
+ 
+jNSH_Migrate_Time 1
+0
+ 
+jOSH_Migrate_Time 1
+0
+ 
 
 # Adult migration times - days of the year adult stages of each group leave the model domain
-#MAK_Migrate_Time 1
-#0
+MAK_Migrate_Time 1
+0
+ 
+HER_Migrate_Time 1
+0
+ 
+WHK_Migrate_Time 1
+0
+ 
+BLF_Migrate_Time 1
+0
+ 
+WPF_Migrate_Time 1
+0
+ 
+SUF_Migrate_Time 1
+0
+ 
+WIF_Migrate_Time 1
+0
+ 
+WTF_Migrate_Time 1
+0
+ 
+HAL_Migrate_Time 1
+0
+ 
+PLA_Migrate_Time 1
+0
+ 
+FOU_Migrate_Time 1
+0
+ 
+FLA_Migrate_Time 1
+0
+ 
+BFT_Migrate_Time 1
+260
+ 
+TUN_Migrate_Time 1
+260
+ 
+BIL_Migrate_Time 1
+260
+ 
+MPF_Migrate_Time 1
+0
+ 
+BUT_Migrate_Time 1
+0
+ 
+ANC_Migrate_Time 1
+0
+ 
+BPF_Migrate_Time 1
+0
+ 
+GOO_Migrate_Time 1
+0
+ 
+MEN_Migrate_Time 1
+0
+ 
+FDE_Migrate_Time 1
+0
+ 
+COD_Migrate_Time 1
+0
+ 
+SHK_Migrate_Time 1
+0
+ 
+OHK_Migrate_Time 1
+0
+ 
+POL_Migrate_Time 1
+0
+ 
+RHK_Migrate_Time 1
+0
+ 
+BSB_Migrate_Time 1
+0
+ 
+SCU_Migrate_Time 1
+0
+ 
+TYL_Migrate_Time 1
+0
+ 
+RED_Migrate_Time 1
+0
+ 
+OPT_Migrate_Time 1
+0
+ 
+SAL_Migrate_Time 1
+0
+ 
+DRM_Migrate_Time 1
+0
+ 
+STB_Migrate_Time 1
+0
+ 
+TAU_Migrate_Time 1
+0
+ 
+WOL_Migrate_Time 1
+0
+ 
+SDF_Migrate_Time 1
+0
+ 
+FDF_Migrate_Time 1
+0
+ 
+HAD_Migrate_Time 1
+0
+ 
+YTF_Migrate_Time 1
+0
+ 
+DOG_Migrate_Time 1
+0
+ 
+SMO_Migrate_Time 1
+0
+ 
+SSH_Migrate_Time 1
+0
+ 
+DSH_Migrate_Time 1
+0
+ 
+BLS_Migrate_Time 1
+270
+ 
+POR_Migrate_Time 1
+270
+ 
+PSH_Migrate_Time 1
+270
+ 
+WSK_Migrate_Time 1
+0
+ 
+LSK_Migrate_Time 1
+0
+ 
+SK_Migrate_Time 1
+0
+ 
+SB_Migrate_Time 1
+224
+ 
+PIN_Migrate_Time 1
+0
+ 
+REP_Migrate_Time 1
+270
+ 
+RWH_Migrate_Time 1
+300
+ 
+BWH_Migrate_Time 1
+300
+ 
+SWH_Migrate_Time 1
+330
+ 
+TWH_Migrate_Time 1
+330
+ 
+INV_Migrate_Time 1
+0
+ 
+LSQ_Migrate_Time 1
+0
+ 
+ISQ_Migrate_Time 1
+0
+ 
+LOB_Migrate_Time 1
+0
+ 
+NSH_Migrate_Time 1
+0
+ 
+OSH_Migrate_Time 1
+0
+ 
+ZL_Migrate_Time 1
+0
  
 
 # Juvenile return times - days of the year juvenile stages of each group return to the model domain
  
-#jMAK_Migrate_Return 1
-#364
+jMAK_Migrate_Return 1
+364
  
+jHER_Migrate_Return 1
+364
+ 
+jWHK_Migrate_Return 1
+364
+ 
+jBLF_Migrate_Return 1
+364
+ 
+jWPF_Migrate_Return 1
+364
+ 
+jSUF_Migrate_Return 1
+364
+ 
+jWIF_Migrate_Return 1
+364
+ 
+jWTF_Migrate_Return 1
+364
+ 
+jHAL_Migrate_Return 1
+364
+ 
+jPLA_Migrate_Return 1
+364
+ 
+jFOU_Migrate_Return 1
+364
+ 
+jFLA_Migrate_Return 1
+364
+ 
+jBFT_Migrate_Return 1
+90
+ 
+jTUN_Migrate_Return 1
+90
+ 
+jBIL_Migrate_Return 1
+90
+ 
+jMPF_Migrate_Return 1
+364
+ 
+jBUT_Migrate_Return 1
+364
+ 
+jANC_Migrate_Return 1
+364
+ 
+jBPF_Migrate_Return 1
+364
+ 
+jGOO_Migrate_Return 1
+364
+ 
+jMEN_Migrate_Return 1
+364
+ 
+jFDE_Migrate_Return 1
+364
+ 
+jCOD_Migrate_Return 1
+364
+ 
+jSHK_Migrate_Return 1
+364
+ 
+jOHK_Migrate_Return 1
+364
+ 
+jPOL_Migrate_Return 1
+364
+ 
+jRHK_Migrate_Return 1
+364
+ 
+jBSB_Migrate_Return 1
+364
+ 
+jSCU_Migrate_Return 1
+364
+ 
+jTYL_Migrate_Return 1
+364
+ 
+jRED_Migrate_Return 1
+364
+ 
+jOPT_Migrate_Return 1
+364
+ 
+jSAL_Migrate_Return 1
+364
+ 
+jDRM_Migrate_Return 1
+364
+ 
+jSTB_Migrate_Return 1
+364
+ 
+jTAU_Migrate_Return 1
+364
+ 
+jWOL_Migrate_Return 1
+364
+ 
+jSDF_Migrate_Return 1
+364
+ 
+jFDF_Migrate_Return 1
+364
+ 
+jHAD_Migrate_Return 1
+364
+ 
+jYTF_Migrate_Return 1
+364
+ 
+jDOG_Migrate_Return 1
+364
+ 
+jSMO_Migrate_Return 1
+364
+ 
+jSSH_Migrate_Return 1
+364
+ 
+jDSH_Migrate_Return 1
+364
+ 
+jBLS_Migrate_Return 1
+150
+ 
+jPOR_Migrate_Return 1
+150
+ 
+jPSH_Migrate_Return 1
+150
+ 
+jWSK_Migrate_Return 1
+364
+ 
+jLSK_Migrate_Return 1
+364
+ 
+jSK_Migrate_Return 1
+364
+ 
+jSB_Migrate_Return 1
+120
+ 
+jPIN_Migrate_Return 1
+364
+ 
+jREP_Migrate_Return 1
+180
+ 
+jRWH_Migrate_Return 1
+100
+ 
+jBWH_Migrate_Return 1
+100
+ 
+jSWH_Migrate_Return 1
+90
+ 
+jTWH_Migrate_Return 1
+90
+ 
+jINV_Migrate_Return 1
+364
+ 
+jLSQ_Migrate_Return 1
+364
+ 
+jISQ_Migrate_Return 1
+364
+ 
+jNSH_Migrate_Return 1
+364
+ 
+jOSH_Migrate_Return 1
+364
+ 
+
 # Adult migration return times - days of the year adult stages of each group return the model domain
  
-#MAK_Migrate_Return 1
-#364
+MAK_Migrate_Return 1
+364
  
+HER_Migrate_Return 1
+364
+ 
+WHK_Migrate_Return 1
+364
+ 
+BLF_Migrate_Return 1
+364
+ 
+WPF_Migrate_Return 1
+364
+ 
+SUF_Migrate_Return 1
+364
+ 
+WIF_Migrate_Return 1
+364
+ 
+WTF_Migrate_Return 1
+364
+ 
+HAL_Migrate_Return 1
+364
+ 
+PLA_Migrate_Return 1
+364
+ 
+FOU_Migrate_Return 1
+364
+ 
+FLA_Migrate_Return 1
+364
+ 
+BFT_Migrate_Return 1
+90
+ 
+TUN_Migrate_Return 1
+90
+ 
+BIL_Migrate_Return 1
+90
+ 
+MPF_Migrate_Return 1
+364
+ 
+BUT_Migrate_Return 1
+364
+ 
+ANC_Migrate_Return 1
+364
+ 
+BPF_Migrate_Return 1
+364
+ 
+GOO_Migrate_Return 1
+364
+ 
+MEN_Migrate_Return 1
+364
+ 
+FDE_Migrate_Return 1
+364
+ 
+COD_Migrate_Return 1
+364
+ 
+SHK_Migrate_Return 1
+364
+ 
+OHK_Migrate_Return 1
+364
+ 
+POL_Migrate_Return 1
+364
+ 
+RHK_Migrate_Return 1
+364
+ 
+BSB_Migrate_Return 1
+364
+ 
+SCU_Migrate_Return 1
+364
+ 
+TYL_Migrate_Return 1
+364
+ 
+RED_Migrate_Return 1
+364
+ 
+OPT_Migrate_Return 1
+364
+ 
+SAL_Migrate_Return 1
+364
+ 
+DRM_Migrate_Return 1
+364
+ 
+STB_Migrate_Return 1
+364
+ 
+TAU_Migrate_Return 1
+364
+ 
+WOL_Migrate_Return 1
+364
+ 
+SDF_Migrate_Return 1
+364
+ 
+FDF_Migrate_Return 1
+364
+ 
+HAD_Migrate_Return 1
+364
+ 
+YTF_Migrate_Return 1
+364
+ 
+DOG_Migrate_Return 1
+364
+ 
+SMO_Migrate_Return 1
+364
+ 
+SSH_Migrate_Return 1
+364
+ 
+DSH_Migrate_Return 1
+364
+ 
+BLS_Migrate_Return 1
+150
+ 
+POR_Migrate_Return 1
+150
+ 
+PSH_Migrate_Return 1
+150
+ 
+WSK_Migrate_Return 1
+364
+ 
+LSK_Migrate_Return 1
+364
+ 
+SK_Migrate_Return 1
+364
+ 
+SB_Migrate_Return 1
+120
+ 
+PIN_Migrate_Return 1
+364
+ 
+REP_Migrate_Return 1
+180
+ 
+RWH_Migrate_Return 1
+100
+ 
+BWH_Migrate_Return 1
+100
+ 
+SWH_Migrate_Return 1
+90
+ 
+TWH_Migrate_Return 1
+90
+ 
+INV_Migrate_Return 1
+364
+ 
+LSQ_Migrate_Return 1
+364
+ 
+ISQ_Migrate_Return 1
+364
+ 
+LOB_Migrate_Return 1
+364
+ 
+NSH_Migrate_Return 1
+364
+ 
+OSH_Migrate_Return 1
+364
+ 
+ZL_Migrate_Return 1
+364
+ 
+
+
+
 # Juvenile migration periods - period of time migrating juvenile stages exit/enter over
  
-#jMAK_Migrate_Period 1
-#0
+jMAK_Migrate_Period 1
+0
  
+jHER_Migrate_Period 1
+0
+ 
+jWHK_Migrate_Period 1
+0
+ 
+jBLF_Migrate_Period 1
+0
+ 
+jWPF_Migrate_Period 1
+0
+ 
+jSUF_Migrate_Period 1
+0
+ 
+jWIF_Migrate_Period 1
+0
+ 
+jWTF_Migrate_Period 1
+0
+ 
+jHAL_Migrate_Period 1
+0
+ 
+jPLA_Migrate_Period 1
+0
+ 
+jFOU_Migrate_Period 1
+0
+ 
+jFLA_Migrate_Period 1
+0
+ 
+jBFT_Migrate_Period 1
+1
+ 
+jTUN_Migrate_Period 1
+1
+ 
+jBIL_Migrate_Period 1
+1
+ 
+jMPF_Migrate_Period 1
+0
+ 
+jBUT_Migrate_Period 1
+0
+ 
+jANC_Migrate_Period 1
+0
+ 
+jBPF_Migrate_Period 1
+0
+ 
+jGOO_Migrate_Period 1
+0
+ 
+jMEN_Migrate_Period 1
+0
+ 
+jFDE_Migrate_Period 1
+0
+ 
+jCOD_Migrate_Period 1
+0
+ 
+jSHK_Migrate_Period 1
+0
+ 
+jOHK_Migrate_Period 1
+0
+ 
+jPOL_Migrate_Period 1
+0
+ 
+jRHK_Migrate_Period 1
+0
+ 
+jBSB_Migrate_Period 1
+0
+ 
+jSCU_Migrate_Period 1
+0
+ 
+jTYL_Migrate_Period 1
+0
+ 
+jRED_Migrate_Period 1
+0
+ 
+jOPT_Migrate_Period 1
+0
+ 
+jSAL_Migrate_Period 1
+0
+ 
+jDRM_Migrate_Period 1
+0
+ 
+jSTB_Migrate_Period 1
+0
+ 
+jTAU_Migrate_Period 1
+0
+ 
+jWOL_Migrate_Period 1
+0
+ 
+jSDF_Migrate_Period 1
+0
+ 
+jFDF_Migrate_Period 1
+0
+ 
+jHAD_Migrate_Period 1
+0
+ 
+jYTF_Migrate_Period 1
+0
+ 
+jDOG_Migrate_Period 1
+0
+ 
+jSMO_Migrate_Period 1
+0
+ 
+jSSH_Migrate_Period 1
+0
+ 
+jDSH_Migrate_Period 1
+0
+ 
+jBLS_Migrate_Period 1
+1
+ 
+jPOR_Migrate_Period 1
+1
+ 
+jPSH_Migrate_Period 1
+1
+ 
+jWSK_Migrate_Period 1
+0
+ 
+jLSK_Migrate_Period 1
+0
+ 
+jSK_Migrate_Period 1
+0
+ 
+jSB_Migrate_Period 1
+1
+ 
+jPIN_Migrate_Period 1
+0
+ 
+jREP_Migrate_Period 1
+1
+ 
+jRWH_Migrate_Period 1
+1
+ 
+jBWH_Migrate_Period 1
+1
+ 
+jSWH_Migrate_Period 1
+1
+ 
+jTWH_Migrate_Period 1
+1
+ 
+jINV_Migrate_Period 1
+0
+ 
+jLSQ_Migrate_Period 1
+0
+ 
+jISQ_Migrate_Period 1
+0
+ 
+jNSH_Migrate_Period 1
+0
+ 
+jOSH_Migrate_Period 1
+0
+ 
+
 # Adult migration periods - period of time migrating adult stages exit/enter over
  
-#MAK_Migrate_Period 1
-#0
+MAK_Migrate_Period 1
+0
  
+HER_Migrate_Period 1
+0
+ 
+WHK_Migrate_Period 1
+0
+ 
+BLF_Migrate_Period 1
+0
+ 
+WPF_Migrate_Period 1
+0
+ 
+SUF_Migrate_Period 1
+0
+ 
+WIF_Migrate_Period 1
+0
+ 
+WTF_Migrate_Period 1
+0
+ 
+HAL_Migrate_Period 1
+0
+ 
+PLA_Migrate_Period 1
+0
+ 
+FOU_Migrate_Period 1
+0
+ 
+FLA_Migrate_Period 1
+0
+ 
+BFT_Migrate_Period 1
+7
+ 
+TUN_Migrate_Period 1
+7
+ 
+BIL_Migrate_Period 1
+7
+ 
+MPF_Migrate_Period 1
+0
+ 
+BUT_Migrate_Period 1
+0
+ 
+ANC_Migrate_Period 1
+0
+ 
+BPF_Migrate_Period 1
+0
+ 
+GOO_Migrate_Period 1
+0
+ 
+MEN_Migrate_Period 1
+0
+ 
+FDE_Migrate_Period 1
+0
+ 
+COD_Migrate_Period 1
+0
+ 
+SHK_Migrate_Period 1
+0
+ 
+OHK_Migrate_Period 1
+0
+ 
+POL_Migrate_Period 1
+0
+ 
+RHK_Migrate_Period 1
+0
+ 
+BSB_Migrate_Period 1
+0
+ 
+SCU_Migrate_Period 1
+0
+ 
+TYL_Migrate_Period 1
+0
+ 
+RED_Migrate_Period 1
+0
+ 
+OPT_Migrate_Period 1
+0
+ 
+SAL_Migrate_Period 1
+0
+ 
+DRM_Migrate_Period 1
+0
+ 
+STB_Migrate_Period 1
+0
+ 
+TAU_Migrate_Period 1
+0
+ 
+WOL_Migrate_Period 1
+0
+ 
+SDF_Migrate_Period 1
+0
+ 
+FDF_Migrate_Period 1
+0
+ 
+HAD_Migrate_Period 1
+0
+ 
+YTF_Migrate_Period 1
+0
+ 
+DOG_Migrate_Period 1
+0
+ 
+SMO_Migrate_Period 1
+0
+ 
+SSH_Migrate_Period 1
+0
+ 
+DSH_Migrate_Period 1
+0
+ 
+BLS_Migrate_Period 1
+10
+ 
+POR_Migrate_Period 1
+10
+ 
+PSH_Migrate_Period 1
+10
+ 
+WSK_Migrate_Period 1
+0
+ 
+LSK_Migrate_Period 1
+0
+ 
+SK_Migrate_Period 1
+0
+ 
+SB_Migrate_Period 1
+3
+ 
+PIN_Migrate_Period 1
+0
+ 
+REP_Migrate_Period 1
+10
+ 
+RWH_Migrate_Period 1
+10
+ 
+BWH_Migrate_Period 1
+10
+ 
+SWH_Migrate_Period 1
+10
+ 
+TWH_Migrate_Period 1
+10
+ 
+INV_Migrate_Period 1
+0
+ 
+LSQ_Migrate_Period 1
+0
+ 
+ISQ_Migrate_Period 1
+0
+ 
+LOB_Migrate_Period 1
+0
+ 
+NSH_Migrate_Period 1
+0
+ 
+OSH_Migrate_Period 1
+0
+ 
+ZL_Migrate_Period 1
+0
+ 
+
 k_migslow          1       0 = all migrators leave at once, 1 = migrators leave gradually  0  
 juv_transition_thresh 0.1
 mat_transition_thresh 0.99
@@ -5707,25 +6673,754 @@ mat_transition_thresh 0.99
 # the immigrating individuals enter. If set to 0 then the returning individuals will be
 # spread uniformly across all stocks.
  
-#jMAK_ReturnStock 1
-#0
+jMAK_ReturnStock 1
+0
  
+jHER_ReturnStock 1
+0
+ 
+jWHK_ReturnStock 1
+0
+ 
+jBLF_ReturnStock 1
+0
+ 
+jWPF_ReturnStock 1
+0
+ 
+jSUF_ReturnStock 1
+0
+ 
+jWIF_ReturnStock 1
+0
+ 
+jWTF_ReturnStock 1
+0
+ 
+jHAL_ReturnStock 1
+0
+ 
+jPLA_ReturnStock 1
+0
+ 
+jFOU_ReturnStock 1
+0
+ 
+jFLA_ReturnStock 1
+0
+ 
+jBFT_ReturnStock 1
+0
+ 
+jTUN_ReturnStock 1
+0
+ 
+jBIL_ReturnStock 1
+0
+ 
+jMPF_ReturnStock 1
+0
+ 
+jBUT_ReturnStock 1
+0
+ 
+jANC_ReturnStock 1
+0
+ 
+jBPF_ReturnStock 1
+0
+ 
+jGOO_ReturnStock 1
+0
+ 
+jMEN_ReturnStock 1
+0
+ 
+jFDE_ReturnStock 1
+0
+ 
+jCOD_ReturnStock 1
+0
+ 
+jSHK_ReturnStock 1
+0
+ 
+jOHK_ReturnStock 1
+0
+ 
+jPOL_ReturnStock 1
+0
+ 
+jRHK_ReturnStock 1
+0
+ 
+jBSB_ReturnStock 1
+0
+ 
+jSCU_ReturnStock 1
+0
+ 
+jTYL_ReturnStock 1
+0
+ 
+jRED_ReturnStock 1
+0
+ 
+jOPT_ReturnStock 1
+0
+ 
+jSAL_ReturnStock 1
+0
+ 
+jDRM_ReturnStock 1
+0
+ 
+jSTB_ReturnStock 1
+0
+ 
+jTAU_ReturnStock 1
+0
+ 
+jWOL_ReturnStock 1
+0
+ 
+jSDF_ReturnStock 1
+0
+ 
+jFDF_ReturnStock 1
+0
+ 
+jHAD_ReturnStock 1
+0
+ 
+jYTF_ReturnStock 1
+0
+ 
+jDOG_ReturnStock 1
+0
+ 
+jSMO_ReturnStock 1
+0
+ 
+jSSH_ReturnStock 1
+0
+ 
+jDSH_ReturnStock 1
+0
+ 
+jBLS_ReturnStock 1
+0
+ 
+jPOR_ReturnStock 1
+0
+ 
+jPSH_ReturnStock 1
+0
+ 
+jWSK_ReturnStock 1
+0
+ 
+jLSK_ReturnStock 1
+0
+ 
+jSK_ReturnStock 1
+0
+ 
+jSB_ReturnStock 1
+0
+ 
+jPIN_ReturnStock 1
+0
+ 
+jREP_ReturnStock 1
+0
+ 
+jRWH_ReturnStock 1
+0
+ 
+jBWH_ReturnStock 1
+0
+ 
+jSWH_ReturnStock 1
+0
+ 
+jTWH_ReturnStock 1
+0
+ 
+jINV_ReturnStock 1
+0
+ 
+
 # Adult migration return stock - set value to the integer number identifiying the stock
 # the immigrating individuals enter. If set to 0 then the returning individuals will be
 # spread uniformly across all stocks.
  
-#MAK_ReturnStock 1
-#0
+MAK_ReturnStock 1
+0
  
+HER_ReturnStock 1
+0
+ 
+WHK_ReturnStock 1
+0
+ 
+BLF_ReturnStock 1
+0
+ 
+WPF_ReturnStock 1
+0
+ 
+SUF_ReturnStock 1
+0
+ 
+WIF_ReturnStock 1
+0
+ 
+WTF_ReturnStock 1
+0
+ 
+HAL_ReturnStock 1
+0
+ 
+PLA_ReturnStock 1
+0
+ 
+FOU_ReturnStock 1
+0
+ 
+FLA_ReturnStock 1
+0
+ 
+BFT_ReturnStock 1
+0
+ 
+TUN_ReturnStock 1
+0
+ 
+BIL_ReturnStock 1
+0
+ 
+MPF_ReturnStock 1
+0
+ 
+BUT_ReturnStock 1
+0
+ 
+ANC_ReturnStock 1
+0
+ 
+BPF_ReturnStock 1
+0
+ 
+GOO_ReturnStock 1
+0
+ 
+MEN_ReturnStock 1
+0
+ 
+FDE_ReturnStock 1
+0
+ 
+COD_ReturnStock 1
+0
+ 
+SHK_ReturnStock 1
+0
+ 
+OHK_ReturnStock 1
+0
+ 
+POL_ReturnStock 1
+0
+ 
+RHK_ReturnStock 1
+0
+ 
+BSB_ReturnStock 1
+0
+ 
+SCU_ReturnStock 1
+0
+ 
+TYL_ReturnStock 1
+0
+ 
+RED_ReturnStock 1
+0
+ 
+OPT_ReturnStock 1
+0
+ 
+SAL_ReturnStock 1
+0
+ 
+DRM_ReturnStock 1
+0
+ 
+STB_ReturnStock 1
+0
+ 
+TAU_ReturnStock 1
+0
+ 
+WOL_ReturnStock 1
+0
+ 
+SDF_ReturnStock 1
+0
+ 
+FDF_ReturnStock 1
+0
+ 
+HAD_ReturnStock 1
+0
+ 
+YTF_ReturnStock 1
+0
+ 
+DOG_ReturnStock 1
+0
+ 
+SMO_ReturnStock 1
+0
+ 
+SSH_ReturnStock 1
+0
+ 
+DSH_ReturnStock 1
+0
+ 
+BLS_ReturnStock 1
+0
+ 
+POR_ReturnStock 1
+0
+ 
+PSH_ReturnStock 1
+0
+ 
+WSK_ReturnStock 1
+0
+ 
+LSK_ReturnStock 1
+0
+ 
+SK_ReturnStock 1
+0
+ 
+SB_ReturnStock 1
+0
+ 
+PIN_ReturnStock 1
+0
+ 
+REP_ReturnStock 1
+0
+ 
+RWH_ReturnStock 1
+0
+ 
+BWH_ReturnStock 1
+0
+ 
+SWH_ReturnStock 1
+0
+ 
+TWH_ReturnStock 1
+0
+ 
+INV_ReturnStock 1
+0
+ 
+
 # Juvenile external/migration survivorship - proportion of migrating juvenile stages that return to the model domain
  
-#jMAK_FSM 1
-#1
+jMAK_FSM 1
+1
  
+jHER_FSM 1
+1
+ 
+jWHK_FSM 1
+1
+ 
+jBLF_FSM 1
+1
+ 
+jWPF_FSM 1
+1
+ 
+jSUF_FSM 1
+1
+ 
+jWIF_FSM 1
+1
+ 
+jWTF_FSM 1
+1
+ 
+jHAL_FSM 1
+1
+ 
+jPLA_FSM 1
+1
+ 
+jFOU_FSM 1
+1
+ 
+jFLA_FSM 1
+1
+ 
+jBFT_FSM 1
+0.99
+ 
+jTUN_FSM 1
+0.875
+ 
+jBIL_FSM 1
+0.99
+ 
+jMPF_FSM 1
+1
+ 
+jBUT_FSM 1
+1
+ 
+jANC_FSM 1
+1
+ 
+jBPF_FSM 1
+1
+ 
+jGOO_FSM 1
+1
+ 
+jMEN_FSM 1
+1
+ 
+jFDE_FSM 1
+1
+ 
+jCOD_FSM 1
+1
+ 
+jSHK_FSM 1
+1
+ 
+jOHK_FSM 1
+1
+ 
+jPOL_FSM 1
+1
+ 
+jRHK_FSM 1
+1
+ 
+jBSB_FSM 1
+1
+ 
+jSCU_FSM 1
+1
+ 
+jTYL_FSM 1
+1
+ 
+jRED_FSM 1
+1
+ 
+jOPT_FSM 1
+1
+ 
+jSAL_FSM 1
+1
+ 
+jDRM_FSM 1
+1
+ 
+jSTB_FSM 1
+1
+ 
+jTAU_FSM 1
+1
+ 
+jWOL_FSM 1
+1
+ 
+jSDF_FSM 1
+1
+ 
+jFDF_FSM 1
+1
+ 
+jHAD_FSM 1
+1
+ 
+jYTF_FSM 1
+1
+ 
+jDOG_FSM 1
+1
+ 
+jSMO_FSM 1
+1
+ 
+jSSH_FSM 1
+1
+ 
+jDSH_FSM 1
+1
+ 
+jBLS_FSM 1
+1
+ 
+jPOR_FSM 1
+1
+ 
+jPSH_FSM 1
+1
+ 
+jWSK_FSM 1
+1
+ 
+jLSK_FSM 1
+1
+ 
+jSK_FSM 1
+1
+ 
+jSB_FSM 1
+1
+ 
+jPIN_FSM 1
+1
+ 
+jREP_FSM 1
+1
+ 
+jRWH_FSM 1
+1
+ 
+jBWH_FSM 1
+1
+ 
+jSWH_FSM 1
+1
+ 
+jTWH_FSM 1
+1
+ 
+jINV_FSM 1
+1
+ 
+jLSQ_FSM 1
+1
+ 
+jISQ_FSM 1
+1
+ 
+jNSH_FSM 1
+1
+ 
+jOSH_FSM 1
+1
+ 
+
 # Adult external/migration survivorship - proportion of migrating adult stages that return to the model domain
  
-#MAK_FSM 1
-#1
+MAK_FSM 1
+1
+ 
+HER_FSM 1
+1
+ 
+WHK_FSM 1
+1
+ 
+BLF_FSM 1
+1
+ 
+WPF_FSM 1
+1
+ 
+SUF_FSM 1
+1
+ 
+WIF_FSM 1
+1
+ 
+WTF_FSM 1
+1
+ 
+HAL_FSM 1
+1
+ 
+PLA_FSM 1
+1
+ 
+FOU_FSM 1
+1
+ 
+FLA_FSM 1
+1
+ 
+BFT_FSM 1
+0.9
+ 
+TUN_FSM 1
+0.825
+ 
+BIL_FSM 1
+0.925
+ 
+MPF_FSM 1
+1
+ 
+BUT_FSM 1
+1
+ 
+ANC_FSM 1
+1
+ 
+BPF_FSM 1
+1
+ 
+GOO_FSM 1
+1
+ 
+MEN_FSM 1
+1
+ 
+FDE_FSM 1
+1
+ 
+COD_FSM 1
+1
+ 
+SHK_FSM 1
+1
+ 
+OHK_FSM 1
+1
+ 
+POL_FSM 1
+1
+ 
+RHK_FSM 1
+1
+ 
+BSB_FSM 1
+1
+ 
+SCU_FSM 1
+1
+ 
+TYL_FSM 1
+1
+ 
+RED_FSM 1
+1
+ 
+OPT_FSM 1
+1
+ 
+SAL_FSM 1
+1
+ 
+DRM_FSM 1
+1
+ 
+STB_FSM 1
+1
+ 
+TAU_FSM 1
+1
+ 
+WOL_FSM 1
+1
+ 
+SDF_FSM 1
+1
+ 
+FDF_FSM 1
+1
+ 
+HAD_FSM 1
+1
+ 
+YTF_FSM 1
+1
+ 
+DOG_FSM 1
+1
+ 
+SMO_FSM 1
+1
+ 
+SSH_FSM 1
+1
+ 
+DSH_FSM 1
+1
+ 
+BLS_FSM 1
+1
+ 
+POR_FSM 1
+1
+
+PSH_FSM 1
+1
+ 
+WSK_FSM 1
+1
+ 
+LSK_FSM 1
+1
+ 
+SK_FSM 1
+1
+ 
+SB_FSM 1
+1
+ 
+PIN_FSM 1
+1
+ 
+REP_FSM 1
+1
+ 
+RWH_FSM 1
+1
+ 
+BWH_FSM 1
+1
+ 
+SWH_FSM 1
+1
+ 
+TWH_FSM 1
+1
+ 
+INV_FSM 1
+1
+ 
+LSQ_FSM 1
+1
+ 
+ISQ_FSM 1
+1
+ 
+LOB_FSM 1
+1
+ 
+NSH_FSM 1
+1
+ 
+OSH_FSM 1
+1
+ 
+ZL_FSM 1
+1
  
 
 # Proportional increases in size while outside model domain - note that if on seasonal feeding grounds
@@ -5738,14 +7433,395 @@ mat_transition_thresh 0.99
 
 # Proportional increase in size of juvenile stages while outside model domain
  
-#jMAK_FSMG 1
-#0.46
+jMAK_FSMG 1
+0.46
+ 
+jHER_FSMG 1
+0.246
+ 
+jWHK_FSMG 1
+0.425
+ 
+jBLF_FSMG 1
+0.425
+ 
+jWPF_FSMG 1
+0.425
+ 
+jSUF_FSMG 1
+0.425
+ 
+jWIF_FSMG 1
+0.425
+ 
+jWTF_FSMG 1
+0.425
+ 
+jHAL_FSMG 1
+0.425
+ 
+jPLA_FSMG 1
+0.425
+ 
+jFOU_FSMG 1
+0.425
+ 
+jFLA_FSMG 1
+0.425
+ 
+jBFT_FSMG 1
+0.425
+ 
+jTUN_FSMG 1
+0.125
+ 
+jBIL_FSMG 1
+0.3
+ 
+jMPF_FSMG 1
+0.246
+ 
+jBUT_FSMG 1
+0.246
+ 
+jANC_FSMG 1
+0.246
+ 
+jBPF_FSMG 1
+0.246
+ 
+jGOO_FSMG 1
+0.276
+ 
+jMEN_FSMG 1
+0.276
+ 
+jFDE_FSMG 1
+0.276
+ 
+jCOD_FSMG 1
+0.276
+ 
+jSHK_FSMG 1
+0.276
+ 
+jOHK_FSMG 1
+0.276
+ 
+jPOL_FSMG 1
+0.276
+ 
+jRHK_FSMG 1
+0.276
+ 
+jBSB_FSMG 1
+0.276
+ 
+jSCU_FSMG 1
+0.276
+ 
+jTYL_FSMG 1
+0.276
+ 
+jRED_FSMG 1
+0.276
+ 
+jOPT_FSMG 1
+0.276
+ 
+jSAL_FSMG 1
+0.276
+ 
+jDRM_FSMG 1
+0.276
+ 
+jSTB_FSMG 1
+0.276
+ 
+jTAU_FSMG 1
+0.276
+ 
+jWOL_FSMG 1
+0.276
+ 
+jSDF_FSMG 1
+0.276
+ 
+jFDF_FSMG 1
+0.276
+ 
+jHAD_FSMG 1
+0.276
+ 
+jYTF_FSMG 1
+0.276
+ 
+jDOG_FSMG 1
+1.5
+ 
+jSMO_FSMG 1
+0.27
+ 
+jSSH_FSMG 1
+0.27
+ 
+jDSH_FSMG 1
+0.27
+ 
+jBLS_FSMG 1
+0.27
+ 
+jPOR_FSMG 1
+0.27
+ 
+jPSH_FSMG 1
+0.27
+ 
+jWSK_FSMG 1
+0.27
+ 
+jLSK_FSMG 1
+0.27
+ 
+jSK_FSMG 1
+0.27
+ 
+jSB_FSMG 1
+0.8
+ 
+jPIN_FSMG 1
+0.16
+ 
+jREP_FSMG 1
+0.5
+ 
+jRWH_FSMG 1
+0.4
+ 
+jBWH_FSMG 1
+0.4
+ 
+jSWH_FSMG 1
+0.16
+ 
+jTWH_FSMG 1
+0.16
+ 
+jINV_FSMG 1
+0.276
+ 
+jLSQ_FSMG 1
+0.2
+ 
+jISQ_FSMG 1
+0.2
+ 
+jNSH_FSMG 1
+0.2
+ 
+jOSH_FSMG 1
+0.2
+ 
 
 # Proportional increase in size of adults stages while outside model domain
  
-#MAK_FSMG 1
-#0
+MAK_FSMG 1
+0
  
+HER_FSMG 1
+0
+ 
+WHK_FSMG 1
+0
+ 
+BLF_FSMG 1
+0
+ 
+WPF_FSMG 1
+0
+ 
+SUF_FSMG 1
+0
+ 
+WIF_FSMG 1
+0
+ 
+WTF_FSMG 1
+0
+ 
+HAL_FSMG 1
+0
+ 
+PLA_FSMG 1
+0
+ 
+FOU_FSMG 1
+0
+ 
+FLA_FSMG 1
+0
+ 
+BFT_FSMG 1
+0
+ 
+TUN_FSMG 1
+0
+ 
+BIL_FSMG 1
+0
+ 
+MPF_FSMG 1
+0
+ 
+BUT_FSMG 1
+0
+ 
+ANC_FSMG 1
+0
+ 
+BPF_FSMG 1
+0
+ 
+GOO_FSMG 1
+0
+ 
+MEN_FSMG 1
+0
+ 
+FDE_FSMG 1
+0
+ 
+COD_FSMG 1
+0
+ 
+SHK_FSMG 1
+0
+ 
+OHK_FSMG 1
+0
+ 
+POL_FSMG 1
+0
+ 
+RHK_FSMG 1
+0
+ 
+BSB_FSMG 1
+0
+ 
+SCU_FSMG 1
+0
+ 
+TYL_FSMG 1
+0
+ 
+RED_FSMG 1
+0
+ 
+OPT_FSMG 1
+0
+ 
+SAL_FSMG 1
+0
+ 
+DRM_FSMG 1
+0
+ 
+STB_FSMG 1
+0
+ 
+TAU_FSMG 1
+0
+ 
+WOL_FSMG 1
+0
+ 
+SDF_FSMG 1
+0
+ 
+FDF_FSMG 1
+0
+ 
+HAD_FSMG 1
+0
+ 
+YTF_FSMG 1
+0
+ 
+DOG_FSMG 1
+0
+ 
+SMO_FSMG 1
+0
+ 
+SSH_FSMG 1
+0
+ 
+DSH_FSMG 1
+0
+ 
+BLS_FSMG 1
+0
+ 
+POR_FSMG 1
+0
+ 
+PSH_FSMG 1
+0
+ 
+WSK_FSMG 1
+0
+ 
+LSK_FSMG 1
+0
+ 
+SK_FSMG 1
+0
+ 
+SB_FSMG 1
+0
+ 
+PIN_FSMG 1
+0
+ 
+REP_FSMG 1
+0
+ 
+RWH_FSMG 1
+0
+ 
+BWH_FSMG 1
+0
+ 
+SWH_FSMG 1
+0.0
+ 
+TWH_FSMG 1
+0.0
+ 
+INV_FSMG 1
+0
+ 
+LSQ_FSMG 1
+0
+ 
+ISQ_FSMG 1
+0
+ 
+LOB_FSMG 1
+0
+ 
+NSH_FSMG 1
+0
+ 
+OSH_FSMG 1
+0
+ 
+ZL_FSMG 1
+0
+ 
+
+
 # Proportion from each box in the model that exit when group migrates out of the model domain (default value will be 
 # 0.0 except for the few cells along the boundary where the group can flow out of the model. Juv stands for 
 # juveniles and ad for adults (treated seperately in the model so separate entries for them are given here)
@@ -9867,7 +11943,7 @@ C_RWH	10
 17605.845	1258095.263	1584838.195	1622248.968	1626225.985	1626645.538	1626689.762	1626694.424	1626694.915	1768146.703
 									
 C_BWH	10								
-81041.071	1303659.006	1330071.387	1330366.788	1330370.070	1330370.106	1330370.107	1330370.107	1330370.107	1330370.107
+81041.071	1303659.006	1330071.387	1330366.788	1330370.07	1330370.106	1330370.107	1330370.107	1330370.107	1330370.107
 									
 C_SWH	10								
 343.026	30182.662	38873.800	47132.490	47613.519	47697.442	47712.035	47714.571	47196.371	47196.447
@@ -10043,55 +12119,55 @@ mum_YTF	10.00
 0.2183	1.3024	8.6802	8.6802	7.5961	6.512	4.3401	3.256	2.1719	0.6512
 									
 mum_DOG	10.00
-2.5	4	25	25	23.5	20.5	14	12.5	6.5	2
+5.32e+00 9.53e+00 4.75e+01 4.16e+01 3.62e+01 3.00e+01 1.98e+01 1.72e+01 8.59e+00 2.00e+00
 									
 mum_SMO	10.00								
-1.4	46.75	72	78.5	80	80.5	80.5	80.5	80.5	80.5
+1.40e+00 4.68e+01 7.20e+01 7.85e+01 8.00e+01 8.05e+01 8.05e+01 8.05e+01 8.05e+01 8.05e+01
 									
 mum_SSH	10.00								
-0.5 23.1 114 273 463 576 601 700 784 851
+1.74e+00 4.76e+01 1.78e+02 3.55e+02 4.63e+02 5.76e+02 6.01e+02 7.00e+02 7.84e+02 8.51e+02
 									
 mum_DSH	10.00								
-72.41	4269.8275	8000.33	9455.925	9927.31	10072.29	10116.2075	10129.4525	10133.44	10134.6425
+1.36e+02 4.27e+03 8.00e+03 9.46e+03 9.93e+03 1.01e+04 1.01e+04 1.01e+04 1.01e+04 1.01e+04
 									
 mum_BLS	10.00	
-2.5	490	1325	2065	2470	2700	2815	2850	2905	2920
+1.18e+01 8.97e+02 1.74e+03 2.06e+03 2.47e+03 2.70e+03 2.82e+03 2.85e+03 2.90e+03 2.92e+03
 									
 mum_POR	10.00								
 9.355	1574.475	3991.625	5583.52	6408.21	6798.965	6977.42	7057.64	7093.455	7109.39
 									
 mum_PSH	10.00								
-32	4551	11663.98	16377.07	18813.05	19960.875	20481.565	20713.955	20816.94	20862.44
+1.20e+02 7.71e+03 1.52e+04 1.64e+04 1.88e+04 2.00e+04 2.05e+04 2.07e+04 2.08e+04 2.09e+04
 									
 mum_WSK	10.00								
-1.06	6.36	42.4	42.4	37.1	31.8	21.2	15.9	10.6	3.18
+2.49e+00 1.45e+01 8.08e+01 7.41e+01 6.08e+01 4.95e+01 3.17e+01 2.30e+01 1.49e+01 4.37e+00
 										
 mum_LSK	10.00		
-7.748	46.49	309.9	309.9	271.2	232.5	155	116.2	77.48	23.25
-									
+1.10e+01 6.08e+01 3.10e+02 2.12e+02 1.72e+02 1.43e+02 9.56e+01 7.26e+01 4.93e+01 1.52e+01
+								
 mum_SK	10.00								
-2.27 8.75 27.4 47.8 65.3 78.5 88.1 94.7 99 102
+5.36e+00 2.08e+01 5.33e+01 8.16e+01 1.02e+02 1.15e+02 1.23e+02 1.28e+02 1.30e+02 1.32e+02
 									
 mum_SB	10.00								
-0.904 4.74 6.3 6.74 6.9 6.84 6.76 6.76 6.7 6.7
+1.20e-01 8.70e-02 1.22e-01 1.61e-01 1.91e-01 2.32e-01 3.40e-01 5.17e-01 7.74e-01 9.30e-01
 									
 mum_PIN	10.00								
-4600 27600 184000 184000 161000 138000 92000 69000 46000 13800
+5.75e+03 3.98e+04 2.43e+05 2.36e+05 2.04e+05 1.73e+05 9.20e+04 6.90e+04 4.60e+04 1.38e+04
 									
 mum_REP	10.00
-84.44	12224.37	20342.23	22512.01	23006.90	23116.12	23140.06	23145.30	23146.44	23146.69
+1.33e+02 9.24e+03 1.58e+04 2.25e+04 2.30e+04 2.31e+04 2.31e+04 2.31e+04 2.31e+04 2.31e+04
 									
 mum_RWH	10.00								
-88029.23	1290476.31	1924190.98	2111244.84	2131129.92	2133227.69	2133448.81	2133472.12	2133474.57	2133474.83
+1.10e+05 8.06e+04 8.69e+05 1.04e+06 1.17e+06 1.31e+06 1.71e+06 2.13e+06 2.13e+06 2.13e+06
 									
-mum_BWH	10.00								
-810410.7	3036590.06	3300713.88	3303667.88	3303700.7	3303701.06	3303701.06	3303701.06	3303701.06	3303701.06
+mum_BWH	10.00				
+3.97e+05 1.48e+06 1.26e+06 1.38e+06 1.55e+06 1.76e+06 1.97e+06 2.19e+06 2.64e+06 2.64e+06				
 
 mum_SWH	10.00								
-1143.42	100608.88	129579.32	157108.3	158711.74	158991.48	159040.1	159048.58	157321.24	157321.5
+2.55e+03 1.43e+05 1.30e+05 1.57e+05 1.59e+05 1.59e+05 1.59e+05 1.59e+05 1.57e+05 1.57e+05
 									
 mum_TWH	10.00								
-33733.99	2989897.03	3778184.55	4668948.44	4716599.19	4724912.56	4726358.21	4726609.45	4675276.46	4675283.96
+7.53e+04 4.26e+06 3.78e+06 4.67e+06 4.72e+06 4.72e+06 4.73e+06 4.73e+06 4.68e+06 4.68e+06
 									
 mum_INV	10.00								
 0.19 2.1 3.7 4.6 4.9 5.1 5.1 5.2 5.2 5.2
@@ -11931,7 +14007,7 @@ MEN_mQ	2
 FDE_mQ	2
 0	0
 COD_mQ	2
-0 5.4E-13
+0 0
 SHK_mQ	2
 0	0
 OHK_mQ	2
@@ -11977,31 +14053,31 @@ SSH_mQ 2
 DSH_mQ 2
 5.00E-13 3.50E-10
 BLS_mQ 2
-4E-10	1.8E-9
+4E-9	1.8E-9
 POR_mQ	2
-2E-10	9E-10
+2E-8	9E-8
 PSH_mQ	2
-2E-9	9E-9
+2E-8	9E-8
 WSK_mQ 2
 0	0
 LSK_mQ 2
-2.5E-11	1.25E-10
+5E-10	2.5E-9
 SK_mQ 2
-5.00E-10 3.5E-10
+5.00E-10 1.75E-9
 SB_mQ 2
-1.00E-09	4.5E-09
+2E-08	9E-08
 PIN_mQ 2
 2E-10	 5E-11
 REP_mQ	2
-1E-10	1E-11
+1E-6	1E-6
 RWH_mQ	2
 0.0001	0.0015
 BWH_mQ	2
 1E-4	3.2E-3
 SWH_mQ 2
-0	2E-11
+1E-8	2E-10
 TWH_mQ 2
-0	3E-9
+1E-8	3E-9
 INV_mQ 2
 0	0
 
@@ -14073,7 +16149,7 @@ KDENR_SHK
 1444618082
 
 KDENR_SSH
-1
+0.5
 
 KDENR_OHK
 10000000
@@ -14127,7 +16203,7 @@ KDENR_YTF
 2.9E8
 
 KDENR_DOG
-6
+5
 
 KDENR_SMO
 0.15
@@ -14148,7 +16224,7 @@ KDENR_WSK
 0.2
 
 KDENR_LSK
-2
+1
 
 KDENR_SK
 2
@@ -14163,10 +16239,10 @@ KDENR_REP
 0.1
 
 KDENR_RWH
-0.1
+0.05
 
 KDENR_BWH
-0.1
+0.05
 
 KDENR_SWH
 0.125
@@ -14426,7 +16502,7 @@ BHalpha_BPF 2778840113.97642
 BHalpha_GOO 1.2E9
 BHalpha_MEN 1728554233187.38
 BHalpha_FDE 892865378.024942
-BHalpha_COD 5.2245e+10
+BHalpha_COD 2e+10
 BHalpha_SHK 8e+09    
 BHalpha_OHK 115655844.57759
 BHalpha_POL 1.25e+08  
