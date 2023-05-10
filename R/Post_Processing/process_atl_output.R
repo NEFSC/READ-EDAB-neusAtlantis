@@ -610,7 +610,8 @@ process_atl_output = function(param.dir,
                                        bboxes = bboxes))
     
     ##Recreate bio.consumed manually without full_join
-    data_eat = bind_rows(rawdata.prod[[1]], rawdata.prod[[2]])
+    data_eat = bind_rows(
+      [[1]], rawdata.prod[[2]])
     ts_eat = sort(unique(data_eat$time))
     ts_dm = sort(unique(data.dietcheck$time))
     matching = sum(ts_eat %in% ts_dm)/length(ts_eat)
