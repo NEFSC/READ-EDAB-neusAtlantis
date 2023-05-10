@@ -16,25 +16,24 @@
 #'  
 #'Author: J. Caracappa
 #'
-
-in.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Climatology/v6/'
-micro.file = 'DOY-OCCCI-ATLANTIS_NEUS-PSC_MICRO-TURNER.CSV'
-nanopico.file = 'DOY-OCCCI-ATLANTIS_NEUS-PSC_NANOPICO-TURNER.CSV'
-
-in.file = 'DOY-OCCCI-ATLANTIS_NEUS-VER_1.csv'
-out.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format/'
-out.file = 'Phyto_Climatology'
-stat.var = 'MED'
-bio.vars = c('MICRO','NANO','PICO')
-atl.groups = c('PL','DF','PS')
-atl.varname = c('Diatom_N','DinoFlag_N','PicoPhytopl_N')
-atl.longname = c('Diatom Nitrogen','Dinoflagellate Nitrogen','PicoPhytoplankton Nitrogen')
-phyto.fract = data.frame(PL = c(0.5,0,0),DF = c(0.5,0.5,0), PS = c(0,0.5,1))
-chl.conv = rep(7,3)
+# 
+# in.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Climatology/v6/'
+# micro.file = 'DOY-OCCCI-ATLANTIS_NEUS-PSC_MICRO-TURNER.CSV'
+# nanopico.file = 'DOY-OCCCI-ATLANTIS_NEUS-PSC_NANOPICO-TURNER.CSV'
+# out.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format/v6/'
+# out.file = 'Phyto_Climatology'
+# stat.var = 'MED'
+# bio.vars = c('PSC_MICRO','PSC_NANOPICO')
+# atl.groups = c('PL','DF','PS')
+# atl.varname = c('Diatom_N','DinoFlag_N','PicoPhytopl_N')
+# atl.longname = c('Diatom Nitrogen','Dinoflagellate Nitrogen','PicoPhytoplankton Nitrogen')
+# hirata.doy = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Data/v6/Diatom_Pct_Hirata_DOY.rds'
+# chl.conv = rep(7,3)
 
 
-make_SatPhyto_climatology = function(in.dir,
-                                     in.file,
+make_SatPhyto_climatology_byClass = function(in.dir,
+                                     micro.file,
+                                     nanopico.file,
                                      out.dir,
                                      out.file,
                                      stat.var,
@@ -42,14 +41,18 @@ make_SatPhyto_climatology = function(in.dir,
                                      atl.groups,
                                      atl.varname,
                                      atl.longname,
-                                     phyto.fract,
+                                     hirata.doy,
                                      chl.conv){
   `%>%` = dplyr::`%>%`
   
   #Read in data from CSV
-  data = read.csv(paste0(in.dir,in.file),header = T,as.is = T)
-  #Remove unused columns
-  data = data %>% dplyr::select(PROD,PERIOD,UNITS,SUBAREA,N_SUBAREA,all_of(stat.var)) %>% dplyr::rename( 'STAT' =all_of(stat.var))
+  micro.data = read.csv(paste0(in.dir,micro.file),header = T,as.is = T)
+  nanopico.data = read.csv(paste0(in.dir,nanopico.file),header = T,as.is = T)
+  
+  #Remove unused columns and combine
+  micro.data = micro.data %>% dplyr::select(PROD,PERIOD,UNITS,SUBAREA,N_SUBAREA,all_of(stat.var)) %>% dplyr::rename( 'STAT' =all_of(stat.var))
+  nanopico.data = nanopico.data %>% dplyr::select(PROD,PERIOD,UNITS,SUBAREA,N_SUBAREA,all_of(stat.var)) %>% dplyr::rename( 'STAT' =all_of(stat.var))
+  data = bind_rows(micro.data,nanopico.data)
   
   #Format DOY and DATE columns
   data$DOY = unname(sapply(data$PERIOD,function(x){return(strsplit(x,'_')[[1]][2])}))
@@ -81,22 +84,38 @@ make_SatPhyto_climatology = function(in.dir,
     prod.ls[[v]] = var.array
   }
   
+  #Conform DOY Hirata to get Diatom pct
+  hirata.data = readRDS(hirata.doy)
+  diatom.pct.mat = hirata.data %>%
+    filter(DOY<=365)%>%
+    tidyr::spread(DOY,MED)%>%
+    ungroup()%>%
+    select(-SUBAREA)%>%
+    as.matrix()
+  hirata.array = array(NA,dim = c(5,30,length(ref.year.dates)))
+  for(i in 1:length(boxes)){  hirata.array[1,,] = diatom.pct.mat[i,]  }
+  
   #Assign Producer groups to Atlantis groups using phyto.fract
   atl.var.ls = list()
   
   for(i in 1:length(atl.groups)){
     
     atl.array = array(0,dim = c(5,30,length(ref.year.dates)))
-    for(j in 1:length(bio.vars)){
-      atl.array = atl.array+ (prod.ls[[j]]*phyto.fract[j,i])
+    if(atl.groups[i] == 'PL'){
+      atl.array = atl.array + (prod.ls[[1]] * hirata.array)
+    }else if(atl.groups[i] == 'DF'){
+      atl.array = atl.array + (prod.ls[[1]] * (1-hirata.array))
+    }else if(atl.groups[i] == 'PS'){
+      atl.array = atl.array + prod.ls[[2]]
     }
+
     atl.var.ls[[i]] = atl.array
   }
   
   #Quick test. All equal: MICRO, 2*PL, 2*DF - NANO
-  # plot(prod.ls[[1]][1,1,],type='l')
-  # lines(atl.var.ls[[1]][1,1,]*2,col = 'red')
-  # lines(atl.var.ls[[2]][1,1,]*2-prod.ls[[2]][1,1,], col = 'green')
+  # plot(prod.ls[[1]][1,1,],type='l',ylim=c(0,9))
+  # lines(atl.var.ls[[1]][1,1,]/hirata.array[1,1,],col = 'red')
+  # lines(atl.var.ls[[2]][1,1,]/(1-hirata.array[1,1,]), col = 'green')
   
   #Format as netCDF
   

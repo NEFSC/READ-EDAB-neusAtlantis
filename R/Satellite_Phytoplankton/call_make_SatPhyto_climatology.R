@@ -1,28 +1,30 @@
 #Script that calls on make_SatPhyto_Climatology
 
 #Read in climatology function and statevar forcing function
-source(here::here('R','make_SatPhyto_climatology.R'))
-source(here::here('R','make_force_statevar.R'))
+source(here::here('R','Satellite_Phytoplankton','make_SatPhyto_climatology_byClass.R'))
+source(here::here('R','Physical_Forcing','make_force_statevar.R'))
 
 #set.directories
-rawdata.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Climatology/'
-processed.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format/'
-force.dir = 'c:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_Files/'
+rawdata.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Climatology/v6/'
+processed.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format/v6/'
+force.dir = 'c:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_Files/v6/'
 atl.varname =  c('Diatom_N','DinoFlag_N','PicoPhytopl_N')
 atl.longname = c('Diatom Nitrogen','Dinoflagellate Nitrogen','PicoPhytoplankton Nitrogen')
 
 #make climatology
-make_SatPhyto_climatology(in.dir = rawdata.dir,
-                          in.file = 'DOY-OCCCI-ATLANTIS_NEUS-VER_1.csv',
+make_SatPhyto_climatology_byClass(in.dir = rawdata.dir,
+                          micro.file = 'DOY-OCCCI-ATLANTIS_NEUS-PSC_MICRO-TURNER.CSV',
+                          nanopico.file = 'DOY-OCCCI-ATLANTIS_NEUS-PSC_NANOPICO-TURNER.CSV',
                           out.dir = processed.dir,
                           out.file = 'Phyto_Climatology',
                           stat.var = 'MED',
-                          bio.vars = c('MICRO','NANO','PICO'),
+                          bio.vars =  c('PSC_MICRO','PSC_NANOPICO'),
                           atl.groups = c('PL','DF','PS'),
                           atl.varname = atl.varname,
                           atl.longname = atl.longname,
-                          phyto.fract = data.frame(PL = c(0.75,0,0),DF = c(0.25,0,0), PS = c(0,1,1)),
-                          chl.conv = rep(7,3))
+                          hirata.doy = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Data/v6/Diatom_Pct_Hirata_DOY.rds', 
+                          chl.conv = rep(7,3)
+                          )
 
 #make forcing
 satphyto.files = list.files(processed.dir,'*Climatology.nc',full.names = T)

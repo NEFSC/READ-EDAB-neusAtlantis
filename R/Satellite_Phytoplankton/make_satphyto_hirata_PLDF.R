@@ -54,14 +54,14 @@ for(b in 1:30){
 }
 
 #save plots
-pdf('C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Figures/Hirata_Diatom_Proportion.pdf',width = 16, height = 6, onefile = T)
+pdf('C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Figures/v6/Hirata_Diatom_Proportion.pdf',width = 16, height = 6, onefile = T)
 for(b in 1:length(boxes)){gridExtra::grid.arrange(fig.diatom.prop[[b]])}
 dev.off()
 
-pdf('C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Figures/Hirata_Diatom_Dinoflagellate.pdf',width = 16, height = 6, onefile = T)
+pdf('C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Figures/v6/Hirata_Diatom_Dinoflagellate_v6.pdf',width = 16, height = 6, onefile = T)
 for(b in 1:length(boxes)){gridExtra::grid.arrange(fig.PL.DF[[b]])}
 dev.off()
 
 #Save Diatom Proportions and PL:DF
-save(diatom.prop,file = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Data/diatom_proportion_DOY.R')
-save(PL.DF,file = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Data/diatom_dinoflag_ratio_DOY.R')
+save(diatom.prop,file = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Data/v6/diatom_proportion_DOY.R')
+save(PL.DF,file = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Data/v6/diatom_dinoflag_ratio_DOY.R')

@@ -18,23 +18,26 @@
 #'Author: J. Caracappa
 #'
 
-in.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Data_v6/'
-micro.file = 'D8-OCCCI-ATLANTIS_NEUS-PSC_MICRO-TURNER.CSV'
-nanopico.file = 'D8-OCCCI-ATLANTIS_NEUS-PSC_NANOPICO-TURNER.CSV'
-out.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format_V6/'
-out.prefix = 'Phyto_Forcing_'
-stat.var = 'MED'
-bio.vars = c('MICRO','NANO','PICO')
-atl.varname = c('Diatom_N','DinoFlag_N','PicoPhytopl_N','Diatom_S')
-atl.longname = c('Diatom Nitrogen','Dinoflagellate Nitrogen','PicoPhytoplankton Nitrogen','Diatom Silicon')
-atl.units = c(rep('mg N m-3',3),'mg Si m-3')
-# phyto.fract = matrix(0.75,nrow = 30, ncol = 366)
-# phyto.fract.ls = lapply(1,function(x) return(phyto.fract))
-chl.conv = rep(7,3)
-years = 1998:2021
+# in.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Data/v6/'
+# micro.file = 'D8-OCCCI-ATLANTIS_NEUS-PSC_MICRO-TURNER.CSV'
+# nanopico.file = 'D8-OCCCI-ATLANTIS_NEUS-PSC_NANOPICO-TURNER.CSV'
+# out.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format/V6/'
+# out.prefix = 'Phyto_Forcing_'
+# stat.var = 'MED'
+# bio.vars = c('MICRO','NANO','PICO')
+# atl.varname = c('Diatom_N','DinoFlag_N','PicoPhytopl_N','Diatom_S')
+# atl.longname = c('Diatom Nitrogen','Dinoflagellate Nitrogen','PicoPhytoplankton Nitrogen','Diatom Silicon')
+# atl.units = c(rep('mg N m-3',3),'mg Si m-3')
+# # phyto.fract = matrix(0.75,nrow = 30, ncol = 366)
+# # phyto.fract.ls = lapply(1,function(x) return(phyto.fract))
+# chl.conv = rep(7,3)
+# years = 1998:2021
+# dynamic.mid = T
+# dynamic.bot = T
 
-make_SatPhyto_files = function(in.dir,
-                                     in.prefix,
+make_SatPhyto_files_byClass = function(in.dir,
+                                     micro.file,
+                                     nanopico.file,
                                      out.dir,
                                      out.prefix,
                                      stat.var,
@@ -42,11 +45,11 @@ make_SatPhyto_files = function(in.dir,
                                      atl.varname,
                                      atl.longname,
                                      atl.units,
-                                    dynamic.mid,
-                                    dynamic.bot,
+                                     dynamic.mid,
+                                     dynamic.bot,
                                      phyto.fract.ls,
                                      chl.conv,
-                               years){
+                                    years){
   
   
   source(here::here('R','Satellite_Phytoplankton','fill_satphyto_gaps.R'))
@@ -192,10 +195,10 @@ make_SatPhyto_files = function(in.dir,
     }
     atl.var.ls[[i]] = fill_satphyto_gaps(input.mat = year.var.ls[[i]],
                        var.name = var.name,
-                       doy.file = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format/Phyto_Climatology.nc',
+                       doy.file = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format/v6/Phyto_Climatology.nc',
                        max.interp = 100,
                        write.gaps = T,
-                       gaps.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Diagnostics/Gap_Analysis_v6/'
+                       gaps.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Diagnostics/v6/Gap_Analysis/'
                        )
   }
   

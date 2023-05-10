@@ -4,15 +4,15 @@
 #C) create spinup forcing 1964-1997
 
 #Read in climatology function and statevar forcing function
-source(here::here('R','Satellite_Phytoplankton','make_SatPhyto_files.R'))
+source(here::here('R','Satellite_Phytoplankton','make_SatPhyto_files_byClass.R'))
 source(here::here('R','Physical_Forcing','make_force_statevar.R'))
 source(here::here('R','Physical_Forcing','make_force_spinup.R'))
 
 #set.directories
 satphyto.dir ='C:/Users/joseph.caracappa/Documents/Satellite_Phyto/'
-rawdata.dir = paste0(satphyto.dir,'Data_v6/')
-satphyto.atl.dir = paste0(satphyto.dir,'Atlantis_Format_v6/')
-satphyto.force.dir = paste0(satphyto.dir,'Forcing_dynamic_lower_v6/')
+rawdata.dir = paste0(satphyto.dir,'Data/v6/')
+satphyto.atl.dir = paste0(satphyto.dir,'Atlantis_Format/v6/')
+satphyto.force.dir = paste0(satphyto.dir,'Forcing_dynamic_lower/v6/')
 
 
 
@@ -50,8 +50,11 @@ for(f in 1:length(years)){
   }
 }
 
-make_SatPhyto_files(in.dir = rawdata.dir,
-                    in.prefix = 'D8-OCCCI-ATLANTIS_*',
+
+
+make_SatPhyto_files_byClass(in.dir = rawdata.dir,
+                    micro.file = 'D8-OCCCI-ATLANTIS_NEUS-PSC_MICRO-TURNER.CSV',
+                    nanopico.file = 'D8-OCCCI-ATLANTIS_NEUS-PSC_NANOPICO-TURNER.CSV',
                     out.dir = satphyto.force.dir,
                     out.prefix =  'Phyto_Forcing_',
                     stat.var = 'MED',
@@ -62,7 +65,8 @@ make_SatPhyto_files(in.dir = rawdata.dir,
                     dynamic.mid = T,
                     dynamic.bot = T,
                     phyto.fract.ls = phyto.fract.ls,
-                    chl.conv = rep(7,3)
+                    chl.conv = rep(7,3),
+                    years = years
 )
 
 
@@ -70,8 +74,8 @@ make_SatPhyto_files(in.dir = rawdata.dir,
 
 
 #copy to obs hindcast directory
-obs.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars_DOY_spinup/'
-from.files = paste0(satphyto.force.dir,'Phyto_Forcing_',1998:2017,'.nc')
+obs.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars_v6_DOY_spinup/'
+from.files = paste0(satphyto.force.dir,'Phyto_Forcing_',1998:2021,'.nc')
 file.copy(from.files,obs.dir,overwrite = T)
 
 #Make spinup files
@@ -86,7 +90,7 @@ for(i in 1:length(years)){
     transport.file = NA,
     statevar.file = NA,
     # anyvar.file = paste0(obs.dir,'Phyto_Forcing_1998.nc'),
-    anyvar.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years/LTL_DOY_Climatology.nc',
+    anyvar.file = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_Files/v6/SatPhyto_Climatology.nc',
     anyvar.out = obs.dir,
     force.dir = obs.dir,
     start.year = 1964,
@@ -99,7 +103,7 @@ for(i in 1:length(years)){
 }
 
 #Copy files into GitHub directory
-from.files = paste0(obs.dir,'Phyto_Forcing_',1964:2017,'.nc')
+from.files = paste0(obs.dir,'Phyto_Forcing_',1964:2021,'.nc')
 git.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/currentVersion/tsfiles/Annual_Files/'
 file.copy(from.files,git.dir,overwrite = T)
 
