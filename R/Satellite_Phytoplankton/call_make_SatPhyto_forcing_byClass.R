@@ -90,7 +90,7 @@ for(i in 1:length(years)){
     transport.file = NA,
     statevar.file = NA,
     # anyvar.file = paste0(obs.dir,'Phyto_Forcing_1998.nc'),
-    anyvar.file = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_Files/v6/SatPhyto_Climatology.nc',
+    anyvar.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years/v6/LTL_DOY_Climatology.nc',
     anyvar.out = obs.dir,
     force.dir = obs.dir,
     start.year = 1964,

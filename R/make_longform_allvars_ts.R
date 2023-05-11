@@ -2,7 +2,7 @@
 library(dplyr)
 library(ggplot2)
 #Read in all forcing variables that are on the Atlantis box level
-data.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years/'
+data.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years/v6/'
 force.vars = c('Diatom_N','DinoFlag_N','PicoPhytopl_N','Lab_Det_N','Diatom_S','salinity','temperature','verticalflux')
 # surf.var.flag = c(T,T,T,T,T,F,F,F)
 var.units = c(rep('mg N m-3',4),'mg Si m-3','psu','deg C','m3 s-1')

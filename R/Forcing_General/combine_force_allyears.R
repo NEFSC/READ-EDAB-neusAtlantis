@@ -4,7 +4,7 @@ transport.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/trans
 phys.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phys_statevars_alternate/'
 force.dir = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/currentVersion/tsfiles/Annual_Files/'
 
-out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years/'
+out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years/v6/'
 
 # file.dir = phys.dir
 # var.name = 'temperature'
@@ -41,7 +41,7 @@ combine_years(phys.dir,file.pattern = '^GLORYS_tempsalt_force_.*\\.nc','temperat
 combine_years(phys.dir,file.pattern = '^GLORYS_tempsalt_force_.*\\.nc','salinity',out.dir)
 combine_years('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/statevars/',file.pattern = '^ECCO_vflux_Atlantis_.*\\.nc','verticalflux',out.dir)
 
-phyto.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars_DOY_spinup/'
+phyto.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/phyto_statevars_v6_DOY_spinup/'
 dl.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/labile_detritus_DOY_spinup/'
 
 #New Satellite Phytoplankton

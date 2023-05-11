@@ -7,7 +7,7 @@ library(ncdf4)
 library(RNetCDF)
 
 #Load full dataset
-data.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years/'
+data.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years/v6/'
 load(paste0(data.dir,'All_Forcing_Variables_Longform.R'))
 
 #filter based on true start date of variables (PL,DF,PS,and DL on 1998-01-01, temp,salt,vflux on 1993-01-01)
