@@ -10,15 +10,15 @@ ZL.revert2 = here::here('Atlantis_Runs','ZL_revert_2','')
 ZL.revert2b = here::here('Atlantis_Runs','ZL_revert_2b','')
 recruit.12 = here::here('Atlantis_Runs','all_recruit_12','')
 ZL.revert3 = here::here('Atlantis_Runs','ZL_revert_3','')
-
+recruit.7 = here::here('Atlantis_Runs','all_recruit12_7','')
 figure.dir = here::here('Figures','Run_Comparisons','')
 
 plot_run_comparisons(
-  model.dirs = c(dev.old,dev,ZL.revert,recruit.12),
-  model.names = c('dev_old','dev','ZL_revert_1','all_recruit_12'),
+  model.dirs = c(dev,recruit.7),
+  model.names = c('dev','all_recruit12_7'),
   plot.rel = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'all_recruit_12'),
+  plot.out = paste(figure.dir,'all_recruit12_7_v_dev_'),
   table.out = F,
   groups = NULL,
   remove.init = F
