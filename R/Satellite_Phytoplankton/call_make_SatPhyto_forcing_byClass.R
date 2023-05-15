@@ -22,18 +22,18 @@ atl.varname =  c('Diatom_N','DinoFlag_N','PicoPhytopl_N','Diatom_S')
 atl.longname = c('Diatom Nitrogen','Dinoflagellate Nitrogen','PicoPhytoplankton Nitrogen','Diatom Silicate')
 
 years = 1998:2021
-hirata.file = 'D8-OCCCI-ATLANTIS_NEUS-PSC_FDIATOM-HIRATA.CSV'
+# hirata.file = 'D8-OCCCI-ATLANTIS_NEUS-PSC_FDIATOM-HIRATA.CSV'
 
 # Make Forcing using Hirata Diatom Proportion
-diatom.pct = read.csv(paste0(rawdata.dir,'/',hirata.file),as.is = T)%>% 
-  select(PERIOD,SUBAREA,MED)%>%
-  tidyr::separate(PERIOD,c('DURATION','DATE.START','DATE.END'),sep = '_')%>%
-  mutate(DATE = as.Date(DATE.END,'%Y%m%d'),
-         DOY = format(DATE,'%j'))%>%
-  group_by(DOY,SUBAREA)%>%
-  summarise(MED = mean(MED,na.rm=T))
+# diatom.pct = read.csv(paste0(rawdata.dir,'/',hirata.file),as.is = T)%>% 
+#   select(PERIOD,SUBAREA,MED)%>%
+#   tidyr::separate(PERIOD,c('DURATION','DATE.START','DATE.END'),sep = '_')%>%
+#   mutate(DATE = as.Date(DATE.END,'%Y%m%d'),
+#          DOY = format(DATE,'%j'))%>%
+#   group_by(DOY,SUBAREA)%>%
+#   summarise(MED = mean(MED,na.rm=T))
 
-saveRDS(diatom.pct, paste0(rawdata.dir,'/Diatom_Pct_Hirata_DOY.rds'))
+diatom.pct = readRDS(paste0(rawdata.dir,'/diatom_proportion_DOY_dataframe.rds'))
 
 diatom.pct.mat = diatom.pct %>%
   tidyr::spread(DOY,MED)%>%
@@ -44,7 +44,9 @@ diatom.pct.mat = diatom.pct %>%
 phyto.fract.ls = list()
 for(f in 1:length(years)){
   if(years[f] %% 4 == 0){
-    phyto.fract.ls[[f]] = diatom.pct.mat
+    phyto.fract.ls[[f]] = matrix(NA,30,366)
+    phyto.fract.ls[[f]][,1:365] = diatom.pct.mat
+    phyto.fract.ls[[f]][,366] = diatom.pct.mat[,365]
   }else{
     phyto.fract.ls[[f]] = diatom.pct.mat[,1:365]
   }
