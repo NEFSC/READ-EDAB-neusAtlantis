@@ -54,16 +54,15 @@ plot_run_comparisons(
 
 
 plot_run_comparisons(
-  model.dirs = c(dev.old,dev,zl.7),
-  model.names = c('Dev_20230313','Dev_20230327','ZL_restore_7'),
+  model.dirs = c(dev.old,dev,ZL.revert,ZL.revert2,ZL.revert3),
+  model.names = c('dev_old','dev','ZL_revert_1','ZL_revert_2','ZL.revert3'),
   plot.rel = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'ZL_restore_7_v_dev'),
+  plot.out = paste(figure.dir,'ZL.revert3'),
   table.out = F,
   groups = NULL,
   remove.init = F
 )
-
 # plot_run_catch_comparisons(
 #   model.dirs = c(dev, new.clams, new.clams.2),
 #   model.names = c('Dev_11032022','Dev_New_Clams','Dev_New_Clams_2'),
