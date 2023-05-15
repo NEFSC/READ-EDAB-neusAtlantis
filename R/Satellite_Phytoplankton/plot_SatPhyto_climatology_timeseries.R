@@ -5,9 +5,9 @@ library(ggplot2)
 library(gridExtra)
 library(ncdf4)
 
-fig.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Figures/box_timeseries/'
+fig.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Figures/v6/box_timeseries/'
 
-phyto.nc = nc_open('C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format/Phyto_Climatology.nc')
+phyto.nc = nc_open('C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format/v6/Phyto_Climatology.nc')
 phyto.names = names(phyto.nc$var)
 
 for( v in 1:length(phyto.names)){
