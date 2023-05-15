@@ -22,7 +22,7 @@ make_SatPhyto_climatology_byClass(in.dir = rawdata.dir,
                           atl.groups = c('PL','DF','PS'),
                           atl.varname = atl.varname,
                           atl.longname = atl.longname,
-                          hirata.doy = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Data/v6/Diatom_Pct_Hirata_DOY.rds', 
+                          hirata.doy = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Data/v6/diatom_proportion_DOY_dataframe.rds', 
                           chl.conv = rep(7,3)
                           )
 
@@ -41,7 +41,7 @@ for(i in 1:length(satphyto.files)){
                       valid.min = rep(0,3),
                       valid.max = rep(99999,3),
                       dupe.bottom = F,
-                      out.prefix = 'SatPhyto_Climatology_')
+                      out.prefix = 'SatPhyto_Climatology')
   print(i)
 }
 

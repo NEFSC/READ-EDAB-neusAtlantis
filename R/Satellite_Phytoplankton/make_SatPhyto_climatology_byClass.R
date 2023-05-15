@@ -17,21 +17,22 @@
 #'Author: J. Caracappa
 #'
 # 
-# in.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Climatology/v6/'
-# micro.file = 'DOY-OCCCI-ATLANTIS_NEUS-PSC_MICRO-TURNER.CSV'
-# nanopico.file = 'DOY-OCCCI-ATLANTIS_NEUS-PSC_NANOPICO-TURNER.CSV'
-# out.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format/v6/'
-# out.file = 'Phyto_Climatology'
-# stat.var = 'MED'
-# bio.vars = c('PSC_MICRO','PSC_NANOPICO')
-# atl.groups = c('PL','DF','PS')
-# atl.varname = c('Diatom_N','DinoFlag_N','PicoPhytopl_N')
-# atl.longname = c('Diatom Nitrogen','Dinoflagellate Nitrogen','PicoPhytoplankton Nitrogen')
-# hirata.doy = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Data/v6/Diatom_Pct_Hirata_DOY.rds'
-# chl.conv = rep(7,3)
+in.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Climatology/v6/'
+micro.file = 'DOY-OCCCI-ATLANTIS_NEUS-PSC_MICRO-TURNER.CSV'
+nanopico.file = 'DOY-OCCCI-ATLANTIS_NEUS-PSC_NANOPICO-TURNER.CSV'
+out.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format/v6/'
+out.file = 'Phyto_Climatology'
+stat.var = 'MED'
+bio.vars = c('PSC_MICRO','PSC_NANOPICO')
+atl.groups = c('PL','DF','PS')
+atl.varname = c('Diatom_N','DinoFlag_N','PicoPhytopl_N')
+atl.longname = c('Diatom Nitrogen','Dinoflagellate Nitrogen','PicoPhytoplankton Nitrogen')
+hirata.doy = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Data/v6/Diatom_Pct_Hirata_DOY.rds'
+chl.conv = rep(7,3)
 
 
 make_SatPhyto_climatology_byClass = function(in.dir,
+                                     chl.file,
                                      micro.file,
                                      nanopico.file,
                                      out.dir,
