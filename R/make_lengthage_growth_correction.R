@@ -13,8 +13,8 @@ scale.C = F
 source(here::here('R','edit_param_mum_age.R'))
 source(here::here('R','edit_param_C_age.R'))
 
-run.name = 'New_Init_Inverts'
-run.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/Post_Processed/Data/')
+run.name = 'all_recruit12_6'
+run.dir = here::here('Atlantis_Runs',run.name,'')
 
 fgs = read.csv(here::here('currentVersion','neus_groups.csv'))%>%select(Code,LongName)%>%rename(species = 'LongName')
 
@@ -32,7 +32,7 @@ length.age.ref = read.csv(here::here('currentVersion','vertebrate_init_length_cm
 
 #Read in post-processed length.age data
 #Determine whether output values fall within bounds of reference values
-length.age = readRDS(paste0(run.dir,'length_age.rds'))%>%
+length.age = readRDS(paste0(run.dir,'Post_Processed/Data/length_age.rds'))%>%
   group_by(species,agecl)%>%
   summarise(length = mean(atoutput,na.rm=T))%>%
   left_join(length.age.ref)%>%
@@ -62,6 +62,7 @@ length.age.scalars = length.age.scalars.long %>%
   tidyr::spread(agecl,length.scalar)
 
 length.age.scalars = length.age.scalars[match(current.mum$group,length.age.scalars$Code),]
+
 
 if(scale.mum == T){
   new.mum = current.mum
