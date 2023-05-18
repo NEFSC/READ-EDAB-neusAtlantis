@@ -33,7 +33,9 @@ outputFolder
 !/currentVersion/at_physics.prm
 !/currentVersion/at_run.prm
 # except nc
-!/currentVersion/neus_init_nc
+!/currentVersion/neus_init.nc
+!/currentVersion/neus_init.cdf
+
 # except csv
 !/currentVersion/neus_fisheries.csv
 !/currentVersion/neus_groups.csv
