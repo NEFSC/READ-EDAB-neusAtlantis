@@ -6,8 +6,10 @@
 #' @plot.XXX = whether to plot specific outputs (and processes relevant data)
 
 make_post_process = function(run.name,
-                             run.dir,
-                             process.all = T,
+                             atl.dir,
+                             large.file =F,
+                             process.all = F,
+                             plot.all = F,
                              plot.benthic =F,
                              plot.overall.biomass =F,
                              plot.biomass.timeseries = F,
@@ -20,14 +22,21 @@ make_post_process = function(run.name,
                              plot.physics=F,
                              plot.growth.cons=F,
                              plot.cohort=F,
-                             plot.diet=T,
-                             plot.consumption= T,
+                             plot.diet=F,
+                             plot.consumption= F,
                              plot.spatial.biomass=F,
                              plot.spatial.biomass.seasonal = F,
+                             plot.spatial.overlap = F,
                              plot.LTL=F, 
                              plot.catch =F,
-                             plot.mortality=T,
-                             plot.max.weight = F){
+                             plot.mortality=F,
+                             plot.max.weight = F,
+                             benthic.box,
+                             benthic.level,
+                             
+                             run.prefix = 'neus_output',
+                             agg.scale= 'year',
+                             system ='linux'){
   
   # Test post-processing procedure with new functions
   library(ncdf4)
@@ -42,12 +51,9 @@ make_post_process = function(run.name,
   
   dir.create(paste0(atl.dir,'Post_Processed/'))
   dir.create(paste0(atl.dir,'Post_Processed/Data/'))
-  param.dir = here::here ('currentVersion')
+  param.dir = here::here ('currentVersion','/')
   out.dir = paste0(atl.dir,'Post_Processed/Data/')
   fig.dir = paste0(atl.dir,'Post_Processed/')
-  
-  #Run prefix is the filename prefix in the atlantis output (specified in run.bat)
-  run.prefix = 'neus_output'
   
   #Run function that retreives parameter files
   param.ls= get_atl_paramfiles(param.dir = param.dir,
@@ -56,17 +62,37 @@ make_post_process = function(run.name,
   
   #Run  post-processing function to generate "result" R object. 
   process_atl_output(
-    param.dir = here::here('currentVersion'),
+    param.dir = param.dir,
     atl.dir = atl.dir,
     out.dir = out.dir,
-    run.prefix = 'neus_output',
+    run.prefix = run.prefix,
     param.ls = param.ls,
-    include_catch = T,
-    save.out = T,
-    agg.scale = 'year',
-    spatial.overlap = F,
-    large.file = F,
-    system = 'linux'
+    agg.scale = agg.scale,
+    large.file = large.file,
+    system = system,
+    process.all = process.all,
+    plot.all = plot.all,
+    plot.benthic = plot.benthic,
+    plot.overall.biomass = plot.overall.biomass,
+    plot.biomass.timeseries = plot.biomass.timeseries,
+    plot.length.age = plot.length.age,
+    plot.biomass.box=plot.biomass.box,
+    plot.c.mum=plot.c.mum,
+    plot.sn.rn=plot.sn.rn,
+    plot.recruits=plot.recruits,
+    plot.numbers.timeseries=plot.numbers.timeseries,
+    plot.physics=plot.physics,
+    plot.growth.cons=plot.growth.cons,
+    plot.cohort=plot.cohort,
+    plot.diet=plot.diet,
+    plot.consumption= plot.consumption,
+    plot.spatial.biomass=plot.spatial.biomass,
+    plot.spatial.biomass.seasonal = plot.spatial.biomass.seasonal,
+    plot.spatial.overlap = plot.spatial.overlap,
+    plot.LTL=plot.LTL, 
+    plot.catch =plot.catch,
+    plot.mortality=plot.mortality,
+    plot.max.weight = plot.max.weight
   )
   #If result object saved to file or already exists load it into env.
   # load(paste0(out.dir,'neus_output_postprocessed.rdata'))
@@ -78,38 +104,37 @@ make_post_process = function(run.name,
     fig.dir = fig.dir,
     out.dir = out.dir,
     param.dir = param.dir,
-    run.prefix = 'neus_output',
+    run.prefix = run.prefix,
     run.name = run.name,
-    benthic.box =4,
-    benthic.level = 4,
+    benthic.box =benthic.box,
+    benthic.level = benthic.level,
     
     param.ls = param.ls,
     
     phytopl.history = here::here('R','phytoplankton_timeseries_biomass_tonnes_1998_2016.csv'),
     zoopl.history = here::here('R','Zooplankton_total_biomass_tonnes_N_20yrs.csv'),
     
-    plot.all = F,
-    #Turn these on/off for desired output
-    plot.benthic =F,
-    plot.overall.biomass =F,
-    plot.biomass.timeseries = F,
-    plot.length.age = F,
-    plot.biomass.box=F,
-    plot.c.mum=F,
-    plot.sn.rn=F,
-    plot.recruits=F,
-    plot.numbers.timeseries=F,
-    plot.physics=F,
-    plot.growth.cons=F,
-    plot.cohort=F,
-    plot.diet=T,
-    plot.consumption= T,
-    plot.spatial.biomass=F,
-    plot.spatial.biomass.seasonal = F,
-    plot.LTL=F, 
-    plot.catch =F,
-    plot.mortality=T,
-    plot.max.weight = F
+    plot.all = plot.all,
+    plot.benthic = plot.benthic,
+    plot.overall.biomass = plot.overall.biomass,
+    plot.biomass.timeseries = plot.biomass.timeseries,
+    plot.length.age = plot.length.age,
+    plot.biomass.box=plot.biomass.box,
+    plot.c.mum=plot.c.mum,
+    plot.sn.rn=plot.sn.rn,
+    plot.recruits=plot.recruits,
+    plot.numbers.timeseries=plot.numbers.timeseries,
+    plot.physics=plot.physics,
+    plot.growth.cons=plot.growth.cons,
+    plot.cohort=plot.cohort,
+    plot.diet=plot.diet,
+    plot.consumption= plot.consumption,
+    plot.spatial.biomass=plot.spatial.biomass,
+    plot.spatial.biomass.seasonal = plot.spatial.biomass.seasonal,
+    plot.LTL=plot.LTL, 
+    plot.catch =plot.catch,
+    plot.mortality=plot.mortality,
+    plot.max.weight = plot.max.weight
     
   )
   
