@@ -38,31 +38,72 @@ BH_13 = here::here('Atlantis_Runs','BH_13','')
 BH_14 = here::here('Atlantis_Runs','BH_14','')
 BH_15 = here::here('Atlantis_Runs','BH_15','')
 BH_16 = here::here('Atlantis_Runs','BH_16','')
-
+BH_17 = here::here('Atlantis_Runs','BH_17','')
+BH_18 = here::here('Atlantis_Runs','BH_18','')
+BH_19 = here::here('Atlantis_Runs','BH_19','')
+BH_20 = here::here('Atlantis_Runs','BH_20','')
+BH_21 = here::here('Atlantis_Runs','BH_21','')
+BH_22 = here::here('Atlantis_Runs','BH_22','')
+BH_23 = here::here('Atlantis_Runs','BH_23','')
+BH_24 = here::here('Atlantis_Runs','BH_24','')
+BH_25 = here::here('Atlantis_Runs','BH_25','')
+BH_26 = here::here('Atlantis_Runs','BH_26','')
+BH_27 = here::here('Atlantis_Runs','BH_27','')
+BH_28 = here::here('Atlantis_Runs','BH_28','')
+BH_29 = here::here('Atlantis_Runs','BH_29','')
+BH_30 = here::here('Atlantis_Runs','BH_30','')
+BH_31 = here::here('Atlantis_Runs','BH_31','')
+BH_32 = here::here('Atlantis_Runs','BH_32','')
+BH_33 = here::here('Atlantis_Runs','BH_33','')
+BH_34 = here::here('Atlantis_Runs','BH_34','')
+BH_35 = here::here('Atlantis_Runs','BH_35','')
+BH_36 = here::here('Atlantis_Runs','BH_36','')
+BH_37 = here::here('Atlantis_Runs','BH_37','')
+BH_38 = here::here('Atlantis_Runs','BH_38','')
+BH_39 = here::here('Atlantis_Runs','BH_39','')
+BH_40 = here::here('Atlantis_Runs','BH_40','')
+BH_41 = here::here('Atlantis_Runs','BH_41','')
+BH_42 = here::here('Atlantis_Runs','BH_42','')
+BH_43 = here::here('Atlantis_Runs','BH_43','')
+BH_44 = here::here('Atlantis_Runs','BH_44','')
+BH_combined = here::here('Atlantis_Runs','BH_combined','')
 figure.dir = here::here('Figures','Run_Comparisons','')
 
 plot_run_comparisons(
-  model.dirs = c(dev,BH_13,BH_14, BH_15,BH_16),
-  model.names = c('dev', 'BH_13','BH_14','BH_15', 'BH_16'),
+#  model.dirs = c(dev,BH_35,BH_36, BH_37,BH_38,BH_39,BH_40,BH_41,BH_42,BH_43,BH_44),
+#  model.names = c('dev', '35','36','37','38','39','40','41','42','43','44'),
+  model.dirs = c(dev,BH_35,BH_41),
+  model.names = c('dev', '35','41'),
   plot.rel = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'dev_BH13-16_'),
+  plot.out = paste(figure.dir,'dev_BH35_44_'),
   table.out = F,
   groups = NULL,
   remove.init = F
 )
-
 
 plot_run_comparisons(
-  model.dirs = c(dev.old,dev,ZL.revert,ZL.revert2,ZL.revert3),
-  model.names = c('dev_old','dev','ZL_revert_1','ZL_revert_2','ZL.revert3'),
+  model.dirs = c(dev,BH_combined),
+  model.names = c('dev', 'BH_combined'),
   plot.rel = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'ZL.revert3'),
+  plot.out = paste(figure.dir,'dev_BH_combined_'),
   table.out = F,
   groups = NULL,
   remove.init = F
 )
+
+plot_run_comparisons(
+  model.dirs = c(dev.old,dev,zl.7),
+  model.names = c('Dev_20230313','Dev_20230327','ZL_restore_7'),
+  plot.rel = T,
+  plot.diff = F,
+  plot.out = paste(figure.dir,'ZL_restore_7_v_dev'),
+  table.out = F,
+  groups = NULL,
+  remove.init = F
+)
+
 # plot_run_catch_comparisons(
 #   model.dirs = c(dev, new.clams, new.clams.2),
 #   model.names = c('Dev_11032022','Dev_New_Clams','Dev_New_Clams_2'),
