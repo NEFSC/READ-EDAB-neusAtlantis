@@ -48,7 +48,7 @@ setup.df = data.frame(
 
 write.csv(setup.df,paste0(proj.dir,'Setup_Files/',batch.prefix,'.csv'),row.names = F)
 
-source(paste0(proj.dir,'R/atlantis_batcher.r'))
+source(paste0(proj.dir,'R/atlantis_batcher_cloud.r'))
 
 atlantis_batcher(
   batcherFilename =paste0(proj.dir,'Setup_Files/',batch.prefix,'.csv'),
