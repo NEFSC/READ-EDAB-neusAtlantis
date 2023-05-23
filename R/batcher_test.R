@@ -43,7 +43,7 @@ setup.df = data.frame(
   HarvestPrm = 'at_harvest.prm',
   InitNC = 'neus_init.nc',
   ForcePrm = 'at_force_LINUX.prm',
-  status = 'Incomplete'
+  Status = 'Incomplete'
 )
 
 write.csv(setup.df,paste0(proj.dir,'Setup_Files/',batch.prefix,'.csv'),row.names = F)
