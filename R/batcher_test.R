@@ -1,10 +1,9 @@
 #Reads in setup file and executes batcher
-install.packages('dplyr')
+# install.packages('dplyr')
 library(dplyr)
 
 proj.dir = '/contrib/fishing_sensitivity/neus-atlantis/'
 # proj.dir = here::here('/')
-
 
 batch.prefix = 'batcher_test1'
 dir.create(paste0(proj.dir,'Atlantis_Runs/',batch.prefix,'/'))
