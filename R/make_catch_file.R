@@ -6,29 +6,7 @@ library(ggplot2)
 # ask Sean for it
 
 ##Old Comland Pulls
-# load("C:/Users/robert.gamble/Desktop/Atlantis_Catch/comland_meatwt_deflated.RData")
-#load('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/comland_meatwt_deflated_stat_areas.RData')
-# from https://github.com/NOAA-EDAB/Atlantis-Catch-Files/blob/master/Atlantis_1_5_groups_svspp_nespp3.csv
-library(dplyr)
-##New Comland Pull
-load('/home/jcaracappa/Documents/Atlantis/data/comland_meatwt_deflated_stat_areas.RData')
-# comland = readRDS('/home/jcaracappa/Documents/Atlantis/data/comland_livewt_deflated_stat_areas.Rds')
-comland$AREA = as.numeric(as.character(comland$AREA))
-
-# test2 = comland %>% filter(NESPP3 == 23) %>% group_by(YEAR) %>% summarise(val = sum(SPPLIVMT))
-# plot(val~YEAR,test,'l')
-#Read stat areas
-# load('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/strata_stat_box.Rdata')
-load('/home/jcaracappa/Documents/Atlantis/data/strata_stat_box.Rdata')
-stat.neus = stat.neus %>%
-  sf::st_drop_geometry()
-
-# spcodes <- readr::read_csv("C:/Users/robert.gamble/Desktop/Atlantis_Catch/Atlantis_1_5_groups_svspp_nespp3.csv")
-spcodes = readr::read_csv(here::here('diagnostics','Atlantis_1_5_groups_svspp_nespp3.csv'))
-spcodes <- filter(spcodes,!is.na(NESPP3))
-
-# Read StockSmart to Comland Conversion Factor
-ss.comland.rat = readRDS(here::here('data-raw','stocksmart_comland_ratio.Rds'))
+comland = readRDS(here::here('data','neusCatchData.rds'))
 
 # Conversion factor to appropriate Atlantis units
 # CONVFACTOR = 40 / 71.902080 ##Technically incorrect, but accounts for incorrect 0.5 activity scalar
@@ -36,17 +14,9 @@ CONVFACTOR = 0.278
 
 # stat.names = unique(stat.neus$Id)
 hindcast_catch = comland %>% 
-  left_join(stat.neus, by = c('AREA' = 'Id')) %>%
-  mutate(SPPLIVMT.scaled = SPPLIVMT * overlap_pct) %>%
-  group_by(YEAR,NESPP3) %>%
-  summarize(WGT = (sum(SPPLIVMT.scaled,na.rm=T)*CONVFACTOR)) %>%
-  inner_join(spcodes,by = 'NESPP3') %>%
-  left_join(ss.comland.rat, by = c('Code' = 'Group')) %>%
-  mutate(ss.comland.conv = ifelse(is.na(ss.comland.conv),1,ss.comland.conv),
-         WGT = WGT * ss.comland.conv) %>%
-  group_by(YEAR,Code) %>%
-  summarize(grpWGT = sum(WGT,na.rm=T)) %>%
-  filter(YEAR >= 1964)
+  mutate(grpWGT = value * CONVFACTOR)%>%
+  filter(YEAR >= 1964)%>%
+  arrange(YEAR, Code)
   
 # Species names/catch_ts header
 header <- c("MAK","HER","WHK","BLF","WPF","SUF","WIF","WTF","FOU","HAL","PLA","FLA","BFT","TUN","BIL","MPF","BUT","BPF","ANC","GOO","MEN","FDE","COD","SHK","OHK","POL","RHK","BSB","SCU","TYL","RED","OPT","SAL","DRM","STB","TAU","WOL","SDF","FDF","HAD","YTF","DOG","SMO","SSH","DSH","BLS","POR","PSH","WSK","LSK","SK","SB","PIN","REP","RWH","BWH","SWH","TWH","INV","LSQ","ISQ","SCA","QHG","CLA","BFF","BG","LOB","RCB","BMS","NSH","OSH","ZL","BD","MA","MB","SG","BC","ZG","PL","DF","PS","ZM","ZS","PB","BB","BO","DL","DR","DC")
@@ -72,12 +42,12 @@ for(i in 1:length(header)){
 
 
 hindcast_catch2 = dplyr::bind_rows(hindcast_catch_ls) %>%
-  filter(YEAR >= 1964 & YEAR <=2018)
+  filter(YEAR >= 1964)
 hindcast_catch2$grpWGT[which(!is.finite(hindcast_catch2$grpWGT))] = 0
 
 # x2 = filter(hindcast_catch2, Code == 'PS')
 # plot(grpWGT~YEAR,x2,type='l')
-timesteps <- 55 * 365
+timesteps <- (2022-1964) * 365
 
 # Set up catch tibble for time series file
 

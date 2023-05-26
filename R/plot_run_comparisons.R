@@ -10,7 +10,7 @@
 #' 
 #' @model1.dir string. path to the first model output files
 #' @model2.dir string. path to the second model output files. Convention is that model2 is most recent
-#' @plot.raw logical. Do you want to plot timeseries of the raw data (biomass)?
+#' @plot.rel logical. Do you want to plot timeseries relative to initial conditions?
 #' @plot.diff logical. Do you want to plot only the difference between 2 models?
 #' @plot.out string. path where output plots are saved
 #' @table.out logical. Do you want to export raw data?
@@ -22,14 +22,14 @@
 
 # model1.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Run_Files/atneus_v15_01272020/'
 # model2.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output/'
-# plot.raw = T
+# plot.rel = T
 # plot.diff = T
 # plot.out = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Output/Figures/'
 # table.out = T
 # # groups = c('HER','CLA','LOB')
 # groups = NULL
 
-plot_run_comparisons = function(model.dirs,model.names,plot.raw = T,
+plot_run_comparisons = function(model.dirs,model.names,plot.rel = T,
                              plot.diff = T, plot.out, table.out = F, groups = NULL,remove.init = F,rm.rel = T){
   `%>%` = dplyr::`%>%`
   
@@ -111,8 +111,27 @@ plot_run_comparisons = function(model.dirs,model.names,plot.raw = T,
   # }
   
   plot.cols = c(RColorBrewer::brewer.pal(12,'Paired'),RColorBrewer::brewer.pal(8,'Set2'))
-  if(plot.raw){
+  if(plot.rel){
       pdf(paste0(plot.out,'Model_Comparison_Biomass.pdf'),width = 14,onefile = T)
+    for(i in 1:length(plot.groups)){
+      p= ggplot2::ggplot(data = subset(bio.all,Group == plot.groups[i]),
+                         ggplot2::aes(x=Real.Time,y = Biomass/Biomass[1],color = Model))+
+        ggplot2::geom_path(size = 1)+
+        ggplot2::scale_color_manual(name = 'Model',labels = model.names,values = plot.cols )+
+        ggplot2::ylab('Group Biomass (Tonnes)')+
+        ggplot2::xlab('Date')+
+        ggplot2::ggtitle(plot.groups[i])+
+        ggplot2::theme_minimal()+
+        ggplot2::theme(
+          plot.title = ggplot2::element_text(hjust = 0.5),
+          legend.position = 'bottom',
+          legend.box = 'horizontal'
+        )
+      gridExtra::grid.arrange(p)
+    }
+    dev.off()
+  }else{
+    pdf(paste0(plot.out,'Model_Comparison_Biomass.pdf'),width = 14,onefile = T)
     for(i in 1:length(plot.groups)){
       p= ggplot2::ggplot(data = subset(bio.all,Group == plot.groups[i]),
                          ggplot2::aes(x=Real.Time,y = Biomass,color = Model))+
@@ -133,8 +152,10 @@ plot_run_comparisons = function(model.dirs,model.names,plot.raw = T,
   }
   
   if(table.out){
-    if(plot.raw){
-      write.csv(bio.all,file=paste0(plot.out,'Biomass_Difference_Data.csv'),row.names = F)
+    if(plot.rel){
+      write.csv(bio.all,file=paste0(plot.out,'Biomass_realtive_Data.csv'),row.names = F)
+    }else{
+      
     }
     if(plot.diff){
       write.csv(bio.diff,file = paste0(plot.out,'Model_Comparison_Biomass_Data.csv'),row.names = F)
