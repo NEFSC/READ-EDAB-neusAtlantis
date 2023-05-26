@@ -55,12 +55,12 @@ make_catch_file_projected_mean = function(fgs.file,original_catch_file,start.tim
 
 }
 
-make_catch_file_projected_mean(
-  fgs.file = here::here('currentVersion','neus_groups.csv'),
-  original_catch_file = here::here('currentVersion','CatchFiles','total_catch.ts'),
-  start.time = 19724-(365*10),
-  end.time = 19724,
-  duration = 20*365,
-  new_catch_file = here::here('currentVersion','CatchFiles','total_catch_project_mean_20yrs.ts'),
-  overwrite = F
-)
+# make_catch_file_projected_mean(
+#   fgs.file = here::here('currentVersion','neus_groups.csv'),
+#   original_catch_file = here::here('currentVersion','CatchFiles','total_catch.ts'),
+#   start.time = 19724-(365*10),
+#   end.time = 19724,
+#   duration = 20*365,
+#   new_catch_file = here::here('currentVersion','CatchFiles','total_catch_project_mean_20yrs.ts'),
+#   overwrite = F
+# )

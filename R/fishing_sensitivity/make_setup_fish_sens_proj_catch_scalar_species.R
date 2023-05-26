@@ -8,17 +8,34 @@ library(ggplot2)
 
 #### Generate Guild and Fishing Scalar Combinations ####
 
+#project directory
+#proj.dir = '/contrib/Joseph.Caracappa/fishing_sensitivity/neus-atlantis/'
+proj.dir = here::here('/')
+
 #Scenario Name
 batch.prefix = 'fish_sens_catch_scalar_species_1'
 
 #Read in Functional Group to guild match
-fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T)
+fgs = read.csv(paste0(proj.dir,'currentVersion/neus_groups.csv'),as.is = T)
 
 #Need to run baseline catch with projection (total_catch_projected_mean.ts)
+proj.duration.yr = 20
 
+source(paste0(proj.dir,'/R/fishing_sensitivity/make_catch_file_projected_mean.R'))
+new.base.catch.file =  paste0(proj.dir,'currentVersion/CatchFiles/total_catch_',batch.prefix,'.ts')
+
+make_catch_file_projected_mean(
+  fgs.file = paste0(proj.dir,'currentVersion/neus_groups.csv'),
+  original_catch_file = paste0(proj.dir,'currentVersion/CatchFiles/total_catch.ts'),
+  start.time = 19724-(365*10),
+  end.time = 19724,
+  duration = proj.duration.yr*365,
+  new_catch_file = new.base.catch.file,
+  overwrite = F
+)
 
 #Get only caught species
-original_catch_file = here::here('currentVersion','CatchFiles','total_catch_project_mean_20yrs.ts')
+original_catch_file = new.base.catch.file
 catch.dat.orig = read.table(original_catch_file,as.is = T)[-1]
 groups.fished = fgs$Code[which(colSums(catch.dat.orig)>0)]
 
@@ -36,39 +53,40 @@ scenario.combs = expand.grid('Code' = groups.fished, 'fishing.levels' = fishing.
   left_join(data.frame(fishing.levels = fishing.levels,fishing.levels.text = fishing.levels.text))
 
 #### Create Parameter Files for each Scenario ####
-dir.create(here::here('currentVersion','CatchFiles',batch.prefix))
+dir.create(paste0(proj.dir,'currentVersion/CatchFiles/',batch.prefix))
 
 #Functions to make new catch files#Functions to makebatch.prefix new catch files
-source(here::here('R','Fishing_Sensitivity','make_catch_scalar_projected.R'))
+source(paste0(proj.dir,'R/Fishing_Sensitivity/make_catch_scalar_projected.R'))
 new.catch.names = character()
 i=1
 for(i in 1:nrow(scenario.combs)){
 
   new.catch.name = paste0(batch.prefix,'_',scenario.combs$Code[i],'_',scenario.combs$fishing.levels.text[i])
   new.catch.names[i] = new.catch.name
-# 
-#   make_catch_scalar_projected(
-#     original_catch_file = original_catch_file,
-#     fgs.file = here::here('currentVersion','neus_groups.csv'),
-#     groups = scenario.combs$Code[i],
-#     new_catch_file = here::here('currentVersion','CatchFiles',batch.prefix,paste0(new.catch.name,'.ts')),
-#     setup.filename = here::here('currentVersion','CatchFiles',batch.prefix,paste0(new.catch.name,'.csv')),
-#     start.time = 19724,
-#     end.time = 19724 + (365*20),
-#     type = 'Scalar',
-#     change = scenario.combs$fishing.levels[i]
-#   )
+
+  make_catch_scalar_projected(
+    proj.dir = proj.dir,
+    original_catch_file = original_catch_file,
+    fgs.file = paste0(proj.dir,'currentVersion/neus_groups.csv'),
+    groups = scenario.combs$Code[i],
+    new_catch_file = paste0(proj.dir,'currentVersion/CatchFiles/',batch.prefix,'/',paste0(new.catch.name,'.ts')),
+    setup.filename = paste0(proj.dir,'currentVersion/CatchFiles/',batch.prefix,'/',paste0(new.catch.name,'.csv')),
+    start.time = 19724,
+    end.time = 19724 + (365*20),
+    type = 'Scalar',
+    change = scenario.combs$fishing.levels[i]
+  )
 }
 
 # Create at_force_LINUX.prm and runAtlantis.sh and put into a new directory
-dir.create(here::here('currentVersion',batch.prefix))
+dir.create(paste0(proj.dir,'currentVersion/',batch.prefix))
 #specify original run.sh
-run.sh.orig = here::here('currentVersion','runAtlantis.sh')
+run.sh.orig = paste0(proj.dir,'currentVersion/runAtlantis.sh')
 run.sh.lines = readLines(run.sh.orig)
 run.command.line = grep('atlantisMerged',run.sh.lines)
 
 #Specify original force.prm
-force.file.orig = here::here('currentVersion','at_force_LINUX.prm')
+force.file.orig = paste0(proj.dir,'currentVersion/at_force_LINUX.prm')
 force.lines = readLines(force.file.orig)
 catch.file.line = grep('Catchts0.data',force.lines)
 
@@ -77,7 +95,7 @@ for(i in 1:length(new.catch.names)){
 
   #Do force.prm duplication
   force.file.new.short = paste0('at_force_LINUX_',new.catch.names[i],'.prm')
-  force.file.new = here::here('currentVersion',batch.prefix,force.file.new.short)
+  force.file.new = paste0(proj.dir,'currentVersion/',batch.prefix,'/',force.file.new.short)
 
   file.copy(force.file.orig, force.file.new,overwrite = T)
   
@@ -89,7 +107,7 @@ for(i in 1:length(new.catch.names)){
   force.files.new[i] = force.file.new
   
   #Do run.sh duplication
-  run.file.new = here::here('currentVersion',batch.prefix,paste0('runAtlantis_',new.catch.names[i],'.sh'))
+  run.file.new = paste0(proj.dir,'currentVersion/',batch.prefix,'/',paste0('runAtlantis_',new.catch.names[i],'.sh'))
   
   file.copy(run.sh.orig, run.file.new,overwrite=T)
 
@@ -114,5 +132,5 @@ setup.df = data.frame(
   ForcePrm = paste0(batch.prefix,'/at_force_LINUX_',new.catch.names,'.prm')
 )
 
-write.csv(setup.df,here::here('Setup_Files',paste0(batch.prefix,'.csv')),row.names =F)
+write.csv(setup.df,paste0(proj.dir,'Setup_Files/',paste0(batch.prefix,'.csv')),row.names =F)
 

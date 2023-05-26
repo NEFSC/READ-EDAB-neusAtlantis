@@ -57,5 +57,5 @@ atlantis_batcher(
   NUM_TO_RUN          = 3,
   CONTAINER_TYPE      = 'podman',
   param.dir = paste0(proj.dir,'currentVersion/'),
-  output.dir = paste0(proj.dir,'Atlantis_Runs/',batch.prefix,'')
+  output.dir = paste0(proj.dir,'Atlantis_Runs/')
 )

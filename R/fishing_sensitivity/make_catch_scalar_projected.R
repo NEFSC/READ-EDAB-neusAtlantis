@@ -1,6 +1,8 @@
 #Function to scale catch for scenario testing
 
-make_catch_scalar_projected = function(original_catch_file,
+make_catch_scalar_projected = function(
+                                      proj.dir,
+                                      original_catch_file,
                                       setup.filename,
                                       groups,
                                       change,
@@ -25,7 +27,7 @@ make_catch_scalar_projected = function(original_catch_file,
   )
   write.csv(setup.df,file = setup.filename,row.names = F)
   
-  source(here::here('R','scale_catch_functions.r'))
+  source(paste0(proj.dir,'R/scale_catch_functions.r'))
   
   new.catch.data = scale_catch(
     filename = setup.filename,

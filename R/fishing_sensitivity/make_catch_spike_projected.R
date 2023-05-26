@@ -1,20 +1,24 @@
 #Function to scale catch for scenario testing
-original_catch_file = "C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/currentVersion/CatchFiles/total_catch_project_mean_20yrs.ts"
-fgs.file = here::here('currentVersion','neus_groups.csv')
-groups = c('MAK','HER')
-new_catch_file = "C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/currentVersion/CatchFiles/fish_sens_catch_spike_species_1/test.ts"
-spinup.end = 365*20
-spike.start = 19724
-spike.end = 19724 + (365*2)
-time.end = 19724 + (365*20)
-type = 'Scalar'
-change = 2
+# proj.dir = here::here('/')
+# original_catch_file = "C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/currentVersion/CatchFiles/total_catch_project_mean_20yrs.ts"
+# fgs.file = here::here('currentVersion','neus_groups.csv')
+# group.names = c('MAK','HER')
+# new_catch_file = "C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/currentVersion/CatchFiles/fish_sens_catch_spike_species_1/test.ts"
+# setup.filename = here::here('Setup_Files','test.csv')
+# spike.start = 19724
+# spike.end = 19724 + (365*2)
+# time.end = 19724 + (365*20)
+# type = 'Replace'
+# change = 2
 
-make_catch_scale_spike_projected = function(original_catch_file,
+make_catch_spike_projected = function(proj.dir,
+                                            original_catch_file,
                                       setup.filename,
-                                      groups,
+                                      group.names,
                                       change,
-                                      spinup.end,
+                                      spike.start,
+                                      spike.end,
+                                      time.end,
                                       start.time, 
                                       end.time,
                                       type,
@@ -34,27 +38,32 @@ make_catch_scale_spike_projected = function(original_catch_file,
   colnames(orig.data) = c('Time',fgs$Code)
   catch.base = orig.data%>%
     tidyr::gather('groups','catch',-Time)%>%
-    filter(groups %in% groups & catch >0 & Time < spike.start & Time > spinup.end)
-  
-  
+    filter(groups %in% group.names & catch >0 &  Time > spike.start)%>%
+    group_by(groups)%>%
+    summarise(mean.catch = mean(catch,na.rm=T))%>%
+    mutate(scaled.catch = mean.catch * change)
   
   #create setupfile and save
   setup.df = data.frame(
-    Group = groups,
+    Group = group.names,
     Start_Time = spike.start,
     End_Time = spike.end,
-    Change = change,
-    Type = type
+    Change = catch.base$scaled.catch[match(catch.base$groups,group.names)],
+    Type = 'Replace'
   )
+  
   write.csv(setup.df,file = setup.filename,row.names = F)
   
-  source(here::here('R','scale_catch_functions.r'))
+  source(paste0(proj.dir,'R/scale_catch_functions.r'))
   
   new.catch.data = scale_catch(
     filename = setup.filename,
     original_catch_file = original_catch_file,
     fgs.file = fgs.file)
     
+  plot(orig.data[,2],type='l')
+  lines(new.catch.data[,2],col = 2)
+  
   if(overwrite == T){
     
     writeLines(header,new.catch.data)
