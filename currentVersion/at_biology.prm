@@ -11893,7 +11893,7 @@ mum_BD_T15	0.0000675
 mum_BO_T15	0.00025
 mum_PB_T15	10
 mum_BB_T15	1
-mum_DF_T15	0.00001
+mum_DF_T15	0.000001
 mum_PL_T15	0.00001
 mum_PS_T15	0.00001
 mum_MA_T15	0.1
@@ -13692,8 +13692,8 @@ MB_mL 0 # 0.005
 SG_mL 0 # 2e-05
 BC_mL 0 # 8e-05
 ZG_mL 0 # 3e-06
-PL_mL 0 # 0.0015
-DF_mL 0 # 5e-04
+PL_mL 0.0015
+DF_mL 5e-04
 PS_mL 0 # 0.016
 ZM_mL 0 # 1e-04
 ZS_mL 0 # 8e-05
