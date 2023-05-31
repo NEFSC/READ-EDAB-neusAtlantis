@@ -10,12 +10,14 @@ phyto.update.2 = here::here('Atlantis_Runs','phyto_update_2022_newDiatomPct','')
 phyto.update.3 = here::here('Atlantis_Runs','phyto_update_2022_lowVflux','')
 phyto.update.4 = here::here('Atlantis_Runs','phyto_update_2022_lowSink','')
 phyto.update.5 = here::here('Atlantis_Runs','phyto_update_2022_midSink','')
+phyto.update.6 = here::here('Atlantis_Runs','phyto_update_2022_midSink_2','')
+phyto_svel_0 =  here::here('Atlantis_Runs','phyto_svel_1','phyto_svel_1_0','')
 
 figure.dir = here::here('Figures','Run_Comparisons','')
 
 plot_run_comparisons(
-  model.dirs = c(dev,phyto.update.4,phyto.update.5,phyto.update.2),
-  model.names = c('dev','lowSink_PL','midSink_PL','normalSink_PL'),
+  model.dirs = c(dev,phyto_svel_0),
+  model.names = c('dev','phyto_svel_1_0'),
   plot.rel = T,
   plot.diff = F,
   plot.out = paste(figure.dir,'phyto_update_2022_sinkVel'),

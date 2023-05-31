@@ -6,10 +6,10 @@ library(ncdf4)
 groups = c('Diatom','Dinoflagellates','Pico-phytoplankton')
 nc.var.name = c('Diatom_N','DinoFlag_N','PicoPhytopl_N')
 
-run.name = 'phyto_update_2022_newDiatomPct'
+run.name = 'phyto_svel_1_0'
 # output.data = readRDS(here::here('Atlantis_Runs',run.name,'Post_Processed','Data','biomass_spatial_stanza.rds'))%>%
 #   filter(species %in% groups)
-output.nc = nc_open(here::here('Atlantis_Runs',run.name,'neus_output.nc'))
+output.nc = nc_open(here::here('Atlantis_Runs','phyto_svel_1',run.name,'neus_output.nc'))
 output.dat.ls = list()
 for(i in 1:length(nc.var.name)){
   
