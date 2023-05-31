@@ -26,6 +26,16 @@ plot_run_comparisons(
   remove.init = F
 )
 
+plot_run_comparisons(
+  model.dirs = c(dev,BH_combined),
+  model.names = c('dev', 'BH_combined'),
+  plot.rel = T,
+  plot.diff = F,
+  plot.out = paste(figure.dir,'dev_BH_combined_'),
+  table.out = F,
+  groups = NULL,
+  remove.init = F
+)
 
 # plot_run_comparisons(
 #   model.dirs = c(dev.old,dev,zl.7),

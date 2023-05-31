@@ -94,8 +94,8 @@ make_atlantis_diagnostic_figures(
   plot.spatial.biomass.seasonal = F,
   plot.LTL=T,
   plot.catch =F,
-  plot.mortality=F,
-  plot.max.weight = F
+  plot.mortality=T,
+  plot.max.weight = T
 
 )
 tictoc::toc()

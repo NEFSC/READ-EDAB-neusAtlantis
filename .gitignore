@@ -35,7 +35,6 @@ outputFolder
 # except nc
 !/currentVersion/neus_init.nc
 !/currentVersion/neus_init.cdf
-
 # except csv
 !/currentVersion/neus_fisheries.csv
 !/currentVersion/neus_groups.csv
