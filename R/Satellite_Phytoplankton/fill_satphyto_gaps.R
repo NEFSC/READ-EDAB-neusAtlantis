@@ -49,6 +49,10 @@ fill_satphyto_gaps = function(input.mat,
     var.gaps.ls = list()
   }
   for( b in 1:length(boxes)){
+    
+    if(b == 25){
+      next()
+    }
     #Generate box timeseries
     var.box = input.mat %>% dplyr::filter(box == boxes[b])
     
@@ -130,9 +134,19 @@ fill_satphyto_gaps = function(input.mat,
       if(gap.length <= max.interp){
         pre.gap = var.box.gaps$start[g]-1
         post.gap = var.box.gaps$stop[g]+1
-        m = (var.box$values[post.gap]-var.box$values[pre.gap])/(post.gap-pre.gap)
+        if(pre.gap == 0){
+          val.start = var.box.doy[1]
+        }else{
+          val.start = var.box$values[pre.gap]
+        }
+        if(post.gap == 366){
+          val.end = var.box.doy[365]
+        }else{
+          val.end = var.box$values[post.gap]
+        }
+        m = (val.end - val.start)/(post.gap-pre.gap)
         match.id = which(input.mat$box == boxes[b] & input.mat$date %in% gap.dates)
-        input.mat$values[match.id] = var.box$values[pre.gap]+m*(1:gap.length)
+        input.mat$values[match.id] = val.start+m*(1:gap.length)
       }else if(!is.na(doy.file)){
         match.id = which(input.mat$box == boxes[b] & input.mat$date %in% gap.dates)
         input.mat$values[match.id] = var.box.doy[doy.range]

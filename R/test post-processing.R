@@ -16,10 +16,8 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 run.name = 'BLF_RED_5'
 
 # atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HER_CatchSpinup_1/',run.name,'/')
-# atl.dir = here::here('Atlantis_Runs','ZL_restore_7_mumC',run.name,'')
+# atl.dir = here::here('Atlantis_Runs','BH_convert_2_g_BH2',run.name,'')
 atl.dir = here::here('Atlantis_Runs',run.name,'')
-# atl.dir = '/home/jcaracappa/atlantis/Shared_Data/Dev_Runs/Dev_11032022/'
-
 
 dir.create(paste0(atl.dir,'Post_Processed/'))
 dir.create(paste0(atl.dir,'Post_Processed/Data/'))
@@ -81,20 +79,20 @@ make_atlantis_diagnostic_figures(
   plot.benthic =F,
   plot.overall.biomass = F,
   plot.biomass.timeseries = T,
-  plot.length.age = T,
+  plot.length.age = F,
   plot.biomass.box=F,
   plot.c.mum=F,
   plot.sn.rn=F,
-  plot.recruits=T,
-  plot.numbers.timeseries=T,
-  plot.physics=F,
+  plot.recruits=F,
+  plot.numbers.timeseries=F,
+  plot.physics=T,
   plot.growth.cons=F,
   plot.cohort=F,
   plot.diet=T,
   plot.consumption= T,
   plot.spatial.biomass=F,
   plot.spatial.biomass.seasonal = F,
-  plot.LTL=F,
+  plot.LTL=T,
   plot.catch =F,
   plot.mortality=T,
   plot.max.weight = T

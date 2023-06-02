@@ -24,16 +24,16 @@ plot_run_comparisons(
   remove.init = F
 )
 
-plot_run_comparisons(
-  model.dirs = c(dev.old,dev,zl.7),
-  model.names = c('Dev_20230313','Dev_20230327','ZL_restore_7'),
-  plot.rel = T,
-  plot.diff = F,
-  plot.out = paste(figure.dir,'ZL_restore_7_v_dev'),
-  table.out = F,
-  groups = NULL,
-  remove.init = F
-)
+# plot_run_comparisons(
+#   model.dirs = c(dev.old,dev,zl.7),
+#   model.names = c('Dev_20230313','Dev_20230327','ZL_restore_7'),
+#   plot.rel = T,
+#   plot.diff = F,
+#   plot.out = paste(figure.dir,'ZL_restore_7_v_dev'),
+#   table.out = F,
+#   groups = NULL,
+#   remove.init = F
+# )
 
 # plot_run_catch_comparisons(
 #   model.dirs = c(dev, new.clams, new.clams.2),

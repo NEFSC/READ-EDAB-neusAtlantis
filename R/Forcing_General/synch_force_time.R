@@ -6,7 +6,7 @@ statevar.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/statev
 trans.dir = 'C:/Users/joseph.caracappa/Documents/GLORYS/Atlantis_Format/'
 trans.prefix = 'GLORYS_Atlantis_Transport_'
 statevar.prefix = 'Obs_Hindcast_statevars_'
-years = 2018:2021
+years = 1964:2021
 
 yr=1
 for(yr in 1:length(years)){
