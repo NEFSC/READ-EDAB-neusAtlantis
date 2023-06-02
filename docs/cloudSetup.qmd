@@ -17,6 +17,10 @@ editor: visual
 9.  [Using the Parallel Works IDE](#ide)
 10. [Clone the neus-atlantis repo in /contrib](#clone-repo)
 11. [Run Atlantis](#run-atlantis)
+    *   [Podman](#pod)
+    *   [Singularity](#sing)
+    *   [Using SLURM](#slurm)
+    *   [Useful example](#sbatch)
 
 ## NOAA Cloud {#noaa-cloud}
 
@@ -42,15 +46,14 @@ A snapshot results in a running container that is used to spin up your resource.
 
         sudo yum -y install podman;
         sudo yum -y install git;
-        sudo yum -y install netcdf.x86_64; 
+        sudo yum -y install netcdf-devel; 
         sudo dnf -y install nco;
         sudo podman login --username=andybeet --password=secretKey docker.io; 
         sudo podman pull docker.io/andybeet/atlantis:6536;
         sudo podman login --username=andybeet --password=secretKey docker.io; 
         sudo podman pull docker.io/andybeet/atlantis:6665;
-        sudo yum-config-manager --add-repo
+        sudo yum-config-manager --add-repo https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-rhel7.repo;
 
-        https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-rhel7.repo;
         sudo -n yum install tigervnc-server -y;
         sudo -n yum install python3 -y;
         sudo -n yum groupinstall "Server with GUI" -y;
@@ -63,6 +66,36 @@ A snapshot results in a running container that is used to spin up your resource.
         yum -y install R-${R_VERSION}-1-1.x86_64.rpm;
         ln -s /opt/R/${R_VERSION}/bin/R /usr/local/bin/R;
         ln -s /opt/R/${R_VERSION}/bin/Rscript /usr/local/bin/Rscript;
+
+        # required for some other R packages
+        sudo yum -y install fontconfig-devel
+        # install package manager for gdal, geos, proj4
+        sudo yum -y install https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+        sudo yum install -y proj-devel
+        sudo yum -y install gdal34-devel geos311-devel proj81-developer
+        sudo yum -y install harfbuzz-devel
+        sudo yum -y install fribidi-devel
+        sudo yum -y install libjpeg-devel
+
+        # install packages
+        sudo /usr/local/bin/Rscript -e "install.packages('remotes', repos='http://cran.rstudio.com/')";
+        sudo /usr/local/bin/Rscript -e "install.packages('dplyr', repos='http://cran.rstudio.com/')";
+        sudo /usr/local/bin/Rscript -e "install.packages('tidyr', repos='http://cran.rstudio.com/')";
+        sudo /usr/local/bin/Rscript -e "install.packages('ggplot2', repos='http://cran.rstudio.com/')";
+        sudo /usr/local/bin/Rscript -e "install.packages('here', repos='http://cran.rstudio.com/')";
+        sudo /usr/local/bin/Rscript -e "install.packages('purr', repos='http://cran.rstudio.com/')";
+        sudo /usr/local/bin/Rscript -e "install.packages('magrittr', repos='http://cran.rstudio.com/')";
+        sudo /usr/local/bin/Rscript -e "install.packages('rlang', repos='http://cran.rstudio.com/')";
+        sudo /usr/local/bin/Rscript -e "install.packages('tibble', repos='http://cran.rstudio.com/')";
+        sudo /usr/local/bin/Rscript -e "install.packages('stringr', repos='http://cran.rstudio.com/')";
+        sudo /usr/local/bin/Rscript -e "install.packages('grid', repos='http://cran.rstudio.com/')";
+        sudo /usr/local/bin/Rscript -e "install.packages('gridextra', repos='http://cran.rstudio.com/')";
+        sudo /usr/local/bin/Rscript -e "install.packages('xml2', repos='http://cran.rstudio.com/')";
+        #sudo /usr/local/bin/Rscript -e "remotes::install_github('atlantistools','Atlantis-Ecosystem-Model/atlantistools')";
+        #sudo /usr/local/bin/Rscript -e "remotes::install_github('atlantisdiagnostics','NOAA-EDAB/atlantisdiagnostics')";
+
+
+
         # old Rstudio version
         wget https://download1.rstudio.org/desktop/centos7/x86_64/rstudio-2022.07.2-576-x86_64.rpm;
         sudo -n yum install rstudio-2022.07.2-576-x86_64.rpm -y;
@@ -89,15 +122,10 @@ This script will install podman, git, netcdf, nco. It will then log in to Docker
 
 The User bootstrap text field (found in the resource properties) is a location to add linux command line operations that will get executed after the cluster is booted up.
 
-     > cp -R /contrib/neus-atlantis /home/First.Last/neus-atlantis;
-     > cp /contrib/slurm.sh /home/First.Last/slurm.sh;
-     > echo "Install R packages ....";
-     > sudo chmod -R 777 /opt/R/4.2.2/lib/R/library
-     > Rscript -e "install.packages('remotes', repos='http://cran.rstudio.com/')";
-     > Rscript -e "install.packages('here', repos='http://cran.rstudio.com/')";
-     > Rscript -e "install.packages('dplyr', repos='http://cran.rstudio.com/')";
+        cp /contrib/.Rprofile /home/First.Last/.Rprofile
+        sudo /usr/local/bin/Rscript -e "remotes::install_github('NOAA-EDAB/atlantisdiagnostics')";
 
-This will copy the atlantis repo from \contrib (permanent storage location) to your user profile. You can also copy any other content you like. It will then install R packages to your environment
+This will copy a startup Rprofile script (this allows R to use underlying spatial linux libraries, proj, geos, gdal) from \\contrib (permanent storage location) to your user profile. You can also copy any other content you like. It will then install R packages to your environment
 
 ## Create a compute partition (to run the model) {#partition}
 
@@ -109,7 +137,7 @@ In the resource properties
 
 -   Max Nodes (This is the number of these machines that you want available)
 
-Note: You do not get charged for any of these machines unless you send a job to the SLURM resource manager. At that point a node will be booted up and the job run. After the job has finished, the node will remain idle for a small amount of time before being shut
+Note: You do not get charged for any of these machines unless you send a job to the SLURM resource manager. At that point a node will be booted up and the job run. After the job has finished, the node will remain idle for a small amount of time before being shutdown
 
 ## Boot the resource {#boot-the-resource}
 
@@ -117,7 +145,7 @@ On the compute tab
 
 -   Click the big button. The resource will boot up. This can take up 5-15 mins
 
-## Add/Run Rstudio workflow from marketplace\](#add-workflow)
+## Add/Run Rstudio workflow from marketplace {#add-workflow}
 
 You will need to first get the workflow from the "marketplace" then you'll need to apply it to the active resource
 
@@ -139,7 +167,7 @@ You will need to first get the workflow from the "marketplace" then you'll need 
 
 -   From the compute tab you should see the RSTUDIO_CLOUD workflow in a running status. After a minute or so click the blue eye icon to launch Rstudio.
 
-## Using the IDE (#ide)
+## Using the IDE {#ide}
 
 Once the resource has fully booted, the "power" button next to the resource will turn bright green and a line (bright green) will appear under the resource. You will also see an ip address.
 
@@ -151,7 +179,7 @@ Once the resource has fully booted, the "power" button next to the resource will
 
 You are now logged into the resource and can use any linux command to explore the environment
 
-## Clone the neus-atlantis repo in /contrib\]() {#clone-repo}
+## Clone the neus-atlantis repo in \\contrib {#clone-repo}
 
 The neus-atlantis dev branch is stored in the \contrib directory, which is permanent storage, and is accessible to anyone in the atlantis cloud team. It is then copied to your personal environment in the [User Bootrap](#bootstrap) script.
 
@@ -164,7 +192,9 @@ It will then clone a single branch of the neus-atlantis repo into the folder `/c
 
 ## Run atlantis {#run-atlantis}
 
-### From the command line
+Podman can not be used on centos7 in combination with SLURM. Podman can not be successfully updated to a more recent version from what is bundled with centos7. Because of this there are issues relating to the queueing of jobs. When a resource becomes available podman jobs all attempt to start at the same time and conflict with each other and don't start. However this is unlikely to be an issue on ubuntu where we can update podman to a version where this bug has been resolved.
+
+### Podman {#pod}
 
 -   You'll need to use `sudo` for all podman commands, eg `sudo podman images`
 
@@ -176,26 +206,133 @@ It will then clone a single branch of the neus-atlantis repo into the folder `/c
 
 -   Unless you save output in `/contrib` folder it will not persist after the cluster is shut down
 
-### using **sbatch**
+### Singularity {#sing}
 
--   To send a job to the partition and boot up an additional node (other than the main controller node) you can use the SLURM resource manager
+Alternatively another container option is Singularity. This is supported on NOAAs HPC and cloud mounted volumes. Docker/Podman utilizes a Dockerfile from which an image is built, Singularity has a recipe file from which an image is built. A singularity image has an `.sif` extension and this file and can be stored anywhere. 
+
+You will find the file `atlantis6536.sif` file and the `Singularity` recipe file in the \\contrib\\atlantisCode` folder
+
+-   `sudo singularity exec --bind /contrib/neus-atlantis/currentVersion:/app/model,/contrib/Andrew.Beet/out1:/app/model/output /contrib/atlantisCode/atlantis6536.sif` (By default this will run `RunAtlantis.sh` found in currentVersion)
+
+-   You'll need to have created the output folder for the run (in this case `mkdir /home/Andrew.Beet/out1`)
+
+-   To create multiple folders- `mkdir out{1..15}` will create multiple directories
+
+-   Unless you save output in `/contrib` folder it will not persist after the cluster is shut down
+
+
+### Using SLURM {#slurm}
+
+To send a job to the partition and boot up an additional node (other than the main controller node) you can use the SLURM resource manager
+
+-   Configure your resource to have a additional partition. Name it "compute" and select a resource. The 44 core machine `Standard_HC44rs` has been tested and recommended. Then select the number of nodes (how many of this type of resource you want to make available)
 
 -   Create a file with the .sh extension (for this example, job.sh) and copy the following
+
+    For Podman:
 
     > #!/bin/bash
     >
     > sudo podman run --rm --name scenario1 --mount "type=bind,src=/contrib/neus-atlantis/currentVersion/,dst=/app/model" --mount "type=bind,src=/home/Andrew.Beet/out1,dst=/app/model/output/" atlantis:6536
-
-Note: The `-d` flag is omitted.
-
--   [Log in to the resource](#ide) either using the Parallel Works IDE or your preferred shell.
-
+    
+    For Singularity
+    
+    > #!/bin/bash
+    >
+    > sudo singularity exec --bind /contrib/neus-atlantis/currentVersion:/app/model,/contrib/Andrew.Beet/out1:/app/model/output /contrib/atlantisCode/atlantis6536.sif 
+    
 -   On the command line type
 
     > sbatch -N 1 job.sh
 
-This will request a single node from the partition and run the commands found in `job.sh` If this is run again it will run an addition job on the next free core on the node. If all cores are used a new node will be launched. Use commands `sinfo`, `cancel`, `squeue` to inspect resource usage and cancel jobs
+This will request a single node from the partition and run the commands found in `job.sh` If this is run again it will run an addition job on the next free core on the node. If all cores are used a new node will be launched. Use commands `sinfo`, `scancel`, `squeue` to inspect resource usage and cancel jobs.
 
-### using **srun**
+**Note: In the above example all output will be saved in the folder `out1`**
 
-This should be equivalent to **sbatch** (Can't seem to get it to work)
+### Practical use of sbatch {#sbatch}
+
+In practice we want to submit multiple jobs, each job with a different set of input files, with each job outputting model results to its own folder. For example suppose we want 30 model runs each one with different initial starting value scalars (`init_scalar` in the `at_run.prm` file)
+
+-   Create the 30 `at_run.prm` files and save them in the `currentVersion` folder (eg, `at_run1.prm`, ..., `at_run30.prm`)
+
+-   The Singularity image located in `\contrib\atlantisCode\atlantis6536.sif` can take a shell script as an argument. This script be executed instead of the default script (`RunAtlantis.sh`) embedded in the container.
+
+-   Create a `RunAtlantis.sh` file for each run (eg `RunAtlantis1.sh`, ..., `RunAtlantis30.sh`. Each of these shell scripts will have the form:
+
+    > #!/bin/bash
+    >
+    > cd /app/model
+    >
+    > find /app/model -type f | xargs dos2unix
+    >
+    > atlantisMerged -i neus_init.nc 0 -o neus_output.nc -r at_run1.prm -f at_force_LINUX.prm -p at_physics.prm -b at_biology.prm -h at_harvest.prm -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -t . -d output
+
+Note: the addition of the line `cd /app/model`. This is required for Singularity because unlike Podman/Docker you can not specify a working directory inside the container.
+
+-   Create output folders for each run (eg, `out1`, ..., `out30`)
+
+-   Create a `job.sh` for each run that will execute the `RunAtlantis.sh`. The `job.sh` will have the form
+
+    > #!/bin/bash
+    >
+    > sudo singularity exec --bind /contrib/neus-atlantis/currentVersion:/app/model,/contrib/Andrew.Beet/out1:/app/model/output /contrib/atlantisCode/atlantis6536.sif /app/model/RunAtlantis1.sh
+
+Note: the full path to the `sif` file needs to be included. The path to the location of the `RunAtlantis.sh` INSIDE the container needs to be specified
+
+-   Send each job (`job.sh`) to be managed by SLUM 
+
+    > sbatch -N 1 /pathtojob/job.sh
+    
+-   Monitor batch progress using `squeue` and `sinfo` command line functions. To view run specific progress you can access the slurm-xx.out logs from parallel works IDE. In the left hand side column (The explorer), click on the named resource you are using then select the slurm job `out` file. This will contain all of the information that atlantis would print to standard out.
+
+
+### Example r script
+
+```{r code1, eval = F}
+#' Test cloud atlantis RunAtlantis.sh 
+#'
+#' Use singularity with individual RunAtlantisx.sh scripts
+#' 30 at_run.prm scripts all different initial scalars
+#' run on a 44 core compute node 
+#' 
+
+nfolders <- 30
+for (ifolder in 1:nfolders) {
+  # create folder for output
+  folder <- paste0("/contrib/Andrew.Beet/out",ifolder)
+  if (!dir.exists(folder)){
+    dir.create(paste0("/contrib/Andrew.Beet/out",ifolder))
+  }
+  
+  # create sh script to run model
+  filenm <- paste0("/contrib/neus-atlantis/currentVersion/RunAtlantis",ifolder,".sh")
+  fileConn<-file(filenm,open="w")
+  cat("#!/bin/bash\n",file=fileConn,append=T)
+  cat("cd /app/model\n",file=fileConn,append=T)
+  cat("find /app/model -type f | xargs dos2unix\n",file=fileConn,append=T)
+  cat(paste0("atlantisMerged -i neus_init.nc 0 -o neus_output.nc -r at_run",ifolder,".prm -f at_force_LINUX.prm -p at_physics.prm -b at_biology.prm -h at_harvest.prm -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -t . -d output\n"),file = fileConn,append=T)
+  close(fileConn)
+  system(paste0("chmod 775 ",filenm))
+  
+
+  # create batch sh script to submit to slurm
+  filenmjob <- paste0("/contrib/Andrew.Beet/job",ifolder,".sh")
+  fileConn2<-file(filenmjob,open="w")
+  cat("#!/bin/bash\n",file=fileConn2,append=T)
+  runString <- paste0("sudo singularity exec --bind /contrib/neus-atlantis/currentVersion:/app/model,/contrib/Andrew.Beet/out",ifolder,":/app/model/output /contrib/atlantisCode/atlantis6536.sif /app/model/RunAtlantis",ifolder,".sh") 
+  
+
+  cat(runString,file=fileConn2,append=T)
+  close(fileConn)
+  system(paste0("chmod 775 ",filenmjob))
+  
+  
+  # print to make sure working
+  message(ifolder)
+  message(runString)
+  
+  # submit job to slurm
+  batchString <- paste0("sbatch -N 1 /contrib/Andrew.Beet/job",ifolder,".sh")
+  system(batchString)
+
+```
