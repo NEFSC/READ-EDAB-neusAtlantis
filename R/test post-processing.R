@@ -13,7 +13,7 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'phyto_update_2022_midSink'
+run.name = 'BLF_RED_5'
 
 # atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HER_CatchSpinup_1/',run.name,'/')
 # atl.dir = here::here('Atlantis_Runs','BH_convert_2_g_BH2',run.name,'')
