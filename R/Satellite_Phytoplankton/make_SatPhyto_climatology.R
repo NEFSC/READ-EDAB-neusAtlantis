@@ -17,10 +17,7 @@
 #'Author: J. Caracappa
 #'
 
-# in.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Climatology/v6/'
-# micro.file = 'DOY-OCCCI-ATLANTIS_NEUS-PSC_MICRO-TURNER.CSV'
-# nanopico.file = 'DOY-OCCCI-ATLANTIS_NEUS-PSC_NANOPICO-TURNER.CSV'
-# 
+# in.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Climatology/'
 # in.file = 'DOY-OCCCI-ATLANTIS_NEUS-VER_1.csv'
 # out.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format/'
 # out.file = 'Phyto_Climatology'

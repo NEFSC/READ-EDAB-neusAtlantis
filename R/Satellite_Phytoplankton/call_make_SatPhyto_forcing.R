@@ -5,14 +5,14 @@
 
 #Read in climatology function and statevar forcing function
 source(here::here('R','Satellite_Phytoplankton','make_SatPhyto_files.R'))
-source(here::here('R','Physical_Forcing','make_force_statevar.R'))
-source(here::here('R','Physical_Forcing','make_force_spinup.R'))
+source(here::here('R','make_force_statevar.R'))
+source('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/R/make_force_spinup.R')
 
 #set.directories
-satphyto.dir ='C:/Users/joseph.caracappa/Documents/Satellite_Phyto/'
-rawdata.dir = paste0(satphyto.dir,'Data_v6/')
-satphyto.atl.dir = paste0(satphyto.dir,'Atlantis_Format_v6/')
-satphyto.force.dir = paste0(satphyto.dir,'Forcing_dynamic_lower_v6/')
+satphyto.dir ='C:/Users/joseph.caracappa/Documents/Satellite_Phyto/' 
+rawdata.dir = paste0(satphyto.dir,'Data/')
+satphyto.atl.dir = paste0(satphyto.dir,'Atlantis_Format/')
+satphyto.force.dir = paste0(satphyto.dir,'Forcing_dynamic_lower/')
 
 
 
@@ -21,7 +21,7 @@ satphyto.force.dir = paste0(satphyto.dir,'Forcing_dynamic_lower_v6/')
 atl.varname =  c('Diatom_N','DinoFlag_N','PicoPhytopl_N','Diatom_S')
 atl.longname = c('Diatom Nitrogen','Dinoflagellate Nitrogen','PicoPhytoplankton Nitrogen','Diatom Silicate')
 
-years = 1997:2022
+years = 1997:2019
 raw.files = paste0('D8-OCCCI-ATLANTIS_',years,'.csv')
 
 # #Make Forcing using Hirata Diatom Proportion

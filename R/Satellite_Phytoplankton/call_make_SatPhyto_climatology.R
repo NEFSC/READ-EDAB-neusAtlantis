@@ -1,30 +1,28 @@
 #Script that calls on make_SatPhyto_Climatology
 
 #Read in climatology function and statevar forcing function
-source(here::here('R','Satellite_Phytoplankton','make_SatPhyto_climatology_byClass.R'))
-source(here::here('R','Physical_Forcing','make_force_statevar.R'))
+source(here::here('R','make_SatPhyto_climatology.R'))
+source(here::here('R','make_force_statevar.R'))
 
 #set.directories
-rawdata.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Climatology/v6/'
-processed.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format/v6/'
-force.dir = 'c:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_Files/v6/'
+rawdata.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Climatology/'
+processed.dir = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Atlantis_Format/'
+force.dir = 'c:/Users/joseph.caracappa/Documents/Satellite_Phyto/Forcing_Files/'
 atl.varname =  c('Diatom_N','DinoFlag_N','PicoPhytopl_N')
 atl.longname = c('Diatom Nitrogen','Dinoflagellate Nitrogen','PicoPhytoplankton Nitrogen')
 
 #make climatology
-make_SatPhyto_climatology_byClass(in.dir = rawdata.dir,
-                          micro.file = 'DOY-OCCCI-ATLANTIS_NEUS-PSC_MICRO-TURNER.CSV',
-                          nanopico.file = 'DOY-OCCCI-ATLANTIS_NEUS-PSC_NANOPICO-TURNER.CSV',
+make_SatPhyto_climatology(in.dir = rawdata.dir,
+                          in.file = 'DOY-OCCCI-ATLANTIS_NEUS-VER_1.csv',
                           out.dir = processed.dir,
                           out.file = 'Phyto_Climatology',
                           stat.var = 'MED',
-                          bio.vars =  c('PSC_MICRO','PSC_NANOPICO'),
+                          bio.vars = c('MICRO','NANO','PICO'),
                           atl.groups = c('PL','DF','PS'),
                           atl.varname = atl.varname,
                           atl.longname = atl.longname,
-                          hirata.doy = 'C:/Users/joseph.caracappa/Documents/Satellite_Phyto/Data/v6/diatom_proportion_DOY_dataframe.rds', 
-                          chl.conv = rep(7,3)
-                          )
+                          phyto.fract = data.frame(PL = c(0.75,0,0),DF = c(0.25,0,0), PS = c(0,1,1)),
+                          chl.conv = rep(7,3))
 
 #make forcing
 satphyto.files = list.files(processed.dir,'*Climatology.nc',full.names = T)
@@ -41,7 +39,7 @@ for(i in 1:length(satphyto.files)){
                       valid.min = rep(0,3),
                       valid.max = rep(99999,3),
                       dupe.bottom = F,
-                      out.prefix = 'SatPhyto_Climatology')
+                      out.prefix = 'SatPhyto_Climatology_')
   print(i)
 }
 

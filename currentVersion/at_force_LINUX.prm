@@ -343,8 +343,8 @@ Diatom_N PicoPhytopl_N Diatom_S DinoFlag_N Lab_Det_N
 
 #Diatom_N
 
-Diatom_N_nFiles 57
-Diatom_N_use_resets 0
+Diatom_N_nFiles 54
+#Diatom_N_use_resets 0
 Diatom_N_ResetTol 0
 Diatom_N_rewind 1
 Diatom_N_wgt_coefft 1.0
@@ -403,9 +403,6 @@ Diatom_N_File50.name /tsfiles/Annual_Files/Phyto_Forcing_2014.nc
 Diatom_N_File51.name /tsfiles/Annual_Files/Phyto_Forcing_2015.nc
 Diatom_N_File52.name /tsfiles/Annual_Files/Phyto_Forcing_2016.nc
 Diatom_N_File53.name /tsfiles/Annual_Files/Phyto_Forcing_2017.nc
-Diatom_N_File54.name /tsfiles/Annual_Files/Phyto_Forcing_2018.nc
-Diatom_N_File55.name /tsfiles/Annual_Files/Phyto_Forcing_2019.nc
-Diatom_N_File56.name /tsfiles/Annual_Files/Phyto_Forcing_2020.nc
 
 Diatom_N_File0.use_resets 0
 Diatom_N_File1.use_resets 0
@@ -464,7 +461,7 @@ Diatom_N_File53.use_resets 0
 
 #PicoPhytopl_N
 
-PicoPhytopl_N_nFiles 57
+PicoPhytopl_N_nFiles 54
 PicoPhytopl_N_use_resets 0
 PicoPHytopl_N_ResetTol 0
 PicoPhytopl_N_rewind 1
@@ -524,10 +521,6 @@ PicoPhytopl_N_File50.name /tsfiles/Annual_Files/Phyto_Forcing_2014.nc
 PicoPhytopl_N_File51.name /tsfiles/Annual_Files/Phyto_Forcing_2015.nc
 PicoPhytopl_N_File52.name /tsfiles/Annual_Files/Phyto_Forcing_2016.nc
 PicoPhytopl_N_File53.name /tsfiles/Annual_Files/Phyto_Forcing_2017.nc
-PicoPhytopl_N_File54.name /tsfiles/Annual_Files/Phyto_Forcing_2018.nc
-PicoPhytopl_N_File55.name /tsfiles/Annual_Files/Phyto_Forcing_2019.nc
-PicoPhytopl_N_File56.name /tsfiles/Annual_Files/Phyto_Forcing_2020.nc
-
 
 PicoPhytopl_N_File0.use_resets 0
 PicoPhytopl_N_File1.use_resets 0
@@ -586,7 +579,7 @@ PicoPhytopl_N_File53.use_resets 0
 
 #Diatom_S
 
-Diatom_S_nFiles 57
+Diatom_S_nFiles 54
 Diatom_S_rewind 1
 Diatom_S_wgt_coefft 1.0
 Diatom_S_use_resets 0
@@ -646,9 +639,6 @@ Diatom_S_File50.name /tsfiles/Annual_Files/Phyto_Forcing_2014.nc
 Diatom_S_File51.name /tsfiles/Annual_Files/Phyto_Forcing_2015.nc
 Diatom_S_File52.name /tsfiles/Annual_Files/Phyto_Forcing_2016.nc
 Diatom_S_File53.name /tsfiles/Annual_Files/Phyto_Forcing_2017.nc
-Diatom_S_File54.name /tsfiles/Annual_Files/Phyto_Forcing_2018.nc
-Diatom_S_File55.name /tsfiles/Annual_Files/Phyto_Forcing_2019.nc
-Diatom_S_File56.name /tsfiles/Annual_Files/Phyto_Forcing_2020.nc
 
 Diatom_S_File0.use_resets 0
 Diatom_S_File1.use_resets 0
@@ -707,7 +697,7 @@ Diatom_S_File53.use_resets 0
 
 #DinoFlag_N
 
-DinoFlag_N_nFiles 57
+DinoFlag_N_nFiles 54
 DinoFlag_N_use_resets 0
 DinoFlag_N_rewind 1
 DinoFlag_N_wgt_coefft 1.0
@@ -767,9 +757,6 @@ DinoFlag_N_File50.name /tsfiles/Annual_Files/Phyto_Forcing_2014.nc
 DinoFlag_N_File51.name /tsfiles/Annual_Files/Phyto_Forcing_2015.nc
 DinoFlag_N_File52.name /tsfiles/Annual_Files/Phyto_Forcing_2016.nc
 DinoFlag_N_File53.name /tsfiles/Annual_Files/Phyto_Forcing_2017.nc
-DinoFlag_N_File54.name /tsfiles/Annual_Files/Phyto_Forcing_2018.nc
-DinoFlag_N_File55.name /tsfiles/Annual_Files/Phyto_Forcing_2019.nc
-DinoFlag_N_File56.name /tsfiles/Annual_Files/Phyto_Forcing_2020.nc
 
 DinoFlag_N_File0.use_resets 0
 DinoFlag_N_File1.use_resets 0
