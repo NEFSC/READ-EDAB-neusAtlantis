@@ -119,14 +119,17 @@ for(i in 1:N){
 # lines(base.catch[,2],type = 'l',col = 'red')
 # 
 # #### Create Batcher Setup ####
-# setup.df = data.frame(
-#   Run = paste0('rand_',1:N),
-#   OutputDir = paste0(batch.prefix,'/rand_',1:N,'/'),
-#   BiolPrm = 'at_biology.prm',
-#   RunPrm = 'at_run.prm',
-#   HarvestPrm = 'at_harvest.prm',
-#   InitNC = 'neus_init.nc',
-#   ForcePrm = paste0('at_force_LINUX_rand_',1:N,'.prm')
-# )
+setup.df = data.frame(
+  Run = paste0('rand_',1:N),
+  OutputDir = paste0(batch.prefix,'/rand_',1:N,'/'),
+  BiolPrm = 'at_biology.prm',
+  RunPrm = 'at_run.prm',
+  HarvestPrm = 'at_harvest.prm',
+  InitNC = 'neus_init.nc',
+  ForcePrm = paste0('at_force_LINUX_rand_',1:N,'.prm')
+)
+
+write.csv(setup.df,paste0(proj.dir,'Setup_Files/',paste0(batch.prefix,'.csv')),row.names =F)
+
 
 
