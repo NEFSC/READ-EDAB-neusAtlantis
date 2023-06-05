@@ -5,8 +5,8 @@ source(here::here('R','edit_param_C_age.R'))
 
 group.names = 'RED'
 
-mum.scale = 0.5
-C.scale = 1
+mum.scale = 0.25
+C.scale = 2/3
 
 bio.prm = here::here('currentVersion','at_biology.prm')
 

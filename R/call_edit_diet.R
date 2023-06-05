@@ -6,7 +6,7 @@ source(here::here('R','edit_param_pprey.R'))
 atl.dir  = here::here('currentVersion','/')
 
 # diet.change = read.csv('C:/Users/joe92/Documents/Atlantis/Diet Changes/Diet_Adjust_07082022.csv')
-diet.change = read.csv(here::here('Setup_Files','MAK_fix_2.csv'))
+diet.change = read.csv(here::here('Setup_Files','HER_LOB_diet.csv'))
 
 
 X=get_pprey_vals(atl.dir = atl.dir,
