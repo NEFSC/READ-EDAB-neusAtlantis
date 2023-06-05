@@ -4,27 +4,29 @@ format: html
 editor: visual
 ---
 
+## NOAA Cloud {#noaa-cloud}
+
+NOAA RDHHPCS Cloud access is via a gateway developed by Parallel works. Currently the underlying operating system on Azure is RHEL7/Centos7 which reaches end of life in June 2024. "There is no plan for OS upgrade until 09/30/2023. We have suggested an OS version upgrade to RL8, which is being reviewed by NOAA RDHPCS." Once there is an OS update some of the set up below will break (since it is dependent on Centos7)
+
+
 ## Contents
 
-1.  [NOAA Cloud](#noaa-cloud)
-2.  [Log into Parallel works](#login)
-3.  [Create a snapshot](#create-a-snapshot)
-4.  [Create a Resource](#create-a-resource)
-5.  [Add code in User Bootstrap section of resource](#bootstrap)
-6.  [Create a compute partition (to run the model)](#partition)
-7.  [Boot the resource](#boot-the-resource)
-8.  [Add/Run Rstudio workflow from marketplace](#add-workflow)
-9.  [Using the Parallel Works IDE](#ide)
-10. [Clone the neus-atlantis repo in /contrib](#clone-repo)
-11. [Run Atlantis](#run-atlantis)
+1.  [Log into Parallel works](#login)
+2.  [Create a snapshot](#create-a-snapshot)
+3.  [Create a Resource](#create-a-resource)
+4.  [Add code in User Bootstrap section of resource](#bootstrap)
+5.  [Create a compute partition (to run the model)](#partition)
+6.  [Boot the resource](#boot-the-resource)
+7.  [Add/Run Rstudio workflow from marketplace](#add-workflow)
+8.  [Using the Parallel Works IDE](#ide)
+9. [Clone the neus-atlantis repo in /contrib](#clone-repo)
+10. [Run Atlantis](#run-atlantis)
     *   [Podman](#pod)
     *   [Singularity](#sing)
     *   [Using SLURM](#slurm)
     *   [Useful example](#sbatch)
 
-## NOAA Cloud {#noaa-cloud}
 
-NOAA RDHHPCS Cloud access is via a gateway developed by Parallel works. Currently the underlying operating system on Azure is RHEL7/Centos7 which reaches end of life in June 2024. "There is no plan for OS upgrade until 09/30/2023. We have suggested an OS version upgrade to RL8, which is being reviewed by NOAA RDHPCS." At which point some of the environment set up below will break since it is dependent on Centos7
 
 ## Log into Parallel works {#login}
 
@@ -181,7 +183,7 @@ You are now logged into the resource and can use any linux command to explore th
 
 ## Clone the neus-atlantis repo in \\contrib {#clone-repo}
 
-The neus-atlantis dev branch is stored in the \contrib directory, which is permanent storage, and is accessible to anyone in the atlantis cloud team. It is then copied to your personal environment in the [User Bootrap](#bootstrap) script.
+The neus-atlantis dev branch is stored in the \contrib directory, which is permanent storage, and is accessible to anyone in the atlantis cloud team. It can then be copied to your personal environment in the [User Bootrap](#bootstrap) script if desired.
 
 If the dev branch is updated on GitHub, it will need to be pulled again.
 
@@ -192,15 +194,16 @@ It will then clone a single branch of the neus-atlantis repo into the folder `/c
 
 ## Run atlantis {#run-atlantis}
 
-Podman can not be used on centos7 in combination with SLURM. Podman can not be successfully updated to a more recent version from what is bundled with centos7. Because of this there are issues relating to the queueing of jobs. When a resource becomes available podman jobs all attempt to start at the same time and conflict with each other and don't start. However this is unlikely to be an issue on ubuntu where we can update podman to a version where this bug has been resolved.
+Podman can not be used on centos7 in combination with SLURM. The version bundled with Centos7 (v1.6.4) can not be successfully updated to a more recent version. Because of this there are issues relating to the queueing of jobs dependent on podman. When a resource becomes available podman jobs all attempt to start at the same time and conflict with each other. Some jobs terminate. However this is unlikely to be an issue on ubuntu where we can update podman to a version where this bug has been resolved.
 
 ### Podman {#pod}
 
 -   You'll need to use `sudo` for all podman commands, eg `sudo podman images`
 
--   `sudo podman run --rm  -d --name scenario1 --mount "type=bind,src=/contrib/neus-atlantis/currentVersion/,dst=/app/model" --mount "type=bind,src=/home/Andrew.Beet/out1,dst=/app/model/output/" atlantis:6536`
+-   `sudo podman run --rm  -d --name scenario1 --mount "type=bind,src=/contrib/neus-atlantis/currentVersion/,dst=/app/model"`
+    `--mount "type=bind,src=/contrib/First.Last/out1,dst=/app/model/output/" atlantis:6536`
 
--   You'll need to have created the output folder for the run (in this case `mkdir /home/Andrew.Beet/out1`)
+-   You'll need to have created the output folder for the run (in this case `mkdir /contrib/First.Last/out1`)
 
 -   To create multiple folders- `mkdir out{1..15}` will create multiple directories
 
@@ -208,13 +211,14 @@ Podman can not be used on centos7 in combination with SLURM. Podman can not be s
 
 ### Singularity {#sing}
 
-Alternatively another container option is Singularity. This is supported on NOAAs HPC and cloud mounted volumes. Docker/Podman utilizes a Dockerfile from which an image is built, Singularity has a recipe file from which an image is built. A singularity image has an `.sif` extension and this file and can be stored anywhere. 
+Alternatively another container option is Singularity. This is supported on NOAAs HPC and cloud mounted volumes. Docker/Podman utilizes a Dockerfile from which an image is built, Singularity has a recipe file from which an image is built. A singularity image has an `.sif` extension and can be stored anywhere. 
 
-You will find the file `atlantis6536.sif` file and the `Singularity` recipe file in the \\contrib\\atlantisCode` folder
+You will find the file `atlantis6536.sif` file and the `Singularity` recipe file in the `/contrib/atlantisCode` folder
 
--   `sudo singularity exec --bind /contrib/neus-atlantis/currentVersion:/app/model,/contrib/Andrew.Beet/out1:/app/model/output /contrib/atlantisCode/atlantis6536.sif` (By default this will run `RunAtlantis.sh` found in currentVersion)
+-   `sudo singularity exec --bind /contrib/neus-atlantis/currentVersion:/app/model,/contrib/First.Last/out1:/app/model/output`
+    `/contrib/atlantisCode/atlantis6536.sif` (By default this will run `RunAtlantis.sh` found in currentVersion)
 
--   You'll need to have created the output folder for the run (in this case `mkdir /home/Andrew.Beet/out1`)
+-   You'll need to have created the output folder for the run (in this case `mkdir /contrib/First.Last/out1`)
 
 -   To create multiple folders- `mkdir out{1..15}` will create multiple directories
 
@@ -233,13 +237,13 @@ To send a job to the partition and boot up an additional node (other than the ma
 
     > #!/bin/bash
     >
-    > sudo podman run --rm --name scenario1 --mount "type=bind,src=/contrib/neus-atlantis/currentVersion/,dst=/app/model" --mount "type=bind,src=/home/Andrew.Beet/out1,dst=/app/model/output/" atlantis:6536
+    > sudo podman run --rm --name scenario1 --mount "type=bind,src=/contrib/neus-atlantis/currentVersion/,dst=/app/model" --mount "type=bind,src=/contrib/First.Last/out1,dst=/app/model/output/" atlantis:6536
     
     For Singularity
     
     > #!/bin/bash
     >
-    > sudo singularity exec --bind /contrib/neus-atlantis/currentVersion:/app/model,/contrib/Andrew.Beet/out1:/app/model/output /contrib/atlantisCode/atlantis6536.sif 
+    > sudo singularity exec --bind /contrib/neus-atlantis/currentVersion:/app/model,/contrib/First.Last/out1:/app/model/output /contrib/atlantisCode/atlantis6536.sif 
     
 -   On the command line type
 
@@ -249,7 +253,7 @@ This will request a single node from the partition and run the commands found in
 
 **Note: In the above example all output will be saved in the folder `out1`**
 
-### Practical use of sbatch {#sbatch}
+### A useful example {#sbatch}
 
 In practice we want to submit multiple jobs, each job with a different set of input files, with each job outputting model results to its own folder. For example suppose we want 30 model runs each one with different initial starting value scalars (`init_scalar` in the `at_run.prm` file)
 
@@ -275,7 +279,7 @@ Note: the addition of the line `cd /app/model`. This is required for Singularity
 
     > #!/bin/bash
     >
-    > sudo singularity exec --bind /contrib/neus-atlantis/currentVersion:/app/model,/contrib/Andrew.Beet/out1:/app/model/output /contrib/atlantisCode/atlantis6536.sif /app/model/RunAtlantis1.sh
+    > sudo singularity exec --bind /contrib/neus-atlantis/currentVersion:/app/model,/contrib/First.Last/out1:/app/model/output /contrib/atlantisCode/atlantis6536.sif /app/model/RunAtlantis1.sh
 
 Note: the full path to the `sif` file needs to be included. The path to the location of the `RunAtlantis.sh` INSIDE the container needs to be specified
 
@@ -299,9 +303,9 @@ Note: the full path to the `sif` file needs to be included. The path to the loca
 nfolders <- 30
 for (ifolder in 1:nfolders) {
   # create folder for output
-  folder <- paste0("/contrib/Andrew.Beet/out",ifolder)
+  folder <- paste0("/contrib/First.Last/out",ifolder)
   if (!dir.exists(folder)){
-    dir.create(paste0("/contrib/Andrew.Beet/out",ifolder))
+    dir.create(paste0("/contrib/First.Last/out",ifolder))
   }
   
   # create sh script to run model
@@ -316,10 +320,10 @@ for (ifolder in 1:nfolders) {
   
 
   # create batch sh script to submit to slurm
-  filenmjob <- paste0("/contrib/Andrew.Beet/job",ifolder,".sh")
+  filenmjob <- paste0("/contrib/First.Last/job",ifolder,".sh")
   fileConn2<-file(filenmjob,open="w")
   cat("#!/bin/bash\n",file=fileConn2,append=T)
-  runString <- paste0("sudo singularity exec --bind /contrib/neus-atlantis/currentVersion:/app/model,/contrib/Andrew.Beet/out",ifolder,":/app/model/output /contrib/atlantisCode/atlantis6536.sif /app/model/RunAtlantis",ifolder,".sh") 
+  runString <- paste0("sudo singularity exec --bind /contrib/neus-atlantis/currentVersion:/app/model,/contrib/First.Last/out",ifolder,":/app/model/output /contrib/atlantisCode/atlantis6536.sif /app/model/RunAtlantis",ifolder,".sh") 
   
 
   cat(runString,file=fileConn2,append=T)
@@ -332,7 +336,7 @@ for (ifolder in 1:nfolders) {
   message(runString)
   
   # submit job to slurm
-  batchString <- paste0("sbatch -N 1 /contrib/Andrew.Beet/job",ifolder,".sh")
+  batchString <- paste0("sbatch -N 1 /contrib/First.Last/job",ifolder,".sh")
   system(batchString)
 
 ```
