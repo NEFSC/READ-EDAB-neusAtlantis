@@ -22,17 +22,17 @@ export_scenario_stats =function(scenario.dir,
   #create output dataframe space
   biomass.ls = list()
   biomass.age.ls = list()
-  biomass.age.mean.ls = list()
+  biomass.box.ls = list()
   numbers.ls = list()
   numbers.age.ls = list()
-  numbers.age.mean.ls = list()
-  numbiomass.box.ls = list()
+  numbers.box.ls = list()
   diet.ls = list()
   
   fgs = read.csv(fgs.file,as.is = T)%>%filter(IsTurnedOn == 1)
    
   i=1
-  for(i in 1:length(run.names)){
+  # for(i in 1:length(run.names)){
+  for(i in 1:2){
       
     #In biomass.ls cacluate:
     # 1) Mean biomass in window by species
@@ -57,7 +57,7 @@ export_scenario_stats =function(scenario.dir,
     # 1) Mean Biomass by age over last N years
     # 2) Mean age weighted by biomass
     
-    biomass.age = data.table:::fread(paste0(run.dirs[i],'/neus_outputAgeBiomIndx.txt'),header = T)%>%
+    biomass.age = data.table::fread(paste0(run.dirs[i],'/neus_outputAgeBiomIndx.txt'),header = T)%>%
       filter(Time >= start.time & Time <= end.time) 
     
     biomass.age.ls[[i]] = biomass.age %>% 
@@ -68,7 +68,7 @@ export_scenario_stats =function(scenario.dir,
       tidyr::separate('ID',c('species','cohort'))%>%
       tidyr::spread(cohort,biomass)
     
-    age.mean.biomass.ls[[i]] = biomass.age %>%
+    age.mean.biomass= biomass.age %>%
       tidyr::gather('ID','biomass',-Time)%>%
       tidyr::separate('ID',c('species','cohort'))%>%
       group_by(species,cohort)%>%
@@ -84,6 +84,19 @@ export_scenario_stats =function(scenario.dir,
       mutate(run.name = run.names[i])%>%
       select(run.name,species,age.mean)
     
+    biomass.ls[[i]]  =     biomass.ls[[i]]  %>% 
+      left_join(age.mean.biomass)
+    
+    #From BoxBiomass calculate:
+    # 1) Mean biomass by box
+    
+    biomass.box.ls[[i]] = data.table::fread(paste0(run.dirs[i],'/neus_outputBoxBiomass.txt')) %>%
+      tidyr::gather('species','biomass',-Time,-Box)%>%
+      group_by(species,Box)%>%
+      summarise(biomass = mean(biomass))%>%
+      tidyr::spread(Box,biomass)
+    
+    
     #From neus_output.nc calculate:
     # 1) Mean Numbers
     # 2) Mean Numbers by age
@@ -93,33 +106,72 @@ export_scenario_stats =function(scenario.dir,
     nc.time = nc.data$dim$t$vals/86400
     which.time = which(nc.time >= start.time & nc.time <= end.time)
     
+    numbers.run = list()
+    numbers.age.run = list()
+    numbers.box.run = list()
+    
     j=1
     for(j in 1:nrow(fgs)){
+    
+      
+      number.group.time = matrix(nrow = 10, ncol = length(which.time))
+      number.box.group = array(dim =c(10,23,length(which.time)))
       
       k=1
       
-      number.tot.group = data.frame(species = fgs$Code[j],Cohort = 1:10,number = NA)
-      number.box.group = data.frame(species = fgs$Code[j], Cohort =1:10)
-      for(l in 1:30){number.box.group[,l+2] = NA;colnames(number.box.group)[l+2] = as.character(l)}
       for(k in 1:10){
         var.name = paste0(fgs$Name[j],k,'_Nums')
         if(var.name %in% names(nc.data$var)){
-          numbers.group = ncdf4::ncvar_get(nc.data,var.name)[,,which.time]
           
-          number.tot.group$number[k] = mean(apply(numbers.group,3,sum))
-          number.box.group[k,3:32] = rowMeans(apply(numbers.group,c(2,3),sum))
+          numbers.group = ncdf4::ncvar_get(nc.data,var.name)[,1:23,which.time]
+          number.group.time[k,] = apply(numbers.group,3,sum)
+          number.box.group[k,,]=apply(numbers.group,c(2,3),sum)
+          
         }
-          
-        
-        
       }
       
+      
+        # numbers.total = apply(number.group.time,2,sum)      
+        # 
+        # if(any(is.na(number.group.time))){
+        #   numbers.run[[j]] = data.frame(run.name = run.names[i],species = fgs$Code[j]) %>%
+        #     mutate(number.mean = NA,
+        #            number.slope = NA,
+        #            age.mean = NA)
+        #   
+        #   numbers.age.run[[j]] = data.frame(run.name = run.names[i], species = fgs$Code[j], cohort = 1:10, number = NA)%>%
+        #     tidyr::spread(cohort,number)
+        # 
+        #   numbers.box.run[[j]]=data.frame(run.name = run.names[i],species = fgs$Code[j], box = 1:30, number = NA)%>%
+        #     tidyr::spread(box,number)  
+        # }else{
+        #   numbers.run[[j]] = data.frame(run.name = run.names[i],species = fgs$Code[j]) %>%
+        #     mutate(number.mean = mean(apply(number.group.time,2,sum)),
+        #            number.slope = lm(apply(number.group.time,2,sum)~nc.time[which.time])$coefficients[2],
+        #            age.mean = mean(colSums(sweep(number.group.time,2,colSums(number.group.time),'/')* 1:10)))
+        #   
+        #   numbers.age.run[[j]] = data.frame(run.name = run.names[i], species = fgs$Code[j], cohort = 1:10, number = rowMeans(number.group.time))%>%
+        #     tidyr::spread(cohort,number)
+        #   
+        #   numbers.box.run[[j]]=data.frame(run.name = run.names[i],species = fgs$Code[j], box = 1:30, number = rowMeans(apply(number.box.group,c(2,3),sum)))%>%
+        #     tidyr::spread(box,number)  
+        # }
+        
+        print(j)
     }
-      
-      
- 
-run.names}
-
+    
+    numbers.ls[[i]] = bind_rows(numbers.run)
+    numbers.age.ls[[i]] = bind_rows(numbers.age.run)
+    numbers.box.ls[[i]] = bind_rows(numbers.box.run)
+    
+    #read dietcheck.txt and calculate mean diet proportions
+    
+    diet.ls[[i]] = data.table::fread(paste0(run.dirs[i],'/neus_outputDietCheck.txt'))%>%
+      filter(Time >= start.time & Time <= end.time)%>%
+      select(-Stock, -Updated,-Time)%>%
+      group_by(Predator,Cohort)%>%
+      summarise(across(everything(),mean))
+  }
   
     
 }
