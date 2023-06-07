@@ -10,16 +10,19 @@ RED3 = here::here('Atlantis_Runs','BLF_RED_3','')
 RED4 = here::here('Atlantis_Runs','BLF_RED_4','')
 RED5 = here::here('Atlantis_Runs','BLF_RED_5','')
 HER1 = here::here('Atlantis_Runs','HER_LOB_1','')
+HER2 = here::here('Atlantis_Runs','HER_LOB_2','')
+HER3 = here::here('Atlantis_Runs','HER_LOB_3','')
+HER4 = here::here('Atlantis_Runs','HER_LOB_4','')
 
 
 figure.dir = here::here('Figures','Run_Comparisons','')
 
 plot_run_comparisons(
-  model.dirs = c(RED5,HER1),
-  model.names = c('BLF_RED_5','HER_LOB_1'),
+  model.dirs = c(RED5,HER1,HER2,HER3,HER4),
+  model.names = c('BLF_RED_5','HER_LOB_1','HER_LOB_2','HER_LOB_3','HER_LOB_4'),
   plot.rel = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'HER_LOB_1'),
+  plot.out = paste(figure.dir,'HER_LOB_4'),
   table.out = F,
   groups = NULL,
   remove.init = F
