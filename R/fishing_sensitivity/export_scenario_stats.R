@@ -1,11 +1,5 @@
 #Function to export statistics based on raw scenario output (without needing export)
 
-scenario.dir = 'D:/Atlantis_Runs/fishing_sensitivity_extended_constant_2/'
-fgs.file = here::here('currentVersion','neus_groups.csv')
-start.time = 20000
-end.time = 20000+3650
-out.dir =  'D:/fishing_sensitivity_test/'
-
 export_scenario_stats =function(scenario.dir,
                                 start.time,
                                 end.time,
@@ -175,3 +169,9 @@ export_scenario_stats =function(scenario.dir,
   
     
 }
+ 
+# export_scenario_stats(scenario.dir = 'D:/Atlantis_Runs/fishing_sensitivity_extended_constant_2/',
+#                       fgs.file = here::here('currentVersion','neus_groups.csv'),
+#                       start.time = 20000,
+#                       end.time = 20000+3650,
+#                       out.dir =  'D:/fishing_sensitivity_test/')

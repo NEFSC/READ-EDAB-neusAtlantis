@@ -46,6 +46,7 @@ outputFolder
 !/currentVersion/run_command.txt
 # shell script to run
 !/currentVersion/RunAtlantis.sh
+!/currentVersion/RunAtlantis_cloud.sh
 !/currentVersion/vertebrate_init_length_cm_Adjusted.csv
 /currentVersion/CatchFiles/fishing_sensitivity_scenarios/*
 /currentVersion/fishing_sensitivity_extended_constant_3/*
