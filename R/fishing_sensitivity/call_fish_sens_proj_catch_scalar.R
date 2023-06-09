@@ -1,7 +1,7 @@
 #Reads in setup file and executes batcher
 
-# proj.dir = '/contrib/Joseph.Caracappa/fishing_sensitivity/neus-atlantis/'
-proj.dir = here::here('/')
+proj.dir = '/contrib/Joseph.Caracappa/fishing_sensitivity/neus-atlantis/'
+# proj.dir = here::here('/')
 batch.prefix = 'fish_sens_catch_scalar_species_1'
 
 source(paste0(proj.dir,'R/fishing_sensitivity/make_fish_sens_proj_catch_scalar_species.R'))
@@ -11,7 +11,7 @@ make_fish_sens_proj_catch_scalar_species(proj.dir = proj.dir,
                                          proj.duration.yr = 20,
                                          fishing.levels = c(0,2,5,10,25,50,100),
                                          fishing.levels.text = c('0','1','5','10','25','50','100'),
-                                         make.catch.files = F
+                                         make.catch.files = T
 )
 
 setup.df = read.csv(paste0(proj.dir,'Setup_Files/',batch.prefix,'.csv'))
@@ -32,6 +32,9 @@ for(i in 1:nrow(setup.df)){
     dir.create(out.dir)  
   }
   
+  sh.file = paste0(proj.dir,'currentVersion',setup.df$sh.script[i])
+  system(paste0('chmod 775 ',sh.file))
+  
   #Create job shell script
   file.job = paste0(out.dir,'/',setup.df$Run[i],'_job.sh')
   jobConn = file(file.job,open = 'w')
@@ -39,6 +42,8 @@ for(i in 1:nrow(setup.df)){
   runString <- paste0("sudo singularity exec --bind ",proj.dir,"currentVersion",":/app/model,",out.dir,":/app/model/output /contrib/atlantisCode/atlantis6536.sif /app/model/",setup.df$sh.script[i]) 
   cat(runString,file=jobConn,append=T)
   close(jobConn)
+  
+  system(paste0('chmod 775 ',file.job))
   
   sbatchString = paste0('sbatch -N 1 ',file.job)
   system(sbatchString)
