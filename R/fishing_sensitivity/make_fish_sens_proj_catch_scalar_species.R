@@ -62,10 +62,11 @@ make_fish_sens_proj_catch_scalar_species = function(proj.dir,
     left_join(data.frame(fishing.levels = fishing.levels,fishing.levels.text = fishing.levels.text))
   
   #### Create Parameter Files for each Scenario ####
-  dir.create(paste0(proj.dir,'currentVersion/CatchFiles/',batch.prefix))
+  catch.dir = paste0(proj.dir,'currentVersion/CatchFiles/',batch.prefix)
+  if(!dir.exists(catch.dir)){dir.create(catch.dir)}
   
   #Functions to make new catch files#Functions to makebatch.prefix new catch files
-  source(paste0(proj.dir,'R/Fishing_Sensitivity/make_catch_scalar_projected.R'))
+  source(paste0(proj.dir,'R/fishing_sensitivity/make_catch_scalar_projected.R'))
   new.catch.names = character()
   i=1
   for(i in 1:nrow(scenario.combs)){
@@ -93,7 +94,7 @@ make_fish_sens_proj_catch_scalar_species = function(proj.dir,
   # Create at_force_LINUX.prm and runAtlantis.sh and put into a new directory
   dir.create(paste0(proj.dir,'currentVersion/',batch.prefix))
   #specify original run.sh
-  run.sh.orig = paste0(proj.dir,'currentVersion/runAtlantis_cloud.sh')
+  run.sh.orig = paste0(proj.dir,'currentVersion/RunAtlantis_cloud.sh')
   run.sh.lines = readLines(run.sh.orig)
   run.command.line = grep('atlantisMerged',run.sh.lines)
   
