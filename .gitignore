@@ -47,6 +47,7 @@ outputFolder
 !/currentVersion/run_command.txt
 # shell script to run
 !/currentVersion/RunAtlantis.sh
+!/currentVersion/RunAtlantis_cloud.sh
 !/currentVersion/vertebrate_init_length_cm_Adjusted.csv
 /currentVersion/CatchFiles/fishing_sensitivity_scenarios/*
 /currentVersion/fishing_sensitivity_extended_constant_3/*
@@ -55,9 +56,17 @@ outputFolder
 /currentVersion/BH_convert_2/*
 /currentVersion/CatchFiles/random_catch_1/*
 /currentVersion/random_catch_1/*
+<<<<<<< HEAD
 /currentVersion/fish_sens_catch_scalar_species_1/*
 /currentVersion/CatchFiles/fish_sens_catch_scalar_species_1/*
 
+=======
+/currentVersion/CatchFiles/fish_sens_catch_scalar_species_1/*
+/currentVersion/fish_sens_catch_scalar_species_1/*
+/currentVersion/CatchFiles/fish_sens_catch_spike_species_1/*
+/currentVersion/fish_sens_catch_spike_species_1/*
+slurm*
+>>>>>>> fishing_sensitivity_final
 
 #Geometry/NEUS 1-5 Map.R
 #Geometry/Neus 1-5.pdf
