@@ -33,7 +33,8 @@ outputFolder
 !/currentVersion/at_physics.prm
 !/currentVersion/at_run.prm
 # except nc
-!/currentVersion/neus_init_nc
+!/currentVersion/neus_init.nc
+!/currentVersion/neus_init.cdf
 # except csv
 !/currentVersion/neus_fisheries.csv
 !/currentVersion/neus_groups.csv
@@ -55,11 +56,17 @@ outputFolder
 /currentVersion/BH_convert_2/*
 /currentVersion/CatchFiles/random_catch_1/*
 /currentVersion/random_catch_1/*
+<<<<<<< HEAD
+/currentVersion/fish_sens_catch_scalar_species_1/*
+/currentVersion/CatchFiles/fish_sens_catch_scalar_species_1/*
+
+=======
 /currentVersion/CatchFiles/fish_sens_catch_scalar_species_1/*
 /currentVersion/fish_sens_catch_scalar_species_1/*
 /currentVersion/CatchFiles/fish_sens_catch_spike_species_1/*
 /currentVersion/fish_sens_catch_spike_species_1/*
 slurm*
+>>>>>>> fishing_sensitivity_final
 
 #Geometry/NEUS 1-5 Map.R
 #Geometry/Neus 1-5.pdf
