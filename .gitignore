@@ -57,7 +57,9 @@ outputFolder
 /currentVersion/random_catch_1/*
 /currentVersion/CatchFiles/fish_sens_catch_scalar_species_1/*
 /currentVersion/fish_sens_catch_scalar_species_1/*
-
+/currentVersion/CatchFiles/fish_sens_catch_spike_species_1/*
+/currentVersion/fish_sens_catch_spike_species_1/*
+slurm*
 
 #Geometry/NEUS 1-5 Map.R
 #Geometry/Neus 1-5.pdf
