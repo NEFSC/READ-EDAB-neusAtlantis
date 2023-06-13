@@ -3,12 +3,12 @@
 # 2) Create parameter files for each scenario
 # 3) Create batcher setup file for each scenario
 
-# proj.dir = here::here('/')
-# batch.prefix = 'fish_sens_catch_scalar_species_1'
-# proj.duration.yr = 20
-# #define fishing levels
-# fishing.levels = c(0,2,5,10,25,50)
-# fishing.levels.text = c('0','1','5','10','25','50','100')
+proj.dir = here::here('/')
+batch.prefix = 'fish_sens_catch_scalar_species_1'
+proj.duration.yr = 20
+#define fishing levels
+fishing.levels = c(0,2,5,10,25,50,100)
+fishing.levels.text = c('0','1','5','10','25','50','100')
 
 make_fish_sens_proj_catch_scalar_species = function(proj.dir,
                                                     batch.prefix,
@@ -120,7 +120,7 @@ make_fish_sens_proj_catch_scalar_species = function(proj.dir,
     force.files.new[i] = force.file.new
     
     #Do run.sh duplication
-    run.file.new = paste0(proj.dir,'currentVersion/',paste0('runAtlantis_',new.catch.names[i],'.sh'))
+    run.file.new = paste0(proj.dir,'currentVersion/',paste0('runAtlantis_',i,'.sh'))
     
     file.copy(run.sh.orig, run.file.new,overwrite=T)
   
@@ -139,6 +139,7 @@ make_fish_sens_proj_catch_scalar_species = function(proj.dir,
   setup.df = data.frame(
     ID = 1:length(new.catch.names),
     Run = new.catch.names,
+    scalar = fishing.levels,
     OutputDir = paste0(batch.prefix,'/',new.catch.names,'/'),
     BiolPrm = 'at_biology.prm',
     RunPrm = 'at_run.prm',

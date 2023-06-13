@@ -1,6 +1,7 @@
 #Function to export statistics based on raw scenario output (without needing export)
 
 export_scenario_stats =function(scenario.dir,
+                                fgs.file,
                                 start.time,
                                 end.time,
                                 out.dir){
@@ -28,6 +29,7 @@ export_scenario_stats =function(scenario.dir,
   # for(i in 1:length(run.names)){
   for(i in 1:2){
       
+    tictoc::tic()
     #In biomass.ls cacluate:
     # 1) Mean biomass in window by species
     # 2) Slope of biomass during window
@@ -105,54 +107,61 @@ export_scenario_stats =function(scenario.dir,
     numbers.box.run = list()
     
     j=1
+
     for(j in 1:nrow(fgs)){
     
       
       number.group.time = matrix(nrow = 10, ncol = length(which.time))
-      number.box.group = array(dim =c(10,23,length(which.time)))
+      number.box.group = array(dim =c(10,22,length(which.time)))
       
       k=1
       
+      # profvis::profvis({
       for(k in 1:10){
+        
+        
         var.name = paste0(fgs$Name[j],k,'_Nums')
         if(var.name %in% names(nc.data$var)){
           
-          numbers.group = ncdf4::ncvar_get(nc.data,var.name)[,1:23,which.time]
+          
+          numbers.group = ncdf4::ncvar_get(nc.data,var.name)[,2:23,which.time]
           number.group.time[k,] = apply(numbers.group,3,sum)
           number.box.group[k,,]=apply(numbers.group,c(2,3),sum)
           
         }
       }
+      # })
       
       
-        # numbers.total = apply(number.group.time,2,sum)      
-        # 
-        # if(any(is.na(number.group.time))){
-        #   numbers.run[[j]] = data.frame(run.name = run.names[i],species = fgs$Code[j]) %>%
-        #     mutate(number.mean = NA,
-        #            number.slope = NA,
-        #            age.mean = NA)
-        #   
-        #   numbers.age.run[[j]] = data.frame(run.name = run.names[i], species = fgs$Code[j], cohort = 1:10, number = NA)%>%
-        #     tidyr::spread(cohort,number)
-        # 
-        #   numbers.box.run[[j]]=data.frame(run.name = run.names[i],species = fgs$Code[j], box = 1:30, number = NA)%>%
-        #     tidyr::spread(box,number)  
-        # }else{
-        #   numbers.run[[j]] = data.frame(run.name = run.names[i],species = fgs$Code[j]) %>%
-        #     mutate(number.mean = mean(apply(number.group.time,2,sum)),
-        #            number.slope = lm(apply(number.group.time,2,sum)~nc.time[which.time])$coefficients[2],
-        #            age.mean = mean(colSums(sweep(number.group.time,2,colSums(number.group.time),'/')* 1:10)))
-        #   
-        #   numbers.age.run[[j]] = data.frame(run.name = run.names[i], species = fgs$Code[j], cohort = 1:10, number = rowMeans(number.group.time))%>%
-        #     tidyr::spread(cohort,number)
-        #   
-        #   numbers.box.run[[j]]=data.frame(run.name = run.names[i],species = fgs$Code[j], box = 1:30, number = rowMeans(apply(number.box.group,c(2,3),sum)))%>%
-        #     tidyr::spread(box,number)  
-        # }
+        numbers.total = apply(number.group.time,2,sum)
+
+        if(any(is.na(number.group.time))){
+          numbers.run[[j]] = data.frame(run.name = run.names[i],species = fgs$Code[j]) %>%
+            mutate(number.mean = NA,
+                   number.slope = NA,
+                   age.mean = NA)
+
+          numbers.age.run[[j]] = data.frame(run.name = run.names[i], species = fgs$Code[j], cohort = 1:10, number = NA)%>%
+            tidyr::spread(cohort,number)
+
+          numbers.box.run[[j]]=data.frame(run.name = run.names[i],species = fgs$Code[j], box = 1:22, number = NA)%>%
+            tidyr::spread(box,number)
+        }else{
+          numbers.run[[j]] = data.frame(run.name = run.names[i],species = fgs$Code[j]) %>%
+            mutate(number.mean = mean(apply(number.group.time,2,sum)),
+                   number.slope = lm(apply(number.group.time,2,sum)~nc.time[which.time])$coefficients[2],
+                   age.mean = mean(colSums(sweep(number.group.time,2,colSums(number.group.time),'/')* 1:10)))
+
+          numbers.age.run[[j]] = data.frame(run.name = run.names[i], species = fgs$Code[j], cohort = 1:10, number = rowMeans(number.group.time))%>%
+            tidyr::spread(cohort,number)
+
+          numbers.box.run[[j]]=data.frame(run.name = run.names[i],species = fgs$Code[j], box = 1:22, number = rowMeans(apply(number.box.group,c(2,3),sum)))%>%
+            tidyr::spread(box,number)
+        }
         
         print(j)
     }
+
     
     numbers.ls[[i]] = bind_rows(numbers.run)
     numbers.age.ls[[i]] = bind_rows(numbers.age.run)
@@ -165,13 +174,29 @@ export_scenario_stats =function(scenario.dir,
       select(-Stock, -Updated,-Time)%>%
       group_by(Predator,Cohort)%>%
       summarise(across(everything(),mean))
+    
+    tictoc::toc()
   }
+  
+  
+  
+  saveRDS(bind_rows(biomass.ls),paste0(out.dir,'scenario_stats_biomass.rds'))
+  saveRDS(bind_rows(biomass.age.ls),paste0(out.dir,'scenario_stats_biomass_age.rds'))
+  saveRDS(bind_rows(biomass.box.ls),paste0(out.dir,'scenario_stats_biomass_box.rds'))
+  saveRDS(bind_rows(biomass.ls),paste0(out.dir,'scenario_stats_biomass.rds'))
+  
+  saveRDS(bind_rows(numbers.ls),paste0(out.dir,'scenario_stats_numbers.rds'))
+  saveRDS(bind_rows(numbers.age.ls),paste0(out.dir,'scenario_stats_numbers_age.rds'))
+  saveRDS(bind_rows(numbers.box.ls),paste0(out.dir,'scenario_stats_numbers_box.rds'))
+  
+  saveRDS(bind_rows(diet.ls),paste0(out.dir,'scenario_stats_diet.rds'))
+  
   
     
 }
  
-# export_scenario_stats(scenario.dir = 'D:/Atlantis_Runs/fishing_sensitivity_extended_constant_2/',
-#                       fgs.file = here::here('currentVersion','neus_groups.csv'),
-#                       start.time = 20000,
-#                       end.time = 20000+3650,
-#                       out.dir =  'D:/fishing_sensitivity_test/')
+export_scenario_stats(scenario.dir = 'D:/Atlantis_Runs/fishing_sensitivity_extended_constant_2/',
+                      fgs.file = here::here('currentVersion','neus_groups.csv'),
+                      start.time = 20000,
+                      end.time = 20000+3650,
+                      out.dir =  'D:/fishing_sensitivity_test/')
