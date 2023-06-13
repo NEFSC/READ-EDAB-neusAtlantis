@@ -48,7 +48,7 @@ outputFolder
 # shell script to run
 !/currentVersion/RunAtlantis.sh
 !/currentVersion/RunAtlantis_cloud.sh
-!/currentVersion/slurm_scenario_array_base.sh
+!/currentVersion/sbatch_scenario_array_base.sh
 !/currentVersion/vertebrate_init_length_cm_Adjusted.csv
 /currentVersion/CatchFiles/fishing_sensitivity_scenarios/*
 /currentVersion/fishing_sensitivity_extended_constant_3/*
@@ -61,7 +61,7 @@ outputFolder
 /currentVersion/fish_sens_catch_scalar_species_1/*
 /currentVersion/CatchFiles/fish_sens_catch_spike_species_1/*
 /currentVersion/fish_sens_catch_spike_species_1/*
-slurm*
+
 
 
 #Geometry/NEUS 1-5 Map.R
