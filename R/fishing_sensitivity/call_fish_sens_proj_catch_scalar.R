@@ -11,42 +11,29 @@ make_fish_sens_proj_catch_scalar_species(proj.dir = proj.dir,
                                          proj.duration.yr = 20,
                                          fishing.levels = c(0,2,5,10,25,50,100),
                                          fishing.levels.text = c('0','1','5','10','25','50','100'),
-                                         make.catch.files = T
+                                         make.catch.files = F
 )
 
 setup.df = read.csv(paste0(proj.dir,'Setup_Files/',batch.prefix,'.csv'))
 
-#make scenario batch directory
-batch.dir = paste0(proj.dir,'Atlantis_Runs/',batch.prefix)
-if(!dir.exists(batch.dir)){
-  dir.create(batch.dir)
-}
+base.sbatch.array = paste0(proj.dir,'currentVersion/sbatch_scenario_array_base.sh')
+new.sbatch.array =  paste0(proj.dir,'currentVersion/sbatch_',batch.prefix,'.sh')
+file.copy(base.sbatch.array,new.sbatch.array,overwrite = T)
 
+#replace max array number
+sbatch.lines = readLines(new.sbatch.array)
+new.array.line = paste0('#SBATCH --array=1-',nrow(setup.df))
+sbatch.lines[grep('--array',sbatch.lines)] = new.array.line
 
-i=1
-for(i in 1:nrow(setup.df)){
-  
-  out.dir = paste0(batch.dir,'/',setup.df$Run[i])
-  
-  if(!dir.exists(out.dir)){
-    dir.create(out.dir)  
-  }
-  
-  sh.file = paste0(proj.dir,'currentVersion',setup.df$sh.script[i])
-  system(paste0('chmod 775 ',sh.file))
-  
-  #Create job shell script
-  file.job = paste0(out.dir,'/',setup.df$Run[i],'_job.sh')
-  jobConn = file(file.job,open = 'w')
-  cat("#!/bin/bash\n",file=jobConn,append=T)
-  runString <- paste0("sudo singularity exec --bind ",proj.dir,"currentVersion",":/app/model,",out.dir,":/app/model/output /contrib/atlantisCode/atlantis6536.sif /app/model/",setup.df$sh.script[i]) 
-  cat(runString,file=jobConn,append=T)
-  close(jobConn)
-  
-  system(paste0('chmod 775 ',file.job))
-  
-  sbatchString = paste0('sbatch -N 1 ',file.job)
-  system(sbatchString)
-}
+#replace directories
+new.mkdir = paste0("sudo mkdir -p ",proj.dir,"Atlantis_Runs/",batch.prefix,"/out_$SLURM_ARRAY_TASK_ID")
+sbatch.lines[grep('mkdir',sbatch.lines)] = new.mkdir
 
+new.singularity = paste0( "sudo singularity exec --bind ",proj.dir,"currentVersion:/app/model,",proj.dir,"Atlantis_Runs/",batch.prefix,"/out_$SLURM_ARRAY_TASK_ID:/app/model/output /contrib/atlantisCode/atlantis6536.sif /app/model/runAtlantis_$SLURM_ARRAY_TASK_ID.sh")
+sbatch.lines[grep('singularity',sbatch.lines)] = new.singularity
 
+writeLines(sbatch.lines,new.sbatch.array)
+
+# system("find . -name "*.sh" -exec chmod +x {} \;")
+batch.string = paste0("sbatch ",new.sbatch.array)
+system(batch.string)
