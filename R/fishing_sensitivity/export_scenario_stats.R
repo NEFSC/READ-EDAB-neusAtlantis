@@ -76,9 +76,9 @@ export_scenario_stats =function(scenario.dir,
              cohort.wgt = biomass*cohort,
              age.wgt = cohort.wgt/biomass.tot)%>%
       group_by(species)%>%
-      summarise(age.mean = sum(age.wgt,na.rm=T))%>%
+      summarise(biomass.age.mean = sum(age.wgt,na.rm=T))%>%
       mutate(run.name = run.names[i])%>%
-      select(run.name,species,age.mean)
+      select(run.name,species,biomass.age.mean)
     
     biomass.ls[[i]]  =     biomass.ls[[i]]  %>% 
       left_join(age.mean.biomass)
@@ -139,7 +139,7 @@ export_scenario_stats =function(scenario.dir,
           numbers.run[[j]] = data.frame(run.name = run.names[i],species = fgs$Code[j]) %>%
             mutate(number.mean = NA,
                    number.slope = NA,
-                   age.mean = NA)
+                   number.age.mean = NA)
 
           numbers.age.run[[j]] = data.frame(run.name = run.names[i], species = fgs$Code[j], cohort = 1:10, number = NA)%>%
             tidyr::spread(cohort,number)
@@ -150,7 +150,7 @@ export_scenario_stats =function(scenario.dir,
           numbers.run[[j]] = data.frame(run.name = run.names[i],species = fgs$Code[j]) %>%
             mutate(number.mean = mean(apply(number.group.time,2,sum)),
                    number.slope = lm(apply(number.group.time,2,sum)~nc.time[which.time])$coefficients[2],
-                   age.mean = mean(colSums(sweep(number.group.time,2,colSums(number.group.time),'/')* 1:10)))
+                   number.age.mean = mean(colSums(sweep(number.group.time,2,colSums(number.group.time),'/')* 1:10)))
 
           numbers.age.run[[j]] = data.frame(run.name = run.names[i], species = fgs$Code[j], cohort = 1:10, number = rowMeans(number.group.time))%>%
             tidyr::spread(cohort,number)
