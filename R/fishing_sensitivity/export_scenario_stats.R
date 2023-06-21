@@ -1,18 +1,27 @@
 #Function to export statistics based on raw scenario output (without needing export)
 
 export_scenario_stats =function(scenario.dir,
-                                fgs.file,
+                                param.dir,
                                 start.time,
                                 end.time,
                                 out.dir){
   
   #get run names
   
+  if(!dir.exists(out.dir)){
+    dir.create(out.dir)
+  }
   library(dplyr)
+  library(atlantistools)
   options(dplyr.summarise.inform = FALSE)
+  
+  source(here::here('R','load_nc_temp.R'))
   
   run.names = list.dirs(scenario.dir,full.names = F,recursive = F)
   run.dirs = list.dirs(scenario.dir,recursive = F)
+  
+  fgs.file = paste0(param.dir,'neus_groups.csv')
+  init.file = paste0(param.dir,'neus_init.nc')
   
   #create output dataframe space
   biomass.ls = list()
@@ -26,8 +35,8 @@ export_scenario_stats =function(scenario.dir,
   fgs = read.csv(fgs.file,as.is = T)%>%filter(IsTurnedOn == 1)
    
   i=1
-  # for(i in 1:length(run.names)){
-  for(i in 1:2){
+  for(i in 1:length(run.names)){
+  # for(i in 1:2){
       
     tictoc::tic()
     #In biomass.ls cacluate:
@@ -107,6 +116,23 @@ export_scenario_stats =function(scenario.dir,
     numbers.box.run = list()
     
     j=1
+    
+    # age.vars = 'Nums'
+    # groups.age = atlantistools::get_age_groups(fgs.file)
+    # bio.pools = atlantistools::load_bps(fgs.file,init.file)
+    # bboxes = atlantistools::get_boundary(boxinfo = atlantistools::load_box(paste0(param.dir,'neus_tmerc_RM2.bgm')))
+    # 
+    # tictoc::tic()
+    # numbers.all = Map(load_nc_temp,
+    #                   select_variable = 'Nums',
+    #                   select_groups = groups.age,
+    #                   MoreArgs = list(nc = paste0(run.dirs[i],'/neus_output.nc'),
+    #                                   bps = bio.pools,
+    #                                   fgs = fgs.file,
+    #                                   prm_run = paste0(param.dir,'at_run.prm'),
+    #                                   bboxes = bboxes))
+    # tictoc::toc()
+    
 
     for(j in 1:nrow(fgs)){
     
@@ -123,8 +149,7 @@ export_scenario_stats =function(scenario.dir,
         var.name = paste0(fgs$Name[j],k,'_Nums')
         if(var.name %in% names(nc.data$var)){
           
-          
-          numbers.group = ncdf4::ncvar_get(nc.data,var.name)[,2:23,which.time]
+          numbers.group = ncdf4::ncvar_get(nc.data,var.name,start = c(1,2,which.time[1]),count = c(5,22,length(which.time)))
           number.group.time[k,] = apply(numbers.group,3,sum)
           number.box.group[k,,]=apply(numbers.group,c(2,3),sum)
           
@@ -159,7 +184,7 @@ export_scenario_stats =function(scenario.dir,
             tidyr::spread(box,number)
         }
         
-        print(j)
+        # print(j)
     }
 
     
@@ -173,8 +198,10 @@ export_scenario_stats =function(scenario.dir,
       filter(Time >= start.time & Time <= end.time)%>%
       select(-Stock, -Updated,-Time)%>%
       group_by(Predator,Cohort)%>%
-      summarise(across(everything(),mean))
+      summarise(across(everything(),mean))%>%
+      mutate(run.name = run.names[i])
     
+    print(run.names[i])
     tictoc::toc()
   }
   
@@ -191,12 +218,11 @@ export_scenario_stats =function(scenario.dir,
   
   saveRDS(bind_rows(diet.ls),paste0(out.dir,'scenario_stats_diet.rds'))
   
-  
     
 }
  
-export_scenario_stats(scenario.dir = 'D:/Atlantis_Runs/fishing_sensitivity_extended_constant_2/',
-                      fgs.file = here::here('currentVersion','neus_groups.csv'),
-                      start.time = 20000,
-                      end.time = 20000+3650,
-                      out.dir =  'D:/fishing_sensitivity_test/')
+export_scenario_stats(scenario.dir = '/contrib/Joseph.Caracappa/fishing_sensitivity/neus-atlantis/Atlantis_Runs/fish_sens_catch_spike_species_1/',
+                      param.dir = '/contrib/Joseph.Caracappa/fishing_sensitivity/neus-atlantis/currentVersion/',
+                      start.time = 20805 + (5*365),
+                      end.time = 20805 + (6*365),
+                      out.dir = '/contrib/Joseph.Caracappa/fishing_sensitivity/Data/fish_sens_catch_spike_species_1_proj_5yr/')

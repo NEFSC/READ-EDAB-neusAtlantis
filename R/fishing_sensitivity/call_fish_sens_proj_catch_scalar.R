@@ -2,7 +2,7 @@
 
 proj.dir = '/contrib/Joseph.Caracappa/fishing_sensitivity/neus-atlantis/'
 # proj.dir = here::here('/')
-batch.prefix = 'fish_sens_catch_scalar_species_1'
+batch.prefix = 'fish_sens_catch_scalar_species_2'
 
 source(paste0(proj.dir,'R/fishing_sensitivity/make_fish_sens_proj_catch_scalar_species.R'))
 
@@ -11,10 +11,13 @@ make_fish_sens_proj_catch_scalar_species(proj.dir = proj.dir,
                                          proj.duration.yr = 20,
                                          fishing.levels = c(0,2,5,10,25,50,100),
                                          fishing.levels.text = c('0','1','5','10','25','50','100'),
-                                         make.catch.files = F
+                                         make.catch.files = T
 )
 
+system('sudo chmod -R 775 *')
+
 setup.df = read.csv(paste0(proj.dir,'Setup_Files/',batch.prefix,'.csv'))
+
 
 base.sbatch.array = paste0(proj.dir,'currentVersion/sbatch_scenario_array_base.sh')
 new.sbatch.array =  paste0(proj.dir,'currentVersion/sbatch_',batch.prefix,'.sh')
