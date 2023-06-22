@@ -3,16 +3,22 @@
 # 2) Create parameter files for each scenario
 # 3) Create batcher setup file for each scenario
 
-proj.dir = here::here('/')
-batch.prefix = 'fish_sens_catch_scalar_species_1'
-proj.duration.yr = 20
-#define fishing levels
-fishing.levels = c(0,2,5,10,25,50,100)
-fishing.levels.text = c('0','1','5','10','25','50','100')
+# proj.dir = here::here('')
+# experiment.id = 'fspike1'
+# proj.length.d = 365*20
+# run.length.d = 28105
+# event.start.d = 20805
+# event.end.d = 28105
+# #define fishing levels
+# fishing.levels = c(0,2,5,10,25,50,100)
+# fishing.levels.text = c('0','1','5','10','25','50','100')
 
 make_fish_sens_proj_catch_scalar_species = function(proj.dir,
-                                                    batch.prefix,
-                                                    proj.duration.yr,
+                                                    experiment.id,
+                                                    proj.length.d,
+                                                    run.length.d,
+                                                    event.start.d,
+                                                    event.end.d,
                                                     fishing.levels,
                                                     fishing.levels.text,
                                                     make.catch.files = T){
@@ -34,14 +40,14 @@ make_fish_sens_proj_catch_scalar_species = function(proj.dir,
   
   
   source(paste0(proj.dir,'/R/fishing_sensitivity/make_catch_file_projected_mean.R'))
-  new.base.catch.file =  paste0(proj.dir,'currentVersion/CatchFiles/total_catch_',batch.prefix,'.ts')
+  new.base.catch.file =  paste0(proj.dir,'currentVersion/CatchFiles/total_catch_',experiment.id,'.ts')
   
   make_catch_file_projected_mean(
     fgs.file = paste0(proj.dir,'currentVersion/neus_groups.csv'),
     original_catch_file = paste0(proj.dir,'currentVersion/CatchFiles/total_catch.ts'),
-    start.time = 19724-(365*10),
-    end.time = 19724,
-    duration = proj.duration.yr*365,
+    start.time = event.start.d-(365*10),
+    end.time = event.start.d,
+    duration = proj.length.d,
     new_catch_file = new.base.catch.file,
     overwrite = F
   )
@@ -62,28 +68,28 @@ make_fish_sens_proj_catch_scalar_species = function(proj.dir,
     left_join(data.frame(fishing.levels = fishing.levels,fishing.levels.text = fishing.levels.text))
   
   #### Create Parameter Files for each Scenario ####
-  catch.dir = paste0(proj.dir,'currentVersion/CatchFiles/',batch.prefix)
+  catch.dir = paste0(proj.dir,'currentVersion/CatchFiles/',experiment.id)
   if(!dir.exists(catch.dir)){dir.create(catch.dir)}
   
-  #Functions to make new catch files#Functions to makebatch.prefix new catch files
+  #Functions to make new catch files#Functions to makeexperiment.id new catch files
   source(paste0(proj.dir,'R/fishing_sensitivity/make_catch_scalar_projected.R'))
   new.catch.names = character()
   i=1
   for(i in 1:nrow(scenario.combs)){
   
-    new.catch.name = paste0(batch.prefix,'_',scenario.combs$Code[i],'_',scenario.combs$fishing.levels.text[i])
+    new.catch.name = paste0(experiment.id,'_',scenario.combs$Code[i],'_',scenario.combs$fishing.levels.text[i])
     new.catch.names[i] = new.catch.name
   
     if(make.catch.files){
       make_catch_scalar_projected(
         proj.dir = proj.dir,
-        original_catch_file = original_catch_file,
+        original_catch_file = new.base.catch.file,
         fgs.file = paste0(proj.dir,'currentVersion/neus_groups.csv'),
         groups = scenario.combs$Code[i],
-        new_catch_file = paste0(proj.dir,'currentVersion/CatchFiles/',batch.prefix,'/',paste0(new.catch.name,'.ts')),
-        setup.filename = paste0(proj.dir,'currentVersion/CatchFiles/',batch.prefix,'/',paste0(new.catch.name,'.csv')),
-        start.time = 19724,
-        end.time = 19724 + (365*20),
+        new_catch_file = paste0(proj.dir,'currentVersion/CatchFiles/',experiment.id,'/',paste0(new.catch.name,'.ts')),
+        setup.filename = paste0(proj.dir,'currentVersion/CatchFiles/',experiment.id,'/',paste0(new.catch.name,'.csv')),
+        start.time = event.start.d,
+        end.time = run.length.d,
         type = 'Scalar',
         change = scenario.combs$fishing.levels[i]
       )
@@ -92,7 +98,7 @@ make_fish_sens_proj_catch_scalar_species = function(proj.dir,
   }
   
   # Create at_force_LINUX.prm and runAtlantis.sh and put into a new directory
-  dir.create(paste0(proj.dir,'currentVersion/',batch.prefix))
+  dir.create(paste0(proj.dir,'currentVersion/',experiment.id))
   #specify original run.sh
   run.sh.orig = paste0(proj.dir,'currentVersion/RunAtlantis_cloud.sh')
   run.sh.lines = readLines(run.sh.orig)
@@ -113,7 +119,7 @@ make_fish_sens_proj_catch_scalar_species = function(proj.dir,
     file.copy(force.file.orig, force.file.new,overwrite = T)
     
       force.file.new.lines = readLines(force.file.new)
-      catch.file.line.new = paste0('Catchts0.data CatchFiles/',batch.prefix,'/',paste0(new.catch.names[i],'.ts'))
+      catch.file.line.new = paste0('Catchts0.data CatchFiles/',experiment.id,'/',paste0(new.catch.names[i],'.ts'))
       force.file.new.lines[catch.file.line] = catch.file.line.new
     
       writeLines(force.file.new.lines, con = force.file.new )
@@ -137,19 +143,15 @@ make_fish_sens_proj_catch_scalar_species = function(proj.dir,
   
   #### Create Batcher Setup ####
   setup.df = data.frame(
+    experiment.id = experiment.id,
     ID = 1:length(new.catch.names),
-    Run = new.catch.names,
-    scalar = fishing.levels,
+    run.id = paste0(experiment.id,'_',1:length(new.catch.names)),
+    scalar = scenario.combs$fishing.levels,
     target.species = scenario.combs$Code,
-    OutputDir = paste0(batch.prefix,'/',new.catch.names,'/'),
-    BiolPrm = 'at_biology.prm',
-    RunPrm = 'at_run.prm',
-    HarvestPrm = 'at_harvest.prm',
-    InitNC = 'neus_init.nc',
-    ForcePrm = paste0('/at_force_LINUX_',new.catch.names,'.prm'),
+    OutputDir = paste0(experiment.id,'/',new.catch.names,'/'),
     sh.script = paste0('/runAtlantis_',new.catch.names,'.sh')
   )
   
-  write.csv(setup.df,paste0(proj.dir,'Setup_Files/',paste0(batch.prefix,'.csv')),row.names =F)
+  write.csv(setup.df,paste0(proj.dir,'Setup_Files/',paste0(experiment.id,'.csv')),row.names =F)
   
 }
