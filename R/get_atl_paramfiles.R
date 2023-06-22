@@ -32,9 +32,9 @@ get_atl_paramfiles = function(param.dir,atl.dir,include_catch){
   }
   
   #Identify run_command file to get additional
-  run.bat = list.files(param.dir,'*.bat')
+  run.bat = list.files(param.dir,'RunAtlantis.sh')
   run.con = file(file.path(param.dir,run.bat),'r')
-  run.cmd = readLines(run.con,n = 1,warn = F)
+  run.cmd = readLines(run.con,n = 3,warn = F)[3]
   close(run.con)
   
   #Generate paths of param files from run command 
