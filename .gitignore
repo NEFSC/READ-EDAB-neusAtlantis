@@ -61,6 +61,11 @@ outputFolder
 /currentVersion/fish_sens_catch_scalar_species_1/*
 /currentVersion/CatchFiles/fish_sens_catch_spike_species_1/*
 /currentVersion/fish_sens_catch_spike_species_1/*
+/currentVersion/fscale*
+/currentVersion/fspike*
+/currentVersion/CatchFiles/fscale*
+/currentVersion/CatchFiles/fspike*
+
 
 
 
