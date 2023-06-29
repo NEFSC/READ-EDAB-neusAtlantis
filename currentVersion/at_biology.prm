@@ -1344,7 +1344,7 @@ flagO2depend    0
 
 # Vertebrate density dependent movement related flags 0=prescribed quartlerly, 1=sedentary, 2=density dependent + prescribed, 3=sticky, 4=no explicit mvmt
 MAK_ddepend_move 0
-HER_ddepend_move 0
+HER_ddepend_move 2
 WHK_ddepend_move 0
 BLF_ddepend_move 0
 WPF_ddepend_move 0
@@ -1377,7 +1377,7 @@ RED_ddepend_move 0
 OPT_ddepend_move 0
 SAL_ddepend_move 0
 DRM_ddepend_move 0
-STB_ddepend_move 0
+STB_ddepend_move 2
 TAU_ddepend_move 0
 WOL_ddepend_move 0
 SDF_ddepend_move 0

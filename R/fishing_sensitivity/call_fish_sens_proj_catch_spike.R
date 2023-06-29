@@ -16,6 +16,9 @@ make_fish_sens_proj_catch_spike_species(proj.dir = proj.dir,
                                         fishing.levels.text = c('0','2','5','10','25','50','100'),
                                         make.catch.files = F
 )
+
+system('sudo chmod -R 775 *')
+
 setup.df = read.csv(paste0(proj.dir,'Setup_Files/',experiment.id,'_setup.csv'))
 
 base.sbatch.array = paste0(proj.dir,'currentVersion/sbatch_scenario_array_base.sh')
@@ -28,17 +31,17 @@ new.array.line = paste0('#SBATCH --array=1-',nrow(setup.df))
 sbatch.lines[grep('--array',sbatch.lines)] = new.array.line
 
 #replace directories
-new.mkdir = paste0("sudo mkdir -p ",proj.dir,"Atlantis_Runs/",experiment.id,"/out_$SLURM_ARRAY_TASK_ID")
+new.mkdir = paste0("sudo mkdir -p ",proj.dir,"Atlantis_Runs/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID")
 sbatch.lines[grep('mkdir',sbatch.lines)] = new.mkdir
 
-new.singularity = paste0( "sudo singularity exec --bind ",proj.dir,"currentVersion:/app/model,",proj.dir,"Atlantis_Runs/",experiment.id,"/out_$SLURM_ARRAY_TASK_ID:/app/model/output /contrib/atlantisCode/atlantis6536.sif /app/model/runAtlantis_$SLURM_ARRAY_TASK_ID.sh")
+new.singularity = paste0( "sudo singularity exec --bind ",proj.dir,"currentVersion:/app/model,",proj.dir,"Atlantis_Runs/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID:/app/model/output /contrib/atlantisCode/atlantis6536.sif /app/model/runAtlantis_$SLURM_ARRAY_TASK_ID.sh")
 sbatch.lines[grep('singularity',sbatch.lines)] = new.singularity
 
 writeLines(sbatch.lines,new.sbatch.array)
 
 # system("find . -name "*.sh" -exec chmod +x {} \;")
 batch.string = paste0("sbatch ",new.sbatch.array)
-system(batch.string)
+# system(batch.string)
 
 
 

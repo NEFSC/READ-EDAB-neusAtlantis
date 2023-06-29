@@ -118,15 +118,15 @@ make_fish_sens_proj_catch_scalar_species = function(proj.dir,
   
     file.copy(force.file.orig, force.file.new,overwrite = T)
     
-      force.file.new.lines = readLines(force.file.new)
-      catch.file.line.new = paste0('Catchts0.data CatchFiles/',experiment.id,'/',paste0(new.catch.names[i],'.ts'))
-      force.file.new.lines[catch.file.line] = catch.file.line.new
+    force.file.new.lines = readLines(force.file.new)
+    catch.file.line.new = paste0('Catchts0.data CatchFiles/',experiment.id,'/',paste0(new.catch.names[i],'.ts'))
+    force.file.new.lines[catch.file.line] = catch.file.line.new
     
-      writeLines(force.file.new.lines, con = force.file.new )
+    writeLines(force.file.new.lines, con = force.file.new )
     force.files.new[i] = force.file.new
     
     #Do run.sh duplication
-    run.file.new = paste0(proj.dir,'currentVersion/',paste0('runAtlantis_',i,'.sh'))
+    run.file.new = paste0(proj.dir,'currentVersion/',paste0('runAtlantis_',experiment.id,'_',i,'.sh'))
     
     file.copy(run.sh.orig, run.file.new,overwrite=T)
   
@@ -149,9 +149,9 @@ make_fish_sens_proj_catch_scalar_species = function(proj.dir,
     scalar = scenario.combs$fishing.levels,
     target.species = scenario.combs$Code,
     OutputDir = paste0(experiment.id,'/',new.catch.names,'/'),
-    sh.script = paste0('/runAtlantis_',new.catch.names,'.sh')
+    sh.script = paste0('/runAtlantis_',experiment.id,'_',1:length(new.catch.names),'.sh')
   )
   
-  write.csv(setup.df,paste0(proj.dir,'Setup_Files/',paste0(experiment.id,'.csv')),row.names =F)
+  write.csv(setup.df,paste0(proj.dir,'Setup_Files/',paste0(experiment.id,'_setup.csv')),row.names =F)
   
 }

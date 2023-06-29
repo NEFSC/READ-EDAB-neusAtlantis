@@ -123,7 +123,7 @@ make_fish_sens_proj_catch_spike_species = function(proj.dir,
     force.files.new[i] = force.file.new
     
     #Do run.sh duplication
-    run.file.new = paste0(proj.dir,'currentVersion/',paste0('runAtlantis_',i,'.sh'))
+    run.file.new = paste0(proj.dir,'currentVersion/',paste0('runAtlantis_',experiment.id,'_',i,'.sh'))
     
     file.copy(run.sh.orig, run.file.new,overwrite=T)
     
