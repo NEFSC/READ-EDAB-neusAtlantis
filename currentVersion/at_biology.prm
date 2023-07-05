@@ -18081,7 +18081,7 @@ BB_flag_recruit_stochastic  0
 BO_flag_recruit_stochastic  0  
 
 #v6681
-q10_method_MAK  0 
+q10_method_MAK  0
 q10_method_HER  0 
 q10_method_WHK  0 
 q10_method_BLF  0 
@@ -18167,3 +18167,6 @@ q10_method_ZS  0
 q10_method_PB  0  
 q10_method_BB  0  
 q10_method_BO  0  
+q10_method_DL  0  
+q10_method_DR  0  
+q10_method_DC  0  
