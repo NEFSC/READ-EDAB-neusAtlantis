@@ -97,7 +97,8 @@ make_diet_network = function(run.dir,start.time,end.time,min.fract){
 }
 
 
-diet.network = make_diet_network(run.dir = here::here('Atlantis_Runs','Extended_Constant_Catch','/'),start.time = 365*57,end.time = 365*77,min.fract = 0)
+diet.network = make_diet_network(run.dir = here::here('Atlantis_Runs','Extended_Constant_Catch','/'),
+                                 start.time = 365*57,end.time = 365*77,min.fract = 0)
 
 #From https://rfrelat.github.io/BalticFoodWeb.html
 calculate_trophic_level = function(net){

@@ -9,26 +9,11 @@ figure.dir = 'C:/Users/Joseph.Caracappa/Documents/Atlantis/fishing_sensitivity/f
 
 #make some fake data based on the run.index
 experiment.id = 'fscale2'
-# # fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T) )
-# setup.df = read.csv(here::here('Setup_Files',paste0(experiment.id,'.csv')))%>%
-#   select(ID,Run,scalar,target.species)
-# biomass.test = data.frame(run.name = setup.df$Run,
-#                           Code = setup.df$target.species,
-#                           scalar = setup.df$scalar,
-#                           biomass.mean = rnorm(nrow(setup.df),1E5,1E4),
-#                           biomass.slope = rnorm(nrow(setup.df),0,10),
-#                           biomass.age.mean = rnorm(nrow(setup.df),5,1))
-# number.test = data.frame(run.name = setup.df$Run,
-#                           Code = setup.df$target.species,
-#                           scalar = setup.df$scalar,
-#                           number.mean = rnorm(nrow(setup.df),1E5,1E4),
-#                           number.slope = rnorm(nrow(setup.df),0,10),
-#                           number.age.mean = rnorm(nrow(setup.df),5,1))
-# saveRDS(biomass.test,paste0(data.dir,'scenario_stats_biomass.rds'))
-# saveRDS(number.test,paste0(data.dir,'scenario_stats_numbers.rds'))
+
 
 ref.run.dir = 'C:/Users/Joseph.caracappa/Documents/Atlantis/fishing_sensitivity/reference_Run/fishing_sensitivity_baseline/'
-ref.time = 20805
+data.ref = readRDS(paste0(ref.run.dir,'Post_Processed/Data/ref_run_summary.rds'))
+# ref.time = 20805
 
 fgs.file = here::here('currentVersion','neus_groups.csv')
                           
@@ -49,54 +34,7 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
   
   setup.df = setup.df %>% select(ID,run.id,scalar,target.species)
   
-  #Read in reference biomass and numbers data from post-processed RDS files
-  biomass.ref = readRDS(paste0(ref.run.dir,'/Post_Processed/Data/biomass.rds')) %>%
-    filter(time >= (ref.time/365))%>%
-    group_by(species)%>%
-    summarise(atoutput = mean(atoutput,na.rm=T))%>%
-    rename(biomass.ref = 'atoutput')
-    
-  number.ref = readRDS(paste0(ref.run.dir,'Post_Processed/Data/numbers.rds')) %>%
-    filter(time >= (ref.time/365))%>%
-    group_by(species)%>%
-    summarise(atoutput = mean(atoutput,na.rm=T))%>%
-    rename(number.ref = 'atoutput')
-  
-  catch.ref = read.table(paste0(ref.run.dir,'/neus_outputCatch.txt'),header = T)%>%
-    select(Time:ZG)%>%
-    filter(Time >= ref.time & Time <=ref.time+365)%>%
-    tidyr::gather('Code','catch.ref',-Time)%>%
-    group_by(Code)%>%
-    summarise(catch.ref= mean(catch.ref,na.rm=T))%>%
-    left_join(fgs)%>%
-    rename(species = 'LongName')
-  
-  source(here::here('R','edit_param_BH.R'))
-  bh.param = get_param_BH(here::here('currentVersion','at_biology.prm'))%>%
-    mutate(alpha = as.numeric(as.character(alpha)),
-           beta = as.numeric(as.character(beta)))%>%
-    left_join(fgs, by = c('group' = 'Code'))%>%
-    rename(Code = 'group',
-           species = 'LongName')
-  
-  recruit.ref = read.table(paste0(ref.run.dir,'/neus_outputYOY.txt'),header =T)%>%
-    filter(Time >= ref.time & Time <= ref.time + 365)%>%
-    tidyr::gather('ID','recruit.ref',-Time)%>%
-    tidyr::separate('ID',c('Code','agecl'),sep = '\\.')%>%
-    group_by(Code)%>%
-    summarise(recruit.ref = mean(recruit.ref,na.rm=T))%>%
-    left_join(fgs)%>%
-    rename(species = 'LongName')
-  
-  data.ref = biomass.ref %>% 
-    left_join(number.ref) %>%
-    left_join(catch.ref)%>%
-    left_join(recruit.ref)%>%
-    left_join(bh.param)%>%
-    left_join(fgs, by = c('species' = 'LongName','Code' = 'Code')) %>%
-    select(-species) %>%
-    mutate(exploit.prop = catch.ref/biomass.ref)%>%
-    ungroup()
+  data.ref = readRDS(paste0(ref.run.dir,'Post_Processed/Data/ref_run_summary.rds'))
   
   #Read in biomass and numbers data
   biomass = readRDS(paste0(data.dir,'scenario_stats_biomass.rds'))
@@ -190,6 +128,7 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
       #Do mean age (abundance-weighted) vs fishing scalar
       number.age.plot[[i]] = ggplot(data = data.species, aes(x= scalar, y= number.age.mean))+
         geom_point()+
+        ylim(0,10)+
         # geom_smooth(method = 'lm')+
         ggtitle(data.species$LongName[1])+
         theme_bw()+
@@ -203,7 +142,7 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
       biomass.age.plot[[i]] = ggplot(data = data.species, aes(x= scalar, y= biomass.age.mean))+
         geom_point()+
         geom_path()+
-        geom_hline(yintercept = 0,lty =2)+
+        ylim(0,10)+
         # geom_smooth(method = 'lm')+
         ggtitle(data.species$LongName[1])+
         theme_bw()+
@@ -296,6 +235,7 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
       ylab('Fishing Sensitivity')+
       theme_bw()+
       theme(legend.position = 'bottom')
+  ggsave(paste0(figure.dir,'/recruitment_exploitation_guild.png'))
     
   ggplot(data = data.slope, aes(x = biomass.ref,y = -biomass.slope, color = Guild, label = Code))+
     geom_point(alpha = 0.5,size = 5)+
@@ -304,14 +244,16 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
     ylab('Fishing Sensitivity')+
     theme_bw()+
     theme(legend.position = 'bottom')
+  ggsave(paste0(figure.dir,'/reference_biomass_exploitation_guild.png'))
   
   ggplot(data = data.slope, aes(x = catch.ref,y = -biomass.slope, color = Guild, label = Code))+
     geom_point(alpha = 0.5,size = 5)+
     geom_text_repel()+
-    xlab('Reference Biomass')+
+    xlab('Reference Catch')+
     ylab('Fishing Sensitivity')+
     theme_bw()+
     theme(legend.position = 'bottom')
+  ggsave(paste0(figure.dir,'/reference_catch_exploitation_guild.png'))
     
     
 }
