@@ -101,8 +101,8 @@ file.copy(from.files,obs.dir,overwrite = T)
 
 
 #Make spinup files
-years = 1964:1997
-source(here::here('R','make_force_spinup.R'))
+years = 2018:2100
+source(here::here('R','Physical_Forcing','make_force_spinup.R'))
 for(i in 1:length(years)){
   # out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/'
   
@@ -115,7 +115,7 @@ for(i in 1:length(years)){
     transport.file = NA,
     statevar.file = NA,
     # anyvar.file = paste0(obs.dir,'Satphyto_Forcing_DL_1998.nc'),
-    anyvar.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years/Det_DOY_Climatology.nc',
+    anyvar.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years/v4/Det_DOY_Climatology.nc',
     anyvar.out = obs.dir,
     force.dir = obs.dir,
     start.year = 1964,
@@ -125,6 +125,8 @@ for(i in 1:length(years)){
     param.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/obs_hindcast_hydroconstruct_template.prm',
     bat.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/hydroconstruct_run_template.bat'
   )
+  
+  print(years[i])
 }
 
 from.files = paste0(obs.dir,'Satphyto_Forcing_DL_',1964:2017,'.nc')

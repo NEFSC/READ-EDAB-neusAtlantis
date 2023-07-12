@@ -256,7 +256,7 @@ make_force_spinup = function(do.hydroconstruct,
         dum.array[5,,] = 0
       }
       
-      if(new.year %% 4 == 0){
+      if(lubridate::leap_year(new.year)){
         new.var.dat = dum.array
         last.var = var.dat[,,365]
         new.var.dat[,,1:365] = var.dat[,,1:365]
