@@ -89,29 +89,47 @@ for(yr in 1:length(years)){
 # E) create spinup forcing 1964-1992 --------
 
 start.year = 1964
-years = 1964:1992
+years = 2021:2100
 
-source('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/R/make_force_spinup.R')
+source('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/R/physical_forcing/make_force_spinup.R')
 # obs.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/'
-obs.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/'
+# obs.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/'
+obs.dir = 'C:/Users/joseph.caracappa/Documents/Cobia/Atlantis_Format/'
 for(i in 1:length(years)){
   
   make_force_spinup(
     do.hydroconstruct =F,
     out.dir = obs.dir,
-    trans.prefix = 'GLORYS_Atlantis_Transport_',
+    trans.prefix = 'flow_',
     statevar.prefix = 'Obs_Hindcast_statevars_',
     anyvar.prefix = NA,
-    transport.file = paste0(obs.dir,'Forcing_Files/Annual_Output/combined_years/transport_DOY_climatology.nc'),
-    statevar.file = paste0(obs.dir,'Forcing_Files/Annual_Output/combined_years/Physics_DOY_climatology.nc'),
+    transport.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years/v4/transport_DOY_climatology.nc',
+    statevar.file = NA,
     anyvar.file = NA,
     anyvar.out = NA,
-    force.dir =paste0(obs.dir,'Forcing_Files/'),
+    force.dir =obs.dir,
     start.year = 1964,
     new.year = years[i],
     param.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/obs_hindcast_hydroconstruct_template.prm',
     bat.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/hydroconstruct_run_template.bat'
   )
+  
+  # make_force_spinup(
+  #   do.hydroconstruct =F,
+  #   out.dir = obs.dir,
+  #   trans.prefix = 'GLORYS_Atlantis_Transport_',
+  #   statevar.prefix = 'Obs_Hindcast_statevars_',
+  #   anyvar.prefix = NA,
+  #   transport.file = paste0(obs.dir,'Forcing_Files/Annual_Output/combined_years/transport_DOY_climatology.nc'),
+  #   statevar.file = paste0(obs.dir,'Forcing_Files/Annual_Output/combined_years/Physics_DOY_climatology.nc'),
+  #   anyvar.file = NA,
+  #   anyvar.out = NA,
+  #   force.dir =paste0(obs.dir,'Forcing_Files/'),
+  #   start.year = 1964,
+  #   new.year = years[i],
+  #   param.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/obs_hindcast_hydroconstruct_template.prm',
+  #   bat.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/hydroconstruct_run_template.bat'
+  # )
   
   # make_force_spinup(
   #   do.hydroconstruct = F,

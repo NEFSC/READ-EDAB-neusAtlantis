@@ -132,7 +132,7 @@ make_force_spinup = function(do.hydroconstruct,
     ncdf4::ncvar_put(nc_transp,var.sourceb,ncdf4::ncvar_get(transport.nc,'source_boxid'))
     ncdf4::nc_close(transport.nc)
     #If leap year, append values to add extra day
-    if(new.year %% 4 == 0){
+    if(lubridate::leap_year(new.year)){
 
       dims[3] = 366
       new.array = array(NA,dim = dims)
@@ -177,7 +177,7 @@ make_force_spinup = function(do.hydroconstruct,
       var.dat = ncdf4::ncvar_get(statevar.nc,var.names[v])
       var.def.ls[[v+3]] = var.vertflux=ncdf4::ncvar_def(var.names[v],var.units[v],list(leveldim, boxesdim, timedim),-999,prec="float")
       dims = dim(var.dat)
-      if(new.year %% 4 == 0){
+      if(lubridate::leap_year(new.year)){
         
         dims[3] = 366
         new.var.dat = array(NA,dim = dims)
