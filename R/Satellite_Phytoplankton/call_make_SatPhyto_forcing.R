@@ -6,7 +6,7 @@
 #Read in climatology function and statevar forcing function
 source(here::here('R','Satellite_Phytoplankton','make_SatPhyto_files.R'))
 source(here::here('R','make_force_statevar.R'))
-source('C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/R/make_force_spinup.R')
+source(here::here('R','Physical_Forcing','make_force_spinup.R'))
 
 #set.directories
 satphyto.dir ='C:/Users/joseph.caracappa/Documents/Satellite_Phyto/' 
@@ -93,7 +93,7 @@ from.files = paste0(satphyto.force.dir,'Phyto_Forcing_',1998:2017,'.nc')
 file.copy(from.files,obs.dir,overwrite = T)
 
 #Make spinup files
-years = 1964:1997
+years = 2018:2100
 for(i in 1:length(years)){
   make_force_spinup(
     do.hydroconstruct = F,
@@ -104,7 +104,7 @@ for(i in 1:length(years)){
     transport.file = NA,
     statevar.file = NA,
     # anyvar.file = paste0(obs.dir,'Phyto_Forcing_1998.nc'),
-    anyvar.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years/LTL_DOY_Climatology.nc',
+    anyvar.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/Annual_Output/combined_years/v4/LTL_DOY_Climatology.nc',
     anyvar.out = obs.dir,
     force.dir = obs.dir,
     start.year = 1964,
@@ -114,6 +114,7 @@ for(i in 1:length(years)){
     param.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/obs_hindcast_hydroconstruct_template.prm',
     bat.temp = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Forcing_Files/hydroconstruct_run_template.bat'
     )
+  print(years[i])
 }
 
 #Copy files into GitHub directory
