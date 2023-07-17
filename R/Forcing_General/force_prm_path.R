@@ -16,6 +16,6 @@ x = data.frame(diatom = paste0('Diatom_N_File',id,'.name /tsfiles/Annual_Files/P
                dinoflag = paste0('DinoFlag_N_File',id,'.name /tsfiles/Annual_Files/Phyto_Forcing_',years,'.nc'),
                dinoflag2 = paste0('DinoFlag_N_File',id,'.use_resets 0'),
                DL = paste0('Lab_Det_N_File',id,'.name /tsfiles/Annual_Files/Satphyto_Forcing_DL_',years,'.nc'),
-               DL2 = paste0('Lab_Det_N_File',id,'.use_resets 0'),
+               DL2 = paste0('Lab_Det_N_File',id,'.use_resets 0')
                )
 write.csv(x,file = 'C:/Users/joseph.caracappa/Documents/param2.csv')
