@@ -59,11 +59,12 @@ for(y in 1:length(years)){
   
   RNetCDF::dim.def.nc(nc.file, "t", unlim=TRUE)
   RNetCDF::dim.def.nc(nc.file, "b", 30)
-  RNetCDF::dim.def.nc(nc.file, "z", 5)
+  RNetCDF::dim.def.nc(nc.file, "z", 4)
   RNetCDF::dim.def.nc(nc.file, "dest", 32)
   
   RNetCDF::var.def.nc(nc.file, "t", "NC_DOUBLE", "t")
   for(v in 1:length(var.names)){
+    
     
     #Define Variables
     RNetCDF::var.def.nc(nc.file, var.names[v], 'NC_DOUBLE', c('dest','z','b','t'))
@@ -81,9 +82,9 @@ for(y in 1:length(years)){
   
   RNetCDF::att.put.nc(nc.file, "t", "units", "NC_CHAR", 'seconds since 1964-01-01 00:00:00 UTC')
   RNetCDF::att.put.nc(nc.file, "t", "dt", "NC_DOUBLE", 86400)
-  RNetCDF::att.put.nc(nc.file, "NC_GLOBAL", "title", "NC_CHAR", 'NEUS_Atlantis_Obs_Hindcast')
-  RNetCDF::att.put.nc(nc.file, "NC_GLOBAL", "geometry", "NC_CHAR", 'neus_tmerc_RM2.bgm')
-  RNetCDF::att.put.nc(nc.file, "NC_GLOBAL", "parameters", "NC_CHAR", "")
+  RNetCDF::att.put.nc(nc.file, "NC_GLOBAL", "title", "NC_CHAR", "NEUS_Atlantis_Obs_Hindcast")
+  RNetCDF::att.put.nc(nc.file, "NC_GLOBAL", "geometry", "NC_CHAR", "neus_tmerc_RM2.bgm")
+  RNetCDF::att.put.nc(nc.file, "NC_GLOBAL", "parameters", "NC_CHAR", " ")
   
   RNetCDF::var.put.nc(nc.file, "t", as.numeric(time.vals))
   
