@@ -14,6 +14,7 @@ transport.base = nc_open(transport.base.file,write = F)
 var.names = names(transport.base$var)
 var.units = sapply(var.names,function(x) return(ncdf4::ncatt_get(transport.base,x,'units')$value))
 var.longname = sapply(var.names,function(x) return(ncdf4::ncatt_get(transport.base,x,'long_name')$value))
+var.fill = sapply(var.names,function(x) return(ncdf4::ncatt_get(transport.base,x,'_FillValue')$value))
 
 y=1
 for(y in 1:length(years)){
@@ -63,20 +64,16 @@ for(y in 1:length(years)){
   
   RNetCDF::var.def.nc(nc.file, "t", "NC_DOUBLE", "t")
   for(v in 1:length(var.names)){
+    
     #Define Variables
     RNetCDF::var.def.nc(nc.file, var.names[v], 'NC_DOUBLE', c('dest','z','b','t'))
-    #Assign Fill Value
-    RNetCDF::att.put.nc(nc.file, var.names[v], '_FillValue', "NC_DOUBLE", -999)
-    #Assign 
-    RNetCDF::att.put.nc(nc.file, var.names[v], 'missing_value', 'NC_DOUBLE',-999)
-    #Assign valid_min
-    RNetCDF::att.put.nc(nc.file, var.names[v], 'valid_min', 'NC_DOUBLE', -999)
-    #Assing valid_max
-    RNetCDF::att.put.nc(nc.file, var.names[v], 'valid_max', 'NC_DOUBLE', 99999)
-    #Assign units
-    RNetCDF::att.put.nc(nc.file, var.names[v], 'units','NC_CHAR', var.units[v])  
-    #Assign long_name
-    RNetCDF::att.put.nc(nc.file,var.names[v],'long_name','NC_CHAR',var.longname[v])
+    RNetCDF::att.put.nc(nc.file, var.names[v], '_FillValue', "NC_DOUBLE", var.fill[v])  
+    
+    if(var.names[v] == 'exchange'){
+      
+      RNetCDF::att.put.nc(nc.file, var.names[v], 'units','NC_CHAR', var.units[v])
+      RNetCDF::att.put.nc(nc.file,var.names[v],'long_name','NC_CHAR',var.longname[v])
+    }
     
     #Put variable values
     RNetCDF::var.put.nc(nc.file,var.names[v],new.var.dat.ls[[v]])
