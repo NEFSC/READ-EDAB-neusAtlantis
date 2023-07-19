@@ -10,13 +10,13 @@ data.dir = paste0(ref.run.dir,'/Post_Processed/Data/')
 
 #Read in reference biomass and numbers data from post-processed RDS files
 x = read.table(paste0(ref.run.dir,'neus_outputBiomIndx.txt'),header = T)
-biomass.ref = readRDS(paste0(ref.run.dir,'/Post_Processed/Data/biomass.rds'))
+biomass.ref = readRDS(paste0(ref.run.dir,'/Post_Processed/Data/biomass.rds'))%>%
   filter(time >= (ref.time/365))%>%
   group_by(species)%>%
   summarise(atoutput = mean(atoutput,na.rm=T))%>%
   rename(biomass.ref = 'atoutput')
 
-biomass.age.ref = readRDS(paste0(ref.run.dir,'/Post_Processed/Data/biomass_age.rds'))
+biomass.age.ref = readRDS(paste0(ref.run.dir,'/Post_Processed/Data/biomass_age.rds'))%>%
   filter(time >= ref.time/365)%>%
   group_by(species,agecl)%>%
   summarise(biomass = mean(atoutput,na.rm=T))%>%
@@ -58,7 +58,8 @@ recruit.ref = read.table(paste0(ref.run.dir,'/neus_outputYOY.txt'),header =T)%>%
   group_by(Code)%>%
   summarise(recruit.ref = mean(recruit.ref,na.rm=T))%>%
   left_join(fgs)%>%
-  rename(species = 'LongName')
+  rename(species = 'LongName')%>%
+  select(-IsTurnedOn)
 
 data.ref = biomass.ref %>% 
   left_join(number.ref) %>%

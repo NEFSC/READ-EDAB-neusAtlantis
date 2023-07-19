@@ -4,20 +4,20 @@ library(dplyr)
 library(ggplot2)
 library(gridExtra)
 
-experiment.id = 'fspike1'
+experiment.id = 'fspike_combined'
 
 data.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/fishing_sensitivity/data/',experiment.id,'/')
 figure.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/fishing_sensitivity/figures/',experiment.id,'/')
 
 setup.df = read.csv(here::here('diagnostics','scenario_db',paste0(experiment.id,'_setup.csv')),as.is = T)
-master.dat = read.csv(here::here('diagnostics','scenario_db','scenario_db_master.csv'),as.is = T)
-master.dat = master.dat[which(master.dat$experiment_id == experiment.id),]
+master.dat = read.csv(here::here('diagnostics','scenario_db','scenario_db_master.csv'),as.is = T) %>%
+  filter(experiment_id %in% c('fspike1','fspike2'))
 
-t1 = master.dat$event_start_d/365
-t2 = master.dat$event_end_d/365
-t4 = t1 + 5
-t5 = t1 + 10
-t6 = t1 + 19
+t1 = master.dat$event_start_d[1]/365
+t2 = master.dat$event_end_d[1]/365
+t3 = t1 + 5
+t4 = t1 + 10
+t5 = t1 + 19
 
 fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T) %>%
   filter(IsTurnedOn == T)%>%
@@ -25,12 +25,13 @@ fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T) %>%
 
 bio.run.stats = readRDS(paste0(data.dir,'recovery_stats_', experiment.id,'.rds')) %>%
   filter(scalar != 0)
-# bio.base.stats = readRDS(paste0(data.dir,'recovery_stats_baseline_', experiment.id,'.rds'))
+age.run.stats = readRDS(paste0(data.dir,'age_stats_',experiment.id,',.rds')) %>%
+  filter(scalar != 0)
 
 spp.names = sort(unique(bio.run.stats$Code))
 
 i = 1
-plot.recovery.ls = plot.recovery.ls2= list()
+plot.recovery.ls = plot.age.ls = list()
 
 for(i in 1:length(spp.names)){
   
@@ -45,38 +46,40 @@ for(i in 1:length(spp.names)){
   
   bio.run.spp$Recovery_Time = factor(bio.run.spp$Recovery_Time, levels = c('5','10','20'))
   
-  plot.recovery.ls[[i]] = ggplot(bio.run.spp, aes(x= scalar, y= Recovery_Rate, color = factor(Recovery_Time)))+
+  scalars = sort(unique(bio.run.spp$scalar))
+  scalars.log = log10(scalars)
+  
+  plot.recovery.ls[[i]] = ggplot(bio.run.spp, aes(x= log10(scalar), y= Recovery_Rate, color = factor(Recovery_Time)))+
       geom_point()+
       geom_line()+
+      scale_x_continuous(breaks = scalars.log,labels = scalars,minor_breaks = NULL)+
+      guides(color = guide_legend(title = 'Recovery Time (years)'))+
       # facet_wrap(~scalar,ncol =1 )+
       xlab('Event Magnitude Scalar')+
       ylab('Recovery Rate (%recovered/year)')+
       ggtitle(bio.run.spp$LongName[1])+
       theme_bw()+
-      theme(plot.title = element_text(hjust = 0.5))
+      theme(plot.title = element_text(hjust = 0.5),
+            legend.position = 'bottom')
   
-
+  # if(spp.names[i] %in% age.run.stats$Code ){
+  #   
+  #   age.run.spp = age.run.stats %>%
+  #     filter(Code == spp.names[i])%>%
+  #     left_join(fgs)%>%
+  #     select(LongName,scalar,delta.age.spike,delta.age.5,delta.age.10,delta.age.20)%>%
+  #     tidyr::gather('variable','value',-LongName, -scalar)
+  #   
+  #   plot.age.ls[[i]] = ggplot(dat = age.run.spp, aes(x= scalar, y= value, color = variable))+
+  #     geom_line()+
+  #     geom_point()+
+  #     theme_bw()+
+  #     xlab('Event Magnitude Scalar')+
+  #     ylab('Change in juvenile proportion')+
+  #     ggtitle(age.run.spp$LongName[1])+
+  #     theme( plot.title = element_text(hjust = 0.5))
+  # }
   
-  # plot.recovery.ls[[i]] = ggplot(bio.run.spp, aes(x= Recovery_Time, y= Recovery_Rate, color = factor(scalar)))+
-  #   geom_point()+
-  #   geom_line()+
-  #   # facet_wrap(~scalar,ncol =1 )+
-  #   xlab('Recovery Time (years)')+
-  #   ylab('Recovery Rate (mt/year)')+
-  #   ggtitle(bio.run.spp$LongName[1])+
-  #   theme_bw()+
-  #   theme(plot.title = element_text(hjust = 0.5))
-  # 
-  # plot.recovery.ls2[[i]] = ggplot(bio.run.spp, aes(x= scalar, y= Recovery_Rate, color = factor(Recovery_Time)))+
-  #   geom_point()+
-  #   geom_line()+
-  #   # facet_wrap(~scalar,ncol =1 )+
-  #   xlab('Catch Spike Scalar')+
-  #   ylab('Recovery Rate (mt/year)')+
-  #   ggtitle(bio.run.spp$LongName[1])+
-  #   theme_bw()+
-  #   theme(plot.title = element_text(hjust = 0.5))
-    
 }
 
 pdf(paste0(figure.dir,'recovery_rate_species_',experiment.id,'.pdf'))
@@ -85,8 +88,27 @@ for(i in 1:length(plot.recovery.ls)){
   grid.arrange(plot.recovery.ls[[i]])}
 dev.off()
 
-# pdf(paste0(figure.dir,'recovery_rate_species_',experiment.id,'2.pdf'))
-# for(i in 1:length(plot.recovery.ls2)){
-#   if(is.null(plot.recovery.ls2[[i]])){next()}
-#   grid.arrange(plot.recovery.ls2[[i]])}
+
+
+# pdf(paste0(figure.dir,'age_prop_species_',experiment.id,'.pdf'))
+# for(i in 1:length(plot.age.ls)){
+#   if(is.null(plot.age.ls[[i]])){next()}
+#   grid.arrange(plot.age.ls[[i]])}
 # dev.off()
+
+guild2spp = read.csv(here::here('diagnostics','functional_groups_match.csv')) %>%
+  select(Code,LongName,Guild)
+
+bio.recovery.max = readRDS(paste0(data.dir,'recovery_threshold_',experiment.id,'.rds'))%>%
+  left_join(guild2spp)%>%
+  arrange(Guild)
+
+ggplot(data = bio.recovery.max,aes(x= reorder(LongName,max.recovery),y=max.recovery,fill = Guild))+
+  geom_bar(stat = 'identity')+
+  guides(fill= guide_legend(title.position = 'left',nrow = 1))+
+  ylab('Max Scalar that Recovers')+
+  xlab('')+
+  coord_flip()+
+  theme_bw()+
+  theme(legend.position = 'bottom')
+ggsave(paste0(figure.dir,'Recovery_Threshold_',experiment.id,'.png'),width = 10, height = 10, units = 'in', dpi = 300)

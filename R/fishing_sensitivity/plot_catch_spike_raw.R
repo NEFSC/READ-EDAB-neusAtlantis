@@ -4,14 +4,14 @@ library(dplyr)
 library(ggplot2)
 library(gridExtra)
 
-experiment.id = 'fspike1'
+experiment.id = 'fspike_combined'
 
 data.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/fishing_sensitivity/data/',experiment.id,'/')
 figure.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/fishing_sensitivity/figures/',experiment.id,'/')
 
 setup.df = read.csv(here::here('diagnostics','scenario_db',paste0(experiment.id,'_setup.csv')),as.is = T)
-master.dat = read.csv(here::here('diagnostics','scenario_db','scenario_db_master.csv'),as.is = T)
-master.dat = master.dat[which(master.dat$experiment_id == experiment.id),]
+master.dat = read.csv(here::here('diagnostics','scenario_db','scenario_db_master.csv'),as.is = T) %>%
+  filter(experiment_id %in% c('fspike1','fspike2'))
 
 fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T) %>%
   filter(IsTurnedOn == T)%>%
@@ -26,8 +26,8 @@ biomass.baseline = read.table('C:/Users/joseph.caracappa/Documents/Atlantis/fish
   mutate(scalar = 1,
          run.id = 'baseline')
 
-biomass = readRDS(paste0(data.dir,'BiomIndx_fspike1_1_28105_year.rds')) %>%
-  left_join(setup.df)%>%
+biomass = readRDS(paste0(data.dir,'BiomIndx_1_28105_year_fspike_combined.rds')) %>%
+  left_join(setup.df, by = 'run.id')%>%
   select(Time,Code,Biomass,scalar,run.id)%>%
   bind_rows(biomass.baseline)
 

@@ -4,16 +4,16 @@
 #' 3) delta_numbers ~ catch scalar, by species -> PDF
 #' 4) numbers_trend ~ biomass_trend by guild
 
-data.dir = 'C:/Users/Joseph.Caracappa/Documents/Atlantis/fishing_sensitivity/data/fscale2/'
-figure.dir = 'C:/Users/Joseph.Caracappa/Documents/Atlantis/fishing_sensitivity/figures/fscale2/'
+data.dir = 'C:/Users/Joseph.Caracappa/Documents/Atlantis/fishing_sensitivity/data/fscale_combined/'
+figure.dir = 'C:/Users/Joseph.Caracappa/Documents/Atlantis/fishing_sensitivity/figures/fscale_combined/'
 
 #make some fake data based on the run.index
-experiment.id = 'fscale2'
+experiment.id = 'fscale_combined'
 
 
 ref.run.dir = 'C:/Users/Joseph.caracappa/Documents/Atlantis/fishing_sensitivity/reference_Run/fishing_sensitivity_baseline/'
 data.ref = readRDS(paste0(ref.run.dir,'Post_Processed/Data/ref_run_summary.rds'))
-# ref.time = 20805
+proj.start = 20805
 
 fgs.file = here::here('currentVersion','neus_groups.csv')
                           
@@ -28,7 +28,7 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
   
   fgs = read.csv(fgs.file,as.is =T) %>%select(Code,LongName,IsTurnedOn)
   
-  setup.df = read.csv(paste0(data.dir,experiment.id,'_setup.csv'),as.is = T)
+  setup.df = read.csv(here::here('diagnostics','scenario_db',paste0(experiment.id,'_setup.csv')),as.is = T)
   
   # setup.df$target.species = sapply(setup.df$Run,function(x) return(strsplit(x,split=paste0(experiment.id,'|_'))[[1]][3]),USE.NAMES = F)
   

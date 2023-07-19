@@ -13,7 +13,7 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'fishing_sensitivity_baseline'
+run.name = 'fishing_sensitivity_baseline_100yr'
 
 atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/fishing_sensitivity/reference_run/',run.name,'/')
 # atl.dir = here::here('Atlantis_Runs','ZL_restore_7_mumC',run.name,'')
