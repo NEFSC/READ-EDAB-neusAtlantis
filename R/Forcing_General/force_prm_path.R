@@ -1,8 +1,8 @@
 years = 2021:2100
 id = 56+(1:length(years))
 x = data.frame(flow = paste0('hd',id,'.name /tsfiles/Annual_Files/flow_',years,'.nc'),
-               temp = paste0('Temperature',id,'.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_',years,'.nc'),
-               salt = paste0('Salinity',id,'.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_',years,'.nc'))
+               temp = paste0('Temperature',id,'.name /tsfiles/Annual_Files/CM2_6_tempsalt_force_',years,'.nc'),
+               salt = paste0('Salinity',id,'.name /tsfiles/Annual_Files/CM2_6_tempsalt_force_',years,'.nc'))
 write.csv(x,file = 'C:/Users/joseph.caracappa/Documents/param1.csv')
 
 years = 2018:2100
