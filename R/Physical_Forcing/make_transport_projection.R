@@ -63,22 +63,20 @@ for(y in 1:length(years)){
   RNetCDF::dim.def.nc(nc.file, "dest", 32)
   
   RNetCDF::var.def.nc(nc.file, "t", "NC_DOUBLE", "t")
-  for(v in 1:length(var.names)){
-    
-    
-    #Define Variables
-    RNetCDF::var.def.nc(nc.file, var.names[v], 'NC_DOUBLE', c('dest','z','b','t'))
-    RNetCDF::att.put.nc(nc.file, var.names[v], '_FillValue', "NC_DOUBLE", var.fill[v])  
-    
-    if(var.names[v] == 'exchange'){
-      
-      RNetCDF::att.put.nc(nc.file, var.names[v], 'units','NC_CHAR', var.units[v])
-      RNetCDF::att.put.nc(nc.file,var.names[v],'long_name','NC_CHAR',var.longname[v])
-    }
-    
-    #Put variable values
-    RNetCDF::var.put.nc(nc.file,var.names[v],new.var.dat.ls[[v]])
-  }
+  
+  #Define exchange
+  RNetCDF::var.def.nc(nc.file, 'exchange', 'NC_DOUBLE', c('dest','z','b','t'))
+  RNetCDF::att.put.nc(nc.file, 'exchange', '_FillValue', "NC_DOUBLE", 0)  
+  RNetCDF::att.put.nc(nc.file,  'exchange', 'units','NC_CHAR', 'm^3')
+  RNetCDF::att.put.nc(nc.file, 'exchange','long_name','NC_CHAR','Change in volume in this time step')
+  
+  #Define dest_b
+  RNetCDF::var.def.nc(nc.file, 'dest_b', 'NC_INT', c('dest','z','b','t'))
+  RNetCDF::att.put.nc(nc.file, 'dest_b', '_FillValue', "NC_INT", -1)  
+  
+  #Define dest_k
+  RNetCDF::var.def.nc(nc.file, 'dest_k', 'NC_INT', c('dest','z','b','t'))
+  RNetCDF::att.put.nc(nc.file, 'dest_k', '_FillValue', "NC_INT", -1)  
   
   RNetCDF::att.put.nc(nc.file, "t", "units", "NC_CHAR", 'seconds since 1964-01-01 00:00:00 UTC')
   RNetCDF::att.put.nc(nc.file, "t", "dt", "NC_DOUBLE", 86400)
