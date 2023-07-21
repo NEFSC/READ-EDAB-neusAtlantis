@@ -87,7 +87,7 @@ for(y in 1:length(years)){
   new.var.dat.ls = list()
   for(v in 1:length(var.names)){
     var.dat = ncdf4::ncvar_get(statevar.base,var.names[v])
-    var.def.ls[[v+1]] = var.vertflux=ncdf4::ncvar_def(var.names[v],var.units[v],list(leveldim, boxesdim, timedim),-999,prec="float")
+    var.def.ls[[v+1]] = var.vertflux=ncdf4::ncvar_def(var.names[v],var.units[v],list(leveldim, boxesdim, timedim),-999,prec="double")
     dims = dim(var.dat)
     if(years[y] %% 4 == 0){
       
