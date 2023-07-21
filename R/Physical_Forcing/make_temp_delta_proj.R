@@ -3,7 +3,7 @@ library(dplyr)
 library(ncdf4)
 
 data.dir = 'C:/Users/Joseph.Caracappa/Documents/Cobia/'
-out.dir =  'C:/Users/Joseph.Caracappa/Documents/Cobia/Atlantis_Format/'
+out.dir =  'C:/Users/Joseph.Caracappa/Documents/Cobia/Atlantis_Format/statevar/'
 
 layer.index.mat = read.csv(here::here('Geometry','box_layer_index.csv'),header = F, as.is = T) %>% as.matrix
 layer.index.vec = as.vector(layer.index.mat)
@@ -41,7 +41,7 @@ for( i in 1:ntime){
 }
 
 date2month = format(seq.Date(as.Date('2021-01-01'),as.Date('2021-12-31'), by = 1),format = '%m')
-
+y=1
 for(y in 1:length(years)){
   
   #make new copy of file
@@ -67,17 +67,17 @@ for(y in 1:length(years)){
   }
   
   #define netCDF variables
-  timedim = ncdf4::ncdim_def('time','',1:length(time.vals),unlim = T,create_dimvar = F)
-  var.time = ncdf4::ncvar_def('time',paste0('seconds since ',start.year,'-01-01 00:00:00 +10'),timedim,prec='double')
+  timedim = ncdf4::ncdim_def('t','',1:length(time.vals),unlim = T,create_dimvar = F)
+  var.time = ncdf4::ncvar_def('t',paste0('seconds since ',start.year,'-01-01 00:00:00 +10'),timedim,prec='double')
   
-  leveldim = ncdf4::ncdim_def('level','',1:4,create_dimvar = F)
-  boxesdim = ncdf4::ncdim_def('boxes','',1:30,create_dimvar = F)
+  leveldim = ncdf4::ncdim_def('z','',1:5,create_dimvar = F)
+  boxesdim = ncdf4::ncdim_def('b','',1:30,create_dimvar = F)
   
-  var.time=ncdf4::ncvar_def("time","seconds since 1964-01-01 00:00:00 +10",timedim,prec="double")
-  var.box=ncdf4::ncvar_def("boxes", "", boxesdim, longname="Box IDs", prec='integer')
-  var.lev=ncdf4::ncvar_def("level","",leveldim,longname="layer index; 1=near surface; positice=down" ,prec="integer")
-  
-  var.def.ls = list(var.time,var.box,var.lev)
+  # var.time=ncdf4::ncvar_def("t","seconds since 1964-01-01 00:00:00 +10",timedim,prec="double")
+  # var.box=ncdf4::ncvar_def("b", "", boxesdim, longname="Box IDs", prec='integer')
+  # var.lev=ncdf4::ncvar_def("z","",leveldim,longname="layer index; 1=near surface; positice=down" ,prec="integer")
+  # 
+  var.def.ls = list(var.time)
   
   #Modify and append statevar file
   var.names = names(statevar.base$var)
@@ -87,7 +87,7 @@ for(y in 1:length(years)){
   new.var.dat.ls = list()
   for(v in 1:length(var.names)){
     var.dat = ncdf4::ncvar_get(statevar.base,var.names[v])
-    var.def.ls[[v+3]] = var.vertflux=ncdf4::ncvar_def(var.names[v],var.units[v],list(leveldim, boxesdim, timedim),-999,prec="float")
+    var.def.ls[[v+1]] = var.vertflux=ncdf4::ncvar_def(var.names[v],var.units[v],list(leveldim, boxesdim, timedim),-999,prec="float")
     dims = dim(var.dat)
     if(years[y] %% 4 == 0){
       
@@ -100,7 +100,7 @@ for(y in 1:length(years)){
     } else {
       new.var.dat = var.dat[,,1:365]
     }
-    new.var.dat.ls[[v]] = new.var.dat[1:4,,]
+    new.var.dat.ls[[v]] = new.var.dat[1:5,,]
   }
   
   #Build new NC File
@@ -109,20 +109,33 @@ for(y in 1:length(years)){
   #assign global attributes to file
   ncdf4::ncatt_put(nc_varfile,0,"title","Box averaged properties file, NEUS")
   ncdf4::ncatt_put(nc_varfile,0,"geometry","neus_tmerc_RM.bgm")
-  ncdf4::ncatt_put(nc_varfile,0,"parameters","")
+  # ncdf4::ncatt_put(nc_varfile,0,"parameters","")
   
   #assign attributes to variables
   ncdf4::ncatt_put(nc_varfile,var.time,"dt",86400,prec="double")
   
-  for(v in 1:length(var.names)){
-    ncdf4::ncvar_put(nc_varfile,var.def.ls[[v+3]],new.var.dat.ls[[v]], count=c(4,30,length(time.vals)),verbose = F)  
-  }
-  ncdf4::ncvar_put(nc_varfile,var.time,time.vals,verbose = F)
-  ncdf4::ncvar_put(nc_varfile,var.lev,1:4)
-  ncdf4::ncvar_put(nc_varfile,var.box,0:29)
+  #temperature
+  ncdf4::ncvar_put(nc_varfile,var.def.ls[[2]],new.var.dat.ls[[1]], count=c(5,30,length(time.vals)),verbose = F)  
+  ncdf4::ncatt_put(nc_varfile,'temperature','_FillValue',15)
+  ncdf4::ncatt_put(nc_varfile,'temperature','missing_value',15)
+  ncdf4::ncatt_put(nc_varfile,'temperature','valid_min',-2)
+  ncdf4::ncatt_put(nc_varfile,'temperature','valid_max',999)
+  ncdf4::ncatt_put(nc_varfile,'temperature','units','degrees Celclius')
+  ncdf4::ncatt_put(nc_varfile,'temperature','long_name','Temperature')
   
-  ncdf4::ncatt_put(nc_varfile,'time','units',paste0('seconds since ',start.year,'-01-01 00:00:00 +10'))
+  #Salinity
+  ncdf4::ncvar_put(nc_varfile,var.def.ls[[3]],new.var.dat.ls[[2]], count=c(5,30,length(time.vals)),verbose = F)  
+  ncdf4::ncatt_put(nc_varfile,'salinity','_FillValue',0)
+  ncdf4::ncatt_put(nc_varfile,'salinity','missing_value',0)
+  ncdf4::ncatt_put(nc_varfile,'salinity','valid_min',0)
+  ncdf4::ncatt_put(nc_varfile,'salinity','valid_max',999)
+  ncdf4::ncatt_put(nc_varfile,'salinity','units','PSU')
+  ncdf4::ncatt_put(nc_varfile,'salinity','long_name','Salinity')
+  
+  ncdf4::ncvar_put(nc_varfile,var.time,time.vals,verbose = F)
+  
+  ncdf4::ncatt_put(nc_varfile,'t','units',paste0('seconds since ',start.year,'-01-01 00:00:00 +10'))
   ncdf4::nc_close(nc_varfile)
 }
 
-nc_close(statevar.base.file)
+nc_close(statevar.base)
