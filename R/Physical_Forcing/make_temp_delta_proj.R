@@ -87,7 +87,7 @@ for(y in 1:length(years)){
   new.var.dat.ls = list()
   for(v in 1:length(var.names)){
     var.dat = ncdf4::ncvar_get(statevar.base,var.names[v])
-    var.def.ls[[v+1]] = var.vertflux=ncdf4::ncvar_def(var.names[v],var.units[v],list(leveldim, boxesdim, timedim),-999,prec="double")
+    var.def.ls[[v+1]] = var.vertflux=ncdf4::ncvar_def(var.names[v],var.units[v],list(leveldim, boxesdim, timedim),15,prec="double")
     dims = dim(var.dat)
     if(years[y] %% 4 == 0){
       
@@ -119,7 +119,7 @@ for(y in 1:length(years)){
   ncdf4::ncatt_put(nc_varfile,'temperature','_FillValue',15)
   ncdf4::ncatt_put(nc_varfile,'temperature','missing_value',15)
   ncdf4::ncatt_put(nc_varfile,'temperature','valid_min',-2)
-  ncdf4::ncatt_put(nc_varfile,'temperature','valid_max',999)
+  ncdf4::ncatt_put(nc_varfile,'temperature','valid_max',40)
   ncdf4::ncatt_put(nc_varfile,'temperature','units','degrees Celclius')
   ncdf4::ncatt_put(nc_varfile,'temperature','long_name','Temperature')
   
@@ -128,7 +128,7 @@ for(y in 1:length(years)){
   ncdf4::ncatt_put(nc_varfile,'salinity','_FillValue',0)
   ncdf4::ncatt_put(nc_varfile,'salinity','missing_value',0)
   ncdf4::ncatt_put(nc_varfile,'salinity','valid_min',0)
-  ncdf4::ncatt_put(nc_varfile,'salinity','valid_max',999)
+  ncdf4::ncatt_put(nc_varfile,'salinity','valid_max',40)
   ncdf4::ncatt_put(nc_varfile,'salinity','units','PSU')
   ncdf4::ncatt_put(nc_varfile,'salinity','long_name','Salinity')
   
