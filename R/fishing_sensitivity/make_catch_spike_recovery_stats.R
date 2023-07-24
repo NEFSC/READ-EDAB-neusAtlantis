@@ -187,6 +187,7 @@ bio.recovery = bio.run.stats %>%
 
 
 saveRDS(bio.recovery,paste0(data.dir,'recovery_stats_', experiment.id,'.rds'))
+bio.recovery = readRDS(paste0(data.dir,'recovery_stats_', experiment.id,'.rds'))
 
 #Calculate the minimum maximum scalar before recovery is possible
 bio.recovery.max.scalar = data.frame(Code = spp.names, max.recovery = NA)
@@ -241,14 +242,14 @@ for(i in 1:length(spp.names)){
       
       bio.spp.ls[[j]] = data.frame(Code = spp.names[i],
                                    recovery.time = recovery.times[j], 
-                                   slope = model$coefficients[2],
-                                   intercept = model$coefficients[1],
+                                   slope = as.numeric(model$coefficients[2]),
+                                   intercept = as.numeric(model$coefficients[1]),
                                    r2 = model.sum$r.squared,
                                    p = signif(model.sum$coefficients[2,4],2))  
     }
     
   }
-  bio.recovery.rate[[i]] = bind_rows(bio.spp.time)
+  bio.recovery.rate[[i]] = bind_rows(bio.spp.ls)
 }
 bio.recovery.rate = bind_rows(bio.recovery.rate)
 saveRDS(bio.recovery.rate,paste0(data.dir,'recovery_rate_lm_',experiment.id,'.rds'))
@@ -263,4 +264,26 @@ bio.age.prop = bio.age.run.stats %>%
          delta.age.10 = b.t4-b0.t4,
          delta.age.20 = b.t5-b0.t5)
 
-saveRDS(bio.age.prop, paste0(data.dir,'age_stats_',experiment.id,',.rds'))
+saveRDS(bio.age.prop, paste0(data.dir,'age_stats_',experiment.id,'.rds'))
+bio.age.prop = readRDS( paste0(data.dir,'age_stats_',experiment.id,'.rds'))
+
+spp.names2 = as.character(sort(unique(bio.age.prop$Code)))
+bio.age.prop.lm = data.frame(Code = spp.names2, slope = NA, intercept = NA, r2 = NA, p = NA)
+
+for(i in 1:length(spp.names2)){
+  
+  bio.age.spp = bio.age.prop %>%
+    filter(Code == spp.names2[i])%>%
+    filter(scalar > 0)
+  
+  model = lm(delta.age.spike ~ scalar, data = bio.age.spp)
+  model.sum = summary(model)
+  
+  bio.age.prop.lm$slope[i] = as.numeric(model$coefficients[2])
+  bio.age.prop.lm$intercept[i] = as.numeric(model$coefficients[1])
+  bio.age.prop.lm$r2[i] = model.sum$r.squared
+  bio.age.prop.lm$p[i] = signif(model.sum$coefficients[2,4],2)
+
+}
+
+saveRDS(bio.age.prop.lm, paste0(data.dir,'age_stats_lm_',experiment.id,'.rds'))

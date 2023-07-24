@@ -28,6 +28,8 @@ bio.run.stats = readRDS(paste0(data.dir,'recovery_stats_', experiment.id,'.rds')
 age.run.stats = readRDS(paste0(data.dir,'age_stats_',experiment.id,',.rds')) %>%
   filter(scalar != 0)
 
+ref.data = readRDS('C:/Users/Joseph.caracappa/Documents/Atlantis/fishing_sensitivity/reference_Run/fishing_sensitivity_baseline/Post_Processed/Data/ref_run_summary.rds')
+
 spp.names = sort(unique(bio.run.stats$Code))
 
 i = 1
@@ -101,7 +103,8 @@ guild2spp = read.csv(here::here('diagnostics','functional_groups_match.csv')) %>
 
 bio.recovery.max = readRDS(paste0(data.dir,'recovery_threshold_',experiment.id,'.rds'))%>%
   left_join(guild2spp)%>%
-  arrange(Guild)
+  arrange(Guild)%>%
+  left_join(ref.data)
 
 ggplot(data = bio.recovery.max,aes(x= reorder(LongName,max.recovery),y=max.recovery,fill = Guild))+
   geom_bar(stat = 'identity')+
@@ -112,3 +115,73 @@ ggplot(data = bio.recovery.max,aes(x= reorder(LongName,max.recovery),y=max.recov
   theme_bw()+
   theme(legend.position = 'bottom')
 ggsave(paste0(figure.dir,'Recovery_Threshold_',experiment.id,'.png'),width = 10, height = 10, units = 'in', dpi = 300)
+
+ggplot(data = bio.recovery.max,aes(x= exploit.prop,y=max.recovery,color = Guild,label = Code))+
+  geom_point(size = 5)+
+  geom_text_repel()+
+  ylab('Max Scalar that Recovers')+
+  xlab('Exploitation Rate')+
+  theme_bw()+
+  theme(legend.position = 'bottom')
+ggsave(paste0(figure.dir,'Recovery_Threshold_vs_F_',experiment.id,'.png'),width = 12, height = 10, units = 'in', dpi = 300)
+
+
+#Recovery Slope
+bio.age.lm = readRDS( paste0(data.dir,'age_stats_lm_',experiment.id,'.rds'))%>%
+  select(Code,slope)%>%
+  rename(slope.age = 'slope')
+
+bio.recovery.rate = readRDS(paste0(data.dir,'recovery_rate_lm_',experiment.id,'.rds'))%>%
+  select(Code,recovery.time,slope)%>%
+  rename(slope.bio = 'slope')%>%
+  left_join(bio.age.lm)%>%
+  left_join(guild2spp)%>%
+  left_join(ref.data)
+
+ggplot(bio.recovery.rate,aes(x=reorder(LongName,slope.bio),y=slope.bio,fill = Guild))+
+  geom_bar(stat = 'identity')+
+  facet_wrap(~recovery.time)+
+  coord_flip()+
+  theme_bw()+
+  theme(legend.position = 'bottom')+
+  ylab('Recoverability (slope of recovery rate vs disturbance size')+
+  xlab('')
+ggsave(paste0(figure.dir,'Recoverability_',experiment.id,'.png'),width = 10, height = 10, units = 'in', dpi = 300)
+
+# ggplot(bio.recovery.rate, aes(x = slope.age,y = slope.bio, color = Guild,label = Code))+
+#   geom_point()+
+#   geom_text_repel()+
+#   facet_wrap(~recovery.time,nrow = 3)+
+#   ylab('Juvenile proportion slope')+
+#   xlab('Biomass recovery slope')+
+#   theme_bw()+
+#   theme(legend.position = 'bottom')
+# ggsave(paste0(figure.dir,'Recoverability_v_Juvenile_',experiment.id,'.png'),width = 12, height = 10, units = 'in', dpi = 300)
+
+ggplot(bio.recovery.rate, aes(x = exploit.prop,y = slope.bio, color = Guild, label = Code))+
+  geom_point()+
+  geom_text_repel()+
+  facet_wrap(~recovery.time,ncol =1)+
+  ylab('Recoverability')+
+  xlab('Exploitation Rate')+
+  theme_bw()+
+  theme(legend.position = 'bottom')
+ggsave(paste0(figure.dir,'Recoverability_F_',experiment.id,'.png'),width = 10, height = 10, units = 'in', dpi = 300)
+
+#Recovery Rate vs Juv proportion (time after x scalar)
+bio.recovery.age = bio.run.stats %>%
+  select(Code,scalar,recovery.5,recovery.10,recovery.20)%>%
+  tidyr::gather('var','recoverability',-Code,-scalar)%>%
+  tidyr::separate('var',c('dum','recovery.time'))%>%
+  left_join(select(age.run.stats,Code,scalar,delta.age.spike))%>%
+  left_join(guild2spp)%>%
+  filter(recovery.time == 10)
+
+ggplot(bio.recovery.age,aes(x= delta.age.spike, y = recoverability,color = Guild))+
+  geom_point(size =3)+
+  facet_wrap(~scalar,ncol = 1,labeller = 'label_both')+
+  theme_bw()+
+  xlab('Juvenile Proportion')+
+  ylab('Recoverability')
+ggsave(paste0(figure.dir,'Recoverability_juv_prop_',experiment.id,'.png'),width = 10, height = 14, units = 'in', dpi = 300)
+

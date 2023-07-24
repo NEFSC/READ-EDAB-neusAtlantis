@@ -1,6 +1,6 @@
 data.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/fishing_sensitivity/data/'
 library(dplyr)
-dir.names = c('fspike1','fspike2')
+dir.names = c('fscale2','fscale3')
 
 file.names = list(paste0('AgeBiomIndx_',dir.names,'_1_28105_year.rds'),
                      paste0('BiomIndx_',dir.names,'_1_28105_year.rds'),
@@ -14,7 +14,7 @@ file.prefixes = c('AgeBiomIndx_1_28105_year_',
                   'Catch_1_28105_year_',
                   'DietCheck_1_28105_year_')
 
-combined.name = 'fspike_combined'
+combined.name = 'fscale_combined'
 combined.dir = paste0(data.dir,combined.name,'/')
 
 if(!dir.exists(combined.dir)){ dir.create(combined.dir)}
@@ -42,3 +42,20 @@ for(i in 1:length(dir.names)){
 setup.new = bind_rows(setup.df.ls)
 
 write.csv(setup.new,here::here('diagnostics','scenario_db',paste0(combined.name,'_setup.csv')))
+
+## do rds files
+
+stats.files = list.files(paste0(data.dir,dir.names[1]),'scenario_stats_')
+
+for(i in 1:length(stats.files)){
+  
+  dat.ls = list()
+  for(j in 1:length(dir.names)){
+    dat.ls[[j]] = readRDS(paste0(data.dir,dir.names[j],'/',stats.files[i]))%>%
+      mutate(experiment.id = dir.names[j])
+      
+  }
+  dat = bind_rows(dat.ls)
+  
+  saveRDS(dat,file = paste0(combined.dir,stats.files[i]))
+}

@@ -32,31 +32,33 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
   
   # setup.df$target.species = sapply(setup.df$Run,function(x) return(strsplit(x,split=paste0(experiment.id,'|_'))[[1]][3]),USE.NAMES = F)
   
-  setup.df = setup.df %>% select(ID,run.id,scalar,target.species)
+  setup.df = setup.df %>% select(run.id,scalar,target.species)
   
-  data.ref = readRDS(paste0(ref.run.dir,'Post_Processed/Data/ref_run_summary.rds'))
+  data.ref = readRDS(paste0(ref.run.dir,'Post_Processed/Data/ref_run_summary.rds'))%>%
+    rename(biomass.age.mean.ref = 'biomass.age.mean')
   
   #Read in biomass and numbers data
   biomass = readRDS(paste0(data.dir,'scenario_stats_biomass.rds'))
   numbers = readRDS(paste0(data.dir,'scenario_stats_numbers.rds'))
   
-  data.run = biomass %>% left_join(numbers)%>%
+  data.run = biomass %>%
+    left_join(numbers)%>%
     tidyr::separate(run.name,c('dum','ID'),'_',remove =F )%>%
     mutate(ID = as.numeric(ID))%>%
     rename(Code = 'species')%>%
-    left_join(setup.df)%>%
-    left_join(fgs, by = c('target.species' = 'Code'))%>%
+    left_join(setup.df,by = c('run.name' = 'run.id'))%>%
+    left_join(fgs)%>%
     filter(IsTurnedOn == 1)
     
-  
   #Combine run output and ref data
-  data.all = data.run %>% left_join(data.ref) %>%
+  data.all = data.run %>% 
+    left_join(data.ref, by = 'Code') %>%
     mutate(biomass.rel = biomass.mean/biomass.ref,
            number.rel = number.mean/number.ref)%>%
     left_join(fgs)%>%
     filter(IsTurnedOn == 1)
   
-  spp.names = sort(unique(data.run$target.species))
+  spp.names = sort(unique(data.run$Code))
   
   biomass.plot.name = paste0(figure.dir,'biomass_catch_scalar_species.pdf')
   number.plot.name = paste0(figure.dir,'numbers_catch_scalar_species.pdf')
@@ -77,8 +79,10 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
       mutate(scalar.log = log(scalar),
              biomass.rel.log = log(biomass.rel),
              number.rel.log = log(number.rel))
+    
     data.species.nozero = data.species %>%
-      filter(scalar >0)
+      filter(scalar >0)%>%
+      filter(is.finite(biomass.rel.log))
     
     if(nrow(data.species)== 0| all(is.na(data.species$biomass.ref))){
       biomass.plot[[i]] = NULL
@@ -86,32 +90,43 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
       number.age.plot[[i]] = NULL
       number.plot[[i]] = NULL
       next()
+    }else{
+      #fit a linear model to biomass and numbers vs fishing scalar and extract the slopes
+      b.lm = lm(biomass.rel.log~scalar.log,data.species.nozero)
+      # b.glm = glm(biomass.rel~scalar.log,data = data.species.nozero, family = gaussian(link = log))
+      # print(summary(b.lm))
+      biomass.numbers$biomass.slope[i] = coef(b.lm)[2]
+      biomass.numbers$biomass.int[i] = coef(b.lm)[1]
+      
+      # b.nls = nls(biomass.rel~b*scalar^z, start = list(b=1,z=0.33), data = data.species.nozero)
+      # 
+      # plot(biomass.rel~scalar,data.species.nozero)
+      # lines(x= data.species.nozero$scalar,y=fitted(b.glm))
+      # curve(coef(b.nls)[1]*x^coef(b.nls)[2],add = T)
+      # 
+      # plot(biomass.rel.log~scalar.log,data.species)
+      # abline(b.lm)
+      # points(data.species.nozero$scalar.log, fitted(b.lm), col = 2)
+      # 
+      
+      #Do biomass vs fishing scalar
+      biomass.plot[[i]] = ggplot(data = data.species, aes(x= scalar, y= biomass.rel))+
+        geom_point()+
+        geom_path()+
+        # geom_smooth(method = 'glm', se = F, method.args = list(family = 'binomial'))+
+        # geom_smooth(method = 'lm')+
+        stat_function(fun = function(x) exp(biomass.numbers$biomass.int[i])*x^biomass.numbers$biomass.slope[i], lty = 2)+
+        ggtitle(data.species$LongName[1])+
+        geom_hline(yintercept = 0,lty =2)+
+        theme_bw()+
+        xlab('Fishing Scalar')+
+        ylab('Relative Biomass')+
+        scale_x_continuous(breaks = data.species$scalar)+
+        theme(plot.title = element_text(hjust = 0.5),
+              panel.grid.minor = element_blank())
     }
     
-    #fit a linear model to biomass and numbers vs fishing scalar and extract the slopes
-    b.lm = lm(biomass.rel.log~scalar.log,data.species.nozero)
-    # print(summary(b.lm))
-    biomass.numbers$biomass.slope[i] = coef(b.lm)[2]
-    biomass.numbers$biomass.int[i] = coef(b.lm)[1]
-    
-    # plot(biomass.rel.log~scalar.log,data.species)
-    # abline(b.lm)
-    
-    #Do biomass vs fishing scalar
-    biomass.plot[[i]] = ggplot(data = data.species, aes(x= scalar, y= biomass.rel))+
-      geom_point()+
-      geom_path()+
-      # geom_smooth(method = 'glm', se = F, method.args = list(family = 'binomial'))+
-      # geom_smooth(method = 'lm')+
-      stat_function(fun = function(x) exp(biomass.numbers$biomass.int[i])*x^biomass.numbers$biomass.slope[i], lty = 2)+
-      ggtitle(data.species$LongName[1])+
-      geom_hline(yintercept = 0,lty =2)+
-      theme_bw()+
-      xlab('Fishing Scalar')+
-      ylab('Relative Biomass')+
-      scale_x_continuous(breaks = data.species$scalar)+
-      theme(plot.title = element_text(hjust = 0.5),
-            panel.grid.minor = element_blank())
+
     
     if(all(is.na(data.species$number.ref))){
       biomass.numbers$number.slope[i] = NA
