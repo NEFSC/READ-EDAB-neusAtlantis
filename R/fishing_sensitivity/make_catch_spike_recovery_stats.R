@@ -189,6 +189,7 @@ bio.recovery = bio.run.stats %>%
 saveRDS(bio.recovery,paste0(data.dir,'recovery_stats_', experiment.id,'.rds'))
 bio.recovery = readRDS(paste0(data.dir,'recovery_stats_', experiment.id,'.rds'))
 
+# bio.recovery %>% filter(Code == 'BUT')
 #Calculate the minimum maximum scalar before recovery is possible
 bio.recovery.max.scalar = data.frame(Code = spp.names, max.recovery = NA)
 
@@ -221,7 +222,8 @@ for(i in 1:length(spp.names)){
     select(Code, scalar,recovery.5,recovery.10,recovery.20)%>%
     tidyr::gather('dum','recovery.rate',-Code,-scalar)%>%
     tidyr::separate(dum, c('dum','recovery.time'))%>%
-    filter(scalar > 0)
+    filter(scalar > 0)%>%
+    mutate(recovery.rate = ifelse(recovery.rate == 0, NA, recovery.rate))
   
   bio.spp.ls = list()
   

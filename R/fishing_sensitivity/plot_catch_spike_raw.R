@@ -48,7 +48,10 @@ for(i in 1:length(spp.names)){
     geom_line()+
     theme_bw()+
     ggtitle(dat.spp$LongName[1])+
-    theme(plot.title = element_text(hjust = 0.5))
+    guides(color = guide_legend(title = 'Event Magnitude', nrow = 2))+
+    theme(plot.title = element_text(hjust = 0.5))+
+    theme(legend.position = 'bottom')+
+    xlab('Year')
 }
 
 pdf(paste0(figure.dir,experiment.id,'_biomass.pdf'))

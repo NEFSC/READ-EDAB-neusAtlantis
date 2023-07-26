@@ -136,15 +136,25 @@ bio.recovery.rate = readRDS(paste0(data.dir,'recovery_rate_lm_',experiment.id,'.
   rename(slope.bio = 'slope')%>%
   left_join(bio.age.lm)%>%
   left_join(guild2spp)%>%
-  left_join(ref.data)
+  left_join(ref.data)%>%
+  select(Code,LongName,Guild,recovery.time,slope.bio,exploit.prop)
 
-ggplot(bio.recovery.rate,aes(x=reorder(LongName,slope.bio),y=slope.bio,fill = Guild))+
+dum= bio.recovery.rate %>% 
+  filter(recovery.time == 5)%>%
+  rename(slope.order = slope.bio)%>%
+  select(Code,slope.order)
+
+bio.recovery.rate =bio.recovery.rate %>% 
+  left_join(dum)%>%
+  filter(!is.na(slope.bio))
+
+ggplot(bio.recovery.rate,aes(x=reorder(LongName,slope.order),y=slope.bio,fill = Guild))+
   geom_bar(stat = 'identity')+
   facet_wrap(~recovery.time)+
   coord_flip()+
   theme_bw()+
   theme(legend.position = 'bottom')+
-  ylab('Recoverability (slope of recovery rate vs disturbance size')+
+  ylab('Elasticity (slope of recovery rate vs disturbance size)')+
   xlab('')
 ggsave(paste0(figure.dir,'Recoverability_',experiment.id,'.png'),width = 10, height = 10, units = 'in', dpi = 300)
 
@@ -175,7 +185,8 @@ bio.recovery.age = bio.run.stats %>%
   tidyr::separate('var',c('dum','recovery.time'))%>%
   left_join(select(age.run.stats,Code,scalar,delta.age.spike))%>%
   left_join(guild2spp)%>%
-  filter(recovery.time == 10)
+  filter(recovery.time == 10)%>%
+  left_join(select(ref.data,Code,exploit.prop))
 
 ggplot(bio.recovery.age,aes(x= delta.age.spike, y = recoverability,color = Guild))+
   geom_point(size =3)+
@@ -185,3 +196,12 @@ ggplot(bio.recovery.age,aes(x= delta.age.spike, y = recoverability,color = Guild
   ylab('Recoverability')
 ggsave(paste0(figure.dir,'Recoverability_juv_prop_',experiment.id,'.png'),width = 10, height = 14, units = 'in', dpi = 300)
 
+ggplot(bio.recovery.age,aes(x= exploit.prop, y = recoverability,color = Guild))+
+  geom_point(size =3)+
+  facet_wrap(~scalar,nrow = 1,labeller = 'label_both')+
+  guides(color = guide_legend(nrow = 1, title = 'Guild'))+
+  theme_bw()+
+  xlab('Exploitation Rate')+
+  ylab('Recoverability Rate')+
+  theme(legend.position = 'bottom')
+ggsave(paste0(figure.dir,'Recovery_Rate_F_',experiment.id,'.png'),width = 12, height = 6, units = 'in', dpi = 300)

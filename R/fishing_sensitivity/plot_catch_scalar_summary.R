@@ -270,5 +270,52 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
     theme(legend.position = 'bottom')
   ggsave(paste0(figure.dir,'/reference_catch_exploitation_guild.png'))
     
+  #plot maximum scalar
+  spp.names2 = sort(unique(data.all$target.species))
+  guild2spp = read.csv(here::here('diagnostics','functional_groups_match.csv')) %>%
+    select(Code,LongName,Guild)
+  
+  
+  data.thresh = data.frame(Code = spp.names2,max.scalar = NA)
+  for(i in 1:length(spp.names2)){
     
+    data.spp = data.all %>% 
+      filter(target.species == spp.names2[i] & Code == spp.names2[i])%>%
+      mutate(bio.prop = biomass.mean/biomass.ref)%>%
+      filter(bio.prop >= 0.1)
+    
+    data.thresh$max.scalar[i] =  max(data.spp$scalar,na.rm=T)
+  }
+  data.thresh = data.thresh %>%
+    left_join(fgs)%>%
+    left_join(guild2spp)%>%
+    left_join(data.ref)
+  
+  ggplot(data = data.thresh,aes(x= reorder(LongName,max.scalar),y=max.scalar,fill = Guild))+
+    geom_bar(stat = 'identity')+
+    guides(fill= guide_legend(title.position = 'left',nrow = 1))+
+    ylab('Max Scalar that Persists')+
+    xlab('')+
+    coord_flip()+
+    theme_bw()+
+    theme(legend.position = 'bottom')
+  ggsave(paste0(figure.dir,'max_scalar_guild.png'),width =10,height =8, units = 'in',dpi =300)
+  
+  ggplot(data = data.thresh, aes(x= exploit.prop,y = max.scalar, color = Guild))+
+    geom_point(size = 3)+
+    theme_bw()+
+    guides(color = guide_legend(nrow =1,title = ''))+
+    xlab('Fishing Mortality')+
+    ylab('Maximum Fishing Multiplier')+
+    theme(legend.position = 'bottom')
+  ggsave(paste0(figure.dir,'max_scalar_Exploitation_guild.png'))
+  
+  thresh.prop = data.thresh %>%
+    group_by(max.scalar)%>%
+    summarise(N =n())%>%
+    mutate(pct = N/nrow(data.thresh))
+    
+  thresh.prop$cum.pct = cumsum(thresh.prop$pct)
+  
+  nrow(data.thresh %>% filter(exploit.prop < 0.01))/nrow(data.thresh)
 }
