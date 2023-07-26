@@ -3,10 +3,7 @@ library(dplyr)
 library(ncdf4)
 
 data.dir = 'C:/Users/Joseph.Caracappa/Documents/Cobia/'
-out.dir =  'C:/Users/Joseph.Caracappa/Documents/Cobia/Atlantis_Format/statevar_delta/'
-if(!dir.exists(out.dir)){
-  dir.create(out.dir)
-}
+out.dir =  'C:/Users/Joseph.Caracappa/Documents/Cobia/Atlantis_Format/statevar/'
 
 layer.index.mat = read.csv(here::here('Geometry','box_layer_index.csv'),header = F, as.is = T) %>% as.matrix
 layer.index.vec = as.vector(layer.index.mat)
@@ -43,14 +40,12 @@ for( i in 1:ntime){
   delta.t.reorder[,,i] = dat.time.mat
 }
 
-
+date2month = format(seq.Date(as.Date('2021-01-01'),as.Date('2021-12-31'), by = 1),format = '%m')
 y=1
 for(y in 1:length(years)){
   
-  date2month = format(seq.Date(as.Date(paste0(years[y],'-01-01')),as.Date(paste0(years[y],'-12-31')), by = 1),format = '%m')
-  
   #make new copy of file
-  new.statevar.file = paste0(out.dir,'CM2_6_tempsalt_force_delta_',years[y],'.nc')
+  new.statevar.file = paste0(out.dir,'CM2_6_tempsalt_force_',years[y],'.nc')
   
   file_db.yr = filter(file_db,year == years[y])
   
@@ -66,7 +61,7 @@ for(y in 1:length(years)){
     month.match = as.numeric(date2month[j])
     which.delta = file_db.yr$ID[which(file_db.yr$month == month.match)]
     
-    temp.year[,,j] = temp.base[,,j]+delta.t.reorder[,,which.delta]
+    temp.year[,,j] = temp.base[,,j]+delta.t.reorder[,,13]
     
     temp.year = temp.year[,,1:length(time.vals)]
   }
@@ -94,23 +89,18 @@ for(y in 1:length(years)){
     var.dat = ncdf4::ncvar_get(statevar.base,var.names[v])
     var.def.ls[[v+1]] = var.vertflux=ncdf4::ncvar_def(var.names[v],var.units[v],list(leveldim, boxesdim, timedim),15,prec="double")
     dims = dim(var.dat)
-    
-    if(lubridate::leap_year(years[y])){
-        
-        dims[3] = 366
-        new.var.dat = array(NA,dim = dims)
-        last.dat = var.dat[,,365]
-        new.var.dat[,,1:365] = var.dat[,,1:365]
-        new.var.dat[,,366] = last.dat       
-        
-      } else {
-        new.var.dat = var.dat[,,1:365]
-      }
-    if(var.names[v] == 'temperature'){
-      new.var.dat.ls[[v]] = temp.year
-    }else{
-      new.var.dat.ls[[v]] = new.var.dat[1:5,,]
+    if(years[y] %% 4 == 0){
+      
+      dims[3] = 366
+      new.var.dat = array(NA,dim = dims)
+      last.dat = var.dat[,,365]
+      new.var.dat[,,1:365] = var.dat[,,1:365]
+      new.var.dat[,,366] = last.dat       
+      
+    } else {
+      new.var.dat = var.dat[,,1:365]
     }
+    new.var.dat.ls[[v]] = new.var.dat[1:5,,]
   }
   
   #Build new NC File
