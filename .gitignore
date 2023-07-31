@@ -60,6 +60,7 @@ currentVersion/CatchFiles/**/*
 !/currentVersion/CatchFiles/Catch_Forcing_Raw.pdf
 !/currentVersion/old/*
 
+
 R/desktop.ini
 diagnostics/Obs_Hindcast_Group_Progress.xlsx
 #diagnostics/*.xlsx
