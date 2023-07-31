@@ -13,7 +13,7 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'cm2_6_2100_dev_deltaT'
+run.name = 'cm2_6_2100_dev_baseline_TempDependOff'
 
 # atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HER_CatchSpinup_1/',run.name,'/')
 # atl.dir = here::here('Atlantis_Runs','ZL_restore_7_mumC',run.name,'')
@@ -83,12 +83,12 @@ make_atlantis_diagnostic_figures(
   plot.biomass.timeseries = T,
   plot.length.age = T,
   plot.biomass.box=T,
-  plot.c.mum=T,
-  plot.sn.rn=T,
-  plot.recruits=T,
+  plot.c.mum=F,
+  plot.sn.rn=F,
+  plot.recruits=F,
   plot.numbers.timeseries=T,
   plot.physics=T,
-  plot.growth.cons=T,
+  plot.growth.cons=F,
   plot.cohort=F,
   plot.diet=T,
   plot.consumption= T,
