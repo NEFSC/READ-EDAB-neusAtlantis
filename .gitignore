@@ -40,7 +40,7 @@ outputFolder
 !/currentVersion/neus_fisheries.csv
 !/currentVersion/neus_groups.csv
 # except bgm
-!/currentVersion/neus_boxes.bgm
+!/currentVersion/neus_tmerc_RM2.bgm
 # except rmd
 !/currentVersion/*.Rmd
 # except altlantis
