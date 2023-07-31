@@ -5,7 +5,9 @@ library(atlantistools)
 library(RNetCDF)
 ##Loads post-processing functions
 
-source(here::here('R','get_atl_paramfiles.R'))
+proj.dir = '/contrib/Joseph.Caracappa/fishing_sensitivity/neus-atlantis/'
+
+source(paste0('R','get_atl_paramfiles.R'))
 source(here::here('R','process_atl_output.R'))
 source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
@@ -13,7 +15,7 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'HER_LOB_SCA_1'
+run.name = 'fishing_sensitivity_baseline_100yr'
 
 # atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HER_CatchSpinup_1/',run.name,'/')
 # atl.dir = here::here('Atlantis_Runs','ZL_restore_7_mumC',run.name,'')

@@ -221,8 +221,8 @@ export_scenario_stats =function(scenario.dir,
     
 }
  
-export_scenario_stats(scenario.dir = '/contrib/Joseph.Caracappa/fishing_sensitivity/neus-atlantis/Atlantis_Runs/fspike1/',
+export_scenario_stats(scenario.dir = '/contrib/Joseph.Caracappa/fishing_sensitivity/neus-atlantis/Atlantis_Runs/fscale3/',
                       param.dir = '/contrib/Joseph.Caracappa/fishing_sensitivity/neus-atlantis/currentVersion/',
                       start.time = 20805 + (10*365),
-                      end.time = 20805 + (11*365),
-                      out.dir = '/contrib/Joseph.Caracappa/fishing_sensitivity/Data/fspike1_proj_10yr/')
+                      end.time = 20805 + (20*365),
+                      out.dir = '/contrib/Joseph.Caracappa/fishing_sensitivity/Data/fscale3/')

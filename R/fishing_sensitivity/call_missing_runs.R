@@ -1,33 +1,22 @@
-#Reads in setup file and executes batcher
-
+library(dplyr)
 proj.dir = '/contrib/Joseph.Caracappa/fishing_sensitivity/neus-atlantis/'
-# proj.dir = here::here('/')
+
 experiment.id = 'fscale3'
 
-source(paste0(proj.dir,'R/fishing_sensitivity/make_fish_sens_proj_catch_scalar_species.R'))
-
-make_fish_sens_proj_catch_scalar_species(proj.dir = proj.dir,
-                                         experiment.id = experiment.id,
-                                         proj.length.d = 365*20,
-                                         run.length.d = 28105,
-                                         event.start.d = 20805,
-                                         event.end.d = 28105,
-                                         fishing.levels = c(1.05,1.1,1.25,1.5,1.75),
-                                         fishing.levels.text = c('1_05','1_1','1_25','1_5','1_75'),
-                                         make.catch.files = T
-)
-
-system('sudo chmod -R 775 *')
+missing.run.id = c(130,140,167,184,198,199,206,212,220,222)
+missing.run.txt = paste(missing.run.id,collapse = ',')
+# system('sudo chmod -R 775 *')
 
 setup.df = read.csv(paste0(proj.dir,'Setup_Files/',experiment.id,'_setup.csv'))
+  # filter(ID %in% missing.run.id)
 
 base.sbatch.array = paste0(proj.dir,'currentVersion/sbatch_scenario_array_base.sh')
-new.sbatch.array =  paste0(proj.dir,'currentVersion/sbatch_',experiment.id,'.sh')
+new.sbatch.array =  paste0(proj.dir,'currentVersion/sbatch_',experiment.id,'_revise.sh')
 file.copy(base.sbatch.array,new.sbatch.array,overwrite = T)
 
 #replace max array number
 sbatch.lines = readLines(new.sbatch.array)
-new.array.line = paste0('#SBATCH --array=1-',nrow(setup.df))
+new.array.line = paste0('#SBATCH --array=',missing.run.txt)
 sbatch.lines[grep('--array',sbatch.lines)] = new.array.line
 
 #replace directories

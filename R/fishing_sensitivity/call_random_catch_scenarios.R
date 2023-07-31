@@ -2,19 +2,18 @@
 
 proj.dir = '/contrib/Joseph.Caracappa/fishing_sensitivity/neus-atlantis/'
 # proj.dir = here::here('/')
-experiment.id = 'fscale3'
+experiment.id = 'random_catch1'
 
-source(paste0(proj.dir,'R/fishing_sensitivity/make_fish_sens_proj_catch_scalar_species.R'))
+source(paste0(proj.dir,'R/fishing_sensitivity/make_random_catch_scenarios.R'))
 
-make_fish_sens_proj_catch_scalar_species(proj.dir = proj.dir,
-                                         experiment.id = experiment.id,
-                                         proj.length.d = 365*20,
-                                         run.length.d = 28105,
+make_random_catch_scenarios(experiment.id = experiment.id,
+                                         seed = 13,
+                                         N = 250,
+                                         proj.dir = proj.dir,
+                                         proj.duration.yr = 5,
                                          event.start.d = 20805,
-                                         event.end.d = 28105,
-                                         fishing.levels = c(1.05,1.1,1.25,1.5,1.75),
-                                         fishing.levels.text = c('1_05','1_1','1_25','1_5','1_75'),
-                                         make.catch.files = T
+                                         shuffle.start.yr = 21,
+                                         shuffle.stop.yr = 57
 )
 
 system('sudo chmod -R 775 *')
@@ -34,7 +33,7 @@ sbatch.lines[grep('--array',sbatch.lines)] = new.array.line
 new.mkdir = paste0("sudo mkdir -p ",proj.dir,"Atlantis_Runs/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID")
 sbatch.lines[grep('mkdir',sbatch.lines)] = new.mkdir
 
-new.singularity = paste0( "sudo singularity exec --bind ",proj.dir,"currentVersion:/app/model,",proj.dir,"Atlantis_Runs/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID:/app/model/output /contrib/atlantisCode/atlantis6536.sif /app/model/runAtlantis_",experiment.id,"_$SLURM_ARRAY_TASK_ID.sh")
+new.singularity = paste0( "sudo singularity exec --bind ",proj.dir,"currentVersion:/app/model,",proj.dir,"Atlantis_Runs/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID:/app/model/output /contrib/atlantisCode/atlantis6536.sif /app/model/RunAtlantis_",experiment.id,"_$SLURM_ARRAY_TASK_ID.sh")
 sbatch.lines[grep('singularity',sbatch.lines)] = new.singularity
 
 writeLines(sbatch.lines,new.sbatch.array)
