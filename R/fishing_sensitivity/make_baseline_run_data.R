@@ -38,7 +38,7 @@ biomass.age.ref = readRDS(paste0(ref.run.dir,'/Post_Processed/Data/biomass_age.r
 
 ssb.tot = biomass.age.ref %>%
   mutate(year = floor(time))%>%
-  group_by(year,species)%>%
+  group_by(year,time,species)%>%
   summarise(ssb = sum(ssb.age))
   
   

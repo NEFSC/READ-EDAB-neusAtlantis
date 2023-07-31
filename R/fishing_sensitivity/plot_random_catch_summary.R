@@ -37,7 +37,7 @@ rand.data = readRDS(paste0(data.dir,experiment.id,'/',experiment.id,'_mean_5yr_p
 
 spp.names = sort(unique(rand.data$LongName))  
 plot.ls = list()
-out.df = data.frame(Code = spp.names, p2_5 =NA, p97_5 =NA , med = NA)
+out.df = data.frame(LongName = spp.names, p2_5 =NA, p97_5 =NA , med = NA)
 i = 1
 for(i in 1:length(spp.names)){
   
@@ -73,3 +73,11 @@ for(i in 1:length(plot.ls)){
   if(is.null(plot.ls[[i]])){next()}
   grid.arrange(plot.ls[[i]])}
 dev.off()
+
+out.df = out.df %>%
+  left_join(ref.data)%>%
+  mutate(outside = Biomass <p2_5 | Biomass > p97_5)%>%
+  filter(!is.na(Biomass))
+
+sum(out.df$outside)/nrow(out.df)
+  

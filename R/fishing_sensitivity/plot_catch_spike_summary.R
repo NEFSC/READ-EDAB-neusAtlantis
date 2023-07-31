@@ -205,3 +205,11 @@ ggplot(bio.recovery.age,aes(x= exploit.prop, y = recoverability,color = Guild))+
   ylab('Recoverability Rate')+
   theme(legend.position = 'bottom')
 ggsave(paste0(figure.dir,'Recovery_Rate_F_',experiment.id,'.png'),width = 12, height = 6, units = 'in', dpi = 300)
+
+recov.prop = bio.recovery.max %>% 
+  group_by(max.recovery)%>%
+  summarise(N = n())%>%
+  mutate(tot = nrow(bio.recovery.max),
+         prop= N/tot,
+         prop.cum = cumsum(prop))
+  
