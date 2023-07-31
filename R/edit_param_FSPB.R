@@ -48,11 +48,11 @@ edit_param_FSPB = function(bio.prm,group.name,FSPB,overwrite = F, new.file.name)
 
 #Example
 
-edit_param_FSPB(bio.prm = here::here('currentVersion','at_biology.prm'),
-              group.name = c('MAK','HER'),
-              FSPB = matrix(c(rep(1,10),rep(1,10)),nrow = 2, ncol = 10),
-              overwrite = F,
-              new.file.name = here::here('currentVersion','at_biology_test.prm'))
+# edit_param_FSPB(bio.prm = here::here('currentVersion','at_biology.prm'),
+#               group.name = c('MAK','HER'),
+#               FSPB = matrix(c(rep(1,10),rep(1,10)),nrow = 2, ncol = 10),
+#               overwrite = F,
+#               new.file.name = here::here('currentVersion','at_biology_test.prm'))
 
 # get_param_KDENR(bio.prm = here::here('currentVersion','at_biology.prm'))
 
