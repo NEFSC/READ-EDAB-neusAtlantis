@@ -5,7 +5,9 @@ library(atlantistools)
 library(RNetCDF)
 ##Loads post-processing functions
 
-source(here::here('R','get_atl_paramfiles.R'))
+proj.dir = '/contrib/Joseph.Caracappa/fishing_sensitivity/neus-atlantis/'
+
+source(paste0('R','get_atl_paramfiles.R'))
 source(here::here('R','process_atl_output.R'))
 source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
@@ -13,11 +15,11 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'HER_LOB_SCA_1'
+run.name = 'fishing_sensitivity_baseline_100yr'
 
-# atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HER_CatchSpinup_1/',run.name,'/')
+atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/fishing_sensitivity/reference_run/',run.name,'/')
 # atl.dir = here::here('Atlantis_Runs','ZL_restore_7_mumC',run.name,'')
-atl.dir = here::here('Atlantis_Runs',run.name,'')
+# atl.dir = here::here('Atlantis_Runs',run.name,'')
 # atl.dir = '/home/jcaracappa/atlantis/Shared_Data/Dev_Runs/Dev_11032022/'
 
 
@@ -76,7 +78,7 @@ make_atlantis_diagnostic_figures(
   phytopl.history = here::here('R','phytoplankton_timeseries_biomass_tonnes_1998_2016.csv'),
   zoopl.history = here::here('R','Zooplankton_total_biomass_tonnes_N_20yrs.csv'),
  
-  plot.all = F,
+  plot.all = T,
   #Turn these on/off for desired output
   plot.benthic =F,
   plot.overall.biomass = T,

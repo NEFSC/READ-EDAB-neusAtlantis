@@ -14,4 +14,4 @@ grp.names = unname(sapply(age.mat.line.val,function(x)return(strsplit(x,'_')[[1]
 mat.age = unname(sapply(age.mat.line.val,function(x)return(strsplit(x,' |  ')[[1]][2])))
 #format to table and write
 age.mat.df = data.frame(spp = grp.names,age.mat = mat.age)
-write.csv(age.mat.df,here::here('R','group_mature_age.csv'),row.names = F)
+write.csv(age.mat.df,here::here('diagnostics','group_mature_age.csv'),row.names = F)
