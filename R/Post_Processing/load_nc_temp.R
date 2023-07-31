@@ -25,8 +25,9 @@ load_nc_temp =function (nc, fgs, bps, select_groups, select_variable, prm_run,
                     paste(inactive_groups, collapse = "\n")))
     }
     if (all(!is.element(select_groups, active_groups))) {
-      stop(paste("None of the species selected are active in the model run.", 
+      warning(paste("None of the species selected are active in the model run.", 
                  "Check spelling and Check 'IsTurnedOn' in fgs"))
+      return(NULL)
     }
   }
   at_out <- RNetCDF::open.nc(con = nc)

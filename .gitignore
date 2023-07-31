@@ -24,7 +24,7 @@ atlantis
 outputFolder
 
 # ignore all files in testing except prm
-/currentVersion/*.*
+/currentVersion/*
 !/currentVersion/at_biology.prm
 !/currentVersion/at_economics.prm
 !/currentVersion/at_force_LINUX.prm
@@ -33,12 +33,14 @@ outputFolder
 !/currentVersion/at_physics.prm
 !/currentVersion/at_run.prm
 # except nc
-!/currentVersion/neus_init_nc
+!/currentVersion/neus_init.nc
+!/currentVersion/neus_init_nofill.nc
+!/currentVersion/neus_init.cdf
 # except csv
 !/currentVersion/neus_fisheries.csv
 !/currentVersion/neus_groups.csv
 # except bgm
-!/currentVersion/neus_boxes.bgm
+!/currentVersion/neus_tmerc_RM2.bgm
 # except rmd
 !/currentVersion/*.Rmd
 # except altlantis
@@ -46,31 +48,25 @@ outputFolder
 !/currentVersion/run_command.txt
 # shell script to run
 !/currentVersion/RunAtlantis.sh
+!/currentVersion/RunAtlantis_cloud.sh
+!/currentVersion/sbatch_scenario_array_base.sh
 !/currentVersion/vertebrate_init_length_cm_Adjusted.csv
-/currentVersion/CatchFiles/fishing_sensitivity_scenarios/*
-/currentVersion/fishing_sensitivity_extended_constant_3/*
-/currentVersion/CatchFiles/fishing_sensitivity_extended_constant_3/*
-/currentVersion/BH_convert_1/*
-/currentVersion/BH_convert_2/*
-/currentVersion/CatchFiles/random_catch_1/*
+
+# catch files
+currentVersion/CatchFiles/**/*
+!/currentVersion/CatchFiles/total_catch.ts
+!/currentVersion/CatchFiles/total_catch_project_mean_20yrs.ts
+!/currentVersion/CatchFiles/Catch_Forcing_New_Spinup.pdf
+!/currentVersion/CatchFiles/Catch_Forcing_Raw.pdf
+!/currentVersion/old/*
 
 
-#Geometry/NEUS 1-5 Map.R
-#Geometry/Neus 1-5.pdf
-#Geometry/Neus Faces.pdf
 R/desktop.ini
-#R/generate_annual_forcing.R
-#R/generate_forcing_paths.R
-#R/Post_Hydroconstruct_Diagnostics.R
-#R/ROMS_Diagnostics.R
-#testing/at_force_WIN_test.prm
-testing/tsfiles/roms_cobalt_flows_03242020_1980_1989.nc
-testing/tsfiles/roms_cobalt_flows_03242020_1980_1989.nc
 diagnostics/Obs_Hindcast_Group_Progress.xlsx
-data/fishing_sensitivity_extended_constant_2/*
 #diagnostics/*.xlsx
 
+*.out
+
+#data files
 data/fishing_sensitivity_extended_constant_2/*
-currentVersion/CatchFiles/fishing_sensitivity_extended_constant_3/*
-currentVersion/fishing_sensitivity_extended_constant_3/*
-nohup.out
+
