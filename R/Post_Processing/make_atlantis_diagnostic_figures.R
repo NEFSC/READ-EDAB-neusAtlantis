@@ -734,21 +734,21 @@ make_atlantis_diagnostic_figures = function(
     
     #Biomass Pool Grazers
     #Biomass pool grazing
-    grazing =readRDS(paste0(out.dir,'grazing.rds'))
-    
-    temp.plot.5 = atlantistools::plot_line(grazing)
-    temp.plot.5 = ggplot2::update_labels(temp.plot.5,list(x = 'Time (years)',y='Numbers'))
-    temp.plot.5 = add.title(temp.plot.5, 'Biomass Pool Grazers')
+    # grazing =readRDS(paste0(out.dir,'grazing.rds'))
+    # 
+    # temp.plot.5 = atlantistools::plot_line(grazing)
+    # temp.plot.5 = ggplot2::update_labels(temp.plot.5,list(x = 'Time (years)',y='Numbers'))
+    # temp.plot.5 = add.title(temp.plot.5, 'Biomass Pool Grazers')
     
     pdf(file=paste0(fig.dir,run.name,' Numbers Timeseries.pdf'), width = 24, height = 24, onefile = T)
     gridExtra::grid.arrange(temp.plot.1)
     gridExtra::grid.arrange(temp.plot.2)
     gridExtra::grid.arrange(temp.plot.3)
     gridExtra::grid.arrange(temp.plot.4)
-    gridExtra::grid.arrange(temp.plot.5)
+    # gridExtra::grid.arrange(temp.plot.5)
     dev.off()
     
-    rm(RN.age,SN.age,numbers,numbers.age,grazing)
+    rm(RN.age,SN.age,numbers,numbers.age)
   }
   
   

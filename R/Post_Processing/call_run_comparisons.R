@@ -2,6 +2,7 @@
 source(here::here('R','plot_run_comparisons.R'))
 source(here::here('R','plot_run_catch_comparisons.R'))
 
+
 dev.old = '/home/jcaracappa/atlantis/Shared_Data/Dev_Runs/Dev_20230313/'
 dev = '/net/work3/EDAB/atlantis/Shared_Data/Dev_Runs/Dev_20230523/'
 RED1 = here::here('Atlantis_Runs','BLF_RED_1','')
@@ -15,8 +16,6 @@ HER3 = here::here('Atlantis_Runs','HER_LOB_3','')
 HER4 = here::here('Atlantis_Runs','HER_LOB_4','')
 HER5 = here::here('Atlantis_Runs','HER_LOB_5','')
 HER6 = here::here('Atlantis_Runs','HER_LOB_SCA_1','')
-
-
 
 figure.dir = here::here('Figures','Run_Comparisons','')
 
@@ -32,11 +31,11 @@ plot_run_comparisons(
 )
 
 plot_run_comparisons(
-  model.dirs = c(dev.old,dev,zl.7),
-  model.names = c('Dev_20230313','Dev_20230327','ZL_restore_7'),
+  model.dirs = c(dev,mak2),
+  model.names = c('Dev_20230327','MAK_fix_2'),
   plot.rel = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'ZL_restore_7_v_dev'),
+  plot.out = paste(figure.dir,'PR204_v_dev_'),
   table.out = F,
   groups = NULL,
   remove.init = F

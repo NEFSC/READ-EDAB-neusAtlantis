@@ -2,24 +2,19 @@
 
 source(here::here('R','plot_atlvar_box.R'))
 
-var.names = c('Diatom_N','Diatom_S','DinoFlag_N','PicoPhytopl_N','Lab_Det_N','Ref_Det_N')
-# var.names = c('Lab_Det_N','Ref_Det_N')
+var.names = c('Diatom_N','Diatom_S','DinoFlag_N','PicoPhytopl_N','Lab_Det_N','Ref_Det_N','Temp')
+# var.names
+run.name = 'Obs_Hindcast_LeapYearFix'
+run.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/'
 
 for(v in 1:length(var.names)){
   plot_atlvar_box(
-    nc.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/SatPhyto_Forcing_Fast_PL_Sink_2/neus_output.nc',
-    # nc.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_DinoFlag/neus_output.nc',
+    nc.file = paste0(run.dir,run.name,'/neus_output.nc'),
     variable.name = var.names[v],
-    plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/SatPhyto_Forcing_Fast_PL_Sink_2/Figures/',
-    # plot.dir =  'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_DinoFlag/Figures/',
-    plot.name = var.names[v])  
+    plot.dir = paste0(run.dir,run.name,'/Figures/'),
+    plot.name = var.names[v],
+    remove.bot = T,
+    remove.init = T)
 }
-# for(v in 1:length(var.names)){
-#   plot_atlvar_box(
-#     nc.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/SatPhyto_Forcing_Dynamic_Lower_with_DL/neus_output.nc',
-#     # nc.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_DinoFlag/neus_output.nc',
-#     variable.name = var.names[v],
-#     plot.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/SatPhyto_Forcing_Dynamic_Lower_with_DL/Figures/',
-#     # plot.dir =  'C:/Users/joseph.caracappa/Documents/Atlantis/ROMS_COBALT/Atlantis_Runs/Atlantis_Output_DinoFlag/Figures/',
-#     plot.name = var.names[v])  
-# }
+
+
