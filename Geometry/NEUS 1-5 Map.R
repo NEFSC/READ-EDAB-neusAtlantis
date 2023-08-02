@@ -65,6 +65,20 @@ create_neus_map <- function(saveToFile=F){
       plot.title = element_text(hjust=0.5)
     ) + 
     annotate("text", x=-65.5, y=35.5, label= "* denotes boundary",size=2) 
+  
+  p2b <- ggplot()+ 
+    annotation_map(map_data('worldHires'),fill = 'grey70',alpha=0.3)+
+    geom_polygon(data = corners2, aes(x= Lon1,y = Lat1,group = Area),col = 'black',alpha = 0.75,size = 0.5,fill = 'white')+
+    coord_quickmap()+
+    xlab('')+
+    ylab('')+
+    theme_void()+
+    theme(
+      legend.position = c(0.88,0.30),
+      plot.title = element_text(hjust=0.5)
+    )
+    
+  
 
   # creates neus_faces
   p3 <- ggplot()+ 
@@ -85,6 +99,7 @@ create_neus_map <- function(saveToFile=F){
   if (saveToFile){
     ggsave(file="Geometry/Neus 1-5.pdf",plot=p1,width = 5,height = 5, dpi = 350)
     ggsave("Geometry/Neus_1_5_with_Coastline.png",plot=p2,width = 5,height = 5, dpi = 350)
+    ggsave("Geometry/Neus_1_5_with_Coastline_noLabels.png",plot=p2b,width = 5,height = 5, dpi = 350)
     ggsave("Geometry/Neus Faces.pdf",plot=p3,width = 20,height = 20, units = 'in', dpi = 300)
   } else{
     print(p1)

@@ -41,7 +41,7 @@ variables:
 		Anchovies10_ResN:b_dens = 1000000000. ;
 		Anchovies10_ResN:i_conc = 200000000. ;
 		Anchovies10_ResN:f_conc = 200000000. ;
-		Anchovies10_ResN:_FillValue = 134.62 ;
+		Anchovies10_ResN:_FillValue = 101.6 ;
 	double Anchovies10_StructN(t, b, z) ;
 		Anchovies10_StructN:bmtype = "tracer" ;
 		Anchovies10_StructN:units = "mg N" ;
@@ -98,7 +98,7 @@ variables:
 		Anchovies1_ResN:b_dens = 1000000000. ;
 		Anchovies1_ResN:i_conc = 200000000. ;
 		Anchovies1_ResN:f_conc = 200000000. ;
-		Anchovies1_ResN:_FillValue = 12.46 ;
+		Anchovies1_ResN:_FillValue = 9.4 ;
 	double Anchovies1_StructN(t, b, z) ;
 		Anchovies1_StructN:bmtype = "tracer" ;
 		Anchovies1_StructN:units = "mg N" ;
@@ -155,7 +155,7 @@ variables:
 		Anchovies2_ResN:b_dens = 1000000000. ;
 		Anchovies2_ResN:i_conc = 200000000. ;
 		Anchovies2_ResN:f_conc = 200000000. ;
-		Anchovies2_ResN:_FillValue = 46.3 ;
+		Anchovies2_ResN:_FillValue = 34.94 ;
 	double Anchovies2_StructN(t, b, z) ;
 		Anchovies2_StructN:bmtype = "tracer" ;
 		Anchovies2_StructN:units = "mg N" ;
@@ -212,7 +212,7 @@ variables:
 		Anchovies3_ResN:b_dens = 1000000000. ;
 		Anchovies3_ResN:i_conc = 200000000. ;
 		Anchovies3_ResN:f_conc = 200000000. ;
-		Anchovies3_ResN:_FillValue = 78.86 ;
+		Anchovies3_ResN:_FillValue = 59.52 ;
 	double Anchovies3_StructN(t, b, z) ;
 		Anchovies3_StructN:bmtype = "tracer" ;
 		Anchovies3_StructN:units = "mg N" ;
@@ -269,7 +269,7 @@ variables:
 		Anchovies4_ResN:b_dens = 1000000000. ;
 		Anchovies4_ResN:i_conc = 200000000. ;
 		Anchovies4_ResN:f_conc = 200000000. ;
-		Anchovies4_ResN:_FillValue = 101.97 ;
+		Anchovies4_ResN:_FillValue = 76.96 ;
 	double Anchovies4_StructN(t, b, z) ;
 		Anchovies4_StructN:bmtype = "tracer" ;
 		Anchovies4_StructN:units = "mg N" ;
@@ -326,7 +326,7 @@ variables:
 		Anchovies5_ResN:b_dens = 1000000000. ;
 		Anchovies5_ResN:i_conc = 200000000. ;
 		Anchovies5_ResN:f_conc = 200000000. ;
-		Anchovies5_ResN:_FillValue = 116.36 ;
+		Anchovies5_ResN:_FillValue = 87.82 ;
 	double Anchovies5_StructN(t, b, z) ;
 		Anchovies5_StructN:bmtype = "tracer" ;
 		Anchovies5_StructN:units = "mg N" ;
@@ -383,7 +383,7 @@ variables:
 		Anchovies6_ResN:b_dens = 1000000000. ;
 		Anchovies6_ResN:i_conc = 200000000. ;
 		Anchovies6_ResN:f_conc = 200000000. ;
-		Anchovies6_ResN:_FillValue = 124.81 ;
+		Anchovies6_ResN:_FillValue = 94.2 ;
 	double Anchovies6_StructN(t, b, z) ;
 		Anchovies6_StructN:bmtype = "tracer" ;
 		Anchovies6_StructN:units = "mg N" ;
@@ -440,7 +440,7 @@ variables:
 		Anchovies7_ResN:b_dens = 1000000000. ;
 		Anchovies7_ResN:i_conc = 200000000. ;
 		Anchovies7_ResN:f_conc = 200000000. ;
-		Anchovies7_ResN:_FillValue = 129.61 ;
+		Anchovies7_ResN:_FillValue = 97.82 ;
 	double Anchovies7_StructN(t, b, z) ;
 		Anchovies7_StructN:bmtype = "tracer" ;
 		Anchovies7_StructN:units = "mg N" ;
@@ -497,7 +497,7 @@ variables:
 		Anchovies8_ResN:b_dens = 1000000000. ;
 		Anchovies8_ResN:i_conc = 200000000. ;
 		Anchovies8_ResN:f_conc = 200000000. ;
-		Anchovies8_ResN:_FillValue = 132.31 ;
+		Anchovies8_ResN:_FillValue = 99.86 ;
 	double Anchovies8_StructN(t, b, z) ;
 		Anchovies8_StructN:bmtype = "tracer" ;
 		Anchovies8_StructN:units = "mg N" ;
@@ -554,7 +554,7 @@ variables:
 		Anchovies9_ResN:b_dens = 1000000000. ;
 		Anchovies9_ResN:i_conc = 200000000. ;
 		Anchovies9_ResN:f_conc = 200000000. ;
-		Anchovies9_ResN:_FillValue = 133.8 ;
+		Anchovies9_ResN:_FillValue = 100.98 ;
 	double Anchovies9_StructN(t, b, z) ;
 		Anchovies9_StructN:bmtype = "tracer" ;
 		Anchovies9_StructN:units = "mg N" ;
@@ -623,7 +623,7 @@ variables:
 		Atlantic_Salmon10_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon10_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon10_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon10_ResN:_FillValue = 149688.14 ;
+		Atlantic_Salmon10_ResN:_FillValue = 112972.18 ;
 	double Atlantic_Salmon10_StructN(t, b, z) ;
 		Atlantic_Salmon10_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon10_StructN:units = "mg N" ;
@@ -680,7 +680,7 @@ variables:
 		Atlantic_Salmon1_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon1_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon1_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon1_ResN:_FillValue = 954.19 ;
+		Atlantic_Salmon1_ResN:_FillValue = 720.14 ;
 	double Atlantic_Salmon1_StructN(t, b, z) ;
 		Atlantic_Salmon1_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon1_StructN:units = "mg N" ;
@@ -737,7 +737,7 @@ variables:
 		Atlantic_Salmon2_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon2_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon2_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon2_ResN:_FillValue = 14714.26 ;
+		Atlantic_Salmon2_ResN:_FillValue = 11105.1 ;
 	double Atlantic_Salmon2_StructN(t, b, z) ;
 		Atlantic_Salmon2_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon2_StructN:units = "mg N" ;
@@ -794,7 +794,7 @@ variables:
 		Atlantic_Salmon3_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon3_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon3_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon3_ResN:_FillValue = 40463.62 ;
+		Atlantic_Salmon3_ResN:_FillValue = 30538.58 ;
 	double Atlantic_Salmon3_StructN(t, b, z) ;
 		Atlantic_Salmon3_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon3_StructN:units = "mg N" ;
@@ -851,7 +851,7 @@ variables:
 		Atlantic_Salmon4_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon4_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon4_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon4_ResN:_FillValue = 68508.89 ;
+		Atlantic_Salmon4_ResN:_FillValue = 51704.82 ;
 	double Atlantic_Salmon4_StructN(t, b, z) ;
 		Atlantic_Salmon4_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon4_StructN:units = "mg N" ;
@@ -908,7 +908,7 @@ variables:
 		Atlantic_Salmon5_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon5_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon5_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon5_ResN:_FillValue = 93166.08 ;
+		Atlantic_Salmon5_ResN:_FillValue = 70314.02 ;
 	double Atlantic_Salmon5_StructN(t, b, z) ;
 		Atlantic_Salmon5_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon5_StructN:units = "mg N" ;
@@ -965,7 +965,7 @@ variables:
 		Atlantic_Salmon6_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon6_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon6_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon6_ResN:_FillValue = 112631.17 ;
+		Atlantic_Salmon6_ResN:_FillValue = 85004.66 ;
 	double Atlantic_Salmon6_StructN(t, b, z) ;
 		Atlantic_Salmon6_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon6_StructN:units = "mg N" ;
@@ -1022,7 +1022,7 @@ variables:
 		Atlantic_Salmon7_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon7_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon7_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon7_ResN:_FillValue = 127090.42 ;
+		Atlantic_Salmon7_ResN:_FillValue = 95917.3 ;
 	double Atlantic_Salmon7_StructN(t, b, z) ;
 		Atlantic_Salmon7_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon7_StructN:units = "mg N" ;
@@ -1079,7 +1079,7 @@ variables:
 		Atlantic_Salmon8_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon8_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon8_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon8_ResN:_FillValue = 137444.61 ;
+		Atlantic_Salmon8_ResN:_FillValue = 103731.78 ;
 	double Atlantic_Salmon8_StructN(t, b, z) ;
 		Atlantic_Salmon8_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon8_StructN:units = "mg N" ;
@@ -1136,7 +1136,7 @@ variables:
 		Atlantic_Salmon9_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon9_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon9_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon9_ResN:_FillValue = 144690.93 ;
+		Atlantic_Salmon9_ResN:_FillValue = 109200.7 ;
 	double Atlantic_Salmon9_StructN(t, b, z) ;
 		Atlantic_Salmon9_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon9_StructN:units = "mg N" ;
@@ -1205,7 +1205,7 @@ variables:
 		Atlantic_States_Demersals10_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals10_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals10_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals10_ResN:_FillValue = 127733.95 ;
+		Atlantic_States_Demersals10_ResN:_FillValue = 96402.98 ;
 	double Atlantic_States_Demersals10_StructN(t, b, z) ;
 		Atlantic_States_Demersals10_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals10_StructN:units = "mg N" ;
@@ -1262,7 +1262,7 @@ variables:
 		Atlantic_States_Demersals1_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals1_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals1_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals1_ResN:_FillValue = 419.12 ;
+		Atlantic_States_Demersals1_ResN:_FillValue = 316.32 ;
 	double Atlantic_States_Demersals1_StructN(t, b, z) ;
 		Atlantic_States_Demersals1_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals1_StructN:units = "mg N" ;
@@ -1319,7 +1319,7 @@ variables:
 		Atlantic_States_Demersals2_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals2_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals2_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals2_ResN:_FillValue = 3029.8 ;
+		Atlantic_States_Demersals2_ResN:_FillValue = 2286.64 ;
 	double Atlantic_States_Demersals2_StructN(t, b, z) ;
 		Atlantic_States_Demersals2_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals2_StructN:units = "mg N" ;
@@ -1376,7 +1376,7 @@ variables:
 		Atlantic_States_Demersals3_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals3_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals3_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals3_ResN:_FillValue = 9007.43 ;
+		Atlantic_States_Demersals3_ResN:_FillValue = 6798.06 ;
 	double Atlantic_States_Demersals3_StructN(t, b, z) ;
 		Atlantic_States_Demersals3_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals3_StructN:units = "mg N" ;
@@ -1433,7 +1433,7 @@ variables:
 		Atlantic_States_Demersals4_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals4_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals4_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals4_ResN:_FillValue = 18648.79 ;
+		Atlantic_States_Demersals4_ResN:_FillValue = 14074.56 ;
 	double Atlantic_States_Demersals4_StructN(t, b, z) ;
 		Atlantic_States_Demersals4_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals4_StructN:units = "mg N" ;
@@ -1490,7 +1490,7 @@ variables:
 		Atlantic_States_Demersals5_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals5_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals5_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals5_ResN:_FillValue = 31712.97 ;
+		Atlantic_States_Demersals5_ResN:_FillValue = 23934.32 ;
 	double Atlantic_States_Demersals5_StructN(t, b, z) ;
 		Atlantic_States_Demersals5_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals5_StructN:units = "mg N" ;
@@ -1547,7 +1547,7 @@ variables:
 		Atlantic_States_Demersals6_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals6_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals6_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals6_ResN:_FillValue = 47674.08 ;
+		Atlantic_States_Demersals6_ResN:_FillValue = 35980.44 ;
 	double Atlantic_States_Demersals6_StructN(t, b, z) ;
 		Atlantic_States_Demersals6_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals6_StructN:units = "mg N" ;
@@ -1604,7 +1604,7 @@ variables:
 		Atlantic_States_Demersals7_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals7_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals7_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals7_ResN:_FillValue = 65888.43 ;
+		Atlantic_States_Demersals7_ResN:_FillValue = 49727.12 ;
 	double Atlantic_States_Demersals7_StructN(t, b, z) ;
 		Atlantic_States_Demersals7_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals7_StructN:units = "mg N" ;
@@ -1661,7 +1661,7 @@ variables:
 		Atlantic_States_Demersals8_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals8_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals8_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals8_ResN:_FillValue = 85698.38 ;
+		Atlantic_States_Demersals8_ResN:_FillValue = 64678.02 ;
 	double Atlantic_States_Demersals8_StructN(t, b, z) ;
 		Atlantic_States_Demersals8_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals8_StructN:units = "mg N" ;
@@ -1718,7 +1718,7 @@ variables:
 		Atlantic_States_Demersals9_ResN:b_dens = 1000000000. ;
 		Atlantic_States_Demersals9_ResN:i_conc = 200000000. ;
 		Atlantic_States_Demersals9_ResN:f_conc = 200000000. ;
-		Atlantic_States_Demersals9_ResN:_FillValue = 106492.08 ;
+		Atlantic_States_Demersals9_ResN:_FillValue = 80371.38 ;
 	double Atlantic_States_Demersals9_StructN(t, b, z) ;
 		Atlantic_States_Demersals9_StructN:bmtype = "tracer" ;
 		Atlantic_States_Demersals9_StructN:units = "mg N" ;
@@ -1787,7 +1787,7 @@ variables:
 		Baleen_Whale10_ResN:b_dens = 1000000000. ;
 		Baleen_Whale10_ResN:i_conc = 200000000. ;
 		Baleen_Whale10_ResN:f_conc = 200000000. ;
-		Baleen_Whale10_ResN:_FillValue = 352548078.28 ;
+		Baleen_Whale10_ResN:_FillValue = 266074021.34 ;
 	double Baleen_Whale10_StructN(t, b, z) ;
 		Baleen_Whale10_StructN:bmtype = "tracer" ;
 		Baleen_Whale10_StructN:units = "mg N" ;
@@ -1844,7 +1844,7 @@ variables:
 		Baleen_Whale1_ResN:b_dens = 1000000000. ;
 		Baleen_Whale1_ResN:i_conc = 200000000. ;
 		Baleen_Whale1_ResN:f_conc = 200000000. ;
-		Baleen_Whale1_ResN:_FillValue = 21475883.68 ;
+		Baleen_Whale1_ResN:_FillValue = 16208214.1 ;
 	double Baleen_Whale1_StructN(t, b, z) ;
 		Baleen_Whale1_StructN:bmtype = "tracer" ;
 		Baleen_Whale1_StructN:units = "mg N" ;
@@ -1901,7 +1901,7 @@ variables:
 		Baleen_Whale2_ResN:b_dens = 1000000000. ;
 		Baleen_Whale2_ResN:i_conc = 200000000. ;
 		Baleen_Whale2_ResN:f_conc = 200000000. ;
-		Baleen_Whale2_ResN:_FillValue = 345469636.62 ;
+		Baleen_Whale2_ResN:_FillValue = 260731801.22 ;
 	double Baleen_Whale2_StructN(t, b, z) ;
 		Baleen_Whale2_StructN:bmtype = "tracer" ;
 		Baleen_Whale2_StructN:units = "mg N" ;
@@ -1958,7 +1958,7 @@ variables:
 		Baleen_Whale3_ResN:b_dens = 1000000000. ;
 		Baleen_Whale3_ResN:i_conc = 200000000. ;
 		Baleen_Whale3_ResN:f_conc = 200000000. ;
-		Baleen_Whale3_ResN:_FillValue = 352468917.61 ;
+		Baleen_Whale3_ResN:_FillValue = 266014277.44 ;
 	double Baleen_Whale3_StructN(t, b, z) ;
 		Baleen_Whale3_StructN:bmtype = "tracer" ;
 		Baleen_Whale3_StructN:units = "mg N" ;
@@ -2015,7 +2015,7 @@ variables:
 		Baleen_Whale4_ResN:b_dens = 1000000000. ;
 		Baleen_Whale4_ResN:i_conc = 200000000. ;
 		Baleen_Whale4_ResN:f_conc = 200000000. ;
-		Baleen_Whale4_ResN:_FillValue = 352547198.82 ;
+		Baleen_Whale4_ResN:_FillValue = 266073357.6 ;
 	double Baleen_Whale4_StructN(t, b, z) ;
 		Baleen_Whale4_StructN:bmtype = "tracer" ;
 		Baleen_Whale4_StructN:units = "mg N" ;
@@ -2072,7 +2072,7 @@ variables:
 		Baleen_Whale5_ResN:b_dens = 1000000000. ;
 		Baleen_Whale5_ResN:i_conc = 200000000. ;
 		Baleen_Whale5_ResN:f_conc = 200000000. ;
-		Baleen_Whale5_ResN:_FillValue = 352548068.5 ;
+		Baleen_Whale5_ResN:_FillValue = 266074013.96 ;
 	double Baleen_Whale5_StructN(t, b, z) ;
 		Baleen_Whale5_StructN:bmtype = "tracer" ;
 		Baleen_Whale5_StructN:units = "mg N" ;
@@ -2129,7 +2129,7 @@ variables:
 		Baleen_Whale6_ResN:b_dens = 1000000000. ;
 		Baleen_Whale6_ResN:i_conc = 200000000. ;
 		Baleen_Whale6_ResN:f_conc = 200000000. ;
-		Baleen_Whale6_ResN:_FillValue = 352548078.17 ;
+		Baleen_Whale6_ResN:_FillValue = 266074021.26 ;
 	double Baleen_Whale6_StructN(t, b, z) ;
 		Baleen_Whale6_StructN:bmtype = "tracer" ;
 		Baleen_Whale6_StructN:units = "mg N" ;
@@ -2186,7 +2186,7 @@ variables:
 		Baleen_Whale7_ResN:b_dens = 1000000000. ;
 		Baleen_Whale7_ResN:i_conc = 200000000. ;
 		Baleen_Whale7_ResN:f_conc = 200000000. ;
-		Baleen_Whale7_ResN:_FillValue = 352548078.28 ;
+		Baleen_Whale7_ResN:_FillValue = 266074021.34 ;
 	double Baleen_Whale7_StructN(t, b, z) ;
 		Baleen_Whale7_StructN:bmtype = "tracer" ;
 		Baleen_Whale7_StructN:units = "mg N" ;
@@ -2243,7 +2243,7 @@ variables:
 		Baleen_Whale8_ResN:b_dens = 1000000000. ;
 		Baleen_Whale8_ResN:i_conc = 200000000. ;
 		Baleen_Whale8_ResN:f_conc = 200000000. ;
-		Baleen_Whale8_ResN:_FillValue = 352548078.28 ;
+		Baleen_Whale8_ResN:_FillValue = 266074021.34 ;
 	double Baleen_Whale8_StructN(t, b, z) ;
 		Baleen_Whale8_StructN:bmtype = "tracer" ;
 		Baleen_Whale8_StructN:units = "mg N" ;
@@ -2300,7 +2300,7 @@ variables:
 		Baleen_Whale9_ResN:b_dens = 1000000000. ;
 		Baleen_Whale9_ResN:i_conc = 200000000. ;
 		Baleen_Whale9_ResN:f_conc = 200000000. ;
-		Baleen_Whale9_ResN:_FillValue = 352548078.28 ;
+		Baleen_Whale9_ResN:_FillValue = 266074021.34 ;
 	double Baleen_Whale9_StructN(t, b, z) ;
 		Baleen_Whale9_StructN:bmtype = "tracer" ;
 		Baleen_Whale9_StructN:units = "mg N" ;
@@ -2383,7 +2383,7 @@ variables:
 		Benthopelagic_Fish10_ResN:b_dens = 1000000000. ;
 		Benthopelagic_Fish10_ResN:i_conc = 200000000. ;
 		Benthopelagic_Fish10_ResN:f_conc = 200000000. ;
-		Benthopelagic_Fish10_ResN:_FillValue = 1833.61 ;
+		Benthopelagic_Fish10_ResN:_FillValue = 1383.86 ;
 	double Benthopelagic_Fish10_StructN(t, b, z) ;
 		Benthopelagic_Fish10_StructN:bmtype = "tracer" ;
 		Benthopelagic_Fish10_StructN:units = "mg N" ;
@@ -2440,7 +2440,7 @@ variables:
 		Benthopelagic_Fish1_ResN:b_dens = 1000000000. ;
 		Benthopelagic_Fish1_ResN:i_conc = 200000000. ;
 		Benthopelagic_Fish1_ResN:f_conc = 200000000. ;
-		Benthopelagic_Fish1_ResN:_FillValue = 404.26 ;
+		Benthopelagic_Fish1_ResN:_FillValue = 305.1 ;
 	double Benthopelagic_Fish1_StructN(t, b, z) ;
 		Benthopelagic_Fish1_StructN:bmtype = "tracer" ;
 		Benthopelagic_Fish1_StructN:units = "mg N" ;
@@ -2497,7 +2497,7 @@ variables:
 		Benthopelagic_Fish2_ResN:b_dens = 1000000000. ;
 		Benthopelagic_Fish2_ResN:i_conc = 200000000. ;
 		Benthopelagic_Fish2_ResN:f_conc = 200000000. ;
-		Benthopelagic_Fish2_ResN:_FillValue = 1099.67 ;
+		Benthopelagic_Fish2_ResN:_FillValue = 829.94 ;
 	double Benthopelagic_Fish2_StructN(t, b, z) ;
 		Benthopelagic_Fish2_StructN:bmtype = "tracer" ;
 		Benthopelagic_Fish2_StructN:units = "mg N" ;
@@ -2554,7 +2554,7 @@ variables:
 		Benthopelagic_Fish3_ResN:b_dens = 1000000000. ;
 		Benthopelagic_Fish3_ResN:i_conc = 200000000. ;
 		Benthopelagic_Fish3_ResN:f_conc = 200000000. ;
-		Benthopelagic_Fish3_ResN:_FillValue = 1513.34 ;
+		Benthopelagic_Fish3_ResN:_FillValue = 1142.14 ;
 	double Benthopelagic_Fish3_StructN(t, b, z) ;
 		Benthopelagic_Fish3_StructN:bmtype = "tracer" ;
 		Benthopelagic_Fish3_StructN:units = "mg N" ;
@@ -2611,7 +2611,7 @@ variables:
 		Benthopelagic_Fish4_ResN:b_dens = 1000000000. ;
 		Benthopelagic_Fish4_ResN:i_conc = 200000000. ;
 		Benthopelagic_Fish4_ResN:f_conc = 200000000. ;
-		Benthopelagic_Fish4_ResN:_FillValue = 1702.2 ;
+		Benthopelagic_Fish4_ResN:_FillValue = 1284.68 ;
 	double Benthopelagic_Fish4_StructN(t, b, z) ;
 		Benthopelagic_Fish4_StructN:bmtype = "tracer" ;
 		Benthopelagic_Fish4_StructN:units = "mg N" ;
@@ -2668,7 +2668,7 @@ variables:
 		Benthopelagic_Fish5_ResN:b_dens = 1000000000. ;
 		Benthopelagic_Fish5_ResN:i_conc = 200000000. ;
 		Benthopelagic_Fish5_ResN:f_conc = 200000000. ;
-		Benthopelagic_Fish5_ResN:_FillValue = 1781.12 ;
+		Benthopelagic_Fish5_ResN:_FillValue = 1344.24 ;
 	double Benthopelagic_Fish5_StructN(t, b, z) ;
 		Benthopelagic_Fish5_StructN:bmtype = "tracer" ;
 		Benthopelagic_Fish5_StructN:units = "mg N" ;
@@ -2725,7 +2725,7 @@ variables:
 		Benthopelagic_Fish6_ResN:b_dens = 1000000000. ;
 		Benthopelagic_Fish6_ResN:i_conc = 200000000. ;
 		Benthopelagic_Fish6_ResN:f_conc = 200000000. ;
-		Benthopelagic_Fish6_ResN:_FillValue = 1813.02 ;
+		Benthopelagic_Fish6_ResN:_FillValue = 1368.32 ;
 	double Benthopelagic_Fish6_StructN(t, b, z) ;
 		Benthopelagic_Fish6_StructN:bmtype = "tracer" ;
 		Benthopelagic_Fish6_StructN:units = "mg N" ;
@@ -2782,7 +2782,7 @@ variables:
 		Benthopelagic_Fish7_ResN:b_dens = 1000000000. ;
 		Benthopelagic_Fish7_ResN:i_conc = 200000000. ;
 		Benthopelagic_Fish7_ResN:f_conc = 200000000. ;
-		Benthopelagic_Fish7_ResN:_FillValue = 1825.77 ;
+		Benthopelagic_Fish7_ResN:_FillValue = 1377.94 ;
 	double Benthopelagic_Fish7_StructN(t, b, z) ;
 		Benthopelagic_Fish7_StructN:bmtype = "tracer" ;
 		Benthopelagic_Fish7_StructN:units = "mg N" ;
@@ -2839,7 +2839,7 @@ variables:
 		Benthopelagic_Fish8_ResN:b_dens = 1000000000. ;
 		Benthopelagic_Fish8_ResN:i_conc = 200000000. ;
 		Benthopelagic_Fish8_ResN:f_conc = 200000000. ;
-		Benthopelagic_Fish8_ResN:_FillValue = 1830.83 ;
+		Benthopelagic_Fish8_ResN:_FillValue = 1381.76 ;
 	double Benthopelagic_Fish8_StructN(t, b, z) ;
 		Benthopelagic_Fish8_StructN:bmtype = "tracer" ;
 		Benthopelagic_Fish8_StructN:units = "mg N" ;
@@ -2896,7 +2896,7 @@ variables:
 		Benthopelagic_Fish9_ResN:b_dens = 1000000000. ;
 		Benthopelagic_Fish9_ResN:i_conc = 200000000. ;
 		Benthopelagic_Fish9_ResN:f_conc = 200000000. ;
-		Benthopelagic_Fish9_ResN:_FillValue = 1832.85 ;
+		Benthopelagic_Fish9_ResN:_FillValue = 1383.28 ;
 	double Benthopelagic_Fish9_StructN(t, b, z) ;
 		Benthopelagic_Fish9_StructN:bmtype = "tracer" ;
 		Benthopelagic_Fish9_StructN:units = "mg N" ;
@@ -2965,7 +2965,7 @@ variables:
 		Billfish10_ResN:b_dens = 1000000000. ;
 		Billfish10_ResN:i_conc = 200000000. ;
 		Billfish10_ResN:f_conc = 200000000. ;
-		Billfish10_ResN:_FillValue = 3933215.36 ;
+		Billfish10_ResN:_FillValue = 2968464.42 ;
 	double Billfish10_StructN(t, b, z) ;
 		Billfish10_StructN:bmtype = "tracer" ;
 		Billfish10_StructN:units = "mg N" ;
@@ -3022,7 +3022,7 @@ variables:
 		Billfish1_ResN:b_dens = 1000000000. ;
 		Billfish1_ResN:i_conc = 200000000. ;
 		Billfish1_ResN:f_conc = 200000000. ;
-		Billfish1_ResN:_FillValue = 3720.47 ;
+		Billfish1_ResN:_FillValue = 2807.9 ;
 	double Billfish1_StructN(t, b, z) ;
 		Billfish1_StructN:bmtype = "tracer" ;
 		Billfish1_StructN:units = "mg N" ;
@@ -3079,7 +3079,7 @@ variables:
 		Billfish2_ResN:b_dens = 1000000000. ;
 		Billfish2_ResN:i_conc = 200000000. ;
 		Billfish2_ResN:f_conc = 200000000. ;
-		Billfish2_ResN:_FillValue = 152085.49 ;
+		Billfish2_ResN:_FillValue = 114781.5 ;
 	double Billfish2_StructN(t, b, z) ;
 		Billfish2_StructN:bmtype = "tracer" ;
 		Billfish2_StructN:units = "mg N" ;
@@ -3136,7 +3136,7 @@ variables:
 		Billfish3_ResN:b_dens = 1000000000. ;
 		Billfish3_ResN:i_conc = 200000000. ;
 		Billfish3_ResN:f_conc = 200000000. ;
-		Billfish3_ResN:_FillValue = 548242.18 ;
+		Billfish3_ResN:_FillValue = 413767.68 ;
 	double Billfish3_StructN(t, b, z) ;
 		Billfish3_StructN:bmtype = "tracer" ;
 		Billfish3_StructN:units = "mg N" ;
@@ -3193,7 +3193,7 @@ variables:
 		Billfish4_ResN:b_dens = 1000000000. ;
 		Billfish4_ResN:i_conc = 200000000. ;
 		Billfish4_ResN:f_conc = 200000000. ;
-		Billfish4_ResN:_FillValue = 1103986.05 ;
+		Billfish4_ResN:_FillValue = 833197.02 ;
 	double Billfish4_StructN(t, b, z) ;
 		Billfish4_StructN:bmtype = "tracer" ;
 		Billfish4_StructN:units = "mg N" ;
@@ -3250,7 +3250,7 @@ variables:
 		Billfish5_ResN:b_dens = 1000000000. ;
 		Billfish5_ResN:i_conc = 200000000. ;
 		Billfish5_ResN:f_conc = 200000000. ;
-		Billfish5_ResN:_FillValue = 1712140.43 ;
+		Billfish5_ResN:_FillValue = 1292181.46 ;
 	double Billfish5_StructN(t, b, z) ;
 		Billfish5_StructN:bmtype = "tracer" ;
 		Billfish5_StructN:units = "mg N" ;
@@ -3307,7 +3307,7 @@ variables:
 		Billfish6_ResN:b_dens = 1000000000. ;
 		Billfish6_ResN:i_conc = 200000000. ;
 		Billfish6_ResN:f_conc = 200000000. ;
-		Billfish6_ResN:_FillValue = 2298107.8 ;
+		Billfish6_ResN:_FillValue = 1734420.98 ;
 	double Billfish6_StructN(t, b, z) ;
 		Billfish6_StructN:bmtype = "tracer" ;
 		Billfish6_StructN:units = "mg N" ;
@@ -3364,7 +3364,7 @@ variables:
 		Billfish7_ResN:b_dens = 1000000000. ;
 		Billfish7_ResN:i_conc = 200000000. ;
 		Billfish7_ResN:f_conc = 200000000. ;
-		Billfish7_ResN:_FillValue = 2821877.22 ;
+		Billfish7_ResN:_FillValue = 2129718.66 ;
 	double Billfish7_StructN(t, b, z) ;
 		Billfish7_StructN:bmtype = "tracer" ;
 		Billfish7_StructN:units = "mg N" ;
@@ -3421,7 +3421,7 @@ variables:
 		Billfish8_ResN:b_dens = 1000000000. ;
 		Billfish8_ResN:i_conc = 200000000. ;
 		Billfish8_ResN:f_conc = 200000000. ;
-		Billfish8_ResN:_FillValue = 3268125.43 ;
+		Billfish8_ResN:_FillValue = 2466509.76 ;
 	double Billfish8_StructN(t, b, z) ;
 		Billfish8_StructN:bmtype = "tracer" ;
 		Billfish8_StructN:units = "mg N" ;
@@ -3478,7 +3478,7 @@ variables:
 		Billfish9_ResN:b_dens = 1000000000. ;
 		Billfish9_ResN:i_conc = 200000000. ;
 		Billfish9_ResN:f_conc = 200000000. ;
-		Billfish9_ResN:_FillValue = 3636259.46 ;
+		Billfish9_ResN:_FillValue = 2744346.76 ;
 	double Billfish9_StructN(t, b, z) ;
 		Billfish9_StructN:bmtype = "tracer" ;
 		Billfish9_StructN:units = "mg N" ;
@@ -3547,7 +3547,7 @@ variables:
 		Black_Sea_Bass10_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass10_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass10_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass10_ResN:_FillValue = 18597.54 ;
+		Black_Sea_Bass10_ResN:_FillValue = 14035.88 ;
 	double Black_Sea_Bass10_StructN(t, b, z) ;
 		Black_Sea_Bass10_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass10_StructN:units = "mg N" ;
@@ -3604,7 +3604,7 @@ variables:
 		Black_Sea_Bass1_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass1_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass1_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass1_ResN:_FillValue = 80.08 ;
+		Black_Sea_Bass1_ResN:_FillValue = 60.44 ;
 	double Black_Sea_Bass1_StructN(t, b, z) ;
 		Black_Sea_Bass1_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass1_StructN:units = "mg N" ;
@@ -3661,7 +3661,7 @@ variables:
 		Black_Sea_Bass2_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass2_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass2_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass2_ResN:_FillValue = 1888.5 ;
+		Black_Sea_Bass2_ResN:_FillValue = 1425.28 ;
 	double Black_Sea_Bass2_StructN(t, b, z) ;
 		Black_Sea_Bass2_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass2_StructN:units = "mg N" ;
@@ -3718,7 +3718,7 @@ variables:
 		Black_Sea_Bass3_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass3_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass3_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass3_ResN:_FillValue = 5400.91 ;
+		Black_Sea_Bass3_ResN:_FillValue = 4076.16 ;
 	double Black_Sea_Bass3_StructN(t, b, z) ;
 		Black_Sea_Bass3_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass3_StructN:units = "mg N" ;
@@ -3775,7 +3775,7 @@ variables:
 		Black_Sea_Bass4_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass4_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass4_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass4_ResN:_FillValue = 9108.55 ;
+		Black_Sea_Bass4_ResN:_FillValue = 6874.38 ;
 	double Black_Sea_Bass4_StructN(t, b, z) ;
 		Black_Sea_Bass4_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass4_StructN:units = "mg N" ;
@@ -3832,7 +3832,7 @@ variables:
 		Black_Sea_Bass5_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass5_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass5_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass5_ResN:_FillValue = 12221.99 ;
+		Black_Sea_Bass5_ResN:_FillValue = 9224.14 ;
 	double Black_Sea_Bass5_StructN(t, b, z) ;
 		Black_Sea_Bass5_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass5_StructN:units = "mg N" ;
@@ -3889,7 +3889,7 @@ variables:
 		Black_Sea_Bass6_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass6_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass6_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass6_ResN:_FillValue = 14561.78 ;
+		Black_Sea_Bass6_ResN:_FillValue = 10990.02 ;
 	double Black_Sea_Bass6_StructN(t, b, z) ;
 		Black_Sea_Bass6_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass6_StructN:units = "mg N" ;
@@ -3946,7 +3946,7 @@ variables:
 		Black_Sea_Bass7_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass7_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass7_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass7_ResN:_FillValue = 16216.46 ;
+		Black_Sea_Bass7_ResN:_FillValue = 12238.84 ;
 	double Black_Sea_Bass7_StructN(t, b, z) ;
 		Black_Sea_Bass7_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass7_StructN:units = "mg N" ;
@@ -4003,7 +4003,7 @@ variables:
 		Black_Sea_Bass8_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass8_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass8_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass8_ResN:_FillValue = 17345.84 ;
+		Black_Sea_Bass8_ResN:_FillValue = 13091.2 ;
 	double Black_Sea_Bass8_StructN(t, b, z) ;
 		Black_Sea_Bass8_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass8_StructN:units = "mg N" ;
@@ -4060,7 +4060,7 @@ variables:
 		Black_Sea_Bass9_ResN:b_dens = 1000000000. ;
 		Black_Sea_Bass9_ResN:i_conc = 200000000. ;
 		Black_Sea_Bass9_ResN:f_conc = 200000000. ;
-		Black_Sea_Bass9_ResN:_FillValue = 18100.27 ;
+		Black_Sea_Bass9_ResN:_FillValue = 13660.58 ;
 	double Black_Sea_Bass9_StructN(t, b, z) ;
 		Black_Sea_Bass9_StructN:bmtype = "tracer" ;
 		Black_Sea_Bass9_StructN:units = "mg N" ;
@@ -4129,7 +4129,7 @@ variables:
 		Blue_Shark10_ResN:b_dens = 1000000000. ;
 		Blue_Shark10_ResN:i_conc = 200000000. ;
 		Blue_Shark10_ResN:f_conc = 200000000. ;
-		Blue_Shark10_ResN:_FillValue = 619506.8 ;
+		Blue_Shark10_ResN:_FillValue = 467552.3 ;
 	double Blue_Shark10_StructN(t, b, z) ;
 		Blue_Shark10_StructN:bmtype = "tracer" ;
 		Blue_Shark10_StructN:units = "mg N" ;
@@ -4186,7 +4186,7 @@ variables:
 		Blue_Shark1_ResN:b_dens = 1000000000. ;
 		Blue_Shark1_ResN:i_conc = 200000000. ;
 		Blue_Shark1_ResN:f_conc = 200000000. ;
-		Blue_Shark1_ResN:_FillValue = 536.55 ;
+		Blue_Shark1_ResN:_FillValue = 404.94 ;
 	double Blue_Shark1_StructN(t, b, z) ;
 		Blue_Shark1_StructN:bmtype = "tracer" ;
 		Blue_Shark1_StructN:units = "mg N" ;
@@ -4243,7 +4243,7 @@ variables:
 		Blue_Shark2_ResN:b_dens = 1000000000. ;
 		Blue_Shark2_ResN:i_conc = 200000000. ;
 		Blue_Shark2_ResN:f_conc = 200000000. ;
-		Blue_Shark2_ResN:_FillValue = 103965.54 ;
+		Blue_Shark2_ResN:_FillValue = 78464.56 ;
 	double Blue_Shark2_StructN(t, b, z) ;
 		Blue_Shark2_StructN:bmtype = "tracer" ;
 		Blue_Shark2_StructN:units = "mg N" ;
@@ -4300,7 +4300,7 @@ variables:
 		Blue_Shark3_ResN:b_dens = 1000000000. ;
 		Blue_Shark3_ResN:i_conc = 200000000. ;
 		Blue_Shark3_ResN:f_conc = 200000000. ;
-		Blue_Shark3_ResN:_FillValue = 291915.71 ;
+		Blue_Shark3_ResN:_FillValue = 220313.74 ;
 	double Blue_Shark3_StructN(t, b, z) ;
 		Blue_Shark3_StructN:bmtype = "tracer" ;
 		Blue_Shark3_StructN:units = "mg N" ;
@@ -4357,7 +4357,7 @@ variables:
 		Blue_Shark4_ResN:b_dens = 1000000000. ;
 		Blue_Shark4_ResN:i_conc = 200000000. ;
 		Blue_Shark4_ResN:f_conc = 200000000. ;
-		Blue_Shark4_ResN:_FillValue = 437730.1 ;
+		Blue_Shark4_ResN:_FillValue = 330362.34 ;
 	double Blue_Shark4_StructN(t, b, z) ;
 		Blue_Shark4_StructN:bmtype = "tracer" ;
 		Blue_Shark4_StructN:units = "mg N" ;
@@ -4414,7 +4414,7 @@ variables:
 		Blue_Shark5_ResN:b_dens = 1000000000. ;
 		Blue_Shark5_ResN:i_conc = 200000000. ;
 		Blue_Shark5_ResN:f_conc = 200000000. ;
-		Blue_Shark5_ResN:_FillValue = 525383.09 ;
+		Blue_Shark5_ResN:_FillValue = 396515.54 ;
 	double Blue_Shark5_StructN(t, b, z) ;
 		Blue_Shark5_StructN:bmtype = "tracer" ;
 		Blue_Shark5_StructN:units = "mg N" ;
@@ -4471,7 +4471,7 @@ variables:
 		Blue_Shark6_ResN:b_dens = 1000000000. ;
 		Blue_Shark6_ResN:i_conc = 200000000. ;
 		Blue_Shark6_ResN:f_conc = 200000000. ;
-		Blue_Shark6_ResN:_FillValue = 572951.23 ;
+		Blue_Shark6_ResN:_FillValue = 432416.02 ;
 	double Blue_Shark6_StructN(t, b, z) ;
 		Blue_Shark6_StructN:bmtype = "tracer" ;
 		Blue_Shark6_StructN:units = "mg N" ;
@@ -4528,7 +4528,7 @@ variables:
 		Blue_Shark7_ResN:b_dens = 1000000000. ;
 		Blue_Shark7_ResN:i_conc = 200000000. ;
 		Blue_Shark7_ResN:f_conc = 200000000. ;
-		Blue_Shark7_ResN:_FillValue = 597603.89 ;
+		Blue_Shark7_ResN:_FillValue = 451021.8 ;
 	double Blue_Shark7_StructN(t, b, z) ;
 		Blue_Shark7_StructN:bmtype = "tracer" ;
 		Blue_Shark7_StructN:units = "mg N" ;
@@ -4585,7 +4585,7 @@ variables:
 		Blue_Shark8_ResN:b_dens = 1000000000. ;
 		Blue_Shark8_ResN:i_conc = 200000000. ;
 		Blue_Shark8_ResN:f_conc = 200000000. ;
-		Blue_Shark8_ResN:_FillValue = 610104.49 ;
+		Blue_Shark8_ResN:_FillValue = 460456.22 ;
 	double Blue_Shark8_StructN(t, b, z) ;
 		Blue_Shark8_StructN:bmtype = "tracer" ;
 		Blue_Shark8_StructN:units = "mg N" ;
@@ -4642,7 +4642,7 @@ variables:
 		Blue_Shark9_ResN:b_dens = 1000000000. ;
 		Blue_Shark9_ResN:i_conc = 200000000. ;
 		Blue_Shark9_ResN:f_conc = 200000000. ;
-		Blue_Shark9_ResN:_FillValue = 616376.35 ;
+		Blue_Shark9_ResN:_FillValue = 465189.7 ;
 	double Blue_Shark9_StructN(t, b, z) ;
 		Blue_Shark9_StructN:bmtype = "tracer" ;
 		Blue_Shark9_StructN:units = "mg N" ;
@@ -4711,7 +4711,7 @@ variables:
 		BluefinTuna10_ResN:b_dens = 1000000000. ;
 		BluefinTuna10_ResN:i_conc = 200000000. ;
 		BluefinTuna10_ResN:f_conc = 200000000. ;
-		BluefinTuna10_ResN:_FillValue = 4929735.51 ;
+		BluefinTuna10_ResN:_FillValue = 3720555.1 ;
 	double BluefinTuna10_StructN(t, b, z) ;
 		BluefinTuna10_StructN:bmtype = "tracer" ;
 		BluefinTuna10_StructN:units = "mg N" ;
@@ -4768,7 +4768,7 @@ variables:
 		BluefinTuna1_ResN:b_dens = 1000000000. ;
 		BluefinTuna1_ResN:i_conc = 200000000. ;
 		BluefinTuna1_ResN:f_conc = 200000000. ;
-		BluefinTuna1_ResN:_FillValue = 5917.11 ;
+		BluefinTuna1_ResN:_FillValue = 4465.74 ;
 	double BluefinTuna1_StructN(t, b, z) ;
 		BluefinTuna1_StructN:bmtype = "tracer" ;
 		BluefinTuna1_StructN:units = "mg N" ;
@@ -4825,7 +4825,7 @@ variables:
 		BluefinTuna2_ResN:b_dens = 1000000000. ;
 		BluefinTuna2_ResN:i_conc = 200000000. ;
 		BluefinTuna2_ResN:f_conc = 200000000. ;
-		BluefinTuna2_ResN:_FillValue = 213226.39 ;
+		BluefinTuna2_ResN:_FillValue = 160925.58 ;
 	double BluefinTuna2_StructN(t, b, z) ;
 		BluefinTuna2_StructN:bmtype = "tracer" ;
 		BluefinTuna2_StructN:units = "mg N" ;
@@ -4882,7 +4882,7 @@ variables:
 		BluefinTuna3_ResN:b_dens = 1000000000. ;
 		BluefinTuna3_ResN:i_conc = 200000000. ;
 		BluefinTuna3_ResN:f_conc = 200000000. ;
-		BluefinTuna3_ResN:_FillValue = 759173.43 ;
+		BluefinTuna3_ResN:_FillValue = 572961.08 ;
 	double BluefinTuna3_StructN(t, b, z) ;
 		BluefinTuna3_StructN:bmtype = "tracer" ;
 		BluefinTuna3_StructN:units = "mg N" ;
@@ -4939,7 +4939,7 @@ variables:
 		BluefinTuna4_ResN:b_dens = 1000000000. ;
 		BluefinTuna4_ResN:i_conc = 200000000. ;
 		BluefinTuna4_ResN:f_conc = 200000000. ;
-		BluefinTuna4_ResN:_FillValue = 1503014.15 ;
+		BluefinTuna4_ResN:_FillValue = 1134350.3 ;
 	double BluefinTuna4_StructN(t, b, z) ;
 		BluefinTuna4_StructN:bmtype = "tracer" ;
 		BluefinTuna4_StructN:units = "mg N" ;
@@ -4996,7 +4996,7 @@ variables:
 		BluefinTuna5_ResN:b_dens = 1000000000. ;
 		BluefinTuna5_ResN:i_conc = 200000000. ;
 		BluefinTuna5_ResN:f_conc = 200000000. ;
-		BluefinTuna5_ResN:_FillValue = 2290896.04 ;
+		BluefinTuna5_ResN:_FillValue = 1728978.14 ;
 	double BluefinTuna5_StructN(t, b, z) ;
 		BluefinTuna5_StructN:bmtype = "tracer" ;
 		BluefinTuna5_StructN:units = "mg N" ;
@@ -5053,7 +5053,7 @@ variables:
 		BluefinTuna6_ResN:b_dens = 1000000000. ;
 		BluefinTuna6_ResN:i_conc = 200000000. ;
 		BluefinTuna6_ResN:f_conc = 200000000. ;
-		BluefinTuna6_ResN:_FillValue = 3025108.4 ;
+		BluefinTuna6_ResN:_FillValue = 2283100.68 ;
 	double BluefinTuna6_StructN(t, b, z) ;
 		BluefinTuna6_StructN:bmtype = "tracer" ;
 		BluefinTuna6_StructN:units = "mg N" ;
@@ -5110,7 +5110,7 @@ variables:
 		BluefinTuna7_ResN:b_dens = 1000000000. ;
 		BluefinTuna7_ResN:i_conc = 200000000. ;
 		BluefinTuna7_ResN:f_conc = 200000000. ;
-		BluefinTuna7_ResN:_FillValue = 3660000.6 ;
+		BluefinTuna7_ResN:_FillValue = 2762264.6 ;
 	double BluefinTuna7_StructN(t, b, z) ;
 		BluefinTuna7_StructN:bmtype = "tracer" ;
 		BluefinTuna7_StructN:units = "mg N" ;
@@ -5167,7 +5167,7 @@ variables:
 		BluefinTuna8_ResN:b_dens = 1000000000. ;
 		BluefinTuna8_ResN:i_conc = 200000000. ;
 		BluefinTuna8_ResN:f_conc = 200000000. ;
-		BluefinTuna8_ResN:_FillValue = 4183666.51 ;
+		BluefinTuna8_ResN:_FillValue = 3157484.16 ;
 	double BluefinTuna8_StructN(t, b, z) ;
 		BluefinTuna8_StructN:bmtype = "tracer" ;
 		BluefinTuna8_StructN:units = "mg N" ;
@@ -5224,7 +5224,7 @@ variables:
 		BluefinTuna9_ResN:b_dens = 1000000000. ;
 		BluefinTuna9_ResN:i_conc = 200000000. ;
 		BluefinTuna9_ResN:f_conc = 200000000. ;
-		BluefinTuna9_ResN:_FillValue = 4602255.53 ;
+		BluefinTuna9_ResN:_FillValue = 3473400.4 ;
 	double BluefinTuna9_StructN(t, b, z) ;
 		BluefinTuna9_StructN:bmtype = "tracer" ;
 		BluefinTuna9_StructN:units = "mg N" ;
@@ -5293,7 +5293,7 @@ variables:
 		Bluefish10_ResN:b_dens = 1000000000. ;
 		Bluefish10_ResN:i_conc = 200000000. ;
 		Bluefish10_ResN:f_conc = 200000000. ;
-		Bluefish10_ResN:_FillValue = 24682.18 ;
+		Bluefish10_ResN:_FillValue = 18628.06 ;
 	double Bluefish10_StructN(t, b, z) ;
 		Bluefish10_StructN:bmtype = "tracer" ;
 		Bluefish10_StructN:units = "mg N" ;
@@ -5350,7 +5350,7 @@ variables:
 		Bluefish1_ResN:b_dens = 1000000000. ;
 		Bluefish1_ResN:i_conc = 200000000. ;
 		Bluefish1_ResN:f_conc = 200000000. ;
-		Bluefish1_ResN:_FillValue = 265.87 ;
+		Bluefish1_ResN:_FillValue = 200.66 ;
 	double Bluefish1_StructN(t, b, z) ;
 		Bluefish1_StructN:bmtype = "tracer" ;
 		Bluefish1_StructN:units = "mg N" ;
@@ -5407,7 +5407,7 @@ variables:
 		Bluefish2_ResN:b_dens = 1000000000. ;
 		Bluefish2_ResN:i_conc = 200000000. ;
 		Bluefish2_ResN:f_conc = 200000000. ;
-		Bluefish2_ResN:_FillValue = 1506.58 ;
+		Bluefish2_ResN:_FillValue = 1137.04 ;
 	double Bluefish2_StructN(t, b, z) ;
 		Bluefish2_StructN:bmtype = "tracer" ;
 		Bluefish2_StructN:units = "mg N" ;
@@ -5464,7 +5464,7 @@ variables:
 		Bluefish3_ResN:b_dens = 1000000000. ;
 		Bluefish3_ResN:i_conc = 200000000. ;
 		Bluefish3_ResN:f_conc = 200000000. ;
-		Bluefish3_ResN:_FillValue = 3742.52 ;
+		Bluefish3_ResN:_FillValue = 2824.54 ;
 	double Bluefish3_StructN(t, b, z) ;
 		Bluefish3_StructN:bmtype = "tracer" ;
 		Bluefish3_StructN:units = "mg N" ;
@@ -5521,7 +5521,7 @@ variables:
 		Bluefish4_ResN:b_dens = 1000000000. ;
 		Bluefish4_ResN:i_conc = 200000000. ;
 		Bluefish4_ResN:f_conc = 200000000. ;
-		Bluefish4_ResN:_FillValue = 6669.78 ;
+		Bluefish4_ResN:_FillValue = 5033.8 ;
 	double Bluefish4_StructN(t, b, z) ;
 		Bluefish4_StructN:bmtype = "tracer" ;
 		Bluefish4_StructN:units = "mg N" ;
@@ -5578,7 +5578,7 @@ variables:
 		Bluefish5_ResN:b_dens = 1000000000. ;
 		Bluefish5_ResN:i_conc = 200000000. ;
 		Bluefish5_ResN:f_conc = 200000000. ;
-		Bluefish5_ResN:_FillValue = 9950.51 ;
+		Bluefish5_ResN:_FillValue = 7509.82 ;
 	double Bluefish5_StructN(t, b, z) ;
 		Bluefish5_StructN:bmtype = "tracer" ;
 		Bluefish5_StructN:units = "mg N" ;
@@ -5635,7 +5635,7 @@ variables:
 		Bluefish6_ResN:b_dens = 1000000000. ;
 		Bluefish6_ResN:i_conc = 200000000. ;
 		Bluefish6_ResN:f_conc = 200000000. ;
-		Bluefish6_ResN:_FillValue = 13309.41 ;
+		Bluefish6_ResN:_FillValue = 10044.84 ;
 	double Bluefish6_StructN(t, b, z) ;
 		Bluefish6_StructN:bmtype = "tracer" ;
 		Bluefish6_StructN:units = "mg N" ;
@@ -5692,7 +5692,7 @@ variables:
 		Bluefish7_ResN:b_dens = 1000000000. ;
 		Bluefish7_ResN:i_conc = 200000000. ;
 		Bluefish7_ResN:f_conc = 200000000. ;
-		Bluefish7_ResN:_FillValue = 16554.05 ;
+		Bluefish7_ResN:_FillValue = 12493.62 ;
 	double Bluefish7_StructN(t, b, z) ;
 		Bluefish7_StructN:bmtype = "tracer" ;
 		Bluefish7_StructN:units = "mg N" ;
@@ -5749,7 +5749,7 @@ variables:
 		Bluefish8_ResN:b_dens = 1000000000. ;
 		Bluefish8_ResN:i_conc = 200000000. ;
 		Bluefish8_ResN:f_conc = 200000000. ;
-		Bluefish8_ResN:_FillValue = 19565.77 ;
+		Bluefish8_ResN:_FillValue = 14766.62 ;
 	double Bluefish8_StructN(t, b, z) ;
 		Bluefish8_StructN:bmtype = "tracer" ;
 		Bluefish8_StructN:units = "mg N" ;
@@ -5806,7 +5806,7 @@ variables:
 		Bluefish9_ResN:b_dens = 1000000000. ;
 		Bluefish9_ResN:i_conc = 200000000. ;
 		Bluefish9_ResN:f_conc = 200000000. ;
-		Bluefish9_ResN:_FillValue = 22282.55 ;
+		Bluefish9_ResN:_FillValue = 16817.02 ;
 	double Bluefish9_StructN(t, b, z) ;
 		Bluefish9_StructN:bmtype = "tracer" ;
 		Bluefish9_StructN:units = "mg N" ;
@@ -5875,7 +5875,7 @@ variables:
 		Butterfish10_ResN:b_dens = 1000000000. ;
 		Butterfish10_ResN:i_conc = 200000000. ;
 		Butterfish10_ResN:f_conc = 200000000. ;
-		Butterfish10_ResN:_FillValue = 1241.47 ;
+		Butterfish10_ResN:_FillValue = 936.96 ;
 	double Butterfish10_StructN(t, b, z) ;
 		Butterfish10_StructN:bmtype = "tracer" ;
 		Butterfish10_StructN:units = "mg N" ;
@@ -5932,7 +5932,7 @@ variables:
 		Butterfish1_ResN:b_dens = 1000000000. ;
 		Butterfish1_ResN:i_conc = 200000000. ;
 		Butterfish1_ResN:f_conc = 200000000. ;
-		Butterfish1_ResN:_FillValue = 270.41 ;
+		Butterfish1_ResN:_FillValue = 204.08 ;
 	double Butterfish1_StructN(t, b, z) ;
 		Butterfish1_StructN:bmtype = "tracer" ;
 		Butterfish1_StructN:units = "mg N" ;
@@ -5989,7 +5989,7 @@ variables:
 		Butterfish2_ResN:b_dens = 1000000000. ;
 		Butterfish2_ResN:i_conc = 200000000. ;
 		Butterfish2_ResN:f_conc = 200000000. ;
-		Butterfish2_ResN:_FillValue = 713.8 ;
+		Butterfish2_ResN:_FillValue = 538.72 ;
 	double Butterfish2_StructN(t, b, z) ;
 		Butterfish2_StructN:bmtype = "tracer" ;
 		Butterfish2_StructN:units = "mg N" ;
@@ -6046,7 +6046,7 @@ variables:
 		Butterfish3_ResN:b_dens = 1000000000. ;
 		Butterfish3_ResN:i_conc = 200000000. ;
 		Butterfish3_ResN:f_conc = 200000000. ;
-		Butterfish3_ResN:_FillValue = 994.78 ;
+		Butterfish3_ResN:_FillValue = 750.78 ;
 	double Butterfish3_StructN(t, b, z) ;
 		Butterfish3_StructN:bmtype = "tracer" ;
 		Butterfish3_StructN:units = "mg N" ;
@@ -6103,7 +6103,7 @@ variables:
 		Butterfish4_ResN:b_dens = 1000000000. ;
 		Butterfish4_ResN:i_conc = 200000000. ;
 		Butterfish4_ResN:f_conc = 200000000. ;
-		Butterfish4_ResN:_FillValue = 1132.98 ;
+		Butterfish4_ResN:_FillValue = 855.08 ;
 	double Butterfish4_StructN(t, b, z) ;
 		Butterfish4_StructN:bmtype = "tracer" ;
 		Butterfish4_StructN:units = "mg N" ;
@@ -6160,7 +6160,7 @@ variables:
 		Butterfish5_ResN:b_dens = 1000000000. ;
 		Butterfish5_ResN:i_conc = 200000000. ;
 		Butterfish5_ResN:f_conc = 200000000. ;
-		Butterfish5_ResN:_FillValue = 1195.12 ;
+		Butterfish5_ResN:_FillValue = 901.98 ;
 	double Butterfish5_StructN(t, b, z) ;
 		Butterfish5_StructN:bmtype = "tracer" ;
 		Butterfish5_StructN:units = "mg N" ;
@@ -6217,7 +6217,7 @@ variables:
 		Butterfish6_ResN:b_dens = 1000000000. ;
 		Butterfish6_ResN:i_conc = 200000000. ;
 		Butterfish6_ResN:f_conc = 200000000. ;
-		Butterfish6_ResN:_FillValue = 1222.1 ;
+		Butterfish6_ResN:_FillValue = 922.34 ;
 	double Butterfish6_StructN(t, b, z) ;
 		Butterfish6_StructN:bmtype = "tracer" ;
 		Butterfish6_StructN:units = "mg N" ;
@@ -6274,7 +6274,7 @@ variables:
 		Butterfish7_ResN:b_dens = 1000000000. ;
 		Butterfish7_ResN:i_conc = 200000000. ;
 		Butterfish7_ResN:f_conc = 200000000. ;
-		Butterfish7_ResN:_FillValue = 1233.63 ;
+		Butterfish7_ResN:_FillValue = 931.04 ;
 	double Butterfish7_StructN(t, b, z) ;
 		Butterfish7_StructN:bmtype = "tracer" ;
 		Butterfish7_StructN:units = "mg N" ;
@@ -6331,7 +6331,7 @@ variables:
 		Butterfish8_ResN:b_dens = 1000000000. ;
 		Butterfish8_ResN:i_conc = 200000000. ;
 		Butterfish8_ResN:f_conc = 200000000. ;
-		Butterfish8_ResN:_FillValue = 1238.53 ;
+		Butterfish8_ResN:_FillValue = 934.74 ;
 	double Butterfish8_StructN(t, b, z) ;
 		Butterfish8_StructN:bmtype = "tracer" ;
 		Butterfish8_StructN:units = "mg N" ;
@@ -6388,7 +6388,7 @@ variables:
 		Butterfish9_ResN:b_dens = 1000000000. ;
 		Butterfish9_ResN:i_conc = 200000000. ;
 		Butterfish9_ResN:f_conc = 200000000. ;
-		Butterfish9_ResN:_FillValue = 1240.6 ;
+		Butterfish9_ResN:_FillValue = 936.3 ;
 	double Butterfish9_StructN(t, b, z) ;
 		Butterfish9_StructN:bmtype = "tracer" ;
 		Butterfish9_StructN:units = "mg N" ;
@@ -6507,7 +6507,7 @@ variables:
 		Cod10_ResN:b_dens = 1000000000. ;
 		Cod10_ResN:i_conc = 200000000. ;
 		Cod10_ResN:f_conc = 200000000. ;
-		Cod10_ResN:_FillValue = 175744.77 ;
+		Cod10_ResN:_FillValue = 132637.56 ;
 	double Cod10_StructN(t, b, z) ;
 		Cod10_StructN:bmtype = "tracer" ;
 		Cod10_StructN:units = "mg N" ;
@@ -6564,7 +6564,7 @@ variables:
 		Cod1_ResN:b_dens = 1000000000. ;
 		Cod1_ResN:i_conc = 200000000. ;
 		Cod1_ResN:f_conc = 200000000. ;
-		Cod1_ResN:_FillValue = 199.73 ;
+		Cod1_ResN:_FillValue = 150.74 ;
 	double Cod1_StructN(t, b, z) ;
 		Cod1_StructN:bmtype = "tracer" ;
 		Cod1_StructN:units = "mg N" ;
@@ -6621,7 +6621,7 @@ variables:
 		Cod2_ResN:b_dens = 1000000000. ;
 		Cod2_ResN:i_conc = 200000000. ;
 		Cod2_ResN:f_conc = 200000000. ;
-		Cod2_ResN:_FillValue = 5213.45 ;
+		Cod2_ResN:_FillValue = 3934.68 ;
 	double Cod2_StructN(t, b, z) ;
 		Cod2_StructN:bmtype = "tracer" ;
 		Cod2_StructN:units = "mg N" ;
@@ -6678,7 +6678,7 @@ variables:
 		Cod3_ResN:b_dens = 1000000000. ;
 		Cod3_ResN:i_conc = 200000000. ;
 		Cod3_ResN:f_conc = 200000000. ;
-		Cod3_ResN:_FillValue = 18745.01 ;
+		Cod3_ResN:_FillValue = 14147.18 ;
 	double Cod3_StructN(t, b, z) ;
 		Cod3_StructN:bmtype = "tracer" ;
 		Cod3_StructN:units = "mg N" ;
@@ -6735,7 +6735,7 @@ variables:
 		Cod4_ResN:b_dens = 1000000000. ;
 		Cod4_ResN:i_conc = 200000000. ;
 		Cod4_ResN:f_conc = 200000000. ;
-		Cod4_ResN:_FillValue = 39189.15 ;
+		Cod4_ResN:_FillValue = 29576.72 ;
 	double Cod4_StructN(t, b, z) ;
 		Cod4_StructN:bmtype = "tracer" ;
 		Cod4_StructN:units = "mg N" ;
@@ -6792,7 +6792,7 @@ variables:
 		Cod5_ResN:b_dens = 1000000000. ;
 		Cod5_ResN:i_conc = 200000000. ;
 		Cod5_ResN:f_conc = 200000000. ;
-		Cod5_ResN:_FillValue = 63557.97 ;
+		Cod5_ResN:_FillValue = 47968.28 ;
 	double Cod5_StructN(t, b, z) ;
 		Cod5_StructN:bmtype = "tracer" ;
 		Cod5_StructN:units = "mg N" ;
@@ -6849,7 +6849,7 @@ variables:
 		Cod6_ResN:b_dens = 1000000000. ;
 		Cod6_ResN:i_conc = 200000000. ;
 		Cod6_ResN:f_conc = 200000000. ;
-		Cod6_ResN:_FillValue = 89166.86 ;
+		Cod6_ResN:_FillValue = 67295.74 ;
 	double Cod6_StructN(t, b, z) ;
 		Cod6_StructN:bmtype = "tracer" ;
 		Cod6_StructN:units = "mg N" ;
@@ -6906,7 +6906,7 @@ variables:
 		Cod7_ResN:b_dens = 1000000000. ;
 		Cod7_ResN:i_conc = 200000000. ;
 		Cod7_ResN:f_conc = 200000000. ;
-		Cod7_ResN:_FillValue = 114094.4 ;
+		Cod7_ResN:_FillValue = 86108.98 ;
 	double Cod7_StructN(t, b, z) ;
 		Cod7_StructN:bmtype = "tracer" ;
 		Cod7_StructN:units = "mg N" ;
@@ -6963,7 +6963,7 @@ variables:
 		Cod8_ResN:b_dens = 1000000000. ;
 		Cod8_ResN:i_conc = 200000000. ;
 		Cod8_ResN:f_conc = 200000000. ;
-		Cod8_ResN:_FillValue = 137164.45 ;
+		Cod8_ResN:_FillValue = 103520.34 ;
 	double Cod8_StructN(t, b, z) ;
 		Cod8_StructN:bmtype = "tracer" ;
 		Cod8_StructN:units = "mg N" ;
@@ -7020,7 +7020,7 @@ variables:
 		Cod9_ResN:b_dens = 1000000000. ;
 		Cod9_ResN:i_conc = 200000000. ;
 		Cod9_ResN:f_conc = 200000000. ;
-		Cod9_ResN:_FillValue = 157780.44 ;
+		Cod9_ResN:_FillValue = 119079.58 ;
 	double Cod9_StructN(t, b, z) ;
 		Cod9_StructN:bmtype = "tracer" ;
 		Cod9_StructN:units = "mg N" ;
@@ -7101,7 +7101,7 @@ variables:
 		Demersal_Shark10_ResN:b_dens = 1000000000. ;
 		Demersal_Shark10_ResN:i_conc = 200000000. ;
 		Demersal_Shark10_ResN:f_conc = 200000000. ;
-		Demersal_Shark10_ResN:_FillValue = 2148543.97 ;
+		Demersal_Shark10_ResN:_FillValue = 1621542.62 ;
 	double Demersal_Shark10_StructN(t, b, z) ;
 		Demersal_Shark10_StructN:bmtype = "tracer" ;
 		Demersal_Shark10_StructN:units = "mg N" ;
@@ -7158,7 +7158,7 @@ variables:
 		Demersal_Shark1_ResN:b_dens = 1000000000. ;
 		Demersal_Shark1_ResN:i_conc = 200000000. ;
 		Demersal_Shark1_ResN:f_conc = 200000000. ;
-		Demersal_Shark1_ResN:_FillValue = 15351.08 ;
+		Demersal_Shark1_ResN:_FillValue = 11585.72 ;
 	double Demersal_Shark1_StructN(t, b, z) ;
 		Demersal_Shark1_StructN:bmtype = "tracer" ;
 		Demersal_Shark1_StructN:units = "mg N" ;
@@ -7215,7 +7215,7 @@ variables:
 		Demersal_Shark2_ResN:b_dens = 1000000000. ;
 		Demersal_Shark2_ResN:i_conc = 200000000. ;
 		Demersal_Shark2_ResN:f_conc = 200000000. ;
-		Demersal_Shark2_ResN:_FillValue = 905203.35 ;
+		Demersal_Shark2_ResN:_FillValue = 683172.34 ;
 	double Demersal_Shark2_StructN(t, b, z) ;
 		Demersal_Shark2_StructN:bmtype = "tracer" ;
 		Demersal_Shark2_StructN:units = "mg N" ;
@@ -7272,7 +7272,7 @@ variables:
 		Demersal_Shark3_ResN:b_dens = 1000000000. ;
 		Demersal_Shark3_ResN:i_conc = 200000000. ;
 		Demersal_Shark3_ResN:f_conc = 200000000. ;
-		Demersal_Shark3_ResN:_FillValue = 1696070.17 ;
+		Demersal_Shark3_ResN:_FillValue = 1280052.96 ;
 	double Demersal_Shark3_StructN(t, b, z) ;
 		Demersal_Shark3_StructN:bmtype = "tracer" ;
 		Demersal_Shark3_StructN:units = "mg N" ;
@@ -7329,7 +7329,7 @@ variables:
 		Demersal_Shark4_ResN:b_dens = 1000000000. ;
 		Demersal_Shark4_ResN:i_conc = 200000000. ;
 		Demersal_Shark4_ResN:f_conc = 200000000. ;
-		Demersal_Shark4_ResN:_FillValue = 2004655.91 ;
+		Demersal_Shark4_ResN:_FillValue = 1512947.86 ;
 	double Demersal_Shark4_StructN(t, b, z) ;
 		Demersal_Shark4_StructN:bmtype = "tracer" ;
 		Demersal_Shark4_StructN:units = "mg N" ;
@@ -7386,7 +7386,7 @@ variables:
 		Demersal_Shark5_ResN:b_dens = 1000000000. ;
 		Demersal_Shark5_ResN:i_conc = 200000000. ;
 		Demersal_Shark5_ResN:f_conc = 200000000. ;
-		Demersal_Shark5_ResN:_FillValue = 2104589.69 ;
+		Demersal_Shark5_ResN:_FillValue = 1588369.58 ;
 	double Demersal_Shark5_StructN(t, b, z) ;
 		Demersal_Shark5_StructN:bmtype = "tracer" ;
 		Demersal_Shark5_StructN:units = "mg N" ;
@@ -7443,7 +7443,7 @@ variables:
 		Demersal_Shark6_ResN:b_dens = 1000000000. ;
 		Demersal_Shark6_ResN:i_conc = 200000000. ;
 		Demersal_Shark6_ResN:f_conc = 200000000. ;
-		Demersal_Shark6_ResN:_FillValue = 2135325.21 ;
+		Demersal_Shark6_ResN:_FillValue = 1611566.2 ;
 	double Demersal_Shark6_StructN(t, b, z) ;
 		Demersal_Shark6_StructN:bmtype = "tracer" ;
 		Demersal_Shark6_StructN:units = "mg N" ;
@@ -7500,7 +7500,7 @@ variables:
 		Demersal_Shark7_ResN:b_dens = 1000000000. ;
 		Demersal_Shark7_ResN:i_conc = 200000000. ;
 		Demersal_Shark7_ResN:f_conc = 200000000. ;
-		Demersal_Shark7_ResN:_FillValue = 2144636.02 ;
+		Demersal_Shark7_ResN:_FillValue = 1618593.22 ;
 	double Demersal_Shark7_StructN(t, b, z) ;
 		Demersal_Shark7_StructN:bmtype = "tracer" ;
 		Demersal_Shark7_StructN:units = "mg N" ;
@@ -7557,7 +7557,7 @@ variables:
 		Demersal_Shark8_ResN:b_dens = 1000000000. ;
 		Demersal_Shark8_ResN:i_conc = 200000000. ;
 		Demersal_Shark8_ResN:f_conc = 200000000. ;
-		Demersal_Shark8_ResN:_FillValue = 2147443.85 ;
+		Demersal_Shark8_ResN:_FillValue = 1620712.34 ;
 	double Demersal_Shark8_StructN(t, b, z) ;
 		Demersal_Shark8_StructN:bmtype = "tracer" ;
 		Demersal_Shark8_StructN:units = "mg N" ;
@@ -7614,7 +7614,7 @@ variables:
 		Demersal_Shark9_ResN:b_dens = 1000000000. ;
 		Demersal_Shark9_ResN:i_conc = 200000000. ;
 		Demersal_Shark9_ResN:f_conc = 200000000. ;
-		Demersal_Shark9_ResN:_FillValue = 2148289.44 ;
+		Demersal_Shark9_ResN:_FillValue = 1621350.52 ;
 	double Demersal_Shark9_StructN(t, b, z) ;
 		Demersal_Shark9_StructN:bmtype = "tracer" ;
 		Demersal_Shark9_StructN:units = "mg N" ;
@@ -7744,7 +7744,7 @@ variables:
 		Diatom_N:decay = 0. ;
 		Diatom_N:partic = 1 ;
 		Diatom_N:passive = 1 ;
-		Diatom_N:svel = -5.e-06 ;
+		Diatom_N:svel = -1.55e-06 ;
 		Diatom_N:xvel = 0. ;
 		Diatom_N:psize = 0.0001 ;
 		Diatom_N:b_dens = 1000000000. ;
@@ -7763,7 +7763,7 @@ variables:
 		Diatom_S:decay = 0. ;
 		Diatom_S:partic = 1 ;
 		Diatom_S:passive = 1 ;
-		Diatom_S:svel = -5.e-06 ;
+		Diatom_S:svel = -1.55e-06 ;
 		Diatom_S:xvel = 0. ;
 		Diatom_S:psize = 0.0001 ;
 		Diatom_S:b_dens = 1000000000. ;
@@ -7782,7 +7782,7 @@ variables:
 		DinoFlag_N:decay = 0. ;
 		DinoFlag_N:partic = 1 ;
 		DinoFlag_N:passive = 1 ;
-		DinoFlag_N:svel = -2.89e-05 ;
+		DinoFlag_N:svel = -8.99e-07 ;
 		DinoFlag_N:xvel = 0. ;
 		DinoFlag_N:psize = 7.5e-05 ;
 		DinoFlag_N:b_dens = 1000000000. ;
@@ -7826,7 +7826,7 @@ variables:
 		Drums_Croakers10_ResN:b_dens = 1000000000. ;
 		Drums_Croakers10_ResN:i_conc = 200000000. ;
 		Drums_Croakers10_ResN:f_conc = 200000000. ;
-		Drums_Croakers10_ResN:_FillValue = 9905.62 ;
+		Drums_Croakers10_ResN:_FillValue = 7475.94 ;
 	double Drums_Croakers10_StructN(t, b, z) ;
 		Drums_Croakers10_StructN:bmtype = "tracer" ;
 		Drums_Croakers10_StructN:units = "mg N" ;
@@ -7883,7 +7883,7 @@ variables:
 		Drums_Croakers1_ResN:b_dens = 1000000000. ;
 		Drums_Croakers1_ResN:i_conc = 200000000. ;
 		Drums_Croakers1_ResN:f_conc = 200000000. ;
-		Drums_Croakers1_ResN:_FillValue = 466.66 ;
+		Drums_Croakers1_ResN:_FillValue = 352.2 ;
 	double Drums_Croakers1_StructN(t, b, z) ;
 		Drums_Croakers1_StructN:bmtype = "tracer" ;
 		Drums_Croakers1_StructN:units = "mg N" ;
@@ -7940,7 +7940,7 @@ variables:
 		Drums_Croakers2_ResN:b_dens = 1000000000. ;
 		Drums_Croakers2_ResN:i_conc = 200000000. ;
 		Drums_Croakers2_ResN:f_conc = 200000000. ;
-		Drums_Croakers2_ResN:_FillValue = 4003.41 ;
+		Drums_Croakers2_ResN:_FillValue = 3021.44 ;
 	double Drums_Croakers2_StructN(t, b, z) ;
 		Drums_Croakers2_StructN:bmtype = "tracer" ;
 		Drums_Croakers2_StructN:units = "mg N" ;
@@ -7997,7 +7997,7 @@ variables:
 		Drums_Croakers3_ResN:b_dens = 1000000000. ;
 		Drums_Croakers3_ResN:i_conc = 200000000. ;
 		Drums_Croakers3_ResN:f_conc = 200000000. ;
-		Drums_Croakers3_ResN:_FillValue = 7071.1 ;
+		Drums_Croakers3_ResN:_FillValue = 5336.68 ;
 	double Drums_Croakers3_StructN(t, b, z) ;
 		Drums_Croakers3_StructN:bmtype = "tracer" ;
 		Drums_Croakers3_StructN:units = "mg N" ;
@@ -8054,7 +8054,7 @@ variables:
 		Drums_Croakers4_ResN:b_dens = 1000000000. ;
 		Drums_Croakers4_ResN:i_conc = 200000000. ;
 		Drums_Croakers4_ResN:f_conc = 200000000. ;
-		Drums_Croakers4_ResN:_FillValue = 8674.77 ;
+		Drums_Croakers4_ResN:_FillValue = 6547. ;
 	double Drums_Croakers4_StructN(t, b, z) ;
 		Drums_Croakers4_StructN:bmtype = "tracer" ;
 		Drums_Croakers4_StructN:units = "mg N" ;
@@ -8111,7 +8111,7 @@ variables:
 		Drums_Croakers5_ResN:b_dens = 1000000000. ;
 		Drums_Croakers5_ResN:i_conc = 200000000. ;
 		Drums_Croakers5_ResN:f_conc = 200000000. ;
-		Drums_Croakers5_ResN:_FillValue = 9393.43 ;
+		Drums_Croakers5_ResN:_FillValue = 7089.38 ;
 	double Drums_Croakers5_StructN(t, b, z) ;
 		Drums_Croakers5_StructN:bmtype = "tracer" ;
 		Drums_Croakers5_StructN:units = "mg N" ;
@@ -8168,7 +8168,7 @@ variables:
 		Drums_Croakers6_ResN:b_dens = 1000000000. ;
 		Drums_Croakers6_ResN:i_conc = 200000000. ;
 		Drums_Croakers6_ResN:f_conc = 200000000. ;
-		Drums_Croakers6_ResN:_FillValue = 9697.83 ;
+		Drums_Croakers6_ResN:_FillValue = 7319.12 ;
 	double Drums_Croakers6_StructN(t, b, z) ;
 		Drums_Croakers6_StructN:bmtype = "tracer" ;
 		Drums_Croakers6_StructN:units = "mg N" ;
@@ -8225,7 +8225,7 @@ variables:
 		Drums_Croakers7_ResN:b_dens = 1000000000. ;
 		Drums_Croakers7_ResN:i_conc = 200000000. ;
 		Drums_Croakers7_ResN:f_conc = 200000000. ;
-		Drums_Croakers7_ResN:_FillValue = 9823.97 ;
+		Drums_Croakers7_ResN:_FillValue = 7414.32 ;
 	double Drums_Croakers7_StructN(t, b, z) ;
 		Drums_Croakers7_StructN:bmtype = "tracer" ;
 		Drums_Croakers7_StructN:units = "mg N" ;
@@ -8282,7 +8282,7 @@ variables:
 		Drums_Croakers8_ResN:b_dens = 1000000000. ;
 		Drums_Croakers8_ResN:i_conc = 200000000. ;
 		Drums_Croakers8_ResN:f_conc = 200000000. ;
-		Drums_Croakers8_ResN:_FillValue = 9875.75 ;
+		Drums_Croakers8_ResN:_FillValue = 7453.4 ;
 	double Drums_Croakers8_StructN(t, b, z) ;
 		Drums_Croakers8_StructN:bmtype = "tracer" ;
 		Drums_Croakers8_StructN:units = "mg N" ;
@@ -8339,7 +8339,7 @@ variables:
 		Drums_Croakers9_ResN:b_dens = 1000000000. ;
 		Drums_Croakers9_ResN:i_conc = 200000000. ;
 		Drums_Croakers9_ResN:f_conc = 200000000. ;
-		Drums_Croakers9_ResN:_FillValue = 9896.95 ;
+		Drums_Croakers9_ResN:_FillValue = 7469.4 ;
 	double Drums_Croakers9_StructN(t, b, z) ;
 		Drums_Croakers9_StructN:bmtype = "tracer" ;
 		Drums_Croakers9_StructN:units = "mg N" ;
@@ -8422,7 +8422,7 @@ variables:
 		Fourspotflounder10_ResN:b_dens = 1000000000. ;
 		Fourspotflounder10_ResN:i_conc = 200000000. ;
 		Fourspotflounder10_ResN:f_conc = 200000000. ;
-		Fourspotflounder10_ResN:_FillValue = 3883.57 ;
+		Fourspotflounder10_ResN:_FillValue = 2931. ;
 	double Fourspotflounder10_StructN(t, b, z) ;
 		Fourspotflounder10_StructN:bmtype = "tracer" ;
 		Fourspotflounder10_StructN:units = "mg N" ;
@@ -8479,7 +8479,7 @@ variables:
 		Fourspotflounder1_ResN:b_dens = 1000000000. ;
 		Fourspotflounder1_ResN:i_conc = 200000000. ;
 		Fourspotflounder1_ResN:f_conc = 200000000. ;
-		Fourspotflounder1_ResN:_FillValue = 18.34 ;
+		Fourspotflounder1_ResN:_FillValue = 13.84 ;
 	double Fourspotflounder1_StructN(t, b, z) ;
 		Fourspotflounder1_StructN:bmtype = "tracer" ;
 		Fourspotflounder1_StructN:units = "mg N" ;
@@ -8536,7 +8536,7 @@ variables:
 		Fourspotflounder2_ResN:b_dens = 1000000000. ;
 		Fourspotflounder2_ResN:i_conc = 200000000. ;
 		Fourspotflounder2_ResN:f_conc = 200000000. ;
-		Fourspotflounder2_ResN:_FillValue = 292.03 ;
+		Fourspotflounder2_ResN:_FillValue = 220.4 ;
 	double Fourspotflounder2_StructN(t, b, z) ;
 		Fourspotflounder2_StructN:bmtype = "tracer" ;
 		Fourspotflounder2_StructN:units = "mg N" ;
@@ -8593,7 +8593,7 @@ variables:
 		Fourspotflounder3_ResN:b_dens = 1000000000. ;
 		Fourspotflounder3_ResN:i_conc = 200000000. ;
 		Fourspotflounder3_ResN:f_conc = 200000000. ;
-		Fourspotflounder3_ResN:_FillValue = 844.45 ;
+		Fourspotflounder3_ResN:_FillValue = 637.32 ;
 	double Fourspotflounder3_StructN(t, b, z) ;
 		Fourspotflounder3_StructN:bmtype = "tracer" ;
 		Fourspotflounder3_StructN:units = "mg N" ;
@@ -8650,7 +8650,7 @@ variables:
 		Fourspotflounder4_ResN:b_dens = 1000000000. ;
 		Fourspotflounder4_ResN:i_conc = 200000000. ;
 		Fourspotflounder4_ResN:f_conc = 200000000. ;
-		Fourspotflounder4_ResN:_FillValue = 1500.48 ;
+		Fourspotflounder4_ResN:_FillValue = 1132.44 ;
 	double Fourspotflounder4_StructN(t, b, z) ;
 		Fourspotflounder4_StructN:bmtype = "tracer" ;
 		Fourspotflounder4_StructN:units = "mg N" ;
@@ -8707,7 +8707,7 @@ variables:
 		Fourspotflounder5_ResN:b_dens = 1000000000. ;
 		Fourspotflounder5_ResN:i_conc = 200000000. ;
 		Fourspotflounder5_ResN:f_conc = 200000000. ;
-		Fourspotflounder5_ResN:_FillValue = 2129.59 ;
+		Fourspotflounder5_ResN:_FillValue = 1607.24 ;
 	double Fourspotflounder5_StructN(t, b, z) ;
 		Fourspotflounder5_StructN:bmtype = "tracer" ;
 		Fourspotflounder5_StructN:units = "mg N" ;
@@ -8764,7 +8764,7 @@ variables:
 		Fourspotflounder6_ResN:b_dens = 1000000000. ;
 		Fourspotflounder6_ResN:i_conc = 200000000. ;
 		Fourspotflounder6_ResN:f_conc = 200000000. ;
-		Fourspotflounder6_ResN:_FillValue = 2669.9 ;
+		Fourspotflounder6_ResN:_FillValue = 2015.02 ;
 	double Fourspotflounder6_StructN(t, b, z) ;
 		Fourspotflounder6_StructN:bmtype = "tracer" ;
 		Fourspotflounder6_StructN:units = "mg N" ;
@@ -8821,7 +8821,7 @@ variables:
 		Fourspotflounder7_ResN:b_dens = 1000000000. ;
 		Fourspotflounder7_ResN:i_conc = 200000000. ;
 		Fourspotflounder7_ResN:f_conc = 200000000. ;
-		Fourspotflounder7_ResN:_FillValue = 3105.08 ;
+		Fourspotflounder7_ResN:_FillValue = 2343.46 ;
 	double Fourspotflounder7_StructN(t, b, z) ;
 		Fourspotflounder7_StructN:bmtype = "tracer" ;
 		Fourspotflounder7_StructN:units = "mg N" ;
@@ -8878,7 +8878,7 @@ variables:
 		Fourspotflounder8_ResN:b_dens = 1000000000. ;
 		Fourspotflounder8_ResN:i_conc = 200000000. ;
 		Fourspotflounder8_ResN:f_conc = 200000000. ;
-		Fourspotflounder8_ResN:_FillValue = 3441.79 ;
+		Fourspotflounder8_ResN:_FillValue = 2597.58 ;
 	double Fourspotflounder8_StructN(t, b, z) ;
 		Fourspotflounder8_StructN:bmtype = "tracer" ;
 		Fourspotflounder8_StructN:units = "mg N" ;
@@ -8935,7 +8935,7 @@ variables:
 		Fourspotflounder9_ResN:b_dens = 1000000000. ;
 		Fourspotflounder9_ResN:i_conc = 200000000. ;
 		Fourspotflounder9_ResN:f_conc = 200000000. ;
-		Fourspotflounder9_ResN:_FillValue = 3695.58 ;
+		Fourspotflounder9_ResN:_FillValue = 2789.12 ;
 	double Fourspotflounder9_StructN(t, b, z) ;
 		Fourspotflounder9_StructN:bmtype = "tracer" ;
 		Fourspotflounder9_StructN:units = "mg N" ;
@@ -9023,7 +9023,7 @@ variables:
 		Haddock10_ResN:b_dens = 1000000000. ;
 		Haddock10_ResN:i_conc = 200000000. ;
 		Haddock10_ResN:f_conc = 200000000. ;
-		Haddock10_ResN:_FillValue = 15131.77 ;
+		Haddock10_ResN:_FillValue = 11420.2 ;
 	double Haddock10_StructN(t, b, z) ;
 		Haddock10_StructN:bmtype = "tracer" ;
 		Haddock10_StructN:units = "mg N" ;
@@ -9080,7 +9080,7 @@ variables:
 		Haddock1_ResN:b_dens = 1000000000. ;
 		Haddock1_ResN:i_conc = 200000000. ;
 		Haddock1_ResN:f_conc = 200000000. ;
-		Haddock1_ResN:_FillValue = 486.01 ;
+		Haddock1_ResN:_FillValue = 366.8 ;
 	double Haddock1_StructN(t, b, z) ;
 		Haddock1_StructN:bmtype = "tracer" ;
 		Haddock1_StructN:units = "mg N" ;
@@ -9137,7 +9137,7 @@ variables:
 		Haddock2_ResN:b_dens = 1000000000. ;
 		Haddock2_ResN:i_conc = 200000000. ;
 		Haddock2_ResN:f_conc = 200000000. ;
-		Haddock2_ResN:_FillValue = 4989.63 ;
+		Haddock2_ResN:_FillValue = 3765.76 ;
 	double Haddock2_StructN(t, b, z) ;
 		Haddock2_StructN:bmtype = "tracer" ;
 		Haddock2_StructN:units = "mg N" ;
@@ -9194,7 +9194,7 @@ variables:
 		Haddock3_ResN:b_dens = 1000000000. ;
 		Haddock3_ResN:i_conc = 200000000. ;
 		Haddock3_ResN:f_conc = 200000000. ;
-		Haddock3_ResN:_FillValue = 9655.88 ;
+		Haddock3_ResN:_FillValue = 7287.46 ;
 	double Haddock3_StructN(t, b, z) ;
 		Haddock3_StructN:bmtype = "tracer" ;
 		Haddock3_StructN:units = "mg N" ;
@@ -9251,7 +9251,7 @@ variables:
 		Haddock4_ResN:b_dens = 1000000000. ;
 		Haddock4_ResN:i_conc = 200000000. ;
 		Haddock4_ResN:f_conc = 200000000. ;
-		Haddock4_ResN:_FillValue = 12476.68 ;
+		Haddock4_ResN:_FillValue = 9416.36 ;
 	double Haddock4_StructN(t, b, z) ;
 		Haddock4_StructN:bmtype = "tracer" ;
 		Haddock4_StructN:units = "mg N" ;
@@ -9308,7 +9308,7 @@ variables:
 		Haddock5_ResN:b_dens = 1000000000. ;
 		Haddock5_ResN:i_conc = 200000000. ;
 		Haddock5_ResN:f_conc = 200000000. ;
-		Haddock5_ResN:_FillValue = 13908.02 ;
+		Haddock5_ResN:_FillValue = 10496.62 ;
 	double Haddock5_StructN(t, b, z) ;
 		Haddock5_StructN:bmtype = "tracer" ;
 		Haddock5_StructN:units = "mg N" ;
@@ -9365,7 +9365,7 @@ variables:
 		Haddock6_ResN:b_dens = 1000000000. ;
 		Haddock6_ResN:i_conc = 200000000. ;
 		Haddock6_ResN:f_conc = 200000000. ;
-		Haddock6_ResN:_FillValue = 14585.86 ;
+		Haddock6_ResN:_FillValue = 11008.2 ;
 	double Haddock6_StructN(t, b, z) ;
 		Haddock6_StructN:bmtype = "tracer" ;
 		Haddock6_StructN:units = "mg N" ;
@@ -9422,7 +9422,7 @@ variables:
 		Haddock7_ResN:b_dens = 1000000000. ;
 		Haddock7_ResN:i_conc = 200000000. ;
 		Haddock7_ResN:f_conc = 200000000. ;
-		Haddock7_ResN:_FillValue = 14897.58 ;
+		Haddock7_ResN:_FillValue = 11243.46 ;
 	double Haddock7_StructN(t, b, z) ;
 		Haddock7_StructN:bmtype = "tracer" ;
 		Haddock7_StructN:units = "mg N" ;
@@ -9479,7 +9479,7 @@ variables:
 		Haddock8_ResN:b_dens = 1000000000. ;
 		Haddock8_ResN:i_conc = 200000000. ;
 		Haddock8_ResN:f_conc = 200000000. ;
-		Haddock8_ResN:_FillValue = 15039.12 ;
+		Haddock8_ResN:_FillValue = 11350.28 ;
 	double Haddock8_StructN(t, b, z) ;
 		Haddock8_StructN:bmtype = "tracer" ;
 		Haddock8_StructN:units = "mg N" ;
@@ -9536,7 +9536,7 @@ variables:
 		Haddock9_ResN:b_dens = 1000000000. ;
 		Haddock9_ResN:i_conc = 200000000. ;
 		Haddock9_ResN:f_conc = 200000000. ;
-		Haddock9_ResN:_FillValue = 15102.99 ;
+		Haddock9_ResN:_FillValue = 11398.48 ;
 	double Haddock9_StructN(t, b, z) ;
 		Haddock9_StructN:bmtype = "tracer" ;
 		Haddock9_StructN:units = "mg N" ;
@@ -9605,7 +9605,7 @@ variables:
 		Halibut10_ResN:b_dens = 1000000000. ;
 		Halibut10_ResN:i_conc = 200000000. ;
 		Halibut10_ResN:f_conc = 200000000. ;
-		Halibut10_ResN:_FillValue = 1286539.75 ;
+		Halibut10_ResN:_FillValue = 970973.4 ;
 	double Halibut10_StructN(t, b, z) ;
 		Halibut10_StructN:bmtype = "tracer" ;
 		Halibut10_StructN:units = "mg N" ;
@@ -9662,7 +9662,7 @@ variables:
 		Halibut1_ResN:b_dens = 1000000000. ;
 		Halibut1_ResN:i_conc = 200000000. ;
 		Halibut1_ResN:f_conc = 200000000. ;
-		Halibut1_ResN:_FillValue = 311.96 ;
+		Halibut1_ResN:_FillValue = 235.44 ;
 	double Halibut1_StructN(t, b, z) ;
 		Halibut1_StructN:bmtype = "tracer" ;
 		Halibut1_StructN:units = "mg N" ;
@@ -9719,7 +9719,7 @@ variables:
 		Halibut2_ResN:b_dens = 1000000000. ;
 		Halibut2_ResN:i_conc = 200000000. ;
 		Halibut2_ResN:f_conc = 200000000. ;
-		Halibut2_ResN:_FillValue = 15050.81 ;
+		Halibut2_ResN:_FillValue = 11359.1 ;
 	double Halibut2_StructN(t, b, z) ;
 		Halibut2_StructN:bmtype = "tracer" ;
 		Halibut2_StructN:units = "mg N" ;
@@ -9776,7 +9776,7 @@ variables:
 		Halibut3_ResN:b_dens = 1000000000. ;
 		Halibut3_ResN:i_conc = 200000000. ;
 		Halibut3_ResN:f_conc = 200000000. ;
-		Halibut3_ResN:_FillValue = 67201.54 ;
+		Halibut3_ResN:_FillValue = 50718.14 ;
 	double Halibut3_StructN(t, b, z) ;
 		Halibut3_StructN:bmtype = "tracer" ;
 		Halibut3_StructN:units = "mg N" ;
@@ -9833,7 +9833,7 @@ variables:
 		Halibut4_ResN:b_dens = 1000000000. ;
 		Halibut4_ResN:i_conc = 200000000. ;
 		Halibut4_ResN:f_conc = 200000000. ;
-		Halibut4_ResN:_FillValue = 163755.95 ;
+		Halibut4_ResN:_FillValue = 123589.4 ;
 	double Halibut4_StructN(t, b, z) ;
 		Halibut4_StructN:bmtype = "tracer" ;
 		Halibut4_StructN:units = "mg N" ;
@@ -9890,7 +9890,7 @@ variables:
 		Halibut5_ResN:b_dens = 1000000000. ;
 		Halibut5_ResN:i_conc = 200000000. ;
 		Halibut5_ResN:f_conc = 200000000. ;
-		Halibut5_ResN:_FillValue = 301099.39 ;
+		Halibut5_ResN:_FillValue = 227244.82 ;
 	double Halibut5_StructN(t, b, z) ;
 		Halibut5_StructN:bmtype = "tracer" ;
 		Halibut5_StructN:units = "mg N" ;
@@ -9947,7 +9947,7 @@ variables:
 		Halibut6_ResN:b_dens = 1000000000. ;
 		Halibut6_ResN:i_conc = 200000000. ;
 		Halibut6_ResN:f_conc = 200000000. ;
-		Halibut6_ResN:_FillValue = 470758.64 ;
+		Halibut6_ResN:_FillValue = 355289.54 ;
 	double Halibut6_StructN(t, b, z) ;
 		Halibut6_StructN:bmtype = "tracer" ;
 		Halibut6_StructN:units = "mg N" ;
@@ -10004,7 +10004,7 @@ variables:
 		Halibut7_ResN:b_dens = 1000000000. ;
 		Halibut7_ResN:i_conc = 200000000. ;
 		Halibut7_ResN:f_conc = 200000000. ;
-		Halibut7_ResN:_FillValue = 662855.23 ;
+		Halibut7_ResN:_FillValue = 500268.1 ;
 	double Halibut7_StructN(t, b, z) ;
 		Halibut7_StructN:bmtype = "tracer" ;
 		Halibut7_StructN:units = "mg N" ;
@@ -10061,7 +10061,7 @@ variables:
 		Halibut8_ResN:b_dens = 1000000000. ;
 		Halibut8_ResN:i_conc = 200000000. ;
 		Halibut8_ResN:f_conc = 200000000. ;
-		Halibut8_ResN:_FillValue = 867969.92 ;
+		Halibut8_ResN:_FillValue = 655071.64 ;
 	double Halibut8_StructN(t, b, z) ;
 		Halibut8_StructN:bmtype = "tracer" ;
 		Halibut8_StructN:units = "mg N" ;
@@ -10118,7 +10118,7 @@ variables:
 		Halibut9_ResN:b_dens = 1000000000. ;
 		Halibut9_ResN:i_conc = 200000000. ;
 		Halibut9_ResN:f_conc = 200000000. ;
-		Halibut9_ResN:_FillValue = 1078017.14 ;
+		Halibut9_ResN:_FillValue = 813597.84 ;
 	double Halibut9_StructN(t, b, z) ;
 		Halibut9_StructN:bmtype = "tracer" ;
 		Halibut9_StructN:units = "mg N" ;
@@ -10187,7 +10187,7 @@ variables:
 		Herring10_ResN:b_dens = 1000000000. ;
 		Herring10_ResN:i_conc = 200000000. ;
 		Herring10_ResN:f_conc = 200000000. ;
-		Herring10_ResN:_FillValue = 1980;
+		Herring10_ResN:_FillValue = 1980.22 ;
 	double Herring10_StructN(t, b, z) ;
 		Herring10_StructN:bmtype = "tracer" ;
 		Herring10_StructN:units = "mg N" ;
@@ -10358,7 +10358,7 @@ variables:
 		Herring3_ResN:b_dens = 1000000000. ;
 		Herring3_ResN:i_conc = 200000000. ;
 		Herring3_ResN:f_conc = 200000000. ;
-		Herring3_ResN:_FillValue = 369 ;
+		Herring3_ResN:_FillValue = 369.02 ;
 	double Herring3_StructN(t, b, z) ;
 		Herring3_StructN:bmtype = "tracer" ;
 		Herring3_StructN:units = "mg N" ;
@@ -10529,7 +10529,7 @@ variables:
 		Herring6_ResN:b_dens = 1000000000. ;
 		Herring6_ResN:i_conc = 200000000. ;
 		Herring6_ResN:f_conc = 200000000. ;
-		Herring6_ResN:_FillValue = 1292 ;
+		Herring6_ResN:_FillValue = 1292.04 ;
 	double Herring6_StructN(t, b, z) ;
 		Herring6_StructN:bmtype = "tracer" ;
 		Herring6_StructN:units = "mg N" ;
@@ -10586,7 +10586,7 @@ variables:
 		Herring7_ResN:b_dens = 1000000000. ;
 		Herring7_ResN:i_conc = 200000000. ;
 		Herring7_ResN:f_conc = 200000000. ;
-		Herring7_ResN:_FillValue = 1530 ;
+		Herring7_ResN:_FillValue = 1530.22 ;
 	double Herring7_StructN(t, b, z) ;
 		Herring7_StructN:bmtype = "tracer" ;
 		Herring7_StructN:units = "mg N" ;
@@ -10643,7 +10643,7 @@ variables:
 		Herring8_ResN:b_dens = 1000000000. ;
 		Herring8_ResN:i_conc = 200000000. ;
 		Herring8_ResN:f_conc = 200000000. ;
-		Herring8_ResN:_FillValue = 1720 ;
+		Herring8_ResN:_FillValue = 1720.4 ;
 	double Herring8_StructN(t, b, z) ;
 		Herring8_StructN:bmtype = "tracer" ;
 		Herring8_StructN:units = "mg N" ;
@@ -10807,7 +10807,7 @@ variables:
 		Invasive_Species10_ResN:b_dens = 1000000000. ;
 		Invasive_Species10_ResN:i_conc = 200000000. ;
 		Invasive_Species10_ResN:f_conc = 200000000. ;
-		Invasive_Species10_ResN:_FillValue = 8532.05 ;
+		Invasive_Species10_ResN:_FillValue = 6439.28 ;
 	double Invasive_Species10_StructN(t, b, z) ;
 		Invasive_Species10_StructN:bmtype = "tracer" ;
 		Invasive_Species10_StructN:units = "mg N" ;
@@ -10864,7 +10864,7 @@ variables:
 		Invasive_Species1_ResN:b_dens = 1000000000. ;
 		Invasive_Species1_ResN:i_conc = 200000000. ;
 		Invasive_Species1_ResN:f_conc = 200000000. ;
-		Invasive_Species1_ResN:_FillValue = 359.98 ;
+		Invasive_Species1_ResN:_FillValue = 271.68 ;
 	double Invasive_Species1_StructN(t, b, z) ;
 		Invasive_Species1_StructN:bmtype = "tracer" ;
 		Invasive_Species1_StructN:units = "mg N" ;
@@ -10921,7 +10921,7 @@ variables:
 		Invasive_Species2_ResN:b_dens = 1000000000. ;
 		Invasive_Species2_ResN:i_conc = 200000000. ;
 		Invasive_Species2_ResN:f_conc = 200000000. ;
-		Invasive_Species2_ResN:_FillValue = 3499.59 ;
+		Invasive_Species2_ResN:_FillValue = 2641.2 ;
 	double Invasive_Species2_StructN(t, b, z) ;
 		Invasive_Species2_StructN:bmtype = "tracer" ;
 		Invasive_Species2_StructN:units = "mg N" ;
@@ -10978,7 +10978,7 @@ variables:
 		Invasive_Species3_ResN:b_dens = 1000000000. ;
 		Invasive_Species3_ResN:i_conc = 200000000. ;
 		Invasive_Species3_ResN:f_conc = 200000000. ;
-		Invasive_Species3_ResN:_FillValue = 6207.52 ;
+		Invasive_Species3_ResN:_FillValue = 4684.92 ;
 	double Invasive_Species3_StructN(t, b, z) ;
 		Invasive_Species3_StructN:bmtype = "tracer" ;
 		Invasive_Species3_StructN:units = "mg N" ;
@@ -11035,7 +11035,7 @@ variables:
 		Invasive_Species4_ResN:b_dens = 1000000000. ;
 		Invasive_Species4_ResN:i_conc = 200000000. ;
 		Invasive_Species4_ResN:f_conc = 200000000. ;
-		Invasive_Species4_ResN:_FillValue = 7566.28 ;
+		Invasive_Species4_ResN:_FillValue = 5710.4 ;
 	double Invasive_Species4_StructN(t, b, z) ;
 		Invasive_Species4_StructN:bmtype = "tracer" ;
 		Invasive_Species4_StructN:units = "mg N" ;
@@ -11092,7 +11092,7 @@ variables:
 		Invasive_Species5_ResN:b_dens = 1000000000. ;
 		Invasive_Species5_ResN:i_conc = 200000000. ;
 		Invasive_Species5_ResN:f_conc = 200000000. ;
-		Invasive_Species5_ResN:_FillValue = 8147.53 ;
+		Invasive_Species5_ResN:_FillValue = 6149.08 ;
 	double Invasive_Species5_StructN(t, b, z) ;
 		Invasive_Species5_StructN:bmtype = "tracer" ;
 		Invasive_Species5_StructN:units = "mg N" ;
@@ -11149,7 +11149,7 @@ variables:
 		Invasive_Species6_ResN:b_dens = 1000000000. ;
 		Invasive_Species6_ResN:i_conc = 200000000. ;
 		Invasive_Species6_ResN:f_conc = 200000000. ;
-		Invasive_Species6_ResN:_FillValue = 8382.56 ;
+		Invasive_Species6_ResN:_FillValue = 6326.46 ;
 	double Invasive_Species6_StructN(t, b, z) ;
 		Invasive_Species6_StructN:bmtype = "tracer" ;
 		Invasive_Species6_StructN:units = "mg N" ;
@@ -11206,7 +11206,7 @@ variables:
 		Invasive_Species7_ResN:b_dens = 1000000000. ;
 		Invasive_Species7_ResN:i_conc = 200000000. ;
 		Invasive_Species7_ResN:f_conc = 200000000. ;
-		Invasive_Species7_ResN:_FillValue = 8475.6 ;
+		Invasive_Species7_ResN:_FillValue = 6396.68 ;
 	double Invasive_Species7_StructN(t, b, z) ;
 		Invasive_Species7_StructN:bmtype = "tracer" ;
 		Invasive_Species7_StructN:units = "mg N" ;
@@ -11263,7 +11263,7 @@ variables:
 		Invasive_Species8_ResN:b_dens = 1000000000. ;
 		Invasive_Species8_ResN:i_conc = 200000000. ;
 		Invasive_Species8_ResN:f_conc = 200000000. ;
-		Invasive_Species8_ResN:_FillValue = 8512.14 ;
+		Invasive_Species8_ResN:_FillValue = 6424.26 ;
 	double Invasive_Species8_StructN(t, b, z) ;
 		Invasive_Species8_StructN:bmtype = "tracer" ;
 		Invasive_Species8_StructN:units = "mg N" ;
@@ -11320,7 +11320,7 @@ variables:
 		Invasive_Species9_ResN:b_dens = 1000000000. ;
 		Invasive_Species9_ResN:i_conc = 200000000. ;
 		Invasive_Species9_ResN:f_conc = 200000000. ;
-		Invasive_Species9_ResN:_FillValue = 8526.45 ;
+		Invasive_Species9_ResN:_FillValue = 6435.06 ;
 	double Invasive_Species9_StructN(t, b, z) ;
 		Invasive_Species9_StructN:bmtype = "tracer" ;
 		Invasive_Species9_StructN:units = "mg N" ;
@@ -11371,6 +11371,66 @@ variables:
 		Lab_Det_N:i_conc = 200000000. ;
 		Lab_Det_N:f_conc = 200000000. ;
 		Lab_Det_N:_FillValue = 0.2 ;
+	double DayLight(t, b, z) ;
+		DayLight:bmtype = "tracer" ;
+		DayLight:units = " " ;
+		DayLight:long_name = "DayLight intensity on the surface of a cell" ;
+		DayLight:dtype = 0 ;
+		DayLight:sumtype = 0 ;
+		DayLight:inwc = 0 ;
+		DayLight:insed = 0 ;
+		DayLight:dissol = 1 ;
+		DayLight:partic = 0 ;
+		DayLight:decay = 0. ;
+		DayLight:_FillValue = 0. ;
+	double DayLight_Adaptn_DF(t, b, z) ;
+		DayLight_Adaptn_DF:bmtype = "tracer" ;
+		DayLight_Adaptn_DF:units = "DFU" ;
+		DayLight_Adaptn_DF:long_name = "DayLight Adaptation of Dinoflagellates " ;
+		DayLight_Adaptn_DF:dtype = 2 ;
+		DayLight_Adaptn_DF:sumtype = 0 ;
+		DayLight_Adaptn_DF:inwc = 0 ;
+		DayLight_Adaptn_DF:insed = 0 ;
+		DayLight_Adaptn_DF:dissol = 1 ;
+		DayLight_Adaptn_DF:partic = 0 ;
+		DayLight_Adaptn_DF:decay = 0. ;
+		DayLight_Adaptn_DF:_FillValue = 15. ;
+	double DayLight_Adaptn_MB(t, b, z) ;
+		DayLight_Adaptn_MB:bmtype = "tracer" ;
+		DayLight_Adaptn_MB:units = "MBU" ;
+		DayLight_Adaptn_MB:long_name = "DayLight Adaptation of Microphytobenthos " ;
+		DayLight_Adaptn_MB:dtype = 2 ;
+		DayLight_Adaptn_MB:sumtype = 0 ;
+		DayLight_Adaptn_MB:inwc = 0 ;
+		DayLight_Adaptn_MB:insed = 0 ;
+		DayLight_Adaptn_MB:dissol = 1 ;
+		DayLight_Adaptn_MB:partic = 0 ;
+		DayLight_Adaptn_MB:decay = 0. ;
+		DayLight_Adaptn_MB:_FillValue = 15. ;
+	double DayLight_Adaptn_PL(t, b, z) ;
+		DayLight_Adaptn_PL:bmtype = "tracer" ;
+		DayLight_Adaptn_PL:units = "PSU" ;
+		DayLight_Adaptn_PL:long_name = "DayLight Adaptation of Diatoms" ;
+		DayLight_Adaptn_PL:dtype = 2 ;
+		DayLight_Adaptn_PL:sumtype = 0 ;
+		DayLight_Adaptn_PL:inwc = 0 ;
+		DayLight_Adaptn_PL:insed = 0 ;
+		DayLight_Adaptn_PL:dissol = 1 ;
+		DayLight_Adaptn_PL:partic = 0 ;
+		DayLight_Adaptn_PL:decay = 0. ;
+		DayLight_Adaptn_PL:_FillValue = 15. ;
+	double DayLight_Adaptn_PS(t, b, z) ;
+		DayLight_Adaptn_PS:bmtype = "tracer" ;
+		DayLight_Adaptn_PS:units = "PSU" ;
+		DayLight_Adaptn_PS:long_name = "DayLight Adaptation of PicoPhytoplankton " ;
+		DayLight_Adaptn_PS:dtype = 2 ;
+		DayLight_Adaptn_PS:sumtype = 0 ;
+		DayLight_Adaptn_PS:inwc = 0 ;
+		DayLight_Adaptn_PS:insed = 0 ;
+		DayLight_Adaptn_PS:dissol = 1 ;
+		DayLight_Adaptn_PS:partic = 0 ;
+		DayLight_Adaptn_PS:decay = 0. ;
+		DayLight_Adaptn_PS:_FillValue = 15. ;
 	double Light(t, b, z) ;
 		Light:bmtype = "tracer" ;
 		Light:units = " " ;
@@ -11468,7 +11528,7 @@ variables:
 		Little_Skate10_ResN:b_dens = 1000000000. ;
 		Little_Skate10_ResN:i_conc = 200000000. ;
 		Little_Skate10_ResN:f_conc = 200000000. ;
-		Little_Skate10_ResN:_FillValue = 24046.26 ;
+		Little_Skate10_ResN:_FillValue = 18148.12 ;
 	double Little_Skate10_StructN(t, b, z) ;
 		Little_Skate10_StructN:bmtype = "tracer" ;
 		Little_Skate10_StructN:units = "mg N" ;
@@ -11525,7 +11585,7 @@ variables:
 		Little_Skate1_ResN:b_dens = 1000000000. ;
 		Little_Skate1_ResN:i_conc = 200000000. ;
 		Little_Skate1_ResN:f_conc = 200000000. ;
-		Little_Skate1_ResN:_FillValue = 122.14 ;
+		Little_Skate1_ResN:_FillValue = 92.18 ;
 	double Little_Skate1_StructN(t, b, z) ;
 		Little_Skate1_StructN:bmtype = "tracer" ;
 		Little_Skate1_StructN:units = "mg N" ;
@@ -11582,7 +11642,7 @@ variables:
 		Little_Skate2_ResN:b_dens = 1000000000. ;
 		Little_Skate2_ResN:i_conc = 200000000. ;
 		Little_Skate2_ResN:f_conc = 200000000. ;
-		Little_Skate2_ResN:_FillValue = 3826.49 ;
+		Little_Skate2_ResN:_FillValue = 2887.92 ;
 	double Little_Skate2_StructN(t, b, z) ;
 		Little_Skate2_StructN:bmtype = "tracer" ;
 		Little_Skate2_StructN:units = "mg N" ;
@@ -11639,7 +11699,7 @@ variables:
 		Little_Skate3_ResN:b_dens = 1000000000. ;
 		Little_Skate3_ResN:i_conc = 200000000. ;
 		Little_Skate3_ResN:f_conc = 200000000. ;
-		Little_Skate3_ResN:_FillValue = 10111.6 ;
+		Little_Skate3_ResN:_FillValue = 7631.4 ;
 	double Little_Skate3_StructN(t, b, z) ;
 		Little_Skate3_StructN:bmtype = "tracer" ;
 		Little_Skate3_StructN:units = "mg N" ;
@@ -11696,7 +11756,7 @@ variables:
 		Little_Skate4_ResN:b_dens = 1000000000. ;
 		Little_Skate4_ResN:i_conc = 200000000. ;
 		Little_Skate4_ResN:f_conc = 200000000. ;
-		Little_Skate4_ResN:_FillValue = 15497.54 ;
+		Little_Skate4_ResN:_FillValue = 11696.26 ;
 	double Little_Skate4_StructN(t, b, z) ;
 		Little_Skate4_StructN:bmtype = "tracer" ;
 		Little_Skate4_StructN:units = "mg N" ;
@@ -11753,7 +11813,7 @@ variables:
 		Little_Skate5_ResN:b_dens = 1000000000. ;
 		Little_Skate5_ResN:i_conc = 200000000. ;
 		Little_Skate5_ResN:f_conc = 200000000. ;
-		Little_Skate5_ResN:_FillValue = 19148.34 ;
+		Little_Skate5_ResN:_FillValue = 14451.58 ;
 	double Little_Skate5_StructN(t, b, z) ;
 		Little_Skate5_StructN:bmtype = "tracer" ;
 		Little_Skate5_StructN:units = "mg N" ;
@@ -11810,7 +11870,7 @@ variables:
 		Little_Skate6_ResN:b_dens = 1000000000. ;
 		Little_Skate6_ResN:i_conc = 200000000. ;
 		Little_Skate6_ResN:f_conc = 200000000. ;
-		Little_Skate6_ResN:_FillValue = 21379.93 ;
+		Little_Skate6_ResN:_FillValue = 16135.8 ;
 	double Little_Skate6_StructN(t, b, z) ;
 		Little_Skate6_StructN:bmtype = "tracer" ;
 		Little_Skate6_StructN:units = "mg N" ;
@@ -11867,7 +11927,7 @@ variables:
 		Little_Skate7_ResN:b_dens = 1000000000. ;
 		Little_Skate7_ResN:i_conc = 200000000. ;
 		Little_Skate7_ResN:f_conc = 200000000. ;
-		Little_Skate7_ResN:_FillValue = 22676.45 ;
+		Little_Skate7_ResN:_FillValue = 17114.3 ;
 	double Little_Skate7_StructN(t, b, z) ;
 		Little_Skate7_StructN:bmtype = "tracer" ;
 		Little_Skate7_StructN:units = "mg N" ;
@@ -11924,7 +11984,7 @@ variables:
 		Little_Skate8_ResN:b_dens = 1000000000. ;
 		Little_Skate8_ResN:i_conc = 200000000. ;
 		Little_Skate8_ResN:f_conc = 200000000. ;
-		Little_Skate8_ResN:_FillValue = 23410.13 ;
+		Little_Skate8_ResN:_FillValue = 17668.02 ;
 	double Little_Skate8_StructN(t, b, z) ;
 		Little_Skate8_StructN:bmtype = "tracer" ;
 		Little_Skate8_StructN:units = "mg N" ;
@@ -11981,7 +12041,7 @@ variables:
 		Little_Skate9_ResN:b_dens = 1000000000. ;
 		Little_Skate9_ResN:i_conc = 200000000. ;
 		Little_Skate9_ResN:f_conc = 200000000. ;
-		Little_Skate9_ResN:_FillValue = 23819.52 ;
+		Little_Skate9_ResN:_FillValue = 17977. ;
 	double Little_Skate9_StructN(t, b, z) ;
 		Little_Skate9_StructN:bmtype = "tracer" ;
 		Little_Skate9_StructN:units = "mg N" ;
@@ -12095,7 +12155,7 @@ variables:
 		Mackerel10_ResN:b_dens = 1000000000. ;
 		Mackerel10_ResN:i_conc = 200000000. ;
 		Mackerel10_ResN:f_conc = 200000000. ;
-		Mackerel10_ResN:_FillValue = 4709.05 ;
+		Mackerel10_ResN:_FillValue = 3554. ;
 	double Mackerel10_StructN(t, b, z) ;
 		Mackerel10_StructN:bmtype = "tracer" ;
 		Mackerel10_StructN:units = "mg N" ;
@@ -12152,7 +12212,7 @@ variables:
 		Mackerel1_ResN:b_dens = 1000000000. ;
 		Mackerel1_ResN:i_conc = 200000000. ;
 		Mackerel1_ResN:f_conc = 200000000. ;
-		Mackerel1_ResN:_FillValue = 40.12 ;
+		Mackerel1_ResN:_FillValue = 30.28 ;
 	double Mackerel1_StructN(t, b, z) ;
 		Mackerel1_StructN:bmtype = "tracer" ;
 		Mackerel1_StructN:units = "mg N" ;
@@ -12209,7 +12269,7 @@ variables:
 		Mackerel2_ResN:b_dens = 1000000000. ;
 		Mackerel2_ResN:i_conc = 200000000. ;
 		Mackerel2_ResN:f_conc = 200000000. ;
-		Mackerel2_ResN:_FillValue = 248.73 ;
+		Mackerel2_ResN:_FillValue = 187.72 ;
 	double Mackerel2_StructN(t, b, z) ;
 		Mackerel2_StructN:bmtype = "tracer" ;
 		Mackerel2_StructN:units = "mg N" ;
@@ -12266,7 +12326,7 @@ variables:
 		Mackerel3_ResN:b_dens = 1000000000. ;
 		Mackerel3_ResN:i_conc = 200000000. ;
 		Mackerel3_ResN:f_conc = 200000000. ;
-		Mackerel3_ResN:_FillValue = 647.66 ;
+		Mackerel3_ResN:_FillValue = 488.8 ;
 	double Mackerel3_StructN(t, b, z) ;
 		Mackerel3_StructN:bmtype = "tracer" ;
 		Mackerel3_StructN:units = "mg N" ;
@@ -12323,7 +12383,7 @@ variables:
 		Mackerel4_ResN:b_dens = 1000000000. ;
 		Mackerel4_ResN:i_conc = 200000000. ;
 		Mackerel4_ResN:f_conc = 200000000. ;
-		Mackerel4_ResN:_FillValue = 1189.24 ;
+		Mackerel4_ResN:_FillValue = 897.54 ;
 	double Mackerel4_StructN(t, b, z) ;
 		Mackerel4_StructN:bmtype = "tracer" ;
 		Mackerel4_StructN:units = "mg N" ;
@@ -12380,7 +12440,7 @@ variables:
 		Mackerel5_ResN:b_dens = 1000000000. ;
 		Mackerel5_ResN:i_conc = 200000000. ;
 		Mackerel5_ResN:f_conc = 200000000. ;
-		Mackerel5_ResN:_FillValue = 1811.3 ;
+		Mackerel5_ResN:_FillValue = 1367.02 ;
 	double Mackerel5_StructN(t, b, z) ;
 		Mackerel5_StructN:bmtype = "tracer" ;
 		Mackerel5_StructN:units = "mg N" ;
@@ -12437,7 +12497,7 @@ variables:
 		Mackerel6_ResN:b_dens = 1000000000. ;
 		Mackerel6_ResN:i_conc = 200000000. ;
 		Mackerel6_ResN:f_conc = 200000000. ;
-		Mackerel6_ResN:_FillValue = 2459.44 ;
+		Mackerel6_ResN:_FillValue = 1856.18 ;
 	double Mackerel6_StructN(t, b, z) ;
 		Mackerel6_StructN:bmtype = "tracer" ;
 		Mackerel6_StructN:units = "mg N" ;
@@ -12494,7 +12554,7 @@ variables:
 		Mackerel7_ResN:b_dens = 1000000000. ;
 		Mackerel7_ResN:i_conc = 200000000. ;
 		Mackerel7_ResN:f_conc = 200000000. ;
-		Mackerel7_ResN:_FillValue = 3093.72 ;
+		Mackerel7_ResN:_FillValue = 2334.88 ;
 	double Mackerel7_StructN(t, b, z) ;
 		Mackerel7_StructN:bmtype = "tracer" ;
 		Mackerel7_StructN:units = "mg N" ;
@@ -12551,7 +12611,7 @@ variables:
 		Mackerel8_ResN:b_dens = 1000000000. ;
 		Mackerel8_ResN:i_conc = 200000000. ;
 		Mackerel8_ResN:f_conc = 200000000. ;
-		Mackerel8_ResN:_FillValue = 3688.32 ;
+		Mackerel8_ResN:_FillValue = 2783.64 ;
 	double Mackerel8_StructN(t, b, z) ;
 		Mackerel8_StructN:bmtype = "tracer" ;
 		Mackerel8_StructN:units = "mg N" ;
@@ -12608,7 +12668,7 @@ variables:
 		Mackerel9_ResN:b_dens = 1000000000. ;
 		Mackerel9_ResN:i_conc = 200000000. ;
 		Mackerel9_ResN:f_conc = 200000000. ;
-		Mackerel9_ResN:_FillValue = 4228.82 ;
+		Mackerel9_ResN:_FillValue = 3191.56 ;
 	double Mackerel9_StructN(t, b, z) ;
 		Mackerel9_StructN:bmtype = "tracer" ;
 		Mackerel9_StructN:units = "mg N" ;
@@ -12717,7 +12777,7 @@ variables:
 		Menhaden10_ResN:b_dens = 1000000000. ;
 		Menhaden10_ResN:i_conc = 200000000. ;
 		Menhaden10_ResN:f_conc = 200000000. ;
-		Menhaden10_ResN:_FillValue = 1811.96 ;
+		Menhaden10_ResN:_FillValue = 1367.52 ;
 	double Menhaden10_StructN(t, b, z) ;
 		Menhaden10_StructN:bmtype = "tracer" ;
 		Menhaden10_StructN:units = "mg N" ;
@@ -12774,7 +12834,7 @@ variables:
 		Menhaden1_ResN:b_dens = 1000000000. ;
 		Menhaden1_ResN:i_conc = 200000000. ;
 		Menhaden1_ResN:f_conc = 200000000. ;
-		Menhaden1_ResN:_FillValue = 27.48 ;
+		Menhaden1_ResN:_FillValue = 20.74 ;
 	double Menhaden1_StructN(t, b, z) ;
 		Menhaden1_StructN:bmtype = "tracer" ;
 		Menhaden1_StructN:units = "mg N" ;
@@ -12831,7 +12891,7 @@ variables:
 		Menhaden2_ResN:b_dens = 1000000000. ;
 		Menhaden2_ResN:i_conc = 200000000. ;
 		Menhaden2_ResN:f_conc = 200000000. ;
-		Menhaden2_ResN:_FillValue = 147.55 ;
+		Menhaden2_ResN:_FillValue = 111.36 ;
 	double Menhaden2_StructN(t, b, z) ;
 		Menhaden2_StructN:bmtype = "tracer" ;
 		Menhaden2_StructN:units = "mg N" ;
@@ -12888,7 +12948,7 @@ variables:
 		Menhaden3_ResN:b_dens = 1000000000. ;
 		Menhaden3_ResN:i_conc = 200000000. ;
 		Menhaden3_ResN:f_conc = 200000000. ;
-		Menhaden3_ResN:_FillValue = 348.74 ;
+		Menhaden3_ResN:_FillValue = 263.2 ;
 	double Menhaden3_StructN(t, b, z) ;
 		Menhaden3_StructN:bmtype = "tracer" ;
 		Menhaden3_StructN:units = "mg N" ;
@@ -12945,7 +13005,7 @@ variables:
 		Menhaden4_ResN:b_dens = 1000000000. ;
 		Menhaden4_ResN:i_conc = 200000000. ;
 		Menhaden4_ResN:f_conc = 200000000. ;
-		Menhaden4_ResN:_FillValue = 593.87 ;
+		Menhaden4_ResN:_FillValue = 448.2 ;
 	double Menhaden4_StructN(t, b, z) ;
 		Menhaden4_StructN:bmtype = "tracer" ;
 		Menhaden4_StructN:units = "mg N" ;
@@ -13002,7 +13062,7 @@ variables:
 		Menhaden5_ResN:b_dens = 1000000000. ;
 		Menhaden5_ResN:i_conc = 200000000. ;
 		Menhaden5_ResN:f_conc = 200000000. ;
-		Menhaden5_ResN:_FillValue = 850.09 ;
+		Menhaden5_ResN:_FillValue = 641.58 ;
 	double Menhaden5_StructN(t, b, z) ;
 		Menhaden5_StructN:bmtype = "tracer" ;
 		Menhaden5_StructN:units = "mg N" ;
@@ -13059,7 +13119,7 @@ variables:
 		Menhaden6_ResN:b_dens = 1000000000. ;
 		Menhaden6_ResN:i_conc = 200000000. ;
 		Menhaden6_ResN:f_conc = 200000000. ;
-		Menhaden6_ResN:_FillValue = 1095.3 ;
+		Menhaden6_ResN:_FillValue = 826.64 ;
 	double Menhaden6_StructN(t, b, z) ;
 		Menhaden6_StructN:bmtype = "tracer" ;
 		Menhaden6_StructN:units = "mg N" ;
@@ -13116,7 +13176,7 @@ variables:
 		Menhaden7_ResN:b_dens = 1000000000. ;
 		Menhaden7_ResN:i_conc = 200000000. ;
 		Menhaden7_ResN:f_conc = 200000000. ;
-		Menhaden7_ResN:_FillValue = 1317.26 ;
+		Menhaden7_ResN:_FillValue = 994.16 ;
 	double Menhaden7_StructN(t, b, z) ;
 		Menhaden7_StructN:bmtype = "tracer" ;
 		Menhaden7_StructN:units = "mg N" ;
@@ -13173,7 +13233,7 @@ variables:
 		Menhaden8_ResN:b_dens = 1000000000. ;
 		Menhaden8_ResN:i_conc = 200000000. ;
 		Menhaden8_ResN:f_conc = 200000000. ;
-		Menhaden8_ResN:_FillValue = 1510.77 ;
+		Menhaden8_ResN:_FillValue = 1140.2 ;
 	double Menhaden8_StructN(t, b, z) ;
 		Menhaden8_StructN:bmtype = "tracer" ;
 		Menhaden8_StructN:units = "mg N" ;
@@ -13230,7 +13290,7 @@ variables:
 		Menhaden9_ResN:b_dens = 1000000000. ;
 		Menhaden9_ResN:i_conc = 200000000. ;
 		Menhaden9_ResN:f_conc = 200000000. ;
-		Menhaden9_ResN:_FillValue = 1675.09 ;
+		Menhaden9_ResN:_FillValue = 1264.22 ;
 	double Menhaden9_StructN(t, b, z) ;
 		Menhaden9_StructN:bmtype = "tracer" ;
 		Menhaden9_StructN:units = "mg N" ;
@@ -13299,7 +13359,7 @@ variables:
 		Mesopelagic_Mig_Fish10_ResN:b_dens = 1000000000. ;
 		Mesopelagic_Mig_Fish10_ResN:i_conc = 200000000. ;
 		Mesopelagic_Mig_Fish10_ResN:f_conc = 200000000. ;
-		Mesopelagic_Mig_Fish10_ResN:_FillValue = 46.06 ;
+		Mesopelagic_Mig_Fish10_ResN:_FillValue = 34.76 ;
 	double Mesopelagic_Mig_Fish10_StructN(t, b, z) ;
 		Mesopelagic_Mig_Fish10_StructN:bmtype = "tracer" ;
 		Mesopelagic_Mig_Fish10_StructN:units = "mg N" ;
@@ -13356,7 +13416,7 @@ variables:
 		Mesopelagic_Mig_Fish1_ResN:b_dens = 1000000000. ;
 		Mesopelagic_Mig_Fish1_ResN:i_conc = 200000000. ;
 		Mesopelagic_Mig_Fish1_ResN:f_conc = 200000000. ;
-		Mesopelagic_Mig_Fish1_ResN:_FillValue = 1.06 ;
+		Mesopelagic_Mig_Fish1_ResN:_FillValue = 0.8 ;
 	double Mesopelagic_Mig_Fish1_StructN(t, b, z) ;
 		Mesopelagic_Mig_Fish1_StructN:bmtype = "tracer" ;
 		Mesopelagic_Mig_Fish1_StructN:units = "mg N" ;
@@ -13413,7 +13473,7 @@ variables:
 		Mesopelagic_Mig_Fish2_ResN:b_dens = 1000000000. ;
 		Mesopelagic_Mig_Fish2_ResN:i_conc = 200000000. ;
 		Mesopelagic_Mig_Fish2_ResN:f_conc = 200000000. ;
-		Mesopelagic_Mig_Fish2_ResN:_FillValue = 5.49 ;
+		Mesopelagic_Mig_Fish2_ResN:_FillValue = 4.14 ;
 	double Mesopelagic_Mig_Fish2_StructN(t, b, z) ;
 		Mesopelagic_Mig_Fish2_StructN:bmtype = "tracer" ;
 		Mesopelagic_Mig_Fish2_StructN:units = "mg N" ;
@@ -13470,7 +13530,7 @@ variables:
 		Mesopelagic_Mig_Fish3_ResN:b_dens = 1000000000. ;
 		Mesopelagic_Mig_Fish3_ResN:i_conc = 200000000. ;
 		Mesopelagic_Mig_Fish3_ResN:f_conc = 200000000. ;
-		Mesopelagic_Mig_Fish3_ResN:_FillValue = 12.22 ;
+		Mesopelagic_Mig_Fish3_ResN:_FillValue = 9.22 ;
 	double Mesopelagic_Mig_Fish3_StructN(t, b, z) ;
 		Mesopelagic_Mig_Fish3_StructN:bmtype = "tracer" ;
 		Mesopelagic_Mig_Fish3_StructN:units = "mg N" ;
@@ -13527,7 +13587,7 @@ variables:
 		Mesopelagic_Mig_Fish4_ResN:b_dens = 1000000000. ;
 		Mesopelagic_Mig_Fish4_ResN:i_conc = 200000000. ;
 		Mesopelagic_Mig_Fish4_ResN:f_conc = 200000000. ;
-		Mesopelagic_Mig_Fish4_ResN:_FillValue = 19.58 ;
+		Mesopelagic_Mig_Fish4_ResN:_FillValue = 14.78 ;
 	double Mesopelagic_Mig_Fish4_StructN(t, b, z) ;
 		Mesopelagic_Mig_Fish4_StructN:bmtype = "tracer" ;
 		Mesopelagic_Mig_Fish4_StructN:units = "mg N" ;
@@ -13584,7 +13644,7 @@ variables:
 		Mesopelagic_Mig_Fish5_ResN:b_dens = 1000000000. ;
 		Mesopelagic_Mig_Fish5_ResN:i_conc = 200000000. ;
 		Mesopelagic_Mig_Fish5_ResN:f_conc = 200000000. ;
-		Mesopelagic_Mig_Fish5_ResN:_FillValue = 26.47 ;
+		Mesopelagic_Mig_Fish5_ResN:_FillValue = 19.98 ;
 	double Mesopelagic_Mig_Fish5_StructN(t, b, z) ;
 		Mesopelagic_Mig_Fish5_StructN:bmtype = "tracer" ;
 		Mesopelagic_Mig_Fish5_StructN:units = "mg N" ;
@@ -13641,7 +13701,7 @@ variables:
 		Mesopelagic_Mig_Fish6_ResN:b_dens = 1000000000. ;
 		Mesopelagic_Mig_Fish6_ResN:i_conc = 200000000. ;
 		Mesopelagic_Mig_Fish6_ResN:f_conc = 200000000. ;
-		Mesopelagic_Mig_Fish6_ResN:_FillValue = 32.38 ;
+		Mesopelagic_Mig_Fish6_ResN:_FillValue = 24.44 ;
 	double Mesopelagic_Mig_Fish6_StructN(t, b, z) ;
 		Mesopelagic_Mig_Fish6_StructN:bmtype = "tracer" ;
 		Mesopelagic_Mig_Fish6_StructN:units = "mg N" ;
@@ -13698,7 +13758,7 @@ variables:
 		Mesopelagic_Mig_Fish7_ResN:b_dens = 1000000000. ;
 		Mesopelagic_Mig_Fish7_ResN:i_conc = 200000000. ;
 		Mesopelagic_Mig_Fish7_ResN:f_conc = 200000000. ;
-		Mesopelagic_Mig_Fish7_ResN:_FillValue = 37.21 ;
+		Mesopelagic_Mig_Fish7_ResN:_FillValue = 28.08 ;
 	double Mesopelagic_Mig_Fish7_StructN(t, b, z) ;
 		Mesopelagic_Mig_Fish7_StructN:bmtype = "tracer" ;
 		Mesopelagic_Mig_Fish7_StructN:units = "mg N" ;
@@ -13755,7 +13815,7 @@ variables:
 		Mesopelagic_Mig_Fish8_ResN:b_dens = 1000000000. ;
 		Mesopelagic_Mig_Fish8_ResN:i_conc = 200000000. ;
 		Mesopelagic_Mig_Fish8_ResN:f_conc = 200000000. ;
-		Mesopelagic_Mig_Fish8_ResN:_FillValue = 40.97 ;
+		Mesopelagic_Mig_Fish8_ResN:_FillValue = 30.92 ;
 	double Mesopelagic_Mig_Fish8_StructN(t, b, z) ;
 		Mesopelagic_Mig_Fish8_StructN:bmtype = "tracer" ;
 		Mesopelagic_Mig_Fish8_StructN:units = "mg N" ;
@@ -13812,7 +13872,7 @@ variables:
 		Mesopelagic_Mig_Fish9_ResN:b_dens = 1000000000. ;
 		Mesopelagic_Mig_Fish9_ResN:i_conc = 200000000. ;
 		Mesopelagic_Mig_Fish9_ResN:f_conc = 200000000. ;
-		Mesopelagic_Mig_Fish9_ResN:_FillValue = 43.88 ;
+		Mesopelagic_Mig_Fish9_ResN:_FillValue = 33.12 ;
 	double Mesopelagic_Mig_Fish9_StructN(t, b, z) ;
 		Mesopelagic_Mig_Fish9_StructN:bmtype = "tracer" ;
 		Mesopelagic_Mig_Fish9_StructN:units = "mg N" ;
@@ -13957,7 +14017,7 @@ variables:
 		Misc_Demersal_Fish10_ResN:b_dens = 1000000000. ;
 		Misc_Demersal_Fish10_ResN:i_conc = 200000000. ;
 		Misc_Demersal_Fish10_ResN:f_conc = 200000000. ;
-		Misc_Demersal_Fish10_ResN:_FillValue = 12916.95 ;
+		Misc_Demersal_Fish10_ResN:_FillValue = 9748.64 ;
 	double Misc_Demersal_Fish10_StructN(t, b, z) ;
 		Misc_Demersal_Fish10_StructN:bmtype = "tracer" ;
 		Misc_Demersal_Fish10_StructN:units = "mg N" ;
@@ -14014,7 +14074,7 @@ variables:
 		Misc_Demersal_Fish1_ResN:b_dens = 1000000000. ;
 		Misc_Demersal_Fish1_ResN:i_conc = 200000000. ;
 		Misc_Demersal_Fish1_ResN:f_conc = 200000000. ;
-		Misc_Demersal_Fish1_ResN:_FillValue = 127.12 ;
+		Misc_Demersal_Fish1_ResN:_FillValue = 95.94 ;
 	double Misc_Demersal_Fish1_StructN(t, b, z) ;
 		Misc_Demersal_Fish1_StructN:bmtype = "tracer" ;
 		Misc_Demersal_Fish1_StructN:units = "mg N" ;
@@ -14071,7 +14131,7 @@ variables:
 		Misc_Demersal_Fish2_ResN:b_dens = 1000000000. ;
 		Misc_Demersal_Fish2_ResN:i_conc = 200000000. ;
 		Misc_Demersal_Fish2_ResN:f_conc = 200000000. ;
-		Misc_Demersal_Fish2_ResN:_FillValue = 784.32 ;
+		Misc_Demersal_Fish2_ResN:_FillValue = 591.94 ;
 	double Misc_Demersal_Fish2_StructN(t, b, z) ;
 		Misc_Demersal_Fish2_StructN:bmtype = "tracer" ;
 		Misc_Demersal_Fish2_StructN:units = "mg N" ;
@@ -14128,7 +14188,7 @@ variables:
 		Misc_Demersal_Fish3_ResN:b_dens = 1000000000. ;
 		Misc_Demersal_Fish3_ResN:i_conc = 200000000. ;
 		Misc_Demersal_Fish3_ResN:f_conc = 200000000. ;
-		Misc_Demersal_Fish3_ResN:_FillValue = 2009.26 ;
+		Misc_Demersal_Fish3_ResN:_FillValue = 1516.42 ;
 	double Misc_Demersal_Fish3_StructN(t, b, z) ;
 		Misc_Demersal_Fish3_StructN:bmtype = "tracer" ;
 		Misc_Demersal_Fish3_StructN:units = "mg N" ;
@@ -14185,7 +14245,7 @@ variables:
 		Misc_Demersal_Fish4_ResN:b_dens = 1000000000. ;
 		Misc_Demersal_Fish4_ResN:i_conc = 200000000. ;
 		Misc_Demersal_Fish4_ResN:f_conc = 200000000. ;
-		Misc_Demersal_Fish4_ResN:_FillValue = 3618.73 ;
+		Misc_Demersal_Fish4_ResN:_FillValue = 2731.12 ;
 	double Misc_Demersal_Fish4_StructN(t, b, z) ;
 		Misc_Demersal_Fish4_StructN:bmtype = "tracer" ;
 		Misc_Demersal_Fish4_StructN:units = "mg N" ;
@@ -14242,7 +14302,7 @@ variables:
 		Misc_Demersal_Fish5_ResN:b_dens = 1000000000. ;
 		Misc_Demersal_Fish5_ResN:i_conc = 200000000. ;
 		Misc_Demersal_Fish5_ResN:f_conc = 200000000. ;
-		Misc_Demersal_Fish5_ResN:_FillValue = 5403.11 ;
+		Misc_Demersal_Fish5_ResN:_FillValue = 4077.82 ;
 	double Misc_Demersal_Fish5_StructN(t, b, z) ;
 		Misc_Demersal_Fish5_StructN:bmtype = "tracer" ;
 		Misc_Demersal_Fish5_StructN:units = "mg N" ;
@@ -14299,7 +14359,7 @@ variables:
 		Misc_Demersal_Fish6_ResN:b_dens = 1000000000. ;
 		Misc_Demersal_Fish6_ResN:i_conc = 200000000. ;
 		Misc_Demersal_Fish6_ResN:f_conc = 200000000. ;
-		Misc_Demersal_Fish6_ResN:_FillValue = 7196.29 ;
+		Misc_Demersal_Fish6_ResN:_FillValue = 5431.16 ;
 	double Misc_Demersal_Fish6_StructN(t, b, z) ;
 		Misc_Demersal_Fish6_StructN:bmtype = "tracer" ;
 		Misc_Demersal_Fish6_StructN:units = "mg N" ;
@@ -14356,7 +14416,7 @@ variables:
 		Misc_Demersal_Fish7_ResN:b_dens = 1000000000. ;
 		Misc_Demersal_Fish7_ResN:i_conc = 200000000. ;
 		Misc_Demersal_Fish7_ResN:f_conc = 200000000. ;
-		Misc_Demersal_Fish7_ResN:_FillValue = 8888.79 ;
+		Misc_Demersal_Fish7_ResN:_FillValue = 6708.52 ;
 	double Misc_Demersal_Fish7_StructN(t, b, z) ;
 		Misc_Demersal_Fish7_StructN:bmtype = "tracer" ;
 		Misc_Demersal_Fish7_StructN:units = "mg N" ;
@@ -14413,7 +14473,7 @@ variables:
 		Misc_Demersal_Fish8_ResN:b_dens = 1000000000. ;
 		Misc_Demersal_Fish8_ResN:i_conc = 200000000. ;
 		Misc_Demersal_Fish8_ResN:f_conc = 200000000. ;
-		Misc_Demersal_Fish8_ResN:_FillValue = 10419.69 ;
+		Misc_Demersal_Fish8_ResN:_FillValue = 7863.92 ;
 	double Misc_Demersal_Fish8_StructN(t, b, z) ;
 		Misc_Demersal_Fish8_StructN:bmtype = "tracer" ;
 		Misc_Demersal_Fish8_StructN:units = "mg N" ;
@@ -14470,7 +14530,7 @@ variables:
 		Misc_Demersal_Fish9_ResN:b_dens = 1000000000. ;
 		Misc_Demersal_Fish9_ResN:i_conc = 200000000. ;
 		Misc_Demersal_Fish9_ResN:f_conc = 200000000. ;
-		Misc_Demersal_Fish9_ResN:_FillValue = 11763.32 ;
+		Misc_Demersal_Fish9_ResN:_FillValue = 8877.98 ;
 	double Misc_Demersal_Fish9_StructN(t, b, z) ;
 		Misc_Demersal_Fish9_StructN:bmtype = "tracer" ;
 		Misc_Demersal_Fish9_StructN:units = "mg N" ;
@@ -14539,7 +14599,7 @@ variables:
 		Monkfish10_ResN:b_dens = 1000000000. ;
 		Monkfish10_ResN:i_conc = 200000000. ;
 		Monkfish10_ResN:f_conc = 200000000. ;
-		Monkfish10_ResN:_FillValue = 67231.11 ;
+		Monkfish10_ResN:_FillValue = 38055.345 ;
 	double Monkfish10_StructN(t, b, z) ;
 		Monkfish10_StructN:bmtype = "tracer" ;
 		Monkfish10_StructN:units = "mg N" ;
@@ -14596,7 +14656,7 @@ variables:
 		Monkfish1_ResN:b_dens = 1000000000. ;
 		Monkfish1_ResN:i_conc = 200000000. ;
 		Monkfish1_ResN:f_conc = 200000000. ;
-		Monkfish1_ResN:_FillValue = 170.21 ;
+		Monkfish1_ResN:_FillValue = 96.345 ;
 	double Monkfish1_StructN(t, b, z) ;
 		Monkfish1_StructN:bmtype = "tracer" ;
 		Monkfish1_StructN:units = "mg N" ;
@@ -14653,7 +14713,7 @@ variables:
 		Monkfish2_ResN:b_dens = 1000000000. ;
 		Monkfish2_ResN:i_conc = 200000000. ;
 		Monkfish2_ResN:f_conc = 200000000. ;
-		Monkfish2_ResN:_FillValue = 1367.13 ;
+		Monkfish2_ResN:_FillValue = 773.85 ;
 	double Monkfish2_StructN(t, b, z) ;
 		Monkfish2_StructN:bmtype = "tracer" ;
 		Monkfish2_StructN:units = "mg N" ;
@@ -14710,7 +14770,7 @@ variables:
 		Monkfish3_ResN:b_dens = 1000000000. ;
 		Monkfish3_ResN:i_conc = 200000000. ;
 		Monkfish3_ResN:f_conc = 200000000. ;
-		Monkfish3_ResN:_FillValue = 4209.82 ;
+		Monkfish3_ResN:_FillValue = 2382.915 ;
 	double Monkfish3_StructN(t, b, z) ;
 		Monkfish3_StructN:bmtype = "tracer" ;
 		Monkfish3_StructN:units = "mg N" ;
@@ -14767,7 +14827,7 @@ variables:
 		Monkfish4_ResN:b_dens = 1000000000. ;
 		Monkfish4_ResN:i_conc = 200000000. ;
 		Monkfish4_ResN:f_conc = 200000000. ;
-		Monkfish4_ResN:_FillValue = 8912.11 ;
+		Monkfish4_ResN:_FillValue = 5044.59 ;
 	double Monkfish4_StructN(t, b, z) ;
 		Monkfish4_StructN:bmtype = "tracer" ;
 		Monkfish4_StructN:units = "mg N" ;
@@ -14824,7 +14884,7 @@ variables:
 		Monkfish5_ResN:b_dens = 1000000000. ;
 		Monkfish5_ResN:i_conc = 200000000. ;
 		Monkfish5_ResN:f_conc = 200000000. ;
-		Monkfish5_ResN:_FillValue = 15436.75 ;
+		Monkfish5_ResN:_FillValue = 8737.785 ;
 	double Monkfish5_StructN(t, b, z) ;
 		Monkfish5_StructN:bmtype = "tracer" ;
 		Monkfish5_StructN:units = "mg N" ;
@@ -14881,7 +14941,7 @@ variables:
 		Monkfish6_ResN:b_dens = 1000000000. ;
 		Monkfish6_ResN:i_conc = 200000000. ;
 		Monkfish6_ResN:f_conc = 200000000. ;
-		Monkfish6_ResN:_FillValue = 23600.69 ;
+		Monkfish6_ResN:_FillValue = 13358.88 ;
 	double Monkfish6_StructN(t, b, z) ;
 		Monkfish6_StructN:bmtype = "tracer" ;
 		Monkfish6_StructN:units = "mg N" ;
@@ -14938,7 +14998,7 @@ variables:
 		Monkfish7_ResN:b_dens = 1000000000. ;
 		Monkfish7_ResN:i_conc = 200000000. ;
 		Monkfish7_ResN:f_conc = 200000000. ;
-		Monkfish7_ResN:_FillValue = 33146.01 ;
+		Monkfish7_ResN:_FillValue = 18761.895 ;
 	double Monkfish7_StructN(t, b, z) ;
 		Monkfish7_StructN:bmtype = "tracer" ;
 		Monkfish7_StructN:units = "mg N" ;
@@ -14995,7 +15055,7 @@ variables:
 		Monkfish8_ResN:b_dens = 1000000000. ;
 		Monkfish8_ResN:i_conc = 200000000. ;
 		Monkfish8_ResN:f_conc = 200000000. ;
-		Monkfish8_ResN:_FillValue = 43786.56 ;
+		Monkfish8_ResN:_FillValue = 24784.845 ;
 	double Monkfish8_StructN(t, b, z) ;
 		Monkfish8_StructN:bmtype = "tracer" ;
 		Monkfish8_StructN:units = "mg N" ;
@@ -15052,7 +15112,7 @@ variables:
 		Monkfish9_ResN:b_dens = 1000000000. ;
 		Monkfish9_ResN:i_conc = 200000000. ;
 		Monkfish9_ResN:f_conc = 200000000. ;
-		Monkfish9_ResN:_FillValue = 55237.1 ;
+		Monkfish9_ResN:_FillValue = 31266.285 ;
 	double Monkfish9_StructN(t, b, z) ;
 		Monkfish9_StructN:bmtype = "tracer" ;
 		Monkfish9_StructN:units = "mg N" ;
@@ -15195,7 +15255,7 @@ variables:
 		Ocean_Pout10_ResN:b_dens = 1000000000. ;
 		Ocean_Pout10_ResN:i_conc = 200000000. ;
 		Ocean_Pout10_ResN:f_conc = 200000000. ;
-		Ocean_Pout10_ResN:_FillValue = 30252.03 ;
+		Ocean_Pout10_ResN:_FillValue = 22831.72 ;
 	double Ocean_Pout10_StructN(t, b, z) ;
 		Ocean_Pout10_StructN:bmtype = "tracer" ;
 		Ocean_Pout10_StructN:units = "mg N" ;
@@ -15252,7 +15312,7 @@ variables:
 		Ocean_Pout1_ResN:b_dens = 1000000000. ;
 		Ocean_Pout1_ResN:i_conc = 200000000. ;
 		Ocean_Pout1_ResN:f_conc = 200000000. ;
-		Ocean_Pout1_ResN:_FillValue = 38.85 ;
+		Ocean_Pout1_ResN:_FillValue = 29.32 ;
 	double Ocean_Pout1_StructN(t, b, z) ;
 		Ocean_Pout1_StructN:bmtype = "tracer" ;
 		Ocean_Pout1_StructN:units = "mg N" ;
@@ -15309,7 +15369,7 @@ variables:
 		Ocean_Pout2_ResN:b_dens = 1000000000. ;
 		Ocean_Pout2_ResN:i_conc = 200000000. ;
 		Ocean_Pout2_ResN:f_conc = 200000000. ;
-		Ocean_Pout2_ResN:_FillValue = 850.28 ;
+		Ocean_Pout2_ResN:_FillValue = 641.72 ;
 	double Ocean_Pout2_StructN(t, b, z) ;
 		Ocean_Pout2_StructN:bmtype = "tracer" ;
 		Ocean_Pout2_StructN:units = "mg N" ;
@@ -15366,7 +15426,7 @@ variables:
 		Ocean_Pout3_ResN:b_dens = 1000000000. ;
 		Ocean_Pout3_ResN:i_conc = 200000000. ;
 		Ocean_Pout3_ResN:f_conc = 200000000. ;
-		Ocean_Pout3_ResN:_FillValue = 3044.24 ;
+		Ocean_Pout3_ResN:_FillValue = 2297.54 ;
 	double Ocean_Pout3_StructN(t, b, z) ;
 		Ocean_Pout3_StructN:bmtype = "tracer" ;
 		Ocean_Pout3_StructN:units = "mg N" ;
@@ -15423,7 +15483,7 @@ variables:
 		Ocean_Pout4_ResN:b_dens = 1000000000. ;
 		Ocean_Pout4_ResN:i_conc = 200000000. ;
 		Ocean_Pout4_ResN:f_conc = 200000000. ;
-		Ocean_Pout4_ResN:_FillValue = 6422.83 ;
+		Ocean_Pout4_ResN:_FillValue = 4847.42 ;
 	double Ocean_Pout4_StructN(t, b, z) ;
 		Ocean_Pout4_StructN:bmtype = "tracer" ;
 		Ocean_Pout4_StructN:units = "mg N" ;
@@ -15480,7 +15540,7 @@ variables:
 		Ocean_Pout5_ResN:b_dens = 1000000000. ;
 		Ocean_Pout5_ResN:i_conc = 200000000. ;
 		Ocean_Pout5_ResN:f_conc = 200000000. ;
-		Ocean_Pout5_ResN:_FillValue = 10527.42 ;
+		Ocean_Pout5_ResN:_FillValue = 7945.22 ;
 	double Ocean_Pout5_StructN(t, b, z) ;
 		Ocean_Pout5_StructN:bmtype = "tracer" ;
 		Ocean_Pout5_StructN:units = "mg N" ;
@@ -15537,7 +15597,7 @@ variables:
 		Ocean_Pout6_ResN:b_dens = 1000000000. ;
 		Ocean_Pout6_ResN:i_conc = 200000000. ;
 		Ocean_Pout6_ResN:f_conc = 200000000. ;
-		Ocean_Pout6_ResN:_FillValue = 14915.55 ;
+		Ocean_Pout6_ResN:_FillValue = 11257.02 ;
 	double Ocean_Pout6_StructN(t, b, z) ;
 		Ocean_Pout6_StructN:bmtype = "tracer" ;
 		Ocean_Pout6_StructN:units = "mg N" ;
@@ -15594,7 +15654,7 @@ variables:
 		Ocean_Pout7_ResN:b_dens = 1000000000. ;
 		Ocean_Pout7_ResN:i_conc = 200000000. ;
 		Ocean_Pout7_ResN:f_conc = 200000000. ;
-		Ocean_Pout7_ResN:_FillValue = 19253.02 ;
+		Ocean_Pout7_ResN:_FillValue = 14530.58 ;
 	double Ocean_Pout7_StructN(t, b, z) ;
 		Ocean_Pout7_StructN:bmtype = "tracer" ;
 		Ocean_Pout7_StructN:units = "mg N" ;
@@ -15651,7 +15711,7 @@ variables:
 		Ocean_Pout8_ResN:b_dens = 1000000000. ;
 		Ocean_Pout8_ResN:i_conc = 200000000. ;
 		Ocean_Pout8_ResN:f_conc = 200000000. ;
-		Ocean_Pout8_ResN:_FillValue = 23323.02 ;
+		Ocean_Pout8_ResN:_FillValue = 17602.28 ;
 	double Ocean_Pout8_StructN(t, b, z) ;
 		Ocean_Pout8_StructN:bmtype = "tracer" ;
 		Ocean_Pout8_StructN:units = "mg N" ;
@@ -15708,7 +15768,7 @@ variables:
 		Ocean_Pout9_ResN:b_dens = 1000000000. ;
 		Ocean_Pout9_ResN:i_conc = 200000000. ;
 		Ocean_Pout9_ResN:f_conc = 200000000. ;
-		Ocean_Pout9_ResN:_FillValue = 27005.88 ;
+		Ocean_Pout9_ResN:_FillValue = 20381.8 ;
 	double Ocean_Pout9_StructN(t, b, z) ;
 		Ocean_Pout9_StructN:bmtype = "tracer" ;
 		Ocean_Pout9_StructN:units = "mg N" ;
@@ -15777,7 +15837,7 @@ variables:
 		Offshore_Hake10_ResN:b_dens = 1000000000. ;
 		Offshore_Hake10_ResN:i_conc = 200000000. ;
 		Offshore_Hake10_ResN:f_conc = 200000000. ;
-		Offshore_Hake10_ResN:_FillValue = 3340.06 ;
+		Offshore_Hake10_ResN:_FillValue = 2520.8 ;
 	double Offshore_Hake10_StructN(t, b, z) ;
 		Offshore_Hake10_StructN:bmtype = "tracer" ;
 		Offshore_Hake10_StructN:units = "mg N" ;
@@ -15834,7 +15894,7 @@ variables:
 		Offshore_Hake1_ResN:b_dens = 1000000000. ;
 		Offshore_Hake1_ResN:i_conc = 200000000. ;
 		Offshore_Hake1_ResN:f_conc = 200000000. ;
-		Offshore_Hake1_ResN:_FillValue = 224.48 ;
+		Offshore_Hake1_ResN:_FillValue = 169.42 ;
 	double Offshore_Hake1_StructN(t, b, z) ;
 		Offshore_Hake1_StructN:bmtype = "tracer" ;
 		Offshore_Hake1_StructN:units = "mg N" ;
@@ -15891,7 +15951,7 @@ variables:
 		Offshore_Hake2_ResN:b_dens = 1000000000. ;
 		Offshore_Hake2_ResN:i_conc = 200000000. ;
 		Offshore_Hake2_ResN:f_conc = 200000000. ;
-		Offshore_Hake2_ResN:_FillValue = 1567. ;
+		Offshore_Hake2_ResN:_FillValue = 1182.64 ;
 	double Offshore_Hake2_StructN(t, b, z) ;
 		Offshore_Hake2_StructN:bmtype = "tracer" ;
 		Offshore_Hake2_StructN:units = "mg N" ;
@@ -15948,7 +16008,7 @@ variables:
 		Offshore_Hake3_ResN:b_dens = 1000000000. ;
 		Offshore_Hake3_ResN:i_conc = 200000000. ;
 		Offshore_Hake3_ResN:f_conc = 200000000. ;
-		Offshore_Hake3_ResN:_FillValue = 2560.03 ;
+		Offshore_Hake3_ResN:_FillValue = 1932.1 ;
 	double Offshore_Hake3_StructN(t, b, z) ;
 		Offshore_Hake3_StructN:bmtype = "tracer" ;
 		Offshore_Hake3_StructN:units = "mg N" ;
@@ -16005,7 +16065,7 @@ variables:
 		Offshore_Hake4_ResN:b_dens = 1000000000. ;
 		Offshore_Hake4_ResN:i_conc = 200000000. ;
 		Offshore_Hake4_ResN:f_conc = 200000000. ;
-		Offshore_Hake4_ResN:_FillValue = 3026.19 ;
+		Offshore_Hake4_ResN:_FillValue = 2283.92 ;
 	double Offshore_Hake4_StructN(t, b, z) ;
 		Offshore_Hake4_StructN:bmtype = "tracer" ;
 		Offshore_Hake4_StructN:units = "mg N" ;
@@ -16062,7 +16122,7 @@ variables:
 		Offshore_Hake5_ResN:b_dens = 1000000000. ;
 		Offshore_Hake5_ResN:i_conc = 200000000. ;
 		Offshore_Hake5_ResN:f_conc = 200000000. ;
-		Offshore_Hake5_ResN:_FillValue = 3218.16 ;
+		Offshore_Hake5_ResN:_FillValue = 2428.8 ;
 	double Offshore_Hake5_StructN(t, b, z) ;
 		Offshore_Hake5_StructN:bmtype = "tracer" ;
 		Offshore_Hake5_StructN:units = "mg N" ;
@@ -16119,7 +16179,7 @@ variables:
 		Offshore_Hake6_ResN:b_dens = 1000000000. ;
 		Offshore_Hake6_ResN:i_conc = 200000000. ;
 		Offshore_Hake6_ResN:f_conc = 200000000. ;
-		Offshore_Hake6_ResN:_FillValue = 3293.66 ;
+		Offshore_Hake6_ResN:_FillValue = 2485.78 ;
 	double Offshore_Hake6_StructN(t, b, z) ;
 		Offshore_Hake6_StructN:bmtype = "tracer" ;
 		Offshore_Hake6_StructN:units = "mg N" ;
@@ -16176,7 +16236,7 @@ variables:
 		Offshore_Hake7_ResN:b_dens = 1000000000. ;
 		Offshore_Hake7_ResN:i_conc = 200000000. ;
 		Offshore_Hake7_ResN:f_conc = 200000000. ;
-		Offshore_Hake7_ResN:_FillValue = 3322.89 ;
+		Offshore_Hake7_ResN:_FillValue = 2507.84 ;
 	double Offshore_Hake7_StructN(t, b, z) ;
 		Offshore_Hake7_StructN:bmtype = "tracer" ;
 		Offshore_Hake7_StructN:units = "mg N" ;
@@ -16233,7 +16293,7 @@ variables:
 		Offshore_Hake8_ResN:b_dens = 1000000000. ;
 		Offshore_Hake8_ResN:i_conc = 200000000. ;
 		Offshore_Hake8_ResN:f_conc = 200000000. ;
-		Offshore_Hake8_ResN:_FillValue = 3334.1 ;
+		Offshore_Hake8_ResN:_FillValue = 2516.3 ;
 	double Offshore_Hake8_StructN(t, b, z) ;
 		Offshore_Hake8_StructN:bmtype = "tracer" ;
 		Offshore_Hake8_StructN:units = "mg N" ;
@@ -16290,7 +16350,7 @@ variables:
 		Offshore_Hake9_ResN:b_dens = 1000000000. ;
 		Offshore_Hake9_ResN:i_conc = 200000000. ;
 		Offshore_Hake9_ResN:f_conc = 200000000. ;
-		Offshore_Hake9_ResN:_FillValue = 3338.42 ;
+		Offshore_Hake9_ResN:_FillValue = 2519.56 ;
 	double Offshore_Hake9_StructN(t, b, z) ;
 		Offshore_Hake9_StructN:bmtype = "tracer" ;
 		Offshore_Hake9_StructN:units = "mg N" ;
@@ -16359,7 +16419,7 @@ variables:
 		Other_Flatfish10_ResN:b_dens = 1000000000. ;
 		Other_Flatfish10_ResN:i_conc = 200000000. ;
 		Other_Flatfish10_ResN:f_conc = 200000000. ;
-		Other_Flatfish10_ResN:_FillValue = 839.04 ;
+		Other_Flatfish10_ResN:_FillValue = 633.24 ;
 	double Other_Flatfish10_StructN(t, b, z) ;
 		Other_Flatfish10_StructN:bmtype = "tracer" ;
 		Other_Flatfish10_StructN:units = "mg N" ;
@@ -16416,7 +16476,7 @@ variables:
 		Other_Flatfish1_ResN:b_dens = 1000000000. ;
 		Other_Flatfish1_ResN:i_conc = 200000000. ;
 		Other_Flatfish1_ResN:f_conc = 200000000. ;
-		Other_Flatfish1_ResN:_FillValue = 12.24 ;
+		Other_Flatfish1_ResN:_FillValue = 9.24 ;
 	double Other_Flatfish1_StructN(t, b, z) ;
 		Other_Flatfish1_StructN:bmtype = "tracer" ;
 		Other_Flatfish1_StructN:units = "mg N" ;
@@ -16473,7 +16533,7 @@ variables:
 		Other_Flatfish2_ResN:b_dens = 1000000000. ;
 		Other_Flatfish2_ResN:i_conc = 200000000. ;
 		Other_Flatfish2_ResN:f_conc = 200000000. ;
-		Other_Flatfish2_ResN:_FillValue = 53.85 ;
+		Other_Flatfish2_ResN:_FillValue = 40.64 ;
 	double Other_Flatfish2_StructN(t, b, z) ;
 		Other_Flatfish2_StructN:bmtype = "tracer" ;
 		Other_Flatfish2_StructN:units = "mg N" ;
@@ -16530,7 +16590,7 @@ variables:
 		Other_Flatfish3_ResN:b_dens = 1000000000. ;
 		Other_Flatfish3_ResN:i_conc = 200000000. ;
 		Other_Flatfish3_ResN:f_conc = 200000000. ;
-		Other_Flatfish3_ResN:_FillValue = 126.14 ;
+		Other_Flatfish3_ResN:_FillValue = 95.2 ;
 	double Other_Flatfish3_StructN(t, b, z) ;
 		Other_Flatfish3_StructN:bmtype = "tracer" ;
 		Other_Flatfish3_StructN:units = "mg N" ;
@@ -16587,7 +16647,7 @@ variables:
 		Other_Flatfish4_ResN:b_dens = 1000000000. ;
 		Other_Flatfish4_ResN:i_conc = 200000000. ;
 		Other_Flatfish4_ResN:f_conc = 200000000. ;
-		Other_Flatfish4_ResN:_FillValue = 221.41 ;
+		Other_Flatfish4_ResN:_FillValue = 167.1 ;
 	double Other_Flatfish4_StructN(t, b, z) ;
 		Other_Flatfish4_StructN:bmtype = "tracer" ;
 		Other_Flatfish4_StructN:units = "mg N" ;
@@ -16644,7 +16704,7 @@ variables:
 		Other_Flatfish5_ResN:b_dens = 1000000000. ;
 		Other_Flatfish5_ResN:i_conc = 200000000. ;
 		Other_Flatfish5_ResN:f_conc = 200000000. ;
-		Other_Flatfish5_ResN:_FillValue = 329.85 ;
+		Other_Flatfish5_ResN:_FillValue = 248.94 ;
 	double Other_Flatfish5_StructN(t, b, z) ;
 		Other_Flatfish5_StructN:bmtype = "tracer" ;
 		Other_Flatfish5_StructN:units = "mg N" ;
@@ -16701,7 +16761,7 @@ variables:
 		Other_Flatfish6_ResN:b_dens = 1000000000. ;
 		Other_Flatfish6_ResN:i_conc = 200000000. ;
 		Other_Flatfish6_ResN:f_conc = 200000000. ;
-		Other_Flatfish6_ResN:_FillValue = 442.76 ;
+		Other_Flatfish6_ResN:_FillValue = 334.16 ;
 	double Other_Flatfish6_StructN(t, b, z) ;
 		Other_Flatfish6_StructN:bmtype = "tracer" ;
 		Other_Flatfish6_StructN:units = "mg N" ;
@@ -16758,7 +16818,7 @@ variables:
 		Other_Flatfish7_ResN:b_dens = 1000000000. ;
 		Other_Flatfish7_ResN:i_conc = 200000000. ;
 		Other_Flatfish7_ResN:f_conc = 200000000. ;
-		Other_Flatfish7_ResN:_FillValue = 553.64 ;
+		Other_Flatfish7_ResN:_FillValue = 417.84 ;
 	double Other_Flatfish7_StructN(t, b, z) ;
 		Other_Flatfish7_StructN:bmtype = "tracer" ;
 		Other_Flatfish7_StructN:units = "mg N" ;
@@ -16815,7 +16875,7 @@ variables:
 		Other_Flatfish8_ResN:b_dens = 1000000000. ;
 		Other_Flatfish8_ResN:i_conc = 200000000. ;
 		Other_Flatfish8_ResN:f_conc = 200000000. ;
-		Other_Flatfish8_ResN:_FillValue = 658.1 ;
+		Other_Flatfish8_ResN:_FillValue = 496.68 ;
 	double Other_Flatfish8_StructN(t, b, z) ;
 		Other_Flatfish8_StructN:bmtype = "tracer" ;
 		Other_Flatfish8_StructN:units = "mg N" ;
@@ -16872,7 +16932,7 @@ variables:
 		Other_Flatfish9_ResN:b_dens = 1000000000. ;
 		Other_Flatfish9_ResN:i_conc = 200000000. ;
 		Other_Flatfish9_ResN:f_conc = 200000000. ;
-		Other_Flatfish9_ResN:_FillValue = 753.61 ;
+		Other_Flatfish9_ResN:_FillValue = 568.76 ;
 	double Other_Flatfish9_StructN(t, b, z) ;
 		Other_Flatfish9_StructN:bmtype = "tracer" ;
 		Other_Flatfish9_StructN:units = "mg N" ;
@@ -17010,7 +17070,7 @@ variables:
 		Pelagic_Shark10_ResN:b_dens = 1000000000. ;
 		Pelagic_Shark10_ResN:i_conc = 200000000. ;
 		Pelagic_Shark10_ResN:f_conc = 200000000. ;
-		Pelagic_Shark10_ResN:_FillValue = 2211418.69 ;
+		Pelagic_Shark10_ResN:_FillValue = 1668995.24 ;
 	double Pelagic_Shark10_StructN(t, b, z) ;
 		Pelagic_Shark10_StructN:bmtype = "tracer" ;
 		Pelagic_Shark10_StructN:units = "mg N" ;
@@ -17067,7 +17127,7 @@ variables:
 		Pelagic_Shark1_ResN:b_dens = 1000000000. ;
 		Pelagic_Shark1_ResN:i_conc = 200000000. ;
 		Pelagic_Shark1_ResN:f_conc = 200000000. ;
-		Pelagic_Shark1_ResN:_FillValue = 3446.25 ;
+		Pelagic_Shark1_ResN:_FillValue = 2600.94 ;
 	double Pelagic_Shark1_StructN(t, b, z) ;
 		Pelagic_Shark1_StructN:bmtype = "tracer" ;
 		Pelagic_Shark1_StructN:units = "mg N" ;
@@ -17124,7 +17184,7 @@ variables:
 		Pelagic_Shark2_ResN:b_dens = 1000000000. ;
 		Pelagic_Shark2_ResN:i_conc = 200000000. ;
 		Pelagic_Shark2_ResN:f_conc = 200000000. ;
-		Pelagic_Shark2_ResN:_FillValue = 482446.33 ;
+		Pelagic_Shark2_ResN:_FillValue = 364110.44 ;
 	double Pelagic_Shark2_StructN(t, b, z) ;
 		Pelagic_Shark2_StructN:bmtype = "tracer" ;
 		Pelagic_Shark2_StructN:units = "mg N" ;
@@ -17181,7 +17241,7 @@ variables:
 		Pelagic_Shark3_ResN:b_dens = 1000000000. ;
 		Pelagic_Shark3_ResN:i_conc = 200000000. ;
 		Pelagic_Shark3_ResN:f_conc = 200000000. ;
-		Pelagic_Shark3_ResN:_FillValue = 1236381.69 ;
+		Pelagic_Shark3_ResN:_FillValue = 933118.26 ;
 	double Pelagic_Shark3_StructN(t, b, z) ;
 		Pelagic_Shark3_StructN:bmtype = "tracer" ;
 		Pelagic_Shark3_StructN:units = "mg N" ;
@@ -17238,7 +17298,7 @@ variables:
 		Pelagic_Shark4_ResN:b_dens = 1000000000. ;
 		Pelagic_Shark4_ResN:i_conc = 200000000. ;
 		Pelagic_Shark4_ResN:f_conc = 200000000. ;
-		Pelagic_Shark4_ResN:_FillValue = 1735969.66 ;
+		Pelagic_Shark4_ResN:_FillValue = 1310165.78 ;
 	double Pelagic_Shark4_StructN(t, b, z) ;
 		Pelagic_Shark4_StructN:bmtype = "tracer" ;
 		Pelagic_Shark4_StructN:units = "mg N" ;
@@ -17295,7 +17355,7 @@ variables:
 		Pelagic_Shark5_ResN:b_dens = 1000000000. ;
 		Pelagic_Shark5_ResN:i_conc = 200000000. ;
 		Pelagic_Shark5_ResN:f_conc = 200000000. ;
-		Pelagic_Shark5_ResN:_FillValue = 1994183.3 ;
+		Pelagic_Shark5_ResN:_FillValue = 1505044. ;
 	double Pelagic_Shark5_StructN(t, b, z) ;
 		Pelagic_Shark5_StructN:bmtype = "tracer" ;
 		Pelagic_Shark5_StructN:units = "mg N" ;
@@ -17352,7 +17412,7 @@ variables:
 		Pelagic_Shark6_ResN:b_dens = 1000000000. ;
 		Pelagic_Shark6_ResN:i_conc = 200000000. ;
 		Pelagic_Shark6_ResN:f_conc = 200000000. ;
-		Pelagic_Shark6_ResN:_FillValue = 2115852.96 ;
+		Pelagic_Shark6_ResN:_FillValue = 1596870.16 ;
 	double Pelagic_Shark6_StructN(t, b, z) ;
 		Pelagic_Shark6_StructN:bmtype = "tracer" ;
 		Pelagic_Shark6_StructN:units = "mg N" ;
@@ -17409,7 +17469,7 @@ variables:
 		Pelagic_Shark7_ResN:b_dens = 1000000000. ;
 		Pelagic_Shark7_ResN:i_conc = 200000000. ;
 		Pelagic_Shark7_ResN:f_conc = 200000000. ;
-		Pelagic_Shark7_ResN:_FillValue = 2171045.68 ;
+		Pelagic_Shark7_ResN:_FillValue = 1638525.04 ;
 	double Pelagic_Shark7_StructN(t, b, z) ;
 		Pelagic_Shark7_StructN:bmtype = "tracer" ;
 		Pelagic_Shark7_StructN:units = "mg N" ;
@@ -17466,7 +17526,7 @@ variables:
 		Pelagic_Shark8_ResN:b_dens = 1000000000. ;
 		Pelagic_Shark8_ResN:i_conc = 200000000. ;
 		Pelagic_Shark8_ResN:f_conc = 200000000. ;
-		Pelagic_Shark8_ResN:_FillValue = 2195678.96 ;
+		Pelagic_Shark8_ResN:_FillValue = 1657116.2 ;
 	double Pelagic_Shark8_StructN(t, b, z) ;
 		Pelagic_Shark8_StructN:bmtype = "tracer" ;
 		Pelagic_Shark8_StructN:units = "mg N" ;
@@ -17523,7 +17583,7 @@ variables:
 		Pelagic_Shark9_ResN:b_dens = 1000000000. ;
 		Pelagic_Shark9_ResN:i_conc = 200000000. ;
 		Pelagic_Shark9_ResN:f_conc = 200000000. ;
-		Pelagic_Shark9_ResN:_FillValue = 2206595.69 ;
+		Pelagic_Shark9_ResN:_FillValue = 1665355.24 ;
 	double Pelagic_Shark9_StructN(t, b, z) ;
 		Pelagic_Shark9_StructN:bmtype = "tracer" ;
 		Pelagic_Shark9_StructN:units = "mg N" ;
@@ -17567,7 +17627,7 @@ variables:
 		PicoPhytopl_N:decay = 0. ;
 		PicoPhytopl_N:partic = 1 ;
 		PicoPhytopl_N:passive = 1 ;
-		PicoPhytopl_N:svel = -2.89e-06 ;
+		PicoPhytopl_N:svel = 0. ;
 		PicoPhytopl_N:xvel = 0. ;
 		PicoPhytopl_N:psize = 1.e-05 ;
 		PicoPhytopl_N:b_dens = 1000000000. ;
@@ -17611,7 +17671,7 @@ variables:
 		Pinniped10_ResN:b_dens = 1000000000. ;
 		Pinniped10_ResN:i_conc = 200000000. ;
 		Pinniped10_ResN:f_conc = 200000000. ;
-		Pinniped10_ResN:_FillValue = 1182934.85 ;
+		Pinniped10_ResN:_FillValue = 892781.02 ;
 	double Pinniped10_StructN(t, b, z) ;
 		Pinniped10_StructN:bmtype = "tracer" ;
 		Pinniped10_StructN:units = "mg N" ;
@@ -17668,7 +17728,7 @@ variables:
 		Pinniped1_ResN:b_dens = 1000000000. ;
 		Pinniped1_ResN:i_conc = 200000000. ;
 		Pinniped1_ResN:f_conc = 200000000. ;
-		Pinniped1_ResN:_FillValue = 79104.91 ;
+		Pinniped1_ResN:_FillValue = 59701.82 ;
 	double Pinniped1_StructN(t, b, z) ;
 		Pinniped1_StructN:bmtype = "tracer" ;
 		Pinniped1_StructN:units = "mg N" ;
@@ -17725,7 +17785,7 @@ variables:
 		Pinniped2_ResN:b_dens = 1000000000. ;
 		Pinniped2_ResN:i_conc = 200000000. ;
 		Pinniped2_ResN:f_conc = 200000000. ;
-		Pinniped2_ResN:_FillValue = 775926.02 ;
+		Pinniped2_ResN:_FillValue = 585604.54 ;
 	double Pinniped2_StructN(t, b, z) ;
 		Pinniped2_StructN:bmtype = "tracer" ;
 		Pinniped2_StructN:units = "mg N" ;
@@ -17782,7 +17842,7 @@ variables:
 		Pinniped3_ResN:b_dens = 1000000000. ;
 		Pinniped3_ResN:i_conc = 200000000. ;
 		Pinniped3_ResN:f_conc = 200000000. ;
-		Pinniped3_ResN:_FillValue = 1082289.89 ;
+		Pinniped3_ResN:_FillValue = 816822.56 ;
 	double Pinniped3_StructN(t, b, z) ;
 		Pinniped3_StructN:bmtype = "tracer" ;
 		Pinniped3_StructN:units = "mg N" ;
@@ -17839,7 +17899,7 @@ variables:
 		Pinniped4_ResN:b_dens = 1000000000. ;
 		Pinniped4_ResN:i_conc = 200000000. ;
 		Pinniped4_ResN:f_conc = 200000000. ;
-		Pinniped4_ResN:_FillValue = 1159970.72 ;
+		Pinniped4_ResN:_FillValue = 875449.6 ;
 	double Pinniped4_StructN(t, b, z) ;
 		Pinniped4_StructN:bmtype = "tracer" ;
 		Pinniped4_StructN:units = "mg N" ;
@@ -17896,7 +17956,7 @@ variables:
 		Pinniped5_ResN:b_dens = 1000000000. ;
 		Pinniped5_ResN:i_conc = 200000000. ;
 		Pinniped5_ResN:f_conc = 200000000. ;
-		Pinniped5_ResN:_FillValue = 1177787.49 ;
+		Pinniped5_ResN:_FillValue = 888896.22 ;
 	double Pinniped5_StructN(t, b, z) ;
 		Pinniped5_StructN:bmtype = "tracer" ;
 		Pinniped5_StructN:units = "mg N" ;
@@ -17953,7 +18013,7 @@ variables:
 		Pinniped6_ResN:b_dens = 1000000000. ;
 		Pinniped6_ResN:i_conc = 200000000. ;
 		Pinniped6_ResN:f_conc = 200000000. ;
-		Pinniped6_ResN:_FillValue = 1181787.27 ;
+		Pinniped6_ResN:_FillValue = 891914.92 ;
 	double Pinniped6_StructN(t, b, z) ;
 		Pinniped6_StructN:bmtype = "tracer" ;
 		Pinniped6_StructN:units = "mg N" ;
@@ -18010,7 +18070,7 @@ variables:
 		Pinniped7_ResN:b_dens = 1000000000. ;
 		Pinniped7_ResN:i_conc = 200000000. ;
 		Pinniped7_ResN:f_conc = 200000000. ;
-		Pinniped7_ResN:_FillValue = 1182680.96 ;
+		Pinniped7_ResN:_FillValue = 892589.4 ;
 	double Pinniped7_StructN(t, b, z) ;
 		Pinniped7_StructN:bmtype = "tracer" ;
 		Pinniped7_StructN:units = "mg N" ;
@@ -18067,7 +18127,7 @@ variables:
 		Pinniped8_ResN:b_dens = 1000000000. ;
 		Pinniped8_ResN:i_conc = 200000000. ;
 		Pinniped8_ResN:f_conc = 200000000. ;
-		Pinniped8_ResN:_FillValue = 1182880.42 ;
+		Pinniped8_ResN:_FillValue = 892739.94 ;
 	double Pinniped8_StructN(t, b, z) ;
 		Pinniped8_StructN:bmtype = "tracer" ;
 		Pinniped8_StructN:units = "mg N" ;
@@ -18124,7 +18184,7 @@ variables:
 		Pinniped9_ResN:b_dens = 1000000000. ;
 		Pinniped9_ResN:i_conc = 200000000. ;
 		Pinniped9_ResN:f_conc = 200000000. ;
-		Pinniped9_ResN:_FillValue = 1182924.94 ;
+		Pinniped9_ResN:_FillValue = 892773.54 ;
 	double Pinniped9_StructN(t, b, z) ;
 		Pinniped9_StructN:bmtype = "tracer" ;
 		Pinniped9_StructN:units = "mg N" ;
@@ -18193,7 +18253,7 @@ variables:
 		Plaice10_ResN:b_dens = 1000000000. ;
 		Plaice10_ResN:i_conc = 200000000. ;
 		Plaice10_ResN:f_conc = 200000000. ;
-		Plaice10_ResN:_FillValue = 13085.57 ;
+		Plaice10_ResN:_FillValue = 9875.9 ;
 	double Plaice10_StructN(t, b, z) ;
 		Plaice10_StructN:bmtype = "tracer" ;
 		Plaice10_StructN:units = "mg N" ;
@@ -18250,7 +18310,7 @@ variables:
 		Plaice1_ResN:b_dens = 1000000000. ;
 		Plaice1_ResN:i_conc = 200000000. ;
 		Plaice1_ResN:f_conc = 200000000. ;
-		Plaice1_ResN:_FillValue = 33.63 ;
+		Plaice1_ResN:_FillValue = 25.38 ;
 	double Plaice1_StructN(t, b, z) ;
 		Plaice1_StructN:bmtype = "tracer" ;
 		Plaice1_StructN:units = "mg N" ;
@@ -18307,7 +18367,7 @@ variables:
 		Plaice2_ResN:b_dens = 1000000000. ;
 		Plaice2_ResN:i_conc = 200000000. ;
 		Plaice2_ResN:f_conc = 200000000. ;
-		Plaice2_ResN:_FillValue = 733.44 ;
+		Plaice2_ResN:_FillValue = 553.54 ;
 	double Plaice2_StructN(t, b, z) ;
 		Plaice2_StructN:bmtype = "tracer" ;
 		Plaice2_StructN:units = "mg N" ;
@@ -18364,7 +18424,7 @@ variables:
 		Plaice3_ResN:b_dens = 1000000000. ;
 		Plaice3_ResN:i_conc = 200000000. ;
 		Plaice3_ResN:f_conc = 200000000. ;
-		Plaice3_ResN:_FillValue = 2392.66 ;
+		Plaice3_ResN:_FillValue = 1805.78 ;
 	double Plaice3_StructN(t, b, z) ;
 		Plaice3_StructN:bmtype = "tracer" ;
 		Plaice3_StructN:units = "mg N" ;
@@ -18421,7 +18481,7 @@ variables:
 		Plaice4_ResN:b_dens = 1000000000. ;
 		Plaice4_ResN:i_conc = 200000000. ;
 		Plaice4_ResN:f_conc = 200000000. ;
-		Plaice4_ResN:_FillValue = 4538.28 ;
+		Plaice4_ResN:_FillValue = 3425.12 ;
 	double Plaice4_StructN(t, b, z) ;
 		Plaice4_StructN:bmtype = "tracer" ;
 		Plaice4_StructN:units = "mg N" ;
@@ -18478,7 +18538,7 @@ variables:
 		Plaice5_ResN:b_dens = 1000000000. ;
 		Plaice5_ResN:i_conc = 200000000. ;
 		Plaice5_ResN:f_conc = 200000000. ;
-		Plaice5_ResN:_FillValue = 6702.35 ;
+		Plaice5_ResN:_FillValue = 5058.38 ;
 	double Plaice5_StructN(t, b, z) ;
 		Plaice5_StructN:bmtype = "tracer" ;
 		Plaice5_StructN:units = "mg N" ;
@@ -18535,7 +18595,7 @@ variables:
 		Plaice6_ResN:b_dens = 1000000000. ;
 		Plaice6_ResN:i_conc = 200000000. ;
 		Plaice6_ResN:f_conc = 200000000. ;
-		Plaice6_ResN:_FillValue = 8621.38 ;
+		Plaice6_ResN:_FillValue = 6506.7 ;
 	double Plaice6_StructN(t, b, z) ;
 		Plaice6_StructN:bmtype = "tracer" ;
 		Plaice6_StructN:units = "mg N" ;
@@ -18592,7 +18652,7 @@ variables:
 		Plaice7_ResN:b_dens = 1000000000. ;
 		Plaice7_ResN:i_conc = 200000000. ;
 		Plaice7_ResN:f_conc = 200000000. ;
-		Plaice7_ResN:_FillValue = 10200.01 ;
+		Plaice7_ResN:_FillValue = 7698.12 ;
 	double Plaice7_StructN(t, b, z) ;
 		Plaice7_StructN:bmtype = "tracer" ;
 		Plaice7_StructN:units = "mg N" ;
@@ -18649,7 +18709,7 @@ variables:
 		Plaice8_ResN:b_dens = 1000000000. ;
 		Plaice8_ResN:i_conc = 200000000. ;
 		Plaice8_ResN:f_conc = 200000000. ;
-		Plaice8_ResN:_FillValue = 11439.02 ;
+		Plaice8_ResN:_FillValue = 8633.22 ;
 	double Plaice8_StructN(t, b, z) ;
 		Plaice8_StructN:bmtype = "tracer" ;
 		Plaice8_StructN:units = "mg N" ;
@@ -18706,7 +18766,7 @@ variables:
 		Plaice9_ResN:b_dens = 1000000000. ;
 		Plaice9_ResN:i_conc = 200000000. ;
 		Plaice9_ResN:f_conc = 200000000. ;
-		Plaice9_ResN:_FillValue = 12382.2 ;
+		Plaice9_ResN:_FillValue = 9345.06 ;
 	double Plaice9_StructN(t, b, z) ;
 		Plaice9_StructN:bmtype = "tracer" ;
 		Plaice9_StructN:units = "mg N" ;
@@ -18775,7 +18835,7 @@ variables:
 		Pollock10_ResN:b_dens = 1000000000. ;
 		Pollock10_ResN:i_conc = 200000000. ;
 		Pollock10_ResN:f_conc = 200000000. ;
-		Pollock10_ResN:_FillValue = 100802.45 ;
+		Pollock10_ResN:_FillValue = 76077.32 ;
 	double Pollock10_StructN(t, b, z) ;
 		Pollock10_StructN:bmtype = "tracer" ;
 		Pollock10_StructN:units = "mg N" ;
@@ -18832,7 +18892,7 @@ variables:
 		Pollock1_ResN:b_dens = 1000000000. ;
 		Pollock1_ResN:i_conc = 200000000. ;
 		Pollock1_ResN:f_conc = 200000000. ;
-		Pollock1_ResN:_FillValue = 434.73 ;
+		Pollock1_ResN:_FillValue = 328.1 ;
 	double Pollock1_StructN(t, b, z) ;
 		Pollock1_StructN:bmtype = "tracer" ;
 		Pollock1_StructN:units = "mg N" ;
@@ -18889,7 +18949,7 @@ variables:
 		Pollock2_ResN:b_dens = 1000000000. ;
 		Pollock2_ResN:i_conc = 200000000. ;
 		Pollock2_ResN:f_conc = 200000000. ;
-		Pollock2_ResN:_FillValue = 7254.75 ;
+		Pollock2_ResN:_FillValue = 5475.28 ;
 	double Pollock2_StructN(t, b, z) ;
 		Pollock2_StructN:bmtype = "tracer" ;
 		Pollock2_StructN:units = "mg N" ;
@@ -18946,7 +19006,7 @@ variables:
 		Pollock3_ResN:b_dens = 1000000000. ;
 		Pollock3_ResN:i_conc = 200000000. ;
 		Pollock3_ResN:f_conc = 200000000. ;
-		Pollock3_ResN:_FillValue = 21358.81 ;
+		Pollock3_ResN:_FillValue = 16119.86 ;
 	double Pollock3_StructN(t, b, z) ;
 		Pollock3_StructN:bmtype = "tracer" ;
 		Pollock3_StructN:units = "mg N" ;
@@ -19003,7 +19063,7 @@ variables:
 		Pollock4_ResN:b_dens = 1000000000. ;
 		Pollock4_ResN:i_conc = 200000000. ;
 		Pollock4_ResN:f_conc = 200000000. ;
-		Pollock4_ResN:_FillValue = 38323.96 ;
+		Pollock4_ResN:_FillValue = 28923.74 ;
 	double Pollock4_StructN(t, b, z) ;
 		Pollock4_StructN:bmtype = "tracer" ;
 		Pollock4_StructN:units = "mg N" ;
@@ -19060,7 +19120,7 @@ variables:
 		Pollock5_ResN:b_dens = 1000000000. ;
 		Pollock5_ResN:i_conc = 200000000. ;
 		Pollock5_ResN:f_conc = 200000000. ;
-		Pollock5_ResN:_FillValue = 54716.03 ;
+		Pollock5_ResN:_FillValue = 41295.12 ;
 	double Pollock5_StructN(t, b, z) ;
 		Pollock5_StructN:bmtype = "tracer" ;
 		Pollock5_StructN:units = "mg N" ;
@@ -19117,7 +19177,7 @@ variables:
 		Pollock6_ResN:b_dens = 1000000000. ;
 		Pollock6_ResN:i_conc = 200000000. ;
 		Pollock6_ResN:f_conc = 200000000. ;
-		Pollock6_ResN:_FillValue = 68861.68 ;
+		Pollock6_ResN:_FillValue = 51971.08 ;
 	double Pollock6_StructN(t, b, z) ;
 		Pollock6_StructN:bmtype = "tracer" ;
 		Pollock6_StructN:units = "mg N" ;
@@ -19174,7 +19234,7 @@ variables:
 		Pollock7_ResN:b_dens = 1000000000. ;
 		Pollock7_ResN:i_conc = 200000000. ;
 		Pollock7_ResN:f_conc = 200000000. ;
-		Pollock7_ResN:_FillValue = 80290.68 ;
+		Pollock7_ResN:_FillValue = 60596.74 ;
 	double Pollock7_StructN(t, b, z) ;
 		Pollock7_StructN:bmtype = "tracer" ;
 		Pollock7_StructN:units = "mg N" ;
@@ -19231,7 +19291,7 @@ variables:
 		Pollock8_ResN:b_dens = 1000000000. ;
 		Pollock8_ResN:i_conc = 200000000. ;
 		Pollock8_ResN:f_conc = 200000000. ;
-		Pollock8_ResN:_FillValue = 89152.68 ;
+		Pollock8_ResN:_FillValue = 67285.04 ;
 	double Pollock8_StructN(t, b, z) ;
 		Pollock8_StructN:bmtype = "tracer" ;
 		Pollock8_StructN:units = "mg N" ;
@@ -19288,7 +19348,7 @@ variables:
 		Pollock9_ResN:b_dens = 1000000000. ;
 		Pollock9_ResN:i_conc = 200000000. ;
 		Pollock9_ResN:f_conc = 200000000. ;
-		Pollock9_ResN:_FillValue = 95842.42 ;
+		Pollock9_ResN:_FillValue = 72333.9 ;
 	double Pollock9_StructN(t, b, z) ;
 		Pollock9_StructN:bmtype = "tracer" ;
 		Pollock9_StructN:units = "mg N" ;
@@ -19357,7 +19417,7 @@ variables:
 		Porbeagle_Shark10_ResN:b_dens = 1000000000. ;
 		Porbeagle_Shark10_ResN:i_conc = 200000000. ;
 		Porbeagle_Shark10_ResN:f_conc = 200000000. ;
-		Porbeagle_Shark10_ResN:_FillValue = 753595.47 ;
+		Porbeagle_Shark10_ResN:_FillValue = 568751.3 ;
 	double Porbeagle_Shark10_StructN(t, b, z) ;
 		Porbeagle_Shark10_StructN:bmtype = "tracer" ;
 		Porbeagle_Shark10_StructN:units = "mg N" ;
@@ -19414,7 +19474,7 @@ variables:
 		Porbeagle_Shark1_ResN:b_dens = 1000000000. ;
 		Porbeagle_Shark1_ResN:i_conc = 200000000. ;
 		Porbeagle_Shark1_ResN:f_conc = 200000000. ;
-		Porbeagle_Shark1_ResN:_FillValue = 991.87 ;
+		Porbeagle_Shark1_ResN:_FillValue = 748.58 ;
 	double Porbeagle_Shark1_StructN(t, b, z) ;
 		Porbeagle_Shark1_StructN:bmtype = "tracer" ;
 		Porbeagle_Shark1_StructN:units = "mg N" ;
@@ -19471,7 +19531,7 @@ variables:
 		Porbeagle_Shark2_ResN:b_dens = 1000000000. ;
 		Porbeagle_Shark2_ResN:i_conc = 200000000. ;
 		Porbeagle_Shark2_ResN:f_conc = 200000000. ;
-		Porbeagle_Shark2_ResN:_FillValue = 166894.48 ;
+		Porbeagle_Shark2_ResN:_FillValue = 125958.1 ;
 	double Porbeagle_Shark2_StructN(t, b, z) ;
 		Porbeagle_Shark2_StructN:bmtype = "tracer" ;
 		Porbeagle_Shark2_StructN:units = "mg N" ;
@@ -19528,7 +19588,7 @@ variables:
 		Porbeagle_Shark3_ResN:b_dens = 1000000000. ;
 		Porbeagle_Shark3_ResN:i_conc = 200000000. ;
 		Porbeagle_Shark3_ResN:f_conc = 200000000. ;
-		Porbeagle_Shark3_ResN:_FillValue = 423112.41 ;
+		Porbeagle_Shark3_ResN:_FillValue = 319330.12 ;
 	double Porbeagle_Shark3_StructN(t, b, z) ;
 		Porbeagle_Shark3_StructN:bmtype = "tracer" ;
 		Porbeagle_Shark3_StructN:units = "mg N" ;
@@ -19585,7 +19645,7 @@ variables:
 		Porbeagle_Shark4_ResN:b_dens = 1000000000. ;
 		Porbeagle_Shark4_ResN:i_conc = 200000000. ;
 		Porbeagle_Shark4_ResN:f_conc = 200000000. ;
-		Porbeagle_Shark4_ResN:_FillValue = 591852.96 ;
+		Porbeagle_Shark4_ResN:_FillValue = 446681.48 ;
 	double Porbeagle_Shark4_StructN(t, b, z) ;
 		Porbeagle_Shark4_StructN:bmtype = "tracer" ;
 		Porbeagle_Shark4_StructN:units = "mg N" ;
@@ -19642,7 +19702,7 @@ variables:
 		Porbeagle_Shark5_ResN:b_dens = 1000000000. ;
 		Porbeagle_Shark5_ResN:i_conc = 200000000. ;
 		Porbeagle_Shark5_ResN:f_conc = 200000000. ;
-		Porbeagle_Shark5_ResN:_FillValue = 679270.07 ;
+		Porbeagle_Shark5_ResN:_FillValue = 512656.66 ;
 	double Porbeagle_Shark5_StructN(t, b, z) ;
 		Porbeagle_Shark5_StructN:bmtype = "tracer" ;
 		Porbeagle_Shark5_StructN:units = "mg N" ;
@@ -19699,7 +19759,7 @@ variables:
 		Porbeagle_Shark6_ResN:b_dens = 1000000000. ;
 		Porbeagle_Shark6_ResN:i_conc = 200000000. ;
 		Porbeagle_Shark6_ResN:f_conc = 200000000. ;
-		Porbeagle_Shark6_ResN:_FillValue = 720690.29 ;
+		Porbeagle_Shark6_ResN:_FillValue = 543917.2 ;
 	double Porbeagle_Shark6_StructN(t, b, z) ;
 		Porbeagle_Shark6_StructN:bmtype = "tracer" ;
 		Porbeagle_Shark6_StructN:units = "mg N" ;
@@ -19756,7 +19816,7 @@ variables:
 		Porbeagle_Shark7_ResN:b_dens = 1000000000. ;
 		Porbeagle_Shark7_ResN:i_conc = 200000000. ;
 		Porbeagle_Shark7_ResN:f_conc = 200000000. ;
-		Porbeagle_Shark7_ResN:_FillValue = 739606.71 ;
+		Porbeagle_Shark7_ResN:_FillValue = 558193.74 ;
 	double Porbeagle_Shark7_StructN(t, b, z) ;
 		Porbeagle_Shark7_StructN:bmtype = "tracer" ;
 		Porbeagle_Shark7_StructN:units = "mg N" ;
@@ -19813,7 +19873,7 @@ variables:
 		Porbeagle_Shark8_ResN:b_dens = 1000000000. ;
 		Porbeagle_Shark8_ResN:i_conc = 200000000. ;
 		Porbeagle_Shark8_ResN:f_conc = 200000000. ;
-		Porbeagle_Shark8_ResN:_FillValue = 748110.03 ;
+		Porbeagle_Shark8_ResN:_FillValue = 564611.34 ;
 	double Porbeagle_Shark8_StructN(t, b, z) ;
 		Porbeagle_Shark8_StructN:bmtype = "tracer" ;
 		Porbeagle_Shark8_StructN:units = "mg N" ;
@@ -19870,7 +19930,7 @@ variables:
 		Porbeagle_Shark9_ResN:b_dens = 1000000000. ;
 		Porbeagle_Shark9_ResN:i_conc = 200000000. ;
 		Porbeagle_Shark9_ResN:f_conc = 200000000. ;
-		Porbeagle_Shark9_ResN:_FillValue = 751906.04 ;
+		Porbeagle_Shark9_ResN:_FillValue = 567476.26 ;
 	double Porbeagle_Shark9_StructN(t, b, z) ;
 		Porbeagle_Shark9_StructN:bmtype = "tracer" ;
 		Porbeagle_Shark9_StructN:units = "mg N" ;
@@ -19960,7 +20020,7 @@ variables:
 		Red_Hake10_ResN:b_dens = 1000000000. ;
 		Red_Hake10_ResN:i_conc = 200000000. ;
 		Red_Hake10_ResN:f_conc = 200000000. ;
-		Red_Hake10_ResN:_FillValue = 16636.04 ;
+		Red_Hake10_ResN:_FillValue = 12555.5 ;
 	double Red_Hake10_StructN(t, b, z) ;
 		Red_Hake10_StructN:bmtype = "tracer" ;
 		Red_Hake10_StructN:units = "mg N" ;
@@ -20017,7 +20077,7 @@ variables:
 		Red_Hake1_ResN:b_dens = 1000000000. ;
 		Red_Hake1_ResN:i_conc = 200000000. ;
 		Red_Hake1_ResN:f_conc = 200000000. ;
-		Red_Hake1_ResN:_FillValue = 93.6 ;
+		Red_Hake1_ResN:_FillValue = 70.64 ;
 	double Red_Hake1_StructN(t, b, z) ;
 		Red_Hake1_StructN:bmtype = "tracer" ;
 		Red_Hake1_StructN:units = "mg N" ;
@@ -20074,7 +20134,7 @@ variables:
 		Red_Hake2_ResN:b_dens = 1000000000. ;
 		Red_Hake2_ResN:i_conc = 200000000. ;
 		Red_Hake2_ResN:f_conc = 200000000. ;
-		Red_Hake2_ResN:_FillValue = 1481.4 ;
+		Red_Hake2_ResN:_FillValue = 1118.04 ;
 	double Red_Hake2_StructN(t, b, z) ;
 		Red_Hake2_StructN:bmtype = "tracer" ;
 		Red_Hake2_StructN:units = "mg N" ;
@@ -20131,7 +20191,7 @@ variables:
 		Red_Hake3_ResN:b_dens = 1000000000. ;
 		Red_Hake3_ResN:i_conc = 200000000. ;
 		Red_Hake3_ResN:f_conc = 200000000. ;
-		Red_Hake3_ResN:_FillValue = 4165.93 ;
+		Red_Hake3_ResN:_FillValue = 3144.1 ;
 	double Red_Hake3_StructN(t, b, z) ;
 		Red_Hake3_StructN:bmtype = "tracer" ;
 		Red_Hake3_StructN:units = "mg N" ;
@@ -20188,7 +20248,7 @@ variables:
 		Red_Hake4_ResN:b_dens = 1000000000. ;
 		Red_Hake4_ResN:i_conc = 200000000. ;
 		Red_Hake4_ResN:f_conc = 200000000. ;
-		Red_Hake4_ResN:_FillValue = 7187.36 ;
+		Red_Hake4_ResN:_FillValue = 5424.42 ;
 	double Red_Hake4_StructN(t, b, z) ;
 		Red_Hake4_StructN:bmtype = "tracer" ;
 		Red_Hake4_StructN:units = "mg N" ;
@@ -20245,7 +20305,7 @@ variables:
 		Red_Hake5_ResN:b_dens = 1000000000. ;
 		Red_Hake5_ResN:i_conc = 200000000. ;
 		Red_Hake5_ResN:f_conc = 200000000. ;
-		Red_Hake5_ResN:_FillValue = 9927.64 ;
+		Red_Hake5_ResN:_FillValue = 7492.56 ;
 	double Red_Hake5_StructN(t, b, z) ;
 		Red_Hake5_StructN:bmtype = "tracer" ;
 		Red_Hake5_StructN:units = "mg N" ;
@@ -20302,7 +20362,7 @@ variables:
 		Red_Hake6_ResN:b_dens = 1000000000. ;
 		Red_Hake6_ResN:i_conc = 200000000. ;
 		Red_Hake6_ResN:f_conc = 200000000. ;
-		Red_Hake6_ResN:_FillValue = 12155.1 ;
+		Red_Hake6_ResN:_FillValue = 9173.66 ;
 	double Red_Hake6_StructN(t, b, z) ;
 		Red_Hake6_StructN:bmtype = "tracer" ;
 		Red_Hake6_StructN:units = "mg N" ;
@@ -20359,7 +20419,7 @@ variables:
 		Red_Hake7_ResN:b_dens = 1000000000. ;
 		Red_Hake7_ResN:i_conc = 200000000. ;
 		Red_Hake7_ResN:f_conc = 200000000. ;
-		Red_Hake7_ResN:_FillValue = 13855.92 ;
+		Red_Hake7_ResN:_FillValue = 10457.3 ;
 	double Red_Hake7_StructN(t, b, z) ;
 		Red_Hake7_StructN:bmtype = "tracer" ;
 		Red_Hake7_StructN:units = "mg N" ;
@@ -20416,7 +20476,7 @@ variables:
 		Red_Hake8_ResN:b_dens = 1000000000. ;
 		Red_Hake8_ResN:i_conc = 200000000. ;
 		Red_Hake8_ResN:f_conc = 200000000. ;
-		Red_Hake8_ResN:_FillValue = 15105.98 ;
+		Red_Hake8_ResN:_FillValue = 11400.74 ;
 	double Red_Hake8_StructN(t, b, z) ;
 		Red_Hake8_StructN:bmtype = "tracer" ;
 		Red_Hake8_StructN:units = "mg N" ;
@@ -20473,7 +20533,7 @@ variables:
 		Red_Hake9_ResN:b_dens = 1000000000. ;
 		Red_Hake9_ResN:i_conc = 200000000. ;
 		Red_Hake9_ResN:f_conc = 200000000. ;
-		Red_Hake9_ResN:_FillValue = 16002.77 ;
+		Red_Hake9_ResN:_FillValue = 12077.56 ;
 	double Red_Hake9_StructN(t, b, z) ;
 		Red_Hake9_StructN:bmtype = "tracer" ;
 		Red_Hake9_StructN:units = "mg N" ;
@@ -20542,7 +20602,7 @@ variables:
 		Redfish10_ResN:b_dens = 1000000000. ;
 		Redfish10_ResN:i_conc = 200000000. ;
 		Redfish10_ResN:f_conc = 200000000. ;
-		Redfish10_ResN:_FillValue = 2190.41 ;
+		Redfish10_ResN:_FillValue = 1653.14 ;
 	double Redfish10_StructN(t, b, z) ;
 		Redfish10_StructN:bmtype = "tracer" ;
 		Redfish10_StructN:units = "mg N" ;
@@ -20599,7 +20659,7 @@ variables:
 		Redfish1_ResN:b_dens = 1000000000. ;
 		Redfish1_ResN:i_conc = 200000000. ;
 		Redfish1_ResN:f_conc = 200000000. ;
-		Redfish1_ResN:_FillValue = 2.46 ;
+		Redfish1_ResN:_FillValue = 1.86 ;
 	double Redfish1_StructN(t, b, z) ;
 		Redfish1_StructN:bmtype = "tracer" ;
 		Redfish1_StructN:units = "mg N" ;
@@ -20656,7 +20716,7 @@ variables:
 		Redfish2_ResN:b_dens = 1000000000. ;
 		Redfish2_ResN:i_conc = 200000000. ;
 		Redfish2_ResN:f_conc = 200000000. ;
-		Redfish2_ResN:_FillValue = 55.07 ;
+		Redfish2_ResN:_FillValue = 41.56 ;
 	double Redfish2_StructN(t, b, z) ;
 		Redfish2_StructN:bmtype = "tracer" ;
 		Redfish2_StructN:units = "mg N" ;
@@ -20713,7 +20773,7 @@ variables:
 		Redfish3_ResN:b_dens = 1000000000. ;
 		Redfish3_ResN:i_conc = 200000000. ;
 		Redfish3_ResN:f_conc = 200000000. ;
-		Redfish3_ResN:_FillValue = 200.84 ;
+		Redfish3_ResN:_FillValue = 151.58 ;
 	double Redfish3_StructN(t, b, z) ;
 		Redfish3_StructN:bmtype = "tracer" ;
 		Redfish3_StructN:units = "mg N" ;
@@ -20770,7 +20830,7 @@ variables:
 		Redfish4_ResN:b_dens = 1000000000. ;
 		Redfish4_ResN:i_conc = 200000000. ;
 		Redfish4_ResN:f_conc = 200000000. ;
-		Redfish4_ResN:_FillValue = 431.13 ;
+		Redfish4_ResN:_FillValue = 325.38 ;
 	double Redfish4_StructN(t, b, z) ;
 		Redfish4_StructN:bmtype = "tracer" ;
 		Redfish4_StructN:units = "mg N" ;
@@ -20827,7 +20887,7 @@ variables:
 		Redfish5_ResN:b_dens = 1000000000. ;
 		Redfish5_ResN:i_conc = 200000000. ;
 		Redfish5_ResN:f_conc = 200000000. ;
-		Redfish5_ResN:_FillValue = 717.94 ;
+		Redfish5_ResN:_FillValue = 541.84 ;
 	double Redfish5_StructN(t, b, z) ;
 		Redfish5_StructN:bmtype = "tracer" ;
 		Redfish5_StructN:units = "mg N" ;
@@ -20884,7 +20944,7 @@ variables:
 		Redfish6_ResN:b_dens = 1000000000. ;
 		Redfish6_ResN:i_conc = 200000000. ;
 		Redfish6_ResN:f_conc = 200000000. ;
-		Redfish6_ResN:_FillValue = 1032.04 ;
+		Redfish6_ResN:_FillValue = 778.9 ;
 	double Redfish6_StructN(t, b, z) ;
 		Redfish6_StructN:bmtype = "tracer" ;
 		Redfish6_StructN:units = "mg N" ;
@@ -20941,7 +21001,7 @@ variables:
 		Redfish7_ResN:b_dens = 1000000000. ;
 		Redfish7_ResN:i_conc = 200000000. ;
 		Redfish7_ResN:f_conc = 200000000. ;
-		Redfish7_ResN:_FillValue = 1349.8 ;
+		Redfish7_ResN:_FillValue = 1018.72 ;
 	double Redfish7_StructN(t, b, z) ;
 		Redfish7_StructN:bmtype = "tracer" ;
 		Redfish7_StructN:units = "mg N" ;
@@ -20998,7 +21058,7 @@ variables:
 		Redfish8_ResN:b_dens = 1000000000. ;
 		Redfish8_ResN:i_conc = 200000000. ;
 		Redfish8_ResN:f_conc = 200000000. ;
-		Redfish8_ResN:_FillValue = 1654.71 ;
+		Redfish8_ResN:_FillValue = 1248.84 ;
 	double Redfish8_StructN(t, b, z) ;
 		Redfish8_StructN:bmtype = "tracer" ;
 		Redfish8_StructN:units = "mg N" ;
@@ -21055,7 +21115,7 @@ variables:
 		Redfish9_ResN:b_dens = 1000000000. ;
 		Redfish9_ResN:i_conc = 200000000. ;
 		Redfish9_ResN:f_conc = 200000000. ;
-		Redfish9_ResN:_FillValue = 1936.67 ;
+		Redfish9_ResN:_FillValue = 1461.64 ;
 	double Redfish9_StructN(t, b, z) ;
 		Redfish9_StructN:bmtype = "tracer" ;
 		Redfish9_StructN:units = "mg N" ;
@@ -21143,7 +21203,7 @@ variables:
 		Right_Whale10_ResN:b_dens = 1000000000. ;
 		Right_Whale10_ResN:i_conc = 200000000. ;
 		Right_Whale10_ResN:f_conc = 200000000. ;
-		Right_Whale10_ResN:_FillValue = 431074166.15 ;
+		Right_Whale10_ResN:_FillValue = 325338993.32 ;
 	double Right_Whale10_StructN(t, b, z) ;
 		Right_Whale10_StructN:bmtype = "tracer" ;
 		Right_Whale10_StructN:units = "mg N" ;
@@ -21200,7 +21260,7 @@ variables:
 		Right_Whale1_ResN:b_dens = 1000000000. ;
 		Right_Whale1_ResN:i_conc = 200000000. ;
 		Right_Whale1_ResN:f_conc = 200000000. ;
-		Right_Whale1_ResN:_FillValue = 4665548.98 ;
+		Right_Whale1_ResN:_FillValue = 3521169.04 ;
 	double Right_Whale1_StructN(t, b, z) ;
 		Right_Whale1_StructN:bmtype = "tracer" ;
 		Right_Whale1_StructN:units = "mg N" ;
@@ -21257,7 +21317,7 @@ variables:
 		Right_Whale2_ResN:b_dens = 1000000000. ;
 		Right_Whale2_ResN:i_conc = 200000000. ;
 		Right_Whale2_ResN:f_conc = 200000000. ;
-		Right_Whale2_ResN:_FillValue = 333395244.67 ;
+		Right_Whale2_ResN:_FillValue = 251619052.58 ;
 	double Right_Whale2_StructN(t, b, z) ;
 		Right_Whale2_StructN:bmtype = "tracer" ;
 		Right_Whale2_StructN:units = "mg N" ;
@@ -21314,7 +21374,7 @@ variables:
 		Right_Whale3_ResN:b_dens = 1000000000. ;
 		Right_Whale3_ResN:i_conc = 200000000. ;
 		Right_Whale3_ResN:f_conc = 200000000. ;
-		Right_Whale3_ResN:_FillValue = 419982121.75 ;
+		Right_Whale3_ResN:_FillValue = 316967639.06 ;
 	double Right_Whale3_StructN(t, b, z) ;
 		Right_Whale3_StructN:bmtype = "tracer" ;
 		Right_Whale3_StructN:units = "mg N" ;
@@ -21371,7 +21431,7 @@ variables:
 		Right_Whale4_ResN:b_dens = 1000000000. ;
 		Right_Whale4_ResN:i_conc = 200000000. ;
 		Right_Whale4_ResN:f_conc = 200000000. ;
-		Right_Whale4_ResN:_FillValue = 429895976.52 ;
+		Right_Whale4_ResN:_FillValue = 324449793.6 ;
 	double Right_Whale4_StructN(t, b, z) ;
 		Right_Whale4_StructN:bmtype = "tracer" ;
 		Right_Whale4_StructN:units = "mg N" ;
@@ -21428,7 +21488,7 @@ variables:
 		Right_Whale5_ResN:b_dens = 1000000000. ;
 		Right_Whale5_ResN:i_conc = 200000000. ;
 		Right_Whale5_ResN:f_conc = 200000000. ;
-		Right_Whale5_ResN:_FillValue = 430949885.97 ;
+		Right_Whale5_ResN:_FillValue = 325245196.96 ;
 	double Right_Whale5_StructN(t, b, z) ;
 		Right_Whale5_StructN:bmtype = "tracer" ;
 		Right_Whale5_StructN:units = "mg N" ;
@@ -21485,7 +21545,7 @@ variables:
 		Right_Whale6_ResN:b_dens = 1000000000. ;
 		Right_Whale6_ResN:i_conc = 200000000. ;
 		Right_Whale6_ResN:f_conc = 200000000. ;
-		Right_Whale6_ResN:_FillValue = 431061067.44 ;
+		Right_Whale6_ResN:_FillValue = 325329107.5 ;
 	double Right_Whale6_StructN(t, b, z) ;
 		Right_Whale6_StructN:bmtype = "tracer" ;
 		Right_Whale6_StructN:units = "mg N" ;
@@ -21542,7 +21602,7 @@ variables:
 		Right_Whale7_ResN:b_dens = 1000000000. ;
 		Right_Whale7_ResN:i_conc = 200000000. ;
 		Right_Whale7_ResN:f_conc = 200000000. ;
-		Right_Whale7_ResN:_FillValue = 431072787.01 ;
+		Right_Whale7_ResN:_FillValue = 325337952.46 ;
 	double Right_Whale7_StructN(t, b, z) ;
 		Right_Whale7_StructN:bmtype = "tracer" ;
 		Right_Whale7_StructN:units = "mg N" ;
@@ -21599,7 +21659,7 @@ variables:
 		Right_Whale8_ResN:b_dens = 1000000000. ;
 		Right_Whale8_ResN:i_conc = 200000000. ;
 		Right_Whale8_ResN:f_conc = 200000000. ;
-		Right_Whale8_ResN:_FillValue = 431074022.23 ;
+		Right_Whale8_ResN:_FillValue = 325338884.7 ;
 	double Right_Whale8_StructN(t, b, z) ;
 		Right_Whale8_StructN:bmtype = "tracer" ;
 		Right_Whale8_StructN:units = "mg N" ;
@@ -21656,7 +21716,7 @@ variables:
 		Right_Whale9_ResN:b_dens = 1000000000. ;
 		Right_Whale9_ResN:i_conc = 200000000. ;
 		Right_Whale9_ResN:f_conc = 200000000. ;
-		Right_Whale9_ResN:_FillValue = 431074152.42 ;
+		Right_Whale9_ResN:_FillValue = 325338982.96 ;
 	double Right_Whale9_StructN(t, b, z) ;
 		Right_Whale9_StructN:bmtype = "tracer" ;
 		Right_Whale9_StructN:units = "mg N" ;
@@ -21725,7 +21785,7 @@ variables:
 		Sandbar_Shark10_ResN:b_dens = 1000000000. ;
 		Sandbar_Shark10_ResN:i_conc = 200000000. ;
 		Sandbar_Shark10_ResN:f_conc = 200000000. ;
-		Sandbar_Shark10_ResN:_FillValue = 721350.22 ;
+		Sandbar_Shark10_ResN:_FillValue = 544415.26 ;
 	double Sandbar_Shark10_StructN(t, b, z) ;
 		Sandbar_Shark10_StructN:bmtype = "tracer" ;
 		Sandbar_Shark10_StructN:units = "mg N" ;
@@ -21782,7 +21842,7 @@ variables:
 		Sandbar_Shark1_ResN:b_dens = 1000000000. ;
 		Sandbar_Shark1_ResN:i_conc = 200000000. ;
 		Sandbar_Shark1_ResN:f_conc = 200000000. ;
-		Sandbar_Shark1_ResN:_FillValue = 116.07 ;
+		Sandbar_Shark1_ResN:_FillValue = 87.6 ;
 	double Sandbar_Shark1_StructN(t, b, z) ;
 		Sandbar_Shark1_StructN:bmtype = "tracer" ;
 		Sandbar_Shark1_StructN:units = "mg N" ;
@@ -21839,7 +21899,7 @@ variables:
 		Sandbar_Shark2_ResN:b_dens = 1000000000. ;
 		Sandbar_Shark2_ResN:i_conc = 200000000. ;
 		Sandbar_Shark2_ResN:f_conc = 200000000. ;
-		Sandbar_Shark2_ResN:_FillValue = 19566.7 ;
+		Sandbar_Shark2_ResN:_FillValue = 14767.32 ;
 	double Sandbar_Shark2_StructN(t, b, z) ;
 		Sandbar_Shark2_StructN:bmtype = "tracer" ;
 		Sandbar_Shark2_StructN:units = "mg N" ;
@@ -21896,7 +21956,7 @@ variables:
 		Sandbar_Shark3_ResN:b_dens = 1000000000. ;
 		Sandbar_Shark3_ResN:i_conc = 200000000. ;
 		Sandbar_Shark3_ResN:f_conc = 200000000. ;
-		Sandbar_Shark3_ResN:_FillValue = 85338.14 ;
+		Sandbar_Shark3_ResN:_FillValue = 64406.14 ;
 	double Sandbar_Shark3_StructN(t, b, z) ;
 		Sandbar_Shark3_StructN:bmtype = "tracer" ;
 		Sandbar_Shark3_StructN:units = "mg N" ;
@@ -21953,7 +22013,7 @@ variables:
 		Sandbar_Shark4_ResN:b_dens = 1000000000. ;
 		Sandbar_Shark4_ResN:i_conc = 200000000. ;
 		Sandbar_Shark4_ResN:f_conc = 200000000. ;
-		Sandbar_Shark4_ResN:_FillValue = 185398.19 ;
+		Sandbar_Shark4_ResN:_FillValue = 139923.16 ;
 	double Sandbar_Shark4_StructN(t, b, z) ;
 		Sandbar_Shark4_StructN:bmtype = "tracer" ;
 		Sandbar_Shark4_StructN:units = "mg N" ;
@@ -22010,7 +22070,7 @@ variables:
 		Sandbar_Shark5_ResN:b_dens = 1000000000. ;
 		Sandbar_Shark5_ResN:i_conc = 200000000. ;
 		Sandbar_Shark5_ResN:f_conc = 200000000. ;
-		Sandbar_Shark5_ResN:_FillValue = 298856.06 ;
+		Sandbar_Shark5_ResN:_FillValue = 225551.74 ;
 	double Sandbar_Shark5_StructN(t, b, z) ;
 		Sandbar_Shark5_StructN:bmtype = "tracer" ;
 		Sandbar_Shark5_StructN:units = "mg N" ;
@@ -22067,7 +22127,7 @@ variables:
 		Sandbar_Shark6_ResN:b_dens = 1000000000. ;
 		Sandbar_Shark6_ResN:i_conc = 200000000. ;
 		Sandbar_Shark6_ResN:f_conc = 200000000. ;
-		Sandbar_Shark6_ResN:_FillValue = 409958.05 ;
+		Sandbar_Shark6_ResN:_FillValue = 309402.3 ;
 	double Sandbar_Shark6_StructN(t, b, z) ;
 		Sandbar_Shark6_StructN:bmtype = "tracer" ;
 		Sandbar_Shark6_StructN:units = "mg N" ;
@@ -22124,7 +22184,7 @@ variables:
 		Sandbar_Shark7_ResN:b_dens = 1000000000. ;
 		Sandbar_Shark7_ResN:i_conc = 200000000. ;
 		Sandbar_Shark7_ResN:f_conc = 200000000. ;
-		Sandbar_Shark7_ResN:_FillValue = 509885.49 ;
+		Sandbar_Shark7_ResN:_FillValue = 384819.24 ;
 	double Sandbar_Shark7_StructN(t, b, z) ;
 		Sandbar_Shark7_StructN:bmtype = "tracer" ;
 		Sandbar_Shark7_StructN:units = "mg N" ;
@@ -22181,7 +22241,7 @@ variables:
 		Sandbar_Shark8_ResN:b_dens = 1000000000. ;
 		Sandbar_Shark8_ResN:i_conc = 200000000. ;
 		Sandbar_Shark8_ResN:f_conc = 200000000. ;
-		Sandbar_Shark8_ResN:_FillValue = 595065.69 ;
+		Sandbar_Shark8_ResN:_FillValue = 449106.18 ;
 	double Sandbar_Shark8_StructN(t, b, z) ;
 		Sandbar_Shark8_StructN:bmtype = "tracer" ;
 		Sandbar_Shark8_StructN:units = "mg N" ;
@@ -22238,7 +22298,7 @@ variables:
 		Sandbar_Shark9_ResN:b_dens = 1000000000. ;
 		Sandbar_Shark9_ResN:i_conc = 200000000. ;
 		Sandbar_Shark9_ResN:f_conc = 200000000. ;
-		Sandbar_Shark9_ResN:_FillValue = 665126.68 ;
+		Sandbar_Shark9_ResN:_FillValue = 501982.4 ;
 	double Sandbar_Shark9_StructN(t, b, z) ;
 		Sandbar_Shark9_StructN:bmtype = "tracer" ;
 		Sandbar_Shark9_StructN:units = "mg N" ;
@@ -22321,7 +22381,7 @@ variables:
 		Scup10_ResN:b_dens = 1000000000. ;
 		Scup10_ResN:i_conc = 200000000. ;
 		Scup10_ResN:f_conc = 200000000. ;
-		Scup10_ResN:_FillValue = 9346.21 ;
+		Scup10_ResN:_FillValue = 7053.74 ;
 	double Scup10_StructN(t, b, z) ;
 		Scup10_StructN:bmtype = "tracer" ;
 		Scup10_StructN:units = "mg N" ;
@@ -22378,7 +22438,7 @@ variables:
 		Scup1_ResN:b_dens = 1000000000. ;
 		Scup1_ResN:i_conc = 200000000. ;
 		Scup1_ResN:f_conc = 200000000. ;
-		Scup1_ResN:_FillValue = 33.63 ;
+		Scup1_ResN:_FillValue = 25.38 ;
 	double Scup1_StructN(t, b, z) ;
 		Scup1_StructN:bmtype = "tracer" ;
 		Scup1_StructN:units = "mg N" ;
@@ -22435,7 +22495,7 @@ variables:
 		Scup2_ResN:b_dens = 1000000000. ;
 		Scup2_ResN:i_conc = 200000000. ;
 		Scup2_ResN:f_conc = 200000000. ;
-		Scup2_ResN:_FillValue = 616.15 ;
+		Scup2_ResN:_FillValue = 465.02 ;
 	double Scup2_StructN(t, b, z) ;
 		Scup2_StructN:bmtype = "tracer" ;
 		Scup2_StructN:units = "mg N" ;
@@ -22492,7 +22552,7 @@ variables:
 		Scup3_ResN:b_dens = 1000000000. ;
 		Scup3_ResN:i_conc = 200000000. ;
 		Scup3_ResN:f_conc = 200000000. ;
-		Scup3_ResN:_FillValue = 1880.52 ;
+		Scup3_ResN:_FillValue = 1419.26 ;
 	double Scup3_StructN(t, b, z) ;
 		Scup3_StructN:bmtype = "tracer" ;
 		Scup3_StructN:units = "mg N" ;
@@ -22549,7 +22609,7 @@ variables:
 		Scup4_ResN:b_dens = 1000000000. ;
 		Scup4_ResN:i_conc = 200000000. ;
 		Scup4_ResN:f_conc = 200000000. ;
-		Scup4_ResN:_FillValue = 3440.6 ;
+		Scup4_ResN:_FillValue = 2596.68 ;
 	double Scup4_StructN(t, b, z) ;
 		Scup4_StructN:bmtype = "tracer" ;
 		Scup4_StructN:units = "mg N" ;
@@ -22606,7 +22666,7 @@ variables:
 		Scup5_ResN:b_dens = 1000000000. ;
 		Scup5_ResN:i_conc = 200000000. ;
 		Scup5_ResN:f_conc = 200000000. ;
-		Scup5_ResN:_FillValue = 4970.87 ;
+		Scup5_ResN:_FillValue = 3751.6 ;
 	double Scup5_StructN(t, b, z) ;
 		Scup5_StructN:bmtype = "tracer" ;
 		Scup5_StructN:units = "mg N" ;
@@ -22663,7 +22723,7 @@ variables:
 		Scup6_ResN:b_dens = 1000000000. ;
 		Scup6_ResN:i_conc = 200000000. ;
 		Scup6_ResN:f_conc = 200000000. ;
-		Scup6_ResN:_FillValue = 6304.14 ;
+		Scup6_ResN:_FillValue = 4757.84 ;
 	double Scup6_StructN(t, b, z) ;
 		Scup6_StructN:bmtype = "tracer" ;
 		Scup6_StructN:units = "mg N" ;
@@ -22720,7 +22780,7 @@ variables:
 		Scup7_ResN:b_dens = 1000000000. ;
 		Scup7_ResN:i_conc = 200000000. ;
 		Scup7_ResN:f_conc = 200000000. ;
-		Scup7_ResN:_FillValue = 7388.15 ;
+		Scup7_ResN:_FillValue = 5575.96 ;
 	double Scup7_StructN(t, b, z) ;
 		Scup7_StructN:bmtype = "tracer" ;
 		Scup7_StructN:units = "mg N" ;
@@ -22777,7 +22837,7 @@ variables:
 		Scup8_ResN:b_dens = 1000000000. ;
 		Scup8_ResN:i_conc = 200000000. ;
 		Scup8_ResN:f_conc = 200000000. ;
-		Scup8_ResN:_FillValue = 8232.28 ;
+		Scup8_ResN:_FillValue = 6213.04 ;
 	double Scup8_StructN(t, b, z) ;
 		Scup8_StructN:bmtype = "tracer" ;
 		Scup8_StructN:units = "mg N" ;
@@ -22834,7 +22894,7 @@ variables:
 		Scup9_ResN:b_dens = 1000000000. ;
 		Scup9_ResN:i_conc = 200000000. ;
 		Scup9_ResN:f_conc = 200000000. ;
-		Scup9_ResN:_FillValue = 8871.38 ;
+		Scup9_ResN:_FillValue = 6695.38 ;
 	double Scup9_StructN(t, b, z) ;
 		Scup9_StructN:bmtype = "tracer" ;
 		Scup9_StructN:units = "mg N" ;
@@ -22903,7 +22963,7 @@ variables:
 		Seabird10_ResN:b_dens = 1000000000. ;
 		Seabird10_ResN:i_conc = 200000000. ;
 		Seabird10_ResN:f_conc = 200000000. ;
-		Seabird10_ResN:_FillValue = 5441.22 ;
+		Seabird10_ResN:_FillValue = 4106.58 ;
 	double Seabird10_StructN(t, b, z) ;
 		Seabird10_StructN:bmtype = "tracer" ;
 		Seabird10_StructN:units = "mg N" ;
@@ -22960,7 +23020,7 @@ variables:
 		Seabird1_ResN:b_dens = 1000000000. ;
 		Seabird1_ResN:i_conc = 200000000. ;
 		Seabird1_ResN:f_conc = 200000000. ;
-		Seabird1_ResN:_FillValue = 799.27 ;
+		Seabird1_ResN:_FillValue = 603.22 ;
 	double Seabird1_StructN(t, b, z) ;
 		Seabird1_StructN:bmtype = "tracer" ;
 		Seabird1_StructN:units = "mg N" ;
@@ -23017,7 +23077,7 @@ variables:
 		Seabird2_ResN:b_dens = 1000000000. ;
 		Seabird2_ResN:i_conc = 200000000. ;
 		Seabird2_ResN:f_conc = 200000000. ;
-		Seabird2_ResN:_FillValue = 3895.69 ;
+		Seabird2_ResN:_FillValue = 2940.14 ;
 	double Seabird2_StructN(t, b, z) ;
 		Seabird2_StructN:bmtype = "tracer" ;
 		Seabird2_StructN:units = "mg N" ;
@@ -23074,7 +23134,7 @@ variables:
 		Seabird3_ResN:b_dens = 1000000000. ;
 		Seabird3_ResN:i_conc = 200000000. ;
 		Seabird3_ResN:f_conc = 200000000. ;
-		Seabird3_ResN:_FillValue = 5066.3 ;
+		Seabird3_ResN:_FillValue = 3823.62 ;
 	double Seabird3_StructN(t, b, z) ;
 		Seabird3_StructN:bmtype = "tracer" ;
 		Seabird3_StructN:units = "mg N" ;
@@ -23131,7 +23191,7 @@ variables:
 		Seabird4_ResN:b_dens = 1000000000. ;
 		Seabird4_ResN:i_conc = 200000000. ;
 		Seabird4_ResN:f_conc = 200000000. ;
-		Seabird4_ResN:_FillValue = 5356.02 ;
+		Seabird4_ResN:_FillValue = 4042.28 ;
 	double Seabird4_StructN(t, b, z) ;
 		Seabird4_StructN:bmtype = "tracer" ;
 		Seabird4_StructN:units = "mg N" ;
@@ -23188,7 +23248,7 @@ variables:
 		Seabird5_ResN:b_dens = 1000000000. ;
 		Seabird5_ResN:i_conc = 200000000. ;
 		Seabird5_ResN:f_conc = 200000000. ;
-		Seabird5_ResN:_FillValue = 5422.14 ;
+		Seabird5_ResN:_FillValue = 4092.18 ;
 	double Seabird5_StructN(t, b, z) ;
 		Seabird5_StructN:bmtype = "tracer" ;
 		Seabird5_StructN:units = "mg N" ;
@@ -23245,7 +23305,7 @@ variables:
 		Seabird6_ResN:b_dens = 1000000000. ;
 		Seabird6_ResN:i_conc = 200000000. ;
 		Seabird6_ResN:f_conc = 200000000. ;
-		Seabird6_ResN:_FillValue = 5436.98 ;
+		Seabird6_ResN:_FillValue = 4103.38 ;
 	double Seabird6_StructN(t, b, z) ;
 		Seabird6_StructN:bmtype = "tracer" ;
 		Seabird6_StructN:units = "mg N" ;
@@ -23302,7 +23362,7 @@ variables:
 		Seabird7_ResN:b_dens = 1000000000. ;
 		Seabird7_ResN:i_conc = 200000000. ;
 		Seabird7_ResN:f_conc = 200000000. ;
-		Seabird7_ResN:_FillValue = 5440.29 ;
+		Seabird7_ResN:_FillValue = 4105.88 ;
 	double Seabird7_StructN(t, b, z) ;
 		Seabird7_StructN:bmtype = "tracer" ;
 		Seabird7_StructN:units = "mg N" ;
@@ -23359,7 +23419,7 @@ variables:
 		Seabird8_ResN:b_dens = 1000000000. ;
 		Seabird8_ResN:i_conc = 200000000. ;
 		Seabird8_ResN:f_conc = 200000000. ;
-		Seabird8_ResN:_FillValue = 5441.03 ;
+		Seabird8_ResN:_FillValue = 4106.44 ;
 	double Seabird8_StructN(t, b, z) ;
 		Seabird8_StructN:bmtype = "tracer" ;
 		Seabird8_StructN:units = "mg N" ;
@@ -23416,7 +23476,7 @@ variables:
 		Seabird9_ResN:b_dens = 1000000000. ;
 		Seabird9_ResN:i_conc = 200000000. ;
 		Seabird9_ResN:f_conc = 200000000. ;
-		Seabird9_ResN:_FillValue = 5441.19 ;
+		Seabird9_ResN:_FillValue = 4106.56 ;
 	double Seabird9_StructN(t, b, z) ;
 		Seabird9_StructN:bmtype = "tracer" ;
 		Seabird9_StructN:units = "mg N" ;
@@ -23518,7 +23578,7 @@ variables:
 		Shallow_Demersal_Fish10_ResN:b_dens = 1000000000. ;
 		Shallow_Demersal_Fish10_ResN:i_conc = 200000000. ;
 		Shallow_Demersal_Fish10_ResN:f_conc = 200000000. ;
-		Shallow_Demersal_Fish10_ResN:_FillValue = 9738.43 ;
+		Shallow_Demersal_Fish10_ResN:_FillValue = 7349.76 ;
 	double Shallow_Demersal_Fish10_StructN(t, b, z) ;
 		Shallow_Demersal_Fish10_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish10_StructN:units = "mg N" ;
@@ -23575,7 +23635,7 @@ variables:
 		Shallow_Demersal_Fish1_ResN:b_dens = 1000000000. ;
 		Shallow_Demersal_Fish1_ResN:i_conc = 200000000. ;
 		Shallow_Demersal_Fish1_ResN:f_conc = 200000000. ;
-		Shallow_Demersal_Fish1_ResN:_FillValue = 727.58 ;
+		Shallow_Demersal_Fish1_ResN:_FillValue = 549.12 ;
 	double Shallow_Demersal_Fish1_StructN(t, b, z) ;
 		Shallow_Demersal_Fish1_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish1_StructN:units = "mg N" ;
@@ -23632,7 +23692,7 @@ variables:
 		Shallow_Demersal_Fish2_ResN:b_dens = 1000000000. ;
 		Shallow_Demersal_Fish2_ResN:i_conc = 200000000. ;
 		Shallow_Demersal_Fish2_ResN:f_conc = 200000000. ;
-		Shallow_Demersal_Fish2_ResN:_FillValue = 2998.74 ;
+		Shallow_Demersal_Fish2_ResN:_FillValue = 2263.2 ;
 	double Shallow_Demersal_Fish2_StructN(t, b, z) ;
 		Shallow_Demersal_Fish2_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish2_StructN:units = "mg N" ;
@@ -23689,7 +23749,7 @@ variables:
 		Shallow_Demersal_Fish3_ResN:b_dens = 1000000000. ;
 		Shallow_Demersal_Fish3_ResN:i_conc = 200000000. ;
 		Shallow_Demersal_Fish3_ResN:f_conc = 200000000. ;
-		Shallow_Demersal_Fish3_ResN:_FillValue = 5361.21 ;
+		Shallow_Demersal_Fish3_ResN:_FillValue = 4046.2 ;
 	double Shallow_Demersal_Fish3_StructN(t, b, z) ;
 		Shallow_Demersal_Fish3_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish3_StructN:units = "mg N" ;
@@ -23746,7 +23806,7 @@ variables:
 		Shallow_Demersal_Fish4_ResN:b_dens = 1000000000. ;
 		Shallow_Demersal_Fish4_ResN:i_conc = 200000000. ;
 		Shallow_Demersal_Fish4_ResN:f_conc = 200000000. ;
-		Shallow_Demersal_Fish4_ResN:_FillValue = 7114.22 ;
+		Shallow_Demersal_Fish4_ResN:_FillValue = 5369.22 ;
 	double Shallow_Demersal_Fish4_StructN(t, b, z) ;
 		Shallow_Demersal_Fish4_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish4_StructN:units = "mg N" ;
@@ -23803,7 +23863,7 @@ variables:
 		Shallow_Demersal_Fish5_ResN:b_dens = 1000000000. ;
 		Shallow_Demersal_Fish5_ResN:i_conc = 200000000. ;
 		Shallow_Demersal_Fish5_ResN:f_conc = 200000000. ;
-		Shallow_Demersal_Fish5_ResN:_FillValue = 8243.17 ;
+		Shallow_Demersal_Fish5_ResN:_FillValue = 6221.26 ;
 	double Shallow_Demersal_Fish5_StructN(t, b, z) ;
 		Shallow_Demersal_Fish5_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish5_StructN:units = "mg N" ;
@@ -23860,7 +23920,7 @@ variables:
 		Shallow_Demersal_Fish6_ResN:b_dens = 1000000000. ;
 		Shallow_Demersal_Fish6_ResN:i_conc = 200000000. ;
 		Shallow_Demersal_Fish6_ResN:f_conc = 200000000. ;
-		Shallow_Demersal_Fish6_ResN:_FillValue = 8922.15 ;
+		Shallow_Demersal_Fish6_ResN:_FillValue = 6733.7 ;
 	double Shallow_Demersal_Fish6_StructN(t, b, z) ;
 		Shallow_Demersal_Fish6_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish6_StructN:units = "mg N" ;
@@ -23917,7 +23977,7 @@ variables:
 		Shallow_Demersal_Fish7_ResN:b_dens = 1000000000. ;
 		Shallow_Demersal_Fish7_ResN:i_conc = 200000000. ;
 		Shallow_Demersal_Fish7_ResN:f_conc = 200000000. ;
-		Shallow_Demersal_Fish7_ResN:_FillValue = 9316.31 ;
+		Shallow_Demersal_Fish7_ResN:_FillValue = 7031.18 ;
 	double Shallow_Demersal_Fish7_StructN(t, b, z) ;
 		Shallow_Demersal_Fish7_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish7_StructN:units = "mg N" ;
@@ -23974,7 +24034,7 @@ variables:
 		Shallow_Demersal_Fish8_ResN:b_dens = 1000000000. ;
 		Shallow_Demersal_Fish8_ResN:i_conc = 200000000. ;
 		Shallow_Demersal_Fish8_ResN:f_conc = 200000000. ;
-		Shallow_Demersal_Fish8_ResN:_FillValue = 9540.85 ;
+		Shallow_Demersal_Fish8_ResN:_FillValue = 7200.64 ;
 	double Shallow_Demersal_Fish8_StructN(t, b, z) ;
 		Shallow_Demersal_Fish8_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish8_StructN:units = "mg N" ;
@@ -24031,7 +24091,7 @@ variables:
 		Shallow_Demersal_Fish9_ResN:b_dens = 1000000000. ;
 		Shallow_Demersal_Fish9_ResN:i_conc = 200000000. ;
 		Shallow_Demersal_Fish9_ResN:f_conc = 200000000. ;
-		Shallow_Demersal_Fish9_ResN:_FillValue = 9667.47 ;
+		Shallow_Demersal_Fish9_ResN:_FillValue = 7296.2 ;
 	double Shallow_Demersal_Fish9_StructN(t, b, z) ;
 		Shallow_Demersal_Fish9_StructN:bmtype = "tracer" ;
 		Shallow_Demersal_Fish9_StructN:units = "mg N" ;
@@ -24112,7 +24172,7 @@ variables:
 		Silver_Hake10_ResN:b_dens = 1000000000. ;
 		Silver_Hake10_ResN:i_conc = 200000000. ;
 		Silver_Hake10_ResN:f_conc = 200000000. ;
-		Silver_Hake10_ResN:_FillValue = 6051.96 ;
+		Silver_Hake10_ResN:_FillValue = 4567.52 ;
 	double Silver_Hake10_StructN(t, b, z) ;
 		Silver_Hake10_StructN:bmtype = "tracer" ;
 		Silver_Hake10_StructN:units = "mg N" ;
@@ -24169,7 +24229,7 @@ variables:
 		Silver_Hake1_ResN:b_dens = 1000000000. ;
 		Silver_Hake1_ResN:i_conc = 200000000. ;
 		Silver_Hake1_ResN:f_conc = 200000000. ;
-		Silver_Hake1_ResN:_FillValue = 64.34 ;
+		Silver_Hake1_ResN:_FillValue = 48.56 ;
 	double Silver_Hake1_StructN(t, b, z) ;
 		Silver_Hake1_StructN:bmtype = "tracer" ;
 		Silver_Hake1_StructN:units = "mg N" ;
@@ -24226,7 +24286,7 @@ variables:
 		Silver_Hake2_ResN:b_dens = 1000000000. ;
 		Silver_Hake2_ResN:i_conc = 200000000. ;
 		Silver_Hake2_ResN:f_conc = 200000000. ;
-		Silver_Hake2_ResN:_FillValue = 352.32 ;
+		Silver_Hake2_ResN:_FillValue = 265.9 ;
 	double Silver_Hake2_StructN(t, b, z) ;
 		Silver_Hake2_StructN:bmtype = "tracer" ;
 		Silver_Hake2_StructN:units = "mg N" ;
@@ -24283,7 +24343,7 @@ variables:
 		Silver_Hake3_ResN:b_dens = 1000000000. ;
 		Silver_Hake3_ResN:i_conc = 200000000. ;
 		Silver_Hake3_ResN:f_conc = 200000000. ;
-		Silver_Hake3_ResN:_FillValue = 868.4 ;
+		Silver_Hake3_ResN:_FillValue = 655.4 ;
 	double Silver_Hake3_StructN(t, b, z) ;
 		Silver_Hake3_StructN:bmtype = "tracer" ;
 		Silver_Hake3_StructN:units = "mg N" ;
@@ -24340,7 +24400,7 @@ variables:
 		Silver_Hake4_ResN:b_dens = 1000000000. ;
 		Silver_Hake4_ResN:i_conc = 200000000. ;
 		Silver_Hake4_ResN:f_conc = 200000000. ;
-		Silver_Hake4_ResN:_FillValue = 1550.7 ;
+		Silver_Hake4_ResN:_FillValue = 1170.34 ;
 	double Silver_Hake4_StructN(t, b, z) ;
 		Silver_Hake4_StructN:bmtype = "tracer" ;
 		Silver_Hake4_StructN:units = "mg N" ;
@@ -24397,7 +24457,7 @@ variables:
 		Silver_Hake5_ResN:b_dens = 1000000000. ;
 		Silver_Hake5_ResN:i_conc = 200000000. ;
 		Silver_Hake5_ResN:f_conc = 200000000. ;
-		Silver_Hake5_ResN:_FillValue = 2328.34 ;
+		Silver_Hake5_ResN:_FillValue = 1757.24 ;
 	double Silver_Hake5_StructN(t, b, z) ;
 		Silver_Hake5_StructN:bmtype = "tracer" ;
 		Silver_Hake5_StructN:units = "mg N" ;
@@ -24454,7 +24514,7 @@ variables:
 		Silver_Hake6_ResN:b_dens = 1000000000. ;
 		Silver_Hake6_ResN:i_conc = 200000000. ;
 		Silver_Hake6_ResN:f_conc = 200000000. ;
-		Silver_Hake6_ResN:_FillValue = 3141.07 ;
+		Silver_Hake6_ResN:_FillValue = 2370.62 ;
 	double Silver_Hake6_StructN(t, b, z) ;
 		Silver_Hake6_StructN:bmtype = "tracer" ;
 		Silver_Hake6_StructN:units = "mg N" ;
@@ -24511,7 +24571,7 @@ variables:
 		Silver_Hake7_ResN:b_dens = 1000000000. ;
 		Silver_Hake7_ResN:i_conc = 200000000. ;
 		Silver_Hake7_ResN:f_conc = 200000000. ;
-		Silver_Hake7_ResN:_FillValue = 3944.15 ;
+		Silver_Hake7_ResN:_FillValue = 2976.72 ;
 	double Silver_Hake7_StructN(t, b, z) ;
 		Silver_Hake7_StructN:bmtype = "tracer" ;
 		Silver_Hake7_StructN:units = "mg N" ;
@@ -24568,7 +24628,7 @@ variables:
 		Silver_Hake8_ResN:b_dens = 1000000000. ;
 		Silver_Hake8_ResN:i_conc = 200000000. ;
 		Silver_Hake8_ResN:f_conc = 200000000. ;
-		Silver_Hake8_ResN:_FillValue = 4707.54 ;
+		Silver_Hake8_ResN:_FillValue = 3552.86 ;
 	double Silver_Hake8_StructN(t, b, z) ;
 		Silver_Hake8_StructN:bmtype = "tracer" ;
 		Silver_Hake8_StructN:units = "mg N" ;
@@ -24625,7 +24685,7 @@ variables:
 		Silver_Hake9_ResN:b_dens = 1000000000. ;
 		Silver_Hake9_ResN:i_conc = 200000000. ;
 		Silver_Hake9_ResN:f_conc = 200000000. ;
-		Silver_Hake9_ResN:_FillValue = 5413.15 ;
+		Silver_Hake9_ResN:_FillValue = 4085.4 ;
 	double Silver_Hake9_StructN(t, b, z) ;
 		Silver_Hake9_StructN:bmtype = "tracer" ;
 		Silver_Hake9_StructN:units = "mg N" ;
@@ -24694,7 +24754,7 @@ variables:
 		Skate10_ResN:b_dens = 1000000000. ;
 		Skate10_ResN:i_conc = 200000000. ;
 		Skate10_ResN:f_conc = 200000000. ;
-		Skate10_ResN:_FillValue = 163694.69 ;
+		Skate10_ResN:_FillValue = 123543.16 ;
 	double Skate10_StructN(t, b, z) ;
 		Skate10_StructN:bmtype = "tracer" ;
 		Skate10_StructN:units = "mg N" ;
@@ -24751,7 +24811,7 @@ variables:
 		Skate1_ResN:b_dens = 1000000000. ;
 		Skate1_ResN:i_conc = 200000000. ;
 		Skate1_ResN:f_conc = 200000000. ;
-		Skate1_ResN:_FillValue = 363.95 ;
+		Skate1_ResN:_FillValue = 274.68 ;
 	double Skate1_StructN(t, b, z) ;
 		Skate1_StructN:bmtype = "tracer" ;
 		Skate1_StructN:units = "mg N" ;
@@ -24808,7 +24868,7 @@ variables:
 		Skate2_ResN:b_dens = 1000000000. ;
 		Skate2_ResN:i_conc = 200000000. ;
 		Skate2_ResN:f_conc = 200000000. ;
-		Skate2_ResN:_FillValue = 14054.41 ;
+		Skate2_ResN:_FillValue = 10607.1 ;
 	double Skate2_StructN(t, b, z) ;
 		Skate2_StructN:bmtype = "tracer" ;
 		Skate2_StructN:units = "mg N" ;
@@ -24865,7 +24925,7 @@ variables:
 		Skate3_ResN:b_dens = 1000000000. ;
 		Skate3_ResN:i_conc = 200000000. ;
 		Skate3_ResN:f_conc = 200000000. ;
-		Skate3_ResN:_FillValue = 43971.13 ;
+		Skate3_ResN:_FillValue = 33185.76 ;
 	double Skate3_StructN(t, b, z) ;
 		Skate3_StructN:bmtype = "tracer" ;
 		Skate3_StructN:units = "mg N" ;
@@ -24922,7 +24982,7 @@ variables:
 		Skate4_ResN:b_dens = 1000000000. ;
 		Skate4_ResN:i_conc = 200000000. ;
 		Skate4_ResN:f_conc = 200000000. ;
-		Skate4_ResN:_FillValue = 76933.95 ;
+		Skate4_ResN:_FillValue = 58063.36 ;
 	double Skate4_StructN(t, b, z) ;
 		Skate4_StructN:bmtype = "tracer" ;
 		Skate4_StructN:units = "mg N" ;
@@ -24979,7 +25039,7 @@ variables:
 		Skate5_ResN:b_dens = 1000000000. ;
 		Skate5_ResN:i_conc = 200000000. ;
 		Skate5_ResN:f_conc = 200000000. ;
-		Skate5_ResN:_FillValue = 105158.97 ;
+		Skate5_ResN:_FillValue = 79365.26 ;
 	double Skate5_StructN(t, b, z) ;
 		Skate5_StructN:bmtype = "tracer" ;
 		Skate5_StructN:units = "mg N" ;
@@ -25036,7 +25096,7 @@ variables:
 		Skate6_ResN:b_dens = 1000000000. ;
 		Skate6_ResN:i_conc = 200000000. ;
 		Skate6_ResN:f_conc = 200000000. ;
-		Skate6_ResN:_FillValue = 126571.53 ;
+		Skate6_ResN:_FillValue = 95525.68 ;
 	double Skate6_StructN(t, b, z) ;
 		Skate6_StructN:bmtype = "tracer" ;
 		Skate6_StructN:units = "mg N" ;
@@ -25093,7 +25153,7 @@ variables:
 		Skate7_ResN:b_dens = 1000000000. ;
 		Skate7_ResN:i_conc = 200000000. ;
 		Skate7_ResN:f_conc = 200000000. ;
-		Skate7_ResN:_FillValue = 141780.49 ;
+		Skate7_ResN:_FillValue = 107004.14 ;
 	double Skate7_StructN(t, b, z) ;
 		Skate7_StructN:bmtype = "tracer" ;
 		Skate7_StructN:units = "mg N" ;
@@ -25150,7 +25210,7 @@ variables:
 		Skate8_ResN:b_dens = 1000000000. ;
 		Skate8_ResN:i_conc = 200000000. ;
 		Skate8_ResN:f_conc = 200000000. ;
-		Skate8_ResN:_FillValue = 152177.26 ;
+		Skate8_ResN:_FillValue = 114850.76 ;
 	double Skate8_StructN(t, b, z) ;
 		Skate8_StructN:bmtype = "tracer" ;
 		Skate8_StructN:units = "mg N" ;
@@ -25207,7 +25267,7 @@ variables:
 		Skate9_ResN:b_dens = 1000000000. ;
 		Skate9_ResN:i_conc = 200000000. ;
 		Skate9_ResN:f_conc = 200000000. ;
-		Skate9_ResN:_FillValue = 159121.85 ;
+		Skate9_ResN:_FillValue = 120091.96 ;
 	double Skate9_StructN(t, b, z) ;
 		Skate9_StructN:bmtype = "tracer" ;
 		Skate9_StructN:units = "mg N" ;
@@ -25276,7 +25336,7 @@ variables:
 		Small_Whale10_ResN:b_dens = 1000000000. ;
 		Small_Whale10_ResN:i_conc = 200000000. ;
 		Small_Whale10_ResN:f_conc = 200000000. ;
-		Small_Whale10_ResN:_FillValue = 1917748.95 ;
+		Small_Whale10_ResN:_FillValue = 1447357.7 ;
 	double Small_Whale10_StructN(t, b, z) ;
 		Small_Whale10_StructN:bmtype = "tracer" ;
 		Small_Whale10_StructN:units = "mg N" ;
@@ -25333,7 +25393,7 @@ variables:
 		Small_Whale1_ResN:b_dens = 1000000000. ;
 		Small_Whale1_ResN:i_conc = 200000000. ;
 		Small_Whale1_ResN:f_conc = 200000000. ;
-		Small_Whale1_ResN:_FillValue = 20755.94 ;
+		Small_Whale1_ResN:_FillValue = 15664.86 ;
 	double Small_Whale1_StructN(t, b, z) ;
 		Small_Whale1_StructN:bmtype = "tracer" ;
 		Small_Whale1_StructN:units = "mg N" ;
@@ -25390,7 +25450,7 @@ variables:
 		Small_Whale2_ResN:b_dens = 1000000000. ;
 		Small_Whale2_ResN:i_conc = 200000000. ;
 		Small_Whale2_ResN:f_conc = 200000000. ;
-		Small_Whale2_ResN:_FillValue = 1239752.84 ;
+		Small_Whale2_ResN:_FillValue = 935662.52 ;
 	double Small_Whale2_StructN(t, b, z) ;
 		Small_Whale2_StructN:bmtype = "tracer" ;
 		Small_Whale2_StructN:units = "mg N" ;
@@ -25447,7 +25507,7 @@ variables:
 		Small_Whale3_ResN:b_dens = 1000000000. ;
 		Small_Whale3_ResN:i_conc = 200000000. ;
 		Small_Whale3_ResN:f_conc = 200000000. ;
-		Small_Whale3_ResN:_FillValue = 1785603.23 ;
+		Small_Whale3_ResN:_FillValue = 1347625.08 ;
 	double Small_Whale3_StructN(t, b, z) ;
 		Small_Whale3_StructN:bmtype = "tracer" ;
 		Small_Whale3_StructN:units = "mg N" ;
@@ -25504,7 +25564,7 @@ variables:
 		Small_Whale4_ResN:b_dens = 1000000000. ;
 		Small_Whale4_ResN:i_conc = 200000000. ;
 		Small_Whale4_ResN:f_conc = 200000000. ;
-		Small_Whale4_ResN:_FillValue = 1894333.34 ;
+		Small_Whale4_ResN:_FillValue = 1429685.54 ;
 	double Small_Whale4_StructN(t, b, z) ;
 		Small_Whale4_StructN:bmtype = "tracer" ;
 		Small_Whale4_StructN:units = "mg N" ;
@@ -25561,7 +25621,7 @@ variables:
 		Small_Whale5_ResN:b_dens = 1000000000. ;
 		Small_Whale5_ResN:i_conc = 200000000. ;
 		Small_Whale5_ResN:f_conc = 200000000. ;
-		Small_Whale5_ResN:_FillValue = 1913666.68 ;
+		Small_Whale5_ResN:_FillValue = 1444276.74 ;
 	double Small_Whale5_StructN(t, b, z) ;
 		Small_Whale5_StructN:bmtype = "tracer" ;
 		Small_Whale5_StructN:units = "mg N" ;
@@ -25618,7 +25678,7 @@ variables:
 		Small_Whale6_ResN:b_dens = 1000000000. ;
 		Small_Whale6_ResN:i_conc = 200000000. ;
 		Small_Whale6_ResN:f_conc = 200000000. ;
-		Small_Whale6_ResN:_FillValue = 1917039.68 ;
+		Small_Whale6_ResN:_FillValue = 1446822.4 ;
 	double Small_Whale6_StructN(t, b, z) ;
 		Small_Whale6_StructN:bmtype = "tracer" ;
 		Small_Whale6_StructN:units = "mg N" ;
@@ -25675,7 +25735,7 @@ variables:
 		Small_Whale7_ResN:b_dens = 1000000000. ;
 		Small_Whale7_ResN:i_conc = 200000000. ;
 		Small_Whale7_ResN:f_conc = 200000000. ;
-		Small_Whale7_ResN:_FillValue = 1917626.23 ;
+		Small_Whale7_ResN:_FillValue = 1447265.08 ;
 	double Small_Whale7_StructN(t, b, z) ;
 		Small_Whale7_StructN:bmtype = "tracer" ;
 		Small_Whale7_StructN:units = "mg N" ;
@@ -25732,7 +25792,7 @@ variables:
 		Small_Whale8_ResN:b_dens = 1000000000. ;
 		Small_Whale8_ResN:i_conc = 200000000. ;
 		Small_Whale8_ResN:f_conc = 200000000. ;
-		Small_Whale8_ResN:_FillValue = 1917728.15 ;
+		Small_Whale8_ResN:_FillValue = 1447342. ;
 	double Small_Whale8_StructN(t, b, z) ;
 		Small_Whale8_StructN:bmtype = "tracer" ;
 		Small_Whale8_StructN:units = "mg N" ;
@@ -25789,7 +25849,7 @@ variables:
 		Small_Whale9_ResN:b_dens = 1000000000. ;
 		Small_Whale9_ResN:i_conc = 200000000. ;
 		Small_Whale9_ResN:f_conc = 200000000. ;
-		Small_Whale9_ResN:_FillValue = 1917745.88 ;
+		Small_Whale9_ResN:_FillValue = 1447355.38 ;
 	double Small_Whale9_StructN(t, b, z) ;
 		Small_Whale9_StructN:bmtype = "tracer" ;
 		Small_Whale9_StructN:units = "mg N" ;
@@ -25858,7 +25918,7 @@ variables:
 		Smooth_Dogfish10_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish10_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish10_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish10_ResN:_FillValue = 43713.39 ;
+		Smooth_Dogfish10_ResN:_FillValue = 32991.24 ;
 	double Smooth_Dogfish10_StructN(t, b, z) ;
 		Smooth_Dogfish10_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish10_StructN:units = "mg N" ;
@@ -25915,7 +25975,7 @@ variables:
 		Smooth_Dogfish1_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish1_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish1_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish1_ResN:_FillValue = 761.08 ;
+		Smooth_Dogfish1_ResN:_FillValue = 574.4 ;
 	double Smooth_Dogfish1_StructN(t, b, z) ;
 		Smooth_Dogfish1_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish1_StructN:units = "mg N" ;
@@ -25972,7 +26032,7 @@ variables:
 		Smooth_Dogfish2_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish2_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish2_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish2_ResN:_FillValue = 25421.93 ;
+		Smooth_Dogfish2_ResN:_FillValue = 19186.36 ;
 	double Smooth_Dogfish2_StructN(t, b, z) ;
 		Smooth_Dogfish2_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish2_StructN:units = "mg N" ;
@@ -26029,7 +26089,7 @@ variables:
 		Smooth_Dogfish3_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish3_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish3_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish3_ResN:_FillValue = 39052.84 ;
+		Smooth_Dogfish3_ResN:_FillValue = 29473.84 ;
 	double Smooth_Dogfish3_StructN(t, b, z) ;
 		Smooth_Dogfish3_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish3_StructN:units = "mg N" ;
@@ -26086,7 +26146,7 @@ variables:
 		Smooth_Dogfish4_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish4_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish4_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish4_ResN:_FillValue = 42643.11 ;
+		Smooth_Dogfish4_ResN:_FillValue = 32183.48 ;
 	double Smooth_Dogfish4_StructN(t, b, z) ;
 		Smooth_Dogfish4_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish4_StructN:units = "mg N" ;
@@ -26143,7 +26203,7 @@ variables:
 		Smooth_Dogfish5_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish5_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish5_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish5_ResN:_FillValue = 43473.14 ;
+		Smooth_Dogfish5_ResN:_FillValue = 32809.92 ;
 	double Smooth_Dogfish5_StructN(t, b, z) ;
 		Smooth_Dogfish5_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish5_StructN:units = "mg N" ;
@@ -26200,7 +26260,7 @@ variables:
 		Smooth_Dogfish6_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish6_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish6_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish6_ResN:_FillValue = 43659.81 ;
+		Smooth_Dogfish6_ResN:_FillValue = 32950.8 ;
 	double Smooth_Dogfish6_StructN(t, b, z) ;
 		Smooth_Dogfish6_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish6_StructN:units = "mg N" ;
@@ -26257,7 +26317,7 @@ variables:
 		Smooth_Dogfish7_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish7_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish7_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish7_ResN:_FillValue = 43701.52 ;
+		Smooth_Dogfish7_ResN:_FillValue = 32982.28 ;
 	double Smooth_Dogfish7_StructN(t, b, z) ;
 		Smooth_Dogfish7_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish7_StructN:units = "mg N" ;
@@ -26314,7 +26374,7 @@ variables:
 		Smooth_Dogfish8_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish8_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish8_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish8_ResN:_FillValue = 43710.85 ;
+		Smooth_Dogfish8_ResN:_FillValue = 32989.32 ;
 	double Smooth_Dogfish8_StructN(t, b, z) ;
 		Smooth_Dogfish8_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish8_StructN:units = "mg N" ;
@@ -26371,7 +26431,7 @@ variables:
 		Smooth_Dogfish9_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish9_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish9_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish9_ResN:_FillValue = 43712.92 ;
+		Smooth_Dogfish9_ResN:_FillValue = 32990.88 ;
 	double Smooth_Dogfish9_StructN(t, b, z) ;
 		Smooth_Dogfish9_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish9_StructN:units = "mg N" ;
@@ -26440,7 +26500,7 @@ variables:
 		Spiny_Dogfish10_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish10_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish10_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish10_ResN:_FillValue = 99815.75 ;
+		Spiny_Dogfish10_ResN:_FillValue = 75332.64 ;
 	double Spiny_Dogfish10_StructN(t, b, z) ;
 		Spiny_Dogfish10_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish10_StructN:units = "mg N" ;
@@ -26497,7 +26557,7 @@ variables:
 		Spiny_Dogfish1_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish1_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish1_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish1_ResN:_FillValue = 140.53 ;
+		Spiny_Dogfish1_ResN:_FillValue = 106.06 ;
 	double Spiny_Dogfish1_StructN(t, b, z) ;
 		Spiny_Dogfish1_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish1_StructN:units = "mg N" ;
@@ -26554,7 +26614,7 @@ variables:
 		Spiny_Dogfish2_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish2_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish2_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish2_ResN:_FillValue = 9873.87 ;
+		Spiny_Dogfish2_ResN:_FillValue = 7451.98 ;
 	double Spiny_Dogfish2_StructN(t, b, z) ;
 		Spiny_Dogfish2_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish2_StructN:units = "mg N" ;
@@ -26611,7 +26671,7 @@ variables:
 		Spiny_Dogfish3_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish3_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish3_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish3_ResN:_FillValue = 31190.45 ;
+		Spiny_Dogfish3_ResN:_FillValue = 23539.96 ;
 	double Spiny_Dogfish3_StructN(t, b, z) ;
 		Spiny_Dogfish3_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish3_StructN:units = "mg N" ;
@@ -26668,7 +26728,7 @@ variables:
 		Spiny_Dogfish4_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish4_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish4_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish4_ResN:_FillValue = 53009.59 ;
+		Spiny_Dogfish4_ResN:_FillValue = 40007.24 ;
 	double Spiny_Dogfish4_StructN(t, b, z) ;
 		Spiny_Dogfish4_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish4_StructN:units = "mg N" ;
@@ -26725,7 +26785,7 @@ variables:
 		Spiny_Dogfish5_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish5_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish5_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish5_ResN:_FillValue = 70163.81 ;
+		Spiny_Dogfish5_ResN:_FillValue = 52953.82 ;
 	double Spiny_Dogfish5_StructN(t, b, z) ;
 		Spiny_Dogfish5_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish5_StructN:units = "mg N" ;
@@ -26782,7 +26842,7 @@ variables:
 		Spiny_Dogfish6_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish6_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish6_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish6_ResN:_FillValue = 82115.52 ;
+		Spiny_Dogfish6_ResN:_FillValue = 61973.98 ;
 	double Spiny_Dogfish6_StructN(t, b, z) ;
 		Spiny_Dogfish6_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish6_StructN:units = "mg N" ;
@@ -26839,7 +26899,7 @@ variables:
 		Spiny_Dogfish7_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish7_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish7_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish7_ResN:_FillValue = 89936.04 ;
+		Spiny_Dogfish7_ResN:_FillValue = 67876.26 ;
 	double Spiny_Dogfish7_StructN(t, b, z) ;
 		Spiny_Dogfish7_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish7_StructN:units = "mg N" ;
@@ -26896,7 +26956,7 @@ variables:
 		Spiny_Dogfish8_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish8_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish8_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish8_ResN:_FillValue = 94878.59 ;
+		Spiny_Dogfish8_ResN:_FillValue = 71606.48 ;
 	double Spiny_Dogfish8_StructN(t, b, z) ;
 		Spiny_Dogfish8_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish8_StructN:units = "mg N" ;
@@ -26953,7 +27013,7 @@ variables:
 		Spiny_Dogfish9_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish9_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish9_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish9_ResN:_FillValue = 97940.66 ;
+		Spiny_Dogfish9_ResN:_FillValue = 73917.48 ;
 	double Spiny_Dogfish9_StructN(t, b, z) ;
 		Spiny_Dogfish9_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish9_StructN:units = "mg N" ;
@@ -27034,7 +27094,7 @@ variables:
 		Striped_Bass10_ResN:b_dens = 1000000000. ;
 		Striped_Bass10_ResN:i_conc = 200000000. ;
 		Striped_Bass10_ResN:f_conc = 200000000. ;
-		Striped_Bass10_ResN:_FillValue = 60617.93 ;
+		Striped_Bass10_ResN:_FillValue = 45749.38 ;
 	double Striped_Bass10_StructN(t, b, z) ;
 		Striped_Bass10_StructN:bmtype = "tracer" ;
 		Striped_Bass10_StructN:units = "mg N" ;
@@ -27091,7 +27151,7 @@ variables:
 		Striped_Bass1_ResN:b_dens = 1000000000. ;
 		Striped_Bass1_ResN:i_conc = 200000000. ;
 		Striped_Bass1_ResN:f_conc = 200000000. ;
-		Striped_Bass1_ResN:_FillValue = 273.45 ;
+		Striped_Bass1_ResN:_FillValue = 206.38 ;
 	double Striped_Bass1_StructN(t, b, z) ;
 		Striped_Bass1_StructN:bmtype = "tracer" ;
 		Striped_Bass1_StructN:units = "mg N" ;
@@ -27148,7 +27208,7 @@ variables:
 		Striped_Bass2_ResN:b_dens = 1000000000. ;
 		Striped_Bass2_ResN:i_conc = 200000000. ;
 		Striped_Bass2_ResN:f_conc = 200000000. ;
-		Striped_Bass2_ResN:_FillValue = 4263.19 ;
+		Striped_Bass2_ResN:_FillValue = 3217.5 ;
 	double Striped_Bass2_StructN(t, b, z) ;
 		Striped_Bass2_StructN:bmtype = "tracer" ;
 		Striped_Bass2_StructN:units = "mg N" ;
@@ -27205,7 +27265,7 @@ variables:
 		Striped_Bass3_ResN:b_dens = 1000000000. ;
 		Striped_Bass3_ResN:i_conc = 200000000. ;
 		Striped_Bass3_ResN:f_conc = 200000000. ;
-		Striped_Bass3_ResN:_FillValue = 12385.76 ;
+		Striped_Bass3_ResN:_FillValue = 9347.74 ;
 	double Striped_Bass3_StructN(t, b, z) ;
 		Striped_Bass3_StructN:bmtype = "tracer" ;
 		Striped_Bass3_StructN:units = "mg N" ;
@@ -27262,7 +27322,7 @@ variables:
 		Striped_Bass4_ResN:b_dens = 1000000000. ;
 		Striped_Bass4_ResN:i_conc = 200000000. ;
 		Striped_Bass4_ResN:f_conc = 200000000. ;
-		Striped_Bass4_ResN:_FillValue = 22229.31 ;
+		Striped_Bass4_ResN:_FillValue = 16776.84 ;
 	double Striped_Bass4_StructN(t, b, z) ;
 		Striped_Bass4_StructN:bmtype = "tracer" ;
 		Striped_Bass4_StructN:units = "mg N" ;
@@ -27319,7 +27379,7 @@ variables:
 		Striped_Bass5_ResN:b_dens = 1000000000. ;
 		Striped_Bass5_ResN:i_conc = 200000000. ;
 		Striped_Bass5_ResN:f_conc = 200000000. ;
-		Striped_Bass5_ResN:_FillValue = 31898.92 ;
+		Striped_Bass5_ResN:_FillValue = 24074.66 ;
 	double Striped_Bass5_StructN(t, b, z) ;
 		Striped_Bass5_StructN:bmtype = "tracer" ;
 		Striped_Bass5_StructN:units = "mg N" ;
@@ -27376,7 +27436,7 @@ variables:
 		Striped_Bass6_ResN:b_dens = 1000000000. ;
 		Striped_Bass6_ResN:i_conc = 200000000. ;
 		Striped_Bass6_ResN:f_conc = 200000000. ;
-		Striped_Bass6_ResN:_FillValue = 40416.18 ;
+		Striped_Bass6_ResN:_FillValue = 30502.78 ;
 	double Striped_Bass6_StructN(t, b, z) ;
 		Striped_Bass6_StructN:bmtype = "tracer" ;
 		Striped_Bass6_StructN:units = "mg N" ;
@@ -27433,7 +27493,7 @@ variables:
 		Striped_Bass7_ResN:b_dens = 1000000000. ;
 		Striped_Bass7_ResN:i_conc = 200000000. ;
 		Striped_Bass7_ResN:f_conc = 200000000. ;
-		Striped_Bass7_ResN:_FillValue = 47452.52 ;
+		Striped_Bass7_ResN:_FillValue = 35813.22 ;
 	double Striped_Bass7_StructN(t, b, z) ;
 		Striped_Bass7_StructN:bmtype = "tracer" ;
 		Striped_Bass7_StructN:units = "mg N" ;
@@ -27490,7 +27550,7 @@ variables:
 		Striped_Bass8_ResN:b_dens = 1000000000. ;
 		Striped_Bass8_ResN:i_conc = 200000000. ;
 		Striped_Bass8_ResN:f_conc = 200000000. ;
-		Striped_Bass8_ResN:_FillValue = 53034.87 ;
+		Striped_Bass8_ResN:_FillValue = 40026.32 ;
 	double Striped_Bass8_StructN(t, b, z) ;
 		Striped_Bass8_StructN:bmtype = "tracer" ;
 		Striped_Bass8_StructN:units = "mg N" ;
@@ -27547,7 +27607,7 @@ variables:
 		Striped_Bass9_ResN:b_dens = 1000000000. ;
 		Striped_Bass9_ResN:i_conc = 200000000. ;
 		Striped_Bass9_ResN:f_conc = 200000000. ;
-		Striped_Bass9_ResN:_FillValue = 57346.95 ;
+		Striped_Bass9_ResN:_FillValue = 43280.72 ;
 	double Striped_Bass9_StructN(t, b, z) ;
 		Striped_Bass9_StructN:bmtype = "tracer" ;
 		Striped_Bass9_StructN:units = "mg N" ;
@@ -27616,7 +27676,7 @@ variables:
 		Summerflounder10_ResN:b_dens = 1000000000. ;
 		Summerflounder10_ResN:i_conc = 200000000. ;
 		Summerflounder10_ResN:f_conc = 200000000. ;
-		Summerflounder10_ResN:_FillValue = 57469.2 ;
+		Summerflounder10_ResN:_FillValue = 43372.98 ;
 	double Summerflounder10_StructN(t, b, z) ;
 		Summerflounder10_StructN:bmtype = "tracer" ;
 		Summerflounder10_StructN:units = "mg N" ;
@@ -27673,7 +27733,7 @@ variables:
 		Summerflounder1_ResN:b_dens = 1000000000. ;
 		Summerflounder1_ResN:i_conc = 200000000. ;
 		Summerflounder1_ResN:f_conc = 200000000. ;
-		Summerflounder1_ResN:_FillValue = 403.65 ;
+		Summerflounder1_ResN:_FillValue = 304.64 ;
 	double Summerflounder1_StructN(t, b, z) ;
 		Summerflounder1_StructN:bmtype = "tracer" ;
 		Summerflounder1_StructN:units = "mg N" ;
@@ -27730,7 +27790,7 @@ variables:
 		Summerflounder2_ResN:b_dens = 1000000000. ;
 		Summerflounder2_ResN:i_conc = 200000000. ;
 		Summerflounder2_ResN:f_conc = 200000000. ;
-		Summerflounder2_ResN:_FillValue = 6262.74 ;
+		Summerflounder2_ResN:_FillValue = 4726.6 ;
 	double Summerflounder2_StructN(t, b, z) ;
 		Summerflounder2_StructN:bmtype = "tracer" ;
 		Summerflounder2_StructN:units = "mg N" ;
@@ -27787,7 +27847,7 @@ variables:
 		Summerflounder3_ResN:b_dens = 1000000000. ;
 		Summerflounder3_ResN:i_conc = 200000000. ;
 		Summerflounder3_ResN:f_conc = 200000000. ;
-		Summerflounder3_ResN:_FillValue = 16939.89 ;
+		Summerflounder3_ResN:_FillValue = 12784.82 ;
 	double Summerflounder3_StructN(t, b, z) ;
 		Summerflounder3_StructN:bmtype = "tracer" ;
 		Summerflounder3_StructN:units = "mg N" ;
@@ -27844,7 +27904,7 @@ variables:
 		Summerflounder4_ResN:b_dens = 1000000000. ;
 		Summerflounder4_ResN:i_conc = 200000000. ;
 		Summerflounder4_ResN:f_conc = 200000000. ;
-		Summerflounder4_ResN:_FillValue = 28142.76 ;
+		Summerflounder4_ResN:_FillValue = 21239.82 ;
 	double Summerflounder4_StructN(t, b, z) ;
 		Summerflounder4_StructN:bmtype = "tracer" ;
 		Summerflounder4_StructN:units = "mg N" ;
@@ -27901,7 +27961,7 @@ variables:
 		Summerflounder5_ResN:b_dens = 1000000000. ;
 		Summerflounder5_ResN:i_conc = 200000000. ;
 		Summerflounder5_ResN:f_conc = 200000000. ;
-		Summerflounder5_ResN:_FillValue = 37609.44 ;
+		Summerflounder5_ResN:_FillValue = 28384.48 ;
 	double Summerflounder5_StructN(t, b, z) ;
 		Summerflounder5_StructN:bmtype = "tracer" ;
 		Summerflounder5_StructN:units = "mg N" ;
@@ -27958,7 +28018,7 @@ variables:
 		Summerflounder6_ResN:b_dens = 1000000000. ;
 		Summerflounder6_ResN:i_conc = 200000000. ;
 		Summerflounder6_ResN:f_conc = 200000000. ;
-		Summerflounder6_ResN:_FillValue = 44794.41 ;
+		Summerflounder6_ResN:_FillValue = 33807.1 ;
 	double Summerflounder6_StructN(t, b, z) ;
 		Summerflounder6_StructN:bmtype = "tracer" ;
 		Summerflounder6_StructN:units = "mg N" ;
@@ -28015,7 +28075,7 @@ variables:
 		Summerflounder7_ResN:b_dens = 1000000000. ;
 		Summerflounder7_ResN:i_conc = 200000000. ;
 		Summerflounder7_ResN:f_conc = 200000000. ;
-		Summerflounder7_ResN:_FillValue = 49931.72 ;
+		Summerflounder7_ResN:_FillValue = 37684.32 ;
 	double Summerflounder7_StructN(t, b, z) ;
 		Summerflounder7_StructN:bmtype = "tracer" ;
 		Summerflounder7_StructN:units = "mg N" ;
@@ -28072,7 +28132,7 @@ variables:
 		Summerflounder8_ResN:b_dens = 1000000000. ;
 		Summerflounder8_ResN:i_conc = 200000000. ;
 		Summerflounder8_ResN:f_conc = 200000000. ;
-		Summerflounder8_ResN:_FillValue = 53477.72 ;
+		Summerflounder8_ResN:_FillValue = 40360.54 ;
 	double Summerflounder8_StructN(t, b, z) ;
 		Summerflounder8_StructN:bmtype = "tracer" ;
 		Summerflounder8_StructN:units = "mg N" ;
@@ -28129,7 +28189,7 @@ variables:
 		Summerflounder9_ResN:b_dens = 1000000000. ;
 		Summerflounder9_ResN:i_conc = 200000000. ;
 		Summerflounder9_ResN:f_conc = 200000000. ;
-		Summerflounder9_ResN:_FillValue = 55872.97 ;
+		Summerflounder9_ResN:_FillValue = 42168.28 ;
 	double Summerflounder9_StructN(t, b, z) ;
 		Summerflounder9_StructN:bmtype = "tracer" ;
 		Summerflounder9_StructN:units = "mg N" ;
@@ -28212,7 +28272,7 @@ variables:
 		Tautog10_ResN:b_dens = 1000000000. ;
 		Tautog10_ResN:i_conc = 200000000. ;
 		Tautog10_ResN:f_conc = 200000000. ;
-		Tautog10_ResN:_FillValue = 23045.72 ;
+		Tautog10_ResN:_FillValue = 17393. ;
 	double Tautog10_StructN(t, b, z) ;
 		Tautog10_StructN:bmtype = "tracer" ;
 		Tautog10_StructN:units = "mg N" ;
@@ -28269,7 +28329,7 @@ variables:
 		Tautog1_ResN:b_dens = 1000000000. ;
 		Tautog1_ResN:i_conc = 200000000. ;
 		Tautog1_ResN:f_conc = 200000000. ;
-		Tautog1_ResN:_FillValue = 32.28 ;
+		Tautog1_ResN:_FillValue = 24.36 ;
 	double Tautog1_StructN(t, b, z) ;
 		Tautog1_StructN:bmtype = "tracer" ;
 		Tautog1_StructN:units = "mg N" ;
@@ -28326,7 +28386,7 @@ variables:
 		Tautog2_ResN:b_dens = 1000000000. ;
 		Tautog2_ResN:i_conc = 200000000. ;
 		Tautog2_ResN:f_conc = 200000000. ;
-		Tautog2_ResN:_FillValue = 652.35 ;
+		Tautog2_ResN:_FillValue = 492.34 ;
 	double Tautog2_StructN(t, b, z) ;
 		Tautog2_StructN:bmtype = "tracer" ;
 		Tautog2_StructN:units = "mg N" ;
@@ -28383,7 +28443,7 @@ variables:
 		Tautog3_ResN:b_dens = 1000000000. ;
 		Tautog3_ResN:i_conc = 200000000. ;
 		Tautog3_ResN:f_conc = 200000000. ;
-		Tautog3_ResN:_FillValue = 2282.47 ;
+		Tautog3_ResN:_FillValue = 1722.62 ;
 	double Tautog3_StructN(t, b, z) ;
 		Tautog3_StructN:bmtype = "tracer" ;
 		Tautog3_StructN:units = "mg N" ;
@@ -28440,7 +28500,7 @@ variables:
 		Tautog4_ResN:b_dens = 1000000000. ;
 		Tautog4_ResN:i_conc = 200000000. ;
 		Tautog4_ResN:f_conc = 200000000. ;
-		Tautog4_ResN:_FillValue = 4780.26 ;
+		Tautog4_ResN:_FillValue = 3607.74 ;
 	double Tautog4_StructN(t, b, z) ;
 		Tautog4_StructN:bmtype = "tracer" ;
 		Tautog4_StructN:units = "mg N" ;
@@ -28497,7 +28557,7 @@ variables:
 		Tautog5_ResN:b_dens = 1000000000. ;
 		Tautog5_ResN:i_conc = 200000000. ;
 		Tautog5_ResN:f_conc = 200000000. ;
-		Tautog5_ResN:_FillValue = 7830.35 ;
+		Tautog5_ResN:_FillValue = 5909.7 ;
 	double Tautog5_StructN(t, b, z) ;
 		Tautog5_StructN:bmtype = "tracer" ;
 		Tautog5_StructN:units = "mg N" ;
@@ -28554,7 +28614,7 @@ variables:
 		Tautog6_ResN:b_dens = 1000000000. ;
 		Tautog6_ResN:i_conc = 200000000. ;
 		Tautog6_ResN:f_conc = 200000000. ;
-		Tautog6_ResN:_FillValue = 11125.04 ;
+		Tautog6_ResN:_FillValue = 8396.26 ;
 	double Tautog6_StructN(t, b, z) ;
 		Tautog6_StructN:bmtype = "tracer" ;
 		Tautog6_StructN:units = "mg N" ;
@@ -28611,7 +28671,7 @@ variables:
 		Tautog7_ResN:b_dens = 1000000000. ;
 		Tautog7_ResN:i_conc = 200000000. ;
 		Tautog7_ResN:f_conc = 200000000. ;
-		Tautog7_ResN:_FillValue = 14424.96 ;
+		Tautog7_ResN:_FillValue = 10886.76 ;
 	double Tautog7_StructN(t, b, z) ;
 		Tautog7_StructN:bmtype = "tracer" ;
 		Tautog7_StructN:units = "mg N" ;
@@ -28668,7 +28728,7 @@ variables:
 		Tautog8_ResN:b_dens = 1000000000. ;
 		Tautog8_ResN:i_conc = 200000000. ;
 		Tautog8_ResN:f_conc = 200000000. ;
-		Tautog8_ResN:_FillValue = 17567.8 ;
+		Tautog8_ResN:_FillValue = 13258.72 ;
 	double Tautog8_StructN(t, b, z) ;
 		Tautog8_StructN:bmtype = "tracer" ;
 		Tautog8_StructN:units = "mg N" ;
@@ -28725,7 +28785,7 @@ variables:
 		Tautog9_ResN:b_dens = 1000000000. ;
 		Tautog9_ResN:i_conc = 200000000. ;
 		Tautog9_ResN:f_conc = 200000000. ;
-		Tautog9_ResN:_FillValue = 20457.07 ;
+		Tautog9_ResN:_FillValue = 15439.3 ;
 	double Tautog9_StructN(t, b, z) ;
 		Tautog9_StructN:bmtype = "tracer" ;
 		Tautog9_StructN:units = "mg N" ;
@@ -28806,7 +28866,7 @@ variables:
 		Tilefish10_ResN:b_dens = 1000000000. ;
 		Tilefish10_ResN:i_conc = 200000000. ;
 		Tilefish10_ResN:f_conc = 200000000. ;
-		Tilefish10_ResN:_FillValue = 99925.19 ;
+		Tilefish10_ResN:_FillValue = 75415.24 ;
 	double Tilefish10_StructN(t, b, z) ;
 		Tilefish10_StructN:bmtype = "tracer" ;
 		Tilefish10_StructN:units = "mg N" ;
@@ -28863,7 +28923,7 @@ variables:
 		Tilefish1_ResN:b_dens = 1000000000. ;
 		Tilefish1_ResN:i_conc = 200000000. ;
 		Tilefish1_ResN:f_conc = 200000000. ;
-		Tilefish1_ResN:_FillValue = 94.05 ;
+		Tilefish1_ResN:_FillValue = 70.98 ;
 	double Tilefish1_StructN(t, b, z) ;
 		Tilefish1_StructN:bmtype = "tracer" ;
 		Tilefish1_StructN:units = "mg N" ;
@@ -28920,7 +28980,7 @@ variables:
 		Tilefish2_ResN:b_dens = 1000000000. ;
 		Tilefish2_ResN:i_conc = 200000000. ;
 		Tilefish2_ResN:f_conc = 200000000. ;
-		Tilefish2_ResN:_FillValue = 3281.52 ;
+		Tilefish2_ResN:_FillValue = 2476.62 ;
 	double Tilefish2_StructN(t, b, z) ;
 		Tilefish2_StructN:bmtype = "tracer" ;
 		Tilefish2_StructN:units = "mg N" ;
@@ -28977,7 +29037,7 @@ variables:
 		Tilefish3_ResN:b_dens = 1000000000. ;
 		Tilefish3_ResN:i_conc = 200000000. ;
 		Tilefish3_ResN:f_conc = 200000000. ;
-		Tilefish3_ResN:_FillValue = 12162.31 ;
+		Tilefish3_ResN:_FillValue = 9179.1 ;
 	double Tilefish3_StructN(t, b, z) ;
 		Tilefish3_StructN:bmtype = "tracer" ;
 		Tilefish3_StructN:units = "mg N" ;
@@ -29034,7 +29094,7 @@ variables:
 		Tilefish4_ResN:b_dens = 1000000000. ;
 		Tilefish4_ResN:i_conc = 200000000. ;
 		Tilefish4_ResN:f_conc = 200000000. ;
-		Tilefish4_ResN:_FillValue = 25251.66 ;
+		Tilefish4_ResN:_FillValue = 19057.86 ;
 	double Tilefish4_StructN(t, b, z) ;
 		Tilefish4_StructN:bmtype = "tracer" ;
 		Tilefish4_StructN:units = "mg N" ;
@@ -29091,7 +29151,7 @@ variables:
 		Tilefish5_ResN:b_dens = 1000000000. ;
 		Tilefish5_ResN:i_conc = 200000000. ;
 		Tilefish5_ResN:f_conc = 200000000. ;
-		Tilefish5_ResN:_FillValue = 40206.3 ;
+		Tilefish5_ResN:_FillValue = 30344.38 ;
 	double Tilefish5_StructN(t, b, z) ;
 		Tilefish5_StructN:bmtype = "tracer" ;
 		Tilefish5_StructN:units = "mg N" ;
@@ -29148,7 +29208,7 @@ variables:
 		Tilefish6_ResN:b_dens = 1000000000. ;
 		Tilefish6_ResN:i_conc = 200000000. ;
 		Tilefish6_ResN:f_conc = 200000000. ;
-		Tilefish6_ResN:_FillValue = 55166.35 ;
+		Tilefish6_ResN:_FillValue = 41634.98 ;
 	double Tilefish6_StructN(t, b, z) ;
 		Tilefish6_StructN:bmtype = "tracer" ;
 		Tilefish6_StructN:units = "mg N" ;
@@ -29205,7 +29265,7 @@ variables:
 		Tilefish7_ResN:b_dens = 1000000000. ;
 		Tilefish7_ResN:i_conc = 200000000. ;
 		Tilefish7_ResN:f_conc = 200000000. ;
-		Tilefish7_ResN:_FillValue = 68990.23 ;
+		Tilefish7_ResN:_FillValue = 52068.1 ;
 	double Tilefish7_StructN(t, b, z) ;
 		Tilefish7_StructN:bmtype = "tracer" ;
 		Tilefish7_StructN:units = "mg N" ;
@@ -29262,7 +29322,7 @@ variables:
 		Tilefish8_ResN:b_dens = 1000000000. ;
 		Tilefish8_ResN:i_conc = 200000000. ;
 		Tilefish8_ResN:f_conc = 200000000. ;
-		Tilefish8_ResN:_FillValue = 81125.75 ;
+		Tilefish8_ResN:_FillValue = 61226.98 ;
 	double Tilefish8_StructN(t, b, z) ;
 		Tilefish8_StructN:bmtype = "tracer" ;
 		Tilefish8_StructN:units = "mg N" ;
@@ -29319,7 +29379,7 @@ variables:
 		Tilefish9_ResN:b_dens = 1000000000. ;
 		Tilefish9_ResN:i_conc = 200000000. ;
 		Tilefish9_ResN:f_conc = 200000000. ;
-		Tilefish9_ResN:_FillValue = 91414.11 ;
+		Tilefish9_ResN:_FillValue = 68991.78 ;
 	double Tilefish9_StructN(t, b, z) ;
 		Tilefish9_StructN:bmtype = "tracer" ;
 		Tilefish9_StructN:units = "mg N" ;
@@ -29388,7 +29448,7 @@ variables:
 		Tooth_Whale10_ResN:b_dens = 1000000000. ;
 		Tooth_Whale10_ResN:i_conc = 200000000. ;
 		Tooth_Whale10_ResN:f_conc = 200000000. ;
-		Tooth_Whale10_ResN:_FillValue = 113983422.83 ;
+		Tooth_Whale10_ResN:_FillValue = 86025224.78 ;
 	double Tooth_Whale10_StructN(t, b, z) ;
 		Tooth_Whale10_StructN:bmtype = "tracer" ;
 		Tooth_Whale10_StructN:units = "mg N" ;
@@ -29445,7 +29505,7 @@ variables:
 		Tooth_Whale1_ResN:b_dens = 1000000000. ;
 		Tooth_Whale1_ResN:i_conc = 200000000. ;
 		Tooth_Whale1_ResN:f_conc = 200000000. ;
-		Tooth_Whale1_ResN:_FillValue = 1233651.8 ;
+		Tooth_Whale1_ResN:_FillValue = 931057.96 ;
 	double Tooth_Whale1_StructN(t, b, z) ;
 		Tooth_Whale1_StructN:bmtype = "tracer" ;
 		Tooth_Whale1_StructN:units = "mg N" ;
@@ -29502,7 +29562,7 @@ variables:
 		Tooth_Whale2_ResN:b_dens = 1000000000. ;
 		Tooth_Whale2_ResN:i_conc = 200000000. ;
 		Tooth_Whale2_ResN:f_conc = 200000000. ;
-		Tooth_Whale2_ResN:_FillValue = 73686012.25 ;
+		Tooth_Whale2_ResN:_FillValue = 55612084.72 ;
 	double Tooth_Whale2_StructN(t, b, z) ;
 		Tooth_Whale2_StructN:bmtype = "tracer" ;
 		Tooth_Whale2_StructN:units = "mg N" ;
@@ -29559,7 +29619,7 @@ variables:
 		Tooth_Whale3_ResN:b_dens = 1000000000. ;
 		Tooth_Whale3_ResN:i_conc = 200000000. ;
 		Tooth_Whale3_ResN:f_conc = 200000000. ;
-		Tooth_Whale3_ResN:_FillValue = 106129203.9 ;
+		Tooth_Whale3_ResN:_FillValue = 80097512.38 ;
 	double Tooth_Whale3_StructN(t, b, z) ;
 		Tooth_Whale3_StructN:bmtype = "tracer" ;
 		Tooth_Whale3_StructN:units = "mg N" ;
@@ -29616,7 +29676,7 @@ variables:
 		Tooth_Whale4_ResN:b_dens = 1000000000. ;
 		Tooth_Whale4_ResN:i_conc = 200000000. ;
 		Tooth_Whale4_ResN:f_conc = 200000000. ;
-		Tooth_Whale4_ResN:_FillValue = 112591691.65 ;
+		Tooth_Whale4_ResN:_FillValue = 84974861.62 ;
 	double Tooth_Whale4_StructN(t, b, z) ;
 		Tooth_Whale4_StructN:bmtype = "tracer" ;
 		Tooth_Whale4_StructN:units = "mg N" ;
@@ -29673,7 +29733,7 @@ variables:
 		Tooth_Whale5_ResN:b_dens = 1000000000. ;
 		Tooth_Whale5_ResN:i_conc = 200000000. ;
 		Tooth_Whale5_ResN:f_conc = 200000000. ;
-		Tooth_Whale5_ResN:_FillValue = 113740789.34 ;
+		Tooth_Whale5_ResN:_FillValue = 85842105.16 ;
 	double Tooth_Whale5_StructN(t, b, z) ;
 		Tooth_Whale5_StructN:bmtype = "tracer" ;
 		Tooth_Whale5_StructN:units = "mg N" ;
@@ -29730,7 +29790,7 @@ variables:
 		Tooth_Whale6_ResN:b_dens = 1000000000. ;
 		Tooth_Whale6_ResN:i_conc = 200000000. ;
 		Tooth_Whale6_ResN:f_conc = 200000000. ;
-		Tooth_Whale6_ResN:_FillValue = 113941266.5 ;
+		Tooth_Whale6_ResN:_FillValue = 85993408.68 ;
 	double Tooth_Whale6_StructN(t, b, z) ;
 		Tooth_Whale6_StructN:bmtype = "tracer" ;
 		Tooth_Whale6_StructN:units = "mg N" ;
@@ -29787,7 +29847,7 @@ variables:
 		Tooth_Whale7_ResN:b_dens = 1000000000. ;
 		Tooth_Whale7_ResN:i_conc = 200000000. ;
 		Tooth_Whale7_ResN:f_conc = 200000000. ;
-		Tooth_Whale7_ResN:_FillValue = 113976128.23 ;
+		Tooth_Whale7_ResN:_FillValue = 86019719.42 ;
 	double Tooth_Whale7_StructN(t, b, z) ;
 		Tooth_Whale7_StructN:bmtype = "tracer" ;
 		Tooth_Whale7_StructN:units = "mg N" ;
@@ -29844,7 +29904,7 @@ variables:
 		Tooth_Whale8_ResN:b_dens = 1000000000. ;
 		Tooth_Whale8_ResN:i_conc = 200000000. ;
 		Tooth_Whale8_ResN:f_conc = 200000000. ;
-		Tooth_Whale8_ResN:_FillValue = 113982187.01 ;
+		Tooth_Whale8_ResN:_FillValue = 86024292.08 ;
 	double Tooth_Whale8_StructN(t, b, z) ;
 		Tooth_Whale8_StructN:bmtype = "tracer" ;
 		Tooth_Whale8_StructN:units = "mg N" ;
@@ -29901,7 +29961,7 @@ variables:
 		Tooth_Whale9_ResN:b_dens = 1000000000. ;
 		Tooth_Whale9_ResN:i_conc = 200000000. ;
 		Tooth_Whale9_ResN:f_conc = 200000000. ;
-		Tooth_Whale9_ResN:_FillValue = 113983239.88 ;
+		Tooth_Whale9_ResN:_FillValue = 86025086.7 ;
 	double Tooth_Whale9_StructN(t, b, z) ;
 		Tooth_Whale9_StructN:bmtype = "tracer" ;
 		Tooth_Whale9_StructN:units = "mg N" ;
@@ -29970,7 +30030,7 @@ variables:
 		Tunas10_ResN:b_dens = 1000000000. ;
 		Tunas10_ResN:i_conc = 200000000. ;
 		Tunas10_ResN:f_conc = 200000000. ;
-		Tunas10_ResN:_FillValue = 265548.13 ;
+		Tunas10_ResN:_FillValue = 200413.68 ;
 	double Tunas10_StructN(t, b, z) ;
 		Tunas10_StructN:bmtype = "tracer" ;
 		Tunas10_StructN:units = "mg N" ;
@@ -30027,7 +30087,7 @@ variables:
 		Tunas1_ResN:b_dens = 1000000000. ;
 		Tunas1_ResN:i_conc = 200000000. ;
 		Tunas1_ResN:f_conc = 200000000. ;
-		Tunas1_ResN:_FillValue = 4928.58 ;
+		Tunas1_ResN:_FillValue = 3719.68 ;
 	double Tunas1_StructN(t, b, z) ;
 		Tunas1_StructN:bmtype = "tracer" ;
 		Tunas1_StructN:units = "mg N" ;
@@ -30084,7 +30144,7 @@ variables:
 		Tunas2_ResN:b_dens = 1000000000. ;
 		Tunas2_ResN:i_conc = 200000000. ;
 		Tunas2_ResN:f_conc = 200000000. ;
-		Tunas2_ResN:_FillValue = 57230.33 ;
+		Tunas2_ResN:_FillValue = 43192.7 ;
 	double Tunas2_StructN(t, b, z) ;
 		Tunas2_StructN:bmtype = "tracer" ;
 		Tunas2_StructN:units = "mg N" ;
@@ -30141,7 +30201,7 @@ variables:
 		Tunas3_ResN:b_dens = 1000000000. ;
 		Tunas3_ResN:i_conc = 200000000. ;
 		Tunas3_ResN:f_conc = 200000000. ;
-		Tunas3_ResN:_FillValue = 127023.06 ;
+		Tunas3_ResN:_FillValue = 95866.46 ;
 	double Tunas3_StructN(t, b, z) ;
 		Tunas3_StructN:bmtype = "tracer" ;
 		Tunas3_StructN:units = "mg N" ;
@@ -30198,7 +30258,7 @@ variables:
 		Tunas4_ResN:b_dens = 1000000000. ;
 		Tunas4_ResN:i_conc = 200000000. ;
 		Tunas4_ResN:f_conc = 200000000. ;
-		Tunas4_ResN:_FillValue = 182191.05 ;
+		Tunas4_ResN:_FillValue = 137502.68 ;
 	double Tunas4_StructN(t, b, z) ;
 		Tunas4_StructN:bmtype = "tracer" ;
 		Tunas4_StructN:units = "mg N" ;
@@ -30255,7 +30315,7 @@ variables:
 		Tunas5_ResN:b_dens = 1000000000. ;
 		Tunas5_ResN:i_conc = 200000000. ;
 		Tunas5_ResN:f_conc = 200000000. ;
-		Tunas5_ResN:_FillValue = 218282.14 ;
+		Tunas5_ResN:_FillValue = 164741.24 ;
 	double Tunas5_StructN(t, b, z) ;
 		Tunas5_StructN:bmtype = "tracer" ;
 		Tunas5_StructN:units = "mg N" ;
@@ -30312,7 +30372,7 @@ variables:
 		Tunas6_ResN:b_dens = 1000000000. ;
 		Tunas6_ResN:i_conc = 200000000. ;
 		Tunas6_ResN:f_conc = 200000000. ;
-		Tunas6_ResN:_FillValue = 239961.45 ;
+		Tunas6_ResN:_FillValue = 181102.98 ;
 	double Tunas6_StructN(t, b, z) ;
 		Tunas6_StructN:bmtype = "tracer" ;
 		Tunas6_StructN:units = "mg N" ;
@@ -30369,7 +30429,7 @@ variables:
 		Tunas7_ResN:b_dens = 1000000000. ;
 		Tunas7_ResN:i_conc = 200000000. ;
 		Tunas7_ResN:f_conc = 200000000. ;
-		Tunas7_ResN:_FillValue = 252443.13 ;
+		Tunas7_ResN:_FillValue = 190523.12 ;
 	double Tunas7_StructN(t, b, z) ;
 		Tunas7_StructN:bmtype = "tracer" ;
 		Tunas7_StructN:units = "mg N" ;
@@ -30426,7 +30486,7 @@ variables:
 		Tunas8_ResN:b_dens = 1000000000. ;
 		Tunas8_ResN:i_conc = 200000000. ;
 		Tunas8_ResN:f_conc = 200000000. ;
-		Tunas8_ResN:_FillValue = 259472.34 ;
+		Tunas8_ResN:_FillValue = 195828.18 ;
 	double Tunas8_StructN(t, b, z) ;
 		Tunas8_StructN:bmtype = "tracer" ;
 		Tunas8_StructN:units = "mg N" ;
@@ -30483,7 +30543,7 @@ variables:
 		Tunas9_ResN:b_dens = 1000000000. ;
 		Tunas9_ResN:i_conc = 200000000. ;
 		Tunas9_ResN:f_conc = 200000000. ;
-		Tunas9_ResN:_FillValue = 263384.56 ;
+		Tunas9_ResN:_FillValue = 198780.8 ;
 	double Tunas9_StructN(t, b, z) ;
 		Tunas9_StructN:bmtype = "tracer" ;
 		Tunas9_StructN:units = "mg N" ;
@@ -30552,7 +30612,7 @@ variables:
 		Turtle10_ResN:b_dens = 1000000000. ;
 		Turtle10_ResN:i_conc = 200000000. ;
 		Turtle10_ResN:f_conc = 200000000. ;
-		Turtle10_ResN:_FillValue = 1226774.62 ;
+		Turtle10_ResN:_FillValue = 925867.64 ;
 	double Turtle10_StructN(t, b, z) ;
 		Turtle10_StructN:bmtype = "tracer" ;
 		Turtle10_StructN:units = "mg N" ;
@@ -30609,7 +30669,7 @@ variables:
 		Turtle1_ResN:b_dens = 1000000000. ;
 		Turtle1_ResN:i_conc = 200000000. ;
 		Turtle1_ResN:f_conc = 200000000. ;
-		Turtle1_ResN:_FillValue = 4475.51 ;
+		Turtle1_ResN:_FillValue = 3377.74 ;
 	double Turtle1_StructN(t, b, z) ;
 		Turtle1_StructN:bmtype = "tracer" ;
 		Turtle1_StructN:units = "mg N" ;
@@ -30666,7 +30726,7 @@ variables:
 		Turtle2_ResN:b_dens = 1000000000. ;
 		Turtle2_ResN:i_conc = 200000000. ;
 		Turtle2_ResN:f_conc = 200000000. ;
-		Turtle2_ResN:_FillValue = 647891.53 ;
+		Turtle2_ResN:_FillValue = 488974.74 ;
 	double Turtle2_StructN(t, b, z) ;
 		Turtle2_StructN:bmtype = "tracer" ;
 		Turtle2_StructN:units = "mg N" ;
@@ -30723,7 +30783,7 @@ variables:
 		Turtle3_ResN:b_dens = 1000000000. ;
 		Turtle3_ResN:i_conc = 200000000. ;
 		Turtle3_ResN:f_conc = 200000000. ;
-		Turtle3_ResN:_FillValue = 1078138.32 ;
+		Turtle3_ResN:_FillValue = 813689.3 ;
 	double Turtle3_StructN(t, b, z) ;
 		Turtle3_StructN:bmtype = "tracer" ;
 		Turtle3_StructN:units = "mg N" ;
@@ -30780,7 +30840,7 @@ variables:
 		Turtle4_ResN:b_dens = 1000000000. ;
 		Turtle4_ResN:i_conc = 200000000. ;
 		Turtle4_ResN:f_conc = 200000000. ;
-		Turtle4_ResN:_FillValue = 1193136.58 ;
+		Turtle4_ResN:_FillValue = 900480.44 ;
 	double Turtle4_StructN(t, b, z) ;
 		Turtle4_StructN:bmtype = "tracer" ;
 		Turtle4_StructN:units = "mg N" ;
@@ -30837,7 +30897,7 @@ variables:
 		Turtle5_ResN:b_dens = 1000000000. ;
 		Turtle5_ResN:i_conc = 200000000. ;
 		Turtle5_ResN:f_conc = 200000000. ;
-		Turtle5_ResN:_FillValue = 1219365.49 ;
+		Turtle5_ResN:_FillValue = 920275.84 ;
 	double Turtle5_StructN(t, b, z) ;
 		Turtle5_StructN:bmtype = "tracer" ;
 		Turtle5_StructN:units = "mg N" ;
@@ -30894,7 +30954,7 @@ variables:
 		Turtle6_ResN:b_dens = 1000000000. ;
 		Turtle6_ResN:i_conc = 200000000. ;
 		Turtle6_ResN:f_conc = 200000000. ;
-		Turtle6_ResN:_FillValue = 1225154.41 ;
+		Turtle6_ResN:_FillValue = 924644.84 ;
 	double Turtle6_StructN(t, b, z) ;
 		Turtle6_StructN:bmtype = "tracer" ;
 		Turtle6_StructN:units = "mg N" ;
@@ -30951,7 +31011,7 @@ variables:
 		Turtle7_ResN:b_dens = 1000000000. ;
 		Turtle7_ResN:i_conc = 200000000. ;
 		Turtle7_ResN:f_conc = 200000000. ;
-		Turtle7_ResN:_FillValue = 1226423.05 ;
+		Turtle7_ResN:_FillValue = 925602.3 ;
 	double Turtle7_StructN(t, b, z) ;
 		Turtle7_StructN:bmtype = "tracer" ;
 		Turtle7_StructN:units = "mg N" ;
@@ -31008,7 +31068,7 @@ variables:
 		Turtle8_ResN:b_dens = 1000000000. ;
 		Turtle8_ResN:i_conc = 200000000. ;
 		Turtle8_ResN:f_conc = 200000000. ;
-		Turtle8_ResN:_FillValue = 1226700.64 ;
+		Turtle8_ResN:_FillValue = 925811.8 ;
 	double Turtle8_StructN(t, b, z) ;
 		Turtle8_StructN:bmtype = "tracer" ;
 		Turtle8_StructN:units = "mg N" ;
@@ -31065,7 +31125,7 @@ variables:
 		Turtle9_ResN:b_dens = 1000000000. ;
 		Turtle9_ResN:i_conc = 200000000. ;
 		Turtle9_ResN:f_conc = 200000000. ;
-		Turtle9_ResN:_FillValue = 1226761.35 ;
+		Turtle9_ResN:_FillValue = 925857.62 ;
 	double Turtle9_StructN(t, b, z) ;
 		Turtle9_StructN:bmtype = "tracer" ;
 		Turtle9_StructN:units = "mg N" ;
@@ -31134,7 +31194,7 @@ variables:
 		White_Hake10_ResN:b_dens = 1000000000. ;
 		White_Hake10_ResN:i_conc = 200000000. ;
 		White_Hake10_ResN:f_conc = 200000000. ;
-		White_Hake10_ResN:_FillValue = 38879.61 ;
+		White_Hake10_ResN:_FillValue = 29343.1 ;
 	double White_Hake10_StructN(t, b, z) ;
 		White_Hake10_StructN:bmtype = "tracer" ;
 		White_Hake10_StructN:units = "mg N" ;
@@ -31191,7 +31251,7 @@ variables:
 		White_Hake1_ResN:b_dens = 1000000000. ;
 		White_Hake1_ResN:i_conc = 200000000. ;
 		White_Hake1_ResN:f_conc = 200000000. ;
-		White_Hake1_ResN:_FillValue = 160.3 ;
+		White_Hake1_ResN:_FillValue = 120.98 ;
 	double White_Hake1_StructN(t, b, z) ;
 		White_Hake1_StructN:bmtype = "tracer" ;
 		White_Hake1_StructN:units = "mg N" ;
@@ -31248,7 +31308,7 @@ variables:
 		White_Hake2_ResN:b_dens = 1000000000. ;
 		White_Hake2_ResN:i_conc = 200000000. ;
 		White_Hake2_ResN:f_conc = 200000000. ;
-		White_Hake2_ResN:_FillValue = 1038.83 ;
+		White_Hake2_ResN:_FillValue = 784.02 ;
 	double White_Hake2_StructN(t, b, z) ;
 		White_Hake2_StructN:bmtype = "tracer" ;
 		White_Hake2_StructN:units = "mg N" ;
@@ -31305,7 +31365,7 @@ variables:
 		White_Hake3_ResN:b_dens = 1000000000. ;
 		White_Hake3_ResN:i_conc = 200000000. ;
 		White_Hake3_ResN:f_conc = 200000000. ;
-		White_Hake3_ResN:_FillValue = 2929.92 ;
+		White_Hake3_ResN:_FillValue = 2211.26 ;
 	double White_Hake3_StructN(t, b, z) ;
 		White_Hake3_StructN:bmtype = "tracer" ;
 		White_Hake3_StructN:units = "mg N" ;
@@ -31362,7 +31422,7 @@ variables:
 		White_Hake4_ResN:b_dens = 1000000000. ;
 		White_Hake4_ResN:i_conc = 200000000. ;
 		White_Hake4_ResN:f_conc = 200000000. ;
-		White_Hake4_ResN:_FillValue = 5886.68 ;
+		White_Hake4_ResN:_FillValue = 4442.78 ;
 	double White_Hake4_StructN(t, b, z) ;
 		White_Hake4_StructN:bmtype = "tracer" ;
 		White_Hake4_StructN:units = "mg N" ;
@@ -31419,7 +31479,7 @@ variables:
 		White_Hake5_ResN:b_dens = 1000000000. ;
 		White_Hake5_ResN:i_conc = 200000000. ;
 		White_Hake5_ResN:f_conc = 200000000. ;
-		White_Hake5_ResN:_FillValue = 9832.06 ;
+		White_Hake5_ResN:_FillValue = 7420.42 ;
 	double White_Hake5_StructN(t, b, z) ;
 		White_Hake5_StructN:bmtype = "tracer" ;
 		White_Hake5_StructN:units = "mg N" ;
@@ -31476,7 +31536,7 @@ variables:
 		White_Hake6_ResN:b_dens = 1000000000. ;
 		White_Hake6_ResN:i_conc = 200000000. ;
 		White_Hake6_ResN:f_conc = 200000000. ;
-		White_Hake6_ResN:_FillValue = 14623.12 ;
+		White_Hake6_ResN:_FillValue = 11036.32 ;
 	double White_Hake6_StructN(t, b, z) ;
 		White_Hake6_StructN:bmtype = "tracer" ;
 		White_Hake6_StructN:units = "mg N" ;
@@ -31533,7 +31593,7 @@ variables:
 		White_Hake7_ResN:b_dens = 1000000000. ;
 		White_Hake7_ResN:i_conc = 200000000. ;
 		White_Hake7_ResN:f_conc = 200000000. ;
-		White_Hake7_ResN:_FillValue = 20090.34 ;
+		White_Hake7_ResN:_FillValue = 15162.52 ;
 	double White_Hake7_StructN(t, b, z) ;
 		White_Hake7_StructN:bmtype = "tracer" ;
 		White_Hake7_StructN:units = "mg N" ;
@@ -31590,7 +31650,7 @@ variables:
 		White_Hake8_ResN:b_dens = 1000000000. ;
 		White_Hake8_ResN:i_conc = 200000000. ;
 		White_Hake8_ResN:f_conc = 200000000. ;
-		White_Hake8_ResN:_FillValue = 26060.92 ;
+		White_Hake8_ResN:_FillValue = 19668.62 ;
 	double White_Hake8_StructN(t, b, z) ;
 		White_Hake8_StructN:bmtype = "tracer" ;
 		White_Hake8_StructN:units = "mg N" ;
@@ -31647,7 +31707,7 @@ variables:
 		White_Hake9_ResN:b_dens = 1000000000. ;
 		White_Hake9_ResN:i_conc = 200000000. ;
 		White_Hake9_ResN:f_conc = 200000000. ;
-		White_Hake9_ResN:_FillValue = 32372.37 ;
+		White_Hake9_ResN:_FillValue = 24431.98 ;
 	double White_Hake9_StructN(t, b, z) ;
 		White_Hake9_StructN:bmtype = "tracer" ;
 		White_Hake9_StructN:units = "mg N" ;
@@ -31716,7 +31776,7 @@ variables:
 		Windowpane10_ResN:b_dens = 1000000000. ;
 		Windowpane10_ResN:i_conc = 200000000. ;
 		Windowpane10_ResN:f_conc = 200000000. ;
-		Windowpane10_ResN:_FillValue = 5437.99 ;
+		Windowpane10_ResN:_FillValue = 4104.14 ;
 	double Windowpane10_StructN(t, b, z) ;
 		Windowpane10_StructN:bmtype = "tracer" ;
 		Windowpane10_StructN:units = "mg N" ;
@@ -31773,7 +31833,7 @@ variables:
 		Windowpane1_ResN:b_dens = 1000000000. ;
 		Windowpane1_ResN:i_conc = 200000000. ;
 		Windowpane1_ResN:f_conc = 200000000. ;
-		Windowpane1_ResN:_FillValue = 41.02 ;
+		Windowpane1_ResN:_FillValue = 30.96 ;
 	double Windowpane1_StructN(t, b, z) ;
 		Windowpane1_StructN:bmtype = "tracer" ;
 		Windowpane1_StructN:units = "mg N" ;
@@ -31830,7 +31890,7 @@ variables:
 		Windowpane2_ResN:b_dens = 1000000000. ;
 		Windowpane2_ResN:i_conc = 200000000. ;
 		Windowpane2_ResN:f_conc = 200000000. ;
-		Windowpane2_ResN:_FillValue = 577.51 ;
+		Windowpane2_ResN:_FillValue = 435.86 ;
 	double Windowpane2_StructN(t, b, z) ;
 		Windowpane2_StructN:bmtype = "tracer" ;
 		Windowpane2_StructN:units = "mg N" ;
@@ -31887,7 +31947,7 @@ variables:
 		Windowpane3_ResN:b_dens = 1000000000. ;
 		Windowpane3_ResN:i_conc = 200000000. ;
 		Windowpane3_ResN:f_conc = 200000000. ;
-		Windowpane3_ResN:_FillValue = 1535.52 ;
+		Windowpane3_ResN:_FillValue = 1158.88 ;
 	double Windowpane3_StructN(t, b, z) ;
 		Windowpane3_StructN:bmtype = "tracer" ;
 		Windowpane3_StructN:units = "mg N" ;
@@ -31944,7 +32004,7 @@ variables:
 		Windowpane4_ResN:b_dens = 1000000000. ;
 		Windowpane4_ResN:i_conc = 200000000. ;
 		Windowpane4_ResN:f_conc = 200000000. ;
-		Windowpane4_ResN:_FillValue = 2554.55 ;
+		Windowpane4_ResN:_FillValue = 1927.96 ;
 	double Windowpane4_StructN(t, b, z) ;
 		Windowpane4_StructN:bmtype = "tracer" ;
 		Windowpane4_StructN:units = "mg N" ;
@@ -32001,7 +32061,7 @@ variables:
 		Windowpane5_ResN:b_dens = 1000000000. ;
 		Windowpane5_ResN:i_conc = 200000000. ;
 		Windowpane5_ResN:f_conc = 200000000. ;
-		Windowpane5_ResN:_FillValue = 3438.53 ;
+		Windowpane5_ResN:_FillValue = 2595.12 ;
 	double Windowpane5_StructN(t, b, z) ;
 		Windowpane5_StructN:bmtype = "tracer" ;
 		Windowpane5_StructN:units = "mg N" ;
@@ -32058,7 +32118,7 @@ variables:
 		Windowpane6_ResN:b_dens = 1000000000. ;
 		Windowpane6_ResN:i_conc = 200000000. ;
 		Windowpane6_ResN:f_conc = 200000000. ;
-		Windowpane6_ResN:_FillValue = 4130.74 ;
+		Windowpane6_ResN:_FillValue = 3117.54 ;
 	double Windowpane6_StructN(t, b, z) ;
 		Windowpane6_StructN:bmtype = "tracer" ;
 		Windowpane6_StructN:units = "mg N" ;
@@ -32115,7 +32175,7 @@ variables:
 		Windowpane7_ResN:b_dens = 1000000000. ;
 		Windowpane7_ResN:i_conc = 200000000. ;
 		Windowpane7_ResN:f_conc = 200000000. ;
-		Windowpane7_ResN:_FillValue = 4642.3 ;
+		Windowpane7_ResN:_FillValue = 3503.62 ;
 	double Windowpane7_StructN(t, b, z) ;
 		Windowpane7_StructN:bmtype = "tracer" ;
 		Windowpane7_StructN:units = "mg N" ;
@@ -32172,7 +32232,7 @@ variables:
 		Windowpane8_ResN:b_dens = 1000000000. ;
 		Windowpane8_ResN:i_conc = 200000000. ;
 		Windowpane8_ResN:f_conc = 200000000. ;
-		Windowpane8_ResN:_FillValue = 5007.41 ;
+		Windowpane8_ResN:_FillValue = 3779.18 ;
 	double Windowpane8_StructN(t, b, z) ;
 		Windowpane8_StructN:bmtype = "tracer" ;
 		Windowpane8_StructN:units = "mg N" ;
@@ -32229,7 +32289,7 @@ variables:
 		Windowpane9_ResN:b_dens = 1000000000. ;
 		Windowpane9_ResN:i_conc = 200000000. ;
 		Windowpane9_ResN:f_conc = 200000000. ;
-		Windowpane9_ResN:_FillValue = 5262.4 ;
+		Windowpane9_ResN:_FillValue = 3971.62 ;
 	double Windowpane9_StructN(t, b, z) ;
 		Windowpane9_StructN:bmtype = "tracer" ;
 		Windowpane9_StructN:units = "mg N" ;
@@ -32298,7 +32358,7 @@ variables:
 		Winter_Skate10_ResN:b_dens = 1000000000. ;
 		Winter_Skate10_ResN:i_conc = 200000000. ;
 		Winter_Skate10_ResN:f_conc = 200000000. ;
-		Winter_Skate10_ResN:_FillValue = 158413.63 ;
+		Winter_Skate10_ResN:_FillValue = 119557.46 ;
 	double Winter_Skate10_StructN(t, b, z) ;
 		Winter_Skate10_StructN:bmtype = "tracer" ;
 		Winter_Skate10_StructN:units = "mg N" ;
@@ -32355,7 +32415,7 @@ variables:
 		Winter_Skate1_ResN:b_dens = 1000000000. ;
 		Winter_Skate1_ResN:i_conc = 200000000. ;
 		Winter_Skate1_ResN:f_conc = 200000000. ;
-		Winter_Skate1_ResN:_FillValue = 131.07 ;
+		Winter_Skate1_ResN:_FillValue = 98.92 ;
 	double Winter_Skate1_StructN(t, b, z) ;
 		Winter_Skate1_StructN:bmtype = "tracer" ;
 		Winter_Skate1_StructN:units = "mg N" ;
@@ -32412,7 +32472,7 @@ variables:
 		Winter_Skate2_ResN:b_dens = 1000000000. ;
 		Winter_Skate2_ResN:i_conc = 200000000. ;
 		Winter_Skate2_ResN:f_conc = 200000000. ;
-		Winter_Skate2_ResN:_FillValue = 6170.84 ;
+		Winter_Skate2_ResN:_FillValue = 4657.24 ;
 	double Winter_Skate2_StructN(t, b, z) ;
 		Winter_Skate2_StructN:bmtype = "tracer" ;
 		Winter_Skate2_StructN:units = "mg N" ;
@@ -32469,7 +32529,7 @@ variables:
 		Winter_Skate3_ResN:b_dens = 1000000000. ;
 		Winter_Skate3_ResN:i_conc = 200000000. ;
 		Winter_Skate3_ResN:f_conc = 200000000. ;
-		Winter_Skate3_ResN:_FillValue = 22920.67 ;
+		Winter_Skate3_ResN:_FillValue = 17298.62 ;
 	double Winter_Skate3_StructN(t, b, z) ;
 		Winter_Skate3_StructN:bmtype = "tracer" ;
 		Winter_Skate3_StructN:units = "mg N" ;
@@ -32526,7 +32586,7 @@ variables:
 		Winter_Skate4_ResN:b_dens = 1000000000. ;
 		Winter_Skate4_ResN:i_conc = 200000000. ;
 		Winter_Skate4_ResN:f_conc = 200000000. ;
-		Winter_Skate4_ResN:_FillValue = 46423.36 ;
+		Winter_Skate4_ResN:_FillValue = 35036.5 ;
 	double Winter_Skate4_StructN(t, b, z) ;
 		Winter_Skate4_StructN:bmtype = "tracer" ;
 		Winter_Skate4_StructN:units = "mg N" ;
@@ -32583,7 +32643,7 @@ variables:
 		Winter_Skate5_ResN:b_dens = 1000000000. ;
 		Winter_Skate5_ResN:i_conc = 200000000. ;
 		Winter_Skate5_ResN:f_conc = 200000000. ;
-		Winter_Skate5_ResN:_FillValue = 71759.67 ;
+		Winter_Skate5_ResN:_FillValue = 54158.24 ;
 	double Winter_Skate5_StructN(t, b, z) ;
 		Winter_Skate5_StructN:bmtype = "tracer" ;
 		Winter_Skate5_StructN:units = "mg N" ;
@@ -32640,7 +32700,7 @@ variables:
 		Winter_Skate6_ResN:b_dens = 1000000000. ;
 		Winter_Skate6_ResN:i_conc = 200000000. ;
 		Winter_Skate6_ResN:f_conc = 200000000. ;
-		Winter_Skate6_ResN:_FillValue = 95640.2 ;
+		Winter_Skate6_ResN:_FillValue = 72181.28 ;
 	double Winter_Skate6_StructN(t, b, z) ;
 		Winter_Skate6_StructN:bmtype = "tracer" ;
 		Winter_Skate6_StructN:units = "mg N" ;
@@ -32697,7 +32757,7 @@ variables:
 		Winter_Skate7_ResN:b_dens = 1000000000. ;
 		Winter_Skate7_ResN:i_conc = 200000000. ;
 		Winter_Skate7_ResN:f_conc = 200000000. ;
-		Winter_Skate7_ResN:_FillValue = 116449.77 ;
+		Winter_Skate7_ResN:_FillValue = 87886.62 ;
 	double Winter_Skate7_StructN(t, b, z) ;
 		Winter_Skate7_StructN:bmtype = "tracer" ;
 		Winter_Skate7_StructN:units = "mg N" ;
@@ -32754,7 +32814,7 @@ variables:
 		Winter_Skate8_ResN:b_dens = 1000000000. ;
 		Winter_Skate8_ResN:i_conc = 200000000. ;
 		Winter_Skate8_ResN:f_conc = 200000000. ;
-		Winter_Skate8_ResN:_FillValue = 133705.86 ;
+		Winter_Skate8_ResN:_FillValue = 100910.08 ;
 	double Winter_Skate8_StructN(t, b, z) ;
 		Winter_Skate8_StructN:bmtype = "tracer" ;
 		Winter_Skate8_StructN:units = "mg N" ;
@@ -32811,7 +32871,7 @@ variables:
 		Winter_Skate9_ResN:b_dens = 1000000000. ;
 		Winter_Skate9_ResN:i_conc = 200000000. ;
 		Winter_Skate9_ResN:f_conc = 200000000. ;
-		Winter_Skate9_ResN:_FillValue = 147551.81 ;
+		Winter_Skate9_ResN:_FillValue = 111359.86 ;
 	double Winter_Skate9_StructN(t, b, z) ;
 		Winter_Skate9_StructN:bmtype = "tracer" ;
 		Winter_Skate9_StructN:units = "mg N" ;
@@ -32880,7 +32940,7 @@ variables:
 		Winterflounder10_ResN:b_dens = 1000000000. ;
 		Winterflounder10_ResN:i_conc = 200000000. ;
 		Winterflounder10_ResN:f_conc = 200000000. ;
-		Winterflounder10_ResN:_FillValue = 21455.59 ;
+		Winterflounder10_ResN:_FillValue = 16192.9 ;
 	double Winterflounder10_StructN(t, b, z) ;
 		Winterflounder10_StructN:bmtype = "tracer" ;
 		Winterflounder10_StructN:units = "mg N" ;
@@ -32937,7 +32997,7 @@ variables:
 		Winterflounder1_ResN:b_dens = 1000000000. ;
 		Winterflounder1_ResN:i_conc = 200000000. ;
 		Winterflounder1_ResN:f_conc = 200000000. ;
-		Winterflounder1_ResN:_FillValue = 2266.33 ;
+		Winterflounder1_ResN:_FillValue = 1710.44 ;
 	double Winterflounder1_StructN(t, b, z) ;
 		Winterflounder1_StructN:bmtype = "tracer" ;
 		Winterflounder1_StructN:units = "mg N" ;
@@ -32994,7 +33054,7 @@ variables:
 		Winterflounder2_ResN:b_dens = 1000000000. ;
 		Winterflounder2_ResN:i_conc = 200000000. ;
 		Winterflounder2_ResN:f_conc = 200000000. ;
-		Winterflounder2_ResN:_FillValue = 13335.04 ;
+		Winterflounder2_ResN:_FillValue = 10064.18 ;
 	double Winterflounder2_StructN(t, b, z) ;
 		Winterflounder2_StructN:bmtype = "tracer" ;
 		Winterflounder2_StructN:units = "mg N" ;
@@ -33051,7 +33111,7 @@ variables:
 		Winterflounder3_ResN:b_dens = 1000000000. ;
 		Winterflounder3_ResN:i_conc = 200000000. ;
 		Winterflounder3_ResN:f_conc = 200000000. ;
-		Winterflounder3_ResN:_FillValue = 18937.64 ;
+		Winterflounder3_ResN:_FillValue = 14292.56 ;
 	double Winterflounder3_StructN(t, b, z) ;
 		Winterflounder3_StructN:bmtype = "tracer" ;
 		Winterflounder3_StructN:units = "mg N" ;
@@ -33108,7 +33168,7 @@ variables:
 		Winterflounder4_ResN:b_dens = 1000000000. ;
 		Winterflounder4_ResN:i_conc = 200000000. ;
 		Winterflounder4_ResN:f_conc = 200000000. ;
-		Winterflounder4_ResN:_FillValue = 20734.66 ;
+		Winterflounder4_ResN:_FillValue = 15648.8 ;
 	double Winterflounder4_StructN(t, b, z) ;
 		Winterflounder4_StructN:bmtype = "tracer" ;
 		Winterflounder4_StructN:units = "mg N" ;
@@ -33165,7 +33225,7 @@ variables:
 		Winterflounder5_ResN:b_dens = 1000000000. ;
 		Winterflounder5_ResN:i_conc = 200000000. ;
 		Winterflounder5_ResN:f_conc = 200000000. ;
-		Winterflounder5_ResN:_FillValue = 21253.74 ;
+		Winterflounder5_ResN:_FillValue = 16040.56 ;
 	double Winterflounder5_StructN(t, b, z) ;
 		Winterflounder5_StructN:bmtype = "tracer" ;
 		Winterflounder5_StructN:units = "mg N" ;
@@ -33222,7 +33282,7 @@ variables:
 		Winterflounder6_ResN:b_dens = 1000000000. ;
 		Winterflounder6_ResN:i_conc = 200000000. ;
 		Winterflounder6_ResN:f_conc = 200000000. ;
-		Winterflounder6_ResN:_FillValue = 21399.6 ;
+		Winterflounder6_ResN:_FillValue = 16150.64 ;
 	double Winterflounder6_StructN(t, b, z) ;
 		Winterflounder6_StructN:bmtype = "tracer" ;
 		Winterflounder6_StructN:units = "mg N" ;
@@ -33279,7 +33339,7 @@ variables:
 		Winterflounder7_ResN:b_dens = 1000000000. ;
 		Winterflounder7_ResN:i_conc = 200000000. ;
 		Winterflounder7_ResN:f_conc = 200000000. ;
-		Winterflounder7_ResN:_FillValue = 21440.25 ;
+		Winterflounder7_ResN:_FillValue = 16181.32 ;
 	double Winterflounder7_StructN(t, b, z) ;
 		Winterflounder7_StructN:bmtype = "tracer" ;
 		Winterflounder7_StructN:units = "mg N" ;
@@ -33336,7 +33396,7 @@ variables:
 		Winterflounder8_ResN:b_dens = 1000000000. ;
 		Winterflounder8_ResN:i_conc = 200000000. ;
 		Winterflounder8_ResN:f_conc = 200000000. ;
-		Winterflounder8_ResN:_FillValue = 21451.56 ;
+		Winterflounder8_ResN:_FillValue = 16189.86 ;
 	double Winterflounder8_StructN(t, b, z) ;
 		Winterflounder8_StructN:bmtype = "tracer" ;
 		Winterflounder8_StructN:units = "mg N" ;
@@ -33393,7 +33453,7 @@ variables:
 		Winterflounder9_ResN:b_dens = 1000000000. ;
 		Winterflounder9_ResN:i_conc = 200000000. ;
 		Winterflounder9_ResN:f_conc = 200000000. ;
-		Winterflounder9_ResN:_FillValue = 21454.72 ;
+		Winterflounder9_ResN:_FillValue = 16192.24 ;
 	double Winterflounder9_StructN(t, b, z) ;
 		Winterflounder9_StructN:bmtype = "tracer" ;
 		Winterflounder9_StructN:units = "mg N" ;
@@ -33462,7 +33522,7 @@ variables:
 		Witchflounder10_ResN:b_dens = 1000000000. ;
 		Witchflounder10_ResN:i_conc = 200000000. ;
 		Witchflounder10_ResN:f_conc = 200000000. ;
-		Witchflounder10_ResN:_FillValue = 10304.1 ;
+		Witchflounder10_ResN:_FillValue = 7776.68 ;
 	double Witchflounder10_StructN(t, b, z) ;
 		Witchflounder10_StructN:bmtype = "tracer" ;
 		Witchflounder10_StructN:units = "mg N" ;
@@ -33519,7 +33579,7 @@ variables:
 		Witchflounder1_ResN:b_dens = 1000000000. ;
 		Witchflounder1_ResN:i_conc = 200000000. ;
 		Witchflounder1_ResN:f_conc = 200000000. ;
-		Witchflounder1_ResN:_FillValue = 14.18 ;
+		Witchflounder1_ResN:_FillValue = 10.7 ;
 	double Witchflounder1_StructN(t, b, z) ;
 		Witchflounder1_StructN:bmtype = "tracer" ;
 		Witchflounder1_StructN:units = "mg N" ;
@@ -33576,7 +33636,7 @@ variables:
 		Witchflounder2_ResN:b_dens = 1000000000. ;
 		Witchflounder2_ResN:i_conc = 200000000. ;
 		Witchflounder2_ResN:f_conc = 200000000. ;
-		Witchflounder2_ResN:_FillValue = 287.13 ;
+		Witchflounder2_ResN:_FillValue = 216.7 ;
 	double Witchflounder2_StructN(t, b, z) ;
 		Witchflounder2_StructN:bmtype = "tracer" ;
 		Witchflounder2_StructN:units = "mg N" ;
@@ -33633,7 +33693,7 @@ variables:
 		Witchflounder3_ResN:b_dens = 1000000000. ;
 		Witchflounder3_ResN:i_conc = 200000000. ;
 		Witchflounder3_ResN:f_conc = 200000000. ;
-		Witchflounder3_ResN:_FillValue = 1007.21 ;
+		Witchflounder3_ResN:_FillValue = 760.16 ;
 	double Witchflounder3_StructN(t, b, z) ;
 		Witchflounder3_StructN:bmtype = "tracer" ;
 		Witchflounder3_StructN:units = "mg N" ;
@@ -33690,7 +33750,7 @@ variables:
 		Witchflounder4_ResN:b_dens = 1000000000. ;
 		Witchflounder4_ResN:i_conc = 200000000. ;
 		Witchflounder4_ResN:f_conc = 200000000. ;
-		Witchflounder4_ResN:_FillValue = 2114.54 ;
+		Witchflounder4_ResN:_FillValue = 1595.88 ;
 	double Witchflounder4_StructN(t, b, z) ;
 		Witchflounder4_StructN:bmtype = "tracer" ;
 		Witchflounder4_StructN:units = "mg N" ;
@@ -33747,7 +33807,7 @@ variables:
 		Witchflounder5_ResN:b_dens = 1000000000. ;
 		Witchflounder5_ResN:i_conc = 200000000. ;
 		Witchflounder5_ResN:f_conc = 200000000. ;
-		Witchflounder5_ResN:_FillValue = 3471.45 ;
+		Witchflounder5_ResN:_FillValue = 2619.96 ;
 	double Witchflounder5_StructN(t, b, z) ;
 		Witchflounder5_StructN:bmtype = "tracer" ;
 		Witchflounder5_StructN:units = "mg N" ;
@@ -33804,7 +33864,7 @@ variables:
 		Witchflounder6_ResN:b_dens = 1000000000. ;
 		Witchflounder6_ResN:i_conc = 200000000. ;
 		Witchflounder6_ResN:f_conc = 200000000. ;
-		Witchflounder6_ResN:_FillValue = 4942.14 ;
+		Witchflounder6_ResN:_FillValue = 3729.92 ;
 	double Witchflounder6_StructN(t, b, z) ;
 		Witchflounder6_StructN:bmtype = "tracer" ;
 		Witchflounder6_StructN:units = "mg N" ;
@@ -33861,7 +33921,7 @@ variables:
 		Witchflounder7_ResN:b_dens = 1000000000. ;
 		Witchflounder7_ResN:i_conc = 200000000. ;
 		Witchflounder7_ResN:f_conc = 200000000. ;
-		Witchflounder7_ResN:_FillValue = 6420. ;
+		Witchflounder7_ResN:_FillValue = 4845.28 ;
 	double Witchflounder7_StructN(t, b, z) ;
 		Witchflounder7_StructN:bmtype = "tracer" ;
 		Witchflounder7_StructN:units = "mg N" ;
@@ -33918,7 +33978,7 @@ variables:
 		Witchflounder8_ResN:b_dens = 1000000000. ;
 		Witchflounder8_ResN:i_conc = 200000000. ;
 		Witchflounder8_ResN:f_conc = 200000000. ;
-		Witchflounder8_ResN:_FillValue = 7832. ;
+		Witchflounder8_ResN:_FillValue = 5910.94 ;
 	double Witchflounder8_StructN(t, b, z) ;
 		Witchflounder8_StructN:bmtype = "tracer" ;
 		Witchflounder8_StructN:units = "mg N" ;
@@ -33975,7 +34035,7 @@ variables:
 		Witchflounder9_ResN:b_dens = 1000000000. ;
 		Witchflounder9_ResN:i_conc = 200000000. ;
 		Witchflounder9_ResN:f_conc = 200000000. ;
-		Witchflounder9_ResN:_FillValue = 9134.05 ;
+		Witchflounder9_ResN:_FillValue = 6893.62 ;
 	double Witchflounder9_StructN(t, b, z) ;
 		Witchflounder9_StructN:bmtype = "tracer" ;
 		Witchflounder9_StructN:units = "mg N" ;
@@ -34044,7 +34104,7 @@ variables:
 		Wolffish10_ResN:b_dens = 1000000000. ;
 		Wolffish10_ResN:i_conc = 200000000. ;
 		Wolffish10_ResN:f_conc = 200000000. ;
-		Wolffish10_ResN:_FillValue = 31911.43 ;
+		Wolffish10_ResN:_FillValue = 24084.1 ;
 	double Wolffish10_StructN(t, b, z) ;
 		Wolffish10_StructN:bmtype = "tracer" ;
 		Wolffish10_StructN:units = "mg N" ;
@@ -34101,7 +34161,7 @@ variables:
 		Wolffish1_ResN:b_dens = 1000000000. ;
 		Wolffish1_ResN:i_conc = 200000000. ;
 		Wolffish1_ResN:f_conc = 200000000. ;
-		Wolffish1_ResN:_FillValue = 18.66 ;
+		Wolffish1_ResN:_FillValue = 14.08 ;
 	double Wolffish1_StructN(t, b, z) ;
 		Wolffish1_StructN:bmtype = "tracer" ;
 		Wolffish1_StructN:units = "mg N" ;
@@ -34158,7 +34218,7 @@ variables:
 		Wolffish2_ResN:b_dens = 1000000000. ;
 		Wolffish2_ResN:i_conc = 200000000. ;
 		Wolffish2_ResN:f_conc = 200000000. ;
-		Wolffish2_ResN:_FillValue = 390.64 ;
+		Wolffish2_ResN:_FillValue = 294.82 ;
 	double Wolffish2_StructN(t, b, z) ;
 		Wolffish2_StructN:bmtype = "tracer" ;
 		Wolffish2_StructN:units = "mg N" ;
@@ -34215,7 +34275,7 @@ variables:
 		Wolffish3_ResN:b_dens = 1000000000. ;
 		Wolffish3_ResN:i_conc = 200000000. ;
 		Wolffish3_ResN:f_conc = 200000000. ;
-		Wolffish3_ResN:_FillValue = 1508.22 ;
+		Wolffish3_ResN:_FillValue = 1138.28 ;
 	double Wolffish3_StructN(t, b, z) ;
 		Wolffish3_StructN:bmtype = "tracer" ;
 		Wolffish3_StructN:units = "mg N" ;
@@ -34272,7 +34332,7 @@ variables:
 		Wolffish4_ResN:b_dens = 1000000000. ;
 		Wolffish4_ResN:i_conc = 200000000. ;
 		Wolffish4_ResN:f_conc = 200000000. ;
-		Wolffish4_ResN:_FillValue = 3530.52 ;
+		Wolffish4_ResN:_FillValue = 2664.54 ;
 	double Wolffish4_StructN(t, b, z) ;
 		Wolffish4_StructN:bmtype = "tracer" ;
 		Wolffish4_StructN:units = "mg N" ;
@@ -34329,7 +34389,7 @@ variables:
 		Wolffish5_ResN:b_dens = 1000000000. ;
 		Wolffish5_ResN:i_conc = 200000000. ;
 		Wolffish5_ResN:f_conc = 200000000. ;
-		Wolffish5_ResN:_FillValue = 6478.43 ;
+		Wolffish5_ResN:_FillValue = 4889.38 ;
 	double Wolffish5_StructN(t, b, z) ;
 		Wolffish5_StructN:bmtype = "tracer" ;
 		Wolffish5_StructN:units = "mg N" ;
@@ -34386,7 +34446,7 @@ variables:
 		Wolffish6_ResN:b_dens = 1000000000. ;
 		Wolffish6_ResN:i_conc = 200000000. ;
 		Wolffish6_ResN:f_conc = 200000000. ;
-		Wolffish6_ResN:_FillValue = 10292.52 ;
+		Wolffish6_ResN:_FillValue = 7767.94 ;
 	double Wolffish6_StructN(t, b, z) ;
 		Wolffish6_StructN:bmtype = "tracer" ;
 		Wolffish6_StructN:units = "mg N" ;
@@ -34443,7 +34503,7 @@ variables:
 		Wolffish7_ResN:b_dens = 1000000000. ;
 		Wolffish7_ResN:i_conc = 200000000. ;
 		Wolffish7_ResN:f_conc = 200000000. ;
-		Wolffish7_ResN:_FillValue = 14869.28 ;
+		Wolffish7_ResN:_FillValue = 11222.1 ;
 	double Wolffish7_StructN(t, b, z) ;
 		Wolffish7_StructN:bmtype = "tracer" ;
 		Wolffish7_StructN:units = "mg N" ;
@@ -34500,7 +34560,7 @@ variables:
 		Wolffish8_ResN:b_dens = 1000000000. ;
 		Wolffish8_ResN:i_conc = 200000000. ;
 		Wolffish8_ResN:f_conc = 200000000. ;
-		Wolffish8_ResN:_FillValue = 20084.3 ;
+		Wolffish8_ResN:_FillValue = 15157.96 ;
 	double Wolffish8_StructN(t, b, z) ;
 		Wolffish8_StructN:bmtype = "tracer" ;
 		Wolffish8_StructN:units = "mg N" ;
@@ -34557,7 +34617,7 @@ variables:
 		Wolffish9_ResN:b_dens = 1000000000. ;
 		Wolffish9_ResN:i_conc = 200000000. ;
 		Wolffish9_ResN:f_conc = 200000000. ;
-		Wolffish9_ResN:_FillValue = 25807.29 ;
+		Wolffish9_ResN:_FillValue = 19477.2 ;
 	double Wolffish9_StructN(t, b, z) ;
 		Wolffish9_StructN:bmtype = "tracer" ;
 		Wolffish9_StructN:units = "mg N" ;
@@ -34626,7 +34686,7 @@ variables:
 		Yellowtail_Flounder10_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder10_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder10_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder10_ResN:_FillValue = 4449.54 ;
+		Yellowtail_Flounder10_ResN:_FillValue = 3358.14 ;
 	double Yellowtail_Flounder10_StructN(t, b, z) ;
 		Yellowtail_Flounder10_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder10_StructN:units = "mg N" ;
@@ -34683,7 +34743,7 @@ variables:
 		Yellowtail_Flounder1_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder1_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder1_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder1_ResN:_FillValue = 142.33 ;
+		Yellowtail_Flounder1_ResN:_FillValue = 107.42 ;
 	double Yellowtail_Flounder1_StructN(t, b, z) ;
 		Yellowtail_Flounder1_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder1_StructN:units = "mg N" ;
@@ -34740,7 +34800,7 @@ variables:
 		Yellowtail_Flounder2_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder2_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder2_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder2_ResN:_FillValue = 651.82 ;
+		Yellowtail_Flounder2_ResN:_FillValue = 491.94 ;
 	double Yellowtail_Flounder2_StructN(t, b, z) ;
 		Yellowtail_Flounder2_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder2_StructN:units = "mg N" ;
@@ -34797,7 +34857,7 @@ variables:
 		Yellowtail_Flounder3_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder3_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder3_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder3_ResN:_FillValue = 1361.01 ;
+		Yellowtail_Flounder3_ResN:_FillValue = 1027.18 ;
 	double Yellowtail_Flounder3_StructN(t, b, z) ;
 		Yellowtail_Flounder3_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder3_StructN:units = "mg N" ;
@@ -34854,7 +34914,7 @@ variables:
 		Yellowtail_Flounder4_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder4_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder4_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder4_ResN:_FillValue = 2090.4 ;
+		Yellowtail_Flounder4_ResN:_FillValue = 1577.66 ;
 	double Yellowtail_Flounder4_StructN(t, b, z) ;
 		Yellowtail_Flounder4_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder4_StructN:units = "mg N" ;
@@ -34911,7 +34971,7 @@ variables:
 		Yellowtail_Flounder5_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder5_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder5_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder5_ResN:_FillValue = 2741.85 ;
+		Yellowtail_Flounder5_ResN:_FillValue = 2069.32 ;
 	double Yellowtail_Flounder5_StructN(t, b, z) ;
 		Yellowtail_Flounder5_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder5_StructN:units = "mg N" ;
@@ -34968,7 +35028,7 @@ variables:
 		Yellowtail_Flounder6_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder6_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder6_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder6_ResN:_FillValue = 3279.98 ;
+		Yellowtail_Flounder6_ResN:_FillValue = 2475.46 ;
 	double Yellowtail_Flounder6_StructN(t, b, z) ;
 		Yellowtail_Flounder6_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder6_StructN:units = "mg N" ;
@@ -35025,7 +35085,7 @@ variables:
 		Yellowtail_Flounder7_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder7_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder7_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder7_ResN:_FillValue = 3703.88 ;
+		Yellowtail_Flounder7_ResN:_FillValue = 2795.38 ;
 	double Yellowtail_Flounder7_StructN(t, b, z) ;
 		Yellowtail_Flounder7_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder7_StructN:units = "mg N" ;
@@ -35082,7 +35142,7 @@ variables:
 		Yellowtail_Flounder8_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder8_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder8_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder8_ResN:_FillValue = 4027.79 ;
+		Yellowtail_Flounder8_ResN:_FillValue = 3039.84 ;
 	double Yellowtail_Flounder8_StructN(t, b, z) ;
 		Yellowtail_Flounder8_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder8_StructN:units = "mg N" ;
@@ -35139,7 +35199,7 @@ variables:
 		Yellowtail_Flounder9_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder9_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder9_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder9_ResN:_FillValue = 4270.34 ;
+		Yellowtail_Flounder9_ResN:_FillValue = 3222.9 ;
 	double Yellowtail_Flounder9_StructN(t, b, z) ;
 		Yellowtail_Flounder9_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder9_StructN:units = "mg N" ;
@@ -40380,28 +40440,28 @@ data:
 
  Billfish10_Nums =
   _, _, _, _, _,
-  3.902695044, _, _, _, _,
-  3.902695044, _, _, _, _,
-  3.902695044, _, _, _, _,
-  3.902695044, _, _, _, _,
-  3.902695044, _, _, _, _,
-  6.967046116, _, _, _, _,
-  6.967046116, _, _, _, _,
-  18.81102451, _, _, _, _,
-  6.967046116, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.81102451, _, _, _, _,
-  18.81102451, _, _, _, _,
-  18.81102451, _, _, _, _,
-  18.81102451, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
+  22.4504582236288, _, _, _, _,
+  22.4504582236288, _, _, _, _,
+  22.4504582236288, _, _, _, _,
+  22.4504582236288, _, _, _, _,
+  22.4504582236288, _, _, _, _,
+  40.0782987164724, _, _, _, _,
+  40.0782987164724, _, _, _, _,
+  108.211406525689, _, _, _, _,
+  40.0782987164724, _, _, _, _,
+  108.939531122666, _, _, _, _,
+  108.939531122666, _, _, _, _,
+  108.211406525689, _, _, _, _,
+  108.211406525689, _, _, _, _,
+  108.211406525689, _, _, _, _,
+  108.211406525689, _, _, _, _,
+  108.939531122666, _, _, _, _,
+  108.939531122666, _, _, _, _,
+  108.939531122666, _, _, _, _,
+  108.939531122666, _, _, _, _,
+  108.939531122666, _, _, _, _,
+  108.939531122666, _, _, _, _,
+  108.939531122666, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -40476,28 +40536,28 @@ data:
 
  Billfish1_Nums =
   _, _, _, _, _,
-  224.0047711, _, _, _, _,
-  224.0047711, _, _, _, _,
-  224.0047711, _, _, _, _,
-  224.0047711, _, _, _, _,
-  224.0047711, _, _, _, _,
-  399.8907302, _, _, _, _,
-  399.8907302, _, _, _, _,
-  1079.704971, _, _, _, _,
-  399.8907302, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1079.704971, _, _, _, _,
-  1079.704971, _, _, _, _,
-  1079.704971, _, _, _, _,
-  1079.704971, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
+  7912.58336358228, _, _, _, _,
+  7912.58336358228, _, _, _, _,
+  7912.58336358228, _, _, _, _,
+  7912.58336358228, _, _, _, _,
+  7912.58336358228, _, _, _, _,
+  14125.4524297804, _, _, _, _,
+  14125.4524297804, _, _, _, _,
+  38138.7215573104, _, _, _, _,
+  14125.4524297804, _, _, _, _,
+  38395.346456244, _, _, _, _,
+  38395.346456244, _, _, _, _,
+  38138.7215573104, _, _, _, _,
+  38138.7215573104, _, _, _, _,
+  38138.7215573104, _, _, _, _,
+  38138.7215573104, _, _, _, _,
+  38395.346456244, _, _, _, _,
+  38395.346456244, _, _, _, _,
+  38395.346456244, _, _, _, _,
+  38395.346456244, _, _, _, _,
+  38395.346456244, _, _, _, _,
+  38395.346456244, _, _, _, _,
+  38395.346456244, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -40572,28 +40632,28 @@ data:
 
  Billfish2_Nums =
   _, _, _, _, _,
-  142.8317482, _, _, _, _,
-  142.8317482, _, _, _, _,
-  142.8317482, _, _, _, _,
-  142.8317482, _, _, _, _,
-  142.8317482, _, _, _, _,
-  254.9815871, _, _, _, _,
-  254.9815871, _, _, _, _,
-  688.4502852, _, _, _, _,
-  254.9815871, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
-  688.4502852, _, _, _, _,
-  688.4502852, _, _, _, _,
-  688.4502852, _, _, _, _,
-  688.4502852, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
+  1161.39522681722, _, _, _, _,
+  1161.39522681722, _, _, _, _,
+  1161.39522681722, _, _, _, _,
+  1161.39522681722, _, _, _, _,
+  1161.39522681722, _, _, _, _,
+  2073.30934471867, _, _, _, _,
+  2073.30934471867, _, _, _, _,
+  5597.9352302859, _, _, _, _,
+  2073.30934471867, _, _, _, _,
+  5635.60218670316, _, _, _, _,
+  5635.60218670316, _, _, _, _,
+  5597.9352302859, _, _, _, _,
+  5597.9352302859, _, _, _, _,
+  5597.9352302859, _, _, _, _,
+  5597.9352302859, _, _, _, _,
+  5635.60218670316, _, _, _, _,
+  5635.60218670316, _, _, _, _,
+  5635.60218670316, _, _, _, _,
+  5635.60218670316, _, _, _, _,
+  5635.60218670316, _, _, _, _,
+  5635.60218670316, _, _, _, _,
+  5635.60218670316, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -40668,28 +40728,28 @@ data:
 
  Billfish3_Nums =
   _, _, _, _, _,
-  91.07354358, _, _, _, _,
-  91.07354358, _, _, _, _,
-  91.07354358, _, _, _, _,
-  91.07354358, _, _, _, _,
-  91.07354358, _, _, _, _,
-  162.5834381, _, _, _, _,
-  162.5834381, _, _, _, _,
-  438.9752829, _, _, _, _,
-  162.5834381, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
-  438.9752829, _, _, _, _,
-  438.9752829, _, _, _, _,
-  438.9752829, _, _, _, _,
-  438.9752829, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
+  2147.84583390779, _, _, _, _,
+  2147.84583390779, _, _, _, _,
+  2147.84583390779, _, _, _, _,
+  2147.84583390779, _, _, _, _,
+  2147.84583390779, _, _, _, _,
+  3834.30957492381, _, _, _, _,
+  3834.30957492381, _, _, _, _,
+  10352.6358514537, _, _, _, _,
+  3834.30957492381, _, _, _, _,
+  10422.2958720468, _, _, _, _,
+  10422.2958720468, _, _, _, _,
+  10352.6358514537, _, _, _, _,
+  10352.6358514537, _, _, _, _,
+  10352.6358514537, _, _, _, _,
+  10352.6358514537, _, _, _, _,
+  10422.2958720468, _, _, _, _,
+  10422.2958720468, _, _, _, _,
+  10422.2958720468, _, _, _, _,
+  10422.2958720468, _, _, _, _,
+  10422.2958720468, _, _, _, _,
+  10422.2958720468, _, _, _, _,
+  10422.2958720468, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -40764,28 +40824,28 @@ data:
 
  Billfish4_Nums =
   _, _, _, _, _,
-  58.07105525, _, _, _, _,
-  58.07105525, _, _, _, _,
-  58.07105525, _, _, _, _,
-  58.07105525, _, _, _, _,
-  58.07105525, _, _, _, _,
-  103.6677771, _, _, _, _,
-  103.6677771, _, _, _, _,
-  279.9029982, _, _, _, _,
-  103.6677771, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
-  279.9029982, _, _, _, _,
-  279.9029982, _, _, _, _,
-  279.9029982, _, _, _, _,
-  279.9029982, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
+  1066.62715801007, _, _, _, _,
+  1066.62715801007, _, _, _, _,
+  1066.62715801007, _, _, _, _,
+  1066.62715801007, _, _, _, _,
+  1066.62715801007, _, _, _, _,
+  1904.13048286191, _, _, _, _,
+  1904.13048286191, _, _, _, _,
+  5141.15230330973, _, _, _, _,
+  1904.13048286191, _, _, _, _,
+  5175.74569386837, _, _, _, _,
+  5175.74569386837, _, _, _, _,
+  5141.15230330973, _, _, _, _,
+  5141.15230330973, _, _, _, _,
+  5141.15230330973, _, _, _, _,
+  5141.15230330973, _, _, _, _,
+  5175.74569386837, _, _, _, _,
+  5175.74569386837, _, _, _, _,
+  5175.74569386837, _, _, _, _,
+  5175.74569386837, _, _, _, _,
+  5175.74569386837, _, _, _, _,
+  5175.74569386837, _, _, _, _,
+  5175.74569386837, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -40860,28 +40920,28 @@ data:
 
  Billfish5_Nums =
   _, _, _, _, _,
-  37.02773962, _, _, _, _,
-  37.02773962, _, _, _, _,
-  37.02773962, _, _, _, _,
-  37.02773962, _, _, _, _,
-  37.02773962, _, _, _, _,
-  66.10149311, _, _, _, _,
-  66.10149311, _, _, _, _,
-  178.4740314, _, _, _, _,
-  66.10149311, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
-  178.4740314, _, _, _, _,
-  178.4740314, _, _, _, _,
-  178.4740314, _, _, _, _,
-  178.4740314, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
+  601.784916671683, _, _, _, _,
+  601.784916671683, _, _, _, _,
+  601.784916671683, _, _, _, _,
+  601.784916671683, _, _, _, _,
+  601.784916671683, _, _, _, _,
+  1074.29948258476, _, _, _, _,
+  1074.29948258476, _, _, _, _,
+  2900.60860274333, _, _, _, _,
+  1074.29948258476, _, _, _, _,
+  2920.12599501896, _, _, _, _,
+  2920.12599501896, _, _, _, _,
+  2900.60860274333, _, _, _, _,
+  2900.60860274333, _, _, _, _,
+  2900.60860274333, _, _, _, _,
+  2900.60860274333, _, _, _, _,
+  2920.12599501896, _, _, _, _,
+  2920.12599501896, _, _, _, _,
+  2920.12599501896, _, _, _, _,
+  2920.12599501896, _, _, _, _,
+  2920.12599501896, _, _, _, _,
+  2920.12599501896, _, _, _, _,
+  2920.12599501896, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -40956,28 +41016,28 @@ data:
 
  Billfish6_Nums =
   _, _, _, _, _,
-  23.60992918, _, _, _, _,
-  23.60992918, _, _, _, _,
-  23.60992918, _, _, _, _,
-  23.60992918, _, _, _, _,
-  23.60992918, _, _, _, _,
-  42.14817287, _, _, _, _,
-  42.14817287, _, _, _, _,
-  113.8000667, _, _, _, _,
-  42.14817287, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
-  113.8000667, _, _, _, _,
-  113.8000667, _, _, _, _,
-  113.8000667, _, _, _, _,
-  113.8000667, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
+  384.294502683142, _, _, _, _,
+  384.294502683142, _, _, _, _,
+  384.294502683142, _, _, _, _,
+  384.294502683142, _, _, _, _,
+  384.294502683142, _, _, _, _,
+  686.038107561782, _, _, _, _,
+  686.038107561782, _, _, _, _,
+  1852.30289026642, _, _, _, _,
+  686.038107561782, _, _, _, _,
+  1864.76652361854, _, _, _, _,
+  1864.76652361854, _, _, _, _,
+  1852.30289026642, _, _, _, _,
+  1852.30289026642, _, _, _, _,
+  1852.30289026642, _, _, _, _,
+  1852.30289026642, _, _, _, _,
+  1864.76652361854, _, _, _, _,
+  1864.76652361854, _, _, _, _,
+  1864.76652361854, _, _, _, _,
+  1864.76652361854, _, _, _, _,
+  1864.76652361854, _, _, _, _,
+  1864.76652361854, _, _, _, _,
+  1864.76652361854, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -41052,28 +41112,28 @@ data:
 
  Billfish7_Nums =
   _, _, _, _, _,
-  15.0543555, _, _, _, _,
-  15.0543555, _, _, _, _,
-  15.0543555, _, _, _, _,
-  15.0543555, _, _, _, _,
-  15.0543555, _, _, _, _,
-  26.87486156, _, _, _, _,
-  26.87486156, _, _, _, _,
-  72.56212621, _, _, _, _,
-  26.87486156, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
-  72.56212621, _, _, _, _,
-  72.56212621, _, _, _, _,
-  72.56212621, _, _, _, _,
-  72.56212621, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
+  208.64590621629, _, _, _, _,
+  208.64590621629, _, _, _, _,
+  208.64590621629, _, _, _, _,
+  208.64590621629, _, _, _, _,
+  208.64590621629, _, _, _, _,
+  372.472261902632, _, _, _, _,
+  372.472261902632, _, _, _, _,
+  1005.67510705545, _, _, _, _,
+  372.472261902632, _, _, _, _,
+  1012.44201643705, _, _, _, _,
+  1012.44201643705, _, _, _, _,
+  1005.67510705545, _, _, _, _,
+  1005.67510705545, _, _, _, _,
+  1005.67510705545, _, _, _, _,
+  1005.67510705545, _, _, _, _,
+  1012.44201643705, _, _, _, _,
+  1012.44201643705, _, _, _, _,
+  1012.44201643705, _, _, _, _,
+  1012.44201643705, _, _, _, _,
+  1012.44201643705, _, _, _, _,
+  1012.44201643705, _, _, _, _,
+  1012.44201643705, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -41148,28 +41208,28 @@ data:
 
  Billfish8_Nums =
   _, _, _, _, _,
-  9.599080871, _, _, _, _,
-  9.599080871, _, _, _, _,
-  9.599080871, _, _, _, _,
-  9.599080871, _, _, _, _,
-  9.599080871, _, _, _, _,
-  17.1361683, _, _, _, _,
-  17.1361683, _, _, _, _,
-  46.26765442, _, _, _, _,
-  17.1361683, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.26765442, _, _, _, _,
-  46.26765442, _, _, _, _,
-  46.26765442, _, _, _, _,
-  46.26765442, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
+  135.112335808795, _, _, _, _,
+  135.112335808795, _, _, _, _,
+  135.112335808795, _, _, _, _,
+  135.112335808795, _, _, _, _,
+  135.112335808795, _, _, _, _,
+  241.200981329009, _, _, _, _,
+  241.200981329009, _, _, _, _,
+  651.242649535448, _, _, _, _,
+  241.200981329009, _, _, _, _,
+  655.624681032418, _, _, _, _,
+  655.624681032418, _, _, _, _,
+  651.242649535448, _, _, _, _,
+  651.242649535448, _, _, _, _,
+  651.242649535448, _, _, _, _,
+  651.242649535448, _, _, _, _,
+  655.624681032418, _, _, _, _,
+  655.624681032418, _, _, _, _,
+  655.624681032418, _, _, _, _,
+  655.624681032418, _, _, _, _,
+  655.624681032418, _, _, _, _,
+  655.624681032418, _, _, _, _,
+  655.624681032418, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -41244,28 +41304,28 @@ data:
 
  Billfish9_Nums =
   _, _, _, _, _,
-  6.120644193, _, _, _, _,
-  6.120644193, _, _, _, _,
-  6.120644193, _, _, _, _,
-  6.120644193, _, _, _, _,
-  6.120644193, _, _, _, _,
-  10.92650332, _, _, _, _,
-  10.92650332, _, _, _, _,
-  29.50155896, _, _, _, _,
-  10.92650332, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.50155896, _, _, _, _,
-  29.50155896, _, _, _, _,
-  29.50155896, _, _, _, _,
-  29.50155896, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
+  80.9573251222647, _, _, _, _,
+  80.9573251222647, _, _, _, _,
+  80.9573251222647, _, _, _, _,
+  80.9573251222647, _, _, _, _,
+  80.9573251222647, _, _, _, _,
+  144.524081745546, _, _, _, _,
+  144.524081745546, _, _, _, _,
+  390.215020681291, _, _, _, _,
+  144.524081745546, _, _, _, _,
+  392.840669527287, _, _, _, _,
+  392.840669527287, _, _, _, _,
+  390.215020681291, _, _, _, _,
+  390.215020681291, _, _, _, _,
+  390.215020681291, _, _, _, _,
+  390.215020681291, _, _, _, _,
+  392.840669527287, _, _, _, _,
+  392.840669527287, _, _, _, _,
+  392.840669527287, _, _, _, _,
+  392.840669527287, _, _, _, _,
+  392.840669527287, _, _, _, _,
+  392.840669527287, _, _, _, _,
+  392.840669527287, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -41372,13 +41432,13 @@ data:
 
  Black_Sea_Bass10_Nums =
   _, _, _, _, _,
-  327, _, _, _, _,
-  695, _, _, _, _,
-  2495, _, _, _, _,
-  245, _, _, _, _,
-  205, _, _, _, _,
-  41, _, _, _, _,
-  82, _, _, _, _,
+  6477.69385234375, _, _, _, _,
+  13767.1038239217, _, _, _, _,
+  49399.8680870828, _, _, _, _,
+  4858.52851260327, _, _, _, _,
+  4050.2209584091, _, _, _, _,
+  810.093388524827, _, _, _, _,
+  1619.49137711452, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -41468,13 +41528,13 @@ data:
 
  Black_Sea_Bass1_Nums =
   _, _, _, _, _,
-  18784, _, _, _, _,
-  39917, _, _, _, _,
-  143232, _, _, _, _,
-  14088, _, _, _, _,
-  11740, _, _, _, _,
-  2348, _, _, _, _,
-  4696, _, _, _, _,
+  501433.159458011, _, _, _, _,
+  1065700.62191466, _, _, _, _,
+  3824004.73013284, _, _, _, _,
+  376094.850717592, _, _, _, _,
+  313524.402043685, _, _, _, _,
+  62708.6886974561, _, _, _, _,
+  125363.547035758, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -41564,13 +41624,13 @@ data:
 
  Black_Sea_Bass2_Nums =
   _, _, _, _, _,
-  11978, _, _, _, _,
-  25452, _, _, _, _,
-  91329, _, _, _, _,
-  8983, _, _, _, _,
-  7486, _, _, _, _,
-  1497, _, _, _, _,
-  2994, _, _, _, _,
+  127581.765098324, _, _, _, _,
+  271150.72835872, _, _, _, _,
+  972957.739256851, _, _, _, _,
+  95691.4077058739, _, _, _, _,
+  79771.3431185225, _, _, _, _,
+  15955.2375827524, _, _, _, _,
+  31896.7788789567, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -41660,13 +41720,13 @@ data:
 
  Black_Sea_Bass3_Nums =
   _, _, _, _, _,
-  7637, _, _, _, _,
-  16229, _, _, _, _,
-  58234, _, _, _, _,
-  5728, _, _, _, _,
-  4773, _, _, _, _,
-  955, _, _, _, _,
-  1909, _, _, _, _,
+  297403.600509651, _, _, _, _,
+  632074.676444161, _, _, _, _,
+  2268044.61104387, _, _, _, _,
+  223064.551330132, _, _, _, _,
+  185953.569796246, _, _, _, _,
+  37192.9726825815, _, _, _, _,
+  74354.0181933613, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -41756,13 +41816,13 @@ data:
 
  Black_Sea_Bass4_Nums =
   _, _, _, _, _,
-  4870, _, _, _, _,
-  10348, _, _, _, _,
-  37131, _, _, _, _,
-  3652, _, _, _, _,
-  3044, _, _, _, _,
-  609, _, _, _, _,
-  1217, _, _, _, _,
+  176345.362569148, _, _, _, _,
+  374788.461865663, _, _, _, _,
+  1344836.2715587, _, _, _, _,
+  132266.048942336, _, _, _, _,
+  110261.105213762, _, _, _, _,
+  22053.5603519749, _, _, _, _,
+  44088.189498418, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -41852,13 +41912,13 @@ data:
 
  Black_Sea_Bass5_Nums =
   _, _, _, _, _,
-  3105, _, _, _, _,
-  6598, _, _, _, _,
-  23676, _, _, _, _,
-  2329, _, _, _, _,
-  1941, _, _, _, _,
-  388, _, _, _, _,
-  776, _, _, _, _,
+  114995.203521998, _, _, _, _,
+  244400.390359224, _, _, _, _,
+  876970.726638858, _, _, _, _,
+  86250.984973934, _, _, _, _,
+  71901.5121798013, _, _, _, _,
+  14381.1758024859, _, _, _, _,
+  28750.0065236987, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -41948,13 +42008,13 @@ data:
 
  Black_Sea_Bass6_Nums =
   _, _, _, _, _,
-  1980, _, _, _, _,
-  4207, _, _, _, _,
-  15097, _, _, _, _,
-  1485, _, _, _, _,
-  1237, _, _, _, _,
-  247, _, _, _, _,
-  495, _, _, _, _,
+  82729.5163264336, _, _, _, _,
+  175825.821122551, _, _, _, _,
+  630907.740716288, _, _, _, _,
+  62050.4338531567, _, _, _, _,
+  51727.1776873391, _, _, _, _,
+  10346.0638522847, _, _, _, _,
+  20683.2464419475, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -42044,13 +42104,13 @@ data:
 
  Black_Sea_Bass7_Nums =
   _, _, _, _, _,
-  1262, _, _, _, _,
-  2683, _, _, _, _,
-  9626, _, _, _, _,
-  947, _, _, _, _,
-  789, _, _, _, _,
-  158, _, _, _, _,
-  316, _, _, _, _,
+  49525.3262108788, _, _, _, _,
+  105256.642780681, _, _, _, _,
+  377687.590299124, _, _, _, _,
+  37145.9681448934, _, _, _, _,
+  30966.0380320031, _, _, _, _,
+  6193.58374175896, _, _, _, _,
+  12381.850790661, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -42140,13 +42200,13 @@ data:
 
  Black_Sea_Bass8_Nums =
   _, _, _, _, _,
-  805, _, _, _, _,
-  1711, _, _, _, _,
-  6138, _, _, _, _,
-  604, _, _, _, _,
-  503, _, _, _, _,
-  101, _, _, _, _,
-  201, _, _, _, _,
+  34725.5678994301, _, _, _, _,
+  73802.5768913304, _, _, _, _,
+  264822.406335274, _, _, _, _,
+  26045.5596700789, _, _, _, _,
+  21712.3911850267, _, _, _, _,
+  4342.7419710365, _, _, _, _,
+  8681.75604782311, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -42236,13 +42296,13 @@ data:
 
  Black_Sea_Bass9_Nums =
   _, _, _, _, _,
-  513, _, _, _, _,
-  1091, _, _, _, _,
-  3914, _, _, _, _,
-  385, _, _, _, _,
-  321, _, _, _, _,
-  64, _, _, _, _,
-  128, _, _, _, _,
+  22185.4795351149, _, _, _, _,
+  47151.0088475248, _, _, _, _,
+  169189.8054254, _, _, _, _,
+  16639.9936990125, _, _, _, _,
+  13871.6179297308, _, _, _, _,
+  2774.49208041018, _, _, _, _,
+  5546.60248280635, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -43356,28 +43416,28 @@ data:
 
  BluefinTuna10_Nums =
   _, _, _, _, _,
-  3.902695044, _, _, _, _,
-  3.902695044, _, _, _, _,
-  3.902695044, _, _, _, _,
-  3.902695044, _, _, _, _,
-  3.902695044, _, _, _, _,
-  6.967046116, _, _, _, _,
-  6.967046116, _, _, _, _,
-  18.81102451, _, _, _, _,
-  6.967046116, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.81102451, _, _, _, _,
-  18.81102451, _, _, _, _,
-  18.81102451, _, _, _, _,
-  18.81102451, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
+  7.06536655612492, _, _, _, _,
+  7.06536655612492, _, _, _, _,
+  7.06536655612492, _, _, _, _,
+  7.06536655612492, _, _, _, _,
+  7.06536655612492, _, _, _, _,
+  12.6130107705204, _, _, _, _,
+  12.6130107705204, _, _, _, _,
+  34.0551290776399, _, _, _, _,
+  12.6130107705204, _, _, _, _,
+  34.2842766132905, _, _, _, _,
+  34.2842766132905, _, _, _, _,
+  34.0551290776399, _, _, _, _,
+  34.0551290776399, _, _, _, _,
+  34.0551290776399, _, _, _, _,
+  34.0551290776399, _, _, _, _,
+  34.2842766132905, _, _, _, _,
+  34.2842766132905, _, _, _, _,
+  34.2842766132905, _, _, _, _,
+  34.2842766132905, _, _, _, _,
+  34.2842766132905, _, _, _, _,
+  34.2842766132905, _, _, _, _,
+  34.2842766132905, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -43452,28 +43512,28 @@ data:
 
  BluefinTuna1_Nums =
   _, _, _, _, _,
-  224.0047711, _, _, _, _,
-  224.0047711, _, _, _, _,
-  224.0047711, _, _, _, _,
-  224.0047711, _, _, _, _,
-  224.0047711, _, _, _, _,
-  399.8907302, _, _, _, _,
-  399.8907302, _, _, _, _,
-  1079.704971, _, _, _, _,
-  399.8907302, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1079.704971, _, _, _, _,
-  1079.704971, _, _, _, _,
-  1079.704971, _, _, _, _,
-  1079.704971, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
+  1960.49842397663, _, _, _, _,
+  1960.49842397663, _, _, _, _,
+  1960.49842397663, _, _, _, _,
+  1960.49842397663, _, _, _, _,
+  1960.49842397663, _, _, _, _,
+  3499.85914259028, _, _, _, _,
+  3499.85914259028, _, _, _, _,
+  9449.61968422651, _, _, _, _,
+  3499.85914259028, _, _, _, _,
+  9513.20355902373, _, _, _, _,
+  9513.20355902373, _, _, _, _,
+  9449.61968422651, _, _, _, _,
+  9449.61968422651, _, _, _, _,
+  9449.61968422651, _, _, _, _,
+  9449.61968422651, _, _, _, _,
+  9513.20355902373, _, _, _, _,
+  9513.20355902373, _, _, _, _,
+  9513.20355902373, _, _, _, _,
+  9513.20355902373, _, _, _, _,
+  9513.20355902373, _, _, _, _,
+  9513.20355902373, _, _, _, _,
+  9513.20355902373, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -43548,28 +43608,28 @@ data:
 
  BluefinTuna2_Nums =
   _, _, _, _, _,
-  142.8317482, _, _, _, _,
-  142.8317482, _, _, _, _,
-  142.8317482, _, _, _, _,
-  142.8317482, _, _, _, _,
-  142.8317482, _, _, _, _,
-  254.9815871, _, _, _, _,
-  254.9815871, _, _, _, _,
-  688.4502852, _, _, _, _,
-  254.9815871, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
-  688.4502852, _, _, _, _,
-  688.4502852, _, _, _, _,
-  688.4502852, _, _, _, _,
-  688.4502852, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
+  326.427614639228, _, _, _, _,
+  326.427614639228, _, _, _, _,
+  326.427614639228, _, _, _, _,
+  326.427614639228, _, _, _, _,
+  326.427614639228, _, _, _, _,
+  582.734807392357, _, _, _, _,
+  582.734807392357, _, _, _, _,
+  1573.38397983162, _, _, _, _,
+  582.734807392357, _, _, _, _,
+  1583.97084505208, _, _, _, _,
+  1583.97084505208, _, _, _, _,
+  1573.38397983162, _, _, _, _,
+  1573.38397983162, _, _, _, _,
+  1573.38397983162, _, _, _, _,
+  1573.38397983162, _, _, _, _,
+  1583.97084505208, _, _, _, _,
+  1583.97084505208, _, _, _, _,
+  1583.97084505208, _, _, _, _,
+  1583.97084505208, _, _, _, _,
+  1583.97084505208, _, _, _, _,
+  1583.97084505208, _, _, _, _,
+  1583.97084505208, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -43644,28 +43704,28 @@ data:
 
  BluefinTuna3_Nums =
   _, _, _, _, _,
-  91.07354358, _, _, _, _,
-  91.07354358, _, _, _, _,
-  91.07354358, _, _, _, _,
-  91.07354358, _, _, _, _,
-  91.07354358, _, _, _, _,
-  162.5834381, _, _, _, _,
-  162.5834381, _, _, _, _,
-  438.9752829, _, _, _, _,
-  162.5834381, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
-  438.9752829, _, _, _, _,
-  438.9752829, _, _, _, _,
-  438.9752829, _, _, _, _,
-  438.9752829, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
+  611.218204990278, _, _, _, _,
+  611.218204990278, _, _, _, _,
+  611.218204990278, _, _, _, _,
+  611.218204990278, _, _, _, _,
+  611.218204990278, _, _, _, _,
+  1091.13967993598, _, _, _, _,
+  1091.13967993598, _, _, _, _,
+  2946.07713558794, _, _, _, _,
+  1091.13967993598, _, _, _, _,
+  2965.90047303345, _, _, _, _,
+  2965.90047303345, _, _, _, _,
+  2946.07713558794, _, _, _, _,
+  2946.07713558794, _, _, _, _,
+  2946.07713558794, _, _, _, _,
+  2946.07713558794, _, _, _, _,
+  2965.90047303345, _, _, _, _,
+  2965.90047303345, _, _, _, _,
+  2965.90047303345, _, _, _, _,
+  2965.90047303345, _, _, _, _,
+  2965.90047303345, _, _, _, _,
+  2965.90047303345, _, _, _, _,
+  2965.90047303345, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -43740,28 +43800,28 @@ data:
 
  BluefinTuna4_Nums =
   _, _, _, _, _,
-  58.07105525, _, _, _, _,
-  58.07105525, _, _, _, _,
-  58.07105525, _, _, _, _,
-  58.07105525, _, _, _, _,
-  58.07105525, _, _, _, _,
-  103.6677771, _, _, _, _,
-  103.6677771, _, _, _, _,
-  279.9029982, _, _, _, _,
-  103.6677771, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
-  279.9029982, _, _, _, _,
-  279.9029982, _, _, _, _,
-  279.9029982, _, _, _, _,
-  279.9029982, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
+  308.725799517632, _, _, _, _,
+  308.725799517632, _, _, _, _,
+  308.725799517632, _, _, _, _,
+  308.725799517632, _, _, _, _,
+  308.725799517632, _, _, _, _,
+  551.133731494477, _, _, _, _,
+  551.133731494477, _, _, _, _,
+  1488.06107491427, _, _, _, _,
+  551.133731494477, _, _, _, _,
+  1498.07382592856, _, _, _, _,
+  1498.07382592856, _, _, _, _,
+  1488.06107491427, _, _, _, _,
+  1488.06107491427, _, _, _, _,
+  1488.06107491427, _, _, _, _,
+  1488.06107491427, _, _, _, _,
+  1498.07382592856, _, _, _, _,
+  1498.07382592856, _, _, _, _,
+  1498.07382592856, _, _, _, _,
+  1498.07382592856, _, _, _, _,
+  1498.07382592856, _, _, _, _,
+  1498.07382592856, _, _, _, _,
+  1498.07382592856, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -43836,28 +43896,28 @@ data:
 
  BluefinTuna5_Nums =
   _, _, _, _, _,
-  37.02773962, _, _, _, _,
-  37.02773962, _, _, _, _,
-  37.02773962, _, _, _, _,
-  37.02773962, _, _, _, _,
-  37.02773962, _, _, _, _,
-  66.10149311, _, _, _, _,
-  66.10149311, _, _, _, _,
-  178.4740314, _, _, _, _,
-  66.10149311, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
-  178.4740314, _, _, _, _,
-  178.4740314, _, _, _, _,
-  178.4740314, _, _, _, _,
-  178.4740314, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
+  177.235744026561, _, _, _, _,
+  177.235744026561, _, _, _, _,
+  177.235744026561, _, _, _, _,
+  177.235744026561, _, _, _, _,
+  177.235744026561, _, _, _, _,
+  316.399203151079, _, _, _, _,
+  316.399203151079, _, _, _, _,
+  854.277848438551, _, _, _, _,
+  316.399203151079, _, _, _, _,
+  860.026047580134, _, _, _, _,
+  860.026047580134, _, _, _, _,
+  854.277848438551, _, _, _, _,
+  854.277848438551, _, _, _, _,
+  854.277848438551, _, _, _, _,
+  854.277848438551, _, _, _, _,
+  860.026047580134, _, _, _, _,
+  860.026047580134, _, _, _, _,
+  860.026047580134, _, _, _, _,
+  860.026047580134, _, _, _, _,
+  860.026047580134, _, _, _, _,
+  860.026047580134, _, _, _, _,
+  860.026047580134, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -43932,28 +43992,28 @@ data:
 
  BluefinTuna6_Nums =
   _, _, _, _, _,
-  23.60992918, _, _, _, _,
-  23.60992918, _, _, _, _,
-  23.60992918, _, _, _, _,
-  23.60992918, _, _, _, _,
-  23.60992918, _, _, _, _,
-  42.14817287, _, _, _, _,
-  42.14817287, _, _, _, _,
-  113.8000667, _, _, _, _,
-  42.14817287, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
-  113.8000667, _, _, _, _,
-  113.8000667, _, _, _, _,
-  113.8000667, _, _, _, _,
-  113.8000667, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
+  115.04259892473, _, _, _, _,
+  115.04259892473, _, _, _, _,
+  115.04259892473, _, _, _, _,
+  115.04259892473, _, _, _, _,
+  115.04259892473, _, _, _, _,
+  205.37271885043, _, _, _, _,
+  205.37271885043, _, _, _, _,
+  554.506340851137, _, _, _, _,
+  205.37271885043, _, _, _, _,
+  558.237460507709, _, _, _, _,
+  558.237460507709, _, _, _, _,
+  554.506340851137, _, _, _, _,
+  554.506340851137, _, _, _, _,
+  554.506340851137, _, _, _, _,
+  554.506340851137, _, _, _, _,
+  558.237460507709, _, _, _, _,
+  558.237460507709, _, _, _, _,
+  558.237460507709, _, _, _, _,
+  558.237460507709, _, _, _, _,
+  558.237460507709, _, _, _, _,
+  558.237460507709, _, _, _, _,
+  558.237460507709, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -44028,28 +44088,28 @@ data:
 
  BluefinTuna7_Nums =
   _, _, _, _, _,
-  15.0543555, _, _, _, _,
-  15.0543555, _, _, _, _,
-  15.0543555, _, _, _, _,
-  15.0543555, _, _, _, _,
-  15.0543555, _, _, _, _,
-  26.87486156, _, _, _, _,
-  26.87486156, _, _, _, _,
-  72.56212621, _, _, _, _,
-  26.87486156, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
-  72.56212621, _, _, _, _,
-  72.56212621, _, _, _, _,
-  72.56212621, _, _, _, _,
-  72.56212621, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
+  63.3963053487078, _, _, _, _,
+  63.3963053487078, _, _, _, _,
+  63.3963053487078, _, _, _, _,
+  63.3963053487078, _, _, _, _,
+  63.3963053487078, _, _, _, _,
+  113.174352076789, _, _, _, _,
+  113.174352076789, _, _, _, _,
+  305.570750582519, _, _, _, _,
+  113.174352076789, _, _, _, _,
+  307.626851568167, _, _, _, _,
+  307.626851568167, _, _, _, _,
+  305.570750582519, _, _, _, _,
+  305.570750582519, _, _, _, _,
+  305.570750582519, _, _, _, _,
+  305.570750582519, _, _, _, _,
+  307.626851568167, _, _, _, _,
+  307.626851568167, _, _, _, _,
+  307.626851568167, _, _, _, _,
+  307.626851568167, _, _, _, _,
+  307.626851568167, _, _, _, _,
+  307.626851568167, _, _, _, _,
+  307.626851568167, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -44124,28 +44184,28 @@ data:
 
  BluefinTuna8_Nums =
   _, _, _, _, _,
-  9.599080871, _, _, _, _,
-  9.599080871, _, _, _, _,
-  9.599080871, _, _, _, _,
-  9.599080871, _, _, _, _,
-  9.599080871, _, _, _, _,
-  17.1361683, _, _, _, _,
-  17.1361683, _, _, _, _,
-  46.26765442, _, _, _, _,
-  17.1361683, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.26765442, _, _, _, _,
-  46.26765442, _, _, _, _,
-  46.26765442, _, _, _, _,
-  46.26765442, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
+  41.5858259798005, _, _, _, _,
+  41.5858259798005, _, _, _, _,
+  41.5858259798005, _, _, _, _,
+  41.5858259798005, _, _, _, _,
+  41.5858259798005, _, _, _, _,
+  74.2385362199651, _, _, _, _,
+  74.2385362199651, _, _, _, _,
+  200.444047777631, _, _, _, _,
+  74.2385362199651, _, _, _, _,
+  201.792780283661, _, _, _, _,
+  201.792780283661, _, _, _, _,
+  200.444047777631, _, _, _, _,
+  200.444047777631, _, _, _, _,
+  200.444047777631, _, _, _, _,
+  200.444047777631, _, _, _, _,
+  201.792780283661, _, _, _, _,
+  201.792780283661, _, _, _, _,
+  201.792780283661, _, _, _, _,
+  201.792780283661, _, _, _, _,
+  201.792780283661, _, _, _, _,
+  201.792780283661, _, _, _, _,
+  201.792780283661, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -44220,28 +44280,28 @@ data:
 
  BluefinTuna9_Nums =
   _, _, _, _, _,
-  6.120644193, _, _, _, _,
-  6.120644193, _, _, _, _,
-  6.120644193, _, _, _, _,
-  6.120644193, _, _, _, _,
-  6.120644193, _, _, _, _,
-  10.92650332, _, _, _, _,
-  10.92650332, _, _, _, _,
-  29.50155896, _, _, _, _,
-  10.92650332, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.50155896, _, _, _, _,
-  29.50155896, _, _, _, _,
-  29.50155896, _, _, _, _,
-  29.50155896, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
+  25.2023672989311, _, _, _, _,
+  25.2023672989311, _, _, _, _,
+  25.2023672989311, _, _, _, _,
+  25.2023672989311, _, _, _, _,
+  25.2023672989311, _, _, _, _,
+  44.9909750129613, _, _, _, _,
+  44.9909750129613, _, _, _, _,
+  121.475632525132, _, _, _, _,
+  44.9909750129613, _, _, _, _,
+  122.293008426756, _, _, _, _,
+  122.293008426756, _, _, _, _,
+  121.475632525132, _, _, _, _,
+  121.475632525132, _, _, _, _,
+  121.475632525132, _, _, _, _,
+  121.475632525132, _, _, _, _,
+  122.293008426756, _, _, _, _,
+  122.293008426756, _, _, _, _,
+  122.293008426756, _, _, _, _,
+  122.293008426756, _, _, _, _,
+  122.293008426756, _, _, _, _,
+  122.293008426756, _, _, _, _,
+  122.293008426756, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -44348,24 +44408,24 @@ data:
 
  Bluefish10_Nums =
   _, _, _, _, _,
-  15024, _, _, _, _,
-  2156, _, _, _, _,
-  221, _, _, _, _,
-  327, _, _, _, _,
-  294, _, _, _, _,
-  378, _, _, _, _,
-  426, _, _, _, _,
-  10, _, _, _, _,
-  202, _, _, _, _,
+  310820.737320594, _, _, _, _,
+  44604.2789718078, _, _, _, _,
+  4569.0234564849, _, _, _, _,
+  6764.16086129649, _, _, _, _,
+  6074.53056520794, _, _, _, _,
+  7814.75029621449, _, _, _, _,
+  8809.07132215336, _, _, _, _,
+  214.878535929011, _, _, _, _,
+  4182.18283359012, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  47, _, _, _, _,
-  382, _, _, _, _,
+  974.493084532977, _, _, _, _,
+  7908.72150898415, _, _, _, _,
   _, _, _, _, _,
-  20, _, _, _, _,
+  412.508115557307, _, _, _, _,
   _, _, _, _, _,
-  16, _, _, _, _,
-  10, _, _, _, _,
+  330.942631161856, _, _, _, _,
+  207.720496485861, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -44444,24 +44504,24 @@ data:
 
  Bluefish1_Nums =
   _, _, _, _, _,
-  862355, _, _, _, _,
-  123754, _, _, _, _,
-  12678, _, _, _, _,
-  18766, _, _, _, _,
-  16853, _, _, _, _,
-  21683, _, _, _, _,
-  24439, _, _, _, _,
-  601, _, _, _, _,
-  11606, _, _, _, _,
+  9618227.48054438, _, _, _, _,
+  1380262.15835788, _, _, _, _,
+  141386.663410065, _, _, _, _,
+  209314.341249502, _, _, _, _,
+  187973.998509071, _, _, _, _,
+  241824.424909961, _, _, _, _,
+  272593.30442106, _, _, _, _,
+  6649.33317212946, _, _, _, _,
+  129416.029977458, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  2702, _, _, _, _,
-  21942, _, _, _, _,
+  30155.3115344036, _, _, _, _,
+  244732.327737914, _, _, _, _,
   _, _, _, _, _,
-  1145, _, _, _, _,
+  12764.9040640056, _, _, _, _,
   _, _, _, _, _,
-  919, _, _, _, _,
-  574, _, _, _, _,
+  10240.8917016417, _, _, _, _,
+  6427.83041052988, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -44540,24 +44600,24 @@ data:
 
  Bluefish2_Nums =
   _, _, _, _, _,
-  549862, _, _, _, _,
-  78909, _, _, _, _,
-  8084, _, _, _, _,
-  11966, _, _, _, _,
-  10746, _, _, _, _,
-  13826, _, _, _, _,
-  15583, _, _, _, _,
-  383, _, _, _, _,
-  7400, _, _, _, _,
+  10184304.5358085, _, _, _, _,
+  1461496.9534047, _, _, _, _,
+  149707.920755941, _, _, _, _,
+  221633.45578061, _, _, _, _,
+  199037.135428788, _, _, _, _,
+  256056.907830632, _, _, _, _,
+  288636.677835083, _, _, _, _,
+  7040.67710209608, _, _, _, _,
+  137032.76032635, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  1723, _, _, _, _,
-  13991, _, _, _, _,
+  31930.0907219928, _, _, _, _,
+  259135.95415391, _, _, _, _,
   _, _, _, _, _,
-  730, _, _, _, _,
+  13516.1775515477, _, _, _, _,
   _, _, _, _, _,
-  586, _, _, _, _,
-  366, _, _, _, _,
+  10843.6154186125, _, _, _, _,
+  6806.13788120369, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -44636,24 +44696,24 @@ data:
 
  Bluefish3_Nums =
   _, _, _, _, _,
-  350607, _, _, _, _,
-  50315, _, _, _, _,
-  5154, _, _, _, _,
-  7630, _, _, _, _,
-  6852, _, _, _, _,
-  8816, _, _, _, _,
-  9936, _, _, _, _,
-  244, _, _, _, _,
-  4719, _, _, _, _,
+  27331792.6446949, _, _, _, _,
+  3922244.42433559, _, _, _, _,
+  401773.712970079, _, _, _, _,
+  594801.504140398, _, _, _, _,
+  534159.371904702, _, _, _, _,
+  687184.312435034, _, _, _, _,
+  774619.199622726, _, _, _, _,
+  18895.1858181511, _, _, _, _,
+  367757.167669244, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  1099, _, _, _, _,
-  8921, _, _, _, _,
+  85691.3317616654, _, _, _, _,
+  695447.601828565, _, _, _, _,
   _, _, _, _, _,
-  466, _, _, _, _,
+  36273.5973663079, _, _, _, _,
   _, _, _, _, _,
-  374, _, _, _, _,
-  233, _, _, _, _,
+  29101.1965616565, _, _, _, _,
+  18265.7488909717, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -44732,24 +44792,24 @@ data:
 
  Bluefish4_Nums =
   _, _, _, _, _,
-  223557, _, _, _, _,
-  32082, _, _, _, _,
-  3287, _, _, _, _,
-  4865, _, _, _, _,
-  4369, _, _, _, _,
-  5621, _, _, _, _,
-  6336, _, _, _, _,
-  156, _, _, _, _,
-  3009, _, _, _, _,
+  15336274.8277631, _, _, _, _,
+  2200829.60584539, _, _, _, _,
+  225441.198123384, _, _, _, _,
+  333751.958901773, _, _, _, _,
+  299724.757751881, _, _, _, _,
+  385589.324850841, _, _, _, _,
+  434650.338772486, _, _, _, _,
+  10602.3694236193, _, _, _, _,
+  206354.009287788, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  700, _, _, _, _,
-  5688, _, _, _, _,
+  48082.6790740711, _, _, _, _,
+  390225.979268938, _, _, _, _,
   _, _, _, _, _,
-  297, _, _, _, _,
+  20353.6542748248, _, _, _, _,
   _, _, _, _, _,
-  238, _, _, _, _,
-  149, _, _, _, _,
+  16329.1136475435, _, _, _, _,
+  10249.1830143905, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -44828,24 +44888,24 @@ data:
 
  Bluefish5_Nums =
   _, _, _, _, _,
-  142546, _, _, _, _,
-  20456, _, _, _, _,
-  2096, _, _, _, _,
-  3102, _, _, _, _,
-  2786, _, _, _, _,
-  3584, _, _, _, _,
-  4040, _, _, _, _,
-  99, _, _, _, _,
-  1918, _, _, _, _,
+  8994859.00159836, _, _, _, _,
+  1290805.76694452, _, _, _, _,
+  132223.229763744, _, _, _, _,
+  195748.436014861, _, _, _, _,
+  175791.185639546, _, _, _, _,
+  226151.503445684, _, _, _, _,
+  254926.216187646, _, _, _, _,
+  6218.38217685511, _, _, _, _,
+  121028.426968331, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  447, _, _, _, _,
-  3627, _, _, _, _,
+  28200.9108174972, _, _, _, _,
+  228870.941718557, _, _, _, _,
   _, _, _, _, _,
-  189, _, _, _, _,
+  11937.5958259371, _, _, _, _,
   _, _, _, _, _,
-  152, _, _, _, _,
-  95, _, _, _, _,
+  9577.16763231432, _, _, _, _,
+  6011.23526615009, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -44924,24 +44984,24 @@ data:
 
  Bluefish6_Nums =
   _, _, _, _, _,
-  90891, _, _, _, _,
-  13044, _, _, _, _,
-  1336, _, _, _, _,
-  1978, _, _, _, _,
-  1776, _, _, _, _,
-  2285, _, _, _, _,
-  2576, _, _, _, _,
-  63, _, _, _, _,
-  1223, _, _, _, _,
+  5764134.41662327, _, _, _, _,
+  827181.164829661, _, _, _, _,
+  84732.0084976154, _, _, _, _,
+  125440.576315086, _, _, _, _,
+  112651.462697065, _, _, _, _,
+  144923.635173239, _, _, _, _,
+  163363.202932435, _, _, _, _,
+  3984.89745252905, _, _, _, _,
+  77558.0941462191, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  285, _, _, _, _,
-  2313, _, _, _, _,
+  18071.8608923579, _, _, _, _,
+  146666.32038262, _, _, _, _,
   _, _, _, _, _,
-  121, _, _, _, _,
+  7649.91501698861, _, _, _, _,
   _, _, _, _, _,
-  97, _, _, _, _,
-  60, _, _, _, _,
+  6137.29259718066, _, _, _, _,
+  3852.15244373238, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -45020,24 +45080,24 @@ data:
 
  Bluefish7_Nums =
   _, _, _, _, _,
-  57955, _, _, _, _,
-  8317, _, _, _, _,
-  852, _, _, _, _,
-  1261, _, _, _, _,
-  1133, _, _, _, _,
-  1457, _, _, _, _,
-  1642, _, _, _, _,
-  40, _, _, _, _,
-  780, _, _, _, _,
+  3089566.81403516, _, _, _, _,
+  443367.779329096, _, _, _, _,
+  45416.22082681, _, _, _, _,
+  67235.9479679817, _, _, _, _,
+  60381.0035549557, _, _, _, _,
+  77678.8363070267, _, _, _, _,
+  87562.4150885464, _, _, _, _,
+  2135.89865135022, _, _, _, _,
+  41571.0142259915, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  182, _, _, _, _,
-  1475, _, _, _, _,
+  9686.48848990542, _, _, _, _,
+  78612.9127877356, _, _, _, _,
   _, _, _, _, _,
-  77, _, _, _, _,
+  4100.34219509458, _, _, _, _,
   _, _, _, _, _,
-  62, _, _, _, _,
-  39, _, _, _, _,
+  3289.57900107074, _, _, _, _,
+  2064.74753927271, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -45116,24 +45176,24 @@ data:
 
  Bluefish8_Nums =
   _, _, _, _, _,
-  36954, _, _, _, _,
-  5303, _, _, _, _,
-  543, _, _, _, _,
-  804, _, _, _, _,
-  722, _, _, _, _,
-  929, _, _, _, _,
-  1047, _, _, _, _,
-  26, _, _, _, _,
-  497, _, _, _, _,
+  1960496.36478233, _, _, _, _,
+  281340.709541429, _, _, _, _,
+  28819.0355452527, _, _, _, _,
+  42664.8263358844, _, _, _, _,
+  38314.9953040802, _, _, _, _,
+  49291.4008231298, _, _, _, _,
+  55563.0633048037, _, _, _, _,
+  1355.34260741445, _, _, _, _,
+  26379.0450817042, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  116, _, _, _, _,
-  940, _, _, _, _,
+  6146.59808802222, _, _, _, _,
+  49884.122604235, _, _, _, _,
   _, _, _, _, _,
-  49, _, _, _, _,
+  2601.88772462489, _, _, _, _,
   _, _, _, _, _,
-  39, _, _, _, _,
-  25, _, _, _, _,
+  2087.41485827924, _, _, _, _,
+  1310.19339881197, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -45212,24 +45272,24 @@ data:
 
  Bluefish9_Nums =
   _, _, _, _, _,
-  23563, _, _, _, _,
-  3381, _, _, _, _,
-  346, _, _, _, _,
-  513, _, _, _, _,
-  460, _, _, _, _,
-  592, _, _, _, _,
-  668, _, _, _, _,
-  16, _, _, _, _,
-  317, _, _, _, _,
+  1147643.25257037, _, _, _, _,
+  164692.356884033, _, _, _, _,
+  16870.2030175745, _, _, _, _,
+  24975.3077567683, _, _, _, _,
+  22428.9861602855, _, _, _, _,
+  28854.3986005744, _, _, _, _,
+  32525.7296261184, _, _, _, _,
+  793.395910475468, _, _, _, _,
+  15441.8715796133, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  74, _, _, _, _,
-  600, _, _, _, _,
+  3598.1203274324, _, _, _, _,
+  29201.3684623687, _, _, _, _,
   _, _, _, _, _,
-  31, _, _, _, _,
+  1523.10350825004, _, _, _, _,
   _, _, _, _, _,
-  25, _, _, _, _,
-  16, _, _, _, _,
+  1221.9393111118, _, _, _, _,
+  766.966285028403, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -45340,20 +45400,20 @@ data:
 
  Butterfish10_Nums =
   _, _, _, _, _,
-  9727, _, _, _, _,
-  32422, _, _, _, _,
-  94024, _, _, _, _,
-  9727, _, _, _, _,
-  45391, _, _, _, _,
-  58360, _, _, _, _,
-  6484, _, _, _, _,
+  270183.68833431, _, _, _, _,
+  900607.43800221, _, _, _, _,
+  2611763.15307107, _, _, _, _,
+  270183.68833431, _, _, _, _,
+  1260851.05623741, _, _, _, _,
+  1621094.19664929, _, _, _, _,
+  180120.677722272, _, _, _, _,
   _, _, _, _, _,
-  35664, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
+  990668.663646922, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  32422, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  900607.43800221, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -45436,20 +45496,20 @@ data:
 
  Butterfish1_Nums =
   _, _, _, _, _,
-  558283, _, _, _, _,
-  1860942, _, _, _, _,
-  5396732, _, _, _, _,
-  558283, _, _, _, _,
-  2605319, _, _, _, _,
-  3349696, _, _, _, _,
-  372188, _, _, _, _,
+  413483.751641246, _, _, _, _,
+  1378271.73992974, _, _, _, _,
+  3996990.4681809, _, _, _, _,
+  413483.751641246, _, _, _, _,
+  1929581.41998859, _, _, _, _,
+  2480890.36879611, _, _, _, _,
+  275653.108564478, _, _, _, _,
   _, _, _, _, _,
-  2047036, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
+  1516099.65132796, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  1860942, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  1378271.73992974, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -45532,20 +45592,20 @@ data:
 
  Butterfish2_Nums =
   _, _, _, _, _,
-  355977, _, _, _, _,
-  1186589, _, _, _, _,
-  3441107, _, _, _, _,
-  355977, _, _, _, _,
-  1661224, _, _, _, _,
-  2135860, _, _, _, _,
-  237317, _, _, _, _,
+  939825.131428802, _, _, _, _,
+  3132733.54510905, _, _, _, _,
+  9084932.78675926, _, _, _, _,
+  939825.131428802, _, _, _, _,
+  4385829.19992654, _, _, _, _,
+  5638923.19265119, _, _, _, _,
+  626543.891887059, _, _, _, _,
   _, _, _, _, _,
-  1305247, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
+  3446008.57570027, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  1186589, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  3132733.54510905, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -45628,20 +45688,20 @@ data:
 
  Butterfish3_Nums =
   _, _, _, _, _,
-  226981, _, _, _, _,
-  756602, _, _, _, _,
-  2194146, _, _, _, _,
-  226981, _, _, _, _,
-  1059243, _, _, _, _,
-  1361884, _, _, _, _,
-  151320, _, _, _, _,
+  4495791.94757476, _, _, _, _,
+  14985892.3484912, _, _, _, _,
+  43459114.1491139, _, _, _, _,
+  4495791.94757476, _, _, _, _,
+  20980259.9878249, _, _, _, _,
+  26974619.6762928, _, _, _, _,
+  2997164.99351921, _, _, _, _,
   _, _, _, _, _,
-  832262, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
+  16484489.6011174, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  756602, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  14985892.3484912, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -45724,20 +45784,20 @@ data:
 
  Butterfish4_Nums =
   _, _, _, _, _,
-  144729, _, _, _, _,
-  482431, _, _, _, _,
-  1399049, _, _, _, _,
-  144729, _, _, _, _,
-  675403, _, _, _, _,
-  868375, _, _, _, _,
-  96486, _, _, _, _,
+  3947409.22268604, _, _, _, _,
+  13157959.7891592, _, _, _, _,
+  38158106.514364, _, _, _, _,
+  3947409.22268604, _, _, _, _,
+  18421153.099615, _, _, _, _,
+  23684339.4290269, _, _, _, _,
+  2631580.12543522, _, _, _, _,
   _, _, _, _, _,
-  530674, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
+  14473762.8078686, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  482431, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  13157959.7891592, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -45820,20 +45880,20 @@ data:
 
  Butterfish5_Nums =
   _, _, _, _, _,
-  92283, _, _, _, _,
-  307611, _, _, _, _,
-  892073, _, _, _, _,
-  92283, _, _, _, _,
-  430656, _, _, _, _,
-  553700, _, _, _, _,
-  61522, _, _, _, _,
+  3274387.27347206, _, _, _, _,
+  10914565.389084, _, _, _, _,
+  31652258.8112629, _, _, _, _,
+  3274387.27347206, _, _, _, _,
+  15280399.3377246, _, _, _, _,
+  19646227.4955693, _, _, _, _,
+  2182903.26280987, _, _, _, _,
   _, _, _, _, _,
-  338372, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
+  12006027.7675213, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  307611, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  10914565.389084, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -45916,20 +45976,20 @@ data:
 
  Butterfish6_Nums =
   _, _, _, _, _,
-  58843, _, _, _, _,
-  196142, _, _, _, _,
-  568811, _, _, _, _,
-  58843, _, _, _, _,
-  274598, _, _, _, _,
-  353055, _, _, _, _,
-  39228, _, _, _, _,
+  2744663.58755644, _, _, _, _,
+  9148829.29094007, _, _, _, _,
+  26531621.0232721, _, _, _, _,
+  2744663.58755644, _, _, _, _,
+  12808367.5395864, _, _, _, _,
+  16467900.9342598, _, _, _, _,
+  1829757.63103286, _, _, _, _,
   _, _, _, _, _,
-  215756, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
+  10063717.114856, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  196142, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  9148829.29094007, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -46012,20 +46072,20 @@ data:
 
  Butterfish7_Nums =
   _, _, _, _, _,
-  37520, _, _, _, _,
-  125065, _, _, _, _,
-  362690, _, _, _, _,
-  37520, _, _, _, _,
-  175092, _, _, _, _,
-  225118, _, _, _, _,
-  25013, _, _, _, _,
+  1812677.58350746, _, _, _, _,
+  6042226.02952517, _, _, _, _,
+  17522466.1051512, _, _, _, _,
+  1812677.58350746, _, _, _, _,
+  8459120.7554887, _, _, _, _,
+  10876012.2757086, _, _, _, _,
+  1208439.77238677, _, _, _, _,
   _, _, _, _, _,
-  137572, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
+  6646451.86519952, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  125065, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  6042226.02952517, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -46108,20 +46168,20 @@ data:
 
  Butterfish8_Nums =
   _, _, _, _, _,
-  23924, _, _, _, _,
-  79745, _, _, _, _,
-  231261, _, _, _, _,
-  23924, _, _, _, _,
-  111643, _, _, _, _,
-  143541, _, _, _, _,
-  15949, _, _, _, _,
+  1354126.80697021, _, _, _, _,
+  4513731.68333746, _, _, _, _,
+  13089829.8147981, _, _, _, _,
+  1354126.80697021, _, _, _, _,
+  6319227.57947992, _, _, _, _,
+  8124721.0808317, _, _, _, _,
+  902742.277659537, _, _, _, _,
   _, _, _, _, _,
-  87720, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
+  4965107.26661545, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  79745, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  4513731.68333746, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -46204,20 +46264,20 @@ data:
 
  Butterfish9_Nums =
   _, _, _, _, _,
-  15254, _, _, _, _,
-  50848, _, _, _, _,
-  147459, _, _, _, _,
-  15254, _, _, _, _,
-  71187, _, _, _, _,
-  91526, _, _, _, _,
-  10170, _, _, _, _,
+  901247.107474721, _, _, _, _,
+  3004140.82535359, _, _, _, _,
+  8712013.67345998, _, _, _, _,
+  901247.107474721, _, _, _, _,
+  4205799.3004536, _, _, _, _,
+  5407456.18168651, _, _, _, _,
+  600825.463573959, _, _, _, _,
   _, _, _, _, _,
-  55933, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
+  3304556.51516937, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  50848, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  3004140.82535359, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -46428,28 +46488,28 @@ data:
 
  Cod10_Nums =
   _, _, _, _, _,
-  2346, _, _, _, _,
-  2346, _, _, _, _,
+  270.634030627282, _, _, _, _,
+  270.634030627282, _, _, _, _,
   _, _, _, _, _,
-  9384, _, _, _, _,
-  4692, _, _, _, _,
-  4692, _, _, _, _,
-  9384, _, _, _, _,
-  16422, _, _, _, _,
-  9384, _, _, _, _,
-  18768, _, _, _, _,
-  14076, _, _, _, _,
-  30498, _, _, _, _,
-  28152, _, _, _, _,
-  9384, _, _, _, _,
-  23460, _, _, _, _,
-  9384, _, _, _, _,
-  4692, _, _, _, _,
-  4692, _, _, _, _,
-  4692, _, _, _, _,
-  9384, _, _, _, _,
-  14076, _, _, _, _,
-  4692, _, _, _, _,
+  1082.56042548066, _, _, _, _,
+  541.281325164305, _, _, _, _,
+  541.281325164305, _, _, _, _,
+  1082.56042548066, _, _, _, _,
+  1894.48346224008, _, _, _, _,
+  1082.56042548066, _, _, _, _,
+  2165.11984040775, _, _, _, _,
+  1623.8407400914, _, _, _, _,
+  3518.31806247701, _, _, _, _,
+  3247.67742399598, _, _, _, _,
+  1082.56042548066, _, _, _, _,
+  2706.40116557205, _, _, _, _,
+  1082.56042548066, _, _, _, _,
+  541.281325164305, _, _, _, _,
+  541.281325164305, _, _, _, _,
+  541.281325164305, _, _, _, _,
+  1082.56042548066, _, _, _, _,
+  1623.8407400914, _, _, _, _,
+  541.281325164305, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -46524,28 +46584,28 @@ data:
 
  Cod1_Nums =
   _, _, _, _, _,
-  134654, _, _, _, _,
-  134654, _, _, _, _,
+  79376.35919626, _, _, _, _,
+  79376.35919626, _, _, _, _,
   _, _, _, _, _,
-  538618, _, _, _, _,
-  269309, _, _, _, _,
-  269309, _, _, _, _,
-  538618, _, _, _, _,
-  942581, _, _, _, _,
-  538618, _, _, _, _,
-  1077235, _, _, _, _,
-  807926, _, _, _, _,
-  1750507, _, _, _, _,
-  1615853, _, _, _, _,
-  538618, _, _, _, _,
-  1346544, _, _, _, _,
-  538618, _, _, _, _,
-  269309, _, _, _, _,
-  269309, _, _, _, _,
-  269309, _, _, _, _,
-  538618, _, _, _, _,
-  807926, _, _, _, _,
-  269309, _, _, _, _,
+  317512.56479253, _, _, _, _,
+  158756.608667743, _, _, _, _,
+  158756.608667743, _, _, _, _,
+  317512.56479253, _, _, _, _,
+  555647.785467313, _, _, _, _,
+  317512.56479253, _, _, _, _,
+  635024.833191949, _, _, _, _,
+  476268.877067161, _, _, _, _,
+  1031914.86172882, _, _, _, _,
+  952536.56446375, _, _, _, _,
+  317512.56479253, _, _, _, _,
+  793781.441859691, _, _, _, _,
+  317512.56479253, _, _, _, _,
+  158756.608667743, _, _, _, _,
+  158756.608667743, _, _, _, _,
+  158756.608667743, _, _, _, _,
+  317512.56479253, _, _, _, _,
+  476268.877067161, _, _, _, _,
+  158756.608667743, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -46620,28 +46680,28 @@ data:
 
  Cod2_Nums =
   _, _, _, _, _,
-  85859, _, _, _, _,
-  85859, _, _, _, _,
+  18245.7375539081, _, _, _, _,
+  18245.7375539081, _, _, _, _,
   _, _, _, _, _,
-  343438, _, _, _, _,
-  171719, _, _, _, _,
-  171719, _, _, _, _,
-  343438, _, _, _, _,
-  601016, _, _, _, _,
-  343438, _, _, _, _,
-  686875, _, _, _, _,
-  515156, _, _, _, _,
-  1116172, _, _, _, _,
-  1030313, _, _, _, _,
-  343438, _, _, _, _,
-  858594, _, _, _, _,
-  343438, _, _, _, _,
-  171719, _, _, _, _,
-  171719, _, _, _, _,
-  171719, _, _, _, _,
-  343438, _, _, _, _,
-  515156, _, _, _, _,
-  171719, _, _, _, _,
+  72984.5886852632, _, _, _, _,
+  36492.3693405758, _, _, _, _,
+  36492.3693405758, _, _, _, _,
+  72984.5886852632, _, _, _, _,
+  127723.213418996, _, _, _, _,
+  72984.5886852632, _, _, _, _,
+  145969.109240532, _, _, _, _,
+  109476.889895844, _, _, _, _,
+  237199.689375127, _, _, _, _,
+  218953.5063297, _, _, _, _,
+  72984.5886852632, _, _, _, _,
+  182461.478581107, _, _, _, _,
+  72984.5886852632, _, _, _, _,
+  36492.3693405758, _, _, _, _,
+  36492.3693405758, _, _, _, _,
+  36492.3693405758, _, _, _, _,
+  72984.5886852632, _, _, _, _,
+  109476.889895844, _, _, _, _,
+  36492.3693405758, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -46716,28 +46776,28 @@ data:
 
  Cod3_Nums =
   _, _, _, _, _,
-  54746, _, _, _, _,
-  54746, _, _, _, _,
+  33830.603798634, _, _, _, _,
+  33830.603798634, _, _, _, _,
   _, _, _, _, _,
-  218986, _, _, _, _,
-  109493, _, _, _, _,
-  109493, _, _, _, _,
-  218986, _, _, _, _,
-  383225, _, _, _, _,
-  218986, _, _, _, _,
-  437971, _, _, _, _,
-  328478, _, _, _, _,
-  711703, _, _, _, _,
-  656956, _, _, _, _,
-  218986, _, _, _, _,
-  547464, _, _, _, _,
-  218986, _, _, _, _,
-  109493, _, _, _, _,
-  109493, _, _, _, _,
-  109493, _, _, _, _,
-  218986, _, _, _, _,
-  328478, _, _, _, _,
-  109493, _, _, _, _,
+  135325.453187204, _, _, _, _,
+  67662.8656521483, _, _, _, _,
+  67662.8656521483, _, _, _, _,
+  135325.453187204, _, _, _, _,
+  236819.88279728, _, _, _, _,
+  135325.453187204, _, _, _, _,
+  270650.780050173, _, _, _, _,
+  202988.192515117, _, _, _, _,
+  439807.307799961, _, _, _, _,
+  405975.877986647, _, _, _, _,
+  135325.453187204, _, _, _, _,
+  338313.645702321, _, _, _, _,
+  135325.453187204, _, _, _, _,
+  67662.8656521483, _, _, _, _,
+  67662.8656521483, _, _, _, _,
+  67662.8656521483, _, _, _, _,
+  135325.453187204, _, _, _, _,
+  202988.192515117, _, _, _, _,
+  67662.8656521483, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -46812,28 +46872,28 @@ data:
 
  Cod4_Nums =
   _, _, _, _, _,
-  34908, _, _, _, _,
-  34908, _, _, _, _,
+  16181.9030758892, _, _, _, _,
+  16181.9030758892, _, _, _, _,
   _, _, _, _, _,
-  139631, _, _, _, _,
-  69816, _, _, _, _,
-  69816, _, _, _, _,
-  139631, _, _, _, _,
-  244355, _, _, _, _,
-  139631, _, _, _, _,
-  279262, _, _, _, _,
-  209447, _, _, _, _,
-  453802, _, _, _, _,
-  418894, _, _, _, _,
-  139631, _, _, _, _,
-  349078, _, _, _, _,
-  139631, _, _, _, _,
-  69816, _, _, _, _,
-  69816, _, _, _, _,
-  69816, _, _, _, _,
-  139631, _, _, _, _,
-  209447, _, _, _, _,
-  69816, _, _, _, _,
+  64729.0654405802, _, _, _, _,
+  32364.5992349739, _, _, _, _,
+  32364.5992349739, _, _, _, _,
+  64729.0654405802, _, _, _, _,
+  113276.027016218, _, _, _, _,
+  64729.0654405802, _, _, _, _,
+  129458.07045757, _, _, _, _,
+  97093.6042519637, _, _, _, _,
+  210369.264150529, _, _, _, _,
+  194186.96597411, _, _, _, _,
+  64729.0654405802, _, _, _, _,
+  161822.669692544, _, _, _, _,
+  64729.0654405802, _, _, _, _,
+  32364.5992349739, _, _, _, _,
+  32364.5992349739, _, _, _, _,
+  32364.5992349739, _, _, _, _,
+  64729.0654405802, _, _, _, _,
+  97093.6042519637, _, _, _, _,
+  32364.5992349739, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -46908,28 +46968,28 @@ data:
 
  Cod5_Nums =
   _, _, _, _, _,
-  22258, _, _, _, _,
-  22258, _, _, _, _,
+  8730.38743391199, _, _, _, _,
+  8730.38743391199, _, _, _, _,
   _, _, _, _, _,
-  89033, _, _, _, _,
-  44516, _, _, _, _,
-  44516, _, _, _, _,
-  89033, _, _, _, _,
-  155807, _, _, _, _,
-  89033, _, _, _, _,
-  178066, _, _, _, _,
-  133549, _, _, _, _,
-  289357, _, _, _, _,
-  267098, _, _, _, _,
-  89033, _, _, _, _,
-  222582, _, _, _, _,
-  89033, _, _, _, _,
-  44516, _, _, _, _,
-  44516, _, _, _, _,
-  44516, _, _, _, _,
-  89033, _, _, _, _,
-  133549, _, _, _, _,
-  44516, _, _, _, _,
+  34922.3337255872, _, _, _, _,
+  17461.2027484961, _, _, _, _,
+  17461.2027484961, _, _, _, _,
+  34922.3337255872, _, _, _, _,
+  61114.1716884569, _, _, _, _,
+  34922.3337255872, _, _, _, _,
+  69844.6348517112, _, _, _, _,
+  52383.5038746201, _, _, _, _,
+  113497.477497415, _, _, _, _,
+  104766.876900646, _, _, _, _,
+  34922.3337255872, _, _, _, _,
+  87305.8376002071, _, _, _, _,
+  34922.3337255872, _, _, _, _,
+  17461.2027484961, _, _, _, _,
+  17461.2027484961, _, _, _, _,
+  17461.2027484961, _, _, _, _,
+  34922.3337255872, _, _, _, _,
+  52383.5038746201, _, _, _, _,
+  17461.2027484961, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -47004,28 +47064,28 @@ data:
 
  Cod6_Nums =
   _, _, _, _, _,
-  14192, _, _, _, _,
-  14192, _, _, _, _,
+  5334.00234795152, _, _, _, _,
+  5334.00234795152, _, _, _, _,
   _, _, _, _, _,
-  56770, _, _, _, _,
-  28385, _, _, _, _,
-  28385, _, _, _, _,
-  56770, _, _, _, _,
-  99347, _, _, _, _,
-  56770, _, _, _, _,
-  113540, _, _, _, _,
-  85155, _, _, _, _,
-  184502, _, _, _, _,
-  170309, _, _, _, _,
-  56770, _, _, _, _,
-  141925, _, _, _, _,
-  56770, _, _, _, _,
-  28385, _, _, _, _,
-  28385, _, _, _, _,
-  28385, _, _, _, _,
-  56770, _, _, _, _,
-  85155, _, _, _, _,
-  28385, _, _, _, _,
+  21336.4883859181, _, _, _, _,
+  10668.2661180366, _, _, _, _,
+  10668.2661180366, _, _, _, _,
+  21336.4883859181, _, _, _, _,
+  37338.908238265, _, _, _, _,
+  21336.4883859181, _, _, _, _,
+  42672.9568545515, _, _, _, _,
+  32004.7345866699, _, _, _, _,
+  69343.5218128135, _, _, _, _,
+  64009.389228811, _, _, _, _,
+  21336.4883859181, _, _, _, _,
+  53341.222972588, _, _, _, _,
+  21336.4883859181, _, _, _, _,
+  10668.2661180366, _, _, _, _,
+  10668.2661180366, _, _, _, _,
+  10668.2661180366, _, _, _, _,
+  21336.4883859181, _, _, _, _,
+  32004.7345866699, _, _, _, _,
+  10668.2661180366, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -47100,28 +47160,28 @@ data:
 
  Cod7_Nums =
   _, _, _, _, _,
-  9049, _, _, _, _,
-  9049, _, _, _, _,
+  2779.0787018826, _, _, _, _,
+  2779.0787018826, _, _, _, _,
   _, _, _, _, _,
-  36198, _, _, _, _,
-  18099, _, _, _, _,
-  18099, _, _, _, _,
-  36198, _, _, _, _,
-  63347, _, _, _, _,
-  36198, _, _, _, _,
-  72396, _, _, _, _,
-  54297, _, _, _, _,
-  117644, _, _, _, _,
-  108594, _, _, _, _,
-  36198, _, _, _, _,
-  90495, _, _, _, _,
-  36198, _, _, _, _,
-  18099, _, _, _, _,
-  18099, _, _, _, _,
-  18099, _, _, _, _,
-  36198, _, _, _, _,
-  54297, _, _, _, _,
-  18099, _, _, _, _,
+  11116.5643691631, _, _, _, _,
+  5558.29360780789, _, _, _, _,
+  5558.29360780789, _, _, _, _,
+  11116.5643691631, _, _, _, _,
+  19454.0155529481, _, _, _, _,
+  11116.5643691631, _, _, _, _,
+  22233.1183611839, _, _, _, _,
+  16674.8475998286, _, _, _, _,
+  36128.8001040214, _, _, _, _,
+  33349.6535476063, _, _, _, _,
+  11116.5643691631, _, _, _, _,
+  27791.4119689917, _, _, _, _,
+  11116.5643691631, _, _, _, _,
+  5558.29360780789, _, _, _, _,
+  5558.29360780789, _, _, _, _,
+  5558.29360780789, _, _, _, _,
+  11116.5643691631, _, _, _, _,
+  16674.8475998286, _, _, _, _,
+  5558.29360780789, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -47196,28 +47256,28 @@ data:
 
  Cod8_Nums =
   _, _, _, _, _,
-  5770, _, _, _, _,
-  5770, _, _, _, _,
+  1733.74175887145, _, _, _, _,
+  1733.74175887145, _, _, _, _,
   _, _, _, _, _,
-  23081, _, _, _, _,
-  11540, _, _, _, _,
-  11540, _, _, _, _,
-  23081, _, _, _, _,
-  40392, _, _, _, _,
-  23081, _, _, _, _,
-  46162, _, _, _, _,
-  34621, _, _, _, _,
-  75013, _, _, _, _,
-  69243, _, _, _, _,
-  23081, _, _, _, _,
-  57702, _, _, _, _,
-  23081, _, _, _, _,
-  11540, _, _, _, _,
-  11540, _, _, _, _,
-  11540, _, _, _, _,
-  23081, _, _, _, _,
-  34621, _, _, _, _,
-  11540, _, _, _, _,
+  6935.12272572367, _, _, _, _,
+  3467.56848929711, _, _, _, _,
+  3467.56848929711, _, _, _, _,
+  6935.12272572367, _, _, _, _,
+  12136.4821798795, _, _, _, _,
+  6935.12272572367, _, _, _, _,
+  13870.2389776166, _, _, _, _,
+  10402.68474119, _, _, _, _,
+  22539.127587797, _, _, _, _,
+  20805.3434975456, _, _, _, _,
+  6935.12272572367, _, _, _, _,
+  17337.8074669137, _, _, _, _,
+  6935.12272572367, _, _, _, _,
+  3467.56848929711, _, _, _, _,
+  3467.56848929711, _, _, _, _,
+  3467.56848929711, _, _, _, _,
+  6935.12272572367, _, _, _, _,
+  10402.68474119, _, _, _, _,
+  3467.56848929711, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -47292,28 +47352,28 @@ data:
 
  Cod9_Nums =
   _, _, _, _, _,
-  3679, _, _, _, _,
-  3679, _, _, _, _,
+  1004.80783696132, _, _, _, _,
+  1004.80783696132, _, _, _, _,
   _, _, _, _, _,
-  14717, _, _, _, _,
-  7359, _, _, _, _,
-  7359, _, _, _, _,
-  14717, _, _, _, _,
-  25755, _, _, _, _,
-  14717, _, _, _, _,
-  29434, _, _, _, _,
-  22076, _, _, _, _,
-  47830, _, _, _, _,
-  44151, _, _, _, _,
-  14717, _, _, _, _,
-  36793, _, _, _, _,
-  14717, _, _, _, _,
-  7359, _, _, _, _,
-  7359, _, _, _, _,
-  7359, _, _, _, _,
-  14717, _, _, _, _,
-  22076, _, _, _, _,
-  7359, _, _, _, _,
+  4019.32157972114, _, _, _, _,
+  2009.6649200593, _, _, _, _,
+  2009.6649200593, _, _, _, _,
+  4019.32157972114, _, _, _, _,
+  7033.82285457692, _, _, _, _,
+  4019.32157972114, _, _, _, _,
+  8038.6394074672, _, _, _, _,
+  6028.98274780535, _, _, _, _,
+  13062.7828063803, _, _, _, _,
+  12057.9504358331, _, _, _, _,
+  4019.32157972114, _, _, _, _,
+  10048.3043275265, _, _, _, _,
+  4019.32157972114, _, _, _, _,
+  2009.6649200593, _, _, _, _,
+  2009.6649200593, _, _, _, _,
+  2009.6649200593, _, _, _, _,
+  4019.32157972114, _, _, _, _,
+  6028.98274780535, _, _, _, _,
+  2009.6649200593, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -50770,21 +50830,21 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  297730, _, _, _, _,
-  66162, _, _, _, _,
-  264649, _, _, _, _,
-  198487, _, _, _, _,
-  430054, _, _, _, _,
-  430054, _, _, _, _,
-  264649, _, _, _, _,
-  562378, _, _, _, _,
-  132324, _, _, _, _,
-  66162, _, _, _, _,
-  99243, _, _, _, _,
-  66162, _, _, _, _,
-  99243, _, _, _, _,
-  231568, _, _, _, _,
-  99243, _, _, _, _,
+  34173.6292083139, _, _, _, _,
+  7594.14007923627, _, _, _, _,
+  30376.5649433693, _, _, _, _,
+  22782.4278397083, _, _, _, _,
+  49361.9087736337, _, _, _, _,
+  49361.9087736337, _, _, _, _,
+  30376.5649433693, _, _, _, _,
+  64550.190315819, _, _, _, _,
+  15188.2801367336, _, _, _, _,
+  7594.14007923627, _, _, _, _,
+  11391.2035727925, _, _, _, _,
+  7594.14007923627, _, _, _, _,
+  11391.2035727925, _, _, _, _,
+  26579.4941093326, _, _, _, _,
+  11391.2035727925, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -50866,21 +50926,21 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  17088969, _, _, _, _,
-  3797549, _, _, _, _,
-  15190195, _, _, _, _,
-  11392646, _, _, _, _,
-  24684067, _, _, _, _,
-  24684067, _, _, _, _,
-  15190195, _, _, _, _,
-  32279164, _, _, _, _,
-  7595097, _, _, _, _,
-  3797549, _, _, _, _,
-  5696323, _, _, _, _,
-  3797549, _, _, _, _,
-  5696323, _, _, _, _,
-  13291420, _, _, _, _,
-  5696323, _, _, _, _,
+  354661.911783697, _, _, _, _,
+  78813.7608223325, _, _, _, _,
+  315255.091303442, _, _, _, _,
+  236441.361362325, _, _, _, _,
+  512289.427272484, _, _, _, _,
+  512289.427272484, _, _, _, _,
+  315255.091303442, _, _, _, _,
+  669916.963277644, _, _, _, _,
+  157627.521419054, _, _, _, _,
+  78813.7608223325, _, _, _, _,
+  118220.573296938, _, _, _, _,
+  78813.7608223325, _, _, _, _,
+  118220.573296938, _, _, _, _,
+  275848.202647614, _, _, _, _,
+  118220.573296938, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -50962,21 +51022,21 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  10896405, _, _, _, _,
-  2421424, _, _, _, _,
-  9685694, _, _, _, _,
-  7264270, _, _, _, _,
-  15739252, _, _, _, _,
-  15739252, _, _, _, _,
-  9685694, _, _, _, _,
-  20582099, _, _, _, _,
-  4842847, _, _, _, _,
-  2421424, _, _, _, _,
-  3632135, _, _, _, _,
-  2421424, _, _, _, _,
-  3632135, _, _, _, _,
-  8474982, _, _, _, _,
-  3632135, _, _, _, _,
+  207272.875198196, _, _, _, _,
+  46060.6404805907, _, _, _, _,
+  184242.589982955, _, _, _, _,
+  138181.967550082, _, _, _, _,
+  299394.152561736, _, _, _, _,
+  299394.152561736, _, _, _, _,
+  184242.589982955, _, _, _, _,
+  391515.441915533, _, _, _, _,
+  92121.2808293287, _, _, _, _,
+  46060.6404805907, _, _, _, _,
+  69090.9210171404, _, _, _, _,
+  46060.6404805907, _, _, _, _,
+  69090.9210171404, _, _, _, _,
+  161212.264924282, _, _, _, _,
+  69090.9210171404, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -51058,21 +51118,21 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  6947853, _, _, _, _,
-  1543967, _, _, _, _,
-  6175869, _, _, _, _,
-  4631902, _, _, _, _,
-  10035788, _, _, _, _,
-  10035788, _, _, _, _,
-  6175869, _, _, _, _,
-  13123722, _, _, _, _,
-  3087935, _, _, _, _,
-  1543967, _, _, _, _,
-  2315951, _, _, _, _,
-  1543967, _, _, _, _,
-  2315951, _, _, _, _,
-  5403886, _, _, _, _,
-  2315951, _, _, _, _,
+  714048.373457942, _, _, _, _,
+  158677.42165562, _, _, _, _,
+  634709.783290312, _, _, _, _,
+  476032.423808501, _, _, _, _,
+  1031403.20437542, _, _, _, _,
+  1031403.20437542, _, _, _, _,
+  634709.783290312, _, _, _, _,
+  1348758.07659895, _, _, _, _,
+  317354.842857011, _, _, _, _,
+  158677.42165562, _, _, _, _,
+  238015.995705305, _, _, _, _,
+  158677.42165562, _, _, _, _,
+  238015.995705305, _, _, _, _,
+  555371.055863349, _, _, _, _,
+  238015.995705305, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -51154,21 +51214,21 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  4430146, _, _, _, _,
-  984477, _, _, _, _,
-  3937907, _, _, _, _,
-  2953430, _, _, _, _,
-  6399099, _, _, _, _,
-  6399099, _, _, _, _,
-  3937907, _, _, _, _,
-  8368053, _, _, _, _,
-  1968954, _, _, _, _,
-  984477, _, _, _, _,
-  1476715, _, _, _, _,
-  984477, _, _, _, _,
-  1476715, _, _, _, _,
-  3445669, _, _, _, _,
-  1476715, _, _, _, _,
+  552612.587197857, _, _, _, _,
+  122802.801281308, _, _, _, _,
+  491211.279937899, _, _, _, _,
+  368408.52677382, _, _, _, _,
+  798218.18016876, _, _, _, _,
+  798218.18016876, _, _, _, _,
+  491211.279937899, _, _, _, _,
+  1043823.80510702, _, _, _, _,
+  245605.602211083, _, _, _, _,
+  122802.801281308, _, _, _, _,
+  184204.096067351, _, _, _, _,
+  122802.801281308, _, _, _, _,
+  184204.096067351, _, _, _, _,
+  429809.866450915, _, _, _, _,
+  184204.096067351, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -51250,21 +51310,21 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  2824785, _, _, _, _,
-  627730, _, _, _, _,
-  2510920, _, _, _, _,
-  1883190, _, _, _, _,
-  4080245, _, _, _, _,
-  4080245, _, _, _, _,
-  2510920, _, _, _, _,
-  5335705, _, _, _, _,
-  1255460, _, _, _, _,
-  627730, _, _, _, _,
-  941595, _, _, _, _,
-  627730, _, _, _, _,
-  941595, _, _, _, _,
-  2197055, _, _, _, _,
-  941595, _, _, _, _,
+  433772.899950966, _, _, _, _,
+  96393.9810057623, _, _, _, _,
+  385575.982747203, _, _, _, _,
+  289182.039511029, _, _, _, _,
+  626560.854433481, _, _, _, _,
+  626560.854433481, _, _, _, _,
+  385575.982747203, _, _, _, _,
+  819348.834008756, _, _, _, _,
+  192787.961735588, _, _, _, _,
+  96393.9810057623, _, _, _, _,
+  144590.888418133, _, _, _, _,
+  96393.9810057623, _, _, _, _,
+  144590.888418133, _, _, _, _,
+  337378.982160604, _, _, _, _,
+  144590.888418133, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -51346,21 +51406,21 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  1801162, _, _, _, _,
-  400258, _, _, _, _,
-  1601033, _, _, _, _,
-  1200775, _, _, _, _,
-  2601678, _, _, _, _,
-  2601678, _, _, _, _,
-  1601033, _, _, _, _,
-  3402195, _, _, _, _,
-  800516, _, _, _, _,
-  400258, _, _, _, _,
-  600387, _, _, _, _,
-  400258, _, _, _, _,
-  600387, _, _, _, _,
-  1400904, _, _, _, _,
-  600387, _, _, _, _,
+  354526.551786833, _, _, _, _,
+  78783.6808220187, _, _, _, _,
+  315134.771283862, _, _, _, _,
+  236351.121331273, _, _, _, _,
+  512093.907277342, _, _, _, _,
+  512093.907277342, _, _, _, _,
+  315134.771283862, _, _, _, _,
+  669661.283276393, _, _, _, _,
+  157567.361418512, _, _, _, _,
+  78783.6808220187, _, _, _, _,
+  118175.453322396, _, _, _, _,
+  78783.6808220187, _, _, _, _,
+  118175.453322396, _, _, _, _,
+  275742.922631337, _, _, _, _,
+  118175.453322396, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -51442,21 +51502,21 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  1148471, _, _, _, _,
-  255216, _, _, _, _,
-  1020863, _, _, _, _,
-  765648, _, _, _, _,
-  1658903, _, _, _, _,
-  1658903, _, _, _, _,
-  1020863, _, _, _, _,
-  2169335, _, _, _, _,
-  510432, _, _, _, _,
-  255216, _, _, _, _,
-  382824, _, _, _, _,
-  255216, _, _, _, _,
-  382824, _, _, _, _,
-  893255, _, _, _, _,
-  382824, _, _, _, _,
+  231405.564639125, _, _, _, _,
+  51423.4605365457, _, _, _, _,
+  205693.873473857, _, _, _, _,
+  154270.433086318, _, _, _, _,
+  334252.481695703, _, _, _, _,
+  334252.481695703, _, _, _, _,
+  205693.873473857, _, _, _, _,
+  437099.412138558, _, _, _, _,
+  102846.920925887, _, _, _, _,
+  51423.4605365457, _, _, _, _,
+  77135.1464783833, _, _, _, _,
+  51423.4605365457, _, _, _, _,
+  77135.1464783833, _, _, _, _,
+  179982.137826206, _, _, _, _,
+  77135.1464783833, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -51538,21 +51598,21 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  732297, _, _, _, _,
-  162733, _, _, _, _,
-  650931, _, _, _, _,
-  488198, _, _, _, _,
-  1057763, _, _, _, _,
-  1057763, _, _, _, _,
-  650931, _, _, _, _,
-  1383229, _, _, _, _,
-  325466, _, _, _, _,
-  162733, _, _, _, _,
-  244099, _, _, _, _,
-  162733, _, _, _, _,
-  244099, _, _, _, _,
-  569565, _, _, _, _,
-  244099, _, _, _, _,
+  171920.876017181, _, _, _, _,
+  38204.6403986222, _, _, _, _,
+  152818.584869129, _, _, _, _,
+  114613.959440046, _, _, _, _,
+  248330.15383039, _, _, _, _,
+  248330.15383039, _, _, _, _,
+  152818.584869129, _, _, _, _,
+  324739.441588824, _, _, _, _,
+  76409.2806878803, _, _, _, _,
+  38204.6403986222, _, _, _, _,
+  57306.92766597, _, _, _, _,
+  38204.6403986222, _, _, _, _,
+  57306.92766597, _, _, _, _,
+  133716.260673252, _, _, _, _,
+  57306.92766597, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -51634,21 +51694,21 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  466933, _, _, _, _,
-  103763, _, _, _, _,
-  415052, _, _, _, _,
-  311289, _, _, _, _,
-  674459, _, _, _, _,
-  674459, _, _, _, _,
-  415052, _, _, _, _,
-  881985, _, _, _, _,
-  207526, _, _, _, _,
-  103763, _, _, _, _,
-  155644, _, _, _, _,
-  103763, _, _, _, _,
-  155644, _, _, _, _,
-  363170, _, _, _, _,
-  155644, _, _, _, _,
+  114129.267356015, _, _, _, _,
+  25362.0602646244, _, _, _, _,
+  101448.256509312, _, _, _, _,
+  76086.2061821816, _, _, _, _,
+  164853.385904319, _, _, _, _,
+  164853.385904319, _, _, _, _,
+  101448.256509312, _, _, _, _,
+  215577.511054737, _, _, _, _,
+  50724.1204566477, _, _, _, _,
+  25362.0602646244, _, _, _, _,
+  38043.0685351306, _, _, _, _,
+  25362.0602646244, _, _, _, _,
+  38043.0685351306, _, _, _, _,
+  88767.2237238898, _, _, _, _,
+  38043.0685351306, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -51761,22 +51821,22 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  5, _, _, _, _,
-  32, _, _, _, _,
-  9, _, _, _, _,
-  36, _, _, _, _,
-  36, _, _, _, _,
-  36, _, _, _, _,
-  27, _, _, _, _,
+  48.3631329732773, _, _, _, _,
+  338.020006181485, _, _, _, _,
+  96.2032888252543, _, _, _, _,
+  385.620112035221, _, _, _, _,
+  385.620112035221, _, _, _, _,
+  385.620112035221, _, _, _, _,
+  289.656873208208, _, _, _, _,
   _, _, _, _, _,
-  63, _, _, _, _,
-  14, _, _, _, _,
-  32, _, _, _, _,
-  45, _, _, _, _,
-  23, _, _, _, _,
-  18, _, _, _, _,
-  59, _, _, _, _,
-  18, _, _, _, _,
+  675.322572089016, _, _, _, _,
+  144.566421798532, _, _, _, _,
+  338.020006181485, _, _, _, _,
+  482.256046600386, _, _, _, _,
+  242.182710919064, _, _, _, _,
+  192.775103370296, _, _, _, _,
+  626.998398377033, _, _, _, _,
+  192.775103370296, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -51857,22 +51917,22 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  260, _, _, _, _,
-  1822, _, _, _, _,
-  521, _, _, _, _,
-  2082, _, _, _, _,
-  2082, _, _, _, _,
-  2082, _, _, _, _,
-  1562, _, _, _, _,
+  66484.4199335163, _, _, _, _,
+  464673.45383346, _, _, _, _,
+  132249.907316336, _, _, _, _,
+  530108.946364687, _, _, _, _,
+  530108.946364687, _, _, _, _,
+  530108.946364687, _, _, _, _,
+  398189.033899944, _, _, _, _,
   _, _, _, _, _,
-  3644, _, _, _, _,
-  781, _, _, _, _,
-  1822, _, _, _, _,
-  2603, _, _, _, _,
-  1302, _, _, _, _,
-  1041, _, _, _, _,
-  3384, _, _, _, _,
-  1041, _, _, _, _,
+  928360.648144048, _, _, _, _,
+  198734.327249853, _, _, _, _,
+  464673.45383346, _, _, _, _,
+  662953.608389543, _, _, _, _,
+  332926.675000091, _, _, _, _,
+  265006.424051962, _, _, _, _,
+  861929.785201756, _, _, _, _,
+  265006.424051962, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -51953,22 +52013,22 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  166, _, _, _, _,
-  1162, _, _, _, _,
-  332, _, _, _, _,
-  1328, _, _, _, _,
-  1328, _, _, _, _,
-  1328, _, _, _, _,
-  996, _, _, _, _,
+  8268.13073551525, _, _, _, _,
+  57787.6872425208, _, _, _, _,
+  16446.853631944, _, _, _, _,
+  65925.3713425256, _, _, _, _,
+  65925.3713425256, _, _, _, _,
+  65925.3713425256, _, _, _, _,
+  49519.5565070056, _, _, _, _,
   _, _, _, _, _,
-  2324, _, _, _, _,
-  498, _, _, _, _,
-  1162, _, _, _, _,
-  1660, _, _, _, _,
-  830, _, _, _, _,
-  664, _, _, _, _,
-  2158, _, _, _, _,
-  664, _, _, _, _,
+  115452.721347925, _, _, _, _,
+  24714.9843674592, _, _, _, _,
+  57787.6872425208, _, _, _, _,
+  82446.1898175189, _, _, _, _,
+  41403.4036394361, _, _, _, _,
+  32956.7101887043, _, _, _, _,
+  107191.251063169, _, _, _, _,
+  32956.7101887043, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -52049,22 +52109,22 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  106, _, _, _, _,
-  741, _, _, _, _,
-  212, _, _, _, _,
-  846, _, _, _, _,
-  846, _, _, _, _,
-  846, _, _, _, _,
-  635, _, _, _, _,
+  12345.1608911077, _, _, _, _,
+  86282.899890488, _, _, _, _,
+  24556.8267766625, _, _, _, _,
+  98433.2906751962, _, _, _, _,
+  98433.2906751962, _, _, _, _,
+  98433.2906751962, _, _, _, _,
+  73937.7389993803, _, _, _, _,
   _, _, _, _, _,
-  1482, _, _, _, _,
-  318, _, _, _, _,
-  741, _, _, _, _,
-  1058, _, _, _, _,
-  529, _, _, _, _,
-  423, _, _, _, _,
-  1376, _, _, _, _,
-  423, _, _, _, _,
+  172382.666161063, _, _, _, _,
+  36901.9876677701, _, _, _, _,
+  86282.899890488, _, _, _, _,
+  123100.554492217, _, _, _, _,
+  61819.4965365964, _, _, _, _,
+  49207.723333829, _, _, _, _,
+  160047.450000979, _, _, _, _,
+  49207.723333829, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -52145,22 +52205,22 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  67, _, _, _, _,
-  472, _, _, _, _,
-  135, _, _, _, _,
-  540, _, _, _, _,
-  540, _, _, _, _,
-  540, _, _, _, _,
-  405, _, _, _, _,
+  5066.15848525172, _, _, _, _,
+  35408.4364932971, _, _, _, _,
+  10077.5338161091, _, _, _, _,
+  40394.6659896995, _, _, _, _,
+  40394.6659896995, _, _, _, _,
+  40394.6659896995, _, _, _, _,
+  30342.2780080454, _, _, _, _,
   _, _, _, _, _,
-  945, _, _, _, _,
-  202, _, _, _, _,
-  472, _, _, _, _,
-  675, _, _, _, _,
-  338, _, _, _, _,
-  270, _, _, _, _,
-  877, _, _, _, _,
-  270, _, _, _, _,
+  70741.7193332201, _, _, _, _,
+  15143.6923013609, _, _, _, _,
+  35408.4364932971, _, _, _, _,
+  50517.5205232974, _, _, _, _,
+  25369.2414133265, _, _, _, _,
+  20193.6716180966, _, _, _, _,
+  65679.6419275026, _, _, _, _,
+  20193.6716180966, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -52241,22 +52301,22 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  43, _, _, _, _,
-  301, _, _, _, _,
-  86, _, _, _, _,
-  344, _, _, _, _,
-  344, _, _, _, _,
-  344, _, _, _, _,
-  258, _, _, _, _,
+  2410.86809193261, _, _, _, _,
+  16850.0590685075, _, _, _, _,
+  4795.66614296753, _, _, _, _,
+  19222.8907963196, _, _, _, _,
+  19222.8907963196, _, _, _, _,
+  19222.8907963196, _, _, _, _,
+  14439.1909765749, _, _, _, _,
   _, _, _, _, _,
-  602, _, _, _, _,
-  129, _, _, _, _,
-  301, _, _, _, _,
-  430, _, _, _, _,
-  215, _, _, _, _,
-  172, _, _, _, _,
-  559, _, _, _, _,
-  172, _, _, _, _,
+  33664.354245017, _, _, _, _,
+  7206.53423490014, _, _, _, _,
+  16850.0590685075, _, _, _, _,
+  24040.1240244889, _, _, _, _,
+  12072.6374466916, _, _, _, _,
+  9609.7030333261, _, _, _, _,
+  31255.4282448011, _, _, _, _,
+  9609.7030333261, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -52337,22 +52397,22 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  27, _, _, _, _,
-  192, _, _, _, _,
-  55, _, _, _, _,
-  219, _, _, _, _,
-  219, _, _, _, _,
-  219, _, _, _, _,
-  165, _, _, _, _,
+  1321.71509857629, _, _, _, _,
+  9237.74202216752, _, _, _, _,
+  2629.13776581206, _, _, _, _,
+  10538.6043677785, _, _, _, _,
+  10538.6043677785, _, _, _, _,
+  10538.6043677785, _, _, _, _,
+  7916.02692359123, _, _, _, _,
   _, _, _, _, _,
-  384, _, _, _, _,
-  82, _, _, _, _,
-  192, _, _, _, _,
-  274, _, _, _, _,
-  137, _, _, _, _,
-  110, _, _, _, _,
-  357, _, _, _, _,
-  110, _, _, _, _,
+  18455.8771333655, _, _, _, _,
+  3950.85286438835, _, _, _, _,
+  9237.74202216752, _, _, _, _,
+  13179.5659004067, _, _, _, _,
+  6618.60648715067, _, _, _, _,
+  5268.34696368634, _, _, _, _,
+  17135.2267516659, _, _, _, _,
+  5268.34696368634, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -52433,22 +52493,22 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  17, _, _, _, _,
-  122, _, _, _, _,
-  35, _, _, _, _,
-  140, _, _, _, _,
-  140, _, _, _, _,
-  140, _, _, _, _,
-  105, _, _, _, _,
+  625.783249804932, _, _, _, _,
+  4373.72942907175, _, _, _, _,
+  1244.79956160521, _, _, _, _,
+  4989.63967104612, _, _, _, _,
+  4989.63967104612, _, _, _, _,
+  4989.63967104612, _, _, _, _,
+  3747.94617926682, _, _, _, _,
   _, _, _, _, _,
-  245, _, _, _, _,
-  52, _, _, _, _,
-  122, _, _, _, _,
-  175, _, _, _, _,
-  88, _, _, _, _,
-  70, _, _, _, _,
-  227, _, _, _, _,
-  70, _, _, _, _,
+  8738.17571045279, _, _, _, _,
+  1870.58281141015, _, _, _, _,
+  4373.72942907175, _, _, _, _,
+  6240.03734924326, _, _, _, _,
+  3133.66555407485, _, _, _, _,
+  2494.36757406104, _, _, _, _,
+  8112.89656473798, _, _, _, _,
+  2494.36757406104, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -52529,22 +52589,22 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  11, _, _, _, _,
-  78, _, _, _, _,
-  22, _, _, _, _,
-  89, _, _, _, _,
-  89, _, _, _, _,
-  89, _, _, _, _,
-  67, _, _, _, _,
+  358.432572566461, _, _, _, _,
+  2505.15987997522, _, _, _, _,
+  712.98921684919, _, _, _, _,
+  2857.93744723948, _, _, _, _,
+  2857.93744723948, _, _, _, _,
+  2857.93744723948, _, _, _, _,
+  2146.72730740876, _, _, _, _,
   _, _, _, _, _,
-  156, _, _, _, _,
-  33, _, _, _, _,
-  78, _, _, _, _,
-  112, _, _, _, _,
-  56, _, _, _, _,
-  45, _, _, _, _,
-  145, _, _, _, _,
-  45, _, _, _, _,
+  5005.00261138609, _, _, _, _,
+  1071.42178941565, _, _, _, _,
+  2505.15987997522, _, _, _, _,
+  3574.13312148777, _, _, _, _,
+  1794.88314278159, _, _, _, _,
+  1428.7096798704, _, _, _, _,
+  4646.85877669479, _, _, _, _,
+  1428.7096798704, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -52625,22 +52685,22 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  7, _, _, _, _,
-  50, _, _, _, _,
-  14, _, _, _, _,
-  57, _, _, _, _,
-  57, _, _, _, _,
-  57, _, _, _, _,
-  43, _, _, _, _,
+  192.389826234907, _, _, _, _,
+  1344.65255361167, _, _, _, _,
+  382.699235604608, _, _, _, _,
+  1534.00703771888, _, _, _, _,
+  1534.00703771888, _, _, _, _,
+  1534.00703771888, _, _, _, _,
+  1152.26272737676, _, _, _, _,
   _, _, _, _, _,
-  100, _, _, _, _,
-  21, _, _, _, _,
-  50, _, _, _, _,
-  71, _, _, _, _,
-  36, _, _, _, _,
-  28, _, _, _, _,
-  92, _, _, _, _,
-  28, _, _, _, _,
+  2686.45111077699, _, _, _, _,
+  575.089061839515, _, _, _, _,
+  1344.65255361167, _, _, _, _,
+  1918.42734955668, _, _, _, _,
+  963.409250111286, _, _, _, _,
+  766.864476300989, _, _, _, _,
+  2494.21626551726, _, _, _, _,
+  766.864476300989, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -52746,36 +52806,36 @@ data:
   _, _, _, _, _ ;
 
  Herring10_Nums =
-_, _, _, _, _,
-29107500, _, _, _, _,
-34929000, _, _, _, _,
-17464500, _, _, _, _,
-34929000, _, _, _, _,
-46570500, _, _, _, _,
-46570500, _, _, _, _,
-52392000, _, _, _, _,
-29107500, _, _, _, _,
-29107500, _, _, _, _,
-29107500, _, _, _, _,
-23286000, _, _, _, _,
-34929000, _, _, _, _,
-29107500, _, _, _, _,
-29107500, _, _, _, _,
-23286000, _, _, _, _,
-23286000, _, _, _, _,
-5821500, _, _, _, _,
-11643000, _, _, _, _,
-17464500, _, _, _, _,
-11643000, _, _, _, _,
-11643000, _, _, _, _,
-11643000, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _ ;
+  _, _, _, _, _,
+  196809.826386489, _, _, _, _,
+  236170.983751111, _, _, _, _,
+  118086.215455724, _, _, _, _,
+  236170.983751111, _, _, _, _,
+  314893.85500711, _, _, _, _,
+  314893.85500711, _, _, _, _,
+  354255.494813386, _, _, _, _,
+  196809.826386489, _, _, _, _,
+  196809.826386489, _, _, _, _,
+  196809.826386489, _, _, _, _,
+  157447.592289565, _, _, _, _,
+  236170.983751111, _, _, _, _,
+  196809.826386489, _, _, _, _,
+  196809.826386489, _, _, _, _,
+  157447.592289565, _, _, _, _,
+  157447.592289565, _, _, _, _,
+  39362.2340969243, _, _, _, _,
+  78723.6109307648, _, _, _, _,
+  118086.215455724, _, _, _, _,
+  78723.6109307648, _, _, _, _,
+  78723.6109307648, _, _, _, _,
+  78723.6109307648, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
 
  Herring10_ResN =
   _, _, _, _, _,
@@ -52842,36 +52902,37 @@ _, _, _, _, _ ;
   _, _, _, _, _ ;
 
  Herring1_Nums =
-_, _, _, _, _,
-1670667000, _, _, _, _,
-2004799500, _, _, _, _,
-1002400500, _, _, _, _,
-2004799500, _, _, _, _,
-2673066000, _, _, _, _,
-2673066000, _, _, _, _,
-3007200000, _, _, _, _,
-1670667000, _, _, _, _,
-1670667000, _, _, _, _,
-1670667000, _, _, _, _,
-1336533000, _, _, _, _,
-2004799500, _, _, _, _,
-1670667000, _, _, _, _,
-1670667000, _, _, _, _,
-1336533000, _, _, _, _,
-1336533000, _, _, _, _,
-334134000, _, _, _, _,
-668266500, _, _, _, _,
-1002400500, _, _, _, _,
-668266500, _, _, _, _,
-668266500, _, _, _, _,
-668266500, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _ ;
+  _, _, _, _, _,
+  23449263.3599314, _, _, _, _,
+  28139019.771698, _, _, _, _,
+  14069596.0981193, _, _, _, _,
+  28139019.771698, _, _, _, _,
+  37518598.90362, _, _, _, _,
+  37518598.90362, _, _, _, _,
+  42208412.7967716, _, _, _, _,
+  23449263.3599314, _, _, _, _,
+  23449263.3599314, _, _, _, _,
+  23449263.3599314, _, _, _, _,
+  18759378.6589437, _, _, _, _,
+  28139019.771698, _, _, _, _,
+  23449263.3599314, _, _, _, _,
+  23449263.3599314, _, _, _, _,
+  18759378.6589437, _, _, _, _,
+  18759378.6589437, _, _, _, _,
+  4689884.70098775, _, _, _, _,
+  9379667.26181212, _, _, _, _,
+  14069596.0981193, _, _, _, _,
+  9379667.26181212, _, _, _, _,
+  9379667.26181212, _, _, _, _,
+  9379667.26181212, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
  Herring1_ResN =
   _, _, _, _, _,
   _, _, _, _, _,
@@ -52937,36 +52998,36 @@ _, _, _, _, _ ;
   _, _, _, _, _ ;
 
  Herring2_Nums =
-_, _, _, _, _,
-1065264000, _, _, _, _,
-1278316500, _, _, _, _,
-639159000, _, _, _, _,
-1278316500, _, _, _, _,
-1704421500, _, _, _, _,
-1704421500, _, _, _, _,
-1917475500, _, _, _, _,
-1065264000, _, _, _, _,
-1065264000, _, _, _, _,
-1065264000, _, _, _, _,
-852211500, _, _, _, _,
-1278316500, _, _, _, _,
-1065264000, _, _, _, _,
-1065264000, _, _, _, _,
-852211500, _, _, _, _,
-852211500, _, _, _, _,
-213052500, _, _, _, _,
-426105000, _, _, _, _,
-639159000, _, _, _, _,
-426105000, _, _, _, _,
-426105000, _, _, _, _,
-426105000, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _ ;
+  _, _, _, _, _,
+  6625752.43791335, _, _, _, _,
+  7950875.72650153, _, _, _, _,
+  3975462.22312728, _, _, _, _,
+  7950875.72650153, _, _, _, _,
+  10601141.0395742, _, _, _, _,
+  10601141.0395742, _, _, _, _,
+  11926280.5699275, _, _, _, _,
+  6625752.43791335, _, _, _, _,
+  6625752.43791335, _, _, _, _,
+  6625752.43791335, _, _, _, _,
+  5300592.90031357, _, _, _, _,
+  7950875.72650153, _, _, _, _,
+  6625752.43791335, _, _, _, _,
+  6625752.43791335, _, _, _, _,
+  5300592.90031357, _, _, _, _,
+  5300592.90031357, _, _, _, _,
+  1325159.53759978, _, _, _, _,
+  2650290.21478607, _, _, _, _,
+  3975462.22312728, _, _, _, _,
+  2650290.21478607, _, _, _, _,
+  2650290.21478607, _, _, _, _,
+  2650290.21478607, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
 
  Herring2_ResN =
   _, _, _, _, _,
@@ -53033,36 +53094,36 @@ _, _, _, _, _ ;
   _, _, _, _, _ ;
 
  Herring3_Nums =
-_, _, _, _, _,
-679242000, _, _, _, _,
-815091000, _, _, _, _,
-407545500, _, _, _, _,
-815091000, _, _, _, _,
-1086787500, _, _, _, _,
-1086787500, _, _, _, _,
-1222635000, _, _, _, _,
-679242000, _, _, _, _,
-679242000, _, _, _, _,
-679242000, _, _, _, _,
-543393000, _, _, _, _,
-815091000, _, _, _, _,
-679242000, _, _, _, _,
-679242000, _, _, _, _,
-543393000, _, _, _, _,
-543393000, _, _, _, _,
-135849000, _, _, _, _,
-271696500, _, _, _, _,
-407545500, _, _, _, _,
-271696500, _, _, _, _,
-271696500, _, _, _, _,
-271696500, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _ ;
+  _, _, _, _, _,
+  14081504.4348757, _, _, _, _,
+  16897747.5166784, _, _, _, _,
+  8448925.52962293, _, _, _, _,
+  16897747.5166784, _, _, _, _,
+  22530273.4990986, _, _, _, _,
+  22530273.4990986, _, _, _, _,
+  25346551.0990167, _, _, _, _,
+  14081504.4348757, _, _, _, _,
+  14081504.4348757, _, _, _, _,
+  14081504.4348757, _, _, _, _,
+  11265184.3141822, _, _, _, _,
+  16897747.5166784, _, _, _, _,
+  14081504.4348757, _, _, _, _,
+  14081504.4348757, _, _, _, _,
+  11265184.3141822, _, _, _, _,
+  11265184.3141822, _, _, _, _,
+  2816320.12069345, _, _, _, _,
+  5632578.90525273, _, _, _, _,
+  8448925.52962293, _, _, _, _,
+  5632578.90525273, _, _, _, _,
+  5632578.90525273, _, _, _, _,
+  5632578.90525273, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
 
  Herring3_ResN =
   _, _, _, _, _,
@@ -53129,36 +53190,36 @@ _, _, _, _, _ ;
   _, _, _, _, _ ;
 
  Herring4_Nums =
-_, _, _, _, _,
-433104000, _, _, _, _,
-519724500, _, _, _, _,
-259863000, _, _, _, _,
-519724500, _, _, _, _,
-692965500, _, _, _, _,
-692965500, _, _, _, _,
-779587500, _, _, _, _,
-433104000, _, _, _, _,
-433104000, _, _, _, _,
-433104000, _, _, _, _,
-346483500, _, _, _, _,
-519724500, _, _, _, _,
-433104000, _, _, _, _,
-433104000, _, _, _, _,
-346483500, _, _, _, _,
-346483500, _, _, _, _,
-86620500, _, _, _, _,
-173241000, _, _, _, _,
-259863000, _, _, _, _,
-173241000, _, _, _, _,
-173241000, _, _, _, _,
-173241000, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _ ;
+  _, _, _, _, _,
+  7565600.1128543, _, _, _, _,
+  9078689.07831614, _, _, _, _,
+  4539372.35442679, _, _, _, _,
+  9078689.07831614, _, _, _, _,
+  12104888.4027798, _, _, _, _,
+  12104888.4027798, _, _, _, _,
+  13617995.9138636, _, _, _, _,
+  7565600.1128543, _, _, _, _,
+  7565600.1128543, _, _, _, _,
+  7565600.1128543, _, _, _, _,
+  6052469.75654232, _, _, _, _,
+  9078689.07831614, _, _, _, _,
+  7565600.1128543, _, _, _, _,
+  7565600.1128543, _, _, _, _,
+  6052469.75654232, _, _, _, _,
+  6052469.75654232, _, _, _, _,
+  1513130.35631199, _, _, _, _,
+  3026227.75842751, _, _, _, _,
+  4539372.35442679, _, _, _, _,
+  3026227.75842751, _, _, _, _,
+  3026227.75842751, _, _, _, _,
+  3026227.75842751, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
 
  Herring4_ResN =
   _, _, _, _, _,
@@ -53225,36 +53286,36 @@ _, _, _, _, _ ;
   _, _, _, _, _ ;
 
  Herring5_Nums =
-_, _, _, _, _,
-276159000, _, _, _, _,
-331390500, _, _, _, _,
-165696000, _, _, _, _,
-331390500, _, _, _, _,
-441855000, _, _, _, _,
-441855000, _, _, _, _,
-497086500, _, _, _, _,
-276159000, _, _, _, _,
-276159000, _, _, _, _,
-276159000, _, _, _, _,
-220927500, _, _, _, _,
-331390500, _, _, _, _,
-276159000, _, _, _, _,
-276159000, _, _, _, _,
-220927500, _, _, _, _,
-220927500, _, _, _, _,
-55231500, _, _, _, _,
-110463000, _, _, _, _,
-165696000, _, _, _, _,
-110463000, _, _, _, _,
-110463000, _, _, _, _,
-110463000, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _ ;
+  _, _, _, _, _,
+  4517718.08532725, _, _, _, _,
+  5421243.15696854, _, _, _, _,
+  2710638.18807778, _, _, _, _,
+  5421243.15696854, _, _, _, _,
+  7228306.07517725, _, _, _, _,
+  7228306.07517725, _, _, _, _,
+  8131842.22114051, _, _, _, _,
+  4517718.08532725, _, _, _, _,
+  4517718.08532725, _, _, _, _,
+  4517718.08532725, _, _, _, _,
+  3614168.29757759, _, _, _, _,
+  5421243.15696854, _, _, _, _,
+  4517718.08532725, _, _, _, _,
+  4517718.08532725, _, _, _, _,
+  3614168.29757759, _, _, _, _,
+  3614168.29757759, _, _, _, _,
+  903549.787749662, _, _, _, _,
+  1807079.89724947, _, _, _, _,
+  2710638.18807778, _, _, _, _,
+  1807079.89724947, _, _, _, _,
+  1807079.89724947, _, _, _, _,
+  1807079.89724947, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
 
  Herring5_ResN =
   _, _, _, _, _,
@@ -53321,36 +53382,36 @@ _, _, _, _, _ ;
   _, _, _, _, _ ;
 
  Herring6_Nums =
-_, _, _, _, _,
-176086500, _, _, _, _,
-211303500, _, _, _, _,
-105652500, _, _, _, _,
-211303500, _, _, _, _,
-281739000, _, _, _, _,
-281739000, _, _, _, _,
-316956000, _, _, _, _,
-176086500, _, _, _, _,
-176086500, _, _, _, _,
-176086500, _, _, _, _,
-140869500, _, _, _, _,
-211303500, _, _, _, _,
-176086500, _, _, _, _,
-176086500, _, _, _, _,
-140869500, _, _, _, _,
-140869500, _, _, _, _,
-35217000, _, _, _, _,
-70434000, _, _, _, _,
-105652500, _, _, _, _,
-70434000, _, _, _, _,
-70434000, _, _, _, _,
-70434000, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _ ;
+  _, _, _, _, _,
+  3016367.60124505, _, _, _, _,
+  3619628.73917726, _, _, _, _,
+  1809825.45939963, _, _, _, _,
+  3619628.73917726, _, _, _, _,
+  4826159.54454096, _, _, _, _,
+  4826159.54454096, _, _, _, _,
+  5429428.07652153, _, _, _, _,
+  3016367.60124505, _, _, _, _,
+  3016367.60124505, _, _, _, _,
+  3016367.60124505, _, _, _, _,
+  2413089.96098422, _, _, _, _,
+  3619628.73917726, _, _, _, _,
+  3016367.60124505, _, _, _, _,
+  3016367.60124505, _, _, _, _,
+  2413089.96098422, _, _, _, _,
+  2413089.96098422, _, _, _, _,
+  603277.640260836, _, _, _, _,
+  1206542.14184542, _, _, _, _,
+  1809825.45939963, _, _, _, _,
+  1206542.14184542, _, _, _, _,
+  1206542.14184542, _, _, _, _,
+  1206542.14184542, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
 
  Herring6_ResN =
   _, _, _, _, _,
@@ -53417,36 +53478,36 @@ _, _, _, _, _ ;
   _, _, _, _, _ ;
 
  Herring7_Nums =
-_, _, _, _, _,
-112278000, _, _, _, _,
-134733000, _, _, _, _,
-67366500, _, _, _, _,
-134733000, _, _, _, _,
-179644500, _, _, _, _,
-179644500, _, _, _, _,
-202099500, _, _, _, _,
-112278000, _, _, _, _,
-112278000, _, _, _, _,
-112278000, _, _, _, _,
-89823000, _, _, _, _,
-134733000, _, _, _, _,
-112278000, _, _, _, _,
-112278000, _, _, _, _,
-89823000, _, _, _, _,
-89823000, _, _, _, _,
-22455000, _, _, _, _,
-44911500, _, _, _, _,
-67366500, _, _, _, _,
-44911500, _, _, _, _,
-44911500, _, _, _, _,
-44911500, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _ ;
+  _, _, _, _, _,
+  1697911.65986682, _, _, _, _,
+  2037487.02184087, _, _, _, _,
+  1018749.75336894, _, _, _, _,
+  2037487.02184087, _, _, _, _,
+  2716642.54703945, _, _, _, _,
+  2716642.54703945, _, _, _, _,
+  3056222.07111925, _, _, _, _,
+  1697911.65986682, _, _, _, _,
+  1697911.65986682, _, _, _, _,
+  1697911.65986682, _, _, _, _,
+  1358327.00874107, _, _, _, _,
+  2037487.02184087, _, _, _, _,
+  1697911.65986682, _, _, _, _,
+  1697911.65986682, _, _, _, _,
+  1358327.00874107, _, _, _, _,
+  1358327.00874107, _, _, _, _,
+  339584.651125748, _, _, _, _,
+  679161.906497878, _, _, _, _,
+  1018749.75336894, _, _, _, _,
+  679161.906497878, _, _, _, _,
+  679161.906497878, _, _, _, _,
+  679161.906497878, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
 
  Herring7_ResN =
   _, _, _, _, _,
@@ -53513,36 +53574,36 @@ _, _, _, _, _ ;
   _, _, _, _, _ ;
 
  Herring8_Nums =
-_, _, _, _, _,
-71592000, _, _, _, _,
-85909500, _, _, _, _,
-42955500, _, _, _, _,
-85909500, _, _, _, _,
-114546000, _, _, _, _,
-114546000, _, _, _, _,
-128865000, _, _, _, _,
-71592000, _, _, _, _,
-71592000, _, _, _, _,
-71592000, _, _, _, _,
-57273000, _, _, _, _,
-85909500, _, _, _, _,
-71592000, _, _, _, _,
-71592000, _, _, _, _,
-57273000, _, _, _, _,
-57273000, _, _, _, _,
-14319000, _, _, _, _,
-28636500, _, _, _, _,
-42955500, _, _, _, _,
-28636500, _, _, _, _,
-28636500, _, _, _, _,
-28636500, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _ ;
+  _, _, _, _, _,
+  1132663.19165905, _, _, _, _,
+  1359191.18036046, _, _, _, _,
+  679599.754467344, _, _, _, _,
+  1359191.18036046, _, _, _, _,
+  1812250.3606388, _, _, _, _,
+  1812250.3606388, _, _, _, _,
+  2038781.12584744, _, _, _, _,
+  1132663.19165905, _, _, _, _,
+  1132663.19165905, _, _, _, _,
+  1132663.19165905, _, _, _, _,
+  906129.006239363, _, _, _, _,
+  1359191.18036046, _, _, _, _,
+  1132663.19165905, _, _, _, _,
+  1132663.19165905, _, _, _, _,
+  906129.006239363, _, _, _, _,
+  906129.006239363, _, _, _, _,
+  226534.185419685, _, _, _, _,
+  453063.437191704, _, _, _, _,
+  679599.754467344, _, _, _, _,
+  453063.437191704, _, _, _, _,
+  453063.437191704, _, _, _, _,
+  453063.437191704, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
 
  Herring8_ResN =
   _, _, _, _, _,
@@ -53609,37 +53670,36 @@ _, _, _, _, _ ;
   _, _, _, _, _ ;
 
  Herring9_Nums =
-_, _, _, _, _,
-45649500, _, _, _, _,
-54778500, _, _, _, _,
-27390000, _, _, _, _,
-54778500, _, _, _, _,
-73038000, _, _, _, _,
-73038000, _, _, _, _,
-82167000, _, _, _, _,
-45649500, _, _, _, _,
-45649500, _, _, _, _,
-45649500, _, _, _, _,
-36519000, _, _, _, _,
-54778500, _, _, _, _,
-45649500, _, _, _, _,
-45649500, _, _, _, _,
-36519000, _, _, _, _,
-36519000, _, _, _, _,
-9130500, _, _, _, _,
-18259500, _, _, _, _,
-27390000, _, _, _, _,
-18259500, _, _, _, _,
-18259500, _, _, _, _,
-18259500, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _,
-_, _, _, _, _ ;
-
+  _, _, _, _, _,
+  695466.233405363, _, _, _, _,
+  834556.62516808, _, _, _, _,
+  417280.869496893, _, _, _, _,
+  834556.62516808, _, _, _, _,
+  1112739.37529028, _, _, _, _,
+  1112739.37529028, _, _, _, _,
+  1251831.47185547, _, _, _, _,
+  695466.233405363, _, _, _, _,
+  695466.233405363, _, _, _, _,
+  695466.233405363, _, _, _, _,
+  556372.036797264, _, _, _, _,
+  834556.62516808, _, _, _, _,
+  695466.233405363, _, _, _, _,
+  695466.233405363, _, _, _, _,
+  556372.036797264, _, _, _, _,
+  556372.036797264, _, _, _, _,
+  139094.196608099, _, _, _, _,
+  278185.36390847, _, _, _, _,
+  417280.869496893, _, _, _, _,
+  278185.36390847, _, _, _, _,
+  278185.36390847, _, _, _, _,
+  278185.36390847, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
 
  Herring9_ResN =
   _, _, _, _, _,
@@ -54825,6 +54885,166 @@ _, _, _, _, _ ;
   1e-06, 1e-06, 1e-06, 1e-06, 500,
   1e-06, 1e-06, 1e-06, 1e-06, 500 ;
 
+DayLight =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ DayLight_Adaptn_DF =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ DayLight_Adaptn_MB =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ DayLight_Adaptn_PL =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ DayLight_Adaptn_PS =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+  
  Light =
   _, _, _, _, _,
   _, _, _, _, _,
@@ -56051,26 +56271,26 @@ _, _, _, _, _ ;
 
  Mackerel10_Nums =
   _, _, _, _, _,
-  5317, _, _, _, _,
-  13293, _, _, _, _,
-  29245, _, _, _, _,
-  1329, _, _, _, _,
-  21269, _, _, _, _,
-  19940, _, _, _, _,
-  5317, _, _, _, _,
+  96427.6147458026, _, _, _, _,
+  241070.734423546, _, _, _, _,
+  530354.786528935, _, _, _, _,
+  24107.2778653286, _, _, _, _,
+  385712.323020145, _, _, _, _,
+  361607.002991523, _, _, _, _,
+  96427.6147458026, _, _, _, _,
   _, _, _, _, _,
-  11964, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  1329, _, _, _, _,
-  2659, _, _, _, _,
-  15952, _, _, _, _,
-  3988, _, _, _, _,
+  216963.878206318, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  24107.2778653286, _, _, _, _,
+  48215.211334465, _, _, _, _,
+  289284.78942161, _, _, _, _,
+  72321.2109858673, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  1329, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  24107.2778653286, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -56147,26 +56367,26 @@ _, _, _, _, _ ;
 
  Mackerel1_Nums =
   _, _, _, _, _,
-  305196, _, _, _, _,
-  762989, _, _, _, _,
-  1678576, _, _, _, _,
-  76299, _, _, _, _,
-  1220782, _, _, _, _,
-  1144484, _, _, _, _,
-  305196, _, _, _, _,
+  3772608.69276937, _, _, _, _,
+  9431588.14677778, _, _, _, _,
+  20749461.4813958, _, _, _, _,
+  943166.812468565, _, _, _, _,
+  15090507.6991693, _, _, _, _,
+  14147417.4845903, _, _, _, _,
+  3772608.69276937, _, _, _, _,
   _, _, _, _, _,
-  686690, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  76299, _, _, _, _,
-  152598, _, _, _, _,
-  915587, _, _, _, _,
-  228897, _, _, _, _,
+  8488437.83075885, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  943166.812468565, _, _, _, _,
+  1886359.27460845, _, _, _, _,
+  11317902.1811843, _, _, _, _,
+  2829476.07857081, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  76299, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  943166.812468565, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -56243,26 +56463,26 @@ _, _, _, _, _ ;
 
  Mackerel2_Nums =
   _, _, _, _, _,
-  194602, _, _, _, _,
-  486503, _, _, _, _,
-  1070307, _, _, _, _,
-  48650, _, _, _, _,
-  778405, _, _, _, _,
-  729755, _, _, _, _,
-  194602, _, _, _, _,
+  3651222.81021068, _, _, _, _,
+  9128121.30344442, _, _, _, _,
+  20081835.469887, _, _, _, _,
+  912819.870801651, _, _, _, _,
+  14604961.8224307, _, _, _, _,
+  13692216.0849368, _, _, _, _,
+  3651222.81021068, _, _, _, _,
   _, _, _, _, _,
-  437853, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  48650, _, _, _, _,
-  97301, _, _, _, _,
-  583804, _, _, _, _,
-  145951, _, _, _, _,
+  8215317.39830952, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  912819.870801651, _, _, _, _,
+  1825664.5659815, _, _, _, _,
+  10953742.0848539, _, _, _, _,
+  2738436.03732978, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  48650, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  912819.870801651, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -56339,26 +56559,26 @@ _, _, _, _, _ ;
 
  Mackerel3_Nums =
   _, _, _, _, _,
-  124083, _, _, _, _,
-  310208, _, _, _, _,
-  682458, _, _, _, _,
-  31021, _, _, _, _,
-  496333, _, _, _, _,
-  465312, _, _, _, _,
-  124083, _, _, _, _,
+  9348166.22699313, _, _, _, _,
+  23370580.1371875, _, _, _, _,
+  51415195.914817, _, _, _, _,
+  2337077.83148513, _, _, _, _,
+  37392845.6168614, _, _, _, _,
+  35055957.5876754, _, _, _, _,
+  9348166.22699313, _, _, _, _,
   _, _, _, _, _,
-  279187, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  31021, _, _, _, _,
-  62042, _, _, _, _,
-  372250, _, _, _, _,
-  93063, _, _, _, _,
+  21033543.1823386, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  2337077.83148513, _, _, _, _,
+  4674219.220421, _, _, _, _,
+  28044687.2566826, _, _, _, _,
+  7011173.13557481, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  31021, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  2337077.83148513, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -56435,26 +56655,26 @@ _, _, _, _, _ ;
 
  Mackerel4_Nums =
   _, _, _, _, _,
-  79119, _, _, _, _,
-  197797, _, _, _, _,
-  435154, _, _, _, _,
-  19780, _, _, _, _,
-  316476, _, _, _, _,
-  296696, _, _, _, _,
-  79119, _, _, _, _,
+  5091008.39712867, _, _, _, _,
+  12727610.6174313, _, _, _, _,
+  28000699.5796162, _, _, _, _,
+  1272771.85449249, _, _, _, _,
+  20364132.0025189, _, _, _, _,
+  19091463.5142991, _, _, _, _,
+  5091008.39712867, _, _, _, _,
   _, _, _, _, _,
-  178018, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  19780, _, _, _, _,
-  39560, _, _, _, _,
-  237357, _, _, _, _,
-  59339, _, _, _, _,
+  11454861.0243421, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  1272771.85449249, _, _, _, _,
+  2545578.32235272, _, _, _, _,
+  15273127.8896549, _, _, _, _,
+  3818282.69205001, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  19780, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  1272771.85449249, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -56531,26 +56751,26 @@ _, _, _, _, _ ;
 
  Mackerel5_Nums =
   _, _, _, _, _,
-  50449, _, _, _, _,
-  126121, _, _, _, _,
-  277466, _, _, _, _,
-  12612, _, _, _, _,
-  201794, _, _, _, _,
-  189182, _, _, _, _,
-  50449, _, _, _, _,
+  2924763.86205159, _, _, _, _,
+  7311961.14410696, _, _, _, _,
+  16086289.3663294, _, _, _, _,
+  731202.314801824, _, _, _, _,
+  11699111.9866563, _, _, _, _,
+  10967969.0553626, _, _, _, _,
+  2924763.86205159, _, _, _, _,
   _, _, _, _, _,
-  113509, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  12612, _, _, _, _,
-  25224, _, _, _, _,
-  151345, _, _, _, _,
-  37836, _, _, _, _,
+  6580771.61839185, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  731202.314801824, _, _, _, _,
+  1462424.5148443, _, _, _, _,
+  8774350.58589747, _, _, _, _,
+  2193588.05990252, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  12612, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  731202.314801824, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -56627,26 +56847,26 @@ _, _, _, _, _ ;
 
  Mackerel6_Nums =
   _, _, _, _, _,
-  32167, _, _, _, _,
-  80418, _, _, _, _,
-  176920, _, _, _, _,
-  8042, _, _, _, _,
-  128669, _, _, _, _,
-  120628, _, _, _, _,
-  32167, _, _, _, _,
+  1846285.26247638, _, _, _, _,
+  4615745.65910254, _, _, _, _,
+  10154624.5734011, _, _, _, _,
+  461578.479966671, _, _, _, _,
+  7385176.74034472, _, _, _, _,
+  6923635.7467876, _, _, _, _,
+  1846285.26247638, _, _, _, _,
   _, _, _, _, _,
-  72377, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  8042, _, _, _, _,
-  16084, _, _, _, _,
-  96502, _, _, _, _,
-  24126, _, _, _, _,
+  4154175.25236962, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  461578.479966671, _, _, _, _,
+  923169.51268238, _, _, _, _,
+  5538893.03158305, _, _, _, _,
+  1384723.51887626, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  8042, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  461578.479966671, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -56723,26 +56943,26 @@ _, _, _, _, _ ;
 
  Mackerel7_Nums =
   _, _, _, _, _,
-  20511, _, _, _, _,
-  51277, _, _, _, _,
-  112809, _, _, _, _,
-  5128, _, _, _, _,
-  82043, _, _, _, _,
-  76916, _, _, _, _,
-  20511, _, _, _, _,
+  978505.04929282, _, _, _, _,
+  2446279.84931501, _, _, _, _,
+  5381807.25410682, _, _, _, _,
+  244630.059325987, _, _, _, _,
+  3914039.11259875, _, _, _, _,
+  3669428.92053909, _, _, _, _,
+  978505.04929282, _, _, _, _,
   _, _, _, _, _,
-  46149, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  5128, _, _, _, _,
-  10255, _, _, _, _,
-  61532, _, _, _, _,
-  15383, _, _, _, _,
+  2201654.06868861, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  244630.059325987, _, _, _, _,
+  489266.771431241, _, _, _, _,
+  2935534.88675273, _, _, _, _,
+  733883.860004148, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  5128, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  244630.059325987, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -56819,26 +57039,26 @@ _, _, _, _, _ ;
 
  Mackerel8_Nums =
   _, _, _, _, _,
-  13078, _, _, _, _,
-  32696, _, _, _, _,
-  71930, _, _, _, _,
-  3270, _, _, _, _,
-  52313, _, _, _, _,
-  49043, _, _, _, _,
-  13078, _, _, _, _,
+  615567.713197815, _, _, _, _,
+  1538930.11975057, _, _, _, _,
+  3385640.97004528, _, _, _, _,
+  153894.316955824, _, _, _, _,
+  2462282.75229698, _, _, _, _,
+  2308400.93363916, _, _, _, _,
+  615567.713197815, _, _, _, _,
   _, _, _, _, _,
-  29426, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  3270, _, _, _, _,
-  6539, _, _, _, _,
-  39235, _, _, _, _,
-  9809, _, _, _, _,
+  1385038.49448175, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  153894.316955824, _, _, _, _,
+  307792.819108366, _, _, _, _,
+  1846715.55712129, _, _, _, _,
+  461678.976293509, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  3270, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  153894.316955824, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -56915,26 +57135,26 @@ _, _, _, _, _ ;
 
  Mackerel9_Nums =
   _, _, _, _, _,
-  8339, _, _, _, _,
-  20848, _, _, _, _,
-  45865, _, _, _, _,
-  2085, _, _, _, _,
-  33356, _, _, _, _,
-  31272, _, _, _, _,
-  8339, _, _, _, _,
+  357927.130660417, _, _, _, _,
+  894824.127775856, _, _, _, _,
+  1968610.00321054, _, _, _, _,
+  89483.1715698541, _, _, _, _,
+  1431715.44171141, _, _, _, _,
+  1342239.53738421, _, _, _, _,
+  357927.130660417, _, _, _, _,
   _, _, _, _, _,
-  18763, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  2085, _, _, _, _,
-  4170, _, _, _, _,
-  25017, _, _, _, _,
-  6254, _, _, _, _,
+  805342.521310513, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  89483.1715698541, _, _, _, _,
+  178968.776658264, _, _, _, _,
+  1073788.6122594, _, _, _, _,
+  268447.203659415, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  2085, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  89483.1715698541, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -57090,28 +57310,28 @@ _, _, _, _, _ ;
 
  Menhaden10_Nums =
   _, _, _, _, _,
-  16792.2854, _, _, _, _,
-  37790.90249, _, _, _, _,
-  5304.432855, _, _, _, _,
-  4211.684037, _, _, _, _,
-  21720.67429, _, _, _, _,
-  77264.4635, _, _, _, _,
-  24707.58312, _, _, _, _,
-  2205.306272, _, _, _, _,
-  43022.453, _, _, _, _,
-  7442.950526, _, _, _, _,
-  5261.54197, _, _, _, _,
-  5576.69049, _, _, _, _,
-  16091.57743, _, _, _, _,
-  2414.12585, _, _, _, _,
-  2429.640915, _, _, _, _,
-  6314.892499, _, _, _, _,
-  25238.48169, _, _, _, _,
-  11661.56728, _, _, _, _,
-  5448.490464, _, _, _, _,
-  6400.171251, _, _, _, _,
-  923.5604931, _, _, _, _,
-  2525.647782, _, _, _, _,
+  10913978.714307, _, _, _, _,
+  24561820.83577, _, _, _, _,
+  3447563.3240046, _, _, _, _,
+  2737342.10898245, _, _, _, _,
+  14117136.0075949, _, _, _, _,
+  50217268.8175666, _, _, _, _,
+  16058447.6627571, _, _, _, _,
+  1433316.85588184, _, _, _, _,
+  27962015.0007182, _, _, _, _,
+  4837471.59358121, _, _, _, _,
+  3419686.82051437, _, _, _, _,
+  3624514.46311336, _, _, _, _,
+  10458560.5477471, _, _, _, _,
+  1569037.06158553, _, _, _, _,
+  1579120.92371113, _, _, _, _,
+  4104301.50998472, _, _, _, _,
+  16403499.905516, _, _, _, _,
+  7579319.55016726, _, _, _, _,
+  3541192.13280173, _, _, _, _,
+  4159727.58492442, _, _, _, _,
+  600258.947628955, _, _, _, _,
+  1641519.63114118, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -57186,28 +57406,28 @@ _, _, _, _, _ ;
 
  Menhaden1_Nums =
   _, _, _, _, _,
-  963834.4799, _, _, _, _,
-  2169101.703, _, _, _, _,
-  304460.957, _, _, _, _,
-  241739.9536, _, _, _, _,
-  1246711.47, _, _, _, _,
-  4434783.725, _, _, _, _,
-  1418152.441, _, _, _, _,
-  126578.972, _, _, _, _,
-  2469379.398, _, _, _, _,
-  427206.4331, _, _, _, _,
-  301999.1292, _, _, _, _,
-  320087.8528, _, _, _, _,
-  923615.6246, _, _, _, _,
-  138564.6848, _, _, _, _,
-  139455.2101, _, _, _, _,
-  362458.771, _, _, _, _,
-  1448624.669, _, _, _, _,
-  669344.3068, _, _, _, _,
-  312729.4974, _, _, _, _,
-  367353.5544, _, _, _, _,
-  53010.02373, _, _, _, _,
-  144965.7601, _, _, _, _,
+  239875990.997659, _, _, _, _,
+  539838977.875577, _, _, _, _,
+  75773252.8641182, _, _, _, _,
+  60163453.5195703, _, _, _, _,
+  310277496.274703, _, _, _, _,
+  1103714551.59783, _, _, _, _,
+  352945167.644347, _, _, _, _,
+  31502562.9258008, _, _, _, _,
+  614571114.180023, _, _, _, _,
+  106321747.806982, _, _, _, _,
+  75160561.189037, _, _, _, _,
+  79662423.8954156, _, _, _, _,
+  229866453.05723, _, _, _, _,
+  34485528.1389269, _, _, _, _,
+  34707159.1759466, _, _, _, _,
+  90207560.2154304, _, _, _, _,
+  360528996.680888, _, _, _, _,
+  166584234.382003, _, _, _, _,
+  77831100.3168259, _, _, _, _,
+  91425757.9965789, _, _, _, _,
+  13192962.3180368, _, _, _, _,
+  36078606.9470638, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -57282,28 +57502,28 @@ _, _, _, _, _ ;
 
  Menhaden2_Nums =
   _, _, _, _, _,
-  614567.9979, _, _, _, _,
-  1383080.309, _, _, _, _,
-  194132.8772, _, _, _, _,
-  154140.1998, _, _, _, _,
-  794938.33, _, _, _, _,
-  2827742.949, _, _, _, _,
-  904253.9194, _, _, _, _,
-  80710.31597, _, _, _, _,
-  1574545.821, _, _, _, _,
-  272398.8483, _, _, _, _,
-  192563.1466, _, _, _, _,
-  204097.026, _, _, _, _,
-  588923.3235, _, _, _, _,
-  88352.74384, _, _, _, _,
-  88920.56783, _, _, _, _,
-  231113.9162, _, _, _, _,
-  923683.87, _, _, _, _,
-  426792.7731, _, _, _, _,
-  199405.1314, _, _, _, _,
-  234234.9679, _, _, _, _,
-  33800.68345, _, _, _, _,
-  92434.24966, _, _, _, _,
+  268051080.431471, _, _, _, _,
+  603246788.79589, _, _, _, _,
+  84673343.9789403, _, _, _, _,
+  67230066.0492814, _, _, _, _,
+  346721728.023284, _, _, _, _,
+  1233353437.38767, _, _, _, _,
+  394401011.650463, _, _, _, _,
+  35202756.1970707, _, _, _, _,
+  686756729.895224, _, _, _, _,
+  118809970.328803, _, _, _, _,
+  83988687.4412276, _, _, _, _,
+  89019324.9693106, _, _, _, _,
+  256865853.22973, _, _, _, _,
+  38536091.2463286, _, _, _, _,
+  38783754.377112, _, _, _, _,
+  100803060.274044, _, _, _, _,
+  402875613.708792, _, _, _, _,
+  186150701.548873, _, _, _, _,
+  86972899.8067966, _, _, _, _,
+  102164343.785821, _, _, _, _,
+  14742566.7268049, _, _, _, _,
+  40316288.1470586, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -57378,28 +57598,28 @@ _, _, _, _, _ ;
 
  Menhaden3_Nums =
   _, _, _, _, _,
-  391865.8566, _, _, _, _,
-  881890.9412, _, _, _, _,
-  123784.5877, _, _, _, _,
-  98284.13068, _, _, _, _,
-  506875.058, _, _, _, _,
-  1803048.51, _, _, _, _,
-  576577.7552, _, _, _, _,
-  51463.16959, _, _, _, _,
-  1003974.742, _, _, _, _,
-  173689.1741, _, _, _, _,
-  122783.6832, _, _, _, _,
-  130138.0094, _, _, _, _,
-  375514.0902, _, _, _, _,
-  56336.19674, _, _, _, _,
-  56698.2573, _, _, _, _,
-  147364.7392, _, _, _, _,
-  588966.8387, _, _, _, _,
-  272135.0871, _, _, _, _,
-  127146.3253, _, _, _, _,
-  149354.8096, _, _, _, _,
-  21552.26731, _, _, _, _,
-  58938.67976, _, _, _, _,
+  756083290.742449, _, _, _, _,
+  1701559331.40966, _, _, _, _,
+  238835450.507097, _, _, _, _,
+  189633742.54471, _, _, _, _,
+  977987123.475792, _, _, _, _,
+  3478881428.44842, _, _, _, _,
+  1112474586.11557, _, _, _, _,
+  99295312.3182428, _, _, _, _,
+  1937113207.83671, _, _, _, _,
+  335123563.742469, _, _, _, _,
+  236904261.245599, _, _, _, _,
+  251094023.02773, _, _, _, _,
+  724533470.548545, _, _, _, _,
+  108697546.135518, _, _, _, _,
+  109396121.774971, _, _, _, _,
+  284332036.290351, _, _, _, _,
+  1136378630.82854, _, _, _, _,
+  525069456.069846, _, _, _, _,
+  245321735.638919, _, _, _, _,
+  288171766.074542, _, _, _, _,
+  41583896.4232136, _, _, _, _,
+  113718891.801079, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -57474,28 +57694,28 @@ _, _, _, _, _ ;
 
  Menhaden4_Nums =
   _, _, _, _, _,
-  249864.7018, _, _, _, _,
-  562318.4908, _, _, _, _,
-  78928.53784, _, _, _, _,
-  62668.72858, _, _, _, _,
-  323197.8063, _, _, _, _,
-  1149674.489, _, _, _, _,
-  367642.2083, _, _, _, _,
-  32814.3657, _, _, _, _,
-  640162.5587, _, _, _, _,
-  110749.1071, _, _, _, _,
-  78290.33298, _, _, _, _,
-  82979.6584, _, _, _, _,
-  239438.3553, _, _, _, _,
-  35921.545, _, _, _, _,
-  36152.40501, _, _, _, _,
-  93963.90626, _, _, _, _,
-  375541.8367, _, _, _, _,
-  173520.9926, _, _, _, _,
-  81072.07641, _, _, _, _,
-  95232.8312, _, _, _, _,
-  13742.33237, _, _, _, _,
-  37580.96143, _, _, _, _,
+  444000718.736409, _, _, _, _,
+  999220026.905586, _, _, _, _,
+  140253214.140937, _, _, _, _,
+  111360109.418431, _, _, _, _,
+  574311046.223239, _, _, _, _,
+  2042930816.67375, _, _, _, _,
+  653287173.330165, _, _, _, _,
+  58309964.7568774, _, _, _, _,
+  1137546176.571, _, _, _, _,
+  196797237.803062, _, _, _, _,
+  139119146.72982, _, _, _, _,
+  147451911.793016, _, _, _, _,
+  425473470.464142, _, _, _, _,
+  63831312.237654, _, _, _, _,
+  64241542.2874466, _, _, _, _,
+  166970530.916952, _, _, _, _,
+  667324532.921652, _, _, _, _,
+  308340653.385714, _, _, _, _,
+  144062206.213266, _, _, _, _,
+  169225365.542724, _, _, _, _,
+  24419637.5264912, _, _, _, _,
+  66780036.4216571, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -57570,28 +57790,28 @@ _, _, _, _, _ ;
 
  Menhaden5_Nums =
   _, _, _, _, _,
-  159320.768, _, _, _, _,
-  358550.0999, _, _, _, _,
-  50327.05769, _, _, _, _,
-  39959.34557, _, _, _, _,
-  206080.0199, _, _, _, _,
-  733064.8192, _, _, _, _,
-  234419.0218, _, _, _, _,
-  20923.36335, _, _, _, _,
-  408185.6691, _, _, _, _,
-  70616.74843, _, _, _, _,
-  49920.12031, _, _, _, _,
-  52910.16621, _, _, _, _,
-  152672.6359, _, _, _, _,
-  22904.58834, _, _, _, _,
-  23051.79118, _, _, _, _,
-  59914.03187, _, _, _, _,
-  239456.0472, _, _, _, _,
-  110641.8697, _, _, _, _,
-  51693.83823, _, _, _, _,
-  60723.13413, _, _, _, _,
-  8762.497987, _, _, _, _,
-  23962.67898, _, _, _, _,
+  271401823.411049, _, _, _, _,
+  610787608.774147, _, _, _, _,
+  85731793.7805161, _, _, _, _,
+  68070468.0781357, _, _, _, _,
+  351055884.760019, _, _, _, _,
+  1248770836.06039, _, _, _, _,
+  399331178.015766, _, _, _, _,
+  35642804.369976, _, _, _, _,
+  695341456.685619, _, _, _, _,
+  120295141.264664, _, _, _, _,
+  85038578.7692338, _, _, _, _,
+  90132101.2271328, _, _, _, _,
+  260076776.509791, _, _, _, _,
+  39017807.4065327, _, _, _, _,
+  39268566.4229789, _, _, _, _,
+  102063137.815943, _, _, _, _,
+  407911715.90284, _, _, _, _,
+  188477657.871356, _, _, _, _,
+  88060094.9524833, _, _, _, _,
+  103441437.902183, _, _, _, _,
+  14926854.5568756, _, _, _, _,
+  40820257.4623621, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -57666,28 +57886,28 @@ _, _, _, _, _ ;
 
  Menhaden6_Nums =
   _, _, _, _, _,
-  101587.4068, _, _, _, _,
-  228621.6375, _, _, _, _,
-  32089.94877, _, _, _, _,
-  25479.20366, _, _, _, _,
-  131402.4221, _, _, _, _,
-  467422.7657, _, _, _, _,
-  149472.1676, _, _, _, _,
-  13341.3255, _, _, _, _,
-  260270.6737, _, _, _, _,
-  45027.22678, _, _, _, _,
-  31830.47404, _, _, _, _,
-  33737.01148, _, _, _, _,
-  97348.37062, _, _, _, _,
-  14604.61033, _, _, _, _,
-  14698.471, _, _, _, _,
-  38202.8734, _, _, _, _,
-  152683.9168, _, _, _, _,
-  70548.3709, _, _, _, _,
-  32961.44652, _, _, _, _,
-  38718.77978, _, _, _, _,
-  5587.215395, _, _, _, _,
-  15279.2787, _, _, _, _,
+  180551197.133458, _, _, _, _,
+  406329009.040714, _, _, _, _,
+  57033434.0607115, _, _, _, _,
+  45284163.3356613, _, _, _, _,
+  233541394.297008, _, _, _, _,
+  830750016.939178, _, _, _, _,
+  265656734.863799, _, _, _, _,
+  23711524.548036, _, _, _, _,
+  462578809.689751, _, _, _, _,
+  80026845.4047142, _, _, _, _,
+  56572269.8777121, _, _, _, _,
+  59960756.9771778, _, _, _, _,
+  173017162.35832, _, _, _, _,
+  25956759.4212611, _, _, _, _,
+  26123577.9048009, _, _, _, _,
+  67897928.9242143, _, _, _, _,
+  271364973.548746, _, _, _, _,
+  125385549.492216, _, _, _, _,
+  58582346.1446559, _, _, _, _,
+  68814848.8161006, _, _, _, _,
+  9930152.36894381, _, _, _, _,
+  27155846.852816, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -57762,28 +57982,28 @@ _, _, _, _, _ ;
 
  Menhaden7_Nums =
   _, _, _, _, _,
-  64774.99042, _, _, _, _,
-  145775.5921, _, _, _, _,
-  20461.45472, _, _, _, _,
-  16246.25753, _, _, _, _,
-  83785.88355, _, _, _, _,
-  298041.9141, _, _, _, _,
-  95307.66192, _, _, _, _,
-  8506.804718, _, _, _, _,
-  165955.9086, _, _, _, _,
-  28710.62738, _, _, _, _,
-  20296.00633, _, _, _, _,
-  21511.66827, _, _, _, _,
-  62072.06162, _, _, _, _,
-  9312.310688, _, _, _, _,
-  9372.158897, _, _, _, _,
-  24359.22755, _, _, _, _,
-  97355.56364, _, _, _, _,
-  44983.62734, _, _, _, _,
-  21017.14622, _, _, _, _,
-  24688.18398, _, _, _, _,
-  3562.565825, _, _, _, _,
-  9742.498238, _, _, _, _,
+  100085057.784023, _, _, _, _,
+  225240613.160291, _, _, _, _,
+  31615379.0958708, _, _, _, _,
+  25102398.5224572, _, _, _, _,
+  129459146.847417, _, _, _, _,
+  460510175.338117, _, _, _, _,
+  147261663.626107, _, _, _, _,
+  13144024.2004227, _, _, _, _,
+  256421600.258024, _, _, _, _,
+  44361331.155747, _, _, _, _,
+  31359741.6665089, _, _, _, _,
+  33238083.8350172, _, _, _, _,
+  95908711.5853369, _, _, _, _,
+  14388626.6488869, _, _, _, _,
+  14481099.2429743, _, _, _, _,
+  37637901.3137885, _, _, _, _,
+  150425915.138688, _, _, _, _,
+  69505049.8996906, _, _, _, _,
+  32473988.4979971, _, _, _, _,
+  38146178.0896823, _, _, _, _,
+  5504587.55981143, _, _, _, _,
+  15053317.5331381, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -57858,28 +58078,28 @@ _, _, _, _, _ ;
 
  Menhaden8_Nums =
   _, _, _, _, _,
-  41302.35741, _, _, _, _,
-  92950.62135, _, _, _, _,
-  13046.79955, _, _, _, _,
-  10359.07116, _, _, _, _,
-  53424.23806, _, _, _, _,
-  190039.9148, _, _, _, _,
-  60770.8483, _, _, _, _,
-  5424.178168, _, _, _, _,
-  105818.1592, _, _, _, _,
-  18306.70427, _, _, _, _,
-  12941.305, _, _, _, _,
-  13716.44528, _, _, _, _,
-  39578.89392, _, _, _, _,
-  5937.791451, _, _, _, _,
-  5975.952354, _, _, _, _,
-  15532.12924, _, _, _, _,
-  62076.64809, _, _, _, _,
-  28682.82715, _, _, _, _,
-  13401.1241, _, _, _, _,
-  15741.88112, _, _, _, _,
-  2271.592262, _, _, _, _,
-  6212.091143, _, _, _, _,
+  65449413.1048654, _, _, _, _,
+  147293374.906502, _, _, _, _,
+  20674494.8019892, _, _, _, _,
+  16415409.9242727, _, _, _, _,
+  84658243.3963747, _, _, _, _,
+  301145059.732481, _, _, _, _,
+  96299983.9393944, _, _, _, _,
+  8595375.66147201, _, _, _, _,
+  167683804.314865, _, _, _, _,
+  29009556.0014525, _, _, _, _,
+  20507323.796748, _, _, _, _,
+  21735642.941093, _, _, _, _,
+  62718342.0171452, _, _, _, _,
+  9409268.38036958, _, _, _, _,
+  9469739.71490552, _, _, _, _,
+  24612850.3697536, _, _, _, _,
+  98369207.9474532, _, _, _, _,
+  45451986.7848376, _, _, _, _,
+  21235972.0364506, _, _, _, _,
+  24945231.8202281, _, _, _, _,
+  3599658.46201982, _, _, _, _,
+  9843934.94532554, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -57954,28 +58174,28 @@ _, _, _, _, _ ;
 
  Menhaden9_Nums =
   _, _, _, _, _,
-  26335.54581, _, _, _, _,
-  59267.93288, _, _, _, _,
-  8319.006684, _, _, _, _,
-  6605.235397, _, _, _, _,
-  34064.79817, _, _, _, _,
-  121174.7996, _, _, _, _,
-  38749.20368, _, _, _, _,
-  3458.608699, _, _, _, _,
-  67472.63728, _, _, _, _,
-  11672.87001, _, _, _, _,
-  8251.740386, _, _, _, _,
-  8745.99165, _, _, _, _,
-  25236.61697, _, _, _, _,
-  3786.102988, _, _, _, _,
-  3810.435454, _, _, _, _,
-  9903.722857, _, _, _, _,
-  39581.81838, _, _, _, _,
-  18288.97806, _, _, _, _,
-  8544.933987, _, _, _, _,
-  10037.46656, _, _, _, _,
-  1448.431175, _, _, _, _,
-  3961.004193, _, _, _, _,
+  39352549.831337, _, _, _, _,
+  88562595.1534017, _, _, _, _,
+  12430884.378282, _, _, _, _,
+  9870038.65125179, _, _, _, _,
+  50902179.0088693, _, _, _, _,
+  181068483.388775, _, _, _, _,
+  57901969.4288176, _, _, _, _,
+  5168112.79109841, _, _, _, _,
+  100822680.48204, _, _, _, _,
+  17442478.7629953, _, _, _, _,
+  12330370.0267848, _, _, _, _,
+  13068917.3726437, _, _, _, _,
+  37710447.8479283, _, _, _, _,
+  5657479.3454854, _, _, _, _,
+  5693838.74265647, _, _, _, _,
+  14798886.2652607, _, _, _, _,
+  59146124.8310802, _, _, _, _,
+  27328764.1558795, _, _, _, _,
+  12768481.918124, _, _, _, _,
+  14998736.1488931, _, _, _, _,
+  2164354.61041435, _, _, _, _,
+  5918829.85798028, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -60198,28 +60418,28 @@ _, _, _, _, _ ;
 
  Monkfish10_Nums =
   _, _, _, _, _,
-  8723, _, _, _, _,
-  21807, _, _, _, _,
-  30530, _, _, _, _,
-  30530, _, _, _, _,
-  34892, _, _, _, _,
-  43615, _, _, _, _,
-  21807, _, _, _, _,
-  13084, _, _, _, _,
-  26169, _, _, _, _,
-  26169, _, _, _, _,
-  30530, _, _, _, _,
-  21807, _, _, _, _,
-  8723, _, _, _, _,
-  17446, _, _, _, _,
-  8723, _, _, _, _,
-  26169, _, _, _, _,
-  8723, _, _, _, _,
-  8723, _, _, _, _,
-  17446, _, _, _, _,
-  17446, _, _, _, _,
-  8723, _, _, _, _,
-  4361, _, _, _, _,
+  1799.94092655339, _, _, _, _,
+  4499.84305850597, _, _, _, _,
+  6299.78398505935, _, _, _, _,
+  6299.78398505935, _, _, _, _,
+  7199.76503197025, _, _, _, _,
+  8999.70595852363, _, _, _, _,
+  4499.84305850597, _, _, _, _,
+  2699.89294945589, _, _, _, _,
+  5399.82751629337, _, _, _, _,
+  5399.82751629337, _, _, _, _,
+  6299.78398505935, _, _, _, _,
+  4499.84305850597, _, _, _, _,
+  1799.94092655339, _, _, _, _,
+  3599.89159941711, _, _, _, _,
+  1799.94092655339, _, _, _, _,
+  5399.82751629337, _, _, _, _,
+  1799.94092655339, _, _, _, _,
+  1799.94092655339, _, _, _, _,
+  3599.89159941711, _, _, _, _,
+  3599.89159941711, _, _, _, _,
+  1799.94092655339, _, _, _, _,
+  899.952022902499, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -60294,28 +60514,28 @@ _, _, _, _, _ ;
 
  Monkfish1_Nums =
   _, _, _, _, _,
-  500674, _, _, _, _,
-  1251685, _, _, _, _,
-  1752359, _, _, _, _,
-  1752359, _, _, _, _,
-  2002696, _, _, _, _,
-  2503370, _, _, _, _,
-  1251685, _, _, _, _,
-  751011, _, _, _, _,
-  1502022, _, _, _, _,
-  1502022, _, _, _, _,
-  1752359, _, _, _, _,
-  1251685, _, _, _, _,
-  500674, _, _, _, _,
-  1001348, _, _, _, _,
-  500674, _, _, _, _,
-  1502022, _, _, _, _,
-  500674, _, _, _, _,
-  500674, _, _, _, _,
-  1001348, _, _, _, _,
-  1001348, _, _, _, _,
-  500674, _, _, _, _,
-  250337, _, _, _, _,
+  236987.021993519, _, _, _, _,
+  592466.336056673, _, _, _, _,
+  829453.358050192, _, _, _, _,
+  829453.358050192, _, _, _, _,
+  947948.262528212, _, _, _, _,
+  1184935.28452173, _, _, _, _,
+  592466.336056673, _, _, _, _,
+  355478.105060951, _, _, _, _,
+  710961.689623579, _, _, _, _,
+  710961.689623579, _, _, _, _,
+  829453.358050192, _, _, _, _,
+  592466.336056673, _, _, _, _,
+  236987.021993519, _, _, _, _,
+  473975.327223076, _, _, _, _,
+  236987.021993519, _, _, _, _,
+  710961.689623579, _, _, _, _,
+  236987.021993519, _, _, _, _,
+  236987.021993519, _, _, _, _,
+  473975.327223076, _, _, _, _,
+  473975.327223076, _, _, _, _,
+  236987.021993519, _, _, _, _,
+  118491.083067431, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -60390,28 +60610,28 @@ _, _, _, _, _ ;
 
  Monkfish2_Nums =
   _, _, _, _, _,
-  319244, _, _, _, _,
-  798109, _, _, _, _,
-  1117353, _, _, _, _,
-  1117353, _, _, _, _,
-  1276975, _, _, _, _,
-  1596219, _, _, _, _,
-  798109, _, _, _, _,
-  478866, _, _, _, _,
-  957731, _, _, _, _,
-  957731, _, _, _, _,
-  1117353, _, _, _, _,
-  798109, _, _, _, _,
-  319244, _, _, _, _,
-  638488, _, _, _, _,
-  319244, _, _, _, _,
-  957731, _, _, _, _,
-  319244, _, _, _, _,
-  319244, _, _, _, _,
-  638488, _, _, _, _,
-  638488, _, _, _, _,
-  319244, _, _, _, _,
-  159622, _, _, _, _,
+  177030.5511298, _, _, _, _,
+  442575.46727953, _, _, _, _,
+  619606.01840933, _, _, _, _,
+  619606.01840933, _, _, _, _,
+  708122.334912057, _, _, _, _,
+  885152.886041856, _, _, _, _,
+  442575.46727953, _, _, _, _,
+  265544.01301873, _, _, _, _,
+  531092.119254016, _, _, _, _,
+  531092.119254016, _, _, _, _,
+  619606.01840933, _, _, _, _,
+  442575.46727953, _, _, _, _,
+  177030.5511298, _, _, _, _,
+  354062.060843666, _, _, _, _,
+  177030.5511298, _, _, _, _,
+  531092.119254016, _, _, _, _,
+  177030.5511298, _, _, _, _,
+  177030.5511298, _, _, _, _,
+  354062.060843666, _, _, _, _,
+  354062.060843666, _, _, _, _,
+  177030.5511298, _, _, _, _,
+  88513.4618889296, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -60486,28 +60706,28 @@ _, _, _, _, _ ;
 
  Monkfish3_Nums =
   _, _, _, _, _,
-  203559, _, _, _, _,
-  508897, _, _, _, _,
-  712456, _, _, _, _,
-  712456, _, _, _, _,
-  814235, _, _, _, _,
-  1017794, _, _, _, _,
-  508897, _, _, _, _,
-  305338, _, _, _, _,
-  610676, _, _, _, _,
-  610676, _, _, _, _,
-  712456, _, _, _, _,
-  508897, _, _, _, _,
-  203559, _, _, _, _,
-  407118, _, _, _, _,
-  203559, _, _, _, _,
-  610676, _, _, _, _,
-  203559, _, _, _, _,
-  203559, _, _, _, _,
-  407118, _, _, _, _,
-  407118, _, _, _, _,
-  203559, _, _, _, _,
-  101779, _, _, _, _,
+  383270.297295581, _, _, _, _,
+  958173.771913446, _, _, _, _,
+  1341444.06920903, _, _, _, _,
+  1341444.06920903, _, _, _, _,
+  1533081.47148224, _, _, _, _,
+  1916351.76877782, _, _, _, _,
+  958173.771913446, _, _, _, _,
+  574901.519343564, _, _, _, _,
+  1149811.90048141, _, _, _, _,
+  1149811.90048141, _, _, _, _,
+  1341444.06920903, _, _, _, _,
+  958173.771913446, _, _, _, _,
+  383270.297295581, _, _, _, _,
+  766542.669921085, _, _, _, _,
+  383270.297295581, _, _, _, _,
+  1149811.90048141, _, _, _, _,
+  383270.297295581, _, _, _, _,
+  383270.297295581, _, _, _, _,
+  766542.669921085, _, _, _, _,
+  766542.669921085, _, _, _, _,
+  383270.297295581, _, _, _, _,
+  191631.222047981, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -60582,28 +60802,28 @@ _, _, _, _, _ ;
 
  Monkfish4_Nums =
   _, _, _, _, _,
-  129795, _, _, _, _,
-  324487, _, _, _, _,
-  454282, _, _, _, _,
-  454282, _, _, _, _,
-  519179, _, _, _, _,
-  648974, _, _, _, _,
-  324487, _, _, _, _,
-  194692, _, _, _, _,
-  389384, _, _, _, _,
-  389384, _, _, _, _,
-  454282, _, _, _, _,
-  324487, _, _, _, _,
-  129795, _, _, _, _,
-  259590, _, _, _, _,
-  129795, _, _, _, _,
-  389384, _, _, _, _,
-  129795, _, _, _, _,
-  129795, _, _, _, _,
-  259590, _, _, _, _,
-  259590, _, _, _, _,
-  129795, _, _, _, _,
-  64897, _, _, _, _,
+  181045.553196598, _, _, _, _,
+  452612.951795626, _, _, _, _,
+  633658.504992224, _, _, _, _,
+  633658.504992224, _, _, _, _,
+  724182.34613652, _, _, _, _,
+  905227.899333117, _, _, _, _,
+  452612.951795626, _, _, _, _,
+  271566.474985277, _, _, _, _,
+  543137.136020084, _, _, _, _,
+  543137.136020084, _, _, _, _,
+  633658.504992224, _, _, _, _,
+  452612.951795626, _, _, _, _,
+  181045.553196598, _, _, _, _,
+  362092.086717672, _, _, _, _,
+  181045.553196598, _, _, _, _,
+  543137.136020084, _, _, _, _,
+  181045.553196598, _, _, _, _,
+  181045.553196598, _, _, _, _,
+  362092.086717672, _, _, _, _,
+  362092.086717672, _, _, _, _,
+  181045.553196598, _, _, _, _,
+  90520.9217886783, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -60678,28 +60898,28 @@ _, _, _, _, _ ;
 
  Monkfish5_Nums =
   _, _, _, _, _,
-  82761, _, _, _, _,
-  206902, _, _, _, _,
-  289663, _, _, _, _,
-  289663, _, _, _, _,
-  331043, _, _, _, _,
-  413804, _, _, _, _,
-  206902, _, _, _, _,
-  124141, _, _, _, _,
-  248282, _, _, _, _,
-  248282, _, _, _, _,
-  289663, _, _, _, _,
-  206902, _, _, _, _,
-  82761, _, _, _, _,
-  165522, _, _, _, _,
-  82761, _, _, _, _,
-  248282, _, _, _, _,
-  82761, _, _, _, _,
-  82761, _, _, _, _,
-  165522, _, _, _, _,
-  165522, _, _, _, _,
-  82761, _, _, _, _,
-  41380, _, _, _, _,
+  91457.7270795821, _, _, _, _,
+  228643.847292165, _, _, _, _,
+  320101.574371747, _, _, _, _,
+  320101.574371747, _, _, _, _,
+  365830.975682036, _, _, _, _,
+  457288.702761618, _, _, _, _,
+  228643.847292165, _, _, _, _,
+  137185.653636006, _, _, _, _,
+  274373.42191426, _, _, _, _,
+  274373.42191426, _, _, _, _,
+  320101.574371747, _, _, _, _,
+  228643.847292165, _, _, _, _,
+  91457.7270795821, _, _, _, _,
+  182915.949383968, _, _, _, _,
+  91457.7270795821, _, _, _, _,
+  274373.42191426, _, _, _, _,
+  91457.7270795821, _, _, _, _,
+  91457.7270795821, _, _, _, _,
+  182915.949383968, _, _, _, _,
+  182915.949383968, _, _, _, _,
+  91457.7270795821, _, _, _, _,
+  45727.9265564238, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -60774,28 +60994,28 @@ _, _, _, _, _ ;
 
  Monkfish6_Nums =
   _, _, _, _, _,
-  52771, _, _, _, _,
-  131926, _, _, _, _,
-  184697, _, _, _, _,
-  184697, _, _, _, _,
-  211082, _, _, _, _,
-  263853, _, _, _, _,
-  131926, _, _, _, _,
-  79156, _, _, _, _,
-  158312, _, _, _, _,
-  158312, _, _, _, _,
-  184697, _, _, _, _,
-  131926, _, _, _, _,
-  52771, _, _, _, _,
-  105541, _, _, _, _,
-  52771, _, _, _, _,
-  158312, _, _, _, _,
-  52771, _, _, _, _,
-  52771, _, _, _, _,
-  105541, _, _, _, _,
-  105541, _, _, _, _,
-  52771, _, _, _, _,
-  26385, _, _, _, _,
+  51274.9063947207, _, _, _, _,
+  128187.002257701, _, _, _, _,
+  179461.908652422, _, _, _, _,
+  179461.908652422, _, _, _, _,
+  205099.663345706, _, _, _, _,
+  256374.569740427, _, _, _, _,
+  128187.002257701, _, _, _, _,
+  76911.8342812521, _, _, _, _,
+  153824.854116604, _, _, _, _,
+  153824.854116604, _, _, _, _,
+  179461.908652422, _, _, _, _,
+  128187.002257701, _, _, _, _,
+  51274.9063947207, _, _, _, _,
+  102550.090432526, _, _, _, _,
+  51274.9063947207, _, _, _, _,
+  153824.854116604, _, _, _, _,
+  51274.9063947207, _, _, _, _,
+  51274.9063947207, _, _, _, _,
+  102550.090432526, _, _, _, _,
+  102550.090432526, _, _, _, _,
+  51274.9063947207, _, _, _, _,
+  25636.9278865312, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -60870,28 +61090,28 @@ _, _, _, _, _ ;
 
  Monkfish7_Nums =
   _, _, _, _, _,
-  33648, _, _, _, _,
-  84120, _, _, _, _,
-  117768, _, _, _, _,
-  117768, _, _, _, _,
-  134592, _, _, _, _,
-  168240, _, _, _, _,
-  84120, _, _, _, _,
-  50472, _, _, _, _,
-  100944, _, _, _, _,
-  100944, _, _, _, _,
-  117768, _, _, _, _,
-  84120, _, _, _, _,
-  33648, _, _, _, _,
-  67296, _, _, _, _,
-  33648, _, _, _, _,
-  100944, _, _, _, _,
-  33648, _, _, _, _,
-  33648, _, _, _, _,
-  67296, _, _, _, _,
-  67296, _, _, _, _,
-  33648, _, _, _, _,
-  16824, _, _, _, _,
+  24339.2325290769, _, _, _, _,
+  60847.9561354543, _, _, _, _,
+  85187.1886645312, _, _, _, _,
+  85187.1886645312, _, _, _, _,
+  97356.9480435075, _, _, _, _,
+  121696.180572584, _, _, _, _,
+  60847.9561354543, _, _, _, _,
+  36508.5994384568, _, _, _, _,
+  73017.7616371201, _, _, _, _,
+  73017.7616371201, _, _, _, _,
+  85187.1886645312, _, _, _, _,
+  60847.9561354543, _, _, _, _,
+  24339.2325290769, _, _, _, _,
+  48678.5968500978, _, _, _, _,
+  24339.2325290769, _, _, _, _,
+  73017.7616371201, _, _, _, _,
+  24339.2325290769, _, _, _, _,
+  24339.2325290769, _, _, _, _,
+  48678.5968500978, _, _, _, _,
+  48678.5968500978, _, _, _, _,
+  24339.2325290769, _, _, _, _,
+  12169.3669093797, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -60966,28 +61186,28 @@ _, _, _, _, _ ;
 
  Monkfish8_Nums =
   _, _, _, _, _,
-  21455, _, _, _, _,
-  53637, _, _, _, _,
-  75092, _, _, _, _,
-  75092, _, _, _, _,
-  85820, _, _, _, _,
-  107275, _, _, _, _,
-  53637, _, _, _, _,
-  32182, _, _, _, _,
-  64365, _, _, _, _,
-  64365, _, _, _, _,
-  75092, _, _, _, _,
-  53637, _, _, _, _,
-  21455, _, _, _, _,
-  42910, _, _, _, _,
-  21455, _, _, _, _,
-  64365, _, _, _, _,
-  21455, _, _, _, _,
-  21455, _, _, _, _,
-  42910, _, _, _, _,
-  42910, _, _, _, _,
-  21455, _, _, _, _,
-  10727, _, _, _, _,
+  13818.4271132948, _, _, _, _,
+  34545.9967090681, _, _, _, _,
+  48364.4238223629, _, _, _, _,
+  48364.4238223629, _, _, _, _,
+  55273.7186312201, _, _, _, _,
+  69092.1457445148, _, _, _, _,
+  34545.9967090681, _, _, _, _,
+  20727.4991003146, _, _, _, _,
+  41455.317703756, _, _, _, _,
+  41455.317703756, _, _, _, _,
+  48364.4238223629, _, _, _, _,
+  34545.9967090681, _, _, _, _,
+  13818.4271132948, _, _, _, _,
+  27636.9290505336, _, _, _, _,
+  13818.4271132948, _, _, _, _,
+  41455.317703756, _, _, _, _,
+  13818.4271132948, _, _, _, _,
+  13818.4271132948, _, _, _, _,
+  27636.9290505336, _, _, _, _,
+  27636.9290505336, _, _, _, _,
+  13818.4271132948, _, _, _, _,
+  6909.07198701977, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -61062,28 +61282,28 @@ _, _, _, _, _ ;
 
  Monkfish9_Nums =
   _, _, _, _, _,
-  13680, _, _, _, _,
-  34201, _, _, _, _,
-  47881, _, _, _, _,
-  47881, _, _, _, _,
-  54721, _, _, _, _,
-  68401, _, _, _, _,
-  34201, _, _, _, _,
-  20520, _, _, _, _,
-  41041, _, _, _, _,
-  41041, _, _, _, _,
-  47881, _, _, _, _,
-  34201, _, _, _, _,
-  13680, _, _, _, _,
-  27361, _, _, _, _,
-  13680, _, _, _, _,
-  41041, _, _, _, _,
-  13680, _, _, _, _,
-  13680, _, _, _, _,
-  27361, _, _, _, _,
-  27361, _, _, _, _,
-  13680, _, _, _, _,
-  6840, _, _, _, _,
+  7302.60375915239, _, _, _, _,
+  18256.47183742, _, _, _, _,
+  25559.0755965723, _, _, _, _,
+  25559.0755965723, _, _, _, _,
+  29210.4204153838, _, _, _, _,
+  36513.0241745362, _, _, _, _,
+  18256.47183742, _, _, _, _,
+  10953.8308236367, _, _, _, _,
+  21907.8304946187, _, _, _, _,
+  21907.8304946187, _, _, _, _,
+  25559.0755965723, _, _, _, _,
+  18256.47183742, _, _, _, _,
+  7302.60375915239, _, _, _, _,
+  14605.2470604039, _, _, _, _,
+  7302.60375915239, _, _, _, _,
+  21907.8304946187, _, _, _, _,
+  7302.60375915239, _, _, _, _,
+  7302.60375915239, _, _, _, _,
+  14605.2470604039, _, _, _, _,
+  14605.2470604039, _, _, _, _,
+  7302.60375915239, _, _, _, _,
+  3651.22706448426, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -66476,22 +66696,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  3192, _, _, _, _,
-  15959, _, _, _, _,
-  6384, _, _, _, _,
-  47877, _, _, _, _,
-  41494, _, _, _, _,
-  28726, _, _, _, _,
-  22343, _, _, _, _,
-  12767, _, _, _, _,
-  22343, _, _, _, _,
-  35110, _, _, _, _,
-  15959, _, _, _, _,
-  19151, _, _, _, _,
-  19151, _, _, _, _,
-  15959, _, _, _, _,
-  6384, _, _, _, _,
-  6384, _, _, _, _,
+  5268.51589345303, _, _, _, _,
+  26342.269459227, _, _, _, _,
+  10536.9783063203, _, _, _, _,
+  79026.7828256452, _, _, _, _,
+  68489.962506912, _, _, _, _,
+  47416.0856237656, _, _, _, _,
+  36879.2027062674, _, _, _, _,
+  21073.8161645386, _, _, _, _,
+  36879.2027062674, _, _, _, _,
+  57953.0993347913, _, _, _, _,
+  26342.269459227, _, _, _, _,
+  31610.7944708589, _, _, _, _,
+  31610.7944708589, _, _, _, _,
+  26342.269459227, _, _, _, _,
+  10536.9783063203, _, _, _, _,
+  10536.9783063203, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -66572,22 +66792,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  183203, _, _, _, _,
-  916015, _, _, _, _,
-  366406, _, _, _, _,
-  2748044, _, _, _, _,
-  2381638, _, _, _, _,
-  1648827, _, _, _, _,
-  1282421, _, _, _, _,
-  732812, _, _, _, _,
-  1282421, _, _, _, _,
-  2015232, _, _, _, _,
-  916015, _, _, _, _,
-  1099218, _, _, _, _,
-  1099218, _, _, _, _,
-  916015, _, _, _, _,
-  366406, _, _, _, _,
-  366406, _, _, _, _,
+  683363.659774964, _, _, _, _,
+  3416778.0886464, _, _, _, _,
+  1366720.38274086, _, _, _, _,
+  10250330.95166, _, _, _, _,
+  8883631.06102315, _, _, _, _,
+  6150200.63701899, _, _, _, _,
+  4783492.62688094, _, _, _, _,
+  2733422.5483726, _, _, _, _,
+  4783492.62688094, _, _, _, _,
+  7516925.61199978, _, _, _, _,
+  3416778.0886464, _, _, _, _,
+  4100142.93111345, _, _, _, _,
+  4100142.93111345, _, _, _, _,
+  3416778.0886464, _, _, _, _,
+  1366720.38274086, _, _, _, _,
+  1366720.38274086, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -66668,22 +66888,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  116815, _, _, _, _,
-  584077, _, _, _, _,
-  233631, _, _, _, _,
-  1752230, _, _, _, _,
-  1518599, _, _, _, _,
-  1051338, _, _, _, _,
-  817708, _, _, _, _,
-  467261, _, _, _, _,
-  817708, _, _, _, _,
-  1284968, _, _, _, _,
-  584077, _, _, _, _,
-  700892, _, _, _, _,
-  700892, _, _, _, _,
-  584077, _, _, _, _,
-  233631, _, _, _, _,
-  233631, _, _, _, _,
+  187994.754428068, _, _, _, _,
+  939962.71022344, _, _, _, _,
+  375987.600525632, _, _, _, _,
+  2819887.21890527, _, _, _, _,
+  2443905.25579978, _, _, _, _,
+  1691932.89971036, _, _, _, _,
+  1315948.70291331, _, _, _, _,
+  751970.189486915, _, _, _, _,
+  1315948.70291331, _, _, _, _,
+  2067921.76357068, _, _, _, _,
+  939962.71022344, _, _, _, _,
+  1127957.79001255, _, _, _, _,
+  1127957.79001255, _, _, _, _,
+  939962.71022344, _, _, _, _,
+  375987.600525632, _, _, _, _,
+  375987.600525632, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -66764,22 +66984,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  74485, _, _, _, _,
-  372424, _, _, _, _,
-  148969, _, _, _, _,
-  1117271, _, _, _, _,
-  968301, _, _, _, _,
-  670363, _, _, _, _,
-  521393, _, _, _, _,
-  297939, _, _, _, _,
-  521393, _, _, _, _,
-  819332, _, _, _, _,
-  372424, _, _, _, _,
-  446908, _, _, _, _,
-  446908, _, _, _, _,
-  372424, _, _, _, _,
-  148969, _, _, _, _,
-  148969, _, _, _, _,
+  384183.445785253, _, _, _, _,
+  1920894.62294789, _, _, _, _,
+  768362.991733027, _, _, _, _,
+  5762682.00557339, _, _, _, _,
+  4994330.53439318, _, _, _, _,
+  3457610.36485127, _, _, _, _,
+  2689254.3289303, _, _, _, _,
+  1536715.74190338, _, _, _, _,
+  2689254.3289303, _, _, _, _,
+  4225975.93831737, _, _, _, _,
+  1920894.62294789, _, _, _, _,
+  2305078.7336364, _, _, _, _,
+  2305078.7336364, _, _, _, _,
+  1920894.62294789, _, _, _, _,
+  768362.991733027, _, _, _, _,
+  768362.991733027, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -66860,22 +67080,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  47494, _, _, _, _,
-  237468, _, _, _, _,
-  94987, _, _, _, _,
-  712403, _, _, _, _,
-  617416, _, _, _, _,
-  427442, _, _, _, _,
-  332455, _, _, _, _,
-  189974, _, _, _, _,
-  332455, _, _, _, _,
-  522429, _, _, _, _,
-  237468, _, _, _, _,
-  284961, _, _, _, _,
-  284961, _, _, _, _,
-  237468, _, _, _, _,
-  94987, _, _, _, _,
-  94987, _, _, _, _,
+  202547.878821524, _, _, _, _,
+  1012727.47586123, _, _, _, _,
+  405093.701584106, _, _, _, _,
+  3038181.44523671, _, _, _, _,
+  2633093.81747895, _, _, _, _,
+  1822909.47950788, _, _, _, _,
+  1417819.44514316, _, _, _, _,
+  810182.003646659, _, _, _, _,
+  1417819.44514316, _, _, _, _,
+  2228004.54222445, _, _, _, _,
+  1012727.47586123, _, _, _, _,
+  1215275.70523077, _, _, _, _,
+  1215275.70523077, _, _, _, _,
+  1012727.47586123, _, _, _, _,
+  405093.701584106, _, _, _, _,
+  405093.701584106, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -66956,22 +67176,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  30283, _, _, _, _,
-  151416, _, _, _, _,
-  60566, _, _, _, _,
-  454248, _, _, _, _,
-  393682, _, _, _, _,
-  272549, _, _, _, _,
-  211983, _, _, _, _,
-  121133, _, _, _, _,
-  211983, _, _, _, _,
-  333115, _, _, _, _,
-  151416, _, _, _, _,
-  181699, _, _, _, _,
-  181699, _, _, _, _,
-  151416, _, _, _, _,
-  60566, _, _, _, _,
-  60566, _, _, _, _,
+  120005.203129914, _, _, _, _,
+  600018.95434837, _, _, _, _,
+  240009.188089722, _, _, _, _,
+  1800056.28102594, _, _, _, _,
+  1560050.69154593, _, _, _, _,
+  1080034.13142899, _, _, _, _,
+  840027.116086812, _, _, _, _,
+  480015.17708062, _, _, _, _,
+  840027.116086812, _, _, _, _,
+  1320044.12596002, _, _, _, _,
+  600018.95434837, _, _, _, _,
+  720024.365170342, _, _, _, _,
+  720024.365170342, _, _, _, _,
+  600018.95434837, _, _, _, _,
+  240009.188089722, _, _, _, _,
+  240009.188089722, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -67052,22 +67272,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  19309, _, _, _, _,
-  96547, _, _, _, _,
-  38619, _, _, _, _,
-  289641, _, _, _, _,
-  251022, _, _, _, _,
-  173785, _, _, _, _,
-  135166, _, _, _, _,
-  77238, _, _, _, _,
-  135166, _, _, _, _,
-  212404, _, _, _, _,
-  96547, _, _, _, _,
-  115857, _, _, _, _,
-  115857, _, _, _, _,
-  96547, _, _, _, _,
-  38619, _, _, _, _,
-  38619, _, _, _, _,
+  79965.7383529956, _, _, _, _,
+  399823.986450964, _, _, _, _,
+  159930.664975588, _, _, _, _,
+  1199471.5715231, _, _, _, _,
+  1039543.30448923, _, _, _, _,
+  719683.184675408, _, _, _, _,
+  559753.967515057, _, _, _, _,
+  319859.198224444, _, _, _, _,
+  559753.967515057, _, _, _, _,
+  879614.387024986, _, _, _, _,
+  399823.986450964, _, _, _, _,
+  479789.863200032, _, _, _, _,
+  479789.863200032, _, _, _, _,
+  399823.986450964, _, _, _, _,
+  159930.664975588, _, _, _, _,
+  159930.664975588, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -67148,22 +67368,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  12312, _, _, _, _,
-  61561, _, _, _, _,
-  24624, _, _, _, _,
-  184683, _, _, _, _,
-  160059, _, _, _, _,
-  110810, _, _, _, _,
-  86186, _, _, _, _,
-  49249, _, _, _, _,
-  86186, _, _, _, _,
-  135435, _, _, _, _,
-  61561, _, _, _, _,
-  73873, _, _, _, _,
-  73873, _, _, _, _,
-  61561, _, _, _, _,
-  24624, _, _, _, _,
-  24624, _, _, _, _,
+  45059.7580369881, _, _, _, _,
+  225296.138795541, _, _, _, _,
+  90119.0586733903, _, _, _, _,
+  675888.197849075, _, _, _, _,
+  585770.490387789, _, _, _, _,
+  405533.054939248, _, _, _, _,
+  315414.812092805, _, _, _, _,
+  180236.916143707, _, _, _, _,
+  315414.812092805, _, _, _, _,
+  495652.416416595, _, _, _, _,
+  225296.138795541, _, _, _, _,
+  270355.974817097, _, _, _, _,
+  270355.974817097, _, _, _, _,
+  225296.138795541, _, _, _, _,
+  90119.0586733903, _, _, _, _,
+  90119.0586733903, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -67244,22 +67464,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  7851, _, _, _, _,
-  39253, _, _, _, _,
-  15701, _, _, _, _,
-  117759, _, _, _, _,
-  102058, _, _, _, _,
-  70656, _, _, _, _,
-  54954, _, _, _, _,
-  31403, _, _, _, _,
-  54954, _, _, _, _,
-  86357, _, _, _, _,
-  39253, _, _, _, _,
-  47104, _, _, _, _,
-  47104, _, _, _, _,
-  39253, _, _, _, _,
-  15701, _, _, _, _,
-  15701, _, _, _, _,
+  30134.3596940945, _, _, _, _,
+  150670.02531577, _, _, _, _,
+  60268.4134949846, _, _, _, _,
+  452009.929797191, _, _, _, _,
+  391742.419944687, _, _, _, _,
+  271206.048983949, _, _, _, _,
+  210938.181084941, _, _, _, _,
+  120536.023668179, _, _, _, _,
+  210938.181084941, _, _, _, _,
+  331474.664983425, _, _, _, _,
+  150670.02531577, _, _, _, _,
+  180804.437163164, _, _, _, _,
+  180804.437163164, _, _, _, _,
+  150670.02531577, _, _, _, _,
+  60268.4134949846, _, _, _, _,
+  60268.4134949846, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -67340,22 +67560,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  5006, _, _, _, _,
-  25029, _, _, _, _,
-  10012, _, _, _, _,
-  75087, _, _, _, _,
-  65075, _, _, _, _,
-  45052, _, _, _, _,
-  35040, _, _, _, _,
-  20023, _, _, _, _,
-  35040, _, _, _, _,
-  55064, _, _, _, _,
-  25029, _, _, _, _,
-  30035, _, _, _, _,
-  30035, _, _, _, _,
-  25029, _, _, _, _,
-  10012, _, _, _, _,
-  10012, _, _, _, _,
+  18559.2868946571, _, _, _, _,
+  92795.34241468, _, _, _, _,
+  37118.3853944122, _, _, _, _,
+  278385.937232437, _, _, _, _,
+  241268.108377478, _, _, _, _,
+  167031.618450016, _, _, _, _,
+  129913.569079743, _, _, _, _,
+  74236.2760353362, _, _, _, _,
+  129913.569079743, _, _, _, _,
+  204150.128563818, _, _, _, _,
+  92795.34241468, _, _, _, _,
+  111354.661429748, _, _, _, _,
+  111354.661429748, _, _, _, _,
+  92795.34241468, _, _, _, _,
+  37118.3853944122, _, _, _, _,
+  37118.3853944122, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -67468,22 +67688,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  2505, _, _, _, _,
-  20041, _, _, _, _,
-  5010, _, _, _, _,
-  15031, _, _, _, _,
-  25052, _, _, _, _,
-  35072, _, _, _, _,
-  17536, _, _, _, _,
-  5010, _, _, _, _,
-  20041, _, _, _, _,
-  22547, _, _, _, _,
-  5010, _, _, _, _,
-  5010, _, _, _, _,
-  17536, _, _, _, _,
-  22547, _, _, _, _,
-  22547, _, _, _, _,
-  10021, _, _, _, _,
+  570.280799747396, _, _, _, _,
+  4562.23167587119, _, _, _, _,
+  1140.55237973067, _, _, _, _,
+  3421.6692611516, _, _, _, _,
+  5702.8068198165, _, _, _, _,
+  7983.90093702278, _, _, _, _,
+  3991.95677748696, _, _, _, _,
+  1140.55237973067, _, _, _, _,
+  4562.23167587119, _, _, _, _,
+  5132.53939931926, _, _, _, _,
+  1140.55237973067, _, _, _, _,
+  1140.55237973067, _, _, _, _,
+  3991.95677748696, _, _, _, _,
+  5132.53939931926, _, _, _, _,
+  5132.53939931926, _, _, _, _,
+  2281.13755866492, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -67564,22 +67784,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  143790, _, _, _, _,
-  1150322, _, _, _, _,
-  287581, _, _, _, _,
-  862742, _, _, _, _,
-  1437903, _, _, _, _,
-  2013064, _, _, _, _,
-  1006532, _, _, _, _,
-  287581, _, _, _, _,
-  1150322, _, _, _, _,
-  1294113, _, _, _, _,
-  287581, _, _, _, _,
-  287581, _, _, _, _,
-  1006532, _, _, _, _,
-  1294113, _, _, _, _,
-  1294113, _, _, _, _,
-  575161, _, _, _, _,
+  44077.2318127971, _, _, _, _,
+  352616.716624745, _, _, _, _,
+  88153.7510263262, _, _, _, _,
+  264462.189990099, _, _, _, _,
+  440772.227106354, _, _, _, _,
+  617078.906614843, _, _, _, _,
+  308539.940930674, _, _, _, _,
+  88153.7510263262, _, _, _, _,
+  352616.716624745, _, _, _, _,
+  396696.029381169, _, _, _, _,
+  88153.7510263262, _, _, _, _,
+  88153.7510263262, _, _, _, _,
+  308539.940930674, _, _, _, _,
+  396696.029381169, _, _, _, _,
+  396696.029381169, _, _, _, _,
+  176310.037116256, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -67660,22 +67880,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  91685, _, _, _, _,
-  733478, _, _, _, _,
-  183369, _, _, _, _,
-  550108, _, _, _, _,
-  916847, _, _, _, _,
-  1283586, _, _, _, _,
-  641793, _, _, _, _,
-  183369, _, _, _, _,
-  733478, _, _, _, _,
-  825163, _, _, _, _,
-  183369, _, _, _, _,
-  183369, _, _, _, _,
-  641793, _, _, _, _,
-  825163, _, _, _, _,
-  825163, _, _, _, _,
-  366739, _, _, _, _,
+  15847.6722243754, _, _, _, _,
+  126780.968678754, _, _, _, _,
+  31695.0882384772, _, _, _, _,
+  95085.6015755229, _, _, _, _,
+  158476.689517544, _, _, _, _,
+  221866.570254277, _, _, _, _,
+  110933.460448799, _, _, _, _,
+  31695.0882384772, _, _, _, _,
+  126780.968678754, _, _, _, _,
+  142629.389092414, _, _, _, _,
+  31695.0882384772, _, _, _, _,
+  31695.0882384772, _, _, _, _,
+  110933.460448799, _, _, _, _,
+  142629.389092414, _, _, _, _,
+  142629.389092414, _, _, _, _,
+  63391.0879420216, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -67756,22 +67976,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  58461, _, _, _, _,
-  467686, _, _, _, _,
-  116922, _, _, _, _,
-  350765, _, _, _, _,
-  584608, _, _, _, _,
-  818451, _, _, _, _,
-  409225, _, _, _, _,
-  116922, _, _, _, _,
-  467686, _, _, _, _,
-  526147, _, _, _, _,
-  116922, _, _, _, _,
-  116922, _, _, _, _,
-  409225, _, _, _, _,
-  526147, _, _, _, _,
-  526147, _, _, _, _,
-  233843, _, _, _, _,
+  35885.5303249617, _, _, _, _,
+  287083.316195276, _, _, _, _,
+  71770.480486388, _, _, _, _,
+  215312.204246459, _, _, _, _,
+  358855.22914426, _, _, _, _,
+  502395.520441735, _, _, _, _,
+  251198.157219914, _, _, _, _,
+  71770.480486388, _, _, _, _,
+  287083.316195276, _, _, _, _,
+  322970.540722949, _, _, _, _,
+  71770.480486388, _, _, _, _,
+  71770.480486388, _, _, _, _,
+  251198.157219914, _, _, _, _,
+  322970.540722949, _, _, _, _,
+  322970.540722949, _, _, _, _,
+  143543.024897802, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -67852,22 +68072,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  37276, _, _, _, _,
-  298210, _, _, _, _,
-  74552, _, _, _, _,
-  223657, _, _, _, _,
-  372762, _, _, _, _,
-  521867, _, _, _, _,
-  260934, _, _, _, _,
-  74552, _, _, _, _,
-  298210, _, _, _, _,
-  335486, _, _, _, _,
-  74552, _, _, _, _,
-  74552, _, _, _, _,
-  260934, _, _, _, _,
-  335486, _, _, _, _,
-  335486, _, _, _, _,
-  149105, _, _, _, _,
+  19999.8180472399, _, _, _, _,
+  159998.028071775, _, _, _, _,
+  39999.3127562139, _, _, _, _,
+  119998.363387261, _, _, _, _,
+  199998.139171807, _, _, _, _,
+  279996.391459036, _, _, _, _,
+  139998.41698607, _, _, _, _,
+  39999.3127562139, _, _, _, _,
+  159998.028071775, _, _, _, _,
+  179998.790336521, _, _, _, _,
+  39999.3127562139, _, _, _, _,
+  39999.3127562139, _, _, _, _,
+  139998.41698607, _, _, _, _,
+  179998.790336521, _, _, _, _,
+  179998.790336521, _, _, _, _,
+  79999.7757845462, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -67948,22 +68168,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  23768, _, _, _, _,
-  190147, _, _, _, _,
-  47537, _, _, _, _,
-  142610, _, _, _, _,
-  237684, _, _, _, _,
-  332757, _, _, _, _,
-  166379, _, _, _, _,
-  47537, _, _, _, _,
-  190147, _, _, _, _,
-  213915, _, _, _, _,
-  47537, _, _, _, _,
-  47537, _, _, _, _,
-  166379, _, _, _, _,
-  213915, _, _, _, _,
-  213915, _, _, _, _,
-  95074, _, _, _, _,
+  12257.1571891278, _, _, _, _,
+  98056.9410878653, _, _, _, _,
+  24514.1162160552, _, _, _, _,
+  73542.6091878231, _, _, _, _,
+  122571.546579655, _, _, _, _,
+  171599.550275688, _, _, _, _,
+  85799.9107378946, _, _, _, _,
+  24514.1162160552, _, _, _, _,
+  98056.9410878653, _, _, _, _,
+  110314.676953378, _, _, _, _,
+  24514.1162160552, _, _, _, _,
+  24514.1162160552, _, _, _, _,
+  85799.9107378946, _, _, _, _,
+  110314.676953378, _, _, _, _,
+  110314.676953378, _, _, _, _,
+  49028.9373918322, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -68044,22 +68264,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  15155, _, _, _, _,
-  121243, _, _, _, _,
-  30311, _, _, _, _,
-  90932, _, _, _, _,
-  151554, _, _, _, _,
-  212175, _, _, _, _,
-  106088, _, _, _, _,
-  30311, _, _, _, _,
-  121243, _, _, _, _,
-  136399, _, _, _, _,
-  30311, _, _, _, _,
-  30311, _, _, _, _,
-  106088, _, _, _, _,
-  136399, _, _, _, _,
-  136399, _, _, _, _,
-  60622, _, _, _, _,
+  8347.95170695672, _, _, _, _,
+  66783.3981487553, _, _, _, _,
+  16695.7684520742, _, _, _, _,
+  50087.482801322, _, _, _, _,
+  83479.4998306428, _, _, _, _,
+  116870.880950077, _, _, _, _,
+  58435.5328278293, _, _, _, _,
+  16695.7684520742, _, _, _, _,
+  66783.3981487553, _, _, _, _,
+  75131.7439734048, _, _, _, _,
+  16695.7684520742, _, _, _, _,
+  16695.7684520742, _, _, _, _,
+  58435.5328278293, _, _, _, _,
+  75131.7439734048, _, _, _, _,
+  75131.7439734048, _, _, _, _,
+  33392.017029321, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -68140,22 +68360,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  9664, _, _, _, _,
-  77308, _, _, _, _,
-  19327, _, _, _, _,
-  57981, _, _, _, _,
-  96635, _, _, _, _,
-  135289, _, _, _, _,
-  67645, _, _, _, _,
-  19327, _, _, _, _,
-  77308, _, _, _, _,
-  86972, _, _, _, _,
-  19327, _, _, _, _,
-  19327, _, _, _, _,
-  67645, _, _, _, _,
-  86972, _, _, _, _,
-  86972, _, _, _, _,
-  38654, _, _, _, _,
+  4773.10669368432, _, _, _, _,
+  38184.7303291379, _, _, _, _,
+  9546.13622026454, _, _, _, _,
+  28638.510118543, _, _, _, _,
+  47731.0570801469, _, _, _, _,
+  66823.2404476809, _, _, _, _,
+  33411.6730283773, _, _, _, _,
+  9546.13622026454, _, _, _, _,
+  38184.7303291379, _, _, _, _,
+  42958.0623674174, _, _, _, _,
+  9546.13622026454, _, _, _, _,
+  9546.13622026454, _, _, _, _,
+  33411.6730283773, _, _, _, _,
+  42958.0623674174, _, _, _, _,
+  42958.0623674174, _, _, _, _,
+  19092.546961604, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -68236,22 +68456,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  6162, _, _, _, _,
-  49294, _, _, _, _,
-  12323, _, _, _, _,
-  36970, _, _, _, _,
-  61617, _, _, _, _,
-  86264, _, _, _, _,
-  43132, _, _, _, _,
-  12323, _, _, _, _,
-  49294, _, _, _, _,
-  55456, _, _, _, _,
-  12323, _, _, _, _,
-  12323, _, _, _, _,
-  43132, _, _, _, _,
-  55456, _, _, _, _,
-  55456, _, _, _, _,
-  24647, _, _, _, _,
+  3223.9845212345, _, _, _, _,
+  25791.792940968, _, _, _, _,
+  6447.91692011658, _, _, _, _,
+  19343.8192897656, _, _, _, _,
+  32239.8385546609, _, _, _, _,
+  45135.6122307335, _, _, _, _,
+  22567.8417820762, _, _, _, _,
+  6447.91692011658, _, _, _, _,
+  25791.792940968, _, _, _, _,
+  29015.9296707185, _, _, _, _,
+  6447.91692011658, _, _, _, _,
+  6447.91692011658, _, _, _, _,
+  22567.8417820762, _, _, _, _,
+  29015.9296707185, _, _, _, _,
+  29015.9296707185, _, _, _, _,
+  12896.0192648953, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -68332,22 +68552,22 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  3929, _, _, _, _,
-  31431, _, _, _, _,
-  7858, _, _, _, _,
-  23573, _, _, _, _,
-  39289, _, _, _, _,
-  55004, _, _, _, _,
-  27502, _, _, _, _,
-  7858, _, _, _, _,
-  31431, _, _, _, _,
-  35360, _, _, _, _,
-  7858, _, _, _, _,
-  7858, _, _, _, _,
-  27502, _, _, _, _,
-  35360, _, _, _, _,
-  35360, _, _, _, _,
-  15716, _, _, _, _,
+  1999.30280377178, _, _, _, _,
+  15994.3708170886, _, _, _, _,
+  3998.57328469441, _, _, _, _,
+  11995.7623515122, _, _, _, _,
+  19993.0239090607, _, _, _, _,
+  27990.1331686008, _, _, _, _,
+  13995.0887024438, _, _, _, _,
+  3998.57328469441, _, _, _, _,
+  15994.3708170886, _, _, _, _,
+  17993.7680105545, _, _, _, _,
+  3998.57328469441, _, _, _, _,
+  3998.57328469441, _, _, _, _,
+  13995.0887024438, _, _, _, _,
+  17993.7680105545, _, _, _, _,
+  17993.7680105545, _, _, _, _,
+  7997.26155754852, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -69456,39 +69676,38 @@ _, _, _, _, _ ;
     _, _, _, _, _, _, _, _, _ ;
 
  Red_Crab_N =
-  _, _, _, 0.668220948567054, 
-    0.0915007830778375, 0.00490037505799584, 0.00678953317117097, 
-    0.0274223313357173, 2.01888759746367, 0.026614021340566, 
-    0.0287055503075783, 0.458708385437046, 0.00245119119397125, 
-    0.267165793291298, 0.0802924945859884, 0.134351117173237, 
-    0.038887265517062, 0.230994885146418, 0.240532544451789, 
-    0.17659612216635, 0.38933605441343, 2.30566307021485, 0.96538895552756, 
-    _, _, _, _, _, _, _ ;
+  _, _, _, 0.668220948567054, 0.0915007830778375, 0.00490037505799584, 
+    0.00678953317117097, 0.0274223313357173, 2.01888759746367, 
+    0.026614021340566, 0.0287055503075783, 0.458708385437046, 
+    0.00245119119397125, 0.267165793291298, 0.0802924945859884, 
+    0.134351117173237, 0.038887265517062, 0.230994885146418, 
+    0.240532544451789, 0.17659612216635, 0.38933605441343, 2.30566307021485, 
+    0.96538895552756, _, _, _, _, _, _, _ ;
 
  Red_Hake10_Nums =
   _, _, _, _, _,
-  7858, _, _, _, _,
-  15716, _, _, _, _,
-  27503, _, _, _, _,
-  31432, _, _, _, _,
-  35361, _, _, _, _,
-  43219, _, _, _, _,
-  11787, _, _, _, _,
-  11787, _, _, _, _,
-  23574, _, _, _, _,
-  19645, _, _, _, _,
-  27503, _, _, _, _,
-  15716, _, _, _, _,
-  7858, _, _, _, _,
-  27503, _, _, _, _,
-  7858, _, _, _, _,
-  23574, _, _, _, _,
-  7858, _, _, _, _,
-  7858, _, _, _, _,
-  11787, _, _, _, _,
-  15716, _, _, _, _,
-  7858, _, _, _, _,
-  3929, _, _, _, _,
+  20327.4012791469, _, _, _, _,
+  40654.7464456459, _, _, _, _,
+  71145.7856851024, _, _, _, _,
+  81309.3348758851, _, _, _, _,
+  91472.9659095455, _, _, _, _,
+  111800.367188692, _, _, _, _,
+  30491.0257345786, _, _, _, _,
+  30491.0257345786, _, _, _, _,
+  60982.0877321261, _, _, _, _,
+  50818.377337786, _, _, _, _,
+  71145.7856851024, _, _, _, _,
+  40654.7464456459, _, _, _, _,
+  20327.4012791469, _, _, _, _,
+  71145.7856851024, _, _, _, _,
+  20327.4012791469, _, _, _, _,
+  60982.0877321261, _, _, _, _,
+  20327.4012791469, _, _, _, _,
+  20327.4012791469, _, _, _, _,
+  30491.0257345786, _, _, _, _,
+  40654.7464456459, _, _, _, _,
+  20327.4012791469, _, _, _, _,
+  10163.6979529764, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -69563,28 +69782,28 @@ _, _, _, _, _ ;
 
  Red_Hake1_Nums =
   _, _, _, _, _,
-  451031, _, _, _, _,
-  902062, _, _, _, _,
-  1578609, _, _, _, _,
-  1804125, _, _, _, _,
-  2029640, _, _, _, _,
-  2480671, _, _, _, _,
-  676547, _, _, _, _,
-  676547, _, _, _, _,
-  1353093, _, _, _, _,
-  1127578, _, _, _, _,
-  1578609, _, _, _, _,
-  902062, _, _, _, _,
-  451031, _, _, _, _,
-  1578609, _, _, _, _,
-  451031, _, _, _, _,
-  1353093, _, _, _, _,
-  451031, _, _, _, _,
-  451031, _, _, _, _,
-  676547, _, _, _, _,
-  902062, _, _, _, _,
-  451031, _, _, _, _,
-  225516, _, _, _, _,
+  1204326.20564259, _, _, _, _,
+  2408649.08681043, _, _, _, _,
+  4215134.68175094, _, _, _, _,
+  4817288.8117702, _, _, _, _,
+  5419447.79068879, _, _, _, _,
+  6623773.99633137, _, _, _, _,
+  1806484.79482454, _, _, _, _,
+  1806484.79482454, _, _, _, _,
+  3612971.73810096, _, _, _, _,
+  3010808.05734445, _, _, _, _,
+  4215134.68175094, _, _, _, _,
+  2408649.08681043, _, _, _, _,
+  1204326.20564259, _, _, _, _,
+  4215134.68175094, _, _, _, _,
+  1204326.20564259, _, _, _, _,
+  3612971.73810096, _, _, _, _,
+  1204326.20564259, _, _, _, _,
+  1204326.20564259, _, _, _, _,
+  1806484.79482454, _, _, _, _,
+  2408649.08681043, _, _, _, _,
+  1204326.20564259, _, _, _, _,
+  602162.943649977, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -69659,28 +69878,28 @@ _, _, _, _, _ ;
 
  Red_Hake2_Nums =
   _, _, _, _, _,
-  287590, _, _, _, _,
-  575180, _, _, _, _,
-  1006566, _, _, _, _,
-  1150361, _, _, _, _,
-  1294156, _, _, _, _,
-  1581746, _, _, _, _,
-  431385, _, _, _, _,
-  431385, _, _, _, _,
-  862771, _, _, _, _,
-  718975, _, _, _, _,
-  1006566, _, _, _, _,
-  575180, _, _, _, _,
-  287590, _, _, _, _,
-  1006566, _, _, _, _,
-  287590, _, _, _, _,
-  862771, _, _, _, _,
-  287590, _, _, _, _,
-  287590, _, _, _, _,
-  431385, _, _, _, _,
-  575180, _, _, _, _,
-  287590, _, _, _, _,
-  143795, _, _, _, _,
+  456550.407123496, _, _, _, _,
+  913099.553965272, _, _, _, _,
+  1597923.75688358, _, _, _, _,
+  1826195.55892803, _, _, _, _,
+  2054469.19915133, _, _, _, _,
+  2511019.60627482, _, _, _, _,
+  684823.899600759, _, _, _, _,
+  684823.899600759, _, _, _, _,
+  1369648.6136624, _, _, _, _,
+  1141373.19101005, _, _, _, _,
+  1597923.75688358, _, _, _, _,
+  913099.553965272, _, _, _, _,
+  456550.407123496, _, _, _, _,
+  1597923.75688358, _, _, _, _,
+  456550.407123496, _, _, _, _,
+  1369648.6136624, _, _, _, _,
+  456550.407123496, _, _, _, _,
+  456550.407123496, _, _, _, _,
+  684823.899600759, _, _, _, _,
+  913099.553965272, _, _, _, _,
+  456550.407123496, _, _, _, _,
+  228275.143221177, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -69755,28 +69974,28 @@ _, _, _, _, _ ;
 
  Red_Hake3_Nums =
   _, _, _, _, _,
-  183376, _, _, _, _,
-  366751, _, _, _, _,
-  641815, _, _, _, _,
-  733502, _, _, _, _,
-  825190, _, _, _, _,
-  1008566, _, _, _, _,
-  275063, _, _, _, _,
-  275063, _, _, _, _,
-  550127, _, _, _, _,
-  458439, _, _, _, _,
-  641815, _, _, _, _,
-  366751, _, _, _, _,
-  183376, _, _, _, _,
-  641815, _, _, _, _,
-  183376, _, _, _, _,
-  550127, _, _, _, _,
-  183376, _, _, _, _,
-  183376, _, _, _, _,
-  275063, _, _, _, _,
-  366751, _, _, _, _,
-  183376, _, _, _, _,
-  91688, _, _, _, _,
+  1082326.93789692, _, _, _, _,
+  2164650.88809121, _, _, _, _,
+  3788137.95759628, _, _, _, _,
+  4329293.36269517, _, _, _, _,
+  4870453.12549577, _, _, _, _,
+  5952780.06339268, _, _, _, _,
+  1623486.35044153, _, _, _, _,
+  1623486.35044153, _, _, _, _,
+  3246974.63169494, _, _, _, _,
+  2705810.64335659, _, _, _, _,
+  3788137.95759628, _, _, _, _,
+  2164650.88809121, _, _, _, _,
+  1082326.93789692, _, _, _, _,
+  3788137.95759628, _, _, _, _,
+  1082326.93789692, _, _, _, _,
+  3246974.63169494, _, _, _, _,
+  1082326.93789692, _, _, _, _,
+  1082326.93789692, _, _, _, _,
+  1623486.35044153, _, _, _, _,
+  2164650.88809121, _, _, _, _,
+  1082326.93789692, _, _, _, _,
+  541163.325901331, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -69851,28 +70070,28 @@ _, _, _, _, _ ;
 
  Red_Hake4_Nums =
   _, _, _, _, _,
-  116925, _, _, _, _,
-  233851, _, _, _, _,
-  409239, _, _, _, _,
-  467702, _, _, _, _,
-  526165, _, _, _, _,
-  643090, _, _, _, _,
-  175388, _, _, _, _,
-  175388, _, _, _, _,
-  350776, _, _, _, _,
-  292314, _, _, _, _,
-  409239, _, _, _, _,
-  233851, _, _, _, _,
-  116925, _, _, _, _,
-  409239, _, _, _, _,
-  116925, _, _, _, _,
-  350776, _, _, _, _,
-  116925, _, _, _, _,
-  116925, _, _, _, _,
-  175388, _, _, _, _,
-  233851, _, _, _, _,
-  116925, _, _, _, _,
-  58463, _, _, _, _,
+  627337.873944068, _, _, _, _,
+  1254674.01615722, _, _, _, _,
+  2195678.89268556, _, _, _, _,
+  2509343.15569258, _, _, _, _,
+  2823009.94450879, _, _, _, _,
+  3450347.81845285, _, _, _, _,
+  941004.459745045, _, _, _, _,
+  941004.459745045, _, _, _, _,
+  1882010.03862645, _, _, _, _,
+  1568340.80060587, _, _, _, _,
+  2195678.89268556, _, _, _, _,
+  1254674.01615722, _, _, _, _,
+  627337.873944068, _, _, _, _,
+  2195678.89268556, _, _, _, _,
+  627337.873944068, _, _, _, _,
+  1882010.03862645, _, _, _, _,
+  627337.873944068, _, _, _, _,
+  627337.873944068, _, _, _, _,
+  941004.459745045, _, _, _, _,
+  1254674.01615722, _, _, _, _,
+  627337.873944068, _, _, _, _,
+  313668.854059118, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -69947,28 +70166,28 @@ _, _, _, _, _ ;
 
  Red_Hake5_Nums =
   _, _, _, _, _,
-  74555, _, _, _, _,
-  149110, _, _, _, _,
-  260942, _, _, _, _,
-  298220, _, _, _, _,
-  335497, _, _, _, _,
-  410052, _, _, _, _,
-  111832, _, _, _, _,
-  111832, _, _, _, _,
-  223665, _, _, _, _,
-  186387, _, _, _, _,
-  260942, _, _, _, _,
-  149110, _, _, _, _,
-  74555, _, _, _, _,
-  260942, _, _, _, _,
-  74555, _, _, _, _,
-  223665, _, _, _, _,
-  74555, _, _, _, _,
-  74555, _, _, _, _,
-  111832, _, _, _, _,
-  149110, _, _, _, _,
-  74555, _, _, _, _,
-  37277, _, _, _, _,
+  397404.367014779, _, _, _, _,
+  794807.637017155, _, _, _, _,
+  1390912.96214839, _, _, _, _,
+  1589612.18480456, _, _, _, _,
+  1788313.00750378, _, _, _, _,
+  2185717.37451855, _, _, _, _,
+  596105.061108435, _, _, _, _,
+  596105.061108435, _, _, _, _,
+  1192210.83116446, _, _, _, _,
+  993508.456949622, _, _, _, _,
+  1390912.96214839, _, _, _, _,
+  794807.637017155, _, _, _, _,
+  397404.367014779, _, _, _, _,
+  1390912.96214839, _, _, _, _,
+  397404.367014779, _, _, _, _,
+  1192210.83116446, _, _, _, _,
+  397404.367014779, _, _, _, _,
+  397404.367014779, _, _, _, _,
+  596105.061108435, _, _, _, _,
+  794807.637017155, _, _, _, _,
+  397404.367014779, _, _, _, _,
+  198702.130983931, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -70043,28 +70262,28 @@ _, _, _, _, _ ;
 
  Red_Hake6_Nums =
   _, _, _, _, _,
-  47538, _, _, _, _,
-  95077, _, _, _, _,
-  166384, _, _, _, _,
-  190153, _, _, _, _,
-  213923, _, _, _, _,
-  261461, _, _, _, _,
-  71308, _, _, _, _,
-  71308, _, _, _, _,
-  142615, _, _, _, _,
-  118846, _, _, _, _,
-  166384, _, _, _, _,
-  95077, _, _, _, _,
-  47538, _, _, _, _,
-  166384, _, _, _, _,
-  47538, _, _, _, _,
-  142615, _, _, _, _,
-  47538, _, _, _, _,
-  47538, _, _, _, _,
-  71308, _, _, _, _,
-  95077, _, _, _, _,
-  47538, _, _, _, _,
-  23769, _, _, _, _,
+  278210.444965963, _, _, _, _,
+  556420.12194764, _, _, _, _,
+  973734.931538481, _, _, _, _,
+  1112838.08122156, _, _, _, _,
+  1251942.35104503, _, _, _, _,
+  1530152.79601099, _, _, _, _,
+  417314.624756684, _, _, _, _,
+  417314.624756684, _, _, _, _,
+  834629.745825541, _, _, _, _,
+  695524.389834202, _, _, _, _,
+  973734.931538481, _, _, _, _,
+  556420.12194764, _, _, _, _,
+  278210.444965963, _, _, _, _,
+  973734.931538481, _, _, _, _,
+  278210.444965963, _, _, _, _,
+  834629.745825541, _, _, _, _,
+  278210.444965963, _, _, _, _,
+  278210.444965963, _, _, _, _,
+  417314.624756684, _, _, _, _,
+  556420.12194764, _, _, _, _,
+  278210.444965963, _, _, _, _,
+  139105.185712941, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -70139,28 +70358,28 @@ _, _, _, _, _ ;
 
  Red_Hake7_Nums =
   _, _, _, _, _,
-  30312, _, _, _, _,
-  60624, _, _, _, _,
-  106091, _, _, _, _,
-  121247, _, _, _, _,
-  136403, _, _, _, _,
-  166715, _, _, _, _,
-  45468, _, _, _, _,
-  45468, _, _, _, _,
-  90935, _, _, _, _,
-  75779, _, _, _, _,
-  106091, _, _, _, _,
-  60624, _, _, _, _,
-  30312, _, _, _, _,
-  106091, _, _, _, _,
-  30312, _, _, _, _,
-  90935, _, _, _, _,
-  30312, _, _, _, _,
-  30312, _, _, _, _,
-  45468, _, _, _, _,
-  60624, _, _, _, _,
-  30312, _, _, _, _,
-  15156, _, _, _, _,
+  162706.630410701, _, _, _, _,
+  325412.8116789, _, _, _, _,
+  569472.255591281, _, _, _, _,
+  650824.358554983, _, _, _, _,
+  732177.116613681, _, _, _, _,
+  894883.747024381, _, _, _, _,
+  244059.335815279, _, _, _, _,
+  244059.335815279, _, _, _, _,
+  488118.961890261, _, _, _, _,
+  406765.568604826, _, _, _, _,
+  569472.255591281, _, _, _, _,
+  325412.8116789, _, _, _, _,
+  162706.630410701, _, _, _, _,
+  569472.255591281, _, _, _, _,
+  162706.630410701, _, _, _, _,
+  488118.961890261, _, _, _, _,
+  162706.630410701, _, _, _, _,
+  162706.630410701, _, _, _, _,
+  244059.335815279, _, _, _, _,
+  325412.8116789, _, _, _, _,
+  162706.630410701, _, _, _, _,
+  81353.2937010197, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -70235,28 +70454,28 @@ _, _, _, _, _ ;
 
  Red_Hake8_Nums =
   _, _, _, _, _,
-  19328, _, _, _, _,
-  38655, _, _, _, _,
-  67647, _, _, _, _,
-  77311, _, _, _, _,
-  86974, _, _, _, _,
-  106302, _, _, _, _,
-  28991, _, _, _, _,
-  28991, _, _, _, _,
-  57983, _, _, _, _,
-  48319, _, _, _, _,
-  67647, _, _, _, _,
-  38655, _, _, _, _,
-  19328, _, _, _, _,
-  67647, _, _, _, _,
-  19328, _, _, _, _,
-  57983, _, _, _, _,
-  19328, _, _, _, _,
-  19328, _, _, _, _,
-  28991, _, _, _, _,
-  38655, _, _, _, _,
-  19328, _, _, _, _,
-  9664, _, _, _, _,
+  111931.687301292, _, _, _, _,
+  223863.065621456, _, _, _, _,
+  391760.251433566, _, _, _, _,
+  447725.261139997, _, _, _, _,
+  503690.721509613, _, _, _, _,
+  615622.408810904, _, _, _, _,
+  167897.111448263, _, _, _, _,
+  167897.111448263, _, _, _, _,
+  335794.422576516, _, _, _, _,
+  279828.525211798, _, _, _, _,
+  391760.251433566, _, _, _, _,
+  223863.065621456, _, _, _, _,
+  111931.687301292, _, _, _, _,
+  391760.251433566, _, _, _, _,
+  111931.687301292, _, _, _, _,
+  335794.422576516, _, _, _, _,
+  111931.687301292, _, _, _, _,
+  111931.687301292, _, _, _, _,
+  167897.111448263, _, _, _, _,
+  223863.065621456, _, _, _, _,
+  111931.687301292, _, _, _, _,
+  55965.8288570506, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -70331,28 +70550,28 @@ _, _, _, _, _ ;
 
  Red_Hake9_Nums =
   _, _, _, _, _,
-  12324, _, _, _, _,
-  24648, _, _, _, _,
-  43134, _, _, _, _,
-  49295, _, _, _, _,
-  55457, _, _, _, _,
-  67781, _, _, _, _,
-  18486, _, _, _, _,
-  18486, _, _, _, _,
-  36972, _, _, _, _,
-  30810, _, _, _, _,
-  43134, _, _, _, _,
-  24648, _, _, _, _,
-  12324, _, _, _, _,
-  43134, _, _, _, _,
-  12324, _, _, _, _,
-  36972, _, _, _, _,
-  12324, _, _, _, _,
-  12324, _, _, _, _,
-  18486, _, _, _, _,
-  24648, _, _, _, _,
-  12324, _, _, _, _,
-  6162, _, _, _, _,
+  70439.4030423116, _, _, _, _,
+  140878.611640613, _, _, _, _,
+  246537.499005144, _, _, _, _,
+  281756.675719303, _, _, _, _,
+  316976.136038994, _, _, _, _,
+  387415.539081305, _, _, _, _,
+  105658.840566836, _, _, _, _,
+  105658.840566836, _, _, _, _,
+  211317.806793703, _, _, _, _,
+  176098.071469901, _, _, _, _,
+  246537.499005144, _, _, _, _,
+  140878.611640613, _, _, _, _,
+  70439.4030423116, _, _, _, _,
+  246537.499005144, _, _, _, _,
+  70439.4030423116, _, _, _, _,
+  211317.806793703, _, _, _, _,
+  70439.4030423116, _, _, _, _,
+  70439.4030423116, _, _, _, _,
+  105658.840566836, _, _, _, _,
+  140878.611640613, _, _, _, _,
+  70439.4030423116, _, _, _, _,
+  35219.6922114416, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -70460,27 +70679,27 @@ _, _, _, _, _ ;
  Redfish10_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  9, _, _, _, _,
-  1139, _, _, _, _,
+  39.3153563409373, _, _, _, _,
+  5032.81984554363, _, _, _, _,
   _, _, _, _, _,
-  360, _, _, _, _,
-  1575, _, _, _, _,
-  1963, _, _, _, _,
-  73309, _, _, _, _,
-  6358, _, _, _, _,
-  225742, _, _, _, _,
-  307371, _, _, _, _,
-  94760, _, _, _, _,
-  13547, _, _, _, _,
-  31186, _, _, _, _,
-  48901, _, _, _, _,
-  270758, _, _, _, _,
-  96887, _, _, _, _,
-  53999, _, _, _, _,
-  224841, _, _, _, _,
-  271558, _, _, _, _,
-  81128, _, _, _, _,
-  58914, _, _, _, _,
+  1592.36482209109, _, _, _, _,
+  6961.72146253198, _, _, _, _,
+  8676.05400543196, _, _, _, _,
+  324002.613888039, _, _, _, _,
+  28102.066735229, _, _, _, _,
+  997711.230194406, _, _, _, _,
+  1358487.23642297, _, _, _, _,
+  418810.18250599, _, _, _, _,
+  59872.845703801, _, _, _, _,
+  137831.946134121, _, _, _, _,
+  216129.025872344, _, _, _, _,
+  1196666.62086916, _, _, _, _,
+  428212.397107985, _, _, _, _,
+  238657.359768511, _, _, _, _,
+  993729.006764975, _, _, _, _,
+  1200203.72585862, _, _, _, _,
+  358561.124838025, _, _, _, _,
+  260383.341843882, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -70556,27 +70775,27 @@ _, _, _, _, _ ;
  Redfish1_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  509, _, _, _, _,
-  65357, _, _, _, _,
+  11647.6316918233, _, _, _, _,
+  1491031.42863168, _, _, _, _,
   _, _, _, _, _,
-  20682, _, _, _, _,
-  90415, _, _, _, _,
-  112673, _, _, _, _,
-  4207736, _, _, _, _,
-  364958, _, _, _, _,
-  12957018, _, _, _, _,
-  17642322, _, _, _, _,
-  5438979, _, _, _, _,
-  777548, _, _, _, _,
-  1789987, _, _, _, _,
-  2806812, _, _, _, _,
-  15540794, _, _, _, _,
-  5561084, _, _, _, _,
-  3099377, _, _, _, _,
-  12905298, _, _, _, _,
-  15586731, _, _, _, _,
-  4656540, _, _, _, _,
-  3381532, _, _, _, _,
+  471756.603345861, _, _, _, _,
+  2062490.97257198, _, _, _, _,
+  2570381.93212089, _, _, _, _,
+  95989543.6538714, _, _, _, _,
+  8325564.19614999, _, _, _, _,
+  295583558.83449, _, _, _, _,
+  402467647.773084, _, _, _, _,
+  124077388.80229, _, _, _, _,
+  17738027.0714497, _, _, _, _,
+  40834317.5123615, _, _, _, _,
+  64030738.2551273, _, _, _, _,
+  354526407.872575, _, _, _, _,
+  126862904.258944, _, _, _, _,
+  70705019.2555957, _, _, _, _,
+  294403778.816261, _, _, _, _,
+  355574316.374669, _, _, _, _,
+  106227904.559789, _, _, _, _,
+  77141594.1949809, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -70652,27 +70871,27 @@ _, _, _, _, _ ;
  Redfish2_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  325, _, _, _, _,
-  41674, _, _, _, _,
+  3127.70860553904, _, _, _, _,
+  400382.837803352, _, _, _, _,
   _, _, _, _, _,
-  13187, _, _, _, _,
-  57651, _, _, _, _,
-  71844, _, _, _, _,
-  2682971, _, _, _, _,
-  232707, _, _, _, _,
-  8261760, _, _, _, _,
-  11249242, _, _, _, _,
-  3468046, _, _, _, _,
-  495787, _, _, _, _,
-  1141346, _, _, _, _,
-  1789702, _, _, _, _,
-  9909249, _, _, _, _,
-  3545904, _, _, _, _,
-  1976250, _, _, _, _,
-  8228782, _, _, _, _,
-  9938539, _, _, _, _,
-  2969141, _, _, _, _,
-  2156160, _, _, _, _,
+  126679.588352758, _, _, _, _,
+  553835.400572335, _, _, _, _,
+  690218.054736422, _, _, _, _,
+  25775825.4786456, _, _, _, _,
+  2235642.35814103, _, _, _, _,
+  79372293.4484177, _, _, _, _,
+  108073603.175023, _, _, _, _,
+  33318182.3548018, _, _, _, _,
+  4763146.82542758, _, _, _, _,
+  10965134.3435237, _, _, _, _,
+  17194009.5942568, _, _, _, _,
+  95200065.2263343, _, _, _, _,
+  34066169.66202, _, _, _, _,
+  18986237.1194116, _, _, _, _,
+  79055490.1519805, _, _, _, _,
+  95481457.4034339, _, _, _, _,
+  28525106.2216599, _, _, _, _,
+  20714634.0468526, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -70748,27 +70967,27 @@ _, _, _, _, _ ;
  Redfish3_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  207, _, _, _, _,
-  26572, _, _, _, _,
+  5717.00618774795, _, _, _, _,
+  731842.844034813, _, _, _, _,
   _, _, _, _, _,
-  8409, _, _, _, _,
-  36760, _, _, _, _,
-  45810, _, _, _, _,
-  1710738, _, _, _, _,
-  148381, _, _, _, _,
-  5267931, _, _, _, _,
-  7172834, _, _, _, _,
-  2211324, _, _, _, _,
-  316127, _, _, _, _,
-  727754, _, _, _, _,
-  1141165, _, _, _, _,
-  6318416, _, _, _, _,
-  2260968, _, _, _, _,
-  1260113, _, _, _, _,
-  5246903, _, _, _, _,
-  6337093, _, _, _, _,
-  1893208, _, _, _, _,
-  1374829, _, _, _, _,
+  231552.258158418, _, _, _, _,
+  1012332.28903056, _, _, _, _,
+  1261620.37052791, _, _, _, _,
+  47114540.4961188, _, _, _, _,
+  4086436.04856564, _, _, _, _,
+  145081255.963788, _, _, _, _,
+  197543165.303066, _, _, _, _,
+  60900895.4189608, _, _, _, _,
+  8706354.49411644, _, _, _, _,
+  20042704.9950866, _, _, _, _,
+  31428202.444589, _, _, _, _,
+  174012170.126431, _, _, _, _,
+  62268109.7611634, _, _, _, _,
+  34704139.2863448, _, _, _, _,
+  144502184.626124, _, _, _, _,
+  174526514.977743, _, _, _, _,
+  52139834.4099553, _, _, _, _,
+  37863402.8800074, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -70844,27 +71063,27 @@ _, _, _, _, _ ;
  Redfish4_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  132, _, _, _, _,
-  16943, _, _, _, _,
+  2663.29767738782, _, _, _, _,
+  340932.873381865, _, _, _, _,
   _, _, _, _, _,
-  5362, _, _, _, _,
-  23439, _, _, _, _,
-  29209, _, _, _, _,
-  1090815, _, _, _, _,
-  94612, _, _, _, _,
-  3358981, _, _, _, _,
-  4573601, _, _, _, _,
-  1410003, _, _, _, _,
-  201572, _, _, _, _,
-  464037, _, _, _, _,
-  727639, _, _, _, _,
-  4028800, _, _, _, _,
-  1441657, _, _, _, _,
-  803483, _, _, _, _,
-  3345574, _, _, _, _,
-  4040709, _, _, _, _,
-  1207163, _, _, _, _,
-  876629, _, _, _, _,
+  107869.848500225, _, _, _, _,
+  471600.370119914, _, _, _, _,
+  587732.546061094, _, _, _, _,
+  21948558.765499, _, _, _, _,
+  1903687.92328104, _, _, _, _,
+  67586873.1555584, _, _, _, _,
+  92026532.0795013, _, _, _, _,
+  28371005.3817607, _, _, _, _,
+  4055901.4528248, _, _, _, _,
+  9337000.50498121, _, _, _, _,
+  14640994.9239744, _, _, _, _,
+  81064493.0782381, _, _, _, _,
+  29007929.44, _, _, _, _,
+  16167107.4897812, _, _, _, _,
+  67317109.699303, _, _, _, _,
+  81304103.3572703, _, _, _, _,
+  24289618.6086027, _, _, _, _,
+  17638867.2036835, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -70940,27 +71159,27 @@ _, _, _, _, _ ;
  Redfish5_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  84, _, _, _, _,
-  10803, _, _, _, _,
+  1399.41832109515, _, _, _, _,
+  179141.713419788, _, _, _, _,
   _, _, _, _, _,
-  3419, _, _, _, _,
-  14945, _, _, _, _,
-  18625, _, _, _, _,
-  695534, _, _, _, _,
-  60327, _, _, _, _,
-  2141781, _, _, _, _,
-  2916257, _, _, _, _,
-  899057, _, _, _, _,
-  128528, _, _, _, _,
-  295883, _, _, _, _,
-  463963, _, _, _, _,
-  2568877, _, _, _, _,
-  919241, _, _, _, _,
-  512324, _, _, _, _,
-  2133232, _, _, _, _,
-  2576470, _, _, _, _,
-  769721, _, _, _, _,
-  558964, _, _, _, _,
+  56679.7484061304, _, _, _, _,
+  247800.388136996, _, _, _, _,
+  308821.540995932, _, _, _, _,
+  11532775.8961584, _, _, _, _,
+  1000284.63964268, _, _, _, _,
+  35513232.0966049, _, _, _, _,
+  48354945.8674168, _, _, _, _,
+  14907422.8751125, _, _, _, _,
+  2131155.99124707, _, _, _, _,
+  4906086.79671172, _, _, _, _,
+  7693047.87430539, _, _, _, _,
+  42594989.5751958, _, _, _, _,
+  15242091.8848195, _, _, _, _,
+  8494937.16470505, _, _, _, _,
+  35371486.047618, _, _, _, _,
+  42720891.766771, _, _, _, _,
+  12762875.7318, _, _, _, _,
+  9268266.98261137, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -71036,27 +71255,27 @@ _, _, _, _, _ ;
  Redfish6_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  54, _, _, _, _,
-  6889, _, _, _, _,
+  834.430413607121, _, _, _, _,
+  106816.733616994, _, _, _, _,
   _, _, _, _, _,
-  2180, _, _, _, _,
-  9530, _, _, _, _,
-  11876, _, _, _, _,
-  443492, _, _, _, _,
-  38466, _, _, _, _,
-  1365660, _, _, _, _,
-  1859488, _, _, _, _,
-  573264, _, _, _, _,
-  81953, _, _, _, _,
-  188663, _, _, _, _,
-  295836, _, _, _, _,
-  1637988, _, _, _, _,
-  586134, _, _, _, _,
-  326672, _, _, _, _,
-  1360209, _, _, _, _,
-  1642830, _, _, _, _,
-  490796, _, _, _, _,
-  356411, _, _, _, _,
+  33796.4032575069, _, _, _, _,
+  147755.804857081, _, _, _, _,
+  184140.855024938, _, _, _, _,
+  6876642.11337375, _, _, _, _,
+  596439.186910674, _, _, _, _,
+  21175455.9020675, _, _, _, _,
+  28832577.7016572, _, _, _, _,
+  8888841.06202193, _, _, _, _,
+  1270743.24269668, _, _, _, _,
+  2925349.74943654, _, _, _, _,
+  4587129.54010238, _, _, _, _,
+  25398091.6449679, _, _, _, _,
+  9088393.97338639, _, _, _, _,
+  5065271.63826476, _, _, _, _,
+  21090937.0612746, _, _, _, _,
+  25473163.2773786, _, _, _, _,
+  7610113.08424771, _, _, _, _,
+  5526384.59504333, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -71132,27 +71351,27 @@ _, _, _, _, _ ;
  Redfish7_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  34, _, _, _, _,
-  4392, _, _, _, _,
+  425.329727235943, _, _, _, _,
+  54447.1191757659, _, _, _, _,
   _, _, _, _, _,
-  1390, _, _, _, _,
-  6076, _, _, _, _,
-  7572, _, _, _, _,
-  282783, _, _, _, _,
-  24527, _, _, _, _,
-  870783, _, _, _, _,
-  1185662, _, _, _, _,
-  365530, _, _, _, _,
-  52256, _, _, _, _,
-  120297, _, _, _, _,
-  188633, _, _, _, _,
-  1044428, _, _, _, _,
-  373736, _, _, _, _,
-  208295, _, _, _, _,
-  867308, _, _, _, _,
-  1047515, _, _, _, _,
-  312945, _, _, _, _,
-  227258, _, _, _, _,
+  17226.8588784198, _, _, _, _,
+  75314.7717923176, _, _, _, _,
+  93861.127738839, _, _, _, _,
+  3505193.80248474, _, _, _, _,
+  304019.73914746, _, _, _, _,
+  10793651.257256, _, _, _, _,
+  14696674.7728457, _, _, _, _,
+  4530861.15115348, _, _, _, _,
+  647729.119156453, _, _, _, _,
+  1491122.79551139, _, _, _, _,
+  2338172.87130464, _, _, _, _,
+  12946032.6655278, _, _, _, _,
+  4632578.18348561, _, _, _, _,
+  2581893.67159558, _, _, _, _,
+  10750569.9230734, _, _, _, _,
+  12984298.524988, _, _, _, _,
+  3879062.01592714, _, _, _, _,
+  2816934.29923014, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -71228,27 +71447,27 @@ _, _, _, _, _ ;
  Redfish8_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  22, _, _, _, _,
-  2801, _, _, _, _,
+  260.216618209233, _, _, _, _,
+  33310.7335695194, _, _, _, _,
   _, _, _, _, _,
-  886, _, _, _, _,
-  3874, _, _, _, _,
-  4828, _, _, _, _,
-  180311, _, _, _, _,
-  15639, _, _, _, _,
-  555236, _, _, _, _,
-  756011, _, _, _, _,
-  233072, _, _, _, _,
-  33320, _, _, _, _,
-  76705, _, _, _, _,
-  120278, _, _, _, _,
-  665956, _, _, _, _,
-  238304, _, _, _, _,
-  132815, _, _, _, _,
-  553020, _, _, _, _,
-  667925, _, _, _, _,
-  199543, _, _, _, _,
-  144906, _, _, _, _,
+  10539.3878505544, _, _, _, _,
+  46077.5580967688, _, _, _, _,
+  57424.2139157056, _, _, _, _,
+  2144476.67078903, _, _, _, _,
+  185999.198560415, _, _, _, _,
+  6603553.07527076, _, _, _, _,
+  8991421.8626656, _, _, _, _,
+  2771979.69206305, _, _, _, _,
+  396280.509236633, _, _, _, _,
+  912268.54446369, _, _, _, _,
+  1430493.56393081, _, _, _, _,
+  7920379.46969351, _, _, _, _,
+  2834210.14639728, _, _, _, _,
+  1579601.88713949, _, _, _, _,
+  6577195.92604962, _, _, _, _,
+  7943790.51271258, _, _, _, _,
+  2373209.14803707, _, _, _, _,
+  1723399.68293972, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -71324,27 +71543,27 @@ _, _, _, _, _ ;
  Redfish9_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  14, _, _, _, _,
-  1786, _, _, _, _,
+  148.221143108672, _, _, _, _,
+  18974.018805719, _, _, _, _,
   _, _, _, _, _,
-  565, _, _, _, _,
-  2470, _, _, _, _,
-  3079, _, _, _, _,
-  114971, _, _, _, _,
-  9972, _, _, _, _,
-  354034, _, _, _, _,
-  482054, _, _, _, _,
-  148613, _, _, _, _,
-  21246, _, _, _, _,
-  48909, _, _, _, _,
-  76693, _, _, _, _,
-  424633, _, _, _, _,
-  151950, _, _, _, _,
-  84687, _, _, _, _,
-  352621, _, _, _, _,
-  425888, _, _, _, _,
-  127234, _, _, _, _,
-  92396, _, _, _, _,
+  6003.30649758399, _, _, _, _,
+  26246.0882773743, _, _, _, _,
+  32709.2200616448, _, _, _, _,
+  1221508.39443563, _, _, _, _,
+  105946.399648289, _, _, _, _,
+  3761428.42886539, _, _, _, _,
+  5121574.61667187, _, _, _, _,
+  1578938.35320404, _, _, _, _,
+  225724.054347334, _, _, _, _,
+  519634.323945322, _, _, _, _,
+  814818.794873957, _, _, _, _,
+  4511501.63633468, _, _, _, _,
+  1614385.24026709, _, _, _, _,
+  899751.902778837, _, _, _, _,
+  3746415.21866564, _, _, _, _,
+  4524836.72454516, _, _, _, _,
+  1351795.95822421, _, _, _, _,
+  981660.098407142, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -73482,13 +73701,13 @@ _, _, _, _, _ ;
 
  Scup10_Nums =
   _, _, _, _, _,
-  5405.76798942752, _, _, _, _,
-  12613.4760643349, _, _, _, _,
-  42345.234850861, _, _, _, _,
-  10811.5534011924, _, _, _, _,
-  11712.5147327636, _, _, _, _,
-  5405.76798942752, _, _, _, _,
-  1801.92266314251, _, _, _, _,
+  68327.2007233762, _, _, _, _,
+  159430.355234055, _, _, _, _,
+  535230.399638312, _, _, _, _,
+  136654.621659597, _, _, _, _,
+  148042.488446826, _, _, _, _,
+  68327.2007233762, _, _, _, _,
+  22775.7335744587, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -73578,13 +73797,13 @@ _, _, _, _, _ ;
 
  Scup1_Nums =
   _, _, _, _, _,
-  310278, _, _, _, _,
-  723983, _, _, _, _,
-  2430514, _, _, _, _,
-  620557, _, _, _, _,
-  672270, _, _, _, _,
-  310278, _, _, _, _,
-  103426, _, _, _, _,
+  6329948.85567785, _, _, _, _,
+  14769901.0641432, _, _, _, _,
+  49584660.5721611, _, _, _, _,
+  12659918.1122506, _, _, _, _,
+  13714909.5881969, _, _, _, _,
+  6329948.85567785, _, _, _, _,
+  2109982.95189262, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -73674,13 +73893,13 @@ _, _, _, _, _ ;
 
  Scup2_Nums =
   _, _, _, _, _,
-  197841.940584, _, _, _, _,
-  461631.832324, _, _, _, _,
-  1549763.780792, _, _, _, _,
-  395684.518796, _, _, _, _,
-  428658.17556, _, _, _, _,
-  197841.940584, _, _, _, _,
-  65947.313528, _, _, _, _,
+  2072866.97495642, _, _, _, _,
+  4836696.28890826, _, _, _, _,
+  16237478.0125218, _, _, _, _,
+  4145740.63058946, _, _, _, _,
+  4491218.45974886, _, _, _, _,
+  2072866.97495642, _, _, _, _,
+  690955.658318807, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -73770,13 +73989,13 @@ _, _, _, _, _ ;
 
  Scup3_Nums =
   _, _, _, _, _,
-  126149.560890695, _, _, _, _,
-  294349.381981087, _, _, _, _,
-  988172.780018841, _, _, _, _,
-  252299.528350856, _, _, _, _,
-  273324.455165972, _, _, _, _,
-  126149.560890695, _, _, _, _,
-  42049.8536302316, _, _, _, _,
+  4527827.18658923, _, _, _, _,
+  10564944.6948492, _, _, _, _,
+  35468023.4067054, _, _, _, _,
+  9055668.96598618, _, _, _, _,
+  9810306.83041771, _, _, _, _,
+  4527827.18658923, _, _, _, _,
+  1509275.72886308, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -73866,13 +74085,13 @@ _, _, _, _, _ ;
 
  Scup4_Nums =
   _, _, _, _, _,
-  80436.4922116119, _, _, _, _,
-  187685.407733837, _, _, _, _,
-  630086.633377854, _, _, _, _,
-  160873.2436633, _, _, _, _,
-  174279.325698568, _, _, _, _,
-  80436.4922116119, _, _, _, _,
-  26812.1640705373, _, _, _, _,
+  2474761.62865821, _, _, _, _,
+  5774451.77615191, _, _, _, _,
+  19385656.6856709, _, _, _, _,
+  4949531.23326584, _, _, _, _,
+  5361991.50470888, _, _, _, _,
+  2474761.62865821, _, _, _, _,
+  824920.542886071, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -73962,13 +74181,13 @@ _, _, _, _, _ ;
 
  Scup5_Nums =
   _, _, _, _, _,
-  51288.5596559057, _, _, _, _,
-  119673.471162511, _, _, _, _,
-  401760.879867454, _, _, _, _,
-  102577.284610542, _, _, _, _,
-  111125.377886527, _, _, _, _,
-  51288.5596559057, _, _, _, _,
-  17096.1865519686, _, _, _, _,
+  1498798.80101893, _, _, _, _,
+  3497202.03288048, _, _, _, _,
+  11740605.0994905, _, _, _, _,
+  2997602.43254084, _, _, _, _,
+  3247402.23271066, _, _, _, _,
+  1498798.80101893, _, _, _, _,
+  499599.600339643, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -74058,13 +74277,13 @@ _, _, _, _, _ ;
 
  Scup6_Nums =
   _, _, _, _, _,
-  32703.0217162758, _, _, _, _,
-  76307.1560704095, _, _, _, _,
-  256173.986308125, _, _, _, _,
-  65406.1488316509, _, _, _, _,
-  70856.6524510302, _, _, _, _,
-  32703.0217162758, _, _, _, _,
-  10901.0072387586, _, _, _, _,
+  1012985.54468368, _, _, _, _,
+  2363636.20236281, _, _, _, _,
+  7935063.22765816, _, _, _, _,
+  2025974.35413492, _, _, _, _,
+  2194805.27824886, _, _, _, _,
+  1012985.54468368, _, _, _, _,
+  337661.848227894, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -74154,13 +74373,13 @@ _, _, _, _, _ ;
 
  Scup7_Nums =
   _, _, _, _, _,
-  20852.3623309055, _, _, _, _,
-  48655.5793108631, _, _, _, _,
-  163343.706541677, _, _, _, _,
-  41704.7918672279, _, _, _, _,
-  45180.1855890455, _, _, _, _,
-  20852.3623309055, _, _, _, _,
-  6950.78744363517, _, _, _, _,
+  576238.371419521, _, _, _, _,
+  1344558.05714688, _, _, _, _,
+  4513872.81429024, _, _, _, _,
+  1152478.60000704, _, _, _, _,
+  1248518.32857696, _, _, _, _,
+  576238.371419521, _, _, _, _,
+  192079.45713984, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -74250,13 +74469,13 @@ _, _, _, _, _ ;
 
  Scup8_Nums =
   _, _, _, _, _,
-  13296.0500883306, _, _, _, _,
-  31024.159724827, _, _, _, _,
-  104152.520914757, _, _, _, _,
-  26592.1430287168, _, _, _, _,
-  28808.1513767719, _, _, _, _,
-  13296.0500883306, _, _, _, _,
-  4432.01669611021, _, _, _, _,
+  387863.489981447, _, _, _, _,
+  905016.060008246, _, _, _, _,
+  3038267.75500928, _, _, _, _,
+  775728.230014431, _, _, _, _,
+  840372.145011339, _, _, _, _,
+  387863.489981447, _, _, _, _,
+  129287.829993816, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -74346,13 +74565,13 @@ _, _, _, _, _ ;
 
  Scup9_Nums =
   _, _, _, _, _,
-  8477.93382572208, _, _, _, _,
-  19781.872917022, _, _, _, _,
-  66410.5636058344, _, _, _, _,
-  16955.8949751146, _, _, _, _,
-  18368.8839460683, _, _, _, _,
-  8477.93382572208, _, _, _, _,
-  2825.97794190736, _, _, _, _,
+  239947.701600717, _, _, _, _,
+  559878.743733015, _, _, _, _,
+  1879592.64919964, _, _, _, _,
+  479896.176532776, _, _, _, _,
+  519887.460132896, _, _, _, _,
+  239947.701600717, _, _, _, _,
+  79982.5672002391, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -80498,28 +80717,28 @@ _, _, _, _, _ ;
 
  Spiny_Dogfish10_Nums =
   _, _, _, _, _,
-  10738, _, _, _, _,
-  25055, _, _, _, _,
-  39373, _, _, _, _,
-  14317, _, _, _, _,
-  32214, _, _, _, _,
-  32214, _, _, _, _,
-  10738, _, _, _, _,
-  10738, _, _, _, _,
-  21476, _, _, _, _,
-  3579, _, _, _, _,
-  14317, _, _, _, _,
-  28635, _, _, _, _,
-  17897, _, _, _, _,
-  17897, _, _, _, _,
-  14317, _, _, _, _,
-  3579, _, _, _, _,
+  9504.51593783044, _, _, _, _,
+  22177.1689083597, _, _, _, _,
+  34849.9030508383, _, _, _, _,
+  12672.6396807547, _, _, _, _,
+  28513.5517531051, _, _, _, _,
+  28513.5517531051, _, _, _, _,
+  9504.51593783044, _, _, _, _,
+  9504.51593783044, _, _, _, _,
+  19008.9911461276, _, _, _, _,
+  3168.18371077468, _, _, _, _,
+  12672.6396807547, _, _, _, _,
+  25345.3871130078, _, _, _, _,
+  15840.9081117533, _, _, _, _,
+  15840.9081117533, _, _, _, _,
+  12672.6396807547, _, _, _, _,
+  3168.18371077468, _, _, _, _,
   _, _, _, _, _,
-  3579, _, _, _, _,
-  14317, _, _, _, _,
-  21476, _, _, _, _,
-  14317, _, _, _, _,
-  7159, _, _, _, _,
+  3168.18371077468, _, _, _, _,
+  12672.6396807547, _, _, _, _,
+  19008.9911461276, _, _, _, _,
+  12672.6396807547, _, _, _, _,
+  6336.34155623321, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -80594,28 +80813,28 @@ _, _, _, _, _ ;
 
  Spiny_Dogfish1_Nums =
   _, _, _, _, _,
-  616335, _, _, _, _,
-  1438116, _, _, _, _,
-  2259896, _, _, _, _,
-  821780, _, _, _, _,
-  1849006, _, _, _, _,
-  1849006, _, _, _, _,
-  616335, _, _, _, _,
-  616335, _, _, _, _,
-  1232671, _, _, _, _,
-  205445, _, _, _, _,
-  821780, _, _, _, _,
-  1643561, _, _, _, _,
-  1027225, _, _, _, _,
-  1027225, _, _, _, _,
-  821780, _, _, _, _,
-  205445, _, _, _, _,
+  2250299.96584746, _, _, _, _,
+  5250691.64631934, _, _, _, _,
+  8251102.54515393, _, _, _, _,
+  3000388.53396978, _, _, _, _,
+  6750900.83028983, _, _, _, _,
+  6750900.83028983, _, _, _, _,
+  2250299.96584746, _, _, _, _,
+  2250299.96584746, _, _, _, _,
+  4500590.28852447, _, _, _, _,
+  750102.766178554, _, _, _, _,
+  3000388.53396978, _, _, _, _,
+  6000802.57930646, _, _, _, _,
+  3750511.35860458, _, _, _, _,
+  3750511.35860458, _, _, _, _,
+  3000388.53396978, _, _, _, _,
+  750102.766178554, _, _, _, _,
   _, _, _, _, _,
-  205445, _, _, _, _,
-  821780, _, _, _, _,
-  1232671, _, _, _, _,
-  821780, _, _, _, _,
-  410890, _, _, _, _,
+  750102.766178554, _, _, _, _,
+  3000388.53396978, _, _, _, _,
+  4500590.28852447, _, _, _, _,
+  3000388.53396978, _, _, _, _,
+  1500199.40845554, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -80690,28 +80909,28 @@ _, _, _, _, _ ;
 
  Spiny_Dogfish2_Nums =
   _, _, _, _, _,
-  392992, _, _, _, _,
-  916983, _, _, _, _,
-  1440973, _, _, _, _,
-  523990, _, _, _, _,
-  1178978, _, _, _, _,
-  1178978, _, _, _, _,
-  392992, _, _, _, _,
-  392992, _, _, _, _,
-  785986, _, _, _, _,
-  130997, _, _, _, _,
-  523990, _, _, _, _,
-  1047981, _, _, _, _,
-  654987, _, _, _, _,
-  654987, _, _, _, _,
-  523990, _, _, _, _,
-  130997, _, _, _, _,
+  192163.800051991, _, _, _, _,
+  448381.493565895, _, _, _, _,
+  704600.828227054, _, _, _, _,
+  256217.424819148, _, _, _, _,
+  576491.479807705, _, _, _, _,
+  576491.479807705, _, _, _, _,
+  192163.800051991, _, _, _, _,
+  192163.800051991, _, _, _, _,
+  384326.776627864, _, _, _, _,
+  64054.8372066018, _, _, _, _,
+  256217.424819148, _, _, _, _,
+  512437.028175062, _, _, _, _,
+  320273.974912581, _, _, _, _,
+  320273.974912581, _, _, _, _,
+  256217.424819148, _, _, _, _,
+  64054.8372066018, _, _, _, _,
   _, _, _, _, _,
-  130997, _, _, _, _,
-  523990, _, _, _, _,
-  785986, _, _, _, _,
-  523990, _, _, _, _,
-  261995, _, _, _, _,
+  64054.8372066018, _, _, _, _,
+  256217.424819148, _, _, _, _,
+  384326.776627864, _, _, _, _,
+  256217.424819148, _, _, _, _,
+  128109.151464168, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -80786,28 +81005,28 @@ _, _, _, _, _ ;
 
  Spiny_Dogfish3_Nums =
   _, _, _, _, _,
-  250583, _, _, _, _,
-  584694, _, _, _, _,
-  918805, _, _, _, _,
-  334111, _, _, _, _,
-  751749, _, _, _, _,
-  751749, _, _, _, _,
-  250583, _, _, _, _,
-  250583, _, _, _, _,
-  501166, _, _, _, _,
-  83528, _, _, _, _,
-  334111, _, _, _, _,
-  668222, _, _, _, _,
-  417638, _, _, _, _,
-  417638, _, _, _, _,
-  334111, _, _, _, _,
-  83528, _, _, _, _,
+  405551.773363525, _, _, _, _,
+  946285.980032849, _, _, _, _,
+  1487023.65025868, _, _, _, _,
+  540733.639602923, _, _, _, _,
+  1216655.48819144, _, _, _, _,
+  1216655.48819144, _, _, _, _,
+  405551.773363525, _, _, _, _,
+  405551.773363525, _, _, _, _,
+  811101.808823243, _, _, _, _,
+  135184.425030213, _, _, _, _,
+  540733.639602923, _, _, _, _,
+  1081471.87689515, _, _, _, _,
+  675921.679592309, _, _, _, _,
+  675921.679592309, _, _, _, _,
+  540733.639602923, _, _, _, _,
+  135184.425030213, _, _, _, _,
   _, _, _, _, _,
-  83528, _, _, _, _,
-  334111, _, _, _, _,
-  501166, _, _, _, _,
-  334111, _, _, _, _,
-  167055, _, _, _, _,
+  135184.425030213, _, _, _, _,
+  540733.639602923, _, _, _, _,
+  811101.808823243, _, _, _, _,
+  540733.639602923, _, _, _, _,
+  270367.746403501, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -80882,28 +81101,28 @@ _, _, _, _, _ ;
 
  Spiny_Dogfish4_Nums =
   _, _, _, _, _,
-  159779, _, _, _, _,
-  372817, _, _, _, _,
-  585856, _, _, _, _,
-  213038, _, _, _, _,
-  479336, _, _, _, _,
-  479336, _, _, _, _,
-  159779, _, _, _, _,
-  159779, _, _, _, _,
-  319558, _, _, _, _,
-  53260, _, _, _, _,
-  213038, _, _, _, _,
-  426077, _, _, _, _,
-  266298, _, _, _, _,
-  266298, _, _, _, _,
-  213038, _, _, _, _,
-  53260, _, _, _, _,
+  238623.629077203, _, _, _, _,
+  556787.590466062, _, _, _, _,
+  874953.589785654, _, _, _, _,
+  318163.627731232, _, _, _, _,
+  715870.9861409, _, _, _, _,
+  715870.9861409, _, _, _, _,
+  238623.629077203, _, _, _, _,
+  238623.629077203, _, _, _, _,
+  477246.235584808, _, _, _, _,
+  79541.5042274003, _, _, _, _,
+  318163.627731232, _, _, _, _,
+  636329.960708451, _, _, _, _,
+  397707.258973562, _, _, _, _,
+  397707.258973562, _, _, _, _,
+  318163.627731232, _, _, _, _,
+  79541.5042274003, _, _, _, _,
   _, _, _, _, _,
-  53260, _, _, _, _,
-  213038, _, _, _, _,
-  319558, _, _, _, _,
-  213038, _, _, _, _,
-  106519, _, _, _, _,
+  79541.5042274003, _, _, _, _,
+  318163.627731232, _, _, _, _,
+  477246.235584808, _, _, _, _,
+  318163.627731232, _, _, _, _,
+  159082.359071323, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -80978,28 +81197,28 @@ _, _, _, _, _ ;
 
  Spiny_Dogfish5_Nums =
   _, _, _, _, _,
-  101879, _, _, _, _,
-  237719, _, _, _, _,
-  373558, _, _, _, _,
-  135839, _, _, _, _,
-  305638, _, _, _, _,
-  305638, _, _, _, _,
-  101879, _, _, _, _,
-  101879, _, _, _, _,
-  203759, _, _, _, _,
-  33960, _, _, _, _,
-  135839, _, _, _, _,
-  271679, _, _, _, _,
-  169799, _, _, _, _,
-  169799, _, _, _, _,
-  135839, _, _, _, _,
-  33960, _, _, _, _,
+  157747.598550889, _, _, _, _,
+  368077.149939499, _, _, _, _,
+  578408.048548753, _, _, _, _,
+  210329.330816618, _, _, _, _,
+  473242.861038912, _, _, _, _,
+  473242.861038912, _, _, _, _,
+  157747.598550889, _, _, _, _,
+  157747.598550889, _, _, _, _,
+  315494.521108797, _, _, _, _,
+  52582.7275593828, _, _, _, _,
+  210329.330816618, _, _, _, _,
+  420660.449997864, _, _, _, _,
+  262913.464487786, _, _, _, _,
+  262913.464487786, _, _, _, _,
+  210329.330816618, _, _, _, _,
+  52582.7275593828, _, _, _, _,
   _, _, _, _, _,
-  33960, _, _, _, _,
-  135839, _, _, _, _,
-  203759, _, _, _, _,
-  135839, _, _, _, _,
-  67920, _, _, _, _,
+  52582.7275593828, _, _, _, _,
+  210329.330816618, _, _, _, _,
+  315494.521108797, _, _, _, _,
+  210329.330816618, _, _, _, _,
+  105165.02582899, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -81074,28 +81293,28 @@ _, _, _, _, _ ;
 
  Spiny_Dogfish6_Nums =
   _, _, _, _, _,
-  64961, _, _, _, _,
-  151576, _, _, _, _,
-  238191, _, _, _, _,
-  86615, _, _, _, _,
-  194884, _, _, _, _,
-  194884, _, _, _, _,
-  64961, _, _, _, _,
-  64961, _, _, _, _,
-  129922, _, _, _, _,
-  21654, _, _, _, _,
-  86615, _, _, _, _,
-  173230, _, _, _, _,
-  108269, _, _, _, _,
-  108269, _, _, _, _,
-  86615, _, _, _, _,
-  21654, _, _, _, _,
+  115532.442177484, _, _, _, _,
+  269575.273619903, _, _, _, _,
+  423619.091750504, _, _, _, _,
+  154042.669898146, _, _, _, _,
+  346597.374420553, _, _, _, _,
+  346597.374420553, _, _, _, _,
+  115532.442177484, _, _, _, _,
+  115532.442177484, _, _, _, _,
+  231064.389265848, _, _, _, _,
+  38510.9566617526, _, _, _, _,
+  154042.669898146, _, _, _, _,
+  308086.649573019, _, _, _, _,
+  192554.656379244, _, _, _, _,
+  192554.656379244, _, _, _, _,
+  154042.669898146, _, _, _, _,
+  38510.9566617526, _, _, _, _,
   _, _, _, _, _,
-  21654, _, _, _, _,
-  86615, _, _, _, _,
-  129922, _, _, _, _,
-  86615, _, _, _, _,
-  43307, _, _, _, _,
+  38510.9566617526, _, _, _, _,
+  154042.669898146, _, _, _, _,
+  231064.389265848, _, _, _, _,
+  154042.669898146, _, _, _, _,
+  77021.5989168416, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -81170,28 +81389,28 @@ _, _, _, _, _ ;
 
  Spiny_Dogfish7_Nums =
   _, _, _, _, _,
-  41421, _, _, _, _,
-  96649, _, _, _, _,
-  151877, _, _, _, _,
-  55228, _, _, _, _,
-  124263, _, _, _, _,
-  124263, _, _, _, _,
-  41421, _, _, _, _,
-  41421, _, _, _, _,
-  82842, _, _, _, _,
-  13807, _, _, _, _,
-  55228, _, _, _, _,
-  110456, _, _, _, _,
-  69035, _, _, _, _,
-  69035, _, _, _, _,
-  55228, _, _, _, _,
-  13807, _, _, _, _,
+  70324.0939341202, _, _, _, _,
+  164089.293942553, _, _, _, _,
+  257855.09454378, _, _, _, _,
+  93765.1016771382, _, _, _, _,
+  210972.310951638, _, _, _, _,
+  210972.310951638, _, _, _, _,
+  70324.0939341202, _, _, _, _,
+  70324.0939341202, _, _, _, _,
+  140647.88650965, _, _, _, _,
+  23441.4514462823, _, _, _, _,
+  93765.1016771382, _, _, _, _,
+  187531.00060966, _, _, _, _,
+  117207.179969967, _, _, _, _,
+  117207.179969967, _, _, _, _,
+  93765.1016771382, _, _, _, _,
+  23441.4514462823, _, _, _, _,
   _, _, _, _, _,
-  13807, _, _, _, _,
-  55228, _, _, _, _,
-  82842, _, _, _, _,
-  55228, _, _, _, _,
-  27614, _, _, _, _,
+  23441.4514462823, _, _, _, _,
+  93765.1016771382, _, _, _, _,
+  140647.88650965, _, _, _, _,
+  93765.1016771382, _, _, _, _,
+  46882.711514599, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -81266,28 +81485,28 @@ _, _, _, _, _ ;
 
  Spiny_Dogfish8_Nums =
   _, _, _, _, _,
-  26411, _, _, _, _,
-  61626, _, _, _, _,
-  96841, _, _, _, _,
-  35215, _, _, _, _,
-  79234, _, _, _, _,
-  79234, _, _, _, _,
-  26411, _, _, _, _,
-  26411, _, _, _, _,
-  52822, _, _, _, _,
-  8804, _, _, _, _,
-  35215, _, _, _, _,
-  70430, _, _, _, _,
-  44019, _, _, _, _,
-  44019, _, _, _, _,
-  35215, _, _, _, _,
-  8804, _, _, _, _,
+  49995.511234086, _, _, _, _,
+  116656.009054072, _, _, _, _,
+  183316.933853521, _, _, _, _,
+  66660.4279133145, _, _, _, _,
+  149986.554425355, _, _, _, _,
+  149986.554425355, _, _, _, _,
+  49995.511234086, _, _, _, _,
+  49995.511234086, _, _, _, _,
+  99990.8082232962, _, _, _, _,
+  16665.23212121, _, _, _, _,
+  66660.4279133145, _, _, _, _,
+  133321.422619434, _, _, _, _,
+  83326.1056785675, _, _, _, _,
+  83326.1056785675, _, _, _, _,
+  66660.4279133145, _, _, _, _,
+  16665.23212121, _, _, _, _,
   _, _, _, _, _,
-  8804, _, _, _, _,
-  35215, _, _, _, _,
-  52822, _, _, _, _,
-  35215, _, _, _, _,
-  17607, _, _, _, _,
+  16665.23212121, _, _, _, _,
+  66660.4279133145, _, _, _, _,
+  99990.8082232962, _, _, _, _,
+  66660.4279133145, _, _, _, _,
+  33330.3281860744, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -81362,28 +81581,28 @@ _, _, _, _, _ ;
 
  Spiny_Dogfish9_Nums =
   _, _, _, _, _,
-  16841, _, _, _, _,
-  39295, _, _, _, _,
-  61749, _, _, _, _,
-  22454, _, _, _, _,
-  50522, _, _, _, _,
-  50522, _, _, _, _,
-  16841, _, _, _, _,
-  16841, _, _, _, _,
-  33681, _, _, _, _,
-  5614, _, _, _, _,
-  22454, _, _, _, _,
-  44908, _, _, _, _,
-  28068, _, _, _, _,
-  28068, _, _, _, _,
-  22454, _, _, _, _,
-  5614, _, _, _, _,
+  32288.2701717031, _, _, _, _,
+  75339.1783485256, _, _, _, _,
+  118390.362278669, _, _, _, _,
+  43050.8630294594, _, _, _, _,
+  96864.8238985699, _, _, _, _,
+  96864.8238985699, _, _, _, _,
+  32288.2701717031, _, _, _, _,
+  32288.2701717031, _, _, _, _,
+  64576.4019790558, _, _, _, _,
+  10762.7965775638, _, _, _, _,
+  43050.8630294594, _, _, _, _,
+  86102.0921069655, _, _, _, _,
+  53813.9474143664, _, _, _, _,
+  53813.9474143664, _, _, _, _,
+  43050.8630294594, _, _, _, _,
+  10762.7965775638, _, _, _, _,
   _, _, _, _, _,
-  5614, _, _, _, _,
-  22454, _, _, _, _,
-  33681, _, _, _, _,
-  22454, _, _, _, _,
-  11227, _, _, _, _,
+  10762.7965775638, _, _, _, _,
+  43050.8630294594, _, _, _, _,
+  64576.4019790558, _, _, _, _,
+  43050.8630294594, _, _, _, _,
+  21525.5052867583, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -81522,28 +81741,28 @@ _, _, _, _, _ ;
 
  Striped_Bass10_Nums =
   _, _, _, _, _,
-  1239546.351, _, _, _, _,
-  1079106.889, _, _, _, _,
-  831538.9772, _, _, _, _,
-  42965.07536, _, _, _, _,
-  136295.6077, _, _, _, _,
-  474724.1614, _, _, _, _,
-  519494.3872, _, _, _, _,
-  61373.09967, _, _, _, _,
-  266024.829, _, _, _, _,
-  213243.5179, _, _, _, _,
-  364251.8629, _, _, _, _,
-  75745.56634, _, _, _, _,
-  251313.7928, _, _, _, _,
-  213332.6981, _, _, _, _,
-  214136.9743, _, _, _, _,
-  791291.1163, _, _, _, _,
-  59453.83301, _, _, _, _,
-  24933.22118, _, _, _, _,
-  633700.544, _, _, _, _,
-  366699.4765, _, _, _, _,
-  149961.0445, _, _, _, _,
-  107664.184, _, _, _, _,
+  79633.3363889478, _, _, _, _,
+  69326.0738459295, _, _, _, _,
+  53421.3367844722, _, _, _, _,
+  2760.24554935435, _, _, _, _,
+  8756.16629007598, _, _, _, _,
+  30498.1486142857, _, _, _, _,
+  33374.3641364207, _, _, _, _,
+  3942.84948384993, _, _, _, _,
+  17090.4820768471, _, _, _, _,
+  13699.6029076041, _, _, _, _,
+  23400.9733448972, _, _, _, _,
+  4866.19331176076, _, _, _, _,
+  16145.3872065726, _, _, _, _,
+  13705.3321901225, _, _, _, _,
+  13757.002058917, _, _, _, _,
+  50835.6557892649, _, _, _, _,
+  3819.54824005759, _, _, _, _,
+  1601.80826439476, _, _, _, _,
+  40711.4171599222, _, _, _, _,
+  23558.217681163, _, _, _, _,
+  9634.087735679, _, _, _, _,
+  6916.77093946103, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -81618,28 +81837,28 @@ _, _, _, _, _ ;
 
  Striped_Bass1_Nums =
   _, _, _, _, _,
-  71146808.45, _, _, _, _,
-  61937991.3, _, _, _, _,
-  47728222.72, _, _, _, _,
-  2466086.068, _, _, _, _,
-  7823021.288, _, _, _, _,
-  27247959.66, _, _, _, _,
-  29817656.78, _, _, _, _,
-  3522659.852, _, _, _, _,
-  15269148.7, _, _, _, _,
-  12239635.66, _, _, _, _,
-  20907130.65, _, _, _, _,
-  4347602.89, _, _, _, _,
-  14424772.63, _, _, _, _,
-  12244754.37, _, _, _, _,
-  12290917.78, _, _, _, _,
-  45418097.86, _, _, _, _,
-  3412498.827, _, _, _, _,
-  1431103.492, _, _, _, _,
-  36372799.76, _, _, _, _,
-  21047617.45, _, _, _, _,
-  8607382.609, _, _, _, _,
-  6179650.375, _, _, _, _,
+  5884249.56260838, _, _, _, _,
+  5122627.51007734, _, _, _, _,
+  3947398.06043858, _, _, _, _,
+  203959.477311744, _, _, _, _,
+  647008.777967724, _, _, _, _,
+  2253562.71357837, _, _, _, _,
+  2466091.4194639, _, _, _, _,
+  291344.195820918, _, _, _, _,
+  1262846.26822959, _, _, _, _,
+  1012288.14554812, _, _, _, _,
+  1729139.74741403, _, _, _, _,
+  359571.721652367, _, _, _, _,
+  1193011.51900001, _, _, _, _,
+  1012711.49247394, _, _, _, _,
+  1016529.47143402, _, _, _, _,
+  3756337.47004989, _, _, _, _,
+  282233.246528144, _, _, _, _,
+  118360.475732315, _, _, _, _,
+  3008239.38163775, _, _, _, _,
+  1740758.81247964, _, _, _, _,
+  711879.962782368, _, _, _, _,
+  511092.567770834, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -81714,28 +81933,28 @@ _, _, _, _, _ ;
 
  Striped_Bass2_Nums =
   _, _, _, _, _,
-  45365207.96, _, _, _, _,
-  39493406.91, _, _, _, _,
-  30432858.43, _, _, _, _,
-  1572445.901, _, _, _, _,
-  4988178.604, _, _, _, _,
-  17374066.15, _, _, _, _,
-  19012577.38, _, _, _, _,
-  2246147.09, _, _, _, _,
-  9736039.061, _, _, _, _,
-  7804336.263, _, _, _, _,
-  13330975.07, _, _, _, _,
-  2772153.995, _, _, _, _,
-  9197641.108, _, _, _, _,
-  7807600.099, _, _, _, _,
-  7837035.188, _, _, _, _,
-  28959857.79, _, _, _, _,
-  2175905.319, _, _, _, _,
-  912511.8741, _, _, _, _,
-  23192321.08, _, _, _, _,
-  13420553.41, _, _, _, _,
-  5488309.463, _, _, _, _,
-  3940319.046, _, _, _, _,
+  2264599.33713396, _, _, _, _,
+  1971483.15010673, _, _, _, _,
+  1519186.93045889, _, _, _, _,
+  78495.3955823755, _, _, _, _,
+  249006.37440946, _, _, _, _,
+  867301.186507992, _, _, _, _,
+  949094.516540883, _, _, _, _,
+  112126.086039323, _, _, _, _,
+  486016.235631431, _, _, _, _,
+  389586.987942207, _, _, _, _,
+  665472.917853264, _, _, _, _,
+  138383.981481763, _, _, _, _,
+  459139.787729024, _, _, _, _,
+  389749.916308414, _, _, _, _,
+  391219.295288722, _, _, _, _,
+  1445655.772111, _, _, _, _,
+  108619.666145071, _, _, _, _,
+  45551.9522131629, _, _, _, _,
+  1157744.38815224, _, _, _, _,
+  669944.605664213, _, _, _, _,
+  273972.555834507, _, _, _, _,
+  196697.960865355, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -81810,28 +82029,28 @@ _, _, _, _, _ ;
 
  Striped_Bass3_Nums =
   _, _, _, _, _,
-  28926133.7, _, _, _, _,
-  25182108.05, _, _, _, _,
-  19404847.27, _, _, _, _,
-  1002635.773, _, _, _, _,
-  3180603.103, _, _, _, _,
-  11078193.69, _, _, _, _,
-  12122954.57, _, _, _, _,
-  1432206.617, _, _, _, _,
-  6207972.591, _, _, _, _,
-  4976264.506, _, _, _, _,
-  8500204.995, _, _, _, _,
-  1767603.428, _, _, _, _,
-  5864674.899, _, _, _, _,
-  4978345.619, _, _, _, _,
-  4997114.261, _, _, _, _,
-  18465620.59, _, _, _, _,
-  1387418.487, _, _, _, _,
-  581843.2596, _, _, _, _,
-  14788076.82, _, _, _, _,
-  8557322.666, _, _, _, _,
-  3499500.618, _, _, _, _,
-  2512458.35, _, _, _, _,
+  5196513.37323936, _, _, _, _,
+  4523907.7777049, _, _, _, _,
+  3486036.17034137, _, _, _, _,
+  180121.210049351, _, _, _, _,
+  571388.030289819, _, _, _, _,
+  1990172.0098616, _, _, _, _,
+  2177860.89874718, _, _, _, _,
+  257292.623926023, _, _, _, _,
+  1115247.99405202, _, _, _, _,
+  893974.470311328, _, _, _, _,
+  1527042.27209113, _, _, _, _,
+  317545.889297215, _, _, _, _,
+  1053575.35348383, _, _, _, _,
+  894348.337520415, _, _, _, _,
+  897720.080767143, _, _, _, _,
+  3317306.25797278, _, _, _, _,
+  249246.539316753, _, _, _, _,
+  104526.80302929, _, _, _, _,
+  2656643.97987504, _, _, _, _,
+  1537303.3302525, _, _, _, _,
+  628677.235283658, _, _, _, _,
+  451357.362587298, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -81906,28 +82125,28 @@ _, _, _, _, _ ;
 
  Striped_Bass4_Nums =
   _, _, _, _, _,
-  18444117.17, _, _, _, _,
-  16056821.01, _, _, _, _,
-  12373076.9, _, _, _, _,
-  639308.795, _, _, _, _,
-  2028042.078, _, _, _, _,
-  7063768.165, _, _, _, _,
-  7729937.114, _, _, _, _,
-  913215.2582, _, _, _, _,
-  3958378.088, _, _, _, _,
-  3173006.339, _, _, _, _,
-  5419970, _, _, _, _,
-  1127073.706, _, _, _, _,
-  3739481.816, _, _, _, _,
-  3174333.315, _, _, _, _,
-  3186300.73, _, _, _, _,
-  11774199.53, _, _, _, _,
-  884657.0853, _, _, _, _,
-  370999.6422, _, _, _, _,
-  9429294.089, _, _, _, _,
-  5456389.835, _, _, _, _,
-  2231380.111, _, _, _, _,
-  1602014.174, _, _, _, _,
+  2895399.57318157, _, _, _, _,
+  2520636.37825574, _, _, _, _,
+  1942353.82741062, _, _, _, _,
+  100360.15251756, _, _, _, _,
+  318366.670148854, _, _, _, _,
+  1108886.43481333, _, _, _, _,
+  1213463.15572947, _, _, _, _,
+  143358.613745621, _, _, _, _,
+  621395.219071071, _, _, _, _,
+  498105.770900979, _, _, _, _,
+  850839.250335017, _, _, _, _,
+  176930.600635321, _, _, _, _,
+  587032.383001468, _, _, _, _,
+  498314.082682335, _, _, _, _,
+  500192.754641062, _, _, _, _,
+  1848340.69183959, _, _, _, _,
+  138875.486642853, _, _, _, _,
+  58240.3698671476, _, _, _, _,
+  1480232.08889205, _, _, _, _,
+  856556.519066362, _, _, _, _,
+  350287.138311465, _, _, _, _,
+  251487.83831051, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -82002,28 +82221,28 @@ _, _, _, _, _ ;
 
  Striped_Bass5_Nums =
   _, _, _, _, _,
-  11760488.34, _, _, _, _,
-  10238281.1, _, _, _, _,
-  7889422.153, _, _, _, _,
-  407641.2853, _, _, _, _,
-  1293136.721, _, _, _, _,
-  4504057.438, _, _, _, _,
-  4928825.514, _, _, _, _,
-  582291.7571, _, _, _, _,
-  2523973.304, _, _, _, _,
-  2023198.167, _, _, _, _,
-  3455925.453, _, _, _, _,
-  718653.9242, _, _, _, _,
-  2384398.878, _, _, _, _,
-  2024044.285, _, _, _, _,
-  2031675.045, _, _, _, _,
-  7507561.081, _, _, _, _,
-  564082.2621, _, _, _, _,
-  236559.8161, _, _, _, _,
-  6012383.361, _, _, _, _,
-  3479147.765, _, _, _, _,
-  1422790.776, _, _, _, _,
-  1021489.337, _, _, _, _,
+  1765495.29577572, _, _, _, _,
+  1536980.14926543, _, _, _, _,
+  1184367.28967852, _, _, _, _,
+  61195.4836196884, _, _, _, _,
+  194126.870669513, _, _, _, _,
+  676153.233683466, _, _, _, _,
+  739919.80688297, _, _, _, _,
+  87414.1726486158, _, _, _, _,
+  378901.187334914, _, _, _, _,
+  303724.36449526, _, _, _, _,
+  518806.698682074, _, _, _, _,
+  107884.986236007, _, _, _, _,
+  357948.146520677, _, _, _, _,
+  303851.384431798, _, _, _, _,
+  304996.921143263, _, _, _, _,
+  1127041.95533464, _, _, _, _,
+  84680.5465599709, _, _, _, _,
+  35512.5765635523, _, _, _, _,
+  902584.504674618, _, _, _, _,
+  522292.853457867, _, _, _, _,
+  213590.656221614, _, _, _, _,
+  153346.916119811, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -82098,28 +82317,28 @@ _, _, _, _, _ ;
 
  Striped_Bass6_Nums =
   _, _, _, _, _,
-  7498818.44, _, _, _, _,
-  6528216.254, _, _, _, _,
-  5030517.665, _, _, _, _,
-  259923.5592, _, _, _, _,
-  824540.3775, _, _, _, _,
-  2871913.819, _, _, _, _,
-  3142757.902, _, _, _, _,
-  371285.6168, _, _, _, _,
-  1609356.433, _, _, _, _,
-  1290048.108, _, _, _, _,
-  2203595.359, _, _, _, _,
-  458233.9733, _, _, _, _,
-  1520359.849, _, _, _, _,
-  1290587.616, _, _, _, _,
-  1295453.203, _, _, _, _,
-  4787032.295, _, _, _, _,
-  359674.7301, _, _, _, _,
-  150837.1983, _, _, _, _,
-  3833664.889, _, _, _, _,
-  2218402.558, _, _, _, _,
-  907211.4524, _, _, _, _,
-  651330.3576, _, _, _, _,
+  1194374.51515082, _, _, _, _,
+  1039781.82494604, _, _, _, _,
+  801235.840590977, _, _, _, _,
+  41399.3321038959, _, _, _, _,
+  131328.691494344, _, _, _, _,
+  457424.153199748, _, _, _, _,
+  500562.852085106, _, _, _, _,
+  59136.5269136142, _, _, _, _,
+  256330.290426725, _, _, _, _,
+  205472.448129139, _, _, _, _,
+  350977.711851187, _, _, _, _,
+  72985.2288114235, _, _, _, _,
+  242155.357180899, _, _, _, _,
+  205558.378335512, _, _, _, _,
+  206333.344917195, _, _, _, _,
+  762454.701622974, _, _, _, _,
+  57287.2026236878, _, _, _, _,
+  24024.5989419149, _, _, _, _,
+  610607.081612034, _, _, _, _,
+  353336.129021735, _, _, _, _,
+  144496.129259493, _, _, _, _,
+  103740.660781539, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -82194,28 +82413,28 @@ _, _, _, _, _ ;
 
  Striped_Bass7_Nums =
   _, _, _, _, _,
-  4781457.742, _, _, _, _,
-  4162574.463, _, _, _, _,
-  3207599.68, _, _, _, _,
-  165734.5786, _, _, _, _,
-  525750.1568, _, _, _, _,
-  1831213.1, _, _, _, _,
-  2003910.912, _, _, _, _,
-  236742.1616, _, _, _, _,
-  1026170.967, _, _, _, _,
-  822570.9904, _, _, _, _,
-  1405074.435, _, _, _, _,
-  292182.8814, _, _, _, _,
-  969424.2405, _, _, _, _,
-  822914.9961, _, _, _, _,
-  826017.4317, _, _, _, _,
-  3052346.554, _, _, _, _,
-  229338.7334, _, _, _, _,
-  96178.04394, _, _, _, _,
-  2444452.657, _, _, _, _,
-  1414515.923, _, _, _, _,
-  578463.5616, _, _, _, _,
-  415306.572, _, _, _, _,
+  678180.58605804, _, _, _, _,
+  590400.949174104, _, _, _, _,
+  454951.596044462, _, _, _, _,
+  23507.0515591889, _, _, _, _,
+  74570.0513817671, _, _, _, _,
+  259731.077948306, _, _, _, _,
+  284225.763426554, _, _, _, _,
+  33578.4496160718, _, _, _, _,
+  145547.501542322, _, _, _, _,
+  116669.791194769, _, _, _, _,
+  199289.475199905, _, _, _, _,
+  41441.9134208177, _, _, _, _,
+  137498.799553086, _, _, _, _,
+  116718.583426167, _, _, _, _,
+  117158.619012889, _, _, _, _,
+  432931.186851457, _, _, _, _,
+  32528.3804670367, _, _, _, _,
+  13641.4636979924, _, _, _, _,
+  346710.234692632, _, _, _, _,
+  200628.613567815, _, _, _, _,
+  82046.6850064587, _, _, _, _,
+  58905.2271581571, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -82290,28 +82509,28 @@ _, _, _, _, _ ;
 
  Striped_Bass8_Nums =
   _, _, _, _, _,
-  3048792.062, _, _, _, _,
-  2654174.661, _, _, _, _,
-  2045255.855, _, _, _, _,
-  105677.033, _, _, _, _,
-  335233.1007, _, _, _, _,
-  1167633.024, _, _, _, _,
-  1277750.011, _, _, _, _,
-  150953.4669, _, _, _, _,
-  654315.4972, _, _, _, _,
-  524494.4202, _, _, _, _,
-  895915.0151, _, _, _, _,
-  186304.0306, _, _, _, _,
-  618132.1866, _, _, _, _,
-  524713.7679, _, _, _, _,
-  526691.9682, _, _, _, _,
-  1946262.091, _, _, _, _,
-  146232.8327, _, _, _, _,
-  61325.82838, _, _, _, _,
-  1558651.83, _, _, _, _,
-  901935.1734, _, _, _, _,
-  368844.6515, _, _, _, _,
-  264811.1619, _, _, _, _,
+  455097.290285718, _, _, _, _,
+  396192.220294927, _, _, _, _,
+  305298.091433831, _, _, _, _,
+  15774.5528066148, _, _, _, _,
+  50040.6956760107, _, _, _, _,
+  174294.151450609, _, _, _, _,
+  190731.462126732, _, _, _, _,
+  22533.0269642398, _, _, _, _,
+  97670.5540109611, _, _, _, _,
+  78291.9873002615, _, _, _, _,
+  133734.438894978, _, _, _, _,
+  27809.8531420588, _, _, _, _,
+  92269.422600064, _, _, _, _,
+  78324.7296298894, _, _, _, _,
+  78620.0182407159, _, _, _, _,
+  290521.159211443, _, _, _, _,
+  21828.3715462541, _, _, _, _,
+  9154.18885782736, _, _, _, _,
+  232662.05427685, _, _, _, _,
+  134633.076005922, _, _, _, _,
+  55057.9370612794, _, _, _, _,
+  39528.7181828111, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -82386,28 +82605,28 @@ _, _, _, _, _ ;
 
  Striped_Bass9_Nums =
   _, _, _, _, _,
-  1943995.647, _, _, _, _,
-  1692376.483, _, _, _, _,
-  1304112.711, _, _, _, _,
-  67382.65125, _, _, _, _,
-  213754.0624, _, _, _, _,
-  744515.6871, _, _, _, _,
-  814729.3778, _, _, _, _,
-  96252.18007, _, _, _, _,
-  417209.981, _, _, _, _,
-  334432.4077, _, _, _, _,
-  571260.6351, _, _, _, _,
-  118792.6947, _, _, _, _,
-  394138.4836, _, _, _, _,
-  334572.27, _, _, _, _,
-  335833.6261, _, _, _, _,
-  1240991.5, _, _, _, _,
-  93242.17079, _, _, _, _,
-  39103.0746, _, _, _, _,
-  993840.2852, _, _, _, _,
-  575099.2575, _, _, _, _,
-  235185.7334, _, _, _, _,
-  168851.0517, _, _, _, _,
+  280584.900737666, _, _, _, _,
+  244267.670182559, _, _, _, _,
+  188227.960282032, _, _, _, _,
+  9725.61566043673, _, _, _, _,
+  30852.0044588318, _, _, _, _,
+  107459.016407727, _, _, _, _,
+  117593.247665308, _, _, _, _,
+  13892.4736952643, _, _, _, _,
+  60217.63540924, _, _, _, _,
+  48270.0072140771, _, _, _, _,
+  82452.400977815, _, _, _, _,
+  17145.8390325611, _, _, _, _,
+  56887.6311373047, _, _, _, _,
+  48290.19411368, _, _, _, _,
+  48472.2508460014, _, _, _, _,
+  179117.415901021, _, _, _, _,
+  13458.026655631, _, _, _, _,
+  5643.90785626251, _, _, _, _,
+  143445.062842951, _, _, _, _,
+  83006.4451568408, _, _, _, _,
+  33945.3258345287, _, _, _, _,
+  24370.9679322591, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -82514,20 +82733,20 @@ _, _, _, _, _ ;
 
  Summerflounder10_Nums =
   _, _, _, _, _,
-  539.447831482233, _, _, _, _,
-  899.079719137055, _, _, _, _,
-  1618.36091678405, _, _, _, _,
-  599.398094316272, _, _, _, _,
-  779.214038143683, _, _, _, _,
-  719.263775309644, _, _, _, _,
-  119.883103330725, _, _, _, _,
+  19989.4750578428, _, _, _, _,
+  33315.7917630713, _, _, _, _,
+  59969.0707658501, _, _, _, _,
+  22210.9582369287, _, _, _, _,
+  28874.1165895429, _, _, _, _,
+  26652.6334104571, _, _, _, _,
+  4442.32076585008, _, _, _, _,
   _, _, _, _, _,
-  419.582150488861, _, _, _, _,
+  15547.7998843144, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  59.9328404966858, _, _, _, _,
-  239.748784324097, _, _, _, _,
+  2220.83758676418, _, _, _, _,
+  8883.99593937844, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -82610,20 +82829,20 @@ _, _, _, _, _ ;
 
  Summerflounder1_Nums =
   _, _, _, _, _,
-  30963, _, _, _, _,
-  51605, _, _, _, _,
-  92890, _, _, _, _,
-  34404, _, _, _, _,
-  44725, _, _, _, _,
-  41284, _, _, _, _,
-  6881, _, _, _, _,
+  948663.476732086, _, _, _, _,
+  1581105.79455348, _, _, _, _,
+  2846021.06881256, _, _, _, _,
+  1054090.95544652, _, _, _, _,
+  1370312.11435721, _, _, _, _,
+  1264884.63564279, _, _, _, _,
+  210824.318812566, _, _, _, _,
   _, _, _, _, _,
-  24083, _, _, _, _,
+  737869.796535827, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  3440, _, _, _, _,
-  13761, _, _, _, _,
+  105396.840098129, _, _, _, _,
+  421617.999008825, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -82706,20 +82925,20 @@ _, _, _, _, _ ;
 
  Summerflounder2_Nums =
   _, _, _, _, _,
-  19742.875764, _, _, _, _,
-  32904.79294, _, _, _, _,
-  59229.26492, _, _, _, _,
-  21936.953712, _, _, _, _,
-  28517.9123, _, _, _, _,
-  26323.834352, _, _, _, _,
-  4387.518268, _, _, _, _,
+  366861.006391773, _, _, _, _,
+  611435.010652955, _, _, _, _,
+  1100594.86754293, _, _, _, _,
+  407631.239347045, _, _, _, _,
+  529918.241477634, _, _, _, _,
+  489148.008522366, _, _, _, _,
+  81528.6175429315, _, _, _, _,
   _, _, _, _, _,
-  15355.995124, _, _, _, _,
+  285344.237216454, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  2193.44032, _, _, _, _,
-  8774.398908, _, _, _, _,
+  40758.3845876594, _, _, _, _,
+  163045.38671825, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -82802,20 +83021,20 @@ _, _, _, _, _ ;
 
  Summerflounder3_Nums =
   _, _, _, _, _,
-  12588.6103876478, _, _, _, _,
-  20981.0173127463, _, _, _, _,
-  37766.2377324098, _, _, _, _,
-  13987.6159214751, _, _, _, _,
-  18183.8193840244, _, _, _, _,
-  16784.8138501971, _, _, _, _,
-  2797.6044981883, _, _, _, _,
+  904199.951377181, _, _, _, _,
+  1506999.91896197, _, _, _, _,
+  2712629.05672662, _, _, _, _,
+  1004686.08103803, _, _, _, _,
+  1306086.06483042, _, _, _, _,
+  1205599.93516958, _, _, _, _,
+  200943.056726622, _, _, _, _,
   _, _, _, _, _,
-  9791.41245892587, _, _, _, _,
+  703286.097245637, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  1398.59896436096, _, _, _, _,
-  5594.80242691022, _, _, _, _,
+  100456.927065772, _, _, _, _,
+  401856.910858166, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -82898,20 +83117,20 @@ _, _, _, _, _ ;
 
  Summerflounder4_Nums =
   _, _, _, _, _,
-  8026.85046425509, _, _, _, _,
-  13378.0841070918, _, _, _, _,
-  24080.810632841, _, _, _, _,
-  8918.89556477835, _, _, _, _,
-  11594.5123861967, _, _, _, _,
-  10702.4672856734, _, _, _, _,
-  1783.83096097081, _, _, _, _,
+  544262.321321025, _, _, _, _,
+  907103.868868374, _, _, _, _,
+  1632804.54179214, _, _, _, _,
+  604747.631131626, _, _, _, _,
+  786168.404905298, _, _, _, _,
+  725683.095094702, _, _, _, _,
+  120953.041792138, _, _, _, _,
   _, _, _, _, _,
-  6243.27874335999, _, _, _, _,
+  423326.857357951, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  891.78586044755, _, _, _, _,
-  3567.40268186591, _, _, _, _,
+  60467.7319815368, _, _, _, _,
+  241888.505755212, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -82994,20 +83213,20 @@ _, _, _, _, _ ;
 
  Summerflounder5_Nums =
   _, _, _, _, _,
-  5118.14460782204, _, _, _, _,
-  8530.24101303674, _, _, _, _,
-  15354.5991221971, _, _, _, _,
-  5686.93754117849, _, _, _, _,
-  7392.98574378584, _, _, _, _,
-  6824.19281042939, _, _, _, _,
-  1137.4205679819, _, _, _, _,
+  356357.727804648, _, _, _, _,
+  593929.546341081, _, _, _, _,
+  1069084.69256124, _, _, _, _,
+  395960.703658919, _, _, _, _,
+  514746.612927134, _, _, _, _,
+  475143.637072866, _, _, _, _,
+  79194.4425612436, _, _, _, _,
   _, _, _, _, _,
-  3980.88933857114, _, _, _, _,
+  277174.794390703, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  568.62763462545, _, _, _, _,
-  2274.6758372328, _, _, _, _,
+  39591.4667069725, _, _, _, _,
+  158377.375975189, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -83090,20 +83309,20 @@ _, _, _, _, _ ;
 
  Summerflounder6_Nums =
   _, _, _, _, _,
-  3263.47230999635, _, _, _, _,
-  5439.12051666059, _, _, _, _,
-  9790.52232908831, _, _, _, _,
-  3626.15061050656, _, _, _, _,
-  4713.97471383867, _, _, _, _,
-  4351.29641332847, _, _, _, _,
-  725.251201921161, _, _, _, _,
+  256455.802163146, _, _, _, _,
+  427426.336938576, _, _, _, _,
+  769375.689142996, _, _, _, _,
+  284956.413061424, _, _, _, _,
+  370441.680449138, _, _, _, _,
+  341941.069550862, _, _, _, _,
+  56992.9391429966, _, _, _, _,
   _, _, _, _, _,
-  2538.32650717444, _, _, _, _,
+  199471.145673709, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  362.572901410957, _, _, _, _,
-  1450.39700474307, _, _, _, _,
+  28492.3282447186, _, _, _, _,
+  113977.595632434, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -83186,20 +83405,20 @@ _, _, _, _, _ ;
 
  Summerflounder7_Nums =
   _, _, _, _, _,
-  2080.88132207835, _, _, _, _,
-  3468.13553679726, _, _, _, _,
-  6242.71117165192, _, _, _, _,
-  2312.13516147608, _, _, _, _,
-  3005.76226883553, _, _, _, _,
-  2774.50842943781, _, _, _, _,
-  462.440473378586, _, _, _, _,
+  153379.871123952, _, _, _, _,
+  255633.11853992, _, _, _, _,
+  460144.567022056, _, _, _, _,
+  170425.38146008, _, _, _, _,
+  221552.005168063, _, _, _, _,
+  204506.494831937, _, _, _, _,
+  34086.0670220558, _, _, _, _,
   _, _, _, _, _,
-  1618.50805411662, _, _, _, _,
+  119298.757752096, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  231.186633980866, _, _, _, _,
-  924.813741340317, _, _, _, _,
+  17040.5566859282, _, _, _, _,
+  68167.1803939123, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -83282,20 +83501,20 @@ _, _, _, _, _ ;
 
  Summerflounder8_Nums =
   _, _, _, _, _,
-  1326.82819563418, _, _, _, _,
-  2211.38032605696, _, _, _, _,
-  3980.52743895807, _, _, _, _,
-  1474.28211874167, _, _, _, _,
-  1916.55818395306, _, _, _, _,
-  1769.10426084557, _, _, _, _,
-  294.864994159441, _, _, _, _,
+  107407.237466428, _, _, _, _,
+  179012.062444047, _, _, _, _,
+  322225.181289167, _, _, _, _,
+  119343.687555953, _, _, _, _,
+  155146.100044762, _, _, _, _,
+  143209.649955238, _, _, _, _,
+  23869.4312891674, _, _, _, _,
   _, _, _, _, _,
-  1032.00605353027, _, _, _, _,
+  83541.2750671441, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  147.411071051951, _, _, _, _,
-  589.687136263344, _, _, _, _,
+  11932.9811996419, _, _, _, _,
+  47735.3936884512, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -83378,20 +83597,20 @@ _, _, _, _, _ ;
 
  Summerflounder9_Nums =
   _, _, _, _, _,
-  846.022808725829, _, _, _, _,
-  1410.03801454305, _, _, _, _,
-  2538.09574984796, _, _, _, _,
-  940.043558809011, _, _, _, _,
-  1222.05116171762, _, _, _, _,
-  1128.03041163444, _, _, _, _,
-  188.014176495896, _, _, _, _,
+  68535.0987716402, _, _, _, _,
+  114225.1646194, _, _, _, _,
+  205607.50976642, _, _, _, _,
+  76151.5853805997, _, _, _, _,
+  98996.6183044794, _, _, _, _,
+  91380.1316955205, _, _, _, _,
+  15230.7597664198, _, _, _, _,
   _, _, _, _, _,
-  658.035955900402, _, _, _, _,
+  53306.5524567196, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  93.9934264127136, _, _, _, _,
-  376.001029321323, _, _, _, _,
+  7614.27315746026, _, _, _, _,
+  30459.3060813403, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -84543,19 +84762,19 @@ _, _, _, _, _ ;
  Tilefish10_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  12, _, _, _, _,
-  47, _, _, _, _,
+  137.340391502621, _, _, _, _,
+  548.1838798147, _, _, _, _,
   _, _, _, _, _,
-  99, _, _, _, _,
-  216, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  169, _, _, _, _,
+  1164.23333104776, _, _, _, _,
+  2534.82287234189, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  1986.65941644801, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  41, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  479.760108845019, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -84639,19 +84858,19 @@ _, _, _, _, _ ;
  Tilefish1_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  671, _, _, _, _,
-  2684, _, _, _, _,
+  48642.6348977764, _, _, _, _,
+  194153.431710322, _, _, _, _,
   _, _, _, _, _,
-  5702, _, _, _, _,
-  12411, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  9728, _, _, _, _,
+  412343.20245037, _, _, _, _,
+  897772.768526779, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  703626.570473742, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  2348, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  169919.391941011, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -84735,19 +84954,19 @@ _, _, _, _, _ ;
  Tilefish2_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  428, _, _, _, _,
-  1711, _, _, _, _,
+  8364.59315662451, _, _, _, _,
+  33386.6467067877, _, _, _, _,
   _, _, _, _, _,
-  3636, _, _, _, _,
-  7914, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  6203, _, _, _, _,
+  70906.5850697712, _, _, _, _,
+  154381.109732323, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  120995.706926084, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  1497, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  29219.3584084104, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -84831,19 +85050,19 @@ _, _, _, _, _ ;
  Tilefish3_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  273, _, _, _, _,
-  1091, _, _, _, _,
+  15045.7190738364, _, _, _, _,
+  60053.8600935931, _, _, _, _,
   _, _, _, _, _,
-  2318, _, _, _, _,
-  5046, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  3955, _, _, _, _,
+  127542.432664517, _, _, _, _,
+  277691.307137883, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  217639.684496591, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  955, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  52557.9965335807, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -84927,19 +85146,19 @@ _, _, _, _, _ ;
  Tilefish4_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  174, _, _, _, _,
-  696, _, _, _, _,
+  7246.68526987168, _, _, _, _,
+  28924.6011575443, _, _, _, _,
   _, _, _, _, _,
-  1478, _, _, _, _,
-  3218, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  2522, _, _, _, _,
+  61430.0894186431, _, _, _, _,
+  133748.443336739, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  104824.919835407, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  609, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  25314.2609817949, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -85023,19 +85242,19 @@ _, _, _, _, _ ;
  Tilefish5_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  111, _, _, _, _,
-  444, _, _, _, _,
+  3982.39023120028, _, _, _, _,
+  15895.4121507209, _, _, _, _,
   _, _, _, _, _,
-  943, _, _, _, _,
-  2052, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  1608, _, _, _, _,
+  33758.6881300968, _, _, _, _,
+  73500.9834630096, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  57606.1635344446, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  388, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  13911.362490528, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -85119,19 +85338,19 @@ _, _, _, _, _ ;
  Tilefish6_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  71, _, _, _, _,
-  283, _, _, _, _,
+  2487.80361778941, _, _, _, _,
+  9929.88169391391, _, _, _, _,
   _, _, _, _, _,
-  601, _, _, _, _,
-  1308, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  1025, _, _, _, _,
+  21089.0901157535, _, _, _, _,
+  45916.1463228184, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  35986.6345907456, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  247, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  8690.44365897926, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -85215,19 +85434,19 @@ _, _, _, _, _ ;
  Tilefish7_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  45, _, _, _, _,
-  180, _, _, _, _,
+  1326.21382867426, _, _, _, _,
+  5293.48310509725, _, _, _, _,
   _, _, _, _, _,
-  383, _, _, _, _,
-  834, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  654, _, _, _, _,
+  11242.3033497001, _, _, _, _,
+  24477.2649164575, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  19183.97903292, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  158, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  4632.75576715094, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -85311,19 +85530,19 @@ _, _, _, _, _ ;
  Tilefish8_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  29, _, _, _, _,
-  115, _, _, _, _,
+  845.873276814054, _, _, _, _,
+  3376.23979109345, _, _, _, _,
   _, _, _, _, _,
-  244, _, _, _, _,
-  532, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  417, _, _, _, _,
+  7170.4605756182, _, _, _, _,
+  15611.8597428793, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  12235.745741793, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  101, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  2954.82087180201, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -85407,19 +85626,19 @@ _, _, _, _, _ ;
  Tilefish9_Nums =
   _, _, _, _, _,
   _, _, _, _, _,
-  18, _, _, _, _,
-  73, _, _, _, _,
+  500.447457812206, _, _, _, _,
+  1997.49852221488, _, _, _, _,
   _, _, _, _, _,
-  156, _, _, _, _,
-  339, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  266, _, _, _, _,
+  4242.2888448805, _, _, _, _,
+  9236.50827399548, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
+  7239.08417343572, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  64, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  1748.17272766123, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -86526,28 +86745,28 @@ _, _, _, _, _ ;
 
  Tunas10_Nums =
   _, _, _, _, _,
-  3.902695044, _, _, _, _,
-  3.902695044, _, _, _, _,
-  3.902695044, _, _, _, _,
-  3.902695044, _, _, _, _,
-  3.902695044, _, _, _, _,
-  6.967046116, _, _, _, _,
-  6.967046116, _, _, _, _,
-  18.81102451, _, _, _, _,
-  6.967046116, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.81102451, _, _, _, _,
-  18.81102451, _, _, _, _,
-  18.81102451, _, _, _, _,
-  18.81102451, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
-  18.93759869, _, _, _, _,
+  2512.50578532807, _, _, _, _,
+  2512.50578532807, _, _, _, _,
+  2512.50578532807, _, _, _, _,
+  2512.50578532807, _, _, _, _,
+  2512.50578532807, _, _, _, _,
+  4485.29630835157, _, _, _, _,
+  4485.29630835157, _, _, _, _,
+  12110.300031566, _, _, _, _,
+  4485.29630835157, _, _, _, _,
+  12191.7868878306, _, _, _, _,
+  12191.7868878306, _, _, _, _,
+  12110.300031566, _, _, _, _,
+  12110.300031566, _, _, _, _,
+  12110.300031566, _, _, _, _,
+  12110.300031566, _, _, _, _,
+  12191.7868878306, _, _, _, _,
+  12191.7868878306, _, _, _, _,
+  12191.7868878306, _, _, _, _,
+  12191.7868878306, _, _, _, _,
+  12191.7868878306, _, _, _, _,
+  12191.7868878306, _, _, _, _,
+  12191.7868878306, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -86622,28 +86841,28 @@ _, _, _, _, _ ;
 
  Tunas1_Nums =
   _, _, _, _, _,
-  224.0047711, _, _, _, _,
-  224.0047711, _, _, _, _,
-  224.0047711, _, _, _, _,
-  224.0047711, _, _, _, _,
-  224.0047711, _, _, _, _,
-  399.8907302, _, _, _, _,
-  399.8907302, _, _, _, _,
-  1079.704971, _, _, _, _,
-  399.8907302, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1079.704971, _, _, _, _,
-  1079.704971, _, _, _, _,
-  1079.704971, _, _, _, _,
-  1079.704971, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
-  1086.970007, _, _, _, _,
+  45123.8978798197, _, _, _, _,
+  45123.8978798197, _, _, _, _,
+  45123.8978798197, _, _, _, _,
+  45123.8978798197, _, _, _, _,
+  45123.8978798197, _, _, _, _,
+  80554.6613109035, _, _, _, _,
+  80554.6613109035, _, _, _, _,
+  217497.58552178, _, _, _, _,
+  80554.6613109035, _, _, _, _,
+  218961.066562144, _, _, _, _,
+  218961.066562144, _, _, _, _,
+  217497.58552178, _, _, _, _,
+  217497.58552178, _, _, _, _,
+  217497.58552178, _, _, _, _,
+  217497.58552178, _, _, _, _,
+  218961.066562144, _, _, _, _,
+  218961.066562144, _, _, _, _,
+  218961.066562144, _, _, _, _,
+  218961.066562144, _, _, _, _,
+  218961.066562144, _, _, _, _,
+  218961.066562144, _, _, _, _,
+  218961.066562144, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -86718,28 +86937,28 @@ _, _, _, _, _ ;
 
  Tunas2_Nums =
   _, _, _, _, _,
-  142.8317482, _, _, _, _,
-  142.8317482, _, _, _, _,
-  142.8317482, _, _, _, _,
-  142.8317482, _, _, _, _,
-  142.8317482, _, _, _, _,
-  254.9815871, _, _, _, _,
-  254.9815871, _, _, _, _,
-  688.4502852, _, _, _, _,
-  254.9815871, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
-  688.4502852, _, _, _, _,
-  688.4502852, _, _, _, _,
-  688.4502852, _, _, _, _,
-  688.4502852, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
-  693.0826765, _, _, _, _,
+  23315.952827177, _, _, _, _,
+  23315.952827177, _, _, _, _,
+  23315.952827177, _, _, _, _,
+  23315.952827177, _, _, _, _,
+  23315.952827177, _, _, _, _,
+  41623.3696862039, _, _, _, _,
+  41623.3696862039, _, _, _, _,
+  112383.098143626, _, _, _, _,
+  41623.3696862039, _, _, _, _,
+  113139.292898597, _, _, _, _,
+  113139.292898597, _, _, _, _,
+  112383.098143626, _, _, _, _,
+  112383.098143626, _, _, _, _,
+  112383.098143626, _, _, _, _,
+  112383.098143626, _, _, _, _,
+  113139.292898597, _, _, _, _,
+  113139.292898597, _, _, _, _,
+  113139.292898597, _, _, _, _,
+  113139.292898597, _, _, _, _,
+  113139.292898597, _, _, _, _,
+  113139.292898597, _, _, _, _,
+  113139.292898597, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -86814,28 +87033,28 @@ _, _, _, _, _ ;
 
  Tunas3_Nums =
   _, _, _, _, _,
-  91.07354358, _, _, _, _,
-  91.07354358, _, _, _, _,
-  91.07354358, _, _, _, _,
-  91.07354358, _, _, _, _,
-  91.07354358, _, _, _, _,
-  162.5834381, _, _, _, _,
-  162.5834381, _, _, _, _,
-  438.9752829, _, _, _, _,
-  162.5834381, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
-  438.9752829, _, _, _, _,
-  438.9752829, _, _, _, _,
-  438.9752829, _, _, _, _,
-  438.9752829, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
-  441.929026, _, _, _, _,
+  70033.4492535615, _, _, _, _,
+  70033.4492535615, _, _, _, _,
+  70033.4492535615, _, _, _, _,
+  70033.4492535615, _, _, _, _,
+  70033.4492535615, _, _, _, _,
+  125022.904716261, _, _, _, _,
+  125022.904716261, _, _, _, _,
+  337561.842706497, _, _, _, _,
+  125022.904716261, _, _, _, _,
+  339833.202894547, _, _, _, _,
+  339833.202894547, _, _, _, _,
+  337561.842706497, _, _, _, _,
+  337561.842706497, _, _, _, _,
+  337561.842706497, _, _, _, _,
+  337561.842706497, _, _, _, _,
+  339833.202894547, _, _, _, _,
+  339833.202894547, _, _, _, _,
+  339833.202894547, _, _, _, _,
+  339833.202894547, _, _, _, _,
+  339833.202894547, _, _, _, _,
+  339833.202894547, _, _, _, _,
+  339833.202894547, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -86910,28 +87129,28 @@ _, _, _, _, _ ;
 
  Tunas4_Nums =
   _, _, _, _, _,
-  58.07105525, _, _, _, _,
-  58.07105525, _, _, _, _,
-  58.07105525, _, _, _, _,
-  58.07105525, _, _, _, _,
-  58.07105525, _, _, _, _,
-  103.6677771, _, _, _, _,
-  103.6677771, _, _, _, _,
-  279.9029982, _, _, _, _,
-  103.6677771, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
-  279.9029982, _, _, _, _,
-  279.9029982, _, _, _, _,
-  279.9029982, _, _, _, _,
-  279.9029982, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
-  281.786388, _, _, _, _,
+  48827.1099235112, _, _, _, _,
+  48827.1099235112, _, _, _, _,
+  48827.1099235112, _, _, _, _,
+  48827.1099235112, _, _, _, _,
+  48827.1099235112, _, _, _, _,
+  87165.5926789456, _, _, _, _,
+  87165.5926789456, _, _, _, _,
+  235347.100214044, _, _, _, _,
+  87165.5926789456, _, _, _, _,
+  236930.685697265, _, _, _, _,
+  236930.685697265, _, _, _, _,
+  235347.100214044, _, _, _, _,
+  235347.100214044, _, _, _, _,
+  235347.100214044, _, _, _, _,
+  235347.100214044, _, _, _, _,
+  236930.685697265, _, _, _, _,
+  236930.685697265, _, _, _, _,
+  236930.685697265, _, _, _, _,
+  236930.685697265, _, _, _, _,
+  236930.685697265, _, _, _, _,
+  236930.685697265, _, _, _, _,
+  236930.685697265, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -87006,28 +87225,28 @@ _, _, _, _, _ ;
 
  Tunas5_Nums =
   _, _, _, _, _,
-  37.02773962, _, _, _, _,
-  37.02773962, _, _, _, _,
-  37.02773962, _, _, _, _,
-  37.02773962, _, _, _, _,
-  37.02773962, _, _, _, _,
-  66.10149311, _, _, _, _,
-  66.10149311, _, _, _, _,
-  178.4740314, _, _, _, _,
-  66.10149311, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
-  178.4740314, _, _, _, _,
-  178.4740314, _, _, _, _,
-  178.4740314, _, _, _, _,
-  178.4740314, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
-  179.6749337, _, _, _, _,
+  35659.7241816965, _, _, _, _,
+  35659.7241816965, _, _, _, _,
+  35659.7241816965, _, _, _, _,
+  35659.7241816965, _, _, _, _,
+  35659.7241816965, _, _, _, _,
+  63659.3277368767, _, _, _, _,
+  63659.3277368767, _, _, _, _,
+  171880.184875611, _, _, _, _,
+  63659.3277368767, _, _, _, _,
+  173036.71905587, _, _, _, _,
+  173036.71905587, _, _, _, _,
+  171880.184875611, _, _, _, _,
+  171880.184875611, _, _, _, _,
+  171880.184875611, _, _, _, _,
+  171880.184875611, _, _, _, _,
+  173036.71905587, _, _, _, _,
+  173036.71905587, _, _, _, _,
+  173036.71905587, _, _, _, _,
+  173036.71905587, _, _, _, _,
+  173036.71905587, _, _, _, _,
+  173036.71905587, _, _, _, _,
+  173036.71905587, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -87102,28 +87321,28 @@ _, _, _, _, _ ;
 
  Tunas6_Nums =
   _, _, _, _, _,
-  23.60992918, _, _, _, _,
-  23.60992918, _, _, _, _,
-  23.60992918, _, _, _, _,
-  23.60992918, _, _, _, _,
-  23.60992918, _, _, _, _,
-  42.14817287, _, _, _, _,
-  42.14817287, _, _, _, _,
-  113.8000667, _, _, _, _,
-  42.14817287, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
-  113.8000667, _, _, _, _,
-  113.8000667, _, _, _, _,
-  113.8000667, _, _, _, _,
-  113.8000667, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
-  114.5657959, _, _, _, _,
+  27804.034938299, _, _, _, _,
+  27804.034938299, _, _, _, _,
+  27804.034938299, _, _, _, _,
+  27804.034938299, _, _, _, _,
+  27804.034938299, _, _, _, _,
+  49635.4420333191, _, _, _, _,
+  49635.4420333191, _, _, _, _,
+  134015.69347908, _, _, _, _,
+  49635.4420333191, _, _, _, _,
+  134917.447979239, _, _, _, _,
+  134917.447979239, _, _, _, _,
+  134015.69347908, _, _, _, _,
+  134015.69347908, _, _, _, _,
+  134015.69347908, _, _, _, _,
+  134015.69347908, _, _, _, _,
+  134917.447979239, _, _, _, _,
+  134917.447979239, _, _, _, _,
+  134917.447979239, _, _, _, _,
+  134917.447979239, _, _, _, _,
+  134917.447979239, _, _, _, _,
+  134917.447979239, _, _, _, _,
+  134917.447979239, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -87198,28 +87417,28 @@ _, _, _, _, _ ;
 
  Tunas7_Nums =
   _, _, _, _, _,
-  15.0543555, _, _, _, _,
-  15.0543555, _, _, _, _,
-  15.0543555, _, _, _, _,
-  15.0543555, _, _, _, _,
-  15.0543555, _, _, _, _,
-  26.87486156, _, _, _, _,
-  26.87486156, _, _, _, _,
-  72.56212621, _, _, _, _,
-  26.87486156, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
-  72.56212621, _, _, _, _,
-  72.56212621, _, _, _, _,
-  72.56212621, _, _, _, _,
-  72.56212621, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
-  73.05037666, _, _, _, _,
+  17619.5394400326, _, _, _, _,
+  17619.5394400326, _, _, _, _,
+  17619.5394400326, _, _, _, _,
+  17619.5394400326, _, _, _, _,
+  17619.5394400326, _, _, _, _,
+  31454.1983014434, _, _, _, _,
+  31454.1983014434, _, _, _, _,
+  84926.3354070018, _, _, _, _,
+  31454.1983014434, _, _, _, _,
+  85497.7812067221, _, _, _, _,
+  85497.7812067221, _, _, _, _,
+  84926.3354070018, _, _, _, _,
+  84926.3354070018, _, _, _, _,
+  84926.3354070018, _, _, _, _,
+  84926.3354070018, _, _, _, _,
+  85497.7812067221, _, _, _, _,
+  85497.7812067221, _, _, _, _,
+  85497.7812067221, _, _, _, _,
+  85497.7812067221, _, _, _, _,
+  85497.7812067221, _, _, _, _,
+  85497.7812067221, _, _, _, _,
+  85497.7812067221, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -87294,28 +87513,28 @@ _, _, _, _, _ ;
 
  Tunas8_Nums =
   _, _, _, _, _,
-  9.599080871, _, _, _, _,
-  9.599080871, _, _, _, _,
-  9.599080871, _, _, _, _,
-  9.599080871, _, _, _, _,
-  9.599080871, _, _, _, _,
-  17.1361683, _, _, _, _,
-  17.1361683, _, _, _, _,
-  46.26765442, _, _, _, _,
-  17.1361683, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.26765442, _, _, _, _,
-  46.26765442, _, _, _, _,
-  46.26765442, _, _, _, _,
-  46.26765442, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
-  46.57897665, _, _, _, _,
+  12856.6632082704, _, _, _, _,
+  12856.6632082704, _, _, _, _,
+  12856.6632082704, _, _, _, _,
+  12856.6632082704, _, _, _, _,
+  12856.6632082704, _, _, _, _,
+  22951.5666640524, _, _, _, _,
+  22951.5666640524, _, _, _, _,
+  61969.2299879098, _, _, _, _,
+  22951.5666640524, _, _, _, _,
+  62386.2037807714, _, _, _, _,
+  62386.2037807714, _, _, _, _,
+  61969.2299879098, _, _, _, _,
+  61969.2299879098, _, _, _, _,
+  61969.2299879098, _, _, _, _,
+  61969.2299879098, _, _, _, _,
+  62386.2037807714, _, _, _, _,
+  62386.2037807714, _, _, _, _,
+  62386.2037807714, _, _, _, _,
+  62386.2037807714, _, _, _, _,
+  62386.2037807714, _, _, _, _,
+  62386.2037807714, _, _, _, _,
+  62386.2037807714, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -87390,28 +87609,28 @@ _, _, _, _, _ ;
 
  Tunas9_Nums =
   _, _, _, _, _,
-  6.120644193, _, _, _, _,
-  6.120644193, _, _, _, _,
-  6.120644193, _, _, _, _,
-  6.120644193, _, _, _, _,
-  6.120644193, _, _, _, _,
-  10.92650332, _, _, _, _,
-  10.92650332, _, _, _, _,
-  29.50155896, _, _, _, _,
-  10.92650332, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.50155896, _, _, _, _,
-  29.50155896, _, _, _, _,
-  29.50155896, _, _, _, _,
-  29.50155896, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
-  29.70006678, _, _, _, _,
+  8443.79141215528, _, _, _, _,
+  8443.79141215528, _, _, _, _,
+  8443.79141215528, _, _, _, _,
+  8443.79141215528, _, _, _, _,
+  8443.79141215528, _, _, _, _,
+  15073.7589026031, _, _, _, _,
+  15073.7589026031, _, _, _, _,
+  40699.1490337238, _, _, _, _,
+  15073.7589026031, _, _, _, _,
+  40973.0023403106, _, _, _, _,
+  40973.0023403106, _, _, _, _,
+  40699.1490337238, _, _, _, _,
+  40699.1490337238, _, _, _, _,
+  40699.1490337238, _, _, _, _,
+  40699.1490337238, _, _, _, _,
+  40973.0023403106, _, _, _, _,
+  40973.0023403106, _, _, _, _,
+  40973.0023403106, _, _, _, _,
+  40973.0023403106, _, _, _, _,
+  40973.0023403106, _, _, _, _,
+  40973.0023403106, _, _, _, _,
+  40973.0023403106, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -88512,26 +88731,26 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  16582, _, _, _, _,
+  3838.40473691994, _, _, _, _,
   _, _, _, _, _,
-  16582, _, _, _, _,
-  41456, _, _, _, _,
-  8291, _, _, _, _,
-  16582, _, _, _, _,
-  33165, _, _, _, _,
-  58038, _, _, _, _,
-  116076, _, _, _, _,
-  66329, _, _, _, _,
-  8291, _, _, _, _,
-  33165, _, _, _, _,
-  16582, _, _, _, _,
-  99494, _, _, _, _,
-  24874, _, _, _, _,
-  33165, _, _, _, _,
-  82912, _, _, _, _,
-  99494, _, _, _, _,
-  33165, _, _, _, _,
-  24874, _, _, _, _,
+  3838.40473691994, _, _, _, _,
+  9596.05810543648, _, _, _, _,
+  1919.21009189151, _, _, _, _,
+  3838.40473691994, _, _, _, _,
+  7676.85183982113, _, _, _, _,
+  13434.4666686326, _, _, _, _,
+  26868.9313008112, _, _, _, _,
+  15353.6727651376, _, _, _, _,
+  1919.21009189151, _, _, _, _,
+  7676.85183982113, _, _, _, _,
+  3838.40473691994, _, _, _, _,
+  23030.5227376151, _, _, _, _,
+  5757.63797644924, _, _, _, _,
+  7676.85183982113, _, _, _, _,
+  19192.1032411064, _, _, _, _,
+  23030.5227376151, _, _, _, _,
+  7676.85183982113, _, _, _, _,
+  5757.63797644924, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -88608,26 +88827,26 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  951786, _, _, _, _,
+  310329.086003585, _, _, _, _,
   _, _, _, _, _,
-  951786, _, _, _, _,
-  2379465, _, _, _, _,
-  475893, _, _, _, _,
-  951786, _, _, _, _,
-  1903572, _, _, _, _,
-  3331251, _, _, _, _,
-  6662503, _, _, _, _,
-  3807144, _, _, _, _,
-  475893, _, _, _, _,
-  1903572, _, _, _, _,
-  951786, _, _, _, _,
-  5710717, _, _, _, _,
-  1427679, _, _, _, _,
-  1903572, _, _, _, _,
-  4758931, _, _, _, _,
-  5710717, _, _, _, _,
-  1903572, _, _, _, _,
-  1427679, _, _, _, _,
+  310329.086003585, _, _, _, _,
+  775826.455312003, _, _, _, _,
+  155165.167429286, _, _, _, _,
+  310329.086003585, _, _, _, _,
+  620661.597231226, _, _, _, _,
+  1086155.8506641, _, _, _, _,
+  2172311.53668404, _, _, _, _,
+  1241320.69507256, _, _, _, _,
+  155165.167429286, _, _, _, _,
+  620661.597231226, _, _, _, _,
+  310329.086003585, _, _, _, _,
+  1861982.14133194, _, _, _, _,
+  465496.124883583, _, _, _, _,
+  620661.597231226, _, _, _, _,
+  1551651.86203844, _, _, _, _,
+  1861982.14133194, _, _, _, _,
+  620661.597231226, _, _, _, _,
+  465496.124883583, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -88704,26 +88923,26 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  606885, _, _, _, _,
+  287316.23751216, _, _, _, _,
   _, _, _, _, _,
-  606885, _, _, _, _,
-  1517214, _, _, _, _,
-  303443, _, _, _, _,
-  606885, _, _, _, _,
-  1213771, _, _, _, _,
-  2124099, _, _, _, _,
-  4248198, _, _, _, _,
-  2427542, _, _, _, _,
-  303443, _, _, _, _,
-  1213771, _, _, _, _,
-  606885, _, _, _, _,
-  3641313, _, _, _, _,
-  910328, _, _, _, _,
-  1213771, _, _, _, _,
-  3034428, _, _, _, _,
-  3641313, _, _, _, _,
-  1213771, _, _, _, _,
-  910328, _, _, _, _,
+  287316.23751216, _, _, _, _,
+  718294.056716507, _, _, _, _,
+  143658.696878358, _, _, _, _,
+  287316.23751216, _, _, _, _,
+  574635.646246525, _, _, _, _,
+  1005610.58063704, _, _, _, _,
+  2011221.00883933, _, _, _, _,
+  1149268.9784486, _, _, _, _,
+  143658.696878358, _, _, _, _,
+  574635.646246525, _, _, _, _,
+  287316.23751216, _, _, _, _,
+  1723904.48491879, _, _, _, _,
+  430976.66706142, _, _, _, _,
+  574635.646246525, _, _, _, _,
+  1436587.14260664, _, _, _, _,
+  1723904.48491879, _, _, _, _,
+  574635.646246525, _, _, _, _,
+  430976.66706142, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -88800,26 +89019,26 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  386967, _, _, _, _,
+  679135.199478394, _, _, _, _,
   _, _, _, _, _,
-  386967, _, _, _, _,
-  967418, _, _, _, _,
-  193484, _, _, _, _,
-  386967, _, _, _, _,
-  773934, _, _, _, _,
-  1354385, _, _, _, _,
-  2708770, _, _, _, _,
-  1547869, _, _, _, _,
-  193484, _, _, _, _,
-  773934, _, _, _, _,
-  386967, _, _, _, _,
-  2321803, _, _, _, _,
-  580451, _, _, _, _,
-  773934, _, _, _, _,
-  1934836, _, _, _, _,
-  2321803, _, _, _, _,
-  773934, _, _, _, _,
-  580451, _, _, _, _,
+  679135.199478394, _, _, _, _,
+  1697846.18410807, _, _, _, _,
+  339568.966258514, _, _, _, _,
+  679135.199478394, _, _, _, _,
+  1358277.89483883, _, _, _, _,
+  2376982.06057574, _, _, _, _,
+  4753963.76083837, _, _, _, _,
+  2716550.31992401, _, _, _, _,
+  339568.966258514, _, _, _, _,
+  1358277.89483883, _, _, _, _,
+  679135.199478394, _, _, _, _,
+  4074827.88437069, _, _, _, _,
+  1018708.26128615, _, _, _, _,
+  1358277.89483883, _, _, _, _,
+  3395690.07345423, _, _, _, _,
+  4074827.88437069, _, _, _, _,
+  1358277.89483883, _, _, _, _,
+  1018708.26128615, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -88896,26 +89115,26 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  246741, _, _, _, _,
+  338019.095896687, _, _, _, _,
   _, _, _, _, _,
-  246741, _, _, _, _,
-  616853, _, _, _, _,
-  123371, _, _, _, _,
-  246741, _, _, _, _,
-  493482, _, _, _, _,
-  863594, _, _, _, _,
-  1727188, _, _, _, _,
-  986964, _, _, _, _,
-  123371, _, _, _, _,
-  493482, _, _, _, _,
-  246741, _, _, _, _,
-  1480447, _, _, _, _,
-  370112, _, _, _, _,
-  493482, _, _, _, _,
-  1233706, _, _, _, _,
-  1480447, _, _, _, _,
-  493482, _, _, _, _,
-  370112, _, _, _, _,
+  338019.095896687, _, _, _, _,
+  845051.813784111, _, _, _, _,
+  169010.228092186, _, _, _, _,
+  338019.095896687, _, _, _, _,
+  676041.922642949, _, _, _, _,
+  1183071.24663182, _, _, _, _,
+  2366142.31392864, _, _, _, _,
+  1352081.12288072, _, _, _, _,
+  169010.228092186, _, _, _, _,
+  676041.922642949, _, _, _, _,
+  338019.095896687, _, _, _, _,
+  2028122.88108093, _, _, _, _,
+  507031.362425185, _, _, _, _,
+  676041.922642949, _, _, _, _,
+  1690102.48541958, _, _, _, _,
+  2028122.88108093, _, _, _, _,
+  676041.922642949, _, _, _, _,
+  507031.362425185, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -88992,26 +89211,26 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  157329, _, _, _, _,
+  177082.495846974, _, _, _, _,
   _, _, _, _, _,
-  157329, _, _, _, _,
-  393323, _, _, _, _,
-  78665, _, _, _, _,
-  157329, _, _, _, _,
-  314658, _, _, _, _,
-  550652, _, _, _, _,
-  1101303, _, _, _, _,
-  629316, _, _, _, _,
-  78665, _, _, _, _,
-  314658, _, _, _, _,
-  157329, _, _, _, _,
-  943974, _, _, _, _,
-  235994, _, _, _, _,
-  314658, _, _, _, _,
-  786645, _, _, _, _,
-  943974, _, _, _, _,
-  314658, _, _, _, _,
-  235994, _, _, _, _,
+  177082.495846974, _, _, _, _,
+  442708.373939441, _, _, _, _,
+  88541.6042393594, _, _, _, _,
+  177082.495846974, _, _, _, _,
+  354166.946223033, _, _, _, _,
+  619791.046309366, _, _, _, _,
+  1239581.99866815, _, _, _, _,
+  708332.466223969, _, _, _, _,
+  88541.6042393594, _, _, _, _,
+  354166.946223033, _, _, _, _,
+  177082.495846974, _, _, _, _,
+  1062499.32629823, _, _, _, _,
+  265625.167988692, _, _, _, _,
+  354166.946223033, _, _, _, _,
+  885416.149526495, _, _, _, _,
+  1062499.32629823, _, _, _, _,
+  354166.946223033, _, _, _, _,
+  265625.167988692, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -89088,26 +89307,26 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  100317, _, _, _, _,
+  102054.714188372, _, _, _, _,
   _, _, _, _, _,
-  100317, _, _, _, _,
-  250793, _, _, _, _,
-  50159, _, _, _, _,
-  100317, _, _, _, _,
-  200635, _, _, _, _,
-  351111, _, _, _, _,
-  702222, _, _, _, _,
-  401270, _, _, _, _,
-  50159, _, _, _, _,
-  200635, _, _, _, _,
-  100317, _, _, _, _,
-  601904, _, _, _, _,
-  150476, _, _, _, _,
-  200635, _, _, _, _,
-  501587, _, _, _, _,
-  601904, _, _, _, _,
-  200635, _, _, _, _,
-  150476, _, _, _, _,
+  102054.714188372, _, _, _, _,
+  255138.015505675, _, _, _, _,
+  51027.5624431924, _, _, _, _,
+  102054.714188372, _, _, _, _,
+  204110.554794725, _, _, _, _,
+  357192.831426289, _, _, _, _,
+  714385.608707762, _, _, _, _,
+  408220.287640968, _, _, _, _,
+  51027.5624431924, _, _, _, _,
+  204110.554794725, _, _, _, _,
+  102054.714188372, _, _, _, _,
+  612330.792787145, _, _, _, _,
+  153082.892076189, _, _, _, _,
+  204110.554794725, _, _, _, _,
+  510275.686173869, _, _, _, _,
+  612330.792787145, _, _, _, _,
+  204110.554794725, _, _, _, _,
+  153082.892076189, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -89184,26 +89403,26 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  63965, _, _, _, _,
+  49521.6030816851, _, _, _, _,
   _, _, _, _, _,
-  63965, _, _, _, _,
-  159913, _, _, _, _,
-  31983, _, _, _, _,
-  63965, _, _, _, _,
-  127930, _, _, _, _,
-  223878, _, _, _, _,
-  447756, _, _, _, _,
-  255861, _, _, _, _,
-  31983, _, _, _, _,
-  127930, _, _, _, _,
-  63965, _, _, _, _,
-  383791, _, _, _, _,
-  95948, _, _, _, _,
-  127930, _, _, _, _,
-  319826, _, _, _, _,
-  383791, _, _, _, _,
-  127930, _, _, _, _,
-  95948, _, _, _, _,
+  49521.6030816851, _, _, _, _,
+  123804.604573185, _, _, _, _,
+  24760.9011855484, _, _, _, _,
+  49521.6030816851, _, _, _, _,
+  99043.7527527614, _, _, _, _,
+  173326.257019995, _, _, _, _,
+  346652.487766454, _, _, _, _,
+  198087.106658622, _, _, _, _,
+  24760.9011855484, _, _, _, _,
+  99043.7527527614, _, _, _, _,
+  49521.6030816851, _, _, _, _,
+  297130.835319644, _, _, _, _,
+  74282.8029090417, _, _, _, _,
+  99043.7527527614, _, _, _, _,
+  247609.041815492, _, _, _, _,
+  297130.835319644, _, _, _, _,
+  99043.7527527614, _, _, _, _,
+  74282.8029090417, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -89280,26 +89499,26 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  40786, _, _, _, _,
+  28632.106146939, _, _, _, _,
   _, _, _, _, _,
-  40786, _, _, _, _,
-  101965, _, _, _, _,
-  20393, _, _, _, _,
-  40786, _, _, _, _,
-  81572, _, _, _, _,
-  142751, _, _, _, _,
-  285502, _, _, _, _,
-  163144, _, _, _, _,
-  20393, _, _, _, _,
-  81572, _, _, _, _,
-  40786, _, _, _, _,
-  244716, _, _, _, _,
-  61179, _, _, _, _,
-  81572, _, _, _, _,
-  203930, _, _, _, _,
-  244716, _, _, _, _,
-  81572, _, _, _, _,
-  61179, _, _, _, _,
+  28632.106146939, _, _, _, _,
+  71580.6104615025, _, _, _, _,
+  14316.1106854533, _, _, _, _,
+  28632.106146939, _, _, _, _,
+  57264.5283176837, _, _, _, _,
+  100212.745150076, _, _, _, _,
+  200425.475109476, _, _, _, _,
+  114528.826032437, _, _, _, _,
+  14316.1106854533, _, _, _, _,
+  57264.5283176837, _, _, _, _,
+  28632.106146939, _, _, _, _,
+  171793.340420902, _, _, _, _,
+  42948.3894993381, _, _, _, _,
+  57264.5283176837, _, _, _, _,
+  143161.124176633, _, _, _, _,
+  171793.340420902, _, _, _, _,
+  57264.5283176837, _, _, _, _,
+  42948.3894993381, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -89376,26 +89595,26 @@ _, _, _, _, _ ;
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  26006, _, _, _, _,
+  15366.5788961456, _, _, _, _,
   _, _, _, _, _,
-  26006, _, _, _, _,
-  65016, _, _, _, _,
-  13003, _, _, _, _,
-  26006, _, _, _, _,
-  52013, _, _, _, _,
-  91022, _, _, _, _,
-  182044, _, _, _, _,
-  104025, _, _, _, _,
-  13003, _, _, _, _,
-  52013, _, _, _, _,
-  26006, _, _, _, _,
-  156038, _, _, _, _,
-  39009, _, _, _, _,
-  52013, _, _, _, _,
-  130031, _, _, _, _,
-  156038, _, _, _, _,
-  52013, _, _, _, _,
-  39009, _, _, _, _,
+  15366.5788961456, _, _, _, _,
+  38416.632449113, _, _, _, _,
+  7683.32036787629, _, _, _, _,
+  15366.5788961456, _, _, _, _,
+  30733.3273992604, _, _, _, _,
+  53783.2266632823, _, _, _, _,
+  107566.445173873, _, _, _, _,
+  61466.5310361225, _, _, _, _,
+  7683.32036787629, _, _, _, _,
+  30733.3273992604, _, _, _, _,
+  15366.5788961456, _, _, _, _,
+  92199.8509597035, _, _, _, _,
+  23049.9919327285, _, _, _, _,
+  30733.3273992604, _, _, _, _,
+  76833.2129753688, _, _, _, _,
+  92199.8509597035, _, _, _, _,
+  30733.3273992604, _, _, _, _,
+  23049.9919327285, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -89502,24 +89721,24 @@ _, _, _, _, _ ;
 
  Windowpane10_Nums =
   _, _, _, _, _,
-  14327.0674770942, _, _, _, _,
-  12280.343551795, _, _, _, _,
-  4093.44785059834, _, _, _, _,
-  40934.4610836461, _, _, _, _,
-  16373.7914023934, _, _, _, _,
-  14327.0674770942, _, _, _, _,
-  20467.2392529917, _, _, _, _,
-  4093.44785059834, _, _, _, _,
-  18420.5153276926, _, _, _, _,
+  23409.8219927153, _, _, _, _,
+  20065.5617080417, _, _, _, _,
+  6688.52056934726, _, _, _, _,
+  66885.1772261104, _, _, _, _,
+  26754.082277389, _, _, _, _,
+  23409.8219927153, _, _, _, _,
+  33442.6028467361, _, _, _, _,
+  6688.52056934726, _, _, _, _,
+  30098.3425620626, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  8186.89570119669, _, _, _, _,
-  20467.2392529917, _, _, _, _,
-  18420.5153276926, _, _, _, _,
-  6140.17177589752, _, _, _, _,
+  13377.0411386945, _, _, _, _,
+  33442.6028467361, _, _, _, _,
+  30098.3425620626, _, _, _, _,
+  10032.7808540209, _, _, _, _,
   _, _, _, _, _,
-  2046.72392529917, _, _, _, _,
-  4093.44785059834, _, _, _, _,
+  3344.26028467361, _, _, _, _,
+  6688.52056934726, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -89598,24 +89817,24 @@ _, _, _, _, _ ;
 
  Windowpane1_Nums =
   _, _, _, _, _,
-  822339, _, _, _, _,
-  704862, _, _, _, _,
-  234954, _, _, _, _,
-  2349539, _, _, _, _,
-  939816, _, _, _, _,
-  822339, _, _, _, _,
-  1174770, _, _, _, _,
-  234954, _, _, _, _,
-  1057293, _, _, _, _,
+  1034423.54805328, _, _, _, _,
+  886648.755474241, _, _, _, _,
+  295549.585158081, _, _, _, _,
+  2955494.59367677, _, _, _, _,
+  1182198.34063232, _, _, _, _,
+  1034423.54805328, _, _, _, _,
+  1477747.9257904, _, _, _, _,
+  295549.585158081, _, _, _, _,
+  1329973.13321136, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  469908, _, _, _, _,
-  1174770, _, _, _, _,
-  1057293, _, _, _, _,
-  352431, _, _, _, _,
+  591099.170316161, _, _, _, _,
+  1477747.9257904, _, _, _, _,
+  1329973.13321136, _, _, _, _,
+  443324.377737121, _, _, _, _,
   _, _, _, _, _,
-  117477, _, _, _, _,
-  234954, _, _, _, _,
+  147774.79257904, _, _, _, _,
+  295549.585158081, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -89694,24 +89913,24 @@ _, _, _, _, _ ;
 
  Windowpane2_Nums =
   _, _, _, _, _,
-  524346.371892, _, _, _, _,
-  449439.747336, _, _, _, _,
-  149813.249112, _, _, _, _,
-  1498131.853492, _, _, _, _,
-  599252.996448, _, _, _, _,
-  524346.371892, _, _, _, _,
-  749066.24556, _, _, _, _,
-  149813.249112, _, _, _, _,
-  674159.621004, _, _, _, _,
+  440862.907527593, _, _, _, _,
+  377882.492166508, _, _, _, _,
+  125960.83072217, _, _, _, _,
+  1259607.77111322, _, _, _, _,
+  503843.322888678, _, _, _, _,
+  440862.907527593, _, _, _, _,
+  629804.153610846, _, _, _, _,
+  125960.83072217, _, _, _, _,
+  566823.738249763, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  299626.498224, _, _, _, _,
-  749066.24556, _, _, _, _,
-  674159.621004, _, _, _, _,
-  224719.873668, _, _, _, _,
+  251921.661444339, _, _, _, _,
+  629804.153610846, _, _, _, _,
+  566823.738249763, _, _, _, _,
+  188941.246083254, _, _, _, _,
   _, _, _, _, _,
-  74906.624556, _, _, _, _,
-  149813.249112, _, _, _, _,
+  62980.4153610846, _, _, _, _,
+  125960.83072217, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -89790,24 +90009,24 @@ _, _, _, _, _ ;
 
  Windowpane3_Nums =
   _, _, _, _, _,
-  334337.928416752, _, _, _, _,
-  286575.367214359, _, _, _, _,
-  95525.1224047863, _, _, _, _,
-  955250.817478397, _, _, _, _,
-  382100.489619145, _, _, _, _,
-  334337.928416752, _, _, _, _,
-  477625.612023932, _, _, _, _,
-  95525.1224047863, _, _, _, _,
-  429863.050821538, _, _, _, _,
+  1105403.62409532, _, _, _, _,
+  947488.820653133, _, _, _, _,
+  315829.606884379, _, _, _, _,
+  3158294.72462488, _, _, _, _,
+  1263318.42753751, _, _, _, _,
+  1105403.62409532, _, _, _, _,
+  1579148.03442189, _, _, _, _,
+  315829.606884379, _, _, _, _,
+  1421233.2309797, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  191050.244809573, _, _, _, _,
-  477625.612023932, _, _, _, _,
-  429863.050821538, _, _, _, _,
-  143287.683607179, _, _, _, _,
+  631659.213768756, _, _, _, _,
+  1579148.03442189, _, _, _, _,
+  1421233.2309797, _, _, _, _,
+  473744.410326567, _, _, _, _,
   _, _, _, _, _,
-  47762.5612023932, _, _, _, _,
-  95525.1224047863, _, _, _, _,
+  157914.803442189, _, _, _, _,
+  315829.606884379, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -89886,24 +90105,24 @@ _, _, _, _, _ ;
 
  Windowpane4_Nums =
   _, _, _, _, _,
-  213183.224620517, _, _, _, _,
-  182728.478246157, _, _, _, _,
-  60909.4927487191, _, _, _, _,
-  609094.668247115, _, _, _, _,
-  243637.970994876, _, _, _, _,
-  213183.224620517, _, _, _, _,
-  304547.463743596, _, _, _, _,
-  60909.4927487191, _, _, _, _,
-  274092.717369236, _, _, _, _,
+  664448.526559882, _, _, _, _,
+  569527.308479898, _, _, _, _,
+  189842.436159967, _, _, _, _,
+  1898423.55360135, _, _, _, _,
+  759369.744639865, _, _, _, _,
+  664448.526559882, _, _, _, _,
+  949212.180799829, _, _, _, _,
+  189842.436159967, _, _, _, _,
+  854290.962719849, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  121818.985497438, _, _, _, _,
-  304547.463743596, _, _, _, _,
-  274092.717369236, _, _, _, _,
-  91364.2391230787, _, _, _, _,
+  379684.872319933, _, _, _, _,
+  949212.180799829, _, _, _, _,
+  854290.962719849, _, _, _, _,
+  284763.65423995, _, _, _, _,
   _, _, _, _, _,
-  30454.7463743596, _, _, _, _,
-  60909.4927487191, _, _, _, _,
+  94921.2180799829, _, _, _, _,
+  189842.436159967, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -89982,24 +90201,24 @@ _, _, _, _, _ ;
 
  Windowpane5_Nums =
   _, _, _, _, _,
-  135931.593148331, _, _, _, _,
-  116512.794127141, _, _, _, _,
-  38837.5980423803, _, _, _, _,
-  388375.815125072, _, _, _, _,
-  155350.392169521, _, _, _, _,
-  135931.593148331, _, _, _, _,
-  194187.990211901, _, _, _, _,
-  38837.5980423803, _, _, _, _,
-  174769.191190711, _, _, _, _,
+  431926.566766905, _, _, _, _,
+  370222.771514489, _, _, _, _,
+  123407.59050483, _, _, _, _,
+  1234075.3798068, _, _, _, _,
+  493630.36201932, _, _, _, _,
+  431926.566766905, _, _, _, _,
+  617037.952524148, _, _, _, _,
+  123407.59050483, _, _, _, _,
+  555334.157271735, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  77675.1960847605, _, _, _, _,
-  194187.990211901, _, _, _, _,
-  174769.191190711, _, _, _, _,
-  58256.3970635704, _, _, _, _,
+  246815.18100966, _, _, _, _,
+  617037.952524148, _, _, _, _,
+  555334.157271735, _, _, _, _,
+  185111.385757245, _, _, _, _,
   _, _, _, _, _,
-  19418.7990211901, _, _, _, _,
-  38837.5980423803, _, _, _, _,
+  61703.7952524148, _, _, _, _,
+  123407.59050483, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -90078,24 +90297,24 @@ _, _, _, _, _ ;
 
  Windowpane6_Nums =
   _, _, _, _, _,
-  86673.7898759839, _, _, _, _,
-  74291.8198937005, _, _, _, _,
-  24763.9399645668, _, _, _, _,
-  247639.294246569, _, _, _, _,
-  99055.7598582674, _, _, _, _,
-  86673.7898759839, _, _, _, _,
-  123819.699822834, _, _, _, _,
-  24763.9399645668, _, _, _, _,
-  111437.729840551, _, _, _, _,
+  308182.93623347, _, _, _, _,
+  264156.802485831, _, _, _, _,
+  88052.2674952774, _, _, _, _,
+  880522.300188914, _, _, _, _,
+  352209.069981109, _, _, _, _,
+  308182.93623347, _, _, _, _,
+  440261.337476385, _, _, _, _,
+  88052.2674952774, _, _, _, _,
+  396235.203728747, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  49527.8799291337, _, _, _, _,
-  123819.699822834, _, _, _, _,
-  111437.729840551, _, _, _, _,
-  37145.9099468503, _, _, _, _,
+  176104.534990554, _, _, _, _,
+  440261.337476385, _, _, _, _,
+  396235.203728747, _, _, _, _,
+  132078.401242916, _, _, _, _,
   _, _, _, _, _,
-  12381.9699822834, _, _, _, _,
-  24763.9399645668, _, _, _, _,
+  44026.1337476385, _, _, _, _,
+  88052.2674952774, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -90174,24 +90393,24 @@ _, _, _, _, _ ;
 
  Windowpane7_Nums =
   _, _, _, _, _,
-  55265.6352910439, _, _, _, _,
-  47370.5445351805, _, _, _, _,
-  15790.1815117268, _, _, _, _,
-  157901.747911851, _, _, _, _,
-  63160.7260469073, _, _, _, _,
-  55265.6352910439, _, _, _, _,
-  78950.9075586341, _, _, _, _,
-  15790.1815117268, _, _, _, _,
-  71055.8168027707, _, _, _, _,
+  182815.23556179, _, _, _, _,
+  156698.773338677, _, _, _, _,
+  52232.9244462257, _, _, _, _,
+  522329.022150976, _, _, _, _,
+  208931.697784902, _, _, _, _,
+  182815.23556179, _, _, _, _,
+  261164.622231127, _, _, _, _,
+  52232.9244462257, _, _, _, _,
+  235048.160008015, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  31580.3630234537, _, _, _, _,
-  78950.9075586341, _, _, _, _,
-  71055.8168027707, _, _, _, _,
-  23685.2722675902, _, _, _, _,
+  104465.848892451, _, _, _, _,
+  261164.622231127, _, _, _, _,
+  235048.160008015, _, _, _, _,
+  78349.3866693384, _, _, _, _,
   _, _, _, _, _,
-  7895.09075586341, _, _, _, _,
-  15790.1815117268, _, _, _, _,
+  26116.4622231127, _, _, _, _,
+  52232.9244462257, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -90270,24 +90489,24 @@ _, _, _, _, _ ;
 
  Windowpane8_Nums =
   _, _, _, _, _,
-  35238.9164993577, _, _, _, _,
-  30204.7855708781, _, _, _, _,
-  10068.2618569594, _, _, _, _,
-  100682.575717538, _, _, _, _,
-  40273.0474278374, _, _, _, _,
-  35238.9164993577, _, _, _, _,
-  50341.3092847968, _, _, _, _,
-  10068.2618569594, _, _, _, _,
-  45307.1783563171, _, _, _, _,
+  127113.920820324, _, _, _, _,
+  108954.789274563, _, _, _, _,
+  36318.2630915212, _, _, _, _,
+  363182.476339154, _, _, _, _,
+  145273.052366085, _, _, _, _,
+  127113.920820324, _, _, _, _,
+  181591.315457605, _, _, _, _,
+  36318.2630915212, _, _, _, _,
+  163432.183911845, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  20136.5237139187, _, _, _, _,
-  50341.3092847968, _, _, _, _,
-  45307.1783563171, _, _, _, _,
-  15102.392785439, _, _, _, _,
+  72636.5261830423, _, _, _, _,
+  181591.315457605, _, _, _, _,
+  163432.183911845, _, _, _, _,
+  54477.3946372818, _, _, _, _,
   _, _, _, _, _,
-  5034.13092847968, _, _, _, _,
-  10068.2618569594, _, _, _, _,
+  18159.1315457605, _, _, _, _,
+  36318.2630915212, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -90366,24 +90585,24 @@ _, _, _, _, _ ;
 
  Windowpane9_Nums =
   _, _, _, _, _,
-  22469.3198496524, _, _, _, _,
-  19259.4170139878, _, _, _, _,
-  6419.80567132928, _, _, _, _,
-  64198.0293896223, _, _, _, _,
-  25679.2226853171, _, _, _, _,
-  22469.3198496524, _, _, _, _,
-  32099.0283566464, _, _, _, _,
-  6419.80567132928, _, _, _, _,
-  28889.1255209818, _, _, _, _,
+  80636.5068640251, _, _, _, _,
+  69117.00588345, _, _, _, _,
+  23039.0019611501, _, _, _, _,
+  230389.921554, _, _, _, _,
+  92156.0078446, _, _, _, _,
+  80636.5068640251, _, _, _, _,
+  115195.00980575, _, _, _, _,
+  23039.0019611501, _, _, _, _,
+  103675.508825175, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  12839.6113426586, _, _, _, _,
-  32099.0283566464, _, _, _, _,
-  28889.1255209818, _, _, _, _,
-  9629.70850699392, _, _, _, _,
+  46078.0039223, _, _, _, _,
+  115195.00980575, _, _, _, _,
+  103675.508825175, _, _, _, _,
+  34558.502941725, _, _, _, _,
   _, _, _, _, _,
-  3209.90283566464, _, _, _, _,
-  6419.80567132928, _, _, _, _,
+  11519.500980575, _, _, _, _,
+  23039.0019611501, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -91486,28 +91705,28 @@ _, _, _, _, _ ;
 
  Winterflounder10_Nums =
   _, _, _, _, _,
-  4601.86649925366, _, _, _, _,
-  2300.93324962683, _, _, _, _,
+  22858.4488454372, _, _, _, _,
+  11429.2244227186, _, _, _, _,
   _, _, _, _, _,
-  17257.0342168759, _, _, _, _,
-  4601.86649925366, _, _, _, _,
-  3451.39987444024, _, _, _, _,
-  10354.2170456581, _, _, _, _,
-  9203.75042084467, _, _, _, _,
-  5752.35054640443, _, _, _, _,
-  2300.93324962683, _, _, _, _,
-  2300.93324962683, _, _, _, _,
-  10354.2170456581, _, _, _, _,
-  16106.5501697252, _, _, _, _,
-  1150.46662481341, _, _, _, _,
-  8053.28379603126, _, _, _, _,
-  1150.46662481341, _, _, _, _,
-  3451.39987444024, _, _, _, _,
-  6902.81717121784, _, _, _, _,
-  2300.93324962683, _, _, _, _,
+  85719.3562512939, _, _, _, _,
+  22858.4488454372, _, _, _, _,
+  17143.8366340779, _, _, _, _,
+  51431.5964426859, _, _, _, _,
+  45716.9842313266, _, _, _, _,
+  28573.1475972486, _, _, _, _,
+  11429.2244227186, _, _, _, _,
+  11429.2244227186, _, _, _, _,
+  51431.5964426859, _, _, _, _,
+  80004.6574994827, _, _, _, _,
+  5714.61221135931, _, _, _, _,
+  40002.3720199672, _, _, _, _,
+  5714.61221135931, _, _, _, _,
+  17143.8366340779, _, _, _, _,
+  34287.759808608, _, _, _, _,
+  11429.2244227186, _, _, _, _,
   _, _, _, _, _,
-  2300.93324962683, _, _, _, _,
-  1150.46662481341, _, _, _, _,
+  11429.2244227186, _, _, _, _,
+  5714.61221135931, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -91582,28 +91801,28 @@ _, _, _, _, _ ;
 
  Winterflounder1_Nums =
   _, _, _, _, _,
-  264136, _, _, _, _,
-  132068, _, _, _, _,
+  72134.4216855262, _, _, _, _,
+  36067.2108427631, _, _, _, _,
   _, _, _, _, _,
-  990512, _, _, _, _,
-  264136, _, _, _, _,
-  198102, _, _, _, _,
-  594307, _, _, _, _,
-  528273, _, _, _, _,
-  330171, _, _, _, _,
-  132068, _, _, _, _,
-  132068, _, _, _, _,
-  594307, _, _, _, _,
-  924477, _, _, _, _,
-  66034, _, _, _, _,
-  462239, _, _, _, _,
-  66034, _, _, _, _,
-  198102, _, _, _, _,
-  396205, _, _, _, _,
-  132068, _, _, _, _,
+  270504.627512244, _, _, _, _,
+  72134.4216855262, _, _, _, _,
+  54100.8162641447, _, _, _, _,
+  162302.721888194, _, _, _, _,
+  144269.116466813, _, _, _, _,
+  90168.300202668, _, _, _, _,
+  36067.2108427631, _, _, _, _,
+  36067.2108427631, _, _, _, _,
+  162302.721888194, _, _, _, _,
+  252470.748995103, _, _, _, _,
+  18033.6054213816, _, _, _, _,
+  126235.511045431, _, _, _, _,
+  18033.6054213816, _, _, _, _,
+  54100.8162641447, _, _, _, _,
+  108201.90562405, _, _, _, _,
+  36067.2108427631, _, _, _, _,
   _, _, _, _, _,
-  132068, _, _, _, _,
-  66034, _, _, _, _,
+  36067.2108427631, _, _, _, _,
+  18033.6054213816, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -91678,28 +91897,28 @@ _, _, _, _, _ ;
 
  Winterflounder2_Nums =
   _, _, _, _, _,
-  168420.509408, _, _, _, _,
-  84210.254704, _, _, _, _,
+  73556.8997467822, _, _, _, _,
+  36778.4498733911, _, _, _, _,
   _, _, _, _, _,
-  631578.185536, _, _, _, _,
-  168420.509408, _, _, _, _,
-  126315.382056, _, _, _, _,
-  378946.783796, _, _, _, _,
-  336841.656444, _, _, _, _,
-  210526.274388, _, _, _, _,
-  84210.254704, _, _, _, _,
-  84210.254704, _, _, _, _,
-  378946.783796, _, _, _, _,
-  589472.420556, _, _, _, _,
-  42105.127352, _, _, _, _,
-  294736.529092, _, _, _, _,
-  42105.127352, _, _, _, _,
-  126315.382056, _, _, _, _,
-  252631.40174, _, _, _, _,
-  84210.254704, _, _, _, _,
+  275838.931012755, _, _, _, _,
+  73556.8997467822, _, _, _, _,
+  55167.6748100866, _, _, _, _,
+  165503.30291142, _, _, _, _,
+  147114.077974725, _, _, _, _,
+  91946.4031646381, _, _, _, _,
+  36778.4498733911, _, _, _, _,
+  36778.4498733911, _, _, _, _,
+  165503.30291142, _, _, _, _,
+  257449.427594899, _, _, _, _,
+  18389.2249366956, _, _, _, _,
+  128724.853038029, _, _, _, _,
+  18389.2249366956, _, _, _, _,
+  55167.6748100866, _, _, _, _,
+  110335.628101334, _, _, _, _,
+  36778.4498733911, _, _, _, _,
   _, _, _, _, _,
-  84210.254704, _, _, _, _,
-  42105.127352, _, _, _, _,
+  36778.4498733911, _, _, _, _,
+  18389.2249366956, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -91774,28 +91993,28 @@ _, _, _, _, _ ;
 
  Winterflounder3_Nums =
   _, _, _, _, _,
-  107389.632572804, _, _, _, _,
-  53694.8162864021, _, _, _, _,
+  345303.089374594, _, _, _, _,
+  172651.544687297, _, _, _, _,
   _, _, _, _, _,
-  402711.935286949, _, _, _, _,
-  107389.632572804, _, _, _, _,
-  80542.2244296032, _, _, _, _,
-  241627.079858276, _, _, _, _,
-  214779.671715075, _, _, _, _,
-  134237.447285472, _, _, _, _,
-  53694.8162864021, _, _, _, _,
-  53694.8162864021, _, _, _, _,
-  241627.079858276, _, _, _, _,
-  375864.120574281, _, _, _, _,
-  26847.4081432011, _, _, _, _,
-  187932.263571874, _, _, _, _,
-  26847.4081432011, _, _, _, _,
-  80542.2244296032, _, _, _, _,
-  161084.855428673, _, _, _, _,
-  53694.8162864021, _, _, _, _,
+  1294889.19974032, _, _, _, _,
+  345303.089374594, _, _, _, _,
+  258977.317030945, _, _, _, _,
+  776933.258385631, _, _, _, _,
+  690607.486041983, _, _, _, _,
+  431630.169011036, _, _, _, _,
+  172651.544687297, _, _, _, _,
+  172651.544687297, _, _, _, _,
+  776933.258385631, _, _, _, _,
+  1208562.12010388, _, _, _, _,
+  86325.7723436485, _, _, _, _,
+  604281.713698333, _, _, _, _,
+  86325.7723436485, _, _, _, _,
+  258977.317030945, _, _, _, _,
+  517955.941354686, _, _, _, _,
+  172651.544687297, _, _, _, _,
   _, _, _, _, _,
-  53694.8162864021, _, _, _, _,
-  26847.4081432011, _, _, _, _,
+  172651.544687297, _, _, _, _,
+  86325.7723436485, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -91870,28 +92089,28 @@ _, _, _, _, _ ;
 
  Winterflounder4_Nums =
   _, _, _, _, _,
-  68474.636638132, _, _, _, _,
-  34237.318319066, _, _, _, _,
+  315376.570162472, _, _, _, _,
+  157688.285081236, _, _, _, _,
   _, _, _, _, _,
-  256780.405873146, _, _, _, _,
-  68474.636638132, _, _, _, _,
-  51355.977478599, _, _, _, _,
-  154068.191675873, _, _, _, _,
-  136949.53251634, _, _, _, _,
-  85593.5550377407, _, _, _, _,
-  34237.318319066, _, _, _, _,
-  34237.318319066, _, _, _, _,
-  154068.191675873, _, _, _, _,
-  239661.487473538, _, _, _, _,
-  17118.659159533, _, _, _, _,
-  119830.873356807, _, _, _, _,
-  17118.659159533, _, _, _, _,
-  51355.977478599, _, _, _, _,
-  102712.214197274, _, _, _, _,
-  34237.318319066, _, _, _, _,
+  1182664.52609554, _, _, _, _,
+  315376.570162472, _, _, _, _,
+  236532.427621854, _, _, _, _,
+  709598.476858695, _, _, _, _,
+  630754.334318077, _, _, _, _,
+  394221.906696223, _, _, _, _,
+  157688.285081236, _, _, _, _,
+  157688.285081236, _, _, _, _,
+  709598.476858695, _, _, _, _,
+  1103819.18956179, _, _, _, _,
+  78844.142540618, _, _, _, _,
+  551910.191777459, _, _, _, _,
+  78844.142540618, _, _, _, _,
+  236532.427621854, _, _, _, _,
+  473066.049236842, _, _, _, _,
+  157688.285081236, _, _, _, _,
   _, _, _, _, _,
-  34237.318319066, _, _, _, _,
-  17118.659159533, _, _, _, _,
+  157688.285081236, _, _, _, _,
+  78844.142540618, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -91966,28 +92185,28 @@ _, _, _, _, _ ;
 
  Winterflounder5_Nums =
   _, _, _, _, _,
-  43661.3456102988, _, _, _, _,
-  21830.6728051494, _, _, _, _,
+  269214.833077884, _, _, _, _,
+  134607.416538942, _, _, _, _,
   _, _, _, _, _,
-  163730.376636083, _, _, _, _,
-  43661.3456102988, _, _, _, _,
-  32746.0092077241, _, _, _, _,
-  98238.1929219034, _, _, _, _,
-  87322.8565193287, _, _, _, _,
-  54576.8473116045, _, _, _, _,
-  21830.6728051494, _, _, _, _,
-  21830.6728051494, _, _, _, _,
-  98238.1929219034, _, _, _, _,
-  152814.874934777, _, _, _, _,
-  10915.3364025747, _, _, _, _,
-  76407.520116754, _, _, _, _,
-  10915.3364025747, _, _, _, _,
-  32746.0092077241, _, _, _, _,
-  65492.1837141792, _, _, _, _,
-  21830.6728051494, _, _, _, _,
+  1009557.66249827, _, _, _, _,
+  269214.833077884, _, _, _, _,
+  201911.124808413, _, _, _, _,
+  605734.393653339, _, _, _, _,
+  538430.685383868, _, _, _, _,
+  336519.560575454, _, _, _, _,
+  134607.416538942, _, _, _, _,
+  134607.416538942, _, _, _, _,
+  605734.393653339, _, _, _, _,
+  942252.935000697, _, _, _, _,
+  67303.7082694711, _, _, _, _,
+  471126.977114396, _, _, _, _,
+  67303.7082694711, _, _, _, _,
+  201911.124808413, _, _, _, _,
+  403823.268844926, _, _, _, _,
+  134607.416538942, _, _, _, _,
   _, _, _, _, _,
-  21830.6728051494, _, _, _, _,
-  10915.3364025747, _, _, _, _,
+  134607.416538942, _, _, _, _,
+  67303.7082694711, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -92062,28 +92281,28 @@ _, _, _, _, _ ;
 
  Winterflounder6_Nums =
   _, _, _, _, _,
-  27839.6964788036, _, _, _, _,
-  13919.8482394018, _, _, _, _,
+  229182.807638903, _, _, _, _,
+  114591.403819451, _, _, _, _,
   _, _, _, _, _,
-  104399.072593712, _, _, _, _,
-  27839.6964788036, _, _, _, _,
-  20879.7723591027, _, _, _, _,
-  62639.4224764074, _, _, _, _,
-  55679.4983567065, _, _, _, _,
-  34799.7259976038, _, _, _, _,
-  13919.8482394018, _, _, _, _,
-  13919.8482394018, _, _, _, _,
-  62639.4224764074, _, _, _, _,
-  97439.0430749119, _, _, _, _,
-  6959.92411970091, _, _, _, _,
-  48719.5742370056, _, _, _, _,
-  6959.92411970091, _, _, _, _,
-  20879.7723591027, _, _, _, _,
-  41759.6501173047, _, _, _, _,
-  13919.8482394018, _, _, _, _,
+  859437.263985315, _, _, _, _,
+  229182.807638903, _, _, _, _,
+  171887.105729177, _, _, _, _,
+  515662.184857246, _, _, _, _,
+  458366.48294752, _, _, _, _,
+  286479.377218343, _, _, _, _,
+  114591.403819451, _, _, _, _,
+  114591.403819451, _, _, _, _,
+  515662.184857246, _, _, _, _,
+  802140.694405876, _, _, _, _,
+  57295.7019097257, _, _, _, _,
+  401070.781037794, _, _, _, _,
+  57295.7019097257, _, _, _, _,
+  171887.105729177, _, _, _, _,
+  343775.079128069, _, _, _, _,
+  114591.403819451, _, _, _, _,
   _, _, _, _, _,
-  13919.8482394018, _, _, _, _,
-  6959.92411970091, _, _, _, _,
+  114591.403819451, _, _, _, _,
+  57295.7019097257, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -92158,28 +92377,28 @@ _, _, _, _, _ ;
 
  Winterflounder7_Nums =
   _, _, _, _, _,
-  17751.3699863866, _, _, _, _,
-  8875.6849931933, _, _, _, _,
+  152498.832154119, _, _, _, _,
+  76249.4160770595, _, _, _, _,
   _, _, _, _, _,
-  66567.7718597835, _, _, _, _,
-  17751.3699863866, _, _, _, _,
-  13313.52748979, _, _, _, _,
-  39940.6496747867, _, _, _, _,
-  35502.8071781901, _, _, _, _,
-  22189.2796884001, _, _, _, _,
-  8875.6849931933, _, _, _, _,
-  8875.6849931933, _, _, _, _,
-  39940.6496747867, _, _, _, _,
-  62129.86215777, _, _, _, _,
-  4437.84249659665, _, _, _, _,
-  31064.9646815934, _, _, _, _,
-  4437.84249659665, _, _, _, _,
-  13313.52748979, _, _, _, _,
-  26627.1221849968, _, _, _, _,
-  8875.6849931933, _, _, _, _,
+  571871.775277285, _, _, _, _,
+  152498.832154119, _, _, _, _,
+  114374.124115589, _, _, _, _,
+  343122.949696437, _, _, _, _,
+  304998.241657907, _, _, _, _,
+  190624.117542318, _, _, _, _,
+  76249.4160770595, _, _, _, _,
+  76249.4160770595, _, _, _, _,
+  343122.949696437, _, _, _, _,
+  533746.489889087, _, _, _, _,
+  38124.7080385298, _, _, _, _,
+  266873.533619377, _, _, _, _,
+  38124.7080385298, _, _, _, _,
+  114374.124115589, _, _, _, _,
+  228748.825580848, _, _, _, _,
+  76249.4160770595, _, _, _, _,
   _, _, _, _, _,
-  8875.6849931933, _, _, _, _,
-  4437.84249659665, _, _, _, _,
+  76249.4160770595, _, _, _, _,
+  38124.7080385298, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -92254,28 +92473,28 @@ _, _, _, _, _ ;
 
  Winterflounder8_Nums =
   _, _, _, _, _,
-  11318.7705416797, _, _, _, _,
-  5659.38527083986, _, _, _, _,
+  114313.804197801, _, _, _, _,
+  57156.9020989006, _, _, _, _,
   _, _, _, _, _,
-  42445.47523541, _, _, _, _,
-  11318.7705416797, _, _, _, _,
-  8489.07790625979, _, _, _, _,
-  25467.2765708349, _, _, _, _,
-  22637.583935415, _, _, _, _,
-  14148.5060291552, _, _, _, _,
-  5659.38527083986, _, _, _, _,
-  5659.38527083986, _, _, _, _,
-  25467.2765708349, _, _, _, _,
-  39615.7397479345, _, _, _, _,
-  2829.69263541993, _, _, _, _,
-  19807.891299995, _, _, _, _,
-  2829.69263541993, _, _, _, _,
-  8489.07790625979, _, _, _, _,
-  16978.1986645751, _, _, _, _,
-  5659.38527083986, _, _, _, _,
+  428677.631309526, _, _, _, _,
+  114313.804197801, _, _, _, _,
+  85735.353148351, _, _, _, _,
+  257206.492228938, _, _, _, _,
+  228628.041179488, _, _, _, _,
+  142892.688031137, _, _, _, _,
+  57156.9020989006, _, _, _, _,
+  57156.9020989006, _, _, _, _,
+  257206.492228938, _, _, _, _,
+  400098.747476191, _, _, _, _,
+  28578.4510494504, _, _, _, _,
+  200049.590130037, _, _, _, _,
+  28578.4510494504, _, _, _, _,
+  85735.353148351, _, _, _, _,
+  171471.139080587, _, _, _, _,
+  57156.9020989006, _, _, _, _,
   _, _, _, _, _,
-  5659.38527083986, _, _, _, _,
-  2829.69263541993, _, _, _, _,
+  57156.9020989006, _, _, _, _,
+  28578.4510494504, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -92350,28 +92569,28 @@ _, _, _, _, _ ;
 
  Winterflounder9_Nums =
   _, _, _, _, _,
-  7217.16502295015, _, _, _, _,
-  3608.58251147508, _, _, _, _,
+  76198.0161471142, _, _, _, _,
+  38099.0080735571, _, _, _, _,
   _, _, _, _, _,
-  27064.423483404, _, _, _, _,
-  7217.16502295015, _, _, _, _,
-  5412.87376721261, _, _, _, _,
-  16238.6486253083, _, _, _, _,
-  14434.3573695708, _, _, _, _,
-  9021.48360235816, _, _, _, _,
-  3608.58251147508, _, _, _, _,
-  3608.58251147508, _, _, _, _,
-  16238.6486253083, _, _, _, _,
-  25260.104903996, _, _, _, _,
-  1804.29125573754, _, _, _, _,
-  12630.0661138332, _, _, _, _,
-  1804.29125573754, _, _, _, _,
-  5412.87376721261, _, _, _, _,
-  10825.7748580957, _, _, _, _,
-  3608.58251147508, _, _, _, _,
+  285743.137512155, _, _, _, _,
+  76198.0161471142, _, _, _, _,
+  57148.5121103356, _, _, _, _,
+  171445.824811245, _, _, _, _,
+  152396.320774467, _, _, _, _,
+  95247.8086641309, _, _, _, _,
+  38099.0080735571, _, _, _, _,
+  38099.0080735571, _, _, _, _,
+  171445.824811245, _, _, _, _,
+  266693.344995139, _, _, _, _,
+  19049.5040367786, _, _, _, _,
+  133346.816737688, _, _, _, _,
+  19049.5040367786, _, _, _, _,
+  57148.5121103356, _, _, _, _,
+  114297.31270091, _, _, _, _,
+  38099.0080735571, _, _, _, _,
   _, _, _, _, _,
-  3608.58251147508, _, _, _, _,
-  1804.29125573754, _, _, _, _,
+  38099.0080735571, _, _, _, _,
+  19049.5040367786, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -92478,28 +92697,28 @@ _, _, _, _, _ ;
 
  Witchflounder10_Nums =
   _, _, _, _, _,
-  2832.94174305904, _, _, _, _,
-  5665.90090845543, _, _, _, _,
-  11331.7843945735, _, _, _, _,
+  6706.59680161019, _, _, _, _,
+  13413.2348481885, _, _, _, _,
+  26826.4284514089, _, _, _, _,
   _, _, _, _, _,
-  5665.90090845543, _, _, _, _,
-  8498.84265151447, _, _, _, _,
-  2832.94174305904, _, _, _, _,
-  8498.84265151447, _, _, _, _,
-  8498.84265151447, _, _, _, _,
-  28329.4696976024, _, _, _, _,
-  28329.4696976024, _, _, _, _,
-  16997.6853030289, _, _, _, _,
-  5665.90090845543, _, _, _, _,
-  11331.7843945735, _, _, _, _,
-  2832.94174305904, _, _, _, _,
-  39661.2715145133, _, _, _, _,
-  16997.6853030289, _, _, _, _,
-  16997.6853030289, _, _, _, _,
-  28329.4696976024, _, _, _, _,
-  22663.5862114844, _, _, _, _,
-  2832.94174305904, _, _, _, _,
-  8498.84265151447, _, _, _, _,
+  13413.2348481885, _, _, _, _,
+  20119.8316497987, _, _, _, _,
+  6706.59680161019, _, _, _, _,
+  20119.8316497987, _, _, _, _,
+  20119.8316497987, _, _, _, _,
+  67066.0917510064, _, _, _, _,
+  67066.0917510064, _, _, _, _,
+  40239.6632995975, _, _, _, _,
+  13413.2348481885, _, _, _, _,
+  26826.4284514089, _, _, _, _,
+  6706.59680161019, _, _, _, _,
+  93892.5614473833, _, _, _, _,
+  40239.6632995975, _, _, _, _,
+  40239.6632995975, _, _, _, _,
+  67066.0917510064, _, _, _, _,
+  53652.898147786, _, _, _, _,
+  6706.59680161019, _, _, _, _,
+  20119.8316497987, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -92574,28 +92793,28 @@ _, _, _, _, _ ;
 
  Witchflounder1_Nums =
   _, _, _, _, _,
-  162604, _, _, _, _,
-  325209, _, _, _, _,
-  650417, _, _, _, _,
+  1624767.74250377, _, _, _, _,
+  3249545.47718326, _, _, _, _,
+  6499080.9621908, _, _, _, _,
   _, _, _, _, _,
-  325209, _, _, _, _,
-  487813, _, _, _, _,
-  162604, _, _, _, _,
-  487813, _, _, _, _,
-  487813, _, _, _, _,
-  1626043, _, _, _, _,
-  1626043, _, _, _, _,
-  975626, _, _, _, _,
-  325209, _, _, _, _,
-  650417, _, _, _, _,
-  162604, _, _, _, _,
-  2276461, _, _, _, _,
-  975626, _, _, _, _,
-  975626, _, _, _, _,
-  1626043, _, _, _, _,
-  1300835, _, _, _, _,
-  162604, _, _, _, _,
-  487813, _, _, _, _,
+  3249545.47718326, _, _, _, _,
+  4874313.21968702, _, _, _, _,
+  1624767.74250377, _, _, _, _,
+  4874313.21968702, _, _, _, _,
+  4874313.21968702, _, _, _, _,
+  16247707.4015649, _, _, _, _,
+  16247707.4015649, _, _, _, _,
+  9748626.43937406, _, _, _, _,
+  3249545.47718326, _, _, _, _,
+  6499080.9621908, _, _, _, _,
+  1624767.74250377, _, _, _, _,
+  22746798.3559314, _, _, _, _,
+  9748626.43937406, _, _, _, _,
+  9748626.43937406, _, _, _, _,
+  16247707.4015649, _, _, _, _,
+  12998171.9165573, _, _, _, _,
+  1624767.74250377, _, _, _, _,
+  4874313.21968702, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -92670,28 +92889,28 @@ _, _, _, _, _ ;
 
  Witchflounder2_Nums =
   _, _, _, _, _,
-  103680.863312, _, _, _, _,
-  207362.364252, _, _, _, _,
-  414724.090876, _, _, _, _,
+  481357.122703013, _, _, _, _,
+  962717.205709111, _, _, _, _,
+  1925431.45111514, _, _, _, _,
   _, _, _, _, _,
-  207362.364252, _, _, _, _,
-  311043.227564, _, _, _, _,
-  103680.863312, _, _, _, _,
-  311043.227564, _, _, _, _,
-  311043.227564, _, _, _, _,
-  1036810.546004, _, _, _, _,
-  1036810.546004, _, _, _, _,
-  622086.455128, _, _, _, _,
-  207362.364252, _, _, _, _,
-  414724.090876, _, _, _, _,
-  103680.863312, _, _, _, _,
-  1451535.274508, _, _, _, _,
-  622086.455128, _, _, _, _,
-  622086.455128, _, _, _, _,
-  1036810.546004, _, _, _, _,
-  829448.81938, _, _, _, _,
-  103680.863312, _, _, _, _,
-  311043.227564, _, _, _, _,
+  962717.205709111, _, _, _, _,
+  1444074.32841212, _, _, _, _,
+  481357.122703013, _, _, _, _,
+  1444074.32841212, _, _, _, _,
+  1444074.32841212, _, _, _, _,
+  4813580.10793938, _, _, _, _,
+  4813580.10793938, _, _, _, _,
+  2888148.65682425, _, _, _, _,
+  962717.205709111, _, _, _, _,
+  1925431.45111514, _, _, _, _,
+  481357.122703013, _, _, _, _,
+  6739014.5193576, _, _, _, _,
+  2888148.65682425, _, _, _, _,
+  2888148.65682425, _, _, _, _,
+  4813580.10793938, _, _, _, _,
+  3850865.86253336, _, _, _, _,
+  481357.122703013, _, _, _, _,
+  1444074.32841212, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -92766,28 +92985,28 @@ _, _, _, _, _ ;
 
  Witchflounder3_Nums =
   _, _, _, _, _,
-  66109.8215119039, _, _, _, _,
-  132220.049593274, _, _, _, _,
-  264439.692617082, _, _, _, _,
+  914808.189683767, _, _, _, _,
+  1829622.00535576, _, _, _, _,
+  3659238.3847233, _, _, _, _,
   _, _, _, _, _,
-  132220.049593274, _, _, _, _,
-  198329.871105178, _, _, _, _,
-  66109.8215119039, _, _, _, _,
-  198329.871105178, _, _, _, _,
-  198329.871105178, _, _, _, _,
-  661099.434827438, _, _, _, _,
-  661099.434827438, _, _, _, _,
-  396659.742210356, _, _, _, _,
-  132220.049593274, _, _, _, _,
-  264439.692617082, _, _, _, _,
-  66109.8215119039, _, _, _, _,
-  925539.534013987, _, _, _, _,
-  396659.742210356, _, _, _, _,
-  396659.742210356, _, _, _, _,
-  661099.434827438, _, _, _, _,
-  528879.791803631, _, _, _, _,
-  66109.8215119039, _, _, _, _,
-  198329.871105178, _, _, _, _,
+  1829622.00535576, _, _, _, _,
+  2744430.19503953, _, _, _, _,
+  914808.189683767, _, _, _, _,
+  2744430.19503953, _, _, _, _,
+  2744430.19503953, _, _, _, _,
+  9148098.77480236, _, _, _, _,
+  9148098.77480236, _, _, _, _,
+  5488860.39007906, _, _, _, _,
+  1829622.00535576, _, _, _, _,
+  3659238.3847233, _, _, _, _,
+  914808.189683767, _, _, _, _,
+  12807342.7855139, _, _, _, _,
+  5488860.39007906, _, _, _, _,
+  5488860.39007906, _, _, _, _,
+  9148098.77480236, _, _, _, _,
+  7318482.39543482, _, _, _, _,
+  914808.189683767, _, _, _, _,
+  2744430.19503953, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -92862,28 +93081,28 @@ _, _, _, _, _ ;
 
  Witchflounder4_Nums =
   _, _, _, _, _,
-  42153.4732709922, _, _, _, _,
-  84307.2057820603, _, _, _, _,
-  168614.152324045, _, _, _, _,
+  435747.422461593, _, _, _, _,
+  871497.524730709, _, _, _, _,
+  1742992.36965389, _, _, _, _,
   _, _, _, _, _,
-  84307.2057820603, _, _, _, _,
-  126460.679053053, _, _, _, _,
-  42153.4732709922, _, _, _, _,
-  126460.679053053, _, _, _, _,
-  126460.679053053, _, _, _, _,
-  421535.51043015, _, _, _, _,
-  421535.51043015, _, _, _, _,
-  252921.358106105, _, _, _, _,
-  84307.2057820603, _, _, _, _,
-  168614.152324045, _, _, _, _,
-  42153.4732709922, _, _, _, _,
-  590149.921994271, _, _, _, _,
-  252921.358106105, _, _, _, _,
-  252921.358106105, _, _, _, _,
-  421535.51043015, _, _, _, _,
-  337228.563888165, _, _, _, _,
-  42153.4732709922, _, _, _, _,
-  126460.679053053, _, _, _, _,
+  871497.524730709, _, _, _, _,
+  1307244.9471923, _, _, _, _,
+  435747.422461593, _, _, _, _,
+  1307244.9471923, _, _, _, _,
+  1307244.9471923, _, _, _, _,
+  4357482.2640385, _, _, _, _,
+  4357482.2640385, _, _, _, _,
+  2614489.8943846, _, _, _, _,
+  871497.524730709, _, _, _, _,
+  1742992.36965389, _, _, _, _,
+  435747.422461593, _, _, _, _,
+  6100477.31349991, _, _, _, _,
+  2614489.8943846, _, _, _, _,
+  2614489.8943846, _, _, _, _,
+  4357482.2640385, _, _, _, _,
+  3485987.41911531, _, _, _, _,
+  435747.422461593, _, _, _, _,
+  1307244.9471923, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -92958,28 +93177,28 @@ _, _, _, _, _ ;
 
  Witchflounder5_Nums =
   _, _, _, _, _,
-  26878.2348548363, _, _, _, _,
-  53756.6350084035, _, _, _, _,
-  107513.104718076, _, _, _, _,
+  232246.112946323, _, _, _, _,
+  464493.654185387, _, _, _, _,
+  928985.880078032, _, _, _, _,
   _, _, _, _, _,
-  53756.6350084035, _, _, _, _,
-  80634.8698632398, _, _, _, _,
-  26878.2348548363, _, _, _, _,
-  80634.8698632398, _, _, _, _,
-  80634.8698632398, _, _, _, _,
-  268782.844444556, _, _, _, _,
-  268782.844444556, _, _, _, _,
-  161269.73972648, _, _, _, _,
-  53756.6350084035, _, _, _, _,
-  107513.104718076, _, _, _, _,
-  26878.2348548363, _, _, _, _,
-  376296.114461363, _, _, _, _,
-  161269.73972648, _, _, _, _,
-  161269.73972648, _, _, _, _,
-  268782.844444556, _, _, _, _,
-  215026.374734883, _, _, _, _,
-  26878.2348548363, _, _, _, _,
-  80634.8698632398, _, _, _, _,
+  464493.654185387, _, _, _, _,
+  696739.767131709, _, _, _, _,
+  232246.112946323, _, _, _, _,
+  696739.767131709, _, _, _, _,
+  696739.767131709, _, _, _, _,
+  2322465.41434145, _, _, _, _,
+  2322465.41434145, _, _, _, _,
+  1393479.53426342, _, _, _, _,
+  464493.654185387, _, _, _, _,
+  928985.880078032, _, _, _, _,
+  232246.112946323, _, _, _, _,
+  3251452.72271222, _, _, _, _,
+  1393479.53426342, _, _, _, _,
+  1393479.53426342, _, _, _, _,
+  2322465.41434145, _, _, _, _,
+  1857973.18844881, _, _, _, _,
+  232246.112946323, _, _, _, _,
+  696739.767131709, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -93054,28 +93273,28 @@ _, _, _, _, _ ;
 
  Witchflounder6_Nums =
   _, _, _, _, _,
-  17138.3151340195, _, _, _, _,
-  34276.7356671383, _, _, _, _,
-  68553.3659351774, _, _, _, _,
+  139828.854820831, _, _, _, _,
+  279658.569576565, _, _, _, _,
+  559316.279218227, _, _, _, _,
   _, _, _, _, _,
-  34276.7356671383, _, _, _, _,
-  51415.0508011579, _, _, _, _,
-  17138.3151340195, _, _, _, _,
-  51415.0508011579, _, _, _, _,
-  51415.0508011579, _, _, _, _,
-  171383.467537493, _, _, _, _,
-  171383.467537493, _, _, _, _,
-  102830.101602316, _, _, _, _,
-  34276.7356671383, _, _, _, _,
-  68553.3659351774, _, _, _, _,
-  17138.3151340195, _, _, _, _,
-  239936.93887177, _, _, _, _,
-  102830.101602316, _, _, _, _,
-  102830.101602316, _, _, _, _,
-  171383.467537493, _, _, _, _,
-  137106.837269454, _, _, _, _,
-  17138.3151340195, _, _, _, _,
-  51415.0508011579, _, _, _, _,
+  279658.569576565, _, _, _, _,
+  419487.424397395, _, _, _, _,
+  139828.854820831, _, _, _, _,
+  419487.424397395, _, _, _, _,
+  419487.424397395, _, _, _, _,
+  1398291.12801302, _, _, _, _,
+  1398291.12801302, _, _, _, _,
+  838974.848794792, _, _, _, _,
+  279658.569576565, _, _, _, _,
+  559316.279218227, _, _, _, _,
+  139828.854820831, _, _, _, _,
+  1957608.26716615, _, _, _, _,
+  838974.848794792, _, _, _, _,
+  838974.848794792, _, _, _, _,
+  1398291.12801302, _, _, _, _,
+  1118633.41837136, _, _, _, _,
+  139828.854820831, _, _, _, _,
+  419487.424397395, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -93150,28 +93369,28 @@ _, _, _, _, _ ;
 
  Witchflounder7_Nums =
   _, _, _, _, _,
-  10927.8696022746, _, _, _, _,
-  21855.8064099661, _, _, _, _,
-  43711.5456145153, _, _, _, _,
+  71760.6187771641, _, _, _, _,
+  143521.67887569, _, _, _, _,
+  287042.916430019, _, _, _, _,
   _, _, _, _, _,
-  21855.8064099661, _, _, _, _,
-  32783.6760122407, _, _, _, _,
-  10927.8696022746, _, _, _, _,
-  32783.6760122407, _, _, _, _,
-  32783.6760122407, _, _, _, _,
-  109278.897638997, _, _, _, _,
-  109278.897638997, _, _, _, _,
-  65567.3520244814, _, _, _, _,
-  21855.8064099661, _, _, _, _,
-  43711.5456145153, _, _, _, _,
-  10927.8696022746, _, _, _, _,
-  152990.510458929, _, _, _, _,
-  65567.3520244814, _, _, _, _,
-  65567.3520244814, _, _, _, _,
-  109278.897638997, _, _, _, _,
-  87423.1584344475, _, _, _, _,
-  10927.8696022746, _, _, _, _,
-  32783.6760122407, _, _, _, _,
+  143521.67887569, _, _, _, _,
+  215282.297652854, _, _, _, _,
+  71760.6187771641, _, _, _, _,
+  215282.297652854, _, _, _, _,
+  215282.297652854, _, _, _, _,
+  717607.511735728, _, _, _, _,
+  717607.511735728, _, _, _, _,
+  430564.595305709, _, _, _, _,
+  143521.67887569, _, _, _, _,
+  287042.916430019, _, _, _, _,
+  71760.6187771641, _, _, _, _,
+  1004650.86948711, _, _, _, _,
+  430564.595305709, _, _, _, _,
+  430564.595305709, _, _, _, _,
+  717607.511735728, _, _, _, _,
+  574086.274181399, _, _, _, _,
+  71760.6187771641, _, _, _, _,
+  215282.297652854, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -93246,28 +93465,28 @@ _, _, _, _, _ ;
 
  Witchflounder8_Nums =
   _, _, _, _, _,
-  6967.91563875916, _, _, _, _,
-  13935.8741295739, _, _, _, _,
-  27871.7054070922, _, _, _, _,
+  44117.3831782575, _, _, _, _,
+  88235.0376744604, _, _, _, _,
+  176469.804030975, _, _, _, _,
   _, _, _, _, _,
-  13935.8741295739, _, _, _, _,
-  20903.789768333, _, _, _, _,
-  6967.91563875916, _, _, _, _,
-  20903.789768333, _, _, _, _,
-  20903.789768333, _, _, _, _,
-  69679.2849437582, _, _, _, _,
-  69679.2849437582, _, _, _, _,
-  41807.579536666, _, _, _, _,
-  13935.8741295739, _, _, _, _,
-  27871.7054070922, _, _, _, _,
-  6967.91563875916, _, _, _, _,
-  97551.0332029059, _, _, _, _,
-  41807.579536666, _, _, _, _,
-  41807.579536666, _, _, _, _,
-  69679.2849437582, _, _, _, _,
-  55743.4536662399, _, _, _, _,
-  6967.91563875916, _, _, _, _,
-  20903.789768333, _, _, _, _,
+  88235.0376744604, _, _, _, _,
+  132352.420852718, _, _, _, _,
+  44117.3831782575, _, _, _, _,
+  132352.420852718, _, _, _, _,
+  132352.420852718, _, _, _, _,
+  441174.645736411, _, _, _, _,
+  441174.645736411, _, _, _, _,
+  264704.841705436, _, _, _, _,
+  88235.0376744604, _, _, _, _,
+  176469.804030975, _, _, _, _,
+  44117.3831782575, _, _, _, _,
+  617644.721085331, _, _, _, _,
+  264704.841705436, _, _, _, _,
+  264704.841705436, _, _, _, _,
+  441174.645736411, _, _, _, _,
+  352939.879379896, _, _, _, _,
+  44117.3831782575, _, _, _, _,
+  132352.420852718, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -93342,28 +93561,28 @@ _, _, _, _, _ ;
 
  Witchflounder9_Nums =
   _, _, _, _, _,
-  4442.93811291072, _, _, _, _,
-  8885.90354949191, _, _, _, _,
-  17771.7797753134, _, _, _, _,
+  25218.9903697515, _, _, _, _,
+  50438.1358340295, _, _, _, _,
+  100876.116573533, _, _, _, _,
   _, _, _, _, _,
-  8885.90354949191, _, _, _, _,
-  13328.8416624026, _, _, _, _,
-  4442.93811291072, _, _, _, _,
-  13328.8416624026, _, _, _, _,
-  13328.8416624026, _, _, _, _,
-  44429.4631001186, _, _, _, _,
-  44429.4631001186, _, _, _, _,
-  26657.6833248053, _, _, _, _,
-  8885.90354949191, _, _, _, _,
-  17771.7797753134, _, _, _, _,
-  4442.93811291072, _, _, _, _,
-  62201.2701991025, _, _, _, _,
-  26657.6833248053, _, _, _, _,
-  26657.6833248053, _, _, _, _,
-  44429.4631001186, _, _, _, _,
-  35543.5868742972, _, _, _, _,
-  4442.93811291072, _, _, _, _,
-  13328.8416624026, _, _, _, _,
+  50438.1358340295, _, _, _, _,
+  75657.126203781, _, _, _, _,
+  25218.9903697515, _, _, _, _,
+  75657.126203781, _, _, _, _,
+  75657.126203781, _, _, _, _,
+  252190.368981095, _, _, _, _,
+  252190.368981095, _, _, _, _,
+  151314.252407562, _, _, _, _,
+  50438.1358340295, _, _, _, _,
+  100876.116573533, _, _, _, _,
+  25218.9903697515, _, _, _, _,
+  353066.640649153, _, _, _, _,
+  151314.252407562, _, _, _, _,
+  151314.252407562, _, _, _, _,
+  252190.368981095, _, _, _, _,
+  201752.388241592, _, _, _, _,
+  25218.9903697515, _, _, _, _,
+  75657.126203781, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -94462,27 +94681,27 @@ _, _, _, _, _ ;
 
  Yellowtail_Flounder10_Nums =
   _, _, _, _, _,
-  64348, _, _, _, _,
-  96522, _, _, _, _,
-  64348, _, _, _, _,
-  450437, _, _, _, _,
-  289567, _, _, _, _,
-  289567, _, _, _, _,
-  289567, _, _, _, _,
-  160870, _, _, _, _,
-  225219, _, _, _, _,
-  96522, _, _, _, _,
-  64348, _, _, _, _,
-  193044, _, _, _, _,
-  289567, _, _, _, _,
-  257393, _, _, _, _,
-  257393, _, _, _, _,
+  25943.3127435408, _, _, _, _,
+  38914.9693064484, _, _, _, _,
+  25943.3127435408, _, _, _, _,
+  181603.256280453, _, _, _, _,
+  116744.952886939, _, _, _, _,
+  116744.952886939, _, _, _, _,
+  116744.952886939, _, _, _, _,
+  64858.2793404602, _, _, _, _,
+  90801.6324011135, _, _, _, _,
+  38914.9693064484, _, _, _, _,
+  25943.3127435408, _, _, _, _,
+  77829.945972907, _, _, _, _,
+  116744.952886939, _, _, _, _,
+  103773.296324031, _, _, _, _,
+  103773.296324031, _, _, _, _,
   _, _, _, _, _,
-  32174, _, _, _, _,
-  32174, _, _, _, _,
+  12971.6461110941, _, _, _, _,
+  12971.6461110941, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  64348, _, _, _, _,
+  25943.3127435408, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -94558,27 +94777,27 @@ _, _, _, _, _ ;
 
  Yellowtail_Flounder1_Nums =
   _, _, _, _, _,
-  3693428, _, _, _, _,
-  5540142, _, _, _, _,
-  3693428, _, _, _, _,
-  25853997, _, _, _, _,
-  16620426, _, _, _, _,
-  16620426, _, _, _, _,
-  16620426, _, _, _, _,
-  9233570, _, _, _, _,
-  12926998, _, _, _, _,
-  5540142, _, _, _, _,
-  3693428, _, _, _, _,
-  11080284, _, _, _, _,
-  16620426, _, _, _, _,
-  14773712, _, _, _, _,
-  14773712, _, _, _, _,
+  270344.584383425, _, _, _, _,
+  405516.8785669, _, _, _, _,
+  270344.584383425, _, _, _, _,
+  1892412.7896519, _, _, _, _,
+  1216551.10428949, _, _, _, _,
+  1216551.10428949, _, _, _, _,
+  1216551.10428949, _, _, _, _,
+  675861.434715439, _, _, _, _,
+  946206.439226899, _, _, _, _,
+  405516.8785669, _, _, _, _,
+  270344.584383425, _, _, _, _,
+  811033.833829437, _, _, _, _,
+  1216551.10428949, _, _, _, _,
+  1081378.81010601, _, _, _, _,
+  1081378.81010601, _, _, _, _,
   _, _, _, _, _,
-  1846714, _, _, _, _,
-  1846714, _, _, _, _,
+  135172.185269428, _, _, _, _,
+  135172.185269428, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  3693428, _, _, _, _,
+  270344.584383425, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -94654,27 +94873,27 @@ _, _, _, _, _ ;
 
  Yellowtail_Flounder2_Nums =
   _, _, _, _, _,
-  2355033, _, _, _, _,
-  3532550, _, _, _, _,
-  2355033, _, _, _, _,
-  16485232, _, _, _, _,
-  10597649, _, _, _, _,
-  10597649, _, _, _, _,
-  10597649, _, _, _, _,
-  5887583, _, _, _, _,
-  8242616, _, _, _, _,
-  3532550, _, _, _, _,
-  2355033, _, _, _, _,
-  7065099, _, _, _, _,
-  10597649, _, _, _, _,
-  9420132, _, _, _, _,
-  9420132, _, _, _, _,
+  354194.580930211, _, _, _, _,
+  531291.874004842, _, _, _, _,
+  354194.580930211, _, _, _, _,
+  2479362.98227108, _, _, _, _,
+  1593876.23594067, _, _, _, _,
+  1593876.23594067, _, _, _, _,
+  1593876.23594067, _, _, _, _,
+  885486.417942843, _, _, _, _,
+  1239681.54930788, _, _, _, _,
+  531291.874004842, _, _, _, _,
+  354194.580930211, _, _, _, _,
+  1062583.84849322, _, _, _, _,
+  1593876.23594067, _, _, _, _,
+  1416778.94286604, _, _, _, _,
+  1416778.94286604, _, _, _, _,
   _, _, _, _, _,
-  1177517, _, _, _, _,
-  1177517, _, _, _, _,
+  177097.150379837, _, _, _, _,
+  177097.150379837, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  2355033, _, _, _, _,
+  354194.580930211, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -94750,27 +94969,27 @@ _, _, _, _, _ ;
 
  Yellowtail_Flounder3_Nums =
   _, _, _, _, _,
-  1501635, _, _, _, _,
-  2252453, _, _, _, _,
-  1501635, _, _, _, _,
-  10511446, _, _, _, _,
-  6757358, _, _, _, _,
-  6757358, _, _, _, _,
-  6757358, _, _, _, _,
-  3754088, _, _, _, _,
-  5255723, _, _, _, _,
-  2252453, _, _, _, _,
-  1501635, _, _, _, _,
-  4504905, _, _, _, _,
-  6757358, _, _, _, _,
-  6006540, _, _, _, _,
-  6006540, _, _, _, _,
+  1130879.28368807, _, _, _, _,
+  1696318.93386385, _, _, _, _,
+  1130879.28368807, _, _, _, _,
+  7916157.90967139, _, _, _, _,
+  5088958.76174677, _, _, _, _,
+  5088958.76174677, _, _, _, _,
+  5088958.76174677, _, _, _, _,
+  2827198.09944248, _, _, _, _,
+  3958079.14056945, _, _, _, _,
+  1696318.93386385, _, _, _, _,
+  1130879.28368807, _, _, _, _,
+  3392638.18855346, _, _, _, _,
+  5088958.76174677, _, _, _, _,
+  4523519.11157099, _, _, _, _,
+  4523519.11157099, _, _, _, _,
   _, _, _, _, _,
-  750818, _, _, _, _,
-  750818, _, _, _, _,
+  565439.194577088, _, _, _, _,
+  565439.194577088, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  1501635, _, _, _, _,
+  1130879.28368807, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -94846,27 +95065,27 @@ _, _, _, _, _ ;
 
  Yellowtail_Flounder4_Nums =
   _, _, _, _, _,
-  957485, _, _, _, _,
-  1436227, _, _, _, _,
-  957485, _, _, _, _,
-  6702392, _, _, _, _,
-  4308680, _, _, _, _,
-  4308680, _, _, _, _,
-  4308680, _, _, _, _,
-  2393711, _, _, _, _,
-  3351196, _, _, _, _,
-  1436227, _, _, _, _,
-  957485, _, _, _, _,
-  2872454, _, _, _, _,
-  4308680, _, _, _, _,
-  3829938, _, _, _, _,
-  3829938, _, _, _, _,
+  736290.814056206, _, _, _, _,
+  1104436.22650893, _, _, _, _,
+  736290.814056206, _, _, _, _,
+  5154037.60205155, _, _, _, _,
+  3313309.95574106, _, _, _, _,
+  3313309.95574106, _, _, _, _,
+  3313309.95574106, _, _, _, _,
+  1840726.96366665, _, _, _, _,
+  2577018.92195297, _, _, _, _,
+  1104436.22650893, _, _, _, _,
+  736290.814056206, _, _, _, _,
+  2208872.6619005, _, _, _, _,
+  3313309.95574106, _, _, _, _,
+  2945164.54328834, _, _, _, _,
+  2945164.54328834, _, _, _, _,
   _, _, _, _, _,
-  478742, _, _, _, _,
-  478742, _, _, _, _,
+  368145.115822358, _, _, _, _,
+  368145.115822358, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  957485, _, _, _, _,
+  736290.814056206, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -94942,27 +95161,27 @@ _, _, _, _, _ ;
 
  Yellowtail_Flounder5_Nums =
   _, _, _, _, _,
-  610519, _, _, _, _,
-  915778, _, _, _, _,
-  610519, _, _, _, _,
-  4273633, _, _, _, _,
-  2747335, _, _, _, _,
-  2747335, _, _, _, _,
-  2747335, _, _, _, _,
-  1526297, _, _, _, _,
-  2136816, _, _, _, _,
-  915778, _, _, _, _,
-  610519, _, _, _, _,
-  1831557, _, _, _, _,
-  2747335, _, _, _, _,
-  2442076, _, _, _, _,
-  2442076, _, _, _, _,
+  491182.862613983, _, _, _, _,
+  736774.297539761, _, _, _, _,
+  491182.862613983, _, _, _, _,
+  3438281.30823664, _, _, _, _,
+  2210323.74398748, _, _, _, _,
+  2210323.74398748, _, _, _, _,
+  2210323.74398748, _, _, _, _,
+  1227957.10885443, _, _, _, _,
+  1719140.73478938, _, _, _, _,
+  736774.297539761, _, _, _, _,
+  491182.862613983, _, _, _, _,
+  1473548.73442606, _, _, _, _,
+  2210323.74398748, _, _, _, _,
+  1964732.3090617, _, _, _, _,
+  1964732.3090617, _, _, _, _,
   _, _, _, _, _,
-  305259, _, _, _, _,
-  305259, _, _, _, _,
+  245591.23704235, _, _, _, _,
+  245591.23704235, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  610519, _, _, _, _,
+  491182.862613983, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -95038,27 +95257,27 @@ _, _, _, _, _ ;
 
  Yellowtail_Flounder6_Nums =
   _, _, _, _, _,
-  389284, _, _, _, _,
-  583926, _, _, _, _,
-  389284, _, _, _, _,
-  2724988, _, _, _, _,
-  1751778, _, _, _, _,
-  1751778, _, _, _, _,
-  1751778, _, _, _, _,
-  973210, _, _, _, _,
-  1362494, _, _, _, _,
-  583926, _, _, _, _,
-  389284, _, _, _, _,
-  1167852, _, _, _, _,
-  1751778, _, _, _, _,
-  1557136, _, _, _, _,
-  1557136, _, _, _, _,
+  351939.601560938, _, _, _, _,
+  527909.40493432, _, _, _, _,
+  351939.601560938, _, _, _, _,
+  2463578.12085599, _, _, _, _,
+  1583728.82482055, _, _, _, _,
+  1583728.82482055, _, _, _, _,
+  1583728.82482055, _, _, _, _,
+  879848.96973856, _, _, _, _,
+  1231789.11822998, _, _, _, _,
+  527909.40493432, _, _, _, _,
+  351939.601560938, _, _, _, _,
+  1055818.90971245, _, _, _, _,
+  1583728.82482055, _, _, _, _,
+  1407759.02144717, _, _, _, _,
+  1407759.02144717, _, _, _, _,
   _, _, _, _, _,
-  194642, _, _, _, _,
-  194642, _, _, _, _,
+  175969.661587053, _, _, _, _,
+  175969.661587053, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  389284, _, _, _, _,
+  351939.601560938, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -95134,27 +95353,27 @@ _, _, _, _, _ ;
 
  Yellowtail_Flounder7_Nums =
   _, _, _, _, _,
-  248218, _, _, _, _,
-  372328, _, _, _, _,
-  248218, _, _, _, _,
-  1737529, _, _, _, _,
-  1116983, _, _, _, _,
-  1116983, _, _, _, _,
-  1116983, _, _, _, _,
-  620546, _, _, _, _,
-  868764, _, _, _, _,
-  372328, _, _, _, _,
-  248218, _, _, _, _,
-  744655, _, _, _, _,
-  1116983, _, _, _, _,
-  992873, _, _, _, _,
-  992873, _, _, _, _,
+  207774.361884593, _, _, _, _,
+  311661.544357665, _, _, _, _,
+  207774.361884593, _, _, _, _,
+  1454421.07038661, _, _, _, _,
+  934984.993208697, _, _, _, _,
+  934984.993208697, _, _, _, _,
+  934984.993208697, _, _, _, _,
+  519435.884542229, _, _, _, _,
+  727210.569317827, _, _, _, _,
+  311661.544357665, _, _, _, _,
+  207774.361884593, _, _, _, _,
+  623323.147660056, _, _, _, _,
+  934984.993208697, _, _, _, _,
+  831097.810735624, _, _, _, _,
+  831097.810735624, _, _, _, _,
   _, _, _, _, _,
-  124109, _, _, _, _,
-  124109, _, _, _, _,
+  103887.098766767, _, _, _, _,
+  103887.098766767, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  248218, _, _, _, _,
+  207774.361884593, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -95230,27 +95449,27 @@ _, _, _, _, _ ;
 
  Yellowtail_Flounder8_Nums =
   _, _, _, _, _,
-  158271, _, _, _, _,
-  237406, _, _, _, _,
-  158271, _, _, _, _,
-  1107897, _, _, _, _,
-  712219, _, _, _, _,
-  712219, _, _, _, _,
-  712219, _, _, _, _,
-  395677, _, _, _, _,
-  553948, _, _, _, _,
-  237406, _, _, _, _,
-  158271, _, _, _, _,
-  474813, _, _, _, _,
-  712219, _, _, _, _,
-  633084, _, _, _, _,
-  633084, _, _, _, _,
+  143299.05991862, _, _, _, _,
+  214948.590933684, _, _, _, _,
+  143299.05991862, _, _, _, _,
+  1003093.78992582, _, _, _, _,
+  644846.021181589, _, _, _, _,
+  644846.021181589, _, _, _, _,
+  644846.021181589, _, _, _, _,
+  358247.635886099, _, _, _, _,
+  501546.91849811, _, _, _, _,
+  214948.590933684, _, _, _, _,
+  143299.05991862, _, _, _, _,
+  429897.222520718, _, _, _, _,
+  644846.021181589, _, _, _, _,
+  573196.490166524, _, _, _, _,
+  573196.490166524, _, _, _, _,
   _, _, _, _, _,
-  79135, _, _, _, _,
-  79135, _, _, _, _,
+  71649.4732840009, _, _, _, _,
+  71649.4732840009, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  158271, _, _, _, _,
+  143299.05991862, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -95326,27 +95545,27 @@ _, _, _, _, _ ;
 
  Yellowtail_Flounder9_Nums =
   _, _, _, _, _,
-  100918, _, _, _, _,
-  151377, _, _, _, _,
-  100918, _, _, _, _,
-  706426, _, _, _, _,
-  454131, _, _, _, _,
-  454131, _, _, _, _,
-  454131, _, _, _, _,
-  252295, _, _, _, _,
-  353213, _, _, _, _,
-  151377, _, _, _, _,
-  100918, _, _, _, _,
-  302754, _, _, _, _,
-  454131, _, _, _, _,
-  403672, _, _, _, _,
-  403672, _, _, _, _,
+  90106.4747968209, _, _, _, _,
+  135159.71285909, _, _, _, _,
+  90106.4747968209, _, _, _, _,
+  630745.55654537, _, _, _, _,
+  405479.294758996, _, _, _, _,
+  405479.294758996, _, _, _, _,
+  405479.294758996, _, _, _, _,
+  225266.178245158, _, _, _, _,
+  315372.793071624, _, _, _, _,
+  135159.71285909, _, _, _, _,
+  90106.4747968209, _, _, _, _,
+  270319.451281013, _, _, _, _,
+  405479.294758996, _, _, _, _,
+  360426.056696727, _, _, _, _,
+  360426.056696727, _, _, _, _,
   _, _, _, _, _,
-  50459, _, _, _, _,
-  50459, _, _, _, _,
+  45053.2017609659, _, _, _, _,
+  45053.2017609659, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  100918, _, _, _, _,
+  90106.4747968209, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,

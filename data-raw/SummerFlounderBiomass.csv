@@ -1,0 +1,80 @@
+#' Northeast Summer Flounder,,,
+#' ,,,
+#' @description spawning stock biomass (mt; Table A87) and abundance (thousands; Table A89). This data is an estimate from the 2019 ASFMC stock assessment,,,
+#',,,
+#' @source 66th Northeast Regional Stock Assessment Workshop (66th SAW),,,
+#',,,
+#',,,
+Year,Value,Variable,Units
+1982,30451,SSB,Metric Tons
+1983,28896,SSB,Metric Tons
+1984,24266,SSB,Metric Tons
+1985,21797,SSB,Metric Tons
+1986,22185,SSB,Metric Tons
+1987,22913,SSB,Metric Tons
+1988,12572,SSB,Metric Tons
+1989,7408,SSB,Metric Tons
+1990,12121,SSB,Metric Tons
+1991,14072,SSB,Metric Tons
+1992,13077,SSB,Metric Tons
+1993,14543,SSB,Metric Tons
+1994,15916,SSB,Metric Tons
+1995,21103,SSB,Metric Tons
+1996,28923,SSB,Metric Tons
+1997,35649,SSB,Metric Tons
+1998,35365,SSB,Metric Tons
+1999,36344,SSB,Metric Tons
+2000,41262,SSB,Metric Tons
+2001,52588,SSB,Metric Tons
+2002,61339,SSB,Metric Tons
+2003,69153,SSB,Metric Tons
+2004,64394,SSB,Metric Tons
+2005,60941,SSB,Metric Tons
+2006,64754,SSB,Metric Tons
+2007,63850,SSB,Metric Tons
+2008,64312,SSB,Metric Tons
+2009,65969,SSB,Metric Tons
+2010,64519,SSB,Metric Tons
+2011,59019,SSB,Metric Tons
+2012,63401,SSB,Metric Tons
+2013,56052,SSB,Metric Tons
+2014,51785,SSB,Metric Tons
+2015,45930,SSB,Metric Tons
+2016,43000,SSB,Metric Tons
+2017,44552,SSB,Metric Tons
+1982,168973,Abundance,Thousands
+1983,201865,Abundance,Thousands
+1984,155417,Abundance,Thousands
+1985,148650,Abundance,Thousands
+1986,158861,Abundance,Thousands
+1987,137978,Abundance,Thousands
+1988,78842,Abundance,Thousands
+1989,62325,Abundance,Thousands
+1990,76839,Abundance,Thousands
+1991,92177,Abundance,Thousands
+1992,97591,Abundance,Thousands
+1993,90474,Abundance,Thousands
+1994,105602,Abundance,Thousands
+1995,135867,Abundance,Thousands
+1996,149771,Abundance,Thousands
+1997,146942,Abundance,Thousands
+1998,147889,Abundance,Thousands
+1999,135148,Abundance,Thousands
+2000,146399,Abundance,Thousands
+2001,157143,Abundance,Thousands
+2002,173811,Abundance,Thousands
+2003,168704,Abundance,Thousands
+2004,183349,Abundance,Thousands
+2005,162474,Abundance,Thousands
+2006,153429,Abundance,Thousands
+2007,155667,Abundance,Thousands
+2008,169971,Abundance,Thousands
+2009,194362,Abundance,Thousands
+2010,189147,Abundance,Thousands
+2011,162348,Abundance,Thousands
+2012,143640,Abundance,Thousands
+2013,133014,Abundance,Thousands
+2014,130023,Abundance,Thousands
+2015,118093,Abundance,Thousands
+2016,116170,Abundance,Thousands
+2017,121825,Abundance,Thousands

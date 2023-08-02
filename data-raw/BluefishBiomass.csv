@@ -1,0 +1,42 @@
+#' Northeast Bluefish,,,
+#' ,,,
+#' @description spawning stock biomass (mt; Table C1) . This data is an estimate from the 2019 ASFMC stock assessment,,,
+#',,,
+"#' @source Operational Assessment of the Black Sea Bass, Scup, Bluefish, and Monkfish Stocks, Updated Through 2018",,,
+#',,,
+#',,,
+Year,Value,Variable,Units
+1985,185654,SSB,Metric Tons
+1986,165351,SSB,Metric Tons
+1987,138473,SSB,Metric Tons
+1988,102815,SSB,Metric Tons
+1989,96055,SSB,Metric Tons
+1990,85487,SSB,Metric Tons
+1991,78506,SSB,Metric Tons
+1992,75510,SSB,Metric Tons
+1993,75901,SSB,Metric Tons
+1994,77018,SSB,Metric Tons
+1995,77789,SSB,Metric Tons
+1996,76446,SSB,Metric Tons
+1997,80924,SSB,Metric Tons
+1998,94032,SSB,Metric Tons
+1999,97647,SSB,Metric Tons
+2000,107896,SSB,Metric Tons
+2001,118111,SSB,Metric Tons
+2002,101029,SSB,Metric Tons
+2003,105989,SSB,Metric Tons
+2004,117967,SSB,Metric Tons
+2005,132223,SSB,Metric Tons
+2006,107584,SSB,Metric Tons
+2007,109312,SSB,Metric Tons
+2008,131873,SSB,Metric Tons
+2009,121382,SSB,Metric Tons
+2010,118142,SSB,Metric Tons
+2011,115427,SSB,Metric Tons
+2012,112703,SSB,Metric Tons
+2013,110627,SSB,Metric Tons
+2014,94204,SSB,Metric Tons
+2015,85924,SSB,Metric Tons
+2016,96805,SSB,Metric Tons
+2017,92794,SSB,Metric Tons
+2018,91041,SSB,Metric Tons

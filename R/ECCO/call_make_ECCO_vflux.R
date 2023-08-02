@@ -35,7 +35,7 @@ for(yr in 1:length(dir.names)){
     # bgm.file = here::here('Geometry','neus_tmerc_RM2.bgm'),
     bgm.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/neus_ll_WGS84.bgm',
     # shp.file = here::here('Geometry','Neus_ll_0p01.shp'),
-    shp.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/Neus_ll_0p01.shp',
+    shp.file = 'C:/Users/joseph.caracappa/Documents/GitHub/neus-atlantis/Geometry/gis/Neus_ll_0p01.shp',
     name.out = 'ECCO_vflux_Atlantis_'
   )
   

@@ -2,8 +2,12 @@
 library(ncdf4)
 library(dplyr)
 library(atlantistools)
+library(RNetCDF)
 ##Loads post-processing functions
-source(here::here('R','get_atl_paramfiles.R'))
+
+proj.dir = '/contrib/Joseph.Caracappa/fishing_sensitivity/neus-atlantis/'
+
+source(paste0('R','get_atl_paramfiles.R'))
 source(here::here('R','process_atl_output.R'))
 source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
@@ -11,9 +15,13 @@ source(here::here('R','make_atlantis_diagnostic_figures.R'))
 
 #Run name is the actual run name. Can be the same or different than run.prefix (e.g. "Fixed_Migration_ATL120")
 
-run.name = 'Dev_01112022'
+run.name = 'fishing_sensitivity_baseline_100yr'
 
-atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/',run.name,'/')
+atl.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/fishing_sensitivity/reference_run/',run.name,'/')
+# atl.dir = here::here('Atlantis_Runs','ZL_restore_7_mumC',run.name,'')
+# atl.dir = here::here('Atlantis_Runs',run.name,'')
+# atl.dir = '/home/jcaracappa/atlantis/Shared_Data/Dev_Runs/Dev_11032022/'
+
 
 dir.create(paste0(atl.dir,'Post_Processed/'))
 dir.create(paste0(atl.dir,'Post_Processed/Data/'))
@@ -30,6 +38,7 @@ param.ls= get_atl_paramfiles(param.dir = param.dir,
                              include_catch=T)
 
 #Run  post-processing function to generate "result" R object. 
+tictoc::tic()
 process_atl_output(
   param.dir = here::here('currentVersion'),
   atl.dir = atl.dir,
@@ -38,16 +47,18 @@ process_atl_output(
   param.ls = param.ls,
   include_catch = T,
   save.out = T,
-  diet.agg.time = 'month',
+  agg.scale = 'year',
   spatial.overlap = F,
-  large.file = F
+  large.file = F,
+  system = 'linux'
 )
-
+tictoc::toc()
 #If result object saved to file or already exists load it into env.
 # load(paste0(out.dir,'neus_output_postprocessed.rdata'))
 # load(paste0(out.dir,'neus_output_postprocessed.Rdata'))
 
 #Run diagnostic figures/tables script. See function document for more detailed description of figures.
+tictoc::tic()
 make_atlantis_diagnostic_figures(
   atl.dir = atl.dir,
   fig.dir = fig.dir,
@@ -67,12 +78,12 @@ make_atlantis_diagnostic_figures(
   phytopl.history = here::here('R','phytoplankton_timeseries_biomass_tonnes_1998_2016.csv'),
   zoopl.history = here::here('R','Zooplankton_total_biomass_tonnes_N_20yrs.csv'),
  
-  plot.all = F,
+  plot.all = T,
   #Turn these on/off for desired output
   plot.benthic =F,
   plot.overall.biomass = T,
   plot.biomass.timeseries = T,
-  plot.length.age = F,
+  plot.length.age = T,
   plot.biomass.box=T,
   plot.c.mum=T,
   plot.sn.rn=T,
@@ -80,14 +91,15 @@ make_atlantis_diagnostic_figures(
   plot.numbers.timeseries=T,
   plot.physics=T,
   plot.growth.cons=T,
-  plot.cohort=T,
+  plot.cohort=F,
   plot.diet=T,
-  plot.consumption= F,
+  plot.consumption= T,
   plot.spatial.biomass=F,
   plot.spatial.biomass.seasonal = F,
   plot.LTL=F,
   plot.catch =T,
-  plot.mortality=F
+  plot.mortality=T,
+  plot.max.weight = T
 
 )
-  
+tictoc::toc()

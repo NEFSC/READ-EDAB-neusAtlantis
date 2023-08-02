@@ -1,0 +1,90 @@
+Code,Functional_Group,Have_Data,Catch_Source,Imputation_Type
+ANC,Anchovies,TRUE,comlandr,
+BB,Sediment Bacteria,FALSE,,
+BC,Benthic Carnivore,TRUE,comlandr,
+BD,Deposit Feeder,FALSE,,
+BFF,Other benthic filter feeder,TRUE,comlandr,
+BFT,Atlantic bluefin tuna,TRUE,comlandr,
+BG,Benthic grazer,FALSE,,
+BIL,Billfish,TRUE,comlandr,
+BLF,Bluefish,TRUE,stocksmart,mean
+BLS,Blue shark,TRUE,comlandr,
+BMS,Shallow macrozoobenthos,TRUE,comlandr,
+BO,Meiobenthos,FALSE,,
+BPF,Other benthopelagic fish,TRUE,comlandr,
+BSB,Black sea bass,TRUE,stocksmart,mean
+BUT,Butterfish,TRUE,stocksmart,scalar
+BWH,Baleen whales,FALSE,,
+CLA,Atlantic surf clam,TRUE,stocksmart,mean
+COD,Atlantic cod,TRUE,stocksmart,
+DC,Carrion,FALSE,,
+DF,Dinoflagellates,FALSE,,
+DL,Labile detritus,FALSE,,
+DOG,Spiny dogfish,TRUE,stocksmart,scalar
+DR,Refractory detritus,FALSE,,
+DRM,Drums and croakers,TRUE,comlandr,
+DSH,Other demersal sharks,TRUE,comlandr,
+FDE,Shallow demersal fish,TRUE,comlandr,
+FDF,Miscellaneous demersal fish,TRUE,comlandr,
+FLA,Other flatfish,TRUE,comlandr,
+FOU,Fourspot flounder,TRUE,comlandr,
+GOO,Goosefish,TRUE,stocksmart,scalar
+HAD,Haddock,TRUE,stocksmart,
+HAL,Atlantic halibut,TRUE,stocksmart,scalar
+HER,Atlantic herring,TRUE,stocksmart,
+INV,Invasive vertebrate species,FALSE,,
+ISQ,Illex squid,TRUE,stocksmart,scalar
+LOB,Lobster,TRUE,comlandr,
+LSK,Little skate,TRUE,stocksmart,scalar
+LSQ,Loligo squid,TRUE,stocksmart,scalar
+MA,Macroalgae,FALSE,,
+MAK,Atlantic mackerel,TRUE,stocksmart,mean
+MB,Microphtybenthos,FALSE,,
+MEN,Atlantic menhaden,TRUE,manual,
+MPF,Migratory mesopelagic fish,FALSE,,
+NSH,Northern shrimp other pandalids,TRUE,comlandr,
+OHK,Offshore hake,TRUE,comlandr,
+OPT,Ocean pout,TRUE,stocksmart,
+OSH,Other shrimps,FALSE,,
+PB,Pelagic Bacteria,FALSE,,
+PIN,Pinnipeds,FALSE,,
+PL,Diatom,FALSE,,
+PLA,American plaice,TRUE,comlandr,
+POL,Pollock,TRUE,stocksmart,mean
+POR,Porbeagle shark,TRUE,comlandr,
+PS,Pico-phytoplankton,FALSE,,
+PSH,Other pelagic sharks,TRUE,comlandr,
+QHG,Ocean quahog,TRUE,stocksmart,mean
+RCB,Red deep-sea crab,TRUE,stocksmart,scalar
+RED,Acadian redfish,TRUE,stocksmart,scalar
+REP,Marine turtles,TRUE,comlandr,
+RHK,Red hake,TRUE,stocksmart,mean
+RWH,Right whales,FALSE,,
+SAL,Atlantic salmon,TRUE,comlandr,
+SB,Seabirds,FALSE,,
+SCA,Sea scallop,TRUE,stocksmart,scalar
+SCU,Scup,TRUE,stocksmart,mean
+SDF,Atlantic states demersal fish,TRUE,comlandr,
+SG,Seagrass,FALSE,,
+SHK,Silver hake,TRUE,stocksmart,scalar
+SK,Northeast skate complex,TRUE,stocksmart,mean
+SMO,Smooth dogfish,TRUE,stocksmart,scalar
+SSH,Sandbar shark,TRUE,comlandr,
+STB,Striped bass,TRUE,comlandr,
+SUF,Summer flounder,TRUE,stocksmart,mean
+SWH,Small toothed whales,FALSE,,
+TAU,Tautog,TRUE,comlandr,
+TUN,Other tunas,TRUE,comlandr,
+TWH,Toothed whales,FALSE,,
+TYL,All tilefish,TRUE,stocksmart,scalar
+WHK,White hake,TRUE,comlandr,
+WIF,Winter flounder,TRUE,stocksmart,
+WOL,Wolffish,FALSE,,
+WPF,Windowpane flounder,TRUE,stocksmart,scalar
+WSK,Winter skate,TRUE,stocksmart,scalar
+WTF,Witch flounder,TRUE,stocksmart,
+YTF,Yellowtail flounder,TRUE,stocksmart,
+ZG,Gelatinous zooplankton,FALSE,,
+ZL,Carnivorous zooplankton,FALSE,,
+ZM,Mesozooplankton,FALSE,,
+ZS,Microzooplankton,FALSE,,

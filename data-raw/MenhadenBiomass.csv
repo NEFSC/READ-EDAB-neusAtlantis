@@ -1,0 +1,133 @@
+#' Northeast Summer Flounder,,,
+#' ,,,
+#' @description biomass (1000 mt; Table 39 and abundance (billions; Table 37). This data is an estimate from the 2020 ASFMC stock assessment,,,
+#',,,
+#' @source 66th Northeast Regional Stock Assessment Workshop (66th SAW),,,
+#',,,
+#',,,
+Year,Value,Variable,Units
+1955,4243.9,Biomass,Thousand Metric Tons
+1956,3889.8,Biomass,Thousand Metric Tons
+1957,4446.1,Biomass,Thousand Metric Tons
+1958,4026.4,Biomass,Thousand Metric Tons
+1959,6794.8,Biomass,Thousand Metric Tons
+1960,5731.3,Biomass,Thousand Metric Tons
+1961,4092.6,Biomass,Thousand Metric Tons
+1962,3007.1,Biomass,Thousand Metric Tons
+1963,2493.2,Biomass,Thousand Metric Tons
+1964,1981,Biomass,Thousand Metric Tons
+1965,2112.6,Biomass,Thousand Metric Tons
+1966,2029.6,Biomass,Thousand Metric Tons
+1967,2598.1,Biomass,Thousand Metric Tons
+1968,2189.4,Biomass,Thousand Metric Tons
+1969,2007.6,Biomass,Thousand Metric Tons
+1970,2258.4,Biomass,Thousand Metric Tons
+1971,1825.9,Biomass,Thousand Metric Tons
+1972,1819.6,Biomass,Thousand Metric Tons
+1973,1379.2,Biomass,Thousand Metric Tons
+1974,1512.6,Biomass,Thousand Metric Tons
+1975,1851.6,Biomass,Thousand Metric Tons
+1976,2317.5,Biomass,Thousand Metric Tons
+1977,2262.7,Biomass,Thousand Metric Tons
+1978,2283.6,Biomass,Thousand Metric Tons
+1979,2210.6,Biomass,Thousand Metric Tons
+1980,2155.3,Biomass,Thousand Metric Tons
+1981,1797.8,Biomass,Thousand Metric Tons
+1982,2078.1,Biomass,Thousand Metric Tons
+1983,1582.7,Biomass,Thousand Metric Tons
+1984,1682.1,Biomass,Thousand Metric Tons
+1985,2141.8,Biomass,Thousand Metric Tons
+1986,2277.4,Biomass,Thousand Metric Tons
+1987,2103.8,Biomass,Thousand Metric Tons
+1988,1768.7,Biomass,Thousand Metric Tons
+1989,2337.5,Biomass,Thousand Metric Tons
+1990,2628.9,Biomass,Thousand Metric Tons
+1991,3118.1,Biomass,Thousand Metric Tons
+1992,4141,Biomass,Thousand Metric Tons
+1993,3582.7,Biomass,Thousand Metric Tons
+1994,3640.7,Biomass,Thousand Metric Tons
+1996,3087.7,Biomass,Thousand Metric Tons
+1997,2642.3,Biomass,Thousand Metric Tons
+1998,2309.6,Biomass,Thousand Metric Tons
+1999,3391.8,Biomass,Thousand Metric Tons
+2000,3209.2,Biomass,Thousand Metric Tons
+2001,2913.3,Biomass,Thousand Metric Tons
+2002,3352.9,Biomass,Thousand Metric Tons
+2003,3093,Biomass,Thousand Metric Tons
+2004,2786.5,Biomass,Thousand Metric Tons
+2005,2128.2,Biomass,Thousand Metric Tons
+2006,2695,Biomass,Thousand Metric Tons
+2007,3367.4,Biomass,Thousand Metric Tons
+2008,3100.8,Biomass,Thousand Metric Tons
+2009,3321.4,Biomass,Thousand Metric Tons
+2010,3223.8,Biomass,Thousand Metric Tons
+2011,4762,Biomass,Thousand Metric Tons
+2012,4702,Biomass,Thousand Metric Tons
+2013,3549.8,Biomass,Thousand Metric Tons
+2014,3179.3,Biomass,Thousand Metric Tons
+2015,3023.2,Biomass,Thousand Metric Tons
+2016,4404.5,Biomass,Thousand Metric Tons
+2017,4677,Biomass,Thousand Metric Tons
+1955,181,Abundance,Billions
+1956,289.9,Abundance,Billions
+1957,161.1,Abundance,Billions
+1958,609.6,Abundance,Billions
+1959,189.3,Abundance,Billions
+1960,100.2,Abundance,Billions
+1961,81.5,Abundance,Billions
+1962,84.8,Abundance,Billions
+1963,62.9,Abundance,Billions
+1964,86,Abundance,Billions
+1965,86.1,Abundance,Billions
+1966,102.4,Abundance,Billions
+1967,55.4,Abundance,Billions
+1968,60.6,Abundance,Billions
+1969,69.4,Abundance,Billions
+1970,41.8,Abundance,Billions
+1971,70.7,Abundance,Billions
+1972,70.1,Abundance,Billions
+1973,84.7,Abundance,Billions
+1974,137.4,Abundance,Billions
+1975,214.4,Abundance,Billions
+1976,183,Abundance,Billions
+1977,186.8,Abundance,Billions
+1978,150.1,Abundance,Billions
+1979,178.9,Abundance,Billions
+1980,137.9,Abundance,Billions
+1981,175.7,Abundance,Billions
+1982,95,Abundance,Billions
+1983,140,Abundance,Billions
+1984,213.1,Abundance,Billions
+1985,197.9,Abundance,Billions
+1986,135,Abundance,Billions
+1987,114.1,Abundance,Billions
+1988,186.2,Abundance,Billions
+1989,133.7,Abundance,Billions
+1990,190.6,Abundance,Billions
+1991,208.9,Abundance,Billions
+1992,174.2,Abundance,Billions
+1993,147.4,Abundance,Billions
+1994,174.5,Abundance,Billions
+1995,119.6,Abundance,Billions
+1996,100.5,Abundance,Billions
+1997,95.5,Abundance,Billions
+1998,150.5,Abundance,Billions
+1999,125,Abundance,Billions
+2000,92.5,Abundance,Billions
+2001,113.8,Abundance,Billions
+2002,124.1,Abundance,Billions
+2003,107.1,Abundance,Billions
+2004,99.1,Abundance,Billions
+2005,151.5,Abundance,Billions
+2006,151.6,Abundance,Billions
+2007,106.4,Abundance,Billions
+2008,137.1,Abundance,Billions
+2009,133.1,Abundance,Billions
+2010,229.2,Abundance,Billions
+2011,141.6,Abundance,Billions
+2012,105.3,Abundance,Billions
+2013,121.9,Abundance,Billions
+2014,121.8,Abundance,Billions
+2015,201.3,Abundance,Billions
+2016,201.2,Abundance,Billions
+2017,91.4,Abundance,Billions

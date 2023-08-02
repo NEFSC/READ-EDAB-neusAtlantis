@@ -4,6 +4,7 @@
 #Set catch to fixed catch rate during spinup
 
 library(dplyr)
+library(ggplot2)
 
 header <- c("MAK","HER","WHK","BLF","WPF","SUF","WIF","WTF","FOU","HAL","PLA","FLA","BFT","TUN","BIL","MPF","BUT","BPF","ANC","GOO","MEN","FDE","COD","SHK","OHK","POL","RHK","BSB","SCU","TYL","RED","OPT","SAL","DRM","STB","TAU","WOL","SDF","FDF","HAD","YTF","DOG","SMO","SSH","DSH","BLS","POR","PSH","WSK","LSK","SK","SB","PIN","REP","RWH","BWH","SWH","TWH","INV","LSQ","ISQ","SCA","QHG","CLA","BFF","BG","LOB","RCB","BMS","NSH","OSH","ZL","BD","MA","MB","SG","BC","ZG","PL","DF","PS","ZM","ZS","PB","BB","BO","DL","DR","DC")
 
@@ -11,11 +12,16 @@ header <- c("MAK","HER","WHK","BLF","WPF","SUF","WIF","WTF","FOU","HAL","PLA","F
 catch = read.table(here::here('currentVersion','CatchFiles','total_catch_raw.txt'),header = F)
 colnames(catch) = c('time',header)
 
+#Get header from original 
+original_catch_file = here::here('currentVersion','CatchFiles','total_catch.ts')
+catch.lines = readLines(original_catch_file)
+header.text = grep('#',catch.lines,value = T)
+
 date = as.Date(as.POSIXct(catch$time*86400, origin = '1964-01-01 00:00:00', tz = 'UTC'))
 year = as.numeric(format(date, format = '%Y'))
 
 #Write Catch for spinup period
-spin.yr = 20
+spin.yr = 21
 
 date.spinup = which( year < 1964+spin.yr)
 date.rest = which( year >= 1964+spin.yr)
@@ -34,7 +40,12 @@ for(i in 1:length(nonzero.groups)){
   ind = which(header == nonzero.groups[i])
   orig.catch = catch[,ind+1]
   orig.catch = orig.catch[which(orig.catch > 0)]
-  spinup.catch = quantile(orig.catch,catch.p,names = F)
+  #Carve-out for HER (needs to be much lower)
+  if(nonzero.groups[i] == 'HER'){
+    spinup.catch = min(orig.catch) * 0
+  }else{
+    spinup.catch = quantile(orig.catch,catch.p,names = F)  
+  }
   catch[1:length(date.spinup),ind+1] = spinup.catch
 }
 
@@ -51,9 +62,18 @@ for(i in 1:length(nonzero.groups)){
 #Zero out any group in with spinup catch less than 10 mT/yr
 spinup.mean = colMeans(catch[date.spinup,])[-1]*86400*1E-9*5.7*20
 zero.spinup = which(spinup.mean <= 0.0274)
-catch[date.spinup,zero.spinup] = 0
+catch[date.spinup,zero.spinup+1] = 0
+
+for(i in 2:ncol(catch)){
+  catch[,i] = round(catch[,i],2)
+}
 
 write.table(catch,here::here('currentVersion','CatchFiles','total_catch_new_spinup.txt'),col.names = F, row.names = F, sep = " " )
+
+con = file(original_catch_file)
+writeLines(header.text,con)
+write.table(catch,row.names = F, col.names = F, file = original_catch_file,append = T)
+
 
 #plot catch forcing
 pdf(here::here('currentVersion','CatchFiles','Catch_Forcing_New_Spinup.pdf'),width = 12 , height = 12,onefile = T)

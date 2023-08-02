@@ -3,7 +3,7 @@
 #
 # Hydrodynamic files - new hydro from roms doppio
 # this is created from 2008-2010 daily files
-nhdfiles 54
+nhdfiles 57
 
 hd0.name /tsfiles/Annual_Files/flow_1964.nc
 hd1.name /tsfiles/Annual_Files/flow_1965.nc
@@ -59,6 +59,10 @@ hd50.name /tsfiles/Annual_Files/flow_2014.nc
 hd51.name /tsfiles/Annual_Files/flow_2015.nc
 hd52.name /tsfiles/Annual_Files/flow_2016.nc
 hd53.name /tsfiles/Annual_Files/flow_2017.nc
+hd54.name /tsfiles/Annual_Files/flow_2018.nc
+hd55.name /tsfiles/Annual_Files/flow_2019.nc
+hd56.name /tsfiles/Annual_Files/flow_2020.nc
+
 
 
 # Bottom stress
@@ -138,11 +142,11 @@ pss0.rewind 0
 # Solar time series data file
 #Solar_radiation /tsfiles/RMirradiance_smooth_3yr.ts
 Solar_radiation /tsfiles/ROMS_irradiance_smoothed_start1964.ts
-Solar_radiation_rewind 0
+Solar_radiation_rewind 1
 
 # Temperature time series data file
 use_tempfiles 1
-ntempfiles 54
+ntempfiles 57
 Temperature0.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_1964.nc
 Temperature1.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_1965.nc
 Temperature2.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_1966.nc
@@ -197,14 +201,16 @@ Temperature50.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2014.nc
 Temperature51.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2015.nc
 Temperature52.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2016.nc
 Temperature53.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2017.nc
-
+Temperature54.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2018.nc
+Temperature55.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2019.nc
+Temperature56.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2020.nc
 
 
 temp_rewind 1
 
 # Salinity time series data file
 use_saltfiles 1
-nsaltfiles 54
+nsaltfiles 57
 
 Salinity0.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_1964.nc
 Salinity1.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_1965.nc
@@ -260,8 +266,9 @@ Salinity50.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2014.nc
 Salinity51.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2015.nc
 Salinity52.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2016.nc
 Salinity53.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2017.nc
-
-
+Salinity54.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2018.nc
+Salinity55.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2019.nc
+Salinity56.name /tsfiles/Annual_Files/GLORYS_tempsalt_force_2020.nc
 
 salt_rewind 1
 
@@ -323,6 +330,7 @@ inputs_tout 86400 seconds
 ## G.Fay added 09/20/16
 use_external_scaling 0
 
+use_pollutantfiles 0
 #JC Adding LTL Forcing
 
 # JC adding LTL forcing 
@@ -334,7 +342,12 @@ tracerNames 5
 Diatom_N PicoPhytopl_N Diatom_S DinoFlag_N Lab_Det_N
 
 #Diatom_N
+
 Diatom_N_nFiles 54
+#Diatom_N_use_resets 0
+Diatom_N_ResetTol 0
+Diatom_N_rewind 1
+Diatom_N_wgt_coefft 1.0
 
 Diatom_N_File0.name /tsfiles/Annual_Files/Phyto_Forcing_1964.nc
 Diatom_N_File1.name /tsfiles/Annual_Files/Phyto_Forcing_1965.nc
@@ -391,12 +404,69 @@ Diatom_N_File51.name /tsfiles/Annual_Files/Phyto_Forcing_2015.nc
 Diatom_N_File52.name /tsfiles/Annual_Files/Phyto_Forcing_2016.nc
 Diatom_N_File53.name /tsfiles/Annual_Files/Phyto_Forcing_2017.nc
 
-Diatom_N_rewind 0
-Diatom_N_wgt_coefft 1.0
+Diatom_N_File0.use_resets 0
+Diatom_N_File1.use_resets 0
+Diatom_N_File2.use_resets 0
+Diatom_N_File3.use_resets 0
+Diatom_N_File4.use_resets 0
+Diatom_N_File5.use_resets 0
+Diatom_N_File6.use_resets 0
+Diatom_N_File7.use_resets 0
+Diatom_N_File8.use_resets 0
+Diatom_N_File9.use_resets 0
+Diatom_N_File10.use_resets 0
+Diatom_N_File11.use_resets 0
+Diatom_N_File12.use_resets 0
+Diatom_N_File13.use_resets 0
+Diatom_N_File14.use_resets 0
+Diatom_N_File15.use_resets 0
+Diatom_N_File16.use_resets 0
+Diatom_N_File17.use_resets 0
+Diatom_N_File18.use_resets 0
+Diatom_N_File19.use_resets 0
+Diatom_N_File20.use_resets 0
+Diatom_N_File21.use_resets 0
+Diatom_N_File22.use_resets 0
+Diatom_N_File23.use_resets 0
+Diatom_N_File24.use_resets 0
+Diatom_N_File25.use_resets 0
+Diatom_N_File26.use_resets 0
+Diatom_N_File27.use_resets 0
+Diatom_N_File28.use_resets 0
+Diatom_N_File29.use_resets 0
+Diatom_N_File30.use_resets 0
+Diatom_N_File31.use_resets 0
+Diatom_N_File32.use_resets 0
+Diatom_N_File33.use_resets 0
+Diatom_N_File34.use_resets 0
+Diatom_N_File35.use_resets 0
+Diatom_N_File36.use_resets 0
+Diatom_N_File37.use_resets 0
+Diatom_N_File38.use_resets 0
+Diatom_N_File39.use_resets 0
+Diatom_N_File40.use_resets 0
+Diatom_N_File41.use_resets 0
+Diatom_N_File42.use_resets 0
+Diatom_N_File43.use_resets 0
+Diatom_N_File44.use_resets 0
+Diatom_N_File45.use_resets 0
+Diatom_N_File46.use_resets 0
+Diatom_N_File47.use_resets 0
+Diatom_N_File48.use_resets 0
+Diatom_N_File49.use_resets 0
+Diatom_N_File50.use_resets 0
+Diatom_N_File51.use_resets 0
+Diatom_N_File52.use_resets 0
+Diatom_N_File53.use_resets 0
 
 #PicoPhytopl_N
 
 PicoPhytopl_N_nFiles 54
+PicoPhytopl_N_use_resets 0
+PicoPHytopl_N_ResetTol 0
+PicoPhytopl_N_rewind 1
+PicoPhytopl_N_wgt_coefft 1.0
+
 PicoPhytopl_N_File0.name /tsfiles/Annual_Files/Phyto_Forcing_1964.nc
 PicoPhytopl_N_File1.name /tsfiles/Annual_Files/Phyto_Forcing_1965.nc
 PicoPhytopl_N_File2.name /tsfiles/Annual_Files/Phyto_Forcing_1966.nc
@@ -452,16 +522,69 @@ PicoPhytopl_N_File51.name /tsfiles/Annual_Files/Phyto_Forcing_2015.nc
 PicoPhytopl_N_File52.name /tsfiles/Annual_Files/Phyto_Forcing_2016.nc
 PicoPhytopl_N_File53.name /tsfiles/Annual_Files/Phyto_Forcing_2017.nc
 
-
-
-PicoPhytopl_N_rewind 0
-PicoPhytopl_N_wgt_coefft 1.0
+PicoPhytopl_N_File0.use_resets 0
+PicoPhytopl_N_File1.use_resets 0
+PicoPhytopl_N_File2.use_resets 0
+PicoPhytopl_N_File3.use_resets 0
+PicoPhytopl_N_File4.use_resets 0
+PicoPhytopl_N_File5.use_resets 0
+PicoPhytopl_N_File6.use_resets 0
+PicoPhytopl_N_File7.use_resets 0
+PicoPhytopl_N_File8.use_resets 0
+PicoPhytopl_N_File9.use_resets 0
+PicoPhytopl_N_File10.use_resets 0
+PicoPhytopl_N_File11.use_resets 0
+PicoPhytopl_N_File12.use_resets 0
+PicoPhytopl_N_File13.use_resets 0
+PicoPhytopl_N_File14.use_resets 0
+PicoPhytopl_N_File15.use_resets 0
+PicoPhytopl_N_File16.use_resets 0
+PicoPhytopl_N_File17.use_resets 0
+PicoPhytopl_N_File18.use_resets 0
+PicoPhytopl_N_File19.use_resets 0
+PicoPhytopl_N_File20.use_resets 0
+PicoPhytopl_N_File21.use_resets 0
+PicoPhytopl_N_File22.use_resets 0
+PicoPhytopl_N_File23.use_resets 0
+PicoPhytopl_N_File24.use_resets 0
+PicoPhytopl_N_File25.use_resets 0
+PicoPhytopl_N_File26.use_resets 0
+PicoPhytopl_N_File27.use_resets 0
+PicoPhytopl_N_File28.use_resets 0
+PicoPhytopl_N_File29.use_resets 0
+PicoPhytopl_N_File30.use_resets 0
+PicoPhytopl_N_File31.use_resets 0
+PicoPhytopl_N_File32.use_resets 0
+PicoPhytopl_N_File33.use_resets 0
+PicoPhytopl_N_File34.use_resets 0
+PicoPhytopl_N_File35.use_resets 0
+PicoPhytopl_N_File36.use_resets 0
+PicoPhytopl_N_File37.use_resets 0
+PicoPhytopl_N_File38.use_resets 0
+PicoPhytopl_N_File39.use_resets 0
+PicoPhytopl_N_File40.use_resets 0
+PicoPhytopl_N_File41.use_resets 0
+PicoPhytopl_N_File42.use_resets 0
+PicoPhytopl_N_File43.use_resets 0
+PicoPhytopl_N_File44.use_resets 0
+PicoPhytopl_N_File45.use_resets 0
+PicoPhytopl_N_File46.use_resets 0
+PicoPhytopl_N_File47.use_resets 0
+PicoPhytopl_N_File48.use_resets 0
+PicoPhytopl_N_File49.use_resets 0
+PicoPhytopl_N_File50.use_resets 0
+PicoPhytopl_N_File51.use_resets 0
+PicoPhytopl_N_File52.use_resets 0
+PicoPhytopl_N_File53.use_resets 0
 
 #Diatom_S
 
 Diatom_S_nFiles 54
+Diatom_S_rewind 1
+Diatom_S_wgt_coefft 1.0
+Diatom_S_use_resets 0
+Diatom_S_ResetTol 0
 
-Diatom_S
 Diatom_S_File0.name /tsfiles/Annual_Files/Phyto_Forcing_1964.nc
 Diatom_S_File1.name /tsfiles/Annual_Files/Phyto_Forcing_1965.nc
 Diatom_S_File2.name /tsfiles/Annual_Files/Phyto_Forcing_1966.nc
@@ -517,11 +640,68 @@ Diatom_S_File51.name /tsfiles/Annual_Files/Phyto_Forcing_2015.nc
 Diatom_S_File52.name /tsfiles/Annual_Files/Phyto_Forcing_2016.nc
 Diatom_S_File53.name /tsfiles/Annual_Files/Phyto_Forcing_2017.nc
 
-Diatom_S_rewind 0
-Diatom_S_wgt_coefft 1.0
+Diatom_S_File0.use_resets 0
+Diatom_S_File1.use_resets 0
+Diatom_S_File2.use_resets 0
+Diatom_S_File3.use_resets 0
+Diatom_S_File4.use_resets 0
+Diatom_S_File5.use_resets 0
+Diatom_S_File6.use_resets 0
+Diatom_S_File7.use_resets 0
+Diatom_S_File8.use_resets 0
+Diatom_S_File9.use_resets 0
+Diatom_S_File10.use_resets 0
+Diatom_S_File11.use_resets 0
+Diatom_S_File12.use_resets 0
+Diatom_S_File13.use_resets 0
+Diatom_S_File14.use_resets 0
+Diatom_S_File15.use_resets 0
+Diatom_S_File16.use_resets 0
+Diatom_S_File17.use_resets 0
+Diatom_S_File18.use_resets 0
+Diatom_S_File19.use_resets 0
+Diatom_S_File20.use_resets 0
+Diatom_S_File21.use_resets 0
+Diatom_S_File22.use_resets 0
+Diatom_S_File23.use_resets 0
+Diatom_S_File24.use_resets 0
+Diatom_S_File25.use_resets 0
+Diatom_S_File26.use_resets 0
+Diatom_S_File27.use_resets 0
+Diatom_S_File28.use_resets 0
+Diatom_S_File29.use_resets 0
+Diatom_S_File30.use_resets 0
+Diatom_S_File31.use_resets 0
+Diatom_S_File32.use_resets 0
+Diatom_S_File33.use_resets 0
+Diatom_S_File34.use_resets 0
+Diatom_S_File35.use_resets 0
+Diatom_S_File36.use_resets 0
+Diatom_S_File37.use_resets 0
+Diatom_S_File38.use_resets 0
+Diatom_S_File39.use_resets 0
+Diatom_S_File40.use_resets 0
+Diatom_S_File41.use_resets 0
+Diatom_S_File42.use_resets 0
+Diatom_S_File43.use_resets 0
+Diatom_S_File44.use_resets 0
+Diatom_S_File45.use_resets 0
+Diatom_S_File46.use_resets 0
+Diatom_S_File47.use_resets 0
+Diatom_S_File48.use_resets 0
+Diatom_S_File49.use_resets 0
+Diatom_S_File50.use_resets 0
+Diatom_S_File51.use_resets 0
+Diatom_S_File52.use_resets 0
+Diatom_S_File53.use_resets 0
 
 #DinoFlag_N
+
 DinoFlag_N_nFiles 54
+DinoFlag_N_use_resets 0
+DinoFlag_N_rewind 1
+DinoFlag_N_wgt_coefft 1.0
+DinoFlag_N_ResetTol 0
 
 DinoFlag_N_File0.name /tsfiles/Annual_Files/Phyto_Forcing_1964.nc
 DinoFlag_N_File1.name /tsfiles/Annual_Files/Phyto_Forcing_1965.nc
@@ -578,11 +758,68 @@ DinoFlag_N_File51.name /tsfiles/Annual_Files/Phyto_Forcing_2015.nc
 DinoFlag_N_File52.name /tsfiles/Annual_Files/Phyto_Forcing_2016.nc
 DinoFlag_N_File53.name /tsfiles/Annual_Files/Phyto_Forcing_2017.nc
 
-DinoFlag_N_rewind 0
-DinoFlag_N_wgt_coefft 1.0
+DinoFlag_N_File0.use_resets 0
+DinoFlag_N_File1.use_resets 0
+DinoFlag_N_File2.use_resets 0
+DinoFlag_N_File3.use_resets 0
+DinoFlag_N_File4.use_resets 0
+DinoFlag_N_File5.use_resets 0
+DinoFlag_N_File6.use_resets 0
+DinoFlag_N_File7.use_resets 0
+DinoFlag_N_File8.use_resets 0
+DinoFlag_N_File9.use_resets 0
+DinoFlag_N_File10.use_resets 0
+DinoFlag_N_File11.use_resets 0
+DinoFlag_N_File12.use_resets 0
+DinoFlag_N_File13.use_resets 0
+DinoFlag_N_File14.use_resets 0
+DinoFlag_N_File15.use_resets 0
+DinoFlag_N_File16.use_resets 0
+DinoFlag_N_File17.use_resets 0
+DinoFlag_N_File18.use_resets 0
+DinoFlag_N_File19.use_resets 0
+DinoFlag_N_File20.use_resets 0
+DinoFlag_N_File21.use_resets 0
+DinoFlag_N_File22.use_resets 0
+DinoFlag_N_File23.use_resets 0
+DinoFlag_N_File24.use_resets 0
+DinoFlag_N_File25.use_resets 0
+DinoFlag_N_File26.use_resets 0
+DinoFlag_N_File27.use_resets 0
+DinoFlag_N_File28.use_resets 0
+DinoFlag_N_File29.use_resets 0
+DinoFlag_N_File30.use_resets 0
+DinoFlag_N_File31.use_resets 0
+DinoFlag_N_File32.use_resets 0
+DinoFlag_N_File33.use_resets 0
+DinoFlag_N_File34.use_resets 0
+DinoFlag_N_File35.use_resets 0
+DinoFlag_N_File36.use_resets 0
+DinoFlag_N_File37.use_resets 0
+DinoFlag_N_File38.use_resets 0
+DinoFlag_N_File39.use_resets 0
+DinoFlag_N_File40.use_resets 0
+DinoFlag_N_File41.use_resets 0
+DinoFlag_N_File42.use_resets 0
+DinoFlag_N_File43.use_resets 0
+DinoFlag_N_File44.use_resets 0
+DinoFlag_N_File45.use_resets 0
+DinoFlag_N_File46.use_resets 0
+DinoFlag_N_File47.use_resets 0
+DinoFlag_N_File48.use_resets 0
+DinoFlag_N_File49.use_resets 0
+DinoFlag_N_File50.use_resets 0
+DinoFlag_N_File51.use_resets 0
+DinoFlag_N_File52.use_resets 0
+DinoFlag_N_File53.use_resets 0
 
 #Lab_Det_N
+
 Lab_Det_N_nFiles 54
+Lab_Det_N_use_resets 0
+Lab_Det_N_ResetTol 0
+Lab_Det_N_rewind 1
+Lab_Det_N_wgt_coefft 1.0
 
 Lab_Det_N_File0.name /tsfiles/Annual_Files/Satphyto_Forcing_DL_1964.nc
 Lab_Det_N_File1.name /tsfiles/Annual_Files/Satphyto_Forcing_DL_1965.nc
@@ -639,5 +876,57 @@ Lab_Det_N_File51.name /tsfiles/Annual_Files/Satphyto_Forcing_DL_2015.nc
 Lab_Det_N_File52.name /tsfiles/Annual_Files/Satphyto_Forcing_DL_2016.nc
 Lab_Det_N_File53.name /tsfiles/Annual_Files/Satphyto_Forcing_DL_2017.nc
 
-Lab_Det_N_rewind 0
-Lab_Det_N_wgt_coefft 1.0
+Lab_Det_N_File0.use_resets 0
+Lab_Det_N_File1.use_resets 0
+Lab_Det_N_File2.use_resets 0
+Lab_Det_N_File3.use_resets 0
+Lab_Det_N_File4.use_resets 0
+Lab_Det_N_File5.use_resets 0
+Lab_Det_N_File6.use_resets 0
+Lab_Det_N_File7.use_resets 0
+Lab_Det_N_File8.use_resets 0
+Lab_Det_N_File9.use_resets 0
+Lab_Det_N_File10.use_resets 0
+Lab_Det_N_File11.use_resets 0
+Lab_Det_N_File12.use_resets 0
+Lab_Det_N_File13.use_resets 0
+Lab_Det_N_File14.use_resets 0
+Lab_Det_N_File15.use_resets 0
+Lab_Det_N_File16.use_resets 0
+Lab_Det_N_File17.use_resets 0
+Lab_Det_N_File18.use_resets 0
+Lab_Det_N_File19.use_resets 0
+Lab_Det_N_File20.use_resets 0
+Lab_Det_N_File21.use_resets 0
+Lab_Det_N_File22.use_resets 0
+Lab_Det_N_File23.use_resets 0
+Lab_Det_N_File24.use_resets 0
+Lab_Det_N_File25.use_resets 0
+Lab_Det_N_File26.use_resets 0
+Lab_Det_N_File27.use_resets 0
+Lab_Det_N_File28.use_resets 0
+Lab_Det_N_File29.use_resets 0
+Lab_Det_N_File30.use_resets 0
+Lab_Det_N_File31.use_resets 0
+Lab_Det_N_File32.use_resets 0
+Lab_Det_N_File33.use_resets 0
+Lab_Det_N_File34.use_resets 0
+Lab_Det_N_File35.use_resets 0
+Lab_Det_N_File36.use_resets 0
+Lab_Det_N_File37.use_resets 0
+Lab_Det_N_File38.use_resets 0
+Lab_Det_N_File39.use_resets 0
+Lab_Det_N_File40.use_resets 0
+Lab_Det_N_File41.use_resets 0
+Lab_Det_N_File42.use_resets 0
+Lab_Det_N_File43.use_resets 0
+Lab_Det_N_File44.use_resets 0
+Lab_Det_N_File45.use_resets 0
+Lab_Det_N_File46.use_resets 0
+Lab_Det_N_File47.use_resets 0
+Lab_Det_N_File48.use_resets 0
+Lab_Det_N_File49.use_resets 0
+Lab_Det_N_File50.use_resets 0
+Lab_Det_N_File51.use_resets 0
+Lab_Det_N_File52.use_resets 0
+Lab_Det_N_File53.use_resets 0
