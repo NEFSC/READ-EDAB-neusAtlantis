@@ -4,7 +4,7 @@
 library(dplyr)
 library(ggplot2)
 
-experiment.id = 'fspike1'
+experiment.id = 'fspike_UnfishedRecovery'
 
 data.dir = paste0('/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/data/',experiment.id,'/')
 
@@ -28,39 +28,15 @@ catch.age.prop = get_param_catch_age(harvest.file = here::here('currentVersion',
   select(-dum)%>%
   mutate(agecl = as.numeric(agecl) -1)
 
-biomass.baseline = read.table('/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/neus_outputBiomIndx.txt',header = T)%>%
-  select(Time, all_of(fgs$Code))%>%
-  mutate(Time = floor(Time/365))%>%
-  tidyr::gather('Code','Biomass',-Time)%>%
-  group_by(Code,Time)%>%
-  summarise(Biomass = mean(Biomass,na.rm=T))%>%
-  mutate(scalar = 1,
-         run.id = 'baseline')
-
-biomass.age.baseline = read.table('/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/neus_outputAgeBiomIndx.txt',header = T, stringsAsFactors = F)%>%
-  tidyr::gather('dum','Biomass',-Time)%>%
-  tidyr::separate(dum,c('Code','agecl'),sep = '\\.')%>%
-  filter(Code %in% fgs$Code)%>%
-  mutate(Time = floor(Time/365))%>%
-  group_by(Time,Code,agecl)%>%
-  summarise(Biomass = mean(Biomass,na.rm=T))%>%
-  mutate(scalar = 1,
-         run.id = 'baseline')%>%
-  left_join(age.mat)%>%
-  mutate(age.group = ifelse(agecl < age.mat, 'juv','adult'))%>%
-  group_by(Time,Code,scalar,run.id)%>%
-  mutate(Biomass.tot = sum(Biomass,na.rm=T))%>%
-  ungroup()%>%
-  mutate(Biomass.prop = Biomass/Biomass.tot)%>%
-  group_by(Time,Code,age.group,scalar,run.id)%>%
-  summarise(Biomass.prop = sum(Biomass.prop,na.rm=T))
-
-biomass = readRDS(paste0(data.dir,'BiomIndx_1_28105_year_fspike_combined.rds'))%>%
+biomass = readRDS(paste0(data.dir,'BiomIndx_',experiment.id,'_1_28105_year.rds'))%>%
   left_join(setup.df, by = 'run.id')%>%
   select(Time,Code,Biomass,scalar,run.id)%>%
-  bind_rows(biomass.baseline)
+  mutate(scalar = factor(scalar))
 
-biomass.age= readRDS(paste0(data.dir,'AgeBiomIndx_1_28105_year_fspike_combined.rds'))%>%
+biomass.baseline = biomass %>%
+  filter(scalar == 'baseline')
+
+biomass.age= readRDS(paste0(data.dir,'AgeBiomIndx_',experiment.id,'_1_28105_year.rds'))%>%
   left_join(setup.df,by = 'run.id')%>%
   select(Time,Code,agecl,Biomass,scalar,run.id)%>%
   left_join(age.mat)%>%
@@ -71,7 +47,12 @@ biomass.age= readRDS(paste0(data.dir,'AgeBiomIndx_1_28105_year_fspike_combined.r
   mutate(Biomass.prop = Biomass/Biomass.tot)%>%
   group_by(Time,Code,age.group,scalar,run.id)%>%
   summarise(Biomass.prop = sum(Biomass.prop,na.rm=T))%>%
-  bind_rows(biomass.age.baseline)
+  mutate(scalar = factor(scalar))
+  
+
+biomass.age.baseline = biomass.age %>%
+  filter(scalar == 'baseline')
+
 
 spp.names = sort(unique(setup.df$target.species))
 
@@ -92,7 +73,7 @@ t5 = t1 + 19
 
 #Create empty dataframes for stats
 bio.base.stats = data.frame(Code = spp.names,  b0.t1 = NA, b0.t2 = NA, b0.t3 = NA , b0.t4 = NA, b0.t5 = NA,stringsAsFactors = F)
-bio.run.stats =  data.frame(Code = setup.df$target.species, scalar= setup.df$scalar, b.t1 = NA, b.t2 = NA,b.t3 = NA, b.t4 = NA, b.t5 = NA,t.min =NA , b.t.min =NA, stringsAsFactors = F)
+bio.run.stats =  data.frame(Code = setup.df$target.species, scalar= setup.df$scalar, b.t1 = NA, b.t2 = NA,b.t3 = NA, b.t4 = NA, b.t5 = NA,stringsAsFactors = F)
 bio.age.base.stats = bio.age.run.stats = list()
 
 extract.time = function(data, time, var.name){  
@@ -105,7 +86,7 @@ i=1
 #Calculate biomass at key time points for baseline biomass
 for(i in 1:length(spp.names)){
   
-  bio.base.spp = biomass.baseline %>%
+  bio.base.spp = biomass %>%
     filter(Code == spp.names[i])
   
   if(nrow(bio.base.spp)== 0){next()}
@@ -121,7 +102,7 @@ for(i in 1:length(spp.names)){
 
   
   #Extract Biomass baseline age group proportions for each time point
-  bio.age.base.spp = biomass.age.baseline %>%
+  bio.age.base.spp = biomass.age %>%
     filter(Code == spp.names[i])%>%
     arrange(Time,Code,age.group,scalar)
   
@@ -139,11 +120,11 @@ for(i in 1:length(spp.names)){
              b0.t4 = extract.time(bio.age.base.spp,t4,'Biomass.prop'),
              b0.t5 = extract.time(bio.age.base.spp,t5,'Biomass.prop'))
   
+  print(i)
 }
 bio.age.base.stats = bind_rows(bio.age.base.stats)
 
 #calculate biomass at key time points for scenario runs
-i=1
 for(i in 1:nrow(setup.df)){
   
   bio.spp = biomass %>%
@@ -180,10 +161,9 @@ for(i in 1:nrow(setup.df)){
                                        b.t3 = extract.time(bio.age.spp,t3,'Biomass.prop'),
                                        b.t4 = extract.time(bio.age.spp,t4,'Biomass.prop'),
                                        b.t5 = extract.time(bio.age.spp,t5,'Biomass.prop'),
-                                       t.min = t.min,
-                                      b.t.min = extract.time(bio.age.spp,t.min,'Biomass.prop')
-                                      )
+                                      b.t.min = extract.time(bio.age.spp,t.min,'Biomass.prop'))
   
+  print(i)
 }
 
 bio.age.run.stats = bind_rows(bio.age.run.stats)
@@ -199,6 +179,8 @@ bio.recovery = bio.run.stats %>%
          recovery.10 = (db.t4-db.t2)/(t4-t2),
          recovery.20 = (db.t5-db.t2)/(t5-t2))
   
+
+
 
 saveRDS(bio.recovery,paste0(data.dir,'recovery_stats_', experiment.id,'.rds'))
 bio.recovery = readRDS(paste0(data.dir,'recovery_stats_', experiment.id,'.rds'))
