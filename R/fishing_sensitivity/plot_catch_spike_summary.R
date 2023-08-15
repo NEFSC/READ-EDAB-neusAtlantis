@@ -4,10 +4,10 @@ library(dplyr)
 library(ggplot2)
 library(gridExtra)
 
-experiment.id = 'fspike_combined'
+experiment.id = 'fspike_UnfishedRecovery'
 
-data.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/fishing_sensitivity/data/',experiment.id,'/')
-figure.dir = paste0('C:/Users/joseph.caracappa/Documents/Atlantis/fishing_sensitivity/figures/',experiment.id,'/')
+data.dir = paste0('/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/data/',experiment.id,'/')
+figure.dir = paste0('/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/figures/',experiment.id,'/')
 
 setup.df = read.csv(here::here('diagnostics','scenario_db',paste0(experiment.id,'_setup.csv')),as.is = T)
 master.dat = read.csv(here::here('diagnostics','scenario_db','scenario_db_master.csv'),as.is = T) %>%
@@ -25,10 +25,10 @@ fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T) %>%
 
 bio.run.stats = readRDS(paste0(data.dir,'recovery_stats_', experiment.id,'.rds')) %>%
   filter(scalar != 0)
-age.run.stats = readRDS(paste0(data.dir,'age_stats_',experiment.id,',.rds')) %>%
+age.run.stats = readRDS(paste0(data.dir,'age_stats_',experiment.id,'.rds')) %>%
   filter(scalar != 0)
 
-ref.data = readRDS('C:/Users/Joseph.caracappa/Documents/Atlantis/fishing_sensitivity/reference_Run/fishing_sensitivity_baseline/Post_Processed/Data/ref_run_summary.rds')
+ref.data = readRDS('/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/Post_Processed/Data/ref_run_summary.rds')
 
 spp.names = sort(unique(bio.run.stats$Code))
 
@@ -52,17 +52,17 @@ for(i in 1:length(spp.names)){
   scalars.log = log10(scalars)
   
   plot.recovery.ls[[i]] = ggplot(bio.run.spp, aes(x= log10(scalar), y= Recovery_Rate, color = factor(Recovery_Time)))+
-      geom_point()+
-      geom_line()+
-      scale_x_continuous(breaks = scalars.log,labels = scalars,minor_breaks = NULL)+
-      guides(color = guide_legend(title = 'Recovery Time (years)'))+
-      # facet_wrap(~scalar,ncol =1 )+
-      xlab('Event Magnitude Scalar')+
-      ylab('Recovery Rate (%recovered/year)')+
-      ggtitle(bio.run.spp$LongName[1])+
-      theme_bw()+
-      theme(plot.title = element_text(hjust = 0.5),
-            legend.position = 'bottom')
+    geom_point()+
+    geom_line()+
+    scale_x_continuous(breaks = scalars.log,labels = scalars,minor_breaks = NULL)+
+    guides(color = guide_legend(title = 'Recovery Time (years)'))+
+    # facet_wrap(~scalar,ncol =1 )+
+    xlab('Event Magnitude Scalar')+
+    ylab('Recovery Rate (%recovered/year)')+
+    ggtitle(bio.run.spp$LongName[1])+
+    theme_bw()+
+    theme(plot.title = element_text(hjust = 0.5),
+          legend.position = 'bottom')
   
   # if(spp.names[i] %in% age.run.stats$Code ){
   #   
@@ -118,7 +118,7 @@ ggsave(paste0(figure.dir,'Recovery_Threshold_',experiment.id,'.png'),width = 10,
 
 ggplot(data = bio.recovery.max,aes(x= exploit.prop,y=max.recovery,color = Guild,label = Code))+
   geom_point(size = 5)+
-  geom_text_repel()+
+  ggrepel::geom_text_repel()+
   ylab('Max Scalar that Recovers')+
   xlab('Exploitation Rate')+
   theme_bw()+
@@ -158,6 +158,23 @@ ggplot(bio.recovery.rate,aes(x=reorder(LongName,slope.order),y=slope.bio,fill = 
   xlab('')
 ggsave(paste0(figure.dir,'Recoverability_',experiment.id,'.png'),width = 10, height = 10, units = 'in', dpi = 300)
 
+bio.run.stats2 = bio.run.stats %>%
+  left_join(guild2spp)%>%
+  filter(!is.na(recovery.5) & recovery.5 >0)
+
+ggplot(bio.run.stats2,aes(x= scalar, y= recovery.5*100, color = Guild, group = Code))+
+  geom_line(size = 1.25,alpha = 0.75)+
+  scale_color_manual(values = RColorBrewer::brewer.pal(5,'Set1')[c(1,2,3,4,7)])+
+  guides(color = guide_legend(nrow =1))+
+  theme_bw()+
+  ylab('Recovery Rate (% recovered/year) after 5 years')+
+  xlab('Disturbance Magnitude')+
+  theme(panel.grid =element_blank(),
+        legend.position = 'bottom')
+ggsave(paste0(figure.dir,'Recovery_Rate_Guild_',experiment.id,'.png'),width = 10, height = 8, units = 'in',dpi = 300)
+
+
+
 # ggplot(bio.recovery.rate, aes(x = slope.age,y = slope.bio, color = Guild,label = Code))+
 #   geom_point()+
 #   geom_text_repel()+
@@ -170,7 +187,7 @@ ggsave(paste0(figure.dir,'Recoverability_',experiment.id,'.png'),width = 10, hei
 
 ggplot(bio.recovery.rate, aes(x = exploit.prop,y = slope.bio, color = Guild, label = Code))+
   geom_point()+
-  geom_text_repel()+
+  ggrepel::geom_text_repel()+
   facet_wrap(~recovery.time,ncol =1)+
   ylab('Recoverability')+
   xlab('Exploitation Rate')+
@@ -212,4 +229,3 @@ recov.prop = bio.recovery.max %>%
   mutate(tot = nrow(bio.recovery.max),
          prop= N/tot,
          prop.cum = cumsum(prop))
-  
