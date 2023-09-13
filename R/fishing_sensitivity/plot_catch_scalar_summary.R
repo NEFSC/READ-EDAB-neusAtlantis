@@ -4,14 +4,14 @@
 #' 3) delta_numbers ~ catch scalar, by species -> PDF
 #' 4) numbers_trend ~ biomass_trend by guild
 
-data.dir = 'C:/Users/Joseph.Caracappa/Documents/Atlantis/fishing_sensitivity/data/fscale_combined/'
-figure.dir = 'C:/Users/Joseph.Caracappa/Documents/Atlantis/fishing_sensitivity/figures/fscale_combined/'
+data.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/data/fscale_combined/'
+figure.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/figures/fscale_combined/'
 
 #make some fake data based on the run.index
 experiment.id = 'fscale_combined'
 
 
-ref.run.dir = 'C:/Users/Joseph.caracappa/Documents/Atlantis/fishing_sensitivity/reference_Run/fishing_sensitivity_baseline/'
+ref.run.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/'
 data.ref = readRDS(paste0(ref.run.dir,'Post_Processed/Data/ref_run_summary.rds'))
 proj.start = 20805
 
@@ -56,7 +56,8 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
     mutate(biomass.rel = biomass.mean/biomass.ref,
            number.rel = number.mean/number.ref)%>%
     left_join(fgs)%>%
-    filter(IsTurnedOn == 1)
+    filter(IsTurnedOn == 1)%>%
+    filter(scalar %in% c(2,5,10,25,50,100))
   
   spp.names = sort(unique(data.run$Code))
   
@@ -68,15 +69,17 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
   
   biomass.plot = number.plot = biomass.number.plot = number.age.plot = biomass.age.plot = list()
   
-  biomass.numbers = data.frame(Code = spp.names,biomass.slope = NA,biomass.int = NA, number.slope = NA, number.int = NA)
+  # biomass.numbers = data.frame(Code = spp.names,biomass.slope = NA,biomass.int = NA, number.slope = NA, number.int = NA)
+  biomass.numbers = data.frame(Code = spp.names,biomass.a = NA, biomass.b = NA, biomass.c = NA,  biomass.d = NA,number.a = NA, number.b = NA, number.c = NA,number.d = NA)
 
-  i=1
+  i=6
   for(i in 1:length(spp.names)){
-    
+  
     data.species = data.all %>% 
       filter(Code == spp.names[i] & Code == target.species)%>%
       arrange(scalar)%>%
-      mutate(scalar.log = log(scalar),
+      mutate(scalar2 = scalar^2,
+             scalar.log = log(scalar),
              biomass.rel.log = log(biomass.rel),
              number.rel.log = log(number.rel))
     
@@ -85,6 +88,9 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
       filter(is.finite(biomass.rel.log))
     
     if(nrow(data.species)== 0| all(is.na(data.species$biomass.ref))){
+      biomass.numbers$biomass.a[i] = NA
+      biomass.numbers$biomass.b[i] = NA
+      biomass.numbers$biomass.c[i] = NA
       biomass.plot[[i]] = NULL
       biomass.age.plot[[i]] = NULL
       number.age.plot[[i]] = NULL
@@ -92,53 +98,120 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
       next()
     }else{
       #fit a linear model to biomass and numbers vs fishing scalar and extract the slopes
-      b.lm = lm(biomass.rel.log~scalar.log,data.species.nozero)
-      # b.glm = glm(biomass.rel~scalar.log,data = data.species.nozero, family = gaussian(link = log))
-      # print(summary(b.lm))
-      biomass.numbers$biomass.slope[i] = coef(b.lm)[2]
-      biomass.numbers$biomass.int[i] = coef(b.lm)[1]
+      # b.lm = lm(biomass.rel.log~scalar.log,data.species.nozero)
+      b.nls = try(nls(biomass.rel ~ (1/(a+b*scalar^c))+d,data.species.nozero, start = list(a = 1,b = 0.1, c= 2,d=min(data.species.nozero$biomass.rel)),lower = c(0,0,0,0), alg = 'port'), silent = T)
+      if(class(b.nls)== 'try-error'){
+        b.lm = lm(biomass.rel~ scalar,data.species.nozero)
+        biomass.numbers$biomass.a[i] = coef(b.lm)[2]
+        biomass.numbers$biomass.b[i] = coef(b.lm)[1]
+        
+        a = coef(b.lm)[2]
+        b = coef(b.lm)[1]
+        
+        biomass.plot[[i]] = ggplot(data = data.species, aes(x= scalar, y= biomass.rel))+
+          geom_point()+
+          geom_path()+
+          stat_function(fun = function(x,a,b) b + x*a,lty = 2, args = list(a = a, b = b))+
+          ggtitle(data.species$LongName[1])+
+          geom_hline(yintercept = 0,lty =2)+
+          theme_bw()+
+          xlab('Fishing Scalar')+
+          ylab('Relative Biomass')+
+          scale_x_continuous(breaks = data.species$scalar)+
+          theme(plot.title = element_text(hjust = 0.5),
+                panel.grid.minor = element_blank())
+        
+      }else{
+        biomass.numbers$biomass.a[i] = coef(b.nls)[1]
+        biomass.numbers$biomass.b[i] = coef(b.nls)[2]
+        biomass.numbers$biomass.c[i] = coef(b.nls)[3]
+        biomass.numbers$biomass.d[i] = coef(b.nls)[4]
+        
+        a = coef(b.nls)[1]
+        b= coef(b.nls)[2]
+        c = coef(b.nls)[3]
+        d = coef(b.nls)[4]
+        
+        
+        biomass.plot[[i]] = ggplot(data = data.species, aes(x= scalar, y= biomass.rel))+
+          geom_point()+
+          geom_path()+
+          stat_function(fun = function(x,a,b,c,d) (1/(a + b*x^c))+d,lty = 2, args = list(a = a, b=b ,c =c,d = d))+
+          ggtitle(data.species$LongName[1])+
+          geom_hline(yintercept = 0,lty =2)+
+          theme_bw()+
+          xlab('Fishing Scalar')+
+          ylab('Relative Biomass')+
+          scale_x_continuous(breaks = data.species$scalar)+
+          theme(plot.title = element_text(hjust = 0.5),
+                panel.grid.minor = element_blank())
+        
+      }
       
-      # b.nls = nls(biomass.rel~b*scalar^z, start = list(b=1,z=0.33), data = data.species.nozero)
-      # 
+      # print(biomass.plot[[i]])
+      # print(i)
       # plot(biomass.rel~scalar,data.species.nozero)
-      # lines(x= data.species.nozero$scalar,y=fitted(b.glm))
-      # curve(coef(b.nls)[1]*x^coef(b.nls)[2],add = T)
-      # 
-      # plot(biomass.rel.log~scalar.log,data.species)
-      # abline(b.lm)
-      # points(data.species.nozero$scalar.log, fitted(b.lm), col = 2)
-      # 
+      # curve(1/(1+0.01*x^0),0,100)
+      # predict.x = seq(0,100,1)
+      # lines(x = predict.x, y = 1/(coef(b.nls)[1]+coef(b.nls)[2]*predict.x^coef(b.nls)[3]))
       
       #Do biomass vs fishing scalar
-      biomass.plot[[i]] = ggplot(data = data.species, aes(x= scalar, y= biomass.rel))+
-        geom_point()+
-        geom_path()+
-        # geom_smooth(method = 'glm', se = F, method.args = list(family = 'binomial'))+
-        # geom_smooth(method = 'lm')+
-        stat_function(fun = function(x) exp(biomass.numbers$biomass.int[i])*x^biomass.numbers$biomass.slope[i], lty = 2)+
-        ggtitle(data.species$LongName[1])+
-        geom_hline(yintercept = 0,lty =2)+
-        theme_bw()+
-        xlab('Fishing Scalar')+
-        ylab('Relative Biomass')+
-        scale_x_continuous(breaks = data.species$scalar)+
-        theme(plot.title = element_text(hjust = 0.5),
-              panel.grid.minor = element_blank())
+
     }
     
 
     
     if(all(is.na(data.species$number.ref))){
-      biomass.numbers$number.slope[i] = NA
+      biomass.numbers$number.a[i] = NA
+      biomass.numbers$number.b[i] = NA
+      biomass.numbers$number.c[i] = NA
       biomass.age.plot[[i]] = NULL
       number.age.plot[[i]] = NULL
       number.plot[[i]] = NULL
       next()
     }else{
 
-      n.lm = lm(number.rel.log~scalar.log,data =data.species.nozero)
-      biomass.numbers$number.slope[i] = coef(n.lm)[2]
-      biomass.numbers$number.int[i] = coef(n.lm)[1]
+      n.nls = try(nls(number.rel ~ (1/(a+b*scalar^c))+d,data.species.nozero, start = list(a = 1,b = 0.1, c= 2,d = min(data.species.nozero$number.rel)),lower = c(0,0,0,0), alg = 'port'), silent = T)
+      if(class(n.nls)== 'try-error'){
+        n.lm = lm(number.rel~ scalar,data.species.nozero)
+        biomass.numbers$number.a[i] = coef(n.lm)[2]
+        biomass.numbers$number.b[i] = coef(n.lm)[1]
+        
+        a = coef(n.lm)[2]
+        b = coef(n.lm)[1]
+
+        number.plot[[i]] = ggplot(data = data.species, aes(x= scalar, y= number.rel))+
+          geom_point()+
+          geom_path()+
+          stat_function(fun = function(x,a,b) b + x*a,lty = 2, args = list(a = a, b = b))+
+          ggtitle(data.species$LongName[1])+
+          theme_bw()+
+          xlab('Fishing Scalar')+
+          ylab('Relative Numbers')+
+          theme(plot.title = element_text(hjust = 0.5))
+
+      }else{
+        biomass.numbers$number.a[i] = coef(n.nls)[1]
+        biomass.numbers$number.b[i] = coef(n.nls)[2]
+        biomass.numbers$number.c[i] = coef(n.nls)[3]
+        
+        a = coef(n.nls)[1]
+        b = coef(n.nls)[2]
+        c = coef(n.nls)[3]
+        d = coef(n.nls)[4]
+
+        number.plot[[i]] = ggplot(data = data.species, aes(x= scalar, y= number.rel))+
+          geom_point()+
+          geom_path()+
+          stat_function(fun = function(x,a,b,c,d) (1/(a + b*x^c))+d,lty = 2, args = list(a = a, b=b ,c =c,d = d))+
+          ggtitle(data.species$LongName[1])+
+          theme_bw()+
+          xlab('Fishing Scalar')+
+          ylab('Relative Numbers')+
+          theme(plot.title = element_text(hjust = 0.5))
+      }
+      # plot(number.rel~scalar,data.species.nozero)
+      # lines(x = predict.x, y = 1/(coef(n.nls)[1]+coef(n.nls)[2]*predict.x^coef(n.nls)[3]))
 
       #Do mean age (abundance-weighted) vs fishing scalar
       number.age.plot[[i]] = ggplot(data = data.species, aes(x= scalar, y= number.age.mean))+
@@ -152,7 +225,6 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
         theme(plot.title = element_text(hjust = 0.5))
 
 
-
       #Do mean age (biomass-weighted) vs fishing scalar
       biomass.age.plot[[i]] = ggplot(data = data.species, aes(x= scalar, y= biomass.age.mean))+
         geom_point()+
@@ -163,21 +235,6 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
         theme_bw()+
         xlab('Fishing Scalar')+
         ylab('Mean age (biomass-weighted)')+
-        theme(plot.title = element_text(hjust = 0.5))
-
-
-
-      #Do numbers vs fishing scalar
-      number.plot[[i]] = ggplot(data = data.species, aes(x= scalar, y= number.rel))+
-        geom_point()+
-        geom_path()+
-        # geom_smooth(method = 'glm', se = F, method.args = list(family = 'binomial'))+
-        # geom_smooth(method = 'lm')+
-        stat_function(fun = function(x) exp(biomass.numbers$number.int[i])*x^biomass.numbers$number.slope[i], lty = 2)+
-        ggtitle(data.species$LongName[1])+
-        theme_bw()+
-        xlab('Fishing Scalar')+
-        ylab('Relative Numbers')+
         theme(plot.title = element_text(hjust = 0.5))
     }
 
@@ -190,7 +247,8 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
   pdf(biomass.plot.name)
   for(i in 1:length(biomass.plot)){
     if(is.null(biomass.plot[[i]])){next()}
-    print(biomass.plot[[i]])}
+    print(biomass.plot[[i]])
+  }
   # do.call('grid.arrange',biomass.plot)
   dev.off()
   
