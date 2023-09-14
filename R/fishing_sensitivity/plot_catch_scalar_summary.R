@@ -240,6 +240,8 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
 
   }
   
+  saveRDS(biomass.numbers,paste0(data.dir,'biomass_numbers_fit.rds'))
+  
   
   if(!dir.exists(figure.dir)){
     dir.create(figure.dir)
