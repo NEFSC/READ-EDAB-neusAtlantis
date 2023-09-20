@@ -4,7 +4,7 @@
 library(dplyr)
 library(ggplot2)
 
-experiment.id = 'fspike1'
+experiment.id = 'fspike_combined'
 
 data.dir = paste0('/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/data/',experiment.id,'/')
 
@@ -76,23 +76,24 @@ biomass.age= readRDS(paste0(data.dir,'AgeBiomIndx_1_28105_year_fspike_combined.r
 spp.names = sort(unique(setup.df$target.species))
 
 #' Measurements at 6 critical time periods
-#'t1: Biomass at spike start
-#'t2: Biomass at spike end
-#'t3: Minimum biomass after spike
-#'t3: Biomass at proj t+5
-#'t4: Biomass at proj t+10
-#'t5: biomass at proj t+20
+#'t0: Biomass at spike start
+#'t1: Biomass at spike end
+#'t.min: Minimum biomass after spike
+#'t5: Biomass at proj t+5
+#'t10: Biomass at proj t+10
+#'t20: biomass at proj t+20
 #'
 
-t1 = master.dat$event_start_d[1]/365
-t2 = master.dat$event_end_d[2]/365
-t3 = t1 + 5
-t4 = t1 + 10
-t5 = t1 + 19
+t0 = master.dat$event_start_d[1]/365
+t1 = master.dat$event_end_d[2]/365
+# t.min = min value after event
+t5 = t0 + 4
+t10 = t0 + 9
+t20 = t0 + 19
 
 #Create empty dataframes for stats
-bio.base.stats = data.frame(Code = spp.names,  b0.t1 = NA, b0.t2 = NA, b0.t3 = NA , b0.t4 = NA, b0.t5 = NA,stringsAsFactors = F)
-bio.run.stats =  data.frame(Code = setup.df$target.species, scalar= setup.df$scalar, b.t1 = NA, b.t2 = NA,b.t3 = NA, b.t4 = NA, b.t5 = NA,t.min =NA , b.t.min =NA, stringsAsFactors = F)
+bio.base.stats = data.frame(Code = spp.names,  b0.t0 = NA, b0.t1 = NA, b0.t5 = NA, b0.t10 = NA,b0.t20 = NA,stringsAsFactors = F)
+bio.run.stats =  data.frame(Code = setup.df$target.species, scalar= setup.df$scalar, b.t0 = NA, b.t1 = NA,b.tmin = NA, b0.tmin = NA,b.t5 = NA, b.t10 = NA, b.t20 = NA,tmin =NA , stringsAsFactors = F)
 bio.age.base.stats = bio.age.run.stats = list()
 
 extract.time = function(data, time, var.name){  
@@ -101,7 +102,60 @@ extract.time = function(data, time, var.name){
   return(dum[[var.name]])
 }
 
+#calculate biomass at key time points for scenario runs
 i=1
+for(i in 1:nrow(setup.df)){
+  
+  bio.spp = biomass %>%
+    filter(Code == setup.df$target.species[i] & scalar == setup.df$scalar[i] )
+  
+  if(nrow(bio.spp)== 0){next()}
+  
+  early.recover = bio.spp %>% filter(Time >= t0 & Time < t5)
+  t.min = early.recover$Time[which(early.recover$Biomass == min(early.recover$Biomass,na.rm=T))][1]
+  
+  bio.run.stats$b.t0[i] = extract.time(bio.spp,t0,'Biomass')
+  bio.run.stats$b.t1[i] = extract.time(bio.spp,t1,'Biomass')
+  bio.run.stats$b.t5[i] = extract.time(bio.spp,t5,'Biomass')
+  bio.run.stats$b.t10[i] = extract.time(bio.spp,t10,'Biomass')
+  bio.run.stats$b.t20[i] = extract.time(bio.spp,t20,'Biomass')
+  bio.run.stats$tmin[i] = t.min
+  bio.run.stats$b.tmin[i] = extract.time(bio.spp,t.min,'Biomass')
+  
+  bio.baseline.tmin = biomass.baseline %>%
+    filter(Code == setup.df$target.species[i] & Time == t.min)
+  bio.run.stats$b0.tmin[i] = bio.baseline.tmin$Biomass[1]
+  
+  #Extract Biomass baseline age group proportions for each time point
+  bio.age.spp = biomass.age %>%
+    filter(Code == setup.df$target.species[i] & scalar == setup.df$scalar[i])
+  
+  bio.age.baseline.tmin = biomass.age.baseline %>%
+    filter(Code == setup.df$target.species[i] & Time == t.min)
+  
+  if(length(unique(bio.age.spp$age.group))==1){
+    age.group.names = NA
+  }else{
+    age.group.names = c('adult','juv')
+  }
+  
+  bio.age.run.stats[[i]] = data.frame(Code = setup.df$target.species[i],
+                                       age.group = age.group.names,
+                                       scalar = setup.df$scalar[i],
+                                       b.t0 = extract.time(bio.age.spp,t0,'Biomass.prop'),
+                                       b.t1 = extract.time(bio.age.spp,t1,'Biomass.prop'),
+                                       b.t5 = extract.time(bio.age.spp,t5,'Biomass.prop'),
+                                       b.t10 = extract.time(bio.age.spp,t10,'Biomass.prop'),
+                                       b.t20 = extract.time(bio.age.spp,t20,'Biomass.prop'),
+                                       tmin = t.min,
+                                       b.tmin = extract.time(bio.age.spp,t.min,'Biomass.prop'),
+                                      b0.tmin = bio.age.baseline.tmin$Biomass.prop
+                                      )
+  
+}
+
+bio.age.run.stats = bind_rows(bio.age.run.stats)
+
 #Calculate biomass at key time points for baseline biomass
 for(i in 1:length(spp.names)){
   
@@ -110,15 +164,15 @@ for(i in 1:length(spp.names)){
   
   if(nrow(bio.base.spp)== 0){next()}
   
+  bio.base.stats$b0.t0[i] = extract.time(bio.base.spp,t0,'Biomass')
   bio.base.stats$b0.t1[i] = extract.time(bio.base.spp,t1,'Biomass')
-  bio.base.stats$b0.t2[i] = extract.time(bio.base.spp,t2,'Biomass')
-  bio.base.stats$b0.t3[i] = extract.time(bio.base.spp,t3,'Biomass')
-  bio.base.stats$b0.t4[i] = extract.time(bio.base.spp,t4,'Biomass')
   bio.base.stats$b0.t5[i] = extract.time(bio.base.spp,t5,'Biomass')
+  bio.base.stats$b0.t10[i] = extract.time(bio.base.spp,t10,'Biomass')
+  bio.base.stats$b0.t20[i] = extract.time(bio.base.spp,t20,'Biomass')
   
-  bio.base.spp = bio.base.spp %>% 
-    filter(Time > t2)
-
+  # bio.base.spp = bio.base.spp %>% 
+  #   filter(Time > t2)
+  # 
   
   #Extract Biomass baseline age group proportions for each time point
   bio.age.base.spp = biomass.age.baseline %>%
@@ -132,72 +186,28 @@ for(i in 1:length(spp.names)){
   }
   
   bio.age.base.stats[[i]] = data.frame(Code = spp.names[i],
-             age.group = age.group.names,
-             b0.t1 = extract.time(bio.age.base.spp,t1,'Biomass.prop'),
-             b0.t2 = extract.time(bio.age.base.spp,t2,'Biomass.prop'),
-             b0.t3 = extract.time(bio.age.base.spp,t3,'Biomass.prop'),
-             b0.t4 = extract.time(bio.age.base.spp,t4,'Biomass.prop'),
-             b0.t5 = extract.time(bio.age.base.spp,t5,'Biomass.prop'))
+                                       age.group = age.group.names,
+                                       b0.t0 = extract.time(bio.age.base.spp,t0,'Biomass.prop'),
+                                       b0.t1 = extract.time(bio.age.base.spp,t1,'Biomass.prop'),
+                                       b0.t5 = extract.time(bio.age.base.spp,t5,'Biomass.prop'),
+                                       b0.t10 = extract.time(bio.age.base.spp,t10,'Biomass.prop'),
+                                       b0.t20 = extract.time(bio.age.base.spp,t20,'Biomass.prop'))
   
 }
 bio.age.base.stats = bind_rows(bio.age.base.stats)
 
-#calculate biomass at key time points for scenario runs
-i=1
-for(i in 1:nrow(setup.df)){
-  
-  bio.spp = biomass %>%
-    filter(Code == setup.df$target.species[i] & scalar == setup.df$scalar[i] )
-  
-  if(nrow(bio.spp)== 0){next()}
-  
-  early.recover = bio.spp %>% filter(Time >= t1 & Time <= t3)
-  t.min = early.recover$Time[which(early.recover$Biomass == min(early.recover$Biomass,na.rm=T))][1]
-  
-  bio.run.stats$b.t1[i] = extract.time(bio.spp,t1,'Biomass')
-  bio.run.stats$b.t2[i] = extract.time(bio.spp,t2,'Biomass')
-  bio.run.stats$b.t3[i] = extract.time(bio.spp,t3,'Biomass')
-  bio.run.stats$b.t4[i] = extract.time(bio.spp,t4,'Biomass')
-  bio.run.stats$b.t5[i] = extract.time(bio.spp,t5,'Biomass')
-  bio.run.stats$t.min[i] = t.min
-  bio.run.stats$b.t.min[i] = extract.time(bio.spp,t.min,'Biomass')
-  
-  #Extract Biomass baseline age group proportions for each time point
-  bio.age.spp = biomass.age %>%
-    filter(Code == setup.df$target.species[i] & scalar == setup.df$scalar[i])
-  
-  if(length(unique(bio.age.spp$age.group))==1){
-    age.group.names = NA
-  }else{
-    age.group.names = c('adult','juv')
-  }
-  
-  bio.age.run.stats[[i]] = data.frame(Code = setup.df$target.species[i],
-                                       age.group = age.group.names,
-                                       scalar = setup.df$scalar[i],
-                                       b.t1 = extract.time(bio.age.spp,t1,'Biomass.prop'),
-                                       b.t2 = extract.time(bio.age.spp,t2,'Biomass.prop'),
-                                       b.t3 = extract.time(bio.age.spp,t3,'Biomass.prop'),
-                                       b.t4 = extract.time(bio.age.spp,t4,'Biomass.prop'),
-                                       b.t5 = extract.time(bio.age.spp,t5,'Biomass.prop'),
-                                       t.min = t.min,
-                                      b.t.min = extract.time(bio.age.spp,t.min,'Biomass.prop')
-                                      )
-  
-}
-
-bio.age.run.stats = bind_rows(bio.age.run.stats)
 
 #Calculate recovery proportion at each time slice
 bio.recovery = bio.run.stats %>% 
   left_join(bio.base.stats)%>%
-  mutate(db.t2 = b.t2/b0.t2,
-         db.t3 = b.t3/b0.t3,
-         db.t4 = b.t4/b0.t4,
-         db.t5 = b.t5/b0.t5)%>%
-  mutate(recovery.5 = (db.t3-db.t2)/(t3-t2),
-         recovery.10 = (db.t4-db.t2)/(t4-t2),
-         recovery.20 = (db.t5-db.t2)/(t5-t2))
+  mutate(db.tmin = b.tmin/b0.tmin,
+         db.t5 = b.t5/b0.t5,
+         db.t10 = b.t10/b0.t10,
+         db.t20 = b.t20/b0.t20)%>%
+  mutate(recovery.5 = (db.t5-db.tmin)/(t5-tmin),
+         recovery.10 = (db.t10-db.tmin)/(t10-tmin),
+         recovery.20 = (db.t20-db.tmin)/(t20-tmin))%>%
+  filter(Code == 'RED')
   
 
 saveRDS(bio.recovery,paste0(data.dir,'recovery_stats_', experiment.id,'.rds'))
@@ -211,8 +221,8 @@ for(i in 1:length(spp.names)){
   
   bio.spp = bio.recovery %>%
     filter(Code == spp.names[i])%>%
-    mutate(db.t4 = ifelse(abs(db.t4) < 0.01, 0, db.t4),
-           positive.20 = db.t4 > 0)%>%
+    mutate(db.t20 = ifelse(abs(db.t20) < 0.01, 0, db.t20),
+           positive.20 = db.t20 > 0)%>%
     filter(positive.20 == TRUE)
   
   if(nrow(bio.spp)== 0){
@@ -229,6 +239,7 @@ saveRDS(bio.recovery.max.scalar, paste0(data.dir,'recovery_threshold_',experimen
 bio.recovery.rate = list()
 recovery.times = c(5,10,20)
 
+i=1
 for(i in 1:length(spp.names)){
   
   bio.spp = bio.recovery %>%
@@ -241,6 +252,7 @@ for(i in 1:length(spp.names)){
   
   bio.spp.ls = list()
   
+  j=1
   for(j in 1:length(recovery.times)){
     bio.spp.time = bio.spp %>%
       filter(recovery.time == recovery.times[j])
@@ -275,10 +287,10 @@ saveRDS(bio.recovery.rate,paste0(data.dir,'recovery_rate_lm_',experiment.id,'.rd
 bio.age.prop = bio.age.run.stats %>%
   left_join(bio.age.base.stats)%>%
   filter(age.group == 'juv')%>%
-  mutate(delta.age.spike = b.t2-b.t1,
-         delta.age.5 = b.t3-b0.t3,
-         delta.age.10 = b.t4-b0.t4,
-         delta.age.20 = b.t5-b0.t5)
+  mutate(delta.age.tmin = b.tmin-b.t0,
+         delta.age.5 = b.t5-b0.t5,
+         delta.age.10 = b.t10-b0.t5,
+         delta.age.20 = b.t20-b0.t20)
 
 saveRDS(bio.age.prop, paste0(data.dir,'age_stats_',experiment.id,'.rds'))
 bio.age.prop = readRDS( paste0(data.dir,'age_stats_',experiment.id,'.rds'))
@@ -292,7 +304,7 @@ for(i in 1:length(spp.names2)){
     filter(Code == spp.names2[i])%>%
     filter(scalar > 0)
   
-  model = lm(delta.age.spike ~ scalar, data = bio.age.spp)
+  model = lm(delta.age.tmin ~ scalar, data = bio.age.spp)
   model.sum = summary(model)
   
   bio.age.prop.lm$slope[i] = as.numeric(model$coefficients[2])

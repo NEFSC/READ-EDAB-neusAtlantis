@@ -1,4 +1,4 @@
-data.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/fishing_sensitivity/data/'
+data.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/data/'
 library(dplyr)
 dir.names = c('fscale2','fscale3')
 
@@ -59,3 +59,4 @@ for(i in 1:length(stats.files)){
   
   saveRDS(dat,file = paste0(combined.dir,stats.files[i]))
 }
+

@@ -12,7 +12,7 @@ experiment.id = 'fscale_combined'
 
 
 ref.run.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/'
-data.ref = readRDS(paste0(ref.run.dir,'Post_Processed/Data/ref_run_summary.rds'))
+data.ref = readRDS(paste0(ref.run.dir,'Post_Processed/Data/ref_run_summary_20805_28105.rds'))
 proj.start = 20805
 
 fgs.file = here::here('currentVersion','neus_groups.csv')
@@ -31,15 +31,22 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
   setup.df = read.csv(here::here('diagnostics','scenario_db',paste0(experiment.id,'_setup.csv')),as.is = T)
   
   # setup.df$target.species = sapply(setup.df$Run,function(x) return(strsplit(x,split=paste0(experiment.id,'|_'))[[1]][3]),USE.NAMES = F)
+  mig.groups = read.csv(here::here('currentVersion','neus_migrations_orig.csv'),as.is=T)$GroupCode
   
   setup.df = setup.df %>% select(run.id,scalar,target.species)
   
-  data.ref = readRDS(paste0(ref.run.dir,'Post_Processed/Data/ref_run_summary.rds'))%>%
-    rename(biomass.age.mean.ref = 'biomass.age.mean')
+  data.ref = readRDS(paste0(ref.run.dir,'Post_Processed/Data/ref_run_summary_20805_28105.rds'))%>%
+    rename(biomass.age.mean.ref = 'biomass.age.mean')%>%
+    mutate(biomass.ref.plot = ifelse(Code %in% mig.groups,biomass.ref.max,biomass.ref.mean),
+           number.ref.plot = ifelse(Code %in% mig.groups,number.ref.max,number.ref.mean))
   
   #Read in biomass and numbers data
-  biomass = readRDS(paste0(data.dir,'scenario_stats_biomass.rds'))
-  numbers = readRDS(paste0(data.dir,'scenario_stats_numbers.rds'))
+
+  biomass = readRDS(paste0(data.dir,'scenario_stats_biomass.rds'))%>%
+    mutate(biomass.plot = ifelse(species %in% mig.groups,biomass.max,biomass.mean))
+  
+  numbers = readRDS(paste0(data.dir,'scenario_stats_numbers.rds'))%>%
+    mutate(number.plot = ifelse(species %in% mig.groups,number.max,number.mean))
   
   data.run = biomass %>%
     left_join(numbers)%>%
@@ -53,8 +60,8 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
   #Combine run output and ref data
   data.all = data.run %>% 
     left_join(data.ref, by = 'Code') %>%
-    mutate(biomass.rel = biomass.mean/biomass.ref,
-           number.rel = number.mean/number.ref)%>%
+    mutate(biomass.rel = biomass.plot/biomass.ref.plot,
+           number.rel = number.plot/number.ref.plot)%>%
     left_join(fgs)%>%
     filter(IsTurnedOn == 1)%>%
     filter(scalar %in% c(2,5,10,25,50,100))
@@ -77,17 +84,20 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
   
     data.species = data.all %>% 
       filter(Code == spp.names[i] & Code == target.species)%>%
-      arrange(scalar)%>%
-      mutate(scalar2 = scalar^2,
-             scalar.log = log(scalar),
-             biomass.rel.log = log(biomass.rel),
-             number.rel.log = log(number.rel))
-    
+      arrange(scalar)
+      
     data.species.nozero = data.species %>%
-      filter(scalar >0)%>%
-      filter(is.finite(biomass.rel.log))
+      filter(scalar !=0)%>%
+      select(Code,target.species,LongName,scalar,biomass.rel,number.rel)
     
-    if(nrow(data.species)== 0| all(is.na(data.species$biomass.ref))){
+    dum.line = data.species.nozero[1,]
+    dum.line$scalar = 1
+    dum.line$biomass.rel = 1
+    dum.line$number.rel = 1
+    
+    data.species.nozero = bind_rows(dum.line,data.species.nozero)
+    
+    if(nrow(data.species)== 0| all(is.na(data.species$biomass.ref.mean))){
       biomass.numbers$biomass.a[i] = NA
       biomass.numbers$biomass.b[i] = NA
       biomass.numbers$biomass.c[i] = NA
@@ -133,7 +143,7 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
         d = coef(b.nls)[4]
         
         
-        biomass.plot[[i]] = ggplot(data = data.species, aes(x= scalar, y= biomass.rel))+
+        biomass.plot[[i]] = ggplot(data = data.species.nozero, aes(x= scalar, y= biomass.rel))+
           geom_point()+
           geom_path()+
           stat_function(fun = function(x,a,b,c,d) (1/(a + b*x^c))+d,lty = 2, args = list(a = a, b=b ,c =c,d = d))+
@@ -161,7 +171,7 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
     
 
     
-    if(all(is.na(data.species$number.ref))){
+    if(all(is.na(data.species$number.ref.mean))){
       biomass.numbers$number.a[i] = NA
       biomass.numbers$number.b[i] = NA
       biomass.numbers$number.c[i] = NA
@@ -194,13 +204,14 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
         biomass.numbers$number.a[i] = coef(n.nls)[1]
         biomass.numbers$number.b[i] = coef(n.nls)[2]
         biomass.numbers$number.c[i] = coef(n.nls)[3]
+        biomass.numbers$number.d[i] = coef(n.nls)[4]
         
         a = coef(n.nls)[1]
         b = coef(n.nls)[2]
         c = coef(n.nls)[3]
         d = coef(n.nls)[4]
 
-        number.plot[[i]] = ggplot(data = data.species, aes(x= scalar, y= number.rel))+
+        number.plot[[i]] = ggplot(data = data.species.nozero, aes(x= scalar, y= number.rel))+
           geom_point()+
           geom_path()+
           stat_function(fun = function(x,a,b,c,d) (1/(a + b*x^c))+d,lty = 2, args = list(a = a, b=b ,c =c,d = d))+
@@ -277,24 +288,24 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
   spp2guild = read.csv(here::here('diagnostics','functional_groups_match.csv'),as.is = T) %>% select(Code, Guild)
   
   data.slope = biomass.numbers %>% 
-    filter(!is.na(number.slope))%>%
+    filter(!is.na(number.c))%>%
     left_join(spp2guild)%>%
     left_join(data.ref)
     
   
-  ggplot(data = data.slope, aes( x= biomass.slope, y = number.slope, color = Guild, label = Code))+
+  ggplot(data = data.slope, aes( x= biomass.c, y = number.c, color = Guild, label = Code))+
     geom_point(size = 5, alpha = 0.5)+
     geom_hline(yintercept = 0, lty = 2)+
     geom_vline(xintercept = 0,lty =2)+
     stat_function(fun = function(x) x,lty = 1, color = 'black')+
-    geom_text_repel()+
+    geom_text_repel(max.overlaps = 30)+
     xlab('log (biomass slope)')+
     ylab('log (numbers slope)')+
     theme_bw()+
     theme(legend.position = 'bottom')
   ggsave(paste0(figure.dir,'/numbers_biomass_guild.png'))
 
-  ggplot(data = data.slope, aes(x = exploit.prop,y = -biomass.slope, color = Guild, label = Code))+
+  ggplot(data = data.slope, aes(x = exploit.prop,y = biomass.c, color = Guild, label = Code))+
     geom_point(alpha = 0.5,size = 5)+
     geom_text_repel()+
     xlab('Exploitation Rate')+
@@ -303,7 +314,7 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
     theme(legend.position = 'bottom')
     ggsave(paste0(figure.dir,'/biomass_exploitation_guild.png'))
     
-  ggplot(data = data.slope, aes(x = recruit.ref,y = -biomass.slope, color = Guild, label = Code))+
+  ggplot(data = data.slope, aes(x = recruit.ref,y = biomass.c, color = Guild, label = Code))+
       geom_point(alpha = 0.5,size = 5)+
       geom_text_repel()+
       xlab('Reruitment')+
@@ -312,7 +323,7 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
       theme(legend.position = 'bottom')
   ggsave(paste0(figure.dir,'/recruitment_exploitation_guild.png'))
     
-  ggplot(data = data.slope, aes(x = biomass.ref,y = -biomass.slope, color = Guild, label = Code))+
+  ggplot(data = data.slope, aes(x = biomass.ref.plot ,y = biomass.c, color = Guild, label = Code))+
     geom_point(alpha = 0.5,size = 5)+
     geom_text_repel()+
     xlab('Reference Biomass')+
@@ -321,7 +332,7 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
     theme(legend.position = 'bottom')
   ggsave(paste0(figure.dir,'/reference_biomass_exploitation_guild.png'))
   
-  ggplot(data = data.slope, aes(x = catch.ref,y = -biomass.slope, color = Guild, label = Code))+
+  ggplot(data = data.slope, aes(x = catch.ref,y = biomass.c, color = Guild, label = Code))+
     geom_point(alpha = 0.5,size = 5)+
     geom_text_repel()+
     xlab('Reference Catch')+
@@ -341,7 +352,7 @@ plot_catch_scalar_summary = function(data.dir,figure.dir,setup.df,ref.run.dir,re
     
     data.spp = data.all %>% 
       filter(target.species == spp.names2[i] & Code == spp.names2[i])%>%
-      mutate(bio.prop = biomass.mean/biomass.ref)%>%
+      mutate(bio.prop = biomass.plot/biomass.ref.plot)%>%
       filter(bio.prop >= 0.1)
     
     data.thresh$max.scalar[i] =  max(data.spp$scalar,na.rm=T)
