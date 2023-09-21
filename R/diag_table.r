@@ -1,9 +1,10 @@
 library(atlantisdiagnostics)
 library(dplyr)
+library(here)
 
 # Declare paths to files required
 
-priority_data <- read.csv(paste0(here::here(),'/neus_atlantis_group_priority.csv'))
+priority_data <- read.csv(paste0(here::here(),'/Setup_Files/neus_atlantis_group_priority.csv'))
 priority_data <- arrange(priority_data,Overall,LongName)
 
 priority_data <- filter(priority_data, Code != "REP")
@@ -14,18 +15,14 @@ num_priority_plots <- nrow(high_priority_group_table)
 high_priority_groups <- high_priority_group_table$Code
 all_groups <- priority_data$Code
 
-
-outDir <- "/net/work3/EDAB/atlantis/Rob_proj/currentVersion/output/"
-biomind <- paste0(outDir,"neus_outputBiomIndx.txt")
-fgs <- "/net/work3/EDAB/atlantis/Rob_proj/currentVersion/neus_groups.csv"
+biomind <- paste0(here::here(),"/Setup_Files/neus_outputBiomIndx.txt")
+fgs <- paste0(here::here(),"/currentVersion/neus_groups.csv")
 
 # Perform stability test on all species/groups using the last 20 years of the run
 stability_table <- diag_stability(fgs, biomind, speciesCodes=all_groups, nYrs = 20)
-#write.csv(stability_table, file='/net/work3/EDAB/atlantis/Rob_proj/currentVersion/stability_table.csv')
 
-reasonability_data <- read.csv(paste0(here::here(), '/output_diag_reasonability.csv'))
-bio.dir <- '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/Post_Processed/Data/'
-catchfile <-'/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/neus_outputCatch.txt'
+reasonability_data <- read.csv(paste0(here::here(), '/Setup_Files/output_diag_reasonability.csv'))
+catchfile <- paste0(here::here(),'/Setup_Files/neus_outputCatch.txt')
 
 #Make biomass timeseries plots
 biomass = read.table(biomind, header=TRUE)
@@ -63,10 +60,24 @@ for(i in 1:nrow(reasonability_data)) {
 reasonability_data <- full_join(reasonability_data,priority_data, by="Code")
 reasonability_data <- rename(reasonability_data,Priority = Overall)
 stability_table <- select(stability_table,code,aveBio,pass,relChange)
-stability_table <- rename(stability_table, Code = code, Average_Biomass = aveBio, Stable = pass, Relative_Change = relChange)
+stability_table <- rename(stability_table, Code = code, Average_Biomass= aveBio, Stable = pass, Relative_Change = relChange)
 
 diagnostic_table <- full_join(stability_table, reasonability_data, by="Code")
 diagnostic_table <- select(diagnostic_table,Code,Priority,Stable,Reasonable,Relative_Change,Min_Target_q,Max_Target_q,Average_Biomass,Average_Catch, F_rate)
-write.csv(diagnostic_table, file='/net/work3/EDAB/atlantis/Rob_proj/neus-atlantis/currentVersion/output/Post_Processed/Data/diagnostic_table.csv', row.names=FALSE)
+
+# Clean up number formatting
+options(scipen=999)
+diagnostic_table$Relative_Change <- as.numeric(format(round(diagnostic_table$Relative_Change, 3), nsmall = 3))
+diagnostic_table$F_rate[is.na(diagnostic_table$F_rate)] <- 0
+diagnostic_table$F_rate <- as.numeric(format(round(diagnostic_table$F_rate, 3), nsmall = 3))
+diagnostic_table$Average_Biomass <- diagnostic_table$Average_Biomass / 100000
+diagnostic_table$Average_Catch <- diagnostic_table$Average_Catch / 100000
+diagnostic_table$Average_Biomass <- as.numeric(format(round(diagnostic_table$Average_Biomass,2), nsmall = 2))
+diagnostic_table$Average_Catch[is.na(diagnostic_table$Average_Catch)] <- 0
+diagnostic_table$Average_Catch <- as.numeric(format(round(diagnostic_table$Average_Catch,2), nsmall = 2))
+
+
+outFile <- paste0(here::here(),"/Manuscript/Tables/diagnostic_table.csv")
+write.csv(diagnostic_table, file=outFile, row.names=FALSE)
 
 
