@@ -4,7 +4,9 @@ library(here)
 
 # Declare paths to files required
 
-priority_data <- read.csv(paste0(here::here(),'/Setup_Files/neus_atlantis_group_priority.csv'))
+priority_data <- read.csv(paste0(here::here(),'/diagnostics/neus_atlantis_group_priority.csv'))
+priority_data <- rename(priority_data,Code = 'code')
+priority_data <- rename(priority_data,Overall = 'priority.overall')
 priority_data <- arrange(priority_data,Overall,LongName)
 
 priority_data <- filter(priority_data, Code != "REP")
@@ -15,14 +17,15 @@ num_priority_plots <- nrow(high_priority_group_table)
 high_priority_groups <- high_priority_group_table$Code
 all_groups <- priority_data$Code
 
-biomind <- paste0(here::here(),"/Setup_Files/neus_outputBiomIndx.txt")
+base.run.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/'
+biomind <- paste0(base.run.dir,'neus_outputBiomIndx.txt')
 fgs <- paste0(here::here(),"/currentVersion/neus_groups.csv")
 
 # Perform stability test on all species/groups using the last 20 years of the run
 stability_table <- diag_stability(fgs, biomind, speciesCodes=all_groups, nYrs = 20)
 
-reasonability_data <- read.csv(paste0(here::here(), '/Setup_Files/output_diag_reasonability.csv'))
-catchfile <- paste0(here::here(),'/Setup_Files/neus_outputCatch.txt')
+reasonability_data <- read.csv(paste0(here::here(), '/data/output_diag_reasonability.csv'))
+catchfile <- paste0(base.run.dir,'neus_outputCatch.txt')
 
 #Make biomass timeseries plots
 biomass = read.table(biomind, header=TRUE)
@@ -76,8 +79,11 @@ diagnostic_table$Average_Biomass <- as.numeric(format(round(diagnostic_table$Ave
 diagnostic_table$Average_Catch[is.na(diagnostic_table$Average_Catch)] <- 0
 diagnostic_table$Average_Catch <- as.numeric(format(round(diagnostic_table$Average_Catch,2), nsmall = 2))
 
+recovery.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/data/fspike_combined/'
+recovery.stats = readRDS(paste0(recovery.dir,'recovery_stats_fspike_combined.rds'))
 
-outFile <- paste0(here::here(),"/Manuscript/Tables/diagnostic_table.csv")
+out.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/tables/'
+outFile <- paste0(out.dir,"table_1_species_metrics.csv")
 write.csv(diagnostic_table, file=outFile, row.names=FALSE)
 
 
