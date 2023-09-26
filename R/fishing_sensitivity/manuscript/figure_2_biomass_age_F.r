@@ -174,9 +174,9 @@ for(p.group in 1:nrow(plot.index.df)){
         }
         
         adult_proportion <- rep(1,length(juv_proportion))
-        par(mar=c(3,4,3,1.5))
+        par(mar=c(5,3,3,5))
         
-        plot(years,biomass,type='l',main=groupName, col = col_vird_blue, lwd=1.5, bty = "n", ylim=c(0,y_limit), xaxt = "n", ylab="", xlab="", cex.axis=2.75, cex.main=2.75)
+        plot(years,biomass,type='l',main=groupName, col = col_vird_blue, lwd=1.5, bty = "n", ylim=c(0,y_limit), xaxt = "n", ylab="", xlab="", las =2,cex.axis=2.75, cex.main=2.75)
         
         plot.set = (plot.index.df$start[p.group]:plot.index.df$stop[p.group])
         last.4 = tail(plot.set,4)
@@ -190,14 +190,14 @@ for(p.group in 1:nrow(plot.index.df)){
         
         if (length(juv_proportion > 0)) {
           par(new=TRUE)
-          plot(adult_proportion, type = "l", axes = FALSE, xlab ="", ylab = "", bty = "n", xaxt = "n", yaxt = "n", ylim = c(0,1), col = col_bb1)
+          plot(adult_proportion, type = "l", axes = FALSE, xlab ="", ylab = "", bty = "n", xaxt = "n", yaxt = "n", ylim = c(0,1), col = col_bb1,las =2)
           polygon(c(1, seq(adult_proportion), length(adult_proportion)), c(0, adult_proportion, 0),
                   col = scales::alpha(col_bb1,0.5), border = NA)    
           
           if(g %in% right.7){
-            axis(4,at = c(0,0.5,1),labels = T,ylim = c(0,1),cex.axis = 2,las =2)
+            axis(4,at = c(0,0.5,1),labels = T,ylim = c(0,1),cex.axis = 2.75,las =2)
           }else{
-            axis(4,at = c(0,0.5,1),labels = F,ylim = c(0,1),cex.axis = 2)
+            axis(4,at = c(0,0.5,1),labels = F,ylim = c(0,1),cex.axis = 2.75)
           }
         }
         
@@ -235,7 +235,7 @@ for(p.group in 1:nrow(plot.index.df)){
       }    
   }
   
-  mtext('Biomass (000,000 mt)',2,3,outer = T,cex = 5)
+  mtext('Biomass (100,000 mt)',2,3,outer = T,cex = 3.5)
   # mtext('Year',1,2,outer = T, cex =3)
   graphics.off()
 }
