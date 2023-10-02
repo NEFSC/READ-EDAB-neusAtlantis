@@ -5622,6 +5622,993 @@ k_covermowMA          30
 ###### End Vertical, positional and habitat scalars of the fishing effort ########
 ############################################################################
 
+##############################################################################
+###### Fisheries gear selectivity, swept area and conflict ########
+############################################################################
+
+
+## If set to 1, fisheries gear selectivity changes through time (see chapter
+15.10 and 15.8.1 for further explanations)
+
+flagchangesel		 0
+
+## Parameters used to set fisheries gear selectivity. They can have
+different meanings depending on the YYY_selcurve option. Check
+chapter 15.8.1-15.8.11 for details
+
+
+sel_MAK      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_HER      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_WHK      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_BLF      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_WPF      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_SUF      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_WIF      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_WTF      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_FOU      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_HAL      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_PLA      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_FLA      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_BFT      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_TUN      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_BIL      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_MPF      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_BUT      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_BPF      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_ANC      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_GOO      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_MEN      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_FDE      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_COD      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_SHK      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_OHK      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_POL      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_RHK      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_BSB      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_SCU      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_TYL      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_RED      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_OPT      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_SAL      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_DRM      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_STB      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_TAU      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_WOL      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_SDF      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_FDF      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_HAD      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_YTF      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_DOG      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_SMO      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_SSH      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_DSH      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_BLS      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_POR      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_PSH      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_WSK      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_LSK      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_SK       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_SB       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_PIN      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_REP      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_RWH      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_BWH      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_SWH      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_TWH      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_INV      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_LSQ      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_ISQ      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_SCA      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_QHG      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_CLA      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_BFF      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_BG       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_LOB      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_RCB      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_BMS      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_NSH      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_OSH      28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_ZL       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_BD       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_MA       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_MB       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_SG       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_BC       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_ZG       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_PL       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_DF       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_PS       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_ZM       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_ZS       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_PB       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_BB       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_BO       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_DL       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_DR       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_DC       28
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+sel_MAKad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_HERad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_WHKad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BLFad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_WPFad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SUFad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_WIFad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_WTFad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_FOUad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_HALad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_PLAad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_FLAad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BFTad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_TUNad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BILad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_MPFad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BUTad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BPFad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_ANCad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_GOOad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_MENad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_FDEad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_CODad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SHKad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_OHKad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_POLad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_RHKad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BSBad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SCUad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_TYLad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_REDad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_OPTad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SALad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_DRMad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_STBad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_TAUad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_WOLad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SDFad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_FDFad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_HADad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_YTFad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_DOGad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SMOad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SSHad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_DSHad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BLSad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_PORad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_PSHad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_WSKad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_LSKad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SKad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SBad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_PINad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_REPad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_RWHad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BWHad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SWHad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_TWHad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_INVad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_LSQad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_ISQad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SCAad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_QHGad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_CLAad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BFFad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BGad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_LOBad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_RCBad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BMSad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_NSHad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_OSHad      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_ZLad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BDad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_MAad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_MBad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SGad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BCad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_ZGad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_PLad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_DFad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_PSad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_ZMad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_ZSad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_PBad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BBad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BOad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_DLad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_DRad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_DCad       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_MAKjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_HERjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_WHKjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BLFjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_WPFjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SUFjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_WIFjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_WTFjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_FOUjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_HALjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_PLAjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_FLAjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BFTjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_TUNjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BILjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_MPFjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BUTjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BPFjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_ANCjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_GOOjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_MENjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_FDEjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_CODjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SHKjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_OHKjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_POLjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_RHKjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BSBjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SCUjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_TYLjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_REDjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_OPTjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SALjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_DRMjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_STBjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_TAUjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_WOLjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SDFjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_FDFjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_HADjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_YTFjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_DOGjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SMOjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SSHjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_DSHjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BLSjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_PORjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_PSHjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_WSKjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_LSKjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SKjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SBjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_PINjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_REPjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_RWHjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BWHjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SWHjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_TWHjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_INVjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_LSQjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_ISQjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SCAjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_QHGjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_CLAjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BFFjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BGjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_LOBjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_RCBjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BMSjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_NSHjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_OSHjuv      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_ZLjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BDjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_MAjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_MBjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_SGjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BCjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_ZGjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_PLjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_DFjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_PSjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_ZMjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_ZSjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_PBjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BBjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_BOjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_DLjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_DRjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+sel_DCjuv       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+midwcISQsel_b   0
+midwcLSQsel_b   0
+jigISQsel_b     0
+jigLSQsel_b     0
+dredgeSCAsel_b  0
+trapRCBsel_b    0
+dtrawlRCBsel_b  0
+dtrawlISQsel_b  0
+dtrawlLSQsel_b  0
+dtrawlSHKsel_b  0
+dtrawlHADsel_b  0
+dseineSHKsel_b  0
+dlineBLFsel_b   0
+diveBGsel_b     0
+pseineBLFsel_b  0
+cullPINsel_b    0
+ptrawlNSHsel_b  0
+ptrawlOSHsel_b  0
+dtrawlANCsel_b  0
+dtrawlBPFsel_b  0
+dtrawlBUTsel_b  0
+midwcZLsel_b    0
+trapMENsel_b    0
+dlineMENsel_b   0
+netMENsel_b     0
+midwcNSHsel_b   0
+midwcOSHsel_b   0
+mowMAsel_b      0
+midwcISQsel_lsm   0
+midwcLSQsel_lsm   0
+jigISQsel_lsm     0
+jigLSQsel_lsm     0
+dredgeSCAsel_lsm  0
+trapRCBsel_lsm    0
+dtrawlRCBsel_lsm  0
+dtrawlISQsel_lsm  0
+dtrawlLSQsel_lsm  0
+dtrawlSHKsel_lsm  0
+dtrawlHADsel_lsm  0
+dseineSHKsel_lsm  0
+dlineBLFsel_lsm   0
+diveBGsel_lsm     0
+pseineBLFsel_lsm  0
+cullPINsel_lsm    0
+ptrawlNSHsel_lsm  0
+ptrawlOSHsel_lsm  0
+dtrawlANCsel_lsm  0
+dtrawlBPFsel_lsm  0
+dtrawlBUTsel_lsm  0
+midwcZLsel_lsm    0
+trapMENsel_lsm    0
+dlineMENsel_lsm   0
+netMENsel_lsm     0
+midwcNSHsel_lsm   0
+midwcOSHsel_lsm   0
+mowMAsel_lsm      0
+midwcISQsel_normsigma   0
+midwcLSQsel_normsigma   0
+jigISQsel_normsigma     0
+jigLSQsel_normsigma     0
+dredgeSCAsel_normsigma  0
+trapRCBsel_normsigma    0
+dtrawlRCBsel_normsigma  0
+dtrawlISQsel_normsigma  0
+dtrawlLSQsel_normsigma  0
+dtrawlSHKsel_normsigma  0
+dtrawlHADsel_normsigma  0
+dseineSHKsel_normsigma  0
+dlineBLFsel_normsigma   0
+diveBGsel_normsigma     0
+pseineBLFsel_normsigma  0
+cullPINsel_normsigma    0
+ptrawlNSHsel_normsigma  0
+ptrawlOSHsel_normsigma  0
+dtrawlANCsel_normsigma  0
+dtrawlBPFsel_normsigma  0
+dtrawlBUTsel_normsigma  0
+midwcZLsel_normsigma    0
+trapMENsel_normsigma    0
+dlineMENsel_normsigma   0
+netMENsel_normsigma     0
+midwcNSHsel_normsigma   0
+midwcOSHsel_normsigma   0
+mowMAsel_normsigma      0
+midwcISQsel_normlsm   0
+midwcLSQsel_normlsm   0
+jigISQsel_normlsm     0
+jigLSQsel_normlsm     0
+dredgeSCAsel_normlsm  0
+trapRCBsel_normlsm    0
+dtrawlRCBsel_normlsm  0
+dtrawlISQsel_normlsm  0
+dtrawlLSQsel_normlsm  0
+dtrawlSHKsel_normlsm  0
+dtrawlHADsel_normlsm  0
+dseineSHKsel_normlsm  0
+dlineBLFsel_normlsm   0
+diveBGsel_normlsm     0
+pseineBLFsel_normlsm  0
+cullPINsel_normlsm    0
+ptrawlNSHsel_normlsm  0
+ptrawlOSHsel_normlsm  0
+dtrawlANCsel_normlsm  0
+dtrawlBPFsel_normlsm  0
+dtrawlBUTsel_normlsm  0
+midwcZLsel_normlsm    0
+trapMENsel_normlsm    0
+dlineMENsel_normlsm   0
+netMENsel_normlsm     0
+midwcNSHsel_normlsm   0
+midwcOSHsel_normlsm   0
+mowMAsel_normlsm      0
+midwcISQsel_lognormsigma   0
+midwcLSQsel_lognormsigma   0
+jigISQsel_lognormsigma     0
+jigLSQsel_lognormsigma     0
+dredgeSCAsel_lognormsigma  0
+trapRCBsel_lognormsigma    0
+dtrawlRCBsel_lognormsigma  0
+dtrawlISQsel_lognormsigma  0
+dtrawlLSQsel_lognormsigma  0
+dtrawlSHKsel_lognormsigma  0
+dtrawlHADsel_lognormsigma  0
+dseineSHKsel_lognormsigma  0
+dlineBLFsel_lognormsigma   0
+diveBGsel_lognormsigma     0
+pseineBLFsel_lognormsigma  0
+cullPINsel_lognormsigma    0
+ptrawlNSHsel_lognormsigma  0
+ptrawlOSHsel_lognormsigma  0
+dtrawlANCsel_lognormsigma  0
+dtrawlBPFsel_lognormsigma  0
+dtrawlBUTsel_lognormsigma  0
+midwcZLsel_lognormsigma    0
+trapMENsel_lognormsigma    0
+dlineMENsel_lognormsigma   0
+netMENsel_lognormsigma     0
+midwcNSHsel_lognormsigma   0
+midwcOSHsel_lognormsigma   0
+mowMAsel_lognormsigma      0
+midwcISQsel_gammasigma   0
+midwcLSQsel_gammasigma   0
+jigISQsel_gammasigma     0
+jigLSQsel_gammasigma     0
+dredgeSCAsel_gammasigma  0
+trapRCBsel_gammasigma    0
+dtrawlRCBsel_gammasigma  0
+dtrawlISQsel_gammasigma  0
+dtrawlLSQsel_gammasigma  0
+dtrawlSHKsel_gammasigma  0
+dtrawlHADsel_gammasigma  0
+dseineSHKsel_gammasigma  0
+dlineBLFsel_gammasigma   0
+diveBGsel_gammasigma     0
+pseineBLFsel_gammasigma  0
+cullPINsel_gammasigma    0
+ptrawlNSHsel_gammasigma  0
+ptrawlOSHsel_gammasigma  0
+dtrawlANCsel_gammasigma  0
+dtrawlBPFsel_gammasigma  0
+dtrawlBUTsel_gammasigma  0
+midwcZLsel_gammasigma    0
+trapMENsel_gammasigma    0
+dlineMENsel_gammasigma   0
+netMENsel_gammasigma     0
+midwcNSHsel_gammasigma   0
+midwcOSHsel_gammasigma   0
+mowMAsel_gammasigma      0
+midwcISQsel_gammalsm   0
+midwcLSQsel_gammalsm   0
+jigISQsel_gammalsm     0
+jigLSQsel_gammalsm     0
+dredgeSCAsel_gammalsm  0
+trapRCBsel_gammalsm    0
+dtrawlRCBsel_gammalsm  0
+dtrawlISQsel_gammalsm  0
+dtrawlLSQsel_gammalsm  0
+dtrawlSHKsel_gammalsm  0
+dtrawlHADsel_gammalsm  0
+dseineSHKsel_gammalsm  0
+dlineBLFsel_gammalsm   0
+diveBGsel_gammalsm     0
+pseineBLFsel_gammalsm  0
+cullPINsel_gammalsm    0
+ptrawlNSHsel_gammalsm  0
+ptrawlOSHsel_gammalsm  0
+dtrawlANCsel_gammalsm  0
+dtrawlBPFsel_gammalsm  0
+dtrawlBUTsel_gammalsm  0
+midwcZLsel_gammalsm    0
+trapMENsel_gammalsm    0
+dlineMENsel_gammalsm   0
+netMENsel_gammalsm     0
+midwcNSHsel_gammalsm   0
+midwcOSHsel_gammalsm   0
+mowMAsel_gammalsm      0
+midwcISQsel_bisigma   0
+midwcLSQsel_bisigma   0
+jigISQsel_bisigma     0
+jigLSQsel_bisigma     0
+dredgeSCAsel_bisigma  0
+trapRCBsel_bisigma    0
+dtrawlRCBsel_bisigma  0
+dtrawlISQsel_bisigma  0
+dtrawlLSQsel_bisigma  0
+dtrawlSHKsel_bisigma  0
+dtrawlHADsel_bisigma  0
+dseineSHKsel_bisigma  0
+dlineBLFsel_bisigma   0
+diveBGsel_bisigma     0
+pseineBLFsel_bisigma  0
+cullPINsel_bisigma    0
+ptrawlNSHsel_bisigma  0
+ptrawlOSHsel_bisigma  0
+dtrawlANCsel_bisigma  0
+dtrawlBPFsel_bisigma  0
+dtrawlBUTsel_bisigma  0
+midwcZLsel_bisigma    0
+trapMENsel_bisigma    0
+dlineMENsel_bisigma   0
+netMENsel_bisigma     0
+midwcNSHsel_bisigma   0
+midwcOSHsel_bisigma   0
+mowMAsel_bisigma      0
+midwcISQsel_bilsm1   0
+midwcLSQsel_bilsm1   0
+jigISQsel_bilsm1     0
+jigLSQsel_bilsm1     0
+dredgeSCAsel_bilsm1  0
+trapRCBsel_bilsm1    0
+dtrawlRCBsel_bilsm1  0
+dtrawlISQsel_bilsm1  0
+dtrawlLSQsel_bilsm1  0
+dtrawlSHKsel_bilsm1  0
+dtrawlHADsel_bilsm1  0
+dseineSHKsel_bilsm1  0
+dlineBLFsel_bilsm1   0
+diveBGsel_bilsm1     0
+pseineBLFsel_bilsm1  0
+cullPINsel_bilsm1    0
+ptrawlNSHsel_bilsm1  0
+ptrawlOSHsel_bilsm1  0
+dtrawlANCsel_bilsm1  0
+dtrawlBPFsel_bilsm1  0
+dtrawlBUTsel_bilsm1  0
+midwcZLsel_bilsm1    0
+trapMENsel_bilsm1    0
+dlineMENsel_bilsm1   0
+netMENsel_bilsm1     0
+midwcNSHsel_bilsm1   0
+midwcOSHsel_bilsm1   0
+mowMAsel_bilsm1      0
+midwcISQsel_bilsm2   0
+midwcLSQsel_bilsm2   0
+jigISQsel_bilsm2     0
+jigLSQsel_bilsm2     0
+dredgeSCAsel_bilsm2  0
+trapRCBsel_bilsm2    0
+dtrawlRCBsel_bilsm2  0
+dtrawlISQsel_bilsm2  0
+dtrawlLSQsel_bilsm2  0
+dtrawlSHKsel_bilsm2  0
+dtrawlHADsel_bilsm2  0
+dseineSHKsel_bilsm2  0
+dlineBLFsel_bilsm2   0
+diveBGsel_bilsm2     0
+pseineBLFsel_bilsm2  0
+cullPINsel_bilsm2    0
+ptrawlNSHsel_bilsm2  0
+ptrawlOSHsel_bilsm2  0
+dtrawlANCsel_bilsm2  0
+dtrawlBPFsel_bilsm2  0
+dtrawlBUTsel_bilsm2  0
+midwcZLsel_bilsm2    0
+trapMENsel_bilsm2    0
+dlineMENsel_bilsm2   0
+netMENsel_bilsm2     0
+midwcNSHsel_bilsm2   0
+midwcOSHsel_bilsm2   0
+mowMAsel_bilsm2      0
+
+midwcISQsel_lognormlsm   0
+midwcLSQsel_lognormlsm   0
+jigISQsel_lognormlsm     0
+jigLSQsel_lognormlsm     0
+dredgeSCAsel_lognormlsm  0
+trapRCBsel_lognormlsm    0
+dtrawlRCBsel_lognormlsm  0
+dtrawlISQsel_lognormlsm  0
+dtrawlLSQsel_lognormlsm  0
+dtrawlSHKsel_lognormlsm  0
+dtrawlHADsel_lognormlsm  0
+dseineSHKsel_lognormlsm  0
+dlineBLFsel_lognormlsm   0
+diveBGsel_lognormlsm     0
+pseineBLFsel_lognormlsm  0
+cullPINsel_lognormlsm    0
+ptrawlNSHsel_lognormlsm  0
+ptrawlOSHsel_lognormlsm  0
+dtrawlANCsel_lognormlsm  0
+dtrawlBPFsel_lognormlsm  0
+dtrawlBUTsel_lognormlsm  0
+midwcZLsel_lognormlsm    0
+trapMENsel_lognormlsm    0
+dlineMENsel_lognormlsm   0
+netMENsel_lognormlsm     0
+midwcNSHsel_lognormlsm   0
+midwcOSHsel_lognormlsm   0
+mowMAsel_lognormlsm      0
+midwcISQsel_bisigma2   0
+midwcLSQsel_bisigma2   0
+jigISQsel_bisigma2     0
+jigLSQsel_bisigma2     0
+dredgeSCAsel_bisigma2  0
+trapRCBsel_bisigma2    0
+dtrawlRCBsel_bisigma2  0
+dtrawlISQsel_bisigma2  0
+dtrawlLSQsel_bisigma2  0
+dtrawlSHKsel_bisigma2  0
+dtrawlHADsel_bisigma2  0
+dseineSHKsel_bisigma2  0
+dlineBLFsel_bisigma2   0
+diveBGsel_bisigma2     0
+pseineBLFsel_bisigma2  0
+cullPINsel_bisigma2    0
+ptrawlNSHsel_bisigma2  0
+ptrawlOSHsel_bisigma2  0
+dtrawlANCsel_bisigma2  0
+dtrawlBPFsel_bisigma2  0
+dtrawlBUTsel_bisigma2  0
+midwcZLsel_bisigma2    0
+trapMENsel_bisigma2    0
+dlineMENsel_bisigma2   0
+netMENsel_bisigma2     0
+midwcNSHsel_bisigma2   0
+midwcOSHsel_bisigma2   0
+mowMAsel_bisigma2      0
+midwcISQsel_ampli   0
+midwcLSQsel_ampli   0
+jigISQsel_ampli     0
+jigLSQsel_ampli     0
+dredgeSCAsel_ampli  0
+trapRCBsel_ampli    0
+dtrawlRCBsel_ampli  0
+dtrawlISQsel_ampli  0
+dtrawlLSQsel_ampli  0
+dtrawlSHKsel_ampli  0
+dtrawlHADsel_ampli  0
+dseineSHKsel_ampli  0
+dlineBLFsel_ampli   0
+diveBGsel_ampli     0
+pseineBLFsel_ampli  0
+cullPINsel_ampli    0
+ptrawlNSHsel_ampli  0
+ptrawlOSHsel_ampli  0
+dtrawlANCsel_ampli  0
+dtrawlBPFsel_ampli  0
+dtrawlBUTsel_ampli  0
+midwcZLsel_ampli    0
+trapMENsel_ampli    0
+dlineMENsel_ampli   0
+netMENsel_ampli     0
+midwcNSHsel_ampli   0
+midwcOSHsel_ampli   0
+mowMAsel_ampli      0
+invert_incidmort    0
+
+## If set to 1, volume swept by a fishing gear can change through time.
+See chapter 15.8.13 and 15.10 for further details
+
+flagchangeswept		 0
+
+## A parameter used only for reporting purposes, and does not affect
+Atlantis calculations (see chapter 15.8.14).
+
+gear_conflict_midwcISQ       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_midwcLSQ       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_jigISQ         28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_jigLSQ         28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_dredgeSCA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_trapRCB        28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_dtrawlRCB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_dtrawlISQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_dtrawlLSQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_dtrawlSHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_dtrawlHAD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_dseineSHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_dlineBLF       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_diveBG         28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_pseineBLF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_cullPIN        28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_ptrawlNSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_ptrawlOSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_dtrawlANC      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_dtrawlBPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_dtrawlBUT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_midwcZL        28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_trapMEN        28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_dlineMEN       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_netMEN         28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_midwcNSH       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_midwcOSH       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gear_conflict_mowMA          28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+
+##############################################################################
+###### End Fisheries gear selectivity, swept area and conflict ########
+############################################################################
+
 
 
 
@@ -6119,91 +7106,6 @@ netMEN_changeEFF     1
 midwcNSH_changeEFF   1
 midwcOSH_changeEFF   1
 mowMA_changeEFF      1
-midwcISQsel_lognormlsm   0
-midwcLSQsel_lognormlsm   0
-jigISQsel_lognormlsm     0
-jigLSQsel_lognormlsm     0
-dredgeSCAsel_lognormlsm  0
-trapRCBsel_lognormlsm    0
-dtrawlRCBsel_lognormlsm  0
-dtrawlISQsel_lognormlsm  0
-dtrawlLSQsel_lognormlsm  0
-dtrawlSHKsel_lognormlsm  0
-dtrawlHADsel_lognormlsm  0
-dseineSHKsel_lognormlsm  0
-dlineBLFsel_lognormlsm   0
-diveBGsel_lognormlsm     0
-pseineBLFsel_lognormlsm  0
-cullPINsel_lognormlsm    0
-ptrawlNSHsel_lognormlsm  0
-ptrawlOSHsel_lognormlsm  0
-dtrawlANCsel_lognormlsm  0
-dtrawlBPFsel_lognormlsm  0
-dtrawlBUTsel_lognormlsm  0
-midwcZLsel_lognormlsm    0
-trapMENsel_lognormlsm    0
-dlineMENsel_lognormlsm   0
-netMENsel_lognormlsm     0
-midwcNSHsel_lognormlsm   0
-midwcOSHsel_lognormlsm   0
-mowMAsel_lognormlsm      0
-midwcISQsel_bisigma2   0
-midwcLSQsel_bisigma2   0
-jigISQsel_bisigma2     0
-jigLSQsel_bisigma2     0
-dredgeSCAsel_bisigma2  0
-trapRCBsel_bisigma2    0
-dtrawlRCBsel_bisigma2  0
-dtrawlISQsel_bisigma2  0
-dtrawlLSQsel_bisigma2  0
-dtrawlSHKsel_bisigma2  0
-dtrawlHADsel_bisigma2  0
-dseineSHKsel_bisigma2  0
-dlineBLFsel_bisigma2   0
-diveBGsel_bisigma2     0
-pseineBLFsel_bisigma2  0
-cullPINsel_bisigma2    0
-ptrawlNSHsel_bisigma2  0
-ptrawlOSHsel_bisigma2  0
-dtrawlANCsel_bisigma2  0
-dtrawlBPFsel_bisigma2  0
-dtrawlBUTsel_bisigma2  0
-midwcZLsel_bisigma2    0
-trapMENsel_bisigma2    0
-dlineMENsel_bisigma2   0
-netMENsel_bisigma2     0
-midwcNSHsel_bisigma2   0
-midwcOSHsel_bisigma2   0
-mowMAsel_bisigma2      0
-midwcISQsel_ampli   0
-midwcLSQsel_ampli   0
-jigISQsel_ampli     0
-jigLSQsel_ampli     0
-dredgeSCAsel_ampli  0
-trapRCBsel_ampli    0
-dtrawlRCBsel_ampli  0
-dtrawlISQsel_ampli  0
-dtrawlLSQsel_ampli  0
-dtrawlSHKsel_ampli  0
-dtrawlHADsel_ampli  0
-dseineSHKsel_ampli  0
-dlineBLFsel_ampli   0
-diveBGsel_ampli     0
-pseineBLFsel_ampli  0
-cullPINsel_ampli    0
-ptrawlNSHsel_ampli  0
-ptrawlOSHsel_ampli  0
-dtrawlANCsel_ampli  0
-dtrawlBPFsel_ampli  0
-dtrawlBUTsel_ampli  0
-midwcZLsel_ampli    0
-trapMENsel_ampli    0
-dlineMENsel_ampli   0
-netMENsel_ampli     0
-midwcNSHsel_ampli   0
-midwcOSHsel_ampli   0
-mowMAsel_ampli      0
-invert_incidmort    0
 
 tac_resetperiodMAK      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -7434,820 +8336,6 @@ q_DR       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 q_DC       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_MAK      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_HER      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_WHK      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_BLF      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_WPF      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_SUF      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_WIF      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_WTF      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_FOU      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_HAL      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_PLA      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_FLA      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_BFT      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_TUN      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_BIL      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_MPF      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_BUT      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_BPF      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_ANC      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_GOO      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_MEN      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_FDE      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_COD      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_SHK      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_OHK      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_POL      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_RHK      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_BSB      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_SCU      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_TYL      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_RED      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_OPT      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_SAL      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_DRM      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_STB      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_TAU      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_WOL      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_SDF      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_FDF      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_HAD      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_YTF      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_DOG      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_SMO      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_SSH      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_DSH      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_BLS      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_POR      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_PSH      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_WSK      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_LSK      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_SK       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_SB       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_PIN      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_REP      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_RWH      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_BWH      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_SWH      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_TWH      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_INV      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_LSQ      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_ISQ      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_SCA      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_QHG      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_CLA      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_BFF      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_BG       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_LOB      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_RCB      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_BMS      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_NSH      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_OSH      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_ZL       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_BD       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_MA       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_MB       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_SG       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_BC       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_ZG       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_PL       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_DF       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_PS       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_ZM       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_ZS       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_PB       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_BB       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_BO       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_DL       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_DR       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_DC       28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-sel_MAKad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_HERad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_WHKad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BLFad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_WPFad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SUFad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_WIFad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_WTFad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_FOUad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_HALad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_PLAad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_FLAad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BFTad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_TUNad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BILad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_MPFad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BUTad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BPFad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_ANCad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_GOOad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_MENad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_FDEad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_CODad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SHKad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_OHKad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_POLad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_RHKad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BSBad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SCUad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_TYLad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_REDad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_OPTad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SALad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_DRMad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_STBad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_TAUad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_WOLad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SDFad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_FDFad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_HADad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_YTFad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_DOGad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SMOad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SSHad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_DSHad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BLSad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_PORad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_PSHad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_WSKad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_LSKad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SKad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SBad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_PINad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_REPad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_RWHad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BWHad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SWHad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_TWHad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_INVad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_LSQad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_ISQad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SCAad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_QHGad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_CLAad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BFFad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BGad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_LOBad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_RCBad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BMSad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_NSHad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_OSHad      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_ZLad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BDad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_MAad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_MBad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SGad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BCad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_ZGad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_PLad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_DFad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_PSad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_ZMad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_ZSad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_PBad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BBad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BOad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_DLad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_DRad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_DCad       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_MAKjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_HERjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_WHKjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BLFjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_WPFjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SUFjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_WIFjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_WTFjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_FOUjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_HALjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_PLAjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_FLAjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BFTjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_TUNjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BILjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_MPFjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BUTjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BPFjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_ANCjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_GOOjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_MENjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_FDEjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_CODjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SHKjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_OHKjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_POLjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_RHKjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BSBjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SCUjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_TYLjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_REDjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_OPTjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SALjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_DRMjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_STBjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_TAUjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_WOLjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SDFjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_FDFjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_HADjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_YTFjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_DOGjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SMOjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SSHjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_DSHjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BLSjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_PORjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_PSHjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_WSKjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_LSKjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SKjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SBjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_PINjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_REPjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_RWHjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BWHjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SWHjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_TWHjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_INVjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_LSQjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_ISQjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SCAjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_QHGjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_CLAjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BFFjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BGjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_LOBjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_RCBjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BMSjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_NSHjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_OSHjuv      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_ZLjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BDjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_MAjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_MBjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_SGjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BCjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_ZGjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_PLjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_DFjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_PSjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_ZMjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_ZSjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_PBjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BBjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_BOjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_DLjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_DRjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-sel_DCjuv       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-midwcISQsel_b   0
-midwcLSQsel_b   0
-jigISQsel_b     0
-jigLSQsel_b     0
-dredgeSCAsel_b  0
-trapRCBsel_b    0
-dtrawlRCBsel_b  0
-dtrawlISQsel_b  0
-dtrawlLSQsel_b  0
-dtrawlSHKsel_b  0
-dtrawlHADsel_b  0
-dseineSHKsel_b  0
-dlineBLFsel_b   0
-diveBGsel_b     0
-pseineBLFsel_b  0
-cullPINsel_b    0
-ptrawlNSHsel_b  0
-ptrawlOSHsel_b  0
-dtrawlANCsel_b  0
-dtrawlBPFsel_b  0
-dtrawlBUTsel_b  0
-midwcZLsel_b    0
-trapMENsel_b    0
-dlineMENsel_b   0
-netMENsel_b     0
-midwcNSHsel_b   0
-midwcOSHsel_b   0
-mowMAsel_b      0
-midwcISQsel_lsm   0
-midwcLSQsel_lsm   0
-jigISQsel_lsm     0
-jigLSQsel_lsm     0
-dredgeSCAsel_lsm  0
-trapRCBsel_lsm    0
-dtrawlRCBsel_lsm  0
-dtrawlISQsel_lsm  0
-dtrawlLSQsel_lsm  0
-dtrawlSHKsel_lsm  0
-dtrawlHADsel_lsm  0
-dseineSHKsel_lsm  0
-dlineBLFsel_lsm   0
-diveBGsel_lsm     0
-pseineBLFsel_lsm  0
-cullPINsel_lsm    0
-ptrawlNSHsel_lsm  0
-ptrawlOSHsel_lsm  0
-dtrawlANCsel_lsm  0
-dtrawlBPFsel_lsm  0
-dtrawlBUTsel_lsm  0
-midwcZLsel_lsm    0
-trapMENsel_lsm    0
-dlineMENsel_lsm   0
-netMENsel_lsm     0
-midwcNSHsel_lsm   0
-midwcOSHsel_lsm   0
-mowMAsel_lsm      0
-midwcISQsel_normsigma   0
-midwcLSQsel_normsigma   0
-jigISQsel_normsigma     0
-jigLSQsel_normsigma     0
-dredgeSCAsel_normsigma  0
-trapRCBsel_normsigma    0
-dtrawlRCBsel_normsigma  0
-dtrawlISQsel_normsigma  0
-dtrawlLSQsel_normsigma  0
-dtrawlSHKsel_normsigma  0
-dtrawlHADsel_normsigma  0
-dseineSHKsel_normsigma  0
-dlineBLFsel_normsigma   0
-diveBGsel_normsigma     0
-pseineBLFsel_normsigma  0
-cullPINsel_normsigma    0
-ptrawlNSHsel_normsigma  0
-ptrawlOSHsel_normsigma  0
-dtrawlANCsel_normsigma  0
-dtrawlBPFsel_normsigma  0
-dtrawlBUTsel_normsigma  0
-midwcZLsel_normsigma    0
-trapMENsel_normsigma    0
-dlineMENsel_normsigma   0
-netMENsel_normsigma     0
-midwcNSHsel_normsigma   0
-midwcOSHsel_normsigma   0
-mowMAsel_normsigma      0
-midwcISQsel_normlsm   0
-midwcLSQsel_normlsm   0
-jigISQsel_normlsm     0
-jigLSQsel_normlsm     0
-dredgeSCAsel_normlsm  0
-trapRCBsel_normlsm    0
-dtrawlRCBsel_normlsm  0
-dtrawlISQsel_normlsm  0
-dtrawlLSQsel_normlsm  0
-dtrawlSHKsel_normlsm  0
-dtrawlHADsel_normlsm  0
-dseineSHKsel_normlsm  0
-dlineBLFsel_normlsm   0
-diveBGsel_normlsm     0
-pseineBLFsel_normlsm  0
-cullPINsel_normlsm    0
-ptrawlNSHsel_normlsm  0
-ptrawlOSHsel_normlsm  0
-dtrawlANCsel_normlsm  0
-dtrawlBPFsel_normlsm  0
-dtrawlBUTsel_normlsm  0
-midwcZLsel_normlsm    0
-trapMENsel_normlsm    0
-dlineMENsel_normlsm   0
-netMENsel_normlsm     0
-midwcNSHsel_normlsm   0
-midwcOSHsel_normlsm   0
-mowMAsel_normlsm      0
-midwcISQsel_lognormsigma   0
-midwcLSQsel_lognormsigma   0
-jigISQsel_lognormsigma     0
-jigLSQsel_lognormsigma     0
-dredgeSCAsel_lognormsigma  0
-trapRCBsel_lognormsigma    0
-dtrawlRCBsel_lognormsigma  0
-dtrawlISQsel_lognormsigma  0
-dtrawlLSQsel_lognormsigma  0
-dtrawlSHKsel_lognormsigma  0
-dtrawlHADsel_lognormsigma  0
-dseineSHKsel_lognormsigma  0
-dlineBLFsel_lognormsigma   0
-diveBGsel_lognormsigma     0
-pseineBLFsel_lognormsigma  0
-cullPINsel_lognormsigma    0
-ptrawlNSHsel_lognormsigma  0
-ptrawlOSHsel_lognormsigma  0
-dtrawlANCsel_lognormsigma  0
-dtrawlBPFsel_lognormsigma  0
-dtrawlBUTsel_lognormsigma  0
-midwcZLsel_lognormsigma    0
-trapMENsel_lognormsigma    0
-dlineMENsel_lognormsigma   0
-netMENsel_lognormsigma     0
-midwcNSHsel_lognormsigma   0
-midwcOSHsel_lognormsigma   0
-mowMAsel_lognormsigma      0
-midwcISQsel_gammasigma   0
-midwcLSQsel_gammasigma   0
-jigISQsel_gammasigma     0
-jigLSQsel_gammasigma     0
-dredgeSCAsel_gammasigma  0
-trapRCBsel_gammasigma    0
-dtrawlRCBsel_gammasigma  0
-dtrawlISQsel_gammasigma  0
-dtrawlLSQsel_gammasigma  0
-dtrawlSHKsel_gammasigma  0
-dtrawlHADsel_gammasigma  0
-dseineSHKsel_gammasigma  0
-dlineBLFsel_gammasigma   0
-diveBGsel_gammasigma     0
-pseineBLFsel_gammasigma  0
-cullPINsel_gammasigma    0
-ptrawlNSHsel_gammasigma  0
-ptrawlOSHsel_gammasigma  0
-dtrawlANCsel_gammasigma  0
-dtrawlBPFsel_gammasigma  0
-dtrawlBUTsel_gammasigma  0
-midwcZLsel_gammasigma    0
-trapMENsel_gammasigma    0
-dlineMENsel_gammasigma   0
-netMENsel_gammasigma     0
-midwcNSHsel_gammasigma   0
-midwcOSHsel_gammasigma   0
-mowMAsel_gammasigma      0
-midwcISQsel_gammalsm   0
-midwcLSQsel_gammalsm   0
-jigISQsel_gammalsm     0
-jigLSQsel_gammalsm     0
-dredgeSCAsel_gammalsm  0
-trapRCBsel_gammalsm    0
-dtrawlRCBsel_gammalsm  0
-dtrawlISQsel_gammalsm  0
-dtrawlLSQsel_gammalsm  0
-dtrawlSHKsel_gammalsm  0
-dtrawlHADsel_gammalsm  0
-dseineSHKsel_gammalsm  0
-dlineBLFsel_gammalsm   0
-diveBGsel_gammalsm     0
-pseineBLFsel_gammalsm  0
-cullPINsel_gammalsm    0
-ptrawlNSHsel_gammalsm  0
-ptrawlOSHsel_gammalsm  0
-dtrawlANCsel_gammalsm  0
-dtrawlBPFsel_gammalsm  0
-dtrawlBUTsel_gammalsm  0
-midwcZLsel_gammalsm    0
-trapMENsel_gammalsm    0
-dlineMENsel_gammalsm   0
-netMENsel_gammalsm     0
-midwcNSHsel_gammalsm   0
-midwcOSHsel_gammalsm   0
-mowMAsel_gammalsm      0
-midwcISQsel_bisigma   0
-midwcLSQsel_bisigma   0
-jigISQsel_bisigma     0
-jigLSQsel_bisigma     0
-dredgeSCAsel_bisigma  0
-trapRCBsel_bisigma    0
-dtrawlRCBsel_bisigma  0
-dtrawlISQsel_bisigma  0
-dtrawlLSQsel_bisigma  0
-dtrawlSHKsel_bisigma  0
-dtrawlHADsel_bisigma  0
-dseineSHKsel_bisigma  0
-dlineBLFsel_bisigma   0
-diveBGsel_bisigma     0
-pseineBLFsel_bisigma  0
-cullPINsel_bisigma    0
-ptrawlNSHsel_bisigma  0
-ptrawlOSHsel_bisigma  0
-dtrawlANCsel_bisigma  0
-dtrawlBPFsel_bisigma  0
-dtrawlBUTsel_bisigma  0
-midwcZLsel_bisigma    0
-trapMENsel_bisigma    0
-dlineMENsel_bisigma   0
-netMENsel_bisigma     0
-midwcNSHsel_bisigma   0
-midwcOSHsel_bisigma   0
-mowMAsel_bisigma      0
-midwcISQsel_bilsm1   0
-midwcLSQsel_bilsm1   0
-jigISQsel_bilsm1     0
-jigLSQsel_bilsm1     0
-dredgeSCAsel_bilsm1  0
-trapRCBsel_bilsm1    0
-dtrawlRCBsel_bilsm1  0
-dtrawlISQsel_bilsm1  0
-dtrawlLSQsel_bilsm1  0
-dtrawlSHKsel_bilsm1  0
-dtrawlHADsel_bilsm1  0
-dseineSHKsel_bilsm1  0
-dlineBLFsel_bilsm1   0
-diveBGsel_bilsm1     0
-pseineBLFsel_bilsm1  0
-cullPINsel_bilsm1    0
-ptrawlNSHsel_bilsm1  0
-ptrawlOSHsel_bilsm1  0
-dtrawlANCsel_bilsm1  0
-dtrawlBPFsel_bilsm1  0
-dtrawlBUTsel_bilsm1  0
-midwcZLsel_bilsm1    0
-trapMENsel_bilsm1    0
-dlineMENsel_bilsm1   0
-netMENsel_bilsm1     0
-midwcNSHsel_bilsm1   0
-midwcOSHsel_bilsm1   0
-mowMAsel_bilsm1      0
-midwcISQsel_bilsm2   0
-midwcLSQsel_bilsm2   0
-jigISQsel_bilsm2     0
-jigLSQsel_bilsm2     0
-dredgeSCAsel_bilsm2  0
-trapRCBsel_bilsm2    0
-dtrawlRCBsel_bilsm2  0
-dtrawlISQsel_bilsm2  0
-dtrawlLSQsel_bilsm2  0
-dtrawlSHKsel_bilsm2  0
-dtrawlHADsel_bilsm2  0
-dseineSHKsel_bilsm2  0
-dlineBLFsel_bilsm2   0
-diveBGsel_bilsm2     0
-pseineBLFsel_bilsm2  0
-cullPINsel_bilsm2    0
-ptrawlNSHsel_bilsm2  0
-ptrawlOSHsel_bilsm2  0
-dtrawlANCsel_bilsm2  0
-dtrawlBPFsel_bilsm2  0
-dtrawlBUTsel_bilsm2  0
-midwcZLsel_bilsm2    0
-trapMENsel_bilsm2    0
-dlineMENsel_bilsm2   0
-netMENsel_bilsm2     0
-midwcNSHsel_bilsm2   0
-midwcOSHsel_bilsm2   0
-mowMAsel_bilsm2      0
 midwcISQ_maxsaleprice   1
 midwcLSQ_maxsaleprice   1
 jigISQ_maxsaleprice     1
@@ -9877,62 +9965,6 @@ k_waste_DL       28
 k_waste_DR       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 k_waste_DC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_midwcISQ       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_midwcLSQ       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_jigISQ         28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_jigLSQ         28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dredgeSCA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_trapRCB        28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dtrawlRCB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dtrawlISQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dtrawlLSQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dtrawlSHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dtrawlHAD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dseineSHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dlineBLF       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_diveBG         28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_pseineBLF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_cullPIN        28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_ptrawlNSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_ptrawlOSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dtrawlANC      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dtrawlBPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dtrawlBUT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_midwcZL        28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_trapMEN        28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dlineMEN       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_netMEN         28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_midwcNSH       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_midwcOSH       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_mowMA          28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 midwcISQPUEthresh   0        0
 midwcLSQPUEthresh   0        0
@@ -16736,11 +16768,10 @@ flagisplace			 0
 
 flagchangeeffort	 0
 flagchangediscrd	 0
-flagchangesel		 0
+
 
 flagchangeq 		 0
 
-flagchangeswept		 0
 
 flagnewport			 0
 flagchangepop		 0
