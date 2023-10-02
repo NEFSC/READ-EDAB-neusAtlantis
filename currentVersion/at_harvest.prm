@@ -5446,6 +5446,90 @@ mowMA_mEff_shift      1
 ############ Effort Displacement #############################################
 ############################################################################
 
+## If set to 1, effort in dynamic fishery will be displaced into adjacent
+cells when CPUE falls below a certain threshold or when MPAs are
+imposed
+
+flagdisplace		 0
+
+#Level of CPUE below which effort displacement occurs
+
+## YYY_mEff_thresh level - these are absent
+
+### If set to 1, the effort will be capped at the maximum level set in
+YYY_cap
+
+midwcISQ_flagcap   0
+midwcLSQ_flagcap   0
+jigISQ_flagcap     0
+jigLSQ_flagcap     0
+dredgeSCA_flagcap  0
+trapRCB_flagcap    0
+dtrawlRCB_flagcap  0
+dtrawlISQ_flagcap  0
+dtrawlLSQ_flagcap  0
+dtrawlSHK_flagcap  0
+dtrawlHAD_flagcap  0
+dseineSHK_flagcap  0
+dlineBLF_flagcap   0
+diveBG_flagcap     0
+pseineBLF_flagcap  0
+cullPIN_flagcap    0
+ptrawlNSH_flagcap  0
+ptrawlOSH_flagcap  0
+dtrawlANC_flagcap  0
+dtrawlBPF_flagcap  0
+dtrawlBUT_flagcap  0
+midwcZL_flagcap    0
+trapMEN_flagcap    0
+dlineMEN_flagcap   0
+netMEN_flagcap     0
+midwcNSH_flagcap   0
+midwcOSH_flagcap   0
+mowMA_flagcap      0
+
+## Effort cap of a fishery (maximum number of days per year)
+
+midwcISQ_cap   0        0
+midwcLSQ_cap   0        0
+jigISQ_cap     0        0
+jigLSQ_cap     0        0
+dredgeSCA_cap  0        0
+trapRCB_cap    0        0
+dtrawlRCB_cap  0        0
+dtrawlISQ_cap  0        0
+dtrawlLSQ_cap  0        0
+dtrawlSHK_cap  0        0
+dtrawlHAD_cap  0        0
+dseineSHK_cap  0        0
+dlineBLF_cap   0        0
+diveBG_cap     0        0
+pseineBLF_cap  0        0
+cullPIN_cap    0        0
+ptrawlNSH_cap  0        0
+ptrawlOSH_cap  0        0
+dtrawlANC_cap  0        0
+dtrawlBPF_cap  0        0
+dtrawlBUT_cap  0        0
+midwcZL_cap    0        0
+trapMEN_cap    0        0
+dlineMEN_cap   0        0
+netMEN_cap     0        0
+midwcNSH_cap   0        0
+midwcOSH_cap   0        0
+mowMA_cap      0        0
+
+## If set to 1, effort caps can change through time. See chapter 15.10 on
+how temporal changes are implemented
+
+flagchangecap 		 0
+
+## If set to 1, sudden decreases in dynamic effort will be buffered
+through time (and hence not allowed). This should be avoided unless
+well justified (see Note! in chapter 15.6.2)
+
+flagbuffereffort	 0
+
 
 
 ##############################################################################
@@ -5453,23 +5537,17 @@ mowMA_mEff_shift      1
 ############################################################################
 
 
+##############################################################################
+####### Vertical, positional and habitat scalars of the fishing effort ########
+############################################################################
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+##############################################################################
+###### End Vertical, positional and habitat scalars of the fishing effort ########
+############################################################################
 
 
 
@@ -6497,34 +6575,6 @@ flagTACparticipate_netMEN 0
 flagTACparticipate_midwcNSH 0
 flagTACparticipate_midwcOSH 0
 flagTACparticipate_mowMA 0
-midwcISQ_flagcap   0
-midwcLSQ_flagcap   0
-jigISQ_flagcap     0
-jigLSQ_flagcap     0
-dredgeSCA_flagcap  0
-trapRCB_flagcap    0
-dtrawlRCB_flagcap  0
-dtrawlISQ_flagcap  0
-dtrawlLSQ_flagcap  0
-dtrawlSHK_flagcap  0
-dtrawlHAD_flagcap  0
-dseineSHK_flagcap  0
-dlineBLF_flagcap   0
-diveBG_flagcap     0
-pseineBLF_flagcap  0
-cullPIN_flagcap    0
-ptrawlNSH_flagcap  0
-ptrawlOSH_flagcap  0
-dtrawlANC_flagcap  0
-dtrawlBPF_flagcap  0
-dtrawlBUT_flagcap  0
-midwcZL_flagcap    0
-trapMEN_flagcap    0
-dlineMEN_flagcap   0
-netMEN_flagcap     0
-midwcNSH_flagcap   0
-midwcOSH_flagcap   0
-mowMA_flagcap      0
 midwcISQ_flagseasonal   0
 midwcLSQ_flagseasonal   0
 jigISQ_flagseasonal     0
@@ -9979,34 +10029,6 @@ netMENCPUEscale     0        0
 midwcNSHCPUEscale   0        0
 midwcOSHCPUEscale   0        0
 mowMACPUEscale      0        0
-midwcISQ_cap   0        0
-midwcLSQ_cap   0        0
-jigISQ_cap     0        0
-jigLSQ_cap     0        0
-dredgeSCA_cap  0        0
-trapRCB_cap    0        0
-dtrawlRCB_cap  0        0
-dtrawlISQ_cap  0        0
-dtrawlLSQ_cap  0        0
-dtrawlSHK_cap  0        0
-dtrawlHAD_cap  0        0
-dseineSHK_cap  0        0
-dlineBLF_cap   0        0
-diveBG_cap     0        0
-pseineBLF_cap  0        0
-cullPIN_cap    0        0
-ptrawlNSH_cap  0        0
-ptrawlOSH_cap  0        0
-dtrawlANC_cap  0        0
-dtrawlBPF_cap  0        0
-dtrawlBUT_cap  0        0
-midwcZL_cap    0        0
-trapMEN_cap    0        0
-dlineMEN_cap   0        0
-netMEN_cap     0        0
-midwcNSH_cap   0        0
-midwcOSH_cap   0        0
-mowMA_cap      0        0
 
 
 # which market is feed by each port (for economic model)
@@ -16695,8 +16717,7 @@ flagendangered		 0
 
 
 flagisplace			 0
-flagdisplace		 0
-flagbuffereffort	 0
+
 flagchangeeffort	 0
 flagchangediscrd	 0
 flagchangesel		 0
@@ -16704,7 +16725,7 @@ flagchangesel		 0
 flagchangeq 		 0
 flagchangep 		 0
 flagchangeswept		 0
-flagchangecap 		 0
+
 flagnewport			 0
 flagchangepop		 0
 
