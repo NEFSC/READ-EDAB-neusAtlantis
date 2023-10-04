@@ -6612,6 +6612,1670 @@ gear_conflict_mowMA          28
 
 
 
+##############################################################################
+###### Fisheries discarding ###############################################
+############################################################################
+
+
+## Species specific flag setting up discarding options for each
+species/fishery combination.
+
+flagdiscard_MAK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_HER      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_WHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_BLF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_WPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_SUF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_WIF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_WTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_FOU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_HAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_PLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_FLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_BFT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_TUN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_BIL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_MPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_BUT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_BPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_ANC      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_GOO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_MEN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_FDE      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_COD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_SHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_OHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_POL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_RHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_BSB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_SCU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_TYL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_RED      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_OPT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_SAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_DRM      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_STB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_TAU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_WOL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_SDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_FDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_HAD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_YTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_DOG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_SMO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_SSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_DSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_BLS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_POR      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_PSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_WSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_LSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_SK       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_SB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_PIN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_REP      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_RWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_BWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_SWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_TWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_INV      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_LSQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_ISQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_SCA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_QHG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_CLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_BFF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_BG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_LOB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_RCB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_BMS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_NSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_OSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_ZL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_BD       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_MA       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_MB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_SG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_BC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_ZG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_PL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_DF       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_PS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_ZM       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_ZS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_PB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_BB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_BO       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_DL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_DR       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+flagdiscard_DC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+### Proportion of species XXX discards that die after discarding (so if set
+to 1, then all discards die)
+
+incidmort_MAK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_HER      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_WHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_BLF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_WPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_SUF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_WIF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_WTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_FOU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_HAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_PLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_FLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_BFT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_TUN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_BIL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_MPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_BUT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_BPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_ANC      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_GOO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_MEN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_FDE      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_COD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_SHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_OHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_POL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_RHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_BSB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_SCU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_TYL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_RED      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_OPT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_SAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_DRM      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_STB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_TAU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_WOL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_SDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_FDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_HAD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_YTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_DOG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_SMO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_SSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_DSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_BLS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_POR      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_PSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_WSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_LSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_SK       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_SB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_PIN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_REP      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_RWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_BWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_SWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_TWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_INV      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_LSQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_ISQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_SCA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_QHG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_CLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_BFF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_BG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_LOB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_RCB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_BMS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_NSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_OSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_ZL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_BD       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_MA       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_MB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_SG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_BC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_ZG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_PL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_DF       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_PS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_ZM       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_ZS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_PB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_BB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_BO       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_DL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_DR       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+incidmort_DC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+## If set to 1, discarding practices change through time. See chapter 15.9.2 and 15.10 on how to set up temporal changes.
+
+flagchangediscrd	 0
+
+
+## Proportion of legal catch that is discarded as waste (guts, skin). This proportion cannot survive but is sent to DC pool.
+
+k_waste_MAK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_HER      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_WHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_BLF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_WPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_SUF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_WIF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_WTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_FOU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_HAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_PLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_FLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_BFT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_TUN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_BIL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_MPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_BUT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_BPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_ANC      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_GOO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_MEN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_FDE      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_COD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_SHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_OHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_POL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_RHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_BSB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_SCU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_TYL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_RED      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_OPT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_SAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_DRM      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_STB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_TAU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_WOL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_SDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_FDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_HAD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_YTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_DOG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_SMO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_SSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_DSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_BLS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_POR      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_PSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_WSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_LSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_SK       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_SB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_PIN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_REP      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_RWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_BWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_SWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_TWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_INV      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_LSQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_ISQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_SCA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_QHG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_CLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_BFF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_BG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_LOB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_RCB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_BMS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_NSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_OSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_ZL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_BD       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_MA       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_MB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_SG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_BC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_ZG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_PL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_DF       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_PS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_ZM       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_ZS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_PB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_BB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_BO       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_DL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_DR       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_waste_DC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+### Proportion of species XXX catch that is discarded, in constant discarding formulation (when flagdiscard_XXX = 0). Same discarding is applied to all age classes.
+
+FFCDR_MAK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_HER      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_WHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_BLF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_WPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_SUF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_WIF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_WTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_FOU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_HAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_PLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_FLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_BFT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_TUN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_BIL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_MPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_BUT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_BPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_ANC      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_GOO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_MEN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_FDE      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_COD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_SHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_OHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_POL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_RHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_BSB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_SCU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_TYL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_RED      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_OPT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_SAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_DRM      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_STB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_TAU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_WOL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_SDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_FDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_HAD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_YTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_DOG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_SMO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_SSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_DSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_BLS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_POR      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_PSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_WSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_LSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_SK       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_SB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_PIN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_REP      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_RWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_BWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_SWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_TWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_INV      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_LSQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_ISQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_SCA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_QHG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_CLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_BFF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_BG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_LOB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_RCB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_BMS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_NSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_OSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_ZL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_BD       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_MA       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_MB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_SG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_BC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_ZG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_PL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_DF       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_PS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_ZM       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_ZS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_PB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_BB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_BO       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_DL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_DR       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FFCDR_DC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+
+
+
+
+
+
+
+
+### Vectors giving two possible age specific discarding proportions when flagdiscard_XXX =1. Must have as many values as there are age groups in species XXX. The FC_caseXXX vector sets which of the two alternative formulations are used by each fishery (must have as many
+values are there are fisheries)
+
+
+FFCDR_MAKchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_HERchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_WHKchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BLFchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_WPFchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SUFchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_WIFchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_WTFchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_FOUchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_HALchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_PLAchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_FLAchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BFTchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_TUNchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BILchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_MPFchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BUTchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BPFchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_ANCchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_GOOchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_MENchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_FDEchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_CODchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SHKchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_OHKchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_POLchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_RHKchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BSBchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SCUchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_TYLchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_REDchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_OPTchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SALchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_DRMchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_STBchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_TAUchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_WOLchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SDFchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_FDFchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_HADchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_YTFchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_DOGchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SMOchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SSHchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_DSHchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BLSchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_PORchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_PSHchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_WSKchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_LSKchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SKchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SBchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_PINchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_REPchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_RWHchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BWHchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SWHchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_TWHchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_INVchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_LSQchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_ISQchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SCAchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_QHGchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_CLAchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BFFchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BGchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_LOBchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_RCBchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BMSchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_NSHchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_OSHchrt      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_ZLchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BDchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_MAchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_MBchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SGchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BCchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_ZGchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_PLchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_DFchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_PSchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_ZMchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_ZSchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_PBchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BBchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BOchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_DLchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_DRchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_DCchrt       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_MAKchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_HERchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_WHKchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BLFchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_WPFchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SUFchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_WIFchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_WTFchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_FOUchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_HALchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_PLAchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_FLAchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BFTchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_TUNchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BILchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_MPFchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BUTchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BPFchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_ANCchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_GOOchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_MENchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_FDEchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_CODchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SHKchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_OHKchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_POLchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_RHKchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BSBchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SCUchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_TYLchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_REDchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_OPTchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SALchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_DRMchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_STBchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_TAUchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_WOLchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SDFchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_FDFchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_HADchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_YTFchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_DOGchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SMOchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SSHchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_DSHchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BLSchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_PORchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_PSHchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_WSKchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_LSKchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SKchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SBchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_PINchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_REPchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_RWHchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BWHchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SWHchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_TWHchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_INVchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_LSQchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_ISQchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SCAchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_QHGchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_CLAchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BFFchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BGchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_LOBchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_RCBchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BMSchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_NSHchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_OSHchrtB      10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_ZLchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BDchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_MAchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_MBchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_SGchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BCchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_ZGchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_PLchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_DFchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_PSchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_ZMchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_ZSchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_PBchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BBchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_BOchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_DLchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_DRchrtB       10
+1 1 1 1 1 1 1 1 1 1
+FFCDR_DCchrtB       10
+1 1 1 1 1 1 1 1 1 1
+
+## Minimum length of species XXX that can be retained when length based discarding is used (flagdiscard_XXX = 2)
+
+FCthreshli_MAK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_HER      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_WHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_BLF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_WPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_SUF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_WIF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_WTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_FOU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_HAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_PLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_FLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_BFT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_TUN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_BIL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_MPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_BUT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_BPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_ANC      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_GOO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_MEN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_FDE      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_COD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_SHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_OHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_POL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_RHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_BSB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_SCU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_TYL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_RED      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_OPT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_SAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_DRM      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_STB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_TAU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_WOL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_SDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_FDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_HAD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_YTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_DOG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_SMO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_SSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_DSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_BLS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_POR      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_PSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_WSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_LSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_SK       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_SB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_PIN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_REP      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_RWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_BWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_SWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_TWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_INV      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_LSQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_ISQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_SCA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_QHG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_CLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_BFF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_BG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_LOB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_RCB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_BMS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_NSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_OSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_ZL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_BD       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_MA       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_MB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_SG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_BC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_ZG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_PL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_DF       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_PS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_ZM       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_ZS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_PB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_BB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_BO       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_DL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_DR       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FCthreshli_DC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+## A vector of values giving fishery-specific proportion of the undersized catch that will not be discarded
+
+k_retain_MAK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_HER      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_WHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_BLF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_WPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_SUF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_WIF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_WTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_FOU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_HAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_PLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_FLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_BFT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_TUN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_BIL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_MPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_BUT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_BPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_ANC      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_GOO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_MEN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_FDE      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_COD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_SHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_OHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_POL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_RHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_BSB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_SCU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_TYL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_RED      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_OPT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_SAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_DRM      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_STB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_TAU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_WOL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_SDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_FDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_HAD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_YTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_DOG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_SMO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_SSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_DSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_BLS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_POR      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_PSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_WSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_LSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_SK       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_SB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_PIN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_REP      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_RWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_BWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_SWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_TWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_INV      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_LSQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_ISQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_SCA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_QHG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_CLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_BFF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_BG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_LOB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_RCB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_BMS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_NSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_OSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_ZL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_BD       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_MA       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_MB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_SG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_BC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_ZG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_PL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_DF       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_PS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_ZM       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_ZS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_PB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_BB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_BO       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_DL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_DR       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+k_retain_DC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+### Proportional distribution of forced discarding over age groups (when forced discarding is used, flagdiscard_XXX =3)
+
+
+DiscardTS_agedistribMAK      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribHER      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribWHK      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribBLF      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribWPF      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribSUF      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribWIF      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribWTF      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribFOU      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribHAL      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribPLA      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribFLA      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribBFT      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribTUN      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribBIL      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribMPF      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribBUT      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribBPF      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribANC      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribGOO      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribMEN      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribFDE      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribCOD      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribSHK      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribOHK      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribPOL      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribRHK      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribBSB      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribSCU      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribTYL      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribRED      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribOPT      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribSAL      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribDRM      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribSTB      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribTAU      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribWOL      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribSDF      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribFDF      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribHAD      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribYTF      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribDOG      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribSMO      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribSSH      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribDSH      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribBLS      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribPOR      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribPSH      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribWSK      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribLSK      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribSK       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribSB       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribPIN      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribREP      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribRWH      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribBWH      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribSWH      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribTWH      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribINV      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribLSQ      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribISQ      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribSCA      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribQHG      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribCLA      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribBFF      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribBG       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribLOB      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribRCB      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribBMS      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribNSH      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribOSH      10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribZL       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribBD       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribMA       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribMB       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribSG       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribBC       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribZG       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribPL       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribDF       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribPS       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribZM       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribZS       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribPB       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribBB       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribBO       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribDL       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribDR       10
+0 0 0 0 0 0 0 0 0 0
+DiscardTS_agedistribDC       10
+0 0 0 0 0 0 0 0 0 0
+
+### If set to 1, fisheries will start discarding the youngest cohorts of the catch when they are approaching the TAC. The proportion of TAC fulfilled before highgrading starts is set in the global prop_within parameter
+flaghighgrading  	 0
+
+##### ???? ? ?
+highgrade_thresh 	 0
+
+
+##############################################################################
+###### End Fisheries discarding ##############################################
+############################################################################
+
+
 
 
 
@@ -7343,184 +9007,6 @@ netMEN_effortdrop     1
 midwcNSH_effortdrop   1
 midwcOSH_effortdrop   1
 mowMA_effortdrop      1
-flagdiscard_MAK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_HER      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_WHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_BLF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_WPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_SUF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_WIF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_WTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_FOU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_HAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_PLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_FLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_BFT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_TUN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_BIL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_MPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_BUT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_BPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_ANC      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_GOO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_MEN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_FDE      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_COD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_SHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_OHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_POL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_RHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_BSB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_SCU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_TYL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_RED      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_OPT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_SAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_DRM      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_STB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_TAU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_WOL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_SDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_FDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_HAD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_YTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_DOG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_SMO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_SSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_DSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_BLS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_POR      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_PSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_WSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_LSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_SK       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_SB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_PIN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_REP      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_RWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_BWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_SWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_TWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_INV      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_LSQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_ISQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_SCA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_QHG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_CLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_BFF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_BG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_LOB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_RCB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_BMS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_NSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_OSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_ZL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_BD       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_MA       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_MB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_SG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_BC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_ZG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_PL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_DF       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_PS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_ZM       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_ZS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_PB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_BB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_BO       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_DL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_DR       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-flagdiscard_DC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
 flagTACparticipate_midwcISQ 0
 flagTACparticipate_midwcLSQ 0
@@ -8364,362 +9850,6 @@ netMEN_maxsaleprice     1
 midwcNSH_maxsaleprice   1
 midwcOSH_maxsaleprice   1
 mowMA_maxsaleprice      1
-DiscardTS_agedistribMAK      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribHER      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribWHK      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribBLF      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribWPF      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribSUF      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribWIF      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribWTF      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribFOU      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribHAL      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribPLA      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribFLA      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribBFT      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribTUN      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribBIL      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribMPF      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribBUT      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribBPF      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribANC      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribGOO      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribMEN      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribFDE      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribCOD      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribSHK      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribOHK      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribPOL      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribRHK      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribBSB      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribSCU      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribTYL      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribRED      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribOPT      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribSAL      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribDRM      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribSTB      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribTAU      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribWOL      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribSDF      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribFDF      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribHAD      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribYTF      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribDOG      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribSMO      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribSSH      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribDSH      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribBLS      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribPOR      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribPSH      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribWSK      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribLSK      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribSK       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribSB       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribPIN      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribREP      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribRWH      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribBWH      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribSWH      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribTWH      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribINV      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribLSQ      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribISQ      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribSCA      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribQHG      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribCLA      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribBFF      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribBG       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribLOB      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribRCB      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribBMS      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribNSH      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribOSH      10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribZL       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribBD       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribMA       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribMB       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribSG       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribBC       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribZG       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribPL       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribDF       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribPS       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribZM       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribZS       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribPB       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribBB       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribBO       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribDL       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribDR       10
-0 0 0 0 0 0 0 0 0 0
-DiscardTS_agedistribDC       10
-0 0 0 0 0 0 0 0 0 0
-FFCDR_MAK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_HER      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_WHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_BLF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_WPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_SUF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_WIF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_WTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_FOU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_HAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_PLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_FLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_BFT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_TUN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_BIL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_MPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_BUT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_BPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_ANC      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_GOO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_MEN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_FDE      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_COD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_SHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_OHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_POL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_RHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_BSB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_SCU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_TYL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_RED      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_OPT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_SAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_DRM      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_STB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_TAU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_WOL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_SDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_FDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_HAD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_YTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_DOG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_SMO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_SSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_DSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_BLS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_POR      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_PSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_WSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_LSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_SK       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_SB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_PIN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_REP      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_RWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_BWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_SWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_TWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_INV      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_LSQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_ISQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_SCA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_QHG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_CLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_BFF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_BG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_LOB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_RCB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_BMS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_NSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_OSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_ZL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_BD       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_MA       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_MB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_SG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_BC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_ZG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_PL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_DF       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_PS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_ZM       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_ZS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_PB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_BB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_BO       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_DL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_DR       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_DC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FC_caseMAK      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FC_caseHER      28
@@ -8897,1074 +10027,6 @@ FC_caseDL       28
 FC_caseDR       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FC_caseDC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FFCDR_MAKchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_HERchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_WHKchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BLFchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_WPFchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SUFchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_WIFchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_WTFchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_FOUchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_HALchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_PLAchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_FLAchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BFTchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_TUNchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BILchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_MPFchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BUTchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BPFchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_ANCchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_GOOchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_MENchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_FDEchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_CODchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SHKchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_OHKchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_POLchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_RHKchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BSBchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SCUchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_TYLchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_REDchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_OPTchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SALchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_DRMchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_STBchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_TAUchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_WOLchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SDFchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_FDFchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_HADchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_YTFchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_DOGchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SMOchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SSHchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_DSHchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BLSchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_PORchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_PSHchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_WSKchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_LSKchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SKchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SBchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_PINchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_REPchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_RWHchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BWHchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SWHchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_TWHchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_INVchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_LSQchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_ISQchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SCAchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_QHGchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_CLAchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BFFchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BGchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_LOBchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_RCBchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BMSchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_NSHchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_OSHchrt      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_ZLchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BDchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_MAchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_MBchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SGchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BCchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_ZGchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_PLchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_DFchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_PSchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_ZMchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_ZSchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_PBchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BBchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BOchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_DLchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_DRchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_DCchrt       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_MAKchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_HERchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_WHKchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BLFchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_WPFchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SUFchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_WIFchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_WTFchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_FOUchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_HALchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_PLAchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_FLAchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BFTchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_TUNchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BILchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_MPFchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BUTchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BPFchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_ANCchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_GOOchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_MENchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_FDEchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_CODchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SHKchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_OHKchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_POLchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_RHKchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BSBchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SCUchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_TYLchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_REDchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_OPTchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SALchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_DRMchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_STBchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_TAUchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_WOLchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SDFchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_FDFchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_HADchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_YTFchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_DOGchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SMOchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SSHchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_DSHchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BLSchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_PORchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_PSHchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_WSKchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_LSKchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SKchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SBchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_PINchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_REPchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_RWHchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BWHchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SWHchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_TWHchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_INVchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_LSQchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_ISQchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SCAchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_QHGchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_CLAchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BFFchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BGchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_LOBchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_RCBchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BMSchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_NSHchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_OSHchrtB      10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_ZLchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BDchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_MAchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_MBchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_SGchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BCchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_ZGchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_PLchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_DFchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_PSchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_ZMchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_ZSchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_PBchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BBchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_BOchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_DLchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_DRchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FFCDR_DCchrtB       10
-1 1 1 1 1 1 1 1 1 1
-FCthreshli_MAK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_HER      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_WHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_BLF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_WPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_SUF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_WIF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_WTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_FOU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_HAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_PLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_FLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_BFT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_TUN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_BIL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_MPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_BUT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_BPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_ANC      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_GOO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_MEN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_FDE      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_COD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_SHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_OHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_POL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_RHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_BSB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_SCU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_TYL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_RED      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_OPT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_SAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_DRM      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_STB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_TAU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_WOL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_SDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_FDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_HAD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_YTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_DOG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_SMO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_SSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_DSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_BLS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_POR      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_PSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_WSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_LSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_SK       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_SB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_PIN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_REP      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_RWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_BWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_SWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_TWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_INV      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_LSQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_ISQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_SCA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_QHG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_CLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_BFF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_BG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_LOB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_RCB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_BMS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_NSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_OSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_ZL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_BD       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_MA       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_MB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_SG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_BC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_ZG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_PL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_DF       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_PS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_ZM       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_ZS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_PB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_BB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_BO       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_DL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_DR       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FCthreshli_DC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_MAK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_HER      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_WHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_BLF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_WPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_SUF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_WIF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_WTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_FOU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_HAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_PLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_FLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_BFT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_TUN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_BIL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_MPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_BUT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_BPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_ANC      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_GOO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_MEN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_FDE      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_COD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_SHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_OHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_POL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_RHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_BSB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_SCU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_TYL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_RED      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_OPT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_SAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_DRM      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_STB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_TAU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_WOL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_SDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_FDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_HAD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_YTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_DOG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_SMO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_SSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_DSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_BLS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_POR      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_PSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_WSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_LSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_SK       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_SB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_PIN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_REP      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_RWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_BWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_SWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_TWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_INV      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_LSQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_ISQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_SCA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_QHG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_CLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_BFF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_BG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_LOB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_RCB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_BMS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_NSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_OSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_ZL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_BD       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_MA       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_MB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_SG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_BC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_ZG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_PL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_DF       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_PS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_ZM       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_ZS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_PB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_BB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_BO       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_DL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_DR       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-incidmort_DC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_MAK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_HER      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_WHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_BLF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_WPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_SUF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_WIF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_WTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_FOU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_HAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_PLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_FLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_BFT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_TUN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_BIL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_MPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_BUT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_BPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_ANC      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_GOO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_MEN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_FDE      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_COD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_SHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_OHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_POL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_RHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_BSB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_SCU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_TYL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_RED      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_OPT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_SAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_DRM      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_STB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_TAU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_WOL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_SDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_FDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_HAD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_YTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_DOG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_SMO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_SSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_DSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_BLS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_POR      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_PSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_WSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_LSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_SK       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_SB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_PIN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_REP      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_RWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_BWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_SWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_TWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_INV      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_LSQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_ISQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_SCA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_QHG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_CLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_BFF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_BG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_LOB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_RCB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_BMS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_NSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_OSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_ZL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_BD       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_MA       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_MB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_SG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_BC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_ZG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_PL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_DF       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_PS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_ZM       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_ZS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_PB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_BB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_BO       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_DL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_DR       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_retain_DC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_MAK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_HER      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_WHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_BLF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_WPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_SUF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_WIF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_WTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_FOU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_HAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_PLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_FLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_BFT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_TUN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_BIL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_MPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_BUT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_BPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_ANC      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_GOO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_MEN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_FDE      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_COD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_SHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_OHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_POL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_RHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_BSB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_SCU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_TYL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_RED      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_OPT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_SAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_DRM      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_STB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_TAU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_WOL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_SDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_FDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_HAD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_YTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_DOG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_SMO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_SSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_DSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_BLS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_POR      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_PSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_WSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_LSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_SK       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_SB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_PIN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_REP      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_RWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_BWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_SWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_TWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_INV      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_LSQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_ISQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_SCA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_QHG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_CLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_BFF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_BG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_LOB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_RCB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_BMS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_NSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_OSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_ZL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_BD       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_MA       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_MB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_SG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_BC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_ZG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_PL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_DF       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_PS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_ZM       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_ZS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_PB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_BB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_BO       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_DL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_DR       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-k_waste_DC       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 midwcISQPUEthresh   0        0
 midwcLSQPUEthresh   0        0
@@ -16752,8 +16814,7 @@ spawn_closure_DC 28
 prop_within		 	 1
 
 
-flaghighgrading  	 0
-highgrade_thresh 	 0
+
 KDEP_fishery     	 0
 salethresh		 	 0
 useRBCTiers	         0
@@ -16767,7 +16828,7 @@ flagendangered		 0
 flagisplace			 0
 
 flagchangeeffort	 0
-flagchangediscrd	 0
+
 
 
 flagchangeq 		 0
