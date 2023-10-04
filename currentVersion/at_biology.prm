@@ -1337,7 +1337,7 @@ MB_habdepend    1
 
 # movement related flags see min/max.move_var_XXX to set tolerance values
 # If none of the cells have suitable conditions the species will die
-flagtempdepend   0         0 = off, 1 = temperature preferences used
+flagtempdepend   1         0 = off, 1 = temperature preferences used
 flagsaltdepend   0
 flagO2depend    0
 
@@ -1402,6 +1402,94 @@ BWH_ddepend_move 0
 SWH_ddepend_move 0
 TWH_ddepend_move 0
 INV_ddepend_move 0
+
+## Mystery parameters (no documentation). Required if flagtempdepend >0
+MAK_K_temp_const 2
+HER_K_temp_const 2
+WHK_K_temp_const 2
+BLF_K_temp_const 2
+WPF_K_temp_const 2
+SUF_K_temp_const 2
+WIF_K_temp_const 2
+WTF_K_temp_const 2
+HAL_K_temp_const 2
+PLA_K_temp_const 2
+FOU_K_temp_const 2
+FLA_K_temp_const 2
+BFT_K_temp_const 2
+TUN_K_temp_const 2
+BIL_K_temp_const 2
+MPF_K_temp_const 2
+BUT_K_temp_const 2
+ANC_K_temp_const 2
+BPF_K_temp_const 2
+GOO_K_temp_const 2
+MEN_K_temp_const 2
+FDE_K_temp_const 2
+COD_K_temp_const 2
+SHK_K_temp_const 2
+OHK_K_temp_const 2
+POL_K_temp_const 2
+RHK_K_temp_const 2
+BSB_K_temp_const 2
+SCU_K_temp_const 2
+TYL_K_temp_const 2
+RED_K_temp_const 2
+OPT_K_temp_const 2
+SAL_K_temp_const 2
+DRM_K_temp_const 2
+STB_K_temp_const 2
+TAU_K_temp_const 2
+WOL_K_temp_const 2
+SDF_K_temp_const 2
+FDF_K_temp_const 2
+HAD_K_temp_const 2
+YTF_K_temp_const 2
+DOG_K_temp_const 2
+SMO_K_temp_const 2
+SSH_K_temp_const 2
+DSH_K_temp_const 2
+BLS_K_temp_const 2
+POR_K_temp_const 2
+PSH_K_temp_const 2
+WSK_K_temp_const 2
+LSK_K_temp_const 2
+SK_K_temp_const 2
+SB_K_temp_const 2
+PIN_K_temp_const 2
+REP_K_temp_const 2
+RWH_K_temp_const 2
+BWH_K_temp_const 2
+SWH_K_temp_const 2
+TWH_K_temp_const 2
+INV_K_temp_const 2
+LSQ_K_temp_const 2
+ISQ_K_temp_const 2
+SCA_K_temp_const 2
+QHG_K_temp_const 2
+CLA_K_temp_const 2
+LOB_K_temp_const 2
+BFF_K_temp_const 2
+BG_K_temp_const 2
+RCB_K_temp_const 2
+BMS_K_temp_const 2
+OSH_K_temp_const 2
+NSH_K_temp_const 2
+ZL_K_temp_const 2
+BD_K_temp_const 2
+MA_K_temp_const 2
+MB_K_temp_const 2
+SG_K_temp_const 2
+BC_K_temp_const 2
+ZG_K_temp_const 2
+PL_K_temp_const 2
+DF_K_temp_const 2
+PS_K_temp_const 2
+ZM_K_temp_const 2
+ZS_K_temp_const 2
+BO_K_temp_const 2
+PB_K_temp_const 2
+BB_K_temp_const 2
 
 ### June 24 2015, Gavin Fay @UmassD, Invertebrate entries copied from v1
 # values changed to 2, updated seasonal movement with vertebrates below (turn back, need more density dependant inputs)
