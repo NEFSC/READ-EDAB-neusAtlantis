@@ -1,4 +1,4 @@
-#Figure that looks at the difference between recovery rate at 5 years between fished and unfished runs
+#Figure 6: proportion recovered at 5yrs by species
 library(ggplot2)
 library(dplyr)
 

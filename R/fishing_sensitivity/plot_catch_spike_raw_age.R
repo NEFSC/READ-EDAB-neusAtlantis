@@ -4,7 +4,7 @@ library(dplyr)
 library(ggplot2)
 library(gridExtra)
 
-experiment.id = 'fspike_UnfishedRecovery'
+experiment.id = 'fspike_combined'
 
 data.dir = paste0('/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/data/',experiment.id,'/')
 figure.dir = paste0('/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/figures/',experiment.id,'/')
@@ -28,12 +28,14 @@ biomass.age.baseline = read.table('/net/work3/EDAB/atlantis/Shared_Data/fishing_
   summarise(Biomass = mean(Biomass,na.rm=T))%>%
   mutate(scalar = factor('baseline'),
          run.id = 'baseline')
+  
 
-biomass.age = readRDS(paste0(data.dir,'AgeBiomIndx_fspike_UnfishedRecovery_1_28105_year.rds')) %>%
+biomass.age = readRDS(paste0(data.dir,'AgeBiomIndx_1_28105_year_',experiment.id,'.rds')) %>%
   left_join(setup.df, by = 'run.id')%>%
   select(Time,Code,Biomass,agecl,scalar,run.id)%>%
   mutate(scalar = factor(scalar))%>%
-  bind_rows(biomass.age.baseline)
+  bind_rows(biomass.age.baseline)%>%
+  filter(scalar %in% c('baseline',2,5,10,25,50,100))
 
 levels(biomass.age$scalar)
 spike.start = master.dat$event_start_d
@@ -42,7 +44,7 @@ spike.end = master.dat$event_end_d
 spp.names = sort(unique(setup.df$target.species))
 
 bio.plot.ls = bio.plot.ls2 = list()
-i=1
+i=6
 for(i in 1:length(spp.names)){
   
   dat.spp = biomass.age %>%
@@ -50,9 +52,11 @@ for(i in 1:length(spp.names)){
     left_join(fgs)%>%
     filter(Time >= (t1-1))
   
+  if(nrow(dat.spp)== 0){next()}
+  
   bio.plot.ls[[i]] = ggplot(dat.spp, aes(x= Time, y= Biomass,color = agecl))+
     facet_wrap(~scalar,nrow = 2)+
-    # scale_color_manual(values = c(RColorBrewer::brewer.pal(12,'Set3'),'grey50'))+
+    # scale_color_manual(values = c(RColorBrewer::brewer.pal(length(unique(dat.spp)),'Set3'),'black'))+
     geom_line(size = 1.2)+
     theme_bw()+
     ggtitle(dat.spp$LongName[1])+
@@ -63,7 +67,7 @@ for(i in 1:length(spp.names)){
   
   bio.plot.ls2[[i]] = ggplot(dat.spp, aes(x= Time, y= Biomass,color = factor(scalar)))+
     facet_wrap(~agecl,nrow = 2)+
-    scale_color_manual(values = c(RColorBrewer::brewer.pal(12,'Set3'),'grey50'))+
+    scale_color_manual(values = c(RColorBrewer::brewer.pal(length(unique(dat.spp))-1,'Paired'),'black'))+
     geom_line(size =1.2)+
     theme_bw()+
     ggtitle(dat.spp$LongName[1])+

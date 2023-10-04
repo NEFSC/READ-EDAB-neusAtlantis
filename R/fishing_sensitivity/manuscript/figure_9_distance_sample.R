@@ -13,5 +13,5 @@ ggplot(out.stats.df, aes(x = reorder(Guild,-deviation.max),y = deviation.log))+
   xlab('Guild')+
   ylab('Deviation from mean (#stdev) - log transformed')+
   theme_bw()
-ggsave(paste0(figure.dir,'Figure_10_deviation_from_mean.png'),width = 8,height =6, units = 'in',dpi =300)
+ggsave(paste0(figure.dir,'Figure_9_deviation_from_mean.png'),width = 8,height =6, units = 'in',dpi =300)
 

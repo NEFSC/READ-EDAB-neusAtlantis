@@ -22,7 +22,7 @@ biomind <- paste0(base.run.dir,'neus_outputBiomIndx.txt')
 fgs <- paste0(here::here(),"/currentVersion/neus_groups.csv")
 
 # Perform stability test on all species/groups using the last 20 years of the run
-stability_table <- diag_stability(fgs, biomind, speciesCodes=all_groups, nYrs = 20)
+stability_table <- diag_stability(fgs, biomind, speciesCodes=all_groups, nYrs = 20,relChangeThreshold = 0.05)
 
 reasonability_data <- read.csv(paste0(here::here(), '/data/output_diag_reasonability.csv'))
 catchfile <- paste0(base.run.dir,'neus_outputCatch.txt')
@@ -32,11 +32,15 @@ biomass = read.table(biomind, header=TRUE)
 biomass <- select(biomass,!contains("Rel"))
 catch = read.table(catchfile, header=TRUE)
 catch <- select(catch,!contains("TsAct"))
-catch <- filter(catch,Time %% 365 == 0)
-catch_l20 <- tail(catch,20)
 
-biom_l20 <- filter(biomass,Time %% 365 == 0)
-biom_l20 <- tail(biom_l20,20)
+time.stop = max(catch$Time)
+time.start = time.stop - (20*365)
+
+catch_l20 <- catch %>%
+  filter(Time >= time.start & Time <= time.stop)
+
+biom_l20 = biomass %>%
+  filter(Time >= time.start & Time <= time.stop)
 
 reasonability_groups <- reasonability_data$Code
 reasonability_data <- mutate(reasonability_data,Reasonable = NA)
@@ -47,13 +51,13 @@ for(i in 1:nrow(reasonability_data)) {
   code_biomass <- select(biom_l20,matches(code))
   min_biomass <- min(code_biomass)
   max_biomass <- max(code_biomass)
-  if ((min_biomass < reasonability_data$Min_Target_q[i]) || (max_biomass > reasonability_data$Max_Target_q[i])) {
+  avg_biomass <- mean(code_biomass[[1]])
+  if ((avg_biomass < reasonability_data$Min_Target_q[i]) || (avg_biomass > reasonability_data$Max_Target_q[i])) {
     reasonability_data$Reasonable[i] <- FALSE
   } else {
     reasonability_data$Reasonable[i] <- TRUE
   }
   code_catch <- select(catch_l20,matches(code))
-  avg_biomass <- mean(code_biomass[[1]])
   avg_catch <- mean(code_catch[[1]])
   F_rate <- avg_catch / avg_biomass
   reasonability_data$Average_Catch[i] <- avg_catch
@@ -67,23 +71,59 @@ stability_table <- rename(stability_table, Code = code, Average_Biomass= aveBio,
 
 diagnostic_table <- full_join(stability_table, reasonability_data, by="Code")
 diagnostic_table <- select(diagnostic_table,Code,Priority,Stable,Reasonable,Relative_Change,Min_Target_q,Max_Target_q,Average_Biomass,Average_Catch, F_rate)
+diagnostic_table = diagnostic_table %>%
+  mutate(Min_Target_q = Min_Target_q / 1E5,
+        Max_Target_q = Max_Target_q / 1E5)
 
 # Clean up number formatting
-options(scipen=999)
+# options(scipen=999)
 diagnostic_table$Relative_Change <- as.numeric(format(round(diagnostic_table$Relative_Change, 3), nsmall = 3))
 diagnostic_table$F_rate[is.na(diagnostic_table$F_rate)] <- 0
-diagnostic_table$F_rate <- as.numeric(format(round(diagnostic_table$F_rate, 3), nsmall = 3))
+diagnostic_table$F_rate <- round(diagnostic_table$F_rate, 2)
 diagnostic_table$Average_Biomass <- diagnostic_table$Average_Biomass / 100000
 diagnostic_table$Average_Catch <- diagnostic_table$Average_Catch / 100000
-diagnostic_table$Average_Biomass <- as.numeric(format(round(diagnostic_table$Average_Biomass,2), nsmall = 2))
+diagnostic_table$Average_Biomass <- round(diagnostic_table$Average_Biomass,2)
 diagnostic_table$Average_Catch[is.na(diagnostic_table$Average_Catch)] <- 0
-diagnostic_table$Average_Catch <- as.numeric(format(round(diagnostic_table$Average_Catch,2), nsmall = 2))
+diagnostic_table$Average_Catch <- round(diagnostic_table$Average_Catch,2)
 
-recovery.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/data/fspike_combined/'
-recovery.stats = readRDS(paste0(recovery.dir,'recovery_stats_fspike_combined.rds'))
+reasonable = diagnostic_table %>%
+  select(Code,Reasonable)%>%
+  filter(!is.na(Reasonable))%>%
+  mutate(count = n())%>%
+  group_by(Reasonable)%>%
+  summarise(Reasonable.n = n(),
+            count = mean(count))%>%
+  mutate(Reasonable.pct = Reasonable.n/count)
+
+stable = diagnostic_table %>%
+  select(Code,Stable)%>%
+  filter(!is.na(Stable))%>%
+  mutate(count = n())%>%
+  group_by(Stable)%>%
+  summarise(stable.n = n(),
+            count = mean(count))%>%
+  mutate(stable.pct = stable.n/count)
+
+reasonable.pct.over = diagnostic_table %>%
+  select(Code,Reasonable, Min_Target_q: Average_Biomass)%>%
+  filter(Reasonable == F)%>%
+  mutate(is.over = Average_Biomass > Max_Target_q)%>%
+  filter(is.over == T)%>%
+  mutate(pct.over = Average_Biomass/Max_Target_q)
+
+stability.pct.over =diagnostic_table %>%
+  select(Code,Stable,Relative_Change)%>%
+  filter(Stable == F)%>%
+  mutate(pct.over = Relative_Change/ 0.05,
+         is.pos = ifelse(Relative_Change>0,T,F))%>%
+  group_by(is.pos)%>%
+  summarise(mean.rel.change = mean(Relative_Change,na.rm=T))
+
+#Format for print  
+diagnostic_table$Average_Biomass=sapply(diagnostic_table$Average_Biomass,function(x) return(ifelse(x<0.01,'<0.01',x)))
+diagnostic_table$Average_Catch=sapply(diagnostic_table$Average_Catch,function(x) return(ifelse(x<0.01,'<0.01',x)))
+diagnostic_table$F_rate=sapply(diagnostic_table$F_rate,function(x) return(ifelse(x<0.01,'<0.01',x)))
 
 out.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/tables/'
 outFile <- paste0(out.dir,"table_1_species_metrics.csv")
 write.csv(diagnostic_table, file=outFile, row.names=FALSE)
-
-

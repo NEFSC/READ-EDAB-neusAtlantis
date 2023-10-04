@@ -4,7 +4,7 @@ library(dplyr)
 library(ggplot2)
 library(gridExtra)
 
-experiment.id = 'fspike_UnfishedRecovery'
+experiment.id = 'fspike_combined'
 
 data.dir = paste0('/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/data/',experiment.id,'/')
 figure.dir = paste0('/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/figures/',experiment.id,'/')
@@ -26,7 +26,7 @@ biomass.baseline = read.table('/net/work3/EDAB/atlantis/Shared_Data/fishing_sens
   mutate(scalar = 'baseline',
          run.id = 'baseline')
 
-biomass = readRDS(paste0(data.dir,'BiomIndx_',experiment.id,'_1_28105_year.rds')) %>%
+biomass = readRDS(paste0(data.dir,'BiomIndx_1_28105_year_',experiment.id,'.rds')) %>%
   left_join(setup.df, by = 'run.id')%>%
   select(Time,Code,Biomass,scalar,run.id)%>%
   mutate(scalar = as.character(scalar))%>%
@@ -49,6 +49,7 @@ for(i in 1:length(spp.names)){
     geom_line()+
     theme_bw()+
     ggtitle(dat.spp$LongName[1])+
+    scale_color_manual(values = c(RColorBrewer::brewer.pal(12,'Paired'),'black'))+
     guides(color = guide_legend(title = 'Event Magnitude', nrow = 2))+
     theme(plot.title = element_text(hjust = 0.5))+
     theme(legend.position = 'bottom')+

@@ -87,9 +87,9 @@ spp.names = sort(unique(setup.df$target.species))
 t0 = master.dat$event_start_d[1]/365
 t1 = master.dat$event_end_d[2]/365
 # t.min = min value after event
-t5 = t0 + 4
-t10 = t0 + 9
-t20 = t0 + 19
+t5 = t1 + 4
+t10 = t1 + 9
+t20 = t1 + 14
 
 #Create empty dataframes for stats
 bio.base.stats = data.frame(Code = spp.names,  b0.t0 = NA, b0.t1 = NA, b0.t5 = NA, b0.t10 = NA,b0.t20 = NA,stringsAsFactors = F)
@@ -111,7 +111,7 @@ for(i in 1:nrow(setup.df)){
   
   if(nrow(bio.spp)== 0){next()}
   
-  early.recover = bio.spp %>% filter(Time >= t0 & Time < t5)
+  early.recover = bio.spp %>% filter(Time >= t1 & Time < t5)
   t.min = early.recover$Time[which(early.recover$Biomass == min(early.recover$Biomass,na.rm=T))][1]
   
   bio.run.stats$b.t0[i] = extract.time(bio.spp,t0,'Biomass')
@@ -206,8 +206,7 @@ bio.recovery = bio.run.stats %>%
          db.t20 = b.t20/b0.t20)%>%
   mutate(recovery.5 = (db.t5-db.tmin)/(t5-tmin),
          recovery.10 = (db.t10-db.tmin)/(t10-tmin),
-         recovery.20 = (db.t20-db.tmin)/(t20-tmin))%>%
-  filter(Code == 'RED')
+         recovery.20 = (db.t20-db.tmin)/(t20-tmin))
   
 
 saveRDS(bio.recovery,paste0(data.dir,'recovery_stats_', experiment.id,'.rds'))
