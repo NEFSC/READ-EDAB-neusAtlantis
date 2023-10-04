@@ -8393,14 +8393,472 @@ mowMA_TACchange      0
 
 
 
+##############################################################################
+###### management, TACs ###########################################
+############################################################################
+
+## If set to 1, the virgin biomass for management and stock assessment will not be calculated from the initial conditions, but after a burn-in period given in reinit_pop_day parameter (in days of simulation run)
+
+flagreinitpop		 0
+
+#### Proportion of the population of species XXX when effort of ALL fisheries fishing of XXX is restricted. This is used in rule based stock management, set by YYY_flagmanage = 1
+
+FC_thresh_MAK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_HER      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_WHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_BLF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_WPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_SUF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_WIF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_WTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_FOU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_HAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_PLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_FLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_BFT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_TUN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_BIL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_MPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_BUT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_BPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_ANC      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_GOO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_MEN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_FDE      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_COD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_SHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_OHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_POL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_RHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_BSB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_SCU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_TYL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_RED      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_OPT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_SAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_DRM      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_STB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_TAU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_WOL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_SDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_FDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_HAD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_YTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_DOG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_SMO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_SSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_DSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_BLS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_POR      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_PSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_WSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_LSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_SK       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_SB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_PIN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_REP      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_RWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_BWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_SWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_TWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_INV      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_LSQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_ISQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_SCA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_QHG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_CLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_BFF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_BG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_LOB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_RCB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_BMS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_NSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_OSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_ZL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_BD       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_MA       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_MB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_SG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_BC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_ZG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_PL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_DF       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_PS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_ZM       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_ZS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_PB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_BB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_BO       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_DL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_DR       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_thresh_DC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+### This parameter can be used in two ways. If frame-based fishing is not being used, this is the proportion of the population species XXX has to reach when existing fishing restrictions are in place due to low stock biomass (set by FC_thresh_XXX) are lifted and original TAC levels are reinstituted. If frame-based fishing is allowed then FC_high_thresh_XXX * initial_biomass gives the threshold biomass above which fishing is allowed to happen (set using TAC_XXX).
+
+FC_high_thresh_MAK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_HER      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_WHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_BLF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_WPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_SUF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_WIF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_WTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_FOU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_HAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_PLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_FLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_BFT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_TUN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_BIL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_MPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_BUT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_BPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_ANC      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_GOO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_MEN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_FDE      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_COD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_SHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_OHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_POL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_RHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_BSB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_SCU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_TYL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_RED      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_OPT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_SAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_DRM      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_STB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_TAU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_WOL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_SDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_FDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_HAD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_YTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_DOG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_SMO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_SSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_DSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_BLS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_POR      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_PSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_WSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_LSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_SK       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_SB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_PIN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_REP      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_RWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_BWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_SWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_TWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_INV      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_LSQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_ISQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_SCA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_QHG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_CLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_BFF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_BG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_LOB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_RCB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_BMS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_NSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_OSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_ZL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_BD       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_MA       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_MB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_SG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_BC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_ZG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_PL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_DF       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_PS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_ZM       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_ZS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_PB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_BB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_BO       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_DL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_DR       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FC_high_thresh_DC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+## Proportion of effort allowed once restrictions begin
+
+midwcISQ_FC_restrict   0.1
+midwcLSQ_FC_restrict   0.1
+jigISQ_FC_restrict     0.1
+jigLSQ_FC_restrict     0.1
+dredgeSCA_FC_restrict  0.1
+trapRCB_FC_restrict    0.1
+dtrawlRCB_FC_restrict  0.1
+dtrawlISQ_FC_restrict  0.1
+dtrawlLSQ_FC_restrict  0.1
+dtrawlSHK_FC_restrict  0.1
+dtrawlHAD_FC_restrict  0.1
+dseineSHK_FC_restrict  0.1
+dlineBLF_FC_restrict   0.1
+diveBG_FC_restrict     0.1
+pseineBLF_FC_restrict  0.1
+cullPIN_FC_restrict    0.1
+ptrawlNSH_FC_restrict  0.1
+ptrawlOSH_FC_restrict  0.1
+dtrawlANC_FC_restrict  0.1
+dtrawlBPF_FC_restrict  0.1
+dtrawlBUT_FC_restrict  0.1
+midwcZL_FC_restrict    0.1
+trapMEN_FC_restrict    0.1
+dlineMEN_FC_restrict   0.1
+netMEN_FC_restrict     0.1
+midwcNSH_FC_restrict   0.1
+midwcOSH_FC_restrict   0.1
+mowMA_FC_restrict      0.1
+
+##  Period of time over which effort reduction occurs
+
+midwcISQ_FC_period   730
+midwcLSQ_FC_period   730
+jigISQ_FC_period     730
+jigLSQ_FC_period     730
+dredgeSCA_FC_period  730
+trapRCB_FC_period    730
+dtrawlRCB_FC_period  730
+dtrawlISQ_FC_period  730
+dtrawlLSQ_FC_period  730
+dtrawlSHK_FC_period  730
+dtrawlHAD_FC_period  730
+dseineSHK_FC_period  730
+dlineBLF_FC_period   730
+diveBG_FC_period     730
+pseineBLF_FC_period  730
+cullPIN_FC_period    730
+ptrawlNSH_FC_period  730
+ptrawlOSH_FC_period  730
+dtrawlANC_FC_period  730
+dtrawlBPF_FC_period  730
+dtrawlBUT_FC_period  730
+midwcZL_FC_period    730
+trapMEN_FC_period    730
+dlineMEN_FC_period   730
+netMEN_FC_period     730
+midwcNSH_FC_period   730
+midwcOSH_FC_period   730
+mowMA_FC_period      730
+
+## Period of time before stock status is re-checked. If the stock has recovered at this time restrictions are removed. If the stock remains depleted the time counter is reset (i.e. the restrictions are triggered
+afresh).
+
+midwcISQ_FC_period2   1825
+midwcLSQ_FC_period2   1825
+jigISQ_FC_period2     1825
+jigLSQ_FC_period2     1825
+dredgeSCA_FC_period2  1825
+trapRCB_FC_period2    1825
+dtrawlRCB_FC_period2  1825
+dtrawlISQ_FC_period2  1825
+dtrawlLSQ_FC_period2  1825
+dtrawlSHK_FC_period2  1825
+dtrawlHAD_FC_period2  1825
+dseineSHK_FC_period2  1825
+dlineBLF_FC_period2   1825
+diveBG_FC_period2     1825
+pseineBLF_FC_period2  1825
+cullPIN_FC_period2    1825
+ptrawlNSH_FC_period2  1825
+ptrawlOSH_FC_period2  1825
+dtrawlANC_FC_period2  1825
+dtrawlBPF_FC_period2  1825
+dtrawlBUT_FC_period2  1825
+midwcZL_FC_period2    1825
+trapMEN_FC_period2    1825
+dlineMEN_FC_period2   1825
+netMEN_FC_period2     1825
+midwcNSH_FC_period2   1825
+midwcOSH_FC_period2   1825
+mowMA_FC_period2      1825
 
 
-
-
-
-
-
-### Initial TAC values for each species
+### Total allowable catch (in tons per year) for species XXX by each fishery (must have as many values as there are fisheries). If set to 1012 then no TAC is applied for that species/fishery combination.
 
 TAC_MAK      28
 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000
@@ -8582,6 +9040,754 @@ TAC_DC       28
 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000 1000000000000
 
 
+## If set to 1, TAC calculations include all discarded biomass.
+
+flagTACincludeDiscard  0
+
+## If set to 1, fisheries YYY is not allowed to discard, but must land of catches.
+
+midwcISQ_landallTAC_sp   0
+midwcLSQ_landallTAC_sp   0
+jigISQ_landallTAC_sp     0
+jigLSQ_landallTAC_sp     0
+dredgeSCA_landallTAC_sp  0
+trapRCB_landallTAC_sp    0
+dtrawlRCB_landallTAC_sp  0
+dtrawlISQ_landallTAC_sp  0
+dtrawlLSQ_landallTAC_sp  0
+dtrawlSHK_landallTAC_sp  0
+dtrawlHAD_landallTAC_sp  0
+dseineSHK_landallTAC_sp  0
+dlineBLF_landallTAC_sp   0
+diveBG_landallTAC_sp     0
+pseineBLF_landallTAC_sp  0
+cullPIN_landallTAC_sp    0
+ptrawlNSH_landallTAC_sp  0
+ptrawlOSH_landallTAC_sp  0
+dtrawlANC_landallTAC_sp  0
+dtrawlBPF_landallTAC_sp  0
+dtrawlBUT_landallTAC_sp  0
+midwcZL_landallTAC_sp    0
+trapMEN_landallTAC_sp    0
+dlineMEN_landallTAC_sp   0
+netMEN_landallTAC_sp     0
+midwcNSH_landallTAC_sp   0
+midwcOSH_landallTAC_sp   0
+mowMA_landallTAC_sp      0
+
+## Flags determining which fisheries stock assessments are applied to calculated dynamic TACs (see Note! in chapter 16.1)
+
+pseudo_assess		 0
+useRBCTiers	         0
+
+
+### A maximum number of species a multi-species fishery YYY can exceed it’s TAC for, before it is closed (when simple TACs are applied, see chapter 16)
+
+midwcISQ_max_num_sp   5
+midwcLSQ_max_num_sp   5
+jigISQ_max_num_sp     5
+jigLSQ_max_num_sp     5
+dredgeSCA_max_num_sp  5
+trapRCB_max_num_sp    5
+dtrawlRCB_max_num_sp  5
+dtrawlISQ_max_num_sp  5
+dtrawlLSQ_max_num_sp  5
+dtrawlSHK_max_num_sp  5
+dtrawlHAD_max_num_sp  5
+dseineSHK_max_num_sp  5
+dlineBLF_max_num_sp   5
+diveBG_max_num_sp     5
+pseineBLF_max_num_sp  5
+cullPIN_max_num_sp    5
+ptrawlNSH_max_num_sp  5
+ptrawlOSH_max_num_sp  5
+dtrawlANC_max_num_sp  5
+dtrawlBPF_max_num_sp  5
+dtrawlBUT_max_num_sp  5
+midwcZL_max_num_sp    5
+trapMEN_max_num_sp    5
+dlineMEN_max_num_sp   5
+netMEN_max_num_sp     5
+midwcNSH_max_num_sp   5
+midwcOSH_max_num_sp   5
+mowMA_max_num_sp      5
+
+## Vectors giving the ID numbers and ratios of companion species (species that are caught together) caught with each biomass unit of species XXX. Used when YYY_flagmanage=5. See chapter 16.2.4 for further details and related parameters.
+
+co_sp_MAK      2
+45 45
+co_sp_HER      2
+45 45
+co_sp_WHK      2
+45 45
+co_sp_BLF      2
+45 45
+co_sp_WPF      2
+45 45
+co_sp_SUF      2
+45 45
+co_sp_WIF      2
+45 45
+co_sp_WTF      2
+45 45
+co_sp_FOU      2
+45 45
+co_sp_HAL      2
+45 45
+co_sp_PLA      2
+45 45
+co_sp_FLA      2
+45 45
+co_sp_BFT      2
+45 45
+co_sp_TUN      2
+45 45
+co_sp_BIL      2
+45 45
+co_sp_MPF      2
+45 45
+co_sp_BUT      2
+45 45
+co_sp_BPF      2
+45 45
+co_sp_ANC      2
+45 45
+co_sp_GOO      2
+45 45
+co_sp_MEN      2
+45 45
+co_sp_FDE      2
+45 45
+co_sp_COD      2
+45 45
+co_sp_SHK      2
+45 45
+co_sp_OHK      2
+45 45
+co_sp_POL      2
+45 45
+co_sp_RHK      2
+45 45
+co_sp_BSB      2
+45 45
+co_sp_SCU      2
+45 45
+co_sp_TYL      2
+45 45
+co_sp_RED      2
+45 45
+co_sp_OPT      2
+45 45
+co_sp_SAL      2
+45 45
+co_sp_DRM      2
+45 45
+co_sp_STB      2
+45 45
+co_sp_TAU      2
+45 45
+co_sp_WOL      2
+45 45
+co_sp_SDF      2
+45 45
+co_sp_FDF      2
+45 45
+co_sp_HAD      2
+45 45
+co_sp_YTF      2
+45 45
+co_sp_DOG      2
+45 45
+co_sp_SMO      2
+45 45
+co_sp_SSH      2
+45 45
+co_sp_DSH      2
+45 45
+co_sp_BLS      2
+45 45
+co_sp_POR      2
+45 45
+co_sp_PSH      2
+45 45
+co_sp_WSK      2
+45 45
+co_sp_LSK      2
+45 45
+co_sp_SK       2
+45 45
+co_sp_SB       2
+45 45
+co_sp_PIN      2
+45 45
+co_sp_REP      2
+45 45
+co_sp_RWH      2
+45 45
+co_sp_BWH      2
+45 45
+co_sp_SWH      2
+45 45
+co_sp_TWH      2
+45 45
+co_sp_INV      2
+45 45
+co_sp_LSQ      2
+45 45
+co_sp_ISQ      2
+45 45
+co_sp_SCA      2
+45 45
+co_sp_QHG      2
+45 45
+co_sp_CLA      2
+45 45
+co_sp_BFF      2
+45 45
+co_sp_BG       2
+45 45
+co_sp_LOB      2
+45 45
+co_sp_RCB      2
+45 45
+co_sp_BMS      2
+45 45
+co_sp_NSH      2
+45 45
+co_sp_OSH      2
+45 45
+co_sp_ZL       2
+45 45
+co_sp_BD       2
+45 45
+co_sp_MA       2
+45 45
+co_sp_MB       2
+45 45
+co_sp_SG       2
+45 45
+co_sp_BC       2
+45 45
+co_sp_ZG       2
+45 45
+co_sp_PL       2
+45 45
+co_sp_DF       2
+45 45
+co_sp_PS       2
+45 45
+co_sp_ZM       2
+45 45
+co_sp_ZS       2
+45 45
+co_sp_PB       2
+45 45
+co_sp_BB       2
+45 45
+co_sp_BO       2
+45 45
+co_sp_DL       2
+45 45
+co_sp_DR       2
+45 45
+co_sp_DC       2
+45 45
+
+
+co_sp_catch_MAK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_HER      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_WHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_BLF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_WPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_SUF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_WIF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_WTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_FOU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_HAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_PLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_FLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_BFT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_TUN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_BIL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_MPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_BUT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_BPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_ANC      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_GOO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_MEN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_FDE      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_COD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_SHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_OHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_POL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_RHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_BSB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_SCU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_TYL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_RED      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_OPT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_SAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_DRM      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_STB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_TAU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_WOL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_SDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_FDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_HAD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_YTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_DOG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_SMO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_SSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_DSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_BLS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_POR      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_PSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_WSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_LSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_SK       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_SB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_PIN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_REP      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_RWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_BWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_SWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_TWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_INV      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_LSQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_ISQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_SCA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_QHG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_CLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_BFF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_BG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_LOB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_RCB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_BMS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_NSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_OSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_ZL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_BD       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_MA       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_MB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_SG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_BC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_ZG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_PL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_DF       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_PS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_ZM       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_ZS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_PB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_BB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_BO       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_DL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_DR       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch_DC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_MAK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_HER      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_WHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_BLF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_WPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_SUF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_WIF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_WTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_FOU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_HAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_PLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_FLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_BFT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_TUN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_BIL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_MPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_BUT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_BPF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_ANC      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_GOO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_MEN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_FDE      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_COD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_SHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_OHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_POL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_RHK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_BSB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_SCU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_TYL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_RED      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_OPT      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_SAL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_DRM      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_STB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_TAU      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_WOL      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_SDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_FDF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_HAD      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_YTF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_DOG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_SMO      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_SSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_DSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_BLS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_POR      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_PSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_WSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_LSK      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_SK       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_SB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_PIN      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_REP      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_RWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_BWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_SWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_TWH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_INV      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_LSQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_ISQ      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_SCA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_QHG      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_CLA      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_BFF      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_BG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_LOB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_RCB      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_BMS      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_NSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_OSH      28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_ZL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_BD       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_MA       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_MB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_SG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_BC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_ZG       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_PL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_DF       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_PS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_ZM       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_ZS       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_PB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_BB       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_BO       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_DL       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_DR       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+co_sp_catch2_DC       28
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+## A vector of 0 or 1 values indicating which species are included in the basket TACs together with species XXX. Used when YYY_flagmanage=3 (or other value, see Table 11). See chapter 16.2.4 for further details and related parameters.
+
+basketSPMAK 1
+basketSPHER 1
+basketSPWHK 1
+basketSPBLF 1
+basketSPWPF 1
+basketSPSUF 1
+basketSPWIF 1
+basketSPWTF 1
+basketSPFOU 1
+basketSPHAL 1
+basketSPPLA 1
+basketSPFLA 1
+basketSPBFT 1
+basketSPTUN 1
+basketSPBIL 1
+basketSPMPF 1
+basketSPBUT 1
+basketSPBPF 1
+basketSPANC 1
+basketSPGOO 1
+basketSPMEN 1
+basketSPFDE 1
+basketSPCOD 1
+basketSPSHK 1
+basketSPOHK 1
+basketSPPOL 1
+basketSPRHK 1
+basketSPBSB 1
+basketSPSCU 1
+basketSPTYL 1
+basketSPRED 1
+basketSPOPT 1
+basketSPSAL 1
+basketSPDRM 1
+basketSPSTB 1
+basketSPTAU 1
+basketSPWOL 1
+basketSPSDF 1
+basketSPFDF 1
+basketSPHAD 1
+basketSPYTF 1
+basketSPDOG 1
+basketSPSMO 1
+basketSPSSH 1
+basketSPDSH 1
+basketSPBLS 1
+basketSPPOR 1
+basketSPPSH 1
+basketSPWSK 1
+basketSPLSK 1
+basketSPSK 1
+basketSPSB 1
+basketSPPIN 1
+basketSPREP 1
+basketSPRWH 1
+basketSPBWH 1
+basketSPSWH 1
+basketSPTWH 1
+basketSPINV 1
+basketSPLSQ 1
+basketSPISQ 1
+basketSPSCA 1
+basketSPQHG 1
+basketSPCLA 1
+basketSPBFF 1
+basketSPBG 1
+basketSPLOB 1
+basketSPRCB 1
+basketSPBMS 1
+basketSPNSH 1
+basketSPOSH 1
+basketSPZL 1
+basketSPBD 1
+basketSPMA 1
+basketSPMB 1
+basketSPSG 1
+basketSPBC 1
+basketSPZG 1
+basketSPPL 1
+basketSPDF 1
+basketSPPS 1
+basketSPZM 1
+basketSPZS 1
+basketSPPB 1
+basketSPBB 1
+basketSPBO 1
+basketSPDL 1
+basketSPDR 1
+basketSPDC 1
+
+### If set to 1, TACs management will be based on regional rather than global biomasses, with regional TACs given in RegTAC_XXX vector. See chapter 16.2.5 for further details and related parameters.
+
+manage_reg 0
+
+
+### If set to 1, a fishery YYY shares its TAC with other fisheries (see chapter 16.2.6. for further details)
+
+flagTACparticipate_midwcISQ 0
+flagTACparticipate_midwcLSQ 0
+flagTACparticipate_jigISQ 0
+flagTACparticipate_jigLSQ 0
+flagTACparticipate_dredgeSCA 0
+flagTACparticipate_trapRCB 0
+flagTACparticipate_dtrawlRCB 0
+flagTACparticipate_dtrawlISQ 0
+flagTACparticipate_dtrawlLSQ 0
+flagTACparticipate_dtrawlSHK 0
+flagTACparticipate_dtrawlHAD 0
+flagTACparticipate_dseineSHK 0
+flagTACparticipate_dlineBLF 0
+flagTACparticipate_diveBG 0
+flagTACparticipate_pseineBLF 0
+flagTACparticipate_cullPIN 0
+flagTACparticipate_ptrawlNSH 0
+flagTACparticipate_ptrawlOSH 0
+flagTACparticipate_dtrawlANC 0
+flagTACparticipate_dtrawlBPF 0
+flagTACparticipate_dtrawlBUT 0
+flagTACparticipate_midwcZL 0
+flagTACparticipate_trapMEN 0
+flagTACparticipate_dlineMEN 0
+flagTACparticipate_netMEN 0
+flagTACparticipate_midwcNSH 0
+flagTACparticipate_midwcOSH 0
+flagTACparticipate_mowMA 0
+
+## If set to 1, some fisheries can be allocated multi-year TACs rather than TACs set for each (see chapter 16.2.7)
+
+bulkTAC 	1
+
+
+
+##############################################################################
+###### End Management, TACs ###########################################
+############################################################################
 
 
 
@@ -8758,99 +9964,8 @@ regionalSPDL 1
 regionalSPDR 1
 regionalSPDC 1
 
-basketSPMAK 1
-basketSPHER 1
-basketSPWHK 1
-basketSPBLF 1
-basketSPWPF 1
-basketSPSUF 1
-basketSPWIF 1
-basketSPWTF 1
-basketSPFOU 1
-basketSPHAL 1
-basketSPPLA 1
-basketSPFLA 1
-basketSPBFT 1
-basketSPTUN 1
-basketSPBIL 1
-basketSPMPF 1
-basketSPBUT 1
-basketSPBPF 1
-basketSPANC 1
-basketSPGOO 1
-basketSPMEN 1
-basketSPFDE 1
-basketSPCOD 1
-basketSPSHK 1
-basketSPOHK 1
-basketSPPOL 1
-basketSPRHK 1
-basketSPBSB 1
-basketSPSCU 1
-basketSPTYL 1
-basketSPRED 1
-basketSPOPT 1
-basketSPSAL 1
-basketSPDRM 1
-basketSPSTB 1
-basketSPTAU 1
-basketSPWOL 1
-basketSPSDF 1
-basketSPFDF 1
-basketSPHAD 1
-basketSPYTF 1
-basketSPDOG 1
-basketSPSMO 1
-basketSPSSH 1
-basketSPDSH 1
-basketSPBLS 1
-basketSPPOR 1
-basketSPPSH 1
-basketSPWSK 1
-basketSPLSK 1
-basketSPSK 1
-basketSPSB 1
-basketSPPIN 1
-basketSPREP 1
-basketSPRWH 1
-basketSPBWH 1
-basketSPSWH 1
-basketSPTWH 1
-basketSPINV 1
-basketSPLSQ 1
-basketSPISQ 1
-basketSPSCA 1
-basketSPQHG 1
-basketSPCLA 1
-basketSPBFF 1
-basketSPBG 1
-basketSPLOB 1
-basketSPRCB 1
-basketSPBMS 1
-basketSPNSH 1
-basketSPOSH 1
-basketSPZL 1
-basketSPBD 1
-basketSPMA 1
-basketSPMB 1
-basketSPSG 1
-basketSPBC 1
-basketSPZG 1
-basketSPPL 1
-basketSPDF 1
-basketSPPS 1
-basketSPZM 1
-basketSPZS 1
-basketSPPB 1
-basketSPBB 1
-basketSPBO 1
-basketSPDL 1
-basketSPDR 1
-basketSPDC 1
-
-manage_reg 0
 max_co_sp 2
-bulkTAC 	1
+
 
 ## Performance measures coefficients
 enforce_coefft  1.0    Coefficient for  management enforcement performance measure
@@ -9124,34 +10239,6 @@ midwcNSH_effortdrop   1
 midwcOSH_effortdrop   1
 mowMA_effortdrop      1
 
-flagTACparticipate_midwcISQ 0
-flagTACparticipate_midwcLSQ 0
-flagTACparticipate_jigISQ 0
-flagTACparticipate_jigLSQ 0
-flagTACparticipate_dredgeSCA 0
-flagTACparticipate_trapRCB 0
-flagTACparticipate_dtrawlRCB 0
-flagTACparticipate_dtrawlISQ 0
-flagTACparticipate_dtrawlLSQ 0
-flagTACparticipate_dtrawlSHK 0
-flagTACparticipate_dtrawlHAD 0
-flagTACparticipate_dseineSHK 0
-flagTACparticipate_dlineBLF 0
-flagTACparticipate_diveBG 0
-flagTACparticipate_pseineBLF 0
-flagTACparticipate_cullPIN 0
-flagTACparticipate_ptrawlNSH 0
-flagTACparticipate_ptrawlOSH 0
-flagTACparticipate_dtrawlANC 0
-flagTACparticipate_dtrawlBPF 0
-flagTACparticipate_dtrawlBUT 0
-flagTACparticipate_midwcZL 0
-flagTACparticipate_trapMEN 0
-flagTACparticipate_dlineMEN 0
-flagTACparticipate_netMEN 0
-flagTACparticipate_midwcNSH 0
-flagTACparticipate_midwcOSH 0
-flagTACparticipate_mowMA 0
 midwcISQ_flagseasonal   0
 midwcLSQ_flagseasonal   0
 jigISQ_flagseasonal     0
@@ -10685,62 +11772,6 @@ BiTAC_Reg1_DR       6
 0 0 0 0 0 0
 BiTAC_Reg1_DC       6
 0 0 0 0 0 0
-midwcISQ_landallTAC_sp   0
-midwcLSQ_landallTAC_sp   0
-jigISQ_landallTAC_sp     0
-jigLSQ_landallTAC_sp     0
-dredgeSCA_landallTAC_sp  0
-trapRCB_landallTAC_sp    0
-dtrawlRCB_landallTAC_sp  0
-dtrawlISQ_landallTAC_sp  0
-dtrawlLSQ_landallTAC_sp  0
-dtrawlSHK_landallTAC_sp  0
-dtrawlHAD_landallTAC_sp  0
-dseineSHK_landallTAC_sp  0
-dlineBLF_landallTAC_sp   0
-diveBG_landallTAC_sp     0
-pseineBLF_landallTAC_sp  0
-cullPIN_landallTAC_sp    0
-ptrawlNSH_landallTAC_sp  0
-ptrawlOSH_landallTAC_sp  0
-dtrawlANC_landallTAC_sp  0
-dtrawlBPF_landallTAC_sp  0
-dtrawlBUT_landallTAC_sp  0
-midwcZL_landallTAC_sp    0
-trapMEN_landallTAC_sp    0
-dlineMEN_landallTAC_sp   0
-netMEN_landallTAC_sp     0
-midwcNSH_landallTAC_sp   0
-midwcOSH_landallTAC_sp   0
-mowMA_landallTAC_sp      0
-midwcISQ_max_num_sp   5
-midwcLSQ_max_num_sp   5
-jigISQ_max_num_sp     5
-jigLSQ_max_num_sp     5
-dredgeSCA_max_num_sp  5
-trapRCB_max_num_sp    5
-dtrawlRCB_max_num_sp  5
-dtrawlISQ_max_num_sp  5
-dtrawlLSQ_max_num_sp  5
-dtrawlSHK_max_num_sp  5
-dtrawlHAD_max_num_sp  5
-dseineSHK_max_num_sp  5
-dlineBLF_max_num_sp   5
-diveBG_max_num_sp     5
-pseineBLF_max_num_sp  5
-cullPIN_max_num_sp    5
-ptrawlNSH_max_num_sp  5
-ptrawlOSH_max_num_sp  5
-dtrawlANC_max_num_sp  5
-dtrawlBPF_max_num_sp  5
-dtrawlBUT_max_num_sp  5
-midwcZL_max_num_sp    5
-trapMEN_max_num_sp    5
-dlineMEN_max_num_sp   5
-netMEN_max_num_sp     5
-midwcNSH_max_num_sp   5
-midwcOSH_max_num_sp   5
-mowMA_max_num_sp      5
 RegTAC_MAK      1
 1
 RegTAC_HER      1
@@ -11186,184 +12217,6 @@ basketTAC_DR       1
 45
 basketTAC_DC       1
 45
-co_sp_MAK      2
-45 45
-co_sp_HER      2
-45 45
-co_sp_WHK      2
-45 45
-co_sp_BLF      2
-45 45
-co_sp_WPF      2
-45 45
-co_sp_SUF      2
-45 45
-co_sp_WIF      2
-45 45
-co_sp_WTF      2
-45 45
-co_sp_FOU      2
-45 45
-co_sp_HAL      2
-45 45
-co_sp_PLA      2
-45 45
-co_sp_FLA      2
-45 45
-co_sp_BFT      2
-45 45
-co_sp_TUN      2
-45 45
-co_sp_BIL      2
-45 45
-co_sp_MPF      2
-45 45
-co_sp_BUT      2
-45 45
-co_sp_BPF      2
-45 45
-co_sp_ANC      2
-45 45
-co_sp_GOO      2
-45 45
-co_sp_MEN      2
-45 45
-co_sp_FDE      2
-45 45
-co_sp_COD      2
-45 45
-co_sp_SHK      2
-45 45
-co_sp_OHK      2
-45 45
-co_sp_POL      2
-45 45
-co_sp_RHK      2
-45 45
-co_sp_BSB      2
-45 45
-co_sp_SCU      2
-45 45
-co_sp_TYL      2
-45 45
-co_sp_RED      2
-45 45
-co_sp_OPT      2
-45 45
-co_sp_SAL      2
-45 45
-co_sp_DRM      2
-45 45
-co_sp_STB      2
-45 45
-co_sp_TAU      2
-45 45
-co_sp_WOL      2
-45 45
-co_sp_SDF      2
-45 45
-co_sp_FDF      2
-45 45
-co_sp_HAD      2
-45 45
-co_sp_YTF      2
-45 45
-co_sp_DOG      2
-45 45
-co_sp_SMO      2
-45 45
-co_sp_SSH      2
-45 45
-co_sp_DSH      2
-45 45
-co_sp_BLS      2
-45 45
-co_sp_POR      2
-45 45
-co_sp_PSH      2
-45 45
-co_sp_WSK      2
-45 45
-co_sp_LSK      2
-45 45
-co_sp_SK       2
-45 45
-co_sp_SB       2
-45 45
-co_sp_PIN      2
-45 45
-co_sp_REP      2
-45 45
-co_sp_RWH      2
-45 45
-co_sp_BWH      2
-45 45
-co_sp_SWH      2
-45 45
-co_sp_TWH      2
-45 45
-co_sp_INV      2
-45 45
-co_sp_LSQ      2
-45 45
-co_sp_ISQ      2
-45 45
-co_sp_SCA      2
-45 45
-co_sp_QHG      2
-45 45
-co_sp_CLA      2
-45 45
-co_sp_BFF      2
-45 45
-co_sp_BG       2
-45 45
-co_sp_LOB      2
-45 45
-co_sp_RCB      2
-45 45
-co_sp_BMS      2
-45 45
-co_sp_NSH      2
-45 45
-co_sp_OSH      2
-45 45
-co_sp_ZL       2
-45 45
-co_sp_BD       2
-45 45
-co_sp_MA       2
-45 45
-co_sp_MB       2
-45 45
-co_sp_SG       2
-45 45
-co_sp_BC       2
-45 45
-co_sp_ZG       2
-45 45
-co_sp_PL       2
-45 45
-co_sp_DF       2
-45 45
-co_sp_PS       2
-45 45
-co_sp_ZM       2
-45 45
-co_sp_ZS       2
-45 45
-co_sp_PB       2
-45 45
-co_sp_BB       2
-45 45
-co_sp_BO       2
-45 45
-co_sp_DL       2
-45 45
-co_sp_DR       2
-45 45
-co_sp_DC       2
-45 45
 coType_MAK 1
 coType_HER 1
 coType_WHK 1
@@ -11453,362 +12306,6 @@ coType_BO 1
 coType_DL 1
 coType_DR 1
 coType_DC 1
-co_sp_catch_MAK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_HER      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_WHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_BLF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_WPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_SUF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_WIF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_WTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_FOU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_HAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_PLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_FLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_BFT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_TUN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_BIL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_MPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_BUT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_BPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_ANC      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_GOO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_MEN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_FDE      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_COD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_SHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_OHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_POL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_RHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_BSB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_SCU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_TYL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_RED      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_OPT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_SAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_DRM      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_STB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_TAU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_WOL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_SDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_FDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_HAD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_YTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_DOG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_SMO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_SSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_DSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_BLS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_POR      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_PSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_WSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_LSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_SK       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_SB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_PIN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_REP      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_RWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_BWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_SWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_TWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_INV      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_LSQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_ISQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_SCA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_QHG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_CLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_BFF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_BG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_LOB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_RCB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_BMS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_NSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_OSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_ZL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_BD       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_MA       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_MB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_SG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_BC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_ZG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_PL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_DF       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_PS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_ZM       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_ZS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_PB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_BB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_BO       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_DL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_DR       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch_DC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_MAK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_HER      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_WHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_BLF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_WPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_SUF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_WIF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_WTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_FOU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_HAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_PLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_FLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_BFT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_TUN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_BIL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_MPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_BUT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_BPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_ANC      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_GOO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_MEN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_FDE      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_COD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_SHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_OHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_POL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_RHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_BSB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_SCU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_TYL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_RED      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_OPT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_SAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_DRM      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_STB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_TAU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_WOL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_SDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_FDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_HAD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_YTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_DOG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_SMO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_SSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_DSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_BLS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_POR      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_PSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_WSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_LSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_SK       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_SB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_PIN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_REP      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_RWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_BWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_SWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_TWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_INV      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_LSQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_ISQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_SCA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_QHG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_CLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_BFF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_BG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_LOB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_RCB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_BMS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_NSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_OSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_ZL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_BD       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_MA       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_MB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_SG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_BC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_ZG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_PL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_DF       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_PS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_ZM       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_ZS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_PB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_BB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_BO       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_DL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_DR       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-co_sp_catch2_DC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 prop_spawn_close_MAK      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 prop_spawn_close_HER      28
@@ -12277,446 +12774,6 @@ MPAoverfishedDR       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 MPAoverfishedDC       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-FC_thresh_MAK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_HER      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_WHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_BLF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_WPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_SUF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_WIF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_WTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_FOU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_HAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_PLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_FLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_BFT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_TUN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_BIL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_MPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_BUT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_BPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_ANC      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_GOO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_MEN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_FDE      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_COD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_SHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_OHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_POL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_RHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_BSB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_SCU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_TYL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_RED      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_OPT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_SAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_DRM      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_STB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_TAU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_WOL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_SDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_FDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_HAD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_YTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_DOG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_SMO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_SSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_DSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_BLS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_POR      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_PSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_WSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_LSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_SK       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_SB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_PIN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_REP      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_RWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_BWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_SWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_TWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_INV      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_LSQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_ISQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_SCA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_QHG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_CLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_BFF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_BG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_LOB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_RCB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_BMS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_NSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_OSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_ZL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_BD       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_MA       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_MB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_SG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_BC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_ZG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_PL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_DF       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_PS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_ZM       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_ZS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_PB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_BB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_BO       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_DL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_DR       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_thresh_DC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_MAK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_HER      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_WHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_BLF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_WPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_SUF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_WIF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_WTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_FOU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_HAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_PLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_FLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_BFT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_TUN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_BIL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_MPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_BUT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_BPF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_ANC      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_GOO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_MEN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_FDE      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_COD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_SHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_OHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_POL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_RHK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_BSB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_SCU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_TYL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_RED      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_OPT      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_SAL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_DRM      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_STB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_TAU      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_WOL      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_SDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_FDF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_HAD      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_YTF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_DOG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_SMO      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_SSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_DSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_BLS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_POR      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_PSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_WSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_LSK      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_SK       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_SB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_PIN      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_REP      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_RWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_BWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_SWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_TWH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_INV      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_LSQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_ISQ      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_SCA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_QHG      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_CLA      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_BFF      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_BG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_LOB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_RCB      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_BMS      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_NSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_OSH      28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_ZL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_BD       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_MA       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_MB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_SG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_BC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_ZG       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_PL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_DF       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_PS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_ZM       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_ZS       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_PB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_BB       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_BO       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_DL       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_DR       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-FC_high_thresh_DC       28
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-midwcISQ_FC_restrict   0.1
-midwcLSQ_FC_restrict   0.1
-jigISQ_FC_restrict     0.1
-jigLSQ_FC_restrict     0.1
-dredgeSCA_FC_restrict  0.1
-trapRCB_FC_restrict    0.1
-dtrawlRCB_FC_restrict  0.1
-dtrawlISQ_FC_restrict  0.1
-dtrawlLSQ_FC_restrict  0.1
-dtrawlSHK_FC_restrict  0.1
-dtrawlHAD_FC_restrict  0.1
-dseineSHK_FC_restrict  0.1
-dlineBLF_FC_restrict   0.1
-diveBG_FC_restrict     0.1
-pseineBLF_FC_restrict  0.1
-cullPIN_FC_restrict    0.1
-ptrawlNSH_FC_restrict  0.1
-ptrawlOSH_FC_restrict  0.1
-dtrawlANC_FC_restrict  0.1
-dtrawlBPF_FC_restrict  0.1
-dtrawlBUT_FC_restrict  0.1
-midwcZL_FC_restrict    0.1
-trapMEN_FC_restrict    0.1
-dlineMEN_FC_restrict   0.1
-netMEN_FC_restrict     0.1
-midwcNSH_FC_restrict   0.1
-midwcOSH_FC_restrict   0.1
-mowMA_FC_restrict      0.1
-midwcISQ_FC_period   730
-midwcLSQ_FC_period   730
-jigISQ_FC_period     730
-jigLSQ_FC_period     730
-dredgeSCA_FC_period  730
-trapRCB_FC_period    730
-dtrawlRCB_FC_period  730
-dtrawlISQ_FC_period  730
-dtrawlLSQ_FC_period  730
-dtrawlSHK_FC_period  730
-dtrawlHAD_FC_period  730
-dseineSHK_FC_period  730
-dlineBLF_FC_period   730
-diveBG_FC_period     730
-pseineBLF_FC_period  730
-cullPIN_FC_period    730
-ptrawlNSH_FC_period  730
-ptrawlOSH_FC_period  730
-dtrawlANC_FC_period  730
-dtrawlBPF_FC_period  730
-dtrawlBUT_FC_period  730
-midwcZL_FC_period    730
-trapMEN_FC_period    730
-dlineMEN_FC_period   730
-netMEN_FC_period     730
-midwcNSH_FC_period   730
-midwcOSH_FC_period   730
-mowMA_FC_period      730
-midwcISQ_FC_period2   1825
-midwcLSQ_FC_period2   1825
-jigISQ_FC_period2     1825
-jigLSQ_FC_period2     1825
-dredgeSCA_FC_period2  1825
-trapRCB_FC_period2    1825
-dtrawlRCB_FC_period2  1825
-dtrawlISQ_FC_period2  1825
-dtrawlLSQ_FC_period2  1825
-dtrawlSHK_FC_period2  1825
-dtrawlHAD_FC_period2  1825
-dseineSHK_FC_period2  1825
-dlineBLF_FC_period2   1825
-diveBG_FC_period2     1825
-pseineBLF_FC_period2  1825
-cullPIN_FC_period2    1825
-ptrawlNSH_FC_period2  1825
-ptrawlOSH_FC_period2  1825
-dtrawlANC_FC_period2  1825
-dtrawlBPF_FC_period2  1825
-dtrawlBUT_FC_period2  1825
-midwcZL_FC_period2    1825
-trapMEN_FC_period2    1825
-dlineMEN_FC_period2   1825
-netMEN_FC_period2     1825
-midwcNSH_FC_period2   1825
-midwcOSH_FC_period2   1825
-mowMA_FC_period2      1825
 midwcISQ_FC_restrict_endangered   0.1
 midwcLSQ_FC_restrict_endangered   0.1
 jigISQ_FC_restrict_endangered     0.1
@@ -16849,7 +16906,7 @@ prop_within		 	 1
 
 KDEP_fishery     	 0
 salethresh		 	 0
-useRBCTiers	         0
+
 flagStoreShotCPUE    0
 flagStoreCPUE        0
 flagmarketdiscard    0
@@ -16870,9 +16927,8 @@ flagnewport			 0
 
 flag_stop_F_tac		 0
 dynDAS				 0
-flagreinitpop		 0
-pseudo_assess		 0
-flagTACincludeDiscard  0
+
+
 flagTradeTACvsMPA	 0
 flagQuotaBound	     0
 flagdyn_coupdate     0
