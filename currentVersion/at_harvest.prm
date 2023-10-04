@@ -5549,11 +5549,6 @@ pelagic species respectively
 
 ## flag_access_thru_wc_YYY defined in first section/ imposed catch
 
-## If set to 1, a spatial coverage of the fishery changes through time (see
-chapter 15.10)
-
-flagchangep 		 0
-
 ##Parameters used to set up Ellis and Pantus (2000) habitat refuge from
 fisheries (see chapter 15.7.3)
 
@@ -8276,6 +8271,127 @@ highgrade_thresh 	 0
 ############################################################################
 
 
+##############################################################################
+###### Temporal changed in harvest###########################################
+############################################################################
+
+## Change occurs over a set period, but pulsed changes are allowed. If pulse changes are applied the effort after the change period reverts to the original value
+
+flagchangeeffort	 0
+
+## Change occurs over a set period and remains in place after the change period – typical 4 parameter description
+
+flagchangeq 		 0
+
+## Change occurs over a set period and  remains in place after the change period – typical 4 parameter description 
+
+flagchangepop		 0
+
+## If set to 1, a spatial coverage of the fishery changes through time (see
+chapter 15.10)
+
+flagchangep 		 0
+
+### Changes in spatial coverage are applied through the habitat overlap
+
+midwcISQ_changeP   0
+midwcLSQ_changeP   0
+jigISQ_changeP     0
+jigLSQ_changeP     0
+dredgeSCA_changeP  0
+trapRCB_changeP    0
+dtrawlRCB_changeP  0
+dtrawlISQ_changeP  0
+dtrawlLSQ_changeP  0
+dtrawlSHK_changeP  0
+dtrawlHAD_changeP  0
+dseineSHK_changeP  0
+dlineBLF_changeP   0
+diveBG_changeP     0
+pseineBLF_changeP  0
+cullPIN_changeP    0
+ptrawlNSH_changeP  0
+ptrawlOSH_changeP  0
+dtrawlANC_changeP  0
+dtrawlBPF_changeP  0
+dtrawlBUT_changeP  0
+midwcZL_changeP    0
+trapMEN_changeP    0
+dlineMEN_changeP   0
+netMEN_changeP     0
+midwcNSH_changeP   0
+midwcOSH_changeP   0
+mowMA_changeP      0
+
+
+### Fishing season can be reduced if biomass of fishing stocks or endangered species fall below a threshold level
+
+midwcISQ_changeseason   0
+midwcLSQ_changeseason   0
+jigISQ_changeseason     0
+jigLSQ_changeseason     0
+dredgeSCA_changeseason  0
+trapRCB_changeseason    0
+dtrawlRCB_changeseason  0
+dtrawlISQ_changeseason  0
+dtrawlLSQ_changeseason  0
+dtrawlSHK_changeseason  0
+dtrawlHAD_changeseason  0
+dseineSHK_changeseason  0
+dlineBLF_changeseason   0
+diveBG_changeseason     0
+pseineBLF_changeseason  0
+cullPIN_changeseason    0
+ptrawlNSH_changeseason  0
+ptrawlOSH_changeseason  0
+dtrawlANC_changeseason  0
+dtrawlBPF_changeseason  0
+dtrawlBUT_changeseason  0
+midwcZL_changeseason    0
+trapMEN_changeseason    0
+dlineMEN_changeseason   0
+netMEN_changeseason     0
+midwcNSH_changeseason   0
+midwcOSH_changeseason   0
+mowMA_changeseason      0
+
+## Forced TAC change is implemented in the same way as other parameter change – typical 4 parameter description  Dynamic change in TAC is implemented  when some form of stock assessment is applied (see box in chapter 16.1)
+
+midwcISQ_TACchange   0
+midwcLSQ_TACchange   0
+jigISQ_TACchange     0
+jigLSQ_TACchange     0
+dredgeSCA_TACchange  0
+trapRCB_TACchange    0
+dtrawlRCB_TACchange  0
+dtrawlISQ_TACchange  0
+dtrawlLSQ_TACchange  0
+dtrawlSHK_TACchange  0
+dtrawlHAD_TACchange  0
+dseineSHK_TACchange  0
+dlineBLF_TACchange   0
+diveBG_TACchange     0
+pseineBLF_TACchange  0
+cullPIN_TACchange    0
+ptrawlNSH_TACchange  0
+ptrawlOSH_TACchange  0
+dtrawlANC_TACchange  0
+dtrawlBPF_TACchange  0
+dtrawlBUT_TACchange  0
+midwcZL_TACchange    0
+trapMEN_TACchange    0
+dlineMEN_TACchange   0
+netMEN_TACchange     0
+midwcNSH_TACchange   0
+midwcOSH_TACchange   0
+mowMA_TACchange      0
+
+
+##############################################################################
+###### End Temporal changed in harvest###########################################
+############################################################################
+
+
 
 
 
@@ -9092,34 +9208,6 @@ netMEN_changeSEL     0
 midwcNSH_changeSEL   0
 midwcOSH_changeSEL   0
 mowMA_changeSEL      0
-midwcISQ_changeP   0
-midwcLSQ_changeP   0
-jigISQ_changeP     0
-jigLSQ_changeP     0
-dredgeSCA_changeP  0
-trapRCB_changeP    0
-dtrawlRCB_changeP  0
-dtrawlISQ_changeP  0
-dtrawlLSQ_changeP  0
-dtrawlSHK_changeP  0
-dtrawlHAD_changeP  0
-dseineSHK_changeP  0
-dlineBLF_changeP   0
-diveBG_changeP     0
-pseineBLF_changeP  0
-cullPIN_changeP    0
-ptrawlNSH_changeP  0
-ptrawlOSH_changeP  0
-dtrawlANC_changeP  0
-dtrawlBPF_changeP  0
-dtrawlBUT_changeP  0
-midwcZL_changeP    0
-trapMEN_changeP    0
-dlineMEN_changeP   0
-netMEN_changeP     0
-midwcNSH_changeP   0
-midwcOSH_changeP   0
-mowMA_changeP      0
 midwcISQ_changeSWEPT   0
 midwcLSQ_changeSWEPT   0
 jigISQ_changeSWEPT     0
@@ -9176,62 +9264,6 @@ netMEN_changeEFF     1
 midwcNSH_changeEFF   1
 midwcOSH_changeEFF   1
 mowMA_changeEFF      1
-midwcISQ_changeseason   0
-midwcLSQ_changeseason   0
-jigISQ_changeseason     0
-jigLSQ_changeseason     0
-dredgeSCA_changeseason  0
-trapRCB_changeseason    0
-dtrawlRCB_changeseason  0
-dtrawlISQ_changeseason  0
-dtrawlLSQ_changeseason  0
-dtrawlSHK_changeseason  0
-dtrawlHAD_changeseason  0
-dseineSHK_changeseason  0
-dlineBLF_changeseason   0
-diveBG_changeseason     0
-pseineBLF_changeseason  0
-cullPIN_changeseason    0
-ptrawlNSH_changeseason  0
-ptrawlOSH_changeseason  0
-dtrawlANC_changeseason  0
-dtrawlBPF_changeseason  0
-dtrawlBUT_changeseason  0
-midwcZL_changeseason    0
-trapMEN_changeseason    0
-dlineMEN_changeseason   0
-netMEN_changeseason     0
-midwcNSH_changeseason   0
-midwcOSH_changeseason   0
-mowMA_changeseason      0
-midwcISQ_TACchange   0
-midwcLSQ_TACchange   0
-jigISQ_TACchange     0
-jigLSQ_TACchange     0
-dredgeSCA_TACchange  0
-trapRCB_TACchange    0
-dtrawlRCB_TACchange  0
-dtrawlISQ_TACchange  0
-dtrawlLSQ_TACchange  0
-dtrawlSHK_TACchange  0
-dtrawlHAD_TACchange  0
-dseineSHK_TACchange  0
-dlineBLF_TACchange   0
-diveBG_TACchange     0
-pseineBLF_TACchange  0
-cullPIN_TACchange    0
-ptrawlNSH_TACchange  0
-ptrawlOSH_TACchange  0
-dtrawlANC_TACchange  0
-dtrawlBPF_TACchange  0
-dtrawlBUT_TACchange  0
-midwcZL_TACchange    0
-trapMEN_TACchange    0
-dlineMEN_TACchange   0
-netMEN_TACchange     0
-midwcNSH_TACchange   0
-midwcOSH_TACchange   0
-mowMA_TACchange      0
 flagQchange_MAK      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 flagQchange_HER      28
@@ -16827,15 +16859,14 @@ flagendangered		 0
 
 flagisplace			 0
 
-flagchangeeffort	 0
 
 
 
-flagchangeq 		 0
+
 
 
 flagnewport			 0
-flagchangepop		 0
+
 
 flag_stop_F_tac		 0
 dynDAS				 0
