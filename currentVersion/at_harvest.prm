@@ -9792,6 +9792,169 @@ bulkTAC 	1
 
 
 
+##############################################################################
+####################### Economics ###########################################
+############################################################################
+
+
+## All parameters associated with this module are missing
+
+##YYY_nsubfleets Number of subfleets per each fishery. This value is only used if economics is switched on for that fishery. If the economics sub-model is being used then this value must be at least 1 or Atlantis will crash.
+
+## YYY_nlicence Number of licences for each fishery across all subfleets. It defines the maximum number of vessels that may be active in a fishery.
+
+## YYY_nboat Number of boats in each subfleet. The array should have as many entries as the maximum number of subfleets. For fisheries that have fewer or only 1 subfleet, give 0 for the remaining “empty” subfleets. For fisheries that have an effortmodel value < 12 then set all values to 0 (as they are not modelled using subfleets but instead use one of the effort models defined in the harvest sub-model).
+
+## YYY_boat_size Boat size (m) for each subfleet.
+
+##YYY_hold_capacity Hold capacity (in tonnes). Used in the Dan Holland effort allocation option.
+
+## YYY_crewsize Number of full time equivalent people in the crew
+
+## YYY_home_port Port for each subfleet (with the number corresponding to the port numbers defined in the harvest.prm). This will be important when weighing the distance of boxes to ports in effort allocation
+
+## YYY_triplength Average length of a fishing trip (in days)
+
+## YYY_FishableLength Length of time (hours per day) spent fishing
+
+## YYY_ShotLength Length of one fishing effort or shot (in hours) for each subfleet. This is used to calculate the final effort (in days per day) for each fishery. 
+
+## YYY_MaxShotVol The volume of one fishing effort or shot (in tonnes). This is only used in the shot-by-shot fine scale calculations and not in the general economics sub-model.
+
+## YYY_minDownTime The proportion of the total time that each subfleet must stay in the port (for maintenance, etc.). This will decrease the maximum possible effort each subfleet can apply 
+
+## month_scalar Global parameter setting up the scalar in number of days per month that each subfleet can apply. It is used in calculating max_month_effort, see chapter 17.
+
+## BycatchCountDiscards This flag indicates whether the discard of bycatch species are used in calculations involving total catches (e.g. for calculating total catch per box vs profit or taxes, used in deciding where to target fishing effort). The inclusion of bycatch may be important if there are penalties or taxes for taking endangered species.
+
+
+## UseConstPrice Parameter determining whether to use constant fish prices given in  XXXsaleprice parameter (if set to 1) or if prices should be updated dynamically using market based calculations (if set to 0)
+
+##XXXsaleprice Original fish price ($/kg) for species XXX and given for each fishery
+
+## K_num_markets in the run.prm Number of independent markets determining fish prices (currently can only be 1 or 2)
+
+##MARKET_intercept1, MARKET_intercept2 Market-specific scalar for each species fish price (unitless)
+
+## MARKET_trend1, MARKET_trend2 Long term price trend coefficient constant for each market and species to be multiplied by the simulation year number to get $/kg
+
+## JanMarketCoefft1, FebMarketCoefft1, …  Monthly market constant ($/kg) in fish price
+
+## MARKET_autocoefft1, MARKET_autocoefft2 Market specific constants to be applied to externally read price residuals
+
+## YYY_homeport An array indicating which port each fishery and subfleet are associated with (each subfleet can only be associated with one port) 
+
+## ports_markets in the harvest.prm. An array indicating which port is associated with which market (each port is only associated with one market)
+
+## DVstart Day of the simulation run when deemed fish price values will start being used
+
+## YYY_flagDV Fishery specific flag determining whether to use no deemed value (=0), simple deemed value (=1), or complex deemed value (=2). See chapter 17.3.2
+
+## XXXdeemed Scalar applied to dynamically calculated fish price to get deemed value prices
+
+## YYY_crewshare Proportion of profit (from 0 to 1) that goes to the crew in each subfleet, used for complex deemed fish value calculations and for calculating subfleet levels of profitability and future economic status.
+
+## YYY_fixedcost Fixed cost of fishing, $/day, applied to each day of the simulation (not fishing days)
+
+## YYY_capitalcost Capital costs of boat, $/day (each day, not fishing days)
+
+## YYY_unloadcost Costs of unloading the catch, $/tonne
+
+## YYY_gearcost Costs of gear maintenance, $/effort_day (only applied for fishing days)
+
+##fuel_intercept Baseline fuel cost, cents/litre, used in calculating fishing costs
+
+## fuel_trend_coefft Fuel yearly trend price coefficient, multiplied by simulation year to get cents/litre
+
+## FuelMonthCoefft Montly fuel price constant (cents/litre)
+
+## fuel_auto_coefft A constant on fuel cost to be applied to externally read price residuals
+
+## YYY_fuelcost Subfleet specific fuel consumption, litres/effort_day
+
+## quota_trading If set to 1, then quota is traded in the simulation 
+
+## fish_withoutQ Whether fishing without quota is allowed (if set to 1)
+
+## OwnQuotaXXX_sub1, OwnQuotaXXX_sub2, …. Total allowable catch of quota (in tonnes) for each subfleet of each fishery (superseding the values for TACs set in harvest.prm). If set to 10^12 then no quota for that species is applied.
+
+## prop_within Proportion of yearly quota fulfilled before attempting to buy more quota (a subfleet will not buy new quota if it has used up less than the set proportion of the quota). This proportion applies to the start of the year and will increase automatically and slowly through the year
+
+## prop_spareend Proportion of quota left at which point a subfleet will try to sell quota. The proportion will increase automatically and gradually through the year, so that a subfleet is not left with any unused quota at the end of the year
+
+## sp_by_sp Whether quota trading is done by single species (=1) or by species packages (=0)
+
+## perm_coefft Scalar (unitless) for permanent quota lease compared to the temporary lease 
+
+## buy_coefft Scalar (unitless) for permanent quota selling compared to the temporary lease
+
+## flagLease Flag indicating whether to use Little et al. 2009 model to calculate quota price (=0) or Newel et al. 2005 model (=1).
+
+##interest_rate The interest rate used for quota price calculation in the Little et al. 2009 quota price model
+
+## UseMinValue If set to 1, quota prices are set at minimum values given in minValue parameter. Otherwise quota prices are allowed to fall to 0
+
+## targetscale A scalar (unitless) used to give the relative weighting of key target species in making quota trade decisions.
+
+## YYY_nlicences Numbers of licenses in each fishery, i.e. number of vessels/boats a fishery is allowed to have across all of its subfleets 
+
+## YYY_buybackdate A day of the simulation run when a proportion of boats given in the YYY_propbuyback parameter is taken out of the fishery (bought back). If buy back is not wanted set this date to a large value
+
+## flagsupp_allowed If set to 1, subfleets are allowed to move across fisheries to simulate gear switching; if set to 2 subfleets are considered to have flexible gear (see chapter 17.4.1 for further details)
+
+## flagswitch If set to 1, subfleets are allowed to switch between fisheries
+
+##YYY_suppcost Cost of gear supplementing and switching (in $ per operator making the change).
+
+## prop_supp Maximum proportion of boats in a subfleet that can supplement gears in any one month
+
+## prop_switch Maximum proportion of boats in a subfleet that can switch gears in any one month
+
+## prop_leave Maximum proportion of boats in a subfleet that can leave fishing business in any one month
+
+## YYY_TolDebt The debt level (in $) above which a subfleet may be forced to sell some boats and will have reduce effort
+
+## cripple_period A period of time (in months) above which subfleet will be forced to lose (sell) boats
+
+## cripple_nboat_lost Proportion of boats lost after the cripple_period time of debt above the tolerable level
+
+## flagnewboat If set to 1, a subfleet can buy boats when it is profitable 
+
+## YYY_newcost Cost of a new boat ($ per boat) for each subfleet
+
+## MultiPlanEffort If set to 1, then baseline economic Atlantis model is used to determine effort allocation. If set to 0 – Dan Holland economics model is used (see 17.5.3. for further details)
+
+## JanYYYEffort_sub1, FebYYYEffort_sub1, …, Historical average fishing effort (in effort days per box per month) – given for each subfleet of each fishery. This represents a part of subfleet’s “black books”
+
+## JanCatchXXX_sub1, FebCatchXXX_sub1, …, Historical average catch per species (kg of catch per box per month) - given for each subfleet of each fishery. This represents a part of subfleet’s “black books”
+
+## JanYYYCPUE_sub1, FebYYYCPUE_sub1, …, Historical average CPUE (kg of catch per one day of effort per box per month) - given for each subfleet of each fishery. This represents a part of subfleet’s “black books”
+
+## OrigEconCalc If set to 1 then the expected yearly profit is calculated as earnings minus costs. If set to 0, then profit calculation takes into account CPUE data and proportional contribution of each fish in the catch (see chapter 17.5.1)
+
+## TemporalBycatchAvoid If set to 1, effort planning will take into account monthly historical bycatch and avoid months when bycatch is highest 
+
+## SpatialBycatchAvoid If set to 1, effort planning will take into account spatial historical bycatch and avoid boxes where bycatch is highest
+
+## YYY_flexweight Parameter setting behavioural flexibility of a subfleet (scalar from 0 to 1). See box in chapter 17.5.3 for an explanation on how this parameter is used in three different calculations
+
+## YYY_choicebuffer Parameter (scalar from 0 to 1) setting how quickly a subfleet will update the effort if it deviates from the yearly plan
+
+## UseVPUE If set to 1, instead of CPUE calculations, Atlantis will use Value per Unit Effort values (which takes into account fish prices at a given time)
+
+## YYY_minDownTime The minimum amount of time (proportion of a month, ranging from 0 to 1) a subfleet must stay in port and therefore cannot fish.
+
+## effort_reduction Global parameter setting a scalar of effort reduction that a subfleet will experience if its debt is higher than the value given in YYY_TolDebt parameter
+
+## YYY_FCwgtscale Scalar (from 0 to a very high value) that will affect the willingness of a subfleet to travel to distant boxes
+
+## YYY_varcost Cost of fishing per subfleet per day ($ / effort_day).
+
+
+##############################################################################
+####################### End Economics ###########################################
+############################################################################
+
 
 
 
