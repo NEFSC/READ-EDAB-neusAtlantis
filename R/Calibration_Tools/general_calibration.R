@@ -144,7 +144,7 @@ for(i in 1:length(run.id)){
     }
   
     #Do mum/C tasks
-    if(setup.run$Type[j] %in% c('mum','c')){
+    if(setup.run$Type[j] %in% c('mum','C')){
       
       #invert mum/c
       if(is.invert == T){
@@ -161,15 +161,15 @@ for(i in 1:length(run.id)){
           new.mum.val = old.mum.val
         }
         edit_param_invert_c_mum(bio.file = bio.file.new,
-                                group =setup.run$Code[i],
+                                group =setup.run$Code[j],
                                 C = new.c.val,
                                 mum = new.mum.val,
-                                scalar = 1,
                                 new.file = F)
       #age mum/c                       
       }else{
         
         mum.age.match = which(mum.age.orig$group == setup.run$Code[j])
+        c.age.match  = which(c.age.orig$group == setup.run$Code[j])
         
         if(setup.run$Type[j] == 'mum'){
           
@@ -186,7 +186,7 @@ for(i in 1:length(run.id)){
                             )
         }else{
           if(setup.run$Unit[j] == 'scalar'){
-            new.c.val = as.numeric(c.age.orig[mum.age.match,2:11]) * setup.run$Value[j]
+            new.c.val = as.numeric(c.age.orig[c.age.match,2:11]) * setup.run$Value[j]
           }else{
             stop("workflow doesn't support values for mum/C")
           }
