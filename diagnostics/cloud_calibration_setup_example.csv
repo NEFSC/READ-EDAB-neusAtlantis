@@ -25,3 +25,11 @@ Run.ID,Run.Group,Code,Type,Unit,Value
 8,Test2,SCA,C,value,5.00E-02
 1,Test1,1SMO2:MAK,diet,value,1.00E-01
 2,Test1,1SMO2:MAK,diet,scalar,5.00E-01
+17,Test1,SMO,E,value,1
+18,Test1,SMO,E,scalar,2
+19,Test1,SMO,EPlant,value,1
+20,Test1,SMO,EPlant,scalar,2
+21,Test1,SMO,EDL,value,1
+22,Test1,SMO,EDL,scalar,2
+23,Test1,SMO,EDR,value,1
+24,Test1,SMO,EDR,scalar,2
