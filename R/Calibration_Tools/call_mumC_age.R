@@ -1,7 +1,7 @@
 #Script to scale Mum_C for age groups
 library(dplyr)
-source(here::here('R','edit_param_mum_age.R'))
-source(here::here('R','edit_param_C_age.R'))
+source(here::here('R','Calibration_Tools','edit_param_mum_age.R'))
+source(here::here('R','Calibration_Tools','edit_param_C_age.R'))
 
 group.names = 'RED'
 
