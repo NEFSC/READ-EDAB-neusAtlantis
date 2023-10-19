@@ -14934,7 +14934,7 @@ REP_AgeClassSize 8
 RWH_AgeClassSize 9               
 BWH_AgeClassSize 9               
 SWH_AgeClassSize 7               
-TWH_AgeClassSize 7               
+TWH_AgeClassSize 7          
 INV_AgeClassSize 2               
 
 
@@ -14997,7 +14997,7 @@ REP_age_mat 2
 RWH_age_mat 2          
 BWH_age_mat 4          
 SWH_age_mat 2          
-TWH_age_mat 2	          
+TWH_age_mat 2  
 INV_age_mat 1          
 
 #GFay 13 Dec 2012, v1, getting warning for these two entries, should be length 10 ?
