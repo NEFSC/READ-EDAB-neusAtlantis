@@ -57,6 +57,7 @@ if('diet' %in% setup.df$Type){
   prey.names = colnames(diet.orig)[-1]
 }
 
+possible.types = unique(read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'),as.is=T)$Type)
 
 #Loop through run id's
 i=1
@@ -74,6 +75,10 @@ for(i in 1:length(run.id)){
   
   j=1
   for(j in 1:nrow(setup.run)){
+    
+    if(!(setup.run$Type[j] %in% possible.types)){
+      stop(paste0("Type: ", setup.run$Type[j]," Run.ID: ",setup.run$Run.ID[j]," is not compatible with this script"))
+    }
     
     is.invert = setup.run$Code[j] %in% invert.groups
     
