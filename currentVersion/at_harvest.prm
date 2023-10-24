@@ -3415,9 +3415,10 @@ reportscale_DR       28
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 reportscale_DC       28
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
 CatchTS_agedistribMAK      10
 0 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.255
-CatchTS_agedistribHER      10 #0 0 0 0 0 0.15 0.2 0.3 0.25 0.1
+CatchTS_agedistribHER      10
 0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
 CatchTS_agedistribWHK      10
 0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25

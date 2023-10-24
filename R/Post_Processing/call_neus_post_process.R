@@ -7,8 +7,8 @@
 
 source(here::here('R','Post_Processing','make_post_process.R'))
 
-run.name = 'Dev_11032022'
-atl.dir = here::here('Atlantis_Runs',run.name,'/')
+run.name = 'new_age_param'
+atl.dir = here::here('Atlantis_Runs',run.name,'')
 # 
 # process.all = T
 # plot.all = T

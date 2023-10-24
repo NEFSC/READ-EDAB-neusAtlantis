@@ -7,7 +7,7 @@
 #' @return list containing parameter file name and full path to file
 #' 
 
-get_atl_paramfiles = function(param.dir,atl.dir,include_catch){
+get_atl_paramfiles = function(param.dir,atl.dir,include_catch,run.prefix){
   
   #Create vector of netCDF output files
   output.files = list.files(path = atl.dir, pattern = '*.nc')

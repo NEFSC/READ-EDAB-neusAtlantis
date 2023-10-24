@@ -1,30 +1,20 @@
 
-source(here::here('R','plot_run_comparisons.R'))
-source(here::here('R','plot_run_catch_comparisons.R'))
+source(here::here('R','Post_Processing','plot_run_comparisons.R'))
+source(here::here('R','Post_Processing','plot_run_catch_comparisons.R'))
 
 
 dev.old = '/home/jcaracappa/atlantis/Shared_Data/Dev_Runs/Dev_20230313/'
-dev = '/net/work3/EDAB/atlantis/Shared_Data/Dev_Runs/Dev_20230523/'
-RED1 = here::here('Atlantis_Runs','BLF_RED_1','')
-RED2 = here::here('Atlantis_Runs','BLF_RED_2','')
-RED3 = here::here('Atlantis_Runs','BLF_RED_3','')
-RED4 = here::here('Atlantis_Runs','BLF_RED_4','')
-RED5 = here::here('Atlantis_Runs','BLF_RED_5','')
-HER1 = here::here('Atlantis_Runs','HER_LOB_1','')
-HER2 = here::here('Atlantis_Runs','HER_LOB_2','')
-HER3 = here::here('Atlantis_Runs','HER_LOB_3','')
-HER4 = here::here('Atlantis_Runs','HER_LOB_4','')
-HER5 = here::here('Atlantis_Runs','HER_LOB_5','')
-HER6 = here::here('Atlantis_Runs','HER_LOB_SCA_1','')
+dev = '/net/work3/EDAB/atlantis/Rob_proj/Atlantis_Runs/v6665_10_13_23/'
+new.age = here::here('Atlantis_Runs','new_age_param','')
 
 figure.dir = here::here('Figures','Run_Comparisons','')
 
 plot_run_comparisons(
-  model.dirs = c(RED5,HER6),
-  model.names = c('Dev','HER_LOB_SCA_1'),
+  model.dirs = c(dev,new.age),
+  model.names = c('Dev','New Ages'),
   plot.rel = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'HER_LOB_SCA_final'),
+  plot.out = paste(figure.dir,'new_age'),
   table.out = F,
   groups = NULL,
   remove.init = F

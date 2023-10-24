@@ -1,8 +1,8 @@
 #Script to edit catch-at-age parameters
 
-edit_param_catch_age = function(harvest.file,group,new.value=NA,max.prop=NA, min.prop = NA,overwrite = F, new.file.name = NA){
+edit_param_catch_age = function(harvest.file,group,new.value=NA,max.prop=NA, min.prop = NA,overwrite = F, new.file.name = NA,n.age = 10){
   
-  if(!is.na(new.value) & sum(new.value) != 1){
+  if(!is.na(new.value[1]) & sum(new.value) != 1){
     stop('Catch at age proportions must sum to 1')
   }  
 
@@ -10,9 +10,9 @@ edit_param_catch_age = function(harvest.file,group,new.value=NA,max.prop=NA, min
   
   catchTS.line = grep(paste0('CatchTS_agedistrib',group),harvest.lines)
   
-  ages = 0:9
+  ages = (1:n.age)-1
   
-  if(is.na(new.value)){
+  if(is.na(new.value[1])){
       if(!is.na(max.prop) & !is.na(min.prop)){
       stop('Specify min OR max catch-at-age. Not both')
     }else if(!is.na(max.prop)){

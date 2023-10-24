@@ -1,5 +1,5 @@
 Code,Index,IsTurnedOn,Name,LongName,NumCohorts,NumGeneTypes,NumStages,NumSpawns,NumAgeClassSize,NumStocks,VerticallyMigrates,HorizontallyMigrates,NumMigrations,MultiYrMigrations,ExternalReproduction,RecruitType,isFished,IsImpacted,isTAC,GroupType,IsPredator,IsCover,isSiliconDep,isAssessed,IsCatchGrazer,OverWinters,isCultured,isHabDepend,numMoveEntries,isBioEroder,isSupplemented
-MAK,0,1,Mackerel,Atlantic mackerel,10,10,2,1,2,1,1,1,0,0,0,0,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
+MAK,0,1,Mackerel,Atlantic mackerel,10,1,2,1,2,1,1,1,0,0,0,0,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 HER,1,1,Herring,Atlantic herring,7,1,2,1,2,1,1,1,0,0,0,0,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 WHK,2,1,White_Hake,White hake,12,1,2,1,2,1,1,1,0,0,0,0,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
 BLF,3,1,Bluefish,Bluefish,12,1,2,1,1,1,1,1,0,0,0,0,1,1,1,FISH,1,0,0,1,0,0,0,0,4,0,0
