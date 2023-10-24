@@ -7,11 +7,11 @@
 #'Unit: supplied value type: value or scalar
 #'Value: Value to be written to biology.prm
 library(dplyr)
-library(tictoc)
 
 #Read in setup file
-experiment.id = 'test_1'
+experiment.id = 'test_2'
 setup.df = read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'),as.is=T)
+proj.dir = '/contrib/Joseph.Caracappa/neus-atlantis/'
 
 #Define base files
 bio.file.orig = here::here('currentVersion','at_biology.prm')
@@ -56,13 +56,15 @@ if('diet' %in% setup.df$Type){
                              fgs.file = fgs.file)
   prey.names = colnames(diet.orig)[-1]
 }
+if(any(c('E','EPlant','EDR','EDL') %in% setup.df$Type)){
+  source(here::here('R','Calibration_Tools','edit_param_assim_eff.R'))
+}
 
 possible.types = unique(read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'),as.is=T)$Type)
 
 #Loop through run id's
 i=1
 out.df = list()
-tic()
 for(i in 1:length(run.id)){
   
   #copy biology.prm with run.id prefix
@@ -261,6 +263,17 @@ for(i in 1:length(run.id)){
                        overwrite = T
                       )
     }
+    
+    #Do Assimilation Efficiency
+    if(setup.run$Type[j] %in% c('E','EPlant','EDR','EDL')){
+      
+      edit_param_assim_eff(bio.file = bio.file.new,
+                           spp.names = setup.run$Code[j],
+                           type = setup.run$Type[j],
+                           unit = setup.run$Unit[j],
+                           value = setup.run$Value[j],
+                           overwrite = T)
+    }
   }
   
   #Write shell script
@@ -282,9 +295,7 @@ for(i in 1:length(run.id)){
   
   out.df[[i]] = setup.run
 }
-toc()
 system('sudo chmod -R 775 *')
-proj.dir = '/contrib/Joseph.Caracappa/neus-atlantis/'
 
 out.df = bind_rows(out.df)
 write.csv(out.df, paste0(proj.dir,'Setup_Files/',experiment.id,'_setup.csv'),row.names = F)

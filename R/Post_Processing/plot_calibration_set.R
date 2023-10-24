@@ -1,0 +1,58 @@
+#' Script to create plot comparisons between individual runs of the same Run.Group
+#' Also produces mean biomass of target species
+library(dplyr)
+library(ggplot2)
+#Specify setup.csv used to generate calibration run set
+experiment.id = 'test_2'
+setup.df = read.csv(here::here('Setup_Files','test_2_setup.csv'),as.is=T)
+experiment.dir = here::here('Atlantis_Runs',experiment.id,'')
+figure.dir = here::here('Figures','')
+
+
+#Read in groups file
+fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T)%>%
+  filter(IsTurnedOn == T)
+
+plot.colors = c(RColorBrewer::brewer.pal(12,'Paired'),
+                RColorBrewer::brewer.pal(8,'Dark2'),
+                RColorBrewer::brewer.pal(12,'Set3'))
+
+run.groups = sort(unique(setup.df$Run.Group))
+i=1
+
+for(i in 1:length(run.groups)){
+  
+  setup.group = setup.df %>%
+    filter(Run.Group == run.groups[i])
+  j=1
+  bio.run.group = list()
+  for(j in 1:nrow(setup.group)){
+    bio.run.group[[j]] = data.table::fread(paste0(experiment.dir,experiment.id,'_',setup.group$Run.ID[j],'/neus_outputBiomIndx.txt'))%>%
+      select(Time,all_of(fgs$Code))%>%
+      tidyr::gather(Code,Biomass,-Time)%>%
+      mutate(Run.ID = setup.group$Run.ID[j])
+  }
+  bio.run.group = bind_rows(bio.run.group)
+  
+  spp.names = sort(unique(fgs$LongName))
+  s=1
+
+  pdf(paste0(figure.dir,experiment.id,'_',run.groups[i],'.pdf'))
+  for(s in 1:length(spp.names)){
+    
+    spp.code = fgs$Code[which(fgs$LongName == spp.names[s])]
+    bio.spp = bio.run.group %>%
+      filter(Code == spp.code)
+    
+    p =ggplot(bio.spp, aes(x=Time,y = Biomass, color = factor(Run.ID)))+
+      geom_line()+
+      scale_color_manual(name = paste0('Run ID (',run.groups[i],')'),
+                         values = plot.colors[1:length(unique(setup.group$Run.ID))])+
+      ggtitle(spp.names[s])+
+      theme_bw()+
+      theme(plot.title = element_text(hjust = 0.5),
+            legend.position = 'bottom')
+    gridExtra::grid.arrange(p)
+  }
+  dev.off()
+}
