@@ -60,8 +60,9 @@ get_atl_paramfiles = function(param.dir,atl.dir,include_catch,run.prefix){
   bgm = file.path(param.dir,bgm.str)
   
   #Get nofill version of initial conditions
-  init.nofill = list.files(param.dir,'*nofill*',full.name = T)
-  
+  init.str = strsplit(init,'/|.nc')[[1]]
+  init.str = init.str[length(init.str)]
+  init.nofill = paste0(param.dir,init.str,'_nofill.nc')
   #Organize parameter files
   param.list = list(run.cmd = run.cmd,
                     run.prm = run.prm,
