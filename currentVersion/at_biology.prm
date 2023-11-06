@@ -1337,7 +1337,7 @@ MB_habdepend    1
 
 # movement related flags see min/max.move_var_XXX to set tolerance values
 # If none of the cells have suitable conditions the species will die
-flagtempdepend   1         0 = off, 1 = temperature preferences used
+flagtempdepend   0         0 = off, 1 = temperature preferences used
 flagsaltdepend   0
 flagO2depend    0
 
