@@ -5,9 +5,9 @@ library(ncdf4)
 
 source(here::here('R','Calibration_Tools','edit_param_init_scalar.R'))
 
-ref.run.dir = '/net/work3/EDAB/atlantis/Rob_proj/Atlantis_Runs/v6665_10_13_23/'
+ref.run.dir = '/home/jcaracappa/atlantis/Shared_Data/Dev_Runs/Dev_20231101/'
 
-new.run.dir = here::here('Atlantis_Runs','new_age_param','')
+new.run.dir = here::here('Atlantis_Runs','6536_new_age_param_init_rescale','')
 
 run.prm = here::here('currentVersion','at_run.prm')
 fgs.file.ref =here::here('diagnostics','neus_groups_v2_0_1.csv')
@@ -26,7 +26,10 @@ fgs.new = read.csv(fgs.file.new,as.is = T)%>%
 main.nc.ref = nc_open(paste0(ref.run.dir,'neus_output.nc'))
 main.nc.new = nc_open(paste0(new.run.dir,'neus_output.nc'))
 
-vert.names = fgs$Name[which(fgs$NumCohorts >2)]
+bio.ref = read.table(paste0(ref.run.dir,'neus_outputBiomIndx.txt'),header =T)
+bio.new = read.table(paste0(new.run.dir,'neus_outputBiomIndx.txt'),header =T)
+
+vert.names = fgs.ref$Name[which(fgs.ref$NumCohorts >2)]
 
 i=1
 init.compare = data.frame(Name = vert.names,numbers.ref = NA,numbers.new = NA)
@@ -36,17 +39,19 @@ for(i in 1:length(vert.names)){
   ncohort.ref = fgs.ref$NumCohorts[which(fgs.ref$Name == vert.names[i])]
   ncohort.new = fgs.new$NumCohorts[which(fgs.new$Name == vert.names[i])]
   
-  out.ref = lapply(1:ncohort.ref,function(x){
-    return(sum(ncvar_get(main.nc.ref,paste0(vert.names[i],x,'_Nums'))[,,1],na.rm=T))
-  })
-  out.new = lapply(1:ncohort.new,function(x){
-    return(sum(ncvar_get(main.nc.new,paste0(vert.names[i],x,'_Nums'))[,,1],na.rm=T))
-  })
+  # out.ref = lapply(1:ncohort.ref,function(x){
+  #   return(sum(ncvar_get(main.nc.ref,paste0(vert.names[i],x,'_Nums'))[,,1],na.rm=T))
+  # })
+  # out.new = lapply(1:ncohort.new,function(x){
+  #   return(sum(ncvar_get(main.nc.new,paste0(vert.names[i],x,'_Nums'))[,,1],na.rm=T))
+  # })
+  # out.ref = sum(unlist(out.ref))
+  # out.new = sum(unlist(out.new))
   
-
+  code.ref = fgs.ref$Code[which(fgs.ref$Name == vert.names[i])]
   
-  out.ref = sum(unlist(out.ref))
-  out.new = sum(unlist(out.new))
+  out.ref = bio.ref[1,code.ref]
+  out.new = bio.new[1,code.ref]
   
   init.compare$numbers.ref[i] = out.ref
   init.compare$numbers.new[i] = out.new
