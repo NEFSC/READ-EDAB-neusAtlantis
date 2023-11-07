@@ -42,11 +42,13 @@ get_param_mort_age = function(bio.prm,fgs){
     
     ml = bio.lines[grep(paste0(mort.out$group[i],'_mL'),bio.lines)+1]
     ml.split = strsplit(ml,'\t| ')
+    ml.split = lapply(ml.split, function(x){x[!x ==""]})
     mort.out$mL.j[i] = ml.split[[1]][1]
     mort.out$mL.a[i] = ml.split[[1]][2]
     
     mq = bio.lines[grep(paste0(mort.out$group[i],'_mQ'),bio.lines)+1]
     mq.split = strsplit(mq,'\t| ')
+    mq.split= lapply(mq.split, function(x){x[!x ==""]})
     mort.out$mQ.j[i] = mq.split[[1]][1]
     mort.out$mQ.a[i] = mq.split[[1]][2]
   }
