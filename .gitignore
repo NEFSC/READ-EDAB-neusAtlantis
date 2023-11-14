@@ -5,7 +5,6 @@
 *.Rproj
 /Atlantis_Runs/
 /Run_Code/
-/Setup_Files/
 /Figures/
 /currentVersion/archive/
 
@@ -69,4 +68,9 @@ diagnostics/Obs_Hindcast_Group_Progress.xlsx
 
 #data files
 data/fishing_sensitivity_extended_constant_2/*
+
+
+#Setup Files for Cloud
+/Setup_Files/*
+!/Setup_Files/cloud*
 
