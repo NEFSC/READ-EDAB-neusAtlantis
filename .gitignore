@@ -26,7 +26,6 @@ outputFolder
 # ignore all files in testing except prm
 /currentVersion/*
 !/currentVersion/at_biology.prm
-!/currentVersion/at_biology_rescale_mumC.prm
 !/currentVersion/at_economics.prm
 !/currentVersion/at_force_LINUX.prm
 !/currentVersion/at_force_WIN.prm
