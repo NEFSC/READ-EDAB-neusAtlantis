@@ -1,30 +1,20 @@
 
-source(here::here('R','plot_run_comparisons.R'))
-source(here::here('R','plot_run_catch_comparisons.R'))
+source(here::here('R','Post_Processing','plot_run_comparisons.R'))
+source(here::here('R','Post_Processing','plot_run_catch_comparisons.R'))
 
+master = '/net/work3/EDAB/atlantis//Shared_Data/Release_Runs/Master_2_0_1/'
+dev1 = '/net/work3/EDAB/atlantis/Shared_Data/Dev_Runs/Dev_20230731/'
+dev2 = '/net/work3/EDAB/atlantis/Shared_Data/Dev_Runs/Dev_20230801/'
 
-dev.old = '/home/jcaracappa/atlantis/Shared_Data/Dev_Runs/Dev_20230313/'
-dev = '/net/work3/EDAB/atlantis/Shared_Data/Dev_Runs/Dev_20230523/'
-RED1 = here::here('Atlantis_Runs','BLF_RED_1','')
-RED2 = here::here('Atlantis_Runs','BLF_RED_2','')
-RED3 = here::here('Atlantis_Runs','BLF_RED_3','')
-RED4 = here::here('Atlantis_Runs','BLF_RED_4','')
-RED5 = here::here('Atlantis_Runs','BLF_RED_5','')
-HER1 = here::here('Atlantis_Runs','HER_LOB_1','')
-HER2 = here::here('Atlantis_Runs','HER_LOB_2','')
-HER3 = here::here('Atlantis_Runs','HER_LOB_3','')
-HER4 = here::here('Atlantis_Runs','HER_LOB_4','')
-HER5 = here::here('Atlantis_Runs','HER_LOB_5','')
-HER6 = here::here('Atlantis_Runs','HER_LOB_SCA_1','')
 
 figure.dir = here::here('Figures','Run_Comparisons','')
 
 plot_run_comparisons(
-  model.dirs = c(RED5,HER6),
-  model.names = c('Dev','HER_LOB_SCA_1'),
+  model.dirs = c(master,dev1,dev2),
+  model.names = c('v2.0.1','Dev_222','Dev_223'),
   plot.rel = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'HER_LOB_SCA_final'),
+  plot.out = paste(figure.dir,'Update_2_1_0'),
   table.out = F,
   groups = NULL,
   remove.init = F

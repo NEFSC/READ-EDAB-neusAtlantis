@@ -7,8 +7,12 @@
 
 source(here::here('R','Post_Processing','make_post_process.R'))
 
-run.name = 'Dev_11032022'
-atl.dir = here::here('Atlantis_Runs',run.name,'/')
+run.name = 'Dev_20231101'
+# atl.dir = here::here('Atlantis_Runs',run.name,'/')
+atl.dir =  paste0('/net/work3/EDAB/atlantis/Shared_Data/Dev_Runs/',run.name,'/')
+run.dir = paste0('/net/work3/EDAB/atlantis/Shared_Data/Dev_Runs/',run.name,'/')
+run.prefix = 'neus_output'
+
 # 
 # process.all = T
 # plot.all = T
