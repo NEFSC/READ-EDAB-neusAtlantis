@@ -7,7 +7,7 @@
 
 source(here::here('R','Post_Processing','make_post_process.R'))
 
-run.name = 'new_age_param'
+run.name = '6536_new_age_param_mum_rescale_2'
 atl.dir = here::here('Atlantis_Runs',run.name,'')
 # 
 # process.all = T
