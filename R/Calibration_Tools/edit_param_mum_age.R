@@ -58,6 +58,7 @@ edit_param_mum_age = function(bio.prm, new.mum, overwrite = F,new.file.name, sin
   if(single.group){
     
     ind = which(group.name == group.names)
+    new.mum = new.mum[!is.na(new.mum)]
     mum.string = paste(new.mum,collapse = '\t')
     bio.lines[bio.lines.id[ind]+1] = mum.string
   }else{
