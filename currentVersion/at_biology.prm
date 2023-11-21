@@ -11778,7 +11778,7 @@ flagfishrates    0         Switch to show whether clearance and growth rates are
 # Clearance rate of each vertebrate group, per age class       (m3 Ind-1 day-1)
 # updated 20180814 as 0.1 * mum (which is RN+SN * [max % body weight consumption per day] /365)
 C_MAK	10	
-0.055 0.41 2.76 5.16 7.24 8.82 10.33 11 11.7 11.9
+0.0825	0.615	4.14	7.74	10.86	13.23	15.495	16.5	17.55	17.85
 
 C_HER 7
 0.029	1.4	7.2	11	12	18	27
@@ -11995,7 +11995,7 @@ mum_SG_T15	0.1
 # are chosen as absolute (=0), or as proportion of body mass (=1)  
 # modified 20180814 based on RN+SN * percent consumption (.10 - 0.30 ) per day / 365
 mum_MAK	10.00		
-5	21.6	144	130	115	100	72	54	36	10.8
+7.5	32.4	216	195	172.5	150	108	81	54	16.2	NA	NA
 
 mum_HER 7
 0.49	12	20	16	9.8	6.2	1.5
@@ -12004,7 +12004,7 @@ mum_WHK 12
 0.22	0.52	1	6.6	12	10	9	6.6	5	3.8	2.5	0.95
 
 mum_BLF 12
-3.7	3.2	22	54	140	180	180	120	91	69	33	11
+5.55	4.8	33	81	210	270	270	180	136.5	103.5	49.5	16.5
 
 mum_WPF 7
 0.02	0.53	1.4	2	2.5	2.7	2.9
@@ -12013,10 +12013,10 @@ mum_SUF 9
 2.3	15	65	55	45	31	21	13	3.6
 
 mum_WIF 7
-0.042	1.6	9.2	12	19	25	30
+0.084	3.2	18.4	24	38	50	60	NA	NA	NA	NA	NA
 
 mum_WTF 12
-0.00068	0.0099	0.029	0.096	0.15	0.17	0.23	0.28	0.34	0.39	0.44	0.48
+0.00102	0.01485	0.0435	0.144	0.225	0.255	0.345	0.42	0.51	0.585	0.66	0.72
 									
 mum_HAL	10.00								
 8.69	52.14	347.6	347.6	304.1	260.7	173.8	130.3	86.9	26.07
@@ -12092,7 +12092,7 @@ mum_OPT 9
 0.21	1.4	4	4.9	8.3	12	15	18	20
 									
 mum_SAL 7
-31	860	2200	3300	4100	4700	4700
+3.1	86	220	330	410	470	470	NA	NA	NA	NA	NA
 										
 mum_DRM	10.00		
 7.435	44.61	297.4	297.4	260.2	223	148.7	111.5	74.35	22.3
@@ -12101,7 +12101,7 @@ mum_STB	10.00
 2.016	12.04	80.5	80.5	70.7	60.34	40.18	30.24	20.16	6.034
 
 mum_TAU 11
-0.026	0.13	0.47	0.98	1.6	2.3	3	3.7	4.4	5.1	5.6
+0.039	0.195	0.705	1.47	2.4	3.45	4.5	5.55	6.6	7.65	8.4	NA
 									
 mum_WOL 12
 0.079	0.39	1.5	3.4	6.3	10	13	18	46	56	38	48
@@ -14062,7 +14062,7 @@ LSK_mQ 2
 SK_mQ 2
 5.00E-10 1.75E-9
 SB_mQ 2
-0	9E-08
+0	9E-07
 PIN_mQ 2
 2E-10	 5E-11
 REP_mQ	2
@@ -16478,9 +16478,9 @@ Rbeta_OSH 2e+12
 # Alpha in Beverton-Holt
 BHalpha_MAK 2.5+12
 BHalpha_HER 6.075e+12
-BHalpha_WHK 1.00E+12
+BHalpha_WHK 5E+11
 BHalpha_BLF 5.62E7
-BHalpha_WPF 3.75E9
+BHalpha_WPF 1.25E9
 BHalpha_SUF 1.55E10
 BHalpha_WIF 61000000
 BHalpha_WTF 4.05E+10
