@@ -20244,3 +20244,13 @@ BB_turbid_b	30.0
 DL_turbid_b	30.0
 DR_turbid_b	30.0
 DC_turbid_b	30.0
+
+# v6678
+# If using options where there are effects of environmental sensitivity on spatial distribution, if cells with environmental conditions outside the species tolerance then the species distribution to that cell is zeroed (i.e. they avoid the cell). We have expanded the options of what happens in these circumstances.
+# If flagenviro_displace is set to 0 then the species will be distributed smoothly over all suitable remaining cells (as it did previously in Atlantis). If flagenviro_displace is set to 1 then the individuals from the cell that is now unsuitable will be moved to adjacent cells only.
+
+flagenviro_displace 0
+
+# If flagenviro_kill is set to 0 then the individuals displaced by the environment will not die but simply move. If none of the cells have suitable conditions the species will disappear from the model domain (this was the way Atlantis has done it in all previous cases). If flagenviro_kill is set to 1 then any individuals that do not find suitable cells die and are added to water column detritus in their source cell.
+
+flagenviro_kill 0
