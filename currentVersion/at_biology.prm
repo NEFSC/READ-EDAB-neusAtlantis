@@ -458,7 +458,7 @@ flagrecruitPSH 12
 flagrecruitWSK 12
 flagrecruitLSK 12
 flagrecruitSK 12
-flagrecruitSB 12
+flagrecruitSB 1
 flagrecruitPIN 12
 flagrecruitREP 12
 flagrecruitRWH 12
@@ -13908,7 +13908,7 @@ LSK_mL	2
 SK_mL	2
 0	0
 SB_mL	2
-0	1E-12
+0	1E-5
 PIN_mL	2
 0	0
 REP_mL	2
@@ -14062,7 +14062,7 @@ LSK_mQ 2
 SK_mQ 2
 5.00E-10 1.75E-9
 SB_mQ 2
-0	9E-06
+0	9E-03
 PIN_mQ 2
 2E-10	 5E-11
 REP_mQ	2
@@ -16226,7 +16226,7 @@ KDENR_SK
 2
 
 KDENR_SB
-0.01
+1E6
 
 KDENR_PIN
 3.5
