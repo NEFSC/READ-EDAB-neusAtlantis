@@ -20519,3 +20519,7 @@ q10_method_BO  0
 q10_method_DL  0  
 q10_method_DR  0  
 q10_method_DC  0  
+
+# 6698
+flagtempdepend_move 0
+flagtempdepend_reprod 0

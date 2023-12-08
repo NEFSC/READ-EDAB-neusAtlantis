@@ -128,3 +128,6 @@ K_num_basket 1 # Relevant to Australia model. Maxiumum number of species in bask
 #6665
 # Dumps total biomass (across every MIGID entry) from migration array into biomindx.txt. Previously while migrators were outside the model, their biomass was not reported inn the NetCDF output file
 flag_mig_in_bioindx 0
+
+#6698
+flag_replicated_old_PPmort 0
