@@ -39,9 +39,9 @@ outputFolder
 # except csv
 !/currentVersion/neus_fisheries.csv
 !/currentVersion/neus_groups.csv
-!/currentVersion/neus_migration.csv
-!/currentVersion/neus_migration_6665.csv
-!/currentVersion/neus_migration_6681.csv
+!/currentVersion/neus_migrations.csv
+!/currentVersion/neus_migrations_6665.csv
+!/currentVersion/neus_migrations_6681.csv
 # except bgm
 !/currentVersion/neus_tmerc_RM2.bgm
 # except rmd
@@ -51,8 +51,8 @@ outputFolder
 !/currentVersion/run_command.txt
 # shell script to run
 !/currentVersion/RunAtlantis.sh
-!/currentVersion/RunAtlantis_6665.sh
-!/currentVersion/RunAtlantis_6681.sh
+!/currentVersion/RunAtlantis6665.sh
+!/currentVersion/RunAtlantis6681.sh
 !/currentVersion/RunAtlantis_cloud.sh
 !/currentVersion/sbatch_scenario_array_base.sh
 !/currentVersion/vertebrate_init_length_cm_Adjusted.csv
