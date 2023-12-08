@@ -42,6 +42,7 @@ outputFolder
 !/currentVersion/neus_migrations.csv
 !/currentVersion/neus_migrations_6665.csv
 !/currentVersion/neus_migrations_6681.csv
+!/currentVersion/neus_migrations_6698.csv
 # except bgm
 !/currentVersion/neus_tmerc_RM2.bgm
 # except rmd
@@ -53,6 +54,7 @@ outputFolder
 !/currentVersion/RunAtlantis.sh
 !/currentVersion/RunAtlantis6665.sh
 !/currentVersion/RunAtlantis6681.sh
+!/currentVersion/RunAtlantis6698.sh
 !/currentVersion/RunAtlantis_cloud.sh
 !/currentVersion/sbatch_scenario_array_base.sh
 !/currentVersion/vertebrate_init_length_cm_Adjusted.csv
