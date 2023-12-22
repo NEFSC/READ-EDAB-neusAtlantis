@@ -11756,7 +11756,7 @@ C_CLA_T15	0.075
 C_BFF_T15	0.0395
 C_BG_T15	0.09
 C_BC_T15	0.00115
-C_LOB_T15	0.000845
+C_LOB_T15	0.00086
 C_RCB_T15	0.0003
 C_BMS_T15	0.000287
 C_NSH_T15	0.0005
@@ -11778,7 +11778,7 @@ flagfishrates    0         Switch to show whether clearance and growth rates are
 # Clearance rate of each vertebrate group, per age class       (m3 Ind-1 day-1)
 # updated 20180814 as 0.1 * mum (which is RN+SN * [max % body weight consumption per day] /365)
 C_MAK	10	
-0.0825	0.615	4.14	7.74	10.86	13.23	15.495	16.5	17.55	17.85
+0.4125	3.075	20.7	38.7	54.3	66.15	77.475	82.5	87.75	89.25
 
 C_HER 7
 0.029	1.4	7.2	11	12	18	27
@@ -11995,7 +11995,7 @@ mum_SG_T15	0.1
 # are chosen as absolute (=0), or as proportion of body mass (=1)  
 # modified 20180814 based on RN+SN * percent consumption (.10 - 0.30 ) per day / 365
 mum_MAK	10.00		
-7.5	32.4	216	195	172.5	150	108	81	54	16.2
+37.5	162	1080	975	862.5	750	540	405	270	81
 
 mum_HER 7
 0.147	3.6	6	4.8	2.94	1.86	0.45
@@ -14004,7 +14004,7 @@ MEN_mQ	2
 FDE_mQ	2
 0	0
 COD_mQ	2
-0 5.4E-11
+0 6.5E-11
 SHK_mQ	2
 0	0
 OHK_mQ	2
@@ -16476,7 +16476,7 @@ Rbeta_OSH 2e+12
 
 # Beverton-Holt recruitment
 # Alpha in Beverton-Holt
-BHalpha_MAK 2.5+12
+BHalpha_MAK 2.5+14
 BHalpha_HER 6.075e+12
 BHalpha_WHK 1E9
 BHalpha_BLF 22.48E7
@@ -16541,7 +16541,7 @@ BHalpha_NSH 9e+11
 BHalpha_OSH 9e+11      
 
 #Beta in Beverton-Holt 
-BHbeta_MAK 6e+13
+BHbeta_MAK 6e+8
 BHbeta_HER 5e+13
 BHbeta_WHK 3.25+14
 BHbeta_BLF 5.25E+09
@@ -17011,7 +17011,7 @@ KWSR_HAL	117.72
 KWSR_HER	2.77
 KWSR_INV	135.84
 KWSR_LSK	46.09
-KWSR_MAK	8
+KWSR_MAK	15.14
 KWSR_MEN	10.37
 KWSR_MPF	0.4
 KWSR_OHK	84.71
@@ -17076,7 +17076,7 @@ KWRR_HAL	311.96
 KWRR_HER	7.34
 KWRR_INV	359.98
 KWRR_LSK	122.14
-KWRR_MAK	20
+KWRR_MAK	40.12
 KWRR_MEN	27.48
 KWRR_MPF	1.06
 KWRR_OHK	224.48
