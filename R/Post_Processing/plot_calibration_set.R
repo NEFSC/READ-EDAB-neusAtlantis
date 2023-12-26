@@ -3,10 +3,14 @@
 library(dplyr)
 library(ggplot2)
 #Specify setup.csv used to generate calibration run set
-experiment.id = 'test_2'
-setup.df = read.csv(here::here('Setup_Files','test_2_setup.csv'),as.is=T)
+experiment.id = 'cloud_new_age_8'
+setup.df = read.csv(here::here('Setup_Files','cloud_new_age_8_setup.csv'),as.is=T)
+setup.df$file.ID = 1:nrow(setup.df)
 experiment.dir = here::here('Atlantis_Runs',experiment.id,'')
-figure.dir = here::here('Figures','')
+figure.dir = here::here('Figures',experiment.id,'')
+
+if(!dir.exists(figure.dir)){dir.create(figure.dir)}
+
 
 
 #Read in groups file
@@ -27,10 +31,13 @@ for(i in 1:length(run.groups)){
   j=1
   bio.run.group = list()
   for(j in 1:nrow(setup.group)){
+    biom.file = paste0(experiment.dir,experiment.id,'_',setup.group$Run.ID[j],'/neus_outputBiomIndx.txt')
+    if(!file.exists(biom.file)){next()}
     bio.run.group[[j]] = data.table::fread(paste0(experiment.dir,experiment.id,'_',setup.group$Run.ID[j],'/neus_outputBiomIndx.txt'))%>%
       select(Time,all_of(fgs$Code))%>%
       tidyr::gather(Code,Biomass,-Time)%>%
-      mutate(Run.ID = setup.group$Run.ID[j])
+      mutate(Run.ID = setup.group$Run.ID[j],
+             file.ID = setup.group$file.ID[j])
   }
   bio.run.group = bind_rows(bio.run.group)
   
@@ -43,6 +50,7 @@ for(i in 1:length(run.groups)){
     spp.code = fgs$Code[which(fgs$LongName == spp.names[s])]
     bio.spp = bio.run.group %>%
       filter(Code == spp.code)
+    
     
     p =ggplot(bio.spp, aes(x=Time,y = Biomass, color = factor(Run.ID)))+
       geom_line()+

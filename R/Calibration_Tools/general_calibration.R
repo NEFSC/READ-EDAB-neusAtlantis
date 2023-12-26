@@ -9,8 +9,8 @@
 library(dplyr)
 
 #Read in setup file
-experiment.id = 'test_2'
-setup.df = read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'),as.is=T)
+experiment.id = 'cloud_new_age_8'
+setup.df = read.csv(here::here('Setup_Files','cloud_new_age_8.csv'),as.is=T)
 proj.dir = '/contrib/Joseph.Caracappa/neus-atlantis/'
 
 #Define base files
