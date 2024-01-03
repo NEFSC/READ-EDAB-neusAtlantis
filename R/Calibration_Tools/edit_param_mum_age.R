@@ -9,19 +9,29 @@
 get_param_mum_age = function(bio.prm, write.output = F, output.dir, out.name ){
   
   bio.lines = readLines(bio.prm)
-  bio.lines.id = grep('^mum.*10\\.00',bio.lines)
+  bio.lines.id = grep('^mum.*',bio.lines)
   bio.lines.vals1 = bio.lines[bio.lines.id]
+  which.invert = grepl('_T15',bio.lines.vals1)
+  bio.lines.vals1 = bio.lines.vals1[!which.invert]
+  bio.lines.id = bio.lines.id[!which.invert]
   
-  group.names =unname(sapply(bio.lines.vals1,function(x) strsplit(x,'mum_|\t10.00')[[1]][2]))
-  out.df = data.frame(group = group.names,
-                      mum1 = NA, mum2 = NA, mum3 = NA, mum4 = NA, mum5 = NA, mum6 = NA, mum7 = NA, mum8 = NA, mum9 = NA, mum10 = NA,
-                      stringsAsFactors = F)
+  group.names =unname(sapply(bio.lines.vals1,function(x) strsplit(x,'mum_|\t10.00|\t| ')[[1]][2]))
+  max.age = max(as.numeric(sapply(bio.lines.vals1,function(x) strsplit(x,'mum_|\t| ')[[1]][3])))
+  
+  mum.mat = matrix(NA, nrow = length(group.names),ncol = max.age)
+  colnames(mum.mat) = paste0('mum',1:max.age)
+  out.df = data.frame(mum.mat)
+  out.df = cbind(data.frame(group = group.names),out.df)
+  
   for(i in 1:length(bio.lines.id)){
     mum.group = bio.lines[bio.lines.id[i] + 1 ]
     mum.split = strsplit(mum.group,split = "\t| |  ")[[1]]
-    if(length(mum.split)>10){print(paste0(group.names[i],' has ',length(mum.split)-10,' trailing tabs ',i))}
-    if(length(mum.split)<10){print(paste0(group.names[i],' has only',10-length(mum.split),' values ',i))}
-    out.df[i,2:11] = mum.split
+    
+    if(length(mum.split)>max.age){print(paste0(group.names[i],' has ',length(mum.split)-10,' trailing tabs ',i))}
+    
+    mum.out = rep(NA,max.age)
+    mum.out[1:length(mum.split)] = mum.split
+    out.df[i,2:ncol(out.df)] = mum.out
   }
   if(write.output){
     write.csv(out.df, file = paste0(output.dir,out.name,'.csv'),row.names = F)
@@ -36,21 +46,33 @@ edit_param_mum_age = function(bio.prm, new.mum, overwrite = F,new.file.name, sin
   
   #Get mum_XXX bio.prm lines
   bio.lines = readLines(bio.prm)
-  bio.lines.id = grep('^mum.*10\\.00',bio.lines)
+  bio.lines.id = grep('^mum.*',bio.lines)
   bio.lines.vals = bio.lines[bio.lines.id]
-  group.names =unname(sapply(bio.lines.vals,function(x) strsplit(x,'mum_|\t10.00| 10.00')[[1]][2]))
+  which.invert = grepl('_T15',bio.lines.vals)
+  bio.lines.vals = bio.lines.vals[!which.invert]
+  bio.lines.id = bio.lines.id[!which.invert]
+  
+  group.names =unname(sapply(bio.lines.vals,function(x) strsplit(x,'mum_|\t10.00|\t| ')[[1]][2]))
+  max.age = max(as.numeric(sapply(bio.lines.vals,function(x) strsplit(x,'mum_|\t| ')[[1]][3])))
   
   if(single.group){
     
     ind = which(group.name == group.names)
+    new.mum = new.mum[!is.na(new.mum)]
     mum.string = paste(new.mum,collapse = '\t')
     bio.lines[bio.lines.id[ind]+1] = mum.string
   }else{
     for(i in 1:nrow(new.mum)){
       
       ind = which(group.names == new.mum$group[i])
-      mum.string = paste(new.mum[i,2:11],collapse='\t')
+      
+      mum.string = new.mum[i,2:ncol(new.mum)]
+      which.na = which(is.na(mum.string))
+      if(length(which.na > 0)){mum.string = mum.string[-which.na]}
+      mum.string = paste(mum.string,collapse='\t')
+      
       bio.lines[bio.lines.id[ind]+1] = mum.string
+      
     }
   }
   

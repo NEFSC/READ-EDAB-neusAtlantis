@@ -198,7 +198,7 @@ make_atlantis_diagnostic_figures = function(
     # select species with 10 age classes
     for (iage in 1:max(specificmort$agecl)) {
       mortality <- specificmort %>%
-        dplyr::filter(code %in% atlantistools::get_cohorts_acronyms(param.ls$groups.file,numCohorts = 10)) %>%
+        dplyr::filter(code %in% atlantistools::get_cohorts_acronyms(param.ls$groups.file,numCohorts = max(specificmort$agecl))) %>%
         dplyr::filter(agecl == iage)
       
       pct = atlantistools::agg_perc(mortality, groups = c('time','species'))
@@ -460,8 +460,8 @@ make_atlantis_diagnostic_figures = function(
     C.age = dplyr::left_join(C.age,group.index,by = c('species' = 'LongName'))
     
     #Initial length
-    init.length = read.csv(paste0(param.dir,'/vertebrate_init_length_cm.csv'),header =T, stringsAsFactors = F)
-    init.length = init.length[order(init.length$Long.Name),]
+    init.length = read.csv(paste0(param.dir,'/vertebrate_init_length_cm_Adjusted.csv'),header =T, stringsAsFactors = F)
+    init.length = init.length[order(init.length$species),]
     
     ## RM "scale mum and C to length at age relative to initial conditions"
     length.age = readRDS(paste0(out.dir,'length_age.rds'))
@@ -471,9 +471,13 @@ make_atlantis_diagnostic_figures = function(
     
     #Mean length at age divided by initial length at age
     #Used to scale mum and C
-    match.id = which(!(init.length$Long.Name %in% length.age.mn$species))
+    match.id = which(!(init.length$species %in% length.age.mn$species))
     init.length = init.length[-match.id,]
-    length.v.length.init = length.age.mn[,2:11]/init.length[,4:13]
+    init.length = init.length %>%
+      select(species,agecl,new.length.ref)%>%
+      tidyr::spread(agecl,new.length.ref)
+      
+    length.v.length.init = length.age.mn[,2:ncol(length.age.mn)]/init.length[,2:ncol(init.length)]
     row.names(length.v.length.init) =init.length$Code
     
     #Scale mum and C by difference between length at age relative to initial conditions
@@ -973,7 +977,7 @@ make_atlantis_diagnostic_figures = function(
     if(file.size(param.ls$prod.nc)> 1E9){
       print('Output file size too large to generate consumption plots')
     }else{
-      source(here::here('R','plot_overall_predation.R'))  
+      source(here::here('R','Post_Processing','plot_overall_predation.R'))  
       consumption = get_consumption(prod.file = param.ls$prod.nc,
                                     fgs.file = param.ls$groups.file)
       data.sub = subset_diet(diet.file = param.ls$dietcheck,
@@ -1079,7 +1083,7 @@ make_atlantis_diagnostic_figures = function(
   }
   
   if(plot.spatial.biomass.seasonal){
-    source(here::here('R','plot_biomass_box_summary.R'))
+    source(here::here('R','Post_Processing','plot_biomass_box_summary.R'))
     
     plot_biomass_box_season(bio.box = readRDS(paste0(out.dir,'biomass_box.rds')),
                            bio.box.invert = readRDS(paste0(out.dir,'biomass_box_invert.rds')),

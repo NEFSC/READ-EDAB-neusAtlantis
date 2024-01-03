@@ -7,12 +7,8 @@
 
 source(here::here('R','Post_Processing','make_post_process.R'))
 
-run.name = 'Dev_20231101'
-# atl.dir = here::here('Atlantis_Runs',run.name,'/')
-atl.dir =  paste0('/net/work3/EDAB/atlantis/Shared_Data/Dev_Runs/',run.name,'/')
-run.dir = paste0('/net/work3/EDAB/atlantis/Shared_Data/Dev_Runs/',run.name,'/')
-run.prefix = 'neus_output'
-
+run.name = '6536_new_age_param_mum_rescale_2'
+atl.dir = here::here('Atlantis_Runs',run.name,'')
 # 
 # process.all = T
 # plot.all = T

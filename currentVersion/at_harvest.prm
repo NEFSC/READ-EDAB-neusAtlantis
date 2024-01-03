@@ -3415,22 +3415,23 @@ reportscale_DR       28
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 reportscale_DC       28
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
 CatchTS_agedistribMAK      10
 0 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.255
-CatchTS_agedistribHER      10 #0 0 0 0 0 0.15 0.2 0.3 0.25 0.1
-0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
-CatchTS_agedistribWHK      10
-0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
-CatchTS_agedistribBLF      10
-0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
-CatchTS_agedistribWPF      10
-0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
-CatchTS_agedistribSUF      10
-0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
-CatchTS_agedistribWIF      10
-0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
-CatchTS_agedistribWTF      10
-0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
+CatchTS_agedistribHER 7
+0.01	0.01	0.01	0.13	0.22	0.26	0.36
+CatchTS_agedistribWHK 12
+0	0	0.01	0.01	0.02	0.07	0.09	0.12	0.14	0.16	0.17	0.21
+CatchTS_agedistribBLF 12
+0	0	0.01	0.01	0.02	0.07	0.09	0.12	0.15	0.17	0.18	0.18
+CatchTS_agedistribWPF 7
+0	0.03	0.14	0.14	0.19	0.19	0.31
+CatchTS_agedistribSUF 9
+0.01	0.01	0.01	0.03	0.11	0.15	0.2	0.22	0.26
+CatchTS_agedistribWIF 7
+0.01	0.01	0.01	0.13	0.22	0.28	0.34
+CatchTS_agedistribWTF 12
+0	0	0.02	0.07	0.08	0.08	0.08	0.12	0.13	0.13	0.13	0.16
 CatchTS_agedistribFOU      10
 0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
 CatchTS_agedistribHAL      10
@@ -3447,74 +3448,74 @@ CatchTS_agedistribBIL      10
 0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
 CatchTS_agedistribMPF      10
 0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
-CatchTS_agedistribBUT      10
-0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
+CatchTS_agedistribBUT 3
+0.01	0.28	0.71
 CatchTS_agedistribBPF      10
 0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
-CatchTS_agedistribANC      10
-0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
-CatchTS_agedistribGOO      10
-0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
-CatchTS_agedistribMEN      10
-0 0 0 0 0 0.15 0.2 0.3 0.25 0.1
+CatchTS_agedistribANC 3
+0	0.33	0.67
+CatchTS_agedistribGOO 11
+0	0	0.01	0.01	0.04	0.09	0.12	0.15	0.16	0.18	0.24
+CatchTS_agedistribMEN 12
+0	0	0	0	0	0	0.11	0.16	0.2	0.24	0.18	0.11
 CatchTS_agedistribFDE      10
 0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
-CatchTS_agedistribCOD      10
-0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
-CatchTS_agedistribSHK      10
-0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
-CatchTS_agedistribOHK      10
-0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
-CatchTS_agedistribPOL      10
-0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
+CatchTS_agedistribCOD 12
+0	0	0.01	0.01	0.02	0.07	0.09	0.12	0.14	0.16	0.17	0.21
+CatchTS_agedistribSHK 12
+0	0	0.01	0.01	0.02	0.07	0.09	0.12	0.14	0.16	0.17	0.21
+CatchTS_agedistribOHK 5
+0	0.13	0.19	0.29	0.39
+CatchTS_agedistribPOL 12
+0	0	0.01	0.01	0.02	0.07	0.09	0.12	0.14	0.16	0.17	0.21
 CatchTS_agedistribRHK      10
 0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
 CatchTS_agedistribBSB      10
 0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
 CatchTS_agedistribSCU      10
 0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
-CatchTS_agedistribTYL      10
-0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
+CatchTS_agedistribTYL 8
+0	0.01	0.11	0.13	0.13	0.19	0.19	0.24
 CatchTS_agedistribRED      10
 0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
-CatchTS_agedistribOPT      10
-0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
-CatchTS_agedistribSAL      10
-0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
+CatchTS_agedistribOPT 9
+0	0	0.07	0.11	0.11	0.15	0.18	0.18	0.2
+CatchTS_agedistribSAL 7
+0	0.03	0.14	0.14	0.21	0.21	0.27
 CatchTS_agedistribDRM      10
 0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
 CatchTS_agedistribSTB      10
 0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
-CatchTS_agedistribTAU      10
-0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
-CatchTS_agedistribWOL      10
-0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
+CatchTS_agedistribTAU 11
+0	0	0.03	0.08	0.09	0.09	0.11	0.14	0.14	0.14	0.18
+CatchTS_agedistribWOL 12
+0	0	0.02	0.07	0.08	0.08	0.08	0.11	0.11	0.11	0.11	0.23
 CatchTS_agedistribSDF      10
 0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
 CatchTS_agedistribFDF      10
 0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
 CatchTS_agedistribHAD      10
 0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
-CatchTS_agedistribYTF      10
-0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
-CatchTS_agedistribDOG      10
-0 0 0 0 0.08 0.11 0.16 0.18 0.2 0.27
-CatchTS_agedistribSMO      10
-0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
-CatchTS_agedistribSSH      10
-0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
+CatchTS_agedistribYTF 12
+0	0	0.01	0.01	0.02	0.07	0.09	0.12	0.14	0.16	0.17	0.21
+CatchTS_agedistribDOG 11
+0	0	0	0	0.04	0.09	0.12	0.16	0.16	0.18	0.25
+CatchTS_agedistribSMO 8
+0	0.01	0.11	0.13	0.13	0.19	0.19	0.24
+CatchTS_agedistribSSH 7
+0	0.03	0.14	0.14	0.21	0.21	0.27
 CatchTS_agedistribDSH      10
 0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
 CatchTS_agedistribBLS      10
 0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
-CatchTS_agedistribPOR      10
-0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
+CatchTS_agedistribPOR 12
+0	0	0.02	0.07	0.08	0.08	0.08	0.12	0.13	0.13	0.13	0.16
 CatchTS_agedistribPSH      10
 0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
 CatchTS_agedistribWSK      10
 0 0 0.005 0.01 0.08 0.11 0.16 0.18 0.2 0.255
-CatchTS_agedistribLSK      10
-0.005 0.005 0.01 0.01 0.08 0.11 0.16 0.18 0.2 0.25
+CatchTS_agedistribLSK 12
+0	0	0.01	0.01	0.02	0.07	0.09	0.12	0.14	0.16	0.18	0.2
 CatchTS_agedistribSK       10
 0 0 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2
 CatchTS_agedistribSB       10

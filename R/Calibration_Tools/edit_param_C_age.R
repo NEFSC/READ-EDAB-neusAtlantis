@@ -9,15 +9,29 @@
 get_param_C_age = function(bio.prm, write.output = F, output.dir, out.name ){
   
   bio.lines = readLines(bio.prm)
-  bio.lines.id = grep('^C_.*10',bio.lines)
+  bio.lines.id = grep('^C_.*',bio.lines)
   bio.lines.vals1 = bio.lines[bio.lines.id]
+  which.invert = grepl('_T15',bio.lines.vals1)
+  bio.lines.vals1 = bio.lines.vals1[!which.invert]
+  bio.lines.id = bio.lines.id[!which.invert]
   
-  group.names =unname(sapply(bio.lines.vals1,function(x) strsplit(x,'C_|\t|10.00')[[1]][2]))
-  out.df = data.frame(group = group.names,
-                      C1 = NA, C2 = NA, C3 = NA, C4 = NA, C5 = NA, C6 = NA, C7 = NA, C8 = NA, C9 = NA, C10 = NA)
+  group.names =unname(sapply(bio.lines.vals1,function(x) strsplit(x,'C_|\t10.00|\t| ')[[1]][2]))
+  max.age = max(as.numeric(sapply(bio.lines.vals1,function(x) strsplit(x,'C_|\t| ')[[1]][3])))
+  
+  C.mat = matrix(NA, nrow = length(group.names),ncol = max.age)
+  colnames(C.mat) = paste0('C',1:max.age)
+  out.df = data.frame(C.mat)
+  out.df = cbind(data.frame(group = group.names),out.df)
+  
   for(i in 1:length(bio.lines.id)){
     C.group = bio.lines[bio.lines.id[i] + 1 ]
-    out.df[i,2:11] = strsplit(C.group,split = "\t| ")[[1]]
+    C.split = strsplit(C.group,split = "\t| |  ")[[1]]
+    
+    if(length(C.split)>max.age){print(paste0(group.names[i],' has ',length(C.split)-10,' trailing tabs ',i))}
+    
+    C.out = rep(NA,max.age)
+    C.out[1:length(C.split)] = C.split
+    out.df[i,2:ncol(out.df)] = C.out
   }
   if(write.output){
     write.csv(out.df, file = paste0(output.dir,out.name,'.csv'),row.names = F)
@@ -32,21 +46,33 @@ edit_param_C_age = function(bio.prm, new.C, overwrite = F,new.file.name,single.g
   
   #Get C_XXX bio.prm lines
   bio.lines = readLines(bio.prm)
-  bio.lines.id = grep('^C.*10',bio.lines)
+  bio.lines.id = grep('^C_',bio.lines)
   bio.lines.vals = bio.lines[bio.lines.id]
-  group.names =unname(sapply(bio.lines.vals,function(x) strsplit(x,'C_|\t10| 10.00')[[1]][2]))
+  which.invert = grepl('_T15',bio.lines.vals)
+  bio.lines.vals = bio.lines.vals[!which.invert]
+  bio.lines.id = bio.lines.id[!which.invert]
+  
+  group.names =unname(sapply(bio.lines.vals,function(x) strsplit(x,'C_|\t10.00|\t| ')[[1]][2]))
+  max.age = max(as.numeric(sapply(bio.lines.vals,function(x) strsplit(x,'C_|\t| ')[[1]][3])))
   
   if(single.group){
     
     ind = which(group.name == group.names)
+    new.C = new.C[!is.na(new.C)]
     C.string = paste(new.C,collapse = '\t')
     bio.lines[bio.lines.id[ind]+1] = C.string
   }else{
     for(i in 1:nrow(new.C)){
       
-      ind = which(new.C$group[i] == group.names)
-      C.string = paste(new.C[i,2:11],collapse='\t')
+      ind = which(group.names == new.C$group[i])
+      
+      C.string = new.C[i,2:ncol(new.C)]
+      which.na = which(is.na(C.string))
+      if(length(which.na > 0)){C.string = C.string[-which.na]}
+      C.string = paste(C.string,collapse='\t')
+      
       bio.lines[bio.lines.id[ind]+1] = C.string
+      
     }
   }
   

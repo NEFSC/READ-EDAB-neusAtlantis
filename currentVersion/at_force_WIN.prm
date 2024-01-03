@@ -1,5 +1,13 @@
 # Linux Version (created by Beth Fulton and Adam Davidson)
 # modded by gfay@nmfs June 2014
+
+use_pollutantfiles 0
+Diatom_N_use_resets 0
+PicoPhytopl_N_use_resets 0 
+Diatom_S_use_resets 0
+DinoFlag_N_use_resets 0 
+Lab_Det_N_use_resets 0 
+
 # Hydrodynamic files - new hydro from roms doppio
 # this is created from 2008-2010 daily files
 

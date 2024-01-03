@@ -101,37 +101,37 @@ edit_param_init_scalar = function(run.prm,groups.file,new.init.scalar,overwrite 
 
 # Example -----------------------------------------------------------------
 # 
-run.prm = here::here('currentVersion','at_run.prm')
-init.file = here::here('currentVersion','neus_init.nc')
-init.file.nofill = here::here('currentVersion','neus_init_nofill.nc')
-groups.file = here::here('currentVersion','neus_groups.csv')
-bgm.file = here::here('currentVersion','neus_tmerc_RM2.bgm')
-# bio.age.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Master_10202020/neus_outputAgeBiomIndx.txt'
-bio.age.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HerZoo_24/neus_outputAgeBiomIndx.txt'
-
-get_param_init_scalar(run.prm,groups.file,write.output = T,
-                      output.dir = here::here('Setup_Files',''))
-
-init.scalar.file =here::here('Setup_Files','init_scalar_0330.csv')
-output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/Initial_Scalars/'
-# missing.cohorts = read.csv(paste0(output.dir,'missing_survdat_cohorts.csv'),stringsAsFactors = F)
-
-
-get_init_biomass(bio.age.file,groups.file,write.output = T,
-                 output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/')
-edit_param_init_scalar(run.prm,groups.file,
-                       new.init.scalar = read.csv(init.scalar.file,stringsAsFactors = F),
-                       overwrite =T,
-                       new.file.name = here::here('currentVersion','at_run_test.prm'))
-calculate_init_scalar(run.prm = run.prm,
-                      groups.file = groups.file,
-                      bio.age.file = bio.age.file,
-                      init.file = init.file,
-                      missing.cohorts = missing.cohorts,
-                      exclude.invert = T,
-                      write.output = T,
-                      output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/')
-
-edit_param_init_scalar(run.prm,groups.file,
-                       new.init.scalar = read.csv(init.scalar.file,stringsAsFactors = F),
-                       overwrite = T)
+# run.prm = here::here('currentVersion','at_run.prm')
+# init.file = here::here('currentVersion','neus_init.nc')
+# init.file.nofill = here::here('currentVersion','neus_init_nofill.nc')
+# groups.file = here::here('currentVersion','neus_groups.csv')
+# bgm.file = here::here('currentVersion','neus_tmerc_RM2.bgm')
+# # bio.age.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/Master_10202020/neus_outputAgeBiomIndx.txt'
+# bio.age.file = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/HerZoo_24/neus_outputAgeBiomIndx.txt'
+# 
+# get_param_init_scalar(run.prm,groups.file,write.output = T,
+#                       output.dir = here::here('Setup_Files',''))
+# 
+# init.scalar.file =here::here('Setup_Files','init_scalar_0330.csv')
+# output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/Initial_Scalars/'
+# # missing.cohorts = read.csv(paste0(output.dir,'missing_survdat_cohorts.csv'),stringsAsFactors = F)
+# 
+# 
+# get_init_biomass(bio.age.file,groups.file,write.output = T,
+#                  output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/')
+# edit_param_init_scalar(run.prm,groups.file,
+#                        new.init.scalar = read.csv(init.scalar.file,stringsAsFactors = F),
+#                        overwrite =T,
+#                        new.file.name = here::here('currentVersion','at_run_test.prm'))
+# calculate_init_scalar(run.prm = run.prm,
+#                       groups.file = groups.file,
+#                       bio.age.file = bio.age.file,
+#                       init.file = init.file,
+#                       missing.cohorts = missing.cohorts,
+#                       exclude.invert = T,
+#                       write.output = T,
+#                       output.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/')
+# 
+# edit_param_init_scalar(run.prm,groups.file,
+#                        new.init.scalar = read.csv(init.scalar.file,stringsAsFactors = F),
+#                        overwrite = T)
