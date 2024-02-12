@@ -15,25 +15,19 @@ get_param_invert_c_mum = function(bio.file,groups){
   return(data.out)
 }
 
-edit_param_invert_c_mum = function(bio.file,group,C = NA, mum = NA, scalar = 10,new.file = F, new.name = NA){
+edit_param_invert_c_mum = function(bio.file,group,type, value = NA, new.file = F, new.name = NA){
   
   bio.lines = readLines(bio.file)
-  mum.line = grep(paste0('mum_',group),bio.lines)
-  C.line = grep(paste0('C_',group),bio.lines)
   
-  if(!is.na(C) & !is.na(mum)){
-    new.mum = paste0('mum_',group,'_T15 ',mum)
-    new.C = paste0('C_',group,'_T15 ',C)
-  }else if(!is.na(C) & is.na(mum)){
-    new.C = paste0('C_',group,'_T15 ',C)
-    new.mum = paste0('mum_',group,'_T15 ',C*scalar)
-  }else if(is.na(C) & !is.na(mum)){
-    new.C = paste0('C_',group,'_T15 ',mum/scalar)
-    new.mum = paste0('mum_',group,'_T15 ',mum)
+  if(type == 'mum'){
+    val.line = grep(paste0('mum_',group),bio.lines) 
+    new.val = paste0('mum_',group,'_T15 ',value)
+  }else{
+    val.line = grep(paste0('C_',group),bio.lines)  
+    new.val = paste0('C_',group,'_T15 ',value)
   }
-  
-  bio.lines[mum.line] = new.mum
-  bio.lines[C.line] = new.C
+
+  bio.lines[val.line] = new.val
   
   if(new.file == F){
     writeLines(bio.lines, con = bio.file)
