@@ -9,8 +9,9 @@
 library(dplyr)
 
 #Read in setup file
-experiment.id = 'cloud_new_age_8'
-setup.df = read.csv(here::here('Setup_Files','cloud_new_age_8.csv'),as.is=T)
+experiment.id = 'cloud_test'
+# setup.df = read.csv(here::here('Setup_Files','cloud_test.csv'),as.is=T)
+setup.df = read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'),as.is=T)
 proj.dir = '/contrib/Joseph.Caracappa/neus-atlantis/'
 
 #Define base files
@@ -86,67 +87,62 @@ for(i in 1:length(run.id)){
     
     #Do mQ or mL tasks
     if(setup.run$Type[j] %in% c('mQa','mQj','mLa','mLj','mL','mQ')){
-      
-      #Get Original values
-      if(setup.run$Type[j] %in% c('mLa','mLj','mL')){
-        if(is.invert){
+
+      if(is.invert){
+        
+        if(setup.run$Type[j] %in% c('mLa','mLj','mL')){
           mort.group.old = mort.invert.orig$mL[which(mort.invert.orig$group == setup.run$Code[j])]
         }else{
-          mort.group.old = mort.age.orig %>%
-            filter(group == setup.run$Code[j])%>%
-            select(mL.j,mL.a)%>%
-            as.numeric()
+          mort.group.old = mort.invert.orig$mQ[which(mort.invert.orig$group == setup.run$Code[j])] 
         }
-      }else{
-        if(is.invert){
-          mort.group.old = mort.invert.orig$mQ[which(mort.invert.orig$group == setup.run$Code[j])]
-        }else{
-          mort.group.old = mort.age.orig %>%
-            filter(group == setup.run$Code[j])%>%
-            select(mQ.j,mQ.a)%>%
-            as.numeric()
-        } 
-      }
-      
-      #Handle unit cases
-      mort.group.new = as.numeric(mort.group.old)
-      if(setup.run$Unit[j] == 'value'){
         
-        if(setup.run$Type[j] %in% c('mLj','mQj')){
-          mort.group.new[1] = setup.run$Value[j]
-        }else if(setup.run$Type[j] %in% c('mLa','mQa')){
-          mort.group.new[2] = setup.run$Value[j]
-        }else{
+        if(setup.run$Type[j] == 'value'){
           mort.group.new = setup.run$Value[j]
-        }
-        
-      }else{
-        
-        if(setup.run$Type[j] %in% c('mLj','mQj')){
-          mort.group.new[1] = mort.group.new[1]*setup.run$Value[j]
-        }else if(setup.run$Type[j] %in% c('mLa','mQa')){
-          mort.group.new[2] = mort.group.new[2]*setup.run$Value[j]
         }else{
-          mort.group.new = mort.group.new *setup.run$Value[j]
+          mort.group.new = as.numeric(mort.group.old) * setup.run$Value[j]
         }
-        
-      }
-      
-      if(is.invert){
         edit_param_invert_mort(bio.file = bio.file.new,
                                group = setup.run$Code[j],
                                type = setup.run$Type[j],
                                value = mort.group.new,
                                new.file = F)
+      
       }else{
-        mort.type = ifelse(grepl('mL',setup.run$Type[j]),'mL','mQ')
+        
+        group.age = substr(setup.run$Type[j],nchar(setup.run$Type[j]),nchar(setup.run$Type[j]))
+        group.type = substr(setup.run$Type[j],1,2)
+        
+        if(group.type == 'mL'){
+          mort.group.old = mort.age.orig %>%
+                  filter(group == setup.run$Code[j])%>%
+                  select(mL.j,mL.a)%>%
+                  as.numeric()
+        }else{
+              mort.group.old = mort.age.orig %>%
+                filter(group == setup.run$Code[j])%>%
+                select(mQ.j,mQ.a)%>%
+                as.numeric()
+        }
+        
+        if(group.age == 'j'){
+          mort.group.old = mort.group.old[1]
+        }else{
+          mort.group.old = mort.group.old[2]
+        }
+        
+        if(setup.run$Unit[j] == 'value'){
+          group.value =  setup.run$Value[j]
+        }else{
+          group.value = mort.group.old * setup.run$Value[j]
+        }
+        
         edit_param_mort_age(bio.prm = bio.file.new,
-                            new.mort = mort.group.new,
-                            type = mort.type,
-                            single.group = T,
                             group.name = setup.run$Code[j],
+                            age = group.age,
+                            type = group.type,
+                            value = group.value,
                             overwrite = T
-                            )
+        )
       }
     }
   
@@ -162,16 +158,23 @@ for(i in 1:length(run.id)){
         
         if(setup.run$Type[j] == 'mum'){
           new.mum.val = ifelse(setup.run$Unit[j] == 'scalar', old.mum.val * setup.run$Value[j], setup.run$Value[j])
-          new.c.val = old.c.val
+          
+          edit_param_invert_c_mum(bio.file = bio.file.new,
+                                  group =setup.run$Code[j],
+                                  type = 'mum',
+                                  value = new.mum.val,
+                                  new.file = F)
+          
         }else{
           new.c.val = ifelse(setup.run$Unit[j] == 'scalar', old.c.val * setup.run$Value[j], setup.run$Value[j])
-          new.mum.val = old.mum.val
+          
+          edit_param_invert_c_mum(bio.file = bio.file.new,
+                                  group =setup.run$Code[j],
+                                  type = 'C',
+                                  value = new.c.val,
+                                  new.file = F)
+          
         }
-        edit_param_invert_c_mum(bio.file = bio.file.new,
-                                group =setup.run$Code[j],
-                                C = new.c.val,
-                                mum = new.mum.val,
-                                new.file = F)
       #age mum/c                       
       }else{
         
@@ -218,9 +221,9 @@ for(i in 1:length(run.id)){
       
       if(setup.run$Type[j] == 'BHalpha'){
         new.alpha.val = ifelse(setup.run$Unit[j]=='scalar',old.alpha.val * setup.run$Value[j], setup.run$Value[j])
-        new.beta.val = old.beta.val
+        new.beta.val = NA
       }else{
-        new.alpha.val = old.alpha.val
+        new.alpha.val = NA
         new.beta.val = ifelse(setup.run$Unit[j]=='scalar',old.beta.val * setup.run$Value[j], setup.run$Value[j])
       }
       edit_param_BH(bio.prm = bio.file.new,
