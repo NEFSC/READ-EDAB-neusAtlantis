@@ -10,9 +10,8 @@ library(dplyr)
 
 #Read in setup file
 experiment.id = 'cloud_jcc_6681_1'
-# setup.df = read.csv(here::here('Setup_Files','cloud_test.csv'),as.is=T)
-setup.df = read.csv(here::here('diagnostics','cloud_jcc_6681_1.csv'),as.is=T)
-proj.dir = '/contrib/Joseph.Caracappa/neus-atlantis/'
+setup.df = read.csv(here::here('Setup_Files','cloud_jcc_6681_1.csv'),as.is=T)
+proj.dir = '/contrib/Joseph.Caracappa/calibration/'
 
 #Define base files
 bio.file.orig = here::here('currentVersion','at_biology.prm')
