@@ -3,18 +3,21 @@
 library(dplyr)
 library(ggplot2)
 #Specify setup.csv used to generate calibration run set
-experiment.id = 'cloud_new_age_8'
-setup.df = read.csv(here::here('Setup_Files','cloud_new_age_8_setup.csv'),as.is=T)
+experiment.id = 'cloud_jcc_6681_1'
+setup.df = read.csv(here::here('Setup_Files','cloud_jcc_6681_1.csv'),as.is=T)
 setup.df$file.ID = 1:nrow(setup.df)
-experiment.dir = here::here('Atlantis_Runs',experiment.id,'')
-figure.dir = here::here('Figures',experiment.id,'')
+# experiment.dir = here::here('Atlantis_Runs',experiment.id,'')
+experiment.dir = paste0('/contrib/Joseph.Caracappa/neus-atlantis/Atlantis_Runs/',experiment.id,'/')
+# figure.dir = here::here('Figures',experiment.id,'')
+figure.dir = paste0('/contrib/Joseph.Caracappa/neus-atlantis/Figures/',experiment.id,'/')
 
 if(!dir.exists(figure.dir)){dir.create(figure.dir)}
 
 
 
 #Read in groups file
-fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T)%>%
+# fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T)%>%
+fgs = read.csv('/contrib/Joseph.Caracappa/neus-atlantis/currentVersion/neus_groups.csv',as.is = T)%>%
   filter(IsTurnedOn == T)
 
 plot.colors = c(RColorBrewer::brewer.pal(12,'Paired'),
@@ -22,7 +25,7 @@ plot.colors = c(RColorBrewer::brewer.pal(12,'Paired'),
                 RColorBrewer::brewer.pal(12,'Set3'))
 
 run.groups = sort(unique(setup.df$Run.Group))
-i=1
+i=6
 
 for(i in 1:length(run.groups)){
   
