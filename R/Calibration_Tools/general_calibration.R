@@ -9,8 +9,9 @@
 library(dplyr)
 
 #Read in setup file
-experiment.id = 'cloud_jcc_6681_1'
-setup.df = read.csv(here::here('Setup_Files','cloud_jcc_6681_1.csv'),as.is=T)
+experiment.id = 'cloud_test'
+# setup.df = read.csv(here::here('Setup_Files','cloud_jcc_6681_1.csv'),as.is=T)
+setup.df = read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'))
 proj.dir = '/contrib/Joseph.Caracappa/calibration/'
 
 #Define base files
@@ -58,6 +59,14 @@ if('diet' %in% setup.df$Type){
 }
 if(any(c('E','EPlant','EDR','EDL') %in% setup.df$Type)){
   source(here::here('R','Calibration_Tools','edit_param_assim_eff.R'))
+}
+if(any('FSP' %in% setup.df$Type)){
+  source(here::here('R','Calibration_Tools','edit_param_FSP.R'))
+}
+
+if(any('FSPB' %in% setup.df$Type)){
+  source(here::here('R','Calibration_Tools','edit_param_FSPB.R'))
+  fspb.orig = get_param_FSPB(bio.prm = bio.file.orig)
 }
 
 possible.types = unique(read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'),as.is=T)$Type)
@@ -268,7 +277,7 @@ for(i in 1:length(run.id)){
     
     #Do Assimilation Efficiency
     if(setup.run$Type[j] %in% c('E','EPlant','EDR','EDL')){
-      
+  
       edit_param_assim_eff(bio.file = bio.file.new,
                            spp.names = setup.run$Code[j],
                            type = setup.run$Type[j],
@@ -276,6 +285,38 @@ for(i in 1:length(run.id)){
                            value = setup.run$Value[j],
                            overwrite = T)
     }
+    
+    #Do FSP
+    if(setup.run$Type[j] == 'FSP'){
+      
+      edit_param_FSP(bio.prm = bio.file.new,
+                     group.name = setup.run$Code[j],
+                     unit = setup.run$Unit[j],
+                     value = setup.run$Value[j],
+                     overwrite = T
+                     )
+      
+    }
+    
+    if(setup.run$Type[j] == 'FSPB'){
+      
+      fspb.old = as.numeric(fspb.orig[which(fspb.orig$group == setup.run$Code[j]),][-1])
+      fspb.old = fspb.old[!is.na(fspb.old)]
+      
+      if(setup.run$Unit[j] == 'scalar'){
+        
+        fspb.new = fspb.old * setup.run$Value[j]
+      }else{
+        stop("Only type 'scalar' works for FSPB changes")
+      }
+      
+      edit_param_FSPB(bio.prm = bio.file.new,
+                      group.name = setup.run$Code[j],
+                      FSPB = fspb.new,
+                      overwrite =T
+                      )
+    }
+    
   }
   
   #Write shell script

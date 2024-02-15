@@ -15464,8 +15464,8 @@ FSP_POR 0.27
 FSP_PSH 0.27   
 FSP_WSK 0.27   
 FSP_LSK 0.24   
-FSP_SK  0.24   
-FSP_SB  0.2    
+FSP_SK 0.24   
+FSP_SB 0.2    
 FSP_PIN 0.16   
 FSP_REP 0.2   
 FSP_RWH 0.16   
@@ -15475,11 +15475,11 @@ FSP_TWH 0.16
 FSP_INV 0.276 
 
 ### added the following from SETAS 20180228 RM
-FSP_ISQ          1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
-FSP_LSQ          1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
-FSP_NSH          1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
-FSP_OSH          1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
-#FSP_CEP          0.5       Fraction of biomass contributing to spawn for cephalopods          1.0  
+FSP_ISQ 1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
+FSP_LSQ 1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
+FSP_NSH 1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
+FSP_OSH 1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
+#FSP_CEP 0.5       Fraction of biomass contributing to spawn for cephalopods          1.0  
 ## Proportion of the biomass of age structured biomass pool lost to spawning (i.e. what proportion of the spawning adult biomass is lost via gamete release)
 ## Simplest case is to set to 0.0, this is effectively what it was in the original Atlantis code
 prop_spawn_lost_ISQ  0.0
