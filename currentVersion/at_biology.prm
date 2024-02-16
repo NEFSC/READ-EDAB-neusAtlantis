@@ -11998,7 +11998,7 @@ mum_MAK	10.00
 1.875	8.1	54	48.75	43.125	37.5	27	20.25	13.5	4.05
 
 mum_HER 7
-0.1029	2.52	4.2	3.36	2.058	1.302	0.315
+0.01029	0.252	0.42	0.336	0.2058	0.1302	0.0315
 
 mum_WHK 12
 0.22	0.52	1	6.6	12	10	9	6.6	5	3.8	2.5	0.95
@@ -13998,7 +13998,7 @@ ANC_mQ	2
 BPF_mQ	2
 0	0
 GOO_mQ	2
-0	0
+0	1E-9
 MEN_mQ	2
 0	0
 FDE_mQ	2
@@ -15464,8 +15464,8 @@ FSP_POR 0.27
 FSP_PSH 0.27   
 FSP_WSK 0.27   
 FSP_LSK 0.24   
-FSP_SK  0.24   
-FSP_SB  0.2    
+FSP_SK 0.24   
+FSP_SB 0.2    
 FSP_PIN 0.16   
 FSP_REP 0.2   
 FSP_RWH 0.16   
@@ -15475,11 +15475,11 @@ FSP_TWH 0.16
 FSP_INV 0.276 
 
 ### added the following from SETAS 20180228 RM
-FSP_ISQ          1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
-FSP_LSQ          1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
-FSP_NSH          1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
-FSP_OSH          1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
-#FSP_CEP          0.5       Fraction of biomass contributing to spawn for cephalopods          1.0  
+FSP_ISQ 1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
+FSP_LSQ 1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
+FSP_NSH 1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
+FSP_OSH 1.0       Fraction of biomass contributing to spawn for cephalopods          1.0
+#FSP_CEP 0.5       Fraction of biomass contributing to spawn for cephalopods          1.0  
 ## Proportion of the biomass of age structured biomass pool lost to spawning (i.e. what proportion of the spawning adult biomass is lost via gamete release)
 ## Simplest case is to set to 0.0, this is effectively what it was in the original Atlantis code
 prop_spawn_lost_ISQ  0.0
@@ -16229,7 +16229,7 @@ KDENR_SB
 1E6
 
 KDENR_PIN
-3.5
+1
 
 KDENR_REP
 0.01
@@ -16476,8 +16476,8 @@ Rbeta_OSH 2e+12
 
 # Beverton-Holt recruitment
 # Alpha in Beverton-Holt
-BHalpha_MAK 2.5E+14
-BHalpha_HER 6.075e+12
+BHalpha_MAK 5E12
+BHalpha_HER 1.5e+12
 BHalpha_WHK 1E9
 BHalpha_BLF 22.48E7
 BHalpha_WPF 1.25E9
@@ -16541,7 +16541,7 @@ BHalpha_NSH 9e+11
 BHalpha_OSH 9e+11      
 
 #Beta in Beverton-Holt 
-BHbeta_MAK 6E+8
+BHbeta_MAK 6E13
 BHbeta_HER 5e+13
 BHbeta_WHK 3.25+14
 BHbeta_BLF 5.25E+09

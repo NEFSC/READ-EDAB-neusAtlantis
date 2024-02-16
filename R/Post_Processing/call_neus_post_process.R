@@ -7,7 +7,7 @@
 
 source(here::here('R','Post_Processing','make_post_process.R'))
 
-run.name = '6536_new_age_param_mum_rescale_2'
+run.name = 'v6681_Calib_1b'
 atl.dir = here::here('Atlantis_Runs',run.name,'')
 # 
 # process.all = T
@@ -42,29 +42,29 @@ make_post_process(
   run.name = run.name,
   atl.dir = atl.dir,
   
-  process.all = T,
-  plot.all = T,
+  process.all = F,
+  plot.all = F,
   
   large.file = F,
   
-  plot.benthic =T,
+  plot.benthic =F,
   plot.overall.biomass =T,
   plot.biomass.timeseries = T,
   plot.length.age = T,
-  plot.biomass.box=T,
-  plot.c.mum=T,
-  plot.sn.rn=T,
-  plot.recruits=T,
+  plot.biomass.box=F,
+  plot.c.mum=F,
+  plot.sn.rn=F,
+  plot.recruits=F,
   plot.numbers.timeseries=T,
-  plot.physics=T,
-  plot.growth.cons=T,
-  plot.cohort=T,
+  plot.physics=F,
+  plot.growth.cons=F,
+  plot.cohort=F,
   plot.diet=T,
   plot.consumption= T,
-  plot.spatial.biomass=T,
-  plot.spatial.biomass.seasonal = T,
-  plot.spatial.overlap = T,
-  plot.LTL=T, 
+  plot.spatial.biomass=F,
+  plot.spatial.biomass.seasonal = F,
+  plot.spatial.overlap = F,
+  plot.LTL=F, 
   plot.catch =T,
   plot.mortality=T,
   plot.max.weight = T,

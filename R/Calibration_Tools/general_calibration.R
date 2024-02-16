@@ -10,9 +10,9 @@ library(dplyr)
 
 #Read in setup file
 experiment.id = 'cloud_test'
-# setup.df = read.csv(here::here('Setup_Files','cloud_test.csv'),as.is=T)
-setup.df = read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'),as.is=T)
-proj.dir = '/contrib/Joseph.Caracappa/neus-atlantis/'
+# setup.df = read.csv(here::here('Setup_Files','cloud_jcc_6681_1.csv'),as.is=T)
+setup.df = read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'))
+proj.dir = '/contrib/Joseph.Caracappa/calibration/'
 
 #Define base files
 bio.file.orig = here::here('currentVersion','at_biology.prm')
@@ -59,6 +59,14 @@ if('diet' %in% setup.df$Type){
 }
 if(any(c('E','EPlant','EDR','EDL') %in% setup.df$Type)){
   source(here::here('R','Calibration_Tools','edit_param_assim_eff.R'))
+}
+if(any('FSP' %in% setup.df$Type)){
+  source(here::here('R','Calibration_Tools','edit_param_FSP.R'))
+}
+
+if(any('FSPB' %in% setup.df$Type)){
+  source(here::here('R','Calibration_Tools','edit_param_FSPB.R'))
+  fspb.orig = get_param_FSPB(bio.prm = bio.file.orig)
 }
 
 possible.types = unique(read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'),as.is=T)$Type)
@@ -269,7 +277,7 @@ for(i in 1:length(run.id)){
     
     #Do Assimilation Efficiency
     if(setup.run$Type[j] %in% c('E','EPlant','EDR','EDL')){
-      
+  
       edit_param_assim_eff(bio.file = bio.file.new,
                            spp.names = setup.run$Code[j],
                            type = setup.run$Type[j],
@@ -277,6 +285,38 @@ for(i in 1:length(run.id)){
                            value = setup.run$Value[j],
                            overwrite = T)
     }
+    
+    #Do FSP
+    if(setup.run$Type[j] == 'FSP'){
+      
+      edit_param_FSP(bio.prm = bio.file.new,
+                     group.name = setup.run$Code[j],
+                     unit = setup.run$Unit[j],
+                     value = setup.run$Value[j],
+                     overwrite = T
+                     )
+      
+    }
+    
+    if(setup.run$Type[j] == 'FSPB'){
+      
+      fspb.old = as.numeric(fspb.orig[which(fspb.orig$group == setup.run$Code[j]),][-1])
+      fspb.old = fspb.old[!is.na(fspb.old)]
+      
+      if(setup.run$Unit[j] == 'scalar'){
+        
+        fspb.new = fspb.old * setup.run$Value[j]
+      }else{
+        stop("Only type 'scalar' works for FSPB changes")
+      }
+      
+      edit_param_FSPB(bio.prm = bio.file.new,
+                      group.name = setup.run$Code[j],
+                      FSPB = fspb.new,
+                      overwrite =T
+                      )
+    }
+    
   }
   
   #Write shell script
@@ -287,7 +327,7 @@ for(i in 1:length(run.id)){
   #Edit shell script
   run.sh.new.lines = readLines(run.sh.new)
   run.command.line = grep('atlantisMerged',run.sh.new.lines)
-  run.command.new =  paste0('atlantisMerged -i neus_init.nc 0 -o neus_output.nc -r at_run.prm -f at_force_LINUX.prm -p at_physics.prm -b ',bio.file.short,' -h at_harvest.prm -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -t . -d output')
+  run.command.new =  paste0('atlantisMerged -i neus_init.nc 0 -o neus_output.nc -r at_run.prm -f at_force_LINUX.prm -p at_physics.prm -b ',bio.file.short,' -h at_harvest.prm -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -m neus_migrations.csv -t . -d output')
   run.sh.new.lines[run.command.line] = run.command.new
   
   writeLines(run.sh.new.lines,con = run.sh.new)
@@ -317,7 +357,7 @@ sbatch.lines[grep('--array',sbatch.lines)] = new.array.line
 new.mkdir = paste0("sudo mkdir -p ",proj.dir,"Atlantis_Runs/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID")
 sbatch.lines[grep('mkdir',sbatch.lines)] = new.mkdir
 
-new.singularity = paste0( "sudo singularity exec --bind ",proj.dir,"currentVersion:/app/model,",proj.dir,"Atlantis_Runs/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID:/app/model/output /contrib/atlantisCode/atlantis6536.sif /app/model/RunAtlantis_$SLURM_ARRAY_TASK_ID.sh")
+new.singularity = paste0( "sudo singularity exec --bind ",proj.dir,"currentVersion:/app/model,",proj.dir,"Atlantis_Runs/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID:/app/model/output /contrib/atlantisCode/atlantis6681.sif /app/model/RunAtlantis_$SLURM_ARRAY_TASK_ID.sh")
 sbatch.lines[grep('singularity',sbatch.lines)] = new.singularity
 
 writeLines(sbatch.lines,new.sbatch.array)

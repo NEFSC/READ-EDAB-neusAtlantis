@@ -37,3 +37,6 @@ Run.ID,Run.Group,Code,Type,Unit,Value
 26,Test1,PIN,mQj,scalar,2
 27,Test1,PIN,mQa,scalar,2
 28,Test1,PIN,mLa,scalar,2
+29,Test1 ,SMO,FSPB,scalar,0.5
+30,Test1,SMO,FSP,scalar,0.5
+31,Test2,SMO,FSP,value,0.5
