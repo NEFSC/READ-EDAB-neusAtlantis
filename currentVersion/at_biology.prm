@@ -11998,7 +11998,7 @@ mum_MAK	10.00
 1.875	8.1	54	48.75	43.125	37.5	27	20.25	13.5	4.05
 
 mum_HER 7
-0.1029	2.52	4.2	3.36	2.058	1.302	0.315
+0.01029	0.252	0.42	0.336	0.2058	0.1302	0.0315
 
 mum_WHK 12
 0.22	0.52	1	6.6	12	10	9	6.6	5	3.8	2.5	0.95
@@ -12010,7 +12010,7 @@ mum_WPF 7
 0.02	0.53	1.4	2	2.5	2.7	2.9
 										
 mum_SUF 9
-2.3	15	65	55	45	31	21	13	3.6
+0.115	0.75	3.25	2.75	2.25	1.55	1.05	0.65	0.18
 
 mum_WIF 7
 0.084	3.2	18.4	24	38	50	60
@@ -13984,11 +13984,11 @@ FOU_mQ 2
 FLA_mQ 2
 6.50E-10 4.00E-09
 BFT_mQ 2
-0	3E-7
+0	3E-9
 TUN_mQ	2
-0	1.5E-9
+0	1.5E-10
 BIL_mQ	2
-0	9E-9
+0	9E-11
 MPF_mQ	2
 0	0
 BUT_mQ	2
@@ -13998,7 +13998,7 @@ ANC_mQ	2
 BPF_mQ	2
 0	0
 GOO_mQ	2
-0	0
+1E-10	1E-9
 MEN_mQ	2
 0	0
 FDE_mQ	2
@@ -14064,7 +14064,7 @@ SK_mQ 2
 SB_mQ 2
 0	9E-03
 PIN_mQ 2
-2E-10	 5E-11
+2E-8	 5E-11
 REP_mQ	2
 1E-4	1E-4
 RWH_mQ	2
@@ -15612,7 +15612,7 @@ FSPB_YTF 12
 0 0.5 1 1 1 1 1 1 1 1 1 1
  
 FSPB_DOG 11
-0 0 0.5 1 1 1 1 1 1 1 1
+0 0 0.05 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1
  
 FSPB_SMO 8
 0 1 1 1 1 1 1 1
@@ -16229,7 +16229,7 @@ KDENR_SB
 1E6
 
 KDENR_PIN
-3.5
+1
 
 KDENR_REP
 0.01
@@ -16476,8 +16476,8 @@ Rbeta_OSH 2e+12
 
 # Beverton-Holt recruitment
 # Alpha in Beverton-Holt
-BHalpha_MAK 2.5E+14
-BHalpha_HER 6.075e+12
+BHalpha_MAK 5E12
+BHalpha_HER 1.875e+12
 BHalpha_WHK 1E9
 BHalpha_BLF 22.48E7
 BHalpha_WPF 1.25E9
@@ -16498,7 +16498,7 @@ BHalpha_BPF 2800000000
 BHalpha_GOO 8106263000
 BHalpha_MEN 8.64E11
 BHalpha_FDE 400000000
-BHalpha_COD 1.5E+10
+BHalpha_COD 2.25E+10
 BHalpha_SHK 8e+09    
 BHalpha_OHK 1.35E8
 BHalpha_POL 1.25e+08  
@@ -16541,7 +16541,7 @@ BHalpha_NSH 9e+11
 BHalpha_OSH 9e+11      
 
 #Beta in Beverton-Holt 
-BHbeta_MAK 6E+8
+BHbeta_MAK 6E13
 BHbeta_HER 5e+13
 BHbeta_WHK 3.25+14
 BHbeta_BLF 5.25E+09
