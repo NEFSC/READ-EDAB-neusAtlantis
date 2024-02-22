@@ -7,7 +7,7 @@
 
 source(here::here('R','Post_Processing','make_post_process.R'))
 
-run.name = 'v6681_Calib_1b'
+run.name = 'v6681_Calib_2'
 atl.dir = here::here('Atlantis_Runs',run.name,'')
 # 
 # process.all = T
