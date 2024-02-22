@@ -9,11 +9,15 @@ edit_param_BH = function(bio.prm,group.name,alpha,beta,overwrite = F, new.file.n
     alpha.line = grep(paste0('BHalpha_',group.name[i]),bio.lines)
     beta.line = grep(paste0('BHbeta_',group.name[i]),bio.lines)
     
-    new.alpha = paste0('BHalpha_',group.name[i],' ',alpha[i])
-    new.beta = paste0('BHbeta_',group.name[i],' ',beta[i])
+    if(!is.na(alpha)){
+      new.alpha = paste0('BHalpha_',group.name[i],' ',alpha[i])
+      bio.lines[alpha.line] = new.alpha
+    }
     
-    bio.lines[alpha.line] = new.alpha
-    bio.lines[beta.line] = new.beta
+    if(!is.na(beta)){
+      new.beta = paste0('BHbeta_',group.name[i],' ',beta[i])  
+      bio.lines[beta.line] = new.beta
+    }
   }
   
   if(overwrite){
