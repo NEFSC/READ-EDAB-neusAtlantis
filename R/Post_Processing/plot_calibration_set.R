@@ -3,13 +3,13 @@
 library(dplyr)
 library(ggplot2)
 #Specify setup.csv used to generate calibration run set
-experiment.id = 'cloud_jcc_6681_1'
-setup.df = read.csv(here::here('Setup_Files','cloud_jcc_6681_1.csv'),as.is=T)
+experiment.id = 'cloud_v6681_calib_3'
+setup.df = read.csv(here::here('Setup_Files','cloud_v6681_calib_3.csv'),as.is=T)
 setup.df$file.ID = 1:nrow(setup.df)
 # experiment.dir = here::here('Atlantis_Runs',experiment.id,'')
-experiment.dir = paste0('/contrib/Joseph.Caracappa/neus-atlantis/Atlantis_Runs/',experiment.id,'/')
+experiment.dir = paste0('/contrib/Joseph.Caracappa/calibration/Atlantis_Runs/',experiment.id,'/')
 # figure.dir = here::here('Figures',experiment.id,'')
-figure.dir = paste0('/contrib/Joseph.Caracappa/neus-atlantis/Figures/',experiment.id,'/')
+figure.dir = paste0('/contrib/Joseph.Caracappa/calibration/Figures/',experiment.id,'/')
 
 if(!dir.exists(figure.dir)){dir.create(figure.dir)}
 
