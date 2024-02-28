@@ -9,15 +9,16 @@ v6681.1b = here::here('Atlantis_Runs','v6681_Calib_1b','')
 v6681.2 = here::here('Atlantis_Runs','v6681_Calib_2','')
 v6681.2b = here::here('Atlantis_Runs','v6681_Calib_2b','')
 v6681.3 = here::here('Atlantis_Runs','v6681_Calib_3','')
+v6681.3c = here::here('Atlantis_Runs','v6681_Calib_3c','')
 
 figure.dir = here::here('Figures','Run_Comparisons','')
 
 plot_run_comparisons(
-  model.dirs = c(dev.6536,v6681.2b,v6681.3),
-  model.names = c('Dev_6536','v6681_Calib_2b','v6681_Calib_3'),
+  model.dirs = c(dev.6536,v6681.2b,v6681.3,v6681.3c),
+  model.names = c('Dev_6536','v6681_Calib_2b','v6681_Calib_3','v6681_Calib_3c'),
   plot.rel = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'v6681_Calib_3'),
+  plot.out = paste(figure.dir,'v6681_Calib_3c'),
   table.out = F,
   groups = NULL,
   remove.init = F
