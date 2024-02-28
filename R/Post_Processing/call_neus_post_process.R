@@ -7,7 +7,7 @@
 
 source(here::here('R','Post_Processing','make_post_process.R'))
 
-run.name = 'v6681_Calib_1b'
+run.name = 'v6681_Calib_3c'
 atl.dir = here::here('Atlantis_Runs',run.name,'')
 # 
 # process.all = T
@@ -59,8 +59,8 @@ make_post_process(
   plot.physics=F,
   plot.growth.cons=F,
   plot.cohort=F,
-  plot.diet=T,
-  plot.consumption= T,
+  plot.diet=F,
+  plot.consumption= F,
   plot.spatial.biomass=F,
   plot.spatial.biomass.seasonal = F,
   plot.spatial.overlap = F,
