@@ -111,7 +111,7 @@
 # Those determining set-up and recording
 ecotest          0         Messages: 0=no, 1=part, 2=more, 3=all, 4=fluxs, 5= do 1 iter only  2
 availflag    1    Switch to filter flows based on active groups, report active only(1) or all groups(0)
-flagrandom       0         Flag indicating whether add random wobble in aging/spawning dates (0=no, 1=yes)
+flagrandom       0         Flag indicating whether add random wobble in agingspawning dates (0=no, 1=yes)
 
 readin_popratio  0         Switch to indicate whether loading pre-existing age distributions or not 0
 
@@ -11750,7 +11750,7 @@ C_LSQ_T15	0.000215
 C_jLSQ_T15	0.000215
 C_ISQ_T15	0.000485
 C_jISQ_T15	0.000485
-C_SCA_T15	0.03573
+C_SCA_T15	0.0339435
 C_QHG_T15	0.0465
 C_CLA_T15	0.075
 C_BFF_T15	0.0395
@@ -11868,7 +11868,7 @@ C_TYL 8
 0.0067	0.4	1.4	2.8	4.3	5.6	6.6	7.4
 
 C_RED	10								
-0.026775	0.11475	0.612	1.683	3.06	4.284	5.508	9.18	11.475	16.83
+0.05355	0.2295	1.224	3.366	6.12	8.568	11.016	18.36	22.95	33.66
 									
 C_OPT 9
 0.041	0.29	1.1	2.2	3.6	5	6.4	7.5	8.6
@@ -11960,7 +11960,7 @@ mum_LSQ_T15	0.00005
 mum_jLSQ_T15 	0.00005
 mum_ISQ_T15	0.00007
 mum_jISQ_T15 0.00007
-mum_SCA_T15	0.0408
+mum_SCA_T15	0.03876
 mum_QHG_T15	0.419
 mum_CLA_T15	0.075
 mum_BFF_T15	0.00474
@@ -11974,7 +11974,7 @@ mum_jNSH_T15 	0.006
 mum_OSH_T15	0.006
 mum_jOSH_T15 	0.006
 mum_ZG_T15	0.275
-mum_ZL_T15	0.03
+mum_ZL_T15	0.075
 mum_ZM_T15	0.013
 mum_ZS_T15	0.5
 mum_BD_T15	0.0000675
@@ -11998,7 +11998,7 @@ mum_MAK	10.00
 1.875	8.1	54	48.75	43.125	37.5	27	20.25	13.5	4.05
 
 mum_HER 7
-0.05145	1.26	2.1	1.68	1.029	0.651	0.1575
+0.025725	0.63	1.05	0.84	0.5145	0.3255	0.07875
 
 mum_WHK 12
 0.22	0.52	1	6.6	12	10	9	6.6	5	3.8	2.5	0.95
@@ -12086,7 +12086,7 @@ mum_TYL 8
 0.0264	1.65	5.61	11	17.6	22	26.4	29.7
 									
 mum_RED	10.00								
-0.00998325	0.05967	0.3978	0.3978	0.348075	0.29835	0.1989	0.1495575	0.0998325	0.029835
+0.0199665	0.11934	0.7956	0.7956	0.69615	0.5967	0.3978	0.299115	0.199665	0.05967
 									
 mum_OPT 9
 0.21	1.4	4	4.9	8.3	12	15	18	20
@@ -15633,7 +15633,7 @@ FSPB_PSH 10
 0 0.2 0.9 1 1 1 1 1 1 1
  
 FSPB_WSK 10
-0 0 0 0 0 0.5 1 1 1 1
+0 0 0 0 0 0.2 0.4 0.4 0.4 0.4
  
 FSPB_LSK 12
 0 0 0 0.5 1 1 1 1 1 1 1 1
@@ -16496,7 +16496,7 @@ BHalpha_BUT 0.9E+10
 BHalpha_ANC 4.73E11
 BHalpha_BPF 2800000000
 BHalpha_GOO 8106263000
-BHalpha_MEN 8.64E11
+BHalpha_MEN 4.3E11
 BHalpha_FDE 400000000
 BHalpha_COD 2.25E+10
 BHalpha_SHK 8e+09    
@@ -16506,7 +16506,7 @@ BHalpha_RHK 2.25e+08
 BHalpha_BSB 420000000
 BHalpha_SCU 113400000
 BHalpha_TYL 90000000
-BHalpha_RED 1.125e+12
+BHalpha_RED 2.8125e+11
 BHalpha_OPT 240000000
 BHalpha_SAL 10065040.7248741
 BHalpha_DRM 1.2e+09   
@@ -20514,4 +20514,4 @@ q10_method_BB  0
 q10_method_BO  0  
 q10_method_DL  0  
 q10_method_DR  0  
-q10_method_DC  0  
+q10_method_DC  0
