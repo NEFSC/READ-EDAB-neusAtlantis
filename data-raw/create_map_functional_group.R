@@ -27,39 +27,65 @@ for (apack in packages$pkgName) {
 create_map_functional_group <- function(channel,writeToFile=F) {
 
   # read in functional group codes and name from Atlantis input file
-  fg <- atlantisom::load_fgs(here::here("currentVersion"),"neus_groups.csv") %>%
+  fg <- atlantisom::load_fgs(here::here("currentVersion"),"neus_groups.csv") |> 
     dplyr::select(Code,LongName,isFished)
   
   #fg <-  readr::read_csv(here::here("data-raw","initialFunctionalGroupNames.csv"))
   
   # read in species membership to group, then join with functional group names
-  data <- readr::read_csv(here::here("data-raw/data","Atlantis_1_5_groups_svspp_nespp3.csv")) %>%
-    dplyr::mutate(NESPP3 = sprintf("%03d",NESPP3)) %>%
-    dplyr::left_join(.,fg,by="Code")
+  data1 <- readr::read_csv(here::here("data-raw/data","Atlantis_1_5_groups_svspp_nespp3.csv")) |> 
+    dplyr::mutate(NESPP3 = sprintf("%03d",NESPP3)) |> 
+    dplyr::left_join(fg,by="Code")
   
+  data2 <- readr::read_csv(here::here("data-raw/data","AdditionalSpeciesFromCAS.csv")) |> 
+    dplyr::filter(!is.na(Code)) |> 
+    dplyr::mutate(NESPP3 = sprintf("%03d",NESPP3)) |> 
+    dplyr::select(Code,Name,SVSPP,NESPP3) |> 
+    dplyr::mutate(Name = stringr::str_to_sentence(Name),
+                  LongName = Name,
+                  isFished = 1)
+  
+  
+  data <- rbind(data1,data2)
   
   # get info by looking up by svspp code
   pullBySVSPP <- dbutils::create_species_lookup(channel,species=na.omit(data$SVSPP),speciesType = "SVSPP")
-  SVSPPData <- pullBySVSPP$data %>%
-    dplyr::select(SVSPPsv,COMNAME,SCIENTIFIC_NAME,SPECIES_ITIS) %>%
+  SVSPPData <- pullBySVSPP$data |> 
+    dplyr::select(SVSPPsv,COMNAME,SCIENTIFIC_NAME,SPECIES_ITIS) |> 
     dplyr::distinct()
   
   # get same data by looking up by nespp3
   pullByNESPP3 <- dbutils::create_species_lookup(channel,species=na.omit(data$NESPP3),speciesType = "NESPP3")
-  NESPP3Data <- pullByNESPP3$data %>%
-    dplyr::select(NESPP3,COMNAME,SCIENTIFIC_NAME,SPECIES_ITIS) %>%
+  NESPP3Data <- pullByNESPP3$data |> 
+    dplyr::select(NESPP3,COMNAME,SCIENTIFIC_NAME,SPECIES_ITIS) |> 
     dplyr::distinct()
   
   # merge two results, rename variable
-  masterList <- dplyr::left_join(data,SVSPPData, by=c("SVSPP"="SVSPPsv"))  %>%
-    dplyr::full_join(.,NESPP3Data, by="NESPP3") %>%
-    dplyr::arrange(Code) %>%
-    dplyr::rename(Species = Name,Functional_Group = LongName,Common_Name = COMNAME.y,Scientific_Name=SCIENTIFIC_NAME.y,Species_Itis=SPECIES_ITIS.y)  %>% 
-    dplyr::mutate(Common_Name = abutils::capitalize_first_letter(Common_Name),NESPP3=as.numeric(NESPP3),Species_Itis=as.numeric(Species_Itis)) %>%
-    dplyr::select(Code,Functional_Group,Species,Scientific_Name,SVSPP,NESPP3,Species_Itis,isFished) %>%
-    dplyr::mutate(isFishedSpecies = (Functional_Group==Species) & (isFished==T)) %>% 
+  masterList <- dplyr::left_join(data,SVSPPData, by=c("SVSPP"="SVSPPsv"))  |> 
+    dplyr::full_join(NESPP3Data, by="NESPP3") |> 
+    dplyr::arrange(Code) |> 
+    dplyr::rename(Species = Name,Functional_Group = LongName,Common_Name = COMNAME.y,Scientific_Name=SCIENTIFIC_NAME.y,Species_Itis=SPECIES_ITIS.y)  |> 
+    dplyr::mutate(Common_Name = abutils::capitalize_first_letter(Common_Name),NESPP3=as.numeric(NESPP3),Species_Itis=as.numeric(Species_Itis)) |> 
+    dplyr::select(Code,Functional_Group,Species,Scientific_Name,SVSPP,NESPP3,Species_Itis,isFished) |> 
+    dplyr::mutate(isFishedSpecies = (Functional_Group==Species) & (isFished==T)) |> 
     dplyr::select(-isFished)
   
+  ## Fixes
+  # if duplicate SVSPP and NESPP3 values, due to SVSPP code is missing.  due to cfdbs having only genus info.
+  # Remove these entries
+  removedups <- masterList |>
+    dplyr::group_by(SVSPP,NESPP3) |> 
+    dplyr::filter((dplyr::n()>1) & !(is.na(NESPP3) & is.na(SVSPP))) |> 
+    dplyr::mutate(keep = dplyr::case_when(grepl("\\s+",Scientific_Name) ~ T,
+                                          TRUE ~ F)) |> 
+    dplyr::filter(keep == F) |> 
+    dplyr::select(-keep)
+   
+  
+  masterList <- dplyr::setdiff(masterList,removedups)
+
+
+  write.csv(masterList,here::here("data-raw/data/Atlantis_2_0_groups_svspp_nespp3.csv"))
   
   # format to markdown table. Copy output to wiki
   # open file and write
