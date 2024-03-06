@@ -247,109 +247,108 @@
 "246","NSH","Northern shrimp other pandalids","Northern shrimp and other pandalids","PANDALUS BOREALIS",306,736,96967,FALSE
 "247","OHK","Offshore hake","Offshore hake","MERLUCCIUS ALBIDUS",69,508,164793,TRUE
 "248","OPT","Ocean pout","Ocean pout","ZOARCES AMERICANUS",193,250,630979,TRUE
-"249","OSH","Other shrimps","Brown shrimp",NA,913,NA,NA,FALSE
+"249","OSH","Other shrimps","Brown shrimp","FARFANTEPENAEUS AZTECUS",913,731,551570,FALSE
 "250","OSH","Other shrimps","Other penaeids",NA,307,NA,NA,FALSE
 "251","OSH","Other shrimps","Pink shrimp",NA,914,NA,NA,FALSE
 "252","OSH","Other shrimps","White shrimp",NA,915,NA,NA,FALSE
-"253","OSH","Other shrimps","Brown shrimp","FARFANTEPENAEUS AZTECUS",NA,731,551570,FALSE
-"254","OSH","Other shrimps","Crangon shrimp","CRANGONIDAE",NA,739,97106,FALSE
-"255","OSH","Other shrimps","Mantis shrimp","STOMATOPODA",NA,737,99140,FALSE
-"256","OSH","Other shrimps","Nk shrimp","CARIDEA",NA,735,96106,FALSE
-"257","OSH","Other shrimps","Penaeid shrimp","PANAEIDAE",NA,738,95602,FALSE
-"258","OSH","Other shrimps","Shrimp royal red","PLEOTICUS ROBUSTUS",NA,733,95966,FALSE
-"259","PB","Pelagic Bacteria","Pelagic Bacteria",NA,NA,NA,NA,FALSE
-"260","PIN","Pinnipeds","All Pinnipeds",NA,NA,NA,NA,FALSE
-"261","PL","Diatom","Diatom",NA,NA,NA,NA,FALSE
-"262","PLA","American plaice","American plaice","HIPPOGLOSSOIDES PLATESSOIDES",102,124,172877,TRUE
-"263","POL","Pollock","Pollock","POLLACHIUS VIRENS",75,269,164727,TRUE
-"264","POL","Pollock","Pollock","POLLACHIUS VIRENS",75,270,164727,TRUE
-"265","POR","Porbeagle shark","Porbeagle shark","LAMNA NASUS",353,481,159911,TRUE
-"266","PS","Pico-phytoplankton","Pico-phytoplankton",NA,NA,NA,NA,FALSE
-"267","PSH","Other pelagic sharks","Bignose shark","CARCHARHINUS ALTIMUS",929,483,160307,FALSE
-"268","PSH","Other pelagic sharks","Blacknose shark","CARCHARHINUS ACRONOTUS",354,503,160304,FALSE
-"269","PSH","Other pelagic sharks","Blacktip shark","CARCHARHINUS LIMBATUS",357,487,160318,FALSE
-"270","PSH","Other pelagic sharks","Dusky shark","CARCHARHINUS OBSCURUS",3,484,160268,FALSE
-"271","PSH","Other pelagic sharks","Finetooth shark","CARCHARHINUS ISODON",928,499,160409,FALSE
-"272","PSH","Other pelagic sharks","Great hammerhead","SPHYRNA MOKARRAN",363,386,160515,FALSE
-"273","PSH","Other pelagic sharks","Shortfin mako","ISURUS OXYRINCHUS",352,355,159924,FALSE
-"274","PSH","Other pelagic sharks","Silky shark","CARCHARHINUS FALCIFORMIS",355,485,160310,FALSE
-"275","PSH","Other pelagic sharks","Tiger shark","GALEOCERDO CUVIER",358,491,160189,FALSE
-"276","PSH","Other pelagic sharks","White shark","CARCHARODON CARCHARIAS",351,480,159903,FALSE
-"277","PSH","Other pelagic sharks","Basking shark","CETORHINUS MAXIMUS",NA,496,159907,FALSE
-"278","PSH","Other pelagic sharks","Mako longfin shark","ISURUS PAUCUS",NA,358,159926,FALSE
-"279","PSH","Other pelagic sharks","Mako shark","ISURUS",NA,357,159923,FALSE
-"280","PSH","Other pelagic sharks","Pelagic sharks","LAMINIFORMES",NA,498,159851,FALSE
-"281","PSH","Other pelagic sharks","Spinner shark","CARCHARHINUS BREVIPINNA",NA,488,160401,FALSE
-"282","PSH","Other pelagic sharks","Threshr bgeye shark","ALOPIAS SUPERCILIOSUS",NA,354,159921,FALSE
-"283","PSH","Other pelagic sharks","Whitetip oc shark","CARCHARHINUS LONGIMANUS",NA,490,160330,FALSE
-"284","QHG","Ocean quahog","Ocean quahog","ARCTICA ISLANDICA",409,754,81343,TRUE
-"285","RCB","Red deep-sea crab","Red deep-sea crab","CHACEON QUINQUEDENS",310,710,620992,TRUE
-"286","RED","Acadian redfish","Acadian redfish","SEBASTES FASCIATUS",155,240,166774,TRUE
-"287","REP","Marine turtles","Green seaturtle","CHELONIA MYDAS",951,809,173833,FALSE
-"288","REP","Marine turtles","Hawksbill seaturtle","ERETMOCHELYS IMBRICATA",953,814,173836,FALSE
-"289","REP","Marine turtles","Kemp’s Ridley seaturtle","LEPIDOCHELYS KEMPI",954,810,551770,FALSE
-"290","REP","Marine turtles","Leatherback seaturtle","DERMOCHELYS CORIACEA",952,812,173843,FALSE
-"291","REP","Marine turtles","Loggerhead seaturtle","CARETTA CARETTA",950,813,173830,FALSE
-"292","REP","Marine turtles","Olive Ridley seaturtle","LEPIDOCHELYS OLIVACEA",NA,818,173840,FALSE
-"293","REP","Marine turtles","Turtles unclassified","TESTUDINES",NA,816,173749,FALSE
-"294","REP","Marine turtles","Snapper turtle","CHELYDRA SERPENTINA",NA,815,173752,FALSE
-"295","RHK","Red hake","Red hake","UROPHYCIS CHUSS",77,152,164730,TRUE
-"296","RWH","Right whales","Right whales",NA,NA,NA,NA,TRUE
-"297","SAL","Atlantic salmon","Atlantic salmon","SALMO SALAR",894,305,161996,TRUE
-"298","SB","Seabirds","Seabirds",NA,NA,NA,NA,TRUE
-"299","SCA","Sea scallop","Sea scallop","PLACOPECTEN MAGELLANICUS",401,800,79718,TRUE
-"300","SCU","Scup","Scup","STENOTOMUS CHRYSOPS",143,329,169182,TRUE
-"301","SDF","Atlantic states demersal fish","American eel","ANGUILLA ROSTRATA",384,115,161127,FALSE
-"302","SG","Seagrass","Seagrass",NA,NA,NA,NA,FALSE
-"303","SHK","Silver hake","Silver hake","MERLUCCIUS BILINEARIS",72,509,164791,TRUE
-"304","SHK","Silver hake","King whiting","MENTICIRRHUS",NA,197,169273,FALSE
-"305","SK","Northeast skate complex","Atlantic stingray","DASYATIDAE",373,286,160946,FALSE
-"306","SK","Northeast skate complex","Atlantic torpedo",NA,21,NA,NA,FALSE
-"307","SK","Northeast skate complex","Barndoor skate","DIPTURUS LAEVIS",22,368,564139,FALSE
-"308","SK","Northeast skate complex","Bluntnose stingray",NA,18,NA,NA,FALSE
-"309","SK","Northeast skate complex","Bullnose ray",NA,19,NA,NA,FALSE
-"310","SK","Northeast skate complex","Clearnose skate","RAJA EGLANTERIA",24,372,160855,FALSE
-"311","SK","Northeast skate complex","Cownose ray","RHINOPTERA BONASUS",270,285,160985,FALSE
-"312","SK","Northeast skate complex","Rosette skate","LEUCORAJA GARMANI",25,364,564136,FALSE
-"313","SK","Northeast skate complex","Roughtail stingray",NA,4,NA,NA,FALSE
-"314","SK","Northeast skate complex","Smooth skate","MALACORAJA SENTA",27,369,564151,FALSE
-"315","SK","Northeast skate complex","Spotted eagle ray",NA,271,NA,NA,FALSE
-"316","SK","Northeast skate complex","Thorny skate","AMBLYRAJA RADIATA",28,370,564149,FALSE
-"317","SK","Northeast skate complex","Yellow stingray",NA,377,NA,NA,FALSE
-"318","SMO","Smooth dogfish","Smooth dogfish","MUSTELUS CANIS",13,351,160230,TRUE
-"319","SSH","Sandbar shark","Sandbar shark","CARCHARHINUS PLUMBEUS",9,482,160289,TRUE
-"320","STB","Striped bass","Striped bass","MORONE SAXATILIS",139,418,167680,TRUE
-"321","SUF","Summer flounder","Summer flounder","PARALICHTHYS DENTATUS",103,121,172735,TRUE
-"322","SWH","Small toothed whales","Small toothed whales",NA,NA,NA,NA,TRUE
-"323","TAU","Tautog","Tautog","TAUTOGA ONITIS",177,438,170479,TRUE
-"324","TUN","Other tunas","Albacore","THUNNUS ALALUNGA",703,470,172419,FALSE
-"325","TUN","Other tunas","Bigeye tuna","THUNNUS OBESUS",706,469,172428,FALSE
-"326","TUN","Other tunas","Blackfin tuna","THUNNUS ATLANTICUS",705,464,172427,FALSE
-"327","TUN","Other tunas","Little tunny","EUTHYNNUS ALLETTERATUS",743,468,172402,FALSE
-"328","TUN","Other tunas","Bonito","SARDA SARDA",NA,33,172409,FALSE
-"329","TUN","Other tunas","Dolphinfish","CORYPHAENA HIPPURUS",NA,105,168791,FALSE
-"330","TUN","Other tunas","Nk tuna","THUNNUS",NA,465,172418,FALSE
-"331","TUN","Other tunas","Skipjack tuna","KATSUWONUS PELAMIS",NA,466,172401,FALSE
-"332","TUN","Other tunas","Wahoo","ACANTHOCYBIUM SOLANDRI",NA,472,172451,FALSE
-"333","TUN","Other tunas","Yellowfin tuna","THUNNUS ALBACARES",NA,471,172423,FALSE
-"334","TWH","Toothed whales","Toothed whales",NA,NA,NA,NA,TRUE
-"335","TYL","All tilefish","Blueline tilefish","CAULOLATILUS MICROPS",621,444,168543,FALSE
-"336","TYL","All tilefish","Tilefish","LOPHOLATILUS CHAMAELEONTICEPS",151,446,168546,FALSE
-"337","TYL","All tilefish","Tilefish unclassified","MALACANTHIDAE",NA,447,168537,FALSE
-"338","TYL","All tilefish","Goldface tilefish","CAULOLATILUS CHRYSOPS",NA,443,168544,FALSE
-"339","TYL","All tilefish","Sand tilefish","MALACANTHUS PLUMIERI",NA,445,168548,FALSE
-"340","WHK","White hake","White hake","UROPHYCIS TENUIS",76,153,164732,TRUE
-"341","WHK","White hake","White hake","UROPHYCIS TENUIS",76,154,164732,TRUE
-"342","WIF","Winter flounder","Winter flounder","PSEUDOPLEURONECTES AMERICANUS",106,119,172905,TRUE
-"343","WIF","Winter flounder","Winter flounder","PSEUDOPLEURONECTES AMERICANUS",106,120,172905,TRUE
-"344","WOL","Wolffish","Northern wolffish","ANARHICHAS DENTICULATUS",NA,668,550561,FALSE
-"345","WOL","Wolffish","Spotted wolffish","ANARHICHAS MINOR",NA,510,171342,FALSE
-"346","WOL","Wolffish","Wolffishes","ANARHICHAS LUPUS",NA,512,171341,FALSE
-"347","WPF","Windowpane flounder","Windowpane flounder","SCOPHTHALMUS AQUOSUS",108,125,172746,TRUE
-"348","WSK","Winter skate","Winter skate","LEUCORAJA OCELLATA",23,367,564145,TRUE
-"349","WTF","Witch flounder","Witch flounder","GLYPTOCEPHALUS CYNOGLOSSUS",107,122,172873,TRUE
-"350","YTF","Yellowtail flounder","Yellowtail flounder","LIMANDA FERRUGINEA",105,123,172909,TRUE
-"351","ZG","Gelatinous zooplankton","Gelatinous zooplankton",NA,NA,NA,NA,FALSE
-"352","ZL","Carnivorous zooplankton","All carnivorous zooplankton",NA,NA,NA,NA,FALSE
-"353","ZM","Mesozooplankton","Mesozooplankton",NA,NA,NA,NA,FALSE
-"354","ZS","Microzooplankton","Microzooplankton",NA,NA,NA,NA,FALSE
+"253","OSH","Other shrimps","Crangon shrimp","CRANGONIDAE",NA,739,97106,FALSE
+"254","OSH","Other shrimps","Mantis shrimp","STOMATOPODA",NA,737,99140,FALSE
+"255","OSH","Other shrimps","Nk shrimp","CARIDEA",NA,735,96106,FALSE
+"256","OSH","Other shrimps","Penaeid shrimp","PANAEIDAE",NA,738,95602,FALSE
+"257","OSH","Other shrimps","Shrimp royal red","PLEOTICUS ROBUSTUS",NA,733,95966,FALSE
+"258","PB","Pelagic Bacteria","Pelagic Bacteria",NA,NA,NA,NA,FALSE
+"259","PIN","Pinnipeds","All Pinnipeds",NA,NA,NA,NA,FALSE
+"260","PL","Diatom","Diatom",NA,NA,NA,NA,FALSE
+"261","PLA","American plaice","American plaice","HIPPOGLOSSOIDES PLATESSOIDES",102,124,172877,TRUE
+"262","POL","Pollock","Pollock","POLLACHIUS VIRENS",75,269,164727,TRUE
+"263","POL","Pollock","Pollock","POLLACHIUS VIRENS",75,270,164727,TRUE
+"264","POR","Porbeagle shark","Porbeagle shark","LAMNA NASUS",353,481,159911,TRUE
+"265","PS","Pico-phytoplankton","Pico-phytoplankton",NA,NA,NA,NA,FALSE
+"266","PSH","Other pelagic sharks","Bignose shark","CARCHARHINUS ALTIMUS",929,483,160307,FALSE
+"267","PSH","Other pelagic sharks","Blacknose shark","CARCHARHINUS ACRONOTUS",354,503,160304,FALSE
+"268","PSH","Other pelagic sharks","Blacktip shark","CARCHARHINUS LIMBATUS",357,487,160318,FALSE
+"269","PSH","Other pelagic sharks","Dusky shark","CARCHARHINUS OBSCURUS",3,484,160268,FALSE
+"270","PSH","Other pelagic sharks","Finetooth shark","CARCHARHINUS ISODON",928,499,160409,FALSE
+"271","PSH","Other pelagic sharks","Great hammerhead","SPHYRNA MOKARRAN",363,386,160515,FALSE
+"272","PSH","Other pelagic sharks","Shortfin mako","ISURUS OXYRINCHUS",352,355,159924,FALSE
+"273","PSH","Other pelagic sharks","Silky shark","CARCHARHINUS FALCIFORMIS",355,485,160310,FALSE
+"274","PSH","Other pelagic sharks","Tiger shark","GALEOCERDO CUVIER",358,491,160189,FALSE
+"275","PSH","Other pelagic sharks","White shark","CARCHARODON CARCHARIAS",351,480,159903,FALSE
+"276","PSH","Other pelagic sharks","Basking shark","CETORHINUS MAXIMUS",NA,496,159907,FALSE
+"277","PSH","Other pelagic sharks","Mako longfin shark","ISURUS PAUCUS",NA,358,159926,FALSE
+"278","PSH","Other pelagic sharks","Mako shark","ISURUS",NA,357,159923,FALSE
+"279","PSH","Other pelagic sharks","Pelagic sharks","LAMINIFORMES",NA,498,159851,FALSE
+"280","PSH","Other pelagic sharks","Spinner shark","CARCHARHINUS BREVIPINNA",NA,488,160401,FALSE
+"281","PSH","Other pelagic sharks","Threshr bgeye shark","ALOPIAS SUPERCILIOSUS",NA,354,159921,FALSE
+"282","PSH","Other pelagic sharks","Whitetip oc shark","CARCHARHINUS LONGIMANUS",NA,490,160330,FALSE
+"283","QHG","Ocean quahog","Ocean quahog","ARCTICA ISLANDICA",409,754,81343,TRUE
+"284","RCB","Red deep-sea crab","Red deep-sea crab","CHACEON QUINQUEDENS",310,710,620992,TRUE
+"285","RED","Acadian redfish","Acadian redfish","SEBASTES FASCIATUS",155,240,166774,TRUE
+"286","REP","Marine turtles","Green seaturtle","CHELONIA MYDAS",951,809,173833,FALSE
+"287","REP","Marine turtles","Hawksbill seaturtle","ERETMOCHELYS IMBRICATA",953,814,173836,FALSE
+"288","REP","Marine turtles","Kemp’s Ridley seaturtle","LEPIDOCHELYS KEMPI",954,810,551770,FALSE
+"289","REP","Marine turtles","Leatherback seaturtle","DERMOCHELYS CORIACEA",952,812,173843,FALSE
+"290","REP","Marine turtles","Loggerhead seaturtle","CARETTA CARETTA",950,813,173830,FALSE
+"291","REP","Marine turtles","Olive Ridley seaturtle","LEPIDOCHELYS OLIVACEA",NA,818,173840,FALSE
+"292","REP","Marine turtles","Turtles unclassified","TESTUDINES",NA,816,173749,FALSE
+"293","REP","Marine turtles","Snapper turtle","CHELYDRA SERPENTINA",NA,815,173752,FALSE
+"294","RHK","Red hake","Red hake","UROPHYCIS CHUSS",77,152,164730,TRUE
+"295","RWH","Right whales","Right whales",NA,NA,NA,NA,TRUE
+"296","SAL","Atlantic salmon","Atlantic salmon","SALMO SALAR",894,305,161996,TRUE
+"297","SB","Seabirds","Seabirds",NA,NA,NA,NA,TRUE
+"298","SCA","Sea scallop","Sea scallop","PLACOPECTEN MAGELLANICUS",401,800,79718,TRUE
+"299","SCU","Scup","Scup","STENOTOMUS CHRYSOPS",143,329,169182,TRUE
+"300","SDF","Atlantic states demersal fish","American eel","ANGUILLA ROSTRATA",384,115,161127,FALSE
+"301","SG","Seagrass","Seagrass",NA,NA,NA,NA,FALSE
+"302","SHK","Silver hake","Silver hake","MERLUCCIUS BILINEARIS",72,509,164791,TRUE
+"303","SHK","Silver hake","King whiting","MENTICIRRHUS",NA,197,169273,FALSE
+"304","SK","Northeast skate complex","Atlantic stingray","DASYATIDAE",373,286,160946,FALSE
+"305","SK","Northeast skate complex","Atlantic torpedo",NA,21,NA,NA,FALSE
+"306","SK","Northeast skate complex","Barndoor skate","DIPTURUS LAEVIS",22,368,564139,FALSE
+"307","SK","Northeast skate complex","Bluntnose stingray",NA,18,NA,NA,FALSE
+"308","SK","Northeast skate complex","Bullnose ray",NA,19,NA,NA,FALSE
+"309","SK","Northeast skate complex","Clearnose skate","RAJA EGLANTERIA",24,372,160855,FALSE
+"310","SK","Northeast skate complex","Cownose ray","RHINOPTERA BONASUS",270,285,160985,FALSE
+"311","SK","Northeast skate complex","Rosette skate","LEUCORAJA GARMANI",25,364,564136,FALSE
+"312","SK","Northeast skate complex","Roughtail stingray",NA,4,NA,NA,FALSE
+"313","SK","Northeast skate complex","Smooth skate","MALACORAJA SENTA",27,369,564151,FALSE
+"314","SK","Northeast skate complex","Spotted eagle ray",NA,271,NA,NA,FALSE
+"315","SK","Northeast skate complex","Thorny skate","AMBLYRAJA RADIATA",28,370,564149,FALSE
+"316","SK","Northeast skate complex","Yellow stingray",NA,377,NA,NA,FALSE
+"317","SMO","Smooth dogfish","Smooth dogfish","MUSTELUS CANIS",13,351,160230,TRUE
+"318","SSH","Sandbar shark","Sandbar shark","CARCHARHINUS PLUMBEUS",9,482,160289,TRUE
+"319","STB","Striped bass","Striped bass","MORONE SAXATILIS",139,418,167680,TRUE
+"320","SUF","Summer flounder","Summer flounder","PARALICHTHYS DENTATUS",103,121,172735,TRUE
+"321","SWH","Small toothed whales","Small toothed whales",NA,NA,NA,NA,TRUE
+"322","TAU","Tautog","Tautog","TAUTOGA ONITIS",177,438,170479,TRUE
+"323","TUN","Other tunas","Albacore","THUNNUS ALALUNGA",703,470,172419,FALSE
+"324","TUN","Other tunas","Bigeye tuna","THUNNUS OBESUS",706,469,172428,FALSE
+"325","TUN","Other tunas","Blackfin tuna","THUNNUS ATLANTICUS",705,464,172427,FALSE
+"326","TUN","Other tunas","Little tunny","EUTHYNNUS ALLETTERATUS",743,468,172402,FALSE
+"327","TUN","Other tunas","Bonito","SARDA SARDA",NA,33,172409,FALSE
+"328","TUN","Other tunas","Dolphinfish","CORYPHAENA HIPPURUS",NA,105,168791,FALSE
+"329","TUN","Other tunas","Nk tuna","THUNNUS",NA,465,172418,FALSE
+"330","TUN","Other tunas","Skipjack tuna","KATSUWONUS PELAMIS",NA,466,172401,FALSE
+"331","TUN","Other tunas","Wahoo","ACANTHOCYBIUM SOLANDRI",NA,472,172451,FALSE
+"332","TUN","Other tunas","Yellowfin tuna","THUNNUS ALBACARES",NA,471,172423,FALSE
+"333","TWH","Toothed whales","Toothed whales",NA,NA,NA,NA,TRUE
+"334","TYL","All tilefish","Blueline tilefish","CAULOLATILUS MICROPS",621,444,168543,FALSE
+"335","TYL","All tilefish","Tilefish","LOPHOLATILUS CHAMAELEONTICEPS",151,446,168546,FALSE
+"336","TYL","All tilefish","Tilefish unclassified","MALACANTHIDAE",NA,447,168537,FALSE
+"337","TYL","All tilefish","Goldface tilefish","CAULOLATILUS CHRYSOPS",NA,443,168544,FALSE
+"338","TYL","All tilefish","Sand tilefish","MALACANTHUS PLUMIERI",NA,445,168548,FALSE
+"339","WHK","White hake","White hake","UROPHYCIS TENUIS",76,153,164732,TRUE
+"340","WHK","White hake","White hake","UROPHYCIS TENUIS",76,154,164732,TRUE
+"341","WIF","Winter flounder","Winter flounder","PSEUDOPLEURONECTES AMERICANUS",106,119,172905,TRUE
+"342","WIF","Winter flounder","Winter flounder","PSEUDOPLEURONECTES AMERICANUS",106,120,172905,TRUE
+"343","WOL","Wolffish","Northern wolffish","ANARHICHAS DENTICULATUS",NA,668,550561,FALSE
+"344","WOL","Wolffish","Spotted wolffish","ANARHICHAS MINOR",NA,510,171342,FALSE
+"345","WOL","Wolffish","Wolffishes","ANARHICHAS LUPUS",NA,512,171341,FALSE
+"346","WPF","Windowpane flounder","Windowpane flounder","SCOPHTHALMUS AQUOSUS",108,125,172746,TRUE
+"347","WSK","Winter skate","Winter skate","LEUCORAJA OCELLATA",23,367,564145,TRUE
+"348","WTF","Witch flounder","Witch flounder","GLYPTOCEPHALUS CYNOGLOSSUS",107,122,172873,TRUE
+"349","YTF","Yellowtail flounder","Yellowtail flounder","LIMANDA FERRUGINEA",105,123,172909,TRUE
+"350","ZG","Gelatinous zooplankton","Gelatinous zooplankton",NA,NA,NA,NA,FALSE
+"351","ZL","Carnivorous zooplankton","All carnivorous zooplankton",NA,NA,NA,NA,FALSE
+"352","ZM","Mesozooplankton","Mesozooplankton",NA,NA,NA,NA,FALSE
+"353","ZS","Microzooplankton","Microzooplankton",NA,NA,NA,NA,FALSE

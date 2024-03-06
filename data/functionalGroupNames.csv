@@ -247,11 +247,10 @@ NSH,Northern shrimp other pandalids,Bristled longbeak,NA,296,NA,NA,FALSE
 NSH,Northern shrimp other pandalids,Northern shrimp and other pandalids,PANDALUS BOREALIS,306,736,96967,FALSE
 OHK,Offshore hake,Offshore hake,MERLUCCIUS ALBIDUS,69,508,164793,TRUE
 OPT,Ocean pout,Ocean pout,ZOARCES AMERICANUS,193,250,630979,TRUE
-OSH,Other shrimps,Brown shrimp,NA,913,NA,NA,FALSE
+OSH,Other shrimps,Brown shrimp,FARFANTEPENAEUS AZTECUS,913,731,551570,FALSE
 OSH,Other shrimps,Other penaeids,NA,307,NA,NA,FALSE
 OSH,Other shrimps,Pink shrimp,NA,914,NA,NA,FALSE
 OSH,Other shrimps,White shrimp,NA,915,NA,NA,FALSE
-OSH,Other shrimps,Brown shrimp,FARFANTEPENAEUS AZTECUS,NA,731,551570,FALSE
 OSH,Other shrimps,Crangon shrimp,CRANGONIDAE,NA,739,97106,FALSE
 OSH,Other shrimps,Mantis shrimp,STOMATOPODA,NA,737,99140,FALSE
 OSH,Other shrimps,Nk shrimp,CARIDEA,NA,735,96106,FALSE
