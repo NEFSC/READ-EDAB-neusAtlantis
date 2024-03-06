@@ -100,7 +100,7 @@ BPF,Other benthopelagic fish,Vermillion snapper,RHOMBOPLITES AURORUBENS,NA,374,1
 BPF,Other benthopelagic fish,Wenchman,PRISTIPOMOIDES AQUILONARIS,NA,379,168913,FALSE
 BPF,Other benthopelagic fish,Wreckfish,POLYPRION AMERICANUS,NA,513,167914,FALSE
 BPF,Other benthopelagic fish,Yellowedge grouper,EPINEPHELUS FLAVOLIMBATUS,NA,142,167699,FALSE
-BPG,NA,Grouper,SERRANIDAE,NA,141,167674,NA
+BPF,Other benthopelagic fish,Grouper,SERRANIDAE,NA,141,167674,FALSE
 BSB,Black sea bass,Black sea bass,CENTROPRISTIS STRIATA,141,335,167687,TRUE
 BUT,Butterfish,Butterfish,PEPRILUS TRIACANTHUS,131,51,172567,TRUE
 BWH,Baleen whales,Baleen whales,NA,NA,NA,NA,TRUE

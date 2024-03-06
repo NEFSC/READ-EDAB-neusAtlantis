@@ -100,7 +100,7 @@
 "99","BPF","Other benthopelagic fish","Wenchman","PRISTIPOMOIDES AQUILONARIS",NA,379,168913,FALSE
 "100","BPF","Other benthopelagic fish","Wreckfish","POLYPRION AMERICANUS",NA,513,167914,FALSE
 "101","BPF","Other benthopelagic fish","Yellowedge grouper","EPINEPHELUS FLAVOLIMBATUS",NA,142,167699,FALSE
-"102","BPG",NA,"Grouper","SERRANIDAE",NA,141,167674,NA
+"102","BPF","Other benthopelagic fish","Grouper","SERRANIDAE",NA,141,167674,FALSE
 "103","BSB","Black sea bass","Black sea bass","CENTROPRISTIS STRIATA",141,335,167687,TRUE
 "104","BUT","Butterfish","Butterfish","PEPRILUS TRIACANTHUS",131,51,172567,TRUE
 "105","BWH","Baleen whales","Baleen whales",NA,NA,NA,NA,TRUE
