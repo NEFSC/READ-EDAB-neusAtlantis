@@ -28,7 +28,9 @@ create_map_functional_group <- function(channel,writeToFile=F) {
 
   # read in functional group codes and name from Atlantis input file
   fg <- atlantisom::load_fgs(here::here("currentVersion"),"neus_groups.csv") |> 
-    dplyr::select(Code,LongName,isFished)
+    dplyr::rename(Functional_Group = LongName) |> 
+    dplyr::select(Code,Functional_Group,isFished)
+  
   
   #fg <-  readr::read_csv(here::here("data-raw","initialFunctionalGroupNames.csv"))
   
@@ -37,14 +39,16 @@ create_map_functional_group <- function(channel,writeToFile=F) {
     dplyr::mutate(NESPP3 = sprintf("%03d",NESPP3)) |> 
     dplyr::left_join(fg,by="Code")
   
+
+  
   data2 <- readr::read_csv(here::here("data-raw/data","AdditionalSpeciesFromCAS.csv")) |> 
     dplyr::filter(!is.na(Code)) |> 
     dplyr::mutate(NESPP3 = sprintf("%03d",NESPP3)) |> 
     dplyr::select(Code,Name,SVSPP,NESPP3) |> 
+    dplyr::left_join(fg, by = "Code") |> 
     dplyr::mutate(Name = stringr::str_to_sentence(Name),
-                  LongName = Name,
-                  isFished = 1)
-  
+                  isFished = 1) 
+
   
   data <- rbind(data1,data2)
   
@@ -64,8 +68,13 @@ create_map_functional_group <- function(channel,writeToFile=F) {
   masterList <- dplyr::left_join(data,SVSPPData, by=c("SVSPP"="SVSPPsv"))  |> 
     dplyr::full_join(NESPP3Data, by="NESPP3") |> 
     dplyr::arrange(Code) |> 
-    dplyr::rename(Species = Name,Functional_Group = LongName,Common_Name = COMNAME.y,Scientific_Name=SCIENTIFIC_NAME.y,Species_Itis=SPECIES_ITIS.y)  |> 
-    dplyr::mutate(Common_Name = abutils::capitalize_first_letter(Common_Name),NESPP3=as.numeric(NESPP3),Species_Itis=as.numeric(Species_Itis)) |> 
+    dplyr::rename(Species = Name,
+                  Common_Name = COMNAME.y,
+                  Scientific_Name=SCIENTIFIC_NAME.y,
+                  Species_Itis=SPECIES_ITIS.y)  |> 
+    dplyr::mutate(Common_Name = abutils::capitalize_first_letter(Common_Name),
+                  NESPP3=as.numeric(NESPP3),
+                  Species_Itis=as.numeric(Species_Itis)) |> 
     dplyr::select(Code,Functional_Group,Species,Scientific_Name,SVSPP,NESPP3,Species_Itis,isFished) |> 
     dplyr::mutate(isFishedSpecies = (Functional_Group==Species) & (isFished==T)) |> 
     dplyr::select(-isFished)
