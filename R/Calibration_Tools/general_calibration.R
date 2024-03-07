@@ -9,8 +9,8 @@
 library(dplyr)
 
 #Read in setup file
-experiment.id = 'cloud_v6681_calib_3'
-setup.df = read.csv(here::here('Setup_Files','cloud_v6681_calib_3.csv'),as.is=T)
+experiment.id = 'cloud_v6681_calib_6'
+setup.df = read.csv(here::here('Setup_Files','cloud_v6681_calib_6.csv'),as.is=T)
 # setup.df = read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'))
 proj.dir = '/contrib/Joseph.Caracappa/calibration/'
 
