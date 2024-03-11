@@ -5,8 +5,8 @@ source(here::here('R','Calibration_Tools','edit_param_C_age.R'))
 
 group.names = 'HER'
 
-mum.scale = 0.5
-C.scale = 1
+mum.scale = 1
+C.scale = 0.8
 
 bio.prm = here::here('currentVersion','at_biology.prm')
 

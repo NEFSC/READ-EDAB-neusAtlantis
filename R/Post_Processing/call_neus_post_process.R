@@ -7,7 +7,7 @@
 
 source(here::here('R','Post_Processing','make_post_process.R'))
 
-run.name = 'v6681_Calib_4'
+run.name = 'v6681_Calib_5'
 atl.dir = here::here('Atlantis_Runs',run.name,'')
 # 
 # process.all = T
@@ -48,26 +48,26 @@ make_post_process(
   large.file = F,
   
   plot.benthic =F,
-  plot.overall.biomass =T,
-  plot.biomass.timeseries = T,
-  plot.length.age = T,
+  plot.overall.biomass =F,
+  plot.biomass.timeseries = F,
+  plot.length.age = F,
   plot.biomass.box=F,
   plot.c.mum=F,
   plot.sn.rn=F,
   plot.recruits=F,
-  plot.numbers.timeseries=T,
+  plot.numbers.timeseries=F,
   plot.physics=F,
   plot.growth.cons=F,
   plot.cohort=F,
-  plot.diet=F,
+  plot.diet=T,
   plot.consumption= F,
   plot.spatial.biomass=F,
   plot.spatial.biomass.seasonal = F,
   plot.spatial.overlap = F,
   plot.LTL=F, 
-  plot.catch =T,
-  plot.mortality=T,
-  plot.max.weight = T,
+  plot.catch =F,
+  plot.mortality=F,
+  plot.max.weight = F,
   
   benthic.box = 1,
   benthic.level = 4,
