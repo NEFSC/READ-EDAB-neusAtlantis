@@ -12,15 +12,20 @@ v6681.3 = here::here('Atlantis_Runs','v6681_Calib_3','')
 v6681.3c = here::here('Atlantis_Runs','v6681_Calib_3c','')
 v6681.3d = here::here('Atlantis_Runs','v6681_Calib_3d_no_mort','')
 v6681.4 = here::here('Atlantis_Runs','v6681_Calib_4','')
+v6681.4m = here::here('Atlantis_Runs','v6681_Calib_4_merge','')
+v6681.5 = here::here('Atlantis_Runs','v6681_Calib_5','')
+v6681.6 = here::here('Atlantis_Runs','v6681_Calib_6','')
+v6681.6b = here::here('Atlantis_Runs','v6681_Calib_6b','')
+v6681.6c = here::here('Atlantis_Runs','v6681_Calib_6c_HER','')
 
 figure.dir = here::here('Figures','Run_Comparisons','')
 
 plot_run_comparisons(
-  model.dirs = c(dev.6536,v6681.2b,v6681.3,v6681.3c,v6681.4),
-  model.names = c('Dev_6536','v6681_Calib_2b','v6681_Calib_3','v6681_Calib_3c','v6681_Calib_4'),
+  model.dirs = c(dev.6536,v6681.4m,v6681.5,v6681.6,v6681.6b,v6681.6c),
+  model.names = c('Dev_6536','v6681_Calib_4_merge','v6681_Calib_5','v6681_Calib_6','v6681_Calib_6b','v6681_Calib_6c_HER'),
   plot.rel = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'v6681_Calib_4'),
+  plot.out = paste(figure.dir,'v6681_Calib_6c'),
   table.out = F,
   groups = NULL,
   remove.init = F
@@ -28,11 +33,11 @@ plot_run_comparisons(
 
 
 plot_run_comparisons(
-  model.dirs = c(dev.6536,v6681.2),
-  model.names = c('Dev_6536','v6681_Calib_2'),
+  model.dirs = c(dev.6536,v6681.6b),
+  model.names = c('Dev_6536','v6681_Calib_6b'),
   plot.rel = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'v6681_Calib_2_dev'),
+  plot.out = paste(figure.dir,'v6681_Calib_6'),
   table.out = F,
   groups = NULL,
   remove.init = F
