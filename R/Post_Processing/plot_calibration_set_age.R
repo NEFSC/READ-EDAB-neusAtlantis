@@ -34,11 +34,12 @@ for(i in 1:length(run.groups)){
   j=1
   bio.run.group = list()
   for(j in 1:nrow(setup.group)){
-    biom.file = paste0(experiment.dir,experiment.id,'_',setup.group$Run.ID[j],'/neus_outputBiomIndx.txt')
+    biom.file = paste0(experiment.dir,experiment.id,'_',setup.group$Run.ID[j],'/neus_outputAgeBiomIndx.txt')
     if(!file.exists(biom.file)){next()}
-    bio.run.group[[j]] = data.table::fread(paste0(experiment.dir,experiment.id,'_',setup.group$Run.ID[j],'/neus_outputBiomIndx.txt'))%>%
-      select(Time,all_of(fgs$Code))%>%
-      tidyr::gather(Code,Biomass,-Time)%>%
+    bio.run.group[[j]] = data.table::fread(paste0(experiment.dir,experiment.id,'_',setup.group$Run.ID[j],'/neus_outputAgeBiomIndx.txt'))%>%
+      select(Time,starts_with(fgs$Code))%>%
+      tidyr::gather(ID,Biomass,-Time)%>%
+      tidyr::separate(ID, c('Code','agecl'),sep = '-')%>%
       mutate(Run.ID = setup.group$Run.ID[j],
              file.ID = setup.group$file.ID[j])
   }
@@ -46,8 +47,8 @@ for(i in 1:length(run.groups)){
   
   spp.names = sort(unique(fgs$LongName))
   s=1
-
-  pdf(paste0(figure.dir,experiment.id,'_',run.groups[i],'.pdf'))
+  
+  pdf(paste0(figure.dir,experiment.id,'_',run.groups[i],'_age.pdf'))
   for(s in 1:length(spp.names)){
     
     spp.code = fgs$Code[which(fgs$LongName == spp.names[s])]
@@ -57,6 +58,7 @@ for(i in 1:length(run.groups)){
     
     p =ggplot(bio.spp, aes(x=Time,y = Biomass, color = factor(Run.ID)))+
       geom_line()+
+      facet_wrap(~agecl)+
       scale_color_manual(name = paste0('Run ID (',run.groups[i],')'),
                          values = plot.colors[1:length(unique(setup.group$Run.ID))])+
       ggtitle(spp.names[s])+

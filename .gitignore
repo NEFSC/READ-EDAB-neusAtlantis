@@ -38,6 +38,7 @@ outputFolder
 # except csv
 !/currentVersion/neus_fisheries.csv
 !/currentVersion/neus_groups.csv
+!/currentVersion/neus_migrations.csv
 # except bgm
 !/currentVersion/neus_tmerc_RM2.bgm
 # except rmd

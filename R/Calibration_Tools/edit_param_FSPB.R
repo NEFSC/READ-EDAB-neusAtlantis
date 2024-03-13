@@ -8,8 +8,8 @@ get_param_FSPB = function(bio.prm){
   
   groups = sapply(bio.lines[FSPB.line],function(x) return(strsplit(x,'\t| |_')[[1]][2]),USE.NAMES = F)
   
-  out.df = as.data.frame(matrix(NA,nrow = length(groups), ncol = 11))
-  colnames(out.df) = c('group',paste0('age.',1:10))
+  out.df = as.data.frame(matrix(NA,nrow = length(groups), ncol = 13))
+  colnames(out.df) = c('group',paste0('age.',1:12))
   out.df$group = groups
   
   for(i in 1:length(groups)){
