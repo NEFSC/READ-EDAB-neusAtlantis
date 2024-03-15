@@ -12133,62 +12133,62 @@ flagchangeDISCRD_DR       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 flagchangeDISCRD_DC       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-habitat_midwcISQ       10
-1 1 1 1 1 1 1 1 1 1
-habitat_midwcLSQ       10
-1 1 1 1 1 1 1 1 1 1
-habitat_jigISQ         10
-1 1 1 1 1 1 1 1 1 1
-habitat_jigLSQ         10
-1 1 1 1 1 1 1 1 1 1
-habitat_dredgeSCA      10
-1 1 1 1 1 1 1 1 1 1
-habitat_trapRCB        10
-1 1 1 1 1 1 1 1 1 1
-habitat_dtrawlRCB      10
-1 1 1 1 1 1 1 1 1 1
-habitat_dtrawlISQ      10
-1 1 1 1 1 1 1 1 1 1
-habitat_dtrawlLSQ      10
-1 1 1 1 1 1 1 1 1 1
-habitat_dtrawlSHK      10
-1 1 1 1 1 1 1 1 1 1
-habitat_dtrawlHAD      10
-1 1 1 1 1 1 1 1 1 1
-habitat_dseineSHK      10
-1 1 1 1 1 1 1 1 1 1
-habitat_dlineBLF       10
-1 1 1 1 1 1 1 1 1 1
-habitat_diveBG         10
-1 1 1 1 1 1 1 1 1 1
-habitat_pseineBLF      10
-1 1 1 1 1 1 1 1 1 1
-habitat_cullPIN        10
-1 1 1 1 1 1 1 1 1 1
-habitat_ptrawlNSH      10
-1 1 1 1 1 1 1 1 1 1
-habitat_ptrawlOSH      10
-1 1 1 1 1 1 1 1 1 1
-habitat_dtrawlANC      10
-1 1 1 1 1 1 1 1 1 1
-habitat_dtrawlBPF      10
-1 1 1 1 1 1 1 1 1 1
-habitat_dtrawlBUT      10
-1 1 1 1 1 1 1 1 1 1
-habitat_midwcZL        10
-1 1 1 1 1 1 1 1 1 1
-habitat_trapMEN        10
-1 1 1 1 1 1 1 1 1 1
-habitat_dlineMEN       10
-1 1 1 1 1 1 1 1 1 1
-habitat_netMEN         10
-1 1 1 1 1 1 1 1 1 1
-habitat_midwcNSH       10
-1 1 1 1 1 1 1 1 1 1
-habitat_midwcOSH       10
-1 1 1 1 1 1 1 1 1 1
-habitat_mowMA          10
-1 1 1 1 1 1 1 1 1 1
+habitat_midwcISQ       11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_midwcLSQ       11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_jigISQ         11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_jigLSQ         11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_dredgeSCA      11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_trapRCB        11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_dtrawlRCB      11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_dtrawlISQ      11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_dtrawlLSQ      11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_dtrawlSHK      11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_dtrawlHAD      11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_dseineSHK      11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_dlineBLF       11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_diveBG         11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_pseineBLF      11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_cullPIN        11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_ptrawlNSH      11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_ptrawlOSH      11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_dtrawlANC      11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_dtrawlBPF      11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_dtrawlBUT      11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_midwcZL        11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_trapMEN        11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_dlineMEN       11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_netMEN         11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_midwcNSH       11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_midwcOSH       11
+1 1 1 1 1 1 1 1 1 1 1
+habitat_mowMA          11
+1 1 1 1 1 1 1 1 1 1 1
 q_MAK      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 q_HER      28
