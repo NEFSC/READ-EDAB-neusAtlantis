@@ -2156,19 +2156,10 @@ imposecatchend_DC       28
 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000
 
 
-## Proportion of the imposed catch to take from the age group (if there is
-sufficient biomass over all fished age classes to cover the imposed
-catch). A vector should have as many values as there are age groups in
-the species XXX and should sum to 1.0
+## Proportion of the imposed catch to take from the age group (if there is sufficient biomass over all fished age classes to cover the imposed catch). A vector should have as many values as there are age groups in the species XXX and should sum to 1.0
 
 
-
-## A vector with as many value as there are fisheries
-A scalar for imposed catches to scale from reported catches to total
-catches when accounting for misreporting by each fishery. For example
-if there was an additional 25% of the catch that was not reported, so
-that total catch was equal to 125% of official reported catch, then the
-scalar should be set to 1.25 for that fishery
+## A vector with as many value as there are fisheries A scalar for imposed catches to scale from reported catches to total catches when accounting for misreporting by each fishery. For example if there was an additional 25% of the catch that was not reported, so that total catch was equal to 125% of official reported catch, then the scalar should be set to 1.25 for that fishery
 
 reportscale_MAK      28
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -2349,8 +2340,7 @@ reportscale_DR       28
 reportscale_DC       28
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 
-## Adaptive management. Can force catch then switch to dynamic fishing and apply management action durng this period. If >0, management options will be applied to the fishery YYY and
-imposed catch may be scaled by a management scalar.
+## Adaptive management. Can force catch then switch to dynamic fishing and apply management action durng this period. If >0, management options will be applied to the fishery YYY and imposed catch may be scaled by a management scalar.
 
 midwcISQ_flagmanage   0
 midwcLSQ_flagmanage   0
@@ -2481,12 +2471,8 @@ mowMA_flagmpa      0
 ########### General fisheries parameters ###########################
 #####################################################################
 
-#### A flag indicating whether fisheries can cause incidental mortality
-through bycatch. The bycatch will be determined depending on how a
-fishery is set: if imposed catches are used or user defined fishing
-mortality is set species in the model then bycatch of other species can
-be generated with the FCcocatchXXX parameter; whereas in dynamic
-fishing bycatch is determined by a range of parameters.
+#### A flag indicating whether fisheries can cause incidental mortality through bycatch. The bycatch will be determined depending on how a
+fishery is set: if imposed catches are used or user defined fishing mortality is set species in the model then bycatch of other species can be generated with the FCcocatchXXX parameter; whereas in dynamic fishing bycatch is determined by a range of parameters.
 
 flagincidmort	 	 0
 
@@ -2856,8 +2842,8 @@ flagmowMAday     2        Active: 2 = no preference, 1 = day, 0 = night         
 
 
 #############################################################################
-################## Whether a fishery has access to fish in the entire water column (e.g. do trawl doors remain open as the gear moves up/down through the water column there by interacting with species who do not live at the depth the trawl is most actively being towed)
-#############################################################################
+################## Whether a fishery has access to fish in the entire water column (e.g. do trawl doors remain open as the gear moves up/down through the water column there by interacting with species who do not live at the depth the trawl is most actively being towed) #############################################################################
+
 flag_access_thru_wc_MAK 1
 flag_access_thru_wc_HER 1
 flag_access_thru_wc_WHK 1
@@ -3938,15 +3924,11 @@ mowMA_selcurve      0
 ## Global. Boolean. Fishing stops once TAC exceeded if value = 1.
 flag_stop_F_tac		 0
 
-## If set to 1, some fisheries will infringe MPAs. This flag is only relevant if
-MPAs have been setup through flagmpa and the YYY_flagmpa
-parameter, see chapter 15.6
+## If set to 1, some fisheries will infringe MPAs. This flag is only relevant if MPAs have been setup through flagmpa and the YYY_flagmpa parameter, see chapter 15.6
 
 flaginfringe		 0
 
-## The level of MPA infringement by fishery YYY (sets the minimum
-proportion of the box that is accessible, if an MPA is more restrictive
-than that then infringement occurs)
+## The level of MPA infringement by fishery YYY (sets the minimum proportion of the box that is accessible, if an MPA is more restrictive than that then infringement occurs)
 
 midwcISQ_infringe   0
 midwcLSQ_infringe   0
@@ -3977,8 +3959,7 @@ midwcNSH_infringe   0
 midwcOSH_infringe   0
 mowMA_infringe      0
 
-# Flag indicating whether mFC values will change for at least one fishery
-during the simulation
+# Flag indicating whether mFC values will change for at least one fishery during the simulation
 
 flagchangeF 		 0
 
@@ -4347,9 +4328,7 @@ DC_mFC_changes       28
 
 
 
-## Vector indicating when each change in fishing mortality begins in days
-of the model run. There should be as many entries as there are
-number of changes given in the XXX_mFC_changes
+## Vector indicating when each change in fishing mortality begins in days of the model run. There should be as many entries as there are number of changes given in the XXX_mFC_changes
 
 mFCchange_start_MAK      1
 0
@@ -4530,9 +4509,7 @@ mFCchange_start_DR       1
 mFCchange_start_DC       1
 0
 
-## Period in days over which the change in fishing mortality will occur.
-There should be as many entries as there are number of changes given
-in the XXX_mFC_changes
+## Period in days over which the change in fishing mortality will occur. There should be as many entries as there are number of changes given in the XXX_mFC_changes
 
 mFCchange_period_MAK      1
 1
@@ -4713,10 +4690,7 @@ mFCchange_period_DR       1
 mFCchange_period_DC       1
 1
 
-## The multiplier by which the ORIGINAL fishing mortality is rescaled to
-obtain the new (changed) mortality rate. There should be as many
-entries as there are number of changes given in the XXX_mFC_changes
-See further details on the wiki.
+## The multiplier by which the ORIGINAL fishing mortality is rescaled to obtain the new (changed) mortality rate. There should be as many entries as there are number of changes given in the XXX_mFC_changes See further details on the wiki.
 
 mFCchange_mult_MAK      1
 1
@@ -4906,8 +4880,7 @@ mFCchange_mult_DC       1
 ############### Dynamic fishing ################################
 #################################################################
 
-## Flag indicating which effort model determines the total effort by
-fishery YYY and its spatial distribution (options 0 to 13 available).
+## Flag indicating which effort model determines the total effort by fishery YYY and its spatial distribution (options 0 to 13 available).
 
 midwcISQ_effortmodel   0
 midwcLSQ_effortmodel   0
@@ -4938,9 +4911,7 @@ midwcNSH_effortmodel   0
 midwcOSH_effortmodel   0
 mowMA_effortmodel      0
 
-## A vector giving relative distribution of effort for fishery YYY across the
-vertical layers in each box (applied in the same way as the vectors
-determining vertical distribution of functional groups)
+## A vector giving relative distribution of effort for fishery YYY across the vertical layers in each box (applied in the same way as the vectors determining vertical distribution of functional groups)
 
 Effort_vdistribmidwcISQ       4
 0 0 0 0
@@ -4999,9 +4970,7 @@ Effort_vdistribmidwcOSH       4
 Effort_vdistribmowMA          4
 0 0 0 0
 
-### A vector setting relative effort per box by the fishery YYY for each
-quarter of the year (1 to 4). It is used in combination with YYY_Effort
-to get the actual final effort per box in days per day
+### A vector setting relative effort per box by the fishery YYY for each quarter of the year (1 to 4). It is used in combination with YYY_Effort to get the actual final effort per box in days per day
 
 Effort_hdistribmidwcISQ1       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -5228,8 +5197,7 @@ Effort_hdistribmidwcOSH4       30
 Effort_hdistribmowMA4          30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
-### The swept volume of water by gear of fishery YYY, m3 day-1. This is a
-volume, but called area to keep in line with the fisheries science usage.
+### The swept volume of water by gear of fishery YYY, m3 day-1. This is a volume, but called area to keep in line with the fisheries science usage.
 
 midwcISQ_sweptarea   0
 midwcLSQ_sweptarea   0
@@ -5261,8 +5229,7 @@ midwcOSH_sweptarea   0
 mowMA_sweptarea      0
 
 
-#### Flag setting which escapement formulation to use. 0 – no escapement,
-1- constant escapement per age class, 2 – size based escapement.
+#### Flag setting which escapement formulation to use. 0 – no escapement, 1- constant escapement per age class, 2 – size based escapement.
 
 flagescapement_MAK      28
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -5444,8 +5411,7 @@ flagescapement_DC       28
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 
 
-### A vector giving proportions of each age class that will escape the
-fishing gear
+### A vector giving proportions of each age class that will escape the fishing gear
 
 p_escape_MAK      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -5626,8 +5592,7 @@ p_escape_DR       28
 p_escape_DC       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
-### The constant in length-based escapement formulation for species XXX
-(when flagescapementXXX=2)
+### The constant in length-based escapement formulation for species XXX (when flagescapementXXX=2)
 
 Ka_escape_MAK      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -5808,8 +5773,7 @@ Ka_escape_DR       28
 Ka_escape_DC       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
-####The second constant in length-based escapement formulation for
-species XXX (when flagescapementXXX=2)
+####The second constant in length-based escapement formulation for species XXX (when flagescapementXXX=2)
 
 Kb_escape_MAK      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -5990,10 +5954,7 @@ Kb_escape_DR       28
 Kb_escape_DC       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
-The minimum depth that a fishery can operate at, in metres. This will
-constrain the area available to a fishery, which means that a fishery
-will not operate in a cell that is outside the depth limits, regardless of
-the effort model applied
+The minimum depth that a fishery can operate at, in metres. This will constrain the area available to a fishery, which means that a fishery will not operate in a cell that is outside the depth limits, regardless of the effort model applied
 
 midwcISQ_mindepth   0
 midwcLSQ_mindepth   0
@@ -6026,10 +5987,7 @@ mowMA_mindepth      0
 
 
 
-## The maximum depth that a fishery can operate at, in meters. This will
-constrain the area available to a fishery, which means that a fishery
-will not operate in a cell that is outside the depth limits, regarless of
-the effort model applied
+## The maximum depth that a fishery can operate at, in meters. This will constrain the area available to a fishery, which means that a fishery will not operate in a cell that is outside the depth limits, regarless of the effort model applied
 
 midwcISQ_maxdepth   1805
 midwcLSQ_maxdepth   1805
@@ -6060,10 +6018,7 @@ midwcNSH_maxdepth   1805
 midwcOSH_maxdepth   1805
 mowMA_maxdepth      1805
 
-### Average effort by the fishery YYY across the entire model domain
-throughout the year (days per day). When applied to recreational
-fisheries this sets the average effort by one fisher and not by the entire
-fishery (so the value should be much smaller)
+### Average effort by the fishery YYY across the entire model domain throughout the year (days per day). When applied to recreational fisheries this sets the average effort by one fisher and not by the entire fishery (so the value should be much smaller)
 
 midwcISQ_Effort   0
 midwcLSQ_Effort   0
@@ -6094,9 +6049,7 @@ midwcNSH_Effort   0
 midwcOSH_Effort   0
 mowMA_Effort      0
 
-
-### vector of four values setting relative quarterly effort (used in
-combination with YYY_Effort to give the final effort in days per day)
+### vector of four values setting relative quarterly effort (used in combination with YYY_Effort to give the final effort in days per day)
 
 mEff_midwcISQ       4
 1 1 1 1
@@ -6156,27 +6109,21 @@ mEff_mowMA          4
 1 1 1 1
 
 
-# A vector giving the population of each port (should have the same
-number of values as there ports indicated in K_num_ports parameter
-in the run.prm file).population of each port (numbers as of 1901)
+# A vector giving the population of each port (should have the same number of values as there ports indicated in K_num_ports parameter in the run.prm file).population of each port (numbers as of 1901)
 
 ports_pop   17
 8202 292623 42103 87330 870505 39067 48590 72204 12674 19992 42527 201042 849964 422050 38658 10591 10591 
 
-# Proportion of population in ALL ports that go recreational fishing.
-This parameter applies the same proportion to all ports
+# Proportion of population in ALL ports that go recreational fishing. This parameter applies the same proportion to all ports
 
 k_proprecfish         0.20   # The proportion of the population who fish recreationally          0.20
 
-# A vector of values indicating whether a port population changes
-during the simulation (0 – no, 1 – yes). It must have as many values as
-there are ports.
+# A vector of values indicating whether a port population changes during the simulation (0 – no, 1 – yes). It must have as many values as there are ports.
 
 ports_popchange   17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0
 
-# A vector of values indicating how many population changes occur in
-each port. It must have as many values as there are ports. number of changes in population for each port (1 is default as = minimum array size)
+# A vector of values indicating how many population changes occur in each port. It must have as many values as there are ports. number of changes in population for each port (1 is default as = minimum array size)
 
 ports_popnumchange   17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -6235,8 +6182,7 @@ PortPopChange_start_Port16  1
 PortPopChange_start_Port17  1
 365
 
-# Period of time (in days) over which the population of port Z changes.
-There must be as many entries as there are changes in port Z.
+# Period of time (in days) over which the population of port Z changes. There must be as many entries as there are changes in port Z.
 
 PortPopChange_period_Port1   1
 14600
@@ -6289,9 +6235,7 @@ PortPopChange_period_Port16  1
 PortPopChange_period_Port17  1
 1
 
-## The multiplier for the final port population, to be reached at the end of
-the change period. There must be as many entries as there are
-changes in port Z.
+## The multiplier for the final port population, to be reached at the end of the change period. There must be as many entries as there are changes in port Z.
 
 PortPopChange_mult_Port1   1
 1.3
@@ -6350,9 +6294,7 @@ PortPopChange_mult_Port17  1
 
 Speed_recboat	  	 10
 
-### The maximum effort per box allowed per fishery YYY in the
-exponential CPUE related effort allocation option (days day-1), used in
-YYY_efformodel =4 and 5
+### The maximum effort per box allowed per fishery YYY in the exponential CPUE related effort allocation option (days day-1), used in YYY_efformodel =4 and 5
 
 midwcISQ_mEff_max   0.001
 midwcLSQ_mEff_max   0.001
@@ -6383,8 +6325,7 @@ midwcNSH_mEff_max   0.001
 midwcOSH_mEff_max   0.001
 mowMA_mEff_max      0.001
 
-### Steepness of the effort increase in response to CPUE in the
-exponential CPUE related effort allocation option (unitless), used in YYY_efformodel =4 and 5
+### Steepness of the effort increase in response to CPUE in the exponential CPUE related effort allocation option (unitless), used in YYY_efformodel =4 and 5
 
 midwcISQ_mEff_a   100
 midwcLSQ_mEff_a   100
@@ -6446,10 +6387,7 @@ midwcNSH_mEff_offset   100
 midwcOSH_mEff_offset   100
 mowMA_mEff_offset      100
 
-## A Boolean vector indicating which species are targeted by the fishery
-YYY. The vector should have as many entries as there are values in the
-functional_group.csv file. 1- species is targeted, 0 – species is not
-targeted (see NOTE! above on what this parameter means)
+## A Boolean vector indicating which species are targeted by the fishery YYY. The vector should have as many entries as there are values in the functional_group.csv file. 1- species is targeted, 0 – species is not targeted (see NOTE! above on what this parameter means)
 
 
 target_midwcISQ       89
@@ -6509,10 +6447,7 @@ target_midwcOSH       89
 target_mowMA          89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
-## A flag indicating whether to use all species caught to define CPUE of a
-fishery YYY for CPUE based effort models (1=yes) or target species
-only (0).
-
+## A flag indicating whether to use all species caught to define CPUE of a fishery YYY for CPUE based effort models (1=yes) or target species only (0).
 
 midwcISQ_flaguseall   1
 midwcLSQ_flaguseall   1
@@ -6544,9 +6479,7 @@ midwcOSH_flaguseall   1
 mowMA_flaguseall      1
 
 
-## A fishery specific distance scalar used in determining the effort
-distribution; it heightens or lessens the effects of distance between the
-optimal box and the ports (unitless)
+## A fishery specific distance scalar used in determining the effort distribution; it heightens or lessens the effects of distance between the optimal box and the ports (unitless)
 
 midwcISQ_mFCscale   1800
 midwcLSQ_mFCscale   1800
@@ -6579,8 +6512,7 @@ mowMA_mFCscale      1800
 
 
 
-# Vectors giving x and y coordinates of each port in metres in the model
-space projection. Port location and timing parameters - there must be as many entries as there are ports (K_num_ports). x coordinate (in metres as in model space)
+# Vectors giving x and y coordinates of each port in metres in the model space projection. Port location and timing parameters - there must be as many entries as there are ports (K_num_ports). x coordinate (in metres as in model space)
 
 ports_x   17
 69087.41 317834.74 494038.37 672140.19 867027.673 1011154.63 981154.63 1063079.2 1113535.52 1156042.11 1343747.12 1462549.96 1568449.39 1758171.57 881584.55 -1535921.32 -1506000.0
@@ -6589,9 +6521,7 @@ ports_x   17
 ports_y   17
 -3810889.25 -3830459.32 -4103144.42 -4228309.71 -4186651 -4310057.04 -4534057.04 -4754843.95 -4580210.39 -4203448.62 -4103072.72 -3868256.93 -3690432.94 -3080657.97 -4677476.26 -3929010 -3910000.0
 
-# Vectors giving the period of port activity during the simulation. The
-ports can be active from the first timestep or only for a set period of
-time. If a port is not active, then no fishery will work from that port.time port first used (days from model start time)
+# Vectors giving the period of port activity during the simulation. The ports can be active from the first timestep or only for a set period of time. If a port is not active, then no fishery will work from that port.time port first used (days from model start time)
 
 ports_start   17
 10920 12740 14560 18200 10920 18764 14890 13300 16380 15310 14890 12740 10920 12740 16380 10920 18764
@@ -6600,10 +6530,7 @@ ports_start   17
 ports_end   17
 31449600000 31449600000 31449600000 31449600000 31449600000 31449600000 31449600000 31449600000 31449600000 31449600000 31449600000 31449600000 31449600000 31449600000 31449600000 31449600000 31449600000
 
-### A vector giving association of each fishery YYY with each port. It has
-as many entries as there ports, with a value of 1 indicating that the
-fishery works from that port and a 0 meaning that fishery does not
-work from the port.
+### A vector giving association of each fishery YYY with each port. It has as many entries as there ports, with a value of 1 indicating that the fishery works from that port and a 0 meaning that fishery does not work from the port.
 
 ports_midwcISQ       17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -6662,8 +6589,7 @@ ports_midwcOSH       17
 ports_mowMA          17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 
-## A flag indicating whether the effort of fishery YYY in any one box is
-capped (0 – no, 1 – yes)
+## A flag indicating whether the effort of fishery YYY in any one box is capped (0 – no, 1 – yes)
 
 midwcISQ_flagcap_peak   0
 midwcLSQ_flagcap_peak   0
@@ -6694,8 +6620,7 @@ midwcNSH_flagcap_peak   0
 midwcOSH_flagcap_peak   0
 mowMA_flagcap_peak      0
 
-## If the effort of a fishery YYY is capped ( YYY_flagcap_peak=1), this sets
-the maximum potential effort in any one box ( days day-1)
+## If the effort of a fishery YYY is capped ( YYY_flagcap_peak=1), this sets the maximum potential effort in any one box ( days day-1)
 
 midwcISQ_mFCpeak   1
 midwcLSQ_mFCpeak   1
@@ -6726,15 +6651,11 @@ midwcNSH_mFCpeak   1
 midwcOSH_mFCpeak   1
 mowMA_mFCpeak      1
 
-# Speed of commercial fisheries boats (m hour-1). This is used across for 
-all fisheries to estimate how quickly the new ideal effort can be
-realised. Applied in YYY_efformodel=4 and 8
+# Speed of commercial fisheries boats (m hour-1). This is used across for all fisheries to estimate how quickly the new ideal effort can be realised. Applied in YYY_efformodel=4 and 8
 
 Speed_boat		 	 10
 
-### Flag indicating whether once per year a fishery YYY will do
-exploratory fishing in all accessible boxes (within YYY_maxdepth and
-YYY_mindepth depth ranges). 1 – yes, 0 – no. Exploratory fishing is recommended with all CPUE based effort models
+### Flag indicating whether once per year a fishery YYY will do exploratory fishing in all accessible boxes (within YYY_maxdepth and YYY_mindepth depth ranges). 1 – yes, 0 – no. Exploratory fishing is recommended with all CPUE based effort models
 
 midwcISQ_explore   0
 midwcLSQ_explore   0
@@ -6766,9 +6687,7 @@ midwcOSH_explore   0
 mowMA_explore      0
 
 
-### The exploratory fishing effort (days day-1) to be applied to each box if
-YYY_exolore is set to 1. Note, this effort is applied in addition to
-normal fishing
+### The exploratory fishing effort (days day-1) to be applied to each box if YYY_exolore is set to 1. Note, this effort is applied in addition to normal fishing
 
 midwcISQ_mEff_testfish   1
 midwcLSQ_mEff_testfish   1
@@ -6800,8 +6719,7 @@ midwcOSH_mEff_testfish   1
 mowMA_mEff_testfish      1
 
 
-### The CPUE threshold (kg day-1) below which the fishery YYY will
-decrease the effort in YYY_effortmodel=8
+### The CPUE threshold (kg day-1) below which the fishery YYY will decrease the effort in YYY_effortmodel=8
 
 midwcISQ_mEff_thresh   0
 midwcLSQ_mEff_thresh   0
@@ -6832,8 +6750,7 @@ midwcNSH_mEff_thresh   0
 midwcOSH_mEff_thresh   0
 mowMA_mEff_thresh      0
 
-### The CPUE threshold (kg day-1) above which the fishery YYY will
-increase the effort in YYY_effortmodel =8
+### The CPUE threshold (kg day-1) above which the fishery YYY will increase the effort in YYY_effortmodel =8
 
 midwcISQ_mEff_thresh_top   0
 midwcLSQ_mEff_thresh_top   0
@@ -6866,10 +6783,7 @@ mowMA_mEff_thresh_top      0
 
 
 
-### The yearly proportional increase/decrease in effort if CPUE is above
-or below the threshold levels in YYY_effortmodel =8. The
-increase/decrease in threshold happens once per week and is
-decreased by YYY_mEff_shift/52
+### The yearly proportional increase/decrease in effort if CPUE is above or below the threshold levels in YYY_effortmodel =8. The increas/decrease in threshold happens once per week and is decreased by YYY_mEff_shift/52
 
 
 midwcISQ_mEff_shift   1
@@ -6911,9 +6825,7 @@ mowMA_mEff_shift      1
 ############ Effort Displacement #############################################
 ############################################################################
 
-## If set to 1, effort in dynamic fishery will be displaced into adjacent
-cells when CPUE falls below a certain threshold or when MPAs are
-imposed
+## If set to 1, effort in dynamic fishery will be displaced into adjacent cells when CPUE falls below a certain threshold or when MPAs are imposed
 
 flagdisplace		 0
 
@@ -6921,8 +6833,7 @@ flagdisplace		 0
 
 ## YYY_mEff_thresh level - these are absent
 
-### If set to 1, the effort will be capped at the maximum level set in
-YYY_cap
+### If set to 1, the effort will be capped at the maximum level set in YYY_cap
 
 midwcISQ_flagcap   0
 midwcLSQ_flagcap   0
@@ -6984,14 +6895,11 @@ midwcNSH_cap   0        0
 midwcOSH_cap   0        0
 mowMA_cap      0        0
 
-## If set to 1, effort caps can change through time. See chapter 15.10 on
-how temporal changes are implemented
+## If set to 1, effort caps can change through time. See chapter 15.10 on how temporal changes are implemented
 
 flagchangecap 		 0
 
-## If set to 1, sudden decreases in dynamic effort will be buffered
-through time (and hence not allowed). This should be avoided unless
-well justified (see Note! in chapter 15.6.2)
+## If set to 1, sudden decreases in dynamic effort will be buffered through time (and hence not allowed). This should be avoided unless well justified (see Note! in chapter 15.6.2)
 
 flagbuffereffort	 0
 
@@ -7007,15 +6915,11 @@ flagbuffereffort	 0
 ############################################################################
 
 
-### If set to 1, fishery has access to both demersal and pelagic species.
-Otherwise the effectiveness of the fisheries gear (which is pelagic or
-demersal) will be reduced by k_mismatch when targeting demersal or
-pelagic species respectively
+### If set to 1, fishery has access to both demersal and pelagic species. Otherwise the effectiveness of the fisheries gear (which is pelagic or demersal) will be reduced by k_mismatch when targeting demersal or pelagic species respectively
 
 ## flag_access_thru_wc_YYY defined in first section/ imposed catch
 
-##Parameters used to set up Ellis and Pantus (2000) habitat refuge from
-fisheries (see chapter 15.7.3)
+##Parameters used to set up Ellis and Pantus (2000) habitat refuge from fisheries (see chapter 15.7.3)
 
 k_patches		 	 2
 k_pattern		 	 0
@@ -7087,14 +6991,11 @@ k_covermowMA          30
 ############################################################################
 
 
-## If set to 1, fisheries gear selectivity changes through time (see chapter
-15.10 and 15.8.1 for further explanations)
+## If set to 1, fisheries gear selectivity changes through time (see chapter 15.10 and 15.8.1 for further explanations)
 
 flagchangesel		 0
 
-## Parameters used to set fisheries gear selectivity. They can have
-different meanings depending on the YYY_selcurve option. Check
-chapter 15.8.1-15.8.11 for details
+## Parameters used to set fisheries gear selectivity. They can have different meanings depending on the YYY_selcurve option. Check chapter 15.8.1-15.8.11 for details
 
 
 sel_MAK      28
@@ -7998,13 +7899,11 @@ midwcOSHsel_ampli   0
 mowMAsel_ampli      0
 invert_incidmort    0
 
-## If set to 1, volume swept by a fishing gear can change through time.
-See chapter 15.8.13 and 15.10 for further details
+## If set to 1, volume swept by a fishing gear can change through time. See chapter 15.8.13 and 15.10 for further details
 
 flagchangeswept		 0
 
-## A parameter used only for reporting purposes, and does not affect
-Atlantis calculations (see chapter 15.8.14).
+## A parameter used only for reporting purposes, and does not affect Atlantis calculations (see chapter 15.8.14).
 
 gear_conflict_midwcISQ       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -8134,8 +8033,7 @@ mowMA_changeSWEPT      0
 ############################################################################
 
 
-## Species specific flag setting up discarding options for each
-species/fishery combination.
+## Species specific flag setting up discarding options for each species/fishery combination.
 
 flagdiscard_MAK      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -8317,8 +8215,7 @@ flagdiscard_DC       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
 
-### Proportion of species XXX discards that die after discarding (so if set
-to 1, then all discards die)
+### Proportion of species XXX discards that die after discarding (so if set to 1, then all discards die)
 
 incidmort_MAK      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -8869,8 +8766,7 @@ FFCDR_DC       28
 
 
 
-### Vectors giving two possible age specific discarding proportions when flagdiscard_XXX =1. Must have as many values as there are age groups in species XXX. The FC_caseXXX vector sets which of the two alternative formulations are used by each fishery (must have as many
-values are there are fisheries)
+### Vectors giving two possible age specific discarding proportions when flagdiscard_XXX =1. Must have as many values as there are age groups in species XXX. The FC_caseXXX vector sets which of the two alternative formulations are used by each fishery (must have as many values are there are fisheries)
 
 
 FFCDR_MAKchrt      10
@@ -9775,6 +9671,7 @@ DiscardTS_agedistribDC       10
 0 0 0 0 0 0 0 0 0 0
 
 ### If set to 1, fisheries will start discarding the youngest cohorts of the catch when they are approaching the TAC. The proportion of TAC fulfilled before highgrading starts is set in the global prop_within parameter
+
 flaghighgrading  	 0
 
 ##### ???? ? ?
@@ -9802,8 +9699,7 @@ flagchangeq 		 0
 
 flagchangepop		 0
 
-## If set to 1, a spatial coverage of the fishery changes through time (see
-chapter 15.10)
+## If set to 1, a spatial coverage of the fishery changes through time (see chapter 15.10)
 
 flagchangep 		 0
 
@@ -10341,8 +10237,7 @@ midwcNSH_FC_period   730
 midwcOSH_FC_period   730
 mowMA_FC_period      730
 
-## Period of time before stock status is re-checked. If the stock has recovered at this time restrictions are removed. If the stock remains depleted the time counter is reset (i.e. the restrictions are triggered
-afresh).
+## Period of time before stock status is re-checked. If the stock has recovered at this time restrictions are removed. If the stock remains depleted the time counter is reset (i.e. the restrictions are triggered afresh).
 
 midwcISQ_FC_period2   1825
 midwcLSQ_FC_period2   1825
@@ -11299,9 +11194,7 @@ flagTACparticipate_mowMA 0
 
 bulkTAC 	1
 
-## If TACs are based on management areas, then users must identify whether species XXX
-should be managed by regional quotas in the parameter regionalSPXXX (where a value of 1 means
-regional management is in place).
+## If TACs are based on management areas, then users must identify whether species XXX should be managed by regional quotas in the parameter regionalSPXXX (where a value of 1 means regional management is in place).
 
 regionalSPMAK 1
 regionalSPHER 1
@@ -11578,14 +11471,6 @@ tac_resetperiodDR       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 tac_resetperiodDC       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-
-
-
-
-
-
-
-
 
 
 ## the endangered species triggered MPAs will only be in place when biomasses of endangered species are below a set level. To identify which species will be used to trigger such species set the SP_Concern parameter to 1
@@ -12783,6 +12668,7 @@ tierBO 0
 tierDL 0
 tierDR 0
 tierDC 0
+
 RegSeason 1
 0
 
