@@ -4,63 +4,6 @@ dimensions:
 	b = 30 ;
 	z = 5 ;
 variables:
-	double Anchovies10_Nums(t, b, z) ;
-		Anchovies10_Nums:bmtype = "tracer" ;
-		Anchovies10_Nums:units = "1" ;
-		Anchovies10_Nums:long_name = "Numbers of benthopelagics cohort 10" ;
-		Anchovies10_Nums:dtype = 0 ;
-		Anchovies10_Nums:sumtype = 0 ;
-		Anchovies10_Nums:inwc = 0 ;
-		Anchovies10_Nums:insed = 0 ;
-		Anchovies10_Nums:dissol = 0 ;
-		Anchovies10_Nums:decay = 0. ;
-		Anchovies10_Nums:partic = 1 ;
-		Anchovies10_Nums:passive = 1 ;
-		Anchovies10_Nums:svel = 0. ;
-		Anchovies10_Nums:xvel = 0. ;
-		Anchovies10_Nums:psize = 10. ;
-		Anchovies10_Nums:b_dens = 1000000000. ;
-		Anchovies10_Nums:i_conc = 200000000. ;
-		Anchovies10_Nums:f_conc = 200000000. ;
-		Anchovies10_Nums:_FillValue = 0. ;
-	double Anchovies10_ResN(t, b, z) ;
-		Anchovies10_ResN:bmtype = "tracer" ;
-		Anchovies10_ResN:units = "mg N" ;
-		Anchovies10_ResN:long_name = "Individ reserve N for benthopelagicss cohort 10" ;
-		Anchovies10_ResN:dtype = 0 ;
-		Anchovies10_ResN:sumtype = 0 ;
-		Anchovies10_ResN:inwc = 0 ;
-		Anchovies10_ResN:insed = 0 ;
-		Anchovies10_ResN:dissol = 0 ;
-		Anchovies10_ResN:decay = 0. ;
-		Anchovies10_ResN:partic = 1 ;
-		Anchovies10_ResN:passive = 0 ;
-		Anchovies10_ResN:svel = 0. ;
-		Anchovies10_ResN:xvel = 0. ;
-		Anchovies10_ResN:psize = 10. ;
-		Anchovies10_ResN:b_dens = 1000000000. ;
-		Anchovies10_ResN:i_conc = 200000000. ;
-		Anchovies10_ResN:f_conc = 200000000. ;
-		Anchovies10_ResN:_FillValue = 101.6 ;
-	double Anchovies10_StructN(t, b, z) ;
-		Anchovies10_StructN:bmtype = "tracer" ;
-		Anchovies10_StructN:units = "mg N" ;
-		Anchovies10_StructN:long_name = "Individ structural N for benthopelagicss cohort 10" ;
-		Anchovies10_StructN:dtype = 0 ;
-		Anchovies10_StructN:sumtype = 0 ;
-		Anchovies10_StructN:inwc = 0 ;
-		Anchovies10_StructN:insed = 0 ;
-		Anchovies10_StructN:dissol = 0 ;
-		Anchovies10_StructN:decay = 0. ;
-		Anchovies10_StructN:partic = 1 ;
-		Anchovies10_StructN:passive = 0 ;
-		Anchovies10_StructN:svel = 0. ;
-		Anchovies10_StructN:xvel = 0. ;
-		Anchovies10_StructN:psize = 10. ;
-		Anchovies10_StructN:b_dens = 1000000000. ;
-		Anchovies10_StructN:i_conc = 200000000. ;
-		Anchovies10_StructN:f_conc = 200000000. ;
-		Anchovies10_StructN:_FillValue = 50.8 ;
 	double Anchovies1_Nums(t, b, z) ;
 		Anchovies1_Nums:bmtype = "tracer" ;
 		Anchovies1_Nums:units = "1" ;
@@ -155,7 +98,7 @@ variables:
 		Anchovies2_ResN:b_dens = 1000000000. ;
 		Anchovies2_ResN:i_conc = 200000000. ;
 		Anchovies2_ResN:f_conc = 200000000. ;
-		Anchovies2_ResN:_FillValue = 34.94 ;
+		Anchovies2_ResN:_FillValue = 91.46 ;
 	double Anchovies2_StructN(t, b, z) ;
 		Anchovies2_StructN:bmtype = "tracer" ;
 		Anchovies2_StructN:units = "mg N" ;
@@ -174,7 +117,7 @@ variables:
 		Anchovies2_StructN:b_dens = 1000000000. ;
 		Anchovies2_StructN:i_conc = 200000000. ;
 		Anchovies2_StructN:f_conc = 200000000. ;
-		Anchovies2_StructN:_FillValue = 17.47 ;
+		Anchovies2_StructN:_FillValue = 45.73 ;
 	double Anchovies3_Nums(t, b, z) ;
 		Anchovies3_Nums:bmtype = "tracer" ;
 		Anchovies3_Nums:units = "1" ;
@@ -212,7 +155,7 @@ variables:
 		Anchovies3_ResN:b_dens = 1000000000. ;
 		Anchovies3_ResN:i_conc = 200000000. ;
 		Anchovies3_ResN:f_conc = 200000000. ;
-		Anchovies3_ResN:_FillValue = 59.52 ;
+		Anchovies3_ResN:_FillValue = 101.6 ;
 	double Anchovies3_StructN(t, b, z) ;
 		Anchovies3_StructN:bmtype = "tracer" ;
 		Anchovies3_StructN:units = "mg N" ;
@@ -231,349 +174,7 @@ variables:
 		Anchovies3_StructN:b_dens = 1000000000. ;
 		Anchovies3_StructN:i_conc = 200000000. ;
 		Anchovies3_StructN:f_conc = 200000000. ;
-		Anchovies3_StructN:_FillValue = 29.76 ;
-	double Anchovies4_Nums(t, b, z) ;
-		Anchovies4_Nums:bmtype = "tracer" ;
-		Anchovies4_Nums:units = "1" ;
-		Anchovies4_Nums:long_name = "Numbers of benthopelagics cohort 4" ;
-		Anchovies4_Nums:dtype = 0 ;
-		Anchovies4_Nums:sumtype = 0 ;
-		Anchovies4_Nums:inwc = 0 ;
-		Anchovies4_Nums:insed = 0 ;
-		Anchovies4_Nums:dissol = 0 ;
-		Anchovies4_Nums:decay = 0. ;
-		Anchovies4_Nums:partic = 1 ;
-		Anchovies4_Nums:passive = 1 ;
-		Anchovies4_Nums:svel = 0. ;
-		Anchovies4_Nums:xvel = 0. ;
-		Anchovies4_Nums:psize = 10. ;
-		Anchovies4_Nums:b_dens = 1000000000. ;
-		Anchovies4_Nums:i_conc = 200000000. ;
-		Anchovies4_Nums:f_conc = 200000000. ;
-		Anchovies4_Nums:_FillValue = 0. ;
-	double Anchovies4_ResN(t, b, z) ;
-		Anchovies4_ResN:bmtype = "tracer" ;
-		Anchovies4_ResN:units = "mg N" ;
-		Anchovies4_ResN:long_name = "Individ reserve N for benthopelagicss cohort 4" ;
-		Anchovies4_ResN:dtype = 0 ;
-		Anchovies4_ResN:sumtype = 0 ;
-		Anchovies4_ResN:inwc = 0 ;
-		Anchovies4_ResN:insed = 0 ;
-		Anchovies4_ResN:dissol = 0 ;
-		Anchovies4_ResN:decay = 0. ;
-		Anchovies4_ResN:partic = 1 ;
-		Anchovies4_ResN:passive = 0 ;
-		Anchovies4_ResN:svel = 0. ;
-		Anchovies4_ResN:xvel = 0. ;
-		Anchovies4_ResN:psize = 10. ;
-		Anchovies4_ResN:b_dens = 1000000000. ;
-		Anchovies4_ResN:i_conc = 200000000. ;
-		Anchovies4_ResN:f_conc = 200000000. ;
-		Anchovies4_ResN:_FillValue = 76.96 ;
-	double Anchovies4_StructN(t, b, z) ;
-		Anchovies4_StructN:bmtype = "tracer" ;
-		Anchovies4_StructN:units = "mg N" ;
-		Anchovies4_StructN:long_name = "Individ structural N for benthopelagicss cohort 4" ;
-		Anchovies4_StructN:dtype = 0 ;
-		Anchovies4_StructN:sumtype = 0 ;
-		Anchovies4_StructN:inwc = 0 ;
-		Anchovies4_StructN:insed = 0 ;
-		Anchovies4_StructN:dissol = 0 ;
-		Anchovies4_StructN:decay = 0. ;
-		Anchovies4_StructN:partic = 1 ;
-		Anchovies4_StructN:passive = 0 ;
-		Anchovies4_StructN:svel = 0. ;
-		Anchovies4_StructN:xvel = 0. ;
-		Anchovies4_StructN:psize = 10. ;
-		Anchovies4_StructN:b_dens = 1000000000. ;
-		Anchovies4_StructN:i_conc = 200000000. ;
-		Anchovies4_StructN:f_conc = 200000000. ;
-		Anchovies4_StructN:_FillValue = 38.48 ;
-	double Anchovies5_Nums(t, b, z) ;
-		Anchovies5_Nums:bmtype = "tracer" ;
-		Anchovies5_Nums:units = "1" ;
-		Anchovies5_Nums:long_name = "Numbers of benthopelagics cohort 5" ;
-		Anchovies5_Nums:dtype = 0 ;
-		Anchovies5_Nums:sumtype = 0 ;
-		Anchovies5_Nums:inwc = 0 ;
-		Anchovies5_Nums:insed = 0 ;
-		Anchovies5_Nums:dissol = 0 ;
-		Anchovies5_Nums:decay = 0. ;
-		Anchovies5_Nums:partic = 1 ;
-		Anchovies5_Nums:passive = 1 ;
-		Anchovies5_Nums:svel = 0. ;
-		Anchovies5_Nums:xvel = 0. ;
-		Anchovies5_Nums:psize = 10. ;
-		Anchovies5_Nums:b_dens = 1000000000. ;
-		Anchovies5_Nums:i_conc = 200000000. ;
-		Anchovies5_Nums:f_conc = 200000000. ;
-		Anchovies5_Nums:_FillValue = 0. ;
-	double Anchovies5_ResN(t, b, z) ;
-		Anchovies5_ResN:bmtype = "tracer" ;
-		Anchovies5_ResN:units = "mg N" ;
-		Anchovies5_ResN:long_name = "Individ reserve N for benthopelagicss cohort 5" ;
-		Anchovies5_ResN:dtype = 0 ;
-		Anchovies5_ResN:sumtype = 0 ;
-		Anchovies5_ResN:inwc = 0 ;
-		Anchovies5_ResN:insed = 0 ;
-		Anchovies5_ResN:dissol = 0 ;
-		Anchovies5_ResN:decay = 0. ;
-		Anchovies5_ResN:partic = 1 ;
-		Anchovies5_ResN:passive = 0 ;
-		Anchovies5_ResN:svel = 0. ;
-		Anchovies5_ResN:xvel = 0. ;
-		Anchovies5_ResN:psize = 10. ;
-		Anchovies5_ResN:b_dens = 1000000000. ;
-		Anchovies5_ResN:i_conc = 200000000. ;
-		Anchovies5_ResN:f_conc = 200000000. ;
-		Anchovies5_ResN:_FillValue = 87.82 ;
-	double Anchovies5_StructN(t, b, z) ;
-		Anchovies5_StructN:bmtype = "tracer" ;
-		Anchovies5_StructN:units = "mg N" ;
-		Anchovies5_StructN:long_name = "Individ structural N for benthopelagicss cohort 5" ;
-		Anchovies5_StructN:dtype = 0 ;
-		Anchovies5_StructN:sumtype = 0 ;
-		Anchovies5_StructN:inwc = 0 ;
-		Anchovies5_StructN:insed = 0 ;
-		Anchovies5_StructN:dissol = 0 ;
-		Anchovies5_StructN:decay = 0. ;
-		Anchovies5_StructN:partic = 1 ;
-		Anchovies5_StructN:passive = 0 ;
-		Anchovies5_StructN:svel = 0. ;
-		Anchovies5_StructN:xvel = 0. ;
-		Anchovies5_StructN:psize = 10. ;
-		Anchovies5_StructN:b_dens = 1000000000. ;
-		Anchovies5_StructN:i_conc = 200000000. ;
-		Anchovies5_StructN:f_conc = 200000000. ;
-		Anchovies5_StructN:_FillValue = 43.91 ;
-	double Anchovies6_Nums(t, b, z) ;
-		Anchovies6_Nums:bmtype = "tracer" ;
-		Anchovies6_Nums:units = "1" ;
-		Anchovies6_Nums:long_name = "Numbers of benthopelagics cohort 6" ;
-		Anchovies6_Nums:dtype = 0 ;
-		Anchovies6_Nums:sumtype = 0 ;
-		Anchovies6_Nums:inwc = 0 ;
-		Anchovies6_Nums:insed = 0 ;
-		Anchovies6_Nums:dissol = 0 ;
-		Anchovies6_Nums:decay = 0. ;
-		Anchovies6_Nums:partic = 1 ;
-		Anchovies6_Nums:passive = 1 ;
-		Anchovies6_Nums:svel = 0. ;
-		Anchovies6_Nums:xvel = 0. ;
-		Anchovies6_Nums:psize = 10. ;
-		Anchovies6_Nums:b_dens = 1000000000. ;
-		Anchovies6_Nums:i_conc = 200000000. ;
-		Anchovies6_Nums:f_conc = 200000000. ;
-		Anchovies6_Nums:_FillValue = 0. ;
-	double Anchovies6_ResN(t, b, z) ;
-		Anchovies6_ResN:bmtype = "tracer" ;
-		Anchovies6_ResN:units = "mg N" ;
-		Anchovies6_ResN:long_name = "Individ reserve N for benthopelagicss cohort 6" ;
-		Anchovies6_ResN:dtype = 0 ;
-		Anchovies6_ResN:sumtype = 0 ;
-		Anchovies6_ResN:inwc = 0 ;
-		Anchovies6_ResN:insed = 0 ;
-		Anchovies6_ResN:dissol = 0 ;
-		Anchovies6_ResN:decay = 0. ;
-		Anchovies6_ResN:partic = 1 ;
-		Anchovies6_ResN:passive = 0 ;
-		Anchovies6_ResN:svel = 0. ;
-		Anchovies6_ResN:xvel = 0. ;
-		Anchovies6_ResN:psize = 10. ;
-		Anchovies6_ResN:b_dens = 1000000000. ;
-		Anchovies6_ResN:i_conc = 200000000. ;
-		Anchovies6_ResN:f_conc = 200000000. ;
-		Anchovies6_ResN:_FillValue = 94.2 ;
-	double Anchovies6_StructN(t, b, z) ;
-		Anchovies6_StructN:bmtype = "tracer" ;
-		Anchovies6_StructN:units = "mg N" ;
-		Anchovies6_StructN:long_name = "Individ structural N for benthopelagicss cohort 6" ;
-		Anchovies6_StructN:dtype = 0 ;
-		Anchovies6_StructN:sumtype = 0 ;
-		Anchovies6_StructN:inwc = 0 ;
-		Anchovies6_StructN:insed = 0 ;
-		Anchovies6_StructN:dissol = 0 ;
-		Anchovies6_StructN:decay = 0. ;
-		Anchovies6_StructN:partic = 1 ;
-		Anchovies6_StructN:passive = 0 ;
-		Anchovies6_StructN:svel = 0. ;
-		Anchovies6_StructN:xvel = 0. ;
-		Anchovies6_StructN:psize = 10. ;
-		Anchovies6_StructN:b_dens = 1000000000. ;
-		Anchovies6_StructN:i_conc = 200000000. ;
-		Anchovies6_StructN:f_conc = 200000000. ;
-		Anchovies6_StructN:_FillValue = 47.1 ;
-	double Anchovies7_Nums(t, b, z) ;
-		Anchovies7_Nums:bmtype = "tracer" ;
-		Anchovies7_Nums:units = "1" ;
-		Anchovies7_Nums:long_name = "Numbers of benthopelagics cohort 7" ;
-		Anchovies7_Nums:dtype = 0 ;
-		Anchovies7_Nums:sumtype = 0 ;
-		Anchovies7_Nums:inwc = 0 ;
-		Anchovies7_Nums:insed = 0 ;
-		Anchovies7_Nums:dissol = 0 ;
-		Anchovies7_Nums:decay = 0. ;
-		Anchovies7_Nums:partic = 1 ;
-		Anchovies7_Nums:passive = 1 ;
-		Anchovies7_Nums:svel = 0. ;
-		Anchovies7_Nums:xvel = 0. ;
-		Anchovies7_Nums:psize = 10. ;
-		Anchovies7_Nums:b_dens = 1000000000. ;
-		Anchovies7_Nums:i_conc = 200000000. ;
-		Anchovies7_Nums:f_conc = 200000000. ;
-		Anchovies7_Nums:_FillValue = 0. ;
-	double Anchovies7_ResN(t, b, z) ;
-		Anchovies7_ResN:bmtype = "tracer" ;
-		Anchovies7_ResN:units = "mg N" ;
-		Anchovies7_ResN:long_name = "Individ reserve N for benthopelagicss cohort 7" ;
-		Anchovies7_ResN:dtype = 0 ;
-		Anchovies7_ResN:sumtype = 0 ;
-		Anchovies7_ResN:inwc = 0 ;
-		Anchovies7_ResN:insed = 0 ;
-		Anchovies7_ResN:dissol = 0 ;
-		Anchovies7_ResN:decay = 0. ;
-		Anchovies7_ResN:partic = 1 ;
-		Anchovies7_ResN:passive = 0 ;
-		Anchovies7_ResN:svel = 0. ;
-		Anchovies7_ResN:xvel = 0. ;
-		Anchovies7_ResN:psize = 10. ;
-		Anchovies7_ResN:b_dens = 1000000000. ;
-		Anchovies7_ResN:i_conc = 200000000. ;
-		Anchovies7_ResN:f_conc = 200000000. ;
-		Anchovies7_ResN:_FillValue = 97.82 ;
-	double Anchovies7_StructN(t, b, z) ;
-		Anchovies7_StructN:bmtype = "tracer" ;
-		Anchovies7_StructN:units = "mg N" ;
-		Anchovies7_StructN:long_name = "Individ structural N for benthopelagicss cohort 7" ;
-		Anchovies7_StructN:dtype = 0 ;
-		Anchovies7_StructN:sumtype = 0 ;
-		Anchovies7_StructN:inwc = 0 ;
-		Anchovies7_StructN:insed = 0 ;
-		Anchovies7_StructN:dissol = 0 ;
-		Anchovies7_StructN:decay = 0. ;
-		Anchovies7_StructN:partic = 1 ;
-		Anchovies7_StructN:passive = 0 ;
-		Anchovies7_StructN:svel = 0. ;
-		Anchovies7_StructN:xvel = 0. ;
-		Anchovies7_StructN:psize = 10. ;
-		Anchovies7_StructN:b_dens = 1000000000. ;
-		Anchovies7_StructN:i_conc = 200000000. ;
-		Anchovies7_StructN:f_conc = 200000000. ;
-		Anchovies7_StructN:_FillValue = 48.91 ;
-	double Anchovies8_Nums(t, b, z) ;
-		Anchovies8_Nums:bmtype = "tracer" ;
-		Anchovies8_Nums:units = "1" ;
-		Anchovies8_Nums:long_name = "Numbers of benthopelagics cohort 8" ;
-		Anchovies8_Nums:dtype = 0 ;
-		Anchovies8_Nums:sumtype = 0 ;
-		Anchovies8_Nums:inwc = 0 ;
-		Anchovies8_Nums:insed = 0 ;
-		Anchovies8_Nums:dissol = 0 ;
-		Anchovies8_Nums:decay = 0. ;
-		Anchovies8_Nums:partic = 1 ;
-		Anchovies8_Nums:passive = 1 ;
-		Anchovies8_Nums:svel = 0. ;
-		Anchovies8_Nums:xvel = 0. ;
-		Anchovies8_Nums:psize = 10. ;
-		Anchovies8_Nums:b_dens = 1000000000. ;
-		Anchovies8_Nums:i_conc = 200000000. ;
-		Anchovies8_Nums:f_conc = 200000000. ;
-		Anchovies8_Nums:_FillValue = 0. ;
-	double Anchovies8_ResN(t, b, z) ;
-		Anchovies8_ResN:bmtype = "tracer" ;
-		Anchovies8_ResN:units = "mg N" ;
-		Anchovies8_ResN:long_name = "Individ reserve N for benthopelagicss cohort 8" ;
-		Anchovies8_ResN:dtype = 0 ;
-		Anchovies8_ResN:sumtype = 0 ;
-		Anchovies8_ResN:inwc = 0 ;
-		Anchovies8_ResN:insed = 0 ;
-		Anchovies8_ResN:dissol = 0 ;
-		Anchovies8_ResN:decay = 0. ;
-		Anchovies8_ResN:partic = 1 ;
-		Anchovies8_ResN:passive = 0 ;
-		Anchovies8_ResN:svel = 0. ;
-		Anchovies8_ResN:xvel = 0. ;
-		Anchovies8_ResN:psize = 10. ;
-		Anchovies8_ResN:b_dens = 1000000000. ;
-		Anchovies8_ResN:i_conc = 200000000. ;
-		Anchovies8_ResN:f_conc = 200000000. ;
-		Anchovies8_ResN:_FillValue = 99.86 ;
-	double Anchovies8_StructN(t, b, z) ;
-		Anchovies8_StructN:bmtype = "tracer" ;
-		Anchovies8_StructN:units = "mg N" ;
-		Anchovies8_StructN:long_name = "Individ structural N for benthopelagicss cohort 8" ;
-		Anchovies8_StructN:dtype = 0 ;
-		Anchovies8_StructN:sumtype = 0 ;
-		Anchovies8_StructN:inwc = 0 ;
-		Anchovies8_StructN:insed = 0 ;
-		Anchovies8_StructN:dissol = 0 ;
-		Anchovies8_StructN:decay = 0. ;
-		Anchovies8_StructN:partic = 1 ;
-		Anchovies8_StructN:passive = 0 ;
-		Anchovies8_StructN:svel = 0. ;
-		Anchovies8_StructN:xvel = 0. ;
-		Anchovies8_StructN:psize = 10. ;
-		Anchovies8_StructN:b_dens = 1000000000. ;
-		Anchovies8_StructN:i_conc = 200000000. ;
-		Anchovies8_StructN:f_conc = 200000000. ;
-		Anchovies8_StructN:_FillValue = 49.93 ;
-	double Anchovies9_Nums(t, b, z) ;
-		Anchovies9_Nums:bmtype = "tracer" ;
-		Anchovies9_Nums:units = "1" ;
-		Anchovies9_Nums:long_name = "Numbers of benthopelagics cohort 9" ;
-		Anchovies9_Nums:dtype = 0 ;
-		Anchovies9_Nums:sumtype = 0 ;
-		Anchovies9_Nums:inwc = 0 ;
-		Anchovies9_Nums:insed = 0 ;
-		Anchovies9_Nums:dissol = 0 ;
-		Anchovies9_Nums:decay = 0. ;
-		Anchovies9_Nums:partic = 1 ;
-		Anchovies9_Nums:passive = 1 ;
-		Anchovies9_Nums:svel = 0. ;
-		Anchovies9_Nums:xvel = 0. ;
-		Anchovies9_Nums:psize = 10. ;
-		Anchovies9_Nums:b_dens = 1000000000. ;
-		Anchovies9_Nums:i_conc = 200000000. ;
-		Anchovies9_Nums:f_conc = 200000000. ;
-		Anchovies9_Nums:_FillValue = 0. ;
-	double Anchovies9_ResN(t, b, z) ;
-		Anchovies9_ResN:bmtype = "tracer" ;
-		Anchovies9_ResN:units = "mg N" ;
-		Anchovies9_ResN:long_name = "Individ reserve N for benthopelagicss cohort 9" ;
-		Anchovies9_ResN:dtype = 0 ;
-		Anchovies9_ResN:sumtype = 0 ;
-		Anchovies9_ResN:inwc = 0 ;
-		Anchovies9_ResN:insed = 0 ;
-		Anchovies9_ResN:dissol = 0 ;
-		Anchovies9_ResN:decay = 0. ;
-		Anchovies9_ResN:partic = 1 ;
-		Anchovies9_ResN:passive = 0 ;
-		Anchovies9_ResN:svel = 0. ;
-		Anchovies9_ResN:xvel = 0. ;
-		Anchovies9_ResN:psize = 10. ;
-		Anchovies9_ResN:b_dens = 1000000000. ;
-		Anchovies9_ResN:i_conc = 200000000. ;
-		Anchovies9_ResN:f_conc = 200000000. ;
-		Anchovies9_ResN:_FillValue = 100.98 ;
-	double Anchovies9_StructN(t, b, z) ;
-		Anchovies9_StructN:bmtype = "tracer" ;
-		Anchovies9_StructN:units = "mg N" ;
-		Anchovies9_StructN:long_name = "Individ structural N for benthopelagicss cohort 9" ;
-		Anchovies9_StructN:dtype = 0 ;
-		Anchovies9_StructN:sumtype = 0 ;
-		Anchovies9_StructN:inwc = 0 ;
-		Anchovies9_StructN:insed = 0 ;
-		Anchovies9_StructN:dissol = 0 ;
-		Anchovies9_StructN:decay = 0. ;
-		Anchovies9_StructN:partic = 1 ;
-		Anchovies9_StructN:passive = 0 ;
-		Anchovies9_StructN:svel = 0. ;
-		Anchovies9_StructN:xvel = 0. ;
-		Anchovies9_StructN:psize = 10. ;
-		Anchovies9_StructN:b_dens = 1000000000. ;
-		Anchovies9_StructN:i_conc = 200000000. ;
-		Anchovies9_StructN:f_conc = 200000000. ;
-		Anchovies9_StructN:_FillValue = 50.49 ;
+		Anchovies3_StructN:_FillValue = 50.8 ;
 	double Anchovies_N(t, b, z) ;
 		Anchovies_N:bmtype = "tracer" ;
 		Anchovies_N:units = "mg N m-3" ;
@@ -586,63 +187,6 @@ variables:
 		Anchovies_N:partic = 0 ;
 		Anchovies_N:decay = 0. ;
 		Anchovies_N:_FillValue = 0. ;
-	double Atlantic_Salmon10_Nums(t, b, z) ;
-		Atlantic_Salmon10_Nums:bmtype = "tracer" ;
-		Atlantic_Salmon10_Nums:units = "1" ;
-		Atlantic_Salmon10_Nums:long_name = "Numbers of other deep demersal cohort 10" ;
-		Atlantic_Salmon10_Nums:dtype = 0 ;
-		Atlantic_Salmon10_Nums:sumtype = 0 ;
-		Atlantic_Salmon10_Nums:inwc = 0 ;
-		Atlantic_Salmon10_Nums:insed = 0 ;
-		Atlantic_Salmon10_Nums:dissol = 0 ;
-		Atlantic_Salmon10_Nums:decay = 0. ;
-		Atlantic_Salmon10_Nums:partic = 1 ;
-		Atlantic_Salmon10_Nums:passive = 1 ;
-		Atlantic_Salmon10_Nums:svel = 0. ;
-		Atlantic_Salmon10_Nums:xvel = 0. ;
-		Atlantic_Salmon10_Nums:psize = 10. ;
-		Atlantic_Salmon10_Nums:b_dens = 1000000000. ;
-		Atlantic_Salmon10_Nums:i_conc = 200000000. ;
-		Atlantic_Salmon10_Nums:f_conc = 200000000. ;
-		Atlantic_Salmon10_Nums:_FillValue = 0. ;
-	double Atlantic_Salmon10_ResN(t, b, z) ;
-		Atlantic_Salmon10_ResN:bmtype = "tracer" ;
-		Atlantic_Salmon10_ResN:units = "mg N" ;
-		Atlantic_Salmon10_ResN:long_name = "Individ reserve N for other deep demersal fish cohort 10" ;
-		Atlantic_Salmon10_ResN:dtype = 0 ;
-		Atlantic_Salmon10_ResN:sumtype = 0 ;
-		Atlantic_Salmon10_ResN:inwc = 0 ;
-		Atlantic_Salmon10_ResN:insed = 0 ;
-		Atlantic_Salmon10_ResN:dissol = 0 ;
-		Atlantic_Salmon10_ResN:decay = 0. ;
-		Atlantic_Salmon10_ResN:partic = 1 ;
-		Atlantic_Salmon10_ResN:passive = 0 ;
-		Atlantic_Salmon10_ResN:svel = 0. ;
-		Atlantic_Salmon10_ResN:xvel = 0. ;
-		Atlantic_Salmon10_ResN:psize = 10. ;
-		Atlantic_Salmon10_ResN:b_dens = 1000000000. ;
-		Atlantic_Salmon10_ResN:i_conc = 200000000. ;
-		Atlantic_Salmon10_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon10_ResN:_FillValue = 112972.18 ;
-	double Atlantic_Salmon10_StructN(t, b, z) ;
-		Atlantic_Salmon10_StructN:bmtype = "tracer" ;
-		Atlantic_Salmon10_StructN:units = "mg N" ;
-		Atlantic_Salmon10_StructN:long_name = "Individ structural N for other deep demersal fish cohort 10" ;
-		Atlantic_Salmon10_StructN:dtype = 0 ;
-		Atlantic_Salmon10_StructN:sumtype = 0 ;
-		Atlantic_Salmon10_StructN:inwc = 0 ;
-		Atlantic_Salmon10_StructN:insed = 0 ;
-		Atlantic_Salmon10_StructN:dissol = 0 ;
-		Atlantic_Salmon10_StructN:decay = 0. ;
-		Atlantic_Salmon10_StructN:partic = 1 ;
-		Atlantic_Salmon10_StructN:passive = 0 ;
-		Atlantic_Salmon10_StructN:svel = 0. ;
-		Atlantic_Salmon10_StructN:xvel = 0. ;
-		Atlantic_Salmon10_StructN:psize = 10. ;
-		Atlantic_Salmon10_StructN:b_dens = 1000000000. ;
-		Atlantic_Salmon10_StructN:i_conc = 200000000. ;
-		Atlantic_Salmon10_StructN:f_conc = 200000000. ;
-		Atlantic_Salmon10_StructN:_FillValue = 56486.09 ;
 	double Atlantic_Salmon1_Nums(t, b, z) ;
 		Atlantic_Salmon1_Nums:bmtype = "tracer" ;
 		Atlantic_Salmon1_Nums:units = "1" ;
@@ -737,7 +281,7 @@ variables:
 		Atlantic_Salmon2_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon2_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon2_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon2_ResN:_FillValue = 11105.1 ;
+		Atlantic_Salmon2_ResN:_FillValue = 20148. ;
 	double Atlantic_Salmon2_StructN(t, b, z) ;
 		Atlantic_Salmon2_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon2_StructN:units = "mg N" ;
@@ -756,7 +300,7 @@ variables:
 		Atlantic_Salmon2_StructN:b_dens = 1000000000. ;
 		Atlantic_Salmon2_StructN:i_conc = 200000000. ;
 		Atlantic_Salmon2_StructN:f_conc = 200000000. ;
-		Atlantic_Salmon2_StructN:_FillValue = 5552.55 ;
+		Atlantic_Salmon2_StructN:_FillValue = 10074. ;
 	double Atlantic_Salmon3_Nums(t, b, z) ;
 		Atlantic_Salmon3_Nums:bmtype = "tracer" ;
 		Atlantic_Salmon3_Nums:units = "1" ;
@@ -794,7 +338,7 @@ variables:
 		Atlantic_Salmon3_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon3_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon3_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon3_ResN:_FillValue = 30538.58 ;
+		Atlantic_Salmon3_ResN:_FillValue = 51704.8 ;
 	double Atlantic_Salmon3_StructN(t, b, z) ;
 		Atlantic_Salmon3_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon3_StructN:units = "mg N" ;
@@ -813,7 +357,7 @@ variables:
 		Atlantic_Salmon3_StructN:b_dens = 1000000000. ;
 		Atlantic_Salmon3_StructN:i_conc = 200000000. ;
 		Atlantic_Salmon3_StructN:f_conc = 200000000. ;
-		Atlantic_Salmon3_StructN:_FillValue = 15269.29 ;
+		Atlantic_Salmon3_StructN:_FillValue = 25852.4 ;
 	double Atlantic_Salmon4_Nums(t, b, z) ;
 		Atlantic_Salmon4_Nums:bmtype = "tracer" ;
 		Atlantic_Salmon4_Nums:units = "1" ;
@@ -851,7 +395,7 @@ variables:
 		Atlantic_Salmon4_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon4_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon4_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon4_ResN:_FillValue = 51704.82 ;
+		Atlantic_Salmon4_ResN:_FillValue = 78140.4 ;
 	double Atlantic_Salmon4_StructN(t, b, z) ;
 		Atlantic_Salmon4_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon4_StructN:units = "mg N" ;
@@ -870,7 +414,7 @@ variables:
 		Atlantic_Salmon4_StructN:b_dens = 1000000000. ;
 		Atlantic_Salmon4_StructN:i_conc = 200000000. ;
 		Atlantic_Salmon4_StructN:f_conc = 200000000. ;
-		Atlantic_Salmon4_StructN:_FillValue = 25852.41 ;
+		Atlantic_Salmon4_StructN:_FillValue = 39070.2 ;
 	double Atlantic_Salmon5_Nums(t, b, z) ;
 		Atlantic_Salmon5_Nums:bmtype = "tracer" ;
 		Atlantic_Salmon5_Nums:units = "1" ;
@@ -908,7 +452,7 @@ variables:
 		Atlantic_Salmon5_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon5_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon5_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon5_ResN:_FillValue = 70314.02 ;
+		Atlantic_Salmon5_ResN:_FillValue = 95917.3 ;
 	double Atlantic_Salmon5_StructN(t, b, z) ;
 		Atlantic_Salmon5_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon5_StructN:units = "mg N" ;
@@ -927,7 +471,7 @@ variables:
 		Atlantic_Salmon5_StructN:b_dens = 1000000000. ;
 		Atlantic_Salmon5_StructN:i_conc = 200000000. ;
 		Atlantic_Salmon5_StructN:f_conc = 200000000. ;
-		Atlantic_Salmon5_StructN:_FillValue = 35157.01 ;
+		Atlantic_Salmon5_StructN:_FillValue = 47958.6 ;
 	double Atlantic_Salmon6_Nums(t, b, z) ;
 		Atlantic_Salmon6_Nums:bmtype = "tracer" ;
 		Atlantic_Salmon6_Nums:units = "1" ;
@@ -965,7 +509,7 @@ variables:
 		Atlantic_Salmon6_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon6_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon6_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon6_ResN:_FillValue = 85004.66 ;
+		Atlantic_Salmon6_ResN:_FillValue = 106719. ;
 	double Atlantic_Salmon6_StructN(t, b, z) ;
 		Atlantic_Salmon6_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon6_StructN:units = "mg N" ;
@@ -984,7 +528,7 @@ variables:
 		Atlantic_Salmon6_StructN:b_dens = 1000000000. ;
 		Atlantic_Salmon6_StructN:i_conc = 200000000. ;
 		Atlantic_Salmon6_StructN:f_conc = 200000000. ;
-		Atlantic_Salmon6_StructN:_FillValue = 42502.33 ;
+		Atlantic_Salmon6_StructN:_FillValue = 53359.5 ;
 	double Atlantic_Salmon7_Nums(t, b, z) ;
 		Atlantic_Salmon7_Nums:bmtype = "tracer" ;
 		Atlantic_Salmon7_Nums:units = "1" ;
@@ -1022,7 +566,7 @@ variables:
 		Atlantic_Salmon7_ResN:b_dens = 1000000000. ;
 		Atlantic_Salmon7_ResN:i_conc = 200000000. ;
 		Atlantic_Salmon7_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon7_ResN:_FillValue = 95917.3 ;
+		Atlantic_Salmon7_ResN:_FillValue = 112972. ;
 	double Atlantic_Salmon7_StructN(t, b, z) ;
 		Atlantic_Salmon7_StructN:bmtype = "tracer" ;
 		Atlantic_Salmon7_StructN:units = "mg N" ;
@@ -1041,121 +585,7 @@ variables:
 		Atlantic_Salmon7_StructN:b_dens = 1000000000. ;
 		Atlantic_Salmon7_StructN:i_conc = 200000000. ;
 		Atlantic_Salmon7_StructN:f_conc = 200000000. ;
-		Atlantic_Salmon7_StructN:_FillValue = 47958.65 ;
-	double Atlantic_Salmon8_Nums(t, b, z) ;
-		Atlantic_Salmon8_Nums:bmtype = "tracer" ;
-		Atlantic_Salmon8_Nums:units = "1" ;
-		Atlantic_Salmon8_Nums:long_name = "Numbers of other deep demersal fish cohort 8" ;
-		Atlantic_Salmon8_Nums:dtype = 0 ;
-		Atlantic_Salmon8_Nums:sumtype = 0 ;
-		Atlantic_Salmon8_Nums:inwc = 0 ;
-		Atlantic_Salmon8_Nums:insed = 0 ;
-		Atlantic_Salmon8_Nums:dissol = 0 ;
-		Atlantic_Salmon8_Nums:decay = 0. ;
-		Atlantic_Salmon8_Nums:partic = 1 ;
-		Atlantic_Salmon8_Nums:passive = 1 ;
-		Atlantic_Salmon8_Nums:svel = 0. ;
-		Atlantic_Salmon8_Nums:xvel = 0. ;
-		Atlantic_Salmon8_Nums:psize = 10. ;
-		Atlantic_Salmon8_Nums:b_dens = 1000000000. ;
-		Atlantic_Salmon8_Nums:i_conc = 200000000. ;
-		Atlantic_Salmon8_Nums:f_conc = 200000000. ;
-		Atlantic_Salmon8_Nums:_FillValue = 0. ;
-	double Atlantic_Salmon8_ResN(t, b, z) ;
-		Atlantic_Salmon8_ResN:bmtype = "tracer" ;
-		Atlantic_Salmon8_ResN:units = "mg N" ;
-		Atlantic_Salmon8_ResN:long_name = "Individ reserve N for other deep demersal fish fish cohort 8" ;
-		Atlantic_Salmon8_ResN:dtype = 0 ;
-		Atlantic_Salmon8_ResN:sumtype = 0 ;
-		Atlantic_Salmon8_ResN:inwc = 0 ;
-		Atlantic_Salmon8_ResN:insed = 0 ;
-		Atlantic_Salmon8_ResN:dissol = 0 ;
-		Atlantic_Salmon8_ResN:decay = 0. ;
-		Atlantic_Salmon8_ResN:partic = 1 ;
-		Atlantic_Salmon8_ResN:passive = 0 ;
-		Atlantic_Salmon8_ResN:svel = 0. ;
-		Atlantic_Salmon8_ResN:xvel = 0. ;
-		Atlantic_Salmon8_ResN:psize = 10. ;
-		Atlantic_Salmon8_ResN:b_dens = 1000000000. ;
-		Atlantic_Salmon8_ResN:i_conc = 200000000. ;
-		Atlantic_Salmon8_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon8_ResN:_FillValue = 103731.78 ;
-	double Atlantic_Salmon8_StructN(t, b, z) ;
-		Atlantic_Salmon8_StructN:bmtype = "tracer" ;
-		Atlantic_Salmon8_StructN:units = "mg N" ;
-		Atlantic_Salmon8_StructN:long_name = "Individ structural N for other deep demersal fish fish cohort 8" ;
-		Atlantic_Salmon8_StructN:dtype = 0 ;
-		Atlantic_Salmon8_StructN:sumtype = 0 ;
-		Atlantic_Salmon8_StructN:inwc = 0 ;
-		Atlantic_Salmon8_StructN:insed = 0 ;
-		Atlantic_Salmon8_StructN:dissol = 0 ;
-		Atlantic_Salmon8_StructN:decay = 0. ;
-		Atlantic_Salmon8_StructN:partic = 1 ;
-		Atlantic_Salmon8_StructN:passive = 0 ;
-		Atlantic_Salmon8_StructN:svel = 0. ;
-		Atlantic_Salmon8_StructN:xvel = 0. ;
-		Atlantic_Salmon8_StructN:psize = 10. ;
-		Atlantic_Salmon8_StructN:b_dens = 1000000000. ;
-		Atlantic_Salmon8_StructN:i_conc = 200000000. ;
-		Atlantic_Salmon8_StructN:f_conc = 200000000. ;
-		Atlantic_Salmon8_StructN:_FillValue = 51865.89 ;
-	double Atlantic_Salmon9_Nums(t, b, z) ;
-		Atlantic_Salmon9_Nums:bmtype = "tracer" ;
-		Atlantic_Salmon9_Nums:units = "1" ;
-		Atlantic_Salmon9_Nums:long_name = "Numbers of other deep demersal cohort 9" ;
-		Atlantic_Salmon9_Nums:dtype = 0 ;
-		Atlantic_Salmon9_Nums:sumtype = 0 ;
-		Atlantic_Salmon9_Nums:inwc = 0 ;
-		Atlantic_Salmon9_Nums:insed = 0 ;
-		Atlantic_Salmon9_Nums:dissol = 0 ;
-		Atlantic_Salmon9_Nums:decay = 0. ;
-		Atlantic_Salmon9_Nums:partic = 1 ;
-		Atlantic_Salmon9_Nums:passive = 1 ;
-		Atlantic_Salmon9_Nums:svel = 0. ;
-		Atlantic_Salmon9_Nums:xvel = 0. ;
-		Atlantic_Salmon9_Nums:psize = 10. ;
-		Atlantic_Salmon9_Nums:b_dens = 1000000000. ;
-		Atlantic_Salmon9_Nums:i_conc = 200000000. ;
-		Atlantic_Salmon9_Nums:f_conc = 200000000. ;
-		Atlantic_Salmon9_Nums:_FillValue = 0. ;
-	double Atlantic_Salmon9_ResN(t, b, z) ;
-		Atlantic_Salmon9_ResN:bmtype = "tracer" ;
-		Atlantic_Salmon9_ResN:units = "mg N" ;
-		Atlantic_Salmon9_ResN:long_name = "Individ reserve N for other deep demersal fish cohort 9" ;
-		Atlantic_Salmon9_ResN:dtype = 0 ;
-		Atlantic_Salmon9_ResN:sumtype = 0 ;
-		Atlantic_Salmon9_ResN:inwc = 0 ;
-		Atlantic_Salmon9_ResN:insed = 0 ;
-		Atlantic_Salmon9_ResN:dissol = 0 ;
-		Atlantic_Salmon9_ResN:decay = 0. ;
-		Atlantic_Salmon9_ResN:partic = 1 ;
-		Atlantic_Salmon9_ResN:passive = 0 ;
-		Atlantic_Salmon9_ResN:svel = 0. ;
-		Atlantic_Salmon9_ResN:xvel = 0. ;
-		Atlantic_Salmon9_ResN:psize = 10. ;
-		Atlantic_Salmon9_ResN:b_dens = 1000000000. ;
-		Atlantic_Salmon9_ResN:i_conc = 200000000. ;
-		Atlantic_Salmon9_ResN:f_conc = 200000000. ;
-		Atlantic_Salmon9_ResN:_FillValue = 109200.7 ;
-	double Atlantic_Salmon9_StructN(t, b, z) ;
-		Atlantic_Salmon9_StructN:bmtype = "tracer" ;
-		Atlantic_Salmon9_StructN:units = "mg N" ;
-		Atlantic_Salmon9_StructN:long_name = "Individ structural N for other deep demersal fish cohort 9" ;
-		Atlantic_Salmon9_StructN:dtype = 0 ;
-		Atlantic_Salmon9_StructN:sumtype = 0 ;
-		Atlantic_Salmon9_StructN:inwc = 0 ;
-		Atlantic_Salmon9_StructN:insed = 0 ;
-		Atlantic_Salmon9_StructN:dissol = 0 ;
-		Atlantic_Salmon9_StructN:decay = 0. ;
-		Atlantic_Salmon9_StructN:partic = 1 ;
-		Atlantic_Salmon9_StructN:passive = 0 ;
-		Atlantic_Salmon9_StructN:svel = 0. ;
-		Atlantic_Salmon9_StructN:xvel = 0. ;
-		Atlantic_Salmon9_StructN:psize = 10. ;
-		Atlantic_Salmon9_StructN:b_dens = 1000000000. ;
-		Atlantic_Salmon9_StructN:i_conc = 200000000. ;
-		Atlantic_Salmon9_StructN:f_conc = 200000000. ;
-		Atlantic_Salmon9_StructN:_FillValue = 54600.35 ;
+		Atlantic_Salmon7_StructN:_FillValue = 56486.1 ;
 	double Atlantic_Salmon_N(t, b, z) ;
 		Atlantic_Salmon_N:bmtype = "tracer" ;
 		Atlantic_Salmon_N:units = "mg N m-3" ;
@@ -5293,7 +4723,7 @@ variables:
 		Bluefish10_ResN:b_dens = 1000000000. ;
 		Bluefish10_ResN:i_conc = 200000000. ;
 		Bluefish10_ResN:f_conc = 200000000. ;
-		Bluefish10_ResN:_FillValue = 18628.06 ;
+		Bluefish10_ResN:_FillValue = 15538.7 ;
 	double Bluefish10_StructN(t, b, z) ;
 		Bluefish10_StructN:bmtype = "tracer" ;
 		Bluefish10_StructN:units = "mg N" ;
@@ -5312,7 +4742,121 @@ variables:
 		Bluefish10_StructN:b_dens = 1000000000. ;
 		Bluefish10_StructN:i_conc = 200000000. ;
 		Bluefish10_StructN:f_conc = 200000000. ;
-		Bluefish10_StructN:_FillValue = 9314.03 ;
+		Bluefish10_StructN:_FillValue = 7769.34 ;
+	double Bluefish11_Nums(t, b, z) ;
+		Bluefish11_Nums:bmtype = "tracer" ;
+		Bluefish11_Nums:units = "1" ;
+		Bluefish11_Nums:long_name = "Numbers of shallow piscivores cohort 10" ;
+		Bluefish11_Nums:dtype = 0 ;
+		Bluefish11_Nums:sumtype = 0 ;
+		Bluefish11_Nums:inwc = 0 ;
+		Bluefish11_Nums:insed = 0 ;
+		Bluefish11_Nums:dissol = 0 ;
+		Bluefish11_Nums:decay = 0. ;
+		Bluefish11_Nums:partic = 1 ;
+		Bluefish11_Nums:passive = 1 ;
+		Bluefish11_Nums:svel = 0. ;
+		Bluefish11_Nums:xvel = 0. ;
+		Bluefish11_Nums:psize = 10. ;
+		Bluefish11_Nums:b_dens = 1000000000. ;
+		Bluefish11_Nums:i_conc = 200000000. ;
+		Bluefish11_Nums:f_conc = 200000000. ;
+		Bluefish11_Nums:_FillValue = 0. ;
+	double Bluefish11_ResN(t, b, z) ;
+		Bluefish11_ResN:bmtype = "tracer" ;
+		Bluefish11_ResN:units = "mg N" ;
+		Bluefish11_ResN:long_name = "Individ reserve N for shallow piscivores cohort 10" ;
+		Bluefish11_ResN:dtype = 0 ;
+		Bluefish11_ResN:sumtype = 0 ;
+		Bluefish11_ResN:inwc = 0 ;
+		Bluefish11_ResN:insed = 0 ;
+		Bluefish11_ResN:dissol = 0 ;
+		Bluefish11_ResN:decay = 0. ;
+		Bluefish11_ResN:partic = 1 ;
+		Bluefish11_ResN:passive = 0 ;
+		Bluefish11_ResN:svel = 0. ;
+		Bluefish11_ResN:xvel = 0. ;
+		Bluefish11_ResN:psize = 10. ;
+		Bluefish11_ResN:b_dens = 1000000000. ;
+		Bluefish11_ResN:i_conc = 200000000. ;
+		Bluefish11_ResN:f_conc = 200000000. ;
+		Bluefish11_ResN:_FillValue = 17160.9 ;
+	double Bluefish11_StructN(t, b, z) ;
+		Bluefish11_StructN:bmtype = "tracer" ;
+		Bluefish11_StructN:units = "mg N" ;
+		Bluefish11_StructN:long_name = "Individ structural N for shallow piscivores cohort 10" ;
+		Bluefish11_StructN:dtype = 0 ;
+		Bluefish11_StructN:sumtype = 0 ;
+		Bluefish11_StructN:inwc = 0 ;
+		Bluefish11_StructN:insed = 0 ;
+		Bluefish11_StructN:dissol = 0 ;
+		Bluefish11_StructN:decay = 0. ;
+		Bluefish11_StructN:partic = 1 ;
+		Bluefish11_StructN:passive = 0 ;
+		Bluefish11_StructN:svel = 0. ;
+		Bluefish11_StructN:xvel = 0. ;
+		Bluefish11_StructN:psize = 10. ;
+		Bluefish11_StructN:b_dens = 1000000000. ;
+		Bluefish11_StructN:i_conc = 200000000. ;
+		Bluefish11_StructN:f_conc = 200000000. ;
+		Bluefish11_StructN:_FillValue = 8580.43 ;
+	double Bluefish12_Nums(t, b, z) ;
+		Bluefish12_Nums:bmtype = "tracer" ;
+		Bluefish12_Nums:units = "1" ;
+		Bluefish12_Nums:long_name = "Numbers of shallow piscivores cohort 10" ;
+		Bluefish12_Nums:dtype = 0 ;
+		Bluefish12_Nums:sumtype = 0 ;
+		Bluefish12_Nums:inwc = 0 ;
+		Bluefish12_Nums:insed = 0 ;
+		Bluefish12_Nums:dissol = 0 ;
+		Bluefish12_Nums:decay = 0. ;
+		Bluefish12_Nums:partic = 1 ;
+		Bluefish12_Nums:passive = 1 ;
+		Bluefish12_Nums:svel = 0. ;
+		Bluefish12_Nums:xvel = 0. ;
+		Bluefish12_Nums:psize = 10. ;
+		Bluefish12_Nums:b_dens = 1000000000. ;
+		Bluefish12_Nums:i_conc = 200000000. ;
+		Bluefish12_Nums:f_conc = 200000000. ;
+		Bluefish12_Nums:_FillValue = 0. ;
+	double Bluefish12_ResN(t, b, z) ;
+		Bluefish12_ResN:bmtype = "tracer" ;
+		Bluefish12_ResN:units = "mg N" ;
+		Bluefish12_ResN:long_name = "Individ reserve N for shallow piscivores cohort 10" ;
+		Bluefish12_ResN:dtype = 0 ;
+		Bluefish12_ResN:sumtype = 0 ;
+		Bluefish12_ResN:inwc = 0 ;
+		Bluefish12_ResN:insed = 0 ;
+		Bluefish12_ResN:dissol = 0 ;
+		Bluefish12_ResN:decay = 0. ;
+		Bluefish12_ResN:partic = 1 ;
+		Bluefish12_ResN:passive = 0 ;
+		Bluefish12_ResN:svel = 0. ;
+		Bluefish12_ResN:xvel = 0. ;
+		Bluefish12_ResN:psize = 10. ;
+		Bluefish12_ResN:b_dens = 1000000000. ;
+		Bluefish12_ResN:i_conc = 200000000. ;
+		Bluefish12_ResN:f_conc = 200000000. ;
+		Bluefish12_ResN:_FillValue = 18628.1 ;
+	double Bluefish12_StructN(t, b, z) ;
+		Bluefish12_StructN:bmtype = "tracer" ;
+		Bluefish12_StructN:units = "mg N" ;
+		Bluefish12_StructN:long_name = "Individ structural N for shallow piscivores cohort 10" ;
+		Bluefish12_StructN:dtype = 0 ;
+		Bluefish12_StructN:sumtype = 0 ;
+		Bluefish12_StructN:inwc = 0 ;
+		Bluefish12_StructN:insed = 0 ;
+		Bluefish12_StructN:dissol = 0 ;
+		Bluefish12_StructN:decay = 0. ;
+		Bluefish12_StructN:partic = 1 ;
+		Bluefish12_StructN:passive = 0 ;
+		Bluefish12_StructN:svel = 0. ;
+		Bluefish12_StructN:xvel = 0. ;
+		Bluefish12_StructN:psize = 10. ;
+		Bluefish12_StructN:b_dens = 1000000000. ;
+		Bluefish12_StructN:i_conc = 200000000. ;
+		Bluefish12_StructN:f_conc = 200000000. ;
+		Bluefish12_StructN:_FillValue = 9314.03 ;
 	double Bluefish1_Nums(t, b, z) ;
 		Bluefish1_Nums:bmtype = "tracer" ;
 		Bluefish1_Nums:units = "1" ;
@@ -5407,7 +4951,7 @@ variables:
 		Bluefish2_ResN:b_dens = 1000000000. ;
 		Bluefish2_ResN:i_conc = 200000000. ;
 		Bluefish2_ResN:f_conc = 200000000. ;
-		Bluefish2_ResN:_FillValue = 1137.04 ;
+		Bluefish2_ResN:_FillValue = 921.079 ;
 	double Bluefish2_StructN(t, b, z) ;
 		Bluefish2_StructN:bmtype = "tracer" ;
 		Bluefish2_StructN:units = "mg N" ;
@@ -5426,7 +4970,7 @@ variables:
 		Bluefish2_StructN:b_dens = 1000000000. ;
 		Bluefish2_StructN:i_conc = 200000000. ;
 		Bluefish2_StructN:f_conc = 200000000. ;
-		Bluefish2_StructN:_FillValue = 568.52 ;
+		Bluefish2_StructN:_FillValue = 460.54 ;
 	double Bluefish3_Nums(t, b, z) ;
 		Bluefish3_Nums:bmtype = "tracer" ;
 		Bluefish3_Nums:units = "1" ;
@@ -5464,7 +5008,7 @@ variables:
 		Bluefish3_ResN:b_dens = 1000000000. ;
 		Bluefish3_ResN:i_conc = 200000000. ;
 		Bluefish3_ResN:f_conc = 200000000. ;
-		Bluefish3_ResN:_FillValue = 2824.54 ;
+		Bluefish3_ResN:_FillValue = 2140.88 ;
 	double Bluefish3_StructN(t, b, z) ;
 		Bluefish3_StructN:bmtype = "tracer" ;
 		Bluefish3_StructN:units = "mg N" ;
@@ -5483,7 +5027,7 @@ variables:
 		Bluefish3_StructN:b_dens = 1000000000. ;
 		Bluefish3_StructN:i_conc = 200000000. ;
 		Bluefish3_StructN:f_conc = 200000000. ;
-		Bluefish3_StructN:_FillValue = 1412.27 ;
+		Bluefish3_StructN:_FillValue = 1070.44 ;
 	double Bluefish4_Nums(t, b, z) ;
 		Bluefish4_Nums:bmtype = "tracer" ;
 		Bluefish4_Nums:units = "1" ;
@@ -5521,7 +5065,7 @@ variables:
 		Bluefish4_ResN:b_dens = 1000000000. ;
 		Bluefish4_ResN:i_conc = 200000000. ;
 		Bluefish4_ResN:f_conc = 200000000. ;
-		Bluefish4_ResN:_FillValue = 5033.8 ;
+		Bluefish4_ResN:_FillValue = 3778.44 ;
 	double Bluefish4_StructN(t, b, z) ;
 		Bluefish4_StructN:bmtype = "tracer" ;
 		Bluefish4_StructN:units = "mg N" ;
@@ -5540,7 +5084,7 @@ variables:
 		Bluefish4_StructN:b_dens = 1000000000. ;
 		Bluefish4_StructN:i_conc = 200000000. ;
 		Bluefish4_StructN:f_conc = 200000000. ;
-		Bluefish4_StructN:_FillValue = 2516.9 ;
+		Bluefish4_StructN:_FillValue = 1889.22 ;
 	double Bluefish5_Nums(t, b, z) ;
 		Bluefish5_Nums:bmtype = "tracer" ;
 		Bluefish5_Nums:units = "1" ;
@@ -5578,7 +5122,7 @@ variables:
 		Bluefish5_ResN:b_dens = 1000000000. ;
 		Bluefish5_ResN:i_conc = 200000000. ;
 		Bluefish5_ResN:f_conc = 200000000. ;
-		Bluefish5_ResN:_FillValue = 7509.82 ;
+		Bluefish5_ResN:_FillValue = 5688.24 ;
 	double Bluefish5_StructN(t, b, z) ;
 		Bluefish5_StructN:bmtype = "tracer" ;
 		Bluefish5_StructN:units = "mg N" ;
@@ -5597,7 +5141,7 @@ variables:
 		Bluefish5_StructN:b_dens = 1000000000. ;
 		Bluefish5_StructN:i_conc = 200000000. ;
 		Bluefish5_StructN:f_conc = 200000000. ;
-		Bluefish5_StructN:_FillValue = 3754.91 ;
+		Bluefish5_StructN:_FillValue = 2844.12 ;
 	double Bluefish6_Nums(t, b, z) ;
 		Bluefish6_Nums:bmtype = "tracer" ;
 		Bluefish6_Nums:units = "1" ;
@@ -5635,7 +5179,7 @@ variables:
 		Bluefish6_ResN:b_dens = 1000000000. ;
 		Bluefish6_ResN:i_conc = 200000000. ;
 		Bluefish6_ResN:f_conc = 200000000. ;
-		Bluefish6_ResN:_FillValue = 10044.84 ;
+		Bluefish6_ResN:_FillValue = 7738.38 ;
 	double Bluefish6_StructN(t, b, z) ;
 		Bluefish6_StructN:bmtype = "tracer" ;
 		Bluefish6_StructN:units = "mg N" ;
@@ -5654,7 +5198,7 @@ variables:
 		Bluefish6_StructN:b_dens = 1000000000. ;
 		Bluefish6_StructN:i_conc = 200000000. ;
 		Bluefish6_StructN:f_conc = 200000000. ;
-		Bluefish6_StructN:_FillValue = 5022.42 ;
+		Bluefish6_StructN:_FillValue = 3869.19 ;
 	double Bluefish7_Nums(t, b, z) ;
 		Bluefish7_Nums:bmtype = "tracer" ;
 		Bluefish7_Nums:units = "1" ;
@@ -5692,7 +5236,7 @@ variables:
 		Bluefish7_ResN:b_dens = 1000000000. ;
 		Bluefish7_ResN:i_conc = 200000000. ;
 		Bluefish7_ResN:f_conc = 200000000. ;
-		Bluefish7_ResN:_FillValue = 12493.62 ;
+		Bluefish7_ResN:_FillValue = 9817.4 ;
 	double Bluefish7_StructN(t, b, z) ;
 		Bluefish7_StructN:bmtype = "tracer" ;
 		Bluefish7_StructN:units = "mg N" ;
@@ -5711,7 +5255,7 @@ variables:
 		Bluefish7_StructN:b_dens = 1000000000. ;
 		Bluefish7_StructN:i_conc = 200000000. ;
 		Bluefish7_StructN:f_conc = 200000000. ;
-		Bluefish7_StructN:_FillValue = 6246.81 ;
+		Bluefish7_StructN:_FillValue = 4908.7 ;
 	double Bluefish8_Nums(t, b, z) ;
 		Bluefish8_Nums:bmtype = "tracer" ;
 		Bluefish8_Nums:units = "1" ;
@@ -5749,7 +5293,7 @@ variables:
 		Bluefish8_ResN:b_dens = 1000000000. ;
 		Bluefish8_ResN:i_conc = 200000000. ;
 		Bluefish8_ResN:f_conc = 200000000. ;
-		Bluefish8_ResN:_FillValue = 14766.62 ;
+		Bluefish8_ResN:_FillValue = 11840.8 ;
 	double Bluefish8_StructN(t, b, z) ;
 		Bluefish8_StructN:bmtype = "tracer" ;
 		Bluefish8_StructN:units = "mg N" ;
@@ -5768,7 +5312,7 @@ variables:
 		Bluefish8_StructN:b_dens = 1000000000. ;
 		Bluefish8_StructN:i_conc = 200000000. ;
 		Bluefish8_StructN:f_conc = 200000000. ;
-		Bluefish8_StructN:_FillValue = 7383.31 ;
+		Bluefish8_StructN:_FillValue = 5920.39 ;
 	double Bluefish9_Nums(t, b, z) ;
 		Bluefish9_Nums:bmtype = "tracer" ;
 		Bluefish9_Nums:units = "1" ;
@@ -5806,7 +5350,7 @@ variables:
 		Bluefish9_ResN:b_dens = 1000000000. ;
 		Bluefish9_ResN:i_conc = 200000000. ;
 		Bluefish9_ResN:f_conc = 200000000. ;
-		Bluefish9_ResN:_FillValue = 16817.02 ;
+		Bluefish9_ResN:_FillValue = 13758.4 ;
 	double Bluefish9_StructN(t, b, z) ;
 		Bluefish9_StructN:bmtype = "tracer" ;
 		Bluefish9_StructN:units = "mg N" ;
@@ -5825,7 +5369,7 @@ variables:
 		Bluefish9_StructN:b_dens = 1000000000. ;
 		Bluefish9_StructN:i_conc = 200000000. ;
 		Bluefish9_StructN:f_conc = 200000000. ;
-		Bluefish9_StructN:_FillValue = 8408.51 ;
+		Bluefish9_StructN:_FillValue = 6879.2 ;
 	double Bluefish_N(t, b, z) ;
 		Bluefish_N:bmtype = "tracer" ;
 		Bluefish_N:units = "mg N m-3" ;
@@ -5838,63 +5382,6 @@ variables:
 		Bluefish_N:partic = 0 ;
 		Bluefish_N:decay = 0. ;
 		Bluefish_N:_FillValue = 0. ;
-	double Butterfish10_Nums(t, b, z) ;
-		Butterfish10_Nums:bmtype = "tracer" ;
-		Butterfish10_Nums:units = "1" ;
-		Butterfish10_Nums:long_name = "Numbers of benthopelagics cohort 10" ;
-		Butterfish10_Nums:dtype = 0 ;
-		Butterfish10_Nums:sumtype = 0 ;
-		Butterfish10_Nums:inwc = 0 ;
-		Butterfish10_Nums:insed = 0 ;
-		Butterfish10_Nums:dissol = 0 ;
-		Butterfish10_Nums:decay = 0. ;
-		Butterfish10_Nums:partic = 1 ;
-		Butterfish10_Nums:passive = 1 ;
-		Butterfish10_Nums:svel = 0. ;
-		Butterfish10_Nums:xvel = 0. ;
-		Butterfish10_Nums:psize = 10. ;
-		Butterfish10_Nums:b_dens = 1000000000. ;
-		Butterfish10_Nums:i_conc = 200000000. ;
-		Butterfish10_Nums:f_conc = 200000000. ;
-		Butterfish10_Nums:_FillValue = 0. ;
-	double Butterfish10_ResN(t, b, z) ;
-		Butterfish10_ResN:bmtype = "tracer" ;
-		Butterfish10_ResN:units = "mg N" ;
-		Butterfish10_ResN:long_name = "Individ reserve N for benthopelagicss cohort 10" ;
-		Butterfish10_ResN:dtype = 0 ;
-		Butterfish10_ResN:sumtype = 0 ;
-		Butterfish10_ResN:inwc = 0 ;
-		Butterfish10_ResN:insed = 0 ;
-		Butterfish10_ResN:dissol = 0 ;
-		Butterfish10_ResN:decay = 0. ;
-		Butterfish10_ResN:partic = 1 ;
-		Butterfish10_ResN:passive = 0 ;
-		Butterfish10_ResN:svel = 0. ;
-		Butterfish10_ResN:xvel = 0. ;
-		Butterfish10_ResN:psize = 10. ;
-		Butterfish10_ResN:b_dens = 1000000000. ;
-		Butterfish10_ResN:i_conc = 200000000. ;
-		Butterfish10_ResN:f_conc = 200000000. ;
-		Butterfish10_ResN:_FillValue = 936.96 ;
-	double Butterfish10_StructN(t, b, z) ;
-		Butterfish10_StructN:bmtype = "tracer" ;
-		Butterfish10_StructN:units = "mg N" ;
-		Butterfish10_StructN:long_name = "Individ structural N for benthopelagicss cohort 10" ;
-		Butterfish10_StructN:dtype = 0 ;
-		Butterfish10_StructN:sumtype = 0 ;
-		Butterfish10_StructN:inwc = 0 ;
-		Butterfish10_StructN:insed = 0 ;
-		Butterfish10_StructN:dissol = 0 ;
-		Butterfish10_StructN:decay = 0. ;
-		Butterfish10_StructN:partic = 1 ;
-		Butterfish10_StructN:passive = 0 ;
-		Butterfish10_StructN:svel = 0. ;
-		Butterfish10_StructN:xvel = 0. ;
-		Butterfish10_StructN:psize = 10. ;
-		Butterfish10_StructN:b_dens = 1000000000. ;
-		Butterfish10_StructN:i_conc = 200000000. ;
-		Butterfish10_StructN:f_conc = 200000000. ;
-		Butterfish10_StructN:_FillValue = 468.48 ;
 	double Butterfish1_Nums(t, b, z) ;
 		Butterfish1_Nums:bmtype = "tracer" ;
 		Butterfish1_Nums:units = "1" ;
@@ -5989,7 +5476,7 @@ variables:
 		Butterfish2_ResN:b_dens = 1000000000. ;
 		Butterfish2_ResN:i_conc = 200000000. ;
 		Butterfish2_ResN:f_conc = 200000000. ;
-		Butterfish2_ResN:_FillValue = 538.72 ;
+		Butterfish2_ResN:_FillValue = 914.55 ;
 	double Butterfish2_StructN(t, b, z) ;
 		Butterfish2_StructN:bmtype = "tracer" ;
 		Butterfish2_StructN:units = "mg N" ;
@@ -6008,7 +5495,7 @@ variables:
 		Butterfish2_StructN:b_dens = 1000000000. ;
 		Butterfish2_StructN:i_conc = 200000000. ;
 		Butterfish2_StructN:f_conc = 200000000. ;
-		Butterfish2_StructN:_FillValue = 269.36 ;
+		Butterfish2_StructN:_FillValue = 457.27 ;
 	double Butterfish3_Nums(t, b, z) ;
 		Butterfish3_Nums:bmtype = "tracer" ;
 		Butterfish3_Nums:units = "1" ;
@@ -6046,7 +5533,7 @@ variables:
 		Butterfish3_ResN:b_dens = 1000000000. ;
 		Butterfish3_ResN:i_conc = 200000000. ;
 		Butterfish3_ResN:f_conc = 200000000. ;
-		Butterfish3_ResN:_FillValue = 750.78 ;
+		Butterfish3_ResN:_FillValue = 936.96 ;
 	double Butterfish3_StructN(t, b, z) ;
 		Butterfish3_StructN:bmtype = "tracer" ;
 		Butterfish3_StructN:units = "mg N" ;
@@ -6065,349 +5552,7 @@ variables:
 		Butterfish3_StructN:b_dens = 1000000000. ;
 		Butterfish3_StructN:i_conc = 200000000. ;
 		Butterfish3_StructN:f_conc = 200000000. ;
-		Butterfish3_StructN:_FillValue = 375.39 ;
-	double Butterfish4_Nums(t, b, z) ;
-		Butterfish4_Nums:bmtype = "tracer" ;
-		Butterfish4_Nums:units = "1" ;
-		Butterfish4_Nums:long_name = "Numbers of benthopelagics cohort 4" ;
-		Butterfish4_Nums:dtype = 0 ;
-		Butterfish4_Nums:sumtype = 0 ;
-		Butterfish4_Nums:inwc = 0 ;
-		Butterfish4_Nums:insed = 0 ;
-		Butterfish4_Nums:dissol = 0 ;
-		Butterfish4_Nums:decay = 0. ;
-		Butterfish4_Nums:partic = 1 ;
-		Butterfish4_Nums:passive = 1 ;
-		Butterfish4_Nums:svel = 0. ;
-		Butterfish4_Nums:xvel = 0. ;
-		Butterfish4_Nums:psize = 10. ;
-		Butterfish4_Nums:b_dens = 1000000000. ;
-		Butterfish4_Nums:i_conc = 200000000. ;
-		Butterfish4_Nums:f_conc = 200000000. ;
-		Butterfish4_Nums:_FillValue = 0. ;
-	double Butterfish4_ResN(t, b, z) ;
-		Butterfish4_ResN:bmtype = "tracer" ;
-		Butterfish4_ResN:units = "mg N" ;
-		Butterfish4_ResN:long_name = "Individ reserve N for benthopelagicss cohort 4" ;
-		Butterfish4_ResN:dtype = 0 ;
-		Butterfish4_ResN:sumtype = 0 ;
-		Butterfish4_ResN:inwc = 0 ;
-		Butterfish4_ResN:insed = 0 ;
-		Butterfish4_ResN:dissol = 0 ;
-		Butterfish4_ResN:decay = 0. ;
-		Butterfish4_ResN:partic = 1 ;
-		Butterfish4_ResN:passive = 0 ;
-		Butterfish4_ResN:svel = 0. ;
-		Butterfish4_ResN:xvel = 0. ;
-		Butterfish4_ResN:psize = 10. ;
-		Butterfish4_ResN:b_dens = 1000000000. ;
-		Butterfish4_ResN:i_conc = 200000000. ;
-		Butterfish4_ResN:f_conc = 200000000. ;
-		Butterfish4_ResN:_FillValue = 855.08 ;
-	double Butterfish4_StructN(t, b, z) ;
-		Butterfish4_StructN:bmtype = "tracer" ;
-		Butterfish4_StructN:units = "mg N" ;
-		Butterfish4_StructN:long_name = "Individ structural N for benthopelagicss cohort 4" ;
-		Butterfish4_StructN:dtype = 0 ;
-		Butterfish4_StructN:sumtype = 0 ;
-		Butterfish4_StructN:inwc = 0 ;
-		Butterfish4_StructN:insed = 0 ;
-		Butterfish4_StructN:dissol = 0 ;
-		Butterfish4_StructN:decay = 0. ;
-		Butterfish4_StructN:partic = 1 ;
-		Butterfish4_StructN:passive = 0 ;
-		Butterfish4_StructN:svel = 0. ;
-		Butterfish4_StructN:xvel = 0. ;
-		Butterfish4_StructN:psize = 10. ;
-		Butterfish4_StructN:b_dens = 1000000000. ;
-		Butterfish4_StructN:i_conc = 200000000. ;
-		Butterfish4_StructN:f_conc = 200000000. ;
-		Butterfish4_StructN:_FillValue = 427.54 ;
-	double Butterfish5_Nums(t, b, z) ;
-		Butterfish5_Nums:bmtype = "tracer" ;
-		Butterfish5_Nums:units = "1" ;
-		Butterfish5_Nums:long_name = "Numbers of benthopelagics cohort 5" ;
-		Butterfish5_Nums:dtype = 0 ;
-		Butterfish5_Nums:sumtype = 0 ;
-		Butterfish5_Nums:inwc = 0 ;
-		Butterfish5_Nums:insed = 0 ;
-		Butterfish5_Nums:dissol = 0 ;
-		Butterfish5_Nums:decay = 0. ;
-		Butterfish5_Nums:partic = 1 ;
-		Butterfish5_Nums:passive = 1 ;
-		Butterfish5_Nums:svel = 0. ;
-		Butterfish5_Nums:xvel = 0. ;
-		Butterfish5_Nums:psize = 10. ;
-		Butterfish5_Nums:b_dens = 1000000000. ;
-		Butterfish5_Nums:i_conc = 200000000. ;
-		Butterfish5_Nums:f_conc = 200000000. ;
-		Butterfish5_Nums:_FillValue = 0. ;
-	double Butterfish5_ResN(t, b, z) ;
-		Butterfish5_ResN:bmtype = "tracer" ;
-		Butterfish5_ResN:units = "mg N" ;
-		Butterfish5_ResN:long_name = "Individ reserve N for benthopelagicss cohort 5" ;
-		Butterfish5_ResN:dtype = 0 ;
-		Butterfish5_ResN:sumtype = 0 ;
-		Butterfish5_ResN:inwc = 0 ;
-		Butterfish5_ResN:insed = 0 ;
-		Butterfish5_ResN:dissol = 0 ;
-		Butterfish5_ResN:decay = 0. ;
-		Butterfish5_ResN:partic = 1 ;
-		Butterfish5_ResN:passive = 0 ;
-		Butterfish5_ResN:svel = 0. ;
-		Butterfish5_ResN:xvel = 0. ;
-		Butterfish5_ResN:psize = 10. ;
-		Butterfish5_ResN:b_dens = 1000000000. ;
-		Butterfish5_ResN:i_conc = 200000000. ;
-		Butterfish5_ResN:f_conc = 200000000. ;
-		Butterfish5_ResN:_FillValue = 901.98 ;
-	double Butterfish5_StructN(t, b, z) ;
-		Butterfish5_StructN:bmtype = "tracer" ;
-		Butterfish5_StructN:units = "mg N" ;
-		Butterfish5_StructN:long_name = "Individ structural N for benthopelagicss cohort 5" ;
-		Butterfish5_StructN:dtype = 0 ;
-		Butterfish5_StructN:sumtype = 0 ;
-		Butterfish5_StructN:inwc = 0 ;
-		Butterfish5_StructN:insed = 0 ;
-		Butterfish5_StructN:dissol = 0 ;
-		Butterfish5_StructN:decay = 0. ;
-		Butterfish5_StructN:partic = 1 ;
-		Butterfish5_StructN:passive = 0 ;
-		Butterfish5_StructN:svel = 0. ;
-		Butterfish5_StructN:xvel = 0. ;
-		Butterfish5_StructN:psize = 10. ;
-		Butterfish5_StructN:b_dens = 1000000000. ;
-		Butterfish5_StructN:i_conc = 200000000. ;
-		Butterfish5_StructN:f_conc = 200000000. ;
-		Butterfish5_StructN:_FillValue = 450.99 ;
-	double Butterfish6_Nums(t, b, z) ;
-		Butterfish6_Nums:bmtype = "tracer" ;
-		Butterfish6_Nums:units = "1" ;
-		Butterfish6_Nums:long_name = "Numbers of benthopelagics cohort 6" ;
-		Butterfish6_Nums:dtype = 0 ;
-		Butterfish6_Nums:sumtype = 0 ;
-		Butterfish6_Nums:inwc = 0 ;
-		Butterfish6_Nums:insed = 0 ;
-		Butterfish6_Nums:dissol = 0 ;
-		Butterfish6_Nums:decay = 0. ;
-		Butterfish6_Nums:partic = 1 ;
-		Butterfish6_Nums:passive = 1 ;
-		Butterfish6_Nums:svel = 0. ;
-		Butterfish6_Nums:xvel = 0. ;
-		Butterfish6_Nums:psize = 10. ;
-		Butterfish6_Nums:b_dens = 1000000000. ;
-		Butterfish6_Nums:i_conc = 200000000. ;
-		Butterfish6_Nums:f_conc = 200000000. ;
-		Butterfish6_Nums:_FillValue = 0. ;
-	double Butterfish6_ResN(t, b, z) ;
-		Butterfish6_ResN:bmtype = "tracer" ;
-		Butterfish6_ResN:units = "mg N" ;
-		Butterfish6_ResN:long_name = "Individ reserve N for benthopelagicss cohort 6" ;
-		Butterfish6_ResN:dtype = 0 ;
-		Butterfish6_ResN:sumtype = 0 ;
-		Butterfish6_ResN:inwc = 0 ;
-		Butterfish6_ResN:insed = 0 ;
-		Butterfish6_ResN:dissol = 0 ;
-		Butterfish6_ResN:decay = 0. ;
-		Butterfish6_ResN:partic = 1 ;
-		Butterfish6_ResN:passive = 0 ;
-		Butterfish6_ResN:svel = 0. ;
-		Butterfish6_ResN:xvel = 0. ;
-		Butterfish6_ResN:psize = 10. ;
-		Butterfish6_ResN:b_dens = 1000000000. ;
-		Butterfish6_ResN:i_conc = 200000000. ;
-		Butterfish6_ResN:f_conc = 200000000. ;
-		Butterfish6_ResN:_FillValue = 922.34 ;
-	double Butterfish6_StructN(t, b, z) ;
-		Butterfish6_StructN:bmtype = "tracer" ;
-		Butterfish6_StructN:units = "mg N" ;
-		Butterfish6_StructN:long_name = "Individ structural N for benthopelagicss cohort 6" ;
-		Butterfish6_StructN:dtype = 0 ;
-		Butterfish6_StructN:sumtype = 0 ;
-		Butterfish6_StructN:inwc = 0 ;
-		Butterfish6_StructN:insed = 0 ;
-		Butterfish6_StructN:dissol = 0 ;
-		Butterfish6_StructN:decay = 0. ;
-		Butterfish6_StructN:partic = 1 ;
-		Butterfish6_StructN:passive = 0 ;
-		Butterfish6_StructN:svel = 0. ;
-		Butterfish6_StructN:xvel = 0. ;
-		Butterfish6_StructN:psize = 10. ;
-		Butterfish6_StructN:b_dens = 1000000000. ;
-		Butterfish6_StructN:i_conc = 200000000. ;
-		Butterfish6_StructN:f_conc = 200000000. ;
-		Butterfish6_StructN:_FillValue = 461.17 ;
-	double Butterfish7_Nums(t, b, z) ;
-		Butterfish7_Nums:bmtype = "tracer" ;
-		Butterfish7_Nums:units = "1" ;
-		Butterfish7_Nums:long_name = "Numbers of benthopelagics cohort 7" ;
-		Butterfish7_Nums:dtype = 0 ;
-		Butterfish7_Nums:sumtype = 0 ;
-		Butterfish7_Nums:inwc = 0 ;
-		Butterfish7_Nums:insed = 0 ;
-		Butterfish7_Nums:dissol = 0 ;
-		Butterfish7_Nums:decay = 0. ;
-		Butterfish7_Nums:partic = 1 ;
-		Butterfish7_Nums:passive = 1 ;
-		Butterfish7_Nums:svel = 0. ;
-		Butterfish7_Nums:xvel = 0. ;
-		Butterfish7_Nums:psize = 10. ;
-		Butterfish7_Nums:b_dens = 1000000000. ;
-		Butterfish7_Nums:i_conc = 200000000. ;
-		Butterfish7_Nums:f_conc = 200000000. ;
-		Butterfish7_Nums:_FillValue = 0. ;
-	double Butterfish7_ResN(t, b, z) ;
-		Butterfish7_ResN:bmtype = "tracer" ;
-		Butterfish7_ResN:units = "mg N" ;
-		Butterfish7_ResN:long_name = "Individ reserve N for benthopelagicss cohort 7" ;
-		Butterfish7_ResN:dtype = 0 ;
-		Butterfish7_ResN:sumtype = 0 ;
-		Butterfish7_ResN:inwc = 0 ;
-		Butterfish7_ResN:insed = 0 ;
-		Butterfish7_ResN:dissol = 0 ;
-		Butterfish7_ResN:decay = 0. ;
-		Butterfish7_ResN:partic = 1 ;
-		Butterfish7_ResN:passive = 0 ;
-		Butterfish7_ResN:svel = 0. ;
-		Butterfish7_ResN:xvel = 0. ;
-		Butterfish7_ResN:psize = 10. ;
-		Butterfish7_ResN:b_dens = 1000000000. ;
-		Butterfish7_ResN:i_conc = 200000000. ;
-		Butterfish7_ResN:f_conc = 200000000. ;
-		Butterfish7_ResN:_FillValue = 931.04 ;
-	double Butterfish7_StructN(t, b, z) ;
-		Butterfish7_StructN:bmtype = "tracer" ;
-		Butterfish7_StructN:units = "mg N" ;
-		Butterfish7_StructN:long_name = "Individ structural N for benthopelagicss cohort 7" ;
-		Butterfish7_StructN:dtype = 0 ;
-		Butterfish7_StructN:sumtype = 0 ;
-		Butterfish7_StructN:inwc = 0 ;
-		Butterfish7_StructN:insed = 0 ;
-		Butterfish7_StructN:dissol = 0 ;
-		Butterfish7_StructN:decay = 0. ;
-		Butterfish7_StructN:partic = 1 ;
-		Butterfish7_StructN:passive = 0 ;
-		Butterfish7_StructN:svel = 0. ;
-		Butterfish7_StructN:xvel = 0. ;
-		Butterfish7_StructN:psize = 10. ;
-		Butterfish7_StructN:b_dens = 1000000000. ;
-		Butterfish7_StructN:i_conc = 200000000. ;
-		Butterfish7_StructN:f_conc = 200000000. ;
-		Butterfish7_StructN:_FillValue = 465.52 ;
-	double Butterfish8_Nums(t, b, z) ;
-		Butterfish8_Nums:bmtype = "tracer" ;
-		Butterfish8_Nums:units = "1" ;
-		Butterfish8_Nums:long_name = "Numbers of benthopelagics cohort 8" ;
-		Butterfish8_Nums:dtype = 0 ;
-		Butterfish8_Nums:sumtype = 0 ;
-		Butterfish8_Nums:inwc = 0 ;
-		Butterfish8_Nums:insed = 0 ;
-		Butterfish8_Nums:dissol = 0 ;
-		Butterfish8_Nums:decay = 0. ;
-		Butterfish8_Nums:partic = 1 ;
-		Butterfish8_Nums:passive = 1 ;
-		Butterfish8_Nums:svel = 0. ;
-		Butterfish8_Nums:xvel = 0. ;
-		Butterfish8_Nums:psize = 10. ;
-		Butterfish8_Nums:b_dens = 1000000000. ;
-		Butterfish8_Nums:i_conc = 200000000. ;
-		Butterfish8_Nums:f_conc = 200000000. ;
-		Butterfish8_Nums:_FillValue = 0. ;
-	double Butterfish8_ResN(t, b, z) ;
-		Butterfish8_ResN:bmtype = "tracer" ;
-		Butterfish8_ResN:units = "mg N" ;
-		Butterfish8_ResN:long_name = "Individ reserve N for benthopelagicss cohort 8" ;
-		Butterfish8_ResN:dtype = 0 ;
-		Butterfish8_ResN:sumtype = 0 ;
-		Butterfish8_ResN:inwc = 0 ;
-		Butterfish8_ResN:insed = 0 ;
-		Butterfish8_ResN:dissol = 0 ;
-		Butterfish8_ResN:decay = 0. ;
-		Butterfish8_ResN:partic = 1 ;
-		Butterfish8_ResN:passive = 0 ;
-		Butterfish8_ResN:svel = 0. ;
-		Butterfish8_ResN:xvel = 0. ;
-		Butterfish8_ResN:psize = 10. ;
-		Butterfish8_ResN:b_dens = 1000000000. ;
-		Butterfish8_ResN:i_conc = 200000000. ;
-		Butterfish8_ResN:f_conc = 200000000. ;
-		Butterfish8_ResN:_FillValue = 934.74 ;
-	double Butterfish8_StructN(t, b, z) ;
-		Butterfish8_StructN:bmtype = "tracer" ;
-		Butterfish8_StructN:units = "mg N" ;
-		Butterfish8_StructN:long_name = "Individ structural N for benthopelagicss cohort 8" ;
-		Butterfish8_StructN:dtype = 0 ;
-		Butterfish8_StructN:sumtype = 0 ;
-		Butterfish8_StructN:inwc = 0 ;
-		Butterfish8_StructN:insed = 0 ;
-		Butterfish8_StructN:dissol = 0 ;
-		Butterfish8_StructN:decay = 0. ;
-		Butterfish8_StructN:partic = 1 ;
-		Butterfish8_StructN:passive = 0 ;
-		Butterfish8_StructN:svel = 0. ;
-		Butterfish8_StructN:xvel = 0. ;
-		Butterfish8_StructN:psize = 10. ;
-		Butterfish8_StructN:b_dens = 1000000000. ;
-		Butterfish8_StructN:i_conc = 200000000. ;
-		Butterfish8_StructN:f_conc = 200000000. ;
-		Butterfish8_StructN:_FillValue = 467.37 ;
-	double Butterfish9_Nums(t, b, z) ;
-		Butterfish9_Nums:bmtype = "tracer" ;
-		Butterfish9_Nums:units = "1" ;
-		Butterfish9_Nums:long_name = "Numbers of benthopelagics cohort 9" ;
-		Butterfish9_Nums:dtype = 0 ;
-		Butterfish9_Nums:sumtype = 0 ;
-		Butterfish9_Nums:inwc = 0 ;
-		Butterfish9_Nums:insed = 0 ;
-		Butterfish9_Nums:dissol = 0 ;
-		Butterfish9_Nums:decay = 0. ;
-		Butterfish9_Nums:partic = 1 ;
-		Butterfish9_Nums:passive = 1 ;
-		Butterfish9_Nums:svel = 0. ;
-		Butterfish9_Nums:xvel = 0. ;
-		Butterfish9_Nums:psize = 10. ;
-		Butterfish9_Nums:b_dens = 1000000000. ;
-		Butterfish9_Nums:i_conc = 200000000. ;
-		Butterfish9_Nums:f_conc = 200000000. ;
-		Butterfish9_Nums:_FillValue = 0. ;
-	double Butterfish9_ResN(t, b, z) ;
-		Butterfish9_ResN:bmtype = "tracer" ;
-		Butterfish9_ResN:units = "mg N" ;
-		Butterfish9_ResN:long_name = "Individ reserve N for benthopelagicss cohort 9" ;
-		Butterfish9_ResN:dtype = 0 ;
-		Butterfish9_ResN:sumtype = 0 ;
-		Butterfish9_ResN:inwc = 0 ;
-		Butterfish9_ResN:insed = 0 ;
-		Butterfish9_ResN:dissol = 0 ;
-		Butterfish9_ResN:decay = 0. ;
-		Butterfish9_ResN:partic = 1 ;
-		Butterfish9_ResN:passive = 0 ;
-		Butterfish9_ResN:svel = 0. ;
-		Butterfish9_ResN:xvel = 0. ;
-		Butterfish9_ResN:psize = 10. ;
-		Butterfish9_ResN:b_dens = 1000000000. ;
-		Butterfish9_ResN:i_conc = 200000000. ;
-		Butterfish9_ResN:f_conc = 200000000. ;
-		Butterfish9_ResN:_FillValue = 936.3 ;
-	double Butterfish9_StructN(t, b, z) ;
-		Butterfish9_StructN:bmtype = "tracer" ;
-		Butterfish9_StructN:units = "mg N" ;
-		Butterfish9_StructN:long_name = "Individ structural N for benthopelagicss cohort 9" ;
-		Butterfish9_StructN:dtype = 0 ;
-		Butterfish9_StructN:sumtype = 0 ;
-		Butterfish9_StructN:inwc = 0 ;
-		Butterfish9_StructN:insed = 0 ;
-		Butterfish9_StructN:dissol = 0 ;
-		Butterfish9_StructN:decay = 0. ;
-		Butterfish9_StructN:partic = 1 ;
-		Butterfish9_StructN:passive = 0 ;
-		Butterfish9_StructN:svel = 0. ;
-		Butterfish9_StructN:xvel = 0. ;
-		Butterfish9_StructN:psize = 10. ;
-		Butterfish9_StructN:b_dens = 1000000000. ;
-		Butterfish9_StructN:i_conc = 200000000. ;
-		Butterfish9_StructN:f_conc = 200000000. ;
-		Butterfish9_StructN:_FillValue = 468.15 ;
+		Butterfish3_StructN:_FillValue = 468.48 ;
 	double Butterfish_N(t, b, z) ;
 		Butterfish_N:bmtype = "tracer" ;
 		Butterfish_N:units = "mg N m-3" ;
@@ -6507,7 +5652,7 @@ variables:
 		Cod10_ResN:b_dens = 1000000000. ;
 		Cod10_ResN:i_conc = 200000000. ;
 		Cod10_ResN:f_conc = 200000000. ;
-		Cod10_ResN:_FillValue = 132637.56 ;
+		Cod10_ResN:_FillValue = 109399. ;
 	double Cod10_StructN(t, b, z) ;
 		Cod10_StructN:bmtype = "tracer" ;
 		Cod10_StructN:units = "mg N" ;
@@ -6526,7 +5671,121 @@ variables:
 		Cod10_StructN:b_dens = 1000000000. ;
 		Cod10_StructN:i_conc = 200000000. ;
 		Cod10_StructN:f_conc = 200000000. ;
-		Cod10_StructN:_FillValue = 66318.78 ;
+		Cod10_StructN:_FillValue = 54699. ;
+	double Cod11_Nums(t, b, z) ;
+		Cod11_Nums:bmtype = "tracer" ;
+		Cod11_Nums:units = "1" ;
+		Cod11_Nums:long_name = "Numbers of shallow demersals cohort 10" ;
+		Cod11_Nums:dtype = 0 ;
+		Cod11_Nums:sumtype = 0 ;
+		Cod11_Nums:inwc = 0 ;
+		Cod11_Nums:insed = 0 ;
+		Cod11_Nums:dissol = 0 ;
+		Cod11_Nums:decay = 0. ;
+		Cod11_Nums:partic = 1 ;
+		Cod11_Nums:passive = 1 ;
+		Cod11_Nums:svel = 0. ;
+		Cod11_Nums:xvel = 0. ;
+		Cod11_Nums:psize = 10. ;
+		Cod11_Nums:b_dens = 1000000000. ;
+		Cod11_Nums:i_conc = 200000000. ;
+		Cod11_Nums:f_conc = 200000000. ;
+		Cod11_Nums:_FillValue = 0. ;
+	double Cod11_ResN(t, b, z) ;
+		Cod11_ResN:bmtype = "tracer" ;
+		Cod11_ResN:units = "mg N" ;
+		Cod11_ResN:long_name = "Individ reserve N for shallow demersals cohort 10" ;
+		Cod11_ResN:dtype = 0 ;
+		Cod11_ResN:sumtype = 0 ;
+		Cod11_ResN:inwc = 0 ;
+		Cod11_ResN:insed = 0 ;
+		Cod11_ResN:dissol = 0 ;
+		Cod11_ResN:decay = 0. ;
+		Cod11_ResN:partic = 1 ;
+		Cod11_ResN:passive = 0 ;
+		Cod11_ResN:svel = 0. ;
+		Cod11_ResN:xvel = 0. ;
+		Cod11_ResN:psize = 10. ;
+		Cod11_ResN:b_dens = 1000000000. ;
+		Cod11_ResN:i_conc = 200000000. ;
+		Cod11_ResN:f_conc = 200000000. ;
+		Cod11_ResN:_FillValue = 121666. ;
+	double Cod11_StructN(t, b, z) ;
+		Cod11_StructN:bmtype = "tracer" ;
+		Cod11_StructN:units = "mg N" ;
+		Cod11_StructN:long_name = "Individ structural N for shallow demersals cohort 10" ;
+		Cod11_StructN:dtype = 0 ;
+		Cod11_StructN:sumtype = 0 ;
+		Cod11_StructN:inwc = 0 ;
+		Cod11_StructN:insed = 0 ;
+		Cod11_StructN:dissol = 0 ;
+		Cod11_StructN:decay = 0. ;
+		Cod11_StructN:partic = 1 ;
+		Cod11_StructN:passive = 0 ;
+		Cod11_StructN:svel = 0. ;
+		Cod11_StructN:xvel = 0. ;
+		Cod11_StructN:psize = 10. ;
+		Cod11_StructN:b_dens = 1000000000. ;
+		Cod11_StructN:i_conc = 200000000. ;
+		Cod11_StructN:f_conc = 200000000. ;
+		Cod11_StructN:_FillValue = 60833. ;
+	double Cod12_Nums(t, b, z) ;
+		Cod12_Nums:bmtype = "tracer" ;
+		Cod12_Nums:units = "1" ;
+		Cod12_Nums:long_name = "Numbers of shallow demersals cohort 10" ;
+		Cod12_Nums:dtype = 0 ;
+		Cod12_Nums:sumtype = 0 ;
+		Cod12_Nums:inwc = 0 ;
+		Cod12_Nums:insed = 0 ;
+		Cod12_Nums:dissol = 0 ;
+		Cod12_Nums:decay = 0. ;
+		Cod12_Nums:partic = 1 ;
+		Cod12_Nums:passive = 1 ;
+		Cod12_Nums:svel = 0. ;
+		Cod12_Nums:xvel = 0. ;
+		Cod12_Nums:psize = 10. ;
+		Cod12_Nums:b_dens = 1000000000. ;
+		Cod12_Nums:i_conc = 200000000. ;
+		Cod12_Nums:f_conc = 200000000. ;
+		Cod12_Nums:_FillValue = 0. ;
+	double Cod12_ResN(t, b, z) ;
+		Cod12_ResN:bmtype = "tracer" ;
+		Cod12_ResN:units = "mg N" ;
+		Cod12_ResN:long_name = "Individ reserve N for shallow demersals cohort 10" ;
+		Cod12_ResN:dtype = 0 ;
+		Cod12_ResN:sumtype = 0 ;
+		Cod12_ResN:inwc = 0 ;
+		Cod12_ResN:insed = 0 ;
+		Cod12_ResN:dissol = 0 ;
+		Cod12_ResN:decay = 0. ;
+		Cod12_ResN:partic = 1 ;
+		Cod12_ResN:passive = 0 ;
+		Cod12_ResN:svel = 0. ;
+		Cod12_ResN:xvel = 0. ;
+		Cod12_ResN:psize = 10. ;
+		Cod12_ResN:b_dens = 1000000000. ;
+		Cod12_ResN:i_conc = 200000000. ;
+		Cod12_ResN:f_conc = 200000000. ;
+		Cod12_ResN:_FillValue = 132638. ;
+	double Cod12_StructN(t, b, z) ;
+		Cod12_StructN:bmtype = "tracer" ;
+		Cod12_StructN:units = "mg N" ;
+		Cod12_StructN:long_name = "Individ structural N for shallow demersals cohort 10" ;
+		Cod12_StructN:dtype = 0 ;
+		Cod12_StructN:sumtype = 0 ;
+		Cod12_StructN:inwc = 0 ;
+		Cod12_StructN:insed = 0 ;
+		Cod12_StructN:dissol = 0 ;
+		Cod12_StructN:decay = 0. ;
+		Cod12_StructN:partic = 1 ;
+		Cod12_StructN:passive = 0 ;
+		Cod12_StructN:svel = 0. ;
+		Cod12_StructN:xvel = 0. ;
+		Cod12_StructN:psize = 10. ;
+		Cod12_StructN:b_dens = 1000000000. ;
+		Cod12_StructN:i_conc = 200000000. ;
+		Cod12_StructN:f_conc = 200000000. ;
+		Cod12_StructN:_FillValue = 66318.78 ;
 	double Cod1_Nums(t, b, z) ;
 		Cod1_Nums:bmtype = "tracer" ;
 		Cod1_Nums:units = "1" ;
@@ -6621,7 +5880,7 @@ variables:
 		Cod2_ResN:b_dens = 1000000000. ;
 		Cod2_ResN:i_conc = 200000000. ;
 		Cod2_ResN:f_conc = 200000000. ;
-		Cod2_ResN:_FillValue = 3934.68 ;
+		Cod2_ResN:_FillValue = 2855.47 ;
 	double Cod2_StructN(t, b, z) ;
 		Cod2_StructN:bmtype = "tracer" ;
 		Cod2_StructN:units = "mg N" ;
@@ -6640,7 +5899,7 @@ variables:
 		Cod2_StructN:b_dens = 1000000000. ;
 		Cod2_StructN:i_conc = 200000000. ;
 		Cod2_StructN:f_conc = 200000000. ;
-		Cod2_StructN:_FillValue = 1967.34 ;
+		Cod2_StructN:_FillValue = 1427.74;
 	double Cod3_Nums(t, b, z) ;
 		Cod3_Nums:bmtype = "tracer" ;
 		Cod3_Nums:units = "1" ;
@@ -6678,7 +5937,7 @@ variables:
 		Cod3_ResN:b_dens = 1000000000. ;
 		Cod3_ResN:i_conc = 200000000. ;
 		Cod3_ResN:f_conc = 200000000. ;
-		Cod3_ResN:_FillValue = 14147.18 ;
+		Cod3_ResN:_FillValue = 9778.95 ;
 	double Cod3_StructN(t, b, z) ;
 		Cod3_StructN:bmtype = "tracer" ;
 		Cod3_StructN:units = "mg N" ;
@@ -6697,7 +5956,7 @@ variables:
 		Cod3_StructN:b_dens = 1000000000. ;
 		Cod3_StructN:i_conc = 200000000. ;
 		Cod3_StructN:f_conc = 200000000. ;
-		Cod3_StructN:_FillValue = 7073.59 ;
+		Cod3_StructN:_FillValue = 4889.47 ;
 	double Cod4_Nums(t, b, z) ;
 		Cod4_Nums:bmtype = "tracer" ;
 		Cod4_Nums:units = "1" ;
@@ -6735,7 +5994,7 @@ variables:
 		Cod4_ResN:b_dens = 1000000000. ;
 		Cod4_ResN:i_conc = 200000000. ;
 		Cod4_ResN:f_conc = 200000000. ;
-		Cod4_ResN:_FillValue = 29576.72 ;
+		Cod4_ResN:_FillValue = 20640.9 ;
 	double Cod4_StructN(t, b, z) ;
 		Cod4_StructN:bmtype = "tracer" ;
 		Cod4_StructN:units = "mg N" ;
@@ -6754,7 +6013,7 @@ variables:
 		Cod4_StructN:b_dens = 1000000000. ;
 		Cod4_StructN:i_conc = 200000000. ;
 		Cod4_StructN:f_conc = 200000000. ;
-		Cod4_StructN:_FillValue = 14788.36 ;
+		Cod4_StructN:_FillValue = 10320.5 ;
 	double Cod5_Nums(t, b, z) ;
 		Cod5_Nums:bmtype = "tracer" ;
 		Cod5_Nums:units = "1" ;
@@ -6792,7 +6051,7 @@ variables:
 		Cod5_ResN:b_dens = 1000000000. ;
 		Cod5_ResN:i_conc = 200000000. ;
 		Cod5_ResN:f_conc = 200000000. ;
-		Cod5_ResN:_FillValue = 47968.28 ;
+		Cod5_ResN:_FillValue = 34353.6 ;
 	double Cod5_StructN(t, b, z) ;
 		Cod5_StructN:bmtype = "tracer" ;
 		Cod5_StructN:units = "mg N" ;
@@ -6811,7 +6070,7 @@ variables:
 		Cod5_StructN:b_dens = 1000000000. ;
 		Cod5_StructN:i_conc = 200000000. ;
 		Cod5_StructN:f_conc = 200000000. ;
-		Cod5_StructN:_FillValue = 23984.14 ;
+		Cod5_StructN:_FillValue = 17176.8 ;
 	double Cod6_Nums(t, b, z) ;
 		Cod6_Nums:bmtype = "tracer" ;
 		Cod6_Nums:units = "1" ;
@@ -6849,7 +6108,7 @@ variables:
 		Cod6_ResN:b_dens = 1000000000. ;
 		Cod6_ResN:i_conc = 200000000. ;
 		Cod6_ResN:f_conc = 200000000. ;
-		Cod6_ResN:_FillValue = 67295.74 ;
+		Cod6_ResN:_FillValue = 49692.1 ;
 	double Cod6_StructN(t, b, z) ;
 		Cod6_StructN:bmtype = "tracer" ;
 		Cod6_StructN:units = "mg N" ;
@@ -6868,7 +6127,7 @@ variables:
 		Cod6_StructN:b_dens = 1000000000. ;
 		Cod6_StructN:i_conc = 200000000. ;
 		Cod6_StructN:f_conc = 200000000. ;
-		Cod6_StructN:_FillValue = 33647.87 ;
+		Cod6_StructN:_FillValue = 24846 ;
 	double Cod7_Nums(t, b, z) ;
 		Cod7_Nums:bmtype = "tracer" ;
 		Cod7_Nums:units = "1" ;
@@ -6906,7 +6165,7 @@ variables:
 		Cod7_ResN:b_dens = 1000000000. ;
 		Cod7_ResN:i_conc = 200000000. ;
 		Cod7_ResN:f_conc = 200000000. ;
-		Cod7_ResN:_FillValue = 86108.98 ;
+		Cod7_ResN:_FillValue = 65554.5 ;
 	double Cod7_StructN(t, b, z) ;
 		Cod7_StructN:bmtype = "tracer" ;
 		Cod7_StructN:units = "mg N" ;
@@ -6925,7 +6184,7 @@ variables:
 		Cod7_StructN:b_dens = 1000000000. ;
 		Cod7_StructN:i_conc = 200000000. ;
 		Cod7_StructN:f_conc = 200000000. ;
-		Cod7_StructN:_FillValue = 43054.49 ;
+		Cod7_StructN:_FillValue = 32777.2 ;
 	double Cod8_Nums(t, b, z) ;
 		Cod8_Nums:bmtype = "tracer" ;
 		Cod8_Nums:units = "1" ;
@@ -6963,7 +6222,7 @@ variables:
 		Cod8_ResN:b_dens = 1000000000. ;
 		Cod8_ResN:i_conc = 200000000. ;
 		Cod8_ResN:f_conc = 200000000. ;
-		Cod8_ResN:_FillValue = 103520.34 ;
+		Cod8_ResN:_FillValue = 81093.1 ;
 	double Cod8_StructN(t, b, z) ;
 		Cod8_StructN:bmtype = "tracer" ;
 		Cod8_StructN:units = "mg N" ;
@@ -6982,7 +6241,7 @@ variables:
 		Cod8_StructN:b_dens = 1000000000. ;
 		Cod8_StructN:i_conc = 200000000. ;
 		Cod8_StructN:f_conc = 200000000. ;
-		Cod8_StructN:_FillValue = 51760.17 ;
+		Cod8_StructN:_FillValue = 40546.6 ;
 	double Cod9_Nums(t, b, z) ;
 		Cod9_Nums:bmtype = "tracer" ;
 		Cod9_Nums:units = "1" ;
@@ -7020,7 +6279,7 @@ variables:
 		Cod9_ResN:b_dens = 1000000000. ;
 		Cod9_ResN:i_conc = 200000000. ;
 		Cod9_ResN:f_conc = 200000000. ;
-		Cod9_ResN:_FillValue = 119079.58 ;
+		Cod9_ResN:_FillValue = 95810.3 ;
 	double Cod9_StructN(t, b, z) ;
 		Cod9_StructN:bmtype = "tracer" ;
 		Cod9_StructN:units = "mg N" ;
@@ -7039,7 +6298,7 @@ variables:
 		Cod9_StructN:b_dens = 1000000000. ;
 		Cod9_StructN:i_conc = 200000000. ;
 		Cod9_StructN:f_conc = 200000000. ;
-		Cod9_StructN:_FillValue = 59539.79 ;
+		Cod9_StructN:_FillValue = 47905.2 ;
 	double Cod_N(t, b, z) ;
 		Cod_N:bmtype = "tracer" ;
 		Cod_N:units = "mg N m-3" ;
@@ -10150,63 +9409,6 @@ variables:
 		Halibut_N:partic = 0 ;
 		Halibut_N:decay = 0. ;
 		Halibut_N:_FillValue = 0. ;
-	double Herring10_Nums(t, b, z) ;
-		Herring10_Nums:bmtype = "tracer" ;
-		Herring10_Nums:units = "1" ;
-		Herring10_Nums:long_name = "Numbers of small planktivores cohort 10" ;
-		Herring10_Nums:dtype = 0 ;
-		Herring10_Nums:sumtype = 0 ;
-		Herring10_Nums:inwc = 0 ;
-		Herring10_Nums:insed = 0 ;
-		Herring10_Nums:dissol = 0 ;
-		Herring10_Nums:decay = 0. ;
-		Herring10_Nums:partic = 1 ;
-		Herring10_Nums:passive = 1 ;
-		Herring10_Nums:svel = 0. ;
-		Herring10_Nums:xvel = 0. ;
-		Herring10_Nums:psize = 10. ;
-		Herring10_Nums:b_dens = 1000000000. ;
-		Herring10_Nums:i_conc = 200000000. ;
-		Herring10_Nums:f_conc = 200000000. ;
-		Herring10_Nums:_FillValue = 0. ;
-	double Herring10_ResN(t, b, z) ;
-		Herring10_ResN:bmtype = "tracer" ;
-		Herring10_ResN:units = "mg N" ;
-		Herring10_ResN:long_name = "Individ reserve N for small planktivores cohort 10" ;
-		Herring10_ResN:dtype = 0 ;
-		Herring10_ResN:sumtype = 0 ;
-		Herring10_ResN:inwc = 0 ;
-		Herring10_ResN:insed = 0 ;
-		Herring10_ResN:dissol = 0 ;
-		Herring10_ResN:decay = 0. ;
-		Herring10_ResN:partic = 1 ;
-		Herring10_ResN:passive = 0 ;
-		Herring10_ResN:svel = 0. ;
-		Herring10_ResN:xvel = 0. ;
-		Herring10_ResN:psize = 10. ;
-		Herring10_ResN:b_dens = 1000000000. ;
-		Herring10_ResN:i_conc = 200000000. ;
-		Herring10_ResN:f_conc = 200000000. ;
-		Herring10_ResN:_FillValue = 1980.22 ;
-	double Herring10_StructN(t, b, z) ;
-		Herring10_StructN:bmtype = "tracer" ;
-		Herring10_StructN:units = "mg N" ;
-		Herring10_StructN:long_name = "Individ structural N for small planktivores cohort 10" ;
-		Herring10_StructN:dtype = 0 ;
-		Herring10_StructN:sumtype = 0 ;
-		Herring10_StructN:inwc = 0 ;
-		Herring10_StructN:insed = 0 ;
-		Herring10_StructN:dissol = 0 ;
-		Herring10_StructN:decay = 0. ;
-		Herring10_StructN:partic = 1 ;
-		Herring10_StructN:passive = 0 ;
-		Herring10_StructN:svel = 0. ;
-		Herring10_StructN:xvel = 0. ;
-		Herring10_StructN:psize = 10. ;
-		Herring10_StructN:b_dens = 1000000000. ;
-		Herring10_StructN:i_conc = 200000000. ;
-		Herring10_StructN:f_conc = 200000000. ;
-		Herring10_StructN:_FillValue = 990.11 ;
 	double Herring1_Nums(t, b, z) ;
 		Herring1_Nums:bmtype = "tracer" ;
 		Herring1_Nums:units = "1" ;
@@ -10301,7 +9503,7 @@ variables:
 		Herring2_ResN:b_dens = 1000000000. ;
 		Herring2_ResN:i_conc = 200000000. ;
 		Herring2_ResN:f_conc = 200000000. ;
-		Herring2_ResN:_FillValue = 117.64 ;
+		Herring2_ResN:_FillValue = 230.4 ;
 	double Herring2_StructN(t, b, z) ;
 		Herring2_StructN:bmtype = "tracer" ;
 		Herring2_StructN:units = "mg N" ;
@@ -10320,7 +9522,7 @@ variables:
 		Herring2_StructN:b_dens = 1000000000. ;
 		Herring2_StructN:i_conc = 200000000. ;
 		Herring2_StructN:f_conc = 200000000. ;
-		Herring2_StructN:_FillValue = 58.82 ;
+		Herring2_StructN:_FillValue = 115.2 ;
 	double Herring3_Nums(t, b, z) ;
 		Herring3_Nums:bmtype = "tracer" ;
 		Herring3_Nums:units = "1" ;
@@ -10358,7 +9560,7 @@ variables:
 		Herring3_ResN:b_dens = 1000000000. ;
 		Herring3_ResN:i_conc = 200000000. ;
 		Herring3_ResN:f_conc = 200000000. ;
-		Herring3_ResN:_FillValue = 369.02 ;
+		Herring3_ResN:_FillValue = 686.8 ;
 	double Herring3_StructN(t, b, z) ;
 		Herring3_StructN:bmtype = "tracer" ;
 		Herring3_StructN:units = "mg N" ;
@@ -10377,7 +9579,7 @@ variables:
 		Herring3_StructN:b_dens = 1000000000. ;
 		Herring3_StructN:i_conc = 200000000. ;
 		Herring3_StructN:f_conc = 200000000. ;
-		Herring3_StructN:_FillValue = 184.51 ;
+		Herring3_StructN:_FillValue = 343.4 ;
 	double Herring4_Nums(t, b, z) ;
 		Herring4_Nums:bmtype = "tracer" ;
 		Herring4_Nums:units = "1" ;
@@ -10415,7 +9617,7 @@ variables:
 		Herring4_ResN:b_dens = 1000000000. ;
 		Herring4_ResN:i_conc = 200000000. ;
 		Herring4_ResN:f_conc = 200000000. ;
-		Herring4_ResN:_FillValue = 686.84 ;
+		Herring4_ResN:_FillValue = 1154.3 ;
 	double Herring4_StructN(t, b, z) ;
 		Herring4_StructN:bmtype = "tracer" ;
 		Herring4_StructN:units = "mg N" ;
@@ -10434,7 +9636,7 @@ variables:
 		Herring4_StructN:b_dens = 1000000000. ;
 		Herring4_StructN:i_conc = 200000000. ;
 		Herring4_StructN:f_conc = 200000000. ;
-		Herring4_StructN:_FillValue = 343.42 ;
+		Herring4_StructN:_FillValue = 765.1 ;
 	double Herring5_Nums(t, b, z) ;
 		Herring5_Nums:bmtype = "tracer" ;
 		Herring5_Nums:units = "1" ;
@@ -10472,7 +9674,7 @@ variables:
 		Herring5_ResN:b_dens = 1000000000. ;
 		Herring5_ResN:i_conc = 200000000. ;
 		Herring5_ResN:f_conc = 200000000. ;
-		Herring5_ResN:_FillValue = 1006.44 ;
+		Herring5_ResN:_FillValue = 1530.2 ;
 	double Herring5_StructN(t, b, z) ;
 		Herring5_StructN:bmtype = "tracer" ;
 		Herring5_StructN:units = "mg N" ;
@@ -10491,7 +9693,7 @@ variables:
 		Herring5_StructN:b_dens = 1000000000. ;
 		Herring5_StructN:i_conc = 200000000. ;
 		Herring5_StructN:f_conc = 200000000. ;
-		Herring5_StructN:_FillValue = 503.22 ;
+		Herring5_StructN:_FillValue = 765.1 ;
 	double Herring6_Nums(t, b, z) ;
 		Herring6_Nums:bmtype = "tracer" ;
 		Herring6_Nums:units = "1" ;
@@ -10529,7 +9731,7 @@ variables:
 		Herring6_ResN:b_dens = 1000000000. ;
 		Herring6_ResN:i_conc = 200000000. ;
 		Herring6_ResN:f_conc = 200000000. ;
-		Herring6_ResN:_FillValue = 1292.04 ;
+		Herring6_ResN:_FillValue = 1799.0 ;
 	double Herring6_StructN(t, b, z) ;
 		Herring6_StructN:bmtype = "tracer" ;
 		Herring6_StructN:units = "mg N" ;
@@ -10548,7 +9750,7 @@ variables:
 		Herring6_StructN:b_dens = 1000000000. ;
 		Herring6_StructN:i_conc = 200000000. ;
 		Herring6_StructN:f_conc = 200000000. ;
-		Herring6_StructN:_FillValue = 646.02 ;
+		Herring6_StructN:_FillValue = 899.5 ;
 	double Herring7_Nums(t, b, z) ;
 		Herring7_Nums:bmtype = "tracer" ;
 		Herring7_Nums:units = "1" ;
@@ -10586,7 +9788,7 @@ variables:
 		Herring7_ResN:b_dens = 1000000000. ;
 		Herring7_ResN:i_conc = 200000000. ;
 		Herring7_ResN:f_conc = 200000000. ;
-		Herring7_ResN:_FillValue = 1530.22 ;
+		Herring7_ResN:_FillValue = 1980.2 ;
 	double Herring7_StructN(t, b, z) ;
 		Herring7_StructN:bmtype = "tracer" ;
 		Herring7_StructN:units = "mg N" ;
@@ -10605,121 +9807,7 @@ variables:
 		Herring7_StructN:b_dens = 1000000000. ;
 		Herring7_StructN:i_conc = 200000000. ;
 		Herring7_StructN:f_conc = 200000000. ;
-		Herring7_StructN:_FillValue = 765.11 ;
-	double Herring8_Nums(t, b, z) ;
-		Herring8_Nums:bmtype = "tracer" ;
-		Herring8_Nums:units = "1" ;
-		Herring8_Nums:long_name = "Numbers of small planktivores cohort 8" ;
-		Herring8_Nums:dtype = 0 ;
-		Herring8_Nums:sumtype = 0 ;
-		Herring8_Nums:inwc = 0 ;
-		Herring8_Nums:insed = 0 ;
-		Herring8_Nums:dissol = 0 ;
-		Herring8_Nums:decay = 0. ;
-		Herring8_Nums:partic = 1 ;
-		Herring8_Nums:passive = 1 ;
-		Herring8_Nums:svel = 0. ;
-		Herring8_Nums:xvel = 0. ;
-		Herring8_Nums:psize = 10. ;
-		Herring8_Nums:b_dens = 1000000000. ;
-		Herring8_Nums:i_conc = 200000000. ;
-		Herring8_Nums:f_conc = 200000000. ;
-		Herring8_Nums:_FillValue = 0. ;
-	double Herring8_ResN(t, b, z) ;
-		Herring8_ResN:bmtype = "tracer" ;
-		Herring8_ResN:units = "mg N" ;
-		Herring8_ResN:long_name = "Individ reserve N for small planktivores cohort 8" ;
-		Herring8_ResN:dtype = 0 ;
-		Herring8_ResN:sumtype = 0 ;
-		Herring8_ResN:inwc = 0 ;
-		Herring8_ResN:insed = 0 ;
-		Herring8_ResN:dissol = 0 ;
-		Herring8_ResN:decay = 0. ;
-		Herring8_ResN:partic = 1 ;
-		Herring8_ResN:passive = 0 ;
-		Herring8_ResN:svel = 0. ;
-		Herring8_ResN:xvel = 0. ;
-		Herring8_ResN:psize = 10. ;
-		Herring8_ResN:b_dens = 1000000000. ;
-		Herring8_ResN:i_conc = 200000000. ;
-		Herring8_ResN:f_conc = 200000000. ;
-		Herring8_ResN:_FillValue = 1720.4 ;
-	double Herring8_StructN(t, b, z) ;
-		Herring8_StructN:bmtype = "tracer" ;
-		Herring8_StructN:units = "mg N" ;
-		Herring8_StructN:long_name = "Individ structural N for small planktivores cohort 8" ;
-		Herring8_StructN:dtype = 0 ;
-		Herring8_StructN:sumtype = 0 ;
-		Herring8_StructN:inwc = 0 ;
-		Herring8_StructN:insed = 0 ;
-		Herring8_StructN:dissol = 0 ;
-		Herring8_StructN:decay = 0. ;
-		Herring8_StructN:partic = 1 ;
-		Herring8_StructN:passive = 0 ;
-		Herring8_StructN:svel = 0. ;
-		Herring8_StructN:xvel = 0. ;
-		Herring8_StructN:psize = 10. ;
-		Herring8_StructN:b_dens = 1000000000. ;
-		Herring8_StructN:i_conc = 200000000. ;
-		Herring8_StructN:f_conc = 200000000. ;
-		Herring8_StructN:_FillValue = 860.2 ;
-	double Herring9_Nums(t, b, z) ;
-		Herring9_Nums:bmtype = "tracer" ;
-		Herring9_Nums:units = "1" ;
-		Herring9_Nums:long_name = "Numbers of small planktivores cohort 9" ;
-		Herring9_Nums:dtype = 0 ;
-		Herring9_Nums:sumtype = 0 ;
-		Herring9_Nums:inwc = 0 ;
-		Herring9_Nums:insed = 0 ;
-		Herring9_Nums:dissol = 0 ;
-		Herring9_Nums:decay = 0. ;
-		Herring9_Nums:partic = 1 ;
-		Herring9_Nums:passive = 1 ;
-		Herring9_Nums:svel = 0. ;
-		Herring9_Nums:xvel = 0. ;
-		Herring9_Nums:psize = 10. ;
-		Herring9_Nums:b_dens = 1000000000. ;
-		Herring9_Nums:i_conc = 200000000. ;
-		Herring9_Nums:f_conc = 200000000. ;
-		Herring9_Nums:_FillValue = 0. ;
-	double Herring9_ResN(t, b, z) ;
-		Herring9_ResN:bmtype = "tracer" ;
-		Herring9_ResN:units = "mg N" ;
-		Herring9_ResN:long_name = "Individ reserve N for small planktivores cohort 9" ;
-		Herring9_ResN:dtype = 0 ;
-		Herring9_ResN:sumtype = 0 ;
-		Herring9_ResN:inwc = 0 ;
-		Herring9_ResN:insed = 0 ;
-		Herring9_ResN:dissol = 0 ;
-		Herring9_ResN:decay = 0. ;
-		Herring9_ResN:partic = 1 ;
-		Herring9_ResN:passive = 0 ;
-		Herring9_ResN:svel = 0. ;
-		Herring9_ResN:xvel = 0. ;
-		Herring9_ResN:psize = 10. ;
-		Herring9_ResN:b_dens = 1000000000. ;
-		Herring9_ResN:i_conc = 200000000. ;
-		Herring9_ResN:f_conc = 200000000. ;
-		Herring9_ResN:_FillValue = 1867.94 ;
-	double Herring9_StructN(t, b, z) ;
-		Herring9_StructN:bmtype = "tracer" ;
-		Herring9_StructN:units = "mg N" ;
-		Herring9_StructN:long_name = "Individ structural N for small planktivores cohort 9" ;
-		Herring9_StructN:dtype = 0 ;
-		Herring9_StructN:sumtype = 0 ;
-		Herring9_StructN:inwc = 0 ;
-		Herring9_StructN:insed = 0 ;
-		Herring9_StructN:dissol = 0 ;
-		Herring9_StructN:decay = 0. ;
-		Herring9_StructN:partic = 1 ;
-		Herring9_StructN:passive = 0 ;
-		Herring9_StructN:svel = 0. ;
-		Herring9_StructN:xvel = 0. ;
-		Herring9_StructN:psize = 10. ;
-		Herring9_StructN:b_dens = 1000000000. ;
-		Herring9_StructN:i_conc = 200000000. ;
-		Herring9_StructN:f_conc = 200000000. ;
-		Herring9_StructN:_FillValue = 933.97 ;
+		Herring7_StructN:_FillValue = 990.1 ;
 	double Herring_N(t, b, z) ;
 		Herring_N:bmtype = "tracer" ;
 		Herring_N:units = "mg N m-3" ;
@@ -11528,7 +10616,7 @@ variables:
 		Little_Skate10_ResN:b_dens = 1000000000. ;
 		Little_Skate10_ResN:i_conc = 200000000. ;
 		Little_Skate10_ResN:f_conc = 200000000. ;
-		Little_Skate10_ResN:_FillValue = 18148.12 ;
+		Little_Skate10_ResN:_FillValue = 17804.2 ;
 	double Little_Skate10_StructN(t, b, z) ;
 		Little_Skate10_StructN:bmtype = "tracer" ;
 		Little_Skate10_StructN:units = "mg N" ;
@@ -11547,7 +10635,121 @@ variables:
 		Little_Skate10_StructN:b_dens = 1000000000. ;
 		Little_Skate10_StructN:i_conc = 200000000. ;
 		Little_Skate10_StructN:f_conc = 200000000. ;
-		Little_Skate10_StructN:_FillValue = 9074.06 ;
+		Little_Skate10_StructN:_FillValue = 8902.1 ;
+	double Little_Skate11_Nums(t, b, z) ;
+		Little_Skate11_Nums:bmtype = "tracer" ;
+		Little_Skate11_Nums:units = "1" ;
+		Little_Skate11_Nums:long_name = "Numbers of skate and ray cohort 10" ;
+		Little_Skate11_Nums:dtype = 0 ;
+		Little_Skate11_Nums:sumtype = 0 ;
+		Little_Skate11_Nums:inwc = 0 ;
+		Little_Skate11_Nums:insed = 0 ;
+		Little_Skate11_Nums:dissol = 0 ;
+		Little_Skate11_Nums:decay = 0. ;
+		Little_Skate11_Nums:partic = 1 ;
+		Little_Skate11_Nums:passive = 1 ;
+		Little_Skate11_Nums:svel = 0. ;
+		Little_Skate11_Nums:xvel = 0. ;
+		Little_Skate11_Nums:psize = 10. ;
+		Little_Skate11_Nums:b_dens = 1000000000. ;
+		Little_Skate11_Nums:i_conc = 200000000. ;
+		Little_Skate11_Nums:f_conc = 200000000. ;
+		Little_Skate11_Nums:_FillValue = 0. ;
+	double Little_Skate11_ResN(t, b, z) ;
+		Little_Skate11_ResN:bmtype = "tracer" ;
+		Little_Skate11_ResN:units = "mg N" ;
+		Little_Skate11_ResN:long_name = "Individ reserve N for skate and ray cohort 10" ;
+		Little_Skate11_ResN:dtype = 0 ;
+		Little_Skate11_ResN:sumtype = 0 ;
+		Little_Skate11_ResN:inwc = 0 ;
+		Little_Skate11_ResN:insed = 0 ;
+		Little_Skate11_ResN:dissol = 0 ;
+		Little_Skate11_ResN:decay = 0. ;
+		Little_Skate11_ResN:partic = 1 ;
+		Little_Skate11_ResN:passive = 0 ;
+		Little_Skate11_ResN:svel = 0. ;
+		Little_Skate11_ResN:xvel = 0. ;
+		Little_Skate11_ResN:psize = 10. ;
+		Little_Skate11_ResN:b_dens = 1000000000. ;
+		Little_Skate11_ResN:i_conc = 200000000. ;
+		Little_Skate11_ResN:f_conc = 200000000. ;
+		Little_Skate11_ResN:_FillValue = 18016.5 ;
+	double Little_Skate11_StructN(t, b, z) ;
+		Little_Skate11_StructN:bmtype = "tracer" ;
+		Little_Skate11_StructN:units = "mg N" ;
+		Little_Skate11_StructN:long_name = "Individ structural N for skate and ray cohort 10" ;
+		Little_Skate11_StructN:dtype = 0 ;
+		Little_Skate11_StructN:sumtype = 0 ;
+		Little_Skate11_StructN:inwc = 0 ;
+		Little_Skate11_StructN:insed = 0 ;
+		Little_Skate11_StructN:dissol = 0 ;
+		Little_Skate11_StructN:decay = 0. ;
+		Little_Skate11_StructN:partic = 1 ;
+		Little_Skate11_StructN:passive = 0 ;
+		Little_Skate11_StructN:svel = 0. ;
+		Little_Skate11_StructN:xvel = 0. ;
+		Little_Skate11_StructN:psize = 10. ;
+		Little_Skate11_StructN:b_dens = 1000000000. ;
+		Little_Skate11_StructN:i_conc = 200000000. ;
+		Little_Skate11_StructN:f_conc = 200000000. ;
+		Little_Skate11_StructN:_FillValue = 9008.2 ;
+	double Little_Skate12_Nums(t, b, z) ;
+		Little_Skate12_Nums:bmtype = "tracer" ;
+		Little_Skate12_Nums:units = "1" ;
+		Little_Skate12_Nums:long_name = "Numbers of skate and ray cohort 10" ;
+		Little_Skate12_Nums:dtype = 0 ;
+		Little_Skate12_Nums:sumtype = 0 ;
+		Little_Skate12_Nums:inwc = 0 ;
+		Little_Skate12_Nums:insed = 0 ;
+		Little_Skate12_Nums:dissol = 0 ;
+		Little_Skate12_Nums:decay = 0. ;
+		Little_Skate12_Nums:partic = 1 ;
+		Little_Skate12_Nums:passive = 1 ;
+		Little_Skate12_Nums:svel = 0. ;
+		Little_Skate12_Nums:xvel = 0. ;
+		Little_Skate12_Nums:psize = 10. ;
+		Little_Skate12_Nums:b_dens = 1000000000. ;
+		Little_Skate12_Nums:i_conc = 200000000. ;
+		Little_Skate12_Nums:f_conc = 200000000. ;
+		Little_Skate12_Nums:_FillValue = 0. ;
+	double Little_Skate12_ResN(t, b, z) ;
+		Little_Skate12_ResN:bmtype = "tracer" ;
+		Little_Skate12_ResN:units = "mg N" ;
+		Little_Skate12_ResN:long_name = "Individ reserve N for skate and ray cohort 10" ;
+		Little_Skate12_ResN:dtype = 0 ;
+		Little_Skate12_ResN:sumtype = 0 ;
+		Little_Skate12_ResN:inwc = 0 ;
+		Little_Skate12_ResN:insed = 0 ;
+		Little_Skate12_ResN:dissol = 0 ;
+		Little_Skate12_ResN:decay = 0. ;
+		Little_Skate12_ResN:partic = 1 ;
+		Little_Skate12_ResN:passive = 0 ;
+		Little_Skate12_ResN:svel = 0. ;
+		Little_Skate12_ResN:xvel = 0. ;
+		Little_Skate12_ResN:psize = 10. ;
+		Little_Skate12_ResN:b_dens = 1000000000. ;
+		Little_Skate12_ResN:i_conc = 200000000. ;
+		Little_Skate12_ResN:f_conc = 200000000. ;
+		Little_Skate12_ResN:_FillValue = 18148.12 ;
+	double Little_Skate12_StructN(t, b, z) ;
+		Little_Skate12_StructN:bmtype = "tracer" ;
+		Little_Skate12_StructN:units = "mg N" ;
+		Little_Skate12_StructN:long_name = "Individ structural N for skate and ray cohort 10" ;
+		Little_Skate12_StructN:dtype = 0 ;
+		Little_Skate12_StructN:sumtype = 0 ;
+		Little_Skate12_StructN:inwc = 0 ;
+		Little_Skate12_StructN:insed = 0 ;
+		Little_Skate12_StructN:dissol = 0 ;
+		Little_Skate12_StructN:decay = 0. ;
+		Little_Skate12_StructN:partic = 1 ;
+		Little_Skate12_StructN:passive = 0 ;
+		Little_Skate12_StructN:svel = 0. ;
+		Little_Skate12_StructN:xvel = 0. ;
+		Little_Skate12_StructN:psize = 10. ;
+		Little_Skate12_StructN:b_dens = 1000000000. ;
+		Little_Skate12_StructN:i_conc = 200000000. ;
+		Little_Skate12_StructN:f_conc = 200000000. ;
+		Little_Skate12_StructN:_FillValue = 9074.06 ;
 	double Little_Skate1_Nums(t, b, z) ;
 		Little_Skate1_Nums:bmtype = "tracer" ;
 		Little_Skate1_Nums:units = "1" ;
@@ -11642,7 +10844,7 @@ variables:
 		Little_Skate2_ResN:b_dens = 1000000000. ;
 		Little_Skate2_ResN:i_conc = 200000000. ;
 		Little_Skate2_ResN:f_conc = 200000000. ;
-		Little_Skate2_ResN:_FillValue = 2887.92 ;
+		Little_Skate2_ResN:_FillValue = 2261.1 ;
 	double Little_Skate2_StructN(t, b, z) ;
 		Little_Skate2_StructN:bmtype = "tracer" ;
 		Little_Skate2_StructN:units = "mg N" ;
@@ -11661,7 +10863,7 @@ variables:
 		Little_Skate2_StructN:b_dens = 1000000000. ;
 		Little_Skate2_StructN:i_conc = 200000000. ;
 		Little_Skate2_StructN:f_conc = 200000000. ;
-		Little_Skate2_StructN:_FillValue = 1443.96 ;
+		Little_Skate2_StructN:_FillValue = 1130.5 ;
 	double Little_Skate3_Nums(t, b, z) ;
 		Little_Skate3_Nums:bmtype = "tracer" ;
 		Little_Skate3_Nums:units = "1" ;
@@ -11699,7 +10901,7 @@ variables:
 		Little_Skate3_ResN:b_dens = 1000000000. ;
 		Little_Skate3_ResN:i_conc = 200000000. ;
 		Little_Skate3_ResN:f_conc = 200000000. ;
-		Little_Skate3_ResN:_FillValue = 7631.4 ;
+		Little_Skate3_ResN:_FillValue = 5874.5 ;
 	double Little_Skate3_StructN(t, b, z) ;
 		Little_Skate3_StructN:bmtype = "tracer" ;
 		Little_Skate3_StructN:units = "mg N" ;
@@ -11718,7 +10920,7 @@ variables:
 		Little_Skate3_StructN:b_dens = 1000000000. ;
 		Little_Skate3_StructN:i_conc = 200000000. ;
 		Little_Skate3_StructN:f_conc = 200000000. ;
-		Little_Skate3_StructN:_FillValue = 3815.7 ;
+		Little_Skate3_StructN:_FillValue = 2937.3 ;
 	double Little_Skate4_Nums(t, b, z) ;
 		Little_Skate4_Nums:bmtype = "tracer" ;
 		Little_Skate4_Nums:units = "1" ;
@@ -11756,7 +10958,7 @@ variables:
 		Little_Skate4_ResN:b_dens = 1000000000. ;
 		Little_Skate4_ResN:i_conc = 200000000. ;
 		Little_Skate4_ResN:f_conc = 200000000. ;
-		Little_Skate4_ResN:_FillValue = 11696.26 ;
+		Little_Skate4_ResN:_FillValue = 9598.7 ;
 	double Little_Skate4_StructN(t, b, z) ;
 		Little_Skate4_StructN:bmtype = "tracer" ;
 		Little_Skate4_StructN:units = "mg N" ;
@@ -11775,7 +10977,7 @@ variables:
 		Little_Skate4_StructN:b_dens = 1000000000. ;
 		Little_Skate4_StructN:i_conc = 200000000. ;
 		Little_Skate4_StructN:f_conc = 200000000. ;
-		Little_Skate4_StructN:_FillValue = 5848.13 ;
+		Little_Skate4_StructN:_FillValue = 4799.4 ;
 	double Little_Skate5_Nums(t, b, z) ;
 		Little_Skate5_Nums:bmtype = "tracer" ;
 		Little_Skate5_Nums:units = "1" ;
@@ -11813,7 +11015,7 @@ variables:
 		Little_Skate5_ResN:b_dens = 1000000000. ;
 		Little_Skate5_ResN:i_conc = 200000000. ;
 		Little_Skate5_ResN:f_conc = 200000000. ;
-		Little_Skate5_ResN:_FillValue = 14451.58 ;
+		Little_Skate5_ResN:_FillValue = 12571.1 ;
 	double Little_Skate5_StructN(t, b, z) ;
 		Little_Skate5_StructN:bmtype = "tracer" ;
 		Little_Skate5_StructN:units = "mg N" ;
@@ -11832,7 +11034,7 @@ variables:
 		Little_Skate5_StructN:b_dens = 1000000000. ;
 		Little_Skate5_StructN:i_conc = 200000000. ;
 		Little_Skate5_StructN:f_conc = 200000000. ;
-		Little_Skate5_StructN:_FillValue = 7225.79 ;
+		Little_Skate5_StructN:_FillValue = 6285.6 ;
 	double Little_Skate6_Nums(t, b, z) ;
 		Little_Skate6_Nums:bmtype = "tracer" ;
 		Little_Skate6_Nums:units = "1" ;
@@ -11870,7 +11072,7 @@ variables:
 		Little_Skate6_ResN:b_dens = 1000000000. ;
 		Little_Skate6_ResN:i_conc = 200000000. ;
 		Little_Skate6_ResN:f_conc = 200000000. ;
-		Little_Skate6_ResN:_FillValue = 16135.8 ;
+		Little_Skate6_ResN:_FillValue = 14647.6 ;
 	double Little_Skate6_StructN(t, b, z) ;
 		Little_Skate6_StructN:bmtype = "tracer" ;
 		Little_Skate6_StructN:units = "mg N" ;
@@ -11889,7 +11091,7 @@ variables:
 		Little_Skate6_StructN:b_dens = 1000000000. ;
 		Little_Skate6_StructN:i_conc = 200000000. ;
 		Little_Skate6_StructN:f_conc = 200000000. ;
-		Little_Skate6_StructN:_FillValue = 8067.9 ;
+		Little_Skate6_StructN:_FillValue = 7323.8 ;
 	double Little_Skate7_Nums(t, b, z) ;
 		Little_Skate7_Nums:bmtype = "tracer" ;
 		Little_Skate7_Nums:units = "1" ;
@@ -11927,7 +11129,7 @@ variables:
 		Little_Skate7_ResN:b_dens = 1000000000. ;
 		Little_Skate7_ResN:i_conc = 200000000. ;
 		Little_Skate7_ResN:f_conc = 200000000. ;
-		Little_Skate7_ResN:_FillValue = 17114.3 ;
+		Little_Skate7_ResN:_FillValue = 16013.2 ;
 	double Little_Skate7_StructN(t, b, z) ;
 		Little_Skate7_StructN:bmtype = "tracer" ;
 		Little_Skate7_StructN:units = "mg N" ;
@@ -11946,7 +11148,7 @@ variables:
 		Little_Skate7_StructN:b_dens = 1000000000. ;
 		Little_Skate7_StructN:i_conc = 200000000. ;
 		Little_Skate7_StructN:f_conc = 200000000. ;
-		Little_Skate7_StructN:_FillValue = 8557.15 ;
+		Little_Skate7_StructN:_FillValue = 8006.6 ;
 	double Little_Skate8_Nums(t, b, z) ;
 		Little_Skate8_Nums:bmtype = "tracer" ;
 		Little_Skate8_Nums:units = "1" ;
@@ -11984,7 +11186,7 @@ variables:
 		Little_Skate8_ResN:b_dens = 1000000000. ;
 		Little_Skate8_ResN:i_conc = 200000000. ;
 		Little_Skate8_ResN:f_conc = 200000000. ;
-		Little_Skate8_ResN:_FillValue = 17668.02 ;
+		Little_Skate8_ResN:_FillValue = 16897.2 ;
 	double Little_Skate8_StructN(t, b, z) ;
 		Little_Skate8_StructN:bmtype = "tracer" ;
 		Little_Skate8_StructN:units = "mg N" ;
@@ -12003,7 +11205,7 @@ variables:
 		Little_Skate8_StructN:b_dens = 1000000000. ;
 		Little_Skate8_StructN:i_conc = 200000000. ;
 		Little_Skate8_StructN:f_conc = 200000000. ;
-		Little_Skate8_StructN:_FillValue = 8834.01 ;
+		Little_Skate8_StructN:_FillValue = 8448.6 ;
 	double Little_Skate9_Nums(t, b, z) ;
 		Little_Skate9_Nums:bmtype = "tracer" ;
 		Little_Skate9_Nums:units = "1" ;
@@ -12041,7 +11243,7 @@ variables:
 		Little_Skate9_ResN:b_dens = 1000000000. ;
 		Little_Skate9_ResN:i_conc = 200000000. ;
 		Little_Skate9_ResN:f_conc = 200000000. ;
-		Little_Skate9_ResN:_FillValue = 17977. ;
+		Little_Skate9_ResN:_FillValue = 17456.8 ;
 	double Little_Skate9_StructN(t, b, z) ;
 		Little_Skate9_StructN:bmtype = "tracer" ;
 		Little_Skate9_StructN:units = "mg N" ;
@@ -12060,7 +11262,7 @@ variables:
 		Little_Skate9_StructN:b_dens = 1000000000. ;
 		Little_Skate9_StructN:i_conc = 200000000. ;
 		Little_Skate9_StructN:f_conc = 200000000. ;
-		Little_Skate9_StructN:_FillValue = 8988.5 ;
+		Little_Skate9_StructN:_FillValue = 8728.4 ;
 	double Little_Skate_N(t, b, z) ;
 		Little_Skate_N:bmtype = "tracer" ;
 		Little_Skate_N:units = "mg N m-3" ;
@@ -12777,7 +11979,7 @@ variables:
 		Menhaden10_ResN:b_dens = 1000000000. ;
 		Menhaden10_ResN:i_conc = 200000000. ;
 		Menhaden10_ResN:f_conc = 200000000. ;
-		Menhaden10_ResN:_FillValue = 1367.52 ;
+		Menhaden10_ResN:_FillValue = 1187.7 ;
 	double Menhaden10_StructN(t, b, z) ;
 		Menhaden10_StructN:bmtype = "tracer" ;
 		Menhaden10_StructN:units = "mg N" ;
@@ -12796,7 +11998,121 @@ variables:
 		Menhaden10_StructN:b_dens = 1000000000. ;
 		Menhaden10_StructN:i_conc = 200000000. ;
 		Menhaden10_StructN:f_conc = 200000000. ;
-		Menhaden10_StructN:_FillValue = 683.76 ;
+		Menhaden10_StructN:_FillValue = 593.9 ;
+	double Menhaden11_Nums(t, b, z) ;
+		Menhaden11_Nums:bmtype = "tracer" ;
+		Menhaden11_Nums:units = "1" ;
+		Menhaden11_Nums:long_name = "Numbers of flat deep demersal cohort 10" ;
+		Menhaden11_Nums:dtype = 0 ;
+		Menhaden11_Nums:sumtype = 0 ;
+		Menhaden11_Nums:inwc = 0 ;
+		Menhaden11_Nums:insed = 0 ;
+		Menhaden11_Nums:dissol = 0 ;
+		Menhaden11_Nums:decay = 0. ;
+		Menhaden11_Nums:partic = 1 ;
+		Menhaden11_Nums:passive = 1 ;
+		Menhaden11_Nums:svel = 0. ;
+		Menhaden11_Nums:xvel = 0. ;
+		Menhaden11_Nums:psize = 10. ;
+		Menhaden11_Nums:b_dens = 1000000000. ;
+		Menhaden11_Nums:i_conc = 200000000. ;
+		Menhaden11_Nums:f_conc = 200000000. ;
+		Menhaden11_Nums:_FillValue = 0. ;
+	double Menhaden11_ResN(t, b, z) ;
+		Menhaden11_ResN:bmtype = "tracer" ;
+		Menhaden11_ResN:units = "mg N" ;
+		Menhaden11_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 10" ;
+		Menhaden11_ResN:dtype = 0 ;
+		Menhaden11_ResN:sumtype = 0 ;
+		Menhaden11_ResN:inwc = 0 ;
+		Menhaden11_ResN:insed = 0 ;
+		Menhaden11_ResN:dissol = 0 ;
+		Menhaden11_ResN:decay = 0. ;
+		Menhaden11_ResN:partic = 1 ;
+		Menhaden11_ResN:passive = 0 ;
+		Menhaden11_ResN:svel = 0. ;
+		Menhaden11_ResN:xvel = 0. ;
+		Menhaden11_ResN:psize = 10. ;
+		Menhaden11_ResN:b_dens = 1000000000. ;
+		Menhaden11_ResN:i_conc = 200000000. ;
+		Menhaden11_ResN:f_conc = 200000000. ;
+		Menhaden11_ResN:_FillValue = 1284.3 ;
+	double Menhaden11_StructN(t, b, z) ;
+		Menhaden11_StructN:bmtype = "tracer" ;
+		Menhaden11_StructN:units = "mg N" ;
+		Menhaden11_StructN:long_name = "Individ structural N for estuarine deep demersal fish cohort 10" ;
+		Menhaden11_StructN:dtype = 0 ;
+		Menhaden11_StructN:sumtype = 0 ;
+		Menhaden11_StructN:inwc = 0 ;
+		Menhaden11_StructN:insed = 0 ;
+		Menhaden11_StructN:dissol = 0 ;
+		Menhaden11_StructN:decay = 0. ;
+		Menhaden11_StructN:partic = 1 ;
+		Menhaden11_StructN:passive = 0 ;
+		Menhaden11_StructN:svel = 0. ;
+		Menhaden11_StructN:xvel = 0. ;
+		Menhaden11_StructN:psize = 10. ;
+		Menhaden11_StructN:b_dens = 1000000000. ;
+		Menhaden11_StructN:i_conc = 200000000. ;
+		Menhaden11_StructN:f_conc = 200000000. ;
+		Menhaden11_StructN:_FillValue = 642.1 ;
+	double Menhaden12_Nums(t, b, z) ;
+		Menhaden12_Nums:bmtype = "tracer" ;
+		Menhaden12_Nums:units = "1" ;
+		Menhaden12_Nums:long_name = "Numbers of flat deep demersal cohort 10" ;
+		Menhaden12_Nums:dtype = 0 ;
+		Menhaden12_Nums:sumtype = 0 ;
+		Menhaden12_Nums:inwc = 0 ;
+		Menhaden12_Nums:insed = 0 ;
+		Menhaden12_Nums:dissol = 0 ;
+		Menhaden12_Nums:decay = 0. ;
+		Menhaden12_Nums:partic = 1 ;
+		Menhaden12_Nums:passive = 1 ;
+		Menhaden12_Nums:svel = 0. ;
+		Menhaden12_Nums:xvel = 0. ;
+		Menhaden12_Nums:psize = 10. ;
+		Menhaden12_Nums:b_dens = 1000000000. ;
+		Menhaden12_Nums:i_conc = 200000000. ;
+		Menhaden12_Nums:f_conc = 200000000. ;
+		Menhaden12_Nums:_FillValue = 0. ;
+	double Menhaden12_ResN(t, b, z) ;
+		Menhaden12_ResN:bmtype = "tracer" ;
+		Menhaden12_ResN:units = "mg N" ;
+		Menhaden12_ResN:long_name = "Individ reserve N for flat deep demersal fish cohort 10" ;
+		Menhaden12_ResN:dtype = 0 ;
+		Menhaden12_ResN:sumtype = 0 ;
+		Menhaden12_ResN:inwc = 0 ;
+		Menhaden12_ResN:insed = 0 ;
+		Menhaden12_ResN:dissol = 0 ;
+		Menhaden12_ResN:decay = 0. ;
+		Menhaden12_ResN:partic = 1 ;
+		Menhaden12_ResN:passive = 0 ;
+		Menhaden12_ResN:svel = 0. ;
+		Menhaden12_ResN:xvel = 0. ;
+		Menhaden12_ResN:psize = 10. ;
+		Menhaden12_ResN:b_dens = 1000000000. ;
+		Menhaden12_ResN:i_conc = 200000000. ;
+		Menhaden12_ResN:f_conc = 200000000. ;
+		Menhaden12_ResN:_FillValue = 1367.52 ;
+	double Menhaden12_StructN(t, b, z) ;
+		Menhaden12_StructN:bmtype = "tracer" ;
+		Menhaden12_StructN:units = "mg N" ;
+		Menhaden12_StructN:long_name = "Individ structural N for estuarine deep demersal fish cohort 10" ;
+		Menhaden12_StructN:dtype = 0 ;
+		Menhaden12_StructN:sumtype = 0 ;
+		Menhaden12_StructN:inwc = 0 ;
+		Menhaden12_StructN:insed = 0 ;
+		Menhaden12_StructN:dissol = 0 ;
+		Menhaden12_StructN:decay = 0. ;
+		Menhaden12_StructN:partic = 1 ;
+		Menhaden12_StructN:passive = 0 ;
+		Menhaden12_StructN:svel = 0. ;
+		Menhaden12_StructN:xvel = 0. ;
+		Menhaden12_StructN:psize = 10. ;
+		Menhaden12_StructN:b_dens = 1000000000. ;
+		Menhaden12_StructN:i_conc = 200000000. ;
+		Menhaden12_StructN:f_conc = 200000000. ;
+		Menhaden12_StructN:_FillValue = 683.76 ;
 	double Menhaden1_Nums(t, b, z) ;
 		Menhaden1_Nums:bmtype = "tracer" ;
 		Menhaden1_Nums:units = "1" ;
@@ -12891,7 +12207,7 @@ variables:
 		Menhaden2_ResN:b_dens = 1000000000. ;
 		Menhaden2_ResN:i_conc = 200000000. ;
 		Menhaden2_ResN:f_conc = 200000000. ;
-		Menhaden2_ResN:_FillValue = 111.36 ;
+		Menhaden2_ResN:_FillValue = 91.2 ;
 	double Menhaden2_StructN(t, b, z) ;
 		Menhaden2_StructN:bmtype = "tracer" ;
 		Menhaden2_StructN:units = "mg N" ;
@@ -12910,7 +12226,7 @@ variables:
 		Menhaden2_StructN:b_dens = 1000000000. ;
 		Menhaden2_StructN:i_conc = 200000000. ;
 		Menhaden2_StructN:f_conc = 200000000. ;
-		Menhaden2_StructN:_FillValue = 55.68 ;
+		Menhaden2_StructN:_FillValue = 45.6 ;
 	double Menhaden3_Nums(t, b, z) ;
 		Menhaden3_Nums:bmtype = "tracer" ;
 		Menhaden3_Nums:units = "1" ;
@@ -12948,7 +12264,7 @@ variables:
 		Menhaden3_ResN:b_dens = 1000000000. ;
 		Menhaden3_ResN:i_conc = 200000000. ;
 		Menhaden3_ResN:f_conc = 200000000. ;
-		Menhaden3_ResN:_FillValue = 263.2 ;
+		Menhaden3_ResN:_FillValue = 202.9 ;
 	double Menhaden3_StructN(t, b, z) ;
 		Menhaden3_StructN:bmtype = "tracer" ;
 		Menhaden3_StructN:units = "mg N" ;
@@ -12967,7 +12283,7 @@ variables:
 		Menhaden3_StructN:b_dens = 1000000000. ;
 		Menhaden3_StructN:i_conc = 200000000. ;
 		Menhaden3_StructN:f_conc = 200000000. ;
-		Menhaden3_StructN:_FillValue = 131.6 ;
+		Menhaden3_StructN:_FillValue = 101.5 ;
 	double Menhaden4_Nums(t, b, z) ;
 		Menhaden4_Nums:bmtype = "tracer" ;
 		Menhaden4_Nums:units = "1" ;
@@ -13005,7 +12321,7 @@ variables:
 		Menhaden4_ResN:b_dens = 1000000000. ;
 		Menhaden4_ResN:i_conc = 200000000. ;
 		Menhaden4_ResN:f_conc = 200000000. ;
-		Menhaden4_ResN:_FillValue = 448.2 ;
+		Menhaden4_ResN:_FillValue = 344.6 ;
 	double Menhaden4_StructN(t, b, z) ;
 		Menhaden4_StructN:bmtype = "tracer" ;
 		Menhaden4_StructN:units = "mg N" ;
@@ -13024,7 +12340,7 @@ variables:
 		Menhaden4_StructN:b_dens = 1000000000. ;
 		Menhaden4_StructN:i_conc = 200000000. ;
 		Menhaden4_StructN:f_conc = 200000000. ;
-		Menhaden4_StructN:_FillValue = 224.1 ;
+		Menhaden4_StructN:_FillValue = 172.3 ;
 	double Menhaden5_Nums(t, b, z) ;
 		Menhaden5_Nums:bmtype = "tracer" ;
 		Menhaden5_Nums:units = "1" ;
@@ -13062,7 +12378,7 @@ variables:
 		Menhaden5_ResN:b_dens = 1000000000. ;
 		Menhaden5_ResN:i_conc = 200000000. ;
 		Menhaden5_ResN:f_conc = 200000000. ;
-		Menhaden5_ResN:_FillValue = 641.58 ;
+		Menhaden5_ResN:_FillValue = 500.6 ;
 	double Menhaden5_StructN(t, b, z) ;
 		Menhaden5_StructN:bmtype = "tracer" ;
 		Menhaden5_StructN:units = "mg N" ;
@@ -13081,7 +12397,7 @@ variables:
 		Menhaden5_StructN:b_dens = 1000000000. ;
 		Menhaden5_StructN:i_conc = 200000000. ;
 		Menhaden5_StructN:f_conc = 200000000. ;
-		Menhaden5_StructN:_FillValue = 320.79 ;
+		Menhaden5_StructN:_FillValue = 250.3 ;
 	double Menhaden6_Nums(t, b, z) ;
 		Menhaden6_Nums:bmtype = "tracer" ;
 		Menhaden6_Nums:units = "1" ;
@@ -13119,7 +12435,7 @@ variables:
 		Menhaden6_ResN:b_dens = 1000000000. ;
 		Menhaden6_ResN:i_conc = 200000000. ;
 		Menhaden6_ResN:f_conc = 200000000. ;
-		Menhaden6_ResN:_FillValue = 826.64 ;
+		Menhaden6_ResN:_FillValue = 658.8;
 	double Menhaden6_StructN(t, b, z) ;
 		Menhaden6_StructN:bmtype = "tracer" ;
 		Menhaden6_StructN:units = "mg N" ;
@@ -13138,7 +12454,7 @@ variables:
 		Menhaden6_StructN:b_dens = 1000000000. ;
 		Menhaden6_StructN:i_conc = 200000000. ;
 		Menhaden6_StructN:f_conc = 200000000. ;
-		Menhaden6_StructN:_FillValue = 413.32 ;
+		Menhaden6_StructN:_FillValue = 329.4 ;
 	double Menhaden7_Nums(t, b, z) ;
 		Menhaden7_Nums:bmtype = "tracer" ;
 		Menhaden7_Nums:units = "1" ;
@@ -13176,7 +12492,7 @@ variables:
 		Menhaden7_ResN:b_dens = 1000000000. ;
 		Menhaden7_ResN:i_conc = 200000000. ;
 		Menhaden7_ResN:f_conc = 200000000. ;
-		Menhaden7_ResN:_FillValue = 994.16 ;
+		Menhaden7_ResN:_FillValue = 810.5 ;
 	double Menhaden7_StructN(t, b, z) ;
 		Menhaden7_StructN:bmtype = "tracer" ;
 		Menhaden7_StructN:units = "mg N" ;
@@ -13195,7 +12511,7 @@ variables:
 		Menhaden7_StructN:b_dens = 1000000000. ;
 		Menhaden7_StructN:i_conc = 200000000. ;
 		Menhaden7_StructN:f_conc = 200000000. ;
-		Menhaden7_StructN:_FillValue = 497.08 ;
+		Menhaden7_StructN:_FillValue = 405.3 ;
 	double Menhaden8_Nums(t, b, z) ;
 		Menhaden8_Nums:bmtype = "tracer" ;
 		Menhaden8_Nums:units = "1" ;
@@ -13233,7 +12549,7 @@ variables:
 		Menhaden8_ResN:b_dens = 1000000000. ;
 		Menhaden8_ResN:i_conc = 200000000. ;
 		Menhaden8_ResN:f_conc = 200000000. ;
-		Menhaden8_ResN:_FillValue = 1140.2 ;
+		Menhaden8_ResN:_FillValue = 950.5 ;
 	double Menhaden8_StructN(t, b, z) ;
 		Menhaden8_StructN:bmtype = "tracer" ;
 		Menhaden8_StructN:units = "mg N" ;
@@ -13252,7 +12568,7 @@ variables:
 		Menhaden8_StructN:b_dens = 1000000000. ;
 		Menhaden8_StructN:i_conc = 200000000. ;
 		Menhaden8_StructN:f_conc = 200000000. ;
-		Menhaden8_StructN:_FillValue = 570.1 ;
+		Menhaden8_StructN:_FillValue = 475.2 ;
 	double Menhaden9_Nums(t, b, z) ;
 		Menhaden9_Nums:bmtype = "tracer" ;
 		Menhaden9_Nums:units = "1" ;
@@ -13290,7 +12606,7 @@ variables:
 		Menhaden9_ResN:b_dens = 1000000000. ;
 		Menhaden9_ResN:i_conc = 200000000. ;
 		Menhaden9_ResN:f_conc = 200000000. ;
-		Menhaden9_ResN:_FillValue = 1264.22 ;
+		Menhaden9_ResN:_FillValue = 1076.5 ;
 	double Menhaden9_StructN(t, b, z) ;
 		Menhaden9_StructN:bmtype = "tracer" ;
 		Menhaden9_StructN:units = "mg N" ;
@@ -13309,7 +12625,7 @@ variables:
 		Menhaden9_StructN:b_dens = 1000000000. ;
 		Menhaden9_StructN:i_conc = 200000000. ;
 		Menhaden9_StructN:f_conc = 200000000. ;
-		Menhaden9_StructN:_FillValue = 632.11 ;
+		Menhaden9_StructN:_FillValue = 538.3 ;
 	double Menhaden_N(t, b, z) ;
 		Menhaden_N:bmtype = "tracer" ;
 		Menhaden_N:units = "mg N m-3" ;
@@ -14599,7 +13915,7 @@ variables:
 		Monkfish10_ResN:b_dens = 1000000000. ;
 		Monkfish10_ResN:i_conc = 200000000. ;
 		Monkfish10_ResN:f_conc = 200000000. ;
-		Monkfish10_ResN:_FillValue = 38055.345 ;
+		Monkfish10_ResN:_FillValue = 31932. ;
 	double Monkfish10_StructN(t, b, z) ;
 		Monkfish10_StructN:bmtype = "tracer" ;
 		Monkfish10_StructN:units = "mg N" ;
@@ -14618,7 +13934,64 @@ variables:
 		Monkfish10_StructN:b_dens = 1000000000. ;
 		Monkfish10_StructN:i_conc = 200000000. ;
 		Monkfish10_StructN:f_conc = 200000000. ;
-		Monkfish10_StructN:_FillValue = 25370.23 ;
+		Monkfish10_StructN:_FillValue = 21288. ;
+	double Monkfish11_Nums(t, b, z) ;
+		Monkfish11_Nums:bmtype = "tracer" ;
+		Monkfish11_Nums:units = "1" ;
+		Monkfish11_Nums:long_name = "Numbers of deep demersals cohort 10" ;
+		Monkfish11_Nums:dtype = 0 ;
+		Monkfish11_Nums:sumtype = 0 ;
+		Monkfish11_Nums:inwc = 0 ;
+		Monkfish11_Nums:insed = 0 ;
+		Monkfish11_Nums:dissol = 0 ;
+		Monkfish11_Nums:decay = 0. ;
+		Monkfish11_Nums:partic = 1 ;
+		Monkfish11_Nums:passive = 1 ;
+		Monkfish11_Nums:svel = 0. ;
+		Monkfish11_Nums:xvel = 0. ;
+		Monkfish11_Nums:psize = 10. ;
+		Monkfish11_Nums:b_dens = 1000000000. ;
+		Monkfish11_Nums:i_conc = 200000000. ;
+		Monkfish11_Nums:f_conc = 200000000. ;
+		Monkfish11_Nums:_FillValue = 0. ;
+	double Monkfish11_ResN(t, b, z) ;
+		Monkfish11_ResN:bmtype = "tracer" ;
+		Monkfish11_ResN:units = "mg N" ;
+		Monkfish11_ResN:long_name = "Individ reserve N for deep demersals cohort 10" ;
+		Monkfish11_ResN:dtype = 0 ;
+		Monkfish11_ResN:sumtype = 0 ;
+		Monkfish11_ResN:inwc = 0 ;
+		Monkfish11_ResN:insed = 0 ;
+		Monkfish11_ResN:dissol = 0 ;
+		Monkfish11_ResN:decay = 0. ;
+		Monkfish11_ResN:partic = 1 ;
+		Monkfish11_ResN:passive = 0 ;
+		Monkfish11_ResN:svel = 0. ;
+		Monkfish11_ResN:xvel = 0. ;
+		Monkfish11_ResN:psize = 10. ;
+		Monkfish11_ResN:b_dens = 1000000000. ;
+		Monkfish11_ResN:i_conc = 200000000. ;
+		Monkfish11_ResN:f_conc = 200000000. ;
+		Monkfish11_ResN:_FillValue = 38055.345 ;
+	double Monkfish11_StructN(t, b, z) ;
+		Monkfish11_StructN:bmtype = "tracer" ;
+		Monkfish11_StructN:units = "mg N" ;
+		Monkfish11_StructN:long_name = "Individ structural N for deep demersals cohort 10" ;
+		Monkfish11_StructN:dtype = 0 ;
+		Monkfish11_StructN:sumtype = 0 ;
+		Monkfish11_StructN:inwc = 0 ;
+		Monkfish11_StructN:insed = 0 ;
+		Monkfish11_StructN:dissol = 0 ;
+		Monkfish11_StructN:decay = 0. ;
+		Monkfish11_StructN:partic = 1 ;
+		Monkfish11_StructN:passive = 0 ;
+		Monkfish11_StructN:svel = 0. ;
+		Monkfish11_StructN:xvel = 0. ;
+		Monkfish11_StructN:psize = 10. ;
+		Monkfish11_StructN:b_dens = 1000000000. ;
+		Monkfish11_StructN:i_conc = 200000000. ;
+		Monkfish11_StructN:f_conc = 200000000. ;
+		Monkfish11_StructN:_FillValue = 25370.23 ;
 	double Monkfish1_Nums(t, b, z) ;
 		Monkfish1_Nums:bmtype = "tracer" ;
 		Monkfish1_Nums:units = "1" ;
@@ -14713,7 +14086,7 @@ variables:
 		Monkfish2_ResN:b_dens = 1000000000. ;
 		Monkfish2_ResN:i_conc = 200000000. ;
 		Monkfish2_ResN:f_conc = 200000000. ;
-		Monkfish2_ResN:_FillValue = 773.85 ;
+		Monkfish2_ResN:_FillValue = 668. ;
 	double Monkfish2_StructN(t, b, z) ;
 		Monkfish2_StructN:bmtype = "tracer" ;
 		Monkfish2_StructN:units = "mg N" ;
@@ -14732,7 +14105,7 @@ variables:
 		Monkfish2_StructN:b_dens = 1000000000. ;
 		Monkfish2_StructN:i_conc = 200000000. ;
 		Monkfish2_StructN:f_conc = 200000000. ;
-		Monkfish2_StructN:_FillValue = 515.9 ;
+		Monkfish2_StructN:_FillValue = 445. ;
 	double Monkfish3_Nums(t, b, z) ;
 		Monkfish3_Nums:bmtype = "tracer" ;
 		Monkfish3_Nums:units = "1" ;
@@ -14770,7 +14143,7 @@ variables:
 		Monkfish3_ResN:b_dens = 1000000000. ;
 		Monkfish3_ResN:i_conc = 200000000. ;
 		Monkfish3_ResN:f_conc = 200000000. ;
-		Monkfish3_ResN:_FillValue = 2382.915 ;
+		Monkfish3_ResN:_FillValue = 1978. ;
 	double Monkfish3_StructN(t, b, z) ;
 		Monkfish3_StructN:bmtype = "tracer" ;
 		Monkfish3_StructN:units = "mg N" ;
@@ -14789,7 +14162,7 @@ variables:
 		Monkfish3_StructN:b_dens = 1000000000. ;
 		Monkfish3_StructN:i_conc = 200000000. ;
 		Monkfish3_StructN:f_conc = 200000000. ;
-		Monkfish3_StructN:_FillValue = 1588.61 ;
+		Monkfish3_StructN:_FillValue = 1319. ;
 	double Monkfish4_Nums(t, b, z) ;
 		Monkfish4_Nums:bmtype = "tracer" ;
 		Monkfish4_Nums:units = "1" ;
@@ -14827,7 +14200,7 @@ variables:
 		Monkfish4_ResN:b_dens = 1000000000. ;
 		Monkfish4_ResN:i_conc = 200000000. ;
 		Monkfish4_ResN:f_conc = 200000000. ;
-		Monkfish4_ResN:_FillValue = 5044.59 ;
+		Monkfish4_ResN:_FillValue = 4137 ;
 	double Monkfish4_StructN(t, b, z) ;
 		Monkfish4_StructN:bmtype = "tracer" ;
 		Monkfish4_StructN:units = "mg N" ;
@@ -14846,7 +14219,7 @@ variables:
 		Monkfish4_StructN:b_dens = 1000000000. ;
 		Monkfish4_StructN:i_conc = 200000000. ;
 		Monkfish4_StructN:f_conc = 200000000. ;
-		Monkfish4_StructN:_FillValue = 3363.06 ;
+		Monkfish4_StructN:_FillValue = 2758. ;
 	double Monkfish5_Nums(t, b, z) ;
 		Monkfish5_Nums:bmtype = "tracer" ;
 		Monkfish5_Nums:units = "1" ;
@@ -14884,7 +14257,7 @@ variables:
 		Monkfish5_ResN:b_dens = 1000000000. ;
 		Monkfish5_ResN:i_conc = 200000000. ;
 		Monkfish5_ResN:f_conc = 200000000. ;
-		Monkfish5_ResN:_FillValue = 8737.785 ;
+		Monkfish5_ResN:_FillValue = 7144. ;
 	double Monkfish5_StructN(t, b, z) ;
 		Monkfish5_StructN:bmtype = "tracer" ;
 		Monkfish5_StructN:units = "mg N" ;
@@ -14903,7 +14276,7 @@ variables:
 		Monkfish5_StructN:b_dens = 1000000000. ;
 		Monkfish5_StructN:i_conc = 200000000. ;
 		Monkfish5_StructN:f_conc = 200000000. ;
-		Monkfish5_StructN:_FillValue = 5825.19 ;
+		Monkfish5_StructN:_FillValue = 4762. ;
 	double Monkfish6_Nums(t, b, z) ;
 		Monkfish6_Nums:bmtype = "tracer" ;
 		Monkfish6_Nums:units = "1" ;
@@ -14941,7 +14314,7 @@ variables:
 		Monkfish6_ResN:b_dens = 1000000000. ;
 		Monkfish6_ResN:i_conc = 200000000. ;
 		Monkfish6_ResN:f_conc = 200000000. ;
-		Monkfish6_ResN:_FillValue = 13358.88 ;
+		Monkfish6_ResN:_FillValue = 10941. ;
 	double Monkfish6_StructN(t, b, z) ;
 		Monkfish6_StructN:bmtype = "tracer" ;
 		Monkfish6_StructN:units = "mg N" ;
@@ -14960,7 +14333,7 @@ variables:
 		Monkfish6_StructN:b_dens = 1000000000. ;
 		Monkfish6_StructN:i_conc = 200000000. ;
 		Monkfish6_StructN:f_conc = 200000000. ;
-		Monkfish6_StructN:_FillValue = 8905.92 ;
+		Monkfish6_StructN:_FillValue = 7294. ;
 	double Monkfish7_Nums(t, b, z) ;
 		Monkfish7_Nums:bmtype = "tracer" ;
 		Monkfish7_Nums:units = "1" ;
@@ -14998,7 +14371,7 @@ variables:
 		Monkfish7_ResN:b_dens = 1000000000. ;
 		Monkfish7_ResN:i_conc = 200000000. ;
 		Monkfish7_ResN:f_conc = 200000000. ;
-		Monkfish7_ResN:_FillValue = 18761.895 ;
+		Monkfish7_ResN:_FillValue = 15434. ;
 	double Monkfish7_StructN(t, b, z) ;
 		Monkfish7_StructN:bmtype = "tracer" ;
 		Monkfish7_StructN:units = "mg N" ;
@@ -15017,7 +14390,7 @@ variables:
 		Monkfish7_StructN:b_dens = 1000000000. ;
 		Monkfish7_StructN:i_conc = 200000000. ;
 		Monkfish7_StructN:f_conc = 200000000. ;
-		Monkfish7_StructN:_FillValue = 12507.93 ;
+		Monkfish7_StructN:_FillValue = 10289. ;
 	double Monkfish8_Nums(t, b, z) ;
 		Monkfish8_Nums:bmtype = "tracer" ;
 		Monkfish8_Nums:units = "1" ;
@@ -15055,7 +14428,7 @@ variables:
 		Monkfish8_ResN:b_dens = 1000000000. ;
 		Monkfish8_ResN:i_conc = 200000000. ;
 		Monkfish8_ResN:f_conc = 200000000. ;
-		Monkfish8_ResN:_FillValue = 24784.845 ;
+		Monkfish8_ResN:_FillValue = 20508. ;
 	double Monkfish8_StructN(t, b, z) ;
 		Monkfish8_StructN:bmtype = "tracer" ;
 		Monkfish8_StructN:units = "mg N" ;
@@ -15074,7 +14447,7 @@ variables:
 		Monkfish8_StructN:b_dens = 1000000000. ;
 		Monkfish8_StructN:i_conc = 200000000. ;
 		Monkfish8_StructN:f_conc = 200000000. ;
-		Monkfish8_StructN:_FillValue = 16523.23 ;
+		Monkfish8_StructN:_FillValue = 13672. ;
 	double Monkfish9_Nums(t, b, z) ;
 		Monkfish9_Nums:bmtype = "tracer" ;
 		Monkfish9_Nums:units = "1" ;
@@ -15112,7 +14485,7 @@ variables:
 		Monkfish9_ResN:b_dens = 1000000000. ;
 		Monkfish9_ResN:i_conc = 200000000. ;
 		Monkfish9_ResN:f_conc = 200000000. ;
-		Monkfish9_ResN:_FillValue = 31266.285 ;
+		Monkfish9_ResN:_FillValue = 26046. ;
 	double Monkfish9_StructN(t, b, z) ;
 		Monkfish9_StructN:bmtype = "tracer" ;
 		Monkfish9_StructN:units = "mg N" ;
@@ -15131,7 +14504,7 @@ variables:
 		Monkfish9_StructN:b_dens = 1000000000. ;
 		Monkfish9_StructN:i_conc = 200000000. ;
 		Monkfish9_StructN:f_conc = 200000000. ;
-		Monkfish9_StructN:_FillValue = 20844.19 ;
+		Monkfish9_StructN:_FillValue = 17364. ;
 	double Monkfish_N(t, b, z) ;
 		Monkfish_N:bmtype = "tracer" ;
 		Monkfish_N:units = "mg N m-3" ;
@@ -15218,63 +14591,6 @@ variables:
 		Northern_Shrimp_N2:i_conc = 200000000. ;
 		Northern_Shrimp_N2:f_conc = 200000000. ;
 		Northern_Shrimp_N2:_FillValue = 0. ;
-	double Ocean_Pout10_Nums(t, b, z) ;
-		Ocean_Pout10_Nums:bmtype = "tracer" ;
-		Ocean_Pout10_Nums:units = "1" ;
-		Ocean_Pout10_Nums:long_name = "Numbers of other deep demersal cohort 10" ;
-		Ocean_Pout10_Nums:dtype = 0 ;
-		Ocean_Pout10_Nums:sumtype = 0 ;
-		Ocean_Pout10_Nums:inwc = 0 ;
-		Ocean_Pout10_Nums:insed = 0 ;
-		Ocean_Pout10_Nums:dissol = 0 ;
-		Ocean_Pout10_Nums:decay = 0. ;
-		Ocean_Pout10_Nums:partic = 1 ;
-		Ocean_Pout10_Nums:passive = 1 ;
-		Ocean_Pout10_Nums:svel = 0. ;
-		Ocean_Pout10_Nums:xvel = 0. ;
-		Ocean_Pout10_Nums:psize = 10. ;
-		Ocean_Pout10_Nums:b_dens = 1000000000. ;
-		Ocean_Pout10_Nums:i_conc = 200000000. ;
-		Ocean_Pout10_Nums:f_conc = 200000000. ;
-		Ocean_Pout10_Nums:_FillValue = 0. ;
-	double Ocean_Pout10_ResN(t, b, z) ;
-		Ocean_Pout10_ResN:bmtype = "tracer" ;
-		Ocean_Pout10_ResN:units = "mg N" ;
-		Ocean_Pout10_ResN:long_name = "Individ reserve N for other deep demersal fish cohort 10" ;
-		Ocean_Pout10_ResN:dtype = 0 ;
-		Ocean_Pout10_ResN:sumtype = 0 ;
-		Ocean_Pout10_ResN:inwc = 0 ;
-		Ocean_Pout10_ResN:insed = 0 ;
-		Ocean_Pout10_ResN:dissol = 0 ;
-		Ocean_Pout10_ResN:decay = 0. ;
-		Ocean_Pout10_ResN:partic = 1 ;
-		Ocean_Pout10_ResN:passive = 0 ;
-		Ocean_Pout10_ResN:svel = 0. ;
-		Ocean_Pout10_ResN:xvel = 0. ;
-		Ocean_Pout10_ResN:psize = 10. ;
-		Ocean_Pout10_ResN:b_dens = 1000000000. ;
-		Ocean_Pout10_ResN:i_conc = 200000000. ;
-		Ocean_Pout10_ResN:f_conc = 200000000. ;
-		Ocean_Pout10_ResN:_FillValue = 22831.72 ;
-	double Ocean_Pout10_StructN(t, b, z) ;
-		Ocean_Pout10_StructN:bmtype = "tracer" ;
-		Ocean_Pout10_StructN:units = "mg N" ;
-		Ocean_Pout10_StructN:long_name = "Individ structural N for other deep demersal fish cohort 10" ;
-		Ocean_Pout10_StructN:dtype = 0 ;
-		Ocean_Pout10_StructN:sumtype = 0 ;
-		Ocean_Pout10_StructN:inwc = 0 ;
-		Ocean_Pout10_StructN:insed = 0 ;
-		Ocean_Pout10_StructN:dissol = 0 ;
-		Ocean_Pout10_StructN:decay = 0. ;
-		Ocean_Pout10_StructN:partic = 1 ;
-		Ocean_Pout10_StructN:passive = 0 ;
-		Ocean_Pout10_StructN:svel = 0. ;
-		Ocean_Pout10_StructN:xvel = 0. ;
-		Ocean_Pout10_StructN:psize = 10. ;
-		Ocean_Pout10_StructN:b_dens = 1000000000. ;
-		Ocean_Pout10_StructN:i_conc = 200000000. ;
-		Ocean_Pout10_StructN:f_conc = 200000000. ;
-		Ocean_Pout10_StructN:_FillValue = 11415.86 ;
 	double Ocean_Pout1_Nums(t, b, z) ;
 		Ocean_Pout1_Nums:bmtype = "tracer" ;
 		Ocean_Pout1_Nums:units = "1" ;
@@ -15369,7 +14685,7 @@ variables:
 		Ocean_Pout2_ResN:b_dens = 1000000000. ;
 		Ocean_Pout2_ResN:i_conc = 200000000. ;
 		Ocean_Pout2_ResN:f_conc = 200000000. ;
-		Ocean_Pout2_ResN:_FillValue = 641.72 ;
+		Ocean_Pout2_ResN:_FillValue = 792.6 ;
 	double Ocean_Pout2_StructN(t, b, z) ;
 		Ocean_Pout2_StructN:bmtype = "tracer" ;
 		Ocean_Pout2_StructN:units = "mg N" ;
@@ -15388,7 +14704,7 @@ variables:
 		Ocean_Pout2_StructN:b_dens = 1000000000. ;
 		Ocean_Pout2_StructN:i_conc = 200000000. ;
 		Ocean_Pout2_StructN:f_conc = 200000000. ;
-		Ocean_Pout2_StructN:_FillValue = 320.86 ;
+		Ocean_Pout2_StructN:_FillValue = 396.3 ;
 	double Ocean_Pout3_Nums(t, b, z) ;
 		Ocean_Pout3_Nums:bmtype = "tracer" ;
 		Ocean_Pout3_Nums:units = "1" ;
@@ -15426,7 +14742,7 @@ variables:
 		Ocean_Pout3_ResN:b_dens = 1000000000. ;
 		Ocean_Pout3_ResN:i_conc = 200000000. ;
 		Ocean_Pout3_ResN:f_conc = 200000000. ;
-		Ocean_Pout3_ResN:_FillValue = 2297.54 ;
+		Ocean_Pout3_ResN:_FillValue = 2859.3 ;
 	double Ocean_Pout3_StructN(t, b, z) ;
 		Ocean_Pout3_StructN:bmtype = "tracer" ;
 		Ocean_Pout3_StructN:units = "mg N" ;
@@ -15445,7 +14761,7 @@ variables:
 		Ocean_Pout3_StructN:b_dens = 1000000000. ;
 		Ocean_Pout3_StructN:i_conc = 200000000. ;
 		Ocean_Pout3_StructN:f_conc = 200000000. ;
-		Ocean_Pout3_StructN:_FillValue = 1148.77 ;
+		Ocean_Pout3_StructN:_FillValue = 1429.6 ;
 	double Ocean_Pout4_Nums(t, b, z) ;
 		Ocean_Pout4_Nums:bmtype = "tracer" ;
 		Ocean_Pout4_Nums:units = "1" ;
@@ -15483,7 +14799,7 @@ variables:
 		Ocean_Pout4_ResN:b_dens = 1000000000. ;
 		Ocean_Pout4_ResN:i_conc = 200000000. ;
 		Ocean_Pout4_ResN:f_conc = 200000000. ;
-		Ocean_Pout4_ResN:_FillValue = 4847.42 ;
+		Ocean_Pout4_ResN:_FillValue = 5959.6 ;
 	double Ocean_Pout4_StructN(t, b, z) ;
 		Ocean_Pout4_StructN:bmtype = "tracer" ;
 		Ocean_Pout4_StructN:units = "mg N" ;
@@ -15502,7 +14818,7 @@ variables:
 		Ocean_Pout4_StructN:b_dens = 1000000000. ;
 		Ocean_Pout4_StructN:i_conc = 200000000. ;
 		Ocean_Pout4_StructN:f_conc = 200000000. ;
-		Ocean_Pout4_StructN:_FillValue = 2423.71 ;
+		Ocean_Pout4_StructN:_FillValue = 2979.8 ;
 	double Ocean_Pout5_Nums(t, b, z) ;
 		Ocean_Pout5_Nums:bmtype = "tracer" ;
 		Ocean_Pout5_Nums:units = "1" ;
@@ -15540,7 +14856,7 @@ variables:
 		Ocean_Pout5_ResN:b_dens = 1000000000. ;
 		Ocean_Pout5_ResN:i_conc = 200000000. ;
 		Ocean_Pout5_ResN:f_conc = 200000000. ;
-		Ocean_Pout5_ResN:_FillValue = 7945.22 ;
+		Ocean_Pout5_ResN:_FillValue = 9590.1 ;
 	double Ocean_Pout5_StructN(t, b, z) ;
 		Ocean_Pout5_StructN:bmtype = "tracer" ;
 		Ocean_Pout5_StructN:units = "mg N" ;
@@ -15559,7 +14875,7 @@ variables:
 		Ocean_Pout5_StructN:b_dens = 1000000000. ;
 		Ocean_Pout5_StructN:i_conc = 200000000. ;
 		Ocean_Pout5_StructN:f_conc = 200000000. ;
-		Ocean_Pout5_StructN:_FillValue = 3972.61 ;
+		Ocean_Pout5_StructN:_FillValue = 4795.1 ;
 	double Ocean_Pout6_Nums(t, b, z) ;
 		Ocean_Pout6_Nums:bmtype = "tracer" ;
 		Ocean_Pout6_Nums:units = "1" ;
@@ -15597,7 +14913,7 @@ variables:
 		Ocean_Pout6_ResN:b_dens = 1000000000. ;
 		Ocean_Pout6_ResN:i_conc = 200000000. ;
 		Ocean_Pout6_ResN:f_conc = 200000000. ;
-		Ocean_Pout6_ResN:_FillValue = 11257.02 ;
+		Ocean_Pout6_ResN:_FillValue = 13319.5 ;
 	double Ocean_Pout6_StructN(t, b, z) ;
 		Ocean_Pout6_StructN:bmtype = "tracer" ;
 		Ocean_Pout6_StructN:units = "mg N" ;
@@ -15616,7 +14932,7 @@ variables:
 		Ocean_Pout6_StructN:b_dens = 1000000000. ;
 		Ocean_Pout6_StructN:i_conc = 200000000. ;
 		Ocean_Pout6_StructN:f_conc = 200000000. ;
-		Ocean_Pout6_StructN:_FillValue = 5628.51 ;
+		Ocean_Pout6_StructN:_FillValue = 6659.7 ;
 	double Ocean_Pout7_Nums(t, b, z) ;
 		Ocean_Pout7_Nums:bmtype = "tracer" ;
 		Ocean_Pout7_Nums:units = "1" ;
@@ -15654,7 +14970,7 @@ variables:
 		Ocean_Pout7_ResN:b_dens = 1000000000. ;
 		Ocean_Pout7_ResN:i_conc = 200000000. ;
 		Ocean_Pout7_ResN:f_conc = 200000000. ;
-		Ocean_Pout7_ResN:_FillValue = 14530.58 ;
+		Ocean_Pout7_ResN:_FillValue = 16859.6 ;
 	double Ocean_Pout7_StructN(t, b, z) ;
 		Ocean_Pout7_StructN:bmtype = "tracer" ;
 		Ocean_Pout7_StructN:units = "mg N" ;
@@ -15673,7 +14989,7 @@ variables:
 		Ocean_Pout7_StructN:b_dens = 1000000000. ;
 		Ocean_Pout7_StructN:i_conc = 200000000. ;
 		Ocean_Pout7_StructN:f_conc = 200000000. ;
-		Ocean_Pout7_StructN:_FillValue = 7265.29 ;
+		Ocean_Pout7_StructN:_FillValue = 8429.8 ;
 	double Ocean_Pout8_Nums(t, b, z) ;
 		Ocean_Pout8_Nums:bmtype = "tracer" ;
 		Ocean_Pout8_Nums:units = "1" ;
@@ -15711,7 +15027,7 @@ variables:
 		Ocean_Pout8_ResN:b_dens = 1000000000. ;
 		Ocean_Pout8_ResN:i_conc = 200000000. ;
 		Ocean_Pout8_ResN:f_conc = 200000000. ;
-		Ocean_Pout8_ResN:_FillValue = 17602.28 ;
+		Ocean_Pout8_ResN:_FillValue = 20052.1 ;
 	double Ocean_Pout8_StructN(t, b, z) ;
 		Ocean_Pout8_StructN:bmtype = "tracer" ;
 		Ocean_Pout8_StructN:units = "mg N" ;
@@ -15730,7 +15046,7 @@ variables:
 		Ocean_Pout8_StructN:b_dens = 1000000000. ;
 		Ocean_Pout8_StructN:i_conc = 200000000. ;
 		Ocean_Pout8_StructN:f_conc = 200000000. ;
-		Ocean_Pout8_StructN:_FillValue = 8801.14 ;
+		Ocean_Pout8_StructN:_FillValue = 10026.1 ;
 	double Ocean_Pout9_Nums(t, b, z) ;
 		Ocean_Pout9_Nums:bmtype = "tracer" ;
 		Ocean_Pout9_Nums:units = "1" ;
@@ -15768,7 +15084,7 @@ variables:
 		Ocean_Pout9_ResN:b_dens = 1000000000. ;
 		Ocean_Pout9_ResN:i_conc = 200000000. ;
 		Ocean_Pout9_ResN:f_conc = 200000000. ;
-		Ocean_Pout9_ResN:_FillValue = 20381.8 ;
+		Ocean_Pout9_ResN:_FillValue = 22831.7 ;
 	double Ocean_Pout9_StructN(t, b, z) ;
 		Ocean_Pout9_StructN:bmtype = "tracer" ;
 		Ocean_Pout9_StructN:units = "mg N" ;
@@ -15787,7 +15103,7 @@ variables:
 		Ocean_Pout9_StructN:b_dens = 1000000000. ;
 		Ocean_Pout9_StructN:i_conc = 200000000. ;
 		Ocean_Pout9_StructN:f_conc = 200000000. ;
-		Ocean_Pout9_StructN:_FillValue = 10190.9 ;
+		Ocean_Pout9_StructN:_FillValue = 11415.9 ;
 	double Ocean_Pout_N(t, b, z) ;
 		Ocean_Pout_N:bmtype = "tracer" ;
 		Ocean_Pout_N:units = "mg N m-3" ;
@@ -15800,63 +15116,6 @@ variables:
 		Ocean_Pout_N:partic = 0 ;
 		Ocean_Pout_N:decay = 0. ;
 		Ocean_Pout_N:_FillValue = 0. ;
-	double Offshore_Hake10_Nums(t, b, z) ;
-		Offshore_Hake10_Nums:bmtype = "tracer" ;
-		Offshore_Hake10_Nums:units = "1" ;
-		Offshore_Hake10_Nums:long_name = "Numbers of other deep demersal cohort 10" ;
-		Offshore_Hake10_Nums:dtype = 0 ;
-		Offshore_Hake10_Nums:sumtype = 0 ;
-		Offshore_Hake10_Nums:inwc = 0 ;
-		Offshore_Hake10_Nums:insed = 0 ;
-		Offshore_Hake10_Nums:dissol = 0 ;
-		Offshore_Hake10_Nums:decay = 0. ;
-		Offshore_Hake10_Nums:partic = 1 ;
-		Offshore_Hake10_Nums:passive = 1 ;
-		Offshore_Hake10_Nums:svel = 0. ;
-		Offshore_Hake10_Nums:xvel = 0. ;
-		Offshore_Hake10_Nums:psize = 10. ;
-		Offshore_Hake10_Nums:b_dens = 1000000000. ;
-		Offshore_Hake10_Nums:i_conc = 200000000. ;
-		Offshore_Hake10_Nums:f_conc = 200000000. ;
-		Offshore_Hake10_Nums:_FillValue = 0. ;
-	double Offshore_Hake10_ResN(t, b, z) ;
-		Offshore_Hake10_ResN:bmtype = "tracer" ;
-		Offshore_Hake10_ResN:units = "mg N" ;
-		Offshore_Hake10_ResN:long_name = "Individ reserve N for other deep demersal fish cohort 10" ;
-		Offshore_Hake10_ResN:dtype = 0 ;
-		Offshore_Hake10_ResN:sumtype = 0 ;
-		Offshore_Hake10_ResN:inwc = 0 ;
-		Offshore_Hake10_ResN:insed = 0 ;
-		Offshore_Hake10_ResN:dissol = 0 ;
-		Offshore_Hake10_ResN:decay = 0. ;
-		Offshore_Hake10_ResN:partic = 1 ;
-		Offshore_Hake10_ResN:passive = 0 ;
-		Offshore_Hake10_ResN:svel = 0. ;
-		Offshore_Hake10_ResN:xvel = 0. ;
-		Offshore_Hake10_ResN:psize = 10. ;
-		Offshore_Hake10_ResN:b_dens = 1000000000. ;
-		Offshore_Hake10_ResN:i_conc = 200000000. ;
-		Offshore_Hake10_ResN:f_conc = 200000000. ;
-		Offshore_Hake10_ResN:_FillValue = 2520.8 ;
-	double Offshore_Hake10_StructN(t, b, z) ;
-		Offshore_Hake10_StructN:bmtype = "tracer" ;
-		Offshore_Hake10_StructN:units = "mg N" ;
-		Offshore_Hake10_StructN:long_name = "Individ structural N for other deep demersal fish cohort 10" ;
-		Offshore_Hake10_StructN:dtype = 0 ;
-		Offshore_Hake10_StructN:sumtype = 0 ;
-		Offshore_Hake10_StructN:inwc = 0 ;
-		Offshore_Hake10_StructN:insed = 0 ;
-		Offshore_Hake10_StructN:dissol = 0 ;
-		Offshore_Hake10_StructN:decay = 0. ;
-		Offshore_Hake10_StructN:partic = 1 ;
-		Offshore_Hake10_StructN:passive = 0 ;
-		Offshore_Hake10_StructN:svel = 0. ;
-		Offshore_Hake10_StructN:xvel = 0. ;
-		Offshore_Hake10_StructN:psize = 10. ;
-		Offshore_Hake10_StructN:b_dens = 1000000000. ;
-		Offshore_Hake10_StructN:i_conc = 200000000. ;
-		Offshore_Hake10_StructN:f_conc = 200000000. ;
-		Offshore_Hake10_StructN:_FillValue = 1260.4 ;
 	double Offshore_Hake1_Nums(t, b, z) ;
 		Offshore_Hake1_Nums:bmtype = "tracer" ;
 		Offshore_Hake1_Nums:units = "1" ;
@@ -15951,7 +15210,7 @@ variables:
 		Offshore_Hake2_ResN:b_dens = 1000000000. ;
 		Offshore_Hake2_ResN:i_conc = 200000000. ;
 		Offshore_Hake2_ResN:f_conc = 200000000. ;
-		Offshore_Hake2_ResN:_FillValue = 1182.64 ;
+		Offshore_Hake2_ResN:_FillValue = 2052.9 ;
 	double Offshore_Hake2_StructN(t, b, z) ;
 		Offshore_Hake2_StructN:bmtype = "tracer" ;
 		Offshore_Hake2_StructN:units = "mg N" ;
@@ -15970,7 +15229,7 @@ variables:
 		Offshore_Hake2_StructN:b_dens = 1000000000. ;
 		Offshore_Hake2_StructN:i_conc = 200000000. ;
 		Offshore_Hake2_StructN:f_conc = 200000000. ;
-		Offshore_Hake2_StructN:_FillValue = 591.32 ;
+		Offshore_Hake2_StructN:_FillValue = 1026.4 ;
 	double Offshore_Hake3_Nums(t, b, z) ;
 		Offshore_Hake3_Nums:bmtype = "tracer" ;
 		Offshore_Hake3_Nums:units = "1" ;
@@ -16008,7 +15267,7 @@ variables:
 		Offshore_Hake3_ResN:b_dens = 1000000000. ;
 		Offshore_Hake3_ResN:i_conc = 200000000. ;
 		Offshore_Hake3_ResN:f_conc = 200000000. ;
-		Offshore_Hake3_ResN:_FillValue = 1932.1 ;
+		Offshore_Hake3_ResN:_FillValue = 2464.9 ;
 	double Offshore_Hake3_StructN(t, b, z) ;
 		Offshore_Hake3_StructN:bmtype = "tracer" ;
 		Offshore_Hake3_StructN:units = "mg N" ;
@@ -16027,7 +15286,7 @@ variables:
 		Offshore_Hake3_StructN:b_dens = 1000000000. ;
 		Offshore_Hake3_StructN:i_conc = 200000000. ;
 		Offshore_Hake3_StructN:f_conc = 200000000. ;
-		Offshore_Hake3_StructN:_FillValue = 966.05 ;
+		Offshore_Hake3_StructN:_FillValue = 1232.5 ;
 	double Offshore_Hake4_Nums(t, b, z) ;
 		Offshore_Hake4_Nums:bmtype = "tracer" ;
 		Offshore_Hake4_Nums:units = "1" ;
@@ -16065,7 +15324,7 @@ variables:
 		Offshore_Hake4_ResN:b_dens = 1000000000. ;
 		Offshore_Hake4_ResN:i_conc = 200000000. ;
 		Offshore_Hake4_ResN:f_conc = 200000000. ;
-		Offshore_Hake4_ResN:_FillValue = 2283.92 ;
+		Offshore_Hake4_ResN:_FillValue = 2514.9 ;
 	double Offshore_Hake4_StructN(t, b, z) ;
 		Offshore_Hake4_StructN:bmtype = "tracer" ;
 		Offshore_Hake4_StructN:units = "mg N" ;
@@ -16084,7 +15343,7 @@ variables:
 		Offshore_Hake4_StructN:b_dens = 1000000000. ;
 		Offshore_Hake4_StructN:i_conc = 200000000. ;
 		Offshore_Hake4_StructN:f_conc = 200000000. ;
-		Offshore_Hake4_StructN:_FillValue = 1141.96 ;
+		Offshore_Hake4_StructN:_FillValue = 1257.4 ;
 	double Offshore_Hake5_Nums(t, b, z) ;
 		Offshore_Hake5_Nums:bmtype = "tracer" ;
 		Offshore_Hake5_Nums:units = "1" ;
@@ -16122,7 +15381,7 @@ variables:
 		Offshore_Hake5_ResN:b_dens = 1000000000. ;
 		Offshore_Hake5_ResN:i_conc = 200000000. ;
 		Offshore_Hake5_ResN:f_conc = 200000000. ;
-		Offshore_Hake5_ResN:_FillValue = 2428.8 ;
+		Offshore_Hake5_ResN:_FillValue = 2520.8 ;
 	double Offshore_Hake5_StructN(t, b, z) ;
 		Offshore_Hake5_StructN:bmtype = "tracer" ;
 		Offshore_Hake5_StructN:units = "mg N" ;
@@ -16141,235 +15400,7 @@ variables:
 		Offshore_Hake5_StructN:b_dens = 1000000000. ;
 		Offshore_Hake5_StructN:i_conc = 200000000. ;
 		Offshore_Hake5_StructN:f_conc = 200000000. ;
-		Offshore_Hake5_StructN:_FillValue = 1214.4 ;
-	double Offshore_Hake6_Nums(t, b, z) ;
-		Offshore_Hake6_Nums:bmtype = "tracer" ;
-		Offshore_Hake6_Nums:units = "1" ;
-		Offshore_Hake6_Nums:long_name = "Numbers of other deep demersal cohort 6" ;
-		Offshore_Hake6_Nums:dtype = 0 ;
-		Offshore_Hake6_Nums:sumtype = 0 ;
-		Offshore_Hake6_Nums:inwc = 0 ;
-		Offshore_Hake6_Nums:insed = 0 ;
-		Offshore_Hake6_Nums:dissol = 0 ;
-		Offshore_Hake6_Nums:decay = 0. ;
-		Offshore_Hake6_Nums:partic = 1 ;
-		Offshore_Hake6_Nums:passive = 1 ;
-		Offshore_Hake6_Nums:svel = 0. ;
-		Offshore_Hake6_Nums:xvel = 0. ;
-		Offshore_Hake6_Nums:psize = 10. ;
-		Offshore_Hake6_Nums:b_dens = 1000000000. ;
-		Offshore_Hake6_Nums:i_conc = 200000000. ;
-		Offshore_Hake6_Nums:f_conc = 200000000. ;
-		Offshore_Hake6_Nums:_FillValue = 0. ;
-	double Offshore_Hake6_ResN(t, b, z) ;
-		Offshore_Hake6_ResN:bmtype = "tracer" ;
-		Offshore_Hake6_ResN:units = "mg N" ;
-		Offshore_Hake6_ResN:long_name = "Individ reserve N for other deep demersal fish cohort 6" ;
-		Offshore_Hake6_ResN:dtype = 0 ;
-		Offshore_Hake6_ResN:sumtype = 0 ;
-		Offshore_Hake6_ResN:inwc = 0 ;
-		Offshore_Hake6_ResN:insed = 0 ;
-		Offshore_Hake6_ResN:dissol = 0 ;
-		Offshore_Hake6_ResN:decay = 0. ;
-		Offshore_Hake6_ResN:partic = 1 ;
-		Offshore_Hake6_ResN:passive = 0 ;
-		Offshore_Hake6_ResN:svel = 0. ;
-		Offshore_Hake6_ResN:xvel = 0. ;
-		Offshore_Hake6_ResN:psize = 10. ;
-		Offshore_Hake6_ResN:b_dens = 1000000000. ;
-		Offshore_Hake6_ResN:i_conc = 200000000. ;
-		Offshore_Hake6_ResN:f_conc = 200000000. ;
-		Offshore_Hake6_ResN:_FillValue = 2485.78 ;
-	double Offshore_Hake6_StructN(t, b, z) ;
-		Offshore_Hake6_StructN:bmtype = "tracer" ;
-		Offshore_Hake6_StructN:units = "mg N" ;
-		Offshore_Hake6_StructN:long_name = "Individ structural N for other deep demersal fish cohort 6" ;
-		Offshore_Hake6_StructN:dtype = 0 ;
-		Offshore_Hake6_StructN:sumtype = 0 ;
-		Offshore_Hake6_StructN:inwc = 0 ;
-		Offshore_Hake6_StructN:insed = 0 ;
-		Offshore_Hake6_StructN:dissol = 0 ;
-		Offshore_Hake6_StructN:decay = 0. ;
-		Offshore_Hake6_StructN:partic = 1 ;
-		Offshore_Hake6_StructN:passive = 0 ;
-		Offshore_Hake6_StructN:svel = 0. ;
-		Offshore_Hake6_StructN:xvel = 0. ;
-		Offshore_Hake6_StructN:psize = 10. ;
-		Offshore_Hake6_StructN:b_dens = 1000000000. ;
-		Offshore_Hake6_StructN:i_conc = 200000000. ;
-		Offshore_Hake6_StructN:f_conc = 200000000. ;
-		Offshore_Hake6_StructN:_FillValue = 1242.89 ;
-	double Offshore_Hake7_Nums(t, b, z) ;
-		Offshore_Hake7_Nums:bmtype = "tracer" ;
-		Offshore_Hake7_Nums:units = "1" ;
-		Offshore_Hake7_Nums:long_name = "Numbers of other deep demersal cohort 7" ;
-		Offshore_Hake7_Nums:dtype = 0 ;
-		Offshore_Hake7_Nums:sumtype = 0 ;
-		Offshore_Hake7_Nums:inwc = 0 ;
-		Offshore_Hake7_Nums:insed = 0 ;
-		Offshore_Hake7_Nums:dissol = 0 ;
-		Offshore_Hake7_Nums:decay = 0. ;
-		Offshore_Hake7_Nums:partic = 1 ;
-		Offshore_Hake7_Nums:passive = 1 ;
-		Offshore_Hake7_Nums:svel = 0. ;
-		Offshore_Hake7_Nums:xvel = 0. ;
-		Offshore_Hake7_Nums:psize = 10. ;
-		Offshore_Hake7_Nums:b_dens = 1000000000. ;
-		Offshore_Hake7_Nums:i_conc = 200000000. ;
-		Offshore_Hake7_Nums:f_conc = 200000000. ;
-		Offshore_Hake7_Nums:_FillValue = 0. ;
-	double Offshore_Hake7_ResN(t, b, z) ;
-		Offshore_Hake7_ResN:bmtype = "tracer" ;
-		Offshore_Hake7_ResN:units = "mg N" ;
-		Offshore_Hake7_ResN:long_name = "Individ reserve N for other deep demersal fish cohort 7" ;
-		Offshore_Hake7_ResN:dtype = 0 ;
-		Offshore_Hake7_ResN:sumtype = 0 ;
-		Offshore_Hake7_ResN:inwc = 0 ;
-		Offshore_Hake7_ResN:insed = 0 ;
-		Offshore_Hake7_ResN:dissol = 0 ;
-		Offshore_Hake7_ResN:decay = 0. ;
-		Offshore_Hake7_ResN:partic = 1 ;
-		Offshore_Hake7_ResN:passive = 0 ;
-		Offshore_Hake7_ResN:svel = 0. ;
-		Offshore_Hake7_ResN:xvel = 0. ;
-		Offshore_Hake7_ResN:psize = 10. ;
-		Offshore_Hake7_ResN:b_dens = 1000000000. ;
-		Offshore_Hake7_ResN:i_conc = 200000000. ;
-		Offshore_Hake7_ResN:f_conc = 200000000. ;
-		Offshore_Hake7_ResN:_FillValue = 2507.84 ;
-	double Offshore_Hake7_StructN(t, b, z) ;
-		Offshore_Hake7_StructN:bmtype = "tracer" ;
-		Offshore_Hake7_StructN:units = "mg N" ;
-		Offshore_Hake7_StructN:long_name = "Individ structural N for other deep demersal fish cohort 7" ;
-		Offshore_Hake7_StructN:dtype = 0 ;
-		Offshore_Hake7_StructN:sumtype = 0 ;
-		Offshore_Hake7_StructN:inwc = 0 ;
-		Offshore_Hake7_StructN:insed = 0 ;
-		Offshore_Hake7_StructN:dissol = 0 ;
-		Offshore_Hake7_StructN:decay = 0. ;
-		Offshore_Hake7_StructN:partic = 1 ;
-		Offshore_Hake7_StructN:passive = 0 ;
-		Offshore_Hake7_StructN:svel = 0. ;
-		Offshore_Hake7_StructN:xvel = 0. ;
-		Offshore_Hake7_StructN:psize = 10. ;
-		Offshore_Hake7_StructN:b_dens = 1000000000. ;
-		Offshore_Hake7_StructN:i_conc = 200000000. ;
-		Offshore_Hake7_StructN:f_conc = 200000000. ;
-		Offshore_Hake7_StructN:_FillValue = 1253.92 ;
-	double Offshore_Hake8_Nums(t, b, z) ;
-		Offshore_Hake8_Nums:bmtype = "tracer" ;
-		Offshore_Hake8_Nums:units = "1" ;
-		Offshore_Hake8_Nums:long_name = "Numbers of other deep demersal fish cohort 8" ;
-		Offshore_Hake8_Nums:dtype = 0 ;
-		Offshore_Hake8_Nums:sumtype = 0 ;
-		Offshore_Hake8_Nums:inwc = 0 ;
-		Offshore_Hake8_Nums:insed = 0 ;
-		Offshore_Hake8_Nums:dissol = 0 ;
-		Offshore_Hake8_Nums:decay = 0. ;
-		Offshore_Hake8_Nums:partic = 1 ;
-		Offshore_Hake8_Nums:passive = 1 ;
-		Offshore_Hake8_Nums:svel = 0. ;
-		Offshore_Hake8_Nums:xvel = 0. ;
-		Offshore_Hake8_Nums:psize = 10. ;
-		Offshore_Hake8_Nums:b_dens = 1000000000. ;
-		Offshore_Hake8_Nums:i_conc = 200000000. ;
-		Offshore_Hake8_Nums:f_conc = 200000000. ;
-		Offshore_Hake8_Nums:_FillValue = 0. ;
-	double Offshore_Hake8_ResN(t, b, z) ;
-		Offshore_Hake8_ResN:bmtype = "tracer" ;
-		Offshore_Hake8_ResN:units = "mg N" ;
-		Offshore_Hake8_ResN:long_name = "Individ reserve N for other deep demersal fish fish cohort 8" ;
-		Offshore_Hake8_ResN:dtype = 0 ;
-		Offshore_Hake8_ResN:sumtype = 0 ;
-		Offshore_Hake8_ResN:inwc = 0 ;
-		Offshore_Hake8_ResN:insed = 0 ;
-		Offshore_Hake8_ResN:dissol = 0 ;
-		Offshore_Hake8_ResN:decay = 0. ;
-		Offshore_Hake8_ResN:partic = 1 ;
-		Offshore_Hake8_ResN:passive = 0 ;
-		Offshore_Hake8_ResN:svel = 0. ;
-		Offshore_Hake8_ResN:xvel = 0. ;
-		Offshore_Hake8_ResN:psize = 10. ;
-		Offshore_Hake8_ResN:b_dens = 1000000000. ;
-		Offshore_Hake8_ResN:i_conc = 200000000. ;
-		Offshore_Hake8_ResN:f_conc = 200000000. ;
-		Offshore_Hake8_ResN:_FillValue = 2516.3 ;
-	double Offshore_Hake8_StructN(t, b, z) ;
-		Offshore_Hake8_StructN:bmtype = "tracer" ;
-		Offshore_Hake8_StructN:units = "mg N" ;
-		Offshore_Hake8_StructN:long_name = "Individ structural N for other deep demersal fish fish cohort 8" ;
-		Offshore_Hake8_StructN:dtype = 0 ;
-		Offshore_Hake8_StructN:sumtype = 0 ;
-		Offshore_Hake8_StructN:inwc = 0 ;
-		Offshore_Hake8_StructN:insed = 0 ;
-		Offshore_Hake8_StructN:dissol = 0 ;
-		Offshore_Hake8_StructN:decay = 0. ;
-		Offshore_Hake8_StructN:partic = 1 ;
-		Offshore_Hake8_StructN:passive = 0 ;
-		Offshore_Hake8_StructN:svel = 0. ;
-		Offshore_Hake8_StructN:xvel = 0. ;
-		Offshore_Hake8_StructN:psize = 10. ;
-		Offshore_Hake8_StructN:b_dens = 1000000000. ;
-		Offshore_Hake8_StructN:i_conc = 200000000. ;
-		Offshore_Hake8_StructN:f_conc = 200000000. ;
-		Offshore_Hake8_StructN:_FillValue = 1258.15 ;
-	double Offshore_Hake9_Nums(t, b, z) ;
-		Offshore_Hake9_Nums:bmtype = "tracer" ;
-		Offshore_Hake9_Nums:units = "1" ;
-		Offshore_Hake9_Nums:long_name = "Numbers of other deep demersal cohort 9" ;
-		Offshore_Hake9_Nums:dtype = 0 ;
-		Offshore_Hake9_Nums:sumtype = 0 ;
-		Offshore_Hake9_Nums:inwc = 0 ;
-		Offshore_Hake9_Nums:insed = 0 ;
-		Offshore_Hake9_Nums:dissol = 0 ;
-		Offshore_Hake9_Nums:decay = 0. ;
-		Offshore_Hake9_Nums:partic = 1 ;
-		Offshore_Hake9_Nums:passive = 1 ;
-		Offshore_Hake9_Nums:svel = 0. ;
-		Offshore_Hake9_Nums:xvel = 0. ;
-		Offshore_Hake9_Nums:psize = 10. ;
-		Offshore_Hake9_Nums:b_dens = 1000000000. ;
-		Offshore_Hake9_Nums:i_conc = 200000000. ;
-		Offshore_Hake9_Nums:f_conc = 200000000. ;
-		Offshore_Hake9_Nums:_FillValue = 0. ;
-	double Offshore_Hake9_ResN(t, b, z) ;
-		Offshore_Hake9_ResN:bmtype = "tracer" ;
-		Offshore_Hake9_ResN:units = "mg N" ;
-		Offshore_Hake9_ResN:long_name = "Individ reserve N for other deep demersal fish cohort 9" ;
-		Offshore_Hake9_ResN:dtype = 0 ;
-		Offshore_Hake9_ResN:sumtype = 0 ;
-		Offshore_Hake9_ResN:inwc = 0 ;
-		Offshore_Hake9_ResN:insed = 0 ;
-		Offshore_Hake9_ResN:dissol = 0 ;
-		Offshore_Hake9_ResN:decay = 0. ;
-		Offshore_Hake9_ResN:partic = 1 ;
-		Offshore_Hake9_ResN:passive = 0 ;
-		Offshore_Hake9_ResN:svel = 0. ;
-		Offshore_Hake9_ResN:xvel = 0. ;
-		Offshore_Hake9_ResN:psize = 10. ;
-		Offshore_Hake9_ResN:b_dens = 1000000000. ;
-		Offshore_Hake9_ResN:i_conc = 200000000. ;
-		Offshore_Hake9_ResN:f_conc = 200000000. ;
-		Offshore_Hake9_ResN:_FillValue = 2519.56 ;
-	double Offshore_Hake9_StructN(t, b, z) ;
-		Offshore_Hake9_StructN:bmtype = "tracer" ;
-		Offshore_Hake9_StructN:units = "mg N" ;
-		Offshore_Hake9_StructN:long_name = "Individ structural N for other deep demersal fish cohort 9" ;
-		Offshore_Hake9_StructN:dtype = 0 ;
-		Offshore_Hake9_StructN:sumtype = 0 ;
-		Offshore_Hake9_StructN:inwc = 0 ;
-		Offshore_Hake9_StructN:insed = 0 ;
-		Offshore_Hake9_StructN:dissol = 0 ;
-		Offshore_Hake9_StructN:decay = 0. ;
-		Offshore_Hake9_StructN:partic = 1 ;
-		Offshore_Hake9_StructN:passive = 0 ;
-		Offshore_Hake9_StructN:svel = 0. ;
-		Offshore_Hake9_StructN:xvel = 0. ;
-		Offshore_Hake9_StructN:psize = 10. ;
-		Offshore_Hake9_StructN:b_dens = 1000000000. ;
-		Offshore_Hake9_StructN:i_conc = 200000000. ;
-		Offshore_Hake9_StructN:f_conc = 200000000. ;
-		Offshore_Hake9_StructN:_FillValue = 1259.78 ;
+		Offshore_Hake5_StructN:_FillValue = 1260.4 ;
 	double Offshore_Hake_N(t, b, z) ;
 		Offshore_Hake_N:bmtype = "tracer" ;
 		Offshore_Hake_N:units = "mg N m-3" ;
@@ -18835,7 +17866,7 @@ variables:
 		Pollock10_ResN:b_dens = 1000000000. ;
 		Pollock10_ResN:i_conc = 200000000. ;
 		Pollock10_ResN:f_conc = 200000000. ;
-		Pollock10_ResN:_FillValue = 76077.32 ;
+		Pollock10_ResN:_FillValue = 69296.6 ;
 	double Pollock10_StructN(t, b, z) ;
 		Pollock10_StructN:bmtype = "tracer" ;
 		Pollock10_StructN:units = "mg N" ;
@@ -18854,7 +17885,121 @@ variables:
 		Pollock10_StructN:b_dens = 1000000000. ;
 		Pollock10_StructN:i_conc = 200000000. ;
 		Pollock10_StructN:f_conc = 200000000. ;
-		Pollock10_StructN:_FillValue = 38038.66 ;
+		Pollock10_StructN:_FillValue = 34648.3 ;
+	double Pollock11_Nums(t, b, z) ;
+		Pollock11_Nums:bmtype = "tracer" ;
+		Pollock11_Nums:units = "1" ;
+		Pollock11_Nums:long_name = "Numbers of other deep demersal cohort 10" ;
+		Pollock11_Nums:dtype = 0 ;
+		Pollock11_Nums:sumtype = 0 ;
+		Pollock11_Nums:inwc = 0 ;
+		Pollock11_Nums:insed = 0 ;
+		Pollock11_Nums:dissol = 0 ;
+		Pollock11_Nums:decay = 0. ;
+		Pollock11_Nums:partic = 1 ;
+		Pollock11_Nums:passive = 1 ;
+		Pollock11_Nums:svel = 0. ;
+		Pollock11_Nums:xvel = 0. ;
+		Pollock11_Nums:psize = 10. ;
+		Pollock11_Nums:b_dens = 1000000000. ;
+		Pollock11_Nums:i_conc = 200000000. ;
+		Pollock11_Nums:f_conc = 200000000. ;
+		Pollock11_Nums:_FillValue = 0. ;
+	double Pollock11_ResN(t, b, z) ;
+		Pollock11_ResN:bmtype = "tracer" ;
+		Pollock11_ResN:units = "mg N" ;
+		Pollock11_ResN:long_name = "Individ reserve N for other deep demersal fish cohort 10" ;
+		Pollock11_ResN:dtype = 0 ;
+		Pollock11_ResN:sumtype = 0 ;
+		Pollock11_ResN:inwc = 0 ;
+		Pollock11_ResN:insed = 0 ;
+		Pollock11_ResN:dissol = 0 ;
+		Pollock11_ResN:decay = 0. ;
+		Pollock11_ResN:partic = 1 ;
+		Pollock11_ResN:passive = 0 ;
+		Pollock11_ResN:svel = 0. ;
+		Pollock11_ResN:xvel = 0. ;
+		Pollock11_ResN:psize = 10. ;
+		Pollock11_ResN:b_dens = 1000000000. ;
+		Pollock11_ResN:i_conc = 200000000. ;
+		Pollock11_ResN:f_conc = 200000000. ;
+		Pollock11_ResN:_FillValue = 73094. ;
+	double Pollock11_StructN(t, b, z) ;
+		Pollock11_StructN:bmtype = "tracer" ;
+		Pollock11_StructN:units = "mg N" ;
+		Pollock11_StructN:long_name = "Individ structural N for other deep demersal fish cohort 10" ;
+		Pollock11_StructN:dtype = 0 ;
+		Pollock11_StructN:sumtype = 0 ;
+		Pollock11_StructN:inwc = 0 ;
+		Pollock11_StructN:insed = 0 ;
+		Pollock11_StructN:dissol = 0 ;
+		Pollock11_StructN:decay = 0. ;
+		Pollock11_StructN:partic = 1 ;
+		Pollock11_StructN:passive = 0 ;
+		Pollock11_StructN:svel = 0. ;
+		Pollock11_StructN:xvel = 0. ;
+		Pollock11_StructN:psize = 10. ;
+		Pollock11_StructN:b_dens = 1000000000. ;
+		Pollock11_StructN:i_conc = 200000000. ;
+		Pollock11_StructN:f_conc = 200000000. ;
+		Pollock11_StructN:_FillValue = 3647. ;
+	double Pollock12_Nums(t, b, z) ;
+		Pollock12_Nums:bmtype = "tracer" ;
+		Pollock12_Nums:units = "1" ;
+		Pollock12_Nums:long_name = "Numbers of other deep demersal cohort 10" ;
+		Pollock12_Nums:dtype = 0 ;
+		Pollock12_Nums:sumtype = 0 ;
+		Pollock12_Nums:inwc = 0 ;
+		Pollock12_Nums:insed = 0 ;
+		Pollock12_Nums:dissol = 0 ;
+		Pollock12_Nums:decay = 0. ;
+		Pollock12_Nums:partic = 1 ;
+		Pollock12_Nums:passive = 1 ;
+		Pollock12_Nums:svel = 0. ;
+		Pollock12_Nums:xvel = 0. ;
+		Pollock12_Nums:psize = 10. ;
+		Pollock12_Nums:b_dens = 1000000000. ;
+		Pollock12_Nums:i_conc = 200000000. ;
+		Pollock12_Nums:f_conc = 200000000. ;
+		Pollock12_Nums:_FillValue = 0. ;
+	double Pollock12_ResN(t, b, z) ;
+		Pollock12_ResN:bmtype = "tracer" ;
+		Pollock12_ResN:units = "mg N" ;
+		Pollock12_ResN:long_name = "Individ reserve N for other deep demersal fish cohort 10" ;
+		Pollock12_ResN:dtype = 0 ;
+		Pollock12_ResN:sumtype = 0 ;
+		Pollock12_ResN:inwc = 0 ;
+		Pollock12_ResN:insed = 0 ;
+		Pollock12_ResN:dissol = 0 ;
+		Pollock12_ResN:decay = 0. ;
+		Pollock12_ResN:partic = 1 ;
+		Pollock12_ResN:passive = 0 ;
+		Pollock12_ResN:svel = 0. ;
+		Pollock12_ResN:xvel = 0. ;
+		Pollock12_ResN:psize = 10. ;
+		Pollock12_ResN:b_dens = 1000000000. ;
+		Pollock12_ResN:i_conc = 200000000. ;
+		Pollock12_ResN:f_conc = 200000000. ;
+		Pollock12_ResN:_FillValue = 76077.32 ;
+	double Pollock12_StructN(t, b, z) ;
+		Pollock12_StructN:bmtype = "tracer" ;
+		Pollock12_StructN:units = "mg N" ;
+		Pollock12_StructN:long_name = "Individ structural N for other deep demersal fish cohort 10" ;
+		Pollock12_StructN:dtype = 0 ;
+		Pollock12_StructN:sumtype = 0 ;
+		Pollock12_StructN:inwc = 0 ;
+		Pollock12_StructN:insed = 0 ;
+		Pollock12_StructN:dissol = 0 ;
+		Pollock12_StructN:decay = 0. ;
+		Pollock12_StructN:partic = 1 ;
+		Pollock12_StructN:passive = 0 ;
+		Pollock12_StructN:svel = 0. ;
+		Pollock12_StructN:xvel = 0. ;
+		Pollock12_StructN:psize = 10. ;
+		Pollock12_StructN:b_dens = 1000000000. ;
+		Pollock12_StructN:i_conc = 200000000. ;
+		Pollock12_StructN:f_conc = 200000000. ;
+		Pollock12_StructN:_FillValue = 38038.66 ;
 	double Pollock1_Nums(t, b, z) ;
 		Pollock1_Nums:bmtype = "tracer" ;
 		Pollock1_Nums:units = "1" ;
@@ -18949,7 +18094,7 @@ variables:
 		Pollock2_ResN:b_dens = 1000000000. ;
 		Pollock2_ResN:i_conc = 200000000. ;
 		Pollock2_ResN:f_conc = 200000000. ;
-		Pollock2_ResN:_FillValue = 5475.28 ;
+		Pollock2_ResN:_FillValue = 4204.8 ;
 	double Pollock2_StructN(t, b, z) ;
 		Pollock2_StructN:bmtype = "tracer" ;
 		Pollock2_StructN:units = "mg N" ;
@@ -18968,7 +18113,7 @@ variables:
 		Pollock2_StructN:b_dens = 1000000000. ;
 		Pollock2_StructN:i_conc = 200000000. ;
 		Pollock2_StructN:f_conc = 200000000. ;
-		Pollock2_StructN:_FillValue = 2737.64 ;
+		Pollock2_StructN:_FillValue = 2102.4 ;
 	double Pollock3_Nums(t, b, z) ;
 		Pollock3_Nums:bmtype = "tracer" ;
 		Pollock3_Nums:units = "1" ;
@@ -19006,7 +18151,7 @@ variables:
 		Pollock3_ResN:b_dens = 1000000000. ;
 		Pollock3_ResN:i_conc = 200000000. ;
 		Pollock3_ResN:f_conc = 200000000. ;
-		Pollock3_ResN:_FillValue = 16119.86 ;
+		Pollock3_ResN:_FillValue = 11858.8 ;
 	double Pollock3_StructN(t, b, z) ;
 		Pollock3_StructN:bmtype = "tracer" ;
 		Pollock3_StructN:units = "mg N" ;
@@ -19025,7 +18170,7 @@ variables:
 		Pollock3_StructN:b_dens = 1000000000. ;
 		Pollock3_StructN:i_conc = 200000000. ;
 		Pollock3_StructN:f_conc = 200000000. ;
-		Pollock3_StructN:_FillValue = 8059.93 ;
+		Pollock3_StructN:_FillValue = 5929.4 ;
 	double Pollock4_Nums(t, b, z) ;
 		Pollock4_Nums:bmtype = "tracer" ;
 		Pollock4_Nums:units = "1" ;
@@ -19063,7 +18208,7 @@ variables:
 		Pollock4_ResN:b_dens = 1000000000. ;
 		Pollock4_ResN:i_conc = 200000000. ;
 		Pollock4_ResN:f_conc = 200000000. ;
-		Pollock4_ResN:_FillValue = 28923.74 ;
+		Pollock4_ResN:_FillValue = 21818.2 ;
 	double Pollock4_StructN(t, b, z) ;
 		Pollock4_StructN:bmtype = "tracer" ;
 		Pollock4_StructN:units = "mg N" ;
@@ -19082,7 +18227,7 @@ variables:
 		Pollock4_StructN:b_dens = 1000000000. ;
 		Pollock4_StructN:i_conc = 200000000. ;
 		Pollock4_StructN:f_conc = 200000000. ;
-		Pollock4_StructN:_FillValue = 14461.87 ;
+		Pollock4_StructN:_FillValue = 10909.1 ;
 	double Pollock5_Nums(t, b, z) ;
 		Pollock5_Nums:bmtype = "tracer" ;
 		Pollock5_Nums:units = "1" ;
@@ -19120,7 +18265,7 @@ variables:
 		Pollock5_ResN:b_dens = 1000000000. ;
 		Pollock5_ResN:i_conc = 200000000. ;
 		Pollock5_ResN:f_conc = 200000000. ;
-		Pollock5_ResN:_FillValue = 41295.12 ;
+		Pollock5_ResN:_FillValue = 32374.8 ;
 	double Pollock5_StructN(t, b, z) ;
 		Pollock5_StructN:bmtype = "tracer" ;
 		Pollock5_StructN:units = "mg N" ;
@@ -19139,7 +18284,7 @@ variables:
 		Pollock5_StructN:b_dens = 1000000000. ;
 		Pollock5_StructN:i_conc = 200000000. ;
 		Pollock5_StructN:f_conc = 200000000. ;
-		Pollock5_StructN:_FillValue = 20647.56 ;
+		Pollock5_StructN:_FillValue = 16187.4 ;
 	double Pollock6_Nums(t, b, z) ;
 		Pollock6_Nums:bmtype = "tracer" ;
 		Pollock6_Nums:units = "1" ;
@@ -19177,7 +18322,7 @@ variables:
 		Pollock6_ResN:b_dens = 1000000000. ;
 		Pollock6_ResN:i_conc = 200000000. ;
 		Pollock6_ResN:f_conc = 200000000. ;
-		Pollock6_ResN:_FillValue = 51971.08 ;
+		Pollock6_ResN:_FillValue = 42337.1;
 	double Pollock6_StructN(t, b, z) ;
 		Pollock6_StructN:bmtype = "tracer" ;
 		Pollock6_StructN:units = "mg N" ;
@@ -19196,7 +18341,7 @@ variables:
 		Pollock6_StructN:b_dens = 1000000000. ;
 		Pollock6_StructN:i_conc = 200000000. ;
 		Pollock6_StructN:f_conc = 200000000. ;
-		Pollock6_StructN:_FillValue = 25985.54 ;
+		Pollock6_StructN:_FillValue = 21168.5 ;
 	double Pollock7_Nums(t, b, z) ;
 		Pollock7_Nums:bmtype = "tracer" ;
 		Pollock7_Nums:units = "1" ;
@@ -19234,7 +18379,7 @@ variables:
 		Pollock7_ResN:b_dens = 1000000000. ;
 		Pollock7_ResN:i_conc = 200000000. ;
 		Pollock7_ResN:f_conc = 200000000. ;
-		Pollock7_ResN:_FillValue = 60596.74 ;
+		Pollock7_ResN:_FillValue = 51083.9 ;
 	double Pollock7_StructN(t, b, z) ;
 		Pollock7_StructN:bmtype = "tracer" ;
 		Pollock7_StructN:units = "mg N" ;
@@ -19253,7 +18398,7 @@ variables:
 		Pollock7_StructN:b_dens = 1000000000. ;
 		Pollock7_StructN:i_conc = 200000000. ;
 		Pollock7_StructN:f_conc = 200000000. ;
-		Pollock7_StructN:_FillValue = 30298.37 ;
+		Pollock7_StructN:_FillValue = 25542. ;
 	double Pollock8_Nums(t, b, z) ;
 		Pollock8_Nums:bmtype = "tracer" ;
 		Pollock8_Nums:units = "1" ;
@@ -19291,7 +18436,7 @@ variables:
 		Pollock8_ResN:b_dens = 1000000000. ;
 		Pollock8_ResN:i_conc = 200000000. ;
 		Pollock8_ResN:f_conc = 200000000. ;
-		Pollock8_ResN:_FillValue = 67285.04 ;
+		Pollock8_ResN:_FillValue = 58439.5 ;
 	double Pollock8_StructN(t, b, z) ;
 		Pollock8_StructN:bmtype = "tracer" ;
 		Pollock8_StructN:units = "mg N" ;
@@ -19310,7 +18455,7 @@ variables:
 		Pollock8_StructN:b_dens = 1000000000. ;
 		Pollock8_StructN:i_conc = 200000000. ;
 		Pollock8_StructN:f_conc = 200000000. ;
-		Pollock8_StructN:_FillValue = 33642.52 ;
+		Pollock8_StructN:_FillValue = 29219.7 ;
 	double Pollock9_Nums(t, b, z) ;
 		Pollock9_Nums:bmtype = "tracer" ;
 		Pollock9_Nums:units = "1" ;
@@ -19348,7 +18493,7 @@ variables:
 		Pollock9_ResN:b_dens = 1000000000. ;
 		Pollock9_ResN:i_conc = 200000000. ;
 		Pollock9_ResN:f_conc = 200000000. ;
-		Pollock9_ResN:_FillValue = 72333.9 ;
+		Pollock9_ResN:_FillValue = 64464.9 ;
 	double Pollock9_StructN(t, b, z) ;
 		Pollock9_StructN:bmtype = "tracer" ;
 		Pollock9_StructN:units = "mg N" ;
@@ -19367,7 +18512,7 @@ variables:
 		Pollock9_StructN:b_dens = 1000000000. ;
 		Pollock9_StructN:i_conc = 200000000. ;
 		Pollock9_StructN:f_conc = 200000000. ;
-		Pollock9_StructN:_FillValue = 36166.95 ;
+		Pollock9_StructN:_FillValue = 32232.5 ;
 	double Pollock_N(t, b, z) ;
 		Pollock_N:bmtype = "tracer" ;
 		Pollock_N:units = "mg N m-3" ;
@@ -19417,7 +18562,7 @@ variables:
 		Porbeagle_Shark10_ResN:b_dens = 1000000000. ;
 		Porbeagle_Shark10_ResN:i_conc = 200000000. ;
 		Porbeagle_Shark10_ResN:f_conc = 200000000. ;
-		Porbeagle_Shark10_ResN:_FillValue = 568751.3 ;
+		Porbeagle_Shark10_ResN:_FillValue = 565982. ;
 	double Porbeagle_Shark10_StructN(t, b, z) ;
 		Porbeagle_Shark10_StructN:bmtype = "tracer" ;
 		Porbeagle_Shark10_StructN:units = "mg N" ;
@@ -19436,7 +18581,121 @@ variables:
 		Porbeagle_Shark10_StructN:b_dens = 1000000000. ;
 		Porbeagle_Shark10_StructN:i_conc = 200000000. ;
 		Porbeagle_Shark10_StructN:f_conc = 200000000. ;
-		Porbeagle_Shark10_StructN:_FillValue = 284375.65 ;
+		Porbeagle_Shark10_StructN:_FillValue = 282991. ;
+	double Porbeagle_Shark11_Nums(t, b, z) ;
+		Porbeagle_Shark11_Nums:bmtype = "tracer" ;
+		Porbeagle_Shark11_Nums:units = "1" ;
+		Porbeagle_Shark11_Nums:long_name = "Numbers of pelagic shark cohort 10" ;
+		Porbeagle_Shark11_Nums:dtype = 0 ;
+		Porbeagle_Shark11_Nums:sumtype = 0 ;
+		Porbeagle_Shark11_Nums:inwc = 0 ;
+		Porbeagle_Shark11_Nums:insed = 0 ;
+		Porbeagle_Shark11_Nums:dissol = 0 ;
+		Porbeagle_Shark11_Nums:decay = 0. ;
+		Porbeagle_Shark11_Nums:partic = 1 ;
+		Porbeagle_Shark11_Nums:passive = 1 ;
+		Porbeagle_Shark11_Nums:svel = 0. ;
+		Porbeagle_Shark11_Nums:xvel = 0. ;
+		Porbeagle_Shark11_Nums:psize = 10. ;
+		Porbeagle_Shark11_Nums:b_dens = 1000000000. ;
+		Porbeagle_Shark11_Nums:i_conc = 200000000. ;
+		Porbeagle_Shark11_Nums:f_conc = 200000000. ;
+		Porbeagle_Shark11_Nums:_FillValue = 0. ;
+	double Porbeagle_Shark11_ResN(t, b, z) ;
+		Porbeagle_Shark11_ResN:bmtype = "tracer" ;
+		Porbeagle_Shark11_ResN:units = "mg N" ;
+		Porbeagle_Shark11_ResN:long_name = "Individ reserve N for pelagic shark cohort 10" ;
+		Porbeagle_Shark11_ResN:dtype = 0 ;
+		Porbeagle_Shark11_ResN:sumtype = 0 ;
+		Porbeagle_Shark11_ResN:inwc = 0 ;
+		Porbeagle_Shark11_ResN:insed = 0 ;
+		Porbeagle_Shark11_ResN:dissol = 0 ;
+		Porbeagle_Shark11_ResN:decay = 0. ;
+		Porbeagle_Shark11_ResN:partic = 1 ;
+		Porbeagle_Shark11_ResN:passive = 0 ;
+		Porbeagle_Shark11_ResN:svel = 0. ;
+		Porbeagle_Shark11_ResN:xvel = 0. ;
+		Porbeagle_Shark11_ResN:psize = 10. ;
+		Porbeagle_Shark11_ResN:b_dens = 1000000000. ;
+		Porbeagle_Shark11_ResN:i_conc = 200000000. ;
+		Porbeagle_Shark11_ResN:f_conc = 200000000. ;
+		Porbeagle_Shark11_ResN:_FillValue = 567805. ;
+	double Porbeagle_Shark11_StructN(t, b, z) ;
+		Porbeagle_Shark11_StructN:bmtype = "tracer" ;
+		Porbeagle_Shark11_StructN:units = "mg N" ;
+		Porbeagle_Shark11_StructN:long_name = "Individ structural N for pelagic shark cohort 10" ;
+		Porbeagle_Shark11_StructN:dtype = 0 ;
+		Porbeagle_Shark11_StructN:sumtype = 0 ;
+		Porbeagle_Shark11_StructN:inwc = 0 ;
+		Porbeagle_Shark11_StructN:insed = 0 ;
+		Porbeagle_Shark11_StructN:dissol = 0 ;
+		Porbeagle_Shark11_StructN:decay = 0. ;
+		Porbeagle_Shark11_StructN:partic = 1 ;
+		Porbeagle_Shark11_StructN:passive = 0 ;
+		Porbeagle_Shark11_StructN:svel = 0. ;
+		Porbeagle_Shark11_StructN:xvel = 0. ;
+		Porbeagle_Shark11_StructN:psize = 10. ;
+		Porbeagle_Shark11_StructN:b_dens = 1000000000. ;
+		Porbeagle_Shark11_StructN:i_conc = 200000000. ;
+		Porbeagle_Shark11_StructN:f_conc = 200000000. ;
+		Porbeagle_Shark11_StructN:_FillValue = 283902. ;
+	double Porbeagle_Shark12_Nums(t, b, z) ;
+		Porbeagle_Shark12_Nums:bmtype = "tracer" ;
+		Porbeagle_Shark12_Nums:units = "1" ;
+		Porbeagle_Shark12_Nums:long_name = "Numbers of pelagic shark cohort 10" ;
+		Porbeagle_Shark12_Nums:dtype = 0 ;
+		Porbeagle_Shark12_Nums:sumtype = 0 ;
+		Porbeagle_Shark12_Nums:inwc = 0 ;
+		Porbeagle_Shark12_Nums:insed = 0 ;
+		Porbeagle_Shark12_Nums:dissol = 0 ;
+		Porbeagle_Shark12_Nums:decay = 0. ;
+		Porbeagle_Shark12_Nums:partic = 1 ;
+		Porbeagle_Shark12_Nums:passive = 1 ;
+		Porbeagle_Shark12_Nums:svel = 0. ;
+		Porbeagle_Shark12_Nums:xvel = 0. ;
+		Porbeagle_Shark12_Nums:psize = 10. ;
+		Porbeagle_Shark12_Nums:b_dens = 1000000000. ;
+		Porbeagle_Shark12_Nums:i_conc = 200000000. ;
+		Porbeagle_Shark12_Nums:f_conc = 200000000. ;
+		Porbeagle_Shark12_Nums:_FillValue = 0. ;
+	double Porbeagle_Shark12_ResN(t, b, z) ;
+		Porbeagle_Shark12_ResN:bmtype = "tracer" ;
+		Porbeagle_Shark12_ResN:units = "mg N" ;
+		Porbeagle_Shark12_ResN:long_name = "Individ reserve N for pelagic shark cohort 10" ;
+		Porbeagle_Shark12_ResN:dtype = 0 ;
+		Porbeagle_Shark12_ResN:sumtype = 0 ;
+		Porbeagle_Shark12_ResN:inwc = 0 ;
+		Porbeagle_Shark12_ResN:insed = 0 ;
+		Porbeagle_Shark12_ResN:dissol = 0 ;
+		Porbeagle_Shark12_ResN:decay = 0. ;
+		Porbeagle_Shark12_ResN:partic = 1 ;
+		Porbeagle_Shark12_ResN:passive = 0 ;
+		Porbeagle_Shark12_ResN:svel = 0. ;
+		Porbeagle_Shark12_ResN:xvel = 0. ;
+		Porbeagle_Shark12_ResN:psize = 10. ;
+		Porbeagle_Shark12_ResN:b_dens = 1000000000. ;
+		Porbeagle_Shark12_ResN:i_conc = 200000000. ;
+		Porbeagle_Shark12_ResN:f_conc = 200000000. ;
+		Porbeagle_Shark12_ResN:_FillValue = 568751.3 ;
+	double Porbeagle_Shark12_StructN(t, b, z) ;
+		Porbeagle_Shark12_StructN:bmtype = "tracer" ;
+		Porbeagle_Shark12_StructN:units = "mg N" ;
+		Porbeagle_Shark12_StructN:long_name = "Individ structural N for pelagic shark cohort 10" ;
+		Porbeagle_Shark12_StructN:dtype = 0 ;
+		Porbeagle_Shark12_StructN:sumtype = 0 ;
+		Porbeagle_Shark12_StructN:inwc = 0 ;
+		Porbeagle_Shark12_StructN:insed = 0 ;
+		Porbeagle_Shark12_StructN:dissol = 0 ;
+		Porbeagle_Shark12_StructN:decay = 0. ;
+		Porbeagle_Shark12_StructN:partic = 1 ;
+		Porbeagle_Shark12_StructN:passive = 0 ;
+		Porbeagle_Shark12_StructN:svel = 0. ;
+		Porbeagle_Shark12_StructN:xvel = 0. ;
+		Porbeagle_Shark12_StructN:psize = 10. ;
+		Porbeagle_Shark12_StructN:b_dens = 1000000000. ;
+		Porbeagle_Shark12_StructN:i_conc = 200000000. ;
+		Porbeagle_Shark12_StructN:f_conc = 200000000. ;
+		Porbeagle_Shark12_StructN:_FillValue = 284375.65 ;
 	double Porbeagle_Shark1_Nums(t, b, z) ;
 		Porbeagle_Shark1_Nums:bmtype = "tracer" ;
 		Porbeagle_Shark1_Nums:units = "1" ;
@@ -19531,7 +18790,7 @@ variables:
 		Porbeagle_Shark2_ResN:b_dens = 1000000000. ;
 		Porbeagle_Shark2_ResN:i_conc = 200000000. ;
 		Porbeagle_Shark2_ResN:f_conc = 200000000. ;
-		Porbeagle_Shark2_ResN:_FillValue = 125958.1 ;
+		Porbeagle_Shark2_ResN:_FillValue = 99044.6 ;
 	double Porbeagle_Shark2_StructN(t, b, z) ;
 		Porbeagle_Shark2_StructN:bmtype = "tracer" ;
 		Porbeagle_Shark2_StructN:units = "mg N" ;
@@ -19550,7 +18809,7 @@ variables:
 		Porbeagle_Shark2_StructN:b_dens = 1000000000. ;
 		Porbeagle_Shark2_StructN:i_conc = 200000000. ;
 		Porbeagle_Shark2_StructN:f_conc = 200000000. ;
-		Porbeagle_Shark2_StructN:_FillValue = 62979.05 ;
+		Porbeagle_Shark2_StructN:_FillValue = 49522.3 ;
 	double Porbeagle_Shark3_Nums(t, b, z) ;
 		Porbeagle_Shark3_Nums:bmtype = "tracer" ;
 		Porbeagle_Shark3_Nums:units = "1" ;
@@ -19588,7 +18847,7 @@ variables:
 		Porbeagle_Shark3_ResN:b_dens = 1000000000. ;
 		Porbeagle_Shark3_ResN:i_conc = 200000000. ;
 		Porbeagle_Shark3_ResN:f_conc = 200000000. ;
-		Porbeagle_Shark3_ResN:_FillValue = 319330.12 ;
+		Porbeagle_Shark3_ResN:_FillValue = 251006. ;
 	double Porbeagle_Shark3_StructN(t, b, z) ;
 		Porbeagle_Shark3_StructN:bmtype = "tracer" ;
 		Porbeagle_Shark3_StructN:units = "mg N" ;
@@ -19607,7 +18866,7 @@ variables:
 		Porbeagle_Shark3_StructN:b_dens = 1000000000. ;
 		Porbeagle_Shark3_StructN:i_conc = 200000000. ;
 		Porbeagle_Shark3_StructN:f_conc = 200000000. ;
-		Porbeagle_Shark3_StructN:_FillValue = 159665.06 ;
+		Porbeagle_Shark3_StructN:_FillValue = 125503. ;
 	double Porbeagle_Shark4_Nums(t, b, z) ;
 		Porbeagle_Shark4_Nums:bmtype = "tracer" ;
 		Porbeagle_Shark4_Nums:units = "1" ;
@@ -19645,7 +18904,7 @@ variables:
 		Porbeagle_Shark4_ResN:b_dens = 1000000000. ;
 		Porbeagle_Shark4_ResN:i_conc = 200000000. ;
 		Porbeagle_Shark4_ResN:f_conc = 200000000. ;
-		Porbeagle_Shark4_ResN:_FillValue = 446681.48 ;
+		Porbeagle_Shark4_ResN:_FillValue = 385140. ;
 	double Porbeagle_Shark4_StructN(t, b, z) ;
 		Porbeagle_Shark4_StructN:bmtype = "tracer" ;
 		Porbeagle_Shark4_StructN:units = "mg N" ;
@@ -19664,7 +18923,7 @@ variables:
 		Porbeagle_Shark4_StructN:b_dens = 1000000000. ;
 		Porbeagle_Shark4_StructN:i_conc = 200000000. ;
 		Porbeagle_Shark4_StructN:f_conc = 200000000. ;
-		Porbeagle_Shark4_StructN:_FillValue = 223340.74 ;
+		Porbeagle_Shark4_StructN:_FillValue = 192570. ;
 	double Porbeagle_Shark5_Nums(t, b, z) ;
 		Porbeagle_Shark5_Nums:bmtype = "tracer" ;
 		Porbeagle_Shark5_Nums:units = "1" ;
@@ -19702,7 +18961,7 @@ variables:
 		Porbeagle_Shark5_ResN:b_dens = 1000000000. ;
 		Porbeagle_Shark5_ResN:i_conc = 200000000. ;
 		Porbeagle_Shark5_ResN:f_conc = 200000000. ;
-		Porbeagle_Shark5_ResN:_FillValue = 512656.66 ;
+		Porbeagle_Shark5_ResN:_FillValue = 470040. ;
 	double Porbeagle_Shark5_StructN(t, b, z) ;
 		Porbeagle_Shark5_StructN:bmtype = "tracer" ;
 		Porbeagle_Shark5_StructN:units = "mg N" ;
@@ -19721,7 +18980,7 @@ variables:
 		Porbeagle_Shark5_StructN:b_dens = 1000000000. ;
 		Porbeagle_Shark5_StructN:i_conc = 200000000. ;
 		Porbeagle_Shark5_StructN:f_conc = 200000000. ;
-		Porbeagle_Shark5_StructN:_FillValue = 256328.33 ;
+		Porbeagle_Shark5_StructN:_FillValue = 235020. ;
 	double Porbeagle_Shark6_Nums(t, b, z) ;
 		Porbeagle_Shark6_Nums:bmtype = "tracer" ;
 		Porbeagle_Shark6_Nums:units = "1" ;
@@ -19759,7 +19018,7 @@ variables:
 		Porbeagle_Shark6_ResN:b_dens = 1000000000. ;
 		Porbeagle_Shark6_ResN:i_conc = 200000000. ;
 		Porbeagle_Shark6_ResN:f_conc = 200000000. ;
-		Porbeagle_Shark6_ResN:_FillValue = 543917.2 ;
+		Porbeagle_Shark6_ResN:_FillValue = 516866. ;
 	double Porbeagle_Shark6_StructN(t, b, z) ;
 		Porbeagle_Shark6_StructN:bmtype = "tracer" ;
 		Porbeagle_Shark6_StructN:units = "mg N" ;
@@ -19778,7 +19037,7 @@ variables:
 		Porbeagle_Shark6_StructN:b_dens = 1000000000. ;
 		Porbeagle_Shark6_StructN:i_conc = 200000000. ;
 		Porbeagle_Shark6_StructN:f_conc = 200000000. ;
-		Porbeagle_Shark6_StructN:_FillValue = 271958.6 ;
+		Porbeagle_Shark6_StructN:_FillValue = 258433. ;
 	double Porbeagle_Shark7_Nums(t, b, z) ;
 		Porbeagle_Shark7_Nums:bmtype = "tracer" ;
 		Porbeagle_Shark7_Nums:units = "1" ;
@@ -19816,7 +19075,7 @@ variables:
 		Porbeagle_Shark7_ResN:b_dens = 1000000000. ;
 		Porbeagle_Shark7_ResN:i_conc = 200000000. ;
 		Porbeagle_Shark7_ResN:f_conc = 200000000. ;
-		Porbeagle_Shark7_ResN:_FillValue = 558193.74 ;
+		Porbeagle_Shark7_ResN:_FillValue = 541844. ;
 	double Porbeagle_Shark7_StructN(t, b, z) ;
 		Porbeagle_Shark7_StructN:bmtype = "tracer" ;
 		Porbeagle_Shark7_StructN:units = "mg N" ;
@@ -19835,7 +19094,7 @@ variables:
 		Porbeagle_Shark7_StructN:b_dens = 1000000000. ;
 		Porbeagle_Shark7_StructN:i_conc = 200000000. ;
 		Porbeagle_Shark7_StructN:f_conc = 200000000. ;
-		Porbeagle_Shark7_StructN:_FillValue = 279096.87 ;
+		Porbeagle_Shark7_StructN:_FillValue = 270922. ;
 	double Porbeagle_Shark8_Nums(t, b, z) ;
 		Porbeagle_Shark8_Nums:bmtype = "tracer" ;
 		Porbeagle_Shark8_Nums:units = "1" ;
@@ -19873,7 +19132,7 @@ variables:
 		Porbeagle_Shark8_ResN:b_dens = 1000000000. ;
 		Porbeagle_Shark8_ResN:i_conc = 200000000. ;
 		Porbeagle_Shark8_ResN:f_conc = 200000000. ;
-		Porbeagle_Shark8_ResN:_FillValue = 564611.34 ;
+		Porbeagle_Shark8_ResN:_FillValue = 555326. ;
 	double Porbeagle_Shark8_StructN(t, b, z) ;
 		Porbeagle_Shark8_StructN:bmtype = "tracer" ;
 		Porbeagle_Shark8_StructN:units = "mg N" ;
@@ -19892,7 +19151,7 @@ variables:
 		Porbeagle_Shark8_StructN:b_dens = 1000000000. ;
 		Porbeagle_Shark8_StructN:i_conc = 200000000. ;
 		Porbeagle_Shark8_StructN:f_conc = 200000000. ;
-		Porbeagle_Shark8_StructN:_FillValue = 282305.67 ;
+		Porbeagle_Shark8_StructN:_FillValue = 277663. ;
 	double Porbeagle_Shark9_Nums(t, b, z) ;
 		Porbeagle_Shark9_Nums:bmtype = "tracer" ;
 		Porbeagle_Shark9_Nums:units = "1" ;
@@ -19930,7 +19189,7 @@ variables:
 		Porbeagle_Shark9_ResN:b_dens = 1000000000. ;
 		Porbeagle_Shark9_ResN:i_conc = 200000000. ;
 		Porbeagle_Shark9_ResN:f_conc = 200000000. ;
-		Porbeagle_Shark9_ResN:_FillValue = 567476.26 ;
+		Porbeagle_Shark9_ResN:_FillValue = 562377. ;
 	double Porbeagle_Shark9_StructN(t, b, z) ;
 		Porbeagle_Shark9_StructN:bmtype = "tracer" ;
 		Porbeagle_Shark9_StructN:units = "mg N" ;
@@ -19949,7 +19208,7 @@ variables:
 		Porbeagle_Shark9_StructN:b_dens = 1000000000. ;
 		Porbeagle_Shark9_StructN:i_conc = 200000000. ;
 		Porbeagle_Shark9_StructN:f_conc = 200000000. ;
-		Porbeagle_Shark9_StructN:_FillValue = 283738.13 ;
+		Porbeagle_Shark9_StructN:_FillValue = 281189. ;
 	double Porbeagle_Shark_N(t, b, z) ;
 		Porbeagle_Shark_N:bmtype = "tracer" ;
 		Porbeagle_Shark_N:units = "mg N m-3" ;
@@ -21748,63 +21007,6 @@ variables:
 		Right_Whale_N:partic = 0 ;
 		Right_Whale_N:decay = 0. ;
 		Right_Whale_N:_FillValue = 0. ;
-	double Sandbar_Shark10_Nums(t, b, z) ;
-		Sandbar_Shark10_Nums:bmtype = "tracer" ;
-		Sandbar_Shark10_Nums:units = "1" ;
-		Sandbar_Shark10_Nums:long_name = "Numbers of demersal shark cohort 10" ;
-		Sandbar_Shark10_Nums:dtype = 0 ;
-		Sandbar_Shark10_Nums:sumtype = 0 ;
-		Sandbar_Shark10_Nums:inwc = 0 ;
-		Sandbar_Shark10_Nums:insed = 0 ;
-		Sandbar_Shark10_Nums:dissol = 0 ;
-		Sandbar_Shark10_Nums:decay = 0. ;
-		Sandbar_Shark10_Nums:partic = 1 ;
-		Sandbar_Shark10_Nums:passive = 1 ;
-		Sandbar_Shark10_Nums:svel = 0. ;
-		Sandbar_Shark10_Nums:xvel = 0. ;
-		Sandbar_Shark10_Nums:psize = 10. ;
-		Sandbar_Shark10_Nums:b_dens = 1000000000. ;
-		Sandbar_Shark10_Nums:i_conc = 200000000. ;
-		Sandbar_Shark10_Nums:f_conc = 200000000. ;
-		Sandbar_Shark10_Nums:_FillValue = 0. ;
-	double Sandbar_Shark10_ResN(t, b, z) ;
-		Sandbar_Shark10_ResN:bmtype = "tracer" ;
-		Sandbar_Shark10_ResN:units = "mg N" ;
-		Sandbar_Shark10_ResN:long_name = "Individ reserve N for demersal shark cohort 10" ;
-		Sandbar_Shark10_ResN:dtype = 0 ;
-		Sandbar_Shark10_ResN:sumtype = 0 ;
-		Sandbar_Shark10_ResN:inwc = 0 ;
-		Sandbar_Shark10_ResN:insed = 0 ;
-		Sandbar_Shark10_ResN:dissol = 0 ;
-		Sandbar_Shark10_ResN:decay = 0. ;
-		Sandbar_Shark10_ResN:partic = 1 ;
-		Sandbar_Shark10_ResN:passive = 0 ;
-		Sandbar_Shark10_ResN:svel = 0. ;
-		Sandbar_Shark10_ResN:xvel = 0. ;
-		Sandbar_Shark10_ResN:psize = 10. ;
-		Sandbar_Shark10_ResN:b_dens = 1000000000. ;
-		Sandbar_Shark10_ResN:i_conc = 200000000. ;
-		Sandbar_Shark10_ResN:f_conc = 200000000. ;
-		Sandbar_Shark10_ResN:_FillValue = 544415.26 ;
-	double Sandbar_Shark10_StructN(t, b, z) ;
-		Sandbar_Shark10_StructN:bmtype = "tracer" ;
-		Sandbar_Shark10_StructN:units = "mg N" ;
-		Sandbar_Shark10_StructN:long_name = "Individ structural N for pelagic shark cohort 10" ;
-		Sandbar_Shark10_StructN:dtype = 0 ;
-		Sandbar_Shark10_StructN:sumtype = 0 ;
-		Sandbar_Shark10_StructN:inwc = 0 ;
-		Sandbar_Shark10_StructN:insed = 0 ;
-		Sandbar_Shark10_StructN:dissol = 0 ;
-		Sandbar_Shark10_StructN:decay = 0. ;
-		Sandbar_Shark10_StructN:partic = 1 ;
-		Sandbar_Shark10_StructN:passive = 0 ;
-		Sandbar_Shark10_StructN:svel = 0. ;
-		Sandbar_Shark10_StructN:xvel = 0. ;
-		Sandbar_Shark10_StructN:psize = 10. ;
-		Sandbar_Shark10_StructN:b_dens = 1000000000. ;
-		Sandbar_Shark10_StructN:i_conc = 200000000. ;
-		Sandbar_Shark10_StructN:f_conc = 200000000. ;
-		Sandbar_Shark10_StructN:_FillValue = 272207.63 ;
 	double Sandbar_Shark1_Nums(t, b, z) ;
 		Sandbar_Shark1_Nums:bmtype = "tracer" ;
 		Sandbar_Shark1_Nums:units = "1" ;
@@ -21899,7 +21101,7 @@ variables:
 		Sandbar_Shark2_ResN:b_dens = 1000000000. ;
 		Sandbar_Shark2_ResN:i_conc = 200000000. ;
 		Sandbar_Shark2_ResN:f_conc = 200000000. ;
-		Sandbar_Shark2_ResN:_FillValue = 14767.32 ;
+		Sandbar_Shark2_ResN:_FillValue = 35784.4 ;
 	double Sandbar_Shark2_StructN(t, b, z) ;
 		Sandbar_Shark2_StructN:bmtype = "tracer" ;
 		Sandbar_Shark2_StructN:units = "mg N" ;
@@ -21918,7 +21120,7 @@ variables:
 		Sandbar_Shark2_StructN:b_dens = 1000000000. ;
 		Sandbar_Shark2_StructN:i_conc = 200000000. ;
 		Sandbar_Shark2_StructN:f_conc = 200000000. ;
-		Sandbar_Shark2_StructN:_FillValue = 7383.66 ;
+		Sandbar_Shark2_StructN:_FillValue = 17892.2 ;
 	double Sandbar_Shark3_Nums(t, b, z) ;
 		Sandbar_Shark3_Nums:bmtype = "tracer" ;
 		Sandbar_Shark3_Nums:units = "1" ;
@@ -21956,7 +21158,7 @@ variables:
 		Sandbar_Shark3_ResN:b_dens = 1000000000. ;
 		Sandbar_Shark3_ResN:i_conc = 200000000. ;
 		Sandbar_Shark3_ResN:f_conc = 200000000. ;
-		Sandbar_Shark3_ResN:_FillValue = 64406.14 ;
+		Sandbar_Shark3_ResN:_FillValue = 139923. ;
 	double Sandbar_Shark3_StructN(t, b, z) ;
 		Sandbar_Shark3_StructN:bmtype = "tracer" ;
 		Sandbar_Shark3_StructN:units = "mg N" ;
@@ -21975,7 +21177,7 @@ variables:
 		Sandbar_Shark3_StructN:b_dens = 1000000000. ;
 		Sandbar_Shark3_StructN:i_conc = 200000000. ;
 		Sandbar_Shark3_StructN:f_conc = 200000000. ;
-		Sandbar_Shark3_StructN:_FillValue = 32203.07 ;
+		Sandbar_Shark3_StructN:_FillValue = 69961.6 ;
 	double Sandbar_Shark4_Nums(t, b, z) ;
 		Sandbar_Shark4_Nums:bmtype = "tracer" ;
 		Sandbar_Shark4_Nums:units = "1" ;
@@ -22013,7 +21215,7 @@ variables:
 		Sandbar_Shark4_ResN:b_dens = 1000000000. ;
 		Sandbar_Shark4_ResN:i_conc = 200000000. ;
 		Sandbar_Shark4_ResN:f_conc = 200000000. ;
-		Sandbar_Shark4_ResN:_FillValue = 139923.16 ;
+		Sandbar_Shark4_ResN:_FillValue = 268115. ;
 	double Sandbar_Shark4_StructN(t, b, z) ;
 		Sandbar_Shark4_StructN:bmtype = "tracer" ;
 		Sandbar_Shark4_StructN:units = "mg N" ;
@@ -22032,7 +21234,7 @@ variables:
 		Sandbar_Shark4_StructN:b_dens = 1000000000. ;
 		Sandbar_Shark4_StructN:i_conc = 200000000. ;
 		Sandbar_Shark4_StructN:f_conc = 200000000. ;
-		Sandbar_Shark4_StructN:_FillValue = 69961.58 ;
+		Sandbar_Shark4_StructN:_FillValue = 134058. ;
 	double Sandbar_Shark5_Nums(t, b, z) ;
 		Sandbar_Shark5_Nums:bmtype = "tracer" ;
 		Sandbar_Shark5_Nums:units = "1" ;
@@ -22070,7 +21272,7 @@ variables:
 		Sandbar_Shark5_ResN:b_dens = 1000000000. ;
 		Sandbar_Shark5_ResN:i_conc = 200000000. ;
 		Sandbar_Shark5_ResN:f_conc = 200000000. ;
-		Sandbar_Shark5_ResN:_FillValue = 225551.74 ;
+		Sandbar_Shark5_ResN:_FillValue = 384819. ;
 	double Sandbar_Shark5_StructN(t, b, z) ;
 		Sandbar_Shark5_StructN:bmtype = "tracer" ;
 		Sandbar_Shark5_StructN:units = "mg N" ;
@@ -22089,7 +21291,7 @@ variables:
 		Sandbar_Shark5_StructN:b_dens = 1000000000. ;
 		Sandbar_Shark5_StructN:i_conc = 200000000. ;
 		Sandbar_Shark5_StructN:f_conc = 200000000. ;
-		Sandbar_Shark5_StructN:_FillValue = 112775.87 ;
+		Sandbar_Shark5_StructN:_FillValue = 192410. ;
 	double Sandbar_Shark6_Nums(t, b, z) ;
 		Sandbar_Shark6_Nums:bmtype = "tracer" ;
 		Sandbar_Shark6_Nums:units = "1" ;
@@ -22127,7 +21329,7 @@ variables:
 		Sandbar_Shark6_ResN:b_dens = 1000000000. ;
 		Sandbar_Shark6_ResN:i_conc = 200000000. ;
 		Sandbar_Shark6_ResN:f_conc = 200000000. ;
-		Sandbar_Shark6_ResN:_FillValue = 309402.3 ;
+		Sandbar_Shark6_ResN:_FillValue = 476910. ;
 	double Sandbar_Shark6_StructN(t, b, z) ;
 		Sandbar_Shark6_StructN:bmtype = "tracer" ;
 		Sandbar_Shark6_StructN:units = "mg N" ;
@@ -22146,7 +21348,7 @@ variables:
 		Sandbar_Shark6_StructN:b_dens = 1000000000. ;
 		Sandbar_Shark6_StructN:i_conc = 200000000. ;
 		Sandbar_Shark6_StructN:f_conc = 200000000. ;
-		Sandbar_Shark6_StructN:_FillValue = 154701.15 ;
+		Sandbar_Shark6_StructN:_FillValue = 238455. ;
 	double Sandbar_Shark7_Nums(t, b, z) ;
 		Sandbar_Shark7_Nums:bmtype = "tracer" ;
 		Sandbar_Shark7_Nums:units = "1" ;
@@ -22184,7 +21386,7 @@ variables:
 		Sandbar_Shark7_ResN:b_dens = 1000000000. ;
 		Sandbar_Shark7_ResN:i_conc = 200000000. ;
 		Sandbar_Shark7_ResN:f_conc = 200000000. ;
-		Sandbar_Shark7_ResN:_FillValue = 384819.24 ;
+		Sandbar_Shark7_ResN:_FillValue = 544415. ;
 	double Sandbar_Shark7_StructN(t, b, z) ;
 		Sandbar_Shark7_StructN:bmtype = "tracer" ;
 		Sandbar_Shark7_StructN:units = "mg N" ;
@@ -22203,121 +21405,7 @@ variables:
 		Sandbar_Shark7_StructN:b_dens = 1000000000. ;
 		Sandbar_Shark7_StructN:i_conc = 200000000. ;
 		Sandbar_Shark7_StructN:f_conc = 200000000. ;
-		Sandbar_Shark7_StructN:_FillValue = 192409.62 ;
-	double Sandbar_Shark8_Nums(t, b, z) ;
-		Sandbar_Shark8_Nums:bmtype = "tracer" ;
-		Sandbar_Shark8_Nums:units = "1" ;
-		Sandbar_Shark8_Nums:long_name = "Numbers of demersal shark cohort 8" ;
-		Sandbar_Shark8_Nums:dtype = 0 ;
-		Sandbar_Shark8_Nums:sumtype = 0 ;
-		Sandbar_Shark8_Nums:inwc = 0 ;
-		Sandbar_Shark8_Nums:insed = 0 ;
-		Sandbar_Shark8_Nums:dissol = 0 ;
-		Sandbar_Shark8_Nums:decay = 0. ;
-		Sandbar_Shark8_Nums:partic = 1 ;
-		Sandbar_Shark8_Nums:passive = 1 ;
-		Sandbar_Shark8_Nums:svel = 0. ;
-		Sandbar_Shark8_Nums:xvel = 0. ;
-		Sandbar_Shark8_Nums:psize = 10. ;
-		Sandbar_Shark8_Nums:b_dens = 1000000000. ;
-		Sandbar_Shark8_Nums:i_conc = 200000000. ;
-		Sandbar_Shark8_Nums:f_conc = 200000000. ;
-		Sandbar_Shark8_Nums:_FillValue = 0. ;
-	double Sandbar_Shark8_ResN(t, b, z) ;
-		Sandbar_Shark8_ResN:bmtype = "tracer" ;
-		Sandbar_Shark8_ResN:units = "mg N" ;
-		Sandbar_Shark8_ResN:long_name = "Individ reserve N for demersal shark cohort 8" ;
-		Sandbar_Shark8_ResN:dtype = 0 ;
-		Sandbar_Shark8_ResN:sumtype = 0 ;
-		Sandbar_Shark8_ResN:inwc = 0 ;
-		Sandbar_Shark8_ResN:insed = 0 ;
-		Sandbar_Shark8_ResN:dissol = 0 ;
-		Sandbar_Shark8_ResN:decay = 0. ;
-		Sandbar_Shark8_ResN:partic = 1 ;
-		Sandbar_Shark8_ResN:passive = 0 ;
-		Sandbar_Shark8_ResN:svel = 0. ;
-		Sandbar_Shark8_ResN:xvel = 0. ;
-		Sandbar_Shark8_ResN:psize = 10. ;
-		Sandbar_Shark8_ResN:b_dens = 1000000000. ;
-		Sandbar_Shark8_ResN:i_conc = 200000000. ;
-		Sandbar_Shark8_ResN:f_conc = 200000000. ;
-		Sandbar_Shark8_ResN:_FillValue = 449106.18 ;
-	double Sandbar_Shark8_StructN(t, b, z) ;
-		Sandbar_Shark8_StructN:bmtype = "tracer" ;
-		Sandbar_Shark8_StructN:units = "mg N" ;
-		Sandbar_Shark8_StructN:long_name = "Individ structural N for pelagic shark cohort 8" ;
-		Sandbar_Shark8_StructN:dtype = 0 ;
-		Sandbar_Shark8_StructN:sumtype = 0 ;
-		Sandbar_Shark8_StructN:inwc = 0 ;
-		Sandbar_Shark8_StructN:insed = 0 ;
-		Sandbar_Shark8_StructN:dissol = 0 ;
-		Sandbar_Shark8_StructN:decay = 0. ;
-		Sandbar_Shark8_StructN:partic = 1 ;
-		Sandbar_Shark8_StructN:passive = 0 ;
-		Sandbar_Shark8_StructN:svel = 0. ;
-		Sandbar_Shark8_StructN:xvel = 0. ;
-		Sandbar_Shark8_StructN:psize = 10. ;
-		Sandbar_Shark8_StructN:b_dens = 1000000000. ;
-		Sandbar_Shark8_StructN:i_conc = 200000000. ;
-		Sandbar_Shark8_StructN:f_conc = 200000000. ;
-		Sandbar_Shark8_StructN:_FillValue = 224553.09 ;
-	double Sandbar_Shark9_Nums(t, b, z) ;
-		Sandbar_Shark9_Nums:bmtype = "tracer" ;
-		Sandbar_Shark9_Nums:units = "1" ;
-		Sandbar_Shark9_Nums:long_name = "Numbers of demersal shark cohort 9" ;
-		Sandbar_Shark9_Nums:dtype = 0 ;
-		Sandbar_Shark9_Nums:sumtype = 0 ;
-		Sandbar_Shark9_Nums:inwc = 0 ;
-		Sandbar_Shark9_Nums:insed = 0 ;
-		Sandbar_Shark9_Nums:dissol = 0 ;
-		Sandbar_Shark9_Nums:decay = 0. ;
-		Sandbar_Shark9_Nums:partic = 1 ;
-		Sandbar_Shark9_Nums:passive = 1 ;
-		Sandbar_Shark9_Nums:svel = 0. ;
-		Sandbar_Shark9_Nums:xvel = 0. ;
-		Sandbar_Shark9_Nums:psize = 10. ;
-		Sandbar_Shark9_Nums:b_dens = 1000000000. ;
-		Sandbar_Shark9_Nums:i_conc = 200000000. ;
-		Sandbar_Shark9_Nums:f_conc = 200000000. ;
-		Sandbar_Shark9_Nums:_FillValue = 0. ;
-	double Sandbar_Shark9_ResN(t, b, z) ;
-		Sandbar_Shark9_ResN:bmtype = "tracer" ;
-		Sandbar_Shark9_ResN:units = "mg N" ;
-		Sandbar_Shark9_ResN:long_name = "Individ reserve N for demersal shark cohort 9" ;
-		Sandbar_Shark9_ResN:dtype = 0 ;
-		Sandbar_Shark9_ResN:sumtype = 0 ;
-		Sandbar_Shark9_ResN:inwc = 0 ;
-		Sandbar_Shark9_ResN:insed = 0 ;
-		Sandbar_Shark9_ResN:dissol = 0 ;
-		Sandbar_Shark9_ResN:decay = 0. ;
-		Sandbar_Shark9_ResN:partic = 1 ;
-		Sandbar_Shark9_ResN:passive = 0 ;
-		Sandbar_Shark9_ResN:svel = 0. ;
-		Sandbar_Shark9_ResN:xvel = 0. ;
-		Sandbar_Shark9_ResN:psize = 10. ;
-		Sandbar_Shark9_ResN:b_dens = 1000000000. ;
-		Sandbar_Shark9_ResN:i_conc = 200000000. ;
-		Sandbar_Shark9_ResN:f_conc = 200000000. ;
-		Sandbar_Shark9_ResN:_FillValue = 501982.4 ;
-	double Sandbar_Shark9_StructN(t, b, z) ;
-		Sandbar_Shark9_StructN:bmtype = "tracer" ;
-		Sandbar_Shark9_StructN:units = "mg N" ;
-		Sandbar_Shark9_StructN:long_name = "Individ structural N for pelagic shark cohort 9" ;
-		Sandbar_Shark9_StructN:dtype = 0 ;
-		Sandbar_Shark9_StructN:sumtype = 0 ;
-		Sandbar_Shark9_StructN:inwc = 0 ;
-		Sandbar_Shark9_StructN:insed = 0 ;
-		Sandbar_Shark9_StructN:dissol = 0 ;
-		Sandbar_Shark9_StructN:decay = 0. ;
-		Sandbar_Shark9_StructN:partic = 1 ;
-		Sandbar_Shark9_StructN:passive = 0 ;
-		Sandbar_Shark9_StructN:svel = 0. ;
-		Sandbar_Shark9_StructN:xvel = 0. ;
-		Sandbar_Shark9_StructN:psize = 10. ;
-		Sandbar_Shark9_StructN:b_dens = 1000000000. ;
-		Sandbar_Shark9_StructN:i_conc = 200000000. ;
-		Sandbar_Shark9_StructN:f_conc = 200000000. ;
-		Sandbar_Shark9_StructN:_FillValue = 250991.2 ;
+		Sandbar_Shark7_StructN:_FillValue = 272208. ;
 	double Sandbar_Shark_N(t, b, z) ;
 		Sandbar_Shark_N:bmtype = "tracer" ;
 		Sandbar_Shark_N:units = "mg N m-3" ;
@@ -24172,7 +23260,7 @@ variables:
 		Silver_Hake10_ResN:b_dens = 1000000000. ;
 		Silver_Hake10_ResN:i_conc = 200000000. ;
 		Silver_Hake10_ResN:f_conc = 200000000. ;
-		Silver_Hake10_ResN:_FillValue = 4567.52 ;
+		Silver_Hake10_ResN:_FillValue = 3751.8 ;
 	double Silver_Hake10_StructN(t, b, z) ;
 		Silver_Hake10_StructN:bmtype = "tracer" ;
 		Silver_Hake10_StructN:units = "mg N" ;
@@ -24191,7 +23279,121 @@ variables:
 		Silver_Hake10_StructN:b_dens = 1000000000. ;
 		Silver_Hake10_StructN:i_conc = 200000000. ;
 		Silver_Hake10_StructN:f_conc = 200000000. ;
-		Silver_Hake10_StructN:_FillValue = 2283.76 ;
+		Silver_Hake10_StructN:_FillValue = 1875.9 ;
+	double Silver_Hake11_Nums(t, b, z) ;
+		Silver_Hake11_Nums:bmtype = "tracer" ;
+		Silver_Hake11_Nums:units = "1" ;
+		Silver_Hake11_Nums:long_name = "Numbers of other demersal cohort 10" ;
+		Silver_Hake11_Nums:dtype = 0 ;
+		Silver_Hake11_Nums:sumtype = 0 ;
+		Silver_Hake11_Nums:inwc = 0 ;
+		Silver_Hake11_Nums:insed = 0 ;
+		Silver_Hake11_Nums:dissol = 0 ;
+		Silver_Hake11_Nums:decay = 0. ;
+		Silver_Hake11_Nums:partic = 1 ;
+		Silver_Hake11_Nums:passive = 1 ;
+		Silver_Hake11_Nums:svel = 0. ;
+		Silver_Hake11_Nums:xvel = 0. ;
+		Silver_Hake11_Nums:psize = 10. ;
+		Silver_Hake11_Nums:b_dens = 1000000000. ;
+		Silver_Hake11_Nums:i_conc = 200000000. ;
+		Silver_Hake11_Nums:f_conc = 200000000. ;
+		Silver_Hake11_Nums:_FillValue = 0. ;
+	double Silver_Hake11_ResN(t, b, z) ;
+		Silver_Hake11_ResN:bmtype = "tracer" ;
+		Silver_Hake11_ResN:units = "mg N" ;
+		Silver_Hake11_ResN:long_name = "Individ reserve N for other demersal fish cohort 10" ;
+		Silver_Hake11_ResN:dtype = 0 ;
+		Silver_Hake11_ResN:sumtype = 0 ;
+		Silver_Hake11_ResN:inwc = 0 ;
+		Silver_Hake11_ResN:insed = 0 ;
+		Silver_Hake11_ResN:dissol = 0 ;
+		Silver_Hake11_ResN:decay = 0. ;
+		Silver_Hake11_ResN:partic = 1 ;
+		Silver_Hake11_ResN:passive = 0 ;
+		Silver_Hake11_ResN:svel = 0. ;
+		Silver_Hake11_ResN:xvel = 0. ;
+		Silver_Hake11_ResN:psize = 10. ;
+		Silver_Hake11_ResN:b_dens = 1000000000. ;
+		Silver_Hake11_ResN:i_conc = 200000000. ;
+		Silver_Hake11_ResN:f_conc = 200000000. ;
+		Silver_Hake11_ResN:_FillValue = 4176.1 ;
+	double Silver_Hake11_StructN(t, b, z) ;
+		Silver_Hake11_StructN:bmtype = "tracer" ;
+		Silver_Hake11_StructN:units = "mg N" ;
+		Silver_Hake11_StructN:long_name = "Individ structural N for other demersal fish cohort 10" ;
+		Silver_Hake11_StructN:dtype = 0 ;
+		Silver_Hake11_StructN:sumtype = 0 ;
+		Silver_Hake11_StructN:inwc = 0 ;
+		Silver_Hake11_StructN:insed = 0 ;
+		Silver_Hake11_StructN:dissol = 0 ;
+		Silver_Hake11_StructN:decay = 0. ;
+		Silver_Hake11_StructN:partic = 1 ;
+		Silver_Hake11_StructN:passive = 0 ;
+		Silver_Hake11_StructN:svel = 0. ;
+		Silver_Hake11_StructN:xvel = 0. ;
+		Silver_Hake11_StructN:psize = 10. ;
+		Silver_Hake11_StructN:b_dens = 1000000000. ;
+		Silver_Hake11_StructN:i_conc = 200000000. ;
+		Silver_Hake11_StructN:f_conc = 200000000. ;
+		Silver_Hake11_StructN:_FillValue = 2088.1 ;
+	double Silver_Hake12_Nums(t, b, z) ;
+		Silver_Hake12_Nums:bmtype = "tracer" ;
+		Silver_Hake12_Nums:units = "1" ;
+		Silver_Hake12_Nums:long_name = "Numbers of other demersal cohort 10" ;
+		Silver_Hake12_Nums:dtype = 0 ;
+		Silver_Hake12_Nums:sumtype = 0 ;
+		Silver_Hake12_Nums:inwc = 0 ;
+		Silver_Hake12_Nums:insed = 0 ;
+		Silver_Hake12_Nums:dissol = 0 ;
+		Silver_Hake12_Nums:decay = 0. ;
+		Silver_Hake12_Nums:partic = 1 ;
+		Silver_Hake12_Nums:passive = 1 ;
+		Silver_Hake12_Nums:svel = 0. ;
+		Silver_Hake12_Nums:xvel = 0. ;
+		Silver_Hake12_Nums:psize = 10. ;
+		Silver_Hake12_Nums:b_dens = 1000000000. ;
+		Silver_Hake12_Nums:i_conc = 200000000. ;
+		Silver_Hake12_Nums:f_conc = 200000000. ;
+		Silver_Hake12_Nums:_FillValue = 0. ;
+	double Silver_Hake12_ResN(t, b, z) ;
+		Silver_Hake12_ResN:bmtype = "tracer" ;
+		Silver_Hake12_ResN:units = "mg N" ;
+		Silver_Hake12_ResN:long_name = "Individ reserve N for other demersal fish cohort 10" ;
+		Silver_Hake12_ResN:dtype = 0 ;
+		Silver_Hake12_ResN:sumtype = 0 ;
+		Silver_Hake12_ResN:inwc = 0 ;
+		Silver_Hake12_ResN:insed = 0 ;
+		Silver_Hake12_ResN:dissol = 0 ;
+		Silver_Hake12_ResN:decay = 0. ;
+		Silver_Hake12_ResN:partic = 1 ;
+		Silver_Hake12_ResN:passive = 0 ;
+		Silver_Hake12_ResN:svel = 0. ;
+		Silver_Hake12_ResN:xvel = 0. ;
+		Silver_Hake12_ResN:psize = 10. ;
+		Silver_Hake12_ResN:b_dens = 1000000000. ;
+		Silver_Hake12_ResN:i_conc = 200000000. ;
+		Silver_Hake12_ResN:f_conc = 200000000. ;
+		Silver_Hake12_ResN:_FillValue = 4567.52 ;
+	double Silver_Hake12_StructN(t, b, z) ;
+		Silver_Hake12_StructN:bmtype = "tracer" ;
+		Silver_Hake12_StructN:units = "mg N" ;
+		Silver_Hake12_StructN:long_name = "Individ structural N for other demersal fish cohort 10" ;
+		Silver_Hake12_StructN:dtype = 0 ;
+		Silver_Hake12_StructN:sumtype = 0 ;
+		Silver_Hake12_StructN:inwc = 0 ;
+		Silver_Hake12_StructN:insed = 0 ;
+		Silver_Hake12_StructN:dissol = 0 ;
+		Silver_Hake12_StructN:decay = 0. ;
+		Silver_Hake12_StructN:partic = 1 ;
+		Silver_Hake12_StructN:passive = 0 ;
+		Silver_Hake12_StructN:svel = 0. ;
+		Silver_Hake12_StructN:xvel = 0. ;
+		Silver_Hake12_StructN:psize = 10. ;
+		Silver_Hake12_StructN:b_dens = 1000000000. ;
+		Silver_Hake12_StructN:i_conc = 200000000. ;
+		Silver_Hake12_StructN:f_conc = 200000000. ;
+		Silver_Hake12_StructN:_FillValue = 2283.76 ;
 	double Silver_Hake1_Nums(t, b, z) ;
 		Silver_Hake1_Nums:bmtype = "tracer" ;
 		Silver_Hake1_Nums:units = "1" ;
@@ -24286,7 +23488,7 @@ variables:
 		Silver_Hake2_ResN:b_dens = 1000000000. ;
 		Silver_Hake2_ResN:i_conc = 200000000. ;
 		Silver_Hake2_ResN:f_conc = 200000000. ;
-		Silver_Hake2_ResN:_FillValue = 265.9 ;
+		Silver_Hake2_ResN:_FillValue = 215.9 ;
 	double Silver_Hake2_StructN(t, b, z) ;
 		Silver_Hake2_StructN:bmtype = "tracer" ;
 		Silver_Hake2_StructN:units = "mg N" ;
@@ -24305,7 +23507,7 @@ variables:
 		Silver_Hake2_StructN:b_dens = 1000000000. ;
 		Silver_Hake2_StructN:i_conc = 200000000. ;
 		Silver_Hake2_StructN:f_conc = 200000000. ;
-		Silver_Hake2_StructN:_FillValue = 132.95 ;
+		Silver_Hake2_StructN:_FillValue = 107.9 ;
 	double Silver_Hake3_Nums(t, b, z) ;
 		Silver_Hake3_Nums:bmtype = "tracer" ;
 		Silver_Hake3_Nums:units = "1" ;
@@ -24343,7 +23545,7 @@ variables:
 		Silver_Hake3_ResN:b_dens = 1000000000. ;
 		Silver_Hake3_ResN:i_conc = 200000000. ;
 		Silver_Hake3_ResN:f_conc = 200000000. ;
-		Silver_Hake3_ResN:_FillValue = 655.4 ;
+		Silver_Hake3_ResN:_FillValue = 497.3 ;
 	double Silver_Hake3_StructN(t, b, z) ;
 		Silver_Hake3_StructN:bmtype = "tracer" ;
 		Silver_Hake3_StructN:units = "mg N" ;
@@ -24362,7 +23564,7 @@ variables:
 		Silver_Hake3_StructN:b_dens = 1000000000. ;
 		Silver_Hake3_StructN:i_conc = 200000000. ;
 		Silver_Hake3_StructN:f_conc = 200000000. ;
-		Silver_Hake3_StructN:_FillValue = 327.7 ;
+		Silver_Hake3_StructN:_FillValue = 248.6 ;
 	double Silver_Hake4_Nums(t, b, z) ;
 		Silver_Hake4_Nums:bmtype = "tracer" ;
 		Silver_Hake4_Nums:units = "1" ;
@@ -24400,7 +23602,7 @@ variables:
 		Silver_Hake4_ResN:b_dens = 1000000000. ;
 		Silver_Hake4_ResN:i_conc = 200000000. ;
 		Silver_Hake4_ResN:f_conc = 200000000. ;
-		Silver_Hake4_ResN:_FillValue = 1170.34 ;
+		Silver_Hake4_ResN:_FillValue = 876.9 ;
 	double Silver_Hake4_StructN(t, b, z) ;
 		Silver_Hake4_StructN:bmtype = "tracer" ;
 		Silver_Hake4_StructN:units = "mg N" ;
@@ -24419,7 +23621,7 @@ variables:
 		Silver_Hake4_StructN:b_dens = 1000000000. ;
 		Silver_Hake4_StructN:i_conc = 200000000. ;
 		Silver_Hake4_StructN:f_conc = 200000000. ;
-		Silver_Hake4_StructN:_FillValue = 585.17 ;
+		Silver_Hake4_StructN:_FillValue = 438.5 ;
 	double Silver_Hake5_Nums(t, b, z) ;
 		Silver_Hake5_Nums:bmtype = "tracer" ;
 		Silver_Hake5_Nums:units = "1" ;
@@ -24457,7 +23659,7 @@ variables:
 		Silver_Hake5_ResN:b_dens = 1000000000. ;
 		Silver_Hake5_ResN:i_conc = 200000000. ;
 		Silver_Hake5_ResN:f_conc = 200000000. ;
-		Silver_Hake5_ResN:_FillValue = 1757.24 ;
+		Silver_Hake5_ResN:_FillValue = 1324.5 ;
 	double Silver_Hake5_StructN(t, b, z) ;
 		Silver_Hake5_StructN:bmtype = "tracer" ;
 		Silver_Hake5_StructN:units = "mg N" ;
@@ -24476,7 +23678,7 @@ variables:
 		Silver_Hake5_StructN:b_dens = 1000000000. ;
 		Silver_Hake5_StructN:i_conc = 200000000. ;
 		Silver_Hake5_StructN:f_conc = 200000000. ;
-		Silver_Hake5_StructN:_FillValue = 878.62 ;
+		Silver_Hake5_StructN:_FillValue = 662.2 ;
 	double Silver_Hake6_Nums(t, b, z) ;
 		Silver_Hake6_Nums:bmtype = "tracer" ;
 		Silver_Hake6_Nums:units = "1" ;
@@ -24514,7 +23716,7 @@ variables:
 		Silver_Hake6_ResN:b_dens = 1000000000. ;
 		Silver_Hake6_ResN:i_conc = 200000000. ;
 		Silver_Hake6_ResN:f_conc = 200000000. ;
-		Silver_Hake6_ResN:_FillValue = 2370.62 ;
+		Silver_Hake6_ResN:_FillValue = 1812. ;
 	double Silver_Hake6_StructN(t, b, z) ;
 		Silver_Hake6_StructN:bmtype = "tracer" ;
 		Silver_Hake6_StructN:units = "mg N" ;
@@ -24533,7 +23735,7 @@ variables:
 		Silver_Hake6_StructN:b_dens = 1000000000. ;
 		Silver_Hake6_StructN:i_conc = 200000000. ;
 		Silver_Hake6_StructN:f_conc = 200000000. ;
-		Silver_Hake6_StructN:_FillValue = 1185.31 ;
+		Silver_Hake6_StructN:_FillValue = 906. ;
 	double Silver_Hake7_Nums(t, b, z) ;
 		Silver_Hake7_Nums:bmtype = "tracer" ;
 		Silver_Hake7_Nums:units = "1" ;
@@ -24571,7 +23773,7 @@ variables:
 		Silver_Hake7_ResN:b_dens = 1000000000. ;
 		Silver_Hake7_ResN:i_conc = 200000000. ;
 		Silver_Hake7_ResN:f_conc = 200000000. ;
-		Silver_Hake7_ResN:_FillValue = 2976.72 ;
+		Silver_Hake7_ResN:_FillValue = 2315. ;
 	double Silver_Hake7_StructN(t, b, z) ;
 		Silver_Hake7_StructN:bmtype = "tracer" ;
 		Silver_Hake7_StructN:units = "mg N" ;
@@ -24590,7 +23792,7 @@ variables:
 		Silver_Hake7_StructN:b_dens = 1000000000. ;
 		Silver_Hake7_StructN:i_conc = 200000000. ;
 		Silver_Hake7_StructN:f_conc = 200000000. ;
-		Silver_Hake7_StructN:_FillValue = 1488.36 ;
+		Silver_Hake7_StructN:_FillValue = 1157.5 ;
 	double Silver_Hake8_Nums(t, b, z) ;
 		Silver_Hake8_Nums:bmtype = "tracer" ;
 		Silver_Hake8_Nums:units = "1" ;
@@ -24628,7 +23830,7 @@ variables:
 		Silver_Hake8_ResN:b_dens = 1000000000. ;
 		Silver_Hake8_ResN:i_conc = 200000000. ;
 		Silver_Hake8_ResN:f_conc = 200000000. ;
-		Silver_Hake8_ResN:_FillValue = 3552.86 ;
+		Silver_Hake8_ResN:_FillValue = 2813.8 ;
 	double Silver_Hake8_StructN(t, b, z) ;
 		Silver_Hake8_StructN:bmtype = "tracer" ;
 		Silver_Hake8_StructN:units = "mg N" ;
@@ -24647,7 +23849,7 @@ variables:
 		Silver_Hake8_StructN:b_dens = 1000000000. ;
 		Silver_Hake8_StructN:i_conc = 200000000. ;
 		Silver_Hake8_StructN:f_conc = 200000000. ;
-		Silver_Hake8_StructN:_FillValue = 1776.43 ;
+		Silver_Hake8_StructN:_FillValue = 1406.9 ;
 	double Silver_Hake9_Nums(t, b, z) ;
 		Silver_Hake9_Nums:bmtype = "tracer" ;
 		Silver_Hake9_Nums:units = "1" ;
@@ -24685,7 +23887,7 @@ variables:
 		Silver_Hake9_ResN:b_dens = 1000000000. ;
 		Silver_Hake9_ResN:i_conc = 200000000. ;
 		Silver_Hake9_ResN:f_conc = 200000000. ;
-		Silver_Hake9_ResN:_FillValue = 4085.4 ;
+		Silver_Hake9_ResN:_FillValue = 3295.6 ;
 	double Silver_Hake9_StructN(t, b, z) ;
 		Silver_Hake9_StructN:bmtype = "tracer" ;
 		Silver_Hake9_StructN:units = "mg N" ;
@@ -24704,7 +23906,7 @@ variables:
 		Silver_Hake9_StructN:b_dens = 1000000000. ;
 		Silver_Hake9_StructN:i_conc = 200000000. ;
 		Silver_Hake9_StructN:f_conc = 200000000. ;
-		Silver_Hake9_StructN:_FillValue = 2042.7 ;
+		Silver_Hake9_StructN:_FillValue = 1647.8 ;
 	double Silver_Hake_N(t, b, z) ;
 		Silver_Hake_N:bmtype = "tracer" ;
 		Silver_Hake_N:units = "mg N m-3" ;
@@ -25881,63 +25083,6 @@ variables:
 		Small_Whale_N:partic = 0 ;
 		Small_Whale_N:decay = 0. ;
 		Small_Whale_N:_FillValue = 0. ;
-	double Smooth_Dogfish10_Nums(t, b, z) ;
-		Smooth_Dogfish10_Nums:bmtype = "tracer" ;
-		Smooth_Dogfish10_Nums:units = "1" ;
-		Smooth_Dogfish10_Nums:long_name = "Numbers of demersal shark cohort 10" ;
-		Smooth_Dogfish10_Nums:dtype = 0 ;
-		Smooth_Dogfish10_Nums:sumtype = 0 ;
-		Smooth_Dogfish10_Nums:inwc = 0 ;
-		Smooth_Dogfish10_Nums:insed = 0 ;
-		Smooth_Dogfish10_Nums:dissol = 0 ;
-		Smooth_Dogfish10_Nums:decay = 0. ;
-		Smooth_Dogfish10_Nums:partic = 1 ;
-		Smooth_Dogfish10_Nums:passive = 1 ;
-		Smooth_Dogfish10_Nums:svel = 0. ;
-		Smooth_Dogfish10_Nums:xvel = 0. ;
-		Smooth_Dogfish10_Nums:psize = 10. ;
-		Smooth_Dogfish10_Nums:b_dens = 1000000000. ;
-		Smooth_Dogfish10_Nums:i_conc = 200000000. ;
-		Smooth_Dogfish10_Nums:f_conc = 200000000. ;
-		Smooth_Dogfish10_Nums:_FillValue = 0. ;
-	double Smooth_Dogfish10_ResN(t, b, z) ;
-		Smooth_Dogfish10_ResN:bmtype = "tracer" ;
-		Smooth_Dogfish10_ResN:units = "mg N" ;
-		Smooth_Dogfish10_ResN:long_name = "Individ reserve N for demersal shark cohort 10" ;
-		Smooth_Dogfish10_ResN:dtype = 0 ;
-		Smooth_Dogfish10_ResN:sumtype = 0 ;
-		Smooth_Dogfish10_ResN:inwc = 0 ;
-		Smooth_Dogfish10_ResN:insed = 0 ;
-		Smooth_Dogfish10_ResN:dissol = 0 ;
-		Smooth_Dogfish10_ResN:decay = 0. ;
-		Smooth_Dogfish10_ResN:partic = 1 ;
-		Smooth_Dogfish10_ResN:passive = 0 ;
-		Smooth_Dogfish10_ResN:svel = 0. ;
-		Smooth_Dogfish10_ResN:xvel = 0. ;
-		Smooth_Dogfish10_ResN:psize = 10. ;
-		Smooth_Dogfish10_ResN:b_dens = 1000000000. ;
-		Smooth_Dogfish10_ResN:i_conc = 200000000. ;
-		Smooth_Dogfish10_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish10_ResN:_FillValue = 32991.24 ;
-	double Smooth_Dogfish10_StructN(t, b, z) ;
-		Smooth_Dogfish10_StructN:bmtype = "tracer" ;
-		Smooth_Dogfish10_StructN:units = "mg N" ;
-		Smooth_Dogfish10_StructN:long_name = "Individ structural N for pelagic shark cohort 10" ;
-		Smooth_Dogfish10_StructN:dtype = 0 ;
-		Smooth_Dogfish10_StructN:sumtype = 0 ;
-		Smooth_Dogfish10_StructN:inwc = 0 ;
-		Smooth_Dogfish10_StructN:insed = 0 ;
-		Smooth_Dogfish10_StructN:dissol = 0 ;
-		Smooth_Dogfish10_StructN:decay = 0. ;
-		Smooth_Dogfish10_StructN:partic = 1 ;
-		Smooth_Dogfish10_StructN:passive = 0 ;
-		Smooth_Dogfish10_StructN:svel = 0. ;
-		Smooth_Dogfish10_StructN:xvel = 0. ;
-		Smooth_Dogfish10_StructN:psize = 10. ;
-		Smooth_Dogfish10_StructN:b_dens = 1000000000. ;
-		Smooth_Dogfish10_StructN:i_conc = 200000000. ;
-		Smooth_Dogfish10_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish10_StructN:_FillValue = 16495.62 ;
 	double Smooth_Dogfish1_Nums(t, b, z) ;
 		Smooth_Dogfish1_Nums:bmtype = "tracer" ;
 		Smooth_Dogfish1_Nums:units = "1" ;
@@ -26032,7 +25177,7 @@ variables:
 		Smooth_Dogfish2_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish2_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish2_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish2_ResN:_FillValue = 19186.36 ;
+		Smooth_Dogfish2_ResN:_FillValue = 22953.3 ;
 	double Smooth_Dogfish2_StructN(t, b, z) ;
 		Smooth_Dogfish2_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish2_StructN:units = "mg N" ;
@@ -26051,7 +25196,7 @@ variables:
 		Smooth_Dogfish2_StructN:b_dens = 1000000000. ;
 		Smooth_Dogfish2_StructN:i_conc = 200000000. ;
 		Smooth_Dogfish2_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish2_StructN:_FillValue = 9593.18 ;
+		Smooth_Dogfish2_StructN:_FillValue = 11476.7 ;
 	double Smooth_Dogfish3_Nums(t, b, z) ;
 		Smooth_Dogfish3_Nums:bmtype = "tracer" ;
 		Smooth_Dogfish3_Nums:units = "1" ;
@@ -26089,7 +25234,7 @@ variables:
 		Smooth_Dogfish3_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish3_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish3_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish3_ResN:_FillValue = 29473.84 ;
+		Smooth_Dogfish3_ResN:_FillValue = 31565.6 ;
 	double Smooth_Dogfish3_StructN(t, b, z) ;
 		Smooth_Dogfish3_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish3_StructN:units = "mg N" ;
@@ -26108,7 +25253,7 @@ variables:
 		Smooth_Dogfish3_StructN:b_dens = 1000000000. ;
 		Smooth_Dogfish3_StructN:i_conc = 200000000. ;
 		Smooth_Dogfish3_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish3_StructN:_FillValue = 14736.92 ;
+		Smooth_Dogfish3_StructN:_FillValue = 15782.8 ;
 	double Smooth_Dogfish4_Nums(t, b, z) ;
 		Smooth_Dogfish4_Nums:bmtype = "tracer" ;
 		Smooth_Dogfish4_Nums:units = "1" ;
@@ -26146,7 +25291,7 @@ variables:
 		Smooth_Dogfish4_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish4_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish4_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish4_ResN:_FillValue = 32183.48 ;
+		Smooth_Dogfish4_ResN:_FillValue = 32764.1 ;
 	double Smooth_Dogfish4_StructN(t, b, z) ;
 		Smooth_Dogfish4_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish4_StructN:units = "mg N" ;
@@ -26165,7 +25310,7 @@ variables:
 		Smooth_Dogfish4_StructN:b_dens = 1000000000. ;
 		Smooth_Dogfish4_StructN:i_conc = 200000000. ;
 		Smooth_Dogfish4_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish4_StructN:_FillValue = 16091.74 ;
+		Smooth_Dogfish4_StructN:_FillValue = 16382.1 ;
 	double Smooth_Dogfish5_Nums(t, b, z) ;
 		Smooth_Dogfish5_Nums:bmtype = "tracer" ;
 		Smooth_Dogfish5_Nums:units = "1" ;
@@ -26203,7 +25348,7 @@ variables:
 		Smooth_Dogfish5_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish5_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish5_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish5_ResN:_FillValue = 32809.92 ;
+		Smooth_Dogfish5_ResN:_FillValue = 32961.3 ;
 	double Smooth_Dogfish5_StructN(t, b, z) ;
 		Smooth_Dogfish5_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish5_StructN:units = "mg N" ;
@@ -26222,7 +25367,7 @@ variables:
 		Smooth_Dogfish5_StructN:b_dens = 1000000000. ;
 		Smooth_Dogfish5_StructN:i_conc = 200000000. ;
 		Smooth_Dogfish5_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish5_StructN:_FillValue = 16404.96 ;
+		Smooth_Dogfish5_StructN:_FillValue = 16480.6 ;
 	double Smooth_Dogfish6_Nums(t, b, z) ;
 		Smooth_Dogfish6_Nums:bmtype = "tracer" ;
 		Smooth_Dogfish6_Nums:units = "1" ;
@@ -26260,7 +25405,7 @@ variables:
 		Smooth_Dogfish6_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish6_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish6_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish6_ResN:_FillValue = 32950.8 ;
+		Smooth_Dogfish6_ResN:_FillValue = 32987.3 ;
 	double Smooth_Dogfish6_StructN(t, b, z) ;
 		Smooth_Dogfish6_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish6_StructN:units = "mg N" ;
@@ -26279,7 +25424,7 @@ variables:
 		Smooth_Dogfish6_StructN:b_dens = 1000000000. ;
 		Smooth_Dogfish6_StructN:i_conc = 200000000. ;
 		Smooth_Dogfish6_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish6_StructN:_FillValue = 16475.4 ;
+		Smooth_Dogfish6_StructN:_FillValue = 16493.6 ;
 	double Smooth_Dogfish7_Nums(t, b, z) ;
 		Smooth_Dogfish7_Nums:bmtype = "tracer" ;
 		Smooth_Dogfish7_Nums:units = "1" ;
@@ -26317,7 +25462,7 @@ variables:
 		Smooth_Dogfish7_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish7_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish7_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish7_ResN:_FillValue = 32982.28 ;
+		Smooth_Dogfish7_ResN:_FillValue = 32990.7 ;
 	double Smooth_Dogfish7_StructN(t, b, z) ;
 		Smooth_Dogfish7_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish7_StructN:units = "mg N" ;
@@ -26336,7 +25481,7 @@ variables:
 		Smooth_Dogfish7_StructN:b_dens = 1000000000. ;
 		Smooth_Dogfish7_StructN:i_conc = 200000000. ;
 		Smooth_Dogfish7_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish7_StructN:_FillValue = 16491.14 ;
+		Smooth_Dogfish7_StructN:_FillValue = 16495.3 ;
 	double Smooth_Dogfish8_Nums(t, b, z) ;
 		Smooth_Dogfish8_Nums:bmtype = "tracer" ;
 		Smooth_Dogfish8_Nums:units = "1" ;
@@ -26374,7 +25519,7 @@ variables:
 		Smooth_Dogfish8_ResN:b_dens = 1000000000. ;
 		Smooth_Dogfish8_ResN:i_conc = 200000000. ;
 		Smooth_Dogfish8_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish8_ResN:_FillValue = 32989.32 ;
+		Smooth_Dogfish8_ResN:_FillValue = 32991.2 ;
 	double Smooth_Dogfish8_StructN(t, b, z) ;
 		Smooth_Dogfish8_StructN:bmtype = "tracer" ;
 		Smooth_Dogfish8_StructN:units = "mg N" ;
@@ -26393,64 +25538,7 @@ variables:
 		Smooth_Dogfish8_StructN:b_dens = 1000000000. ;
 		Smooth_Dogfish8_StructN:i_conc = 200000000. ;
 		Smooth_Dogfish8_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish8_StructN:_FillValue = 16494.66 ;
-	double Smooth_Dogfish9_Nums(t, b, z) ;
-		Smooth_Dogfish9_Nums:bmtype = "tracer" ;
-		Smooth_Dogfish9_Nums:units = "1" ;
-		Smooth_Dogfish9_Nums:long_name = "Numbers of demersal shark cohort 9" ;
-		Smooth_Dogfish9_Nums:dtype = 0 ;
-		Smooth_Dogfish9_Nums:sumtype = 0 ;
-		Smooth_Dogfish9_Nums:inwc = 0 ;
-		Smooth_Dogfish9_Nums:insed = 0 ;
-		Smooth_Dogfish9_Nums:dissol = 0 ;
-		Smooth_Dogfish9_Nums:decay = 0. ;
-		Smooth_Dogfish9_Nums:partic = 1 ;
-		Smooth_Dogfish9_Nums:passive = 1 ;
-		Smooth_Dogfish9_Nums:svel = 0. ;
-		Smooth_Dogfish9_Nums:xvel = 0. ;
-		Smooth_Dogfish9_Nums:psize = 10. ;
-		Smooth_Dogfish9_Nums:b_dens = 1000000000. ;
-		Smooth_Dogfish9_Nums:i_conc = 200000000. ;
-		Smooth_Dogfish9_Nums:f_conc = 200000000. ;
-		Smooth_Dogfish9_Nums:_FillValue = 0. ;
-	double Smooth_Dogfish9_ResN(t, b, z) ;
-		Smooth_Dogfish9_ResN:bmtype = "tracer" ;
-		Smooth_Dogfish9_ResN:units = "mg N" ;
-		Smooth_Dogfish9_ResN:long_name = "Individ reserve N for demersal shark cohort 9" ;
-		Smooth_Dogfish9_ResN:dtype = 0 ;
-		Smooth_Dogfish9_ResN:sumtype = 0 ;
-		Smooth_Dogfish9_ResN:inwc = 0 ;
-		Smooth_Dogfish9_ResN:insed = 0 ;
-		Smooth_Dogfish9_ResN:dissol = 0 ;
-		Smooth_Dogfish9_ResN:decay = 0. ;
-		Smooth_Dogfish9_ResN:partic = 1 ;
-		Smooth_Dogfish9_ResN:passive = 0 ;
-		Smooth_Dogfish9_ResN:svel = 0. ;
-		Smooth_Dogfish9_ResN:xvel = 0. ;
-		Smooth_Dogfish9_ResN:psize = 10. ;
-		Smooth_Dogfish9_ResN:b_dens = 1000000000. ;
-		Smooth_Dogfish9_ResN:i_conc = 200000000. ;
-		Smooth_Dogfish9_ResN:f_conc = 200000000. ;
-		Smooth_Dogfish9_ResN:_FillValue = 32990.88 ;
-	double Smooth_Dogfish9_StructN(t, b, z) ;
-		Smooth_Dogfish9_StructN:bmtype = "tracer" ;
-		Smooth_Dogfish9_StructN:units = "mg N" ;
-		Smooth_Dogfish9_StructN:long_name = "Individ structural N for pelagic shark cohort 9" ;
-		Smooth_Dogfish9_StructN:dtype = 0 ;
-		Smooth_Dogfish9_StructN:sumtype = 0 ;
-		Smooth_Dogfish9_StructN:inwc = 0 ;
-		Smooth_Dogfish9_StructN:insed = 0 ;
-		Smooth_Dogfish9_StructN:dissol = 0 ;
-		Smooth_Dogfish9_StructN:decay = 0. ;
-		Smooth_Dogfish9_StructN:partic = 1 ;
-		Smooth_Dogfish9_StructN:passive = 0 ;
-		Smooth_Dogfish9_StructN:svel = 0. ;
-		Smooth_Dogfish9_StructN:xvel = 0. ;
-		Smooth_Dogfish9_StructN:psize = 10. ;
-		Smooth_Dogfish9_StructN:b_dens = 1000000000. ;
-		Smooth_Dogfish9_StructN:i_conc = 200000000. ;
-		Smooth_Dogfish9_StructN:f_conc = 200000000. ;
-		Smooth_Dogfish9_StructN:_FillValue = 16495.44 ;
+		Smooth_Dogfish8_StructN:_FillValue = 16495.3 ;
 	double Smooth_Dogfish_N(t, b, z) ;
 		Smooth_Dogfish_N:bmtype = "tracer" ;
 		Smooth_Dogfish_N:units = "mg N m-3" ;
@@ -26500,7 +25588,7 @@ variables:
 		Spiny_Dogfish10_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish10_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish10_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish10_ResN:_FillValue = 75332.64 ;
+		Spiny_Dogfish10_ResN:_FillValue = 74095. ;
 	double Spiny_Dogfish10_StructN(t, b, z) ;
 		Spiny_Dogfish10_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish10_StructN:units = "mg N" ;
@@ -26519,7 +25607,64 @@ variables:
 		Spiny_Dogfish10_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish10_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish10_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish10_StructN:_FillValue = 37666.32 ;
+		Spiny_Dogfish10_StructN:_FillValue = 37047. ;
+	double Spiny_Dogfish11_Nums(t, b, z) ;
+		Spiny_Dogfish11_Nums:bmtype = "tracer" ;
+		Spiny_Dogfish11_Nums:units = "1" ;
+		Spiny_Dogfish11_Nums:long_name = "Numbers of other demersal shark cohort 10" ;
+		Spiny_Dogfish11_Nums:dtype = 0 ;
+		Spiny_Dogfish11_Nums:sumtype = 0 ;
+		Spiny_Dogfish11_Nums:inwc = 0 ;
+		Spiny_Dogfish11_Nums:insed = 0 ;
+		Spiny_Dogfish11_Nums:dissol = 0 ;
+		Spiny_Dogfish11_Nums:decay = 0. ;
+		Spiny_Dogfish11_Nums:partic = 1 ;
+		Spiny_Dogfish11_Nums:passive = 1 ;
+		Spiny_Dogfish11_Nums:svel = 0. ;
+		Spiny_Dogfish11_Nums:xvel = 0. ;
+		Spiny_Dogfish11_Nums:psize = 10. ;
+		Spiny_Dogfish11_Nums:b_dens = 1000000000. ;
+		Spiny_Dogfish11_Nums:i_conc = 200000000. ;
+		Spiny_Dogfish11_Nums:f_conc = 200000000. ;
+		Spiny_Dogfish11_Nums:_FillValue = 0. ;
+	double Spiny_Dogfish11_ResN(t, b, z) ;
+		Spiny_Dogfish11_ResN:bmtype = "tracer" ;
+		Spiny_Dogfish11_ResN:units = "mg N" ;
+		Spiny_Dogfish11_ResN:long_name = "Individ reserve N for other demersal shark cohort 10" ;
+		Spiny_Dogfish11_ResN:dtype = 0 ;
+		Spiny_Dogfish11_ResN:sumtype = 0 ;
+		Spiny_Dogfish11_ResN:inwc = 0 ;
+		Spiny_Dogfish11_ResN:insed = 0 ;
+		Spiny_Dogfish11_ResN:dissol = 0 ;
+		Spiny_Dogfish11_ResN:decay = 0. ;
+		Spiny_Dogfish11_ResN:partic = 1 ;
+		Spiny_Dogfish11_ResN:passive = 0 ;
+		Spiny_Dogfish11_ResN:svel = 0. ;
+		Spiny_Dogfish11_ResN:xvel = 0. ;
+		Spiny_Dogfish11_ResN:psize = 10. ;
+		Spiny_Dogfish11_ResN:b_dens = 1000000000. ;
+		Spiny_Dogfish11_ResN:i_conc = 200000000. ;
+		Spiny_Dogfish11_ResN:f_conc = 200000000. ;
+		Spiny_Dogfish11_ResN:_FillValue = 75332.64 ;
+	double Spiny_Dogfish11_StructN(t, b, z) ;
+		Spiny_Dogfish11_StructN:bmtype = "tracer" ;
+		Spiny_Dogfish11_StructN:units = "mg N" ;
+		Spiny_Dogfish11_StructN:long_name = "Individ structural N for other demersal shark cohort 10" ;
+		Spiny_Dogfish11_StructN:dtype = 0 ;
+		Spiny_Dogfish11_StructN:sumtype = 0 ;
+		Spiny_Dogfish11_StructN:inwc = 0 ;
+		Spiny_Dogfish11_StructN:insed = 0 ;
+		Spiny_Dogfish11_StructN:dissol = 0 ;
+		Spiny_Dogfish11_StructN:decay = 0. ;
+		Spiny_Dogfish11_StructN:partic = 1 ;
+		Spiny_Dogfish11_StructN:passive = 0 ;
+		Spiny_Dogfish11_StructN:svel = 0. ;
+		Spiny_Dogfish11_StructN:xvel = 0. ;
+		Spiny_Dogfish11_StructN:psize = 10. ;
+		Spiny_Dogfish11_StructN:b_dens = 1000000000. ;
+		Spiny_Dogfish11_StructN:i_conc = 200000000. ;
+		Spiny_Dogfish11_StructN:f_conc = 200000000. ;
+		Spiny_Dogfish11_StructN:_FillValue = 37666.32 ;
 	double Spiny_Dogfish1_Nums(t, b, z) ;
 		Spiny_Dogfish1_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish1_Nums:units = "1" ;
@@ -26614,7 +25759,7 @@ variables:
 		Spiny_Dogfish2_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish2_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish2_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish2_ResN:_FillValue = 7451.98 ;
+		Spiny_Dogfish2_ResN:_FillValue = 6363. ;
 	double Spiny_Dogfish2_StructN(t, b, z) ;
 		Spiny_Dogfish2_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish2_StructN:units = "mg N" ;
@@ -26633,7 +25778,7 @@ variables:
 		Spiny_Dogfish2_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish2_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish2_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish2_StructN:_FillValue = 3725.99 ;
+		Spiny_Dogfish2_StructN:_FillValue = 3181. ;
 	double Spiny_Dogfish3_Nums(t, b, z) ;
 		Spiny_Dogfish3_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish3_Nums:units = "1" ;
@@ -26671,7 +25816,7 @@ variables:
 		Spiny_Dogfish3_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish3_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish3_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish3_ResN:_FillValue = 23539.96 ;
+		Spiny_Dogfish3_ResN:_FillValue = 20158. ;
 	double Spiny_Dogfish3_StructN(t, b, z) ;
 		Spiny_Dogfish3_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish3_StructN:units = "mg N" ;
@@ -26690,7 +25835,7 @@ variables:
 		Spiny_Dogfish3_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish3_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish3_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish3_StructN:_FillValue = 11769.98 ;
+		Spiny_Dogfish3_StructN:_FillValue = 10079. ;
 	double Spiny_Dogfish4_Nums(t, b, z) ;
 		Spiny_Dogfish4_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish4_Nums:units = "1" ;
@@ -26728,7 +25873,7 @@ variables:
 		Spiny_Dogfish4_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish4_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish4_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish4_ResN:_FillValue = 40007.24 ;
+		Spiny_Dogfish4_ResN:_FillValue = 35313. ;
 	double Spiny_Dogfish4_StructN(t, b, z) ;
 		Spiny_Dogfish4_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish4_StructN:units = "mg N" ;
@@ -26747,7 +25892,7 @@ variables:
 		Spiny_Dogfish4_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish4_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish4_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish4_StructN:_FillValue = 20003.62 ;
+		Spiny_Dogfish4_StructN:_FillValue = 17656. ;
 	double Spiny_Dogfish5_Nums(t, b, z) ;
 		Spiny_Dogfish5_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish5_Nums:units = "1" ;
@@ -26785,7 +25930,7 @@ variables:
 		Spiny_Dogfish5_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish5_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish5_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish5_ResN:_FillValue = 52953.82 ;
+		Spiny_Dogfish5_ResN:_FillValue = 48226. ;
 	double Spiny_Dogfish5_StructN(t, b, z) ;
 		Spiny_Dogfish5_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish5_StructN:units = "mg N" ;
@@ -26804,7 +25949,7 @@ variables:
 		Spiny_Dogfish5_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish5_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish5_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish5_StructN:_FillValue = 26476.91 ;
+		Spiny_Dogfish5_StructN:_FillValue = 24113. ;
 	double Spiny_Dogfish6_Nums(t, b, z) ;
 		Spiny_Dogfish6_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish6_Nums:units = "1" ;
@@ -26842,7 +25987,7 @@ variables:
 		Spiny_Dogfish6_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish6_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish6_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish6_ResN:_FillValue = 61973.98 ;
+		Spiny_Dogfish6_ResN:_FillValue = 57904. ;
 	double Spiny_Dogfish6_StructN(t, b, z) ;
 		Spiny_Dogfish6_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish6_StructN:units = "mg N" ;
@@ -26861,7 +26006,7 @@ variables:
 		Spiny_Dogfish6_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish6_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish6_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish6_StructN:_FillValue = 30986.99 ;
+		Spiny_Dogfish6_StructN:_FillValue = 28952. ;
 	double Spiny_Dogfish7_Nums(t, b, z) ;
 		Spiny_Dogfish7_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish7_Nums:units = "1" ;
@@ -26899,7 +26044,7 @@ variables:
 		Spiny_Dogfish7_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish7_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish7_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish7_ResN:_FillValue = 67876.26 ;
+		Spiny_Dogfish7_ResN:_FillValue = 64663. ;
 	double Spiny_Dogfish7_StructN(t, b, z) ;
 		Spiny_Dogfish7_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish7_StructN:units = "mg N" ;
@@ -26918,7 +26063,7 @@ variables:
 		Spiny_Dogfish7_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish7_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish7_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish7_StructN:_FillValue = 33938.13 ;
+		Spiny_Dogfish7_StructN:_FillValue = 3233. ;
 	double Spiny_Dogfish8_Nums(t, b, z) ;
 		Spiny_Dogfish8_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish8_Nums:units = "1" ;
@@ -26956,7 +26101,7 @@ variables:
 		Spiny_Dogfish8_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish8_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish8_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish8_ResN:_FillValue = 71606.48 ;
+		Spiny_Dogfish8_ResN:_FillValue = 69119. ;
 	double Spiny_Dogfish8_StructN(t, b, z) ;
 		Spiny_Dogfish8_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish8_StructN:units = "mg N" ;
@@ -26975,7 +26120,7 @@ variables:
 		Spiny_Dogfish8_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish8_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish8_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish8_StructN:_FillValue = 35803.24 ;
+		Spiny_Dogfish8_StructN:_FillValue = 34599. ;
 	double Spiny_Dogfish9_Nums(t, b, z) ;
 		Spiny_Dogfish9_Nums:bmtype = "tracer" ;
 		Spiny_Dogfish9_Nums:units = "1" ;
@@ -27013,7 +26158,7 @@ variables:
 		Spiny_Dogfish9_ResN:b_dens = 1000000000. ;
 		Spiny_Dogfish9_ResN:i_conc = 200000000. ;
 		Spiny_Dogfish9_ResN:f_conc = 200000000. ;
-		Spiny_Dogfish9_ResN:_FillValue = 73917.48 ;
+		Spiny_Dogfish9_ResN:_FillValue = 72173. ;
 	double Spiny_Dogfish9_StructN(t, b, z) ;
 		Spiny_Dogfish9_StructN:bmtype = "tracer" ;
 		Spiny_Dogfish9_StructN:units = "mg N" ;
@@ -27032,7 +26177,7 @@ variables:
 		Spiny_Dogfish9_StructN:b_dens = 1000000000. ;
 		Spiny_Dogfish9_StructN:i_conc = 200000000. ;
 		Spiny_Dogfish9_StructN:f_conc = 200000000. ;
-		Spiny_Dogfish9_StructN:_FillValue = 36958.74 ;
+		Spiny_Dogfish9_StructN:_FillValue = 36086. ;
 	double Spiny_Dogfish_N(t, b, z) ;
 		Spiny_Dogfish_N:bmtype = "tracer" ;
 		Spiny_Dogfish_N:units = "mg N m-3" ;
@@ -27639,63 +26784,6 @@ variables:
 		Striped_Bass_N:partic = 0 ;
 		Striped_Bass_N:decay = 0. ;
 		Striped_Bass_N:_FillValue = 0. ;
-	double Summerflounder10_Nums(t, b, z) ;
-		Summerflounder10_Nums:bmtype = "tracer" ;
-		Summerflounder10_Nums:units = "1" ;
-		Summerflounder10_Nums:long_name = "Numbers of other piscivores cohort 10" ;
-		Summerflounder10_Nums:dtype = 0 ;
-		Summerflounder10_Nums:sumtype = 0 ;
-		Summerflounder10_Nums:inwc = 0 ;
-		Summerflounder10_Nums:insed = 0 ;
-		Summerflounder10_Nums:dissol = 0 ;
-		Summerflounder10_Nums:decay = 0. ;
-		Summerflounder10_Nums:partic = 1 ;
-		Summerflounder10_Nums:passive = 1 ;
-		Summerflounder10_Nums:svel = 0. ;
-		Summerflounder10_Nums:xvel = 0. ;
-		Summerflounder10_Nums:psize = 10. ;
-		Summerflounder10_Nums:b_dens = 1000000000. ;
-		Summerflounder10_Nums:i_conc = 200000000. ;
-		Summerflounder10_Nums:f_conc = 200000000. ;
-		Summerflounder10_Nums:_FillValue = 0. ;
-	double Summerflounder10_ResN(t, b, z) ;
-		Summerflounder10_ResN:bmtype = "tracer" ;
-		Summerflounder10_ResN:units = "mg N" ;
-		Summerflounder10_ResN:long_name = "Individ reserve N for other piscivores cohort 10" ;
-		Summerflounder10_ResN:dtype = 0 ;
-		Summerflounder10_ResN:sumtype = 0 ;
-		Summerflounder10_ResN:inwc = 0 ;
-		Summerflounder10_ResN:insed = 0 ;
-		Summerflounder10_ResN:dissol = 0 ;
-		Summerflounder10_ResN:decay = 0. ;
-		Summerflounder10_ResN:partic = 1 ;
-		Summerflounder10_ResN:passive = 0 ;
-		Summerflounder10_ResN:svel = 0. ;
-		Summerflounder10_ResN:xvel = 0. ;
-		Summerflounder10_ResN:psize = 10. ;
-		Summerflounder10_ResN:b_dens = 1000000000. ;
-		Summerflounder10_ResN:i_conc = 200000000. ;
-		Summerflounder10_ResN:f_conc = 200000000. ;
-		Summerflounder10_ResN:_FillValue = 43372.98 ;
-	double Summerflounder10_StructN(t, b, z) ;
-		Summerflounder10_StructN:bmtype = "tracer" ;
-		Summerflounder10_StructN:units = "mg N" ;
-		Summerflounder10_StructN:long_name = "Individ structural N for other piscivores cohort 10" ;
-		Summerflounder10_StructN:dtype = 0 ;
-		Summerflounder10_StructN:sumtype = 0 ;
-		Summerflounder10_StructN:inwc = 0 ;
-		Summerflounder10_StructN:insed = 0 ;
-		Summerflounder10_StructN:dissol = 0 ;
-		Summerflounder10_StructN:decay = 0. ;
-		Summerflounder10_StructN:partic = 1 ;
-		Summerflounder10_StructN:passive = 0 ;
-		Summerflounder10_StructN:svel = 0. ;
-		Summerflounder10_StructN:xvel = 0. ;
-		Summerflounder10_StructN:psize = 10. ;
-		Summerflounder10_StructN:b_dens = 1000000000. ;
-		Summerflounder10_StructN:i_conc = 200000000. ;
-		Summerflounder10_StructN:f_conc = 200000000. ;
-		Summerflounder10_StructN:_FillValue = 21686.49 ;
 	double Summerflounder1_Nums(t, b, z) ;
 		Summerflounder1_Nums:bmtype = "tracer" ;
 		Summerflounder1_Nums:units = "1" ;
@@ -27790,7 +26878,7 @@ variables:
 		Summerflounder2_ResN:b_dens = 1000000000. ;
 		Summerflounder2_ResN:i_conc = 200000000. ;
 		Summerflounder2_ResN:f_conc = 200000000. ;
-		Summerflounder2_ResN:_FillValue = 4726.6 ;
+		Summerflounder2_ResN:_FillValue = 5557.1 ;
 	double Summerflounder2_StructN(t, b, z) ;
 		Summerflounder2_StructN:bmtype = "tracer" ;
 		Summerflounder2_StructN:units = "mg N" ;
@@ -27809,7 +26897,7 @@ variables:
 		Summerflounder2_StructN:b_dens = 1000000000. ;
 		Summerflounder2_StructN:i_conc = 200000000. ;
 		Summerflounder2_StructN:f_conc = 200000000. ;
-		Summerflounder2_StructN:_FillValue = 2363.3 ;
+		Summerflounder2_StructN:_FillValue = 2778.6 ;
 	double Summerflounder3_Nums(t, b, z) ;
 		Summerflounder3_Nums:bmtype = "tracer" ;
 		Summerflounder3_Nums:units = "1" ;
@@ -27847,7 +26935,7 @@ variables:
 		Summerflounder3_ResN:b_dens = 1000000000. ;
 		Summerflounder3_ResN:i_conc = 200000000. ;
 		Summerflounder3_ResN:f_conc = 200000000. ;
-		Summerflounder3_ResN:_FillValue = 12784.82 ;
+		Summerflounder3_ResN:_FillValue = 14901.4 ;
 	double Summerflounder3_StructN(t, b, z) ;
 		Summerflounder3_StructN:bmtype = "tracer" ;
 		Summerflounder3_StructN:units = "mg N" ;
@@ -27866,7 +26954,7 @@ variables:
 		Summerflounder3_StructN:b_dens = 1000000000. ;
 		Summerflounder3_StructN:i_conc = 200000000. ;
 		Summerflounder3_StructN:f_conc = 200000000. ;
-		Summerflounder3_StructN:_FillValue = 6392.41 ;
+		Summerflounder3_StructN:_FillValue = 7450.7 ;
 	double Summerflounder4_Nums(t, b, z) ;
 		Summerflounder4_Nums:bmtype = "tracer" ;
 		Summerflounder4_Nums:units = "1" ;
@@ -27904,7 +26992,7 @@ variables:
 		Summerflounder4_ResN:b_dens = 1000000000. ;
 		Summerflounder4_ResN:i_conc = 200000000. ;
 		Summerflounder4_ResN:f_conc = 200000000. ;
-		Summerflounder4_ResN:_FillValue = 21239.82 ;
+		Summerflounder4_ResN:_FillValue = 24090.7 ;
 	double Summerflounder4_StructN(t, b, z) ;
 		Summerflounder4_StructN:bmtype = "tracer" ;
 		Summerflounder4_StructN:units = "mg N" ;
@@ -27923,7 +27011,7 @@ variables:
 		Summerflounder4_StructN:b_dens = 1000000000. ;
 		Summerflounder4_StructN:i_conc = 200000000. ;
 		Summerflounder4_StructN:f_conc = 200000000. ;
-		Summerflounder4_StructN:_FillValue = 10619.91 ;
+		Summerflounder4_StructN:_FillValue = 12045.4 ;
 	double Summerflounder5_Nums(t, b, z) ;
 		Summerflounder5_Nums:bmtype = "tracer" ;
 		Summerflounder5_Nums:units = "1" ;
@@ -27961,7 +27049,7 @@ variables:
 		Summerflounder5_ResN:b_dens = 1000000000. ;
 		Summerflounder5_ResN:i_conc = 200000000. ;
 		Summerflounder5_ResN:f_conc = 200000000. ;
-		Summerflounder5_ResN:_FillValue = 28384.48 ;
+		Summerflounder5_ResN:_FillValue = 31300. ;
 	double Summerflounder5_StructN(t, b, z) ;
 		Summerflounder5_StructN:bmtype = "tracer" ;
 		Summerflounder5_StructN:units = "mg N" ;
@@ -27980,7 +27068,7 @@ variables:
 		Summerflounder5_StructN:b_dens = 1000000000. ;
 		Summerflounder5_StructN:i_conc = 200000000. ;
 		Summerflounder5_StructN:f_conc = 200000000. ;
-		Summerflounder5_StructN:_FillValue = 14192.24 ;
+		Summerflounder5_StructN:_FillValue = 15650. ;
 	double Summerflounder6_Nums(t, b, z) ;
 		Summerflounder6_Nums:bmtype = "tracer" ;
 		Summerflounder6_Nums:units = "1" ;
@@ -28018,7 +27106,7 @@ variables:
 		Summerflounder6_ResN:b_dens = 1000000000. ;
 		Summerflounder6_ResN:i_conc = 200000000. ;
 		Summerflounder6_ResN:f_conc = 200000000. ;
-		Summerflounder6_ResN:_FillValue = 33807.1 ;
+		Summerflounder6_ResN:_FillValue = 36386.2 ;
 	double Summerflounder6_StructN(t, b, z) ;
 		Summerflounder6_StructN:bmtype = "tracer" ;
 		Summerflounder6_StructN:units = "mg N" ;
@@ -28037,7 +27125,7 @@ variables:
 		Summerflounder6_StructN:b_dens = 1000000000. ;
 		Summerflounder6_StructN:i_conc = 200000000. ;
 		Summerflounder6_StructN:f_conc = 200000000. ;
-		Summerflounder6_StructN:_FillValue = 16903.55 ;
+		Summerflounder6_StructN:_FillValue = 18193.1 ;
 	double Summerflounder7_Nums(t, b, z) ;
 		Summerflounder7_Nums:bmtype = "tracer" ;
 		Summerflounder7_Nums:units = "1" ;
@@ -28075,7 +27163,7 @@ variables:
 		Summerflounder7_ResN:b_dens = 1000000000. ;
 		Summerflounder7_ResN:i_conc = 200000000. ;
 		Summerflounder7_ResN:f_conc = 200000000. ;
-		Summerflounder7_ResN:_FillValue = 37684.32 ;
+		Summerflounder7_ResN:_FillValue = 39780.7 ;
 	double Summerflounder7_StructN(t, b, z) ;
 		Summerflounder7_StructN:bmtype = "tracer" ;
 		Summerflounder7_StructN:units = "mg N" ;
@@ -28094,7 +27182,7 @@ variables:
 		Summerflounder7_StructN:b_dens = 1000000000. ;
 		Summerflounder7_StructN:i_conc = 200000000. ;
 		Summerflounder7_StructN:f_conc = 200000000. ;
-		Summerflounder7_StructN:_FillValue = 18842.16 ;
+		Summerflounder7_StructN:_FillValue = 19890.3 ;
 	double Summerflounder8_Nums(t, b, z) ;
 		Summerflounder8_Nums:bmtype = "tracer" ;
 		Summerflounder8_Nums:units = "1" ;
@@ -28132,7 +27220,7 @@ variables:
 		Summerflounder8_ResN:b_dens = 1000000000. ;
 		Summerflounder8_ResN:i_conc = 200000000. ;
 		Summerflounder8_ResN:f_conc = 200000000. ;
-		Summerflounder8_ResN:_FillValue = 40360.54 ;
+		Summerflounder8_ResN:_FillValue = 41977.1 ;
 	double Summerflounder8_StructN(t, b, z) ;
 		Summerflounder8_StructN:bmtype = "tracer" ;
 		Summerflounder8_StructN:units = "mg N" ;
@@ -28151,7 +27239,7 @@ variables:
 		Summerflounder8_StructN:b_dens = 1000000000. ;
 		Summerflounder8_StructN:i_conc = 200000000. ;
 		Summerflounder8_StructN:f_conc = 200000000. ;
-		Summerflounder8_StructN:_FillValue = 20180.27 ;
+		Summerflounder8_StructN:_FillValue = 20988.6 ;
 	double Summerflounder9_Nums(t, b, z) ;
 		Summerflounder9_Nums:bmtype = "tracer" ;
 		Summerflounder9_Nums:units = "1" ;
@@ -28189,7 +27277,7 @@ variables:
 		Summerflounder9_ResN:b_dens = 1000000000. ;
 		Summerflounder9_ResN:i_conc = 200000000. ;
 		Summerflounder9_ResN:f_conc = 200000000. ;
-		Summerflounder9_ResN:_FillValue = 42168.28 ;
+		Summerflounder9_ResN:_FillValue = 43373. ;
 	double Summerflounder9_StructN(t, b, z) ;
 		Summerflounder9_StructN:bmtype = "tracer" ;
 		Summerflounder9_StructN:units = "mg N" ;
@@ -28208,7 +27296,7 @@ variables:
 		Summerflounder9_StructN:b_dens = 1000000000. ;
 		Summerflounder9_StructN:i_conc = 200000000. ;
 		Summerflounder9_StructN:f_conc = 200000000. ;
-		Summerflounder9_StructN:_FillValue = 21084.14 ;
+		Summerflounder9_StructN:_FillValue = 21686.5 ;
 	double Summerflounder_N(t, b, z) ;
 		Summerflounder_N:bmtype = "tracer" ;
 		Summerflounder_N:units = "mg N m-3" ;
@@ -28272,7 +27360,7 @@ variables:
 		Tautog10_ResN:b_dens = 1000000000. ;
 		Tautog10_ResN:i_conc = 200000000. ;
 		Tautog10_ResN:f_conc = 200000000. ;
-		Tautog10_ResN:_FillValue = 17393. ;
+		Tautog10_ResN:_FillValue = 15643.9 ;
 	double Tautog10_StructN(t, b, z) ;
 		Tautog10_StructN:bmtype = "tracer" ;
 		Tautog10_StructN:units = "mg N" ;
@@ -28291,7 +27379,64 @@ variables:
 		Tautog10_StructN:b_dens = 1000000000. ;
 		Tautog10_StructN:i_conc = 200000000. ;
 		Tautog10_StructN:f_conc = 200000000. ;
-		Tautog10_StructN:_FillValue = 8696.5 ;
+		Tautog10_StructN:_FillValue = 7821.9 ;
+	double Tautog11_Nums(t, b, z) ;
+		Tautog11_Nums:bmtype = "tracer" ;
+		Tautog11_Nums:units = "1" ;
+		Tautog11_Nums:long_name = "Numbers of other deep demersal cohort 10" ;
+		Tautog11_Nums:dtype = 0 ;
+		Tautog11_Nums:sumtype = 0 ;
+		Tautog11_Nums:inwc = 0 ;
+		Tautog11_Nums:insed = 0 ;
+		Tautog11_Nums:dissol = 0 ;
+		Tautog11_Nums:decay = 0. ;
+		Tautog11_Nums:partic = 1 ;
+		Tautog11_Nums:passive = 1 ;
+		Tautog11_Nums:svel = 0. ;
+		Tautog11_Nums:xvel = 0. ;
+		Tautog11_Nums:psize = 10. ;
+		Tautog11_Nums:b_dens = 1000000000. ;
+		Tautog11_Nums:i_conc = 200000000. ;
+		Tautog11_Nums:f_conc = 200000000. ;
+		Tautog11_Nums:_FillValue = 0. ;
+	double Tautog11_ResN(t, b, z) ;
+		Tautog11_ResN:bmtype = "tracer" ;
+		Tautog11_ResN:units = "mg N" ;
+		Tautog11_ResN:long_name = "Individ reserve N for other deep demersal fish cohort 10" ;
+		Tautog11_ResN:dtype = 0 ;
+		Tautog11_ResN:sumtype = 0 ;
+		Tautog11_ResN:inwc = 0 ;
+		Tautog11_ResN:insed = 0 ;
+		Tautog11_ResN:dissol = 0 ;
+		Tautog11_ResN:decay = 0. ;
+		Tautog11_ResN:partic = 1 ;
+		Tautog11_ResN:passive = 0 ;
+		Tautog11_ResN:svel = 0. ;
+		Tautog11_ResN:xvel = 0. ;
+		Tautog11_ResN:psize = 10. ;
+		Tautog11_ResN:b_dens = 1000000000. ;
+		Tautog11_ResN:i_conc = 200000000. ;
+		Tautog11_ResN:f_conc = 200000000. ;
+		Tautog11_ResN:_FillValue = 17393. ;
+	double Tautog11_StructN(t, b, z) ;
+		Tautog11_StructN:bmtype = "tracer" ;
+		Tautog11_StructN:units = "mg N" ;
+		Tautog11_StructN:long_name = "Individ structural N for other deep demersal fish cohort 10" ;
+		Tautog11_StructN:dtype = 0 ;
+		Tautog11_StructN:sumtype = 0 ;
+		Tautog11_StructN:inwc = 0 ;
+		Tautog11_StructN:insed = 0 ;
+		Tautog11_StructN:dissol = 0 ;
+		Tautog11_StructN:decay = 0. ;
+		Tautog11_StructN:partic = 1 ;
+		Tautog11_StructN:passive = 0 ;
+		Tautog11_StructN:svel = 0. ;
+		Tautog11_StructN:xvel = 0. ;
+		Tautog11_StructN:psize = 10. ;
+		Tautog11_StructN:b_dens = 1000000000. ;
+		Tautog11_StructN:i_conc = 200000000. ;
+		Tautog11_StructN:f_conc = 200000000. ;
+		Tautog11_StructN:_FillValue = 8696.5 ;
 	double Tautog1_Nums(t, b, z) ;
 		Tautog1_Nums:bmtype = "tracer" ;
 		Tautog1_Nums:units = "1" ;
@@ -28386,7 +27531,7 @@ variables:
 		Tautog2_ResN:b_dens = 1000000000. ;
 		Tautog2_ResN:i_conc = 200000000. ;
 		Tautog2_ResN:f_conc = 200000000. ;
-		Tautog2_ResN:_FillValue = 492.34 ;
+		Tautog2_ResN:_FillValue = 414.7 ;
 	double Tautog2_StructN(t, b, z) ;
 		Tautog2_StructN:bmtype = "tracer" ;
 		Tautog2_StructN:units = "mg N" ;
@@ -28405,7 +27550,7 @@ variables:
 		Tautog2_StructN:b_dens = 1000000000. ;
 		Tautog2_StructN:i_conc = 200000000. ;
 		Tautog2_StructN:f_conc = 200000000. ;
-		Tautog2_StructN:_FillValue = 246.17 ;
+		Tautog2_StructN:_FillValue = 207.3 ;
 	double Tautog3_Nums(t, b, z) ;
 		Tautog3_Nums:bmtype = "tracer" ;
 		Tautog3_Nums:units = "1" ;
@@ -28443,7 +27588,7 @@ variables:
 		Tautog3_ResN:b_dens = 1000000000. ;
 		Tautog3_ResN:i_conc = 200000000. ;
 		Tautog3_ResN:f_conc = 200000000. ;
-		Tautog3_ResN:_FillValue = 1722.62 ;
+		Tautog3_ResN:_FillValue = 1422.5 ;
 	double Tautog3_StructN(t, b, z) ;
 		Tautog3_StructN:bmtype = "tracer" ;
 		Tautog3_StructN:units = "mg N" ;
@@ -28462,7 +27607,7 @@ variables:
 		Tautog3_StructN:b_dens = 1000000000. ;
 		Tautog3_StructN:i_conc = 200000000. ;
 		Tautog3_StructN:f_conc = 200000000. ;
-		Tautog3_StructN:_FillValue = 861.31 ;
+		Tautog3_StructN:_FillValue = 711.2 ;
 	double Tautog4_Nums(t, b, z) ;
 		Tautog4_Nums:bmtype = "tracer" ;
 		Tautog4_Nums:units = "1" ;
@@ -28500,7 +27645,7 @@ variables:
 		Tautog4_ResN:b_dens = 1000000000. ;
 		Tautog4_ResN:i_conc = 200000000. ;
 		Tautog4_ResN:f_conc = 200000000. ;
-		Tautog4_ResN:_FillValue = 3607.74 ;
+		Tautog4_ResN:_FillValue = 2990.9 ;
 	double Tautog4_StructN(t, b, z) ;
 		Tautog4_StructN:bmtype = "tracer" ;
 		Tautog4_StructN:units = "mg N" ;
@@ -28519,7 +27664,7 @@ variables:
 		Tautog4_StructN:b_dens = 1000000000. ;
 		Tautog4_StructN:i_conc = 200000000. ;
 		Tautog4_StructN:f_conc = 200000000. ;
-		Tautog4_StructN:_FillValue = 1803.87 ;
+		Tautog4_StructN:_FillValue = 1495.5 ;
 	double Tautog5_Nums(t, b, z) ;
 		Tautog5_Nums:bmtype = "tracer" ;
 		Tautog5_Nums:units = "1" ;
@@ -28557,7 +27702,7 @@ variables:
 		Tautog5_ResN:b_dens = 1000000000. ;
 		Tautog5_ResN:i_conc = 200000000. ;
 		Tautog5_ResN:f_conc = 200000000. ;
-		Tautog5_ResN:_FillValue = 5909.7 ;
+		Tautog5_ResN:_FillValue = 4955.6 ;
 	double Tautog5_StructN(t, b, z) ;
 		Tautog5_StructN:bmtype = "tracer" ;
 		Tautog5_StructN:units = "mg N" ;
@@ -28576,7 +27721,7 @@ variables:
 		Tautog5_StructN:b_dens = 1000000000. ;
 		Tautog5_StructN:i_conc = 200000000. ;
 		Tautog5_StructN:f_conc = 200000000. ;
-		Tautog5_StructN:_FillValue = 2954.85 ;
+		Tautog5_StructN:_FillValue = 2477.8 ;
 	double Tautog6_Nums(t, b, z) ;
 		Tautog6_Nums:bmtype = "tracer" ;
 		Tautog6_Nums:units = "1" ;
@@ -28614,7 +27759,7 @@ variables:
 		Tautog6_ResN:b_dens = 1000000000. ;
 		Tautog6_ResN:i_conc = 200000000. ;
 		Tautog6_ResN:f_conc = 200000000. ;
-		Tautog6_ResN:_FillValue = 8396.26 ;
+		Tautog6_ResN:_FillValue = 7141.2 ;
 	double Tautog6_StructN(t, b, z) ;
 		Tautog6_StructN:bmtype = "tracer" ;
 		Tautog6_StructN:units = "mg N" ;
@@ -28633,7 +27778,7 @@ variables:
 		Tautog6_StructN:b_dens = 1000000000. ;
 		Tautog6_StructN:i_conc = 200000000. ;
 		Tautog6_StructN:f_conc = 200000000. ;
-		Tautog6_StructN:_FillValue = 4198.13 ;
+		Tautog6_StructN:_FillValue = 3570.6 ;
 	double Tautog7_Nums(t, b, z) ;
 		Tautog7_Nums:bmtype = "tracer" ;
 		Tautog7_Nums:units = "1" ;
@@ -28671,7 +27816,7 @@ variables:
 		Tautog7_ResN:b_dens = 1000000000. ;
 		Tautog7_ResN:i_conc = 200000000. ;
 		Tautog7_ResN:f_conc = 200000000. ;
-		Tautog7_ResN:_FillValue = 10886.76 ;
+		Tautog7_ResN:_FillValue = 9397.8 ;
 	double Tautog7_StructN(t, b, z) ;
 		Tautog7_StructN:bmtype = "tracer" ;
 		Tautog7_StructN:units = "mg N" ;
@@ -28690,7 +27835,7 @@ variables:
 		Tautog7_StructN:b_dens = 1000000000. ;
 		Tautog7_StructN:i_conc = 200000000. ;
 		Tautog7_StructN:f_conc = 200000000. ;
-		Tautog7_StructN:_FillValue = 5443.38 ;
+		Tautog7_StructN:_FillValue = 4698.9 ;
 	double Tautog8_Nums(t, b, z) ;
 		Tautog8_Nums:bmtype = "tracer" ;
 		Tautog8_Nums:units = "1" ;
@@ -28728,7 +27873,7 @@ variables:
 		Tautog8_ResN:b_dens = 1000000000. ;
 		Tautog8_ResN:i_conc = 200000000. ;
 		Tautog8_ResN:f_conc = 200000000. ;
-		Tautog8_ResN:_FillValue = 13258.72 ;
+		Tautog8_ResN:_FillValue = 11613.1 ;
 	double Tautog8_StructN(t, b, z) ;
 		Tautog8_StructN:bmtype = "tracer" ;
 		Tautog8_StructN:units = "mg N" ;
@@ -28747,7 +27892,7 @@ variables:
 		Tautog8_StructN:b_dens = 1000000000. ;
 		Tautog8_StructN:i_conc = 200000000. ;
 		Tautog8_StructN:f_conc = 200000000. ;
-		Tautog8_StructN:_FillValue = 6629.36 ;
+		Tautog8_StructN:_FillValue = 5806.5 ;
 	double Tautog9_Nums(t, b, z) ;
 		Tautog9_Nums:bmtype = "tracer" ;
 		Tautog9_Nums:units = "1" ;
@@ -28785,7 +27930,7 @@ variables:
 		Tautog9_ResN:b_dens = 1000000000. ;
 		Tautog9_ResN:i_conc = 200000000. ;
 		Tautog9_ResN:f_conc = 200000000. ;
-		Tautog9_ResN:_FillValue = 15439.3 ;
+		Tautog9_ResN:_FillValue = 13710.7 ;
 	double Tautog9_StructN(t, b, z) ;
 		Tautog9_StructN:bmtype = "tracer" ;
 		Tautog9_StructN:units = "mg N" ;
@@ -28804,7 +27949,7 @@ variables:
 		Tautog9_StructN:b_dens = 1000000000. ;
 		Tautog9_StructN:i_conc = 200000000. ;
 		Tautog9_StructN:f_conc = 200000000. ;
-		Tautog9_StructN:_FillValue = 7719.65 ;
+		Tautog9_StructN:_FillValue = 6855.4 ;
 	double Tautog_N(t, b, z) ;
 		Tautog_N:bmtype = "tracer" ;
 		Tautog_N:units = "mg N m-3" ;
@@ -28829,63 +27974,6 @@ variables:
 		Temp:partic = 0 ;
 		Temp:decay = 0. ;
 		Temp:_FillValue = 15. ;
-	double Tilefish10_Nums(t, b, z) ;
-		Tilefish10_Nums:bmtype = "tracer" ;
-		Tilefish10_Nums:units = "1" ;
-		Tilefish10_Nums:long_name = "Numbers of other deep demersal cohort 10" ;
-		Tilefish10_Nums:dtype = 0 ;
-		Tilefish10_Nums:sumtype = 0 ;
-		Tilefish10_Nums:inwc = 0 ;
-		Tilefish10_Nums:insed = 0 ;
-		Tilefish10_Nums:dissol = 0 ;
-		Tilefish10_Nums:decay = 0. ;
-		Tilefish10_Nums:partic = 1 ;
-		Tilefish10_Nums:passive = 1 ;
-		Tilefish10_Nums:svel = 0. ;
-		Tilefish10_Nums:xvel = 0. ;
-		Tilefish10_Nums:psize = 10. ;
-		Tilefish10_Nums:b_dens = 1000000000. ;
-		Tilefish10_Nums:i_conc = 200000000. ;
-		Tilefish10_Nums:f_conc = 200000000. ;
-		Tilefish10_Nums:_FillValue = 0. ;
-	double Tilefish10_ResN(t, b, z) ;
-		Tilefish10_ResN:bmtype = "tracer" ;
-		Tilefish10_ResN:units = "mg N" ;
-		Tilefish10_ResN:long_name = "Individ reserve N for other deep demersal fish cohort 10" ;
-		Tilefish10_ResN:dtype = 0 ;
-		Tilefish10_ResN:sumtype = 0 ;
-		Tilefish10_ResN:inwc = 0 ;
-		Tilefish10_ResN:insed = 0 ;
-		Tilefish10_ResN:dissol = 0 ;
-		Tilefish10_ResN:decay = 0. ;
-		Tilefish10_ResN:partic = 1 ;
-		Tilefish10_ResN:passive = 0 ;
-		Tilefish10_ResN:svel = 0. ;
-		Tilefish10_ResN:xvel = 0. ;
-		Tilefish10_ResN:psize = 10. ;
-		Tilefish10_ResN:b_dens = 1000000000. ;
-		Tilefish10_ResN:i_conc = 200000000. ;
-		Tilefish10_ResN:f_conc = 200000000. ;
-		Tilefish10_ResN:_FillValue = 75415.24 ;
-	double Tilefish10_StructN(t, b, z) ;
-		Tilefish10_StructN:bmtype = "tracer" ;
-		Tilefish10_StructN:units = "mg N" ;
-		Tilefish10_StructN:long_name = "Individ structural N for other deep demersal fish cohort 10" ;
-		Tilefish10_StructN:dtype = 0 ;
-		Tilefish10_StructN:sumtype = 0 ;
-		Tilefish10_StructN:inwc = 0 ;
-		Tilefish10_StructN:insed = 0 ;
-		Tilefish10_StructN:dissol = 0 ;
-		Tilefish10_StructN:decay = 0. ;
-		Tilefish10_StructN:partic = 1 ;
-		Tilefish10_StructN:passive = 0 ;
-		Tilefish10_StructN:svel = 0. ;
-		Tilefish10_StructN:xvel = 0. ;
-		Tilefish10_StructN:psize = 10. ;
-		Tilefish10_StructN:b_dens = 1000000000. ;
-		Tilefish10_StructN:i_conc = 200000000. ;
-		Tilefish10_StructN:f_conc = 200000000. ;
-		Tilefish10_StructN:_FillValue = 37707.62 ;
 	double Tilefish1_Nums(t, b, z) ;
 		Tilefish1_Nums:bmtype = "tracer" ;
 		Tilefish1_Nums:units = "1" ;
@@ -28980,7 +28068,7 @@ variables:
 		Tilefish2_ResN:b_dens = 1000000000. ;
 		Tilefish2_ResN:i_conc = 200000000. ;
 		Tilefish2_ResN:f_conc = 200000000. ;
-		Tilefish2_ResN:_FillValue = 2476.62 ;
+		Tilefish2_ResN:_FillValue = 3985.8 ;
 	double Tilefish2_StructN(t, b, z) ;
 		Tilefish2_StructN:bmtype = "tracer" ;
 		Tilefish2_StructN:units = "mg N" ;
@@ -28999,7 +28087,7 @@ variables:
 		Tilefish2_StructN:b_dens = 1000000000. ;
 		Tilefish2_StructN:i_conc = 200000000. ;
 		Tilefish2_StructN:f_conc = 200000000. ;
-		Tilefish2_StructN:_FillValue = 1238.31 ;
+		Tilefish2_StructN:_FillValue = 1992.9 ;
 	double Tilefish3_Nums(t, b, z) ;
 		Tilefish3_Nums:bmtype = "tracer" ;
 		Tilefish3_Nums:units = "1" ;
@@ -29037,7 +28125,7 @@ variables:
 		Tilefish3_ResN:b_dens = 1000000000. ;
 		Tilefish3_ResN:i_conc = 200000000. ;
 		Tilefish3_ResN:f_conc = 200000000. ;
-		Tilefish3_ResN:_FillValue = 9179.1 ;
+		Tilefish3_ResN:_FillValue = 14558.9 ;
 	double Tilefish3_StructN(t, b, z) ;
 		Tilefish3_StructN:bmtype = "tracer" ;
 		Tilefish3_StructN:units = "mg N" ;
@@ -29056,7 +28144,7 @@ variables:
 		Tilefish3_StructN:b_dens = 1000000000. ;
 		Tilefish3_StructN:i_conc = 200000000. ;
 		Tilefish3_StructN:f_conc = 200000000. ;
-		Tilefish3_StructN:_FillValue = 4589.55 ;
+		Tilefish3_StructN:_FillValue = 7279.5 ;
 	double Tilefish4_Nums(t, b, z) ;
 		Tilefish4_Nums:bmtype = "tracer" ;
 		Tilefish4_Nums:units = "1" ;
@@ -29094,7 +28182,7 @@ variables:
 		Tilefish4_ResN:b_dens = 1000000000. ;
 		Tilefish4_ResN:i_conc = 200000000. ;
 		Tilefish4_ResN:f_conc = 200000000. ;
-		Tilefish4_ResN:_FillValue = 19057.86 ;
+		Tilefish4_ResN:_FillValue = 28719.5 ;
 	double Tilefish4_StructN(t, b, z) ;
 		Tilefish4_StructN:bmtype = "tracer" ;
 		Tilefish4_StructN:units = "mg N" ;
@@ -29113,7 +28201,7 @@ variables:
 		Tilefish4_StructN:b_dens = 1000000000. ;
 		Tilefish4_StructN:i_conc = 200000000. ;
 		Tilefish4_StructN:f_conc = 200000000. ;
-		Tilefish4_StructN:_FillValue = 9528.93 ;
+		Tilefish4_StructN:_FillValue = 14359.7 ;
 	double Tilefish5_Nums(t, b, z) ;
 		Tilefish5_Nums:bmtype = "tracer" ;
 		Tilefish5_Nums:units = "1" ;
@@ -29151,7 +28239,7 @@ variables:
 		Tilefish5_ResN:b_dens = 1000000000. ;
 		Tilefish5_ResN:i_conc = 200000000. ;
 		Tilefish5_ResN:f_conc = 200000000. ;
-		Tilefish5_ResN:_FillValue = 30344.38 ;
+		Tilefish5_ResN:_FillValue = 43181.6 ;
 	double Tilefish5_StructN(t, b, z) ;
 		Tilefish5_StructN:bmtype = "tracer" ;
 		Tilefish5_StructN:units = "mg N" ;
@@ -29170,7 +28258,7 @@ variables:
 		Tilefish5_StructN:b_dens = 1000000000. ;
 		Tilefish5_StructN:i_conc = 200000000. ;
 		Tilefish5_StructN:f_conc = 200000000. ;
-		Tilefish5_StructN:_FillValue = 15172.19 ;
+		Tilefish5_StructN:_FillValue = 21590.8 ;
 	double Tilefish6_Nums(t, b, z) ;
 		Tilefish6_Nums:bmtype = "tracer" ;
 		Tilefish6_Nums:units = "1" ;
@@ -29208,7 +28296,7 @@ variables:
 		Tilefish6_ResN:b_dens = 1000000000. ;
 		Tilefish6_ResN:i_conc = 200000000. ;
 		Tilefish6_ResN:f_conc = 200000000. ;
-		Tilefish6_ResN:_FillValue = 41634.98 ;
+		Tilefish6_ResN:_FillValue = 56155.7 ;
 	double Tilefish6_StructN(t, b, z) ;
 		Tilefish6_StructN:bmtype = "tracer" ;
 		Tilefish6_StructN:units = "mg N" ;
@@ -29227,7 +28315,7 @@ variables:
 		Tilefish6_StructN:b_dens = 1000000000. ;
 		Tilefish6_StructN:i_conc = 200000000. ;
 		Tilefish6_StructN:f_conc = 200000000. ;
-		Tilefish6_StructN:_FillValue = 20817.49 ;
+		Tilefish6_StructN:_FillValue = 28077.8 ;
 	double Tilefish7_Nums(t, b, z) ;
 		Tilefish7_Nums:bmtype = "tracer" ;
 		Tilefish7_Nums:units = "1" ;
@@ -29265,7 +28353,7 @@ variables:
 		Tilefish7_ResN:b_dens = 1000000000. ;
 		Tilefish7_ResN:i_conc = 200000000. ;
 		Tilefish7_ResN:f_conc = 200000000. ;
-		Tilefish7_ResN:_FillValue = 52068.1 ;
+		Tilefish7_ResN:_FillValue = 66911.7 ;
 	double Tilefish7_StructN(t, b, z) ;
 		Tilefish7_StructN:bmtype = "tracer" ;
 		Tilefish7_StructN:units = "mg N" ;
@@ -29284,7 +28372,7 @@ variables:
 		Tilefish7_StructN:b_dens = 1000000000. ;
 		Tilefish7_StructN:i_conc = 200000000. ;
 		Tilefish7_StructN:f_conc = 200000000. ;
-		Tilefish7_StructN:_FillValue = 26034.05 ;
+		Tilefish7_StructN:_FillValue = 33455.8 ;
 	double Tilefish8_Nums(t, b, z) ;
 		Tilefish8_Nums:bmtype = "tracer" ;
 		Tilefish8_Nums:units = "1" ;
@@ -29322,7 +28410,7 @@ variables:
 		Tilefish8_ResN:b_dens = 1000000000. ;
 		Tilefish8_ResN:i_conc = 200000000. ;
 		Tilefish8_ResN:f_conc = 200000000. ;
-		Tilefish8_ResN:_FillValue = 61226.98 ;
+		Tilefish8_ResN:_FillValue = 75415.2 ;
 	double Tilefish8_StructN(t, b, z) ;
 		Tilefish8_StructN:bmtype = "tracer" ;
 		Tilefish8_StructN:units = "mg N" ;
@@ -29341,64 +28429,7 @@ variables:
 		Tilefish8_StructN:b_dens = 1000000000. ;
 		Tilefish8_StructN:i_conc = 200000000. ;
 		Tilefish8_StructN:f_conc = 200000000. ;
-		Tilefish8_StructN:_FillValue = 30613.49 ;
-	double Tilefish9_Nums(t, b, z) ;
-		Tilefish9_Nums:bmtype = "tracer" ;
-		Tilefish9_Nums:units = "1" ;
-		Tilefish9_Nums:long_name = "Numbers of other deep demersal cohort 9" ;
-		Tilefish9_Nums:dtype = 0 ;
-		Tilefish9_Nums:sumtype = 0 ;
-		Tilefish9_Nums:inwc = 0 ;
-		Tilefish9_Nums:insed = 0 ;
-		Tilefish9_Nums:dissol = 0 ;
-		Tilefish9_Nums:decay = 0. ;
-		Tilefish9_Nums:partic = 1 ;
-		Tilefish9_Nums:passive = 1 ;
-		Tilefish9_Nums:svel = 0. ;
-		Tilefish9_Nums:xvel = 0. ;
-		Tilefish9_Nums:psize = 10. ;
-		Tilefish9_Nums:b_dens = 1000000000. ;
-		Tilefish9_Nums:i_conc = 200000000. ;
-		Tilefish9_Nums:f_conc = 200000000. ;
-		Tilefish9_Nums:_FillValue = 0. ;
-	double Tilefish9_ResN(t, b, z) ;
-		Tilefish9_ResN:bmtype = "tracer" ;
-		Tilefish9_ResN:units = "mg N" ;
-		Tilefish9_ResN:long_name = "Individ reserve N for other deep demersal fish cohort 9" ;
-		Tilefish9_ResN:dtype = 0 ;
-		Tilefish9_ResN:sumtype = 0 ;
-		Tilefish9_ResN:inwc = 0 ;
-		Tilefish9_ResN:insed = 0 ;
-		Tilefish9_ResN:dissol = 0 ;
-		Tilefish9_ResN:decay = 0. ;
-		Tilefish9_ResN:partic = 1 ;
-		Tilefish9_ResN:passive = 0 ;
-		Tilefish9_ResN:svel = 0. ;
-		Tilefish9_ResN:xvel = 0. ;
-		Tilefish9_ResN:psize = 10. ;
-		Tilefish9_ResN:b_dens = 1000000000. ;
-		Tilefish9_ResN:i_conc = 200000000. ;
-		Tilefish9_ResN:f_conc = 200000000. ;
-		Tilefish9_ResN:_FillValue = 68991.78 ;
-	double Tilefish9_StructN(t, b, z) ;
-		Tilefish9_StructN:bmtype = "tracer" ;
-		Tilefish9_StructN:units = "mg N" ;
-		Tilefish9_StructN:long_name = "Individ structural N for other deep demersal fish cohort 9" ;
-		Tilefish9_StructN:dtype = 0 ;
-		Tilefish9_StructN:sumtype = 0 ;
-		Tilefish9_StructN:inwc = 0 ;
-		Tilefish9_StructN:insed = 0 ;
-		Tilefish9_StructN:dissol = 0 ;
-		Tilefish9_StructN:decay = 0. ;
-		Tilefish9_StructN:partic = 1 ;
-		Tilefish9_StructN:passive = 0 ;
-		Tilefish9_StructN:svel = 0. ;
-		Tilefish9_StructN:xvel = 0. ;
-		Tilefish9_StructN:psize = 10. ;
-		Tilefish9_StructN:b_dens = 1000000000. ;
-		Tilefish9_StructN:i_conc = 200000000. ;
-		Tilefish9_StructN:f_conc = 200000000. ;
-		Tilefish9_StructN:_FillValue = 34495.89 ;
+		Tilefish8_StructN:_FillValue = 37707.6 ;
 	double Tilefish_N(t, b, z) ;
 		Tilefish_N:bmtype = "tracer" ;
 		Tilefish_N:units = "mg N m-3" ;
@@ -31194,7 +30225,7 @@ variables:
 		White_Hake10_ResN:b_dens = 1000000000. ;
 		White_Hake10_ResN:i_conc = 200000000. ;
 		White_Hake10_ResN:f_conc = 200000000. ;
-		White_Hake10_ResN:_FillValue = 29343.1 ;
+		White_Hake10_ResN:_FillValue = 21375.6 ;
 	double White_Hake10_StructN(t, b, z) ;
 		White_Hake10_StructN:bmtype = "tracer" ;
 		White_Hake10_StructN:units = "mg N" ;
@@ -31213,7 +30244,121 @@ variables:
 		White_Hake10_StructN:b_dens = 1000000000. ;
 		White_Hake10_StructN:i_conc = 200000000. ;
 		White_Hake10_StructN:f_conc = 200000000. ;
-		White_Hake10_StructN:_FillValue = 14671.55 ;
+		White_Hake10_StructN:_FillValue = 10687.8 ;
+	double White_Hake11_Nums(t, b, z) ;
+		White_Hake11_Nums:bmtype = "tracer" ;
+		White_Hake11_Nums:units = "1" ;
+		White_Hake11_Nums:long_name = "Numbers of deep piscivores cohort 10" ;
+		White_Hake11_Nums:dtype = 0 ;
+		White_Hake11_Nums:sumtype = 0 ;
+		White_Hake11_Nums:inwc = 0 ;
+		White_Hake11_Nums:insed = 0 ;
+		White_Hake11_Nums:dissol = 0 ;
+		White_Hake11_Nums:decay = 0. ;
+		White_Hake11_Nums:partic = 1 ;
+		White_Hake11_Nums:passive = 1 ;
+		White_Hake11_Nums:svel = 0. ;
+		White_Hake11_Nums:xvel = 0. ;
+		White_Hake11_Nums:psize = 10. ;
+		White_Hake11_Nums:b_dens = 1000000000. ;
+		White_Hake11_Nums:i_conc = 200000000. ;
+		White_Hake11_Nums:f_conc = 200000000. ;
+		White_Hake11_Nums:_FillValue = 0. ;
+	double White_Hake11_ResN(t, b, z) ;
+		White_Hake11_ResN:bmtype = "tracer" ;
+		White_Hake11_ResN:units = "mg N" ;
+		White_Hake11_ResN:long_name = "Individ reserve N for deep piscivores cohort 10" ;
+		White_Hake11_ResN:dtype = 0 ;
+		White_Hake11_ResN:sumtype = 0 ;
+		White_Hake11_ResN:inwc = 0 ;
+		White_Hake11_ResN:insed = 0 ;
+		White_Hake11_ResN:dissol = 0 ;
+		White_Hake11_ResN:decay = 0. ;
+		White_Hake11_ResN:partic = 1 ;
+		White_Hake11_ResN:passive = 0 ;
+		White_Hake11_ResN:svel = 0. ;
+		White_Hake11_ResN:xvel = 0. ;
+		White_Hake11_ResN:psize = 10. ;
+		White_Hake11_ResN:b_dens = 1000000000. ;
+		White_Hake11_ResN:i_conc = 200000000. ;
+		White_Hake11_ResN:f_conc = 200000000. ;
+		White_Hake11_ResN:_FillValue = 25315.9 ;
+	double White_Hake11_StructN(t, b, z) ;
+		White_Hake11_StructN:bmtype = "tracer" ;
+		White_Hake11_StructN:units = "mg N" ;
+		White_Hake11_StructN:long_name = "Individ structural N for deep piscivores cohort 10" ;
+		White_Hake11_StructN:dtype = 0 ;
+		White_Hake11_StructN:sumtype = 0 ;
+		White_Hake11_StructN:inwc = 0 ;
+		White_Hake11_StructN:insed = 0 ;
+		White_Hake11_StructN:dissol = 0 ;
+		White_Hake11_StructN:decay = 0. ;
+		White_Hake11_StructN:partic = 1 ;
+		White_Hake11_StructN:passive = 0 ;
+		White_Hake11_StructN:svel = 0. ;
+		White_Hake11_StructN:xvel = 0. ;
+		White_Hake11_StructN:psize = 10. ;
+		White_Hake11_StructN:b_dens = 1000000000. ;
+		White_Hake11_StructN:i_conc = 200000000. ;
+		White_Hake11_StructN:f_conc = 200000000. ;
+		White_Hake11_StructN:_FillValue = 12658. ;
+	double White_Hake12_Nums(t, b, z) ;
+		White_Hake12_Nums:bmtype = "tracer" ;
+		White_Hake12_Nums:units = "1" ;
+		White_Hake12_Nums:long_name = "Numbers of deep piscivores cohort 10" ;
+		White_Hake12_Nums:dtype = 0 ;
+		White_Hake12_Nums:sumtype = 0 ;
+		White_Hake12_Nums:inwc = 0 ;
+		White_Hake12_Nums:insed = 0 ;
+		White_Hake12_Nums:dissol = 0 ;
+		White_Hake12_Nums:decay = 0. ;
+		White_Hake12_Nums:partic = 1 ;
+		White_Hake12_Nums:passive = 1 ;
+		White_Hake12_Nums:svel = 0. ;
+		White_Hake12_Nums:xvel = 0. ;
+		White_Hake12_Nums:psize = 10. ;
+		White_Hake12_Nums:b_dens = 1000000000. ;
+		White_Hake12_Nums:i_conc = 200000000. ;
+		White_Hake12_Nums:f_conc = 200000000. ;
+		White_Hake12_Nums:_FillValue = 0. ;
+	double White_Hake12_ResN(t, b, z) ;
+		White_Hake12_ResN:bmtype = "tracer" ;
+		White_Hake12_ResN:units = "mg N" ;
+		White_Hake12_ResN:long_name = "Individ reserve N for deep piscivores cohort 10" ;
+		White_Hake12_ResN:dtype = 0 ;
+		White_Hake12_ResN:sumtype = 0 ;
+		White_Hake12_ResN:inwc = 0 ;
+		White_Hake12_ResN:insed = 0 ;
+		White_Hake12_ResN:dissol = 0 ;
+		White_Hake12_ResN:decay = 0. ;
+		White_Hake12_ResN:partic = 1 ;
+		White_Hake12_ResN:passive = 0 ;
+		White_Hake12_ResN:svel = 0. ;
+		White_Hake12_ResN:xvel = 0. ;
+		White_Hake12_ResN:psize = 10. ;
+		White_Hake12_ResN:b_dens = 1000000000. ;
+		White_Hake12_ResN:i_conc = 200000000. ;
+		White_Hake12_ResN:f_conc = 200000000. ;
+		White_Hake12_ResN:_FillValue = 29343.1 ;
+	double White_Hake12_StructN(t, b, z) ;
+		White_Hake12_StructN:bmtype = "tracer" ;
+		White_Hake12_StructN:units = "mg N" ;
+		White_Hake12_StructN:long_name = "Individ structural N for deep piscivores cohort 10" ;
+		White_Hake12_StructN:dtype = 0 ;
+		White_Hake12_StructN:sumtype = 0 ;
+		White_Hake12_StructN:inwc = 0 ;
+		White_Hake12_StructN:insed = 0 ;
+		White_Hake12_StructN:dissol = 0 ;
+		White_Hake12_StructN:decay = 0. ;
+		White_Hake12_StructN:partic = 1 ;
+		White_Hake12_StructN:passive = 0 ;
+		White_Hake12_StructN:svel = 0. ;
+		White_Hake12_StructN:xvel = 0. ;
+		White_Hake12_StructN:psize = 10. ;
+		White_Hake12_StructN:b_dens = 1000000000. ;
+		White_Hake12_StructN:i_conc = 200000000. ;
+		White_Hake12_StructN:f_conc = 200000000. ;
+		White_Hake12_StructN:_FillValue = 14671.55 ;
 	double White_Hake1_Nums(t, b, z) ;
 		White_Hake1_Nums:bmtype = "tracer" ;
 		White_Hake1_Nums:units = "1" ;
@@ -31308,7 +30453,7 @@ variables:
 		White_Hake2_ResN:b_dens = 1000000000. ;
 		White_Hake2_ResN:i_conc = 200000000. ;
 		White_Hake2_ResN:f_conc = 200000000. ;
-		White_Hake2_ResN:_FillValue = 784.02 ;
+		White_Hake2_ResN:_FillValue = 616.9 ;
 	double White_Hake2_StructN(t, b, z) ;
 		White_Hake2_StructN:bmtype = "tracer" ;
 		White_Hake2_StructN:units = "mg N" ;
@@ -31327,7 +30472,7 @@ variables:
 		White_Hake2_StructN:b_dens = 1000000000. ;
 		White_Hake2_StructN:i_conc = 200000000. ;
 		White_Hake2_StructN:f_conc = 200000000. ;
-		White_Hake2_StructN:_FillValue = 392.01 ;
+		White_Hake2_StructN:_FillValue = 308.5 ;
 	double White_Hake3_Nums(t, b, z) ;
 		White_Hake3_Nums:bmtype = "tracer" ;
 		White_Hake3_Nums:units = "1" ;
@@ -31365,7 +30510,7 @@ variables:
 		White_Hake3_ResN:b_dens = 1000000000. ;
 		White_Hake3_ResN:i_conc = 200000000. ;
 		White_Hake3_ResN:f_conc = 200000000. ;
-		White_Hake3_ResN:_FillValue = 2211.26 ;
+		White_Hake3_ResN:_FillValue = 1600.9 ;
 	double White_Hake3_StructN(t, b, z) ;
 		White_Hake3_StructN:bmtype = "tracer" ;
 		White_Hake3_StructN:units = "mg N" ;
@@ -31384,7 +30529,7 @@ variables:
 		White_Hake3_StructN:b_dens = 1000000000. ;
 		White_Hake3_StructN:i_conc = 200000000. ;
 		White_Hake3_StructN:f_conc = 200000000. ;
-		White_Hake3_StructN:_FillValue = 1105.63 ;
+		White_Hake3_StructN:_FillValue = 800.4 ;
 	double White_Hake4_Nums(t, b, z) ;
 		White_Hake4_Nums:bmtype = "tracer" ;
 		White_Hake4_Nums:units = "1" ;
@@ -31422,7 +30567,7 @@ variables:
 		White_Hake4_ResN:b_dens = 1000000000. ;
 		White_Hake4_ResN:i_conc = 200000000. ;
 		White_Hake4_ResN:f_conc = 200000000. ;
-		White_Hake4_ResN:_FillValue = 4442.78 ;
+		White_Hake4_ResN:_FillValue = 3129.1 ;
 	double White_Hake4_StructN(t, b, z) ;
 		White_Hake4_StructN:bmtype = "tracer" ;
 		White_Hake4_StructN:units = "mg N" ;
@@ -31441,7 +30586,7 @@ variables:
 		White_Hake4_StructN:b_dens = 1000000000. ;
 		White_Hake4_StructN:i_conc = 200000000. ;
 		White_Hake4_StructN:f_conc = 200000000. ;
-		White_Hake4_StructN:_FillValue = 2221.39 ;
+		White_Hake4_StructN:_FillValue = 1564.5 ;
 	double White_Hake5_Nums(t, b, z) ;
 		White_Hake5_Nums:bmtype = "tracer" ;
 		White_Hake5_Nums:units = "1" ;
@@ -31479,7 +30624,7 @@ variables:
 		White_Hake5_ResN:b_dens = 1000000000. ;
 		White_Hake5_ResN:i_conc = 200000000. ;
 		White_Hake5_ResN:f_conc = 200000000. ;
-		White_Hake5_ResN:_FillValue = 7420.42 ;
+		White_Hake5_ResN:_FillValue = 5183.8 ;
 	double White_Hake5_StructN(t, b, z) ;
 		White_Hake5_StructN:bmtype = "tracer" ;
 		White_Hake5_StructN:units = "mg N" ;
@@ -31498,7 +30643,7 @@ variables:
 		White_Hake5_StructN:b_dens = 1000000000. ;
 		White_Hake5_StructN:i_conc = 200000000. ;
 		White_Hake5_StructN:f_conc = 200000000. ;
-		White_Hake5_StructN:_FillValue = 3710.21 ;
+		White_Hake5_StructN:_FillValue = 2591.9 ;
 	double White_Hake6_Nums(t, b, z) ;
 		White_Hake6_Nums:bmtype = "tracer" ;
 		White_Hake6_Nums:units = "1" ;
@@ -31536,7 +30681,7 @@ variables:
 		White_Hake6_ResN:b_dens = 1000000000. ;
 		White_Hake6_ResN:i_conc = 200000000. ;
 		White_Hake6_ResN:f_conc = 200000000. ;
-		White_Hake6_ResN:_FillValue = 11036.32 ;
+		White_Hake6_ResN:_FillValue = 7723.2 ;
 	double White_Hake6_StructN(t, b, z) ;
 		White_Hake6_StructN:bmtype = "tracer" ;
 		White_Hake6_StructN:units = "mg N" ;
@@ -31555,7 +30700,7 @@ variables:
 		White_Hake6_StructN:b_dens = 1000000000. ;
 		White_Hake6_StructN:i_conc = 200000000. ;
 		White_Hake6_StructN:f_conc = 200000000. ;
-		White_Hake6_StructN:_FillValue = 5518.16 ;
+		White_Hake6_StructN:_FillValue = 3861.6 ;
 	double White_Hake7_Nums(t, b, z) ;
 		White_Hake7_Nums:bmtype = "tracer" ;
 		White_Hake7_Nums:units = "1" ;
@@ -31593,7 +30738,7 @@ variables:
 		White_Hake7_ResN:b_dens = 1000000000. ;
 		White_Hake7_ResN:i_conc = 200000000. ;
 		White_Hake7_ResN:f_conc = 200000000. ;
-		White_Hake7_ResN:_FillValue = 15162.52 ;
+		White_Hake7_ResN:_FillValue = 10686. ;
 	double White_Hake7_StructN(t, b, z) ;
 		White_Hake7_StructN:bmtype = "tracer" ;
 		White_Hake7_StructN:units = "mg N" ;
@@ -31612,7 +30757,7 @@ variables:
 		White_Hake7_StructN:b_dens = 1000000000. ;
 		White_Hake7_StructN:i_conc = 200000000. ;
 		White_Hake7_StructN:f_conc = 200000000. ;
-		White_Hake7_StructN:_FillValue = 7581.26 ;
+		White_Hake7_StructN:_FillValue = 5343. ;
 	double White_Hake8_Nums(t, b, z) ;
 		White_Hake8_Nums:bmtype = "tracer" ;
 		White_Hake8_Nums:units = "1" ;
@@ -31650,7 +30795,7 @@ variables:
 		White_Hake8_ResN:b_dens = 1000000000. ;
 		White_Hake8_ResN:i_conc = 200000000. ;
 		White_Hake8_ResN:f_conc = 200000000. ;
-		White_Hake8_ResN:_FillValue = 19668.62 ;
+		White_Hake8_ResN:_FillValue = 13996. ;
 	double White_Hake8_StructN(t, b, z) ;
 		White_Hake8_StructN:bmtype = "tracer" ;
 		White_Hake8_StructN:units = "mg N" ;
@@ -31669,7 +30814,7 @@ variables:
 		White_Hake8_StructN:b_dens = 1000000000. ;
 		White_Hake8_StructN:i_conc = 200000000. ;
 		White_Hake8_StructN:f_conc = 200000000. ;
-		White_Hake8_StructN:_FillValue = 9834.31 ;
+		White_Hake8_StructN:_FillValue = 6997.9 ;
 	double White_Hake9_Nums(t, b, z) ;
 		White_Hake9_Nums:bmtype = "tracer" ;
 		White_Hake9_Nums:units = "1" ;
@@ -31707,7 +30852,7 @@ variables:
 		White_Hake9_ResN:b_dens = 1000000000. ;
 		White_Hake9_ResN:i_conc = 200000000. ;
 		White_Hake9_ResN:f_conc = 200000000. ;
-		White_Hake9_ResN:_FillValue = 24431.98 ;
+		White_Hake9_ResN:_FillValue = 17581.6 ;
 	double White_Hake9_StructN(t, b, z) ;
 		White_Hake9_StructN:bmtype = "tracer" ;
 		White_Hake9_StructN:units = "mg N" ;
@@ -31726,7 +30871,7 @@ variables:
 		White_Hake9_StructN:b_dens = 1000000000. ;
 		White_Hake9_StructN:i_conc = 200000000. ;
 		White_Hake9_StructN:f_conc = 200000000. ;
-		White_Hake9_StructN:_FillValue = 12215.99 ;
+		White_Hake9_StructN:_FillValue = 8790.8 ;
 	double White_Hake_N(t, b, z) ;
 		White_Hake_N:bmtype = "tracer" ;
 		White_Hake_N:units = "mg N m-3" ;
@@ -31739,63 +30884,6 @@ variables:
 		White_Hake_N:partic = 0 ;
 		White_Hake_N:decay = 0. ;
 		White_Hake_N:_FillValue = 0. ;
-	double Windowpane10_Nums(t, b, z) ;
-		Windowpane10_Nums:bmtype = "tracer" ;
-		Windowpane10_Nums:units = "1" ;
-		Windowpane10_Nums:long_name = "Numbers of other piscivores cohort 10" ;
-		Windowpane10_Nums:dtype = 0 ;
-		Windowpane10_Nums:sumtype = 0 ;
-		Windowpane10_Nums:inwc = 0 ;
-		Windowpane10_Nums:insed = 0 ;
-		Windowpane10_Nums:dissol = 0 ;
-		Windowpane10_Nums:decay = 0. ;
-		Windowpane10_Nums:partic = 1 ;
-		Windowpane10_Nums:passive = 1 ;
-		Windowpane10_Nums:svel = 0. ;
-		Windowpane10_Nums:xvel = 0. ;
-		Windowpane10_Nums:psize = 10. ;
-		Windowpane10_Nums:b_dens = 1000000000. ;
-		Windowpane10_Nums:i_conc = 200000000. ;
-		Windowpane10_Nums:f_conc = 200000000. ;
-		Windowpane10_Nums:_FillValue = 0. ;
-	double Windowpane10_ResN(t, b, z) ;
-		Windowpane10_ResN:bmtype = "tracer" ;
-		Windowpane10_ResN:units = "mg N" ;
-		Windowpane10_ResN:long_name = "Individ reserve N for other piscivores cohort 10" ;
-		Windowpane10_ResN:dtype = 0 ;
-		Windowpane10_ResN:sumtype = 0 ;
-		Windowpane10_ResN:inwc = 0 ;
-		Windowpane10_ResN:insed = 0 ;
-		Windowpane10_ResN:dissol = 0 ;
-		Windowpane10_ResN:decay = 0. ;
-		Windowpane10_ResN:partic = 1 ;
-		Windowpane10_ResN:passive = 0 ;
-		Windowpane10_ResN:svel = 0. ;
-		Windowpane10_ResN:xvel = 0. ;
-		Windowpane10_ResN:psize = 10. ;
-		Windowpane10_ResN:b_dens = 1000000000. ;
-		Windowpane10_ResN:i_conc = 200000000. ;
-		Windowpane10_ResN:f_conc = 200000000. ;
-		Windowpane10_ResN:_FillValue = 4104.14 ;
-	double Windowpane10_StructN(t, b, z) ;
-		Windowpane10_StructN:bmtype = "tracer" ;
-		Windowpane10_StructN:units = "mg N" ;
-		Windowpane10_StructN:long_name = "Individ structural N for other piscivores cohort 10" ;
-		Windowpane10_StructN:dtype = 0 ;
-		Windowpane10_StructN:sumtype = 0 ;
-		Windowpane10_StructN:inwc = 0 ;
-		Windowpane10_StructN:insed = 0 ;
-		Windowpane10_StructN:dissol = 0 ;
-		Windowpane10_StructN:decay = 0. ;
-		Windowpane10_StructN:partic = 1 ;
-		Windowpane10_StructN:passive = 0 ;
-		Windowpane10_StructN:svel = 0. ;
-		Windowpane10_StructN:xvel = 0. ;
-		Windowpane10_StructN:psize = 10. ;
-		Windowpane10_StructN:b_dens = 1000000000. ;
-		Windowpane10_StructN:i_conc = 200000000. ;
-		Windowpane10_StructN:f_conc = 200000000. ;
-		Windowpane10_StructN:_FillValue = 2052.07 ;
 	double Windowpane1_Nums(t, b, z) ;
 		Windowpane1_Nums:bmtype = "tracer" ;
 		Windowpane1_Nums:units = "1" ;
@@ -31890,7 +30978,7 @@ variables:
 		Windowpane2_ResN:b_dens = 1000000000. ;
 		Windowpane2_ResN:i_conc = 200000000. ;
 		Windowpane2_ResN:f_conc = 200000000. ;
-		Windowpane2_ResN:_FillValue = 435.86 ;
+		Windowpane2_ResN:_FillValue = 774.6 ;
 	double Windowpane2_StructN(t, b, z) ;
 		Windowpane2_StructN:bmtype = "tracer" ;
 		Windowpane2_StructN:units = "mg N" ;
@@ -31909,7 +30997,7 @@ variables:
 		Windowpane2_StructN:b_dens = 1000000000. ;
 		Windowpane2_StructN:i_conc = 200000000. ;
 		Windowpane2_StructN:f_conc = 200000000. ;
-		Windowpane2_StructN:_FillValue = 217.93 ;
+		Windowpane2_StructN:_FillValue = 387.3 ;
 	double Windowpane3_Nums(t, b, z) ;
 		Windowpane3_Nums:bmtype = "tracer" ;
 		Windowpane3_Nums:units = "1" ;
@@ -31947,7 +31035,7 @@ variables:
 		Windowpane3_ResN:b_dens = 1000000000. ;
 		Windowpane3_ResN:i_conc = 200000000. ;
 		Windowpane3_ResN:f_conc = 200000000. ;
-		Windowpane3_ResN:_FillValue = 1158.88 ;
+		Windowpane3_ResN:_FillValue = 1927.9 ;
 	double Windowpane3_StructN(t, b, z) ;
 		Windowpane3_StructN:bmtype = "tracer" ;
 		Windowpane3_StructN:units = "mg N" ;
@@ -31966,7 +31054,7 @@ variables:
 		Windowpane3_StructN:b_dens = 1000000000. ;
 		Windowpane3_StructN:i_conc = 200000000. ;
 		Windowpane3_StructN:f_conc = 200000000. ;
-		Windowpane3_StructN:_FillValue = 579.44 ;
+		Windowpane3_StructN:_FillValue = 963.9 ;
 	double Windowpane4_Nums(t, b, z) ;
 		Windowpane4_Nums:bmtype = "tracer" ;
 		Windowpane4_Nums:units = "1" ;
@@ -32004,7 +31092,7 @@ variables:
 		Windowpane4_ResN:b_dens = 1000000000. ;
 		Windowpane4_ResN:i_conc = 200000000. ;
 		Windowpane4_ResN:f_conc = 200000000. ;
-		Windowpane4_ResN:_FillValue = 1927.96 ;
+		Windowpane4_ResN:_FillValue = 2873.9 ;
 	double Windowpane4_StructN(t, b, z) ;
 		Windowpane4_StructN:bmtype = "tracer" ;
 		Windowpane4_StructN:units = "mg N" ;
@@ -32023,7 +31111,7 @@ variables:
 		Windowpane4_StructN:b_dens = 1000000000. ;
 		Windowpane4_StructN:i_conc = 200000000. ;
 		Windowpane4_StructN:f_conc = 200000000. ;
-		Windowpane4_StructN:_FillValue = 963.98 ;
+		Windowpane4_StructN:_FillValue = 1436.9 ;
 	double Windowpane5_Nums(t, b, z) ;
 		Windowpane5_Nums:bmtype = "tracer" ;
 		Windowpane5_Nums:units = "1" ;
@@ -32061,7 +31149,7 @@ variables:
 		Windowpane5_ResN:b_dens = 1000000000. ;
 		Windowpane5_ResN:i_conc = 200000000. ;
 		Windowpane5_ResN:f_conc = 200000000. ;
-		Windowpane5_ResN:_FillValue = 2595.12 ;
+		Windowpane5_ResN:_FillValue = 3503.6 ;
 	double Windowpane5_StructN(t, b, z) ;
 		Windowpane5_StructN:bmtype = "tracer" ;
 		Windowpane5_StructN:units = "mg N" ;
@@ -32080,7 +31168,7 @@ variables:
 		Windowpane5_StructN:b_dens = 1000000000. ;
 		Windowpane5_StructN:i_conc = 200000000. ;
 		Windowpane5_StructN:f_conc = 200000000. ;
-		Windowpane5_StructN:_FillValue = 1297.56 ;
+		Windowpane5_StructN:_FillValue = 1751.8 ;
 	double Windowpane6_Nums(t, b, z) ;
 		Windowpane6_Nums:bmtype = "tracer" ;
 		Windowpane6_Nums:units = "1" ;
@@ -32118,7 +31206,7 @@ variables:
 		Windowpane6_ResN:b_dens = 1000000000. ;
 		Windowpane6_ResN:i_conc = 200000000. ;
 		Windowpane6_ResN:f_conc = 200000000. ;
-		Windowpane6_ResN:_FillValue = 3117.54 ;
+		Windowpane6_ResN:_FillValue = 3884.3 ;
 	double Windowpane6_StructN(t, b, z) ;
 		Windowpane6_StructN:bmtype = "tracer" ;
 		Windowpane6_StructN:units = "mg N" ;
@@ -32137,7 +31225,7 @@ variables:
 		Windowpane6_StructN:b_dens = 1000000000. ;
 		Windowpane6_StructN:i_conc = 200000000. ;
 		Windowpane6_StructN:f_conc = 200000000. ;
-		Windowpane6_StructN:_FillValue = 1558.77 ;
+		Windowpane6_StructN:_FillValue = 1942.2 ;
 	double Windowpane7_Nums(t, b, z) ;
 		Windowpane7_Nums:bmtype = "tracer" ;
 		Windowpane7_Nums:units = "1" ;
@@ -32175,7 +31263,7 @@ variables:
 		Windowpane7_ResN:b_dens = 1000000000. ;
 		Windowpane7_ResN:i_conc = 200000000. ;
 		Windowpane7_ResN:f_conc = 200000000. ;
-		Windowpane7_ResN:_FillValue = 3503.62 ;
+		Windowpane7_ResN:_FillValue = 4104.1 ;
 	double Windowpane7_StructN(t, b, z) ;
 		Windowpane7_StructN:bmtype = "tracer" ;
 		Windowpane7_StructN:units = "mg N" ;
@@ -32194,121 +31282,7 @@ variables:
 		Windowpane7_StructN:b_dens = 1000000000. ;
 		Windowpane7_StructN:i_conc = 200000000. ;
 		Windowpane7_StructN:f_conc = 200000000. ;
-		Windowpane7_StructN:_FillValue = 1751.81 ;
-	double Windowpane8_Nums(t, b, z) ;
-		Windowpane8_Nums:bmtype = "tracer" ;
-		Windowpane8_Nums:units = "1" ;
-		Windowpane8_Nums:long_name = "Numbers of other piscivores cohort 8" ;
-		Windowpane8_Nums:dtype = 0 ;
-		Windowpane8_Nums:sumtype = 0 ;
-		Windowpane8_Nums:inwc = 0 ;
-		Windowpane8_Nums:insed = 0 ;
-		Windowpane8_Nums:dissol = 0 ;
-		Windowpane8_Nums:decay = 0. ;
-		Windowpane8_Nums:partic = 1 ;
-		Windowpane8_Nums:passive = 1 ;
-		Windowpane8_Nums:svel = 0. ;
-		Windowpane8_Nums:xvel = 0. ;
-		Windowpane8_Nums:psize = 10. ;
-		Windowpane8_Nums:b_dens = 1000000000. ;
-		Windowpane8_Nums:i_conc = 200000000. ;
-		Windowpane8_Nums:f_conc = 200000000. ;
-		Windowpane8_Nums:_FillValue = 0. ;
-	double Windowpane8_ResN(t, b, z) ;
-		Windowpane8_ResN:bmtype = "tracer" ;
-		Windowpane8_ResN:units = "mg N" ;
-		Windowpane8_ResN:long_name = "Individ reserve N for other piscivores cohort 8" ;
-		Windowpane8_ResN:dtype = 0 ;
-		Windowpane8_ResN:sumtype = 0 ;
-		Windowpane8_ResN:inwc = 0 ;
-		Windowpane8_ResN:insed = 0 ;
-		Windowpane8_ResN:dissol = 0 ;
-		Windowpane8_ResN:decay = 0. ;
-		Windowpane8_ResN:partic = 1 ;
-		Windowpane8_ResN:passive = 0 ;
-		Windowpane8_ResN:svel = 0. ;
-		Windowpane8_ResN:xvel = 0. ;
-		Windowpane8_ResN:psize = 10. ;
-		Windowpane8_ResN:b_dens = 1000000000. ;
-		Windowpane8_ResN:i_conc = 200000000. ;
-		Windowpane8_ResN:f_conc = 200000000. ;
-		Windowpane8_ResN:_FillValue = 3779.18 ;
-	double Windowpane8_StructN(t, b, z) ;
-		Windowpane8_StructN:bmtype = "tracer" ;
-		Windowpane8_StructN:units = "mg N" ;
-		Windowpane8_StructN:long_name = "Individ structural N for other piscivores cohort 8" ;
-		Windowpane8_StructN:dtype = 0 ;
-		Windowpane8_StructN:sumtype = 0 ;
-		Windowpane8_StructN:inwc = 0 ;
-		Windowpane8_StructN:insed = 0 ;
-		Windowpane8_StructN:dissol = 0 ;
-		Windowpane8_StructN:decay = 0. ;
-		Windowpane8_StructN:partic = 1 ;
-		Windowpane8_StructN:passive = 0 ;
-		Windowpane8_StructN:svel = 0. ;
-		Windowpane8_StructN:xvel = 0. ;
-		Windowpane8_StructN:psize = 10. ;
-		Windowpane8_StructN:b_dens = 1000000000. ;
-		Windowpane8_StructN:i_conc = 200000000. ;
-		Windowpane8_StructN:f_conc = 200000000. ;
-		Windowpane8_StructN:_FillValue = 1889.59 ;
-	double Windowpane9_Nums(t, b, z) ;
-		Windowpane9_Nums:bmtype = "tracer" ;
-		Windowpane9_Nums:units = "1" ;
-		Windowpane9_Nums:long_name = "Numbers of other piscivores cohort 9" ;
-		Windowpane9_Nums:dtype = 0 ;
-		Windowpane9_Nums:sumtype = 0 ;
-		Windowpane9_Nums:inwc = 0 ;
-		Windowpane9_Nums:insed = 0 ;
-		Windowpane9_Nums:dissol = 0 ;
-		Windowpane9_Nums:decay = 0. ;
-		Windowpane9_Nums:partic = 1 ;
-		Windowpane9_Nums:passive = 1 ;
-		Windowpane9_Nums:svel = 0. ;
-		Windowpane9_Nums:xvel = 0. ;
-		Windowpane9_Nums:psize = 10. ;
-		Windowpane9_Nums:b_dens = 1000000000. ;
-		Windowpane9_Nums:i_conc = 200000000. ;
-		Windowpane9_Nums:f_conc = 200000000. ;
-		Windowpane9_Nums:_FillValue = 0. ;
-	double Windowpane9_ResN(t, b, z) ;
-		Windowpane9_ResN:bmtype = "tracer" ;
-		Windowpane9_ResN:units = "mg N" ;
-		Windowpane9_ResN:long_name = "Individ reserve N for other piscivores cohort 9" ;
-		Windowpane9_ResN:dtype = 0 ;
-		Windowpane9_ResN:sumtype = 0 ;
-		Windowpane9_ResN:inwc = 0 ;
-		Windowpane9_ResN:insed = 0 ;
-		Windowpane9_ResN:dissol = 0 ;
-		Windowpane9_ResN:decay = 0. ;
-		Windowpane9_ResN:partic = 1 ;
-		Windowpane9_ResN:passive = 0 ;
-		Windowpane9_ResN:svel = 0. ;
-		Windowpane9_ResN:xvel = 0. ;
-		Windowpane9_ResN:psize = 10. ;
-		Windowpane9_ResN:b_dens = 1000000000. ;
-		Windowpane9_ResN:i_conc = 200000000. ;
-		Windowpane9_ResN:f_conc = 200000000. ;
-		Windowpane9_ResN:_FillValue = 3971.62 ;
-	double Windowpane9_StructN(t, b, z) ;
-		Windowpane9_StructN:bmtype = "tracer" ;
-		Windowpane9_StructN:units = "mg N" ;
-		Windowpane9_StructN:long_name = "Individ structural N for other piscivores cohort 9" ;
-		Windowpane9_StructN:dtype = 0 ;
-		Windowpane9_StructN:sumtype = 0 ;
-		Windowpane9_StructN:inwc = 0 ;
-		Windowpane9_StructN:insed = 0 ;
-		Windowpane9_StructN:dissol = 0 ;
-		Windowpane9_StructN:decay = 0. ;
-		Windowpane9_StructN:partic = 1 ;
-		Windowpane9_StructN:passive = 0 ;
-		Windowpane9_StructN:svel = 0. ;
-		Windowpane9_StructN:xvel = 0. ;
-		Windowpane9_StructN:psize = 10. ;
-		Windowpane9_StructN:b_dens = 1000000000. ;
-		Windowpane9_StructN:i_conc = 200000000. ;
-		Windowpane9_StructN:f_conc = 200000000. ;
-		Windowpane9_StructN:_FillValue = 1985.81 ;
+		Windowpane7_StructN:_FillValue = 2052.1 ;
 	double Windowpane_N(t, b, z) ;
 		Windowpane_N:bmtype = "tracer" ;
 		Windowpane_N:units = "mg N m-3" ;
@@ -32903,63 +31877,6 @@ variables:
 		Winter_Skate_N:partic = 0 ;
 		Winter_Skate_N:decay = 0. ;
 		Winter_Skate_N:_FillValue = 0. ;
-	double Winterflounder10_Nums(t, b, z) ;
-		Winterflounder10_Nums:bmtype = "tracer" ;
-		Winterflounder10_Nums:units = "1" ;
-		Winterflounder10_Nums:long_name = "Numbers of other piscivores cohort 10" ;
-		Winterflounder10_Nums:dtype = 0 ;
-		Winterflounder10_Nums:sumtype = 0 ;
-		Winterflounder10_Nums:inwc = 0 ;
-		Winterflounder10_Nums:insed = 0 ;
-		Winterflounder10_Nums:dissol = 0 ;
-		Winterflounder10_Nums:decay = 0. ;
-		Winterflounder10_Nums:partic = 1 ;
-		Winterflounder10_Nums:passive = 1 ;
-		Winterflounder10_Nums:svel = 0. ;
-		Winterflounder10_Nums:xvel = 0. ;
-		Winterflounder10_Nums:psize = 10. ;
-		Winterflounder10_Nums:b_dens = 1000000000. ;
-		Winterflounder10_Nums:i_conc = 200000000. ;
-		Winterflounder10_Nums:f_conc = 200000000. ;
-		Winterflounder10_Nums:_FillValue = 0. ;
-	double Winterflounder10_ResN(t, b, z) ;
-		Winterflounder10_ResN:bmtype = "tracer" ;
-		Winterflounder10_ResN:units = "mg N" ;
-		Winterflounder10_ResN:long_name = "Individ reserve N for other piscivores cohort 10" ;
-		Winterflounder10_ResN:dtype = 0 ;
-		Winterflounder10_ResN:sumtype = 0 ;
-		Winterflounder10_ResN:inwc = 0 ;
-		Winterflounder10_ResN:insed = 0 ;
-		Winterflounder10_ResN:dissol = 0 ;
-		Winterflounder10_ResN:decay = 0. ;
-		Winterflounder10_ResN:partic = 1 ;
-		Winterflounder10_ResN:passive = 0 ;
-		Winterflounder10_ResN:svel = 0. ;
-		Winterflounder10_ResN:xvel = 0. ;
-		Winterflounder10_ResN:psize = 10. ;
-		Winterflounder10_ResN:b_dens = 1000000000. ;
-		Winterflounder10_ResN:i_conc = 200000000. ;
-		Winterflounder10_ResN:f_conc = 200000000. ;
-		Winterflounder10_ResN:_FillValue = 16192.9 ;
-	double Winterflounder10_StructN(t, b, z) ;
-		Winterflounder10_StructN:bmtype = "tracer" ;
-		Winterflounder10_StructN:units = "mg N" ;
-		Winterflounder10_StructN:long_name = "Individ structural N for other piscivores cohort 10" ;
-		Winterflounder10_StructN:dtype = 0 ;
-		Winterflounder10_StructN:sumtype = 0 ;
-		Winterflounder10_StructN:inwc = 0 ;
-		Winterflounder10_StructN:insed = 0 ;
-		Winterflounder10_StructN:dissol = 0 ;
-		Winterflounder10_StructN:decay = 0. ;
-		Winterflounder10_StructN:partic = 1 ;
-		Winterflounder10_StructN:passive = 0 ;
-		Winterflounder10_StructN:svel = 0. ;
-		Winterflounder10_StructN:xvel = 0. ;
-		Winterflounder10_StructN:psize = 10. ;
-		Winterflounder10_StructN:b_dens = 1000000000. ;
-		Winterflounder10_StructN:i_conc = 200000000. ;
-		Winterflounder10_StructN:f_conc = 200000000. ;
-		Winterflounder10_StructN:_FillValue = 8096.45 ;
 	double Winterflounder1_Nums(t, b, z) ;
 		Winterflounder1_Nums:bmtype = "tracer" ;
 		Winterflounder1_Nums:units = "1" ;
@@ -33054,7 +31971,7 @@ variables:
 		Winterflounder2_ResN:b_dens = 1000000000. ;
 		Winterflounder2_ResN:i_conc = 200000000. ;
 		Winterflounder2_ResN:f_conc = 200000000. ;
-		Winterflounder2_ResN:_FillValue = 10064.18 ;
+		Winterflounder2_ResN:_FillValue = 12615.7 ;
 	double Winterflounder2_StructN(t, b, z) ;
 		Winterflounder2_StructN:bmtype = "tracer" ;
 		Winterflounder2_StructN:units = "mg N" ;
@@ -33073,7 +31990,7 @@ variables:
 		Winterflounder2_StructN:b_dens = 1000000000. ;
 		Winterflounder2_StructN:i_conc = 200000000. ;
 		Winterflounder2_StructN:f_conc = 200000000. ;
-		Winterflounder2_StructN:_FillValue = 5032.09 ;
+		Winterflounder2_StructN:_FillValue = 6307.8 ;
 	double Winterflounder3_Nums(t, b, z) ;
 		Winterflounder3_Nums:bmtype = "tracer" ;
 		Winterflounder3_Nums:units = "1" ;
@@ -33111,7 +32028,7 @@ variables:
 		Winterflounder3_ResN:b_dens = 1000000000. ;
 		Winterflounder3_ResN:i_conc = 200000000. ;
 		Winterflounder3_ResN:f_conc = 200000000. ;
-		Winterflounder3_ResN:_FillValue = 14292.56 ;
+		Winterflounder3_ResN:_FillValue = 15648.8;
 	double Winterflounder3_StructN(t, b, z) ;
 		Winterflounder3_StructN:bmtype = "tracer" ;
 		Winterflounder3_StructN:units = "mg N" ;
@@ -33130,7 +32047,7 @@ variables:
 		Winterflounder3_StructN:b_dens = 1000000000. ;
 		Winterflounder3_StructN:i_conc = 200000000. ;
 		Winterflounder3_StructN:f_conc = 200000000. ;
-		Winterflounder3_StructN:_FillValue = 7146.28 ;
+		Winterflounder3_StructN:_FillValue = 7824.4 ;
 	double Winterflounder4_Nums(t, b, z) ;
 		Winterflounder4_Nums:bmtype = "tracer" ;
 		Winterflounder4_Nums:units = "1" ;
@@ -33168,7 +32085,7 @@ variables:
 		Winterflounder4_ResN:b_dens = 1000000000. ;
 		Winterflounder4_ResN:i_conc = 200000000. ;
 		Winterflounder4_ResN:f_conc = 200000000. ;
-		Winterflounder4_ResN:_FillValue = 15648.8 ;
+		Winterflounder4_ResN:_FillValue = 16118.2 ;
 	double Winterflounder4_StructN(t, b, z) ;
 		Winterflounder4_StructN:bmtype = "tracer" ;
 		Winterflounder4_StructN:units = "mg N" ;
@@ -33187,7 +32104,7 @@ variables:
 		Winterflounder4_StructN:b_dens = 1000000000. ;
 		Winterflounder4_StructN:i_conc = 200000000. ;
 		Winterflounder4_StructN:f_conc = 200000000. ;
-		Winterflounder4_StructN:_FillValue = 7824.4 ;
+		Winterflounder4_StructN:_FillValue = 8059.1 ;
 	double Winterflounder5_Nums(t, b, z) ;
 		Winterflounder5_Nums:bmtype = "tracer" ;
 		Winterflounder5_Nums:units = "1" ;
@@ -33225,7 +32142,7 @@ variables:
 		Winterflounder5_ResN:b_dens = 1000000000. ;
 		Winterflounder5_ResN:i_conc = 200000000. ;
 		Winterflounder5_ResN:f_conc = 200000000. ;
-		Winterflounder5_ResN:_FillValue = 16040.56 ;
+		Winterflounder5_ResN:_FillValue = 16181.3 ;
 	double Winterflounder5_StructN(t, b, z) ;
 		Winterflounder5_StructN:bmtype = "tracer" ;
 		Winterflounder5_StructN:units = "mg N" ;
@@ -33244,7 +32161,7 @@ variables:
 		Winterflounder5_StructN:b_dens = 1000000000. ;
 		Winterflounder5_StructN:i_conc = 200000000. ;
 		Winterflounder5_StructN:f_conc = 200000000. ;
-		Winterflounder5_StructN:_FillValue = 8020.28 ;
+		Winterflounder5_StructN:_FillValue = 8090.6 ;
 	double Winterflounder6_Nums(t, b, z) ;
 		Winterflounder6_Nums:bmtype = "tracer" ;
 		Winterflounder6_Nums:units = "1" ;
@@ -33282,7 +32199,7 @@ variables:
 		Winterflounder6_ResN:b_dens = 1000000000. ;
 		Winterflounder6_ResN:i_conc = 200000000. ;
 		Winterflounder6_ResN:f_conc = 200000000. ;
-		Winterflounder6_ResN:_FillValue = 16150.64 ;
+		Winterflounder6_ResN:_FillValue = 16191.5 ;
 	double Winterflounder6_StructN(t, b, z) ;
 		Winterflounder6_StructN:bmtype = "tracer" ;
 		Winterflounder6_StructN:units = "mg N" ;
@@ -33301,7 +32218,7 @@ variables:
 		Winterflounder6_StructN:b_dens = 1000000000. ;
 		Winterflounder6_StructN:i_conc = 200000000. ;
 		Winterflounder6_StructN:f_conc = 200000000. ;
-		Winterflounder6_StructN:_FillValue = 8075.32 ;
+		Winterflounder6_StructN:_FillValue = 8095.8 ;
 	double Winterflounder7_Nums(t, b, z) ;
 		Winterflounder7_Nums:bmtype = "tracer" ;
 		Winterflounder7_Nums:units = "1" ;
@@ -33339,7 +32256,7 @@ variables:
 		Winterflounder7_ResN:b_dens = 1000000000. ;
 		Winterflounder7_ResN:i_conc = 200000000. ;
 		Winterflounder7_ResN:f_conc = 200000000. ;
-		Winterflounder7_ResN:_FillValue = 16181.32 ;
+		Winterflounder7_ResN:_FillValue = 16192.9 ;
 	double Winterflounder7_StructN(t, b, z) ;
 		Winterflounder7_StructN:bmtype = "tracer" ;
 		Winterflounder7_StructN:units = "mg N" ;
@@ -33358,121 +32275,7 @@ variables:
 		Winterflounder7_StructN:b_dens = 1000000000. ;
 		Winterflounder7_StructN:i_conc = 200000000. ;
 		Winterflounder7_StructN:f_conc = 200000000. ;
-		Winterflounder7_StructN:_FillValue = 8090.66 ;
-	double Winterflounder8_Nums(t, b, z) ;
-		Winterflounder8_Nums:bmtype = "tracer" ;
-		Winterflounder8_Nums:units = "1" ;
-		Winterflounder8_Nums:long_name = "Numbers of other piscivores cohort 8" ;
-		Winterflounder8_Nums:dtype = 0 ;
-		Winterflounder8_Nums:sumtype = 0 ;
-		Winterflounder8_Nums:inwc = 0 ;
-		Winterflounder8_Nums:insed = 0 ;
-		Winterflounder8_Nums:dissol = 0 ;
-		Winterflounder8_Nums:decay = 0. ;
-		Winterflounder8_Nums:partic = 1 ;
-		Winterflounder8_Nums:passive = 1 ;
-		Winterflounder8_Nums:svel = 0. ;
-		Winterflounder8_Nums:xvel = 0. ;
-		Winterflounder8_Nums:psize = 10. ;
-		Winterflounder8_Nums:b_dens = 1000000000. ;
-		Winterflounder8_Nums:i_conc = 200000000. ;
-		Winterflounder8_Nums:f_conc = 200000000. ;
-		Winterflounder8_Nums:_FillValue = 0. ;
-	double Winterflounder8_ResN(t, b, z) ;
-		Winterflounder8_ResN:bmtype = "tracer" ;
-		Winterflounder8_ResN:units = "mg N" ;
-		Winterflounder8_ResN:long_name = "Individ reserve N for other piscivores cohort 8" ;
-		Winterflounder8_ResN:dtype = 0 ;
-		Winterflounder8_ResN:sumtype = 0 ;
-		Winterflounder8_ResN:inwc = 0 ;
-		Winterflounder8_ResN:insed = 0 ;
-		Winterflounder8_ResN:dissol = 0 ;
-		Winterflounder8_ResN:decay = 0. ;
-		Winterflounder8_ResN:partic = 1 ;
-		Winterflounder8_ResN:passive = 0 ;
-		Winterflounder8_ResN:svel = 0. ;
-		Winterflounder8_ResN:xvel = 0. ;
-		Winterflounder8_ResN:psize = 10. ;
-		Winterflounder8_ResN:b_dens = 1000000000. ;
-		Winterflounder8_ResN:i_conc = 200000000. ;
-		Winterflounder8_ResN:f_conc = 200000000. ;
-		Winterflounder8_ResN:_FillValue = 16189.86 ;
-	double Winterflounder8_StructN(t, b, z) ;
-		Winterflounder8_StructN:bmtype = "tracer" ;
-		Winterflounder8_StructN:units = "mg N" ;
-		Winterflounder8_StructN:long_name = "Individ structural N for other piscivores cohort 8" ;
-		Winterflounder8_StructN:dtype = 0 ;
-		Winterflounder8_StructN:sumtype = 0 ;
-		Winterflounder8_StructN:inwc = 0 ;
-		Winterflounder8_StructN:insed = 0 ;
-		Winterflounder8_StructN:dissol = 0 ;
-		Winterflounder8_StructN:decay = 0. ;
-		Winterflounder8_StructN:partic = 1 ;
-		Winterflounder8_StructN:passive = 0 ;
-		Winterflounder8_StructN:svel = 0. ;
-		Winterflounder8_StructN:xvel = 0. ;
-		Winterflounder8_StructN:psize = 10. ;
-		Winterflounder8_StructN:b_dens = 1000000000. ;
-		Winterflounder8_StructN:i_conc = 200000000. ;
-		Winterflounder8_StructN:f_conc = 200000000. ;
-		Winterflounder8_StructN:_FillValue = 8094.93 ;
-	double Winterflounder9_Nums(t, b, z) ;
-		Winterflounder9_Nums:bmtype = "tracer" ;
-		Winterflounder9_Nums:units = "1" ;
-		Winterflounder9_Nums:long_name = "Numbers of other piscivores cohort 9" ;
-		Winterflounder9_Nums:dtype = 0 ;
-		Winterflounder9_Nums:sumtype = 0 ;
-		Winterflounder9_Nums:inwc = 0 ;
-		Winterflounder9_Nums:insed = 0 ;
-		Winterflounder9_Nums:dissol = 0 ;
-		Winterflounder9_Nums:decay = 0. ;
-		Winterflounder9_Nums:partic = 1 ;
-		Winterflounder9_Nums:passive = 1 ;
-		Winterflounder9_Nums:svel = 0. ;
-		Winterflounder9_Nums:xvel = 0. ;
-		Winterflounder9_Nums:psize = 10. ;
-		Winterflounder9_Nums:b_dens = 1000000000. ;
-		Winterflounder9_Nums:i_conc = 200000000. ;
-		Winterflounder9_Nums:f_conc = 200000000. ;
-		Winterflounder9_Nums:_FillValue = 0. ;
-	double Winterflounder9_ResN(t, b, z) ;
-		Winterflounder9_ResN:bmtype = "tracer" ;
-		Winterflounder9_ResN:units = "mg N" ;
-		Winterflounder9_ResN:long_name = "Individ reserve N for other piscivores cohort 9" ;
-		Winterflounder9_ResN:dtype = 0 ;
-		Winterflounder9_ResN:sumtype = 0 ;
-		Winterflounder9_ResN:inwc = 0 ;
-		Winterflounder9_ResN:insed = 0 ;
-		Winterflounder9_ResN:dissol = 0 ;
-		Winterflounder9_ResN:decay = 0. ;
-		Winterflounder9_ResN:partic = 1 ;
-		Winterflounder9_ResN:passive = 0 ;
-		Winterflounder9_ResN:svel = 0. ;
-		Winterflounder9_ResN:xvel = 0. ;
-		Winterflounder9_ResN:psize = 10. ;
-		Winterflounder9_ResN:b_dens = 1000000000. ;
-		Winterflounder9_ResN:i_conc = 200000000. ;
-		Winterflounder9_ResN:f_conc = 200000000. ;
-		Winterflounder9_ResN:_FillValue = 16192.24 ;
-	double Winterflounder9_StructN(t, b, z) ;
-		Winterflounder9_StructN:bmtype = "tracer" ;
-		Winterflounder9_StructN:units = "mg N" ;
-		Winterflounder9_StructN:long_name = "Individ structural N for other piscivores cohort 9" ;
-		Winterflounder9_StructN:dtype = 0 ;
-		Winterflounder9_StructN:sumtype = 0 ;
-		Winterflounder9_StructN:inwc = 0 ;
-		Winterflounder9_StructN:insed = 0 ;
-		Winterflounder9_StructN:dissol = 0 ;
-		Winterflounder9_StructN:decay = 0. ;
-		Winterflounder9_StructN:partic = 1 ;
-		Winterflounder9_StructN:passive = 0 ;
-		Winterflounder9_StructN:svel = 0. ;
-		Winterflounder9_StructN:xvel = 0. ;
-		Winterflounder9_StructN:psize = 10. ;
-		Winterflounder9_StructN:b_dens = 1000000000. ;
-		Winterflounder9_StructN:i_conc = 200000000. ;
-		Winterflounder9_StructN:f_conc = 200000000. ;
-		Winterflounder9_StructN:_FillValue = 8096.12 ;
+		Winterflounder7_StructN:_FillValue = 8096.5 ;
 	double Winterflounder_N(t, b, z) ;
 		Winterflounder_N:bmtype = "tracer" ;
 		Winterflounder_N:units = "mg N m-3" ;
@@ -33522,7 +32325,7 @@ variables:
 		Witchflounder10_ResN:b_dens = 1000000000. ;
 		Witchflounder10_ResN:i_conc = 200000000. ;
 		Witchflounder10_ResN:f_conc = 200000000. ;
-		Witchflounder10_ResN:_FillValue = 7776.68 ;
+		Witchflounder10_ResN:_FillValue = 6278.6 ;
 	double Witchflounder10_StructN(t, b, z) ;
 		Witchflounder10_StructN:bmtype = "tracer" ;
 		Witchflounder10_StructN:units = "mg N" ;
@@ -33541,7 +32344,121 @@ variables:
 		Witchflounder10_StructN:b_dens = 1000000000. ;
 		Witchflounder10_StructN:i_conc = 200000000. ;
 		Witchflounder10_StructN:f_conc = 200000000. ;
-		Witchflounder10_StructN:_FillValue = 3888.34 ;
+		Witchflounder10_StructN:_FillValue = 3139.3 ;
+	double Witchflounder11_Nums(t, b, z) ;
+		Witchflounder11_Nums:bmtype = "tracer" ;
+		Witchflounder11_Nums:units = "1" ;
+		Witchflounder11_Nums:long_name = "Numbers of other piscivores cohort 10" ;
+		Witchflounder11_Nums:dtype = 0 ;
+		Witchflounder11_Nums:sumtype = 0 ;
+		Witchflounder11_Nums:inwc = 0 ;
+		Witchflounder11_Nums:insed = 0 ;
+		Witchflounder11_Nums:dissol = 0 ;
+		Witchflounder11_Nums:decay = 0. ;
+		Witchflounder11_Nums:partic = 1 ;
+		Witchflounder11_Nums:passive = 1 ;
+		Witchflounder11_Nums:svel = 0. ;
+		Witchflounder11_Nums:xvel = 0. ;
+		Witchflounder11_Nums:psize = 10. ;
+		Witchflounder11_Nums:b_dens = 1000000000. ;
+		Witchflounder11_Nums:i_conc = 200000000. ;
+		Witchflounder11_Nums:f_conc = 200000000. ;
+		Witchflounder11_Nums:_FillValue = 0. ;
+	double Witchflounder11_ResN(t, b, z) ;
+		Witchflounder11_ResN:bmtype = "tracer" ;
+		Witchflounder11_ResN:units = "mg N" ;
+		Witchflounder11_ResN:long_name = "Individ reserve N for other piscivores cohort 10" ;
+		Witchflounder11_ResN:dtype = 0 ;
+		Witchflounder11_ResN:sumtype = 0 ;
+		Witchflounder11_ResN:inwc = 0 ;
+		Witchflounder11_ResN:insed = 0 ;
+		Witchflounder11_ResN:dissol = 0 ;
+		Witchflounder11_ResN:decay = 0. ;
+		Witchflounder11_ResN:partic = 1 ;
+		Witchflounder11_ResN:passive = 0 ;
+		Witchflounder11_ResN:svel = 0. ;
+		Witchflounder11_ResN:xvel = 0. ;
+		Witchflounder11_ResN:psize = 10. ;
+		Witchflounder11_ResN:b_dens = 1000000000. ;
+		Witchflounder11_ResN:i_conc = 200000000. ;
+		Witchflounder11_ResN:f_conc = 200000000. ;
+		Witchflounder11_ResN:_FillValue = 7060.2 ;
+	double Witchflounder11_StructN(t, b, z) ;
+		Witchflounder11_StructN:bmtype = "tracer" ;
+		Witchflounder11_StructN:units = "mg N" ;
+		Witchflounder11_StructN:long_name = "Individ structural N for other piscivores cohort 10" ;
+		Witchflounder11_StructN:dtype = 0 ;
+		Witchflounder11_StructN:sumtype = 0 ;
+		Witchflounder11_StructN:inwc = 0 ;
+		Witchflounder11_StructN:insed = 0 ;
+		Witchflounder11_StructN:dissol = 0 ;
+		Witchflounder11_StructN:decay = 0. ;
+		Witchflounder11_StructN:partic = 1 ;
+		Witchflounder11_StructN:passive = 0 ;
+		Witchflounder11_StructN:svel = 0. ;
+		Witchflounder11_StructN:xvel = 0. ;
+		Witchflounder11_StructN:psize = 10. ;
+		Witchflounder11_StructN:b_dens = 1000000000. ;
+		Witchflounder11_StructN:i_conc = 200000000. ;
+		Witchflounder11_StructN:f_conc = 200000000. ;
+		Witchflounder11_StructN:_FillValue = 3530.1 ;
+	double Witchflounder12_Nums(t, b, z) ;
+		Witchflounder12_Nums:bmtype = "tracer" ;
+		Witchflounder12_Nums:units = "1" ;
+		Witchflounder12_Nums:long_name = "Numbers of other piscivores cohort 10" ;
+		Witchflounder12_Nums:dtype = 0 ;
+		Witchflounder12_Nums:sumtype = 0 ;
+		Witchflounder12_Nums:inwc = 0 ;
+		Witchflounder12_Nums:insed = 0 ;
+		Witchflounder12_Nums:dissol = 0 ;
+		Witchflounder12_Nums:decay = 0. ;
+		Witchflounder12_Nums:partic = 1 ;
+		Witchflounder12_Nums:passive = 1 ;
+		Witchflounder12_Nums:svel = 0. ;
+		Witchflounder12_Nums:xvel = 0. ;
+		Witchflounder12_Nums:psize = 10. ;
+		Witchflounder12_Nums:b_dens = 1000000000. ;
+		Witchflounder12_Nums:i_conc = 200000000. ;
+		Witchflounder12_Nums:f_conc = 200000000. ;
+		Witchflounder12_Nums:_FillValue = 0. ;
+	double Witchflounder12_ResN(t, b, z) ;
+		Witchflounder12_ResN:bmtype = "tracer" ;
+		Witchflounder12_ResN:units = "mg N" ;
+		Witchflounder12_ResN:long_name = "Individ reserve N for other piscivores cohort 10" ;
+		Witchflounder12_ResN:dtype = 0 ;
+		Witchflounder12_ResN:sumtype = 0 ;
+		Witchflounder12_ResN:inwc = 0 ;
+		Witchflounder12_ResN:insed = 0 ;
+		Witchflounder12_ResN:dissol = 0 ;
+		Witchflounder12_ResN:decay = 0. ;
+		Witchflounder12_ResN:partic = 1 ;
+		Witchflounder12_ResN:passive = 0 ;
+		Witchflounder12_ResN:svel = 0. ;
+		Witchflounder12_ResN:xvel = 0. ;
+		Witchflounder12_ResN:psize = 10. ;
+		Witchflounder12_ResN:b_dens = 1000000000. ;
+		Witchflounder12_ResN:i_conc = 200000000. ;
+		Witchflounder12_ResN:f_conc = 200000000. ;
+		Witchflounder12_ResN:_FillValue = 7776.68 ;
+	double Witchflounder12_StructN(t, b, z) ;
+		Witchflounder12_StructN:bmtype = "tracer" ;
+		Witchflounder12_StructN:units = "mg N" ;
+		Witchflounder12_StructN:long_name = "Individ structural N for other piscivores cohort 10" ;
+		Witchflounder12_StructN:dtype = 0 ;
+		Witchflounder12_StructN:sumtype = 0 ;
+		Witchflounder12_StructN:inwc = 0 ;
+		Witchflounder12_StructN:insed = 0 ;
+		Witchflounder12_StructN:dissol = 0 ;
+		Witchflounder12_StructN:decay = 0. ;
+		Witchflounder12_StructN:partic = 1 ;
+		Witchflounder12_StructN:passive = 0 ;
+		Witchflounder12_StructN:svel = 0. ;
+		Witchflounder12_StructN:xvel = 0. ;
+		Witchflounder12_StructN:psize = 10. ;
+		Witchflounder12_StructN:b_dens = 1000000000. ;
+		Witchflounder12_StructN:i_conc = 200000000. ;
+		Witchflounder12_StructN:f_conc = 200000000. ;
+		Witchflounder12_StructN:_FillValue = 3888.34 ;
 	double Witchflounder1_Nums(t, b, z) ;
 		Witchflounder1_Nums:bmtype = "tracer" ;
 		Witchflounder1_Nums:units = "1" ;
@@ -33636,7 +32553,7 @@ variables:
 		Witchflounder2_ResN:b_dens = 1000000000. ;
 		Witchflounder2_ResN:i_conc = 200000000. ;
 		Witchflounder2_ResN:f_conc = 200000000. ;
-		Witchflounder2_ResN:_FillValue = 216.7 ;
+		Witchflounder2_ResN:_FillValue = 158.7 ;
 	double Witchflounder2_StructN(t, b, z) ;
 		Witchflounder2_StructN:bmtype = "tracer" ;
 		Witchflounder2_StructN:units = "mg N" ;
@@ -33655,7 +32572,7 @@ variables:
 		Witchflounder2_StructN:b_dens = 1000000000. ;
 		Witchflounder2_StructN:i_conc = 200000000. ;
 		Witchflounder2_StructN:f_conc = 200000000. ;
-		Witchflounder2_StructN:_FillValue = 108.35 ;
+		Witchflounder2_StructN:_FillValue = 79.4 ;
 	double Witchflounder3_Nums(t, b, z) ;
 		Witchflounder3_Nums:bmtype = "tracer" ;
 		Witchflounder3_Nums:units = "1" ;
@@ -33693,7 +32610,7 @@ variables:
 		Witchflounder3_ResN:b_dens = 1000000000. ;
 		Witchflounder3_ResN:i_conc = 200000000. ;
 		Witchflounder3_ResN:f_conc = 200000000. ;
-		Witchflounder3_ResN:_FillValue = 760.16 ;
+		Witchflounder3_ResN:_FillValue = 1109.6 ;
 	double Witchflounder3_StructN(t, b, z) ;
 		Witchflounder3_StructN:bmtype = "tracer" ;
 		Witchflounder3_StructN:units = "mg N" ;
@@ -33712,7 +32629,7 @@ variables:
 		Witchflounder3_StructN:b_dens = 1000000000. ;
 		Witchflounder3_StructN:i_conc = 200000000. ;
 		Witchflounder3_StructN:f_conc = 200000000. ;
-		Witchflounder3_StructN:_FillValue = 380.08 ;
+		Witchflounder3_StructN:_FillValue = 263.4 ;
 	double Witchflounder4_Nums(t, b, z) ;
 		Witchflounder4_Nums:bmtype = "tracer" ;
 		Witchflounder4_Nums:units = "1" ;
@@ -33750,7 +32667,7 @@ variables:
 		Witchflounder4_ResN:b_dens = 1000000000. ;
 		Witchflounder4_ResN:i_conc = 200000000. ;
 		Witchflounder4_ResN:f_conc = 200000000. ;
-		Witchflounder4_ResN:_FillValue = 1595.88 ;
+		Witchflounder4_ResN:_FillValue = 1109.7 ;
 	double Witchflounder4_StructN(t, b, z) ;
 		Witchflounder4_StructN:bmtype = "tracer" ;
 		Witchflounder4_StructN:units = "mg N" ;
@@ -33769,7 +32686,7 @@ variables:
 		Witchflounder4_StructN:b_dens = 1000000000. ;
 		Witchflounder4_StructN:i_conc = 200000000. ;
 		Witchflounder4_StructN:f_conc = 200000000. ;
-		Witchflounder4_StructN:_FillValue = 797.94 ;
+		Witchflounder4_StructN:_FillValue = 554.8 ;
 	double Witchflounder5_Nums(t, b, z) ;
 		Witchflounder5_Nums:bmtype = "tracer" ;
 		Witchflounder5_Nums:units = "1" ;
@@ -33807,7 +32724,7 @@ variables:
 		Witchflounder5_ResN:b_dens = 1000000000. ;
 		Witchflounder5_ResN:i_conc = 200000000. ;
 		Witchflounder5_ResN:f_conc = 200000000. ;
-		Witchflounder5_ResN:_FillValue = 2619.96 ;
+		Witchflounder5_ResN:_FillValue = 1859.3 ;
 	double Witchflounder5_StructN(t, b, z) ;
 		Witchflounder5_StructN:bmtype = "tracer" ;
 		Witchflounder5_StructN:units = "mg N" ;
@@ -33826,7 +32743,7 @@ variables:
 		Witchflounder5_StructN:b_dens = 1000000000. ;
 		Witchflounder5_StructN:i_conc = 200000000. ;
 		Witchflounder5_StructN:f_conc = 200000000. ;
-		Witchflounder5_StructN:_FillValue = 1309.98 ;
+		Witchflounder5_StructN:_FillValue = 929.6 ;
 	double Witchflounder6_Nums(t, b, z) ;
 		Witchflounder6_Nums:bmtype = "tracer" ;
 		Witchflounder6_Nums:units = "1" ;
@@ -33864,7 +32781,7 @@ variables:
 		Witchflounder6_ResN:b_dens = 1000000000. ;
 		Witchflounder6_ResN:i_conc = 200000000. ;
 		Witchflounder6_ResN:f_conc = 200000000. ;
-		Witchflounder6_ResN:_FillValue = 3729.92 ;
+		Witchflounder6_ResN:_FillValue = 2717.6 ;
 	double Witchflounder6_StructN(t, b, z) ;
 		Witchflounder6_StructN:bmtype = "tracer" ;
 		Witchflounder6_StructN:units = "mg N" ;
@@ -33883,7 +32800,7 @@ variables:
 		Witchflounder6_StructN:b_dens = 1000000000. ;
 		Witchflounder6_StructN:i_conc = 200000000. ;
 		Witchflounder6_StructN:f_conc = 200000000. ;
-		Witchflounder6_StructN:_FillValue = 1864.96 ;
+		Witchflounder6_StructN:_FillValue = 1358.8 ;
 	double Witchflounder7_Nums(t, b, z) ;
 		Witchflounder7_Nums:bmtype = "tracer" ;
 		Witchflounder7_Nums:units = "1" ;
@@ -33921,7 +32838,7 @@ variables:
 		Witchflounder7_ResN:b_dens = 1000000000. ;
 		Witchflounder7_ResN:i_conc = 200000000. ;
 		Witchflounder7_ResN:f_conc = 200000000. ;
-		Witchflounder7_ResN:_FillValue = 4845.28 ;
+		Witchflounder7_ResN:_FillValue = 3628.5 ;
 	double Witchflounder7_StructN(t, b, z) ;
 		Witchflounder7_StructN:bmtype = "tracer" ;
 		Witchflounder7_StructN:units = "mg N" ;
@@ -33940,7 +32857,7 @@ variables:
 		Witchflounder7_StructN:b_dens = 1000000000. ;
 		Witchflounder7_StructN:i_conc = 200000000. ;
 		Witchflounder7_StructN:f_conc = 200000000. ;
-		Witchflounder7_StructN:_FillValue = 2422.64 ;
+		Witchflounder7_StructN:_FillValue = 1814.2 ;
 	double Witchflounder8_Nums(t, b, z) ;
 		Witchflounder8_Nums:bmtype = "tracer" ;
 		Witchflounder8_Nums:units = "1" ;
@@ -33978,7 +32895,7 @@ variables:
 		Witchflounder8_ResN:b_dens = 1000000000. ;
 		Witchflounder8_ResN:i_conc = 200000000. ;
 		Witchflounder8_ResN:f_conc = 200000000. ;
-		Witchflounder8_ResN:_FillValue = 5910.94 ;
+		Witchflounder8_ResN:_FillValue = 4544.5 ;
 	double Witchflounder8_StructN(t, b, z) ;
 		Witchflounder8_StructN:bmtype = "tracer" ;
 		Witchflounder8_StructN:units = "mg N" ;
@@ -33997,7 +32914,7 @@ variables:
 		Witchflounder8_StructN:b_dens = 1000000000. ;
 		Witchflounder8_StructN:i_conc = 200000000. ;
 		Witchflounder8_StructN:f_conc = 200000000. ;
-		Witchflounder8_StructN:_FillValue = 2955.47 ;
+		Witchflounder8_StructN:_FillValue = 2272.3 ;
 	double Witchflounder9_Nums(t, b, z) ;
 		Witchflounder9_Nums:bmtype = "tracer" ;
 		Witchflounder9_Nums:units = "1" ;
@@ -34035,7 +32952,7 @@ variables:
 		Witchflounder9_ResN:b_dens = 1000000000. ;
 		Witchflounder9_ResN:i_conc = 200000000. ;
 		Witchflounder9_ResN:f_conc = 200000000. ;
-		Witchflounder9_ResN:_FillValue = 6893.62 ;
+		Witchflounder9_ResN:_FillValue = 5434.9 ;
 	double Witchflounder9_StructN(t, b, z) ;
 		Witchflounder9_StructN:bmtype = "tracer" ;
 		Witchflounder9_StructN:units = "mg N" ;
@@ -34054,7 +32971,7 @@ variables:
 		Witchflounder9_StructN:b_dens = 1000000000. ;
 		Witchflounder9_StructN:i_conc = 200000000. ;
 		Witchflounder9_StructN:f_conc = 200000000. ;
-		Witchflounder9_StructN:_FillValue = 3446.81 ;
+		Witchflounder9_StructN:_FillValue = 2717.5 ;
 	double Witchflounder_N(t, b, z) ;
 		Witchflounder_N:bmtype = "tracer" ;
 		Witchflounder_N:units = "mg N m-3" ;
@@ -34104,7 +33021,7 @@ variables:
 		Wolffish10_ResN:b_dens = 1000000000. ;
 		Wolffish10_ResN:i_conc = 200000000. ;
 		Wolffish10_ResN:f_conc = 200000000. ;
-		Wolffish10_ResN:_FillValue = 24084.1 ;
+		Wolffish10_ResN:_FillValue = 16688.3 ;
 	double Wolffish10_StructN(t, b, z) ;
 		Wolffish10_StructN:bmtype = "tracer" ;
 		Wolffish10_StructN:units = "mg N" ;
@@ -34123,7 +33040,121 @@ variables:
 		Wolffish10_StructN:b_dens = 1000000000. ;
 		Wolffish10_StructN:i_conc = 200000000. ;
 		Wolffish10_StructN:f_conc = 200000000. ;
-		Wolffish10_StructN:_FillValue = 12042.05 ;
+		Wolffish10_StructN:_FillValue = 8344.1 ;
+	double Wolffish11_Nums(t, b, z) ;
+		Wolffish11_Nums:bmtype = "tracer" ;
+		Wolffish11_Nums:units = "1" ;
+		Wolffish11_Nums:long_name = "Numbers of other deep demersal cohort 10" ;
+		Wolffish11_Nums:dtype = 0 ;
+		Wolffish11_Nums:sumtype = 0 ;
+		Wolffish11_Nums:inwc = 0 ;
+		Wolffish11_Nums:insed = 0 ;
+		Wolffish11_Nums:dissol = 0 ;
+		Wolffish11_Nums:decay = 0. ;
+		Wolffish11_Nums:partic = 1 ;
+		Wolffish11_Nums:passive = 1 ;
+		Wolffish11_Nums:svel = 0. ;
+		Wolffish11_Nums:xvel = 0. ;
+		Wolffish11_Nums:psize = 10. ;
+		Wolffish11_Nums:b_dens = 1000000000. ;
+		Wolffish11_Nums:i_conc = 200000000. ;
+		Wolffish11_Nums:f_conc = 200000000. ;
+		Wolffish11_Nums:_FillValue = 0. ;
+	double Wolffish11_ResN(t, b, z) ;
+		Wolffish11_ResN:bmtype = "tracer" ;
+		Wolffish11_ResN:units = "mg N" ;
+		Wolffish11_ResN:long_name = "Individ reserve N for other deep demersal fish cohort 10" ;
+		Wolffish11_ResN:dtype = 0 ;
+		Wolffish11_ResN:sumtype = 0 ;
+		Wolffish11_ResN:inwc = 0 ;
+		Wolffish11_ResN:insed = 0 ;
+		Wolffish11_ResN:dissol = 0 ;
+		Wolffish11_ResN:decay = 0. ;
+		Wolffish11_ResN:partic = 1 ;
+		Wolffish11_ResN:passive = 0 ;
+		Wolffish11_ResN:svel = 0. ;
+		Wolffish11_ResN:xvel = 0. ;
+		Wolffish11_ResN:psize = 10. ;
+		Wolffish11_ResN:b_dens = 1000000000. ;
+		Wolffish11_ResN:i_conc = 200000000. ;
+		Wolffish11_ResN:f_conc = 200000000. ;
+		Wolffish11_ResN:_FillValue = 20297.3 ;
+	double Wolffish11_StructN(t, b, z) ;
+		Wolffish11_StructN:bmtype = "tracer" ;
+		Wolffish11_StructN:units = "mg N" ;
+		Wolffish11_StructN:long_name = "Individ structural N for other deep demersal fish cohort 10" ;
+		Wolffish11_StructN:dtype = 0 ;
+		Wolffish11_StructN:sumtype = 0 ;
+		Wolffish11_StructN:inwc = 0 ;
+		Wolffish11_StructN:insed = 0 ;
+		Wolffish11_StructN:dissol = 0 ;
+		Wolffish11_StructN:decay = 0. ;
+		Wolffish11_StructN:partic = 1 ;
+		Wolffish11_StructN:passive = 0 ;
+		Wolffish11_StructN:svel = 0. ;
+		Wolffish11_StructN:xvel = 0. ;
+		Wolffish11_StructN:psize = 10. ;
+		Wolffish11_StructN:b_dens = 1000000000. ;
+		Wolffish11_StructN:i_conc = 200000000. ;
+		Wolffish11_StructN:f_conc = 200000000. ;
+		Wolffish11_StructN:_FillValue = 10148.7 ;
+	double Wolffish12_Nums(t, b, z) ;
+		Wolffish12_Nums:bmtype = "tracer" ;
+		Wolffish12_Nums:units = "1" ;
+		Wolffish12_Nums:long_name = "Numbers of other deep demersal cohort 10" ;
+		Wolffish12_Nums:dtype = 0 ;
+		Wolffish12_Nums:sumtype = 0 ;
+		Wolffish12_Nums:inwc = 0 ;
+		Wolffish12_Nums:insed = 0 ;
+		Wolffish12_Nums:dissol = 0 ;
+		Wolffish12_Nums:decay = 0. ;
+		Wolffish12_Nums:partic = 1 ;
+		Wolffish12_Nums:passive = 1 ;
+		Wolffish12_Nums:svel = 0. ;
+		Wolffish12_Nums:xvel = 0. ;
+		Wolffish12_Nums:psize = 10. ;
+		Wolffish12_Nums:b_dens = 1000000000. ;
+		Wolffish12_Nums:i_conc = 200000000. ;
+		Wolffish12_Nums:f_conc = 200000000. ;
+		Wolffish12_Nums:_FillValue = 0. ;
+	double Wolffish12_ResN(t, b, z) ;
+		Wolffish12_ResN:bmtype = "tracer" ;
+		Wolffish12_ResN:units = "mg N" ;
+		Wolffish12_ResN:long_name = "Individ reserve N for other deep demersal fish cohort 10" ;
+		Wolffish12_ResN:dtype = 0 ;
+		Wolffish12_ResN:sumtype = 0 ;
+		Wolffish12_ResN:inwc = 0 ;
+		Wolffish12_ResN:insed = 0 ;
+		Wolffish12_ResN:dissol = 0 ;
+		Wolffish12_ResN:decay = 0. ;
+		Wolffish12_ResN:partic = 1 ;
+		Wolffish12_ResN:passive = 0 ;
+		Wolffish12_ResN:svel = 0. ;
+		Wolffish12_ResN:xvel = 0. ;
+		Wolffish12_ResN:psize = 10. ;
+		Wolffish12_ResN:b_dens = 1000000000. ;
+		Wolffish12_ResN:i_conc = 200000000. ;
+		Wolffish12_ResN:f_conc = 200000000. ;
+		Wolffish12_ResN:_FillValue = 24084.1 ;
+	double Wolffish12_StructN(t, b, z) ;
+		Wolffish12_StructN:bmtype = "tracer" ;
+		Wolffish12_StructN:units = "mg N" ;
+		Wolffish12_StructN:long_name = "Individ structural N for other deep demersal fish cohort 10" ;
+		Wolffish12_StructN:dtype = 0 ;
+		Wolffish12_StructN:sumtype = 0 ;
+		Wolffish12_StructN:inwc = 0 ;
+		Wolffish12_StructN:insed = 0 ;
+		Wolffish12_StructN:dissol = 0 ;
+		Wolffish12_StructN:decay = 0. ;
+		Wolffish12_StructN:partic = 1 ;
+		Wolffish12_StructN:passive = 0 ;
+		Wolffish12_StructN:svel = 0. ;
+		Wolffish12_StructN:xvel = 0. ;
+		Wolffish12_StructN:psize = 10. ;
+		Wolffish12_StructN:b_dens = 1000000000. ;
+		Wolffish12_StructN:i_conc = 200000000. ;
+		Wolffish12_StructN:f_conc = 200000000. ;
+		Wolffish12_StructN:_FillValue = 12042.05 ;
 	double Wolffish1_Nums(t, b, z) ;
 		Wolffish1_Nums:bmtype = "tracer" ;
 		Wolffish1_Nums:units = "1" ;
@@ -34218,7 +33249,7 @@ variables:
 		Wolffish2_ResN:b_dens = 1000000000. ;
 		Wolffish2_ResN:i_conc = 200000000. ;
 		Wolffish2_ResN:f_conc = 200000000. ;
-		Wolffish2_ResN:_FillValue = 294.82 ;
+		Wolffish2_ResN:_FillValue = 209.5 ;
 	double Wolffish2_StructN(t, b, z) ;
 		Wolffish2_StructN:bmtype = "tracer" ;
 		Wolffish2_StructN:units = "mg N" ;
@@ -34237,7 +33268,7 @@ variables:
 		Wolffish2_StructN:b_dens = 1000000000. ;
 		Wolffish2_StructN:i_conc = 200000000. ;
 		Wolffish2_StructN:f_conc = 200000000. ;
-		Wolffish2_StructN:_FillValue = 147.41 ;
+		Wolffish2_StructN:_FillValue = 104.7 ;
 	double Wolffish3_Nums(t, b, z) ;
 		Wolffish3_Nums:bmtype = "tracer" ;
 		Wolffish3_Nums:units = "1" ;
@@ -34275,7 +33306,7 @@ variables:
 		Wolffish3_ResN:b_dens = 1000000000. ;
 		Wolffish3_ResN:i_conc = 200000000. ;
 		Wolffish3_ResN:f_conc = 200000000. ;
-		Wolffish3_ResN:_FillValue = 1138.28 ;
+		Wolffish3_ResN:_FillValue = 757.6 ;
 	double Wolffish3_StructN(t, b, z) ;
 		Wolffish3_StructN:bmtype = "tracer" ;
 		Wolffish3_StructN:units = "mg N" ;
@@ -34294,7 +33325,7 @@ variables:
 		Wolffish3_StructN:b_dens = 1000000000. ;
 		Wolffish3_StructN:i_conc = 200000000. ;
 		Wolffish3_StructN:f_conc = 200000000. ;
-		Wolffish3_StructN:_FillValue = 569.14 ;
+		Wolffish3_StructN:_FillValue = 378.8 ;
 	double Wolffish4_Nums(t, b, z) ;
 		Wolffish4_Nums:bmtype = "tracer" ;
 		Wolffish4_Nums:units = "1" ;
@@ -34332,7 +33363,7 @@ variables:
 		Wolffish4_ResN:b_dens = 1000000000. ;
 		Wolffish4_ResN:i_conc = 200000000. ;
 		Wolffish4_ResN:f_conc = 200000000. ;
-		Wolffish4_ResN:_FillValue = 2664.54 ;
+		Wolffish4_ResN:_FillValue = 1746.5 ;
 	double Wolffish4_StructN(t, b, z) ;
 		Wolffish4_StructN:bmtype = "tracer" ;
 		Wolffish4_StructN:units = "mg N" ;
@@ -34351,7 +33382,7 @@ variables:
 		Wolffish4_StructN:b_dens = 1000000000. ;
 		Wolffish4_StructN:i_conc = 200000000. ;
 		Wolffish4_StructN:f_conc = 200000000. ;
-		Wolffish4_StructN:_FillValue = 1332.27 ;
+		Wolffish4_StructN:_FillValue = 873.2 ;
 	double Wolffish5_Nums(t, b, z) ;
 		Wolffish5_Nums:bmtype = "tracer" ;
 		Wolffish5_Nums:units = "1" ;
@@ -34389,7 +33420,7 @@ variables:
 		Wolffish5_ResN:b_dens = 1000000000. ;
 		Wolffish5_ResN:i_conc = 200000000. ;
 		Wolffish5_ResN:f_conc = 200000000. ;
-		Wolffish5_ResN:_FillValue = 4889.38 ;
+		Wolffish5_ResN:_FillValue = 3203.2 ;
 	double Wolffish5_StructN(t, b, z) ;
 		Wolffish5_StructN:bmtype = "tracer" ;
 		Wolffish5_StructN:units = "mg N" ;
@@ -34408,7 +33439,7 @@ variables:
 		Wolffish5_StructN:b_dens = 1000000000. ;
 		Wolffish5_StructN:i_conc = 200000000. ;
 		Wolffish5_StructN:f_conc = 200000000. ;
-		Wolffish5_StructN:_FillValue = 2444.69 ;
+		Wolffish5_StructN:_FillValue = 1601.6 ;
 	double Wolffish6_Nums(t, b, z) ;
 		Wolffish6_Nums:bmtype = "tracer" ;
 		Wolffish6_Nums:units = "1" ;
@@ -34446,7 +33477,7 @@ variables:
 		Wolffish6_ResN:b_dens = 1000000000. ;
 		Wolffish6_ResN:i_conc = 200000000. ;
 		Wolffish6_ResN:f_conc = 200000000. ;
-		Wolffish6_ResN:_FillValue = 7767.94 ;
+		Wolffish6_ResN:_FillValue = 5124.3 ;
 	double Wolffish6_StructN(t, b, z) ;
 		Wolffish6_StructN:bmtype = "tracer" ;
 		Wolffish6_StructN:units = "mg N" ;
@@ -34465,7 +33496,7 @@ variables:
 		Wolffish6_StructN:b_dens = 1000000000. ;
 		Wolffish6_StructN:i_conc = 200000000. ;
 		Wolffish6_StructN:f_conc = 200000000. ;
-		Wolffish6_StructN:_FillValue = 3883.97 ;
+		Wolffish6_StructN:_FillValue = 2562.2 ;
 	double Wolffish7_Nums(t, b, z) ;
 		Wolffish7_Nums:bmtype = "tracer" ;
 		Wolffish7_Nums:units = "1" ;
@@ -34503,7 +33534,7 @@ variables:
 		Wolffish7_ResN:b_dens = 1000000000. ;
 		Wolffish7_ResN:i_conc = 200000000. ;
 		Wolffish7_ResN:f_conc = 200000000. ;
-		Wolffish7_ResN:_FillValue = 11222.1 ;
+		Wolffish7_ResN:_FillValue = 7482.2 ;
 	double Wolffish7_StructN(t, b, z) ;
 		Wolffish7_StructN:bmtype = "tracer" ;
 		Wolffish7_StructN:units = "mg N" ;
@@ -34522,7 +33553,7 @@ variables:
 		Wolffish7_StructN:b_dens = 1000000000. ;
 		Wolffish7_StructN:i_conc = 200000000. ;
 		Wolffish7_StructN:f_conc = 200000000. ;
-		Wolffish7_StructN:_FillValue = 5611.05 ;
+		Wolffish7_StructN:_FillValue = 3741.1 ;
 	double Wolffish8_Nums(t, b, z) ;
 		Wolffish8_Nums:bmtype = "tracer" ;
 		Wolffish8_Nums:units = "1" ;
@@ -34560,7 +33591,7 @@ variables:
 		Wolffish8_ResN:b_dens = 1000000000. ;
 		Wolffish8_ResN:i_conc = 200000000. ;
 		Wolffish8_ResN:f_conc = 200000000. ;
-		Wolffish8_ResN:_FillValue = 15157.96 ;
+		Wolffish8_ResN:_FillValue = 10229.7 ;
 	double Wolffish8_StructN(t, b, z) ;
 		Wolffish8_StructN:bmtype = "tracer" ;
 		Wolffish8_StructN:units = "mg N" ;
@@ -34579,7 +33610,7 @@ variables:
 		Wolffish8_StructN:b_dens = 1000000000. ;
 		Wolffish8_StructN:i_conc = 200000000. ;
 		Wolffish8_StructN:f_conc = 200000000. ;
-		Wolffish8_StructN:_FillValue = 7578.98 ;
+		Wolffish8_StructN:_FillValue = 5114.8 ;
 	double Wolffish9_Nums(t, b, z) ;
 		Wolffish9_Nums:bmtype = "tracer" ;
 		Wolffish9_Nums:units = "1" ;
@@ -34617,7 +33648,7 @@ variables:
 		Wolffish9_ResN:b_dens = 1000000000. ;
 		Wolffish9_ResN:i_conc = 200000000. ;
 		Wolffish9_ResN:f_conc = 200000000. ;
-		Wolffish9_ResN:_FillValue = 19477.2 ;
+		Wolffish9_ResN:_FillValue = 13315.9 ;
 	double Wolffish9_StructN(t, b, z) ;
 		Wolffish9_StructN:bmtype = "tracer" ;
 		Wolffish9_StructN:units = "mg N" ;
@@ -34636,7 +33667,7 @@ variables:
 		Wolffish9_StructN:b_dens = 1000000000. ;
 		Wolffish9_StructN:i_conc = 200000000. ;
 		Wolffish9_StructN:f_conc = 200000000. ;
-		Wolffish9_StructN:_FillValue = 9738.6 ;
+		Wolffish9_StructN:_FillValue = 6657.9 ;
 	double Wolffish_N(t, b, z) ;
 		Wolffish_N:bmtype = "tracer" ;
 		Wolffish_N:units = "mg N m-3" ;
@@ -34686,7 +33717,7 @@ variables:
 		Yellowtail_Flounder10_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder10_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder10_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder10_ResN:_FillValue = 3358.14 ;
+		Yellowtail_Flounder10_ResN:_FillValue = 3112.9 ;
 	double Yellowtail_Flounder10_StructN(t, b, z) ;
 		Yellowtail_Flounder10_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder10_StructN:units = "mg N" ;
@@ -34705,7 +33736,121 @@ variables:
 		Yellowtail_Flounder10_StructN:b_dens = 1000000000. ;
 		Yellowtail_Flounder10_StructN:i_conc = 200000000. ;
 		Yellowtail_Flounder10_StructN:f_conc = 200000000. ;
-		Yellowtail_Flounder10_StructN:_FillValue = 1679.07 ;
+		Yellowtail_Flounder10_StructN:_FillValue = 1556.5 ;
+	double Yellowtail_Flounder11_Nums(t, b, z) ;
+		Yellowtail_Flounder11_Nums:bmtype = "tracer" ;
+		Yellowtail_Flounder11_Nums:units = "1" ;
+		Yellowtail_Flounder11_Nums:long_name = "Numbers of estuarine deep demersal cohort 10" ;
+		Yellowtail_Flounder11_Nums:dtype = 0 ;
+		Yellowtail_Flounder11_Nums:sumtype = 0 ;
+		Yellowtail_Flounder11_Nums:inwc = 0 ;
+		Yellowtail_Flounder11_Nums:insed = 0 ;
+		Yellowtail_Flounder11_Nums:dissol = 0 ;
+		Yellowtail_Flounder11_Nums:decay = 0. ;
+		Yellowtail_Flounder11_Nums:partic = 1 ;
+		Yellowtail_Flounder11_Nums:passive = 1 ;
+		Yellowtail_Flounder11_Nums:svel = 0. ;
+		Yellowtail_Flounder11_Nums:xvel = 0. ;
+		Yellowtail_Flounder11_Nums:psize = 10. ;
+		Yellowtail_Flounder11_Nums:b_dens = 1000000000. ;
+		Yellowtail_Flounder11_Nums:i_conc = 200000000. ;
+		Yellowtail_Flounder11_Nums:f_conc = 200000000. ;
+		Yellowtail_Flounder11_Nums:_FillValue = 0. ;
+	double Yellowtail_Flounder11_ResN(t, b, z) ;
+		Yellowtail_Flounder11_ResN:bmtype = "tracer" ;
+		Yellowtail_Flounder11_ResN:units = "mg N" ;
+		Yellowtail_Flounder11_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 10" ;
+		Yellowtail_Flounder11_ResN:dtype = 0 ;
+		Yellowtail_Flounder11_ResN:sumtype = 0 ;
+		Yellowtail_Flounder11_ResN:inwc = 0 ;
+		Yellowtail_Flounder11_ResN:insed = 0 ;
+		Yellowtail_Flounder11_ResN:dissol = 0 ;
+		Yellowtail_Flounder11_ResN:decay = 0. ;
+		Yellowtail_Flounder11_ResN:partic = 1 ;
+		Yellowtail_Flounder11_ResN:passive = 0 ;
+		Yellowtail_Flounder11_ResN:svel = 0. ;
+		Yellowtail_Flounder11_ResN:xvel = 0. ;
+		Yellowtail_Flounder11_ResN:psize = 10. ;
+		Yellowtail_Flounder11_ResN:b_dens = 1000000000. ;
+		Yellowtail_Flounder11_ResN:i_conc = 200000000. ;
+		Yellowtail_Flounder11_ResN:f_conc = 200000000. ;
+		Yellowtail_Flounder11_ResN:_FillValue = 3250.4 ;
+	double Yellowtail_Flounder11_StructN(t, b, z) ;
+		Yellowtail_Flounder11_StructN:bmtype = "tracer" ;
+		Yellowtail_Flounder11_StructN:units = "mg N" ;
+		Yellowtail_Flounder11_StructN:long_name = "Individ structural N for flat deep demersal fish cohort 10" ;
+		Yellowtail_Flounder11_StructN:dtype = 0 ;
+		Yellowtail_Flounder11_StructN:sumtype = 0 ;
+		Yellowtail_Flounder11_StructN:inwc = 0 ;
+		Yellowtail_Flounder11_StructN:insed = 0 ;
+		Yellowtail_Flounder11_StructN:dissol = 0 ;
+		Yellowtail_Flounder11_StructN:decay = 0. ;
+		Yellowtail_Flounder11_StructN:partic = 1 ;
+		Yellowtail_Flounder11_StructN:passive = 0 ;
+		Yellowtail_Flounder11_StructN:svel = 0. ;
+		Yellowtail_Flounder11_StructN:xvel = 0. ;
+		Yellowtail_Flounder11_StructN:psize = 10. ;
+		Yellowtail_Flounder11_StructN:b_dens = 1000000000. ;
+		Yellowtail_Flounder11_StructN:i_conc = 200000000. ;
+		Yellowtail_Flounder11_StructN:f_conc = 200000000. ;
+		Yellowtail_Flounder11_StructN:_FillValue = 1625.2 ;
+	double Yellowtail_Flounder12_Nums(t, b, z) ;
+		Yellowtail_Flounder12_Nums:bmtype = "tracer" ;
+		Yellowtail_Flounder12_Nums:units = "1" ;
+		Yellowtail_Flounder12_Nums:long_name = "Numbers of estuarine deep demersal cohort 10" ;
+		Yellowtail_Flounder12_Nums:dtype = 0 ;
+		Yellowtail_Flounder12_Nums:sumtype = 0 ;
+		Yellowtail_Flounder12_Nums:inwc = 0 ;
+		Yellowtail_Flounder12_Nums:insed = 0 ;
+		Yellowtail_Flounder12_Nums:dissol = 0 ;
+		Yellowtail_Flounder12_Nums:decay = 0. ;
+		Yellowtail_Flounder12_Nums:partic = 1 ;
+		Yellowtail_Flounder12_Nums:passive = 1 ;
+		Yellowtail_Flounder12_Nums:svel = 0. ;
+		Yellowtail_Flounder12_Nums:xvel = 0. ;
+		Yellowtail_Flounder12_Nums:psize = 10. ;
+		Yellowtail_Flounder12_Nums:b_dens = 1000000000. ;
+		Yellowtail_Flounder12_Nums:i_conc = 200000000. ;
+		Yellowtail_Flounder12_Nums:f_conc = 200000000. ;
+		Yellowtail_Flounder12_Nums:_FillValue = 0. ;
+	double Yellowtail_Flounder12_ResN(t, b, z) ;
+		Yellowtail_Flounder12_ResN:bmtype = "tracer" ;
+		Yellowtail_Flounder12_ResN:units = "mg N" ;
+		Yellowtail_Flounder12_ResN:long_name = "Individ reserve N for estuarine deep demersal fish cohort 10" ;
+		Yellowtail_Flounder12_ResN:dtype = 0 ;
+		Yellowtail_Flounder12_ResN:sumtype = 0 ;
+		Yellowtail_Flounder12_ResN:inwc = 0 ;
+		Yellowtail_Flounder12_ResN:insed = 0 ;
+		Yellowtail_Flounder12_ResN:dissol = 0 ;
+		Yellowtail_Flounder12_ResN:decay = 0. ;
+		Yellowtail_Flounder12_ResN:partic = 1 ;
+		Yellowtail_Flounder12_ResN:passive = 0 ;
+		Yellowtail_Flounder12_ResN:svel = 0. ;
+		Yellowtail_Flounder12_ResN:xvel = 0. ;
+		Yellowtail_Flounder12_ResN:psize = 10. ;
+		Yellowtail_Flounder12_ResN:b_dens = 1000000000. ;
+		Yellowtail_Flounder12_ResN:i_conc = 200000000. ;
+		Yellowtail_Flounder12_ResN:f_conc = 200000000. ;
+		Yellowtail_Flounder12_ResN:_FillValue = 3358.14 ;
+	double Yellowtail_Flounder12_StructN(t, b, z) ;
+		Yellowtail_Flounder12_StructN:bmtype = "tracer" ;
+		Yellowtail_Flounder12_StructN:units = "mg N" ;
+		Yellowtail_Flounder12_StructN:long_name = "Individ structural N for flat deep demersal fish cohort 10" ;
+		Yellowtail_Flounder12_StructN:dtype = 0 ;
+		Yellowtail_Flounder12_StructN:sumtype = 0 ;
+		Yellowtail_Flounder12_StructN:inwc = 0 ;
+		Yellowtail_Flounder12_StructN:insed = 0 ;
+		Yellowtail_Flounder12_StructN:dissol = 0 ;
+		Yellowtail_Flounder12_StructN:decay = 0. ;
+		Yellowtail_Flounder12_StructN:partic = 1 ;
+		Yellowtail_Flounder12_StructN:passive = 0 ;
+		Yellowtail_Flounder12_StructN:svel = 0. ;
+		Yellowtail_Flounder12_StructN:xvel = 0. ;
+		Yellowtail_Flounder12_StructN:psize = 10. ;
+		Yellowtail_Flounder12_StructN:b_dens = 1000000000. ;
+		Yellowtail_Flounder12_StructN:i_conc = 200000000. ;
+		Yellowtail_Flounder12_StructN:f_conc = 200000000. ;
+		Yellowtail_Flounder12_StructN:_FillValue = 1679.07 ;
 	double Yellowtail_Flounder1_Nums(t, b, z) ;
 		Yellowtail_Flounder1_Nums:bmtype = "tracer" ;
 		Yellowtail_Flounder1_Nums:units = "1" ;
@@ -34800,7 +33945,7 @@ variables:
 		Yellowtail_Flounder2_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder2_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder2_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder2_ResN:_FillValue = 491.94 ;
+		Yellowtail_Flounder2_ResN:_FillValue = 412.8 ;
 	double Yellowtail_Flounder2_StructN(t, b, z) ;
 		Yellowtail_Flounder2_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder2_StructN:units = "mg N" ;
@@ -34819,7 +33964,7 @@ variables:
 		Yellowtail_Flounder2_StructN:b_dens = 1000000000. ;
 		Yellowtail_Flounder2_StructN:i_conc = 200000000. ;
 		Yellowtail_Flounder2_StructN:f_conc = 200000000. ;
-		Yellowtail_Flounder2_StructN:_FillValue = 245.97 ;
+		Yellowtail_Flounder2_StructN:_FillValue = 206.4 ;
 	double Yellowtail_Flounder3_Nums(t, b, z) ;
 		Yellowtail_Flounder3_Nums:bmtype = "tracer" ;
 		Yellowtail_Flounder3_Nums:units = "1" ;
@@ -34857,7 +34002,7 @@ variables:
 		Yellowtail_Flounder3_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder3_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder3_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder3_ResN:_FillValue = 1027.18 ;
+		Yellowtail_Flounder3_ResN:_FillValue = 825.1 ;
 	double Yellowtail_Flounder3_StructN(t, b, z) ;
 		Yellowtail_Flounder3_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder3_StructN:units = "mg N" ;
@@ -34876,7 +34021,7 @@ variables:
 		Yellowtail_Flounder3_StructN:b_dens = 1000000000. ;
 		Yellowtail_Flounder3_StructN:i_conc = 200000000. ;
 		Yellowtail_Flounder3_StructN:f_conc = 200000000. ;
-		Yellowtail_Flounder3_StructN:_FillValue = 513.59 ;
+		Yellowtail_Flounder3_StructN:_FillValue = 412.5 ;
 	double Yellowtail_Flounder4_Nums(t, b, z) ;
 		Yellowtail_Flounder4_Nums:bmtype = "tracer" ;
 		Yellowtail_Flounder4_Nums:units = "1" ;
@@ -34914,7 +34059,7 @@ variables:
 		Yellowtail_Flounder4_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder4_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder4_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder4_ResN:_FillValue = 1577.66 ;
+		Yellowtail_Flounder4_ResN:_FillValue = 1279.7 ;
 	double Yellowtail_Flounder4_StructN(t, b, z) ;
 		Yellowtail_Flounder4_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder4_StructN:units = "mg N" ;
@@ -34933,7 +34078,7 @@ variables:
 		Yellowtail_Flounder4_StructN:b_dens = 1000000000. ;
 		Yellowtail_Flounder4_StructN:i_conc = 200000000. ;
 		Yellowtail_Flounder4_StructN:f_conc = 200000000. ;
-		Yellowtail_Flounder4_StructN:_FillValue = 788.83 ;
+		Yellowtail_Flounder4_StructN:_FillValue = 639.8 ;
 	double Yellowtail_Flounder5_Nums(t, b, z) ;
 		Yellowtail_Flounder5_Nums:bmtype = "tracer" ;
 		Yellowtail_Flounder5_Nums:units = "1" ;
@@ -34971,7 +34116,7 @@ variables:
 		Yellowtail_Flounder5_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder5_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder5_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder5_ResN:_FillValue = 2069.32 ;
+		Yellowtail_Flounder5_ResN:_FillValue = 1718.3 ;
 	double Yellowtail_Flounder5_StructN(t, b, z) ;
 		Yellowtail_Flounder5_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder5_StructN:units = "mg N" ;
@@ -34990,7 +34135,7 @@ variables:
 		Yellowtail_Flounder5_StructN:b_dens = 1000000000. ;
 		Yellowtail_Flounder5_StructN:i_conc = 200000000. ;
 		Yellowtail_Flounder5_StructN:f_conc = 200000000. ;
-		Yellowtail_Flounder5_StructN:_FillValue = 1034.66 ;
+		Yellowtail_Flounder5_StructN:_FillValue = 859.2 ;
 	double Yellowtail_Flounder6_Nums(t, b, z) ;
 		Yellowtail_Flounder6_Nums:bmtype = "tracer" ;
 		Yellowtail_Flounder6_Nums:units = "1" ;
@@ -35028,7 +34173,7 @@ variables:
 		Yellowtail_Flounder6_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder6_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder6_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder6_ResN:_FillValue = 2475.46 ;
+		Yellowtail_Flounder6_ResN:_FillValue = 2109.7 ;
 	double Yellowtail_Flounder6_StructN(t, b, z) ;
 		Yellowtail_Flounder6_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder6_StructN:units = "mg N" ;
@@ -35047,7 +34192,7 @@ variables:
 		Yellowtail_Flounder6_StructN:b_dens = 1000000000. ;
 		Yellowtail_Flounder6_StructN:i_conc = 200000000. ;
 		Yellowtail_Flounder6_StructN:f_conc = 200000000. ;
-		Yellowtail_Flounder6_StructN:_FillValue = 1237.73 ;
+		Yellowtail_Flounder6_StructN:_FillValue = 1054.9 ;
 	double Yellowtail_Flounder7_Nums(t, b, z) ;
 		Yellowtail_Flounder7_Nums:bmtype = "tracer" ;
 		Yellowtail_Flounder7_Nums:units = "1" ;
@@ -35085,7 +34230,7 @@ variables:
 		Yellowtail_Flounder7_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder7_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder7_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder7_ResN:_FillValue = 2795.38 ;
+		Yellowtail_Flounder7_ResN:_FillValue = 2442.1 ;
 	double Yellowtail_Flounder7_StructN(t, b, z) ;
 		Yellowtail_Flounder7_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder7_StructN:units = "mg N" ;
@@ -35104,7 +34249,7 @@ variables:
 		Yellowtail_Flounder7_StructN:b_dens = 1000000000. ;
 		Yellowtail_Flounder7_StructN:i_conc = 200000000. ;
 		Yellowtail_Flounder7_StructN:f_conc = 200000000. ;
-		Yellowtail_Flounder7_StructN:_FillValue = 1397.69 ;
+		Yellowtail_Flounder7_StructN:_FillValue = 1221.1 ;
 	double Yellowtail_Flounder8_Nums(t, b, z) ;
 		Yellowtail_Flounder8_Nums:bmtype = "tracer" ;
 		Yellowtail_Flounder8_Nums:units = "1" ;
@@ -35142,7 +34287,7 @@ variables:
 		Yellowtail_Flounder8_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder8_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder8_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder8_ResN:_FillValue = 3039.84 ;
+		Yellowtail_Flounder8_ResN:_FillValue = 2715.9 ;
 	double Yellowtail_Flounder8_StructN(t, b, z) ;
 		Yellowtail_Flounder8_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder8_StructN:units = "mg N" ;
@@ -35161,7 +34306,7 @@ variables:
 		Yellowtail_Flounder8_StructN:b_dens = 1000000000. ;
 		Yellowtail_Flounder8_StructN:i_conc = 200000000. ;
 		Yellowtail_Flounder8_StructN:f_conc = 200000000. ;
-		Yellowtail_Flounder8_StructN:_FillValue = 1519.92 ;
+		Yellowtail_Flounder8_StructN:_FillValue = 1357.9 ;
 	double Yellowtail_Flounder9_Nums(t, b, z) ;
 		Yellowtail_Flounder9_Nums:bmtype = "tracer" ;
 		Yellowtail_Flounder9_Nums:units = "1" ;
@@ -35199,7 +34344,7 @@ variables:
 		Yellowtail_Flounder9_ResN:b_dens = 1000000000. ;
 		Yellowtail_Flounder9_ResN:i_conc = 200000000. ;
 		Yellowtail_Flounder9_ResN:f_conc = 200000000. ;
-		Yellowtail_Flounder9_ResN:_FillValue = 3222.9 ;
+		Yellowtail_Flounder9_ResN:_FillValue = 2937.1 ;
 	double Yellowtail_Flounder9_StructN(t, b, z) ;
 		Yellowtail_Flounder9_StructN:bmtype = "tracer" ;
 		Yellowtail_Flounder9_StructN:units = "mg N" ;
@@ -35218,7 +34363,7 @@ variables:
 		Yellowtail_Flounder9_StructN:b_dens = 1000000000. ;
 		Yellowtail_Flounder9_StructN:i_conc = 200000000. ;
 		Yellowtail_Flounder9_StructN:f_conc = 200000000. ;
-		Yellowtail_Flounder9_StructN:_FillValue = 1611.45 ;
+		Yellowtail_Flounder9_StructN:_FillValue = 1468.6 ;
 	double Yellowtail_Flounder_N(t, b, z) ;
 		Yellowtail_Flounder_N:bmtype = "tracer" ;
 		Yellowtail_Flounder_N:units = "mg N m-3" ;
@@ -35462,133 +34607,37 @@ variables:
 		:NCO = "\"4.5.4\"" ;
 data:
 
- Anchovies10_Nums =
-  _, _, _, _, _,
-  1006722, _, _, _, _,
-  540647, _, _, _, _,
-  130501, _, _, _, _,
-  37286, _, _, _, _,
-  18643, _, _, _, _,
-  37286, _, _, _, _,
-  18643, _, _, _, _,
-  37286, _, _, _, _,
-  37286, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Anchovies10_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Anchovies10_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
  Anchovies1_Nums =
-  _, _, _, _, _,
-  57783431, _, _, _, _,
-  31031842, _, _, _, _,
-  7490445, _, _, _, _,
-  2140127, _, _, _, _,
-  1070064, _, _, _, _,
-  2140127, _, _, _, _,
-  1070064, _, _, _, _,
-  2140127, _, _, _, _,
-  2140127, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+149109254,	_,	_,	_,	_,
+80077189,	_,	_,	_,	_,
+19328977,	_,	_,	_,	_,
+5522564,	_,	_,	_,	_,
+2761282,	_,	_,	_,	_,
+5522564,	_,	_,	_,	_,
+2761282,	_,	_,	_,	_,
+5522564,	_,	_,	_,	_,
+5522564,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Anchovies1_ResN =
   _, _, _, _, _,
@@ -35655,36 +34704,37 @@ data:
   _, _, _, _, _ ;
 
  Anchovies2_Nums =
-  _, _, _, _, _,
-  36844334, _, _, _, _,
-  19786771, _, _, _, _,
-  4776117, _, _, _, _,
-  1364605, _, _, _, _,
-  682303, _, _, _, _,
-  1364605, _, _, _, _,
-  682303, _, _, _, _,
-  1364605, _, _, _, _,
-  1364605, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+ _,	_,	_,	_,	_,
+7568998,	_,	_,	_,	_,
+4064832,	_,	_,	_,	_,
+981166,	_,	_,	_,	_,
+280333,	_,	_,	_,	_,
+140167,	_,	_,	_,	_,
+280333,	_,	_,	_,	_,
+140167,	_,	_,	_,	_,
+280333,	_,	_,	_,	_,
+280333,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Anchovies2_ResN =
   _, _, _, _, _,
@@ -35751,36 +34801,37 @@ data:
   _, _, _, _, _ ;
 
  Anchovies3_Nums =
-  _, _, _, _, _,
-  23492979, _, _, _, _,
-  12616599, _, _, _, _,
-  3045386, _, _, _, _,
-  870110, _, _, _, _,
-  435055, _, _, _, _,
-  870110, _, _, _, _,
-  435055, _, _, _, _,
-  870110, _, _, _, _,
-  870110, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+1009200,	_,	_,	_,	_,
+541978,	_,	_,	_,	_,
+130822,	_,	_,	_,	_,
+37378,	_,	_,	_,	_,
+18689,	_,	_,	_,	_,
+37378,	_,	_,	_,	_,
+18689,	_,	_,	_,	_,
+37378,	_,	_,	_,	_,
+37378,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Anchovies3_ResN =
   _, _, _, _, _,
@@ -35846,582 +34897,6 @@ data:
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Anchovies4_Nums =
-  _, _, _, _, _,
-  14979781, _, _, _, _,
-  8044697, _, _, _, _,
-  1941824, _, _, _, _,
-  554807, _, _, _, _,
-  277403, _, _, _, _,
-  554807, _, _, _, _,
-  277403, _, _, _, _,
-  554807, _, _, _, _,
-  554807, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Anchovies4_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Anchovies4_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Anchovies5_Nums =
-  _, _, _, _, _,
-  9551528, _, _, _, _,
-  5129524, _, _, _, _,
-  1238161, _, _, _, _,
-  353760, _, _, _, _,
-  176880, _, _, _, _,
-  353760, _, _, _, _,
-  176880, _, _, _, _,
-  353760, _, _, _, _,
-  353760, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Anchovies5_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Anchovies5_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Anchovies6_Nums =
-  _, _, _, _, _,
-  6090322, _, _, _, _,
-  3270728, _, _, _, _,
-  789486, _, _, _, _,
-  225567, _, _, _, _,
-  112784, _, _, _, _,
-  225567, _, _, _, _,
-  112784, _, _, _, _,
-  225567, _, _, _, _,
-  225567, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Anchovies6_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Anchovies6_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Anchovies7_Nums =
-  _, _, _, _, _,
-  3883360, _, _, _, _,
-  2085508, _, _, _, _,
-  503398, _, _, _, _,
-  143828, _, _, _, _,
-  71914, _, _, _, _,
-  143828, _, _, _, _,
-  71914, _, _, _, _,
-  143828, _, _, _, _,
-  143828, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Anchovies7_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Anchovies7_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Anchovies8_Nums =
-  _, _, _, _, _,
-  2476139, _, _, _, _,
-  1329778, _, _, _, _,
-  320981, _, _, _, _,
-  91709, _, _, _, _,
-  45854, _, _, _, _,
-  91709, _, _, _, _,
-  45854, _, _, _, _,
-  91709, _, _, _, _,
-  91709, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Anchovies8_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Anchovies8_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Anchovies9_Nums =
-  _, _, _, _, _,
-  1578855, _, _, _, _,
-  847904, _, _, _, _,
-  204666, _, _, _, _,
-  58476, _, _, _, _,
-  29238, _, _, _, _,
-  58476, _, _, _, _,
-  29238, _, _, _, _,
-  58476, _, _, _, _,
-  58476, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Anchovies9_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Anchovies9_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
  Anchovies_N =
   _, _, _, _, _,
   _, _, _, _, _,
@@ -36454,133 +34929,38 @@ data:
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Atlantic_Salmon10_Nums =
-  _, _, _, _, _,
-  1239546.351, _, _, _, _,
-  1079106.889, _, _, _, _,
-  831538.9772, _, _, _, _,
-  42965.07536, _, _, _, _,
-  136295.6077, _, _, _, _,
-  474724.1614, _, _, _, _,
-  519494.3872, _, _, _, _,
-  61373.09967, _, _, _, _,
-  266024.829, _, _, _, _,
-  213243.5179, _, _, _, _,
-  364251.8629, _, _, _, _,
-  75745.56634, _, _, _, _,
-  251313.7928, _, _, _, _,
-  213332.6981, _, _, _, _,
-  214136.9743, _, _, _, _,
-  791291.1163, _, _, _, _,
-  59453.83301, _, _, _, _,
-  24933.22118, _, _, _, _,
-  633700.544, _, _, _, _,
-  366699.4765, _, _, _, _,
-  149961.0445, _, _, _, _,
-  107664.184, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Atlantic_Salmon10_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Atlantic_Salmon10_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
  Atlantic_Salmon1_Nums =
-  _, _, _, _, _,
-  71146808.45, _, _, _, _,
-  61937991.3, _, _, _, _,
-  47728222.72, _, _, _, _,
-  2466086.068, _, _, _, _,
-  7823021.288, _, _, _, _,
-  27247959.66, _, _, _, _,
-  29817656.78, _, _, _, _,
-  3522659.852, _, _, _, _,
-  15269148.7, _, _, _, _,
-  12239635.66, _, _, _, _,
-  20907130.65, _, _, _, _,
-  4347602.89, _, _, _, _,
-  14424772.63, _, _, _, _,
-  12244754.37, _, _, _, _,
-  12290917.78, _, _, _, _,
-  45418097.86, _, _, _, _,
-  3412498.827, _, _, _, _,
-  1431103.492, _, _, _, _,
-  36372799.76, _, _, _, _,
-  21047617.45, _, _, _, _,
-  8607382.609, _, _, _, _,
-  6179650.375, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+120881131,	_,	_,	_,	_,
+105235001,	_,	_,	_,	_,
+81092064,	_,	_,	_,	_,
+4189974,	_,	_,	_,	_,
+13291610,	_,	_,	_,	_,
+46295319,	_,	_,	_,	_,
+50661332,	_,	_,	_,	_,
+5985133,	_,	_,	_,	_,
+25942864,	_,	_,	_,	_,
+20795606,	_,	_,	_,	_,
+35522009,	_,	_,	_,	_,
+7386742,	_,	_,	_,	_,
+24508237,	_,	_,	_,	_,
+20804303,	_,	_,	_,	_,
+20882736,	_,	_,	_,	_,
+77167074,	_,	_,	_,	_,
+5797965,	_,	_,	_,	_,
+2431499,	_,	_,	_,	_,
+61798769,	_,	_,	_,	_,
+35760702,	_,	_,	_,	_,
+14624270,	_,	_,	_,	_,
+10499461,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Atlantic_Salmon1_ResN =
   _, _, _, _, _,
@@ -36647,36 +35027,37 @@ data:
   _, _, _, _, _ ;
 
  Atlantic_Salmon2_Nums =
-  _, _, _, _, _,
-  45365207.96, _, _, _, _,
-  39493406.91, _, _, _, _,
-  30432858.43, _, _, _, _,
-  1572445.901, _, _, _, _,
-  4988178.604, _, _, _, _,
-  17374066.15, _, _, _, _,
-  19012577.38, _, _, _, _,
-  2246147.09, _, _, _, _,
-  9736039.061, _, _, _, _,
-  7804336.263, _, _, _, _,
-  13330975.07, _, _, _, _,
-  2772153.995, _, _, _, _,
-  9197641.108, _, _, _, _,
-  7807600.099, _, _, _, _,
-  7837035.188, _, _, _, _,
-  28959857.79, _, _, _, _,
-  2175905.319, _, _, _, _,
-  912511.8741, _, _, _, _,
-  23192321.08, _, _, _, _,
-  13420553.41, _, _, _, _,
-  5488309.463, _, _, _, _,
-  3940319.046, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+36889520,	_,	_,	_,	_,
+32114761,	_,	_,	_,	_,
+24747016,	_,	_,	_,	_,
+1278662,	_,	_,	_,	_,
+4056225,	_,	_,	_,	_,
+14128029,	_,	_,	_,	_,
+15460413,	_,	_,	_,	_,
+1826494,	_,	_,	_,	_,
+7917032,	_,	_,	_,	_,
+6346234,	_,	_,	_,	_,
+10840318,	_,	_,	_,	_,
+2254226,	_,	_,	_,	_,
+7479224,	_,	_,	_,	_,
+6348888,	_,	_,	_,	_,
+6372823,	_,	_,	_,	_,
+23549219,	_,	_,	_,	_,
+1769376,	_,	_,	_,	_,
+742025,	_,	_,	_,	_,
+18859245,	_,	_,	_,	_,
+10913160,	_,	_,	_,	_,
+4462916,	_,	_,	_,	_,
+3204140,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Atlantic_Salmon2_ResN =
   _, _, _, _, _,
@@ -36743,36 +35124,37 @@ data:
   _, _, _, _, _ ;
 
  Atlantic_Salmon3_Nums =
-  _, _, _, _, _,
-  28926133.7, _, _, _, _,
-  25182108.05, _, _, _, _,
-  19404847.27, _, _, _, _,
-  1002635.773, _, _, _, _,
-  3180603.103, _, _, _, _,
-  11078193.69, _, _, _, _,
-  12122954.57, _, _, _, _,
-  1432206.617, _, _, _, _,
-  6207972.591, _, _, _, _,
-  4976264.506, _, _, _, _,
-  8500204.995, _, _, _, _,
-  1767603.428, _, _, _, _,
-  5864674.899, _, _, _, _,
-  4978345.619, _, _, _, _,
-  4997114.261, _, _, _, _,
-  18465620.59, _, _, _, _,
-  1387418.487, _, _, _, _,
-  581843.2596, _, _, _, _,
-  14788076.82, _, _, _, _,
-  8557322.666, _, _, _, _,
-  3499500.618, _, _, _, _,
-  2512458.35, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+18444760,	_,	_,	_,	_,
+16057380,	_,	_,	_,	_,
+12373508,	_,	_,	_,	_,
+639331,	_,	_,	_,	_,
+2028113,	_,	_,	_,	_,
+7064014,	_,	_,	_,	_,
+7730206,	_,	_,	_,	_,
+913247,	_,	_,	_,	_,
+3958516,	_,	_,	_,	_,
+3173117,	_,	_,	_,	_,
+5420159,	_,	_,	_,	_,
+1127113,	_,	_,	_,	_,
+3739612,	_,	_,	_,	_,
+3174444,	_,	_,	_,	_,
+3186412,	_,	_,	_,	_,
+11774610,	_,	_,	_,	_,
+884688,	_,	_,	_,	_,
+371013,	_,	_,	_,	_,
+9429623,	_,	_,	_,	_,
+5456580,	_,	_,	_,	_,
+2231458,	_,	_,	_,	_,
+1602070,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Atlantic_Salmon3_ResN =
   _, _, _, _, _,
@@ -36839,36 +35221,37 @@ data:
   _, _, _, _, _ ;
 
  Atlantic_Salmon4_Nums =
-  _, _, _, _, _,
-  18444117.17, _, _, _, _,
-  16056821.01, _, _, _, _,
-  12373076.9, _, _, _, _,
-  639308.795, _, _, _, _,
-  2028042.078, _, _, _, _,
-  7063768.165, _, _, _, _,
-  7729937.114, _, _, _, _,
-  913215.2582, _, _, _, _,
-  3958378.088, _, _, _, _,
-  3173006.339, _, _, _, _,
-  5419970, _, _, _, _,
-  1127073.706, _, _, _, _,
-  3739481.816, _, _, _, _,
-  3174333.315, _, _, _, _,
-  3186300.73, _, _, _, _,
-  11774199.53, _, _, _, _,
-  884657.0853, _, _, _, _,
-  370999.6422, _, _, _, _,
-  9429294.089, _, _, _, _,
-  5456389.835, _, _, _, _,
-  2231380.111, _, _, _, _,
-  1602014.174, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+9319458,	_,	_,	_,	_,
+8113203,	_,	_,	_,	_,
+6251878,	_,	_,	_,	_,
+323030,	_,	_,	_,	_,
+1024731,	_,	_,	_,	_,
+3569186,	_,	_,	_,	_,
+3905789,	_,	_,	_,	_,
+461430,	_,	_,	_,	_,
+2000092,	_,	_,	_,	_,
+1603259,	_,	_,	_,	_,
+2738607,	_,	_,	_,	_,
+569489,	_,	_,	_,	_,
+1889488,	_,	_,	_,	_,
+1603930,	_,	_,	_,	_,
+1609976,	_,	_,	_,	_,
+5949276,	_,	_,	_,	_,
+447000,	_,	_,	_,	_,
+187459,	_,	_,	_,	_,
+4764441,	_,	_,	_,	_,
+2757009,	_,	_,	_,	_,
+1127473,	_,	_,	_,	_,
+809467,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Atlantic_Salmon4_ResN =
   _, _, _, _, _,
@@ -36935,36 +35318,37 @@ data:
   _, _, _, _, _ ;
 
  Atlantic_Salmon5_Nums =
-  _, _, _, _, _,
-  11760488.34, _, _, _, _,
-  10238281.1, _, _, _, _,
-  7889422.153, _, _, _, _,
-  407641.2853, _, _, _, _,
-  1293136.721, _, _, _, _,
-  4504057.438, _, _, _, _,
-  4928825.514, _, _, _, _,
-  582291.7571, _, _, _, _,
-  2523973.304, _, _, _, _,
-  2023198.167, _, _, _, _,
-  3455925.453, _, _, _, _,
-  718653.9242, _, _, _, _,
-  2384398.878, _, _, _, _,
-  2024044.285, _, _, _, _,
-  2031675.045, _, _, _, _,
-  7507561.081, _, _, _, _,
-  564082.2621, _, _, _, _,
-  236559.8161, _, _, _, _,
-  6012383.361, _, _, _, _,
-  3479147.765, _, _, _, _,
-  1422790.776, _, _, _, _,
-  1021489.337, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+4853884,	_,	_,	_,	_,
+4225626,	_,	_,	_,	_,
+3256186,	_,	_,	_,	_,
+168245,	_,	_,	_,	_,
+533714,	_,	_,	_,	_,
+1858951,	_,	_,	_,	_,
+2034265,	_,	_,	_,	_,
+240328,	_,	_,	_,	_,
+1041715,	_,	_,	_,	_,
+835031,	_,	_,	_,	_,
+1426358,	_,	_,	_,	_,
+296609,	_,	_,	_,	_,
+984108,	_,	_,	_,	_,
+835380,	_,	_,	_,	_,
+838529,	_,	_,	_,	_,
+3098582,	_,	_,	_,	_,
+232813,	_,	_,	_,	_,
+97635,	_,	_,	_,	_,
+2481480,	_,	_,	_,	_,
+1435942,	_,	_,	_,	_,
+587226,	_,	_,	_,	_,
+421597,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Atlantic_Salmon5_ResN =
   _, _, _, _, _,
@@ -37031,36 +35415,37 @@ data:
   _, _, _, _, _ ;
 
  Atlantic_Salmon6_Nums =
-  _, _, _, _, _,
-  7498818.44, _, _, _, _,
-  6528216.254, _, _, _, _,
-  5030517.665, _, _, _, _,
-  259923.5592, _, _, _, _,
-  824540.3775, _, _, _, _,
-  2871913.819, _, _, _, _,
-  3142757.902, _, _, _, _,
-  371285.6168, _, _, _, _,
-  1609356.433, _, _, _, _,
-  1290048.108, _, _, _, _,
-  2203595.359, _, _, _, _,
-  458233.9733, _, _, _, _,
-  1520359.849, _, _, _, _,
-  1290587.616, _, _, _, _,
-  1295453.203, _, _, _, _,
-  4787032.295, _, _, _, _,
-  359674.7301, _, _, _, _,
-  150837.1983, _, _, _, _,
-  3833664.889, _, _, _, _,
-  2218402.558, _, _, _, _,
-  907211.4524, _, _, _, _,
-  651330.3576, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+2524020,	_,	_,	_,	_,
+2197326,	_,	_,	_,	_,
+1693217,	_,	_,	_,	_,
+87487,	_,	_,	_,	_,
+277531,	_,	_,	_,	_,
+966655,	_,	_,	_,	_,
+1057818,	_,	_,	_,	_,
+124971,	_,	_,	_,	_,
+541692,	_,	_,	_,	_,
+434216,	_,	_,	_,	_,
+741706,	_,	_,	_,	_,
+154237,	_,	_,	_,	_,
+511736,	_,	_,	_,	_,
+434398,	_,	_,	_,	_,
+436035,	_,	_,	_,	_,
+1611262,	_,	_,	_,	_,
+121063,	_,	_,	_,	_,
+50770,	_,	_,	_,	_,
+1290369,	_,	_,	_,	_,
+746690,	_,	_,	_,	_,
+305357,	_,	_,	_,	_,
+219231,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Atlantic_Salmon6_ResN =
   _, _, _, _, _,
@@ -37127,36 +35512,37 @@ data:
   _, _, _, _, _ ;
 
  Atlantic_Salmon7_Nums =
-  _, _, _, _, _,
-  4781457.742, _, _, _, _,
-  4162574.463, _, _, _, _,
-  3207599.68, _, _, _, _,
-  165734.5786, _, _, _, _,
-  525750.1568, _, _, _, _,
-  1831213.1, _, _, _, _,
-  2003910.912, _, _, _, _,
-  236742.1616, _, _, _, _,
-  1026170.967, _, _, _, _,
-  822570.9904, _, _, _, _,
-  1405074.435, _, _, _, _,
-  292182.8814, _, _, _, _,
-  969424.2405, _, _, _, _,
-  822914.9961, _, _, _, _,
-  826017.4317, _, _, _, _,
-  3052346.554, _, _, _, _,
-  229338.7334, _, _, _, _,
-  96178.04394, _, _, _, _,
-  2444452.657, _, _, _, _,
-  1414515.923, _, _, _, _,
-  578463.5616, _, _, _, _,
-  415306.572, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+1242594,	_,	_,	_,	_,
+1081760,	_,	_,	_,	_,
+833584,	_,	_,	_,	_,
+43071,	_,	_,	_,	_,
+136631,	_,	_,	_,	_,
+475891,	_,	_,	_,	_,
+520772,	_,	_,	_,	_,
+61524,	_,	_,	_,	_,
+266679,	_,	_,	_,	_,
+213768,	_,	_,	_,	_,
+365148,	_,	_,	_,	_,
+75932,	_,	_,	_,	_,
+251932,	_,	_,	_,	_,
+213857,	_,	_,	_,	_,
+214664,	_,	_,	_,	_,
+793237,	_,	_,	_,	_,
+59600,	_,	_,	_,	_,
+24995,	_,	_,	_,	_,
+635259,	_,	_,	_,	_,
+367601,	_,	_,	_,	_,
+150330,	_,	_,	_,	_,
+107929,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Atlantic_Salmon7_ResN =
   _, _, _, _, _,
@@ -37191,198 +35577,6 @@ data:
   _, _, _, _, _ ;
 
  Atlantic_Salmon7_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Atlantic_Salmon8_Nums =
-  _, _, _, _, _,
-  3048792.062, _, _, _, _,
-  2654174.661, _, _, _, _,
-  2045255.855, _, _, _, _,
-  105677.033, _, _, _, _,
-  335233.1007, _, _, _, _,
-  1167633.024, _, _, _, _,
-  1277750.011, _, _, _, _,
-  150953.4669, _, _, _, _,
-  654315.4972, _, _, _, _,
-  524494.4202, _, _, _, _,
-  895915.0151, _, _, _, _,
-  186304.0306, _, _, _, _,
-  618132.1866, _, _, _, _,
-  524713.7679, _, _, _, _,
-  526691.9682, _, _, _, _,
-  1946262.091, _, _, _, _,
-  146232.8327, _, _, _, _,
-  61325.82838, _, _, _, _,
-  1558651.83, _, _, _, _,
-  901935.1734, _, _, _, _,
-  368844.6515, _, _, _, _,
-  264811.1619, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Atlantic_Salmon8_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Atlantic_Salmon8_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Atlantic_Salmon9_Nums =
-  _, _, _, _, _,
-  1943995.647, _, _, _, _,
-  1692376.483, _, _, _, _,
-  1304112.711, _, _, _, _,
-  67382.65125, _, _, _, _,
-  213754.0624, _, _, _, _,
-  744515.6871, _, _, _, _,
-  814729.3778, _, _, _, _,
-  96252.18007, _, _, _, _,
-  417209.981, _, _, _, _,
-  334432.4077, _, _, _, _,
-  571260.6351, _, _, _, _,
-  118792.6947, _, _, _, _,
-  394138.4836, _, _, _, _,
-  334572.27, _, _, _, _,
-  335833.6261, _, _, _, _,
-  1240991.5, _, _, _, _,
-  93242.17079, _, _, _, _,
-  39103.0746, _, _, _, _,
-  993840.2852, _, _, _, _,
-  575099.2575, _, _, _, _,
-  235185.7334, _, _, _, _,
-  168851.0517, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Atlantic_Salmon9_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Atlantic_Salmon9_StructN =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -44407,36 +42601,37 @@ data:
   _, _, _, _, _ ;
 
  Bluefish10_Nums =
-  _, _, _, _, _,
-  310820.737320594, _, _, _, _,
-  44604.2789718078, _, _, _, _,
-  4569.0234564849, _, _, _, _,
-  6764.16086129649, _, _, _, _,
-  6074.53056520794, _, _, _, _,
-  7814.75029621449, _, _, _, _,
-  8809.07132215336, _, _, _, _,
-  214.878535929011, _, _, _, _,
-  4182.18283359012, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  974.493084532977, _, _, _, _,
-  7908.72150898415, _, _, _, _,
-  _, _, _, _, _,
-  412.508115557307, _, _, _, _,
-  _, _, _, _, _,
-  330.942631161856, _, _, _, _,
-  207.720496485861, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+1674762,	_,	_,	_,	_,
+240337,	_,	_,	_,	_,
+24619,	_,	_,	_,	_,
+36447,	_,	_,	_,	_,
+32731,	_,	_,	_,	_,
+42107,	_,	_,	_,	_,
+47465,	_,	_,	_,	_,
+1158,	_,	_,	_,	_,
+22534,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+5251,	_,	_,	_,	_,
+42614,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+2223,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1783,	_,	_,	_,	_,
+1119,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Bluefish10_ResN =
   _, _, _, _, _,
@@ -44471,6 +42666,200 @@ data:
   _, _, _, _, _ ;
 
  Bluefish10_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+Bluefish11_Nums =
+_,	_,	_,	_,	_,
+1004857,	_,	_,	_,	_,
+144202,	_,	_,	_,	_,
+14771,	_,	_,	_,	_,
+21868,	_,	_,	_,	_,
+19638,	_,	_,	_,	_,
+25264,	_,	_,	_,	_,
+28479,	_,	_,	_,	_,
+695,	_,	_,	_,	_,
+13521,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+3150,	_,	_,	_,	_,
+25568,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1334,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1070,	_,	_,	_,	_,
+672,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
+
+ Bluefish11_ResN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ Bluefish11_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+Bluefish12_Nums =
+_,	_,	_,	_,	_,
+309831,	_,	_,	_,	_,
+44462,	_,	_,	_,	_,
+4554,	_,	_,	_,	_,
+6743,	_,	_,	_,	_,
+6055,	_,	_,	_,	_,
+7790,	_,	_,	_,	_,
+8781,	_,	_,	_,	_,
+214,	_,	_,	_,	_,
+4169,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+971,	_,	_,	_,	_,
+7884,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+411,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+330,	_,	_,	_,	_,
+207,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
+
+ Bluefish12_ResN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ Bluefish12_StructN =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -44599,36 +42988,37 @@ data:
   _, _, _, _, _ ;
 
  Bluefish2_Nums =
-  _, _, _, _, _,
-  10184304.5358085, _, _, _, _,
-  1461496.9534047, _, _, _, _,
-  149707.920755941, _, _, _, _,
-  221633.45578061, _, _, _, _,
-  199037.135428788, _, _, _, _,
-  256056.907830632, _, _, _, _,
-  288636.677835083, _, _, _, _,
-  7040.67710209608, _, _, _, _,
-  137032.76032635, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  31930.0907219928, _, _, _, _,
-  259135.95415391, _, _, _, _,
-  _, _, _, _, _,
-  13516.1775515477, _, _, _, _,
-  _, _, _, _, _,
-  10843.6154186125, _, _, _, _,
-  6806.13788120369, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+10048574,	_,	_,	_,	_,
+1442019,	_,	_,	_,	_,
+147713,	_,	_,	_,	_,
+218680,	_,	_,	_,	_,
+196384,	_,	_,	_,	_,
+252644,	_,	_,	_,	_,
+284790,	_,	_,	_,	_,
+6947,	_,	_,	_,	_,
+135206,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+31505,	_,	_,	_,	_,
+255682,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+13336,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+10699,	_,	_,	_,	_,
+6715,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Bluefish2_ResN =
   _, _, _, _, _,
@@ -44695,36 +43085,37 @@ data:
   _, _, _, _, _ ;
 
  Bluefish3_Nums =
-  _, _, _, _, _,
-  27331792.6446949, _, _, _, _,
-  3922244.42433559, _, _, _, _,
-  401773.712970079, _, _, _, _,
-  594801.504140398, _, _, _, _,
-  534159.371904702, _, _, _, _,
-  687184.312435034, _, _, _, _,
-  774619.199622726, _, _, _, _,
-  18895.1858181511, _, _, _, _,
-  367757.167669244, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  85691.3317616654, _, _, _, _,
-  695447.601828565, _, _, _, _,
-  _, _, _, _, _,
-  36273.5973663079, _, _, _, _,
-  _, _, _, _, _,
-  29101.1965616565, _, _, _, _,
-  18265.7488909717, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+21771911,	_,	_,	_,	_,
+3124375,	_,	_,	_,	_,
+320044,	_,	_,	_,	_,
+473806,	_,	_,	_,	_,
+425500,	_,	_,	_,	_,
+547396,	_,	_,	_,	_,
+617045,	_,	_,	_,	_,
+15051,	_,	_,	_,	_,
+292947,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+68260,	_,	_,	_,	_,
+553978,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+28895,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+23181,	_,	_,	_,	_,
+14550,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Bluefish3_ResN =
   _, _, _, _, _,
@@ -44791,36 +43182,37 @@ data:
   _, _, _, _, _ ;
 
  Bluefish4_Nums =
-  _, _, _, _, _,
-  15336274.8277631, _, _, _, _,
-  2200829.60584539, _, _, _, _,
-  225441.198123384, _, _, _, _,
-  333751.958901773, _, _, _, _,
-  299724.757751881, _, _, _, _,
-  385589.324850841, _, _, _, _,
-  434650.338772486, _, _, _, _,
-  10602.3694236193, _, _, _, _,
-  206354.009287788, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  48082.6790740711, _, _, _, _,
-  390225.979268938, _, _, _, _,
-  _, _, _, _, _,
-  20353.6542748248, _, _, _, _,
-  _, _, _, _, _,
-  16329.1136475435, _, _, _, _,
-  10249.1830143905, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+23446674,	_,	_,	_,	_,
+3364711,	_,	_,	_,	_,
+344663,	_,	_,	_,	_,
+510253,	_,	_,	_,	_,
+458230,	_,	_,	_,	_,
+589503,	_,	_,	_,	_,
+664510,	_,	_,	_,	_,
+16209,	_,	_,	_,	_,
+315482,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+73511,	_,	_,	_,	_,
+596592,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+31117,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+24965,	_,	_,	_,	_,
+15669,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Bluefish4_ResN =
   _, _, _, _, _,
@@ -44887,36 +43279,36 @@ data:
   _, _, _, _, _ ;
 
  Bluefish5_Nums =
-  _, _, _, _, _,
-  8994859.00159836, _, _, _, _,
-  1290805.76694452, _, _, _, _,
-  132223.229763744, _, _, _, _,
-  195748.436014861, _, _, _, _,
-  175791.185639546, _, _, _, _,
-  226151.503445684, _, _, _, _,
-  254926.216187646, _, _, _, _,
-  6218.38217685511, _, _, _, _,
-  121028.426968331, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  28200.9108174972, _, _, _, _,
-  228870.941718557, _, _, _, _,
-  _, _, _, _, _,
-  11937.5958259371, _, _, _, _,
-  _, _, _, _, _,
-  9577.16763231432, _, _, _, _,
-  6011.23526615009, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+13398099,	_,	_,	_,	_,
+1922692,	_,	_,	_,	_,
+196950,	_,	_,	_,	_,
+291573,	_,	_,	_,	_,
+261846,	_,	_,	_,	_,
+336859,	_,	_,	_,	_,
+379720,	_,	_,	_,	_,
+9262,	_,	_,	_,	_,
+180275,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+42006,	_,	_,	_,	_,
+340910,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+17781,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+14265,	_,	_,	_,	_,
+8954,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Bluefish5_ResN =
   _, _, _, _, _,
@@ -44983,36 +43375,37 @@ data:
   _, _, _, _, _ ;
 
  Bluefish6_Nums =
-  _, _, _, _, _,
-  5764134.41662327, _, _, _, _,
-  827181.164829661, _, _, _, _,
-  84732.0084976154, _, _, _, _,
-  125440.576315086, _, _, _, _,
-  112651.462697065, _, _, _, _,
-  144923.635173239, _, _, _, _,
-  163363.202932435, _, _, _, _,
-  3984.89745252905, _, _, _, _,
-  77558.0941462191, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  18071.8608923579, _, _, _, _,
-  146666.32038262, _, _, _, _,
-  _, _, _, _, _,
-  7649.91501698861, _, _, _, _,
-  _, _, _, _, _,
-  6137.29259718066, _, _, _, _,
-  3852.15244373238, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+8373812,	_,	_,	_,	_,
+1201683,	_,	_,	_,	_,
+123094,	_,	_,	_,	_,
+182233,	_,	_,	_,	_,
+163654,	_,	_,	_,	_,
+210537,	_,	_,	_,	_,
+237325,	_,	_,	_,	_,
+5789,	_,	_,	_,	_,
+112672,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+26254,	_,	_,	_,	_,
+213069,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+11113,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+8916,	_,	_,	_,	_,
+5596,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Bluefish6_ResN =
   _, _, _, _, _,
@@ -45079,36 +43472,37 @@ data:
   _, _, _, _, _ ;
 
  Bluefish7_Nums =
-  _, _, _, _, _,
-  3089566.81403516, _, _, _, _,
-  443367.779329096, _, _, _, _,
-  45416.22082681, _, _, _, _,
-  67235.9479679817, _, _, _, _,
-  60381.0035549557, _, _, _, _,
-  77678.8363070267, _, _, _, _,
-  87562.4150885464, _, _, _, _,
-  2135.89865135022, _, _, _, _,
-  41571.0142259915, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  9686.48848990542, _, _, _, _,
-  78612.9127877356, _, _, _, _,
-  _, _, _, _, _,
-  4100.34219509458, _, _, _, _,
-  _, _, _, _, _,
-  3289.57900107074, _, _, _, _,
-  2064.74753927271, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+6029145,	_,	_,	_,	_,
+865211,	_,	_,	_,	_,
+88628,	_,	_,	_,	_,
+131208,	_,	_,	_,	_,
+117831,	_,	_,	_,	_,
+151587,	_,	_,	_,	_,
+170874,	_,	_,	_,	_,
+4168,	_,	_,	_,	_,
+81124,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+18903,	_,	_,	_,	_,
+153409,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+8002,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+6419,	_,	_,	_,	_,
+4029,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Bluefish7_ResN =
   _, _, _, _, _,
@@ -45175,36 +43569,37 @@ data:
   _, _, _, _, _ ;
 
  Bluefish8_Nums =
-  _, _, _, _, _,
-  1960496.36478233, _, _, _, _,
-  281340.709541429, _, _, _, _,
-  28819.0355452527, _, _, _, _,
-  42664.8263358844, _, _, _, _,
-  38314.9953040802, _, _, _, _,
-  49291.4008231298, _, _, _, _,
-  55563.0633048037, _, _, _, _,
-  1355.34260741445, _, _, _, _,
-  26379.0450817042, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  6146.59808802222, _, _, _, _,
-  49884.122604235, _, _, _, _,
-  _, _, _, _, _,
-  2601.88772462489, _, _, _, _,
-  _, _, _, _, _,
-  2087.41485827924, _, _, _, _,
-  1310.19339881197, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+3684477,	_,	_,	_,	_,
+528740,	_,	_,	_,	_,
+54161,	_,	_,	_,	_,
+80183,	_,	_,	_,	_,
+72008,	_,	_,	_,	_,
+92636,	_,	_,	_,	_,
+104423,	_,	_,	_,	_,
+2547,	_,	_,	_,	_,
+49576,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+11552,	_,	_,	_,	_,
+93750,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+4890,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+3923,	_,	_,	_,	_,
+2462,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Bluefish8_ResN =
   _, _, _, _, _,
@@ -45271,36 +43666,36 @@ data:
   _, _, _, _, _ ;
 
  Bluefish9_Nums =
-  _, _, _, _, _,
-  1147643.25257037, _, _, _, _,
-  164692.356884033, _, _, _, _,
-  16870.2030175745, _, _, _, _,
-  24975.3077567683, _, _, _, _,
-  22428.9861602855, _, _, _, _,
-  28854.3986005744, _, _, _, _,
-  32525.7296261184, _, _, _, _,
-  793.395910475468, _, _, _, _,
-  15441.8715796133, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  3598.1203274324, _, _, _, _,
-  29201.3684623687, _, _, _, _,
-  _, _, _, _, _,
-  1523.10350825004, _, _, _, _,
-  _, _, _, _, _,
-  1221.9393111118, _, _, _, _,
-  766.966285028403, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+2344667,	_,	_,	_,	_,
+336471,	_,	_,	_,	_,
+34466,	_,	_,	_,	_,
+51025,	_,	_,	_,	_,
+45823,	_,	_,	_,	_,
+58950,	_,	_,	_,	_,
+66451,	_,	_,	_,	_,
+1621,	_,	_,	_,	_,
+31548,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+7351,	_,	_,	_,	_,
+59659,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+3112,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+2496,	_,	_,	_,	_,
+1567,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Bluefish9_ResN =
   _, _, _, _, _,
@@ -45398,133 +43793,38 @@ data:
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Butterfish10_Nums =
-  _, _, _, _, _,
-  270183.68833431, _, _, _, _,
-  900607.43800221, _, _, _, _,
-  2611763.15307107, _, _, _, _,
-  270183.68833431, _, _, _, _,
-  1260851.05623741, _, _, _, _,
-  1621094.19664929, _, _, _, _,
-  180120.677722272, _, _, _, _,
-  _, _, _, _, _,
-  990668.663646922, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  900607.43800221, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish10_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish10_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
  Butterfish1_Nums =
-  _, _, _, _, _,
-  413483.751641246, _, _, _, _,
-  1378271.73992974, _, _, _, _,
-  3996990.4681809, _, _, _, _,
-  413483.751641246, _, _, _, _,
-  1929581.41998859, _, _, _, _,
-  2480890.36879611, _, _, _, _,
-  275653.108564478, _, _, _, _,
-  _, _, _, _, _,
-  1516099.65132796, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  1378271.73992974, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+ _,	_,	_,	_,	_,
+16868727,	_,	_,	_,	_,
+56228788,	_,	_,	_,	_,
+163063584,	_,	_,	_,	_,
+16868727,	_,	_,	_,	_,
+78720343,	_,	_,	_,	_,
+101211869,	_,	_,	_,	_,
+11245707,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+61851697,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+56228788,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Butterfish1_ResN =
   _, _, _, _, _,
@@ -45591,36 +43891,37 @@ data:
   _, _, _, _, _ ;
 
  Butterfish2_Nums =
-  _, _, _, _, _,
-  939825.131428802, _, _, _, _,
-  3132733.54510905, _, _, _, _,
-  9084932.78675926, _, _, _, _,
-  939825.131428802, _, _, _, _,
-  4385829.19992654, _, _, _, _,
-  5638923.19265119, _, _, _, _,
-  626543.891887059, _, _, _, _,
-  _, _, _, _, _,
-  3446008.57570027, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  3132733.54510905, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+3023069,	_,	_,	_,	_,
+10076844,	_,	_,	_,	_,
+29222864,	_,	_,	_,	_,
+3023069,	_,	_,	_,	_,
+14107588,	_,	_,	_,	_,
+18138328,	_,	_,	_,	_,
+2015360,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+11084533,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+10076844,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Butterfish2_ResN =
   _, _, _, _, _,
@@ -45687,36 +43988,37 @@ data:
   _, _, _, _, _ ;
 
  Butterfish3_Nums =
-  _, _, _, _, _,
-  4495791.94757476, _, _, _, _,
-  14985892.3484912, _, _, _, _,
-  43459114.1491139, _, _, _, _,
-  4495791.94757476, _, _, _, _,
-  20980259.9878249, _, _, _, _,
-  26974619.6762928, _, _, _, _,
-  2997164.99351921, _, _, _, _,
-  _, _, _, _, _,
-  16484489.6011174, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  14985892.3484912, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+261999,	_,	_,	_,	_,
+873326,	_,	_,	_,	_,
+2532648,	_,	_,	_,	_,
+261999,	_,	_,	_,	_,
+1222658,	_,	_,	_,	_,
+1571988,	_,	_,	_,	_,
+174665,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+960660,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+873326,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Butterfish3_ResN =
   _, _, _, _, _,
@@ -45751,582 +44053,6 @@ data:
   _, _, _, _, _ ;
 
  Butterfish3_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish4_Nums =
-  _, _, _, _, _,
-  3947409.22268604, _, _, _, _,
-  13157959.7891592, _, _, _, _,
-  38158106.514364, _, _, _, _,
-  3947409.22268604, _, _, _, _,
-  18421153.099615, _, _, _, _,
-  23684339.4290269, _, _, _, _,
-  2631580.12543522, _, _, _, _,
-  _, _, _, _, _,
-  14473762.8078686, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  13157959.7891592, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish4_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish4_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish5_Nums =
-  _, _, _, _, _,
-  3274387.27347206, _, _, _, _,
-  10914565.389084, _, _, _, _,
-  31652258.8112629, _, _, _, _,
-  3274387.27347206, _, _, _, _,
-  15280399.3377246, _, _, _, _,
-  19646227.4955693, _, _, _, _,
-  2182903.26280987, _, _, _, _,
-  _, _, _, _, _,
-  12006027.7675213, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  10914565.389084, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish5_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish5_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish6_Nums =
-  _, _, _, _, _,
-  2744663.58755644, _, _, _, _,
-  9148829.29094007, _, _, _, _,
-  26531621.0232721, _, _, _, _,
-  2744663.58755644, _, _, _, _,
-  12808367.5395864, _, _, _, _,
-  16467900.9342598, _, _, _, _,
-  1829757.63103286, _, _, _, _,
-  _, _, _, _, _,
-  10063717.114856, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  9148829.29094007, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish6_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish6_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish7_Nums =
-  _, _, _, _, _,
-  1812677.58350746, _, _, _, _,
-  6042226.02952517, _, _, _, _,
-  17522466.1051512, _, _, _, _,
-  1812677.58350746, _, _, _, _,
-  8459120.7554887, _, _, _, _,
-  10876012.2757086, _, _, _, _,
-  1208439.77238677, _, _, _, _,
-  _, _, _, _, _,
-  6646451.86519952, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  6042226.02952517, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish7_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish7_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish8_Nums =
-  _, _, _, _, _,
-  1354126.80697021, _, _, _, _,
-  4513731.68333746, _, _, _, _,
-  13089829.8147981, _, _, _, _,
-  1354126.80697021, _, _, _, _,
-  6319227.57947992, _, _, _, _,
-  8124721.0808317, _, _, _, _,
-  902742.277659537, _, _, _, _,
-  _, _, _, _, _,
-  4965107.26661545, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  4513731.68333746, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish8_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish8_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish9_Nums =
-  _, _, _, _, _,
-  901247.107474721, _, _, _, _,
-  3004140.82535359, _, _, _, _,
-  8712013.67345998, _, _, _, _,
-  901247.107474721, _, _, _, _,
-  4205799.3004536, _, _, _, _,
-  5407456.18168651, _, _, _, _,
-  600825.463573959, _, _, _, _,
-  _, _, _, _, _,
-  3304556.51516937, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  3004140.82535359, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish9_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Butterfish9_StructN =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -46487,36 +44213,37 @@ data:
   _, _, _, _, _ ;
 
  Cod10_Nums =
-  _, _, _, _, _,
-  270.634030627282, _, _, _, _,
-  270.634030627282, _, _, _, _,
-  _, _, _, _, _,
-  1082.56042548066, _, _, _, _,
-  541.281325164305, _, _, _, _,
-  541.281325164305, _, _, _, _,
-  1082.56042548066, _, _, _, _,
-  1894.48346224008, _, _, _, _,
-  1082.56042548066, _, _, _, _,
-  2165.11984040775, _, _, _, _,
-  1623.8407400914, _, _, _, _,
-  3518.31806247701, _, _, _, _,
-  3247.67742399598, _, _, _, _,
-  1082.56042548066, _, _, _, _,
-  2706.40116557205, _, _, _, _,
-  1082.56042548066, _, _, _, _,
-  541.281325164305, _, _, _, _,
-  541.281325164305, _, _, _, _,
-  541.281325164305, _, _, _, _,
-  1082.56042548066, _, _, _, _,
-  1623.8407400914, _, _, _, _,
-  541.281325164305, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+1440,	_,	_,	_,	_,
+1440,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+5762,	_,	_,	_,	_,
+2881,	_,	_,	_,	_,
+2881,	_,	_,	_,	_,
+5762,	_,	_,	_,	_,
+10083,	_,	_,	_,	_,
+5762,	_,	_,	_,	_,
+11523,	_,	_,	_,	_,
+8643,	_,	_,	_,	_,
+18725,	_,	_,	_,	_,
+17285,	_,	_,	_,	_,
+5762,	_,	_,	_,	_,
+14404,	_,	_,	_,	_,
+5762,	_,	_,	_,	_,
+2881,	_,	_,	_,	_,
+2881,	_,	_,	_,	_,
+2881,	_,	_,	_,	_,
+5762,	_,	_,	_,	_,
+8643,	_,	_,	_,	_,
+2881,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Cod10_ResN =
   _, _, _, _, _,
@@ -46581,31 +44308,64 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+  
+  
+ Cod11_Nums =
+_,	_,	_,	_,	_,
+871,	_,	_,	_,	_,
+871,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+3484,	_,	_,	_,	_,
+1742,	_,	_,	_,	_,
+1742,	_,	_,	_,	_,
+3484,	_,	_,	_,	_,
+6097,	_,	_,	_,	_,
+3484,	_,	_,	_,	_,
+6968,	_,	_,	_,	_,
+5226,	_,	_,	_,	_,
+11322,	_,	_,	_,	_,
+10451,	_,	_,	_,	_,
+3484,	_,	_,	_,	_,
+8710,	_,	_,	_,	_,
+3484,	_,	_,	_,	_,
+1742,	_,	_,	_,	_,
+1742,	_,	_,	_,	_,
+1742,	_,	_,	_,	_,
+3484,	_,	_,	_,	_,
+5226,	_,	_,	_,	_,
+1742,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
- Cod1_Nums =
+ Cod11_ResN =
   _, _, _, _, _,
-  79376.35919626, _, _, _, _,
-  79376.35919626, _, _, _, _,
   _, _, _, _, _,
-  317512.56479253, _, _, _, _,
-  158756.608667743, _, _, _, _,
-  158756.608667743, _, _, _, _,
-  317512.56479253, _, _, _, _,
-  555647.785467313, _, _, _, _,
-  317512.56479253, _, _, _, _,
-  635024.833191949, _, _, _, _,
-  476268.877067161, _, _, _, _,
-  1031914.86172882, _, _, _, _,
-  952536.56446375, _, _, _, _,
-  317512.56479253, _, _, _, _,
-  793781.441859691, _, _, _, _,
-  317512.56479253, _, _, _, _,
-  158756.608667743, _, _, _, _,
-  158756.608667743, _, _, _, _,
-  158756.608667743, _, _, _, _,
-  317512.56479253, _, _, _, _,
-  476268.877067161, _, _, _, _,
-  158756.608667743, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -46613,6 +44373,170 @@ data:
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+
+ Cod11_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+  
+  
+ Cod12_Nums =
+_,	_,	_,	_,	_,
+268,	_,	_,	_,	_,
+268,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1072,	_,	_,	_,	_,
+536,	_,	_,	_,	_,
+536,	_,	_,	_,	_,
+1072,	_,	_,	_,	_,
+1876,	_,	_,	_,	_,
+1072,	_,	_,	_,	_,
+2144,	_,	_,	_,	_,
+1608,	_,	_,	_,	_,
+3484,	_,	_,	_,	_,
+3216,	_,	_,	_,	_,
+1072,	_,	_,	_,	_,
+2680,	_,	_,	_,	_,
+1072,	_,	_,	_,	_,
+536,	_,	_,	_,	_,
+536,	_,	_,	_,	_,
+536,	_,	_,	_,	_,
+1072,	_,	_,	_,	_,
+1608,	_,	_,	_,	_,
+536,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
+
+
+ Cod12_ResN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ Cod12_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ Cod1_Nums =
+_,	_,	_,	_,	_,
+53696,	_,	_,	_,	_,
+53696,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+214790,	_,	_,	_,	_,
+107395,	_,	_,	_,	_,
+107395,	_,	_,	_,	_,
+214790,	_,	_,	_,	_,
+375884,	_,	_,	_,	_,
+214790,	_,	_,	_,	_,
+429581,	_,	_,	_,	_,
+322186,	_,	_,	_,	_,
+698068,	_,	_,	_,	_,
+644371,	_,	_,	_,	_,
+214790,	_,	_,	_,	_,
+536976,	_,	_,	_,	_,
+214790,	_,	_,	_,	_,
+107395,	_,	_,	_,	_,
+107395,	_,	_,	_,	_,
+107395,	_,	_,	_,	_,
+214790,	_,	_,	_,	_,
+322186,	_,	_,	_,	_,
+107395,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Cod1_ResN =
   _, _, _, _, _,
@@ -46679,36 +44603,37 @@ data:
   _, _, _, _, _ ;
 
  Cod2_Nums =
-  _, _, _, _, _,
-  18245.7375539081, _, _, _, _,
-  18245.7375539081, _, _, _, _,
-  _, _, _, _, _,
-  72984.5886852632, _, _, _, _,
-  36492.3693405758, _, _, _, _,
-  36492.3693405758, _, _, _, _,
-  72984.5886852632, _, _, _, _,
-  127723.213418996, _, _, _, _,
-  72984.5886852632, _, _, _, _,
-  145969.109240532, _, _, _, _,
-  109476.889895844, _, _, _, _,
-  237199.689375127, _, _, _, _,
-  218953.5063297, _, _, _, _,
-  72984.5886852632, _, _, _, _,
-  182461.478581107, _, _, _, _,
-  72984.5886852632, _, _, _, _,
-  36492.3693405758, _, _, _, _,
-  36492.3693405758, _, _, _, _,
-  36492.3693405758, _, _, _, _,
-  72984.5886852632, _, _, _, _,
-  109476.889895844, _, _, _, _,
-  36492.3693405758, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+25123,	_,	_,	_,	_,
+25123,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+100495,	_,	_,	_,	_,
+50247,	_,	_,	_,	_,
+50247,	_,	_,	_,	_,
+100495,	_,	_,	_,	_,
+175866,	_,	_,	_,	_,
+100495,	_,	_,	_,	_,
+200989,	_,	_,	_,	_,
+150742,	_,	_,	_,	_,
+326607,	_,	_,	_,	_,
+301483,	_,	_,	_,	_,
+100495,	_,	_,	_,	_,
+251237,	_,	_,	_,	_,
+100495,	_,	_,	_,	_,
+50247,	_,	_,	_,	_,
+50247,	_,	_,	_,	_,
+50247,	_,	_,	_,	_,
+100495,	_,	_,	_,	_,
+150742,	_,	_,	_,	_,
+50247,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Cod2_ResN =
   _, _, _, _, _,
@@ -46775,36 +44700,37 @@ data:
   _, _, _, _, _ ;
 
  Cod3_Nums =
-  _, _, _, _, _,
-  33830.603798634, _, _, _, _,
-  33830.603798634, _, _, _, _,
-  _, _, _, _, _,
-  135325.453187204, _, _, _, _,
-  67662.8656521483, _, _, _, _,
-  67662.8656521483, _, _, _, _,
-  135325.453187204, _, _, _, _,
-  236819.88279728, _, _, _, _,
-  135325.453187204, _, _, _, _,
-  270650.780050173, _, _, _, _,
-  202988.192515117, _, _, _, _,
-  439807.307799961, _, _, _, _,
-  405975.877986647, _, _, _, _,
-  135325.453187204, _, _, _, _,
-  338313.645702321, _, _, _, _,
-  135325.453187204, _, _, _, _,
-  67662.8656521483, _, _, _, _,
-  67662.8656521483, _, _, _, _,
-  67662.8656521483, _, _, _, _,
-  135325.453187204, _, _, _, _,
-  202988.192515117, _, _, _, _,
-  67662.8656521483, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+26798,	_,	_,	_,	_,
+26798,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+107194,	_,	_,	_,	_,
+53597,	_,	_,	_,	_,
+53597,	_,	_,	_,	_,
+107194,	_,	_,	_,	_,
+187590,	_,	_,	_,	_,
+107194,	_,	_,	_,	_,
+214388,	_,	_,	_,	_,
+160791,	_,	_,	_,	_,
+348381,	_,	_,	_,	_,
+321582,	_,	_,	_,	_,
+107194,	_,	_,	_,	_,
+267986,	_,	_,	_,	_,
+107194,	_,	_,	_,	_,
+53597,	_,	_,	_,	_,
+53597,	_,	_,	_,	_,
+53597,	_,	_,	_,	_,
+107194,	_,	_,	_,	_,
+160791,	_,	_,	_,	_,
+53597,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Cod3_ResN =
   _, _, _, _, _,
@@ -46871,36 +44797,37 @@ data:
   _, _, _, _, _ ;
 
  Cod4_Nums =
-  _, _, _, _, _,
-  16181.9030758892, _, _, _, _,
-  16181.9030758892, _, _, _, _,
-  _, _, _, _, _,
-  64729.0654405802, _, _, _, _,
-  32364.5992349739, _, _, _, _,
-  32364.5992349739, _, _, _, _,
-  64729.0654405802, _, _, _, _,
-  113276.027016218, _, _, _, _,
-  64729.0654405802, _, _, _, _,
-  129458.07045757, _, _, _, _,
-  97093.6042519637, _, _, _, _,
-  210369.264150529, _, _, _, _,
-  194186.96597411, _, _, _, _,
-  64729.0654405802, _, _, _, _,
-  161822.669692544, _, _, _, _,
-  64729.0654405802, _, _, _, _,
-  32364.5992349739, _, _, _, _,
-  32364.5992349739, _, _, _, _,
-  32364.5992349739, _, _, _, _,
-  64729.0654405802, _, _, _, _,
-  97093.6042519637, _, _, _, _,
-  32364.5992349739, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+26798,	_,	_,	_,	_,
+26798,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+107194,	_,	_,	_,	_,
+53597,	_,	_,	_,	_,
+53597,	_,	_,	_,	_,
+107194,	_,	_,	_,	_,
+187590,	_,	_,	_,	_,
+107194,	_,	_,	_,	_,
+214388,	_,	_,	_,	_,
+160791,	_,	_,	_,	_,
+348381,	_,	_,	_,	_,
+321582,	_,	_,	_,	_,
+107194,	_,	_,	_,	_,
+267986,	_,	_,	_,	_,
+107194,	_,	_,	_,	_,
+53597,	_,	_,	_,	_,
+53597,	_,	_,	_,	_,
+53597,	_,	_,	_,	_,
+107194,	_,	_,	_,	_,
+160791,	_,	_,	_,	_,
+53597,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Cod4_ResN =
   _, _, _, _, _,
@@ -46967,36 +44894,36 @@ data:
   _, _, _, _, _ ;
 
  Cod5_Nums =
-  _, _, _, _, _,
-  8730.38743391199, _, _, _, _,
-  8730.38743391199, _, _, _, _,
-  _, _, _, _, _,
-  34922.3337255872, _, _, _, _,
-  17461.2027484961, _, _, _, _,
-  17461.2027484961, _, _, _, _,
-  34922.3337255872, _, _, _, _,
-  61114.1716884569, _, _, _, _,
-  34922.3337255872, _, _, _, _,
-  69844.6348517112, _, _, _, _,
-  52383.5038746201, _, _, _, _,
-  113497.477497415, _, _, _, _,
-  104766.876900646, _, _, _, _,
-  34922.3337255872, _, _, _, _,
-  87305.8376002071, _, _, _, _,
-  34922.3337255872, _, _, _, _,
-  17461.2027484961, _, _, _, _,
-  17461.2027484961, _, _, _, _,
-  17461.2027484961, _, _, _, _,
-  34922.3337255872, _, _, _, _,
-  52383.5038746201, _, _, _, _,
-  17461.2027484961, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+13231,	_,	_,	_,	_,
+13231,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+52927,	_,	_,	_,	_,
+26464,	_,	_,	_,	_,
+26464,	_,	_,	_,	_,
+52927,	_,	_,	_,	_,
+92623,	_,	_,	_,	_,
+52927,	_,	_,	_,	_,
+105854,	_,	_,	_,	_,
+79391,	_,	_,	_,	_,
+172013,	_,	_,	_,	_,
+158781,	_,	_,	_,	_,
+52927,	_,	_,	_,	_,
+132318,	_,	_,	_,	_,
+52927,	_,	_,	_,	_,
+26464,	_,	_,	_,	_,
+26464,	_,	_,	_,	_,
+26464,	_,	_,	_,	_,
+52927,	_,	_,	_,	_,
+79391,	_,	_,	_,	_,
+26464,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Cod5_ResN =
   _, _, _, _, _,
@@ -47063,36 +44990,37 @@ data:
   _, _, _, _, _ ;
 
  Cod6_Nums =
-  _, _, _, _, _,
-  5334.00234795152, _, _, _, _,
-  5334.00234795152, _, _, _, _,
-  _, _, _, _, _,
-  21336.4883859181, _, _, _, _,
-  10668.2661180366, _, _, _, _,
-  10668.2661180366, _, _, _, _,
-  21336.4883859181, _, _, _, _,
-  37338.908238265, _, _, _, _,
-  21336.4883859181, _, _, _, _,
-  42672.9568545515, _, _, _, _,
-  32004.7345866699, _, _, _, _,
-  69343.5218128135, _, _, _, _,
-  64009.389228811, _, _, _, _,
-  21336.4883859181, _, _, _, _,
-  53341.222972588, _, _, _, _,
-  21336.4883859181, _, _, _, _,
-  10668.2661180366, _, _, _, _,
-  10668.2661180366, _, _, _, _,
-  10668.2661180366, _, _, _, _,
-  21336.4883859181, _, _, _, _,
-  32004.7345866699, _, _, _, _,
-  10668.2661180366, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+8207,	_,	_,	_,	_,
+8207,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+32828,	_,	_,	_,	_,
+16414,	_,	_,	_,	_,
+16414,	_,	_,	_,	_,
+32828,	_,	_,	_,	_,
+57450,	_,	_,	_,	_,
+32828,	_,	_,	_,	_,
+65656,	_,	_,	_,	_,
+49242,	_,	_,	_,	_,
+106692,	_,	_,	_,	_,
+98485,	_,	_,	_,	_,
+32828,	_,	_,	_,	_,
+82071,	_,	_,	_,	_,
+32828,	_,	_,	_,	_,
+16414,	_,	_,	_,	_,
+16414,	_,	_,	_,	_,
+16414,	_,	_,	_,	_,
+32828,	_,	_,	_,	_,
+49242,	_,	_,	_,	_,
+16414,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Cod6_ResN =
   _, _, _, _, _,
@@ -47159,36 +45087,37 @@ data:
   _, _, _, _, _ ;
 
  Cod7_Nums =
-  _, _, _, _, _,
-  2779.0787018826, _, _, _, _,
-  2779.0787018826, _, _, _, _,
-  _, _, _, _, _,
-  11116.5643691631, _, _, _, _,
-  5558.29360780789, _, _, _, _,
-  5558.29360780789, _, _, _, _,
-  11116.5643691631, _, _, _, _,
-  19454.0155529481, _, _, _, _,
-  11116.5643691631, _, _, _, _,
-  22233.1183611839, _, _, _, _,
-  16674.8475998286, _, _, _, _,
-  36128.8001040214, _, _, _, _,
-  33349.6535476063, _, _, _, _,
-  11116.5643691631, _, _, _, _,
-  27791.4119689917, _, _, _, _,
-  11116.5643691631, _, _, _, _,
-  5558.29360780789, _, _, _, _,
-  5558.29360780789, _, _, _, _,
-  5558.29360780789, _, _, _, _,
-  11116.5643691631, _, _, _, _,
-  16674.8475998286, _, _, _, _,
-  5558.29360780789, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+5527,	_,	_,	_,	_,
+5527,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+22109,	_,	_,	_,	_,
+11054,	_,	_,	_,	_,
+11054,	_,	_,	_,	_,
+22109,	_,	_,	_,	_,
+38690,	_,	_,	_,	_,
+22109,	_,	_,	_,	_,
+44218,	_,	_,	_,	_,
+33163,	_,	_,	_,	_,
+71854,	_,	_,	_,	_,
+66326,	_,	_,	_,	_,
+22109,	_,	_,	_,	_,
+55272,	_,	_,	_,	_,
+22109,	_,	_,	_,	_,
+11054,	_,	_,	_,	_,
+11054,	_,	_,	_,	_,
+11054,	_,	_,	_,	_,
+22109,	_,	_,	_,	_,
+33163,	_,	_,	_,	_,
+11054,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Cod7_ResN =
   _, _, _, _, _,
@@ -47255,36 +45184,37 @@ data:
   _, _, _, _, _ ;
 
  Cod8_Nums =
-  _, _, _, _, _,
-  1733.74175887145, _, _, _, _,
-  1733.74175887145, _, _, _, _,
-  _, _, _, _, _,
-  6935.12272572367, _, _, _, _,
-  3467.56848929711, _, _, _, _,
-  3467.56848929711, _, _, _, _,
-  6935.12272572367, _, _, _, _,
-  12136.4821798795, _, _, _, _,
-  6935.12272572367, _, _, _, _,
-  13870.2389776166, _, _, _, _,
-  10402.68474119, _, _, _, _,
-  22539.127587797, _, _, _, _,
-  20805.3434975456, _, _, _, _,
-  6935.12272572367, _, _, _, _,
-  17337.8074669137, _, _, _, _,
-  6935.12272572367, _, _, _, _,
-  3467.56848929711, _, _, _, _,
-  3467.56848929711, _, _, _, _,
-  3467.56848929711, _, _, _, _,
-  6935.12272572367, _, _, _, _,
-  10402.68474119, _, _, _, _,
-  3467.56848929711, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+3350,	_,	_,	_,	_,
+3350,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+13399,	_,	_,	_,	_,
+6700,	_,	_,	_,	_,
+6700,	_,	_,	_,	_,
+13399,	_,	_,	_,	_,
+23449,	_,	_,	_,	_,
+13399,	_,	_,	_,	_,
+26799,	_,	_,	_,	_,
+20099,	_,	_,	_,	_,
+43548,	_,	_,	_,	_,
+40198,	_,	_,	_,	_,
+13399,	_,	_,	_,	_,
+33498,	_,	_,	_,	_,
+13399,	_,	_,	_,	_,
+6700,	_,	_,	_,	_,
+6700,	_,	_,	_,	_,
+6700,	_,	_,	_,	_,
+13399,	_,	_,	_,	_,
+20099,	_,	_,	_,	_,
+6700,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Cod8_ResN =
   _, _, _, _, _,
@@ -47351,36 +45281,37 @@ data:
   _, _, _, _, _ ;
 
  Cod9_Nums =
-  _, _, _, _, _,
-  1004.80783696132, _, _, _, _,
-  1004.80783696132, _, _, _, _,
-  _, _, _, _, _,
-  4019.32157972114, _, _, _, _,
-  2009.6649200593, _, _, _, _,
-  2009.6649200593, _, _, _, _,
-  4019.32157972114, _, _, _, _,
-  7033.82285457692, _, _, _, _,
-  4019.32157972114, _, _, _, _,
-  8038.6394074672, _, _, _, _,
-  6028.98274780535, _, _, _, _,
-  13062.7828063803, _, _, _, _,
-  12057.9504358331, _, _, _, _,
-  4019.32157972114, _, _, _, _,
-  10048.3043275265, _, _, _, _,
-  4019.32157972114, _, _, _, _,
-  2009.6649200593, _, _, _, _,
-  2009.6649200593, _, _, _, _,
-  2009.6649200593, _, _, _, _,
-  4019.32157972114, _, _, _, _,
-  6028.98274780535, _, _, _, _,
-  2009.6649200593, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+2177,	_,	_,	_,	_,
+2177,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+8710,	_,	_,	_,	_,
+4355,	_,	_,	_,	_,
+4355,	_,	_,	_,	_,
+8710,	_,	_,	_,	_,
+15242,	_,	_,	_,	_,
+8710,	_,	_,	_,	_,
+17419,	_,	_,	_,	_,
+13064,	_,	_,	_,	_,
+28306,	_,	_,	_,	_,
+26129,	_,	_,	_,	_,
+8710,	_,	_,	_,	_,
+21774,	_,	_,	_,	_,
+8710,	_,	_,	_,	_,
+4355,	_,	_,	_,	_,
+4355,	_,	_,	_,	_,
+4355,	_,	_,	_,	_,
+8710,	_,	_,	_,	_,
+13064,	_,	_,	_,	_,
+4355,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Cod9_ResN =
   _, _, _, _, _,
@@ -52805,133 +50736,38 @@ data:
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Herring10_Nums =
-  _, _, _, _, _,
-  196809.826386489, _, _, _, _,
-  236170.983751111, _, _, _, _,
-  118086.215455724, _, _, _, _,
-  236170.983751111, _, _, _, _,
-  314893.85500711, _, _, _, _,
-  314893.85500711, _, _, _, _,
-  354255.494813386, _, _, _, _,
-  196809.826386489, _, _, _, _,
-  196809.826386489, _, _, _, _,
-  196809.826386489, _, _, _, _,
-  157447.592289565, _, _, _, _,
-  236170.983751111, _, _, _, _,
-  196809.826386489, _, _, _, _,
-  196809.826386489, _, _, _, _,
-  157447.592289565, _, _, _, _,
-  157447.592289565, _, _, _, _,
-  39362.2340969243, _, _, _, _,
-  78723.6109307648, _, _, _, _,
-  118086.215455724, _, _, _, _,
-  78723.6109307648, _, _, _, _,
-  78723.6109307648, _, _, _, _,
-  78723.6109307648, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Herring10_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Herring10_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
  Herring1_Nums =
-  _, _, _, _, _,
-  23449263.3599314, _, _, _, _,
-  28139019.771698, _, _, _, _,
-  14069596.0981193, _, _, _, _,
-  28139019.771698, _, _, _, _,
-  37518598.90362, _, _, _, _,
-  37518598.90362, _, _, _, _,
-  42208412.7967716, _, _, _, _,
-  23449263.3599314, _, _, _, _,
-  23449263.3599314, _, _, _, _,
-  23449263.3599314, _, _, _, _,
-  18759378.6589437, _, _, _, _,
-  28139019.771698, _, _, _, _,
-  23449263.3599314, _, _, _, _,
-  23449263.3599314, _, _, _, _,
-  18759378.6589437, _, _, _, _,
-  18759378.6589437, _, _, _, _,
-  4689884.70098775, _, _, _, _,
-  9379667.26181212, _, _, _, _,
-  14069596.0981193, _, _, _, _,
-  9379667.26181212, _, _, _, _,
-  9379667.26181212, _, _, _, _,
-  9379667.26181212, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+39544550,	_,	_,	_,	_,
+47453297,	_,	_,	_,	_,
+23726794,	_,	_,	_,	_,
+47453297,	_,	_,	_,	_,
+63270905,	_,	_,	_,	_,
+63270905,	_,	_,	_,	_,
+71179749,	_,	_,	_,	_,
+39544550,	_,	_,	_,	_,
+39544550,	_,	_,	_,	_,
+39544550,	_,	_,	_,	_,
+31635586,	_,	_,	_,	_,
+47453297,	_,	_,	_,	_,
+39544550,	_,	_,	_,	_,
+39544550,	_,	_,	_,	_,
+31635586,	_,	_,	_,	_,
+31635586,	_,	_,	_,	_,
+7908964,	_,	_,	_,	_,
+15817756,	_,	_,	_,	_,
+23726794,	_,	_,	_,	_,
+15817756,	_,	_,	_,	_,
+15817756,	_,	_,	_,	_,
+15817756,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Herring1_ResN =
   _, _, _, _, _,
@@ -52998,36 +50834,37 @@ data:
   _, _, _, _, _ ;
 
  Herring2_Nums =
-  _, _, _, _, _,
-  6625752.43791335, _, _, _, _,
-  7950875.72650153, _, _, _, _,
-  3975462.22312728, _, _, _, _,
-  7950875.72650153, _, _, _, _,
-  10601141.0395742, _, _, _, _,
-  10601141.0395742, _, _, _, _,
-  11926280.5699275, _, _, _, _,
-  6625752.43791335, _, _, _, _,
-  6625752.43791335, _, _, _, _,
-  6625752.43791335, _, _, _, _,
-  5300592.90031357, _, _, _, _,
-  7950875.72650153, _, _, _, _,
-  6625752.43791335, _, _, _, _,
-  6625752.43791335, _, _, _, _,
-  5300592.90031357, _, _, _, _,
-  5300592.90031357, _, _, _, _,
-  1325159.53759978, _, _, _, _,
-  2650290.21478607, _, _, _, _,
-  3975462.22312728, _, _, _, _,
-  2650290.21478607, _, _, _, _,
-  2650290.21478607, _, _, _, _,
-  2650290.21478607, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+9446859,	_,	_,	_,	_,
+11336191,	_,	_,	_,	_,
+5668130,	_,	_,	_,	_,
+11336191,	_,	_,	_,	_,
+15114884,	_,	_,	_,	_,
+15114884,	_,	_,	_,	_,
+17004240,	_,	_,	_,	_,
+9446859,	_,	_,	_,	_,
+9446859,	_,	_,	_,	_,
+9446859,	_,	_,	_,	_,
+7557474,	_,	_,	_,	_,
+11336191,	_,	_,	_,	_,
+9446859,	_,	_,	_,	_,
+9446859,	_,	_,	_,	_,
+7557474,	_,	_,	_,	_,
+7557474,	_,	_,	_,	_,
+1889385,	_,	_,	_,	_,
+3778728,	_,	_,	_,	_,
+5668130,	_,	_,	_,	_,
+3778728,	_,	_,	_,	_,
+3778728,	_,	_,	_,	_,
+3778728,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Herring2_ResN =
   _, _, _, _, _,
@@ -53094,36 +50931,37 @@ data:
   _, _, _, _, _ ;
 
  Herring3_Nums =
-  _, _, _, _, _,
-  14081504.4348757, _, _, _, _,
-  16897747.5166784, _, _, _, _,
-  8448925.52962293, _, _, _, _,
-  16897747.5166784, _, _, _, _,
-  22530273.4990986, _, _, _, _,
-  22530273.4990986, _, _, _, _,
-  25346551.0990167, _, _, _, _,
-  14081504.4348757, _, _, _, _,
-  14081504.4348757, _, _, _, _,
-  14081504.4348757, _, _, _, _,
-  11265184.3141822, _, _, _, _,
-  16897747.5166784, _, _, _, _,
-  14081504.4348757, _, _, _, _,
-  14081504.4348757, _, _, _, _,
-  11265184.3141822, _, _, _, _,
-  11265184.3141822, _, _, _, _,
-  2816320.12069345, _, _, _, _,
-  5632578.90525273, _, _, _, _,
-  8448925.52962293, _, _, _, _,
-  5632578.90525273, _, _, _, _,
-  5632578.90525273, _, _, _, _,
-  5632578.90525273, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+7557487,	_,	_,	_,	_,
+9068953,	_,	_,	_,	_,
+4534504,	_,	_,	_,	_,
+9068953,	_,	_,	_,	_,
+12091907,	_,	_,	_,	_,
+12091907,	_,	_,	_,	_,
+13603392,	_,	_,	_,	_,
+7557487,	_,	_,	_,	_,
+7557487,	_,	_,	_,	_,
+7557487,	_,	_,	_,	_,
+6045979,	_,	_,	_,	_,
+9068953,	_,	_,	_,	_,
+7557487,	_,	_,	_,	_,
+7557487,	_,	_,	_,	_,
+6045979,	_,	_,	_,	_,
+6045979,	_,	_,	_,	_,
+1511508,	_,	_,	_,	_,
+3022982,	_,	_,	_,	_,
+4534504,	_,	_,	_,	_,
+3022982,	_,	_,	_,	_,
+3022982,	_,	_,	_,	_,
+3022982,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Herring3_ResN =
   _, _, _, _, _,
@@ -53190,36 +51028,37 @@ data:
   _, _, _, _, _ ;
 
  Herring4_Nums =
-  _, _, _, _, _,
-  7565600.1128543, _, _, _, _,
-  9078689.07831614, _, _, _, _,
-  4539372.35442679, _, _, _, _,
-  9078689.07831614, _, _, _, _,
-  12104888.4027798, _, _, _, _,
-  12104888.4027798, _, _, _, _,
-  13617995.9138636, _, _, _, _,
-  7565600.1128543, _, _, _, _,
-  7565600.1128543, _, _, _, _,
-  7565600.1128543, _, _, _, _,
-  6052469.75654232, _, _, _, _,
-  9078689.07831614, _, _, _, _,
-  7565600.1128543, _, _, _, _,
-  7565600.1128543, _, _, _, _,
-  6052469.75654232, _, _, _, _,
-  6052469.75654232, _, _, _, _,
-  1513130.35631199, _, _, _, _,
-  3026227.75842751, _, _, _, _,
-  4539372.35442679, _, _, _, _,
-  3026227.75842751, _, _, _, _,
-  3026227.75842751, _, _, _, _,
-  3026227.75842751, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+3652785,	_,	_,	_,	_,
+4383327,	_,	_,	_,	_,
+2191677,	_,	_,	_,	_,
+4383327,	_,	_,	_,	_,
+5844422,	_,	_,	_,	_,
+5844422,	_,	_,	_,	_,
+6574973,	_,	_,	_,	_,
+3652785,	_,	_,	_,	_,
+3652785,	_,	_,	_,	_,
+3652785,	_,	_,	_,	_,
+2922223,	_,	_,	_,	_,
+4383327,	_,	_,	_,	_,
+3652785,	_,	_,	_,	_,
+3652785,	_,	_,	_,	_,
+2922223,	_,	_,	_,	_,
+2922223,	_,	_,	_,	_,
+730562,	_,	_,	_,	_,
+1461108,	_,	_,	_,	_,
+2191677,	_,	_,	_,	_,
+1461108,	_,	_,	_,	_,
+1461108,	_,	_,	_,	_,
+1461108,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Herring4_ResN =
   _, _, _, _, _,
@@ -53286,36 +51125,37 @@ data:
   _, _, _, _, _ ;
 
  Herring5_Nums =
-  _, _, _, _, _,
-  4517718.08532725, _, _, _, _,
-  5421243.15696854, _, _, _, _,
-  2710638.18807778, _, _, _, _,
-  5421243.15696854, _, _, _, _,
-  7228306.07517725, _, _, _, _,
-  7228306.07517725, _, _, _, _,
-  8131842.22114051, _, _, _, _,
-  4517718.08532725, _, _, _, _,
-  4517718.08532725, _, _, _, _,
-  4517718.08532725, _, _, _, _,
-  3614168.29757759, _, _, _, _,
-  5421243.15696854, _, _, _, _,
-  4517718.08532725, _, _, _, _,
-  4517718.08532725, _, _, _, _,
-  3614168.29757759, _, _, _, _,
-  3614168.29757759, _, _, _, _,
-  903549.787749662, _, _, _, _,
-  1807079.89724947, _, _, _, _,
-  2710638.18807778, _, _, _, _,
-  1807079.89724947, _, _, _, _,
-  1807079.89724947, _, _, _, _,
-  1807079.89724947, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+1700435,	_,	_,	_,	_,
+2040514,	_,	_,	_,	_,
+1020263,	_,	_,	_,	_,
+2040514,	_,	_,	_,	_,
+2720679,	_,	_,	_,	_,
+2720679,	_,	_,	_,	_,
+3060763,	_,	_,	_,	_,
+1700435,	_,	_,	_,	_,
+1700435,	_,	_,	_,	_,
+1700435,	_,	_,	_,	_,
+1360345,	_,	_,	_,	_,
+2040514,	_,	_,	_,	_,
+1700435,	_,	_,	_,	_,
+1700435,	_,	_,	_,	_,
+1360345,	_,	_,	_,	_,
+1360345,	_,	_,	_,	_,
+340089,	_,	_,	_,	_,
+680171,	_,	_,	_,	_,
+1020263,	_,	_,	_,	_,
+680171,	_,	_,	_,	_,
+680171,	_,	_,	_,	_,
+680171,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Herring5_ResN =
   _, _, _, _, _,
@@ -53382,36 +51222,37 @@ data:
   _, _, _, _, _ ;
 
  Herring6_Nums =
-  _, _, _, _, _,
-  3016367.60124505, _, _, _, _,
-  3619628.73917726, _, _, _, _,
-  1809825.45939963, _, _, _, _,
-  3619628.73917726, _, _, _, _,
-  4826159.54454096, _, _, _, _,
-  4826159.54454096, _, _, _, _,
-  5429428.07652153, _, _, _, _,
-  3016367.60124505, _, _, _, _,
-  3016367.60124505, _, _, _, _,
-  3016367.60124505, _, _, _, _,
-  2413089.96098422, _, _, _, _,
-  3619628.73917726, _, _, _, _,
-  3016367.60124505, _, _, _, _,
-  3016367.60124505, _, _, _, _,
-  2413089.96098422, _, _, _, _,
-  2413089.96098422, _, _, _, _,
-  603277.640260836, _, _, _, _,
-  1206542.14184542, _, _, _, _,
-  1809825.45939963, _, _, _, _,
-  1206542.14184542, _, _, _, _,
-  1206542.14184542, _, _, _, _,
-  1206542.14184542, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+881707,	_,	_,	_,	_,
+1058045,	_,	_,	_,	_,
+529026,	_,	_,	_,	_,
+1058045,	_,	_,	_,	_,
+1410723,	_,	_,	_,	_,
+1410723,	_,	_,	_,	_,
+1587062,	_,	_,	_,	_,
+881707,	_,	_,	_,	_,
+881707,	_,	_,	_,	_,
+881707,	_,	_,	_,	_,
+705364,	_,	_,	_,	_,
+1058045,	_,	_,	_,	_,
+881707,	_,	_,	_,	_,
+881707,	_,	_,	_,	_,
+705364,	_,	_,	_,	_,
+705364,	_,	_,	_,	_,
+176343,	_,	_,	_,	_,
+352681,	_,	_,	_,	_,
+529026,	_,	_,	_,	_,
+352681,	_,	_,	_,	_,
+352681,	_,	_,	_,	_,
+352681,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Herring6_ResN =
   _, _, _, _, _,
@@ -53478,36 +51319,37 @@ data:
   _, _, _, _, _ ;
 
  Herring7_Nums =
-  _, _, _, _, _,
-  1697911.65986682, _, _, _, _,
-  2037487.02184087, _, _, _, _,
-  1018749.75336894, _, _, _, _,
-  2037487.02184087, _, _, _, _,
-  2716642.54703945, _, _, _, _,
-  2716642.54703945, _, _, _, _,
-  3056222.07111925, _, _, _, _,
-  1697911.65986682, _, _, _, _,
-  1697911.65986682, _, _, _, _,
-  1697911.65986682, _, _, _, _,
-  1358327.00874107, _, _, _, _,
-  2037487.02184087, _, _, _, _,
-  1697911.65986682, _, _, _, _,
-  1697911.65986682, _, _, _, _,
-  1358327.00874107, _, _, _, _,
-  1358327.00874107, _, _, _, _,
-  339584.651125748, _, _, _, _,
-  679161.906497878, _, _, _, _,
-  1018749.75336894, _, _, _, _,
-  679161.906497878, _, _, _, _,
-  679161.906497878, _, _, _, _,
-  679161.906497878, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+195235,	_,	_,	_,	_,
+234281,	_,	_,	_,	_,
+117141,	_,	_,	_,	_,
+234281,	_,	_,	_,	_,
+312374,	_,	_,	_,	_,
+312374,	_,	_,	_,	_,
+351421,	_,	_,	_,	_,
+195235,	_,	_,	_,	_,
+195235,	_,	_,	_,	_,
+195235,	_,	_,	_,	_,
+156188,	_,	_,	_,	_,
+234281,	_,	_,	_,	_,
+195235,	_,	_,	_,	_,
+195235,	_,	_,	_,	_,
+156188,	_,	_,	_,	_,
+156188,	_,	_,	_,	_,
+39047,	_,	_,	_,	_,
+78094,	_,	_,	_,	_,
+117141,	_,	_,	_,	_,
+78094,	_,	_,	_,	_,
+78094,	_,	_,	_,	_,
+78094,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Herring7_ResN =
   _, _, _, _, _,
@@ -53542,198 +51384,6 @@ data:
   _, _, _, _, _ ;
 
  Herring7_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Herring8_Nums =
-  _, _, _, _, _,
-  1132663.19165905, _, _, _, _,
-  1359191.18036046, _, _, _, _,
-  679599.754467344, _, _, _, _,
-  1359191.18036046, _, _, _, _,
-  1812250.3606388, _, _, _, _,
-  1812250.3606388, _, _, _, _,
-  2038781.12584744, _, _, _, _,
-  1132663.19165905, _, _, _, _,
-  1132663.19165905, _, _, _, _,
-  1132663.19165905, _, _, _, _,
-  906129.006239363, _, _, _, _,
-  1359191.18036046, _, _, _, _,
-  1132663.19165905, _, _, _, _,
-  1132663.19165905, _, _, _, _,
-  906129.006239363, _, _, _, _,
-  906129.006239363, _, _, _, _,
-  226534.185419685, _, _, _, _,
-  453063.437191704, _, _, _, _,
-  679599.754467344, _, _, _, _,
-  453063.437191704, _, _, _, _,
-  453063.437191704, _, _, _, _,
-  453063.437191704, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Herring8_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Herring8_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Herring9_Nums =
-  _, _, _, _, _,
-  695466.233405363, _, _, _, _,
-  834556.62516808, _, _, _, _,
-  417280.869496893, _, _, _, _,
-  834556.62516808, _, _, _, _,
-  1112739.37529028, _, _, _, _,
-  1112739.37529028, _, _, _, _,
-  1251831.47185547, _, _, _, _,
-  695466.233405363, _, _, _, _,
-  695466.233405363, _, _, _, _,
-  695466.233405363, _, _, _, _,
-  556372.036797264, _, _, _, _,
-  834556.62516808, _, _, _, _,
-  695466.233405363, _, _, _, _,
-  695466.233405363, _, _, _, _,
-  556372.036797264, _, _, _, _,
-  556372.036797264, _, _, _, _,
-  139094.196608099, _, _, _, _,
-  278185.36390847, _, _, _, _,
-  417280.869496893, _, _, _, _,
-  278185.36390847, _, _, _, _,
-  278185.36390847, _, _, _, _,
-  278185.36390847, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Herring9_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Herring9_StructN =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -54885,7 +52535,7 @@ data:
   1e-06, 1e-06, 1e-06, 1e-06, 500,
   1e-06, 1e-06, 1e-06, 1e-06, 500 ;
 
-DayLight =
+ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -55044,7 +52694,7 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
-  
+
  Light =
   _, _, _, _, _,
   _, _, _, _, _,
@@ -55206,36 +52856,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Little_Skate10_Nums =
-  _, _, _, _, _,
-  13649, _, _, _, _,
-  17061, _, _, _, _,
-  10237, _, _, _, _,
-  47772, _, _, _, _,
-  27298, _, _, _, _,
-  23886, _, _, _, _,
-  23886, _, _, _, _,
-  17061, _, _, _, _,
-  23886, _, _, _, _,
-  _, _, _, _, _,
-  3412, _, _, _, _,
-  34123, _, _, _, _,
-  37535, _, _, _, _,
-  27298, _, _, _, _,
-  23886, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  3412, _, _, _, _,
-  6825, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+27793,	_,	_,	_,	_,
+34741,	_,	_,	_,	_,
+20845,	_,	_,	_,	_,
+97275,	_,	_,	_,	_,
+55586,	_,	_,	_,	_,
+48637,	_,	_,	_,	_,
+48637,	_,	_,	_,	_,
+34741,	_,	_,	_,	_,
+48637,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+6948,	_,	_,	_,	_,
+69482,	_,	_,	_,	_,
+76430,	_,	_,	_,	_,
+55586,	_,	_,	_,	_,
+48637,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+6948,	_,	_,	_,	_,
+13896,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Little_Skate10_ResN =
   _, _, _, _, _,
@@ -55301,29 +52952,62 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Little_Skate1_Nums =
+Little_Skate11_Nums =
+_,	_,	_,	_,	_,
+19669,	_,	_,	_,	_,
+24586,	_,	_,	_,	_,
+14752,	_,	_,	_,	_,
+68841,	_,	_,	_,	_,
+39337,	_,	_,	_,	_,
+34420,	_,	_,	_,	_,
+34420,	_,	_,	_,	_,
+24586,	_,	_,	_,	_,
+34420,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+4917,	_,	_,	_,	_,
+49172,	_,	_,	_,	_,
+54089,	_,	_,	_,	_,
+39337,	_,	_,	_,	_,
+34420,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+4917,	_,	_,	_,	_,
+9834,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
+
+ Little_Skate11_ResN =
   _, _, _, _, _,
-  783420, _, _, _, _,
-  979275, _, _, _, _,
-  587565, _, _, _, _,
-  2741971, _, _, _, _,
-  1566841, _, _, _, _,
-  1370986, _, _, _, _,
-  1370986, _, _, _, _,
-  979275, _, _, _, _,
-  1370986, _, _, _, _,
-  _, _, _, _, _,
-  195855, _, _, _, _,
-  1958551, _, _, _, _,
-  2154406, _, _, _, _,
-  1566841, _, _, _, _,
-  1370986, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  195855, _, _, _, _,
-  391710, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -55332,6 +53016,167 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+
+ Little_Skate11_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+  
+ Little_Skate12_Nums =
+_,	_,	_,	_,	_,
+13683,	_,	_,	_,	_,
+17103,	_,	_,	_,	_,
+10262,	_,	_,	_,	_,
+47889,	_,	_,	_,	_,
+27365,	_,	_,	_,	_,
+23945,	_,	_,	_,	_,
+23945,	_,	_,	_,	_,
+17103,	_,	_,	_,	_,
+23945,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+3421,	_,	_,	_,	_,
+34207,	_,	_,	_,	_,
+37627,	_,	_,	_,	_,
+27365,	_,	_,	_,	_,
+23945,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+3421,	_,	_,	_,	_,
+6841,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
+
+ Little_Skate12_ResN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ Little_Skate12_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+ Little_Skate1_Nums =
+_,	_,	_,	_,	_,
+411333,	_,	_,	_,	_,
+514166,	_,	_,	_,	_,
+308500,	_,	_,	_,	_,
+1439666,	_,	_,	_,	_,
+822667,	_,	_,	_,	_,
+719833,	_,	_,	_,	_,
+719833,	_,	_,	_,	_,
+514166,	_,	_,	_,	_,
+719833,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+102833,	_,	_,	_,	_,
+1028333,	_,	_,	_,	_,
+1131166,	_,	_,	_,	_,
+822667,	_,	_,	_,	_,
+719833,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+102833,	_,	_,	_,	_,
+205667,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Little_Skate1_ResN =
   _, _, _, _, _,
@@ -55398,36 +53243,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Little_Skate2_Nums =
-  _, _, _, _, _,
-  499531, _, _, _, _,
-  624413, _, _, _, _,
-  374648, _, _, _, _,
-  1748357, _, _, _, _,
-  999062, _, _, _, _,
-  874179, _, _, _, _,
-  874179, _, _, _, _,
-  624413, _, _, _, _,
-  874179, _, _, _, _,
-  _, _, _, _, _,
-  124883, _, _, _, _,
-  1248827, _, _, _, _,
-  1373710, _, _, _, _,
-  999062, _, _, _, _,
-  874179, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  124883, _, _, _, _,
-  249765, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+534476,	_,	_,	_,	_,
+668095,	_,	_,	_,	_,
+400857,	_,	_,	_,	_,
+1870668,	_,	_,	_,	_,
+1068954,	_,	_,	_,	_,
+935334,	_,	_,	_,	_,
+935334,	_,	_,	_,	_,
+668095,	_,	_,	_,	_,
+935334,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+133619,	_,	_,	_,	_,
+1336192,	_,	_,	_,	_,
+1469811,	_,	_,	_,	_,
+1068954,	_,	_,	_,	_,
+935334,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+133619,	_,	_,	_,	_,
+267238,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Little_Skate2_ResN =
   _, _, _, _, _,
@@ -55494,36 +53340,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Little_Skate3_Nums =
-  _, _, _, _, _,
-  318515, _, _, _, _,
-  398143, _, _, _, _,
-  238886, _, _, _, _,
-  1114802, _, _, _, _,
-  637030, _, _, _, _,
-  557401, _, _, _, _,
-  557401, _, _, _, _,
-  398143, _, _, _, _,
-  557401, _, _, _, _,
-  _, _, _, _, _,
-  79629, _, _, _, _,
-  796287, _, _, _, _,
-  875916, _, _, _, _,
-  637030, _, _, _, _,
-  557401, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  79629, _, _, _, _,
-  159257, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+384823,	_,	_,	_,	_,
+481029,	_,	_,	_,	_,
+288617,	_,	_,	_,	_,
+1346881,	_,	_,	_,	_,
+769647,	_,	_,	_,	_,
+673441,	_,	_,	_,	_,
+673441,	_,	_,	_,	_,
+481029,	_,	_,	_,	_,
+673441,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+96206,	_,	_,	_,	_,
+962058,	_,	_,	_,	_,
+1058264,	_,	_,	_,	_,
+769647,	_,	_,	_,	_,
+673441,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+96206,	_,	_,	_,	_,
+192412,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Little_Skate3_ResN =
   _, _, _, _, _,
@@ -55590,36 +53437,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Little_Skate4_Nums =
-  _, _, _, _, _,
-  203094, _, _, _, _,
-  253867, _, _, _, _,
-  152320, _, _, _, _,
-  710829, _, _, _, _,
-  406188, _, _, _, _,
-  355415, _, _, _, _,
-  355415, _, _, _, _,
-  253867, _, _, _, _,
-  355415, _, _, _, _,
-  _, _, _, _, _,
-  50773, _, _, _, _,
-  507735, _, _, _, _,
-  558508, _, _, _, _,
-  406188, _, _, _, _,
-  355415, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  50773, _, _, _, _,
-  101547, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+256549,	_,	_,	_,	_,
+320686,	_,	_,	_,	_,
+192411,	_,	_,	_,	_,
+897921,	_,	_,	_,	_,
+513098,	_,	_,	_,	_,
+448961,	_,	_,	_,	_,
+448961,	_,	_,	_,	_,
+320686,	_,	_,	_,	_,
+448961,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+64137,	_,	_,	_,	_,
+641372,	_,	_,	_,	_,
+705509,	_,	_,	_,	_,
+513098,	_,	_,	_,	_,
+448961,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+64137,	_,	_,	_,	_,
+128274,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Little_Skate4_ResN =
   _, _, _, _, _,
@@ -55686,36 +53534,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Little_Skate5_Nums =
-  _, _, _, _, _,
-  129498, _, _, _, _,
-  161873, _, _, _, _,
-  97124, _, _, _, _,
-  453244, _, _, _, _,
-  258997, _, _, _, _,
-  226622, _, _, _, _,
-  226622, _, _, _, _,
-  161873, _, _, _, _,
-  226622, _, _, _, _,
-  _, _, _, _, _,
-  32375, _, _, _, _,
-  323746, _, _, _, _,
-  356121, _, _, _, _,
-  258997, _, _, _, _,
-  226622, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  32375, _, _, _, _,
-  64749, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+179584,	_,	_,	_,	_,
+224480,	_,	_,	_,	_,
+134688,	_,	_,	_,	_,
+628544,	_,	_,	_,	_,
+359168,	_,	_,	_,	_,
+314272,	_,	_,	_,	_,
+314272,	_,	_,	_,	_,
+224480,	_,	_,	_,	_,
+314272,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+44896,	_,	_,	_,	_,
+448960,	_,	_,	_,	_,
+493856,	_,	_,	_,	_,
+359168,	_,	_,	_,	_,
+314272,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+44896,	_,	_,	_,	_,
+89792,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Little_Skate5_ResN =
   _, _, _, _, _,
@@ -55782,36 +53631,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Little_Skate6_Nums =
-  _, _, _, _, _,
-  82572, _, _, _, _,
-  103215, _, _, _, _,
-  61929, _, _, _, _,
-  289001, _, _, _, _,
-  165144, _, _, _, _,
-  144501, _, _, _, _,
-  144501, _, _, _, _,
-  103215, _, _, _, _,
-  144501, _, _, _, _,
-  _, _, _, _, _,
-  20643, _, _, _, _,
-  206430, _, _, _, _,
-  227072, _, _, _, _,
-  165144, _, _, _, _,
-  144501, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  20643, _, _, _, _,
-  41286, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+123999,	_,	_,	_,	_,
+154998,	_,	_,	_,	_,
+92999,	_,	_,	_,	_,
+433995,	_,	_,	_,	_,
+247997,	_,	_,	_,	_,
+216998,	_,	_,	_,	_,
+216998,	_,	_,	_,	_,
+154998,	_,	_,	_,	_,
+216998,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+31000,	_,	_,	_,	_,
+309996,	_,	_,	_,	_,
+340996,	_,	_,	_,	_,
+247997,	_,	_,	_,	_,
+216998,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+31000,	_,	_,	_,	_,
+61999,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Little_Skate6_ResN =
   _, _, _, _, _,
@@ -55878,36 +53728,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Little_Skate7_Nums =
-  _, _, _, _, _,
-  52650, _, _, _, _,
-  65813, _, _, _, _,
-  39488, _, _, _, _,
-  184275, _, _, _, _,
-  105300, _, _, _, _,
-  92138, _, _, _, _,
-  92138, _, _, _, _,
-  65813, _, _, _, _,
-  92138, _, _, _, _,
-  _, _, _, _, _,
-  13163, _, _, _, _,
-  131625, _, _, _, _,
-  144788, _, _, _, _,
-  105300, _, _, _, _,
-  92138, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  13163, _, _, _, _,
-  26325, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+85516,	_,	_,	_,	_,
+106895,	_,	_,	_,	_,
+64137,	_,	_,	_,	_,
+299307,	_,	_,	_,	_,
+171033,	_,	_,	_,	_,
+149654,	_,	_,	_,	_,
+149654,	_,	_,	_,	_,
+106895,	_,	_,	_,	_,
+149654,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+21379,	_,	_,	_,	_,
+213791,	_,	_,	_,	_,
+235170,	_,	_,	_,	_,
+171033,	_,	_,	_,	_,
+149654,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+21379,	_,	_,	_,	_,
+42758,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Little_Skate7_ResN =
   _, _, _, _, _,
@@ -55974,36 +53825,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Little_Skate8_Nums =
-  _, _, _, _, _,
-  33571, _, _, _, _,
-  41964, _, _, _, _,
-  25178, _, _, _, _,
-  117499, _, _, _, _,
-  67142, _, _, _, _,
-  58750, _, _, _, _,
-  58750, _, _, _, _,
-  41964, _, _, _, _,
-  58750, _, _, _, _,
-  _, _, _, _, _,
-  8393, _, _, _, _,
-  83928, _, _, _, _,
-  92321, _, _, _, _,
-  67142, _, _, _, _,
-  58750, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  8393, _, _, _, _,
-  16786, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+59861,	_,	_,	_,	_,
+74827,	_,	_,	_,	_,
+44896,	_,	_,	_,	_,
+209515,	_,	_,	_,	_,
+119723,	_,	_,	_,	_,
+104757,	_,	_,	_,	_,
+104757,	_,	_,	_,	_,
+74827,	_,	_,	_,	_,
+104757,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+14965,	_,	_,	_,	_,
+149653,	_,	_,	_,	_,
+164619,	_,	_,	_,	_,
+119723,	_,	_,	_,	_,
+104757,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+14965,	_,	_,	_,	_,
+29931,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Little_Skate8_ResN =
   _, _, _, _, _,
@@ -56070,36 +53922,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Little_Skate9_Nums =
-  _, _, _, _, _,
-  21406, _, _, _, _,
-  26757, _, _, _, _,
-  16054, _, _, _, _,
-  74921, _, _, _, _,
-  42812, _, _, _, _,
-  37460, _, _, _, _,
-  37460, _, _, _, _,
-  26757, _, _, _, _,
-  37460, _, _, _, _,
-  _, _, _, _, _,
-  5351, _, _, _, _,
-  53515, _, _, _, _,
-  58866, _, _, _, _,
-  42812, _, _, _, _,
-  37460, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  5351, _, _, _, _,
-  10703, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+40620,	_,	_,	_,	_,
+50775,	_,	_,	_,	_,
+30465,	_,	_,	_,	_,
+142171,	_,	_,	_,	_,
+81240,	_,	_,	_,	_,
+71085,	_,	_,	_,	_,
+71085,	_,	_,	_,	_,
+50775,	_,	_,	_,	_,
+71085,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+10155,	_,	_,	_,	_,
+101551,	_,	_,	_,	_,
+111706,	_,	_,	_,	_,
+81240,	_,	_,	_,	_,
+71085,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+10155,	_,	_,	_,	_,
+20310,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Little_Skate9_ResN =
   _, _, _, _, _,
@@ -57309,36 +55162,37 @@ DayLight =
   0.001, 0.001, 0.001, 0.001, _ ;
 
  Menhaden10_Nums =
-  _, _, _, _, _,
-  10913978.714307, _, _, _, _,
-  24561820.83577, _, _, _, _,
-  3447563.3240046, _, _, _, _,
-  2737342.10898245, _, _, _, _,
-  14117136.0075949, _, _, _, _,
-  50217268.8175666, _, _, _, _,
-  16058447.6627571, _, _, _, _,
-  1433316.85588184, _, _, _, _,
-  27962015.0007182, _, _, _, _,
-  4837471.59358121, _, _, _, _,
-  3419686.82051437, _, _, _, _,
-  3624514.46311336, _, _, _, _,
-  10458560.5477471, _, _, _, _,
-  1569037.06158553, _, _, _, _,
-  1579120.92371113, _, _, _, _,
-  4104301.50998472, _, _, _, _,
-  16403499.905516, _, _, _, _,
-  7579319.55016726, _, _, _, _,
-  3541192.13280173, _, _, _, _,
-  4159727.58492442, _, _, _, _,
-  600258.947628955, _, _, _, _,
-  1641519.63114118, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+54642597,	_,	_,	_,	_,
+122972723,	_,	_,	_,	_,
+17260783,	_,	_,	_,	_,
+13704945,	_,	_,	_,	_,
+70679722,	_,	_,	_,	_,
+251420868,	_,	_,	_,	_,
+80399212,	_,	_,	_,	_,
+7176132,	_,	_,	_,	_,
+139996345,	_,	_,	_,	_,
+24219583,	_,	_,	_,	_,
+17121214,	_,	_,	_,	_,
+18146717,	_,	_,	_,	_,
+52362473,	_,	_,	_,	_,
+7855637,	_,	_,	_,	_,
+7906124,	_,	_,	_,	_,
+20548848,	_,	_,	_,	_,
+82126772,	_,	_,	_,	_,
+37947088,	_,	_,	_,	_,
+17729550,	_,	_,	_,	_,
+20826348,	_,	_,	_,	_,
+3005293,	_,	_,	_,	_,
+8218533,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Menhaden10_ResN =
   _, _, _, _, _,
@@ -57403,7 +55257,200 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+ 
+ Menhaden11_Nums =
+ _,	_,	_,	_,	_,
+33260711,	_,	_,	_,	_,
+74852962,	_,	_,	_,	_,
+10506563,	_,	_,	_,	_,
+8342141,	_,	_,	_,	_,
+43022439,	_,	_,	_,	_,
+153038789,	_,	_,	_,	_,
+48938651,	_,	_,	_,	_,
+4368081,	_,	_,	_,	_,
+85215166,	_,	_,	_,	_,
+14742355,	_,	_,	_,	_,
+10421609,	_,	_,	_,	_,
+11045828,	_,	_,	_,	_,
+31872809,	_,	_,	_,	_,
+4781692,	_,	_,	_,	_,
+4812423,	_,	_,	_,	_,
+12507995,	_,	_,	_,	_,
+49990209,	_,	_,	_,	_,
+23098227,	_,	_,	_,	_,
+10791900,	_,	_,	_,	_,
+12676908,	_,	_,	_,	_,
+1829309,	_,	_,	_,	_,
+5002585,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
+
+ Menhaden11_ResN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ Menhaden11_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+Menhaden12_Nums =
+_,	_,	_,	_,	_,
+10928519,	_,	_,	_,	_,
+24594545,	_,	_,	_,	_,
+3452157,	_,	_,	_,	_,
+2740989,	_,	_,	_,	_,
+14135944,	_,	_,	_,	_,
+50284174,	_,	_,	_,	_,
+16079842,	_,	_,	_,	_,
+1435226,	_,	_,	_,	_,
+27999269,	_,	_,	_,	_,
+4843917,	_,	_,	_,	_,
+3424243,	_,	_,	_,	_,
+3629343,	_,	_,	_,	_,
+10472495,	_,	_,	_,	_,
+1571127,	_,	_,	_,	_,
+1581225,	_,	_,	_,	_,
+4109770,	_,	_,	_,	_,
+16425354,	_,	_,	_,	_,
+7589418,	_,	_,	_,	_,
+3545910,	_,	_,	_,	_,
+4165270,	_,	_,	_,	_,
+601059,	_,	_,	_,	_,
+1643707,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
+
+ Menhaden12_ResN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ Menhaden12_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
  Menhaden1_Nums =
   _, _, _, _, _,
   239875990.997659, _, _, _, _,
@@ -57435,6 +55482,7 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+
 
  Menhaden1_ResN =
   _, _, _, _, _,
@@ -57501,36 +55549,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Menhaden2_Nums =
-  _, _, _, _, _,
-  268051080.431471, _, _, _, _,
-  603246788.79589, _, _, _, _,
-  84673343.9789403, _, _, _, _,
-  67230066.0492814, _, _, _, _,
-  346721728.023284, _, _, _, _,
-  1233353437.38767, _, _, _, _,
-  394401011.650463, _, _, _, _,
-  35202756.1970707, _, _, _, _,
-  686756729.895224, _, _, _, _,
-  118809970.328803, _, _, _, _,
-  83988687.4412276, _, _, _, _,
-  89019324.9693106, _, _, _, _,
-  256865853.22973, _, _, _, _,
-  38536091.2463286, _, _, _, _,
-  38783754.377112, _, _, _, _,
-  100803060.274044, _, _, _, _,
-  402875613.708792, _, _, _, _,
-  186150701.548873, _, _, _, _,
-  86972899.8067966, _, _, _, _,
-  102164343.785821, _, _, _, _,
-  14742566.7268049, _, _, _, _,
-  40316288.1470586, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+261334161,	_,	_,	_,	_,
+588130416,	_,	_,	_,	_,
+82551569,	_,	_,	_,	_,
+65545391,	_,	_,	_,	_,
+338033452,	_,	_,	_,	_,
+1202447628,	_,	_,	_,	_,
+384517971,	_,	_,	_,	_,
+34320633,	_,	_,	_,	_,
+669547735,	_,	_,	_,	_,
+115832788,	_,	_,	_,	_,
+81884069,	_,	_,	_,	_,
+86788647,	_,	_,	_,	_,
+250429217,	_,	_,	_,	_,
+37570440,	_,	_,	_,	_,
+37811897,	_,	_,	_,	_,
+98277101,	_,	_,	_,	_,
+392780213,	_,	_,	_,	_,
+181486071,	_,	_,	_,	_,
+84793502,	_,	_,	_,	_,
+99604273,	_,	_,	_,	_,
+14373142,	_,	_,	_,	_,
+39306028,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Menhaden2_ResN =
   _, _, _, _, _,
@@ -57597,36 +55646,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Menhaden3_Nums =
-  _, _, _, _, _,
-  756083290.742449, _, _, _, _,
-  1701559331.40966, _, _, _, _,
-  238835450.507097, _, _, _, _,
-  189633742.54471, _, _, _, _,
-  977987123.475792, _, _, _, _,
-  3478881428.44842, _, _, _, _,
-  1112474586.11557, _, _, _, _,
-  99295312.3182428, _, _, _, _,
-  1937113207.83671, _, _, _, _,
-  335123563.742469, _, _, _, _,
-  236904261.245599, _, _, _, _,
-  251094023.02773, _, _, _, _,
-  724533470.548545, _, _, _, _,
-  108697546.135518, _, _, _, _,
-  109396121.774971, _, _, _, _,
-  284332036.290351, _, _, _, _,
-  1136378630.82854, _, _, _, _,
-  525069456.069846, _, _, _, _,
-  245321735.638919, _, _, _, _,
-  288171766.074542, _, _, _, _,
-  41583896.4232136, _, _, _, _,
-  113718891.801079, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+593941275,	_,	_,	_,	_,
+1336660037,	_,	_,	_,	_,
+187617203,	_,	_,	_,	_,
+148966798,	_,	_,	_,	_,
+768257845,	_,	_,	_,	_,
+2732835519,	_,	_,	_,	_,
+873904479,	_,	_,	_,	_,
+78001439,	_,	_,	_,	_,
+1521699399,	_,	_,	_,	_,
+263256336,	_,	_,	_,	_,
+186100157,	_,	_,	_,	_,
+197246925,	_,	_,	_,	_,
+569157312,	_,	_,	_,	_,
+85387364,	_,	_,	_,	_,
+85936130,	_,	_,	_,	_,
+223357048,	_,	_,	_,	_,
+892682303,	_,	_,	_,	_,
+412468343,	_,	_,	_,	_,
+192712504,	_,	_,	_,	_,
+226373348,	_,	_,	_,	_,
+32666232,	_,	_,	_,	_,
+89331882,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Menhaden3_ResN =
   _, _, _, _, _,
@@ -57693,36 +55743,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Menhaden4_Nums =
-  _, _, _, _, _,
-  444000718.736409, _, _, _, _,
-  999220026.905586, _, _, _, _,
-  140253214.140937, _, _, _, _,
-  111360109.418431, _, _, _, _,
-  574311046.223239, _, _, _, _,
-  2042930816.67375, _, _, _, _,
-  653287173.330165, _, _, _, _,
-  58309964.7568774, _, _, _, _,
-  1137546176.571, _, _, _, _,
-  196797237.803062, _, _, _, _,
-  139119146.72982, _, _, _, _,
-  147451911.793016, _, _, _, _,
-  425473470.464142, _, _, _, _,
-  63831312.237654, _, _, _, _,
-  64241542.2874466, _, _, _, _,
-  166970530.916952, _, _, _, _,
-  667324532.921652, _, _, _, _,
-  308340653.385714, _, _, _, _,
-  144062206.213266, _, _, _, _,
-  169225365.542724, _, _, _, _,
-  24419637.5264912, _, _, _, _,
-  66780036.4216571, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+665214228,	_,	_,	_,	_,
+1497059241,	_,	_,	_,	_,
+210131267,	_,	_,	_,	_,
+166842814,	_,	_,	_,	_,
+860448786,	_,	_,	_,	_,
+3060775781,	_,	_,	_,	_,
+978773017,	_,	_,	_,	_,
+87361611,	_,	_,	_,	_,
+1704303327,	_,	_,	_,	_,
+294847096,	_,	_,	_,	_,
+208432176,	_,	_,	_,	_,
+220916556,	_,	_,	_,	_,
+637456189,	_,	_,	_,	_,
+95633848,	_,	_,	_,	_,
+96248466,	_,	_,	_,	_,
+250159894,	_,	_,	_,	_,
+999804179,	_,	_,	_,	_,
+461964544,	_,	_,	_,	_,
+215838005,	_,	_,	_,	_,
+253538150,	_,	_,	_,	_,
+36586180,	_,	_,	_,	_,
+100051708,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Menhaden4_ResN =
   _, _, _, _, _,
@@ -57789,36 +55840,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Menhaden5_Nums =
-  _, _, _, _, _,
-  271401823.411049, _, _, _, _,
-  610787608.774147, _, _, _, _,
-  85731793.7805161, _, _, _, _,
-  68070468.0781357, _, _, _, _,
-  351055884.760019, _, _, _, _,
-  1248770836.06039, _, _, _, _,
-  399331178.015766, _, _, _, _,
-  35642804.369976, _, _, _, _,
-  695341456.685619, _, _, _, _,
-  120295141.264664, _, _, _, _,
-  85038578.7692338, _, _, _, _,
-  90132101.2271328, _, _, _, _,
-  260076776.509791, _, _, _, _,
-  39017807.4065327, _, _, _, _,
-  39268566.4229789, _, _, _, _,
-  102063137.815943, _, _, _, _,
-  407911715.90284, _, _, _, _,
-  188477657.871356, _, _, _, _,
-  88060094.9524833, _, _, _, _,
-  103441437.902183, _, _, _, _,
-  14926854.5568756, _, _, _, _,
-  40820257.4623621, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+380122416,	_,	_,	_,	_,
+855462423,	_,	_,	_,	_,
+120075010,	_,	_,	_,	_,
+95338751,	_,	_,	_,	_,
+491685021,	_,	_,	_,	_,
+1749014732,	_,	_,	_,	_,
+559298867,	_,	_,	_,	_,
+49920921,	_,	_,	_,	_,
+973887615,	_,	_,	_,	_,
+168484055,	_,	_,	_,	_,
+119104100,	_,	_,	_,	_,
+126238032,	_,	_,	_,	_,
+364260680,	_,	_,	_,	_,
+54647913,	_,	_,	_,	_,
+54999123,	_,	_,	_,	_,
+142948511,	_,	_,	_,	_,
+571316674,	_,	_,	_,	_,
+263979740,	_,	_,	_,	_,
+123336003,	_,	_,	_,	_,
+144878943,	_,	_,	_,	_,
+20906389,	_,	_,	_,	_,
+57172405,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Menhaden5_ResN =
   _, _, _, _, _,
@@ -57885,36 +55937,36 @@ DayLight =
   _, _, _, _, _ ;
 
  Menhaden6_Nums =
-  _, _, _, _, _,
-  180551197.133458, _, _, _, _,
-  406329009.040714, _, _, _, _,
-  57033434.0607115, _, _, _, _,
-  45284163.3356613, _, _, _, _,
-  233541394.297008, _, _, _, _,
-  830750016.939178, _, _, _, _,
-  265656734.863799, _, _, _, _,
-  23711524.548036, _, _, _, _,
-  462578809.689751, _, _, _, _,
-  80026845.4047142, _, _, _, _,
-  56572269.8777121, _, _, _, _,
-  59960756.9771778, _, _, _, _,
-  173017162.35832, _, _, _, _,
-  25956759.4212611, _, _, _, _,
-  26123577.9048009, _, _, _, _,
-  67897928.9242143, _, _, _, _,
-  271364973.548746, _, _, _, _,
-  125385549.492216, _, _, _, _,
-  58582346.1446559, _, _, _, _,
-  68814848.8161006, _, _, _, _,
-  9930152.36894381, _, _, _, _,
-  27155846.852816, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+261334161,	_,	_,	_,	_,
+588130416,	_,	_,	_,	_,
+82551569,	_,	_,	_,	_,
+65545391,	_,	_,	_,	_,
+338033452,	_,	_,	_,	_,
+1202447628,	_,	_,	_,	_,
+384517971,	_,	_,	_,	_,
+34320633,	_,	_,	_,	_,
+669547735,	_,	_,	_,	_,
+115832788,	_,	_,	_,	_,
+81884069,	_,	_,	_,	_,
+86788647,	_,	_,	_,	_,
+250429217,	_,	_,	_,	_,
+37570440,	_,	_,	_,	_,
+37811897,	_,	_,	_,	_,
+98277101,	_,	_,	_,	_,
+392780213,	_,	_,	_,	_,
+181486071,	_,	_,	_,	_,
+84793502,	_,	_,	_,	_,
+99604273,	_,	_,	_,	_,
+14373142,	_,	_,	_,	_,
+39306028,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Menhaden6_ResN =
   _, _, _, _, _,
@@ -57981,36 +56033,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Menhaden7_Nums =
-  _, _, _, _, _,
-  100085057.784023, _, _, _, _,
-  225240613.160291, _, _, _, _,
-  31615379.0958708, _, _, _, _,
-  25102398.5224572, _, _, _, _,
-  129459146.847417, _, _, _, _,
-  460510175.338117, _, _, _, _,
-  147261663.626107, _, _, _, _,
-  13144024.2004227, _, _, _, _,
-  256421600.258024, _, _, _, _,
-  44361331.155747, _, _, _, _,
-  31359741.6665089, _, _, _, _,
-  33238083.8350172, _, _, _, _,
-  95908711.5853369, _, _, _, _,
-  14388626.6488869, _, _, _, _,
-  14481099.2429743, _, _, _, _,
-  37637901.3137885, _, _, _, _,
-  150425915.138688, _, _, _, _,
-  69505049.8996906, _, _, _, _,
-  32473988.4979971, _, _, _, _,
-  38146178.0896823, _, _, _, _,
-  5504587.55981143, _, _, _, _,
-  15053317.5331381, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+187685443,	_,	_,	_,	_,
+422384572,	_,	_,	_,	_,
+59287036,	_,	_,	_,	_,
+47073508,	_,	_,	_,	_,
+242769479,	_,	_,	_,	_,
+863576024,	_,	_,	_,	_,
+276153815,	_,	_,	_,	_,
+24648455,	_,	_,	_,	_,
+480857010,	_,	_,	_,	_,
+83189002,	_,	_,	_,	_,
+58807650,	_,	_,	_,	_,
+62330028,	_,	_,	_,	_,
+179853711,	_,	_,	_,	_,
+26982407,	_,	_,	_,	_,
+27155817,	_,	_,	_,	_,
+70580827,	_,	_,	_,	_,
+282087608,	_,	_,	_,	_,
+130339996,	_,	_,	_,	_,
+60897151,	_,	_,	_,	_,
+71533978,	_,	_,	_,	_,
+10322529,	_,	_,	_,	_,
+28228875,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Menhaden7_ResN =
   _, _, _, _, _,
@@ -58077,36 +56130,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Menhaden8_Nums =
-  _, _, _, _, _,
-  65449413.1048654, _, _, _, _,
-  147293374.906502, _, _, _, _,
-  20674494.8019892, _, _, _, _,
-  16415409.9242727, _, _, _, _,
-  84658243.3963747, _, _, _, _,
-  301145059.732481, _, _, _, _,
-  96299983.9393944, _, _, _, _,
-  8595375.66147201, _, _, _, _,
-  167683804.314865, _, _, _, _,
-  29009556.0014525, _, _, _, _,
-  20507323.796748, _, _, _, _,
-  21735642.941093, _, _, _, _,
-  62718342.0171452, _, _, _, _,
-  9409268.38036958, _, _, _, _,
-  9469739.71490552, _, _, _, _,
-  24612850.3697536, _, _, _, _,
-  98369207.9474532, _, _, _, _,
-  45451986.7848376, _, _, _, _,
-  21235972.0364506, _, _, _, _,
-  24945231.8202281, _, _, _, _,
-  3599658.46201982, _, _, _, _,
-  9843934.94532554, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+118788255,	_,	_,	_,	_,
+267332007,	_,	_,	_,	_,
+37523441,	_,	_,	_,	_,
+29793360,	_,	_,	_,	_,
+153651569,	_,	_,	_,	_,
+546567104,	_,	_,	_,	_,
+174780896,	_,	_,	_,	_,
+15600288,	_,	_,	_,	_,
+304339880,	_,	_,	_,	_,
+52651267,	_,	_,	_,	_,
+37220031,	_,	_,	_,	_,
+39449385,	_,	_,	_,	_,
+113831462,	_,	_,	_,	_,
+17077473,	_,	_,	_,	_,
+17187226,	_,	_,	_,	_,
+44671410,	_,	_,	_,	_,
+178536461,	_,	_,	_,	_,
+82493669,	_,	_,	_,	_,
+38542501,	_,	_,	_,	_,
+45274670,	_,	_,	_,	_,
+6533246,	_,	_,	_,	_,
+17866376,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Menhaden8_ResN =
   _, _, _, _, _,
@@ -58173,36 +56227,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Menhaden9_Nums =
-  _, _, _, _, _,
-  39352549.831337, _, _, _, _,
-  88562595.1534017, _, _, _, _,
-  12430884.378282, _, _, _, _,
-  9870038.65125179, _, _, _, _,
-  50902179.0088693, _, _, _, _,
-  181068483.388775, _, _, _, _,
-  57901969.4288176, _, _, _, _,
-  5168112.79109841, _, _, _, _,
-  100822680.48204, _, _, _, _,
-  17442478.7629953, _, _, _, _,
-  12330370.0267848, _, _, _, _,
-  13068917.3726437, _, _, _, _,
-  37710447.8479283, _, _, _, _,
-  5657479.3454854, _, _, _, _,
-  5693838.74265647, _, _, _, _,
-  14798886.2652607, _, _, _, _,
-  59146124.8310802, _, _, _, _,
-  27328764.1558795, _, _, _, _,
-  12768481.918124, _, _, _, _,
-  14998736.1488931, _, _, _, _,
-  2164354.61041435, _, _, _, _,
-  5918829.85798028, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+78400248,	_,	_,	_,	_,
+176439125,	_,	_,	_,	_,
+24765471,	_,	_,	_,	_,
+19663617,	_,	_,	_,	_,
+101410035,	_,	_,	_,	_,
+360734288,	_,	_,	_,	_,
+115355391,	_,	_,	_,	_,
+10296190,	_,	_,	_,	_,
+200864321,	_,	_,	_,	_,
+34749836,	_,	_,	_,	_,
+24565221,	_,	_,	_,	_,
+26036594,	_,	_,	_,	_,
+75128765,	_,	_,	_,	_,
+11271132,	_,	_,	_,	_,
+11343569,	_,	_,	_,	_,
+29483130,	_,	_,	_,	_,
+117834064,	_,	_,	_,	_,
+54445821,	_,	_,	_,	_,
+25438051,	_,	_,	_,	_,
+29881282,	_,	_,	_,	_,
+4311943,	_,	_,	_,	_,
+11791808,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Menhaden9_ResN =
   _, _, _, _, _,
@@ -60417,36 +58472,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Monkfish10_Nums =
-  _, _, _, _, _,
-  1799.94092655339, _, _, _, _,
-  4499.84305850597, _, _, _, _,
-  6299.78398505935, _, _, _, _,
-  6299.78398505935, _, _, _, _,
-  7199.76503197025, _, _, _, _,
-  8999.70595852363, _, _, _, _,
-  4499.84305850597, _, _, _, _,
-  2699.89294945589, _, _, _, _,
-  5399.82751629337, _, _, _, _,
-  5399.82751629337, _, _, _, _,
-  6299.78398505935, _, _, _, _,
-  4499.84305850597, _, _, _, _,
-  1799.94092655339, _, _, _, _,
-  3599.89159941711, _, _, _, _,
-  1799.94092655339, _, _, _, _,
-  5399.82751629337, _, _, _, _,
-  1799.94092655339, _, _, _, _,
-  1799.94092655339, _, _, _, _,
-  3599.89159941711, _, _, _, _,
-  3599.89159941711, _, _, _, _,
-  1799.94092655339, _, _, _, _,
-  899.952022902499, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+6659,	_,	_,	_,	_,
+16649,	_,	_,	_,	_,
+23308,	_,	_,	_,	_,
+23308,	_,	_,	_,	_,
+26638,	_,	_,	_,	_,
+33297,	_,	_,	_,	_,
+16649,	_,	_,	_,	_,
+9989,	_,	_,	_,	_,
+19978,	_,	_,	_,	_,
+19978,	_,	_,	_,	_,
+23308,	_,	_,	_,	_,
+16649,	_,	_,	_,	_,
+6659,	_,	_,	_,	_,
+13319,	_,	_,	_,	_,
+6659,	_,	_,	_,	_,
+19978,	_,	_,	_,	_,
+6659,	_,	_,	_,	_,
+6659,	_,	_,	_,	_,
+13319,	_,	_,	_,	_,
+13319,	_,	_,	_,	_,
+6659,	_,	_,	_,	_,
+3330,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Monkfish10_ResN =
   _, _, _, _, _,
@@ -60511,31 +58567,64 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+  
+Monkfish11_Nums =
+_,	_,	_,	_,	_,
+1752,	_,	_,	_,	_,
+4381,	_,	_,	_,	_,
+6134,	_,	_,	_,	_,
+6134,	_,	_,	_,	_,
+7010,	_,	_,	_,	_,
+8762,	_,	_,	_,	_,
+4381,	_,	_,	_,	_,
+2629,	_,	_,	_,	_,
+5257,	_,	_,	_,	_,
+5257,	_,	_,	_,	_,
+6134,	_,	_,	_,	_,
+4381,	_,	_,	_,	_,
+1752,	_,	_,	_,	_,
+3505,	_,	_,	_,	_,
+1752,	_,	_,	_,	_,
+5257,	_,	_,	_,	_,
+1752,	_,	_,	_,	_,
+1752,	_,	_,	_,	_,
+3505,	_,	_,	_,	_,
+3505,	_,	_,	_,	_,
+1752,	_,	_,	_,	_,
+876,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
- Monkfish1_Nums =
+
+ Monkfish11_ResN =
   _, _, _, _, _,
-  236987.021993519, _, _, _, _,
-  592466.336056673, _, _, _, _,
-  829453.358050192, _, _, _, _,
-  829453.358050192, _, _, _, _,
-  947948.262528212, _, _, _, _,
-  1184935.28452173, _, _, _, _,
-  592466.336056673, _, _, _, _,
-  355478.105060951, _, _, _, _,
-  710961.689623579, _, _, _, _,
-  710961.689623579, _, _, _, _,
-  829453.358050192, _, _, _, _,
-  592466.336056673, _, _, _, _,
-  236987.021993519, _, _, _, _,
-  473975.327223076, _, _, _, _,
-  236987.021993519, _, _, _, _,
-  710961.689623579, _, _, _, _,
-  236987.021993519, _, _, _, _,
-  236987.021993519, _, _, _, _,
-  473975.327223076, _, _, _, _,
-  473975.327223076, _, _, _, _,
-  236987.021993519, _, _, _, _,
-  118491.083067431, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -60543,6 +58632,70 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+
+ Monkfish11_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ Monkfish1_Nums =
+_,	_,	_,	_,	_,
+122441,	_,	_,	_,	_,
+306101,	_,	_,	_,	_,
+428541,	_,	_,	_,	_,
+428541,	_,	_,	_,	_,
+489762,	_,	_,	_,	_,
+612203,	_,	_,	_,	_,
+306101,	_,	_,	_,	_,
+183660,	_,	_,	_,	_,
+367322,	_,	_,	_,	_,
+367322,	_,	_,	_,	_,
+428541,	_,	_,	_,	_,
+306101,	_,	_,	_,	_,
+122441,	_,	_,	_,	_,
+244882,	_,	_,	_,	_,
+122441,	_,	_,	_,	_,
+367322,	_,	_,	_,	_,
+122441,	_,	_,	_,	_,
+122441,	_,	_,	_,	_,
+244882,	_,	_,	_,	_,
+244882,	_,	_,	_,	_,
+122441,	_,	_,	_,	_,
+61219,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Monkfish1_ResN =
   _, _, _, _, _,
@@ -60609,36 +58762,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Monkfish2_Nums =
-  _, _, _, _, _,
-  177030.5511298, _, _, _, _,
-  442575.46727953, _, _, _, _,
-  619606.01840933, _, _, _, _,
-  619606.01840933, _, _, _, _,
-  708122.334912057, _, _, _, _,
-  885152.886041856, _, _, _, _,
-  442575.46727953, _, _, _, _,
-  265544.01301873, _, _, _, _,
-  531092.119254016, _, _, _, _,
-  531092.119254016, _, _, _, _,
-  619606.01840933, _, _, _, _,
-  442575.46727953, _, _, _, _,
-  177030.5511298, _, _, _, _,
-  354062.060843666, _, _, _, _,
-  177030.5511298, _, _, _, _,
-  531092.119254016, _, _, _, _,
-  177030.5511298, _, _, _, _,
-  177030.5511298, _, _, _, _,
-  354062.060843666, _, _, _, _,
-  354062.060843666, _, _, _, _,
-  177030.5511298, _, _, _, _,
-  88513.4618889296, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+175249,	_,	_,	_,	_,
+438121,	_,	_,	_,	_,
+613370,	_,	_,	_,	_,
+613370,	_,	_,	_,	_,
+700996,	_,	_,	_,	_,
+876245,	_,	_,	_,	_,
+438121,	_,	_,	_,	_,
+262872,	_,	_,	_,	_,
+525747,	_,	_,	_,	_,
+525747,	_,	_,	_,	_,
+613370,	_,	_,	_,	_,
+438121,	_,	_,	_,	_,
+175249,	_,	_,	_,	_,
+350499,	_,	_,	_,	_,
+175249,	_,	_,	_,	_,
+525747,	_,	_,	_,	_,
+175249,	_,	_,	_,	_,
+175249,	_,	_,	_,	_,
+350499,	_,	_,	_,	_,
+350499,	_,	_,	_,	_,
+175249,	_,	_,	_,	_,
+87623,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Monkfish2_ResN =
   _, _, _, _, _,
@@ -60705,36 +58859,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Monkfish3_Nums =
-  _, _, _, _, _,
-  383270.297295581, _, _, _, _,
-  958173.771913446, _, _, _, _,
-  1341444.06920903, _, _, _, _,
-  1341444.06920903, _, _, _, _,
-  1533081.47148224, _, _, _, _,
-  1916351.76877782, _, _, _, _,
-  958173.771913446, _, _, _, _,
-  574901.519343564, _, _, _, _,
-  1149811.90048141, _, _, _, _,
-  1149811.90048141, _, _, _, _,
-  1341444.06920903, _, _, _, _,
-  958173.771913446, _, _, _, _,
-  383270.297295581, _, _, _, _,
-  766542.669921085, _, _, _, _,
-  383270.297295581, _, _, _, _,
-  1149811.90048141, _, _, _, _,
-  383270.297295581, _, _, _, _,
-  383270.297295581, _, _, _, _,
-  766542.669921085, _, _, _, _,
-  766542.669921085, _, _, _, _,
-  383270.297295581, _, _, _, _,
-  191631.222047981, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+362181,	_,	_,	_,	_,
+905451,	_,	_,	_,	_,
+1267632,	_,	_,	_,	_,
+1267632,	_,	_,	_,	_,
+1448725,	_,	_,	_,	_,
+1810906,	_,	_,	_,	_,
+905451,	_,	_,	_,	_,
+543268,	_,	_,	_,	_,
+1086544,	_,	_,	_,	_,
+1086544,	_,	_,	_,	_,
+1267632,	_,	_,	_,	_,
+905451,	_,	_,	_,	_,
+362181,	_,	_,	_,	_,
+724364,	_,	_,	_,	_,
+362181,	_,	_,	_,	_,
+1086544,	_,	_,	_,	_,
+362181,	_,	_,	_,	_,
+362181,	_,	_,	_,	_,
+724364,	_,	_,	_,	_,
+724364,	_,	_,	_,	_,
+362181,	_,	_,	_,	_,
+181087,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Monkfish3_ResN =
   _, _, _, _, _,
@@ -60801,36 +58956,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Monkfish4_Nums =
-  _, _, _, _, _,
-  181045.553196598, _, _, _, _,
-  452612.951795626, _, _, _, _,
-  633658.504992224, _, _, _, _,
-  633658.504992224, _, _, _, _,
-  724182.34613652, _, _, _, _,
-  905227.899333117, _, _, _, _,
-  452612.951795626, _, _, _, _,
-  271566.474985277, _, _, _, _,
-  543137.136020084, _, _, _, _,
-  543137.136020084, _, _, _, _,
-  633658.504992224, _, _, _, _,
-  452612.951795626, _, _, _, _,
-  181045.553196598, _, _, _, _,
-  362092.086717672, _, _, _, _,
-  181045.553196598, _, _, _, _,
-  543137.136020084, _, _, _, _,
-  181045.553196598, _, _, _, _,
-  181045.553196598, _, _, _, _,
-  362092.086717672, _, _, _, _,
-  362092.086717672, _, _, _, _,
-  181045.553196598, _, _, _, _,
-  90520.9217886783, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+245349,	_,	_,	_,	_,
+613370,	_,	_,	_,	_,
+858719,	_,	_,	_,	_,
+858719,	_,	_,	_,	_,
+981394,	_,	_,	_,	_,
+1226743,	_,	_,	_,	_,
+613370,	_,	_,	_,	_,
+368020,	_,	_,	_,	_,
+736046,	_,	_,	_,	_,
+736046,	_,	_,	_,	_,
+858719,	_,	_,	_,	_,
+613370,	_,	_,	_,	_,
+245349,	_,	_,	_,	_,
+490698,	_,	_,	_,	_,
+245349,	_,	_,	_,	_,
+736046,	_,	_,	_,	_,
+245349,	_,	_,	_,	_,
+245349,	_,	_,	_,	_,
+490698,	_,	_,	_,	_,
+490698,	_,	_,	_,	_,
+245349,	_,	_,	_,	_,
+122672,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Monkfish4_ResN =
   _, _, _, _, _,
@@ -60897,36 +59053,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Monkfish5_Nums =
-  _, _, _, _, _,
-  91457.7270795821, _, _, _, _,
-  228643.847292165, _, _, _, _,
-  320101.574371747, _, _, _, _,
-  320101.574371747, _, _, _, _,
-  365830.975682036, _, _, _, _,
-  457288.702761618, _, _, _, _,
-  228643.847292165, _, _, _, _,
-  137185.653636006, _, _, _, _,
-  274373.42191426, _, _, _, _,
-  274373.42191426, _, _, _, _,
-  320101.574371747, _, _, _, _,
-  228643.847292165, _, _, _, _,
-  91457.7270795821, _, _, _, _,
-  182915.949383968, _, _, _, _,
-  91457.7270795821, _, _, _, _,
-  274373.42191426, _, _, _, _,
-  91457.7270795821, _, _, _, _,
-  91457.7270795821, _, _, _, _,
-  182915.949383968, _, _, _, _,
-  182915.949383968, _, _, _, _,
-  91457.7270795821, _, _, _, _,
-  45727.9265564238, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+116833,	_,	_,	_,	_,
+292081,	_,	_,	_,	_,
+408914,	_,	_,	_,	_,
+408914,	_,	_,	_,	_,
+467331,	_,	_,	_,	_,
+584163,	_,	_,	_,	_,
+292081,	_,	_,	_,	_,
+175248,	_,	_,	_,	_,
+350498,	_,	_,	_,	_,
+350498,	_,	_,	_,	_,
+408914,	_,	_,	_,	_,
+292081,	_,	_,	_,	_,
+116833,	_,	_,	_,	_,
+233666,	_,	_,	_,	_,
+116833,	_,	_,	_,	_,
+350498,	_,	_,	_,	_,
+116833,	_,	_,	_,	_,
+116833,	_,	_,	_,	_,
+233666,	_,	_,	_,	_,
+233666,	_,	_,	_,	_,
+116833,	_,	_,	_,	_,
+58415,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Monkfish5_ResN =
   _, _, _, _, _,
@@ -60993,36 +59150,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Monkfish6_Nums =
-  _, _, _, _, _,
-  51274.9063947207, _, _, _, _,
-  128187.002257701, _, _, _, _,
-  179461.908652422, _, _, _, _,
-  179461.908652422, _, _, _, _,
-  205099.663345706, _, _, _, _,
-  256374.569740427, _, _, _, _,
-  128187.002257701, _, _, _, _,
-  76911.8342812521, _, _, _, _,
-  153824.854116604, _, _, _, _,
-  153824.854116604, _, _, _, _,
-  179461.908652422, _, _, _, _,
-  128187.002257701, _, _, _, _,
-  51274.9063947207, _, _, _, _,
-  102550.090432526, _, _, _, _,
-  51274.9063947207, _, _, _, _,
-  153824.854116604, _, _, _, _,
-  51274.9063947207, _, _, _, _,
-  51274.9063947207, _, _, _, _,
-  102550.090432526, _, _, _, _,
-  102550.090432526, _, _, _, _,
-  51274.9063947207, _, _, _, _,
-  25636.9278865312, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+67763,	_,	_,	_,	_,
+169407,	_,	_,	_,	_,
+237170,	_,	_,	_,	_,
+237170,	_,	_,	_,	_,
+271052,	_,	_,	_,	_,
+338815,	_,	_,	_,	_,
+169407,	_,	_,	_,	_,
+101644,	_,	_,	_,	_,
+203289,	_,	_,	_,	_,
+203289,	_,	_,	_,	_,
+237170,	_,	_,	_,	_,
+169407,	_,	_,	_,	_,
+67763,	_,	_,	_,	_,
+135526,	_,	_,	_,	_,
+67763,	_,	_,	_,	_,
+203289,	_,	_,	_,	_,
+67763,	_,	_,	_,	_,
+67763,	_,	_,	_,	_,
+135526,	_,	_,	_,	_,
+135526,	_,	_,	_,	_,
+67763,	_,	_,	_,	_,
+33881,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Monkfish6_ResN =
   _, _, _, _, _,
@@ -61089,36 +59247,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Monkfish7_Nums =
-  _, _, _, _, _,
-  24339.2325290769, _, _, _, _,
-  60847.9561354543, _, _, _, _,
-  85187.1886645312, _, _, _, _,
-  85187.1886645312, _, _, _, _,
-  97356.9480435075, _, _, _, _,
-  121696.180572584, _, _, _, _,
-  60847.9561354543, _, _, _, _,
-  36508.5994384568, _, _, _, _,
-  73017.7616371201, _, _, _, _,
-  73017.7616371201, _, _, _, _,
-  85187.1886645312, _, _, _, _,
-  60847.9561354543, _, _, _, _,
-  24339.2325290769, _, _, _, _,
-  48678.5968500978, _, _, _, _,
-  24339.2325290769, _, _, _, _,
-  73017.7616371201, _, _, _, _,
-  24339.2325290769, _, _, _, _,
-  24339.2325290769, _, _, _, _,
-  48678.5968500978, _, _, _, _,
-  48678.5968500978, _, _, _, _,
-  24339.2325290769, _, _, _, _,
-  12169.3669093797, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+38555,	_,	_,	_,	_,
+96387,	_,	_,	_,	_,
+134941,	_,	_,	_,	_,
+134941,	_,	_,	_,	_,
+154219,	_,	_,	_,	_,
+192774,	_,	_,	_,	_,
+96387,	_,	_,	_,	_,
+57832,	_,	_,	_,	_,
+115664,	_,	_,	_,	_,
+115664,	_,	_,	_,	_,
+134941,	_,	_,	_,	_,
+96387,	_,	_,	_,	_,
+38555,	_,	_,	_,	_,
+77110,	_,	_,	_,	_,
+38555,	_,	_,	_,	_,
+115664,	_,	_,	_,	_,
+38555,	_,	_,	_,	_,
+38555,	_,	_,	_,	_,
+77110,	_,	_,	_,	_,
+77110,	_,	_,	_,	_,
+38555,	_,	_,	_,	_,
+19277,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Monkfish7_ResN =
   _, _, _, _, _,
@@ -61185,36 +59344,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Monkfish8_Nums =
-  _, _, _, _, _,
-  13818.4271132948, _, _, _, _,
-  34545.9967090681, _, _, _, _,
-  48364.4238223629, _, _, _, _,
-  48364.4238223629, _, _, _, _,
-  55273.7186312201, _, _, _, _,
-  69092.1457445148, _, _, _, _,
-  34545.9967090681, _, _, _, _,
-  20727.4991003146, _, _, _, _,
-  41455.317703756, _, _, _, _,
-  41455.317703756, _, _, _, _,
-  48364.4238223629, _, _, _, _,
-  34545.9967090681, _, _, _, _,
-  13818.4271132948, _, _, _, _,
-  27636.9290505336, _, _, _, _,
-  13818.4271132948, _, _, _, _,
-  41455.317703756, _, _, _, _,
-  13818.4271132948, _, _, _, _,
-  13818.4271132948, _, _, _, _,
-  27636.9290505336, _, _, _, _,
-  27636.9290505336, _, _, _, _,
-  13818.4271132948, _, _, _, _,
-  6909.07198701977, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+19862,	_,	_,	_,	_,
+49654,	_,	_,	_,	_,
+69515,	_,	_,	_,	_,
+69515,	_,	_,	_,	_,
+79446,	_,	_,	_,	_,
+99308,	_,	_,	_,	_,
+49654,	_,	_,	_,	_,
+29792,	_,	_,	_,	_,
+59585,	_,	_,	_,	_,
+59585,	_,	_,	_,	_,
+69515,	_,	_,	_,	_,
+49654,	_,	_,	_,	_,
+19862,	_,	_,	_,	_,
+39723,	_,	_,	_,	_,
+19862,	_,	_,	_,	_,
+59585,	_,	_,	_,	_,
+19862,	_,	_,	_,	_,
+19862,	_,	_,	_,	_,
+39723,	_,	_,	_,	_,
+39723,	_,	_,	_,	_,
+19862,	_,	_,	_,	_,
+9931,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Monkfish8_ResN =
   _, _, _, _, _,
@@ -61281,36 +59441,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Monkfish9_Nums =
-  _, _, _, _, _,
-  7302.60375915239, _, _, _, _,
-  18256.47183742, _, _, _, _,
-  25559.0755965723, _, _, _, _,
-  25559.0755965723, _, _, _, _,
-  29210.4204153838, _, _, _, _,
-  36513.0241745362, _, _, _, _,
-  18256.47183742, _, _, _, _,
-  10953.8308236367, _, _, _, _,
-  21907.8304946187, _, _, _, _,
-  21907.8304946187, _, _, _, _,
-  25559.0755965723, _, _, _, _,
-  18256.47183742, _, _, _, _,
-  7302.60375915239, _, _, _, _,
-  14605.2470604039, _, _, _, _,
-  7302.60375915239, _, _, _, _,
-  21907.8304946187, _, _, _, _,
-  7302.60375915239, _, _, _, _,
-  7302.60375915239, _, _, _, _,
-  14605.2470604039, _, _, _, _,
-  14605.2470604039, _, _, _, _,
-  7302.60375915239, _, _, _, _,
-  3651.22706448426, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+11683,	_,	_,	_,	_,
+29208,	_,	_,	_,	_,
+40891,	_,	_,	_,	_,
+40891,	_,	_,	_,	_,
+46733,	_,	_,	_,	_,
+58416,	_,	_,	_,	_,
+29208,	_,	_,	_,	_,
+17525,	_,	_,	_,	_,
+35050,	_,	_,	_,	_,
+35050,	_,	_,	_,	_,
+40891,	_,	_,	_,	_,
+29208,	_,	_,	_,	_,
+11683,	_,	_,	_,	_,
+23367,	_,	_,	_,	_,
+11683,	_,	_,	_,	_,
+35050,	_,	_,	_,	_,
+11683,	_,	_,	_,	_,
+11683,	_,	_,	_,	_,
+23367,	_,	_,	_,	_,
+23367,	_,	_,	_,	_,
+11683,	_,	_,	_,	_,
+5842,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Monkfish9_ResN =
   _, _, _, _, _,
@@ -61568,133 +59729,38 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Ocean_Pout10_Nums =
-  _, _, _, _, _,
-  6068.11298860266, _, _, _, _,
-  6068.11298860266, _, _, _, _,
-  3034.04778313266, _, _, _, _,
-  42476.7386532066, _, _, _, _,
-  27306.4648928686, _, _, _, _,
-  27306.4648928686, _, _, _, _,
-  36408.6256646039, _, _, _, _,
-  18204.3215434706, _, _, _, _,
-  21238.3693266033, _, _, _, _,
-  12136.208554868, _, _, _, _,
-  9102.16077173532, _, _, _, _,
-  18204.3215434706, _, _, _, _,
-  24272.417109736, _, _, _, _,
-  18204.3215434706, _, _, _, _,
-  15170.2563380006, _, _, _, _,
-  3034.04778313266, _, _, _, _,
-  3034.04778313266, _, _, _, _,
-  3034.04778313266, _, _, _, _,
-  3034.04778313266, _, _, _, _,
-  3034.04778313266, _, _, _, _,
-  3034.04778313266, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Ocean_Pout10_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Ocean_Pout10_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
  Ocean_Pout1_Nums =
-  _, _, _, _, _,
-  348295, _, _, _, _,
-  348295, _, _, _, _,
-  174147, _, _, _, _,
-  2438062, _, _, _, _,
-  1567325, _, _, _, _,
-  1567325, _, _, _, _,
-  2089767, _, _, _, _,
-  1044884, _, _, _, _,
-  1219031, _, _, _, _,
-  696589, _, _, _, _,
-  522442, _, _, _, _,
-  1044884, _, _, _, _,
-  1393178, _, _, _, _,
-  1044884, _, _, _, _,
-  870736, _, _, _, _,
-  174147, _, _, _, _,
-  174147, _, _, _, _,
-  174147, _, _, _, _,
-  174147, _, _, _, _,
-  174147, _, _, _, _,
-  174147, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+434938,	_,	_,	_,	_,
+434938,	_,	_,	_,	_,
+217468,	_,	_,	_,	_,
+3044560,	_,	_,	_,	_,
+1957217,	_,	_,	_,	_,
+1957217,	_,	_,	_,	_,
+2609622,	_,	_,	_,	_,
+1304812,	_,	_,	_,	_,
+1522280,	_,	_,	_,	_,
+869874,	_,	_,	_,	_,
+652406,	_,	_,	_,	_,
+1304812,	_,	_,	_,	_,
+1739748,	_,	_,	_,	_,
+1304812,	_,	_,	_,	_,
+1087342,	_,	_,	_,	_,
+217468,	_,	_,	_,	_,
+217468,	_,	_,	_,	_,
+217468,	_,	_,	_,	_,
+217468,	_,	_,	_,	_,
+217468,	_,	_,	_,	_,
+217468,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Ocean_Pout1_ResN =
   _, _, _, _, _,
@@ -61761,36 +59827,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Ocean_Pout2_Nums =
-  _, _, _, _, _,
-  222082.64426, _, _, _, _,
-  222082.64426, _, _, _, _,
-  111041.003316, _, _, _, _,
-  1554576.596936, _, _, _, _,
-  999370.3051, _, _, _, _,
-  999370.3051, _, _, _, _,
-  1332493.952676, _, _, _, _,
-  666247.295152, _, _, _, _,
-  777288.298468, _, _, _, _,
-  444164.650892, _, _, _, _,
-  333123.647576, _, _, _, _,
-  666247.295152, _, _, _, _,
-  888329.301784, _, _, _, _,
-  666247.295152, _, _, _, _,
-  555205.654208, _, _, _, _,
-  111041.003316, _, _, _, _,
-  111041.003316, _, _, _, _,
-  111041.003316, _, _, _, _,
-  111041.003316, _, _, _, _,
-  111041.003316, _, _, _, _,
-  111041.003316, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+209105,	_,	_,	_,	_,
+209105,	_,	_,	_,	_,
+104552,	_,	_,	_,	_,
+1463731,	_,	_,	_,	_,
+940969,	_,	_,	_,	_,
+940969,	_,	_,	_,	_,
+1254626,	_,	_,	_,	_,
+627313,	_,	_,	_,	_,
+731865,	_,	_,	_,	_,
+418209,	_,	_,	_,	_,
+313657,	_,	_,	_,	_,
+627313,	_,	_,	_,	_,
+836417,	_,	_,	_,	_,
+627313,	_,	_,	_,	_,
+522761,	_,	_,	_,	_,
+104552,	_,	_,	_,	_,
+104552,	_,	_,	_,	_,
+104552,	_,	_,	_,	_,
+104552,	_,	_,	_,	_,
+104552,	_,	_,	_,	_,
+104552,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Ocean_Pout2_ResN =
   _, _, _, _, _,
@@ -61857,36 +59924,36 @@ DayLight =
   _, _, _, _, _ ;
 
  Ocean_Pout3_Nums =
-  _, _, _, _, _,
-  141606.112294215, _, _, _, _,
-  141606.112294215, _, _, _, _,
-  70802.8528623744, _, _, _, _,
-  991241.566351108, _, _, _, _,
-  637226.488900303, _, _, _, _,
-  637226.488900303, _, _, _, _,
-  849635.454056893, _, _, _, _,
-  424817.930313179, _, _, _, _,
-  495620.783175554, _, _, _, _,
-  283211.818018964, _, _, _, _,
-  212408.96515659, _, _, _, _,
-  424817.930313179, _, _, _, _,
-  566423.636037928, _, _, _, _,
-  424817.930313179, _, _, _, _,
-  354014.670881339, _, _, _, _,
-  70802.8528623744, _, _, _, _,
-  70802.8528623744, _, _, _, _,
-  70802.8528623744, _, _, _, _,
-  70802.8528623744, _, _, _, _,
-  70802.8528623744, _, _, _, _,
-  70802.8528623744, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+123562,	_,	_,	_,	_,
+123562,	_,	_,	_,	_,
+61781,	_,	_,	_,	_,
+864932,	_,	_,	_,	_,
+556027,	_,	_,	_,	_,
+556027,	_,	_,	_,	_,
+741370,	_,	_,	_,	_,
+370685,	_,	_,	_,	_,
+432466,	_,	_,	_,	_,
+247123,	_,	_,	_,	_,
+185343,	_,	_,	_,	_,
+370685,	_,	_,	_,	_,
+494247,	_,	_,	_,	_,
+370685,	_,	_,	_,	_,
+308904,	_,	_,	_,	_,
+61781,	_,	_,	_,	_,
+61781,	_,	_,	_,	_,
+61781,	_,	_,	_,	_,
+61781,	_,	_,	_,	_,
+61781,	_,	_,	_,	_,
+61781,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Ocean_Pout3_ResN =
   _, _, _, _, _,
@@ -61953,36 +60020,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Ocean_Pout4_Nums =
-  _, _, _, _, _,
-  90292.0221699359, _, _, _, _,
-  90292.0221699359, _, _, _, _,
-  45145.8814649301, _, _, _, _,
-  632043.377469324, _, _, _, _,
-  406313.451664522, _, _, _, _,
-  406313.451664522, _, _, _, _,
-  541751.355299388, _, _, _, _,
-  270875.807269732, _, _, _, _,
-  316021.688734662, _, _, _, _,
-  180583.785099796, _, _, _, _,
-  135437.903634866, _, _, _, _,
-  270875.807269732, _, _, _, _,
-  361167.570199592, _, _, _, _,
-  270875.807269732, _, _, _, _,
-  225729.666564726, _, _, _, _,
-  45145.8814649301, _, _, _, _,
-  45145.8814649301, _, _, _, _,
-  45145.8814649301, _, _, _, _,
-  45145.8814649301, _, _, _, _,
-  45145.8814649301, _, _, _, _,
-  45145.8814649301, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+76038,	_,	_,	_,	_,
+76038,	_,	_,	_,	_,
+38019,	_,	_,	_,	_,
+532266,	_,	_,	_,	_,
+342171,	_,	_,	_,	_,
+342171,	_,	_,	_,	_,
+456228,	_,	_,	_,	_,
+228114,	_,	_,	_,	_,
+266133,	_,	_,	_,	_,
+152076,	_,	_,	_,	_,
+114057,	_,	_,	_,	_,
+228114,	_,	_,	_,	_,
+304152,	_,	_,	_,	_,
+228114,	_,	_,	_,	_,
+190095,	_,	_,	_,	_,
+38019,	_,	_,	_,	_,
+38019,	_,	_,	_,	_,
+38019,	_,	_,	_,	_,
+38019,	_,	_,	_,	_,
+38019,	_,	_,	_,	_,
+38019,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Ocean_Pout4_ResN =
   _, _, _, _, _,
@@ -62049,36 +60117,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Ocean_Pout5_Nums =
-  _, _, _, _, _,
-  57572.7215121719, _, _, _, _,
-  57572.7215121719, _, _, _, _,
-  28786.2781067204, _, _, _, _,
-  403008.55468901, _, _, _, _,
-  259076.833557946, _, _, _, _,
-  259076.833557946, _, _, _, _,
-  345435.833176838, _, _, _, _,
-  172717.999237785, _, _, _, _,
-  201504.277344505, _, _, _, _,
-  115145.277725613, _, _, _, _,
-  86358.9996188923, _, _, _, _,
-  172717.999237785, _, _, _, _,
-  230290.555451226, _, _, _, _,
-  172717.999237785, _, _, _, _,
-  143931.555832333, _, _, _, _,
-  28786.2781067204, _, _, _, _,
-  28786.2781067204, _, _, _, _,
-  28786.2781067204, _, _, _, _,
-  28786.2781067204, _, _, _, _,
-  28786.2781067204, _, _, _, _,
-  28786.2781067204, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+45623,	_,	_,	_,	_,
+45623,	_,	_,	_,	_,
+22811,	_,	_,	_,	_,
+319359,	_,	_,	_,	_,
+205302,	_,	_,	_,	_,
+205302,	_,	_,	_,	_,
+273737,	_,	_,	_,	_,
+136868,	_,	_,	_,	_,
+159680,	_,	_,	_,	_,
+91246,	_,	_,	_,	_,
+68434,	_,	_,	_,	_,
+136868,	_,	_,	_,	_,
+182491,	_,	_,	_,	_,
+136868,	_,	_,	_,	_,
+114057,	_,	_,	_,	_,
+22811,	_,	_,	_,	_,
+22811,	_,	_,	_,	_,
+22811,	_,	_,	_,	_,
+22811,	_,	_,	_,	_,
+22811,	_,	_,	_,	_,
+22811,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Ocean_Pout5_ResN =
   _, _, _, _, _,
@@ -62145,36 +60214,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Ocean_Pout6_Nums =
-  _, _, _, _, _,
-  36709.9792723631, _, _, _, _,
-  36709.9792723631, _, _, _, _,
-  18354.9369366319, _, _, _, _,
-  256969.538709244, _, _, _, _,
-  165194.643227886, _, _, _, _,
-  165194.643227886, _, _, _, _,
-  220259.559436881, _, _, _, _,
-  110129.83241799, _, _, _, _,
-  128484.769354622, _, _, _, _,
-  73419.853145627, _, _, _, _,
-  55064.9162089951, _, _, _, _,
-  110129.83241799, _, _, _, _,
-  146839.706291254, _, _, _, _,
-  110129.83241799, _, _, _, _,
-  91774.790082259, _, _, _, _,
-  18354.9369366319, _, _, _, _,
-  18354.9369366319, _, _, _, _,
-  18354.9369366319, _, _, _, _,
-  18354.9369366319, _, _, _, _,
-  18354.9369366319, _, _, _, _,
-  18354.9369366319, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+27564,	_,	_,	_,	_,
+27564,	_,	_,	_,	_,
+13782,	_,	_,	_,	_,
+192946,	_,	_,	_,	_,
+124037,	_,	_,	_,	_,
+124037,	_,	_,	_,	_,
+165383,	_,	_,	_,	_,
+82691,	_,	_,	_,	_,
+96473,	_,	_,	_,	_,
+55128,	_,	_,	_,	_,
+41346,	_,	_,	_,	_,
+82691,	_,	_,	_,	_,
+110255,	_,	_,	_,	_,
+82691,	_,	_,	_,	_,
+68909,	_,	_,	_,	_,
+13782,	_,	_,	_,	_,
+13782,	_,	_,	_,	_,
+13782,	_,	_,	_,	_,
+13782,	_,	_,	_,	_,
+13782,	_,	_,	_,	_,
+13782,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Ocean_Pout6_ResN =
   _, _, _, _, _,
@@ -62241,36 +60311,36 @@ DayLight =
   _, _, _, _, _ ;
 
  Ocean_Pout7_Nums =
-  _, _, _, _, _,
-  23407.3106634784, _, _, _, _,
-  23407.3106634784, _, _, _, _,
-  11703.6217290308, _, _, _, _,
-  163850.973028098, _, _, _, _,
-  105332.72997211, _, _, _, _,
-  105332.72997211, _, _, _, _,
-  140443.66236462, _, _, _, _,
-  70221.8647850182, _, _, _, _,
-  81925.486514049, _, _, _, _,
-  46814.5541215399, _, _, _, _,
-  35110.9323925091, _, _, _, _,
-  70221.8647850182, _, _, _, _,
-  93629.1082430797, _, _, _, _,
-  70221.8647850182, _, _, _, _,
-  58518.1758505706, _, _, _, _,
-  11703.6217290308, _, _, _, _,
-  11703.6217290308, _, _, _, _,
-  11703.6217290308, _, _, _, _,
-  11703.6217290308, _, _, _, _,
-  11703.6217290308, _, _, _, _,
-  11703.6217290308, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+17109,	_,	_,	_,	_,
+17109,	_,	_,	_,	_,
+8554,	_,	_,	_,	_,
+119760,	_,	_,	_,	_,
+76988,	_,	_,	_,	_,
+76988,	_,	_,	_,	_,
+102651,	_,	_,	_,	_,
+51326,	_,	_,	_,	_,
+59880,	_,	_,	_,	_,
+34217,	_,	_,	_,	_,
+25663,	_,	_,	_,	_,
+51326,	_,	_,	_,	_,
+68434,	_,	_,	_,	_,
+51326,	_,	_,	_,	_,
+42771,	_,	_,	_,	_,
+8554,	_,	_,	_,	_,
+8554,	_,	_,	_,	_,
+8554,	_,	_,	_,	_,
+8554,	_,	_,	_,	_,
+8554,	_,	_,	_,	_,
+8554,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Ocean_Pout7_ResN =
   _, _, _, _, _,
@@ -62337,36 +60407,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Ocean_Pout8_Nums =
-  _, _, _, _, _,
-  14925.1566837324, _, _, _, _,
-  14925.1566837324, _, _, _, _,
-  7462.55691583842, _, _, _, _,
-  104475.96822996, _, _, _, _,
-  67163.0979466569, _, _, _, _,
-  67163.0979466569, _, _, _, _,
-  89550.8115462277, _, _, _, _,
-  44775.4271991416, _, _, _, _,
-  52237.98411498, _, _, _, _,
-  29850.2705154092, _, _, _, _,
-  22387.7135995708, _, _, _, _,
-  44775.4271991416, _, _, _, _,
-  59700.5410308185, _, _, _, _,
-  44775.4271991416, _, _, _, _,
-  37312.8274312476, _, _, _, _,
-  7462.55691583842, _, _, _, _,
-  7462.55691583842, _, _, _, _,
-  7462.55691583842, _, _, _, _,
-  7462.55691583842, _, _, _, _,
-  7462.55691583842, _, _, _, _,
-  7462.55691583842, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+ _,	_,	_,	_,	_,
+10455,	_,	_,	_,	_,
+10455,	_,	_,	_,	_,
+5228,	_,	_,	_,	_,
+73187,	_,	_,	_,	_,
+47048,	_,	_,	_,	_,
+47048,	_,	_,	_,	_,
+62731,	_,	_,	_,	_,
+31366,	_,	_,	_,	_,
+36593,	_,	_,	_,	_,
+20910,	_,	_,	_,	_,
+15683,	_,	_,	_,	_,
+31366,	_,	_,	_,	_,
+41821,	_,	_,	_,	_,
+31366,	_,	_,	_,	_,
+26138,	_,	_,	_,	_,
+5228,	_,	_,	_,	_,
+5228,	_,	_,	_,	_,
+5228,	_,	_,	_,	_,
+5228,	_,	_,	_,	_,
+5228,	_,	_,	_,	_,
+5228,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Ocean_Pout8_ResN =
   _, _, _, _, _,
@@ -62433,36 +60504,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Ocean_Pout9_Nums =
-  _, _, _, _, _,
-  9516.69780593491, _, _, _, _,
-  9516.69780593491, _, _, _, _,
-  4758.33524113222, _, _, _, _,
-  66616.802670533, _, _, _, _,
-  42825.0718175309, _, _, _, _,
-  42825.0718175309, _, _, _, _,
-  57100.104864598, _, _, _, _,
-  28550.0660941343, _, _, _, _,
-  33308.4013352665, _, _, _, _,
-  19033.3682881994, _, _, _, _,
-  14275.0330470671, _, _, _, _,
-  28550.0660941343, _, _, _, _,
-  38066.7365763987, _, _, _, _,
-  28550.0660941343, _, _, _, _,
-  23791.7035293316, _, _, _, _,
-  4758.33524113222, _, _, _, _,
-  4758.33524113222, _, _, _, _,
-  4758.33524113222, _, _, _, _,
-  4758.33524113222, _, _, _, _,
-  4758.33524113222, _, _, _, _,
-  4758.33524113222, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+6083,	_,	_,	_,	_,
+6083,	_,	_,	_,	_,
+3042,	_,	_,	_,	_,
+42581,	_,	_,	_,	_,
+27374,	_,	_,	_,	_,
+27374,	_,	_,	_,	_,
+36498,	_,	_,	_,	_,
+18249,	_,	_,	_,	_,
+21291,	_,	_,	_,	_,
+12166,	_,	_,	_,	_,
+9125,	_,	_,	_,	_,
+18249,	_,	_,	_,	_,
+24332,	_,	_,	_,	_,
+18249,	_,	_,	_,	_,
+15208,	_,	_,	_,	_,
+3042,	_,	_,	_,	_,
+3042,	_,	_,	_,	_,
+3042,	_,	_,	_,	_,
+3042,	_,	_,	_,	_,
+3042,	_,	_,	_,	_,
+3042,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Ocean_Pout9_ResN =
   _, _, _, _, _,
@@ -62560,133 +60632,38 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Offshore_Hake10_Nums =
-  _, _, _, _, _,
-  101.781294820244, _, _, _, _,
-  407.142601618328, _, _, _, _,
-  1933.89686859669, _, _, _, _,
-  101.781294820244, _, _, _, _,
-  1323.19167733788, _, _, _, _,
-  2035.69558575429, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  1832.11557377645, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  1526.77168931572, _, _, _, _,
-  407.142601618328, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  101.781294820244, _, _, _, _,
-  101.781294820244, _, _, _, _,
-  _, _, _, _, _,
-  203.562589640487, _, _, _, _,
-  101.781294820244, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Offshore_Hake10_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Offshore_Hake10_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
  Offshore_Hake1_Nums =
-  _, _, _, _, _,
-  5842, _, _, _, _,
-  23369, _, _, _, _,
-  111001, _, _, _, _,
-  5842, _, _, _, _,
-  75948, _, _, _, _,
-  116844, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  105159, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  87633, _, _, _, _,
-  23369, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  5842, _, _, _, _,
-  5842, _, _, _, _,
-  _, _, _, _, _,
-  11684, _, _, _, _,
-  5842, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+12716,	_,	_,	_,	_,
+50865,	_,	_,	_,	_,
+241605,	_,	_,	_,	_,
+12716,	_,	_,	_,	_,
+165309,	_,	_,	_,	_,
+254323,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+228889,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+190742,	_,	_,	_,	_,
+50865,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+12716,	_,	_,	_,	_,
+12716,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+25431,	_,	_,	_,	_,
+12716,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Offshore_Hake1_ResN =
   _, _, _, _, _,
@@ -62753,36 +60730,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Offshore_Hake2_Nums =
-  _, _, _, _, _,
-  3725.022776, _, _, _, _,
-  14900.728732, _, _, _, _,
-  70777.345628, _, _, _, _,
-  3725.022776, _, _, _, _,
-  48426.571344, _, _, _, _,
-  74503.006032, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  67052.322852, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  55877.254524, _, _, _, _,
-  14900.728732, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  3725.022776, _, _, _, _,
-  3725.022776, _, _, _, _,
-  _, _, _, _, _,
-  7450.045552, _, _, _, _,
-  3725.022776, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+2073,	_,	_,	_,	_,
+8290,	_,	_,	_,	_,
+39379,	_,	_,	_,	_,
+2073,	_,	_,	_,	_,
+26943,	_,	_,	_,	_,
+41452,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+37306,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+31089,	_,	_,	_,	_,
+8290,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+2073,	_,	_,	_,	_,
+2073,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+4145,	_,	_,	_,	_,
+2073,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Offshore_Hake2_ResN =
   _, _, _, _, _,
@@ -62849,36 +60827,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Offshore_Hake3_Nums =
-  _, _, _, _, _,
-  2375.17882261533, _, _, _, _,
-  9501.1218599277, _, _, _, _,
-  45129.6173380904, _, _, _, _,
-  2375.17882261533, _, _, _, _,
-  30878.137832932, _, _, _, _,
-  47505.2027301721, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  42754.4385154751, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  35628.9020476291, _, _, _, _,
-  9501.1218599277, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  2375.17882261533, _, _, _, _,
-  2375.17882261533, _, _, _, _,
-  _, _, _, _, _,
-  4750.35764523066, _, _, _, _,
-  2375.17882261533, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+765,	_,	_,	_,	_,
+3061,	_,	_,	_,	_,
+14540,	_,	_,	_,	_,
+765,	_,	_,	_,	_,
+9948,	_,	_,	_,	_,
+15305,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+13775,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+11479,	_,	_,	_,	_,
+3061,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+765,	_,	_,	_,	_,
+765,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1530,	_,	_,	_,	_,
+765,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Offshore_Hake3_ResN =
   _, _, _, _, _,
@@ -62945,36 +60924,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Offshore_Hake4_Nums =
-  _, _, _, _, _,
-  1514.48052230657, _, _, _, _,
-  6058.18132930198, _, _, _, _,
-  28775.9076440519, _, _, _, _,
-  1514.48052230657, _, _, _, _,
-  19688.7652701368, _, _, _, _,
-  30290.6474064341, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  27261.4271217453, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  22717.9855548256, _, _, _, _,
-  6058.18132930198, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  1514.48052230657, _, _, _, _,
-  1514.48052230657, _, _, _, _,
-  _, _, _, _, _,
-  3028.96104461313, _, _, _, _,
-  1514.48052230657, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+287,	_,	_,	_,	_,
+1148,	_,	_,	_,	_,
+5452,	_,	_,	_,	_,
+287,	_,	_,	_,	_,
+3731,	_,	_,	_,	_,
+5739,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+5166,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+4305,	_,	_,	_,	_,
+1148,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+287,	_,	_,	_,	_,
+287,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+574,	_,	_,	_,	_,
+287,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Offshore_Hake4_ResN =
   _, _, _, _, _,
@@ -63041,36 +61021,36 @@ DayLight =
   _, _, _, _, _ ;
 
  Offshore_Hake5_Nums =
-  _, _, _, _, _,
-  965.675186477291, _, _, _, _,
-  3862.86604464016, _, _, _, _,
-  18348.3244392615, _, _, _, _,
-  965.675186477291, _, _, _, _,
-  12554.1080216668, _, _, _, _,
-  19314.1649244698, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  17382.6492527842, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  14485.6236933524, _, _, _, _,
-  3862.86604464016, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  965.675186477291, _, _, _, _,
-  965.675186477291, _, _, _, _,
-  _, _, _, _, _,
-  1931.35037295458, _, _, _, _,
-  965.675186477291, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+102,	_,	_,	_,	_,
+408,	_,	_,	_,	_,
+1939,	_,	_,	_,	_,
+102,	_,	_,	_,	_,
+1326,	_,	_,	_,	_,
+2041,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1837,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1531,	_,	_,	_,	_,
+408,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+102,	_,	_,	_,	_,
+102,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+204,	_,	_,	_,	_,
+102,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Offshore_Hake5_ResN =
   _, _, _, _, _,
@@ -63105,390 +61085,6 @@ DayLight =
   _, _, _, _, _ ;
 
  Offshore_Hake5_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Offshore_Hake6_Nums =
-  _, _, _, _, _,
-  615.741537803142, _, _, _, _,
-  2463.07155031182, _, _, _, _,
-  11699.4054155574, _, _, _, _,
-  615.741537803142, _, _, _, _,
-  8004.85078963934, _, _, _, _,
-  12315.2523524598, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  11083.6638777543, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  9236.43926434488, _, _, _, _,
-  2463.07155031182, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  615.741537803142, _, _, _, _,
-  615.741537803142, _, _, _, _,
-  _, _, _, _, _,
-  1231.48307560628, _, _, _, _,
-  615.741537803142, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Offshore_Hake6_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Offshore_Hake6_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Offshore_Hake7_Nums =
-  _, _, _, _, _,
-  392.614045266342, _, _, _, _,
-  1570.52338648222, _, _, _, _,
-  7459.86847631106, _, _, _, _,
-  392.614045266342, _, _, _, _,
-  5104.11699929616, _, _, _, _,
-  7852.54972699426, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  7067.25443104472, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  5889.4122952457, _, _, _, _,
-  1570.52338648222, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  392.614045266342, _, _, _, _,
-  392.614045266342, _, _, _, _,
-  _, _, _, _, _,
-  785.228090532684, _, _, _, _,
-  392.614045266342, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Offshore_Hake7_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Offshore_Hake7_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Offshore_Hake8_Nums =
-  _, _, _, _, _,
-  250.341708455087, _, _, _, _,
-  1001.40968587589, _, _, _, _,
-  4756.62101681327, _, _, _, _,
-  250.341708455087, _, _, _, _,
-  3254.52791402721, _, _, _, _,
-  5007.0055773239, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  4506.27930835818, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  3755.25418299292, _, _, _, _,
-  1001.40968587589, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  250.341708455087, _, _, _, _,
-  250.341708455087, _, _, _, _,
-  _, _, _, _, _,
-  500.683416910174, _, _, _, _,
-  250.341708455087, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Offshore_Hake8_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Offshore_Hake8_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Offshore_Hake9_Nums =
-  _, _, _, _, _,
-  159.6248828788, _, _, _, _,
-  638.52685518567, _, _, _, _,
-  3032.95474570861, _, _, _, _,
-  159.6248828788, _, _, _, _,
-  2075.17812476534, _, _, _, _,
-  3192.60695225788, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  2873.32986282981, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  2394.45521419341, _, _, _, _,
-  638.52685518567, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  159.6248828788, _, _, _, _,
-  159.6248828788, _, _, _, _,
-  _, _, _, _, _,
-  319.249765757601, _, _, _, _,
-  159.6248828788, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Offshore_Hake9_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Offshore_Hake9_StructN =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -67681,36 +65277,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Pollock10_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  570.280799747396, _, _, _, _,
-  4562.23167587119, _, _, _, _,
-  1140.55237973067, _, _, _, _,
-  3421.6692611516, _, _, _, _,
-  5702.8068198165, _, _, _, _,
-  7983.90093702278, _, _, _, _,
-  3991.95677748696, _, _, _, _,
-  1140.55237973067, _, _, _, _,
-  4562.23167587119, _, _, _, _,
-  5132.53939931926, _, _, _, _,
-  1140.55237973067, _, _, _, _,
-  1140.55237973067, _, _, _, _,
-  3991.95677748696, _, _, _, _,
-  5132.53939931926, _, _, _, _,
-  5132.53939931926, _, _, _, _,
-  2281.13755866492, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+2793,	_,	_,	_,	_,
+22341,	_,	_,	_,	_,
+5585,	_,	_,	_,	_,
+16756,	_,	_,	_,	_,
+27927,	_,	_,	_,	_,
+39097,	_,	_,	_,	_,
+19549,	_,	_,	_,	_,
+5585,	_,	_,	_,	_,
+22341,	_,	_,	_,	_,
+25134,	_,	_,	_,	_,
+5585,	_,	_,	_,	_,
+5585,	_,	_,	_,	_,
+19549,	_,	_,	_,	_,
+25134,	_,	_,	_,	_,
+25134,	_,	_,	_,	_,
+11171,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Pollock10_ResN =
   _, _, _, _, _,
@@ -67775,8 +65372,40 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+ 
+ Pollock11_Nums =
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1764,	_,	_,	_,	_,
+14110,	_,	_,	_,	_,
+3528,	_,	_,	_,	_,
+10583,	_,	_,	_,	_,
+17638,	_,	_,	_,	_,
+24693,	_,	_,	_,	_,
+12346,	_,	_,	_,	_,
+3528,	_,	_,	_,	_,
+14110,	_,	_,	_,	_,
+15874,	_,	_,	_,	_,
+3528,	_,	_,	_,	_,
+3528,	_,	_,	_,	_,
+12346,	_,	_,	_,	_,
+15874,	_,	_,	_,	_,
+15874,	_,	_,	_,	_,
+7055,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
- Pollock1_Nums =
+ Pollock11_ResN =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -67784,22 +65413,22 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  44077.2318127971, _, _, _, _,
-  352616.716624745, _, _, _, _,
-  88153.7510263262, _, _, _, _,
-  264462.189990099, _, _, _, _,
-  440772.227106354, _, _, _, _,
-  617078.906614843, _, _, _, _,
-  308539.940930674, _, _, _, _,
-  88153.7510263262, _, _, _, _,
-  352616.716624745, _, _, _, _,
-  396696.029381169, _, _, _, _,
-  88153.7510263262, _, _, _, _,
-  88153.7510263262, _, _, _, _,
-  308539.940930674, _, _, _, _,
-  396696.029381169, _, _, _, _,
-  396696.029381169, _, _, _, _,
-  176310.037116256, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -67807,6 +65436,167 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+
+ Pollock11_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+Pollock12_Nums =
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+573,	_,	_,	_,	_,
+4586,	_,	_,	_,	_,
+1146,	_,	_,	_,	_,
+3439,	_,	_,	_,	_,
+5732,	_,	_,	_,	_,
+8025,	_,	_,	_,	_,
+4013,	_,	_,	_,	_,
+1146,	_,	_,	_,	_,
+4586,	_,	_,	_,	_,
+5159,	_,	_,	_,	_,
+1146,	_,	_,	_,	_,
+1146,	_,	_,	_,	_,
+4013,	_,	_,	_,	_,
+5159,	_,	_,	_,	_,
+5159,	_,	_,	_,	_,
+2293,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
+
+ Pollock12_ResN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ Pollock12_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+ Pollock1_Nums =
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+16477,	_,	_,	_,	_,
+131813,	_,	_,	_,	_,
+32953,	_,	_,	_,	_,
+98860,	_,	_,	_,	_,
+164767,	_,	_,	_,	_,
+230673,	_,	_,	_,	_,
+115337,	_,	_,	_,	_,
+32953,	_,	_,	_,	_,
+131813,	_,	_,	_,	_,
+148291,	_,	_,	_,	_,
+32953,	_,	_,	_,	_,
+32953,	_,	_,	_,	_,
+115337,	_,	_,	_,	_,
+148291,	_,	_,	_,	_,
+148291,	_,	_,	_,	_,
+65907,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Pollock1_ResN =
   _, _, _, _, _,
@@ -67873,36 +65663,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Pollock2_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  15847.6722243754, _, _, _, _,
-  126780.968678754, _, _, _, _,
-  31695.0882384772, _, _, _, _,
-  95085.6015755229, _, _, _, _,
-  158476.689517544, _, _, _, _,
-  221866.570254277, _, _, _, _,
-  110933.460448799, _, _, _, _,
-  31695.0882384772, _, _, _, _,
-  126780.968678754, _, _, _, _,
-  142629.389092414, _, _, _, _,
-  31695.0882384772, _, _, _, _,
-  31695.0882384772, _, _, _, _,
-  110933.460448799, _, _, _, _,
-  142629.389092414, _, _, _, _,
-  142629.389092414, _, _, _, _,
-  63391.0879420216, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+17638,	_,	_,	_,	_,
+141102,	_,	_,	_,	_,
+35275,	_,	_,	_,	_,
+105827,	_,	_,	_,	_,
+176378,	_,	_,	_,	_,
+246929,	_,	_,	_,	_,
+123465,	_,	_,	_,	_,
+35275,	_,	_,	_,	_,
+141102,	_,	_,	_,	_,
+158741,	_,	_,	_,	_,
+35275,	_,	_,	_,	_,
+35275,	_,	_,	_,	_,
+123465,	_,	_,	_,	_,
+158741,	_,	_,	_,	_,
+158741,	_,	_,	_,	_,
+70552,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Pollock2_ResN =
   _, _, _, _, _,
@@ -67969,36 +65760,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Pollock3_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  35885.5303249617, _, _, _, _,
-  287083.316195276, _, _, _, _,
-  71770.480486388, _, _, _, _,
-  215312.204246459, _, _, _, _,
-  358855.22914426, _, _, _, _,
-  502395.520441735, _, _, _, _,
-  251198.157219914, _, _, _, _,
-  71770.480486388, _, _, _, _,
-  287083.316195276, _, _, _, _,
-  322970.540722949, _, _, _, _,
-  71770.480486388, _, _, _, _,
-  71770.480486388, _, _, _, _,
-  251198.157219914, _, _, _, _,
-  322970.540722949, _, _, _, _,
-  322970.540722949, _, _, _, _,
-  143543.024897802, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+29396,	_,	_,	_,	_,
+235170,	_,	_,	_,	_,
+58792,	_,	_,	_,	_,
+176378,	_,	_,	_,	_,
+293964,	_,	_,	_,	_,
+411548,	_,	_,	_,	_,
+205774,	_,	_,	_,	_,
+58792,	_,	_,	_,	_,
+235170,	_,	_,	_,	_,
+264568,	_,	_,	_,	_,
+58792,	_,	_,	_,	_,
+58792,	_,	_,	_,	_,
+205774,	_,	_,	_,	_,
+264568,	_,	_,	_,	_,
+264568,	_,	_,	_,	_,
+117586,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Pollock3_ResN =
   _, _, _, _, _,
@@ -68065,36 +65857,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Pollock4_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  19999.8180472399, _, _, _, _,
-  159998.028071775, _, _, _, _,
-  39999.3127562139, _, _, _, _,
-  119998.363387261, _, _, _, _,
-  199998.139171807, _, _, _, _,
-  279996.391459036, _, _, _, _,
-  139998.41698607, _, _, _, _,
-  39999.3127562139, _, _, _, _,
-  159998.028071775, _, _, _, _,
-  179998.790336521, _, _, _, _,
-  39999.3127562139, _, _, _, _,
-  39999.3127562139, _, _, _, _,
-  139998.41698607, _, _, _, _,
-  179998.790336521, _, _, _, _,
-  179998.790336521, _, _, _, _,
-  79999.7757845462, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+30866,	_,	_,	_,	_,
+246929,	_,	_,	_,	_,
+61732,	_,	_,	_,	_,
+185197,	_,	_,	_,	_,
+308662,	_,	_,	_,	_,
+432126,	_,	_,	_,	_,
+216063,	_,	_,	_,	_,
+61732,	_,	_,	_,	_,
+246929,	_,	_,	_,	_,
+277797,	_,	_,	_,	_,
+61732,	_,	_,	_,	_,
+61732,	_,	_,	_,	_,
+216063,	_,	_,	_,	_,
+277797,	_,	_,	_,	_,
+277797,	_,	_,	_,	_,
+123466,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Pollock4_ResN =
   _, _, _, _, _,
@@ -68161,36 +65954,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Pollock5_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  12257.1571891278, _, _, _, _,
-  98056.9410878653, _, _, _, _,
-  24514.1162160552, _, _, _, _,
-  73542.6091878231, _, _, _, _,
-  122571.546579655, _, _, _, _,
-  171599.550275688, _, _, _, _,
-  85799.9107378946, _, _, _, _,
-  24514.1162160552, _, _, _, _,
-  98056.9410878653, _, _, _, _,
-  110314.676953378, _, _, _, _,
-  24514.1162160552, _, _, _, _,
-  24514.1162160552, _, _, _, _,
-  85799.9107378946, _, _, _, _,
-  110314.676953378, _, _, _, _,
-  110314.676953378, _, _, _, _,
-  49028.9373918322, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+17638,	_,	_,	_,	_,
+141102,	_,	_,	_,	_,
+35275,	_,	_,	_,	_,
+105827,	_,	_,	_,	_,
+176378,	_,	_,	_,	_,
+246929,	_,	_,	_,	_,
+123465,	_,	_,	_,	_,
+35275,	_,	_,	_,	_,
+141102,	_,	_,	_,	_,
+158741,	_,	_,	_,	_,
+35275,	_,	_,	_,	_,
+35275,	_,	_,	_,	_,
+123465,	_,	_,	_,	_,
+158741,	_,	_,	_,	_,
+158741,	_,	_,	_,	_,
+70552,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Pollock5_ResN =
   _, _, _, _, _,
@@ -68257,36 +66051,36 @@ DayLight =
   _, _, _, _, _ ;
 
  Pollock6_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  8347.95170695672, _, _, _, _,
-  66783.3981487553, _, _, _, _,
-  16695.7684520742, _, _, _, _,
-  50087.482801322, _, _, _, _,
-  83479.4998306428, _, _, _, _,
-  116870.880950077, _, _, _, _,
-  58435.5328278293, _, _, _, _,
-  16695.7684520742, _, _, _, _,
-  66783.3981487553, _, _, _, _,
-  75131.7439734048, _, _, _, _,
-  16695.7684520742, _, _, _, _,
-  16695.7684520742, _, _, _, _,
-  58435.5328278293, _, _, _, _,
-  75131.7439734048, _, _, _, _,
-  75131.7439734048, _, _, _, _,
-  33392.017029321, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+11759,	_,	_,	_,	_,
+94068,	_,	_,	_,	_,
+23517,	_,	_,	_,	_,
+70551,	_,	_,	_,	_,
+117586,	_,	_,	_,	_,
+164619,	_,	_,	_,	_,
+82310,	_,	_,	_,	_,
+23517,	_,	_,	_,	_,
+94068,	_,	_,	_,	_,
+105827,	_,	_,	_,	_,
+23517,	_,	_,	_,	_,
+23517,	_,	_,	_,	_,
+82310,	_,	_,	_,	_,
+105827,	_,	_,	_,	_,
+105827,	_,	_,	_,	_,
+47035,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Pollock6_ResN =
   _, _, _, _, _,
@@ -68353,36 +66147,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Pollock7_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  4773.10669368432, _, _, _, _,
-  38184.7303291379, _, _, _, _,
-  9546.13622026454, _, _, _, _,
-  28638.510118543, _, _, _, _,
-  47731.0570801469, _, _, _, _,
-  66823.2404476809, _, _, _, _,
-  33411.6730283773, _, _, _, _,
-  9546.13622026454, _, _, _, _,
-  38184.7303291379, _, _, _, _,
-  42958.0623674174, _, _, _, _,
-  9546.13622026454, _, _, _, _,
-  9546.13622026454, _, _, _, _,
-  33411.6730283773, _, _, _, _,
-  42958.0623674174, _, _, _, _,
-  42958.0623674174, _, _, _, _,
-  19092.546961604, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+8672,	_,	_,	_,	_,
+69375,	_,	_,	_,	_,
+17344,	_,	_,	_,	_,
+52031,	_,	_,	_,	_,
+86719,	_,	_,	_,	_,
+121407,	_,	_,	_,	_,
+60703,	_,	_,	_,	_,
+17344,	_,	_,	_,	_,
+69375,	_,	_,	_,	_,
+78048,	_,	_,	_,	_,
+17344,	_,	_,	_,	_,
+17344,	_,	_,	_,	_,
+60703,	_,	_,	_,	_,
+78048,	_,	_,	_,	_,
+78048,	_,	_,	_,	_,
+34688,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Pollock7_ResN =
   _, _, _, _, _,
@@ -68449,36 +66244,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Pollock8_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  3223.9845212345, _, _, _, _,
-  25791.792940968, _, _, _, _,
-  6447.91692011658, _, _, _, _,
-  19343.8192897656, _, _, _, _,
-  32239.8385546609, _, _, _, _,
-  45135.6122307335, _, _, _, _,
-  22567.8417820762, _, _, _, _,
-  6447.91692011658, _, _, _, _,
-  25791.792940968, _, _, _, _,
-  29015.9296707185, _, _, _, _,
-  6447.91692011658, _, _, _, _,
-  6447.91692011658, _, _, _, _,
-  22567.8417820762, _, _, _, _,
-  29015.9296707185, _, _, _, _,
-  29015.9296707185, _, _, _, _,
-  12896.0192648953, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+5585,	_,	_,	_,	_,
+44682,	_,	_,	_,	_,
+11171,	_,	_,	_,	_,
+33512,	_,	_,	_,	_,
+55853,	_,	_,	_,	_,
+78194,	_,	_,	_,	_,
+39097,	_,	_,	_,	_,
+11171,	_,	_,	_,	_,
+44682,	_,	_,	_,	_,
+50268,	_,	_,	_,	_,
+11171,	_,	_,	_,	_,
+11171,	_,	_,	_,	_,
+39097,	_,	_,	_,	_,
+50268,	_,	_,	_,	_,
+50268,	_,	_,	_,	_,
+22341,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Pollock8_ResN =
   _, _, _, _, _,
@@ -68545,36 +66341,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Pollock9_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  1999.30280377178, _, _, _, _,
-  15994.3708170886, _, _, _, _,
-  3998.57328469441, _, _, _, _,
-  11995.7623515122, _, _, _, _,
-  19993.0239090607, _, _, _, _,
-  27990.1331686008, _, _, _, _,
-  13995.0887024438, _, _, _, _,
-  3998.57328469441, _, _, _, _,
-  15994.3708170886, _, _, _, _,
-  17993.7680105545, _, _, _, _,
-  3998.57328469441, _, _, _, _,
-  3998.57328469441, _, _, _, _,
-  13995.0887024438, _, _, _, _,
-  17993.7680105545, _, _, _, _,
-  17993.7680105545, _, _, _, _,
-  7997.26155754852, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+3822,	_,	_,	_,	_,
+30572,	_,	_,	_,	_,
+7643,	_,	_,	_,	_,
+22929,	_,	_,	_,	_,
+38215,	_,	_,	_,	_,
+53501,	_,	_,	_,	_,
+26751,	_,	_,	_,	_,
+7643,	_,	_,	_,	_,
+30572,	_,	_,	_,	_,
+34394,	_,	_,	_,	_,
+7643,	_,	_,	_,	_,
+7643,	_,	_,	_,	_,
+26751,	_,	_,	_,	_,
+34394,	_,	_,	_,	_,
+34394,	_,	_,	_,	_,
+15286,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Pollock9_ResN =
   _, _, _, _, _,
@@ -68673,36 +66470,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Porbeagle_Shark10_Nums =
-  _, _, _, _, _,
-  13.68776658, _, _, _, _,
-  13.68776658, _, _, _, _,
-  13.68776658, _, _, _, _,
-  13.68776658, _, _, _, _,
-  13.68776658, _, _, _, _,
-  24.43524281, _, _, _, _,
-  24.43524281, _, _, _, _,
-  14.66114568, _, _, _, _,
-  24.43524281, _, _, _, _,
-  14.75979647, _, _, _, _,
-  14.75979647, _, _, _, _,
-  14.66114568, _, _, _, _,
-  14.66114568, _, _, _, _,
-  14.66114568, _, _, _, _,
-  14.66114568, _, _, _, _,
-  14.75979647, _, _, _, _,
-  14.75979647, _, _, _, _,
-  14.75979647, _, _, _, _,
-  14.75979647, _, _, _, _,
-  14.75979647, _, _, _, _,
-  14.75979647, _, _, _, _,
-  14.75979647, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+28,	_,	_,	_,	_,
+28,	_,	_,	_,	_,
+28,	_,	_,	_,	_,
+28,	_,	_,	_,	_,
+28,	_,	_,	_,	_,
+50,	_,	_,	_,	_,
+50,	_,	_,	_,	_,
+30,	_,	_,	_,	_,
+50,	_,	_,	_,	_,
+30,	_,	_,	_,	_,
+30,	_,	_,	_,	_,
+30,	_,	_,	_,	_,
+30,	_,	_,	_,	_,
+30,	_,	_,	_,	_,
+30,	_,	_,	_,	_,
+30,	_,	_,	_,	_,
+30,	_,	_,	_,	_,
+30,	_,	_,	_,	_,
+30,	_,	_,	_,	_,
+30,	_,	_,	_,	_,
+30,	_,	_,	_,	_,
+30,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Porbeagle_Shark10_ResN =
   _, _, _, _, _,
@@ -68768,30 +66566,63 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Porbeagle_Shark1_Nums =
+Porbeagle_Shark11_Nums =
+_,	_,	_,	_,	_,
+20,	_,	_,	_,	_,
+20,	_,	_,	_,	_,
+20,	_,	_,	_,	_,
+20,	_,	_,	_,	_,
+20,	_,	_,	_,	_,
+35,	_,	_,	_,	_,
+35,	_,	_,	_,	_,
+21,	_,	_,	_,	_,
+35,	_,	_,	_,	_,
+21,	_,	_,	_,	_,
+21,	_,	_,	_,	_,
+21,	_,	_,	_,	_,
+21,	_,	_,	_,	_,
+21,	_,	_,	_,	_,
+21,	_,	_,	_,	_,
+21,	_,	_,	_,	_,
+21,	_,	_,	_,	_,
+21,	_,	_,	_,	_,
+21,	_,	_,	_,	_,
+21,	_,	_,	_,	_,
+21,	_,	_,	_,	_,
+21,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
+
+ Porbeagle_Shark11_ResN =
   _, _, _, _, _,
-  785.6429943, _, _, _, _,
-  785.6429943, _, _, _, _,
-  785.6429943, _, _, _, _,
-  785.6429943, _, _, _, _,
-  785.6429943, _, _, _, _,
-  1402.520799, _, _, _, _,
-  1402.520799, _, _, _, _,
-  841.5124796, _, _, _, _,
-  1402.520799, _, _, _, _,
-  847.174784, _, _, _, _,
-  847.174784, _, _, _, _,
-  841.5124796, _, _, _, _,
-  841.5124796, _, _, _, _,
-  841.5124796, _, _, _, _,
-  841.5124796, _, _, _, _,
-  847.174784, _, _, _, _,
-  847.174784, _, _, _, _,
-  847.174784, _, _, _, _,
-  847.174784, _, _, _, _,
-  847.174784, _, _, _, _,
-  847.174784, _, _, _, _,
-  847.174784, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -68799,6 +66630,166 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+
+ Porbeagle_Shark11_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+  
+  Porbeagle_Shark12_Nums =
+_,	_,	_,	_,	_,
+14,	_,	_,	_,	_,
+14,	_,	_,	_,	_,
+14,	_,	_,	_,	_,
+14,	_,	_,	_,	_,
+14,	_,	_,	_,	_,
+24,	_,	_,	_,	_,
+24,	_,	_,	_,	_,
+15,	_,	_,	_,	_,
+24,	_,	_,	_,	_,
+15,	_,	_,	_,	_,
+15,	_,	_,	_,	_,
+15,	_,	_,	_,	_,
+15,	_,	_,	_,	_,
+15,	_,	_,	_,	_,
+15,	_,	_,	_,	_,
+15,	_,	_,	_,	_,
+15,	_,	_,	_,	_,
+15,	_,	_,	_,	_,
+15,	_,	_,	_,	_,
+15,	_,	_,	_,	_,
+15,	_,	_,	_,	_,
+15,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
+
+ Porbeagle_Shark12_ResN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ Porbeagle_Shark12_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+ Porbeagle_Shark1_Nums =
+_,	_,	_,	_,	_,
+413,	_,	_,	_,	_,
+413,	_,	_,	_,	_,
+413,	_,	_,	_,	_,
+413,	_,	_,	_,	_,
+413,	_,	_,	_,	_,
+736,	_,	_,	_,	_,
+736,	_,	_,	_,	_,
+442,	_,	_,	_,	_,
+736,	_,	_,	_,	_,
+445,	_,	_,	_,	_,
+445,	_,	_,	_,	_,
+442,	_,	_,	_,	_,
+442,	_,	_,	_,	_,
+442,	_,	_,	_,	_,
+442,	_,	_,	_,	_,
+445,	_,	_,	_,	_,
+445,	_,	_,	_,	_,
+445,	_,	_,	_,	_,
+445,	_,	_,	_,	_,
+445,	_,	_,	_,	_,
+445,	_,	_,	_,	_,
+445,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Porbeagle_Shark1_ResN =
   _, _, _, _, _,
@@ -68865,36 +66856,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Porbeagle_Shark2_Nums =
-  _, _, _, _, _,
-  500.9480903, _, _, _, _,
-  500.9480903, _, _, _, _,
-  500.9480903, _, _, _, _,
-  500.9480903, _, _, _, _,
-  500.9480903, _, _, _, _,
-  894.2867449, _, _, _, _,
-  894.2867449, _, _, _, _,
-  536.5720469, _, _, _, _,
-  894.2867449, _, _, _, _,
-  540.1824916, _, _, _, _,
-  540.1824916, _, _, _, _,
-  536.5720469, _, _, _, _,
-  536.5720469, _, _, _, _,
-  536.5720469, _, _, _, _,
-  536.5720469, _, _, _, _,
-  540.1824916, _, _, _, _,
-  540.1824916, _, _, _, _,
-  540.1824916, _, _, _, _,
-  540.1824916, _, _, _, _,
-  540.1824916, _, _, _, _,
-  540.1824916, _, _, _, _,
-  540.1824916, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+536,	_,	_,	_,	_,
+536,	_,	_,	_,	_,
+536,	_,	_,	_,	_,
+536,	_,	_,	_,	_,
+536,	_,	_,	_,	_,
+957,	_,	_,	_,	_,
+957,	_,	_,	_,	_,
+574,	_,	_,	_,	_,
+957,	_,	_,	_,	_,
+578,	_,	_,	_,	_,
+578,	_,	_,	_,	_,
+574,	_,	_,	_,	_,
+574,	_,	_,	_,	_,
+574,	_,	_,	_,	_,
+574,	_,	_,	_,	_,
+578,	_,	_,	_,	_,
+578,	_,	_,	_,	_,
+578,	_,	_,	_,	_,
+578,	_,	_,	_,	_,
+578,	_,	_,	_,	_,
+578,	_,	_,	_,	_,
+578,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Porbeagle_Shark2_ResN =
   _, _, _, _, _,
@@ -68961,36 +66953,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Porbeagle_Shark3_Nums =
-  _, _, _, _, _,
-  319.4186049, _, _, _, _,
-  319.4186049, _, _, _, _,
-  319.4186049, _, _, _, _,
-  319.4186049, _, _, _, _,
-  319.4186049, _, _, _, _,
-  570.2224042, _, _, _, _,
-  570.2224042, _, _, _, _,
-  342.1334425, _, _, _, _,
-  570.2224042, _, _, _, _,
-  344.4355637, _, _, _, _,
-  344.4355637, _, _, _, _,
-  342.1334425, _, _, _, _,
-  342.1334425, _, _, _, _,
-  342.1334425, _, _, _, _,
-  342.1334425, _, _, _, _,
-  344.4355637, _, _, _, _,
-  344.4355637, _, _, _, _,
-  344.4355637, _, _, _, _,
-  344.4355637, _, _, _, _,
-  344.4355637, _, _, _, _,
-  344.4355637, _, _, _, _,
-  344.4355637, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+386,	_,	_,	_,	_,
+386,	_,	_,	_,	_,
+386,	_,	_,	_,	_,
+386,	_,	_,	_,	_,
+386,	_,	_,	_,	_,
+689,	_,	_,	_,	_,
+689,	_,	_,	_,	_,
+413,	_,	_,	_,	_,
+689,	_,	_,	_,	_,
+416,	_,	_,	_,	_,
+416,	_,	_,	_,	_,
+413,	_,	_,	_,	_,
+413,	_,	_,	_,	_,
+413,	_,	_,	_,	_,
+413,	_,	_,	_,	_,
+416,	_,	_,	_,	_,
+416,	_,	_,	_,	_,
+416,	_,	_,	_,	_,
+416,	_,	_,	_,	_,
+416,	_,	_,	_,	_,
+416,	_,	_,	_,	_,
+416,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Porbeagle_Shark3_ResN =
   _, _, _, _, _,
@@ -69057,36 +67050,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Porbeagle_Shark4_Nums =
-  _, _, _, _, _,
-  203.6702946, _, _, _, _,
-  203.6702946, _, _, _, _,
-  203.6702946, _, _, _, _,
-  203.6702946, _, _, _, _,
-  203.6702946, _, _, _, _,
-  363.5898576, _, _, _, _,
-  363.5898576, _, _, _, _,
-  218.1539145, _, _, _, _,
-  363.5898576, _, _, _, _,
-  219.6218118, _, _, _, _,
-  219.6218118, _, _, _, _,
-  218.1539145, _, _, _, _,
-  218.1539145, _, _, _, _,
-  218.1539145, _, _, _, _,
-  218.1539145, _, _, _, _,
-  219.6218118, _, _, _, _,
-  219.6218118, _, _, _, _,
-  219.6218118, _, _, _, _,
-  219.6218118, _, _, _, _,
-  219.6218118, _, _, _, _,
-  219.6218118, _, _, _, _,
-  219.6218118, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+257,	_,	_,	_,	_,
+257,	_,	_,	_,	_,
+257,	_,	_,	_,	_,
+257,	_,	_,	_,	_,
+257,	_,	_,	_,	_,
+459,	_,	_,	_,	_,
+459,	_,	_,	_,	_,
+276,	_,	_,	_,	_,
+459,	_,	_,	_,	_,
+277,	_,	_,	_,	_,
+277,	_,	_,	_,	_,
+276,	_,	_,	_,	_,
+276,	_,	_,	_,	_,
+276,	_,	_,	_,	_,
+276,	_,	_,	_,	_,
+277,	_,	_,	_,	_,
+277,	_,	_,	_,	_,
+277,	_,	_,	_,	_,
+277,	_,	_,	_,	_,
+277,	_,	_,	_,	_,
+277,	_,	_,	_,	_,
+277,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Porbeagle_Shark4_ResN =
   _, _, _, _, _,
@@ -69153,36 +67147,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Porbeagle_Shark5_Nums =
-  _, _, _, _, _,
-  129.8659135, _, _, _, _,
-  129.8659135, _, _, _, _,
-  129.8659135, _, _, _, _,
-  129.8659135, _, _, _, _,
-  129.8659135, _, _, _, _,
-  231.8351288, _, _, _, _,
-  231.8351288, _, _, _, _,
-  139.1010773, _, _, _, _,
-  231.8351288, _, _, _, _,
-  140.0370499, _, _, _, _,
-  140.0370499, _, _, _, _,
-  139.1010773, _, _, _, _,
-  139.1010773, _, _, _, _,
-  139.1010773, _, _, _, _,
-  139.1010773, _, _, _, _,
-  140.0370499, _, _, _, _,
-  140.0370499, _, _, _, _,
-  140.0370499, _, _, _, _,
-  140.0370499, _, _, _, _,
-  140.0370499, _, _, _, _,
-  140.0370499, _, _, _, _,
-  140.0370499, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+180,	_,	_,	_,	_,
+180,	_,	_,	_,	_,
+180,	_,	_,	_,	_,
+180,	_,	_,	_,	_,
+180,	_,	_,	_,	_,
+322,	_,	_,	_,	_,
+322,	_,	_,	_,	_,
+193,	_,	_,	_,	_,
+322,	_,	_,	_,	_,
+194,	_,	_,	_,	_,
+194,	_,	_,	_,	_,
+193,	_,	_,	_,	_,
+193,	_,	_,	_,	_,
+193,	_,	_,	_,	_,
+193,	_,	_,	_,	_,
+194,	_,	_,	_,	_,
+194,	_,	_,	_,	_,
+194,	_,	_,	_,	_,
+194,	_,	_,	_,	_,
+194,	_,	_,	_,	_,
+194,	_,	_,	_,	_,
+194,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Porbeagle_Shark5_ResN =
   _, _, _, _, _,
@@ -69249,36 +67244,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Porbeagle_Shark6_Nums =
-  _, _, _, _, _,
-  82.80616239, _, _, _, _,
-  82.80616239, _, _, _, _,
-  82.80616239, _, _, _, _,
-  82.80616239, _, _, _, _,
-  82.80616239, _, _, _, _,
-  147.8246047, _, _, _, _,
-  147.8246047, _, _, _, _,
-  88.69476281, _, _, _, _,
-  147.8246047, _, _, _, _,
-  89.2915653, _, _, _, _,
-  89.2915653, _, _, _, _,
-  88.69476281, _, _, _, _,
-  88.69476281, _, _, _, _,
-  88.69476281, _, _, _, _,
-  88.69476281, _, _, _, _,
-  89.2915653, _, _, _, _,
-  89.2915653, _, _, _, _,
-  89.2915653, _, _, _, _,
-  89.2915653, _, _, _, _,
-  89.2915653, _, _, _, _,
-  89.2915653, _, _, _, _,
-  89.2915653, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+124,	_,	_,	_,	_,
+124,	_,	_,	_,	_,
+124,	_,	_,	_,	_,
+124,	_,	_,	_,	_,
+124,	_,	_,	_,	_,
+222,	_,	_,	_,	_,
+222,	_,	_,	_,	_,
+133,	_,	_,	_,	_,
+222,	_,	_,	_,	_,
+134,	_,	_,	_,	_,
+134,	_,	_,	_,	_,
+133,	_,	_,	_,	_,
+133,	_,	_,	_,	_,
+133,	_,	_,	_,	_,
+133,	_,	_,	_,	_,
+134,	_,	_,	_,	_,
+134,	_,	_,	_,	_,
+134,	_,	_,	_,	_,
+134,	_,	_,	_,	_,
+134,	_,	_,	_,	_,
+134,	_,	_,	_,	_,
+134,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Porbeagle_Shark6_ResN =
   _, _, _, _, _,
@@ -69345,36 +67341,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Porbeagle_Shark7_Nums =
-  _, _, _, _, _,
-  52.79954027, _, _, _, _,
-  52.79954027, _, _, _, _,
-  52.79954027, _, _, _, _,
-  52.79954027, _, _, _, _,
-  52.79954027, _, _, _, _,
-  94.25712945, _, _, _, _,
-  94.25712945, _, _, _, _,
-  56.55427767, _, _, _, _,
-  94.25712945, _, _, _, _,
-  56.93481574, _, _, _, _,
-  56.93481574, _, _, _, _,
-  56.55427767, _, _, _, _,
-  56.55427767, _, _, _, _,
-  56.55427767, _, _, _, _,
-  56.55427767, _, _, _, _,
-  56.93481574, _, _, _, _,
-  56.93481574, _, _, _, _,
-  56.93481574, _, _, _, _,
-  56.93481574, _, _, _, _,
-  56.93481574, _, _, _, _,
-  56.93481574, _, _, _, _,
-  56.93481574, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+86,	_,	_,	_,	_,
+86,	_,	_,	_,	_,
+86,	_,	_,	_,	_,
+86,	_,	_,	_,	_,
+86,	_,	_,	_,	_,
+153,	_,	_,	_,	_,
+153,	_,	_,	_,	_,
+92,	_,	_,	_,	_,
+153,	_,	_,	_,	_,
+92,	_,	_,	_,	_,
+92,	_,	_,	_,	_,
+92,	_,	_,	_,	_,
+92,	_,	_,	_,	_,
+92,	_,	_,	_,	_,
+92,	_,	_,	_,	_,
+92,	_,	_,	_,	_,
+92,	_,	_,	_,	_,
+92,	_,	_,	_,	_,
+92,	_,	_,	_,	_,
+92,	_,	_,	_,	_,
+92,	_,	_,	_,	_,
+92,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Porbeagle_Shark7_ResN =
   _, _, _, _, _,
@@ -69441,36 +67438,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Porbeagle_Shark8_Nums =
-  _, _, _, _, _,
-  33.66647327, _, _, _, _,
-  33.66647327, _, _, _, _,
-  33.66647327, _, _, _, _,
-  33.66647327, _, _, _, _,
-  33.66647327, _, _, _, _,
-  60.10099923, _, _, _, _,
-  60.10099923, _, _, _, _,
-  36.06059954, _, _, _, _,
-  60.10099923, _, _, _, _,
-  36.30324132, _, _, _, _,
-  36.30324132, _, _, _, _,
-  36.06059954, _, _, _, _,
-  36.06059954, _, _, _, _,
-  36.06059954, _, _, _, _,
-  36.06059954, _, _, _, _,
-  36.30324132, _, _, _, _,
-  36.30324132, _, _, _, _,
-  36.30324132, _, _, _, _,
-  36.30324132, _, _, _, _,
-  36.30324132, _, _, _, _,
-  36.30324132, _, _, _, _,
-  36.30324132, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+60,	_,	_,	_,	_,
+60,	_,	_,	_,	_,
+60,	_,	_,	_,	_,
+60,	_,	_,	_,	_,
+60,	_,	_,	_,	_,
+107,	_,	_,	_,	_,
+107,	_,	_,	_,	_,
+64,	_,	_,	_,	_,
+107,	_,	_,	_,	_,
+65,	_,	_,	_,	_,
+65,	_,	_,	_,	_,
+64,	_,	_,	_,	_,
+64,	_,	_,	_,	_,
+64,	_,	_,	_,	_,
+64,	_,	_,	_,	_,
+65,	_,	_,	_,	_,
+65,	_,	_,	_,	_,
+65,	_,	_,	_,	_,
+65,	_,	_,	_,	_,
+65,	_,	_,	_,	_,
+65,	_,	_,	_,	_,
+65,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Porbeagle_Shark8_ResN =
   _, _, _, _, _,
@@ -69537,36 +67535,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Porbeagle_Shark9_Nums =
-  _, _, _, _, _,
-  21.46669112, _, _, _, _,
-  21.46669112, _, _, _, _,
-  21.46669112, _, _, _, _,
-  21.46669112, _, _, _, _,
-  21.46669112, _, _, _, _,
-  38.32208905, _, _, _, _,
-  38.32208905, _, _, _, _,
-  22.99325343, _, _, _, _,
-  38.32208905, _, _, _, _,
-  23.14796866, _, _, _, _,
-  23.14796866, _, _, _, _,
-  22.99325343, _, _, _, _,
-  22.99325343, _, _, _, _,
-  22.99325343, _, _, _, _,
-  22.99325343, _, _, _, _,
-  23.14796866, _, _, _, _,
-  23.14796866, _, _, _, _,
-  23.14796866, _, _, _, _,
-  23.14796866, _, _, _, _,
-  23.14796866, _, _, _, _,
-  23.14796866, _, _, _, _,
-  23.14796866, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+41,	_,	_,	_,	_,
+41,	_,	_,	_,	_,
+41,	_,	_,	_,	_,
+41,	_,	_,	_,	_,
+41,	_,	_,	_,	_,
+73,	_,	_,	_,	_,
+73,	_,	_,	_,	_,
+44,	_,	_,	_,	_,
+73,	_,	_,	_,	_,
+44,	_,	_,	_,	_,
+44,	_,	_,	_,	_,
+44,	_,	_,	_,	_,
+44,	_,	_,	_,	_,
+44,	_,	_,	_,	_,
+44,	_,	_,	_,	_,
+44,	_,	_,	_,	_,
+44,	_,	_,	_,	_,
+44,	_,	_,	_,	_,
+44,	_,	_,	_,	_,
+44,	_,	_,	_,	_,
+44,	_,	_,	_,	_,
+44,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Porbeagle_Shark9_ResN =
   _, _, _, _, _,
@@ -72692,133 +70691,38 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Sandbar_Shark10_Nums =
-  _, _, _, _, _,
-  17309.31555, _, _, _, _,
-  11930.52474, _, _, _, _,
-  1561.983216, _, _, _, _,
-  1658.6891, _, _, _, _,
-  2971.967071, _, _, _, _,
-  2988.189006, _, _, _, _,
-  2571.729031, _, _, _, _,
-  5677.199375, _, _, _, _,
-  382.2588262, _, _, _, _,
-  6.384301282, _, _, _, _,
-  6.384301282, _, _, _, _,
-  11.99099467, _, _, _, _,
-  74.926096, _, _, _, _,
-  183.4856488, _, _, _, _,
-  6.384301282, _, _, _, _,
-  183.4856488, _, _, _, _,
-  6.384301282, _, _, _, _,
-  6.384301282, _, _, _, _,
-  6.384301282, _, _, _, _,
-  6.384301282, _, _, _, _,
-  6.384301282, _, _, _, _,
-  6.384301282, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Sandbar_Shark10_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Sandbar_Shark10_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
  Sandbar_Shark1_Nums =
-  _, _, _, _, _,
-  993510.6957, _, _, _, _,
-  684781.7811, _, _, _, _,
-  89653.86452, _, _, _, _,
-  95204.53637, _, _, _, _,
-  170583.3523, _, _, _, _,
-  171514.4501, _, _, _, _,
-  147610.7066, _, _, _, _,
-  325856.8073, _, _, _, _,
-  21940.68456, _, _, _, _,
-  366.4426586, _, _, _, _,
-  366.4426586, _, _, _, _,
-  688.2526014, _, _, _, _,
-  4300.567377, _, _, _, _,
-  10531.60965, _, _, _, _,
-  366.4426586, _, _, _, _,
-  10531.60965, _, _, _, _,
-  366.4426586, _, _, _, _,
-  366.4426586, _, _, _, _,
-  366.4426586, _, _, _, _,
-  366.4426586, _, _, _, _,
-  366.4426586, _, _, _, _,
-  366.4426586, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+1688012,	_,	_,	_,	_,
+1163470,	_,	_,	_,	_,
+152325,	_,	_,	_,	_,
+161756,	_,	_,	_,	_,
+289828,	_,	_,	_,	_,
+291410,	_,	_,	_,	_,
+250796,	_,	_,	_,	_,
+553643,	_,	_,	_,	_,
+37278,	_,	_,	_,	_,
+623,	_,	_,	_,	_,
+623,	_,	_,	_,	_,
+1169,	_,	_,	_,	_,
+7307,	_,	_,	_,	_,
+17894,	_,	_,	_,	_,
+623,	_,	_,	_,	_,
+17894,	_,	_,	_,	_,
+623,	_,	_,	_,	_,
+623,	_,	_,	_,	_,
+623,	_,	_,	_,	_,
+623,	_,	_,	_,	_,
+623,	_,	_,	_,	_,
+623,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Sandbar_Shark1_ResN =
   _, _, _, _, _,
@@ -72885,36 +70789,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Sandbar_Shark2_Nums =
-  _, _, _, _, _,
-  633490.3885, _, _, _, _,
-  436636.1414, _, _, _, _,
-  57165.82792, _, _, _, _,
-  60705.09255, _, _, _, _,
-  108768.7476, _, _, _, _,
-  109362.4418, _, _, _, _,
-  94120.74199, _, _, _, _,
-  207775.4737, _, _, _, _,
-  13989.99814, _, _, _, _,
-  233.6541551, _, _, _, _,
-  233.6541551, _, _, _, _,
-  438.8492341, _, _, _, _,
-  2742.162827, _, _, _, _,
-  6715.250792, _, _, _, _,
-  233.6541551, _, _, _, _,
-  6715.250792, _, _, _, _,
-  233.6541551, _, _, _, _,
-  233.6541551, _, _, _, _,
-  233.6541551, _, _, _, _,
-  233.6541551, _, _, _, _,
-  233.6541551, _, _, _, _,
-  233.6541551, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+515134,	_,	_,	_,	_,
+355058,	_,	_,	_,	_,
+46485,	_,	_,	_,	_,
+49363,	_,	_,	_,	_,
+88447,	_,	_,	_,	_,
+88930,	_,	_,	_,	_,
+76536,	_,	_,	_,	_,
+168956,	_,	_,	_,	_,
+11376,	_,	_,	_,	_,
+190,	_,	_,	_,	_,
+190,	_,	_,	_,	_,
+357,	_,	_,	_,	_,
+2230,	_,	_,	_,	_,
+5461,	_,	_,	_,	_,
+190,	_,	_,	_,	_,
+5461,	_,	_,	_,	_,
+190,	_,	_,	_,	_,
+190,	_,	_,	_,	_,
+190,	_,	_,	_,	_,
+190,	_,	_,	_,	_,
+190,	_,	_,	_,	_,
+190,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Sandbar_Shark2_ResN =
   _, _, _, _, _,
@@ -72981,36 +70886,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Sandbar_Shark3_Nums =
-  _, _, _, _, _,
-  403931.3055, _, _, _, _,
-  278411.4957, _, _, _, _,
-  36450.54119, _, _, _, _,
-  38707.27596, _, _, _, _,
-  69354.0155, _, _, _, _,
-  69732.57162, _, _, _, _,
-  60014.03474, _, _, _, _,
-  132483.4912, _, _, _, _,
-  8920.416656, _, _, _, _,
-  148.984467, _, _, _, _,
-  148.984467, _, _, _, _,
-  279.822626, _, _, _, _,
-  1748.480215, _, _, _, _,
-  4281.83295, _, _, _, _,
-  148.984467, _, _, _, _,
-  4281.83295, _, _, _, _,
-  148.984467, _, _, _, _,
-  148.984467, _, _, _, _,
-  148.984467, _, _, _, _,
-  148.984467, _, _, _, _,
-  148.984467, _, _, _, _,
-  148.984467, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+257567,	_,	_,	_,	_,
+177529,	_,	_,	_,	_,
+23243,	_,	_,	_,	_,
+24682,	_,	_,	_,	_,
+44224,	_,	_,	_,	_,
+44465,	_,	_,	_,	_,
+38268,	_,	_,	_,	_,
+84478,	_,	_,	_,	_,
+5688,	_,	_,	_,	_,
+95,	_,	_,	_,	_,
+95,	_,	_,	_,	_,
+178,	_,	_,	_,	_,
+1115,	_,	_,	_,	_,
+2730,	_,	_,	_,	_,
+95,	_,	_,	_,	_,
+2730,	_,	_,	_,	_,
+95,	_,	_,	_,	_,
+95,	_,	_,	_,	_,
+95,	_,	_,	_,	_,
+95,	_,	_,	_,	_,
+95,	_,	_,	_,	_,
+95,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Sandbar_Shark3_ResN =
   _, _, _, _, _,
@@ -73077,36 +70983,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Sandbar_Shark4_Nums =
-  _, _, _, _, _,
-  257557.9717, _, _, _, _,
-  177523.0074, _, _, _, _,
-  23241.89121, _, _, _, _,
-  24680.84882, _, _, _, _,
-  44222.07271, _, _, _, _,
-  44463.45075, _, _, _, _,
-  38266.63805, _, _, _, _,
-  84475.20365, _, _, _, _,
-  5687.908784, _, _, _, _,
-  94.99669033, _, _, _, _,
-  94.99669033, _, _, _, _,
-  178.4227838, _, _, _, _,
-  1114.880208, _, _, _, _,
-  2730.21723, _, _, _, _,
-  94.99669033, _, _, _, _,
-  2730.21723, _, _, _, _,
-  94.99669033, _, _, _, _,
-  94.99669033, _, _, _, _,
-  94.99669033, _, _, _, _,
-  94.99669033, _, _, _, _,
-  94.99669033, _, _, _, _,
-  94.99669033, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+130139,	_,	_,	_,	_,
+89699,	_,	_,	_,	_,
+11744,	_,	_,	_,	_,
+12471,	_,	_,	_,	_,
+22345,	_,	_,	_,	_,
+22467,	_,	_,	_,	_,
+19335,	_,	_,	_,	_,
+42684,	_,	_,	_,	_,
+2874,	_,	_,	_,	_,
+48,	_,	_,	_,	_,
+48,	_,	_,	_,	_,
+90,	_,	_,	_,	_,
+563,	_,	_,	_,	_,
+1380,	_,	_,	_,	_,
+48,	_,	_,	_,	_,
+1380,	_,	_,	_,	_,
+48,	_,	_,	_,	_,
+48,	_,	_,	_,	_,
+48,	_,	_,	_,	_,
+48,	_,	_,	_,	_,
+48,	_,	_,	_,	_,
+48,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Sandbar_Shark4_ResN =
   _, _, _, _, _,
@@ -73173,36 +71080,36 @@ DayLight =
   _, _, _, _, _ ;
 
  Sandbar_Shark5_Nums =
-  _, _, _, _, _,
-  164226.2134, _, _, _, _,
-  113193.6671, _, _, _, _,
-  14819.68413, _, _, _, _,
-  15737.20402, _, _, _, _,
-  28197.23848, _, _, _, _,
-  28351.14792, _, _, _, _,
-  24399.88569, _, _, _, _,
-  53863.76796, _, _, _, _,
-  3626.770765, _, _, _, _,
-  60.57256406, _, _, _, _,
-  60.57256406, _, _, _, _,
-  113.7673898, _, _, _, _,
-  710.8790061, _, _, _, _,
-  1740.863366, _, _, _, _,
-  60.57256406, _, _, _, _,
-  1740.863366, _, _, _, _,
-  60.57256406, _, _, _, _,
-  60.57256406, _, _, _, _,
-  60.57256406, _, _, _, _,
-  60.57256406, _, _, _, _,
-  60.57256406, _, _, _, _,
-  60.57256406, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+67781,	_,	_,	_,	_,
+46718,	_,	_,	_,	_,
+6117,	_,	_,	_,	_,
+6495,	_,	_,	_,	_,
+11638,	_,	_,	_,	_,
+11701,	_,	_,	_,	_,
+10071,	_,	_,	_,	_,
+22231,	_,	_,	_,	_,
+1497,	_,	_,	_,	_,
+25,	_,	_,	_,	_,
+25,	_,	_,	_,	_,
+47,	_,	_,	_,	_,
+293,	_,	_,	_,	_,
+719,	_,	_,	_,	_,
+25,	_,	_,	_,	_,
+719,	_,	_,	_,	_,
+25,	_,	_,	_,	_,
+25,	_,	_,	_,	_,
+25,	_,	_,	_,	_,
+25,	_,	_,	_,	_,
+25,	_,	_,	_,	_,
+25,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Sandbar_Shark5_ResN =
   _, _, _, _, _,
@@ -73269,36 +71176,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Sandbar_Shark6_Nums =
-  _, _, _, _, _,
-  104715.2569, _, _, _, _,
-  72175.46872, _, _, _, _,
-  9449.447799, _, _, _, _,
-  10034.48431, _, _, _, _,
-  17979.35305, _, _, _, _,
-  18077.49004, _, _, _, _,
-  15558.05401, _, _, _, _,
-  34345.0548, _, _, _, _,
-  2312.531139, _, _, _, _,
-  38.62277206, _, _, _, _,
-  38.62277206, _, _, _, _,
-  72.54129049, _, _, _, _,
-  453.2764667, _, _, _, _,
-  1110.02349, _, _, _, _,
-  38.62277206, _, _, _, _,
-  1110.02349, _, _, _, _,
-  38.62277206, _, _, _, _,
-  38.62277206, _, _, _, _,
-  38.62277206, _, _, _, _,
-  38.62277206, _, _, _, _,
-  38.62277206, _, _, _, _,
-  38.62277206, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+35246,	_,	_,	_,	_,
+24293,	_,	_,	_,	_,
+3181,	_,	_,	_,	_,
+3377,	_,	_,	_,	_,
+6052,	_,	_,	_,	_,
+6085,	_,	_,	_,	_,
+5237,	_,	_,	_,	_,
+11560,	_,	_,	_,	_,
+778,	_,	_,	_,	_,
+13,	_,	_,	_,	_,
+13,	_,	_,	_,	_,
+24,	_,	_,	_,	_,
+153,	_,	_,	_,	_,
+374,	_,	_,	_,	_,
+13,	_,	_,	_,	_,
+374,	_,	_,	_,	_,
+13,	_,	_,	_,	_,
+13,	_,	_,	_,	_,
+13,	_,	_,	_,	_,
+13,	_,	_,	_,	_,
+13,	_,	_,	_,	_,
+13,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Sandbar_Shark6_ResN =
   _, _, _, _, _,
@@ -73365,36 +71273,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Sandbar_Shark7_Nums =
-  _, _, _, _, _,
-  66769.39572, _, _, _, _,
-  46021.11071, _, _, _, _,
-  6025.233934, _, _, _, _,
-  6398.269682, _, _, _, _,
-  11464.14166, _, _, _, _,
-  11526.71656, _, _, _, _,
-  9920.253221, _, _, _, _,
-  21899.37381, _, _, _, _,
-  1474.534956, _, _, _, _,
-  24.62696676, _, _, _, _,
-  24.62696676, _, _, _, _,
-  46.25436897, _, _, _, _,
-  289.0218356, _, _, _, _,
-  707.7822262, _, _, _, _,
-  24.62696676, _, _, _, _,
-  707.7822262, _, _, _, _,
-  24.62696676, _, _, _, _,
-  24.62696676, _, _, _, _,
-  24.62696676, _, _, _, _,
-  24.62696676, _, _, _, _,
-  24.62696676, _, _, _, _,
-  24.62696676, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+17352,	_,	_,	_,	_,
+11960,	_,	_,	_,	_,
+1566,	_,	_,	_,	_,
+1663,	_,	_,	_,	_,
+2979,	_,	_,	_,	_,
+2996,	_,	_,	_,	_,
+2578,	_,	_,	_,	_,
+5691,	_,	_,	_,	_,
+383,	_,	_,	_,	_,
+6,	_,	_,	_,	_,
+6,	_,	_,	_,	_,
+12,	_,	_,	_,	_,
+75,	_,	_,	_,	_,
+184,	_,	_,	_,	_,
+6,	_,	_,	_,	_,
+184,	_,	_,	_,	_,
+6,	_,	_,	_,	_,
+6,	_,	_,	_,	_,
+6,	_,	_,	_,	_,
+6,	_,	_,	_,	_,
+6,	_,	_,	_,	_,
+6,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Sandbar_Shark7_ResN =
   _, _, _, _, _,
@@ -73429,198 +71338,6 @@ DayLight =
   _, _, _, _, _ ;
 
  Sandbar_Shark7_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Sandbar_Shark8_Nums =
-  _, _, _, _, _,
-  42574.04638, _, _, _, _,
-  29344.35576, _, _, _, _,
-  3841.858776, _, _, _, _,
-  4079.716871, _, _, _, _,
-  7309.859454, _, _, _, _,
-  7349.758975, _, _, _, _,
-  6325.432725, _, _, _, _,
-  13963.65724, _, _, _, _,
-  940.2049983, _, _, _, _,
-  15.7028473, _, _, _, _,
-  15.7028473, _, _, _, _,
-  29.49308779, _, _, _, _,
-  184.2884588, _, _, _, _,
-  451.3018727, _, _, _, _,
-  15.7028473, _, _, _, _,
-  451.3018727, _, _, _, _,
-  15.7028473, _, _, _, _,
-  15.7028473, _, _, _, _,
-  15.7028473, _, _, _, _,
-  15.7028473, _, _, _, _,
-  15.7028473, _, _, _, _,
-  15.7028473, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Sandbar_Shark8_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Sandbar_Shark8_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Sandbar_Shark9_Nums =
-  _, _, _, _, _,
-  27146.4105, _, _, _, _,
-  18710.78732, _, _, _, _,
-  2449.67731, _, _, _, _,
-  2601.342327, _, _, _, _,
-  4660.972172, _, _, _, _,
-  4686.41323, _, _, _, _,
-  4033.273977, _, _, _, _,
-  8903.620959, _, _, _, _,
-  599.5011752, _, _, _, _,
-  10.0125775, _, _, _, _,
-  10.0125775, _, _, _, _,
-  18.80562305, _, _, _, _,
-  117.5075094, _, _, _, _,
-  287.7627789, _, _, _, _,
-  10.0125775, _, _, _, _,
-  287.7627789, _, _, _, _,
-  10.0125775, _, _, _, _,
-  10.0125775, _, _, _, _,
-  10.0125775, _, _, _, _,
-  10.0125775, _, _, _, _,
-  10.0125775, _, _, _, _,
-  10.0125775, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Sandbar_Shark9_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Sandbar_Shark9_StructN =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -76748,36 +74465,37 @@ DayLight =
   322, 322, 210, 58, 0.01 ;
 
  Silver_Hake10_Nums =
-  _, _, _, _, _,
-  167225, _, _, _, _,
-  278708, _, _, _, _,
-  445932, _, _, _, _,
-  334449, _, _, _, _,
-  501674, _, _, _, _,
-  668898, _, _, _, _,
-  222966, _, _, _, _,
-  111483, _, _, _, _,
-  334449, _, _, _, _,
-  222966, _, _, _, _,
-  334449, _, _, _, _,
-  334449, _, _, _, _,
-  111483, _, _, _, _,
-  390191, _, _, _, _,
-  111483, _, _, _, _,
-  222966, _, _, _, _,
-  55742, _, _, _, _,
-  111483, _, _, _, _,
-  167225, _, _, _, _,
-  278708, _, _, _, _,
-  111483, _, _, _, _,
-  55742, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+340511,	_,	_,	_,	_,
+567518,	_,	_,	_,	_,
+908029,	_,	_,	_,	_,
+681021,	_,	_,	_,	_,
+1021532,	_,	_,	_,	_,
+1362043,	_,	_,	_,	_,
+454014,	_,	_,	_,	_,
+227007,	_,	_,	_,	_,
+681021,	_,	_,	_,	_,
+454014,	_,	_,	_,	_,
+681021,	_,	_,	_,	_,
+681021,	_,	_,	_,	_,
+227007,	_,	_,	_,	_,
+794525,	_,	_,	_,	_,
+227007,	_,	_,	_,	_,
+454014,	_,	_,	_,	_,
+113504,	_,	_,	_,	_,
+227007,	_,	_,	_,	_,
+340511,	_,	_,	_,	_,
+567518,	_,	_,	_,	_,
+227007,	_,	_,	_,	_,
+113504,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Silver_Hake10_ResN =
   _, _, _, _, _,
@@ -76843,30 +74561,63 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Silver_Hake1_Nums =
+Silver_Hake11_Nums =
+_,	_,	_,	_,	_,
+240977,	_,	_,	_,	_,
+401628,	_,	_,	_,	_,
+642605,	_,	_,	_,	_,
+481954,	_,	_,	_,	_,
+722930,	_,	_,	_,	_,
+963907,	_,	_,	_,	_,
+321302,	_,	_,	_,	_,
+160651,	_,	_,	_,	_,
+481954,	_,	_,	_,	_,
+321302,	_,	_,	_,	_,
+481954,	_,	_,	_,	_,
+481954,	_,	_,	_,	_,
+160651,	_,	_,	_,	_,
+562279,	_,	_,	_,	_,
+160651,	_,	_,	_,	_,
+321302,	_,	_,	_,	_,
+80326,	_,	_,	_,	_,
+160651,	_,	_,	_,	_,
+240977,	_,	_,	_,	_,
+401628,	_,	_,	_,	_,
+160651,	_,	_,	_,	_,
+80326,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
+
+ Silver_Hake11_ResN =
   _, _, _, _, _,
-  9598284, _, _, _, _,
-  15997140, _, _, _, _,
-  25595424, _, _, _, _,
-  19196568, _, _, _, _,
-  28794852, _, _, _, _,
-  38393136, _, _, _, _,
-  12797712, _, _, _, _,
-  6398856, _, _, _, _,
-  19196568, _, _, _, _,
-  12797712, _, _, _, _,
-  19196568, _, _, _, _,
-  19196568, _, _, _, _,
-  6398856, _, _, _, _,
-  22395996, _, _, _, _,
-  6398856, _, _, _, _,
-  12797712, _, _, _, _,
-  3199428, _, _, _, _,
-  6398856, _, _, _, _,
-  9598284, _, _, _, _,
-  15997140, _, _, _, _,
-  6398856, _, _, _, _,
-  3199428, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -76874,6 +74625,168 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+
+ Silver_Hake11_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+Silver_Hake12_Nums =
+_,	_,	_,	_,	_,
+167636,	_,	_,	_,	_,
+279393,	_,	_,	_,	_,
+447029,	_,	_,	_,	_,
+335272,	_,	_,	_,	_,
+502908,	_,	_,	_,	_,
+670544,	_,	_,	_,	_,
+223515,	_,	_,	_,	_,
+111757,	_,	_,	_,	_,
+335272,	_,	_,	_,	_,
+223515,	_,	_,	_,	_,
+335272,	_,	_,	_,	_,
+335272,	_,	_,	_,	_,
+111757,	_,	_,	_,	_,
+391151,	_,	_,	_,	_,
+111757,	_,	_,	_,	_,
+223515,	_,	_,	_,	_,
+55879,	_,	_,	_,	_,
+111757,	_,	_,	_,	_,
+167636,	_,	_,	_,	_,
+279393,	_,	_,	_,	_,
+111757,	_,	_,	_,	_,
+55879,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
+
+ Silver_Hake12_ResN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ Silver_Hake12_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ Silver_Hake1_Nums =
+_,	_,	_,	_,	_,
+5039558,	_,	_,	_,	_,
+8399264,	_,	_,	_,	_,
+13438822,	_,	_,	_,	_,
+10079116,	_,	_,	_,	_,
+15118675,	_,	_,	_,	_,
+20158233,	_,	_,	_,	_,
+6719411,	_,	_,	_,	_,
+3359706,	_,	_,	_,	_,
+10079116,	_,	_,	_,	_,
+6719411,	_,	_,	_,	_,
+10079116,	_,	_,	_,	_,
+10079116,	_,	_,	_,	_,
+3359706,	_,	_,	_,	_,
+11758969,	_,	_,	_,	_,
+3359706,	_,	_,	_,	_,
+6719411,	_,	_,	_,	_,
+1679853,	_,	_,	_,	_,
+3359706,	_,	_,	_,	_,
+5039558,	_,	_,	_,	_,
+8399264,	_,	_,	_,	_,
+3359706,	_,	_,	_,	_,
+1679853,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Silver_Hake1_ResN =
   _, _, _, _, _,
@@ -76940,36 +74853,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Silver_Hake2_Nums =
-  _, _, _, _, _,
-  6120135, _, _, _, _,
-  10200224, _, _, _, _,
-  16320359, _, _, _, _,
-  12240269, _, _, _, _,
-  18360404, _, _, _, _,
-  24480539, _, _, _, _,
-  8160180, _, _, _, _,
-  4080090, _, _, _, _,
-  12240269, _, _, _, _,
-  8160180, _, _, _, _,
-  12240269, _, _, _, _,
-  12240269, _, _, _, _,
-  4080090, _, _, _, _,
-  14280314, _, _, _, _,
-  4080090, _, _, _, _,
-  8160180, _, _, _, _,
-  2040045, _, _, _, _,
-  4080090, _, _, _, _,
-  6120135, _, _, _, _,
-  10200224, _, _, _, _,
-  4080090, _, _, _, _,
-  2040045, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+6548282,	_,	_,	_,	_,
+10913804,	_,	_,	_,	_,
+17462087,	_,	_,	_,	_,
+13096565,	_,	_,	_,	_,
+19644848,	_,	_,	_,	_,
+26193130,	_,	_,	_,	_,
+8731044,	_,	_,	_,	_,
+4365522,	_,	_,	_,	_,
+13096565,	_,	_,	_,	_,
+8731044,	_,	_,	_,	_,
+13096565,	_,	_,	_,	_,
+13096565,	_,	_,	_,	_,
+4365522,	_,	_,	_,	_,
+15279326,	_,	_,	_,	_,
+4365522,	_,	_,	_,	_,
+8731044,	_,	_,	_,	_,
+2182761,	_,	_,	_,	_,
+4365522,	_,	_,	_,	_,
+6548282,	_,	_,	_,	_,
+10913804,	_,	_,	_,	_,
+4365522,	_,	_,	_,	_,
+2182761,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Silver_Hake2_ResN =
   _, _, _, _, _,
@@ -77036,36 +74950,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Silver_Hake3_Nums =
-  _, _, _, _, _,
-  3902369, _, _, _, _,
-  6503949, _, _, _, _,
-  10406318, _, _, _, _,
-  7804738, _, _, _, _,
-  11707108, _, _, _, _,
-  15609477, _, _, _, _,
-  5203159, _, _, _, _,
-  2601579, _, _, _, _,
-  7804738, _, _, _, _,
-  5203159, _, _, _, _,
-  7804738, _, _, _, _,
-  7804738, _, _, _, _,
-  2601579, _, _, _, _,
-  9105528, _, _, _, _,
-  2601579, _, _, _, _,
-  5203159, _, _, _, _,
-  1300790, _, _, _, _,
-  2601579, _, _, _, _,
-  3902369, _, _, _, _,
-  6503949, _, _, _, _,
-  2601579, _, _, _, _,
-  1300790, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+4714763,	_,	_,	_,	_,
+7857939,	_,	_,	_,	_,
+12572703,	_,	_,	_,	_,
+9429527,	_,	_,	_,	_,
+14144290,	_,	_,	_,	_,
+18859054,	_,	_,	_,	_,
+6286351,	_,	_,	_,	_,
+3143176,	_,	_,	_,	_,
+9429527,	_,	_,	_,	_,
+6286351,	_,	_,	_,	_,
+9429527,	_,	_,	_,	_,
+9429527,	_,	_,	_,	_,
+3143176,	_,	_,	_,	_,
+11001115,	_,	_,	_,	_,
+3143176,	_,	_,	_,	_,
+6286351,	_,	_,	_,	_,
+1571588,	_,	_,	_,	_,
+3143176,	_,	_,	_,	_,
+4714763,	_,	_,	_,	_,
+7857939,	_,	_,	_,	_,
+3143176,	_,	_,	_,	_,
+1571588,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Silver_Hake3_ResN =
   _, _, _, _, _,
@@ -77132,36 +75047,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Silver_Hake4_Nums =
-  _, _, _, _, _,
-  2488260, _, _, _, _,
-  4147100, _, _, _, _,
-  6635360, _, _, _, _,
-  4976520, _, _, _, _,
-  7464780, _, _, _, _,
-  9953039, _, _, _, _,
-  3317680, _, _, _, _,
-  1658840, _, _, _, _,
-  4976520, _, _, _, _,
-  3317680, _, _, _, _,
-  4976520, _, _, _, _,
-  4976520, _, _, _, _,
-  1658840, _, _, _, _,
-  5805940, _, _, _, _,
-  1658840, _, _, _, _,
-  3317680, _, _, _, _,
-  829420, _, _, _, _,
-  1658840, _, _, _, _,
-  2488260, _, _, _, _,
-  4147100, _, _, _, _,
-  1658840, _, _, _, _,
-  829420, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+3143176,	_,	_,	_,	_,
+5238626,	_,	_,	_,	_,
+8381802,	_,	_,	_,	_,
+6286351,	_,	_,	_,	_,
+9429527,	_,	_,	_,	_,
+12572703,	_,	_,	_,	_,
+4190901,	_,	_,	_,	_,
+2095450,	_,	_,	_,	_,
+6286351,	_,	_,	_,	_,
+4190901,	_,	_,	_,	_,
+6286351,	_,	_,	_,	_,
+6286351,	_,	_,	_,	_,
+2095450,	_,	_,	_,	_,
+7334076,	_,	_,	_,	_,
+2095450,	_,	_,	_,	_,
+4190901,	_,	_,	_,	_,
+1047725,	_,	_,	_,	_,
+2095450,	_,	_,	_,	_,
+3143176,	_,	_,	_,	_,
+5238626,	_,	_,	_,	_,
+2095450,	_,	_,	_,	_,
+1047725,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Silver_Hake4_ResN =
   _, _, _, _, _,
@@ -77228,36 +75144,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Silver_Hake5_Nums =
-  _, _, _, _, _,
-  1586584, _, _, _, _,
-  2644307, _, _, _, _,
-  4230891, _, _, _, _,
-  3173168, _, _, _, _,
-  4759752, _, _, _, _,
-  6346337, _, _, _, _,
-  2115446, _, _, _, _,
-  1057723, _, _, _, _,
-  3173168, _, _, _, _,
-  2115446, _, _, _, _,
-  3173168, _, _, _, _,
-  3173168, _, _, _, _,
-  1057723, _, _, _, _,
-  3702030, _, _, _, _,
-  1057723, _, _, _, _,
-  2115446, _, _, _, _,
-  528861, _, _, _, _,
-  1057723, _, _, _, _,
-  1586584, _, _, _, _,
-  2644307, _, _, _, _,
-  1057723, _, _, _, _,
-  528861, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+2200223,	_,	_,	_,	_,
+3667038,	_,	_,	_,	_,
+5867261,	_,	_,	_,	_,
+4400446,	_,	_,	_,	_,
+6600669,	_,	_,	_,	_,
+8800892,	_,	_,	_,	_,
+2933631,	_,	_,	_,	_,
+1466815,	_,	_,	_,	_,
+4400446,	_,	_,	_,	_,
+2933631,	_,	_,	_,	_,
+4400446,	_,	_,	_,	_,
+4400446,	_,	_,	_,	_,
+1466815,	_,	_,	_,	_,
+5133854,	_,	_,	_,	_,
+1466815,	_,	_,	_,	_,
+2933631,	_,	_,	_,	_,
+733408,	_,	_,	_,	_,
+1466815,	_,	_,	_,	_,
+2200223,	_,	_,	_,	_,
+3667038,	_,	_,	_,	_,
+1466815,	_,	_,	_,	_,
+733408,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Silver_Hake5_ResN =
   _, _, _, _, _,
@@ -77324,36 +75241,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Silver_Hake6_Nums =
-  _, _, _, _, _,
-  1011650, _, _, _, _,
-  1686084, _, _, _, _,
-  2697735, _, _, _, _,
-  2023301, _, _, _, _,
-  3034951, _, _, _, _,
-  4046602, _, _, _, _,
-  1348867, _, _, _, _,
-  674434, _, _, _, _,
-  2023301, _, _, _, _,
-  1348867, _, _, _, _,
-  2023301, _, _, _, _,
-  2023301, _, _, _, _,
-  674434, _, _, _, _,
-  2360518, _, _, _, _,
-  674434, _, _, _, _,
-  1348867, _, _, _, _,
-  337217, _, _, _, _,
-  674434, _, _, _, _,
-  1011650, _, _, _, _,
-  1686084, _, _, _, _,
-  674434, _, _, _, _,
-  337217, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+1519202,	_,	_,	_,	_,
+2532003,	_,	_,	_,	_,
+4051204,	_,	_,	_,	_,
+3038403,	_,	_,	_,	_,
+4557605,	_,	_,	_,	_,
+6076806,	_,	_,	_,	_,
+2025602,	_,	_,	_,	_,
+1012801,	_,	_,	_,	_,
+3038403,	_,	_,	_,	_,
+2025602,	_,	_,	_,	_,
+3038403,	_,	_,	_,	_,
+3038403,	_,	_,	_,	_,
+1012801,	_,	_,	_,	_,
+3544804,	_,	_,	_,	_,
+1012801,	_,	_,	_,	_,
+2025602,	_,	_,	_,	_,
+506401,	_,	_,	_,	_,
+1012801,	_,	_,	_,	_,
+1519202,	_,	_,	_,	_,
+2532003,	_,	_,	_,	_,
+1012801,	_,	_,	_,	_,
+506401,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Silver_Hake6_ResN =
   _, _, _, _, _,
@@ -77420,36 +75338,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Silver_Hake7_Nums =
-  _, _, _, _, _,
-  645057, _, _, _, _,
-  1075094, _, _, _, _,
-  1720151, _, _, _, _,
-  1290113, _, _, _, _,
-  1935170, _, _, _, _,
-  2580227, _, _, _, _,
-  860076, _, _, _, _,
-  430038, _, _, _, _,
-  1290113, _, _, _, _,
-  860076, _, _, _, _,
-  1290113, _, _, _, _,
-  1290113, _, _, _, _,
-  430038, _, _, _, _,
-  1505132, _, _, _, _,
-  430038, _, _, _, _,
-  860076, _, _, _, _,
-  215019, _, _, _, _,
-  430038, _, _, _, _,
-  645057, _, _, _, _,
-  1075094, _, _, _, _,
-  430038, _, _, _, _,
-  215019, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+1047725,	_,	_,	_,	_,
+1746209,	_,	_,	_,	_,
+2793934,	_,	_,	_,	_,
+2095450,	_,	_,	_,	_,
+3143176,	_,	_,	_,	_,
+4190901,	_,	_,	_,	_,
+1396967,	_,	_,	_,	_,
+698483,	_,	_,	_,	_,
+2095450,	_,	_,	_,	_,
+1396967,	_,	_,	_,	_,
+2095450,	_,	_,	_,	_,
+2095450,	_,	_,	_,	_,
+698483,	_,	_,	_,	_,
+2444692,	_,	_,	_,	_,
+698483,	_,	_,	_,	_,
+1396967,	_,	_,	_,	_,
+349242,	_,	_,	_,	_,
+698483,	_,	_,	_,	_,
+1047725,	_,	_,	_,	_,
+1746209,	_,	_,	_,	_,
+698483,	_,	_,	_,	_,
+349242,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Silver_Hake7_ResN =
   _, _, _, _, _,
@@ -77516,36 +75435,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Silver_Hake8_Nums =
-  _, _, _, _, _,
-  411306, _, _, _, _,
-  685510, _, _, _, _,
-  1096817, _, _, _, _,
-  822612, _, _, _, _,
-  1233919, _, _, _, _,
-  1645225, _, _, _, _,
-  548408, _, _, _, _,
-  274204, _, _, _, _,
-  822612, _, _, _, _,
-  548408, _, _, _, _,
-  822612, _, _, _, _,
-  822612, _, _, _, _,
-  274204, _, _, _, _,
-  959714, _, _, _, _,
-  274204, _, _, _, _,
-  548408, _, _, _, _,
-  137102, _, _, _, _,
-  274204, _, _, _, _,
-  411306, _, _, _, _,
-  685510, _, _, _, _,
-  274204, _, _, _, _,
-  137102, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+733408,	_,	_,	_,	_,
+1222346,	_,	_,	_,	_,
+1955754,	_,	_,	_,	_,
+1466815,	_,	_,	_,	_,
+2200223,	_,	_,	_,	_,
+2933631,	_,	_,	_,	_,
+977877,	_,	_,	_,	_,
+488938,	_,	_,	_,	_,
+1466815,	_,	_,	_,	_,
+977877,	_,	_,	_,	_,
+1466815,	_,	_,	_,	_,
+1466815,	_,	_,	_,	_,
+488938,	_,	_,	_,	_,
+1711285,	_,	_,	_,	_,
+488938,	_,	_,	_,	_,
+977877,	_,	_,	_,	_,
+244469,	_,	_,	_,	_,
+488938,	_,	_,	_,	_,
+733408,	_,	_,	_,	_,
+1222346,	_,	_,	_,	_,
+488938,	_,	_,	_,	_,
+244469,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Silver_Hake8_ResN =
   _, _, _, _, _,
@@ -77612,36 +75532,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Silver_Hake9_Nums =
-  _, _, _, _, _,
-  262260, _, _, _, _,
-  437101, _, _, _, _,
-  699361, _, _, _, _,
-  524521, _, _, _, _,
-  786781, _, _, _, _,
-  1049041, _, _, _, _,
-  349680, _, _, _, _,
-  174840, _, _, _, _,
-  524521, _, _, _, _,
-  349680, _, _, _, _,
-  524521, _, _, _, _,
-  524521, _, _, _, _,
-  174840, _, _, _, _,
-  611941, _, _, _, _,
-  174840, _, _, _, _,
-  349680, _, _, _, _,
-  87420, _, _, _, _,
-  174840, _, _, _, _,
-  262260, _, _, _, _,
-  437101, _, _, _, _,
-  174840, _, _, _, _,
-  87420, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+497669,	_,	_,	_,	_,
+829449,	_,	_,	_,	_,
+1327119,	_,	_,	_,	_,
+995339,	_,	_,	_,	_,
+1493008,	_,	_,	_,	_,
+1990678,	_,	_,	_,	_,
+663559,	_,	_,	_,	_,
+331780,	_,	_,	_,	_,
+995339,	_,	_,	_,	_,
+663559,	_,	_,	_,	_,
+995339,	_,	_,	_,	_,
+995339,	_,	_,	_,	_,
+331780,	_,	_,	_,	_,
+1161229,	_,	_,	_,	_,
+331780,	_,	_,	_,	_,
+663559,	_,	_,	_,	_,
+165890,	_,	_,	_,	_,
+331780,	_,	_,	_,	_,
+497669,	_,	_,	_,	_,
+829449,	_,	_,	_,	_,
+331780,	_,	_,	_,	_,
+165890,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Silver_Hake9_ResN =
   _, _, _, _, _,
@@ -79723,133 +77644,38 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Smooth_Dogfish10_Nums =
-  _, _, _, _, _,
-  4768, _, _, _, _,
-  3117, _, _, _, _,
-  4034, _, _, _, _,
-  4584, _, _, _, _,
-  1100, _, _, _, _,
-  183, _, _, _, _,
-  550, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Smooth_Dogfish10_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Smooth_Dogfish10_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
  Smooth_Dogfish1_Nums =
-  _, _, _, _, _,
-  273649, _, _, _, _,
-  178924, _, _, _, _,
-  231549, _, _, _, _,
-  263124, _, _, _, _,
-  63150, _, _, _, _,
-  10525, _, _, _, _,
-  31575, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+396983,	_,	_,	_,	_,
+259565,	_,	_,	_,	_,
+335909,	_,	_,	_,	_,
+381714,	_,	_,	_,	_,
+91612,	_,	_,	_,	_,
+15269,	_,	_,	_,	_,
+45806,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Smooth_Dogfish1_ResN =
   _, _, _, _, _,
@@ -79916,36 +77742,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Smooth_Dogfish2_Nums =
-  _, _, _, _, _,
-  174486, _, _, _, _,
-  114087, _, _, _, _,
-  147642, _, _, _, _,
-  167775, _, _, _, _,
-  40266, _, _, _, _,
-  6711, _, _, _, _,
-  20133, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+156822,	_,	_,	_,	_,
+102537,	_,	_,	_,	_,
+132695,	_,	_,	_,	_,
+150790,	_,	_,	_,	_,
+36190,	_,	_,	_,	_,
+6032,	_,	_,	_,	_,
+18095,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Smooth_Dogfish2_ResN =
   _, _, _, _, _,
@@ -80012,36 +77839,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Smooth_Dogfish3_Nums =
-  _, _, _, _, _,
-  111257, _, _, _, _,
-  72745, _, _, _, _,
-  94141, _, _, _, _,
-  106978, _, _, _, _,
-  25675, _, _, _, _,
-  4279, _, _, _, _,
-  12837, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+89613,	_,	_,	_,	_,
+58593,	_,	_,	_,	_,
+75826,	_,	_,	_,	_,
+86166,	_,	_,	_,	_,
+20680,	_,	_,	_,	_,
+3447,	_,	_,	_,	_,
+10340,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Smooth_Dogfish3_ResN =
   _, _, _, _, _,
@@ -80108,36 +77936,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Smooth_Dogfish4_Nums =
-  _, _, _, _, _,
-  70941, _, _, _, _,
-  46384, _, _, _, _,
-  60027, _, _, _, _,
-  68212, _, _, _, _,
-  16371, _, _, _, _,
-  2729, _, _, _, _,
-  8186, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+48540,	_,	_,	_,	_,
+31738,	_,	_,	_,	_,
+41072,	_,	_,	_,	_,
+46673,	_,	_,	_,	_,
+11202,	_,	_,	_,	_,
+1867,	_,	_,	_,	_,
+5601,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Smooth_Dogfish4_ResN =
   _, _, _, _, _,
@@ -80204,36 +78033,36 @@ DayLight =
   _, _, _, _, _ ;
 
  Smooth_Dogfish5_Nums =
-  _, _, _, _, _,
-  45234, _, _, _, _,
-  29576, _, _, _, _,
-  38275, _, _, _, _,
-  43494, _, _, _, _,
-  10439, _, _, _, _,
-  1740, _, _, _, _,
-  5219, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+26884,	_,	_,	_,	_,
+17578,	_,	_,	_,	_,
+22748,	_,	_,	_,	_,
+25850,	_,	_,	_,	_,
+6204,	_,	_,	_,	_,
+1034,	_,	_,	_,	_,
+3102,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Smooth_Dogfish5_ResN =
   _, _, _, _, _,
@@ -80300,36 +78129,36 @@ DayLight =
   _, _, _, _, _ ;
 
  Smooth_Dogfish6_Nums =
-  _, _, _, _, _,
-  28842, _, _, _, _,
-  18858, _, _, _, _,
-  24405, _, _, _, _,
-  27733, _, _, _, _,
-  6656, _, _, _, _,
-  1109, _, _, _, _,
-  3328, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+14935,	_,	_,	_,	_,
+9765,	_,	_,	_,	_,
+12638,	_,	_,	_,	_,
+14361,	_,	_,	_,	_,
+3447,	_,	_,	_,	_,
+574,	_,	_,	_,	_,
+1723,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Smooth_Dogfish6_ResN =
   _, _, _, _, _,
@@ -80396,36 +78225,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Smooth_Dogfish7_Nums =
-  _, _, _, _, _,
-  18391, _, _, _, _,
-  12025, _, _, _, _,
-  15561, _, _, _, _,
-  17683, _, _, _, _,
-  4244, _, _, _, _,
-  707, _, _, _, _,
-  2122, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+8214,	_,	_,	_,	_,
+5371,	_,	_,	_,	_,
+6951,	_,	_,	_,	_,
+7899,	_,	_,	_,	_,
+1896,	_,	_,	_,	_,
+316,	_,	_,	_,	_,
+948,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Smooth_Dogfish7_ResN =
   _, _, _, _, _,
@@ -80492,36 +78322,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Smooth_Dogfish8_Nums =
-  _, _, _, _, _,
-  11726, _, _, _, _,
-  7667, _, _, _, _,
-  9922, _, _, _, _,
-  11275, _, _, _, _,
-  2706, _, _, _, _,
-  451, _, _, _, _,
-  1353, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+4779,	_,	_,	_,	_,
+3125,	_,	_,	_,	_,
+4044,	_,	_,	_,	_,
+4596,	_,	_,	_,	_,
+1103,	_,	_,	_,	_,
+184,	_,	_,	_,	_,
+551,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Smooth_Dogfish8_ResN =
   _, _, _, _, _,
@@ -80587,102 +78418,6 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Smooth_Dogfish9_Nums =
-  _, _, _, _, _,
-  7477, _, _, _, _,
-  4889, _, _, _, _,
-  6327, _, _, _, _,
-  7190, _, _, _, _,
-  1725, _, _, _, _,
-  288, _, _, _, _,
-  863, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Smooth_Dogfish9_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Smooth_Dogfish9_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
  Smooth_Dogfish_N =
   _, _, _, _, _,
   _, _, _, _, _,
@@ -80716,36 +78451,36 @@ DayLight =
   _, _, _, _, _ ;
 
  Spiny_Dogfish10_Nums =
-  _, _, _, _, _,
-  9504.51593783044, _, _, _, _,
-  22177.1689083597, _, _, _, _,
-  34849.9030508383, _, _, _, _,
-  12672.6396807547, _, _, _, _,
-  28513.5517531051, _, _, _, _,
-  28513.5517531051, _, _, _, _,
-  9504.51593783044, _, _, _, _,
-  9504.51593783044, _, _, _, _,
-  19008.9911461276, _, _, _, _,
-  3168.18371077468, _, _, _, _,
-  12672.6396807547, _, _, _, _,
-  25345.3871130078, _, _, _, _,
-  15840.9081117533, _, _, _, _,
-  15840.9081117533, _, _, _, _,
-  12672.6396807547, _, _, _, _,
-  3168.18371077468, _, _, _, _,
-  _, _, _, _, _,
-  3168.18371077468, _, _, _, _,
-  12672.6396807547, _, _, _, _,
-  19008.9911461276, _, _, _, _,
-  12672.6396807547, _, _, _, _,
-  6336.34155623321, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+30289,	_,	_,	_,	_,
+70675,	_,	_,	_,	_,
+111061,	_,	_,	_,	_,
+40386,	_,	_,	_,	_,
+90868,	_,	_,	_,	_,
+90868,	_,	_,	_,	_,
+30289,	_,	_,	_,	_,
+30289,	_,	_,	_,	_,
+60579,	_,	_,	_,	_,
+10097,	_,	_,	_,	_,
+40386,	_,	_,	_,	_,
+80772,	_,	_,	_,	_,
+50483,	_,	_,	_,	_,
+50483,	_,	_,	_,	_,
+40386,	_,	_,	_,	_,
+10097,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+10097,	_,	_,	_,	_,
+40386,	_,	_,	_,	_,
+60579,	_,	_,	_,	_,
+40386,	_,	_,	_,	_,
+20193,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Spiny_Dogfish10_ResN =
   _, _, _, _, _,
@@ -80810,31 +78545,64 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+  
+  Spiny_Dogfish11_Nums =
+_,	_,	_,	_,	_,
+9509,	_,	_,	_,	_,
+22189,	_,	_,	_,	_,
+34868,	_,	_,	_,	_,
+12679,	_,	_,	_,	_,
+28528,	_,	_,	_,	_,
+28528,	_,	_,	_,	_,
+9509,	_,	_,	_,	_,
+9509,	_,	_,	_,	_,
+19019,	_,	_,	_,	_,
+3170,	_,	_,	_,	_,
+12679,	_,	_,	_,	_,
+25359,	_,	_,	_,	_,
+15849,	_,	_,	_,	_,
+15849,	_,	_,	_,	_,
+12679,	_,	_,	_,	_,
+3170,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+3170,	_,	_,	_,	_,
+12679,	_,	_,	_,	_,
+19019,	_,	_,	_,	_,
+12679,	_,	_,	_,	_,
+6340,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
- Spiny_Dogfish1_Nums =
+
+ Spiny_Dogfish11_ResN =
   _, _, _, _, _,
-  2250299.96584746, _, _, _, _,
-  5250691.64631934, _, _, _, _,
-  8251102.54515393, _, _, _, _,
-  3000388.53396978, _, _, _, _,
-  6750900.83028983, _, _, _, _,
-  6750900.83028983, _, _, _, _,
-  2250299.96584746, _, _, _, _,
-  2250299.96584746, _, _, _, _,
-  4500590.28852447, _, _, _, _,
-  750102.766178554, _, _, _, _,
-  3000388.53396978, _, _, _, _,
-  6000802.57930646, _, _, _, _,
-  3750511.35860458, _, _, _, _,
-  3750511.35860458, _, _, _, _,
-  3000388.53396978, _, _, _, _,
-  750102.766178554, _, _, _, _,
   _, _, _, _, _,
-  750102.766178554, _, _, _, _,
-  3000388.53396978, _, _, _, _,
-  4500590.28852447, _, _, _, _,
-  3000388.53396978, _, _, _, _,
-  1500199.40845554, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -80842,6 +78610,71 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+
+ Spiny_Dogfish11_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ Spiny_Dogfish1_Nums =
+_,	_,	_,	_,	_,
+2006501,	_,	_,	_,	_,
+4681829,	_,	_,	_,	_,
+7357174,	_,	_,	_,	_,
+2675325,	_,	_,	_,	_,
+6019505,	_,	_,	_,	_,
+6019505,	_,	_,	_,	_,
+2006501,	_,	_,	_,	_,
+2006501,	_,	_,	_,	_,
+4012994,	_,	_,	_,	_,
+668836,	_,	_,	_,	_,
+2675325,	_,	_,	_,	_,
+5350673,	_,	_,	_,	_,
+3344179,	_,	_,	_,	_,
+3344179,	_,	_,	_,	_,
+2675325,	_,	_,	_,	_,
+668836,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+668836,	_,	_,	_,	_,
+2675325,	_,	_,	_,	_,
+4012994,	_,	_,	_,	_,
+2675325,	_,	_,	_,	_,
+1337667,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Spiny_Dogfish1_ResN =
   _, _, _, _, _,
@@ -80908,36 +78741,36 @@ DayLight =
   _, _, _, _, _ ;
 
  Spiny_Dogfish2_Nums =
-  _, _, _, _, _,
-  192163.800051991, _, _, _, _,
-  448381.493565895, _, _, _, _,
-  704600.828227054, _, _, _, _,
-  256217.424819148, _, _, _, _,
-  576491.479807705, _, _, _, _,
-  576491.479807705, _, _, _, _,
-  192163.800051991, _, _, _, _,
-  192163.800051991, _, _, _, _,
-  384326.776627864, _, _, _, _,
-  64054.8372066018, _, _, _, _,
-  256217.424819148, _, _, _, _,
-  512437.028175062, _, _, _, _,
-  320273.974912581, _, _, _, _,
-  320273.974912581, _, _, _, _,
-  256217.424819148, _, _, _, _,
-  64054.8372066018, _, _, _, _,
-  _, _, _, _, _,
-  64054.8372066018, _, _, _, _,
-  256217.424819148, _, _, _, _,
-  384326.776627864, _, _, _, _,
-  256217.424819148, _, _, _, _,
-  128109.151464168, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+306417,	_,	_,	_,	_,
+714971,	_,	_,	_,	_,
+1123528,	_,	_,	_,	_,
+408554,	_,	_,	_,	_,
+919250,	_,	_,	_,	_,
+919250,	_,	_,	_,	_,
+306417,	_,	_,	_,	_,
+306417,	_,	_,	_,	_,
+612832,	_,	_,	_,	_,
+102139,	_,	_,	_,	_,
+408554,	_,	_,	_,	_,
+817112,	_,	_,	_,	_,
+510696,	_,	_,	_,	_,
+510696,	_,	_,	_,	_,
+408554,	_,	_,	_,	_,
+102139,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+102139,	_,	_,	_,	_,
+408554,	_,	_,	_,	_,
+612832,	_,	_,	_,	_,
+408554,	_,	_,	_,	_,
+204278,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Spiny_Dogfish2_ResN =
   _, _, _, _, _,
@@ -81004,36 +78837,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Spiny_Dogfish3_Nums =
-  _, _, _, _, _,
-  405551.773363525, _, _, _, _,
-  946285.980032849, _, _, _, _,
-  1487023.65025868, _, _, _, _,
-  540733.639602923, _, _, _, _,
-  1216655.48819144, _, _, _, _,
-  1216655.48819144, _, _, _, _,
-  405551.773363525, _, _, _, _,
-  405551.773363525, _, _, _, _,
-  811101.808823243, _, _, _, _,
-  135184.425030213, _, _, _, _,
-  540733.639602923, _, _, _, _,
-  1081471.87689515, _, _, _, _,
-  675921.679592309, _, _, _, _,
-  675921.679592309, _, _, _, _,
-  540733.639602923, _, _, _, _,
-  135184.425030213, _, _, _, _,
-  _, _, _, _, _,
-  135184.425030213, _, _, _, _,
-  540733.639602923, _, _, _, _,
-  811101.808823243, _, _, _, _,
-  540733.639602923, _, _, _, _,
-  270367.746403501, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+ _,	_,	_,	_,	_,
+352203,	_,	_,	_,	_,
+821806,	_,	_,	_,	_,
+1291412,	_,	_,	_,	_,
+469602,	_,	_,	_,	_,
+1056610,	_,	_,	_,	_,
+1056610,	_,	_,	_,	_,
+352203,	_,	_,	_,	_,
+352203,	_,	_,	_,	_,
+704405,	_,	_,	_,	_,
+117401,	_,	_,	_,	_,
+469602,	_,	_,	_,	_,
+939209,	_,	_,	_,	_,
+587007,	_,	_,	_,	_,
+587007,	_,	_,	_,	_,
+469602,	_,	_,	_,	_,
+117401,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+117401,	_,	_,	_,	_,
+469602,	_,	_,	_,	_,
+704405,	_,	_,	_,	_,
+469602,	_,	_,	_,	_,
+234802,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Spiny_Dogfish3_ResN =
   _, _, _, _, _,
@@ -81100,36 +78934,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Spiny_Dogfish4_Nums =
-  _, _, _, _, _,
-  238623.629077203, _, _, _, _,
-  556787.590466062, _, _, _, _,
-  874953.589785654, _, _, _, _,
-  318163.627731232, _, _, _, _,
-  715870.9861409, _, _, _, _,
-  715870.9861409, _, _, _, _,
-  238623.629077203, _, _, _, _,
-  238623.629077203, _, _, _, _,
-  477246.235584808, _, _, _, _,
-  79541.5042274003, _, _, _, _,
-  318163.627731232, _, _, _, _,
-  636329.960708451, _, _, _, _,
-  397707.258973562, _, _, _, _,
-  397707.258973562, _, _, _, _,
-  318163.627731232, _, _, _, _,
-  79541.5042274003, _, _, _, _,
-  _, _, _, _, _,
-  79541.5042274003, _, _, _, _,
-  318163.627731232, _, _, _, _,
-  477246.235584808, _, _, _, _,
-  318163.627731232, _, _, _, _,
-  159082.359071323, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+295851,	_,	_,	_,	_,
+690317,	_,	_,	_,	_,
+1084786,	_,	_,	_,	_,
+394466,	_,	_,	_,	_,
+887552,	_,	_,	_,	_,
+887552,	_,	_,	_,	_,
+295851,	_,	_,	_,	_,
+295851,	_,	_,	_,	_,
+591700,	_,	_,	_,	_,
+98617,	_,	_,	_,	_,
+394466,	_,	_,	_,	_,
+788935,	_,	_,	_,	_,
+493086,	_,	_,	_,	_,
+493086,	_,	_,	_,	_,
+394466,	_,	_,	_,	_,
+98617,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+98617,	_,	_,	_,	_,
+394466,	_,	_,	_,	_,
+591700,	_,	_,	_,	_,
+394466,	_,	_,	_,	_,
+197234,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Spiny_Dogfish4_ResN =
   _, _, _, _, _,
@@ -81196,36 +79031,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Spiny_Dogfish5_Nums =
-  _, _, _, _, _,
-  157747.598550889, _, _, _, _,
-  368077.149939499, _, _, _, _,
-  578408.048548753, _, _, _, _,
-  210329.330816618, _, _, _, _,
-  473242.861038912, _, _, _, _,
-  473242.861038912, _, _, _, _,
-  157747.598550889, _, _, _, _,
-  157747.598550889, _, _, _, _,
-  315494.521108797, _, _, _, _,
-  52582.7275593828, _, _, _, _,
-  210329.330816618, _, _, _, _,
-  420660.449997864, _, _, _, _,
-  262913.464487786, _, _, _, _,
-  262913.464487786, _, _, _, _,
-  210329.330816618, _, _, _, _,
-  52582.7275593828, _, _, _, _,
-  _, _, _, _, _,
-  52582.7275593828, _, _, _, _,
-  210329.330816618, _, _, _, _,
-  315494.521108797, _, _, _, _,
-  210329.330816618, _, _, _, _,
-  105165.02582899, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+183146,	_,	_,	_,	_,
+427339,	_,	_,	_,	_,
+671534,	_,	_,	_,	_,
+244193,	_,	_,	_,	_,
+549437,	_,	_,	_,	_,
+549437,	_,	_,	_,	_,
+183146,	_,	_,	_,	_,
+183146,	_,	_,	_,	_,
+366291,	_,	_,	_,	_,
+61049,	_,	_,	_,	_,
+244193,	_,	_,	_,	_,
+488389,	_,	_,	_,	_,
+305244,	_,	_,	_,	_,
+305244,	_,	_,	_,	_,
+244193,	_,	_,	_,	_,
+61049,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+61049,	_,	_,	_,	_,
+244193,	_,	_,	_,	_,
+366291,	_,	_,	_,	_,
+244193,	_,	_,	_,	_,
+122097,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Spiny_Dogfish5_ResN =
   _, _, _, _, _,
@@ -81292,36 +79128,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Spiny_Dogfish6_Nums =
-  _, _, _, _, _,
-  115532.442177484, _, _, _, _,
-  269575.273619903, _, _, _, _,
-  423619.091750504, _, _, _, _,
-  154042.669898146, _, _, _, _,
-  346597.374420553, _, _, _, _,
-  346597.374420553, _, _, _, _,
-  115532.442177484, _, _, _, _,
-  115532.442177484, _, _, _, _,
-  231064.389265848, _, _, _, _,
-  38510.9566617526, _, _, _, _,
-  154042.669898146, _, _, _, _,
-  308086.649573019, _, _, _, _,
-  192554.656379244, _, _, _, _,
-  192554.656379244, _, _, _, _,
-  154042.669898146, _, _, _, _,
-  38510.9566617526, _, _, _, _,
-  _, _, _, _, _,
-  38510.9566617526, _, _, _, _,
-  154042.669898146, _, _, _, _,
-  231064.389265848, _, _, _, _,
-  154042.669898146, _, _, _, _,
-  77021.5989168416, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+ _,	_,	_,	_,	_,
+133837,	_,	_,	_,	_,
+312286,	_,	_,	_,	_,
+490737,	_,	_,	_,	_,
+178449,	_,	_,	_,	_,
+401512,	_,	_,	_,	_,
+401512,	_,	_,	_,	_,
+133837,	_,	_,	_,	_,
+133837,	_,	_,	_,	_,
+267674,	_,	_,	_,	_,
+44613,	_,	_,	_,	_,
+178449,	_,	_,	_,	_,
+356899,	_,	_,	_,	_,
+223063,	_,	_,	_,	_,
+223063,	_,	_,	_,	_,
+178449,	_,	_,	_,	_,
+44613,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+44613,	_,	_,	_,	_,
+178449,	_,	_,	_,	_,
+267674,	_,	_,	_,	_,
+178449,	_,	_,	_,	_,
+89225,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Spiny_Dogfish6_ResN =
   _, _, _, _, _,
@@ -81388,36 +79225,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Spiny_Dogfish7_Nums =
-  _, _, _, _, _,
-  70324.0939341202, _, _, _, _,
-  164089.293942553, _, _, _, _,
-  257855.09454378, _, _, _, _,
-  93765.1016771382, _, _, _, _,
-  210972.310951638, _, _, _, _,
-  210972.310951638, _, _, _, _,
-  70324.0939341202, _, _, _, _,
-  70324.0939341202, _, _, _, _,
-  140647.88650965, _, _, _, _,
-  23441.4514462823, _, _, _, _,
-  93765.1016771382, _, _, _, _,
-  187531.00060966, _, _, _, _,
-  117207.179969967, _, _, _, _,
-  117207.179969967, _, _, _, _,
-  93765.1016771382, _, _, _, _,
-  23441.4514462823, _, _, _, _,
-  _, _, _, _, _,
-  23441.4514462823, _, _, _, _,
-  93765.1016771382, _, _, _, _,
-  140647.88650965, _, _, _, _,
-  93765.1016771382, _, _, _, _,
-  46882.711514599, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+ _,	_,	_,	_,	_,
+95095,	_,	_,	_,	_,
+221888,	_,	_,	_,	_,
+348681,	_,	_,	_,	_,
+126793,	_,	_,	_,	_,
+285285,	_,	_,	_,	_,
+285285,	_,	_,	_,	_,
+95095,	_,	_,	_,	_,
+95095,	_,	_,	_,	_,
+190189,	_,	_,	_,	_,
+31698,	_,	_,	_,	_,
+126793,	_,	_,	_,	_,
+253586,	_,	_,	_,	_,
+158492,	_,	_,	_,	_,
+158492,	_,	_,	_,	_,
+126793,	_,	_,	_,	_,
+31698,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+31698,	_,	_,	_,	_,
+126793,	_,	_,	_,	_,
+190189,	_,	_,	_,	_,
+126793,	_,	_,	_,	_,
+63397,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Spiny_Dogfish7_ResN =
   _, _, _, _, _,
@@ -81484,36 +79322,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Spiny_Dogfish8_Nums =
-  _, _, _, _, _,
-  49995.511234086, _, _, _, _,
-  116656.009054072, _, _, _, _,
-  183316.933853521, _, _, _, _,
-  66660.4279133145, _, _, _, _,
-  149986.554425355, _, _, _, _,
-  149986.554425355, _, _, _, _,
-  49995.511234086, _, _, _, _,
-  49995.511234086, _, _, _, _,
-  99990.8082232962, _, _, _, _,
-  16665.23212121, _, _, _, _,
-  66660.4279133145, _, _, _, _,
-  133321.422619434, _, _, _, _,
-  83326.1056785675, _, _, _, _,
-  83326.1056785675, _, _, _, _,
-  66660.4279133145, _, _, _, _,
-  16665.23212121, _, _, _, _,
-  _, _, _, _, _,
-  16665.23212121, _, _, _, _,
-  66660.4279133145, _, _, _, _,
-  99990.8082232962, _, _, _, _,
-  66660.4279133145, _, _, _, _,
-  33330.3281860744, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+63397,	_,	_,	_,	_,
+147925,	_,	_,	_,	_,
+232454,	_,	_,	_,	_,
+84528,	_,	_,	_,	_,
+190190,	_,	_,	_,	_,
+190190,	_,	_,	_,	_,
+63397,	_,	_,	_,	_,
+63397,	_,	_,	_,	_,
+126793,	_,	_,	_,	_,
+21132,	_,	_,	_,	_,
+84528,	_,	_,	_,	_,
+169058,	_,	_,	_,	_,
+105661,	_,	_,	_,	_,
+105661,	_,	_,	_,	_,
+84528,	_,	_,	_,	_,
+21132,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+21132,	_,	_,	_,	_,
+84528,	_,	_,	_,	_,
+126793,	_,	_,	_,	_,
+84528,	_,	_,	_,	_,
+42264,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Spiny_Dogfish8_ResN =
   _, _, _, _, _,
@@ -81580,36 +79419,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Spiny_Dogfish9_Nums =
-  _, _, _, _, _,
-  32288.2701717031, _, _, _, _,
-  75339.1783485256, _, _, _, _,
-  118390.362278669, _, _, _, _,
-  43050.8630294594, _, _, _, _,
-  96864.8238985699, _, _, _, _,
-  96864.8238985699, _, _, _, _,
-  32288.2701717031, _, _, _, _,
-  32288.2701717031, _, _, _, _,
-  64576.4019790558, _, _, _, _,
-  10762.7965775638, _, _, _, _,
-  43050.8630294594, _, _, _, _,
-  86102.0921069655, _, _, _, _,
-  53813.9474143664, _, _, _, _,
-  53813.9474143664, _, _, _, _,
-  43050.8630294594, _, _, _, _,
-  10762.7965775638, _, _, _, _,
-  _, _, _, _, _,
-  10762.7965775638, _, _, _, _,
-  43050.8630294594, _, _, _, _,
-  64576.4019790558, _, _, _, _,
-  43050.8630294594, _, _, _, _,
-  21525.5052867583, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+ _,	_,	_,	_,	_,
+45786,	_,	_,	_,	_,
+106835,	_,	_,	_,	_,
+167884,	_,	_,	_,	_,
+61048,	_,	_,	_,	_,
+137359,	_,	_,	_,	_,
+137359,	_,	_,	_,	_,
+45786,	_,	_,	_,	_,
+45786,	_,	_,	_,	_,
+91573,	_,	_,	_,	_,
+15262,	_,	_,	_,	_,
+61048,	_,	_,	_,	_,
+122097,	_,	_,	_,	_,
+76311,	_,	_,	_,	_,
+76311,	_,	_,	_,	_,
+61048,	_,	_,	_,	_,
+15262,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+15262,	_,	_,	_,	_,
+61048,	_,	_,	_,	_,
+91573,	_,	_,	_,	_,
+61048,	_,	_,	_,	_,
+30524,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Spiny_Dogfish9_ResN =
   _, _, _, _, _,
@@ -82731,133 +80571,38 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Summerflounder10_Nums =
-  _, _, _, _, _,
-  19989.4750578428, _, _, _, _,
-  33315.7917630713, _, _, _, _,
-  59969.0707658501, _, _, _, _,
-  22210.9582369287, _, _, _, _,
-  28874.1165895429, _, _, _, _,
-  26652.6334104571, _, _, _, _,
-  4442.32076585008, _, _, _, _,
-  _, _, _, _, _,
-  15547.7998843144, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  2220.83758676418, _, _, _, _,
-  8883.99593937844, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Summerflounder10_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Summerflounder10_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
  Summerflounder1_Nums =
-  _, _, _, _, _,
-  948663.476732086, _, _, _, _,
-  1581105.79455348, _, _, _, _,
-  2846021.06881256, _, _, _, _,
-  1054090.95544652, _, _, _, _,
-  1370312.11435721, _, _, _, _,
-  1264884.63564279, _, _, _, _,
-  210824.318812566, _, _, _, _,
-  _, _, _, _, _,
-  737869.796535827, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  105396.840098129, _, _, _, _,
-  421617.999008825, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+1351088,	_,	_,	_,	_,
+2251814,	_,	_,	_,	_,
+4053308,	_,	_,	_,	_,
+1501238,	_,	_,	_,	_,
+1951601,	_,	_,	_,	_,
+1801451,	_,	_,	_,	_,
+300256,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1050875,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+150106,	_,	_,	_,	_,
+600469,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Summerflounder1_ResN =
   _, _, _, _, _,
@@ -82924,36 +80669,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Summerflounder2_Nums =
-  _, _, _, _, _,
-  366861.006391773, _, _, _, _,
-  611435.010652955, _, _, _, _,
-  1100594.86754293, _, _, _, _,
-  407631.239347045, _, _, _, _,
-  529918.241477634, _, _, _, _,
-  489148.008522366, _, _, _, _,
-  81528.6175429315, _, _, _, _,
-  _, _, _, _, _,
-  285344.237216454, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  40758.3845876594, _, _, _, _,
-  163045.38671825, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+372611,	_,	_,	_,	_,
+621019,	_,	_,	_,	_,
+1117846,	_,	_,	_,	_,
+414020,	_,	_,	_,	_,
+538224,	_,	_,	_,	_,
+496815,	_,	_,	_,	_,
+82806,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+289817,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+41397,	_,	_,	_,	_,
+165601,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Summerflounder2_ResN =
   _, _, _, _, _,
@@ -83020,36 +80766,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Summerflounder3_Nums =
-  _, _, _, _, _,
-  904199.951377181, _, _, _, _,
-  1506999.91896197, _, _, _, _,
-  2712629.05672662, _, _, _, _,
-  1004686.08103803, _, _, _, _,
-  1306086.06483042, _, _, _, _,
-  1205599.93516958, _, _, _, _,
-  200943.056726622, _, _, _, _,
-  _, _, _, _, _,
-  703286.097245637, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  100456.927065772, _, _, _, _,
-  401856.910858166, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+857006,	_,	_,	_,	_,
+1428343,	_,	_,	_,	_,
+2571045,	_,	_,	_,	_,
+952247,	_,	_,	_,	_,
+1237916,	_,	_,	_,	_,
+1142674,	_,	_,	_,	_,
+190455,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+666578,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+95214,	_,	_,	_,	_,
+380882,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Summerflounder3_ResN =
   _, _, _, _, _,
@@ -83116,36 +80863,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Summerflounder4_Nums =
-  _, _, _, _, _,
-  544262.321321025, _, _, _, _,
-  907103.868868374, _, _, _, _,
-  1632804.54179214, _, _, _, _,
-  604747.631131626, _, _, _, _,
-  786168.404905298, _, _, _, _,
-  725683.095094702, _, _, _, _,
-  120953.041792138, _, _, _, _,
-  _, _, _, _, _,
-  423326.857357951, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  60467.7319815368, _, _, _, _,
-  241888.505755212, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+447133,	_,	_,	_,	_,
+745222,	_,	_,	_,	_,
+1341415,	_,	_,	_,	_,
+496825,	_,	_,	_,	_,
+645869,	_,	_,	_,	_,
+596178,	_,	_,	_,	_,
+99368,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+347780,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+49677,	_,	_,	_,	_,
+198721,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Summerflounder4_ResN =
   _, _, _, _, _,
@@ -83212,36 +80960,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Summerflounder5_Nums =
-  _, _, _, _, _,
-  356357.727804648, _, _, _, _,
-  593929.546341081, _, _, _, _,
-  1069084.69256124, _, _, _, _,
-  395960.703658919, _, _, _, _,
-  514746.612927134, _, _, _, _,
-  475143.637072866, _, _, _, _,
-  79194.4425612436, _, _, _, _,
-  _, _, _, _, _,
-  277174.794390703, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  39591.4667069725, _, _, _, _,
-  158377.375975189, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+301815,	_,	_,	_,	_,
+503025,	_,	_,	_,	_,
+905455,	_,	_,	_,	_,
+335357,	_,	_,	_,	_,
+435962,	_,	_,	_,	_,
+402420,	_,	_,	_,	_,
+67073,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+234752,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+33532,	_,	_,	_,	_,
+134137,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Summerflounder5_ResN =
   _, _, _, _, _,
@@ -83308,36 +81057,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Summerflounder6_Nums =
-  _, _, _, _, _,
-  256455.802163146, _, _, _, _,
-  427426.336938576, _, _, _, _,
-  769375.689142996, _, _, _, _,
-  284956.413061424, _, _, _, _,
-  370441.680449138, _, _, _, _,
-  341941.069550862, _, _, _, _,
-  56992.9391429966, _, _, _, _,
-  _, _, _, _, _,
-  199471.145673709, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  28492.3282447186, _, _, _, _,
-  113977.595632434, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+186306,	_,	_,	_,	_,
+310509,	_,	_,	_,	_,
+558923,	_,	_,	_,	_,
+207010,	_,	_,	_,	_,
+269112,	_,	_,	_,	_,
+248407,	_,	_,	_,	_,
+41403,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+144908,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+20699,	_,	_,	_,	_,
+82800,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Summerflounder6_ResN =
   _, _, _, _, _,
@@ -83404,36 +81154,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Summerflounder7_Nums =
-  _, _, _, _, _,
-  153379.871123952, _, _, _, _,
-  255633.11853992, _, _, _, _,
-  460144.567022056, _, _, _, _,
-  170425.38146008, _, _, _, _,
-  221552.005168063, _, _, _, _,
-  204506.494831937, _, _, _, _,
-  34086.0670220558, _, _, _, _,
-  _, _, _, _, _,
-  119298.757752096, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  17040.5566859282, _, _, _, _,
-  68167.1803939123, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+115509,	_,	_,	_,	_,
+192516,	_,	_,	_,	_,
+346532,	_,	_,	_,	_,
+128346,	_,	_,	_,	_,
+166850,	_,	_,	_,	_,
+154013,	_,	_,	_,	_,
+25670,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+89843,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+12833,	_,	_,	_,	_,
+51336,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Summerflounder7_ResN =
   _, _, _, _, _,
@@ -83500,36 +81251,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Summerflounder8_Nums =
-  _, _, _, _, _,
-  107407.237466428, _, _, _, _,
-  179012.062444047, _, _, _, _,
-  322225.181289167, _, _, _, _,
-  119343.687555953, _, _, _, _,
-  155146.100044762, _, _, _, _,
-  143209.649955238, _, _, _, _,
-  23869.4312891674, _, _, _, _,
-  _, _, _, _, _,
-  83541.2750671441, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  11932.9811996419, _, _, _, _,
-  47735.3936884512, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+74522,	_,	_,	_,	_,
+124204,	_,	_,	_,	_,
+223569,	_,	_,	_,	_,
+82804,	_,	_,	_,	_,
+107645,	_,	_,	_,	_,
+99363,	_,	_,	_,	_,
+16561,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+57963,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+8279,	_,	_,	_,	_,
+33120,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Summerflounder8_ResN =
   _, _, _, _, _,
@@ -83596,36 +81348,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Summerflounder9_Nums =
-  _, _, _, _, _,
-  68535.0987716402, _, _, _, _,
-  114225.1646194, _, _, _, _,
-  205607.50976642, _, _, _, _,
-  76151.5853805997, _, _, _, _,
-  98996.6183044794, _, _, _, _,
-  91380.1316955205, _, _, _, _,
-  15230.7597664198, _, _, _, _,
-  _, _, _, _, _,
-  53306.5524567196, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  7614.27315746026, _, _, _, _,
-  30459.3060813403, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+20121,	_,	_,	_,	_,
+33535,	_,	_,	_,	_,
+60364,	_,	_,	_,	_,
+22357,	_,	_,	_,	_,
+29064,	_,	_,	_,	_,
+26828,	_,	_,	_,	_,
+4472,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+15650,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+2235,	_,	_,	_,	_,
+8942,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Summerflounder9_ResN =
   _, _, _, _, _,
@@ -83736,36 +81489,37 @@ DayLight =
     43.859649122807, 43.859649122807, _, _, _, _, _, _, _ ;
 
  Tautog10_Nums =
-  _, _, _, _, _,
-  840.906534713092, _, _, _, _,
-  931.816291024634, _, _, _, _,
-  _, _, _, _, _,
-  340.902874999608, _, _, _, _,
-  159.083362376523, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+1264,	_,	_,	_,	_,
+1401,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+513,	_,	_,	_,	_,
+239,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Tautog10_ResN =
   _, _, _, _, _,
@@ -83830,14 +81584,46 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+Tautog11_Nums =
+_,	_,	_,	_,	_,
+843,	_,	_,	_,	_,
+934,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+342,	_,	_,	_,	_,
+159,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
- Tautog1_Nums =
+
+ Tautog11_ResN =
   _, _, _, _, _,
-  48266, _, _, _, _,
-  53484, _, _, _, _,
   _, _, _, _, _,
-  19567, _, _, _, _,
-  9131, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -83862,6 +81648,70 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+
+ Tautog11_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+ Tautog1_Nums =
+_,	_,	_,	_,	_,
+37670,	_,	_,	_,	_,
+41743,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+15272,	_,	_,	_,	_,
+7127,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Tautog1_ResN =
   _, _, _, _, _,
@@ -83928,36 +81778,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Tautog2_Nums =
-  _, _, _, _, _,
-  30775.753048, _, _, _, _,
-  34102.895952, _, _, _, _,
-  _, _, _, _, _,
-  12476.467076, _, _, _, _,
-  5822.181268, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+31612,	_,	_,	_,	_,
+35029,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+12815,	_,	_,	_,	_,
+5980,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Tautog2_ResN =
   _, _, _, _, _,
@@ -84024,36 +81875,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Tautog3_Nums =
-  _, _, _, _, _,
-  19623.4818644901, _, _, _, _,
-  21744.9613400819, _, _, _, _,
-  _, _, _, _, _,
-  7955.34474873573, _, _, _, _,
-  3712.3857975523, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+21074,	_,	_,	_,	_,
+23353,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+8544,	_,	_,	_,	_,
+3987,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Tautog3_ResN =
   _, _, _, _, _,
@@ -84120,36 +81972,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Tautog4_Nums =
-  _, _, _, _, _,
-  12512.4814942911, _, _, _, _,
-  13865.1962093537, _, _, _, _,
-  _, _, _, _, _,
-  5072.55056144686, _, _, _, _,
-  2367.12113132168, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+ _,	_,	_,	_,	_,
+14489,	_,	_,	_,	_,
+16055,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+5874,	_,	_,	_,	_,
+2741,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Tautog4_ResN =
   _, _, _, _, _,
@@ -84216,36 +82069,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Tautog5_Nums =
-  _, _, _, _, _,
-  7978.30855024186, _, _, _, _,
-  8840.83732857779, _, _, _, _,
-  _, _, _, _, _,
-  3234.40026939424, _, _, _, _,
-  1509.34271272238, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+9615,	_,	_,	_,	_,
+10655,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+3898,	_,	_,	_,	_,
+1819,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Tautog5_ResN =
   _, _, _, _, _,
@@ -84312,36 +82166,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Tautog6_Nums =
-  _, _, _, _, _,
-  5087.19292427362, _, _, _, _,
-  5637.1654241464, _, _, _, _,
-  _, _, _, _, _,
-  2062.34417497331, _, _, _, _,
-  962.399175227746, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+6322,	_,	_,	_,	_,
+7006,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+2563,	_,	_,	_,	_,
+1196,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Tautog6_ResN =
   _, _, _, _, _,
@@ -84408,36 +82263,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Tautog7_Nums =
-  _, _, _, _, _,
-  3243.73664991874, _, _, _, _,
-  3594.41451506762, _, _, _, _,
-  _, _, _, _, _,
-  1315.00839159988, _, _, _, _,
-  613.652661302117, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+4215,	_,	_,	_,	_,
+4671,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1709,	_,	_,	_,	_,
+797,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Tautog7_ResN =
   _, _, _, _, _,
@@ -84504,36 +82360,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Tautog8_Nums =
-  _, _, _, _, _,
-  2068.29731261438, _, _, _, _,
-  2291.89933841354, _, _, _, _,
-  _, _, _, _, _,
-  838.48617071905, _, _, _, _,
-  391.282119120746, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+2766,	_,	_,	_,	_,
+3065,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1121,	_,	_,	_,	_,
+523,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Tautog8_ResN =
   _, _, _, _, _,
@@ -84600,36 +82457,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Tautog9_Nums =
-  _, _, _, _, _,
-  1318.80427884768, _, _, _, _,
-  1461.37919135395, _, _, _, _,
-  _, _, _, _, _,
-  534.642260063246, _, _, _, _,
-  249.492435050723, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+1844,	_,	_,	_,	_,
+2043,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+748,	_,	_,	_,	_,
+349,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Tautog9_ResN =
   _, _, _, _, _,
@@ -84759,133 +82617,37 @@ DayLight =
   4, 7, 10, 11.5, 4,
   4, 7, 10, 13.5, 4 ;
 
- Tilefish10_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  137.340391502621, _, _, _, _,
-  548.1838798147, _, _, _, _,
-  _, _, _, _, _,
-  1164.23333104776, _, _, _, _,
-  2534.82287234189, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  1986.65941644801, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  479.760108845019, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Tilefish10_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Tilefish10_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
  Tilefish1_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  48642.6348977764, _, _, _, _,
-  194153.431710322, _, _, _, _,
-  _, _, _, _, _,
-  412343.20245037, _, _, _, _,
-  897772.768526779, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  703626.570473742, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  169919.391941011, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+62245,	_,	_,	_,	_,
+248446,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+527650,	_,	_,	_,	_,
+1148824,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+900387,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+217435,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Tilefish1_ResN =
   _, _, _, _, _,
@@ -84952,36 +82714,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Tilefish2_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  8364.59315662451, _, _, _, _,
-  33386.6467067877, _, _, _, _,
-  _, _, _, _, _,
-  70906.5850697712, _, _, _, _,
-  154381.109732323, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  120995.706926084, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  29219.3584084104, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+7264,	_,	_,	_,	_,
+28992,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+61573,	_,	_,	_,	_,
+134059,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+105069,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+25373,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Tilefish2_ResN =
   _, _, _, _, _,
@@ -85048,36 +82811,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Tilefish3_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  15045.7190738364, _, _, _, _,
-  60053.8600935931, _, _, _, _,
-  _, _, _, _, _,
-  127542.432664517, _, _, _, _,
-  277691.307137883, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  217639.684496591, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  52557.9965335807, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+10630,	_,	_,	_,	_,
+42427,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+90107,	_,	_,	_,	_,
+196185,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+153759,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+37131,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Tilefish3_ResN =
   _, _, _, _, _,
@@ -85144,36 +82908,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Tilefish4_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  7246.68526987168, _, _, _, _,
-  28924.6011575443, _, _, _, _,
-  _, _, _, _, _,
-  61430.0894186431, _, _, _, _,
-  133748.443336739, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  104824.919835407, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  25314.2609817949, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+4340,	_,	_,	_,	_,
+17324,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+36794,	_,	_,	_,	_,
+80109,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+62785,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+15162,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Tilefish4_ResN =
   _, _, _, _, _,
@@ -85240,36 +83005,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Tilefish5_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  3982.39023120028, _, _, _, _,
-  15895.4121507209, _, _, _, _,
-  _, _, _, _, _,
-  33758.6881300968, _, _, _, _,
-  73500.9834630096, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  57606.1635344446, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  13911.362490528, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+2303,	_,	_,	_,	_,
+9193,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+19523,	_,	_,	_,	_,
+42507,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+33314,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+8045,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Tilefish5_ResN =
   _, _, _, _, _,
@@ -85336,36 +83102,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Tilefish6_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  2487.80361778941, _, _, _, _,
-  9929.88169391391, _, _, _, _,
-  _, _, _, _, _,
-  21089.0901157535, _, _, _, _,
-  45916.1463228184, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  35986.6345907456, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  8690.44365897926, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1063,	_,	_,	_,	_,
+4243,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+9011,	_,	_,	_,	_,
+19618,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+15376,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+3713,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Tilefish6_ResN =
   _, _, _, _, _,
@@ -85432,36 +83199,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Tilefish7_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  1326.21382867426, _, _, _, _,
-  5293.48310509725, _, _, _, _,
-  _, _, _, _, _,
-  11242.3033497001, _, _, _, _,
-  24477.2649164575, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  19183.97903292, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  4632.75576715094, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+593,	_,	_,	_,	_,
+2369,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+5031,	_,	_,	_,	_,
+10954,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+8585,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+2073,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Tilefish7_ResN =
   _, _, _, _, _,
@@ -85528,36 +83296,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Tilefish8_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  845.873276814054, _, _, _, _,
-  3376.23979109345, _, _, _, _,
-  _, _, _, _, _,
-  7170.4605756182, _, _, _, _,
-  15611.8597428793, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  12235.745741793, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  2954.82087180201, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+142,	_,	_,	_,	_,
+566,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1201,	_,	_,	_,	_,
+2616,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+2050,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+495,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Tilefish8_ResN =
   _, _, _, _, _,
@@ -85592,102 +83361,6 @@ DayLight =
   _, _, _, _, _ ;
 
  Tilefish8_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Tilefish9_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  500.447457812206, _, _, _, _,
-  1997.49852221488, _, _, _, _,
-  _, _, _, _, _,
-  4242.2888448805, _, _, _, _,
-  9236.50827399548, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  7239.08417343572, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  1748.17272766123, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Tilefish9_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Tilefish9_StructN =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -88728,36 +86401,37 @@ DayLight =
   _, _, _, _, _ ;
 
  White_Hake10_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  3838.40473691994, _, _, _, _,
-  _, _, _, _, _,
-  3838.40473691994, _, _, _, _,
-  9596.05810543648, _, _, _, _,
-  1919.21009189151, _, _, _, _,
-  3838.40473691994, _, _, _, _,
-  7676.85183982113, _, _, _, _,
-  13434.4666686326, _, _, _, _,
-  26868.9313008112, _, _, _, _,
-  15353.6727651376, _, _, _, _,
-  1919.21009189151, _, _, _, _,
-  7676.85183982113, _, _, _, _,
-  3838.40473691994, _, _, _, _,
-  23030.5227376151, _, _, _, _,
-  5757.63797644924, _, _, _, _,
-  7676.85183982113, _, _, _, _,
-  19192.1032411064, _, _, _, _,
-  23030.5227376151, _, _, _, _,
-  7676.85183982113, _, _, _, _,
-  5757.63797644924, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+23896,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+23896,	_,	_,	_,	_,
+59739,	_,	_,	_,	_,
+11948,	_,	_,	_,	_,
+23896,	_,	_,	_,	_,
+47791,	_,	_,	_,	_,
+83635,	_,	_,	_,	_,
+167269,	_,	_,	_,	_,
+95583,	_,	_,	_,	_,
+11948,	_,	_,	_,	_,
+47791,	_,	_,	_,	_,
+23896,	_,	_,	_,	_,
+143374,	_,	_,	_,	_,
+35844,	_,	_,	_,	_,
+47791,	_,	_,	_,	_,
+119478,	_,	_,	_,	_,
+143374,	_,	_,	_,	_,
+47791,	_,	_,	_,	_,
+35844,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  White_Hake10_ResN =
   _, _, _, _, _,
@@ -88822,6 +86496,200 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+  
+  White_Hake11_Nums =
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+13143,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+13143,	_,	_,	_,	_,
+32857,	_,	_,	_,	_,
+6571,	_,	_,	_,	_,
+13143,	_,	_,	_,	_,
+26285,	_,	_,	_,	_,
+45999,	_,	_,	_,	_,
+91998,	_,	_,	_,	_,
+52570,	_,	_,	_,	_,
+6571,	_,	_,	_,	_,
+26285,	_,	_,	_,	_,
+13143,	_,	_,	_,	_,
+78856,	_,	_,	_,	_,
+19714,	_,	_,	_,	_,
+26285,	_,	_,	_,	_,
+65713,	_,	_,	_,	_,
+78856,	_,	_,	_,	_,
+26285,	_,	_,	_,	_,
+19714,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
+
+ White_Hake11_ResN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ White_Hake11_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+  
+  White_Hake12_Nums =
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+3783,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+3783,	_,	_,	_,	_,
+9459,	_,	_,	_,	_,
+1892,	_,	_,	_,	_,
+3783,	_,	_,	_,	_,
+7567,	_,	_,	_,	_,
+13242,	_,	_,	_,	_,
+26484,	_,	_,	_,	_,
+15134,	_,	_,	_,	_,
+1892,	_,	_,	_,	_,
+7567,	_,	_,	_,	_,
+3783,	_,	_,	_,	_,
+22701,	_,	_,	_,	_,
+5675,	_,	_,	_,	_,
+7567,	_,	_,	_,	_,
+18917,	_,	_,	_,	_,
+22701,	_,	_,	_,	_,
+7567,	_,	_,	_,	_,
+5675,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
+
+ White_Hake12_ResN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ White_Hake12_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
 
  White_Hake1_Nums =
   _, _, _, _, _,
@@ -88854,6 +86722,7 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+
 
  White_Hake1_ResN =
   _, _, _, _, _,
@@ -88920,36 +86789,37 @@ DayLight =
   _, _, _, _, _ ;
 
  White_Hake2_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  287316.23751216, _, _, _, _,
-  _, _, _, _, _,
-  287316.23751216, _, _, _, _,
-  718294.056716507, _, _, _, _,
-  143658.696878358, _, _, _, _,
-  287316.23751216, _, _, _, _,
-  574635.646246525, _, _, _, _,
-  1005610.58063704, _, _, _, _,
-  2011221.00883933, _, _, _, _,
-  1149268.9784486, _, _, _, _,
-  143658.696878358, _, _, _, _,
-  574635.646246525, _, _, _, _,
-  287316.23751216, _, _, _, _,
-  1723904.48491879, _, _, _, _,
-  430976.66706142, _, _, _, _,
-  574635.646246525, _, _, _, _,
-  1436587.14260664, _, _, _, _,
-  1723904.48491879, _, _, _, _,
-  574635.646246525, _, _, _, _,
-  430976.66706142, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+258868,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+258868,	_,	_,	_,	_,
+647174,	_,	_,	_,	_,
+129435,	_,	_,	_,	_,
+258868,	_,	_,	_,	_,
+517740,	_,	_,	_,	_,
+906043,	_,	_,	_,	_,
+1812086,	_,	_,	_,	_,
+1035477,	_,	_,	_,	_,
+129435,	_,	_,	_,	_,
+517740,	_,	_,	_,	_,
+258868,	_,	_,	_,	_,
+1553217,	_,	_,	_,	_,
+388305,	_,	_,	_,	_,
+517740,	_,	_,	_,	_,
+1294347,	_,	_,	_,	_,
+1553217,	_,	_,	_,	_,
+517740,	_,	_,	_,	_,
+388305,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  White_Hake2_ResN =
   _, _, _, _, _,
@@ -89016,36 +86886,37 @@ DayLight =
   _, _, _, _, _ ;
 
  White_Hake3_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  679135.199478394, _, _, _, _,
-  _, _, _, _, _,
-  679135.199478394, _, _, _, _,
-  1697846.18410807, _, _, _, _,
-  339568.966258514, _, _, _, _,
-  679135.199478394, _, _, _, _,
-  1358277.89483883, _, _, _, _,
-  2376982.06057574, _, _, _, _,
-  4753963.76083837, _, _, _, _,
-  2716550.31992401, _, _, _, _,
-  339568.966258514, _, _, _, _,
-  1358277.89483883, _, _, _, _,
-  679135.199478394, _, _, _, _,
-  4074827.88437069, _, _, _, _,
-  1018708.26128615, _, _, _, _,
-  1358277.89483883, _, _, _, _,
-  3395690.07345423, _, _, _, _,
-  4074827.88437069, _, _, _, _,
-  1358277.89483883, _, _, _, _,
-  1018708.26128615, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+577476,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+577476,	_,	_,	_,	_,
+1443696,	_,	_,	_,	_,
+288739,	_,	_,	_,	_,
+577476,	_,	_,	_,	_,
+1154958,	_,	_,	_,	_,
+2021172,	_,	_,	_,	_,
+4042345,	_,	_,	_,	_,
+2309911,	_,	_,	_,	_,
+288739,	_,	_,	_,	_,
+1154958,	_,	_,	_,	_,
+577476,	_,	_,	_,	_,
+3464868,	_,	_,	_,	_,
+866218,	_,	_,	_,	_,
+1154958,	_,	_,	_,	_,
+2887390,	_,	_,	_,	_,
+3464868,	_,	_,	_,	_,
+1154958,	_,	_,	_,	_,
+866218,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  White_Hake3_ResN =
   _, _, _, _, _,
@@ -89112,36 +86983,37 @@ DayLight =
   _, _, _, _, _ ;
 
  White_Hake4_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  338019.095896687, _, _, _, _,
-  _, _, _, _, _,
-  338019.095896687, _, _, _, _,
-  845051.813784111, _, _, _, _,
-  169010.228092186, _, _, _, _,
-  338019.095896687, _, _, _, _,
-  676041.922642949, _, _, _, _,
-  1183071.24663182, _, _, _, _,
-  2366142.31392864, _, _, _, _,
-  1352081.12288072, _, _, _, _,
-  169010.228092186, _, _, _, _,
-  676041.922642949, _, _, _, _,
-  338019.095896687, _, _, _, _,
-  2028122.88108093, _, _, _, _,
-  507031.362425185, _, _, _, _,
-  676041.922642949, _, _, _, _,
-  1690102.48541958, _, _, _, _,
-  2028122.88108093, _, _, _, _,
-  676041.922642949, _, _, _, _,
-  507031.362425185, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+557563,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+557563,	_,	_,	_,	_,
+1393914,	_,	_,	_,	_,
+278782,	_,	_,	_,	_,
+557563,	_,	_,	_,	_,
+1115132,	_,	_,	_,	_,
+1951477,	_,	_,	_,	_,
+3902953,	_,	_,	_,	_,
+2230259,	_,	_,	_,	_,
+278782,	_,	_,	_,	_,
+1115132,	_,	_,	_,	_,
+557563,	_,	_,	_,	_,
+3345390,	_,	_,	_,	_,
+836349,	_,	_,	_,	_,
+1115132,	_,	_,	_,	_,
+2787825,	_,	_,	_,	_,
+3345390,	_,	_,	_,	_,
+1115132,	_,	_,	_,	_,
+836349,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  White_Hake4_ResN =
   _, _, _, _, _,
@@ -89208,36 +87080,37 @@ DayLight =
   _, _, _, _, _ ;
 
  White_Hake5_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  177082.495846974, _, _, _, _,
-  _, _, _, _, _,
-  177082.495846974, _, _, _, _,
-  442708.373939441, _, _, _, _,
-  88541.6042393594, _, _, _, _,
-  177082.495846974, _, _, _, _,
-  354166.946223033, _, _, _, _,
-  619791.046309366, _, _, _, _,
-  1239581.99866815, _, _, _, _,
-  708332.466223969, _, _, _, _,
-  88541.6042393594, _, _, _, _,
-  354166.946223033, _, _, _, _,
-  177082.495846974, _, _, _, _,
-  1062499.32629823, _, _, _, _,
-  265625.167988692, _, _, _, _,
-  354166.946223033, _, _, _, _,
-  885416.149526495, _, _, _, _,
-  1062499.32629823, _, _, _, _,
-  354166.946223033, _, _, _, _,
-  265625.167988692, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+278781,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+278781,	_,	_,	_,	_,
+696957,	_,	_,	_,	_,
+139391,	_,	_,	_,	_,
+278781,	_,	_,	_,	_,
+557566,	_,	_,	_,	_,
+975738,	_,	_,	_,	_,
+1951477,	_,	_,	_,	_,
+1115129,	_,	_,	_,	_,
+139391,	_,	_,	_,	_,
+557566,	_,	_,	_,	_,
+278781,	_,	_,	_,	_,
+1672695,	_,	_,	_,	_,
+418174,	_,	_,	_,	_,
+557566,	_,	_,	_,	_,
+1393913,	_,	_,	_,	_,
+1672695,	_,	_,	_,	_,
+557566,	_,	_,	_,	_,
+418174,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  White_Hake5_ResN =
   _, _, _, _, _,
@@ -89304,36 +87177,37 @@ DayLight =
   _, _, _, _, _ ;
 
  White_Hake6_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  102054.714188372, _, _, _, _,
-  _, _, _, _, _,
-  102054.714188372, _, _, _, _,
-  255138.015505675, _, _, _, _,
-  51027.5624431924, _, _, _, _,
-  102054.714188372, _, _, _, _,
-  204110.554794725, _, _, _, _,
-  357192.831426289, _, _, _, _,
-  714385.608707762, _, _, _, _,
-  408220.287640968, _, _, _, _,
-  51027.5624431924, _, _, _, _,
-  204110.554794725, _, _, _, _,
-  102054.714188372, _, _, _, _,
-  612330.792787145, _, _, _, _,
-  153082.892076189, _, _, _, _,
-  204110.554794725, _, _, _, _,
-  510275.686173869, _, _, _, _,
-  612330.792787145, _, _, _, _,
-  204110.554794725, _, _, _, _,
-  153082.892076189, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+167269,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+167269,	_,	_,	_,	_,
+418174,	_,	_,	_,	_,
+83635,	_,	_,	_,	_,
+167269,	_,	_,	_,	_,
+334539,	_,	_,	_,	_,
+585443,	_,	_,	_,	_,
+1170886,	_,	_,	_,	_,
+669078,	_,	_,	_,	_,
+83635,	_,	_,	_,	_,
+334539,	_,	_,	_,	_,
+167269,	_,	_,	_,	_,
+1003617,	_,	_,	_,	_,
+250905,	_,	_,	_,	_,
+334539,	_,	_,	_,	_,
+836348,	_,	_,	_,	_,
+1003617,	_,	_,	_,	_,
+334539,	_,	_,	_,	_,
+250905,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  White_Hake6_ResN =
   _, _, _, _, _,
@@ -89400,36 +87274,37 @@ DayLight =
   _, _, _, _, _ ;
 
  White_Hake7_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  49521.6030816851, _, _, _, _,
-  _, _, _, _, _,
-  49521.6030816851, _, _, _, _,
-  123804.604573185, _, _, _, _,
-  24760.9011855484, _, _, _, _,
-  49521.6030816851, _, _, _, _,
-  99043.7527527614, _, _, _, _,
-  173326.257019995, _, _, _, _,
-  346652.487766454, _, _, _, _,
-  198087.106658622, _, _, _, _,
-  24760.9011855484, _, _, _, _,
-  99043.7527527614, _, _, _, _,
-  49521.6030816851, _, _, _, _,
-  297130.835319644, _, _, _, _,
-  74282.8029090417, _, _, _, _,
-  99043.7527527614, _, _, _, _,
-  247609.041815492, _, _, _, _,
-  297130.835319644, _, _, _, _,
-  99043.7527527614, _, _, _, _,
-  74282.8029090417, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+107530,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+107530,	_,	_,	_,	_,
+268826,	_,	_,	_,	_,
+53765,	_,	_,	_,	_,
+107530,	_,	_,	_,	_,
+215061,	_,	_,	_,	_,
+376356,	_,	_,	_,	_,
+752712,	_,	_,	_,	_,
+430121,	_,	_,	_,	_,
+53765,	_,	_,	_,	_,
+215061,	_,	_,	_,	_,
+107530,	_,	_,	_,	_,
+645182,	_,	_,	_,	_,
+161296,	_,	_,	_,	_,
+215061,	_,	_,	_,	_,
+537652,	_,	_,	_,	_,
+645182,	_,	_,	_,	_,
+215061,	_,	_,	_,	_,
+161296,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  White_Hake7_ResN =
   _, _, _, _, _,
@@ -89496,36 +87371,37 @@ DayLight =
   _, _, _, _, _ ;
 
  White_Hake8_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  28632.106146939, _, _, _, _,
-  _, _, _, _, _,
-  28632.106146939, _, _, _, _,
-  71580.6104615025, _, _, _, _,
-  14316.1106854533, _, _, _, _,
-  28632.106146939, _, _, _, _,
-  57264.5283176837, _, _, _, _,
-  100212.745150076, _, _, _, _,
-  200425.475109476, _, _, _, _,
-  114528.826032437, _, _, _, _,
-  14316.1106854533, _, _, _, _,
-  57264.5283176837, _, _, _, _,
-  28632.106146939, _, _, _, _,
-  171793.340420902, _, _, _, _,
-  42948.3894993381, _, _, _, _,
-  57264.5283176837, _, _, _, _,
-  143161.124176633, _, _, _, _,
-  171793.340420902, _, _, _, _,
-  57264.5283176837, _, _, _, _,
-  42948.3894993381, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+61730,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+61730,	_,	_,	_,	_,
+154326,	_,	_,	_,	_,
+30865,	_,	_,	_,	_,
+61730,	_,	_,	_,	_,
+123461,	_,	_,	_,	_,
+216056,	_,	_,	_,	_,
+432113,	_,	_,	_,	_,
+246922,	_,	_,	_,	_,
+30865,	_,	_,	_,	_,
+123461,	_,	_,	_,	_,
+61730,	_,	_,	_,	_,
+370382,	_,	_,	_,	_,
+92596,	_,	_,	_,	_,
+123461,	_,	_,	_,	_,
+308652,	_,	_,	_,	_,
+370382,	_,	_,	_,	_,
+123461,	_,	_,	_,	_,
+92596,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  White_Hake8_ResN =
   _, _, _, _, _,
@@ -89592,36 +87468,37 @@ DayLight =
   _, _, _, _, _ ;
 
  White_Hake9_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  15366.5788961456, _, _, _, _,
-  _, _, _, _, _,
-  15366.5788961456, _, _, _, _,
-  38416.632449113, _, _, _, _,
-  7683.32036787629, _, _, _, _,
-  15366.5788961456, _, _, _, _,
-  30733.3273992604, _, _, _, _,
-  53783.2266632823, _, _, _, _,
-  107566.445173873, _, _, _, _,
-  61466.5310361225, _, _, _, _,
-  7683.32036787629, _, _, _, _,
-  30733.3273992604, _, _, _, _,
-  15366.5788961456, _, _, _, _,
-  92199.8509597035, _, _, _, _,
-  23049.9919327285, _, _, _, _,
-  30733.3273992604, _, _, _, _,
-  76833.2129753688, _, _, _, _,
-  92199.8509597035, _, _, _, _,
-  30733.3273992604, _, _, _, _,
-  23049.9919327285, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+35843,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+35843,	_,	_,	_,	_,
+89609,	_,	_,	_,	_,
+17922,	_,	_,	_,	_,
+35843,	_,	_,	_,	_,
+71687,	_,	_,	_,	_,
+125452,	_,	_,	_,	_,
+250904,	_,	_,	_,	_,
+143374,	_,	_,	_,	_,
+17922,	_,	_,	_,	_,
+71687,	_,	_,	_,	_,
+35843,	_,	_,	_,	_,
+215061,	_,	_,	_,	_,
+53765,	_,	_,	_,	_,
+71687,	_,	_,	_,	_,
+179217,	_,	_,	_,	_,
+215061,	_,	_,	_,	_,
+71687,	_,	_,	_,	_,
+53765,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  White_Hake9_ResN =
   _, _, _, _, _,
@@ -89719,133 +87596,38 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Windowpane10_Nums =
-  _, _, _, _, _,
-  23409.8219927153, _, _, _, _,
-  20065.5617080417, _, _, _, _,
-  6688.52056934726, _, _, _, _,
-  66885.1772261104, _, _, _, _,
-  26754.082277389, _, _, _, _,
-  23409.8219927153, _, _, _, _,
-  33442.6028467361, _, _, _, _,
-  6688.52056934726, _, _, _, _,
-  30098.3425620626, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  13377.0411386945, _, _, _, _,
-  33442.6028467361, _, _, _, _,
-  30098.3425620626, _, _, _, _,
-  10032.7808540209, _, _, _, _,
-  _, _, _, _, _,
-  3344.26028467361, _, _, _, _,
-  6688.52056934726, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Windowpane10_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Windowpane10_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
  Windowpane1_Nums =
-  _, _, _, _, _,
-  1034423.54805328, _, _, _, _,
-  886648.755474241, _, _, _, _,
-  295549.585158081, _, _, _, _,
-  2955494.59367677, _, _, _, _,
-  1182198.34063232, _, _, _, _,
-  1034423.54805328, _, _, _, _,
-  1477747.9257904, _, _, _, _,
-  295549.585158081, _, _, _, _,
-  1329973.13321136, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  591099.170316161, _, _, _, _,
-  1477747.9257904, _, _, _, _,
-  1329973.13321136, _, _, _, _,
-  443324.377737121, _, _, _, _,
-  _, _, _, _, _,
-  147774.79257904, _, _, _, _,
-  295549.585158081, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+2312672,	_,	_,	_,	_,
+1982290,	_,	_,	_,	_,
+660763,	_,	_,	_,	_,
+6607631,	_,	_,	_,	_,
+2643054,	_,	_,	_,	_,
+2312672,	_,	_,	_,	_,
+3303817,	_,	_,	_,	_,
+660763,	_,	_,	_,	_,
+2973435,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1321527,	_,	_,	_,	_,
+3303817,	_,	_,	_,	_,
+2973435,	_,	_,	_,	_,
+991145,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+330382,	_,	_,	_,	_,
+660763,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Windowpane1_ResN =
   _, _, _, _, _,
@@ -89912,36 +87694,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Windowpane2_Nums =
-  _, _, _, _, _,
-  440862.907527593, _, _, _, _,
-  377882.492166508, _, _, _, _,
-  125960.83072217, _, _, _, _,
-  1259607.77111322, _, _, _, _,
-  503843.322888678, _, _, _, _,
-  440862.907527593, _, _, _, _,
-  629804.153610846, _, _, _, _,
-  125960.83072217, _, _, _, _,
-  566823.738249763, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  251921.661444339, _, _, _, _,
-  629804.153610846, _, _, _, _,
-  566823.738249763, _, _, _, _,
-  188941.246083254, _, _, _, _,
-  _, _, _, _, _,
-  62980.4153610846, _, _, _, _,
-  125960.83072217, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+747868,	_,	_,	_,	_,
+641030,	_,	_,	_,	_,
+213677,	_,	_,	_,	_,
+2136765,	_,	_,	_,	_,
+854706,	_,	_,	_,	_,
+747868,	_,	_,	_,	_,
+1068383,	_,	_,	_,	_,
+213677,	_,	_,	_,	_,
+961545,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+427353,	_,	_,	_,	_,
+1068383,	_,	_,	_,	_,
+961545,	_,	_,	_,	_,
+320515,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+106838,	_,	_,	_,	_,
+213677,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Windowpane2_ResN =
   _, _, _, _, _,
@@ -90008,36 +87791,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Windowpane3_Nums =
-  _, _, _, _, _,
-  1105403.62409532, _, _, _, _,
-  947488.820653133, _, _, _, _,
-  315829.606884379, _, _, _, _,
-  3158294.72462488, _, _, _, _,
-  1263318.42753751, _, _, _, _,
-  1105403.62409532, _, _, _, _,
-  1579148.03442189, _, _, _, _,
-  315829.606884379, _, _, _, _,
-  1421233.2309797, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  631659.213768756, _, _, _, _,
-  1579148.03442189, _, _, _, _,
-  1421233.2309797, _, _, _, _,
-  473744.410326567, _, _, _, _,
-  _, _, _, _, _,
-  157914.803442189, _, _, _, _,
-  315829.606884379, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+659884,	_,	_,	_,	_,
+565614,	_,	_,	_,	_,
+188538,	_,	_,	_,	_,
+1885381,	_,	_,	_,	_,
+754153,	_,	_,	_,	_,
+659884,	_,	_,	_,	_,
+942691,	_,	_,	_,	_,
+188538,	_,	_,	_,	_,
+848422,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+377076,	_,	_,	_,	_,
+942691,	_,	_,	_,	_,
+848422,	_,	_,	_,	_,
+282807,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+94269,	_,	_,	_,	_,
+188538,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Windowpane3_ResN =
   _, _, _, _, _,
@@ -90104,36 +87888,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Windowpane4_Nums =
-  _, _, _, _, _,
-  664448.526559882, _, _, _, _,
-  569527.308479898, _, _, _, _,
-  189842.436159967, _, _, _, _,
-  1898423.55360135, _, _, _, _,
-  759369.744639865, _, _, _, _,
-  664448.526559882, _, _, _, _,
-  949212.180799829, _, _, _, _,
-  189842.436159967, _, _, _, _,
-  854290.962719849, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  379684.872319933, _, _, _, _,
-  949212.180799829, _, _, _, _,
-  854290.962719849, _, _, _, _,
-  284763.65423995, _, _, _, _,
-  _, _, _, _, _,
-  94921.2180799829, _, _, _, _,
-  189842.436159967, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+365136,	_,	_,	_,	_,
+312973,	_,	_,	_,	_,
+104324,	_,	_,	_,	_,
+1043244,	_,	_,	_,	_,
+417298,	_,	_,	_,	_,
+365136,	_,	_,	_,	_,
+521622,	_,	_,	_,	_,
+104324,	_,	_,	_,	_,
+469460,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+208649,	_,	_,	_,	_,
+521622,	_,	_,	_,	_,
+469460,	_,	_,	_,	_,
+156487,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+52162,	_,	_,	_,	_,
+104324,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Windowpane4_ResN =
   _, _, _, _, _,
@@ -90200,36 +87985,36 @@ DayLight =
   _, _, _, _, _ ;
 
  Windowpane5_Nums =
-  _, _, _, _, _,
-  431926.566766905, _, _, _, _,
-  370222.771514489, _, _, _, _,
-  123407.59050483, _, _, _, _,
-  1234075.3798068, _, _, _, _,
-  493630.36201932, _, _, _, _,
-  431926.566766905, _, _, _, _,
-  617037.952524148, _, _, _, _,
-  123407.59050483, _, _, _, _,
-  555334.157271735, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  246815.18100966, _, _, _, _,
-  617037.952524148, _, _, _, _,
-  555334.157271735, _, _, _, _,
-  185111.385757245, _, _, _, _,
-  _, _, _, _, _,
-  61703.7952524148, _, _, _, _,
-  123407.59050483, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+184767,	_,	_,	_,	_,
+158372,	_,	_,	_,	_,
+52791,	_,	_,	_,	_,
+527907,	_,	_,	_,	_,
+211163,	_,	_,	_,	_,
+184767,	_,	_,	_,	_,
+263953,	_,	_,	_,	_,
+52791,	_,	_,	_,	_,
+237558,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+105581,	_,	_,	_,	_,
+263953,	_,	_,	_,	_,
+237558,	_,	_,	_,	_,
+79186,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+26395,	_,	_,	_,	_,
+52791,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Windowpane5_ResN =
   _, _, _, _, _,
@@ -90296,36 +88081,36 @@ DayLight =
   _, _, _, _, _ ;
 
  Windowpane6_Nums =
-  _, _, _, _, _,
-  308182.93623347, _, _, _, _,
-  264156.802485831, _, _, _, _,
-  88052.2674952774, _, _, _, _,
-  880522.300188914, _, _, _, _,
-  352209.069981109, _, _, _, _,
-  308182.93623347, _, _, _, _,
-  440261.337476385, _, _, _, _,
-  88052.2674952774, _, _, _, _,
-  396235.203728747, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  176104.534990554, _, _, _, _,
-  440261.337476385, _, _, _, _,
-  396235.203728747, _, _, _, _,
-  132078.401242916, _, _, _, _,
-  _, _, _, _, _,
-  44026.1337476385, _, _, _, _,
-  88052.2674952774, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+105581,	_,	_,	_,	_,
+90498,	_,	_,	_,	_,
+30166,	_,	_,	_,	_,
+301661,	_,	_,	_,	_,
+120664,	_,	_,	_,	_,
+105581,	_,	_,	_,	_,
+150831,	_,	_,	_,	_,
+30166,	_,	_,	_,	_,
+135747,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+60332,	_,	_,	_,	_,
+150831,	_,	_,	_,	_,
+135747,	_,	_,	_,	_,
+45249,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+15083,	_,	_,	_,	_,
+30166,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Windowpane6_ResN =
   _, _, _, _, _,
@@ -90392,36 +88177,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Windowpane7_Nums =
-  _, _, _, _, _,
-  182815.23556179, _, _, _, _,
-  156698.773338677, _, _, _, _,
-  52232.9244462257, _, _, _, _,
-  522329.022150976, _, _, _, _,
-  208931.697784902, _, _, _, _,
-  182815.23556179, _, _, _, _,
-  261164.622231127, _, _, _, _,
-  52232.9244462257, _, _, _, _,
-  235048.160008015, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  104465.848892451, _, _, _, _,
-  261164.622231127, _, _, _, _,
-  235048.160008015, _, _, _, _,
-  78349.3866693384, _, _, _, _,
-  _, _, _, _, _,
-  26116.4622231127, _, _, _, _,
-  52232.9244462257, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+23316,	_,	_,	_,	_,
+19985,	_,	_,	_,	_,
+6662,	_,	_,	_,	_,
+66617,	_,	_,	_,	_,
+26647,	_,	_,	_,	_,
+23316,	_,	_,	_,	_,
+33308,	_,	_,	_,	_,
+6662,	_,	_,	_,	_,
+29978,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+13323,	_,	_,	_,	_,
+33308,	_,	_,	_,	_,
+29978,	_,	_,	_,	_,
+9993,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+3331,	_,	_,	_,	_,
+6662,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Windowpane7_ResN =
   _, _, _, _, _,
@@ -90456,198 +88242,6 @@ DayLight =
   _, _, _, _, _ ;
 
  Windowpane7_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Windowpane8_Nums =
-  _, _, _, _, _,
-  127113.920820324, _, _, _, _,
-  108954.789274563, _, _, _, _,
-  36318.2630915212, _, _, _, _,
-  363182.476339154, _, _, _, _,
-  145273.052366085, _, _, _, _,
-  127113.920820324, _, _, _, _,
-  181591.315457605, _, _, _, _,
-  36318.2630915212, _, _, _, _,
-  163432.183911845, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  72636.5261830423, _, _, _, _,
-  181591.315457605, _, _, _, _,
-  163432.183911845, _, _, _, _,
-  54477.3946372818, _, _, _, _,
-  _, _, _, _, _,
-  18159.1315457605, _, _, _, _,
-  36318.2630915212, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Windowpane8_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Windowpane8_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Windowpane9_Nums =
-  _, _, _, _, _,
-  80636.5068640251, _, _, _, _,
-  69117.00588345, _, _, _, _,
-  23039.0019611501, _, _, _, _,
-  230389.921554, _, _, _, _,
-  92156.0078446, _, _, _, _,
-  80636.5068640251, _, _, _, _,
-  115195.00980575, _, _, _, _,
-  23039.0019611501, _, _, _, _,
-  103675.508825175, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  46078.0039223, _, _, _, _,
-  115195.00980575, _, _, _, _,
-  103675.508825175, _, _, _, _,
-  34558.502941725, _, _, _, _,
-  _, _, _, _, _,
-  11519.500980575, _, _, _, _,
-  23039.0019611501, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Windowpane9_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Windowpane9_StructN =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -91703,133 +89297,38 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Winterflounder10_Nums =
-  _, _, _, _, _,
-  22858.4488454372, _, _, _, _,
-  11429.2244227186, _, _, _, _,
-  _, _, _, _, _,
-  85719.3562512939, _, _, _, _,
-  22858.4488454372, _, _, _, _,
-  17143.8366340779, _, _, _, _,
-  51431.5964426859, _, _, _, _,
-  45716.9842313266, _, _, _, _,
-  28573.1475972486, _, _, _, _,
-  11429.2244227186, _, _, _, _,
-  11429.2244227186, _, _, _, _,
-  51431.5964426859, _, _, _, _,
-  80004.6574994827, _, _, _, _,
-  5714.61221135931, _, _, _, _,
-  40002.3720199672, _, _, _, _,
-  5714.61221135931, _, _, _, _,
-  17143.8366340779, _, _, _, _,
-  34287.759808608, _, _, _, _,
-  11429.2244227186, _, _, _, _,
-  _, _, _, _, _,
-  11429.2244227186, _, _, _, _,
-  5714.61221135931, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Winterflounder10_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Winterflounder10_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
  Winterflounder1_Nums =
-  _, _, _, _, _,
-  72134.4216855262, _, _, _, _,
-  36067.2108427631, _, _, _, _,
-  _, _, _, _, _,
-  270504.627512244, _, _, _, _,
-  72134.4216855262, _, _, _, _,
-  54100.8162641447, _, _, _, _,
-  162302.721888194, _, _, _, _,
-  144269.116466813, _, _, _, _,
-  90168.300202668, _, _, _, _,
-  36067.2108427631, _, _, _, _,
-  36067.2108427631, _, _, _, _,
-  162302.721888194, _, _, _, _,
-  252470.748995103, _, _, _, _,
-  18033.6054213816, _, _, _, _,
-  126235.511045431, _, _, _, _,
-  18033.6054213816, _, _, _, _,
-  54100.8162641447, _, _, _, _,
-  108201.90562405, _, _, _, _,
-  36067.2108427631, _, _, _, _,
-  _, _, _, _, _,
-  36067.2108427631, _, _, _, _,
-  18033.6054213816, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+629830,	_,	_,	_,	_,
+314915,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+2361869,	_,	_,	_,	_,
+629830,	_,	_,	_,	_,
+472373,	_,	_,	_,	_,
+1417121,	_,	_,	_,	_,
+1259663,	_,	_,	_,	_,
+787290,	_,	_,	_,	_,
+314915,	_,	_,	_,	_,
+314915,	_,	_,	_,	_,
+1417121,	_,	_,	_,	_,
+2204409,	_,	_,	_,	_,
+157458,	_,	_,	_,	_,
+1102206,	_,	_,	_,	_,
+157458,	_,	_,	_,	_,
+472373,	_,	_,	_,	_,
+944748,	_,	_,	_,	_,
+314915,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+314915,	_,	_,	_,	_,
+157458,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Winterflounder1_ResN =
   _, _, _, _, _,
@@ -91896,36 +89395,36 @@ DayLight =
   _, _, _, _, _ ;
 
  Winterflounder2_Nums =
-  _, _, _, _, _,
-  73556.8997467822, _, _, _, _,
-  36778.4498733911, _, _, _, _,
-  _, _, _, _, _,
-  275838.931012755, _, _, _, _,
-  73556.8997467822, _, _, _, _,
-  55167.6748100866, _, _, _, _,
-  165503.30291142, _, _, _, _,
-  147114.077974725, _, _, _, _,
-  91946.4031646381, _, _, _, _,
-  36778.4498733911, _, _, _, _,
-  36778.4498733911, _, _, _, _,
-  165503.30291142, _, _, _, _,
-  257449.427594899, _, _, _, _,
-  18389.2249366956, _, _, _, _,
-  128724.853038029, _, _, _, _,
-  18389.2249366956, _, _, _, _,
-  55167.6748100866, _, _, _, _,
-  110335.628101334, _, _, _, _,
-  36778.4498733911, _, _, _, _,
-  _, _, _, _, _,
-  36778.4498733911, _, _, _, _,
-  18389.2249366956, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+200477,	_,	_,	_,	_,
+100238,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+751788,	_,	_,	_,	_,
+200477,	_,	_,	_,	_,
+150357,	_,	_,	_,	_,
+451073,	_,	_,	_,	_,
+400954,	_,	_,	_,	_,
+250596,	_,	_,	_,	_,
+100238,	_,	_,	_,	_,
+100238,	_,	_,	_,	_,
+451073,	_,	_,	_,	_,
+701669,	_,	_,	_,	_,
+50119,	_,	_,	_,	_,
+350835,	_,	_,	_,	_,
+50119,	_,	_,	_,	_,
+150357,	_,	_,	_,	_,
+300716,	_,	_,	_,	_,
+100238,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+100238,	_,	_,	_,	_,
+50119,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Winterflounder2_ResN =
   _, _, _, _, _,
@@ -91992,36 +89491,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Winterflounder3_Nums =
-  _, _, _, _, _,
-  345303.089374594, _, _, _, _,
-  172651.544687297, _, _, _, _,
-  _, _, _, _, _,
-  1294889.19974032, _, _, _, _,
-  345303.089374594, _, _, _, _,
-  258977.317030945, _, _, _, _,
-  776933.258385631, _, _, _, _,
-  690607.486041983, _, _, _, _,
-  431630.169011036, _, _, _, _,
-  172651.544687297, _, _, _, _,
-  172651.544687297, _, _, _, _,
-  776933.258385631, _, _, _, _,
-  1208562.12010388, _, _, _, _,
-  86325.7723436485, _, _, _, _,
-  604281.713698333, _, _, _, _,
-  86325.7723436485, _, _, _, _,
-  258977.317030945, _, _, _, _,
-  517955.941354686, _, _, _, _,
-  172651.544687297, _, _, _, _,
-  _, _, _, _, _,
-  172651.544687297, _, _, _, _,
-  86325.7723436485, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+317421,	_,	_,	_,	_,
+158711,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1190332,	_,	_,	_,	_,
+317421,	_,	_,	_,	_,
+238066,	_,	_,	_,	_,
+714199,	_,	_,	_,	_,
+634844,	_,	_,	_,	_,
+396778,	_,	_,	_,	_,
+158711,	_,	_,	_,	_,
+158711,	_,	_,	_,	_,
+714199,	_,	_,	_,	_,
+1110975,	_,	_,	_,	_,
+79355,	_,	_,	_,	_,
+555488,	_,	_,	_,	_,
+79355,	_,	_,	_,	_,
+238066,	_,	_,	_,	_,
+476133,	_,	_,	_,	_,
+158711,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+158711,	_,	_,	_,	_,
+79355,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Winterflounder3_ResN =
   _, _, _, _, _,
@@ -92088,36 +89588,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Winterflounder4_Nums =
-  _, _, _, _, _,
-  315376.570162472, _, _, _, _,
-  157688.285081236, _, _, _, _,
-  _, _, _, _, _,
-  1182664.52609554, _, _, _, _,
-  315376.570162472, _, _, _, _,
-  236532.427621854, _, _, _, _,
-  709598.476858695, _, _, _, _,
-  630754.334318077, _, _, _, _,
-  394221.906696223, _, _, _, _,
-  157688.285081236, _, _, _, _,
-  157688.285081236, _, _, _, _,
-  709598.476858695, _, _, _, _,
-  1103819.18956179, _, _, _, _,
-  78844.142540618, _, _, _, _,
-  551910.191777459, _, _, _, _,
-  78844.142540618, _, _, _, _,
-  236532.427621854, _, _, _, _,
-  473066.049236842, _, _, _, _,
-  157688.285081236, _, _, _, _,
-  _, _, _, _, _,
-  157688.285081236, _, _, _, _,
-  78844.142540618, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+250596,	_,	_,	_,	_,
+125298,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+939736,	_,	_,	_,	_,
+250596,	_,	_,	_,	_,
+187947,	_,	_,	_,	_,
+563841,	_,	_,	_,	_,
+501192,	_,	_,	_,	_,
+313246,	_,	_,	_,	_,
+125298,	_,	_,	_,	_,
+125298,	_,	_,	_,	_,
+563841,	_,	_,	_,	_,
+877086,	_,	_,	_,	_,
+62649,	_,	_,	_,	_,
+438543,	_,	_,	_,	_,
+62649,	_,	_,	_,	_,
+187947,	_,	_,	_,	_,
+375894,	_,	_,	_,	_,
+125298,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+125298,	_,	_,	_,	_,
+62649,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Winterflounder4_ResN =
   _, _, _, _, _,
@@ -92184,36 +89685,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Winterflounder5_Nums =
-  _, _, _, _, _,
-  269214.833077884, _, _, _, _,
-  134607.416538942, _, _, _, _,
-  _, _, _, _, _,
-  1009557.66249827, _, _, _, _,
-  269214.833077884, _, _, _, _,
-  201911.124808413, _, _, _, _,
-  605734.393653339, _, _, _, _,
-  538430.685383868, _, _, _, _,
-  336519.560575454, _, _, _, _,
-  134607.416538942, _, _, _, _,
-  134607.416538942, _, _, _, _,
-  605734.393653339, _, _, _, _,
-  942252.935000697, _, _, _, _,
-  67303.7082694711, _, _, _, _,
-  471126.977114396, _, _, _, _,
-  67303.7082694711, _, _, _, _,
-  201911.124808413, _, _, _, _,
-  403823.268844926, _, _, _, _,
-  134607.416538942, _, _, _, _,
-  _, _, _, _, _,
-  134607.416538942, _, _, _, _,
-  67303.7082694711, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+152028,	_,	_,	_,	_,
+76014,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+570106,	_,	_,	_,	_,
+152028,	_,	_,	_,	_,
+114021,	_,	_,	_,	_,
+342064,	_,	_,	_,	_,
+304057,	_,	_,	_,	_,
+190036,	_,	_,	_,	_,
+76014,	_,	_,	_,	_,
+76014,	_,	_,	_,	_,
+342064,	_,	_,	_,	_,
+532099,	_,	_,	_,	_,
+38007,	_,	_,	_,	_,
+266050,	_,	_,	_,	_,
+38007,	_,	_,	_,	_,
+114021,	_,	_,	_,	_,
+228043,	_,	_,	_,	_,
+76014,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+76014,	_,	_,	_,	_,
+38007,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Winterflounder5_ResN =
   _, _, _, _, _,
@@ -92280,36 +89782,36 @@ DayLight =
   _, _, _, _, _ ;
 
  Winterflounder6_Nums =
-  _, _, _, _, _,
-  229182.807638903, _, _, _, _,
-  114591.403819451, _, _, _, _,
-  _, _, _, _, _,
-  859437.263985315, _, _, _, _,
-  229182.807638903, _, _, _, _,
-  171887.105729177, _, _, _, _,
-  515662.184857246, _, _, _, _,
-  458366.48294752, _, _, _, _,
-  286479.377218343, _, _, _, _,
-  114591.403819451, _, _, _, _,
-  114591.403819451, _, _, _, _,
-  515662.184857246, _, _, _, _,
-  802140.694405876, _, _, _, _,
-  57295.7019097257, _, _, _, _,
-  401070.781037794, _, _, _, _,
-  57295.7019097257, _, _, _, _,
-  171887.105729177, _, _, _, _,
-  343775.079128069, _, _, _, _,
-  114591.403819451, _, _, _, _,
-  _, _, _, _, _,
-  114591.403819451, _, _, _, _,
-  57295.7019097257, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+96897,	_,	_,	_,	_,
+48448,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+363364,	_,	_,	_,	_,
+96897,	_,	_,	_,	_,
+72673,	_,	_,	_,	_,
+218019,	_,	_,	_,	_,
+193794,	_,	_,	_,	_,
+121122,	_,	_,	_,	_,
+48448,	_,	_,	_,	_,
+48448,	_,	_,	_,	_,
+218019,	_,	_,	_,	_,
+339140,	_,	_,	_,	_,
+24224,	_,	_,	_,	_,
+169570,	_,	_,	_,	_,
+24224,	_,	_,	_,	_,
+72673,	_,	_,	_,	_,
+145346,	_,	_,	_,	_,
+48448,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+48448,	_,	_,	_,	_,
+24224,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Winterflounder6_ResN =
   _, _, _, _, _,
@@ -92376,36 +89878,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Winterflounder7_Nums =
-  _, _, _, _, _,
-  152498.832154119, _, _, _, _,
-  76249.4160770595, _, _, _, _,
-  _, _, _, _, _,
-  571871.775277285, _, _, _, _,
-  152498.832154119, _, _, _, _,
-  114374.124115589, _, _, _, _,
-  343122.949696437, _, _, _, _,
-  304998.241657907, _, _, _, _,
-  190624.117542318, _, _, _, _,
-  76249.4160770595, _, _, _, _,
-  76249.4160770595, _, _, _, _,
-  343122.949696437, _, _, _, _,
-  533746.489889087, _, _, _, _,
-  38124.7080385298, _, _, _, _,
-  266873.533619377, _, _, _, _,
-  38124.7080385298, _, _, _, _,
-  114374.124115589, _, _, _, _,
-  228748.825580848, _, _, _, _,
-  76249.4160770595, _, _, _, _,
-  _, _, _, _, _,
-  76249.4160770595, _, _, _, _,
-  38124.7080385298, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+23389,	_,	_,	_,	_,
+11694,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+87709,	_,	_,	_,	_,
+23389,	_,	_,	_,	_,
+17542,	_,	_,	_,	_,
+52625,	_,	_,	_,	_,
+46778,	_,	_,	_,	_,
+29236,	_,	_,	_,	_,
+11694,	_,	_,	_,	_,
+11694,	_,	_,	_,	_,
+52625,	_,	_,	_,	_,
+81861,	_,	_,	_,	_,
+5847,	_,	_,	_,	_,
+40931,	_,	_,	_,	_,
+5847,	_,	_,	_,	_,
+17542,	_,	_,	_,	_,
+35083,	_,	_,	_,	_,
+11694,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+11694,	_,	_,	_,	_,
+5847,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Winterflounder7_ResN =
   _, _, _, _, _,
@@ -92471,198 +89974,6 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Winterflounder8_Nums =
-  _, _, _, _, _,
-  114313.804197801, _, _, _, _,
-  57156.9020989006, _, _, _, _,
-  _, _, _, _, _,
-  428677.631309526, _, _, _, _,
-  114313.804197801, _, _, _, _,
-  85735.353148351, _, _, _, _,
-  257206.492228938, _, _, _, _,
-  228628.041179488, _, _, _, _,
-  142892.688031137, _, _, _, _,
-  57156.9020989006, _, _, _, _,
-  57156.9020989006, _, _, _, _,
-  257206.492228938, _, _, _, _,
-  400098.747476191, _, _, _, _,
-  28578.4510494504, _, _, _, _,
-  200049.590130037, _, _, _, _,
-  28578.4510494504, _, _, _, _,
-  85735.353148351, _, _, _, _,
-  171471.139080587, _, _, _, _,
-  57156.9020989006, _, _, _, _,
-  _, _, _, _, _,
-  57156.9020989006, _, _, _, _,
-  28578.4510494504, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Winterflounder8_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Winterflounder8_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Winterflounder9_Nums =
-  _, _, _, _, _,
-  76198.0161471142, _, _, _, _,
-  38099.0080735571, _, _, _, _,
-  _, _, _, _, _,
-  285743.137512155, _, _, _, _,
-  76198.0161471142, _, _, _, _,
-  57148.5121103356, _, _, _, _,
-  171445.824811245, _, _, _, _,
-  152396.320774467, _, _, _, _,
-  95247.8086641309, _, _, _, _,
-  38099.0080735571, _, _, _, _,
-  38099.0080735571, _, _, _, _,
-  171445.824811245, _, _, _, _,
-  266693.344995139, _, _, _, _,
-  19049.5040367786, _, _, _, _,
-  133346.816737688, _, _, _, _,
-  19049.5040367786, _, _, _, _,
-  57148.5121103356, _, _, _, _,
-  114297.31270091, _, _, _, _,
-  38099.0080735571, _, _, _, _,
-  _, _, _, _, _,
-  38099.0080735571, _, _, _, _,
-  19049.5040367786, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Winterflounder9_ResN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
- Winterflounder9_StructN =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
-
  Winterflounder_N =
   _, _, _, _, _,
   _, _, _, _, _,
@@ -92696,36 +90007,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Witchflounder10_Nums =
-  _, _, _, _, _,
-  6706.59680161019, _, _, _, _,
-  13413.2348481885, _, _, _, _,
-  26826.4284514089, _, _, _, _,
-  _, _, _, _, _,
-  13413.2348481885, _, _, _, _,
-  20119.8316497987, _, _, _, _,
-  6706.59680161019, _, _, _, _,
-  20119.8316497987, _, _, _, _,
-  20119.8316497987, _, _, _, _,
-  67066.0917510064, _, _, _, _,
-  67066.0917510064, _, _, _, _,
-  40239.6632995975, _, _, _, _,
-  13413.2348481885, _, _, _, _,
-  26826.4284514089, _, _, _, _,
-  6706.59680161019, _, _, _, _,
-  93892.5614473833, _, _, _, _,
-  40239.6632995975, _, _, _, _,
-  40239.6632995975, _, _, _, _,
-  67066.0917510064, _, _, _, _,
-  53652.898147786, _, _, _, _,
-  6706.59680161019, _, _, _, _,
-  20119.8316497987, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+36584,	_,	_,	_,	_,
+73169,	_,	_,	_,	_,
+146338,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+73169,	_,	_,	_,	_,
+109753,	_,	_,	_,	_,
+36584,	_,	_,	_,	_,
+109753,	_,	_,	_,	_,
+109753,	_,	_,	_,	_,
+365844,	_,	_,	_,	_,
+365844,	_,	_,	_,	_,
+219507,	_,	_,	_,	_,
+73169,	_,	_,	_,	_,
+146338,	_,	_,	_,	_,
+36584,	_,	_,	_,	_,
+512182,	_,	_,	_,	_,
+219507,	_,	_,	_,	_,
+219507,	_,	_,	_,	_,
+365844,	_,	_,	_,	_,
+292675,	_,	_,	_,	_,
+36584,	_,	_,	_,	_,
+109753,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Witchflounder10_ResN =
   _, _, _, _, _,
@@ -92790,31 +90102,64 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+  
+Witchflounder11_Nums =
+_,	_,	_,	_,	_,
+21871,	_,	_,	_,	_,
+43742,	_,	_,	_,	_,
+87484,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+43742,	_,	_,	_,	_,
+65613,	_,	_,	_,	_,
+21871,	_,	_,	_,	_,
+65613,	_,	_,	_,	_,
+65613,	_,	_,	_,	_,
+218711,	_,	_,	_,	_,
+218711,	_,	_,	_,	_,
+131227,	_,	_,	_,	_,
+43742,	_,	_,	_,	_,
+87484,	_,	_,	_,	_,
+21871,	_,	_,	_,	_,
+306196,	_,	_,	_,	_,
+131227,	_,	_,	_,	_,
+131227,	_,	_,	_,	_,
+218711,	_,	_,	_,	_,
+174969,	_,	_,	_,	_,
+21871,	_,	_,	_,	_,
+65613,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
- Witchflounder1_Nums =
+
+ Witchflounder11_ResN =
   _, _, _, _, _,
-  1624767.74250377, _, _, _, _,
-  3249545.47718326, _, _, _, _,
-  6499080.9621908, _, _, _, _,
   _, _, _, _, _,
-  3249545.47718326, _, _, _, _,
-  4874313.21968702, _, _, _, _,
-  1624767.74250377, _, _, _, _,
-  4874313.21968702, _, _, _, _,
-  4874313.21968702, _, _, _, _,
-  16247707.4015649, _, _, _, _,
-  16247707.4015649, _, _, _, _,
-  9748626.43937406, _, _, _, _,
-  3249545.47718326, _, _, _, _,
-  6499080.9621908, _, _, _, _,
-  1624767.74250377, _, _, _, _,
-  22746798.3559314, _, _, _, _,
-  9748626.43937406, _, _, _, _,
-  9748626.43937406, _, _, _, _,
-  16247707.4015649, _, _, _, _,
-  12998171.9165573, _, _, _, _,
-  1624767.74250377, _, _, _, _,
-  4874313.21968702, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -92822,6 +90167,168 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+
+ Witchflounder11_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+  
+  Witchflounder12_Nums =
+_,	_,	_,	_,	_,
+6760,	_,	_,	_,	_,
+13520,	_,	_,	_,	_,
+27041,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+13520,	_,	_,	_,	_,
+20280,	_,	_,	_,	_,
+6760,	_,	_,	_,	_,
+20280,	_,	_,	_,	_,
+20280,	_,	_,	_,	_,
+67602,	_,	_,	_,	_,
+67602,	_,	_,	_,	_,
+40561,	_,	_,	_,	_,
+13520,	_,	_,	_,	_,
+27041,	_,	_,	_,	_,
+6760,	_,	_,	_,	_,
+94642,	_,	_,	_,	_,
+40561,	_,	_,	_,	_,
+40561,	_,	_,	_,	_,
+67602,	_,	_,	_,	_,
+54081,	_,	_,	_,	_,
+6760,	_,	_,	_,	_,
+20280,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
+
+ Witchflounder12_ResN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ Witchflounder12_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+  
+ Witchflounder1_Nums =
+_,	_,	_,	_,	_,
+936877,	_,	_,	_,	_,
+1873760,	_,	_,	_,	_,
+3747515,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1873760,	_,	_,	_,	_,
+2810638,	_,	_,	_,	_,
+936877,	_,	_,	_,	_,
+2810638,	_,	_,	_,	_,
+2810638,	_,	_,	_,	_,
+9368790,	_,	_,	_,	_,
+9368790,	_,	_,	_,	_,
+5621275,	_,	_,	_,	_,
+1873760,	_,	_,	_,	_,
+3747515,	_,	_,	_,	_,
+936877,	_,	_,	_,	_,
+13116311,	_,	_,	_,	_,
+5621275,	_,	_,	_,	_,
+5621275,	_,	_,	_,	_,
+9368790,	_,	_,	_,	_,
+7495036,	_,	_,	_,	_,
+936877,	_,	_,	_,	_,
+2810638,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Witchflounder1_ResN =
   _, _, _, _, _,
@@ -92888,36 +90395,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Witchflounder2_Nums =
-  _, _, _, _, _,
-  481357.122703013, _, _, _, _,
-  962717.205709111, _, _, _, _,
-  1925431.45111514, _, _, _, _,
-  _, _, _, _, _,
-  962717.205709111, _, _, _, _,
-  1444074.32841212, _, _, _, _,
-  481357.122703013, _, _, _, _,
-  1444074.32841212, _, _, _, _,
-  1444074.32841212, _, _, _, _,
-  4813580.10793938, _, _, _, _,
-  4813580.10793938, _, _, _, _,
-  2888148.65682425, _, _, _, _,
-  962717.205709111, _, _, _, _,
-  1925431.45111514, _, _, _, _,
-  481357.122703013, _, _, _, _,
-  6739014.5193576, _, _, _, _,
-  2888148.65682425, _, _, _, _,
-  2888148.65682425, _, _, _, _,
-  4813580.10793938, _, _, _, _,
-  3850865.86253336, _, _, _, _,
-  481357.122703013, _, _, _, _,
-  1444074.32841212, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+596484,	_,	_,	_,	_,
+1192971,	_,	_,	_,	_,
+2385939,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1192971,	_,	_,	_,	_,
+1789455,	_,	_,	_,	_,
+596484,	_,	_,	_,	_,
+1789455,	_,	_,	_,	_,
+1789455,	_,	_,	_,	_,
+5964850,	_,	_,	_,	_,
+5964850,	_,	_,	_,	_,
+3578910,	_,	_,	_,	_,
+1192971,	_,	_,	_,	_,
+2385939,	_,	_,	_,	_,
+596484,	_,	_,	_,	_,
+8350792,	_,	_,	_,	_,
+3578910,	_,	_,	_,	_,
+3578910,	_,	_,	_,	_,
+5964850,	_,	_,	_,	_,
+4771882,	_,	_,	_,	_,
+596484,	_,	_,	_,	_,
+1789455,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Witchflounder2_ResN =
   _, _, _, _, _,
@@ -92984,36 +90492,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Witchflounder3_Nums =
-  _, _, _, _, _,
-  914808.189683767, _, _, _, _,
-  1829622.00535576, _, _, _, _,
-  3659238.3847233, _, _, _, _,
-  _, _, _, _, _,
-  1829622.00535576, _, _, _, _,
-  2744430.19503953, _, _, _, _,
-  914808.189683767, _, _, _, _,
-  2744430.19503953, _, _, _, _,
-  2744430.19503953, _, _, _, _,
-  9148098.77480236, _, _, _, _,
-  9148098.77480236, _, _, _, _,
-  5488860.39007906, _, _, _, _,
-  1829622.00535576, _, _, _, _,
-  3659238.3847233, _, _, _, _,
-  914808.189683767, _, _, _, _,
-  12807342.7855139, _, _, _, _,
-  5488860.39007906, _, _, _, _,
-  5488860.39007906, _, _, _, _,
-  9148098.77480236, _, _, _, _,
-  7318482.39543482, _, _, _, _,
-  914808.189683767, _, _, _, _,
-  2744430.19503953, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+755546,	_,	_,	_,	_,
+1511097,	_,	_,	_,	_,
+3022190,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1511097,	_,	_,	_,	_,
+2266643,	_,	_,	_,	_,
+755546,	_,	_,	_,	_,
+2266643,	_,	_,	_,	_,
+2266643,	_,	_,	_,	_,
+7555476,	_,	_,	_,	_,
+7555476,	_,	_,	_,	_,
+4533287,	_,	_,	_,	_,
+1511097,	_,	_,	_,	_,
+3022190,	_,	_,	_,	_,
+755546,	_,	_,	_,	_,
+10577670,	_,	_,	_,	_,
+4533287,	_,	_,	_,	_,
+4533287,	_,	_,	_,	_,
+7555476,	_,	_,	_,	_,
+6044384,	_,	_,	_,	_,
+755546,	_,	_,	_,	_,
+2266643,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Witchflounder3_ResN =
   _, _, _, _, _,
@@ -93080,36 +90589,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Witchflounder4_Nums =
-  _, _, _, _, _,
-  435747.422461593, _, _, _, _,
-  871497.524730709, _, _, _, _,
-  1742992.36965389, _, _, _, _,
-  _, _, _, _, _,
-  871497.524730709, _, _, _, _,
-  1307244.9471923, _, _, _, _,
-  435747.422461593, _, _, _, _,
-  1307244.9471923, _, _, _, _,
-  1307244.9471923, _, _, _, _,
-  4357482.2640385, _, _, _, _,
-  4357482.2640385, _, _, _, _,
-  2614489.8943846, _, _, _, _,
-  871497.524730709, _, _, _, _,
-  1742992.36965389, _, _, _, _,
-  435747.422461593, _, _, _, _,
-  6100477.31349991, _, _, _, _,
-  2614489.8943846, _, _, _, _,
-  2614489.8943846, _, _, _, _,
-  4357482.2640385, _, _, _, _,
-  3485987.41911531, _, _, _, _,
-  435747.422461593, _, _, _, _,
-  1307244.9471923, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+755546,	_,	_,	_,	_,
+1511097,	_,	_,	_,	_,
+3022190,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1511097,	_,	_,	_,	_,
+2266643,	_,	_,	_,	_,
+755546,	_,	_,	_,	_,
+2266643,	_,	_,	_,	_,
+2266643,	_,	_,	_,	_,
+7555476,	_,	_,	_,	_,
+7555476,	_,	_,	_,	_,
+4533287,	_,	_,	_,	_,
+1511097,	_,	_,	_,	_,
+3022190,	_,	_,	_,	_,
+755546,	_,	_,	_,	_,
+10577670,	_,	_,	_,	_,
+4533287,	_,	_,	_,	_,
+4533287,	_,	_,	_,	_,
+7555476,	_,	_,	_,	_,
+6044384,	_,	_,	_,	_,
+755546,	_,	_,	_,	_,
+2266643,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Witchflounder4_ResN =
   _, _, _, _, _,
@@ -93176,36 +90686,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Witchflounder5_Nums =
-  _, _, _, _, _,
-  232246.112946323, _, _, _, _,
-  464493.654185387, _, _, _, _,
-  928985.880078032, _, _, _, _,
-  _, _, _, _, _,
-  464493.654185387, _, _, _, _,
-  696739.767131709, _, _, _, _,
-  232246.112946323, _, _, _, _,
-  696739.767131709, _, _, _, _,
-  696739.767131709, _, _, _, _,
-  2322465.41434145, _, _, _, _,
-  2322465.41434145, _, _, _, _,
-  1393479.53426342, _, _, _, _,
-  464493.654185387, _, _, _, _,
-  928985.880078032, _, _, _, _,
-  232246.112946323, _, _, _, _,
-  3251452.72271222, _, _, _, _,
-  1393479.53426342, _, _, _, _,
-  1393479.53426342, _, _, _, _,
-  2322465.41434145, _, _, _, _,
-  1857973.18844881, _, _, _, _,
-  232246.112946323, _, _, _, _,
-  696739.767131709, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+357890,	_,	_,	_,	_,
+715783,	_,	_,	_,	_,
+1431563,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+715783,	_,	_,	_,	_,
+1073673,	_,	_,	_,	_,
+357890,	_,	_,	_,	_,
+1073673,	_,	_,	_,	_,
+1073673,	_,	_,	_,	_,
+3578910,	_,	_,	_,	_,
+3578910,	_,	_,	_,	_,
+2147346,	_,	_,	_,	_,
+715783,	_,	_,	_,	_,
+1431563,	_,	_,	_,	_,
+357890,	_,	_,	_,	_,
+5010475,	_,	_,	_,	_,
+2147346,	_,	_,	_,	_,
+2147346,	_,	_,	_,	_,
+3578910,	_,	_,	_,	_,
+2863129,	_,	_,	_,	_,
+357890,	_,	_,	_,	_,
+1073673,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Witchflounder5_ResN =
   _, _, _, _, _,
@@ -93272,36 +90783,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Witchflounder6_Nums =
-  _, _, _, _, _,
-  139828.854820831, _, _, _, _,
-  279658.569576565, _, _, _, _,
-  559316.279218227, _, _, _, _,
-  _, _, _, _, _,
-  279658.569576565, _, _, _, _,
-  419487.424397395, _, _, _, _,
-  139828.854820831, _, _, _, _,
-  419487.424397395, _, _, _, _,
-  419487.424397395, _, _, _, _,
-  1398291.12801302, _, _, _, _,
-  1398291.12801302, _, _, _, _,
-  838974.848794792, _, _, _, _,
-  279658.569576565, _, _, _, _,
-  559316.279218227, _, _, _, _,
-  139828.854820831, _, _, _, _,
-  1957608.26716615, _, _, _, _,
-  838974.848794792, _, _, _, _,
-  838974.848794792, _, _, _, _,
-  1398291.12801302, _, _, _, _,
-  1118633.41837136, _, _, _, _,
-  139828.854820831, _, _, _, _,
-  419487.424397395, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+218711,	_,	_,	_,	_,
+437423,	_,	_,	_,	_,
+874844,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+437423,	_,	_,	_,	_,
+656134,	_,	_,	_,	_,
+218711,	_,	_,	_,	_,
+656134,	_,	_,	_,	_,
+656134,	_,	_,	_,	_,
+2187112,	_,	_,	_,	_,
+2187112,	_,	_,	_,	_,
+1312267,	_,	_,	_,	_,
+437423,	_,	_,	_,	_,
+874844,	_,	_,	_,	_,
+218711,	_,	_,	_,	_,
+3061957,	_,	_,	_,	_,
+1312267,	_,	_,	_,	_,
+1312267,	_,	_,	_,	_,
+2187112,	_,	_,	_,	_,
+1749690,	_,	_,	_,	_,
+218711,	_,	_,	_,	_,
+656134,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Witchflounder6_ResN =
   _, _, _, _, _,
@@ -93368,36 +90880,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Witchflounder7_Nums =
-  _, _, _, _, _,
-  71760.6187771641, _, _, _, _,
-  143521.67887569, _, _, _, _,
-  287042.916430019, _, _, _, _,
-  _, _, _, _, _,
-  143521.67887569, _, _, _, _,
-  215282.297652854, _, _, _, _,
-  71760.6187771641, _, _, _, _,
-  215282.297652854, _, _, _, _,
-  215282.297652854, _, _, _, _,
-  717607.511735728, _, _, _, _,
-  717607.511735728, _, _, _, _,
-  430564.595305709, _, _, _, _,
-  143521.67887569, _, _, _, _,
-  287042.916430019, _, _, _, _,
-  71760.6187771641, _, _, _, _,
-  1004650.86948711, _, _, _, _,
-  430564.595305709, _, _, _, _,
-  430564.595305709, _, _, _, _,
-  717607.511735728, _, _, _, _,
-  574086.274181399, _, _, _, _,
-  71760.6187771641, _, _, _, _,
-  215282.297652854, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+147133,	_,	_,	_,	_,
+294266,	_,	_,	_,	_,
+588532,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+294266,	_,	_,	_,	_,
+441399,	_,	_,	_,	_,
+147133,	_,	_,	_,	_,
+441399,	_,	_,	_,	_,
+441399,	_,	_,	_,	_,
+1471330,	_,	_,	_,	_,
+1471330,	_,	_,	_,	_,
+882798,	_,	_,	_,	_,
+294266,	_,	_,	_,	_,
+588532,	_,	_,	_,	_,
+147133,	_,	_,	_,	_,
+2059862,	_,	_,	_,	_,
+882798,	_,	_,	_,	_,
+882798,	_,	_,	_,	_,
+1471330,	_,	_,	_,	_,
+1177064,	_,	_,	_,	_,
+147133,	_,	_,	_,	_,
+441399,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Witchflounder7_ResN =
   _, _, _, _, _,
@@ -93464,36 +90977,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Witchflounder8_Nums =
-  _, _, _, _, _,
-  44117.3831782575, _, _, _, _,
-  88235.0376744604, _, _, _, _,
-  176469.804030975, _, _, _, _,
-  _, _, _, _, _,
-  88235.0376744604, _, _, _, _,
-  132352.420852718, _, _, _, _,
-  44117.3831782575, _, _, _, _,
-  132352.420852718, _, _, _, _,
-  132352.420852718, _, _, _, _,
-  441174.645736411, _, _, _, _,
-  441174.645736411, _, _, _, _,
-  264704.841705436, _, _, _, _,
-  88235.0376744604, _, _, _, _,
-  176469.804030975, _, _, _, _,
-  44117.3831782575, _, _, _, _,
-  617644.721085331, _, _, _, _,
-  264704.841705436, _, _, _, _,
-  264704.841705436, _, _, _, _,
-  441174.645736411, _, _, _, _,
-  352939.879379896, _, _, _, _,
-  44117.3831782575, _, _, _, _,
-  132352.420852718, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+87484,	_,	_,	_,	_,
+174969,	_,	_,	_,	_,
+349938,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+174969,	_,	_,	_,	_,
+262453,	_,	_,	_,	_,
+87484,	_,	_,	_,	_,
+262453,	_,	_,	_,	_,
+262453,	_,	_,	_,	_,
+874845,	_,	_,	_,	_,
+874845,	_,	_,	_,	_,
+524907,	_,	_,	_,	_,
+174969,	_,	_,	_,	_,
+349938,	_,	_,	_,	_,
+87484,	_,	_,	_,	_,
+1224783,	_,	_,	_,	_,
+524907,	_,	_,	_,	_,
+524907,	_,	_,	_,	_,
+874845,	_,	_,	_,	_,
+699876,	_,	_,	_,	_,
+87484,	_,	_,	_,	_,
+262453,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Witchflounder8_ResN =
   _, _, _, _, _,
@@ -93560,36 +91074,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Witchflounder9_Nums =
-  _, _, _, _, _,
-  25218.9903697515, _, _, _, _,
-  50438.1358340295, _, _, _, _,
-  100876.116573533, _, _, _, _,
-  _, _, _, _, _,
-  50438.1358340295, _, _, _, _,
-  75657.126203781, _, _, _, _,
-  25218.9903697515, _, _, _, _,
-  75657.126203781, _, _, _, _,
-  75657.126203781, _, _, _, _,
-  252190.368981095, _, _, _, _,
-  252190.368981095, _, _, _, _,
-  151314.252407562, _, _, _, _,
-  50438.1358340295, _, _, _, _,
-  100876.116573533, _, _, _, _,
-  25218.9903697515, _, _, _, _,
-  353066.640649153, _, _, _, _,
-  151314.252407562, _, _, _, _,
-  151314.252407562, _, _, _, _,
-  252190.368981095, _, _, _, _,
-  201752.388241592, _, _, _, _,
-  25218.9903697515, _, _, _, _,
-  75657.126203781, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+55672,	_,	_,	_,	_,
+111344,	_,	_,	_,	_,
+222688,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+111344,	_,	_,	_,	_,
+167016,	_,	_,	_,	_,
+55672,	_,	_,	_,	_,
+167016,	_,	_,	_,	_,
+167016,	_,	_,	_,	_,
+556719,	_,	_,	_,	_,
+556719,	_,	_,	_,	_,
+334032,	_,	_,	_,	_,
+111344,	_,	_,	_,	_,
+222688,	_,	_,	_,	_,
+55672,	_,	_,	_,	_,
+779407,	_,	_,	_,	_,
+334032,	_,	_,	_,	_,
+334032,	_,	_,	_,	_,
+556719,	_,	_,	_,	_,
+445376,	_,	_,	_,	_,
+55672,	_,	_,	_,	_,
+167016,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Witchflounder9_ResN =
   _, _, _, _, _,
@@ -93688,36 +91203,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Wolffish10_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  6697.07678940815, _, _, _, _,
-  318.915885259254, _, _, _, _,
-  5102.53220778658, _, _, _, _,
-  3507.98762616502, _, _, _, _,
-  2870.17327798387, _, _, _, _,
-  956.730233440407, _, _, _, _,
-  _, _, _, _, _,
-  3507.98762616502, _, _, _, _,
-  1275.62869636231, _, _, _, _,
-  637.814348181154, _, _, _, _,
-  956.730233440407, _, _, _, _,
-  956.730233440407, _, _, _, _,
-  1275.62869636231, _, _, _, _,
-  2870.17327798387, _, _, _, _,
-  956.730233440407, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+13637,	_,	_,	_,	_,
+649,	_,	_,	_,	_,
+10390,	_,	_,	_,	_,
+7143,	_,	_,	_,	_,
+5844,	_,	_,	_,	_,
+1948,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+7143,	_,	_,	_,	_,
+2597,	_,	_,	_,	_,
+1299,	_,	_,	_,	_,
+1948,	_,	_,	_,	_,
+1948,	_,	_,	_,	_,
+2597,	_,	_,	_,	_,
+5844,	_,	_,	_,	_,
+1948,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Wolffish10_ResN =
   _, _, _, _, _,
@@ -93783,7 +91299,40 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _ ;
 
- Wolffish1_Nums =
+Wolffish11_Nums =
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+9651,	_,	_,	_,	_,
+460,	_,	_,	_,	_,
+7353,	_,	_,	_,	_,
+5055,	_,	_,	_,	_,
+4136,	_,	_,	_,	_,
+1379,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+5055,	_,	_,	_,	_,
+1838,	_,	_,	_,	_,
+919,	_,	_,	_,	_,
+1379,	_,	_,	_,	_,
+1379,	_,	_,	_,	_,
+1838,	_,	_,	_,	_,
+4136,	_,	_,	_,	_,
+1379,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
+
+ Wolffish11_ResN =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -93792,21 +91341,21 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
-  384396, _, _, _, _,
-  18305, _, _, _, _,
-  292873, _, _, _, _,
-  201350, _, _, _, _,
-  164741, _, _, _, _,
-  54914, _, _, _, _,
   _, _, _, _, _,
-  201350, _, _, _, _,
-  73218, _, _, _, _,
-  36609, _, _, _, _,
-  54914, _, _, _, _,
-  54914, _, _, _, _,
-  73218, _, _, _, _,
-  164741, _, _, _, _,
-  54914, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _,
@@ -93814,6 +91363,168 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+
+ Wolffish11_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+  
+  Wolffish12_Nums =
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+6714,	_,	_,	_,	_,
+320,	_,	_,	_,	_,
+5115,	_,	_,	_,	_,
+3517,	_,	_,	_,	_,
+2877,	_,	_,	_,	_,
+959,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+3517,	_,	_,	_,	_,
+1279,	_,	_,	_,	_,
+639,	_,	_,	_,	_,
+959,	_,	_,	_,	_,
+959,	_,	_,	_,	_,
+1279,	_,	_,	_,	_,
+2877,	_,	_,	_,	_,
+959,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
+
+ Wolffish12_ResN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ Wolffish12_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+  
+ Wolffish1_Nums =
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+201826,	_,	_,	_,	_,
+9611,	_,	_,	_,	_,
+153772,	_,	_,	_,	_,
+105718,	_,	_,	_,	_,
+86497,	_,	_,	_,	_,
+28832,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+105718,	_,	_,	_,	_,
+38443,	_,	_,	_,	_,
+19221,	_,	_,	_,	_,
+28832,	_,	_,	_,	_,
+28832,	_,	_,	_,	_,
+38443,	_,	_,	_,	_,
+86497,	_,	_,	_,	_,
+28832,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Wolffish1_ResN =
   _, _, _, _, _,
@@ -93880,36 +91591,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Wolffish2_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  245101.652688, _, _, _, _,
-  11671.78054, _, _, _, _,
-  186744.025244, _, _, _, _,
-  128386.3978, _, _, _, _,
-  105043.474348, _, _, _, _,
-  35014.703992, _, _, _, _,
-  _, _, _, _, _,
-  128386.3978, _, _, _, _,
-  46685.846904, _, _, _, _,
-  23342.923452, _, _, _, _,
-  35014.703992, _, _, _, _,
-  35014.703992, _, _, _, _,
-  46685.846904, _, _, _, _,
-  105043.474348, _, _, _, _,
-  35014.703992, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+262248,	_,	_,	_,	_,
+12488,	_,	_,	_,	_,
+199808,	_,	_,	_,	_,
+137368,	_,	_,	_,	_,
+112392,	_,	_,	_,	_,
+37464,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+137368,	_,	_,	_,	_,
+49952,	_,	_,	_,	_,
+24976,	_,	_,	_,	_,
+37464,	_,	_,	_,	_,
+37464,	_,	_,	_,	_,
+49952,	_,	_,	_,	_,
+112392,	_,	_,	_,	_,
+37464,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Wolffish2_ResN =
   _, _, _, _, _,
@@ -93976,36 +91688,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Wolffish3_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  156283.676600144, _, _, _, _,
-  7442.25408215912, _, _, _, _,
-  119073.219328281, _, _, _, _,
-  81862.7620564184, _, _, _, _,
-  66978.6604615665, _, _, _, _,
-  22326.355677011, _, _, _, _,
-  _, _, _, _, _,
-  81862.7620564184, _, _, _, _,
-  29768.2031897037, _, _, _, _,
-  14884.1015948519, _, _, _, _,
-  22326.355677011, _, _, _, _,
-  22326.355677011, _, _, _, _,
-  29768.2031897037, _, _, _, _,
-  66978.6604615665, _, _, _, _,
-  22326.355677011, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+188819,	_,	_,	_,	_,
+8992,	_,	_,	_,	_,
+143862,	_,	_,	_,	_,
+98905,	_,	_,	_,	_,
+80922,	_,	_,	_,	_,
+26974,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+98905,	_,	_,	_,	_,
+35965,	_,	_,	_,	_,
+17983,	_,	_,	_,	_,
+26974,	_,	_,	_,	_,
+26974,	_,	_,	_,	_,
+35965,	_,	_,	_,	_,
+80922,	_,	_,	_,	_,
+26974,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Wolffish3_ResN =
   _, _, _, _, _,
@@ -94072,36 +91785,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Wolffish4_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  99650.8481431967, _, _, _, _,
-  4745.38958589896, _, _, _, _,
-  75924.4186938533, _, _, _, _,
-  52197.9892445099, _, _, _, _,
-  42707.4693127877, _, _, _, _,
-  14235.9095176212, _, _, _, _,
-  _, _, _, _, _,
-  52197.9892445099, _, _, _, _,
-  18981.0398634443, _, _, _, _,
-  9490.51993172219, _, _, _, _,
-  14235.9095176212, _, _, _, _,
-  14235.9095176212, _, _, _, _,
-  18981.0398634443, _, _, _, _,
-  42707.4693127877, _, _, _, _,
-  14235.9095176212, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+125879,	_,	_,	_,	_,
+5994,	_,	_,	_,	_,
+95908,	_,	_,	_,	_,
+65937,	_,	_,	_,	_,
+53948,	_,	_,	_,	_,
+17983,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+65937,	_,	_,	_,	_,
+23977,	_,	_,	_,	_,
+11988,	_,	_,	_,	_,
+17983,	_,	_,	_,	_,
+17983,	_,	_,	_,	_,
+23977,	_,	_,	_,	_,
+53948,	_,	_,	_,	_,
+17983,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Wolffish4_ResN =
   _, _, _, _, _,
@@ -94168,36 +91882,36 @@ DayLight =
   _, _, _, _, _ ;
 
  Wolffish5_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  63540.1709998502, _, _, _, _,
-  3025.79327087758, _, _, _, _,
-  48411.5352429243, _, _, _, _,
-  33282.8994859984, _, _, _, _,
-  27231.4782429742, _, _, _, _,
-  9077.21451390174, _, _, _, _,
-  _, _, _, _, _,
-  33282.8994859984, _, _, _, _,
-  12102.8424860483, _, _, _, _,
-  6051.42124302416, _, _, _, _,
-  9077.21451390174, _, _, _, _,
-  9077.21451390174, _, _, _, _,
-  12102.8424860483, _, _, _, _,
-  27231.4782429742, _, _, _, _,
-  9077.21451390174, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+88115,	_,	_,	_,	_,
+4196,	_,	_,	_,	_,
+67136,	_,	_,	_,	_,
+46156,	_,	_,	_,	_,
+37764,	_,	_,	_,	_,
+12588,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+46156,	_,	_,	_,	_,
+16784,	_,	_,	_,	_,
+8392,	_,	_,	_,	_,
+12588,	_,	_,	_,	_,
+12588,	_,	_,	_,	_,
+16784,	_,	_,	_,	_,
+37764,	_,	_,	_,	_,
+12588,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Wolffish5_ResN =
   _, _, _, _, _,
@@ -94264,36 +91978,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Wolffish6_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  40514.9921542925, _, _, _, _,
-  1929.33051172313, _, _, _, _,
-  30868.5503938753, _, _, _, _,
-  21222.1086334582, _, _, _, _,
-  17363.5530091112, _, _, _, _,
-  5787.88613607014, _, _, _, _,
-  _, _, _, _, _,
-  21222.1086334582, _, _, _, _,
-  7717.11124869402, _, _, _, _,
-  3858.55562434701, _, _, _, _,
-  5787.88613607014, _, _, _, _,
-  5787.88613607014, _, _, _, _,
-  7717.11124869402, _, _, _, _,
-  17363.5530091112, _, _, _, _,
-  5787.88613607014, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+60842,	_,	_,	_,	_,
+2897,	_,	_,	_,	_,
+46355,	_,	_,	_,	_,
+31869,	_,	_,	_,	_,
+26075,	_,	_,	_,	_,
+8692,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+31869,	_,	_,	_,	_,
+11589,	_,	_,	_,	_,
+5794,	_,	_,	_,	_,
+8692,	_,	_,	_,	_,
+8692,	_,	_,	_,	_,
+11589,	_,	_,	_,	_,
+26075,	_,	_,	_,	_,
+8692,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Wolffish6_ResN =
   _, _, _, _, _,
@@ -94360,36 +92075,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Wolffish7_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  25833.4934173572, _, _, _, _,
-  1230.195155529, _, _, _, _,
-  19682.6520505459, _, _, _, _,
-  13531.8106837347, _, _, _, _,
-  11071.4875780935, _, _, _, _,
-  3690.51826117013, _, _, _, _,
-  _, _, _, _, _,
-  13531.8106837347, _, _, _, _,
-  4920.64621128227, _, _, _, _,
-  2460.32310564114, _, _, _, _,
-  3690.51826117013, _, _, _, _,
-  3690.51826117013, _, _, _, _,
-  4920.64621128227, _, _, _, _,
-  11071.4875780935, _, _, _, _,
-  3690.51826117013, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+41960,	_,	_,	_,	_,
+1998,	_,	_,	_,	_,
+31969,	_,	_,	_,	_,
+21979,	_,	_,	_,	_,
+17983,	_,	_,	_,	_,
+5994,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+21979,	_,	_,	_,	_,
+7992,	_,	_,	_,	_,
+3996,	_,	_,	_,	_,
+5994,	_,	_,	_,	_,
+5994,	_,	_,	_,	_,
+7992,	_,	_,	_,	_,
+17983,	_,	_,	_,	_,
+5994,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Wolffish7_ResN =
   _, _, _, _, _,
@@ -94456,36 +92172,36 @@ DayLight =
   _, _, _, _, _ ;
 
  Wolffish8_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  16472.1587407226, _, _, _, _,
-  784.406876629642, _, _, _, _,
-  12550.2100616855, _, _, _, _,
-  8628.26138264837, _, _, _, _,
-  7059.49048144463, _, _, _, _,
-  2353.17777783339, _, _, _, _,
-  _, _, _, _, _,
-  8628.26138264837, _, _, _, _,
-  3137.54180240749, _, _, _, _,
-  1568.77090120375, _, _, _, _,
-  2353.17777783339, _, _, _, _,
-  2353.17777783339, _, _, _, _,
-  3137.54180240749, _, _, _, _,
-  7059.49048144463, _, _, _, _,
-  2353.17777783339, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+29372,	_,	_,	_,	_,
+1399,	_,	_,	_,	_,
+22379,	_,	_,	_,	_,
+15385,	_,	_,	_,	_,
+12588,	_,	_,	_,	_,
+4196,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+15385,	_,	_,	_,	_,
+5595,	_,	_,	_,	_,
+2797,	_,	_,	_,	_,
+4196,	_,	_,	_,	_,
+4196,	_,	_,	_,	_,
+5595,	_,	_,	_,	_,
+12588,	_,	_,	_,	_,
+4196,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Wolffish8_ResN =
   _, _, _, _, _,
@@ -94552,36 +92268,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Wolffish9_Nums =
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  10503.1096335295, _, _, _, _,
-  500.159787931605, _, _, _, _,
-  8002.36534121241, _, _, _, _,
-  5501.62104889532, _, _, _, _,
-  4501.32879670257, _, _, _, _,
-  1500.45204012435, _, _, _, _,
-  _, _, _, _, _,
-  5501.62104889532, _, _, _, _,
-  2000.58450438548, _, _, _, _,
-  1000.29225219274, _, _, _, _,
-  1500.45204012435, _, _, _, _,
-  1500.45204012435, _, _, _, _,
-  2000.58450438548, _, _, _, _,
-  4501.32879670257, _, _, _, _,
-  1500.45204012435, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+19931,	_,	_,	_,	_,
+949,	_,	_,	_,	_,
+15185,	_,	_,	_,	_,
+10440,	_,	_,	_,	_,
+8542,	_,	_,	_,	_,
+2847,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+10440,	_,	_,	_,	_,
+3796,	_,	_,	_,	_,
+1898,	_,	_,	_,	_,
+2847,	_,	_,	_,	_,
+2847,	_,	_,	_,	_,
+3796,	_,	_,	_,	_,
+8542,	_,	_,	_,	_,
+2847,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Wolffish9_ResN =
   _, _, _, _, _,
@@ -94680,36 +92397,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Yellowtail_Flounder10_Nums =
-  _, _, _, _, _,
-  25943.3127435408, _, _, _, _,
-  38914.9693064484, _, _, _, _,
-  25943.3127435408, _, _, _, _,
-  181603.256280453, _, _, _, _,
-  116744.952886939, _, _, _, _,
-  116744.952886939, _, _, _, _,
-  116744.952886939, _, _, _, _,
-  64858.2793404602, _, _, _, _,
-  90801.6324011135, _, _, _, _,
-  38914.9693064484, _, _, _, _,
-  25943.3127435408, _, _, _, _,
-  77829.945972907, _, _, _, _,
-  116744.952886939, _, _, _, _,
-  103773.296324031, _, _, _, _,
-  103773.296324031, _, _, _, _,
-  _, _, _, _, _,
-  12971.6461110941, _, _, _, _,
-  12971.6461110941, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  25943.3127435408, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+125465,	_,	_,	_,	_,
+188197,	_,	_,	_,	_,
+125465,	_,	_,	_,	_,
+878252,	_,	_,	_,	_,
+564591,	_,	_,	_,	_,
+564591,	_,	_,	_,	_,
+564591,	_,	_,	_,	_,
+313661,	_,	_,	_,	_,
+439126,	_,	_,	_,	_,
+188197,	_,	_,	_,	_,
+125465,	_,	_,	_,	_,
+376394,	_,	_,	_,	_,
+564591,	_,	_,	_,	_,
+501858,	_,	_,	_,	_,
+501858,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+62732,	_,	_,	_,	_,
+62732,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+125465,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Yellowtail_Flounder10_ResN =
   _, _, _, _, _,
@@ -94774,7 +92492,200 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+  
+  Yellowtail_Flounder11_Nums =
+_,	_,	_,	_,	_,
+79841,	_,	_,	_,	_,
+119762,	_,	_,	_,	_,
+79841,	_,	_,	_,	_,
+558888,	_,	_,	_,	_,
+359285,	_,	_,	_,	_,
+359285,	_,	_,	_,	_,
+359285,	_,	_,	_,	_,
+199603,	_,	_,	_,	_,
+279444,	_,	_,	_,	_,
+119762,	_,	_,	_,	_,
+79841,	_,	_,	_,	_,
+239523,	_,	_,	_,	_,
+359285,	_,	_,	_,	_,
+319364,	_,	_,	_,	_,
+319364,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+39920,	_,	_,	_,	_,
+39920,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+79841,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
+
+ Yellowtail_Flounder11_ResN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ Yellowtail_Flounder11_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+Yellowtail_Flounder12_Nums =
+_,	_,	_,	_,	_,
+25853,	_,	_,	_,	_,
+38780,	_,	_,	_,	_,
+25853,	_,	_,	_,	_,
+180973,	_,	_,	_,	_,
+116340,	_,	_,	_,	_,
+116340,	_,	_,	_,	_,
+116340,	_,	_,	_,	_,
+64633,	_,	_,	_,	_,
+90487,	_,	_,	_,	_,
+38780,	_,	_,	_,	_,
+25853,	_,	_,	_,	_,
+77560,	_,	_,	_,	_,
+116340,	_,	_,	_,	_,
+103413,	_,	_,	_,	_,
+103413,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+12927,	_,	_,	_,	_,
+12927,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+25853,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
+ Yellowtail_Flounder12_ResN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+
+ Yellowtail_Flounder12_StructN =
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _,
+  _, _, _, _, _ ;
+  
  Yellowtail_Flounder1_Nums =
   _, _, _, _, _,
   270344.584383425, _, _, _, _,
@@ -94806,6 +92717,7 @@ DayLight =
   _, _, _, _, _,
   _, _, _, _, _,
   _, _, _, _, _ ;
+
 
  Yellowtail_Flounder1_ResN =
   _, _, _, _, _,
@@ -94872,36 +92784,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Yellowtail_Flounder2_Nums =
-  _, _, _, _, _,
-  354194.580930211, _, _, _, _,
-  531291.874004842, _, _, _, _,
-  354194.580930211, _, _, _, _,
-  2479362.98227108, _, _, _, _,
-  1593876.23594067, _, _, _, _,
-  1593876.23594067, _, _, _, _,
-  1593876.23594067, _, _, _, _,
-  885486.417942843, _, _, _, _,
-  1239681.54930788, _, _, _, _,
-  531291.874004842, _, _, _, _,
-  354194.580930211, _, _, _, _,
-  1062583.84849322, _, _, _, _,
-  1593876.23594067, _, _, _, _,
-  1416778.94286604, _, _, _, _,
-  1416778.94286604, _, _, _, _,
-  _, _, _, _, _,
-  177097.150379837, _, _, _, _,
-  177097.150379837, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  354194.580930211, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+319364,	_,	_,	_,	_,
+479046,	_,	_,	_,	_,
+319364,	_,	_,	_,	_,
+2235550,	_,	_,	_,	_,
+1437140,	_,	_,	_,	_,
+1437140,	_,	_,	_,	_,
+1437140,	_,	_,	_,	_,
+798411,	_,	_,	_,	_,
+1117775,	_,	_,	_,	_,
+479046,	_,	_,	_,	_,
+319364,	_,	_,	_,	_,
+958093,	_,	_,	_,	_,
+1437140,	_,	_,	_,	_,
+1277457,	_,	_,	_,	_,
+1277457,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+159682,	_,	_,	_,	_,
+159682,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+319364,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Yellowtail_Flounder2_ResN =
   _, _, _, _, _,
@@ -94968,36 +92881,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Yellowtail_Flounder3_Nums =
-  _, _, _, _, _,
-  1130879.28368807, _, _, _, _,
-  1696318.93386385, _, _, _, _,
-  1130879.28368807, _, _, _, _,
-  7916157.90967139, _, _, _, _,
-  5088958.76174677, _, _, _, _,
-  5088958.76174677, _, _, _, _,
-  5088958.76174677, _, _, _, _,
-  2827198.09944248, _, _, _, _,
-  3958079.14056945, _, _, _, _,
-  1696318.93386385, _, _, _, _,
-  1130879.28368807, _, _, _, _,
-  3392638.18855346, _, _, _, _,
-  5088958.76174677, _, _, _, _,
-  4523519.11157099, _, _, _, _,
-  4523519.11157099, _, _, _, _,
-  _, _, _, _, _,
-  565439.194577088, _, _, _, _,
-  565439.194577088, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  1130879.28368807, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+874450,	_,	_,	_,	_,
+1311674,	_,	_,	_,	_,
+874450,	_,	_,	_,	_,
+6121150,	_,	_,	_,	_,
+3935025,	_,	_,	_,	_,
+3935025,	_,	_,	_,	_,
+3935025,	_,	_,	_,	_,
+2186124,	_,	_,	_,	_,
+3060575,	_,	_,	_,	_,
+1311674,	_,	_,	_,	_,
+874450,	_,	_,	_,	_,
+2623349,	_,	_,	_,	_,
+3935025,	_,	_,	_,	_,
+3497800,	_,	_,	_,	_,
+3497800,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+437224,	_,	_,	_,	_,
+437224,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+874450,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Yellowtail_Flounder3_ResN =
   _, _, _, _, _,
@@ -95064,36 +92978,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Yellowtail_Flounder4_Nums =
-  _, _, _, _, _,
-  736290.814056206, _, _, _, _,
-  1104436.22650893, _, _, _, _,
-  736290.814056206, _, _, _, _,
-  5154037.60205155, _, _, _, _,
-  3313309.95574106, _, _, _, _,
-  3313309.95574106, _, _, _, _,
-  3313309.95574106, _, _, _, _,
-  1840726.96366665, _, _, _, _,
-  2577018.92195297, _, _, _, _,
-  1104436.22650893, _, _, _, _,
-  736290.814056206, _, _, _, _,
-  2208872.6619005, _, _, _, _,
-  3313309.95574106, _, _, _, _,
-  2945164.54328834, _, _, _, _,
-  2945164.54328834, _, _, _, _,
-  _, _, _, _, _,
-  368145.115822358, _, _, _, _,
-  368145.115822358, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  736290.814056206, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+1026528,	_,	_,	_,	_,
+1539792,	_,	_,	_,	_,
+1026528,	_,	_,	_,	_,
+7185697,	_,	_,	_,	_,
+4619377,	_,	_,	_,	_,
+4619377,	_,	_,	_,	_,
+4619377,	_,	_,	_,	_,
+2566319,	_,	_,	_,	_,
+3592849,	_,	_,	_,	_,
+1539792,	_,	_,	_,	_,
+1026528,	_,	_,	_,	_,
+3079584,	_,	_,	_,	_,
+4619377,	_,	_,	_,	_,
+4106113,	_,	_,	_,	_,
+4106113,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+513264,	_,	_,	_,	_,
+513264,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+1026528,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Yellowtail_Flounder4_ResN =
   _, _, _, _, _,
@@ -95160,36 +93075,36 @@ DayLight =
   _, _, _, _, _ ;
 
  Yellowtail_Flounder5_Nums =
-  _, _, _, _, _,
-  491182.862613983, _, _, _, _,
-  736774.297539761, _, _, _, _,
-  491182.862613983, _, _, _, _,
-  3438281.30823664, _, _, _, _,
-  2210323.74398748, _, _, _, _,
-  2210323.74398748, _, _, _, _,
-  2210323.74398748, _, _, _, _,
-  1227957.10885443, _, _, _, _,
-  1719140.73478938, _, _, _, _,
-  736774.297539761, _, _, _, _,
-  491182.862613983, _, _, _, _,
-  1473548.73442606, _, _, _, _,
-  2210323.74398748, _, _, _, _,
-  1964732.3090617, _, _, _, _,
-  1964732.3090617, _, _, _, _,
-  _, _, _, _, _,
-  245591.23704235, _, _, _, _,
-  245591.23704235, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  491182.862613983, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+646332,	_,	_,	_,	_,
+969499,	_,	_,	_,	_,
+646332,	_,	_,	_,	_,
+4524328,	_,	_,	_,	_,
+2908497,	_,	_,	_,	_,
+2908497,	_,	_,	_,	_,
+2908497,	_,	_,	_,	_,
+1615831,	_,	_,	_,	_,
+2262164,	_,	_,	_,	_,
+969499,	_,	_,	_,	_,
+646332,	_,	_,	_,	_,
+1938997,	_,	_,	_,	_,
+2908497,	_,	_,	_,	_,
+2585330,	_,	_,	_,	_,
+2585330,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+323166,	_,	_,	_,	_,
+323166,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+646332,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
 
  Yellowtail_Flounder5_ResN =
   _, _, _, _, _,
@@ -95256,36 +93171,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Yellowtail_Flounder6_Nums =
-  _, _, _, _, _,
-  351939.601560938, _, _, _, _,
-  527909.40493432, _, _, _, _,
-  351939.601560938, _, _, _, _,
-  2463578.12085599, _, _, _, _,
-  1583728.82482055, _, _, _, _,
-  1583728.82482055, _, _, _, _,
-  1583728.82482055, _, _, _, _,
-  879848.96973856, _, _, _, _,
-  1231789.11822998, _, _, _, _,
-  527909.40493432, _, _, _, _,
-  351939.601560938, _, _, _, _,
-  1055818.90971245, _, _, _, _,
-  1583728.82482055, _, _, _, _,
-  1407759.02144717, _, _, _, _,
-  1407759.02144717, _, _, _, _,
-  _, _, _, _, _,
-  175969.661587053, _, _, _, _,
-  175969.661587053, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  351939.601560938, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+456235,	_,	_,	_,	_,
+684352,	_,	_,	_,	_,
+456235,	_,	_,	_,	_,
+3193643,	_,	_,	_,	_,
+2053056,	_,	_,	_,	_,
+2053056,	_,	_,	_,	_,
+2053056,	_,	_,	_,	_,
+1140586,	_,	_,	_,	_,
+1596822,	_,	_,	_,	_,
+684352,	_,	_,	_,	_,
+456235,	_,	_,	_,	_,
+1368704,	_,	_,	_,	_,
+2053056,	_,	_,	_,	_,
+1824939,	_,	_,	_,	_,
+1824939,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+228117,	_,	_,	_,	_,
+228117,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+456235,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Yellowtail_Flounder6_ResN =
   _, _, _, _, _,
@@ -95352,36 +93268,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Yellowtail_Flounder7_Nums =
-  _, _, _, _, _,
-  207774.361884593, _, _, _, _,
-  311661.544357665, _, _, _, _,
-  207774.361884593, _, _, _, _,
-  1454421.07038661, _, _, _, _,
-  934984.993208697, _, _, _, _,
-  934984.993208697, _, _, _, _,
-  934984.993208697, _, _, _, _,
-  519435.884542229, _, _, _, _,
-  727210.569317827, _, _, _, _,
-  311661.544357665, _, _, _, _,
-  207774.361884593, _, _, _, _,
-  623323.147660056, _, _, _, _,
-  934984.993208697, _, _, _, _,
-  831097.810735624, _, _, _, _,
-  831097.810735624, _, _, _, _,
-  _, _, _, _, _,
-  103887.098766767, _, _, _, _,
-  103887.098766767, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  207774.361884593, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+364988,	_,	_,	_,	_,
+547482,	_,	_,	_,	_,
+364988,	_,	_,	_,	_,
+2554915,	_,	_,	_,	_,
+1642445,	_,	_,	_,	_,
+1642445,	_,	_,	_,	_,
+1642445,	_,	_,	_,	_,
+912469,	_,	_,	_,	_,
+1277457,	_,	_,	_,	_,
+547482,	_,	_,	_,	_,
+364988,	_,	_,	_,	_,
+1094963,	_,	_,	_,	_,
+1642445,	_,	_,	_,	_,
+1459951,	_,	_,	_,	_,
+1459951,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+182494,	_,	_,	_,	_,
+182494,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+364988,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Yellowtail_Flounder7_ResN =
   _, _, _, _, _,
@@ -95448,36 +93365,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Yellowtail_Flounder8_Nums =
-  _, _, _, _, _,
-  143299.05991862, _, _, _, _,
-  214948.590933684, _, _, _, _,
-  143299.05991862, _, _, _, _,
-  1003093.78992582, _, _, _, _,
-  644846.021181589, _, _, _, _,
-  644846.021181589, _, _, _, _,
-  644846.021181589, _, _, _, _,
-  358247.635886099, _, _, _, _,
-  501546.91849811, _, _, _, _,
-  214948.590933684, _, _, _, _,
-  143299.05991862, _, _, _, _,
-  429897.222520718, _, _, _, _,
-  644846.021181589, _, _, _, _,
-  573196.490166524, _, _, _, _,
-  573196.490166524, _, _, _, _,
-  _, _, _, _, _,
-  71649.4732840009, _, _, _, _,
-  71649.4732840009, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  143299.05991862, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+243325,	_,	_,	_,	_,
+364988,	_,	_,	_,	_,
+243325,	_,	_,	_,	_,
+1703276,	_,	_,	_,	_,
+1094963,	_,	_,	_,	_,
+1094963,	_,	_,	_,	_,
+1094963,	_,	_,	_,	_,
+608313,	_,	_,	_,	_,
+851638,	_,	_,	_,	_,
+364988,	_,	_,	_,	_,
+243325,	_,	_,	_,	_,
+729975,	_,	_,	_,	_,
+1094963,	_,	_,	_,	_,
+973301,	_,	_,	_,	_,
+973301,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+121662,	_,	_,	_,	_,
+121662,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+243325,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Yellowtail_Flounder8_ResN =
   _, _, _, _, _,
@@ -95544,36 +93462,37 @@ DayLight =
   _, _, _, _, _ ;
 
  Yellowtail_Flounder9_Nums =
-  _, _, _, _, _,
-  90106.4747968209, _, _, _, _,
-  135159.71285909, _, _, _, _,
-  90106.4747968209, _, _, _, _,
-  630745.55654537, _, _, _, _,
-  405479.294758996, _, _, _, _,
-  405479.294758996, _, _, _, _,
-  405479.294758996, _, _, _, _,
-  225266.178245158, _, _, _, _,
-  315372.793071624, _, _, _, _,
-  135159.71285909, _, _, _, _,
-  90106.4747968209, _, _, _, _,
-  270319.451281013, _, _, _, _,
-  405479.294758996, _, _, _, _,
-  360426.056696727, _, _, _, _,
-  360426.056696727, _, _, _, _,
-  _, _, _, _, _,
-  45053.2017609659, _, _, _, _,
-  45053.2017609659, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  90106.4747968209, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _,
-  _, _, _, _, _ ;
+_,	_,	_,	_,	_,
+167286,	_,	_,	_,	_,
+250929,	_,	_,	_,	_,
+167286,	_,	_,	_,	_,
+1171003,	_,	_,	_,	_,
+752787,	_,	_,	_,	_,
+752787,	_,	_,	_,	_,
+752787,	_,	_,	_,	_,
+418215,	_,	_,	_,	_,
+585501,	_,	_,	_,	_,
+250929,	_,	_,	_,	_,
+167286,	_,	_,	_,	_,
+501858,	_,	_,	_,	_,
+752787,	_,	_,	_,	_,
+669144,	_,	_,	_,	_,
+669144,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+83643,	_,	_,	_,	_,
+83643,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+167286,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_,
+_,	_,	_,	_,	_ ;
+
 
  Yellowtail_Flounder9_ResN =
   _, _, _, _, _,

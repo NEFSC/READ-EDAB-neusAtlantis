@@ -1,0 +1,3 @@
+"Run.ID","Run.Group","Code","Type","Unit","Value","bio.file","run.sh.file"
+1,"COD","COD","mQa","scalar",1.25,"at_biology_1.prm","RunAtlantis_1.sh"
+2,"COD","COD","mQa","scalar",1.5,"at_biology_2.prm","RunAtlantis_2.sh"

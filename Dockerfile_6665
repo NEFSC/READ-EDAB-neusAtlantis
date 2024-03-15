@@ -1,0 +1,13 @@
+FROM ubuntu:18.04
+RUN apt-get update && apt-get install -yq build-essential autoconf libnetcdf-dev libxml2-dev libproj-dev subversion valgrind dos2unix gawk
+
+COPY /v6665/atlantis /app/atlantis
+COPY /v6665/svn /app/.svn
+
+RUN cd /app/atlantis && aclocal && autoheader && autoconf && automake -a && ./configure && make && make install
+
+WORKDIR /app/model
+
+ENTRYPOINT ["sh"]
+
+CMD ["RunAtlantis.sh"]
