@@ -1798,7 +1798,6 @@ DiscardTS_agedistribDR       10
 DiscardTS_agedistribDC       10
 0 0 0 0 0 0 0 0 0 0
 
-=======
 imposecatchstart_MAK      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 imposecatchstart_HER      28
@@ -6385,8 +6384,7 @@ midwcOSH_mEff_max   0.001
 mowMA_mEff_max      0.001
 
 ### Steepness of the effort increase in response to CPUE in the
-exponential CPUE related effort allocation option (unitless), used in
-YYY_efformodel =4 and 5
+exponential CPUE related effort allocation option (unitless), used in YYY_efformodel =4 and 5
 
 midwcISQ_mEff_a   100
 midwcLSQ_mEff_a   100
@@ -6417,8 +6415,7 @@ midwcNSH_mEff_a   100
 midwcOSH_mEff_a   100
 mowMA_mEff_a      100
 
-## The effort offset (days day-1) to reduce the effort per box, used in
-YYY_efformodel=4 and 5
+## The effort offset (days day-1) to reduce the effort per box, used in YYY_efformodel=4 and 5
 
 midwcISQ_mEff_offset   100
 midwcLSQ_mEff_offset   100
