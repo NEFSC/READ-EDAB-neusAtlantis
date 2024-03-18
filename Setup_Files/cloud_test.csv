@@ -1,0 +1,11 @@
+Run.ID,Run.Group,Code,Type,Unit,Value
+1,SMO,SMO,mQa,scalar,0.1
+1,SMO,SMO,mQj,scalar,1
+2,SMO,SMO,mQa,scalar,1
+2,SMO,SMO,mQj,scalar,0.1
+3,SMO,SMO,mQa,scalar,0.1
+3,SMO,SMO,mQj,scalar,0.1
+4,SCA,SCA,C,scalar,0.1
+5,SCA,SCA,mum,scalar,0.1
+6,SCA,SCA,C,scalar,0.1
+6,SCA,SCA,mum,scalar,0.1

@@ -5,7 +5,6 @@
 *.Rproj
 /Atlantis_Runs/
 /Run_Code/
-/Setup_Files/
 /Figures/
 /currentVersion/archive/
 
@@ -39,6 +38,7 @@ outputFolder
 # except csv
 !/currentVersion/neus_fisheries.csv
 !/currentVersion/neus_groups.csv
+!/currentVersion/neus_migrations.csv
 # except bgm
 !/currentVersion/neus_tmerc_RM2.bgm
 # except rmd
@@ -69,4 +69,9 @@ diagnostics/Obs_Hindcast_Group_Progress.xlsx
 
 #data files
 data/fishing_sensitivity_extended_constant_2/*
+
+
+#Setup Files for Cloud
+/Setup_Files/*
+!/Setup_Files/cloud*
 

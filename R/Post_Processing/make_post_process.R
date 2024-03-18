@@ -58,6 +58,7 @@ make_post_process = function(run.name,
   #Run function that retreives parameter files
   param.ls= get_atl_paramfiles(param.dir = param.dir,
                                atl.dir=atl.dir,
+                               run.prefix = run.prefix,
                                include_catch=T)
   
   #Run  post-processing function to generate "result" R object. 
