@@ -16543,7 +16543,7 @@ BHalpha_OSH 9e+11
 #Beta in Beverton-Holt 
 BHbeta_MAK 6E13
 BHbeta_HER 5e+13
-BHbeta_WHK 3.25E+14
+BHbeta_WHK 3.25
 BHbeta_BLF 5.25E+09
 BHbeta_WPF 1.47E+11
 BHbeta_SUF 3.60E+10
