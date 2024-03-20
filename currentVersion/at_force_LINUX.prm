@@ -298,6 +298,18 @@ nDiscardts 0
 typeDiscardts 0
 
 #############################################
+# Historical effort lists - nEffortts is the number of time series to be loaded and
+# typeEffortts is whether or not the data is to be interpolated (0) by the model
+# or just use previous record (1)
+nEffortts 1
+typeEffortts 1
+
+Effortts0.name totcatch
+Effortts0.location 52965.5227 2474675.803 0
+Effortts0.data CatchFiles/total_effort.ts
+Effortts0.rewind 0
+
+#############################################
 # Residual lists
 nResidualsts 0
 typeResidualsts 0
