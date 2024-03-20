@@ -55,6 +55,7 @@ outputFolder
 # catch files
 currentVersion/CatchFiles/**/*
 !/currentVersion/CatchFiles/total_catch.ts
+!/currentVersion/CatchFiles/total_effort.ts
 !/currentVersion/CatchFiles/total_catch_project_mean_20yrs.ts
 !/currentVersion/CatchFiles/Catch_Forcing_New_Spinup.pdf
 !/currentVersion/CatchFiles/Catch_Forcing_Raw.pdf
