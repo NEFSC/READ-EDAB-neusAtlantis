@@ -4,147 +4,119 @@
 ## 
 ## COLUMN1.name Time
 ## COLUMN1.long_name Time
-## COLUMN1.units days day-1 
+## COLUMN1.units days since 1964-01-01 00:00:00 10
 ## COLUMN1.missing_value 0
 ## 
 ## COLUMN2.name midwcISQ
 ## COLUMN2.long_name midwcISQ
-## COLUMN2.units days day-1
 ## COLUMN2.missing_value 0
 ## 
 ## COLUMN3.name midwcLSQ
 ## COLUMN3.long_name midwcLSQ
-## COLUMN3.units days day-1
 ## COLUMN3.missing_value 0
 ## 
 ## COLUMN4.name jigISQ
 ## COLUMN4.long_name jigISQ
-## COLUMN4.units days day-1
 ## COLUMN4.missing_value 0
 ## 
 ## COLUMN5.name jigLSQ
 ## COLUMN5.long_name jigLSQ
-## COLUMN5.units days day-1
 ## COLUMN5.missing_value 0
 ## 
 ## COLUMN6.name dredgeSCA
 ## COLUMN6.long_name dredgeSCA
-## COLUMN6.units days day-1
 ## COLUMN6.missing_value 0
 ## 
 ## COLUMN7.name trapRCB
 ## COLUMN7.long_name trapRCB
-## COLUMN7.units days day-1
 ## COLUMN7.missing_value 0
 ## 
 ## COLUMN8.name dtrawlRCB
 ## COLUMN8.long_name dtrawlRCB
-## COLUMN8.units days day-1
 ## COLUMN8.missing_value 0
 ## 
 ## COLUMN9.name dtrawlISQ
 ## COLUMN9.long_name dtrawlISQ
-## COLUMN9.units days day-1
 ## COLUMN9.missing_value 0
 ## 
 ## COLUMN10.name dtrawlLSQ
 ## COLUMN10.long_name dtrawlLSQ
-## COLUMN10.units days day-1
 ## COLUMN10.missing_value 0
 ## 
 ## COLUMN11.name dtrawlSHK
 ## COLUMN11.long_name dtrawlSHK
-## COLUMN11.units days day-1
 ## COLUMN11.missing_value 0
 ## 
 ## COLUMN12.name dtrawlHAD
 ## COLUMN12.long_name dtrawlHAD
-## COLUMN12.units days day-1
 ## COLUMN12.missing_value 0
 ## 
 ## COLUMN13.name dseineSHK
 ## COLUMN13.long_name dseineSHK
-## COLUMN13.units days day-1
 ## COLUMN13.missing_value 0
 ## 
 ## COLUMN14.name dlineBLF
 ## COLUMN14.long_name dlineBLF
-## COLUMN14.units days day-1
 ## COLUMN14.missing_value 0
 ## 
 ## COLUMN15.name diveBG
 ## COLUMN15.long_name diveBG
-## COLUMN15.units days day-1
 ## COLUMN15.missing_value 0
 ## 
 ## COLUMN16.name pseineBLF
 ## COLUMN16.long_name pseineBLF
-## COLUMN16.units days day-1
 ## COLUMN16.missing_value 0
 ## 
 ## COLUMN17.name cullPIN
 ## COLUMN17.long_name cullPIN
-## COLUMN17.units days day-1
 ## COLUMN17.missing_value 0
 ## 
 ## COLUMN18.name ptrawlNSH
 ## COLUMN18.long_name ptrawlNSH
-## COLUMN18.units days day-1
 ## COLUMN18.missing_value 0
 ## 
 ## COLUMN19.name ptrawlOSH
 ## COLUMN19.long_name ptrawlOSH
-## COLUMN19.units days day-1
 ## COLUMN19.missing_value 0
 ## 
 ## COLUMN20.name dtrawlANC
 ## COLUMN20.long_name dtrawlANC
-## COLUMN20.units days day-1
 ## COLUMN20.missing_value 0
 ## 
 ## COLUMN21.name dtrawlBPF
 ## COLUMN21.long_name dtrawlBPF
-## COLUMN21.units days day-1
 ## COLUMN21.missing_value 0
 ## 
 ## COLUMN22.name dtrawlBUT
 ## COLUMN22.long_name dtrawlBUT
-## COLUMN22.units days day-1
 ## COLUMN22.missing_value 0
 ## 
 ## COLUMN23.name midwcZL
 ## COLUMN23.long_name midwcZL
-## COLUMN23.units days day-1
 ## COLUMN23.missing_value 0
 ## 
 ## COLUMN24.name trapMEN
 ## COLUMN24.long_name trapMEN
-## COLUMN24.units days day-1
 ## COLUMN24.missing_value 0
 ## 
 ## COLUMN25.name dlineMEN
 ## COLUMN25.long_name dlineMEN
-## COLUMN25.units days day-1
 ## COLUMN25.missing_value 0
 ## 
 ## COLUMN26.name netMEN
 ## COLUMN26.long_name netMEN
-## COLUMN26.units days day-1
 ## COLUMN26.missing_value 0
 ## 
 ## COLUMN27.name midwcNSH
 ## COLUMN27.long_name midwcNSH
-## COLUMN27.units days day-1
 ## COLUMN27.missing_value 0
 ## 
 ## COLUMN28.name midwcOSH
 ## COLUMN28.long_name midwcOSH
-## COLUMN28.units days day-1
 ## COLUMN28.missing_value 0
 ## 
 ## COLUMN29.name mowMA
 ## COLUMN29.long_name mowMA
-## COLUMN29.units days day-1
 ## COLUMN29.missing_value 0
 ## 
 1 0 0 0 0 0.1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
