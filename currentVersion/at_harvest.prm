@@ -3661,7 +3661,7 @@ midwcISQ_effortmodel   0
 midwcLSQ_effortmodel   0
 jigISQ_effortmodel     0
 jigLSQ_effortmodel     0
-dredgeSCA_effortmodel  11
+dredgeSCA_effortmodel  0
 trapRCB_effortmodel    0
 dtrawlRCB_effortmodel  0
 dtrawlISQ_effortmodel  0
@@ -3756,7 +3756,7 @@ Effort_hdistribjigISQ1         30
 Effort_hdistribjigLSQ1         30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdredgeSCA1      30
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 Effort_hdistribtrapRCB1        30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdtrawlRCB1      30
@@ -3812,7 +3812,7 @@ Effort_hdistribjigISQ2         30
 Effort_hdistribjigLSQ2         30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdredgeSCA2      30
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 Effort_hdistribtrapRCB2        30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdtrawlRCB2      30
@@ -3868,7 +3868,7 @@ Effort_hdistribjigISQ3         30
 Effort_hdistribjigLSQ3         30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdredgeSCA3      30
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 Effort_hdistribtrapRCB3        30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdtrawlRCB3      30
@@ -3924,7 +3924,7 @@ Effort_hdistribjigISQ4         30
 Effort_hdistribjigLSQ4         30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdredgeSCA4      30
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 Effort_hdistribtrapRCB4        30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdtrawlRCB4      30
@@ -3978,7 +3978,7 @@ midwcISQ_sweptarea   0
 midwcLSQ_sweptarea   0
 jigISQ_sweptarea     0
 jigLSQ_sweptarea     0
-dredgeSCA_sweptarea  .1
+dredgeSCA_sweptarea  1
 trapRCB_sweptarea    0
 dtrawlRCB_sweptarea  0
 dtrawlISQ_sweptarea  0
@@ -4129,7 +4129,7 @@ flagescapement_LSQ      28
 flagescapement_ISQ      28
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 flagescapement_SCA      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 flagescapement_QHG      28
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 flagescapement_CLA      28
@@ -4799,7 +4799,7 @@ midwcISQ_Effort   0
 midwcLSQ_Effort   0
 jigISQ_Effort     0
 jigLSQ_Effort     0
-dredgeSCA_Effort  0
+dredgeSCA_Effort  1
 trapRCB_Effort    0
 dtrawlRCB_Effort  0
 dtrawlISQ_Effort  0
@@ -17217,3 +17217,97 @@ useMultispAssess 0
 
 # v6678
 do_sumB_HCR 0
+
+# v6698
+K_max_co_sp 0
+
+max_co_sp_MAK 0
+max_co_sp_HER 0
+max_co_sp_WHK 0
+max_co_sp_BLF 0
+max_co_sp_WPF 0
+max_co_sp_SUF 0
+max_co_sp_WIF 0
+max_co_sp_WTF 0
+max_co_sp_HAL 0
+max_co_sp_PLA 0
+max_co_sp_FOU 0
+max_co_sp_FLA 0
+max_co_sp_BFT 0
+max_co_sp_TUN 0
+max_co_sp_BIL 0
+max_co_sp_MPF 0
+max_co_sp_BUT 0
+max_co_sp_ANC 0
+max_co_sp_BPF 0
+max_co_sp_GOO 0
+max_co_sp_MEN 0
+max_co_sp_FDE 0
+max_co_sp_COD 0
+max_co_sp_SHK 0
+max_co_sp_OHK 0
+max_co_sp_POL 0
+max_co_sp_RHK 0
+max_co_sp_BSB 0
+max_co_sp_SCU 0
+max_co_sp_TYL 0
+max_co_sp_RED 0
+max_co_sp_OPT 0
+max_co_sp_SAL 0
+max_co_sp_DRM 0
+max_co_sp_STB 0
+max_co_sp_TAU 0
+max_co_sp_WOL 0
+max_co_sp_SDF 0
+max_co_sp_FDF 0
+max_co_sp_HAD 0
+max_co_sp_YTF 0
+max_co_sp_DOG 0
+max_co_sp_SMO 0
+max_co_sp_SSH 0
+max_co_sp_DSH 0
+max_co_sp_BLS 0
+max_co_sp_POR 0
+max_co_sp_PSH 0
+max_co_sp_WSK 0
+max_co_sp_LSK 0
+max_co_sp_SK 0
+max_co_sp_SB 0
+max_co_sp_PIN 0
+max_co_sp_REP 0
+max_co_sp_RWH 0
+max_co_sp_BWH 0
+max_co_sp_SWH 0
+max_co_sp_TWH 0
+max_co_sp_INV 0
+max_co_sp_LSQ 0
+max_co_sp_jLSQ 0
+max_co_sp_ISQ 0
+max_co_sp_jISQ 0
+max_co_sp_SCA 0
+max_co_sp_QHG 0
+max_co_sp_CLA 0
+max_co_sp_BFF 0
+max_co_sp_BG 0
+max_co_sp_LOB 0
+max_co_sp_RCB 0
+max_co_sp_BMS 0
+max_co_sp_NSH 0
+max_co_sp_jNSH 0
+max_co_sp_OSH 0
+max_co_sp_jOSH 0
+max_co_sp_ZL 0
+max_co_sp_BD 0
+max_co_sp_MA 0
+max_co_sp_MB 0
+max_co_sp_SG 0
+max_co_sp_BC 0
+max_co_sp_ZG 0
+max_co_sp_PL 0
+max_co_sp_DF 0
+max_co_sp_PS 0
+max_co_sp_ZM 0
+max_co_sp_ZS 0
+max_co_sp_PB 0
+max_co_sp_BB 0
+max_co_sp_BO 0
