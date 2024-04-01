@@ -20,6 +20,7 @@ run.sh.orig = here::here('currentVersion','RunAtlantis_cloud.sh')
 sbatch.orig = here::here('currentVersion','sbatch_scenario_array_base.sh')
 fgs.file = here::here('currentVersion','neus_groups.csv')
 mig.file.orig = here::here('currentVersion','neus_migrations.csv')
+run.prm.orig = here::here('currentVersion','at_run.prm')
 
 #Read in functional groups and define inverts
 fgs = read.csv(fgs.file,as.is = T)
@@ -71,6 +72,9 @@ if(any('FSPB' %in% setup.df$Type)){
 if(any(c('aMigSize','jMigSize','aMigSurvive','jMigSurvive') %in% setup.df$Type)){
   source(here::here('R','Calibration_Tools','edit_param_migration_csv.R'))
 }
+if('InitScalar' %in% setup.df$Type){
+  source(here::here('R','Calibration_Tools','edit_param_init_scalar.R'))
+}
 
 possible.types = unique(read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'),as.is=T)$Type)
 
@@ -88,6 +92,11 @@ for(i in 1:length(run.id)){
   mig.file.short = paste0('neus_migrations_',run.id[i],'.csv')
   mig.file.new = here::here('currentVersion',mig.file.short)
   file.copy(mig.file.orig,mig.file.new,overwrite =T)
+  
+  #Copy run.prm with run.id prefix
+  run.prm.short = paste0('at_run_',run.id[i],'.prm')
+  run.prm.new = here::here('currentversion',run.prm.short)
+  file.copy(run.prm.orig,run.prm.new,overwrite =T)
   
   #Separate task for run.id
   setup.run = dplyr::filter(setup.df, Run.ID == run.id[i])
@@ -350,6 +359,17 @@ for(i in 1:length(run.id)){
                          )
     }
     
+    if(setup.run$Type[j] == 'InitScalar'){
+      
+      edit_param_init_scalar(run.prm = run.prm.new,
+                             groups.file = groups.file,
+                             group.name = setup.run$Code[j],
+                             unit = setup.run$Unit[j],
+                             value = setup.run$Value[j],
+                             overwrite = T)
+      
+    }
+    
   }
   
   #Write shell script
@@ -360,7 +380,7 @@ for(i in 1:length(run.id)){
   #Edit shell script
   run.sh.new.lines = readLines(run.sh.new)
   run.command.line = grep('atlantisMerged',run.sh.new.lines)
-  run.command.new =  paste0('atlantisMerged -i neus_init.nc 0 -o neus_output.nc -r at_run.prm -f at_force_LINUX.prm -p at_physics.prm -b ',bio.file.short,' -h at_harvest.prm -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -m neus_migrations.csv -t . -d output')
+  run.command.new =  paste0('atlantisMerged -i neus_init.nc 0 -o neus_output.nc -r ',run.prm.short,' -f at_force_LINUX.prm -p at_physics.prm -b ',bio.file.short,' -h at_harvest.prm -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -m ',mig.file.short,' -t . -d output')
   run.sh.new.lines[run.command.line] = run.command.new
   
   writeLines(run.sh.new.lines,con = run.sh.new)

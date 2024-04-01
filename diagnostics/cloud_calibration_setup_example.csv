@@ -44,3 +44,4 @@ Run.ID,Run.Group,Code,Type,Unit,Value
 32,Test1,BFT,aMigSize,value,0.5
 32,Test1,BFT,jMigSurvive,value,0.5
 32,Test1,BFT,aMigSurvive,value,0.5
+33,Test1,MAK,InitScalar,scalar,2

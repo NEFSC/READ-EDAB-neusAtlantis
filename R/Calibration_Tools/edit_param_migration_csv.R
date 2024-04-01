@@ -10,7 +10,7 @@ VarName = 'MigPropSizeInc'
 new.file.name = here::here('currentVersion','neus_migrations_test.csv')
 
 
-edit_param_mig_csv = function(mig.file,group.name,StartStage,VarName,unit = 'value',value,overwrite = F, new.file.name){
+edit_param_mig_csv = function(mig.file,group.name,StartStage,VarName,unit,value,overwrite = F, new.file.name){
   
   mig.orig = read.csv(mig.file,as.is = T)  
   
