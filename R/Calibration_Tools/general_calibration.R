@@ -9,9 +9,9 @@
 library(dplyr)
 
 #Read in setup file
-experiment.id = 'cloud_v6681_calib_6'
-setup.df = read.csv(here::here('Setup_Files','cloud_v6681_calib_6.csv'),as.is=T)
-# setup.df = read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'))
+experiment.id = 'test'
+# setup.df = read.csv(here::here('Setup_Files','cloud_v6681_calib_6.csv'),as.is=T)
+setup.df = read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'))
 proj.dir = '/contrib/Joseph.Caracappa/calibration/'
 
 #Define base files
@@ -19,6 +19,7 @@ bio.file.orig = here::here('currentVersion','at_biology.prm')
 run.sh.orig = here::here('currentVersion','RunAtlantis_cloud.sh')
 sbatch.orig = here::here('currentVersion','sbatch_scenario_array_base.sh')
 fgs.file = here::here('currentVersion','neus_groups.csv')
+mig.file.orig = here::here('currentVersion','neus_migrations.csv')
 
 #Read in functional groups and define inverts
 fgs = read.csv(fgs.file,as.is = T)
@@ -63,10 +64,12 @@ if(any(c('E','EPlant','EDR','EDL') %in% setup.df$Type)){
 if(any('FSP' %in% setup.df$Type)){
   source(here::here('R','Calibration_Tools','edit_param_FSP.R'))
 }
-
 if(any('FSPB' %in% setup.df$Type)){
   source(here::here('R','Calibration_Tools','edit_param_FSPB.R'))
   fspb.orig = get_param_FSPB(bio.prm = bio.file.orig)
+}
+if(any(c('aMigSize','jMigSize','aMigSurvive','jMigSurvive') %in% setup.df$Type)){
+  source(here::here('R','Calibration_Tools','edit_param_migration_csv.R'))
 }
 
 possible.types = unique(read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'),as.is=T)$Type)
@@ -81,8 +84,13 @@ for(i in 1:length(run.id)){
   bio.file.new = here::here('currentVersion',bio.file.short)
   file.copy(bio.file.orig, bio.file.new,overwrite = T)
   
+  #copy migration.csv with run.id prefix
+  mig.file.short = paste0('neus_migrations_',run.id[i],'.csv')
+  mig.file.new = here::here('currentVersion',mig.file.short)
+  file.copy(mig.file.orig,mig.file.new,overwrite =T)
+  
   #Separate task for run.id
-  setup.run = filter(setup.df, Run.ID == run.id[i])
+  setup.run = dplyr::filter(setup.df, Run.ID == run.id[i])
   
   j=1
   for(j in 1:nrow(setup.run)){
@@ -315,6 +323,31 @@ for(i in 1:length(run.id)){
                       FSPB = fspb.new,
                       overwrite =T
                       )
+    }
+    
+    if(setup.run$Type[j] %in% c('aMigSize','jMigSize','aMigSurvive','jMigSurvive') ){
+      
+      VarName = dplyr::case_when(
+        setup.run$Type[j] == 'aMigSize' ~ 'MigPropSizeInc',
+        setup.run$Type[j] == 'jMigSize' ~ 'MigPropSizeInc',
+        setup.run$Type[j] == 'aMigSurvive' ~ 'MigPropSurvive',
+        setup.run$Type[j] == 'jMigSurvive' ~ 'MigPropSurvive',
+      )
+      StartStage = dplyr::case_when(
+        setup.run$Type[j] == 'aMigSize' ~ 1,
+        setup.run$Type[j] == 'jMigSize' ~ 0,
+        setup.run$Type[j] == 'aMigSurvive' ~ 1,
+        setup.run$Type[j] == 'jMigSurvive' ~ 0,
+      )
+      
+      edit_param_mig_csv(mig.file = mig.file.new,
+                         group.name = setup.run$Code[j],
+                         StartStage = StartStage,
+                         VarName = VarName,
+                         unit = setup.run$Unit[j],
+                         value = setup.run$Value[j],
+                         overwrite =T
+                         )
     }
     
   }

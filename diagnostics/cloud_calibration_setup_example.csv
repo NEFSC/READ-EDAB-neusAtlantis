@@ -40,3 +40,7 @@ Run.ID,Run.Group,Code,Type,Unit,Value
 29,Test1 ,SMO,FSPB,scalar,0.5
 30,Test1,SMO,FSP,scalar,0.5
 31,Test2,SMO,FSP,value,0.5
+32,Test1,BFT,jMigSize,value,0.5
+32,Test1,BFT,aMigSize,value,0.5
+32,Test1,BFT,jMigSurvive,value,0.5
+32,Test1,BFT,aMigSurvive,value,0.5
