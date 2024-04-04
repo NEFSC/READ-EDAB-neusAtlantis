@@ -3899,12 +3899,27 @@ mFCchange_mult_DC       1
 #################################################################
 
 ## Flag indicating which effort model determines the total effort by fishery YYY and its spatial distribution (options 0 to 13 available).
+# 0 = constant effort distributed evenly across boxes
+# 1 = constant effort distributed relative to box area
+# 2 = constant effort distributed relative to CPUE. Imitates fisher returns to location with good catch
+# 3 = constant effort distributed according to box proportion (Effort_hdistribYYY) by quarter year
+# 4 = dynamic effort based on previous CPUE and boat speed
+# 5 = dynamic effort based on previous CPUE and distance to port
+# 6 = Rec fishing
+# 7 = dynamic effort based on relative CPUE and distance to port
+# 8 = dynamic effort based on relative CPUE, distance to port, boat speed
+# 9 = constant effort based on perfect knowledge of fish disributions. Effort distributed according to biomass
+# 10 = Same as 2 but with dynamic total effort
+# 11 = Forced effort through ts forcing files
+# 12 = Rec fishing
+# 13 = uses economics model
+
 
 midwcISQ_effortmodel   0
 midwcLSQ_effortmodel   0
 jigISQ_effortmodel     0
 jigLSQ_effortmodel     0
-dredgeSCA_effortmodel  0
+dredgeSCA_effortmodel  9
 trapRCB_effortmodel    0
 dtrawlRCB_effortmodel  0
 dtrawlISQ_effortmodel  0
