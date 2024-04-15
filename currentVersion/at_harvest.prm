@@ -3919,7 +3919,7 @@ midwcISQ_effortmodel   0
 midwcLSQ_effortmodel   0
 jigISQ_effortmodel     0
 jigLSQ_effortmodel     0
-dredgeSCA_effortmodel  9
+dredgeSCA_effortmodel  0
 trapRCB_effortmodel    0
 dtrawlRCB_effortmodel  0
 dtrawlISQ_effortmodel  0
@@ -4014,7 +4014,8 @@ Effort_hdistribjigISQ1         30
 Effort_hdistribjigLSQ1         30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdredgeSCA1      30
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+#1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribtrapRCB1        30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdtrawlRCB1      30
@@ -4070,7 +4071,8 @@ Effort_hdistribjigISQ2         30
 Effort_hdistribjigLSQ2         30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdredgeSCA2      30
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+#1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribtrapRCB2        30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdtrawlRCB2      30
@@ -4126,7 +4128,8 @@ Effort_hdistribjigISQ3         30
 Effort_hdistribjigLSQ3         30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdredgeSCA3      30
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+#1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribtrapRCB3        30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdtrawlRCB3      30
@@ -4182,7 +4185,8 @@ Effort_hdistribjigISQ4         30
 Effort_hdistribjigLSQ4         30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdredgeSCA4      30
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+#1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribtrapRCB4        30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdtrawlRCB4      30
