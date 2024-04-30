@@ -29,13 +29,13 @@ debug         0       # 0=debuging off, 1=debug fishing, 2=debug discards, 3=deb
                        # 9=debug_spawning, 10=dug migration, 11=debug movement, 12=debug stocks,
                        # 13=debug biomass calcs, 14=debug feeding, 15=debug everything
 
-title      NEUS v1.5 with fishing
+title      NEUS v2.2 with fishing
 dt         24 hour     # 24 hour time step
-tstop      20805 day   # Stop time after the given period (18260)18260  , 4000   2191 7320 9120 3660 7320 (01-01-1964 to 12-31-2017 is 19724 d)
+tstop      3651 day # 20805 day   # Stop time after the given period (18260)18260  , 4000   2191 7320 9120 3660 7320 (01-01-1964 to 12-31-2017 is 19724 d)
 toutstart  0 day       # Output start time
 toutinc    73 day      # Write output with this periodicity
 toutfinc   73 day      # Write fisheries output with this periodicity
-tburnday   0 day
+tburnday   0 day       # Number of days that define the burn-in period. At the end of this period the “virgin” state of the model is stored. This means that every comparison of species biomass to the original or “virgin” state will use values stored at the end of the burn-in period and not those set in the initial conditions. This is useful for models that have unstable dynamics at the start of the model run. 
 
 check_dups 0    # 1 to check for duplicates in your prm files. Turning this on will make file read in very very slow. Only turn on every once in a while and turn off once the duplicates have been removed.
 
@@ -128,3 +128,6 @@ K_num_basket 1 # Relevant to Australia model. Maxiumum number of species in bask
 #6665
 # Dumps total biomass (across every MIGID entry) from migration array into biomindx.txt. Previously while migrators were outside the model, their biomass was not reported inn the NetCDF output file
 flag_mig_in_bioindx 1
+
+#6698
+flag_replicated_old_PPmort 0
