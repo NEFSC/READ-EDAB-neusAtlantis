@@ -28,7 +28,7 @@
 
 flagimposeglobal 	 1 
 
-## (at_harvest.prm) Vector of length = # fisheries in fisheries.csv. Only applicable if Forcing catch time series. Values = (0,1,2,3,4)
+## (at_harvest.prm) Vector of length = # fisheries in fisheries.csv. Only applicable if Forcing catch time series. Values = (0,1,2,3,4). If flagimposeglobal = 0 then these should be set to zero vectors.
 flagimposecatch_MAK      28
 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 flagimposecatch_HER      28
@@ -1114,9 +1114,9 @@ reportscale_DC       28
 
 midwcISQ_flagmanage   0
 midwcLSQ_flagmanage   0
-jigISQ_flagmanage     0
-jigLSQ_flagmanage     0
-dredgeSCA_flagmanage  0
+dredgeSCA1_flagmanage     0
+dredgeSCA2_flagmanage     0
+dredgeSCA3_flagmanage  0
 trapRCB_flagmanage    0
 dtrawlRCB_flagmanage  0
 dtrawlISQ_flagmanage  0
@@ -1145,9 +1145,9 @@ mowMA_flagmanage      0
 
 midwcISQ_start_manage   0
 midwcLSQ_start_manage   0
-jigISQ_start_manage     0
-jigLSQ_start_manage     0
-dredgeSCA_start_manage  0
+dredgeSCA1_start_manage     0
+dredgeSCA2_start_manage     0
+dredgeSCA3_start_manage  0
 trapRCB_start_manage    0
 dtrawlRCB_start_manage  0
 dtrawlISQ_start_manage  0
@@ -1173,9 +1173,9 @@ midwcOSH_start_manage   0
 mowMA_start_manage      0
 midwcISQ_end_manage   1000000000
 midwcLSQ_end_manage   1000000000
-jigISQ_end_manage     1000000000
-jigLSQ_end_manage     1000000000
-dredgeSCA_end_manage  1000000000
+dredgeSCA1_end_manage     1000000000
+dredgeSCA2_end_manage     1000000000
+dredgeSCA3_end_manage  1000000000
 trapRCB_end_manage    1000000000
 dtrawlRCB_end_manage  1000000000
 dtrawlISQ_end_manage  1000000000
@@ -1206,9 +1206,9 @@ flagmpa 			 0
 
 midwcISQ_flagmpa   0
 midwcLSQ_flagmpa   0
-jigISQ_flagmpa     0
-jigLSQ_flagmpa     0
-dredgeSCA_flagmpa  0
+dredgeSCA1_flagmpa     0
+dredgeSCA2_flagmpa     0
+dredgeSCA3_flagmpa  0
 trapRCB_flagmpa    0
 dtrawlRCB_flagmpa  0
 dtrawlISQ_flagmpa  0
@@ -1503,21 +1503,21 @@ flagfishOSH 1
 flagfishZL 1
 flagfishBD 1
 flagfishMA 1
-flagfishMB 1
-flagfishSG 1
-flagfishBC 1
-flagfishZG 1
-flagfishPL 1
-flagfishDF 1
-flagfishPS 1
-flagfishZM 1
-flagfishZS 1
-flagfishPB 1
-flagfishBB 1
-flagfishBO 1
-flagfishDL 1
-flagfishDR 1
-flagfishDC 1
+flagfishMB 0
+flagfishSG 0
+flagfishBC 0
+flagfishZG 0
+flagfishPL 0
+flagfishDF 0
+flagfishPS 0
+flagfishZM 0
+flagfishZS 0
+flagfishPB 0
+flagfishBB 0
+flagfishBO 0
+flagfishDL 0
+flagfishDR 0
+flagfishDC 0
 
 #################### Day Fleets start and stop fishing #######################
 ###################### These need to be renamed ##############################
@@ -1525,9 +1525,9 @@ flagfishDC 1
 
 midwcISQ_tStart   0
 midwcLSQ_tStart   0
-jigISQ_tStart     0
-jigLSQ_tStart     0
-dredgeSCA_tStart  0
+dredgeSCA1_tStart     0
+dredgeSCA2_tStart     0
+dredgeSCA3_tStart  0
 trapRCB_tStart    0
 dtrawlRCB_tStart  0
 dtrawlISQ_tStart  0
@@ -1553,9 +1553,9 @@ midwcOSH_tStart   0
 mowMA_tStart      0
 midwcISQ_tEnd   1000000000
 midwcLSQ_tEnd   1000000000
-jigISQ_tEnd     1000000000
-jigLSQ_tEnd     1000000000
-dredgeSCA_tEnd  1000000000
+dredgeSCA1_tEnd     1000000000
+dredgeSCA2_tEnd     1000000000
+dredgeSCA3_tEnd  1000000000
 trapRCB_tEnd    1000000000
 dtrawlRCB_tEnd  1000000000
 dtrawlISQ_tEnd  1000000000
@@ -1584,9 +1584,9 @@ mowMA_tEnd      1000000000
 
 flagmidwcISQday  2        Active: 2 = no preference, 1 = day, 0 = night             2
 flagmidwcLSQday  2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagjigISQday    2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagjigLSQday    2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdredgeSCAday 2        Active: 2 = no preference, 1 = day, 0 = night             2
+flagdredgeSCA1day    2        Active: 2 = no preference, 1 = day, 0 = night             2
+flagdredgeSCA2day    2        Active: 2 = no preference, 1 = day, 0 = night             2
+flagdredgeSCA3day 2        Active: 2 = no preference, 1 = day, 0 = night             2
 flagtrapRCBday   2        Active: 2 = no preference, 1 = day, 0 = night             2
 flagdtrawlRCBday 2        Active: 2 = no preference, 1 = day, 0 = night             2
 flagdtrawlISQday 2        Active: 2 = no preference, 1 = day, 0 = night             2
@@ -1895,11 +1895,11 @@ habitat_midwcISQ       11
 1 1 1 1 1 1 1 1 1 1 1
 habitat_midwcLSQ       11
 1 1 1 1 1 1 1 1 1 1 1
-habitat_jigISQ         11
+habitat_dredgeSCA1         11
 1 1 1 1 1 1 1 1 1 1 1
-habitat_jigLSQ         11
+habitat_dredgeSCA2         11
 1 1 1 1 1 1 1 1 1 1 1
-habitat_dredgeSCA      11
+habitat_dredgeSCA3      11
 1 1 1 1 1 1 1 1 1 1 1
 habitat_trapRCB        11
 1 1 1 1 1 1 1 1 1 1 1
@@ -1948,45 +1948,10 @@ habitat_midwcOSH       11
 habitat_mowMA          11
 1 1 1 1 1 1 1 1 1 1 1
 
-
-##########################################################################
-##### Demersal fishery = 1, Pelagic fishery = 0.(Dynamic fishing)
-############ These need to be revisited #################################
-
-midwcISQ_flagdempelfishery   0
-midwcLSQ_flagdempelfishery   0
-jigISQ_flagdempelfishery     0
-jigLSQ_flagdempelfishery     0
-dredgeSCA_flagdempelfishery  1
-trapRCB_flagdempelfishery    0
-dtrawlRCB_flagdempelfishery  0
-dtrawlISQ_flagdempelfishery  0
-dtrawlLSQ_flagdempelfishery  0
-dtrawlSHK_flagdempelfishery  0
-dtrawlHAD_flagdempelfishery  0
-dseineSHK_flagdempelfishery  0
-dlineBLF_flagdempelfishery   0
-diveBG_flagdempelfishery     0
-pseineBLF_flagdempelfishery  0
-cullPIN_flagdempelfishery    0
-ptrawlNSH_flagdempelfishery  0
-ptrawlOSH_flagdempelfishery  0
-dtrawlANC_flagdempelfishery  0
-dtrawlBPF_flagdempelfishery  0
-dtrawlBUT_flagdempelfishery  0
-midwcZL_flagdempelfishery    0
-trapMEN_flagdempelfishery    0
-dlineMEN_flagdempelfishery   0
-netMEN_flagdempelfishery     0
-midwcNSH_flagdempelfishery   0
-midwcOSH_flagdempelfishery   0
-mowMA_flagdempelfishery      0
-
 ###################################################################
 #### Reduction in effectiveness of gear due to mismatch in water column distribution of gear and vertebrates. This positional scalar downscales the availability of target species if they are marked as demersal (pelagic) and the gear is marked as pelagic (demersal).
 
 k_mismatch		 	 0  #(global)
-
 
 ###################################################################
 ########## End General fishing parameters ##########################
@@ -2730,9 +2695,9 @@ flag_sel_with_mFC	 0
 
 midwcISQ_selcurve   0
 midwcLSQ_selcurve   0
-jigISQ_selcurve     0
-jigLSQ_selcurve     0
-dredgeSCA_selcurve  0
+dredgeSCA1_selcurve     0
+dredgeSCA2_selcurve     0
+dredgeSCA3_selcurve  0
 trapRCB_selcurve    0
 dtrawlRCB_selcurve  0
 dtrawlISQ_selcurve  0
@@ -2951,9 +2916,9 @@ flaginfringe		 0
 
 midwcISQ_infringe   0
 midwcLSQ_infringe   0
-jigISQ_infringe     0
-jigLSQ_infringe     0
-dredgeSCA_infringe  0
+dredgeSCA1_infringe     0
+dredgeSCA2_infringe     0
+dredgeSCA3_infringe  0
 trapRCB_infringe    0
 dtrawlRCB_infringe  0
 dtrawlISQ_infringe  0
@@ -3917,9 +3882,9 @@ mFCchange_mult_DC       1
 
 midwcISQ_effortmodel   0
 midwcLSQ_effortmodel   0
-jigISQ_effortmodel     0
-jigLSQ_effortmodel     0
-dredgeSCA_effortmodel  0
+dredgeSCA1_effortmodel     11
+dredgeSCA2_effortmodel     11
+dredgeSCA3_effortmodel  11
 trapRCB_effortmodel    0
 dtrawlRCB_effortmodel  0
 dtrawlISQ_effortmodel  0
@@ -3944,64 +3909,36 @@ midwcNSH_effortmodel   0
 midwcOSH_effortmodel   0
 mowMA_effortmodel      0
 
-## A vector giving relative distribution of effort for fishery YYY across the vertical layers in each box (applied in the same way as the vectors determining vertical distribution of functional groups)
+### Average effort by the fishery YYY across the entire model domain throughout the year (days per day). When applied to recreational fisheries this sets the average effort by one fisher and not by the entire fishery (so the value should be much smaller)
 
-Effort_vdistribmidwcISQ       4
-0 0 0 0
-Effort_vdistribmidwcLSQ       4
-0 0 0 0
-Effort_vdistribjigISQ         4
-0 0 0 0
-Effort_vdistribjigLSQ         4
-0 0 0 0
-Effort_vdistribdredgeSCA      4
-0 0 0 0
-Effort_vdistribtrapRCB        4
-0 0 0 0
-Effort_vdistribdtrawlRCB      4
-0 0 0 0
-Effort_vdistribdtrawlISQ      4
-0 0 0 0
-Effort_vdistribdtrawlLSQ      4
-0 0 0 0
-Effort_vdistribdtrawlSHK      4
-0 0 0 0
-Effort_vdistribdtrawlHAD      4
-0 0 0 0
-Effort_vdistribdseineSHK      4
-0 0 0 0
-Effort_vdistribdlineBLF       4
-0 0 0 0
-Effort_vdistribdiveBG         4
-0 0 0 0
-Effort_vdistribpseineBLF      4
-0 0 0 0
-Effort_vdistribcullPIN        4
-0 0 0 0
-Effort_vdistribptrawlNSH      4
-0 0 0 0
-Effort_vdistribptrawlOSH      4
-0 0 0 0
-Effort_vdistribdtrawlANC      4
-0 0 0 0
-Effort_vdistribdtrawlBPF      4
-0 0 0 0
-Effort_vdistribdtrawlBUT      4
-0 0 0 0
-Effort_vdistribmidwcZL        4
-0 0 0 0
-Effort_vdistribtrapMEN        4
-0 0 0 0
-Effort_vdistribdlineMEN       4
-0 0 0 0
-Effort_vdistribnetMEN         4
-0 0 0 0
-Effort_vdistribmidwcNSH       4
-0 0 0 0
-Effort_vdistribmidwcOSH       4
-0 0 0 0
-Effort_vdistribmowMA          4
-0 0 0 0
+midwcISQ_Effort   0
+midwcLSQ_Effort   0
+dredgeSCA1_Effort 100000
+dredgeSCA2_Effort 100000
+dredgeSCA3_Effort 100000
+trapRCB_Effort    0
+dtrawlRCB_Effort  0
+dtrawlISQ_Effort  0
+dtrawlLSQ_Effort  0
+dtrawlSHK_Effort  0
+dtrawlHAD_Effort  0
+dseineSHK_Effort  0
+dlineBLF_Effort   0
+diveBG_Effort     0
+pseineBLF_Effort  0
+cullPIN_Effort    0
+ptrawlNSH_Effort  0
+ptrawlOSH_Effort  0
+dtrawlANC_Effort  0
+dtrawlBPF_Effort  0
+dtrawlBUT_Effort  0
+midwcZL_Effort    0
+trapMEN_Effort    0
+dlineMEN_Effort   0
+netMEN_Effort     0
+midwcNSH_Effort   0
+midwcOSH_Effort   0
+mowMA_Effort      0
 
 ### A vector setting relative effort per box by the fishery YYY for each quarter of the year (1 to 4). It is used in combination with YYY_Effort to get the actual final effort per box in days per day
 
@@ -4009,13 +3946,18 @@ Effort_hdistribmidwcISQ1       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribmidwcLSQ1       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribjigISQ1         30
+Effort_hdistribdredgeSCA11         30
+#0 0 1 1 0 1 1 1 1 1 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#0 0 .091 .091 0 .091 .091 .091 .091 .091 0 0 .091 .091 .091 .091 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribjigLSQ1         30
+Effort_hdistribdredgeSCA21         30
+#0 0 1 1 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#0 0 .2 .2 0 .2 .2 0 0 .2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdredgeSCA1      30
-#1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Effort_hdistribdredgeSCA31      30
+#0 0 1 1 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#0 0 .2 .2 0 .2 .2 0 0 .2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribtrapRCB1        30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdtrawlRCB1      30
@@ -4066,13 +4008,18 @@ Effort_hdistribmidwcISQ2       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribmidwcLSQ2       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribjigISQ2         30
+Effort_hdistribdredgeSCA12         30
+#0 0 1 1 0 1 1 1 1 1 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribjigLSQ2         30
+#0 0 .091 .091 0 .091 .091 .091 .091 .091 0 0 .091 .091 .091 .091 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Effort_hdistribdredgeSCA22         30
+#0 0 1 1 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdredgeSCA2      30
-#1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#0 0 .2 .2 0 .2 .2 0 0 .2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Effort_hdistribdredgeSCA32      30
+#0 0 1 1 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#0 0 .2 .2 0 .2 .2 0 0 .2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribtrapRCB2        30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdtrawlRCB2      30
@@ -4123,13 +4070,18 @@ Effort_hdistribmidwcISQ3       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribmidwcLSQ3       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribjigISQ3         30
+Effort_hdistribdredgeSCA13         30
+#0 0 1 1 0 1 1 1 1 1 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#0 0 .091 .091 0 .091 .091 .091 .091 .091 0 0 .091 .091 .091 .091 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribjigLSQ3         30
+Effort_hdistribdredgeSCA23         30
+#0 0 1 1 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#0 0 .2 .2 0 .2 .2 0 0 .2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdredgeSCA3      30
-#1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Effort_hdistribdredgeSCA33      30
+#0 0 1 1 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#0 0 .2 .2 0 .2 .2 0 0 .2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribtrapRCB3        30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdtrawlRCB3      30
@@ -4180,13 +4132,18 @@ Effort_hdistribmidwcISQ4       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribmidwcLSQ4       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribjigISQ4         30
+Effort_hdistribdredgeSCA14         30
+#0 0 1 1 0 1 1 1 1 1 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#0 0 .091 .091 0 .091 .091 .091 .091 .091 0 0 .091 .091 .091 .091 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribjigLSQ4         30
+Effort_hdistribdredgeSCA24         30
+#0 0 1 1 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#0 0 .2 .2 0 .2 .2 0 0 .2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdredgeSCA4      30
-#1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Effort_hdistribdredgeSCA34      30
+#0 0 1 1 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#0 0 .2 .2 0 .2 .2 0 0 .2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribtrapRCB4        30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribdtrawlRCB4      30
@@ -4234,13 +4191,108 @@ Effort_hdistribmidwcOSH4       30
 Effort_hdistribmowMA4          30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
+
+##########################################################################
+##### Demersal fishery = 1, Pelagic fishery = 0.(Dynamic fishing)
+############ These need to be revisited #################################
+
+midwcISQ_flagdempelfishery   0
+midwcLSQ_flagdempelfishery   0
+dredgeSCA1_flagdempelfishery  1
+dredgeSCA2_flagdempelfishery  1
+dredgeSCA3_flagdempelfishery  1
+trapRCB_flagdempelfishery    0
+dtrawlRCB_flagdempelfishery  0
+dtrawlISQ_flagdempelfishery  0
+dtrawlLSQ_flagdempelfishery  0
+dtrawlSHK_flagdempelfishery  0
+dtrawlHAD_flagdempelfishery  0
+dseineSHK_flagdempelfishery  0
+dlineBLF_flagdempelfishery   0
+diveBG_flagdempelfishery     0
+pseineBLF_flagdempelfishery  0
+cullPIN_flagdempelfishery    0
+ptrawlNSH_flagdempelfishery  0
+ptrawlOSH_flagdempelfishery  0
+dtrawlANC_flagdempelfishery  0
+dtrawlBPF_flagdempelfishery  0
+dtrawlBUT_flagdempelfishery  0
+midwcZL_flagdempelfishery    0
+trapMEN_flagdempelfishery    0
+dlineMEN_flagdempelfishery   0
+netMEN_flagdempelfishery     0
+midwcNSH_flagdempelfishery   0
+midwcOSH_flagdempelfishery   0
+mowMA_flagdempelfishery      0
+
+
+## A vector giving relative distribution of effort for fishery YYY across the vertical layers in each box (applied in the same way as the vectors determining vertical distribution of functional groups)
+
+Effort_vdistribmidwcISQ       4
+0 0 0 0
+Effort_vdistribmidwcLSQ       4
+0 0 0 0
+Effort_vdistribdredgeSCA1         4
+0 0 0 0
+Effort_vdistribdredgeSCA2         4
+0 0 0 0
+Effort_vdistribdredgeSCA3      4
+0 0 0 0
+Effort_vdistribtrapRCB        4
+0 0 0 0
+Effort_vdistribdtrawlRCB      4
+0 0 0 0
+Effort_vdistribdtrawlISQ      4
+0 0 0 0
+Effort_vdistribdtrawlLSQ      4
+0 0 0 0
+Effort_vdistribdtrawlSHK      4
+0 0 0 0
+Effort_vdistribdtrawlHAD      4
+0 0 0 0
+Effort_vdistribdseineSHK      4
+0 0 0 0
+Effort_vdistribdlineBLF       4
+0 0 0 0
+Effort_vdistribdiveBG         4
+0 0 0 0
+Effort_vdistribpseineBLF      4
+0 0 0 0
+Effort_vdistribcullPIN        4
+0 0 0 0
+Effort_vdistribptrawlNSH      4
+0 0 0 0
+Effort_vdistribptrawlOSH      4
+0 0 0 0
+Effort_vdistribdtrawlANC      4
+0 0 0 0
+Effort_vdistribdtrawlBPF      4
+0 0 0 0
+Effort_vdistribdtrawlBUT      4
+0 0 0 0
+Effort_vdistribmidwcZL        4
+0 0 0 0
+Effort_vdistribtrapMEN        4
+0 0 0 0
+Effort_vdistribdlineMEN       4
+0 0 0 0
+Effort_vdistribnetMEN         4
+0 0 0 0
+Effort_vdistribmidwcNSH       4
+0 0 0 0
+Effort_vdistribmidwcOSH       4
+0 0 0 0
+Effort_vdistribmowMA          4
+0 0 0 0
+
+
 ### The swept volume of water by gear of fishery YYY, m3 day-1. This is a volume, but called area to keep in line with the fisheries science usage.
 
 midwcISQ_sweptarea   0
 midwcLSQ_sweptarea   0
-jigISQ_sweptarea     0
-jigLSQ_sweptarea     0
-dredgeSCA_sweptarea  1
+dredgeSCA1_sweptarea  1
+dredgeSCA2_sweptarea  1
+dredgeSCA3_sweptarea  1
 trapRCB_sweptarea    0
 dtrawlRCB_sweptarea  0
 dtrawlISQ_sweptarea  0
@@ -4995,9 +5047,9 @@ The minimum depth that a fishery can operate at, in metres. This will constrain 
 
 midwcISQ_mindepth   0
 midwcLSQ_mindepth   0
-jigISQ_mindepth     0
-jigLSQ_mindepth     0
-dredgeSCA_mindepth  0
+dredgeSCA1_mindepth     0
+dredgeSCA2_mindepth     0
+dredgeSCA3_mindepth  0
 trapRCB_mindepth    0
 dtrawlRCB_mindepth  0
 dtrawlISQ_mindepth  0
@@ -5028,9 +5080,9 @@ mowMA_mindepth      0
 
 midwcISQ_maxdepth   1805
 midwcLSQ_maxdepth   1805
-jigISQ_maxdepth     1805
-jigLSQ_maxdepth     1805
-dredgeSCA_maxdepth  1805
+dredgeSCA1_maxdepth     1805
+dredgeSCA2_maxdepth     1805
+dredgeSCA3_maxdepth  1805
 trapRCB_maxdepth    1805
 dtrawlRCB_maxdepth  1805
 dtrawlISQ_maxdepth  1805
@@ -5055,36 +5107,6 @@ midwcNSH_maxdepth   1805
 midwcOSH_maxdepth   1805
 mowMA_maxdepth      1805
 
-### Average effort by the fishery YYY across the entire model domain throughout the year (days per day). When applied to recreational fisheries this sets the average effort by one fisher and not by the entire fishery (so the value should be much smaller)
-
-midwcISQ_Effort   0
-midwcLSQ_Effort   0
-jigISQ_Effort     0
-jigLSQ_Effort     0
-dredgeSCA_Effort  100
-trapRCB_Effort    0
-dtrawlRCB_Effort  0
-dtrawlISQ_Effort  0
-dtrawlLSQ_Effort  0
-dtrawlSHK_Effort  0
-dtrawlHAD_Effort  0
-dseineSHK_Effort  0
-dlineBLF_Effort   0
-diveBG_Effort     0
-pseineBLF_Effort  0
-cullPIN_Effort    0
-ptrawlNSH_Effort  0
-ptrawlOSH_Effort  0
-dtrawlANC_Effort  0
-dtrawlBPF_Effort  0
-dtrawlBUT_Effort  0
-midwcZL_Effort    0
-trapMEN_Effort    0
-dlineMEN_Effort   0
-netMEN_Effort     0
-midwcNSH_Effort   0
-midwcOSH_Effort   0
-mowMA_Effort      0
 
 ### vector of four values setting relative quarterly effort (used in combination with YYY_Effort to give the final effort in days per day)
 
@@ -5092,11 +5114,11 @@ mEff_midwcISQ       4
 1 1 1 1
 mEff_midwcLSQ       4
 1 1 1 1
-mEff_jigISQ         4
+mEff_dredgeSCA1         4
 1 1 1 1
-mEff_jigLSQ         4
+mEff_dredgeSCA2         4
 1 1 1 1
-mEff_dredgeSCA      4
+mEff_dredgeSCA3      4
 1 1 1 1
 mEff_trapRCB        4
 1 1 1 1
@@ -5335,9 +5357,9 @@ Speed_recboat	  	 10
 
 midwcISQ_mEff_max   0.001
 midwcLSQ_mEff_max   0.001
-jigISQ_mEff_max     0.001
-jigLSQ_mEff_max     0.001
-dredgeSCA_mEff_max  0.001
+dredgeSCA1_mEff_max     0.001
+dredgeSCA2_mEff_max     0.001
+dredgeSCA3_mEff_max  0.001
 trapRCB_mEff_max    0.001
 dtrawlRCB_mEff_max  0.001
 dtrawlISQ_mEff_max  0.001
@@ -5366,9 +5388,9 @@ mowMA_mEff_max      0.001
 
 midwcISQ_mEff_a   100
 midwcLSQ_mEff_a   100
-jigISQ_mEff_a     100
-jigLSQ_mEff_a     100
-dredgeSCA_mEff_a  100
+dredgeSCA1_mEff_a     100
+dredgeSCA2_mEff_a     100
+dredgeSCA3_mEff_a  100
 trapRCB_mEff_a    100
 dtrawlRCB_mEff_a  100
 dtrawlISQ_mEff_a  100
@@ -5397,9 +5419,9 @@ mowMA_mEff_a      100
 
 midwcISQ_mEff_offset   100
 midwcLSQ_mEff_offset   100
-jigISQ_mEff_offset     100
-jigLSQ_mEff_offset     100
-dredgeSCA_mEff_offset  100
+dredgeSCA1_mEff_offset     100
+dredgeSCA2_mEff_offset     100
+dredgeSCA3_mEff_offset  100
 trapRCB_mEff_offset    100
 dtrawlRCB_mEff_offset  100
 dtrawlISQ_mEff_offset  100
@@ -5431,11 +5453,11 @@ target_midwcISQ       89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 target_midwcLSQ       89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-target_jigISQ         89
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-target_jigLSQ         89
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-target_dredgeSCA      89 # 62
+target_dredgeSCA1         89
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+target_dredgeSCA2         89
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+target_dredgeSCA3      89 # 62
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 target_trapRCB        89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -5488,9 +5510,9 @@ target_mowMA          89
 
 midwcISQ_flaguseall   1
 midwcLSQ_flaguseall   1
-jigISQ_flaguseall     1
-jigLSQ_flaguseall     1
-dredgeSCA_flaguseall  1
+dredgeSCA1_flaguseall     1
+dredgeSCA2_flaguseall     1
+dredgeSCA3_flaguseall  1
 trapRCB_flaguseall    1
 dtrawlRCB_flaguseall  1
 dtrawlISQ_flaguseall  1
@@ -5520,9 +5542,9 @@ mowMA_flaguseall      1
 
 midwcISQ_mFCscale   1800
 midwcLSQ_mFCscale   1800
-jigISQ_mFCscale     1800
-jigLSQ_mFCscale     1800
-dredgeSCA_mFCscale  1800
+dredgeSCA1_mFCscale     1800
+dredgeSCA2_mFCscale     1800
+dredgeSCA3_mFCscale  1800
 trapRCB_mFCscale    1800
 dtrawlRCB_mFCscale  1800
 dtrawlISQ_mFCscale  1800
@@ -5573,11 +5595,11 @@ ports_midwcISQ       17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 ports_midwcLSQ       17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-ports_jigISQ         17
+ports_dredgeSCA1         17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-ports_jigLSQ         17
+ports_dredgeSCA2         17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-ports_dredgeSCA      17
+ports_dredgeSCA3      17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 ports_trapRCB        17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -5630,9 +5652,9 @@ ports_mowMA          17
 
 midwcISQ_flagcap_peak   0
 midwcLSQ_flagcap_peak   0
-jigISQ_flagcap_peak     0
-jigLSQ_flagcap_peak     0
-dredgeSCA_flagcap_peak  0
+dredgeSCA1_flagcap_peak     0
+dredgeSCA2_flagcap_peak     0
+dredgeSCA3_flagcap_peak  0
 trapRCB_flagcap_peak    0
 dtrawlRCB_flagcap_peak  0
 dtrawlISQ_flagcap_peak  0
@@ -5661,9 +5683,9 @@ mowMA_flagcap_peak      0
 
 midwcISQ_mFCpeak   1
 midwcLSQ_mFCpeak   1
-jigISQ_mFCpeak     1
-jigLSQ_mFCpeak     1
-dredgeSCA_mFCpeak  1
+dredgeSCA1_mFCpeak     1
+dredgeSCA2_mFCpeak     1
+dredgeSCA3_mFCpeak  1
 trapRCB_mFCpeak    1
 dtrawlRCB_mFCpeak  1
 dtrawlISQ_mFCpeak  1
@@ -5696,9 +5718,9 @@ Speed_boat		 	 10
 
 midwcISQ_explore   0
 midwcLSQ_explore   0
-jigISQ_explore     0
-jigLSQ_explore     0
-dredgeSCA_explore  0
+dredgeSCA1_explore     0
+dredgeSCA2_explore     0
+dredgeSCA3_explore  0
 trapRCB_explore    0
 dtrawlRCB_explore  0
 dtrawlISQ_explore  0
@@ -5728,9 +5750,9 @@ mowMA_explore      0
 
 midwcISQ_mEff_testfish   1
 midwcLSQ_mEff_testfish   1
-jigISQ_mEff_testfish     1
-jigLSQ_mEff_testfish     1
-dredgeSCA_mEff_testfish  1
+dredgeSCA1_mEff_testfish     1
+dredgeSCA2_mEff_testfish     1
+dredgeSCA3_mEff_testfish  1
 trapRCB_mEff_testfish    1
 dtrawlRCB_mEff_testfish  1
 dtrawlISQ_mEff_testfish  1
@@ -5760,9 +5782,9 @@ mowMA_mEff_testfish      1
 
 midwcISQ_mEff_thresh   0
 midwcLSQ_mEff_thresh   0
-jigISQ_mEff_thresh     0
-jigLSQ_mEff_thresh     0
-dredgeSCA_mEff_thresh  0
+dredgeSCA1_mEff_thresh     0
+dredgeSCA2_mEff_thresh     0
+dredgeSCA3_mEff_thresh  0
 trapRCB_mEff_thresh    0
 dtrawlRCB_mEff_thresh  0
 dtrawlISQ_mEff_thresh  0
@@ -5791,9 +5813,9 @@ mowMA_mEff_thresh      0
 
 midwcISQ_mEff_thresh_top   0
 midwcLSQ_mEff_thresh_top   0
-jigISQ_mEff_thresh_top     0
-jigLSQ_mEff_thresh_top     0
-dredgeSCA_mEff_thresh_top  0
+dredgeSCA1_mEff_thresh_top     0
+dredgeSCA2_mEff_thresh_top     0
+dredgeSCA3_mEff_thresh_top  0
 trapRCB_mEff_thresh_top    0
 dtrawlRCB_mEff_thresh_top  0
 dtrawlISQ_mEff_thresh_top  0
@@ -5825,9 +5847,9 @@ mowMA_mEff_thresh_top      0
 
 midwcISQ_mEff_shift   1
 midwcLSQ_mEff_shift   1
-jigISQ_mEff_shift     1
-jigLSQ_mEff_shift     1
-dredgeSCA_mEff_shift  1
+dredgeSCA1_mEff_shift     1
+dredgeSCA2_mEff_shift     1
+dredgeSCA3_mEff_shift  1
 trapRCB_mEff_shift    1
 dtrawlRCB_mEff_shift  1
 dtrawlISQ_mEff_shift  1
@@ -5874,9 +5896,9 @@ flagdisplace		 0
 
 midwcISQ_flagcap   0
 midwcLSQ_flagcap   0
-jigISQ_flagcap     0
-jigLSQ_flagcap     0
-dredgeSCA_flagcap  0
+dredgeSCA1_flagcap     0
+dredgeSCA2_flagcap     0
+dredgeSCA3_flagcap  0
 trapRCB_flagcap    0
 dtrawlRCB_flagcap  0
 dtrawlISQ_flagcap  0
@@ -5905,9 +5927,9 @@ mowMA_flagcap      0
 
 midwcISQ_cap   0        0
 midwcLSQ_cap   0        0
-jigISQ_cap     0        0
-jigLSQ_cap     0        0
-dredgeSCA_cap  0        0
+dredgeSCA1_cap     0        0
+dredgeSCA2_cap     0        0
+dredgeSCA3_cap  0        0
 trapRCB_cap    0        0
 dtrawlRCB_cap  0        0
 dtrawlISQ_cap  0        0
@@ -5965,11 +5987,11 @@ k_covermidwcISQ       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 k_covermidwcLSQ       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-k_coverjigISQ         30
+k_coverdredgeSCA1         30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-k_coverjigLSQ         30
+k_coverdredgeSCA2         30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-k_coverdredgeSCA      30
+k_coverdredgeSCA3      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 k_covertrapRCB        30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -6036,9 +6058,9 @@ flagchangesel		 0
 
 midwcISQ_sel_changes   1
 midwcLSQ_sel_changes   1
-jigISQ_sel_changes     1
-jigLSQ_sel_changes     1
-dredgeSCA_sel_changes  1
+dredgeSCA1_sel_changes     1
+dredgeSCA2_sel_changes     1
+dredgeSCA3_sel_changes  1
 trapRCB_sel_changes    1
 dtrawlRCB_sel_changes  1
 dtrawlISQ_sel_changes  1
@@ -6068,11 +6090,11 @@ SELchange_start_midwcISQ       1
 0
 SELchange_start_midwcLSQ       1
 0
-SELchange_start_jigISQ         1
+SELchange_start_dredgeSCA1         1
 0
-SELchange_start_jigLSQ         1
+SELchange_start_dredgeSCA2         1
 0
-SELchange_start_dredgeSCA      1
+SELchange_start_dredgeSCA3      1
 0
 SELchange_start_trapRCB        1
 0
@@ -6127,11 +6149,11 @@ SELchange_curve_midwcISQ       1
 0
 SELchange_curve_midwcLSQ       1
 0
-SELchange_curve_jigISQ         1
+SELchange_curve_dredgeSCA1         1
 0
-SELchange_curve_jigLSQ         1
+SELchange_curve_dredgeSCA2         1
 0
-SELchange_curve_dredgeSCA      1
+SELchange_curve_dredgeSCA3      1
 0
 SELchange_curve_trapRCB        1
 0
@@ -6186,11 +6208,11 @@ SELchange_addlsm_midwcISQ       1
 0
 SELchange_addlsm_midwcLSQ       1
 0
-SELchange_addlsm_jigISQ         1
+SELchange_addlsm_dredgeSCA1         1
 0
-SELchange_addlsm_jigLSQ         1
+SELchange_addlsm_dredgeSCA2         1
 0
-SELchange_addlsm_dredgeSCA      1
+SELchange_addlsm_dredgeSCA3      1
 0
 SELchange_addlsm_trapRCB        1
 0
@@ -6243,11 +6265,11 @@ SELchange_addsigma_midwcISQ       1
 0
 SELchange_addsigma_midwcLSQ       1
 0
-SELchange_addsigma_jigISQ         1
+SELchange_addsigma_dredgeSCA1         1
 0
-SELchange_addsigma_jigLSQ         1
+SELchange_addsigma_dredgeSCA2         1
 0
-SELchange_addsigma_dredgeSCA      1
+SELchange_addsigma_dredgeSCA3      1
 0
 SELchange_addsigma_trapRCB        1
 0
@@ -6836,9 +6858,9 @@ sel_DCjuv       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 midwcISQsel_b   0
 midwcLSQsel_b   0
-jigISQsel_b     0
-jigLSQsel_b     0
-dredgeSCAsel_b  0
+dredgeSCA1sel_b     0
+dredgeSCA2sel_b     0
+dredgeSCA3sel_b  0
 trapRCBsel_b    0
 dtrawlRCBsel_b  0
 dtrawlISQsel_b  0
@@ -6864,9 +6886,9 @@ midwcOSHsel_b   0
 mowMAsel_b      0
 midwcISQsel_lsm   0
 midwcLSQsel_lsm   0
-jigISQsel_lsm     0
-jigLSQsel_lsm     0
-dredgeSCAsel_lsm  0
+dredgeSCA1sel_lsm     0
+dredgeSCA2sel_lsm     0
+dredgeSCA3sel_lsm  0
 trapRCBsel_lsm    0
 dtrawlRCBsel_lsm  0
 dtrawlISQsel_lsm  0
@@ -6892,9 +6914,9 @@ midwcOSHsel_lsm   0
 mowMAsel_lsm      0
 midwcISQsel_normsigma   0
 midwcLSQsel_normsigma   0
-jigISQsel_normsigma     0
-jigLSQsel_normsigma     0
-dredgeSCAsel_normsigma  0
+dredgeSCA1sel_normsigma     0
+dredgeSCA2sel_normsigma     0
+dredgeSCA3sel_normsigma  0
 trapRCBsel_normsigma    0
 dtrawlRCBsel_normsigma  0
 dtrawlISQsel_normsigma  0
@@ -6920,9 +6942,9 @@ midwcOSHsel_normsigma   0
 mowMAsel_normsigma      0
 midwcISQsel_normlsm   0
 midwcLSQsel_normlsm   0
-jigISQsel_normlsm     0
-jigLSQsel_normlsm     0
-dredgeSCAsel_normlsm  0
+dredgeSCA1sel_normlsm     0
+dredgeSCA2sel_normlsm     0
+dredgeSCA3sel_normlsm  0
 trapRCBsel_normlsm    0
 dtrawlRCBsel_normlsm  0
 dtrawlISQsel_normlsm  0
@@ -6948,9 +6970,9 @@ midwcOSHsel_normlsm   0
 mowMAsel_normlsm      0
 midwcISQsel_lognormsigma   0
 midwcLSQsel_lognormsigma   0
-jigISQsel_lognormsigma     0
-jigLSQsel_lognormsigma     0
-dredgeSCAsel_lognormsigma  0
+dredgeSCA1sel_lognormsigma     0
+dredgeSCA2sel_lognormsigma     0
+dredgeSCA3sel_lognormsigma  0
 trapRCBsel_lognormsigma    0
 dtrawlRCBsel_lognormsigma  0
 dtrawlISQsel_lognormsigma  0
@@ -6976,9 +6998,9 @@ midwcOSHsel_lognormsigma   0
 mowMAsel_lognormsigma      0
 midwcISQsel_gammasigma   0
 midwcLSQsel_gammasigma   0
-jigISQsel_gammasigma     0
-jigLSQsel_gammasigma     0
-dredgeSCAsel_gammasigma  0
+dredgeSCA1sel_gammasigma     0
+dredgeSCA2sel_gammasigma     0
+dredgeSCA3sel_gammasigma  0
 trapRCBsel_gammasigma    0
 dtrawlRCBsel_gammasigma  0
 dtrawlISQsel_gammasigma  0
@@ -7004,9 +7026,9 @@ midwcOSHsel_gammasigma   0
 mowMAsel_gammasigma      0
 midwcISQsel_gammalsm   0
 midwcLSQsel_gammalsm   0
-jigISQsel_gammalsm     0
-jigLSQsel_gammalsm     0
-dredgeSCAsel_gammalsm  0
+dredgeSCA1sel_gammalsm     0
+dredgeSCA2sel_gammalsm     0
+dredgeSCA3sel_gammalsm  0
 trapRCBsel_gammalsm    0
 dtrawlRCBsel_gammalsm  0
 dtrawlISQsel_gammalsm  0
@@ -7032,9 +7054,9 @@ midwcOSHsel_gammalsm   0
 mowMAsel_gammalsm      0
 midwcISQsel_bisigma   0
 midwcLSQsel_bisigma   0
-jigISQsel_bisigma     0
-jigLSQsel_bisigma     0
-dredgeSCAsel_bisigma  0
+dredgeSCA1sel_bisigma     0
+dredgeSCA2sel_bisigma     0
+dredgeSCA3sel_bisigma  0
 trapRCBsel_bisigma    0
 dtrawlRCBsel_bisigma  0
 dtrawlISQsel_bisigma  0
@@ -7060,9 +7082,9 @@ midwcOSHsel_bisigma   0
 mowMAsel_bisigma      0
 midwcISQsel_bilsm1   0
 midwcLSQsel_bilsm1   0
-jigISQsel_bilsm1     0
-jigLSQsel_bilsm1     0
-dredgeSCAsel_bilsm1  0
+dredgeSCA1sel_bilsm1     0
+dredgeSCA2sel_bilsm1     0
+dredgeSCA3sel_bilsm1  0
 trapRCBsel_bilsm1    0
 dtrawlRCBsel_bilsm1  0
 dtrawlISQsel_bilsm1  0
@@ -7088,9 +7110,9 @@ midwcOSHsel_bilsm1   0
 mowMAsel_bilsm1      0
 midwcISQsel_bilsm2   0
 midwcLSQsel_bilsm2   0
-jigISQsel_bilsm2     0
-jigLSQsel_bilsm2     0
-dredgeSCAsel_bilsm2  0
+dredgeSCA1sel_bilsm2     0
+dredgeSCA2sel_bilsm2     0
+dredgeSCA3sel_bilsm2  0
 trapRCBsel_bilsm2    0
 dtrawlRCBsel_bilsm2  0
 dtrawlISQsel_bilsm2  0
@@ -7117,9 +7139,9 @@ mowMAsel_bilsm2      0
 
 midwcISQsel_lognormlsm   0
 midwcLSQsel_lognormlsm   0
-jigISQsel_lognormlsm     0
-jigLSQsel_lognormlsm     0
-dredgeSCAsel_lognormlsm  0
+dredgeSCA1sel_lognormlsm     0
+dredgeSCA2sel_lognormlsm     0
+dredgeSCA3sel_lognormlsm  0
 trapRCBsel_lognormlsm    0
 dtrawlRCBsel_lognormlsm  0
 dtrawlISQsel_lognormlsm  0
@@ -7145,9 +7167,9 @@ midwcOSHsel_lognormlsm   0
 mowMAsel_lognormlsm      0
 midwcISQsel_bisigma2   0
 midwcLSQsel_bisigma2   0
-jigISQsel_bisigma2     0
-jigLSQsel_bisigma2     0
-dredgeSCAsel_bisigma2  0
+dredgeSCA1sel_bisigma2     0
+dredgeSCA2sel_bisigma2     0
+dredgeSCA3sel_bisigma2  0
 trapRCBsel_bisigma2    0
 dtrawlRCBsel_bisigma2  0
 dtrawlISQsel_bisigma2  0
@@ -7173,9 +7195,9 @@ midwcOSHsel_bisigma2   0
 mowMAsel_bisigma2      0
 midwcISQsel_ampli   0
 midwcLSQsel_ampli   0
-jigISQsel_ampli     0
-jigLSQsel_ampli     0
-dredgeSCAsel_ampli  0
+dredgeSCA1sel_ampli     0
+dredgeSCA2sel_ampli     0
+dredgeSCA3sel_ampli  0
 trapRCBsel_ampli    0
 dtrawlRCBsel_ampli  0
 dtrawlISQsel_ampli  0
@@ -7205,9 +7227,9 @@ invert_incidmort    0
 
 midwcISQ_p_changes   1
 midwcLSQ_p_changes   1
-jigISQ_p_changes     1
-jigLSQ_p_changes     1
-dredgeSCA_p_changes  1
+dredgeSCA1_p_changes     1
+dredgeSCA2_p_changes     1
+dredgeSCA3_p_changes  1
 trapRCB_p_changes    1
 dtrawlRCB_p_changes  1
 dtrawlISQ_p_changes  1
@@ -7238,11 +7260,11 @@ Pchange_start_midwcISQ       1
 0
 Pchange_start_midwcLSQ       1
 0
-Pchange_start_jigISQ         1
+Pchange_start_dredgeSCA1         1
 0
-Pchange_start_jigLSQ         1
+Pchange_start_dredgeSCA2         1
 0
-Pchange_start_dredgeSCA      1
+Pchange_start_dredgeSCA3      1
 0
 Pchange_start_trapRCB        1
 0
@@ -7297,11 +7319,11 @@ Pchange_period_midwcISQ       1
 1
 Pchange_period_midwcLSQ       1
 1
-Pchange_period_jigISQ         1
+Pchange_period_dredgeSCA1         1
 1
-Pchange_period_jigLSQ         1
+Pchange_period_dredgeSCA2         1
 1
-Pchange_period_dredgeSCA      1
+Pchange_period_dredgeSCA3      1
 1
 Pchange_period_trapRCB        1
 1
@@ -7354,11 +7376,11 @@ Pchange_mult_midwcISQ       1
 1
 Pchange_mult_midwcLSQ       1
 1
-Pchange_mult_jigISQ         1
+Pchange_mult_dredgeSCA1         1
 1
-Pchange_mult_jigLSQ         1
+Pchange_mult_dredgeSCA2         1
 1
-Pchange_mult_dredgeSCA      1
+Pchange_mult_dredgeSCA3      1
 1
 Pchange_mult_trapRCB        1
 1
@@ -7418,9 +7440,9 @@ flagchangeswept		 0
 
 midwcISQ_swept_changes   1
 midwcLSQ_swept_changes   1
-jigISQ_swept_changes     1
-jigLSQ_swept_changes     1
-dredgeSCA_swept_changes  1
+dredgeSCA1_swept_changes     1
+dredgeSCA2_swept_changes     1
+dredgeSCA3_swept_changes  1
 trapRCB_swept_changes    1
 dtrawlRCB_swept_changes  1
 dtrawlISQ_swept_changes  1
@@ -7449,11 +7471,11 @@ SWEPTchange_start_midwcISQ       1
 0
 SWEPTchange_start_midwcLSQ       1
 0
-SWEPTchange_start_jigISQ         1
+SWEPTchange_start_dredgeSCA1         1
 0
-SWEPTchange_start_jigLSQ         1
+SWEPTchange_start_dredgeSCA2         1
 0
-SWEPTchange_start_dredgeSCA      1
+SWEPTchange_start_dredgeSCA3      1
 0
 SWEPTchange_start_trapRCB        1
 0
@@ -7505,11 +7527,11 @@ SWEPTchange_period_midwcISQ       1
 1
 SWEPTchange_period_midwcLSQ       1
 1
-SWEPTchange_period_jigISQ         1
+SWEPTchange_period_dredgeSCA1         1
 1
-SWEPTchange_period_jigLSQ         1
+SWEPTchange_period_dredgeSCA2         1
 1
-SWEPTchange_period_dredgeSCA      1
+SWEPTchange_period_dredgeSCA3      1
 1
 SWEPTchange_period_trapRCB        1
 1
@@ -7561,11 +7583,11 @@ SWEPTchange_mult_midwcISQ       1
 1
 SWEPTchange_mult_midwcLSQ       1
 1
-SWEPTchange_mult_jigISQ         1
+SWEPTchange_mult_dredgeSCA1         1
 1
-SWEPTchange_mult_jigLSQ         1
+SWEPTchange_mult_dredgeSCA2         1
 1
-SWEPTchange_mult_dredgeSCA      1
+SWEPTchange_mult_dredgeSCA3      1
 1
 SWEPTchange_mult_trapRCB        1
 1
@@ -7621,11 +7643,11 @@ gear_conflict_midwcISQ       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 gear_conflict_midwcLSQ       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_jigISQ         28
+gear_conflict_dredgeSCA1         28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_jigLSQ         28
+gear_conflict_dredgeSCA2         28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dredgeSCA      28
+gear_conflict_dredgeSCA3      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 gear_conflict_trapRCB        28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -7678,9 +7700,9 @@ gear_conflict_mowMA          28
 
 midwcISQ_changeSEL   0
 midwcLSQ_changeSEL   0
-jigISQ_changeSEL     0
-jigLSQ_changeSEL     0
-dredgeSCA_changeSEL  0
+dredgeSCA1_changeSEL     0
+dredgeSCA2_changeSEL     0
+dredgeSCA3_changeSEL  0
 trapRCB_changeSEL    0
 dtrawlRCB_changeSEL  0
 dtrawlISQ_changeSEL  0
@@ -7706,9 +7728,9 @@ midwcOSH_changeSEL   0
 mowMA_changeSEL      0
 midwcISQ_changeSWEPT   0
 midwcLSQ_changeSWEPT   0
-jigISQ_changeSWEPT     0
-jigLSQ_changeSWEPT     0
-dredgeSCA_changeSWEPT  0
+dredgeSCA1_changeSWEPT     0
+dredgeSCA2_changeSWEPT     0
+dredgeSCA3_changeSWEPT  0
 trapRCB_changeSWEPT    0
 dtrawlRCB_changeSWEPT  0
 dtrawlISQ_changeSWEPT  0
@@ -10677,9 +10699,9 @@ flagchangep 		 0
 
 midwcISQ_changeP   0
 midwcLSQ_changeP   0
-jigISQ_changeP     0
-jigLSQ_changeP     0
-dredgeSCA_changeP  0
+dredgeSCA1_changeP     0
+dredgeSCA2_changeP     0
+dredgeSCA3_changeP  0
 trapRCB_changeP    0
 dtrawlRCB_changeP  0
 dtrawlISQ_changeP  0
@@ -10709,9 +10731,9 @@ mowMA_changeP      0
 
 midwcISQ_changeseason   0
 midwcLSQ_changeseason   0
-jigISQ_changeseason     0
-jigLSQ_changeseason     0
-dredgeSCA_changeseason  0
+dredgeSCA1_changeseason     0
+dredgeSCA2_changeseason     0
+dredgeSCA3_changeseason  0
 trapRCB_changeseason    0
 dtrawlRCB_changeseason  0
 dtrawlISQ_changeseason  0
@@ -11495,9 +11517,9 @@ flagTradeTACvsMPA	 0
 
 flagTACparticipate_midwcISQ 0
 flagTACparticipate_midwcLSQ 0
-flagTACparticipate_jigISQ 0
-flagTACparticipate_jigLSQ 0
-flagTACparticipate_dredgeSCA 0
+flagTACparticipate_dredgeSCA1 0
+flagTACparticipate_dredgeSCA2 0
+flagTACparticipate_dredgeSCA3 0
 flagTACparticipate_trapRCB 0
 flagTACparticipate_dtrawlRCB 0
 flagTACparticipate_dtrawlISQ 0
@@ -11526,9 +11548,9 @@ flagTACparticipate_mowMA 0
 
 midwcISQ_flagseasonal   0
 midwcLSQ_flagseasonal   0
-jigISQ_flagseasonal     0
-jigLSQ_flagseasonal     0
-dredgeSCA_flagseasonal  0
+dredgeSCA1_flagseasonal     0
+dredgeSCA2_flagseasonal     0
+dredgeSCA3_flagseasonal  0
 trapRCB_flagseasonal    0
 dtrawlRCB_flagseasonal  0
 dtrawlISQ_flagseasonal  0
@@ -11559,9 +11581,9 @@ mowMA_flagseasonal      0
 
 midwcISQ_flag_framebased   0
 midwcLSQ_flag_framebased   0
-jigISQ_flag_framebased     0
-jigLSQ_flag_framebased     0
-dredgeSCA_flag_framebased  0
+dredgeSCA1_flag_framebased     0
+dredgeSCA2_flag_framebased     0
+dredgeSCA3_flag_framebased  0
 trapRCB_flag_framebased    0
 dtrawlRCB_flag_framebased  0
 dtrawlISQ_flag_framebased  0
@@ -12138,9 +12160,9 @@ BiTAC_Reg1_DC       6
 
 midwcISQ_landallTAC_sp   0
 midwcLSQ_landallTAC_sp   0
-jigISQ_landallTAC_sp     0
-jigLSQ_landallTAC_sp     0
-dredgeSCA_landallTAC_sp  0
+dredgeSCA1_landallTAC_sp     0
+dredgeSCA2_landallTAC_sp     0
+dredgeSCA3_landallTAC_sp  0
 trapRCB_landallTAC_sp    0
 dtrawlRCB_landallTAC_sp  0
 dtrawlISQ_landallTAC_sp  0
@@ -12169,9 +12191,9 @@ mowMA_landallTAC_sp      0
 
 midwcISQ_max_num_sp   5
 midwcLSQ_max_num_sp   5
-jigISQ_max_num_sp     5
-jigLSQ_max_num_sp     5
-dredgeSCA_max_num_sp  5
+dredgeSCA1_max_num_sp     5
+dredgeSCA2_max_num_sp     5
+dredgeSCA3_max_num_sp  5
 trapRCB_max_num_sp    5
 dtrawlRCB_max_num_sp  5
 dtrawlISQ_max_num_sp  5
@@ -13839,9 +13861,9 @@ RegSeason 1
 
 midwcISQ_seasonopen   0
 midwcLSQ_seasonopen   0
-jigISQ_seasonopen     0
-jigLSQ_seasonopen     0
-dredgeSCA_seasonopen  0
+dredgeSCA1_seasonopen     0
+dredgeSCA2_seasonopen     0
+dredgeSCA3_seasonopen  0
 trapRCB_seasonopen    0
 dtrawlRCB_seasonopen  0
 dtrawlISQ_seasonopen  0
@@ -13867,9 +13889,9 @@ midwcOSH_seasonopen   0
 mowMA_seasonopen      0
 midwcISQ_seasonclose   364
 midwcLSQ_seasonclose   364
-jigISQ_seasonclose     364
-jigLSQ_seasonclose     364
-dredgeSCA_seasonclose  364
+dredgeSCA1_seasonclose     364
+dredgeSCA2_seasonclose     364
+dredgeSCA3_seasonclose  364
 trapRCB_seasonclose    364
 dtrawlRCB_seasonclose  364
 dtrawlISQ_seasonclose  364
@@ -14261,9 +14283,9 @@ FC_high_thresh_DC       28
 
 midwcISQ_FC_restrict   0.1
 midwcLSQ_FC_restrict   0.1
-jigISQ_FC_restrict     0.1
-jigLSQ_FC_restrict     0.1
-dredgeSCA_FC_restrict  0.1
+dredgeSCA1_FC_restrict     0.1
+dredgeSCA2_FC_restrict     0.1
+dredgeSCA3_FC_restrict  0.1
 trapRCB_FC_restrict    0.1
 dtrawlRCB_FC_restrict  0.1
 dtrawlISQ_FC_restrict  0.1
@@ -14292,9 +14314,9 @@ mowMA_FC_restrict      0.1
 
 midwcISQ_FC_period   730
 midwcLSQ_FC_period   730
-jigISQ_FC_period     730
-jigLSQ_FC_period     730
-dredgeSCA_FC_period  730
+dredgeSCA1_FC_period     730
+dredgeSCA2_FC_period     730
+dredgeSCA3_FC_period  730
 trapRCB_FC_period    730
 dtrawlRCB_FC_period  730
 dtrawlISQ_FC_period  730
@@ -14323,9 +14345,9 @@ mowMA_FC_period      730
 
 midwcISQ_FC_period2   1825
 midwcLSQ_FC_period2   1825
-jigISQ_FC_period2     1825
-jigLSQ_FC_period2     1825
-dredgeSCA_FC_period2  1825
+dredgeSCA1_FC_period2     1825
+dredgeSCA2_FC_period2     1825
+dredgeSCA3_FC_period2  1825
 trapRCB_FC_period2    1825
 dtrawlRCB_FC_period2  1825
 dtrawlISQ_FC_period2  1825
@@ -14352,9 +14374,9 @@ mowMA_FC_period2      1825
 
 midwcISQ_FC_restrict_endangered   0.1
 midwcLSQ_FC_restrict_endangered   0.1
-jigISQ_FC_restrict_endangered     0.1
-jigLSQ_FC_restrict_endangered     0.1
-dredgeSCA_FC_restrict_endangered  0.1
+dredgeSCA1_FC_restrict_endangered     0.1
+dredgeSCA2_FC_restrict_endangered     0.1
+dredgeSCA3_FC_restrict_endangered  0.1
 trapRCB_FC_restrict_endangered    0.1
 dtrawlRCB_FC_restrict_endangered  0.1
 dtrawlISQ_FC_restrict_endangered  0.1
@@ -14382,9 +14404,9 @@ mowMA_FC_restrict_endangered      0.1
 
 midwcISQ_FC_endanger_period   730
 midwcLSQ_FC_endanger_period   730
-jigISQ_FC_endanger_period     730
-jigLSQ_FC_endanger_period     730
-dredgeSCA_FC_endanger_period  730
+dredgeSCA1_FC_endanger_period     730
+dredgeSCA2_FC_endanger_period     730
+dredgeSCA3_FC_endanger_period  730
 trapRCB_FC_endanger_period    730
 dtrawlRCB_FC_endanger_period  730
 dtrawlISQ_FC_endanger_period  730
@@ -14411,9 +14433,9 @@ mowMA_FC_endanger_period      730
 
 midwcISQ_num_changes   1
 midwcLSQ_num_changes   1
-jigISQ_num_changes     1
-jigLSQ_num_changes     1
-dredgeSCA_num_changes  1
+dredgeSCA1_num_changes     1
+dredgeSCA2_num_changes     1
+dredgeSCA3_num_changes  1
 trapRCB_num_changes    1
 dtrawlRCB_num_changes  1
 dtrawlISQ_num_changes  1
@@ -14443,11 +14465,11 @@ EffortChange_start_midwcISQ       1
 0
 EffortChange_start_midwcLSQ       1
 0
-EffortChange_start_jigISQ         1
+EffortChange_start_dredgeSCA1         1
 0
-EffortChange_start_jigLSQ         1
+EffortChange_start_dredgeSCA2         1
 0
-EffortChange_start_dredgeSCA      1
+EffortChange_start_dredgeSCA3      1
 0
 EffortChange_start_trapRCB        1
 0
@@ -14499,11 +14521,11 @@ EffortChange_period_midwcISQ       1
 1
 EffortChange_period_midwcLSQ       1
 1
-EffortChange_period_jigISQ         1
+EffortChange_period_dredgeSCA1         1
 1
-EffortChange_period_jigLSQ         1
+EffortChange_period_dredgeSCA2         1
 1
-EffortChange_period_dredgeSCA      1
+EffortChange_period_dredgeSCA3      1
 1
 EffortChange_period_trapRCB        1
 1
@@ -14557,11 +14579,11 @@ Effort_mult_midwcISQ       1
 1
 Effort_mult_midwcLSQ       1
 1
-Effort_mult_jigISQ         1
+Effort_mult_dredgeSCA1         1
 1
-Effort_mult_jigLSQ         1
+Effort_mult_dredgeSCA2         1
 1
-Effort_mult_dredgeSCA      1
+Effort_mult_dredgeSCA3      1
 1
 Effort_mult_trapRCB        1
 1
@@ -14615,11 +14637,11 @@ flagpulsemidwcISQ       1
 0
 flagpulsemidwcLSQ       1
 0
-flagpulsejigISQ         1
+flagpulsedredgeSCA1         1
 0
-flagpulsejigLSQ         1
+flagpulsedredgeSCA2         1
 0
-flagpulsedredgeSCA      1
+flagpulsedredgeSCA3      1
 0
 flagpulsetrapRCB        1
 0
@@ -14671,9 +14693,9 @@ flagpulsemowMA          1
 
 midwcISQ_cap_changes   1
 midwcLSQ_cap_changes   1
-jigISQ_cap_changes     1
-jigLSQ_cap_changes     1
-dredgeSCA_cap_changes  1
+dredgeSCA1_cap_changes     1
+dredgeSCA2_cap_changes     1
+dredgeSCA3_cap_changes  1
 trapRCB_cap_changes    1
 dtrawlRCB_cap_changes  1
 dtrawlISQ_cap_changes  1
@@ -14702,11 +14724,11 @@ CAPchange_start_midwcISQ       1
 0
 CAPchange_start_midwcLSQ       1
 0
-CAPchange_start_jigISQ         1
+CAPchange_start_dredgeSCA1         1
 0
-CAPchange_start_jigLSQ         1
+CAPchange_start_dredgeSCA2         1
 0
-CAPchange_start_dredgeSCA      1
+CAPchange_start_dredgeSCA3      1
 0
 CAPchange_start_trapRCB        1
 0
@@ -14758,11 +14780,11 @@ CAPchange_period_midwcISQ       1
 1
 CAPchange_period_midwcLSQ       1
 1
-CAPchange_period_jigISQ         1
+CAPchange_period_dredgeSCA1         1
 1
-CAPchange_period_jigLSQ         1
+CAPchange_period_dredgeSCA2         1
 1
-CAPchange_period_dredgeSCA      1
+CAPchange_period_dredgeSCA3      1
 1
 CAPchange_period_trapRCB        1
 1
@@ -14814,11 +14836,11 @@ CAPchange_mult_midwcISQ       1
 1
 CAPchange_mult_midwcLSQ       1
 1
-CAPchange_mult_jigISQ         1
+CAPchange_mult_dredgeSCA1         1
 1
-CAPchange_mult_jigLSQ         1
+CAPchange_mult_dredgeSCA2         1
 1
-CAPchange_mult_dredgeSCA      1
+CAPchange_mult_dredgeSCA3      1
 1
 CAPchange_mult_trapRCB        1
 1
@@ -14879,11 +14901,11 @@ MPAmidwcISQ       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 MPAmidwcLSQ       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAjigISQ         30
+MPAdredgeSCA1         30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAjigLSQ         30
+MPAdredgeSCA2         30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAdredgeSCA      30
+MPAdredgeSCA3      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 MPAtrapRCB        30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -14936,11 +14958,11 @@ MPAendangeredmidwcISQ       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 MPAendangeredmidwcLSQ       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAendangeredjigISQ         30
+MPAendangereddredgeSCA1         30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAendangeredjigLSQ         30
+MPAendangereddredgeSCA2         30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAendangereddredgeSCA      30
+MPAendangereddredgeSCA3      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 MPAendangeredtrapRCB        30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -15174,9 +15196,9 @@ MPAoverfishedDC       30
 
 midwcISQ_changeEFF   1
 midwcLSQ_changeEFF   1
-jigISQ_changeEFF     1
-jigLSQ_changeEFF     1
-dredgeSCA_changeEFF  1
+dredgeSCA1_changeEFF     1
+dredgeSCA2_changeEFF     1
+dredgeSCA3_changeEFF  1
 trapRCB_changeEFF    1
 dtrawlRCB_changeEFF  1
 dtrawlISQ_changeEFF  1
@@ -15207,11 +15229,11 @@ EffortPenaltymidwcISQ       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 EffortPenaltymidwcLSQ       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-EffortPenaltyjigISQ         30
+EffortPenaltydredgeSCA1         30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-EffortPenaltyjigLSQ         30
+EffortPenaltydredgeSCA2         30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-EffortPenaltydredgeSCA      30
+EffortPenaltydredgeSCA3      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 EffortPenaltytrapRCB        30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -15269,9 +15291,9 @@ UseLever 89
 
 midwcISQ_use_min_lever   0
 midwcLSQ_use_min_lever   0
-jigISQ_use_min_lever     0
-jigLSQ_use_min_lever     0
-dredgeSCA_use_min_lever  0
+dredgeSCA1_use_min_lever     0
+dredgeSCA2_use_min_lever     0
+dredgeSCA3_use_min_lever  0
 trapRCB_use_min_lever    0
 dtrawlRCB_use_min_lever  0
 dtrawlISQ_use_min_lever  0
@@ -15300,9 +15322,9 @@ mowMA_use_min_lever      0
 
 midwcISQCPUEthresh   0        0
 midwcLSQCPUEthresh   0        0
-jigISQCPUEthresh     0        0
-jigLSQCPUEthresh     0        0
-dredgeSCACPUEthresh  0        0
+dredgeSCA1CPUEthresh     0        0
+dredgeSCA2CPUEthresh     0        0
+dredgeSCA3CPUEthresh  0        0
 trapRCBCPUEthresh    0        0
 dtrawlRCBCPUEthresh  0        0
 dtrawlISQCPUEthresh  0        0
@@ -15328,9 +15350,9 @@ midwcOSHCPUEthresh   0        0
 mowMACPUEthresh      0        0
 midwcISQCPUEthresh   0        0
 midwcLSQCPUEthresh   0        0
-jigISQCPUEthresh     0        0
-jigLSQCPUEthresh     0        0
-dredgeSCACPUEthresh  0        0
+dredgeSCA1CPUEthresh     0        0
+dredgeSCA2CPUEthresh     0        0
+dredgeSCA3CPUEthresh  0        0
 trapRCBCPUEthresh    0        0
 dtrawlRCBCPUEthresh  0        0
 dtrawlISQCPUEthresh  0        0
@@ -15357,9 +15379,9 @@ mowMACPUEthresh      0        0
 
 midwcISQCPUEscale   0        0
 midwcLSQCPUEscale   0        0
-jigISQCPUEscale     0        0
-jigLSQCPUEscale     0        0
-dredgeSCACPUEscale  0        0
+dredgeSCA1CPUEscale     0        0
+dredgeSCA2CPUEscale     0        0
+dredgeSCA3CPUEscale  0        0
 trapRCBCPUEscale    0        0
 dtrawlRCBCPUEscale  0        0
 dtrawlISQCPUEscale  0        0
@@ -15385,9 +15407,9 @@ midwcOSHCPUEscale   0        0
 mowMACPUEscale      0        0
 midwcISQCPUEscale   0        0
 midwcLSQCPUEscale   0        0
-jigISQCPUEscale     0        0
-jigLSQCPUEscale     0        0
-dredgeSCACPUEscale  0        0
+dredgeSCA1CPUEscale     0        0
+dredgeSCA2CPUEscale     0        0
+dredgeSCA3CPUEscale  0        0
 trapRCBCPUEscale    0        0
 dtrawlRCBCPUEscale  0        0
 dtrawlISQCPUEscale  0        0
@@ -15441,9 +15463,9 @@ UpdateMaxSalePrice   0
 
 midwcISQ_maxsaleprice   1
 midwcLSQ_maxsaleprice   1
-jigISQ_maxsaleprice     1
-jigLSQ_maxsaleprice     1
-dredgeSCA_maxsaleprice  1
+dredgeSCA1_maxsaleprice     1
+dredgeSCA2_maxsaleprice     1
+dredgeSCA3_maxsaleprice  1
 trapRCB_maxsaleprice    1
 dtrawlRCB_maxsaleprice  1
 dtrawlISQ_maxsaleprice  1
@@ -15657,9 +15679,9 @@ FC_caseDC       28
 
 midwcISQ_TACchange   0
 midwcLSQ_TACchange   0
-jigISQ_TACchange     0
-jigLSQ_TACchange     0
-dredgeSCA_TACchange  0
+dredgeSCA1_TACchange     0
+dredgeSCA2_TACchange     0
+dredgeSCA3_TACchange  0
 trapRCB_TACchange    0
 dtrawlRCB_TACchange  0
 dtrawlISQ_TACchange  0
@@ -16416,9 +16438,9 @@ dynanyway 0
 
 midwcISQ_effortdrop   1
 midwcLSQ_effortdrop   1
-jigISQ_effortdrop     1
-jigLSQ_effortdrop     1
-dredgeSCA_effortdrop  1
+dredgeSCA1_effortdrop     1
+dredgeSCA2_effortdrop     1
+dredgeSCA3_effortdrop  1
 trapRCB_effortdrop    1
 dtrawlRCB_effortdrop  1
 dtrawlISQ_effortdrop  1
