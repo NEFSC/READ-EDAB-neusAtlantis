@@ -64,7 +64,6 @@ hd55.name /tsfiles/Annual_Files/flow_2019.nc
 hd56.name /tsfiles/Annual_Files/flow_2020.nc
 
 
-
 # Bottom stress
 
 #############################################
@@ -301,13 +300,158 @@ typeDiscardts 0
 # Historical effort lists - nEffortts is the number of time series to be loaded and
 # typeEffortts is whether or not the data is to be interpolated (0) by the model
 # or just use previous record (1)
-nEffortts 1
+nEffortts 30
 typeEffortts 1
 
-Effortts0.name toteffort
-Effortts0.location 52965.5227 2474675.803 0
-Effortts0.data CatchFiles/total_effort.ts
+Effortts0.name boxEffort0
+Effortts0.location 536357.524616088 2472123.25094972 0
+Effortts0.data CatchFiles/effort_box0.ts
 Effortts0.rewind 0
+ 
+Effortts1.name boxEffort1
+Effortts1.location 614031.800829164 2789259.17653846 1
+Effortts1.data CatchFiles/effort_box1.ts
+Effortts1.rewind 0
+ 
+Effortts2.name boxEffort2
+Effortts2.location 655745.085809481 2772137.65990619 2
+Effortts2.data CatchFiles/effort_box2.ts
+Effortts2.rewind 0
+ 
+Effortts3.name boxEffort3
+Effortts3.location 702414.231312402 2753558.39450236 3
+Effortts3.data CatchFiles/effort_box3.ts
+Effortts3.rewind 0
+ 
+Effortts4.name boxEffort4
+Effortts4.location 766324.977551201 3009841.3351 4
+Effortts4.data CatchFiles/effort_box4.ts
+Effortts4.rewind 0
+ 
+Effortts5.name boxEffort5
+Effortts5.location 793999.40873681 2919525.5646889 5
+Effortts5.data CatchFiles/effort_box5.ts
+Effortts5.rewind 0
+ 
+Effortts6.name boxEffort6
+Effortts6.location 886783.853296284 2968086.65276768 6
+Effortts6.data CatchFiles/effort_box6.ts
+Effortts6.rewind 0
+ 
+Effortts7.name boxEffort7
+Effortts7.location 936805.882409505 3073809.53022947 7
+Effortts7.data CatchFiles/effort_box7.ts
+Effortts7.rewind 0
+ 
+Effortts8.name boxEffort8
+Effortts8.location 1086308.04044449 3081669.75124632 8
+Effortts8.data CatchFiles/effort_box8.ts
+Effortts8.rewind 0
+ 
+Effortts9.name boxEffort9
+Effortts9.location 1058482.4817846 2992773.69152756 9
+Effortts9.data CatchFiles/effort_box9.ts
+Effortts9.rewind 0
+ 
+Effortts10.name boxEffort10
+Effortts10.location 998463.206025848 3228644.15597876 10
+Effortts10.data CatchFiles/effort_box10.ts
+Effortts10.rewind 0
+ 
+Effortts11.name boxEffort11
+Effortts11.location 1101141.41710966 3178910.38675319 11
+Effortts11.data CatchFiles/effort_box11.ts
+Effortts11.rewind 0
+ 
+Effortts12.name boxEffort12
+Effortts12.location 1209670.24080485 3163985.5138113 12
+Effortts12.data CatchFiles/effort_box12.ts
+Effortts12.rewind 0
+ 
+Effortts13.name boxEffort13
+Effortts13.location 1211478.49631208 3099078.55620562 13
+Effortts13.data CatchFiles/effort_box13.ts
+Effortts13.rewind 0
+ 
+Effortts14.name boxEffort14
+Effortts14.location 1247039.15761167 3029490.83364039 14
+Effortts14.data CatchFiles/effort_box14.ts
+Effortts14.rewind 0
+ 
+Effortts15.name boxEffort15
+Effortts15.location 1345508.88007565 3133385.49182315 15
+Effortts15.data CatchFiles/effort_box15.ts
+Effortts15.rewind 0
+ 
+Effortts16.name boxEffort16
+Effortts16.location 1099895.74009719 3298468.07375689 16
+Effortts16.data CatchFiles/effort_box16.ts
+Effortts16.rewind 0
+ 
+Effortts17.name boxEffort17
+Effortts17.location 1098345.30458167 3367268.92302973 17
+Effortts17.data CatchFiles/effort_box17.ts
+Effortts17.rewind 0
+ 
+Effortts18.name boxEffort18
+Effortts18.location 1220475.73517184 3429637.98738659 18
+Effortts18.data CatchFiles/effort_box18.ts
+Effortts18.rewind 0
+ 
+Effortts19.name boxEffort19
+Effortts19.location 1237923.2543202 3342156.19820278 19
+Effortts19.data CatchFiles/effort_box19.ts
+Effortts19.rewind 0
+ 
+Effortts20.name boxEffort20
+Effortts20.location 1223939.64864722 3221251.20763294 20
+Effortts20.data CatchFiles/effort_box20.ts
+Effortts20.rewind 0
+ 
+Effortts21.name boxEffort21
+Effortts21.location 1346626.02311962 3211923.00213015 21
+Effortts21.data CatchFiles/effort_box21.ts
+Effortts21.rewind 0
+ 
+Effortts22.name boxEffort22
+Effortts22.location 1341872.80700172 3268177.50999033 22
+Effortts22.data CatchFiles/effort_box22.ts
+Effortts22.rewind 0
+ 
+Effortts23.name boxEffort23
+Effortts23.location 1033068.00609403 3087315.90759938 23
+Effortts23.data CatchFiles/effort_box23.ts
+Effortts23.rewind 0
+ 
+Effortts24.name boxEffort24
+Effortts24.location 1175346.62660234 3428644.29153688 24
+Effortts24.data CatchFiles/effort_box24.ts
+Effortts24.rewind 0
+ 
+Effortts25.name boxEffort25
+Effortts25.location 1379948.28124062 3356730.66781357 25
+Effortts25.data CatchFiles/effort_box25.ts
+Effortts25.rewind 0
+ 
+Effortts26.name boxEffort26
+Effortts26.location 1483492.97420412 3226834.06601288 26
+Effortts26.data CatchFiles/effort_box26.ts
+Effortts26.rewind 0
+ 
+Effortts27.name boxEffort27
+Effortts27.location 1433749.25632048 3091203.0267971 27
+Effortts27.data CatchFiles/effort_box27.ts
+Effortts27.rewind 0
+ 
+Effortts28.name boxEffort28
+Effortts28.location 1082116.87210969 2892209.91164056 28
+Effortts28.data CatchFiles/effort_box28.ts
+Effortts28.rewind 0
+ 
+Effortts29.name boxEffort29
+Effortts29.location 740106.750807048 2716469.89662692 29
+Effortts29.data CatchFiles/effort_box29.ts
+Effortts29.rewind 0
 
 #############################################
 # Residual lists
