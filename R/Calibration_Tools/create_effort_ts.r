@@ -17,8 +17,8 @@ create_effort_ts <- function(filename="total_effort", nYrs=57) {
   
   # input and output files
   #catchFile <- here::here("currentVersion/CatchFiles/total_effort.ts")
-  outFile <- here::here(paste0("currentVersion/catchFiles/",filename,".ts"))
-  copyFile <- here::here(paste0("currentVersion/catchFiles/",filename,".tstemp"))
+  outFile <- here::here(paste0("currentVersion/CatchFiles/",filename,".ts"))
+  copyFile <- here::here(paste0("currentVersion/CatchFiles/",filename,".tstemp"))
   
   if(file.exists(outFile)) {
     file.rename(outFile,copyFile)

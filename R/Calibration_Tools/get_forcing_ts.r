@@ -17,6 +17,8 @@
 get_forcing_ts <- function(code,tstype="catch",time="daily") {
 
   # input and output files
+  tstype = tolower(tstype)
+  time = tolower(time)
   if(tstype == "effort") {
     file <- here::here("currentVersion/CatchFiles/total_effort.ts")
   } else if (tstype=="catch") {

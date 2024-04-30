@@ -5,7 +5,7 @@
 #' @param code character vector. The functional group code of the species or the fleet code to scale
 #' @param tstype character. Make the change to the catch or the effort time series (Default = "effort")
 #' @param value numeric. The value by which you want to apply to the time series. How it is applies is determined by the operation argument (Default = 1)
-#' @param operation character. "add" or "multiply" the value to the time series (Default = "multiply") or "create" using value = 1 and code values
+#' @param operation character. "add", "multiply","remove","create".  manipulate the value to the time series (Default = "multiply") or "remove", create" using value = 1 and code values
 #' @param filename character. The name of the output file (without the extension) (Default = "temp")
 #' 
 #' @Section Info
@@ -23,7 +23,7 @@ scale_forcing_ts <- function(code,tstype="effort",value=1,operation="multiply",f
 
   # input and output files
   if(tstype == "effort") {
-    file <- here::here("currentVersion/CatchFiles/total_effort.ts")
+    file <- here::here(paste0("currentVersion/CatchFiles/",filename,".ts"))
   } else if (tstype=="catch") {
     file <- here::here("currentVersion/CatchFiles/total_catch.ts")
   } else {
@@ -63,9 +63,9 @@ scale_forcing_ts <- function(code,tstype="effort",value=1,operation="multiply",f
   # convert body to a numeric data frame
   body <- as.data.frame(stringr::str_split(body,"\\s+",simplify = T))
   abody <- sapply(body,as.numeric,simplify = T)
-  # identify columns to scale
+  # identify columns to manipulate
   index <- df$Column[which(df$Code %in% code)]
-  
+
   if(operation == "multiply") {
     abody[,index] <- abody[,index]*value
   } else if(operation == "add") {
@@ -92,9 +92,13 @@ scale_forcing_ts <- function(code,tstype="effort",value=1,operation="multiply",f
     }
     headerNew[ic+1] <- "##"
     header <- headerNew
-    
+  } else if (operation == "remove") {
+    # remove the time series and the metadata reference
+      abody <- abody[,-index]
+      header[which(grepl("COLUMNS",header))] <- paste0("## COLUMNS ",ncol(abody))
+      header <- header[-which(grepl(paste0("COLUMN",index),header))]
   } else {
-    stop("operation must be either 'add', 'multiply', or 'create'")
+    stop("operation must be either 'add', 'multiply', or 'remove', 'create'")
   }
   
   
@@ -107,4 +111,6 @@ scale_forcing_ts <- function(code,tstype="effort",value=1,operation="multiply",f
   # write new file
   writeLines(header,con=outFile)
   write.table(abody, file = outFile, append = TRUE, sep = " ", row.names = FALSE, col.names = FALSE, quote = FALSE )
+  
+  return(abody)
 }
