@@ -20,7 +20,8 @@ get_forcing_ts <- function(code,tstype="catch",time="daily") {
   if(tstype == "effort") {
     file <- here::here("currentVersion/CatchFiles/total_effort.ts")
   } else if (tstype=="catch") {
-    file <- here::here("currentVersion/CatchFiles/total_catch.ts")
+    file <- here::here("currentVersion/CatchFiles/master_total_catch.ts")
+  #  file <- here::here("currentVersion/CatchFiles/total_catch.ts")
   } else {
     stop("tsfile must be either 'catch' or 'effort'")
   }
