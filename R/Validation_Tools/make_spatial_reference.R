@@ -1,6 +1,7 @@
 #Script to create spatial biomass and abundance reference points using
 # A) Survdat data pull over a certain time range
 # B) Initial model conditions
+# C) Catch spatial reference (from comlandr pull)
 library(dplyr)
 library(atlantistools)
 
@@ -215,10 +216,15 @@ for(i in 1:nrow(fgs)){
 
 init.ref = bind_rows(init.ref.ls) %>%
   tidyr::gather('variable','init.value',-species,-polygon)%>%
+  dplyr::mutate(init.value = ifelse(init.value == 0, NA, init.value))%>%
   tidyr::separate('variable',c('var.name','statistic'))%>%
   left_join(fgs, by = c('species' = 'Name'))%>%
   select(LongName,polygon,var.name,statistic,init.value)%>%
   rename(species = 'LongName')
   
+  
 
 saveRDS(init.ref,here::here('data',paste0('spatial_reference_initial_conditions.rds')))
+
+#Make Catch Reference
+catch.box = readRDS(here::here('data-raw','landings_by_box_species.rds'))

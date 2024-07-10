@@ -8,7 +8,7 @@
 library(atlantisprocessing)
 # source(here::here('R','Post_Processing','make_post_process.R'))
 
-run.name = 'HER_TS_dist_hardEdge'
+run.name = 'GOO_ddepend3_noT'
 atl.dir = here::here('Atlantis_Runs',run.name,'')
 param.dir = here::here('currentVersion','/')
 run.prefix = 'neus_output'
