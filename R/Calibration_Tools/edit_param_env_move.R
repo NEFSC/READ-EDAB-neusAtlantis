@@ -6,24 +6,33 @@ edit_param_env_move = function(bio.file, group.name,min.val = NA, max.val = NA, 
   bio.lines = readLines(bio.file)
   
   if(tolower(var.name) == 'temperature'){
-    #change min.temp
-    which.min.temp = grep(paste0(group.name,'_min_move_temp'),bio.lines)
-    bio.lines[which.min.temp] = paste0(group.name,'_min_move_temp ',min.val)
     
-    #change max.temp
-    which.max.temp = grep(paste0(group.name,'_max_move_temp'),bio.lines)
-    bio.lines[which.max.temp] = paste0(group.name,'_max_move_temp ',max.val)
+    if(!is.na(min.val)){
+      #change min.temp
+      which.min.temp = grep(paste0(group.name,'_min_move_temp'),bio.lines)
+      bio.lines[which.min.temp] = paste0(group.name,'_min_move_temp ',min.val)
+    }
+    
+    if(!is.na(max.val)){
+      #change max.temp
+      which.max.temp = grep(paste0(group.name,'_max_move_temp'),bio.lines)
+      bio.lines[which.max.temp] = paste0(group.name,'_max_move_temp ',max.val)
+    }
     
   }else if(tolower(var.name) == 'salinity'){
     
-    #change min.salt
-    which.min.salt = grep(paste0(group.name,'_min_move_salt'),bio.lines)
-    bio.lines[which.min.temp] = paste0(group.name,'_min_move_salt ',min.val)
+    if(!is.na(min.val)){
+      #change min.salt
+      which.min.salt = grep(paste0(group.name,'_min_move_salt'),bio.lines)
+      bio.lines[which.min.temp] = paste0(group.name,'_min_move_salt ',min.val)  
+    }
     
-    #change max.salt
-    which.max.salt = grep(paste0(group.name,'_max_move_salt'),bio.lines)
-    bio.lines[which.max.temp] = paste0(group.name,'_max_move_salt ',max.val)
-    
+    if(!is.na(max.val)){
+      #change max.salt
+      which.max.salt = grep(paste0(group.name,'_max_move_salt'),bio.lines)
+      bio.lines[which.max.temp] = paste0(group.name,'_max_move_salt ',max.val)  
+    }
+  
   }else{
     stop('var.name needs to be either "temperature" or "salinity"')
   }
