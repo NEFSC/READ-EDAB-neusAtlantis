@@ -8,8 +8,10 @@
 library(atlantisprocessing)
 # source(here::here('R','Post_Processing','make_post_process.R'))
 
-run.name = 'GOO_ddepend3_noT'
-atl.dir = here::here('Atlantis_Runs',run.name,'')
+# run.name = 'GOO_ddepend3_noT'
+# atl.dir = here::here('Atlantis_Runs',run.name,'')
+run.name = 'Dev_6681_20240620'
+atl.dir = '/net/work3/EDAB/atlantis/Shared_Data/Dev_Runs/Dev_6681_20240620/'
 param.dir = here::here('currentVersion','/')
 run.prefix = 'neus_output'
 param.ls = get_atl_paramfiles(param.dir,atl.dir,run.prefix = run.prefix,include_catch = T)
