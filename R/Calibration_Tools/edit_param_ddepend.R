@@ -1,5 +1,5 @@
 #'Functions to edit densitiy dependent parameters
-#'@var.name parameter name either: ddepend, roc.wgt, or k.roc.food
+#'@var.name parameter name either: ddepend, speed, roc.wgt, or k.roc.food
 
 edit_param_ddepend = function(bio.file,group.name = NA,var.name, value,overwrite,new.file.name){
   
@@ -22,6 +22,12 @@ edit_param_ddepend = function(bio.file,group.name = NA,var.name, value,overwrite
     which.k.roc.food = grep('k_roc_food',bio.lines)
     bio.lines[which.k.roc.food] = paste0('k_roc_food ',value)
     
+  }
+  
+  if(var.name == 'speed'){
+    
+    which.speed = grep(paste0('Speed_',group.name),bio.lines)
+    bio.lines[which.speed] = paste0('Speed_',group.name,' ',value)
   }
   
   if(overwrite == T){
