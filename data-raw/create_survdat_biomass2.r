@@ -150,7 +150,7 @@ neusEPU <- sf::st_read(dsn = system.file("extdata","EPU.shp",package="survdat"),
 
 # read in functional group/species relationship
 speciesList <- readr::read_csv(file=here::here("data","functionalGroupNames.csv")) |> 
-  dplyr::select(-NESPP3) |> 
+  dplyr::select(-NESPP3,-Species_Itis,-Scientific_Name) |> 
   dplyr::filter(!is.na(SVSPP)) |> 
   dplyr::distinct()
 atlantisSpecies <- as.vector(na.omit(unique(speciesList$SVSPP)))
@@ -270,7 +270,7 @@ sweptAreaBiomassBox <- biomassNEUS %>%
   dplyr::inner_join(.,speciesList,by="SVSPP") %>% 
   tibble::as_tibble()
 
-saveRDS(sweptAreaBiomassBox,file = here::here("data","sweptAreaBiomassNEUSBox.RDS"))
+saveRDS(sweptAreaBiomassBox,file = here::here("data","sweptAreaBiomassNEUSBoxSpringandFall.RDS"))
 
 
 #############################################################################
