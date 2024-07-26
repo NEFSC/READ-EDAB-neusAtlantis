@@ -4,15 +4,15 @@ midwcLSQ,1,Scallop dredge,0,1
 dredgeSCA1,2,scallop dregde New Bedford MA,0,1
 dredgeSCA2,3,scallop dredge Cape May NJ,0,1
 dredgeSCA3,4,Scallop dredge NewPort News VA,0,1
-trapRCB,5,Purse seine on small pelagics,0,1
-dtrawlRCB,6,Lobster traps,0,1
-dtrawlISQ,7,Goosefish demersal trawl,0,1
-dtrawlLSQ,8,Demersal trawl on cephalopods,0,1
-dtrawlSHK,9,Demersal trawl on other deep demersals,0,1
-dtrawlHAD,10,Demersal trawl on shallow demersals,0,1
-dseineSHK,11,Midwater Trawl - international fleet,0,1
-dlineBLF,12,Line fishery on demersals,0,1
-diveBG,13,Recreational fishery - charter / party,1,1
+gfgloucester,5,"Groundfish Gloucester, MA",0,1
+gfnewbedford,6,"Groundfish New Bedford, MA",0,1
+gfpointjudith,7,"Groundfish Point Judith, RI",0,1
+gfboston,8,"Groundfish Boston, MA",0,1
+gfmontauk,9,"Groundfish Montauk, NY",0,1
+gfportland,10,"Groundfish Portland, ME",0,1
+gfportsmouth,11,"Groundfish Portsmouth, NH",0,1
+gfchatham,12,"Groundfish Chatham, MA",0,1
+gfother,13,Groundfish Catch all for remaining ports,0,1
 pseineBLF,14,Recreational fishery- private,1,1
 cullPIN,15,Shrimp trawl,0,1
 ptrawlNSH,16,Demersal trawl on benthopelagics,0,1
