@@ -21,6 +21,7 @@ output
 .svn
 atlantis
 outputFolder
+data-raw/figures
 
 # ignore all files in testing except prm
 /currentVersion/*
