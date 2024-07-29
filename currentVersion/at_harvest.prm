@@ -1394,20 +1394,20 @@ flagfishDC 0
 ## Day Fleets start and stop fishing #######################
 ## when are these ignored?
 
-midwcISQ_tStart   0
+catchall_tStart   0
 midwcLSQ_tStart   0
 dredgeSCA1_tStart     0
 dredgeSCA2_tStart     0
 dredgeSCA3_tStart  0
-trapRCB_tStart    0
-dtrawlRCB_tStart  0
-dtrawlISQ_tStart  0
-dtrawlLSQ_tStart  0
-dtrawlSHK_tStart  0
-dtrawlHAD_tStart  0
-dseineSHK_tStart  0
-dlineBLF_tStart   0
-diveBG_tStart     0
+gfgloucester_tStart    0
+gfnewbedford_tStart  0
+gfpointjudith_tStart  0
+gfboston_tStart  0
+gfmontauk_tStart  0
+gfportland_tStart  0
+gfportsmouth_tStart  0
+gfchatham_tStart   0
+gfother_tStart     0
 pseineBLF_tStart  0
 cullPIN_tStart    0
 ptrawlNSH_tStart  0
@@ -1422,20 +1422,20 @@ netMEN_tStart     0
 midwcNSH_tStart   0
 midwcOSH_tStart   0
 mowMA_tStart      0
-midwcISQ_tEnd   1000000000
+catchall_tEnd   1000000000
 midwcLSQ_tEnd   1000000000
 dredgeSCA1_tEnd     1000000000
 dredgeSCA2_tEnd     1000000000
 dredgeSCA3_tEnd  1000000000
-trapRCB_tEnd    1000000000
-dtrawlRCB_tEnd  1000000000
-dtrawlISQ_tEnd  1000000000
-dtrawlLSQ_tEnd  1000000000
-dtrawlSHK_tEnd  1000000000
-dtrawlHAD_tEnd  1000000000
-dseineSHK_tEnd  1000000000
-dlineBLF_tEnd   1000000000
-diveBG_tEnd     1000000000
+gfgloucester_tEnd    1000000000
+gfnewbedford_tEnd  1000000000
+gfpointjudith_tEnd  1000000000
+gfboston_tEnd  1000000000
+gfmontauk_tEnd  1000000000
+gfportland_tEnd  1000000000
+gfportsmouth_tEnd  1000000000
+gfchatham_tEnd   1000000000
+gfother_tEnd     1000000000
 pseineBLF_tEnd  1000000000
 cullPIN_tEnd    1000000000
 ptrawlNSH_tEnd  1000000000
@@ -1453,20 +1453,20 @@ mowMA_tEnd      1000000000
 
 ## Period of activity in fisheries YYY. 0 – fishery only operates at night, 1 – fishery operates during the day, 2 – fishery operates all the time. Note, this has implications for scaling of imposed catch (see chapter 15.2.1). Species activity (set in flagXXXday in biology.prm) files does not affect its availability to fisheries – an inactive species will still be fished.
 
-flagmidwcISQday  2        Active: 2 = no preference, 1 = day, 0 = night             2
+flagcatchallday  2        Active: 2 = no preference, 1 = day, 0 = night             2
 flagmidwcLSQday  2        Active: 2 = no preference, 1 = day, 0 = night             2
 flagdredgeSCA1day    2        Active: 2 = no preference, 1 = day, 0 = night             2
 flagdredgeSCA2day    2        Active: 2 = no preference, 1 = day, 0 = night             2
 flagdredgeSCA3day 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagtrapRCBday   2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdtrawlRCBday 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdtrawlISQday 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdtrawlLSQday 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdtrawlSHKday 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdtrawlHADday 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdseineSHKday 2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdlineBLFday  2        Active: 2 = no preference, 1 = day, 0 = night             2
-flagdiveBGday    2        Active: 2 = no preference, 1 = day, 0 = night             2
+flaggfgloucesterday   2        Active: 2 = no preference, 1 = day, 0 = night             2
+flaggfnewbedfordday 2        Active: 2 = no preference, 1 = day, 0 = night             2
+flaggfpointjudithday 2        Active: 2 = no preference, 1 = day, 0 = night             2
+flaggfbostonday 2        Active: 2 = no preference, 1 = day, 0 = night             2
+flaggfmontaukday 2        Active: 2 = no preference, 1 = day, 0 = night             2
+flaggfportlandday 2        Active: 2 = no preference, 1 = day, 0 = night             2
+flaggfportsmouthday 2        Active: 2 = no preference, 1 = day, 0 = night             2
+flaggfchathamday  2        Active: 2 = no preference, 1 = day, 0 = night             2
+flaggfotherday    2        Active: 2 = no preference, 1 = day, 0 = night             2
 flagpseineBLFday 2        Active: 2 = no preference, 1 = day, 0 = night             2
 flagcullPINday   2        Active: 2 = no preference, 1 = day, 0 = night             2
 flagptrawlNSHday 2        Active: 2 = no preference, 1 = day, 0 = night             2
@@ -1762,7 +1762,7 @@ flaghabitat_DC       28
 
 # A vector of values identifying which of the available habitat preferences for biomass pool group XXX. Traditionally these used to be only 0 or 1 values, indicating absence or presence in each habitat. Now more resolved setting is allowed. A value > 0 indicated that the organism prefers the habitat and of < 0 it avoids it. The absolute value indicates the relative weighting, where proportion of suitable habitat is calculated as a multiplier of habitat proportion and habitat preference given in habitat_XXX vector.
 
-habitat_midwcISQ       11
+habitat_catchall       11
 1 1 1 1 1 1 1 1 1 1 1
 habitat_midwcLSQ       11
 1 1 1 1 1 1 1 1 1 1 1
@@ -1772,23 +1772,23 @@ habitat_dredgeSCA2         11
 1 1 1 1 1 1 1 1 1 1 1
 habitat_dredgeSCA3      11
 1 1 1 1 1 1 1 1 1 1 1
-habitat_trapRCB        11
+habitat_gfgloucester        11
 1 1 1 1 1 1 1 1 1 1 1
-habitat_dtrawlRCB      11
+habitat_gfnewbedford      11
 1 1 1 1 1 1 1 1 1 1 1
-habitat_dtrawlISQ      11
+habitat_gfpointjudith      11
 1 1 1 1 1 1 1 1 1 1 1
-habitat_dtrawlLSQ      11
+habitat_gfboston      11
 1 1 1 1 1 1 1 1 1 1 1
-habitat_dtrawlSHK      11
+habitat_gfmontauk      11
 1 1 1 1 1 1 1 1 1 1 1
-habitat_dtrawlHAD      11
+habitat_gfportland      11
 1 1 1 1 1 1 1 1 1 1 1
-habitat_dseineSHK      11
+habitat_gfportsmouth      11
 1 1 1 1 1 1 1 1 1 1 1
-habitat_dlineBLF       11
+habitat_gfchatham       11
 1 1 1 1 1 1 1 1 1 1 1
-habitat_diveBG         11
+habitat_gfother         11
 1 1 1 1 1 1 1 1 1 1 1
 habitat_pseineBLF      11
 1 1 1 1 1 1 1 1 1 1 1
@@ -1850,20 +1850,20 @@ k_mismatch		 	 0  #(global)
 # 13 = uses economics model
 
 
-midwcISQ_effortmodel   0
+catchall_effortmodel   0
 midwcLSQ_effortmodel   0
 dredgeSCA1_effortmodel     11
 dredgeSCA2_effortmodel     11
 dredgeSCA3_effortmodel  11
-trapRCB_effortmodel    0
-dtrawlRCB_effortmodel  0
-dtrawlISQ_effortmodel  0
-dtrawlLSQ_effortmodel  0
-dtrawlSHK_effortmodel  0
-dtrawlHAD_effortmodel  0
-dseineSHK_effortmodel  0
-dlineBLF_effortmodel   0
-diveBG_effortmodel     0
+gfgloucester_effortmodel    0
+gfnewbedford_effortmodel  0
+gfpointjudith_effortmodel  0
+gfboston_effortmodel  0
+gfmontauk_effortmodel  0
+gfportland_effortmodel  0
+gfportsmouth_effortmodel  0
+gfchatham_effortmodel   0
+gfother_effortmodel     0
 pseineBLF_effortmodel  0
 cullPIN_effortmodel    0
 ptrawlNSH_effortmodel  0
@@ -1881,20 +1881,20 @@ mowMA_effortmodel      0
 
 ### Average effort by the fishery YYY across the entire model domain throughout the year (days per day). When applied to recreational fisheries this sets the average effort by one fisher and not by the entire fishery (so the value should be much smaller)
 
-midwcISQ_Effort   0
+catchall_Effort   0
 midwcLSQ_Effort   0
 dredgeSCA1_Effort 100000
 dredgeSCA2_Effort 100000
 dredgeSCA3_Effort 100000
-trapRCB_Effort    0
-dtrawlRCB_Effort  0
-dtrawlISQ_Effort  0
-dtrawlLSQ_Effort  0
-dtrawlSHK_Effort  0
-dtrawlHAD_Effort  0
-dseineSHK_Effort  0
-dlineBLF_Effort   0
-diveBG_Effort     0
+gfgloucester_Effort    0
+gfnewbedford_Effort  0
+gfpointjudith_Effort  0
+gfboston_Effort  0
+gfmontauk_Effort  0
+gfportland_Effort  0
+gfportsmouth_Effort  0
+gfchatham_Effort   0
+gfother_Effort     0
 pseineBLF_Effort  0
 cullPIN_Effort    0
 ptrawlNSH_Effort  0
@@ -1912,7 +1912,7 @@ mowMA_Effort      0
 
 ### A vector setting relative effort per box by the fishery YYY for each quarter of the year (1 to 4). It is used in combination with YYY_Effort to get the actual final effort per box in days per day
 
-Effort_hdistribmidwcISQ1       30
+Effort_hdistribcatchall1       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribmidwcLSQ1       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -1928,23 +1928,23 @@ Effort_hdistribdredgeSCA31      30
 #0 0 1 1 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 #0 0 .2 .2 0 .2 .2 0 0 .2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribtrapRCB1        30
+Effort_hdistribgfgloucester1        30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlRCB1      30
+Effort_hdistribgfnewbedford1      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlISQ1      30
+Effort_hdistribgfpointjudith1      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlLSQ1      30
+Effort_hdistribgfboston1      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlSHK1      30
+Effort_hdistribgfmontauk1      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlHAD1      30
+Effort_hdistribgfportland1      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdseineSHK1      30
+Effort_hdistribgfportsmouth1      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdlineBLF1       30
+Effort_hdistribgfchatham1       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdiveBG1         30
+Effort_hdistribgfother1         30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribpseineBLF1      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -1974,7 +1974,7 @@ Effort_hdistribmidwcOSH1       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribmowMA1          30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribmidwcISQ2       30
+Effort_hdistribcatchall2       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribmidwcLSQ2       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -1990,23 +1990,23 @@ Effort_hdistribdredgeSCA32      30
 #0 0 1 1 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 #0 0 .2 .2 0 .2 .2 0 0 .2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribtrapRCB2        30
+Effort_hdistribgfgloucester2        30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlRCB2      30
+Effort_hdistribgfnewbedford2      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlISQ2      30
+Effort_hdistribgfpointjudith2      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlLSQ2      30
+Effort_hdistribgfboston2      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlSHK2      30
+Effort_hdistribgfmontauk2      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlHAD2      30
+Effort_hdistribgfportland2      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdseineSHK2      30
+Effort_hdistribgfportsmouth2      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdlineBLF2       30
+Effort_hdistribgfchatham2       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdiveBG2         30
+Effort_hdistribgfother2         30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribpseineBLF2      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -2036,7 +2036,7 @@ Effort_hdistribmidwcOSH2       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribmowMA2          30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribmidwcISQ3       30
+Effort_hdistribcatchall3       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribmidwcLSQ3       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -2052,23 +2052,23 @@ Effort_hdistribdredgeSCA33      30
 #0 0 1 1 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 #0 0 .2 .2 0 .2 .2 0 0 .2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribtrapRCB3        30
+Effort_hdistribgfgloucester3        30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlRCB3      30
+Effort_hdistribgfnewbedford3      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlISQ3      30
+Effort_hdistribgfpointjudith3      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlLSQ3      30
+Effort_hdistribgfboston3      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlSHK3      30
+Effort_hdistribgfmontauk3      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlHAD3      30
+Effort_hdistribgfportland3      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdseineSHK3      30
+Effort_hdistribgfportsmouth3      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdlineBLF3       30
+Effort_hdistribgfchatham3       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdiveBG3         30
+Effort_hdistribgfother3         30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribpseineBLF3      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -2098,7 +2098,7 @@ Effort_hdistribmidwcOSH3       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribmowMA3          30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribmidwcISQ4       30
+Effort_hdistribcatchall4       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribmidwcLSQ4       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -2114,23 +2114,23 @@ Effort_hdistribdredgeSCA34      30
 #0 0 1 1 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 #0 0 .2 .2 0 .2 .2 0 0 .2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribtrapRCB4        30
+Effort_hdistribgfgloucester4        30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlRCB4      30
+Effort_hdistribgfnewbedford4      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlISQ4      30
+Effort_hdistribgfpointjudith4      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlLSQ4      30
+Effort_hdistribgfboston4      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlSHK4      30
+Effort_hdistribgfmontauk4      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdtrawlHAD4      30
+Effort_hdistribgfportland4      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdseineSHK4      30
+Effort_hdistribgfportsmouth4      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdlineBLF4       30
+Effort_hdistribgfchatham4       30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Effort_hdistribdiveBG4         30
+Effort_hdistribgfother4         30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Effort_hdistribpseineBLF4      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -2170,20 +2170,20 @@ Effort_hdistribmowMA4          30
 ### fleet specific selectivity curve. Additional parameters based on the option type
 # 0 (constant selectivity)
 
-midwcISQ_selcurve   0
+catchall_selcurve   0
 midwcLSQ_selcurve   0
 dredgeSCA1_selcurve     0
 dredgeSCA2_selcurve     0
 dredgeSCA3_selcurve  0
-trapRCB_selcurve    0
-dtrawlRCB_selcurve  0
-dtrawlISQ_selcurve  0
-dtrawlLSQ_selcurve  0
-dtrawlSHK_selcurve  0
-dtrawlHAD_selcurve  0
-dseineSHK_selcurve  0
-dlineBLF_selcurve   0
-diveBG_selcurve     0
+gfgloucester_selcurve    0
+gfnewbedford_selcurve  0
+gfpointjudith_selcurve  0
+gfboston_selcurve  0
+gfmontauk_selcurve  0
+gfportland_selcurve  0
+gfportsmouth_selcurve  0
+gfchatham_selcurve   0
+gfother_selcurve     0
 pseineBLF_selcurve  0
 cullPIN_selcurve    0
 ptrawlNSH_selcurve  0
@@ -2384,7 +2384,7 @@ q_DC       28
 ## A Boolean vector indicating which species are targeted by the fishery YYY. The vector should have as many entries as there are values in the functional_group.csv file. 1- species is targeted, 0 – species is not targeted (see NOTE! in chapte 15.4)
 
 
-target_midwcISQ       89
+target_catchall       89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 target_midwcLSQ       89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -2394,23 +2394,23 @@ target_dredgeSCA2         89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 target_dredgeSCA3      89 # 62
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-target_trapRCB        89
+target_gfgloucester        89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-target_dtrawlRCB      89
+target_gfnewbedford      89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-target_dtrawlISQ      89
+target_gfpointjudith      89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-target_dtrawlLSQ      89
+target_gfboston      89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-target_dtrawlSHK      89
+target_gfmontauk      89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-target_dtrawlHAD      89
+target_gfportland      89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-target_dseineSHK      89
+target_gfportsmouth      89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-target_dlineBLF       89
+target_gfchatham       89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-target_diveBG         89
+target_gfother         89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 target_pseineBLF      89
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -2445,20 +2445,20 @@ target_mowMA          89
 ##### Demersal fishery = 1, Pelagic fishery = 0.(Dynamic fishing)
 ############ These need to be revisited #################################
 
-midwcISQ_flagdempelfishery   0
+catchall_flagdempelfishery   0
 midwcLSQ_flagdempelfishery   0
 dredgeSCA1_flagdempelfishery  1
 dredgeSCA2_flagdempelfishery  1
 dredgeSCA3_flagdempelfishery  1
-trapRCB_flagdempelfishery    0
-dtrawlRCB_flagdempelfishery  0
-dtrawlISQ_flagdempelfishery  0
-dtrawlLSQ_flagdempelfishery  0
-dtrawlSHK_flagdempelfishery  0
-dtrawlHAD_flagdempelfishery  0
-dseineSHK_flagdempelfishery  0
-dlineBLF_flagdempelfishery   0
-diveBG_flagdempelfishery     0
+gfgloucester_flagdempelfishery    0
+gfnewbedford_flagdempelfishery  0
+gfpointjudith_flagdempelfishery  0
+gfboston_flagdempelfishery  0
+gfmontauk_flagdempelfishery  0
+gfportland_flagdempelfishery  0
+gfportsmouth_flagdempelfishery  0
+gfchatham_flagdempelfishery   0
+gfother_flagdempelfishery     0
 pseineBLF_flagdempelfishery  0
 cullPIN_flagdempelfishery    0
 ptrawlNSH_flagdempelfishery  0
@@ -2477,7 +2477,7 @@ mowMA_flagdempelfishery      0
 
 ## A vector giving relative distribution of effort for fishery YYY across the vertical layers in each box (applied in the same way as the vectors determining vertical distribution of functional groups)
 
-Effort_vdistribmidwcISQ       4
+Effort_vdistribcatchall       4
 0 0 0 0
 Effort_vdistribmidwcLSQ       4
 0 0 0 0
@@ -2487,23 +2487,23 @@ Effort_vdistribdredgeSCA2         4
 0 0 0 0
 Effort_vdistribdredgeSCA3      4
 0 0 0 0
-Effort_vdistribtrapRCB        4
+Effort_vdistribgfgloucester        4
 0 0 0 0
-Effort_vdistribdtrawlRCB      4
+Effort_vdistribgfnewbedford      4
 0 0 0 0
-Effort_vdistribdtrawlISQ      4
+Effort_vdistribgfpointjudith      4
 0 0 0 0
-Effort_vdistribdtrawlLSQ      4
+Effort_vdistribgfboston      4
 0 0 0 0
-Effort_vdistribdtrawlSHK      4
+Effort_vdistribgfmontauk      4
 0 0 0 0
-Effort_vdistribdtrawlHAD      4
+Effort_vdistribgfportland      4
 0 0 0 0
-Effort_vdistribdseineSHK      4
+Effort_vdistribgfportsmouth      4
 0 0 0 0
-Effort_vdistribdlineBLF       4
+Effort_vdistribgfchatham       4
 0 0 0 0
-Effort_vdistribdiveBG         4
+Effort_vdistribgfother         4
 0 0 0 0
 Effort_vdistribpseineBLF      4
 0 0 0 0
@@ -2537,20 +2537,20 @@ Effort_vdistribmowMA          4
 
 ### The swept volume of water by gear of fishery YYY, m3 day-1. This is a volume, but called area to keep in line with the fisheries science usage.
 
-midwcISQ_sweptarea   0
+catchall_sweptarea   0
 midwcLSQ_sweptarea   0
 dredgeSCA1_sweptarea  100000
 dredgeSCA2_sweptarea  100000
 dredgeSCA3_sweptarea  100000
-trapRCB_sweptarea    0
-dtrawlRCB_sweptarea  0
-dtrawlISQ_sweptarea  0
-dtrawlLSQ_sweptarea  0
-dtrawlSHK_sweptarea  0
-dtrawlHAD_sweptarea  0
-dseineSHK_sweptarea  0
-dlineBLF_sweptarea   0
-diveBG_sweptarea     0
+gfgloucester_sweptarea    0
+gfnewbedford_sweptarea  0
+gfpointjudith_sweptarea  0
+gfboston_sweptarea  0
+gfmontauk_sweptarea  0
+gfportland_sweptarea  0
+gfportsmouth_sweptarea  0
+gfchatham_sweptarea   0
+gfother_sweptarea     0
 pseineBLF_sweptarea  0
 cullPIN_sweptarea    0
 ptrawlNSH_sweptarea  0
@@ -3294,20 +3294,20 @@ Kb_escape_DC       28
 
 The minimum depth that a fishery can operate at, in metres. This will constrain the area available to a fishery, which means that a fishery will not operate in a cell that is outside the depth limits, regardless of the effort model applied
 
-midwcISQ_mindepth   0
+catchall_mindepth   0
 midwcLSQ_mindepth   0
 dredgeSCA1_mindepth     0
 dredgeSCA2_mindepth     0
 dredgeSCA3_mindepth  0
-trapRCB_mindepth    0
-dtrawlRCB_mindepth  0
-dtrawlISQ_mindepth  0
-dtrawlLSQ_mindepth  0
-dtrawlSHK_mindepth  0
-dtrawlHAD_mindepth  0
-dseineSHK_mindepth  0
-dlineBLF_mindepth   0
-diveBG_mindepth     0
+gfgloucester_mindepth    0
+gfnewbedford_mindepth  0
+gfpointjudith_mindepth  0
+gfboston_mindepth  0
+gfmontauk_mindepth  0
+gfportland_mindepth  0
+gfportsmouth_mindepth  0
+gfchatham_mindepth   0
+gfother_mindepth     0
 pseineBLF_mindepth  0
 cullPIN_mindepth    0
 ptrawlNSH_mindepth  0
@@ -3325,20 +3325,20 @@ mowMA_mindepth      0
 
 ## The maximum depth that a fishery can operate at, in meters. This will constrain the area available to a fishery, which means that a fishery will not operate in a cell that is outside the depth limits, regarless of the effort model applied
 
-midwcISQ_maxdepth   1805
+catchall_maxdepth   1805
 midwcLSQ_maxdepth   1805
 dredgeSCA1_maxdepth     1805
 dredgeSCA2_maxdepth     1805
 dredgeSCA3_maxdepth  1805
-trapRCB_maxdepth    1805
-dtrawlRCB_maxdepth  1805
-dtrawlISQ_maxdepth  1805
-dtrawlLSQ_maxdepth  1805
-dtrawlSHK_maxdepth  1805
-dtrawlHAD_maxdepth  1805
-dseineSHK_maxdepth  1805
-dlineBLF_maxdepth   1805
-diveBG_maxdepth     1805
+gfgloucester_maxdepth    1805
+gfnewbedford_maxdepth  1805
+gfpointjudith_maxdepth  1805
+gfboston_maxdepth  1805
+gfmontauk_maxdepth  1805
+gfportland_maxdepth  1805
+gfportsmouth_maxdepth  1805
+gfchatham_maxdepth   1805
+gfother_maxdepth     1805
 pseineBLF_maxdepth  1805
 cullPIN_maxdepth    1805
 ptrawlNSH_maxdepth  1805
@@ -3356,7 +3356,7 @@ mowMA_maxdepth      1805
 
 ### vector of four values setting relative quarterly effort (used in combination with YYY_Effort to give the final effort in days per day)
 
-mEff_midwcISQ       4
+mEff_catchall       4
 1 1 1 1
 mEff_midwcLSQ       4
 1 1 1 1
@@ -3366,23 +3366,23 @@ mEff_dredgeSCA2         4
 1 1 1 1
 mEff_dredgeSCA3      4
 1 1 1 1
-mEff_trapRCB        4
+mEff_gfgloucester        4
 1 1 1 1
-mEff_dtrawlRCB      4
+mEff_gfnewbedford      4
 1 1 1 1
-mEff_dtrawlISQ      4
+mEff_gfpointjudith      4
 1 1 1 1
-mEff_dtrawlLSQ      4
+mEff_gfboston      4
 1 1 1 1
-mEff_dtrawlSHK      4
+mEff_gfmontauk      4
 1 1 1 1
-mEff_dtrawlHAD      4
+mEff_gfportland      4
 1 1 1 1
-mEff_dseineSHK      4
+mEff_gfportsmouth      4
 1 1 1 1
-mEff_dlineBLF       4
+mEff_gfchatham       4
 1 1 1 1
-mEff_diveBG         4
+mEff_gfother         4
 1 1 1 1
 mEff_pseineBLF      4
 1 1 1 1
@@ -3607,20 +3607,20 @@ Speed_recboat	  	 10
 
 ### The maximum effort per box allowed per fishery YYY in the exponential CPUE related effort allocation option (days day-1), used in YYY_efformodel =4 and 5
 
-midwcISQ_mEff_max   0.001
+catchall_mEff_max   0.001
 midwcLSQ_mEff_max   0.001
 dredgeSCA1_mEff_max     0.001
 dredgeSCA2_mEff_max     0.001
 dredgeSCA3_mEff_max  0.001
-trapRCB_mEff_max    0.001
-dtrawlRCB_mEff_max  0.001
-dtrawlISQ_mEff_max  0.001
-dtrawlLSQ_mEff_max  0.001
-dtrawlSHK_mEff_max  0.001
-dtrawlHAD_mEff_max  0.001
-dseineSHK_mEff_max  0.001
-dlineBLF_mEff_max   0.001
-diveBG_mEff_max     0.001
+gfgloucester_mEff_max    0.001
+gfnewbedford_mEff_max  0.001
+gfpointjudith_mEff_max  0.001
+gfboston_mEff_max  0.001
+gfmontauk_mEff_max  0.001
+gfportland_mEff_max  0.001
+gfportsmouth_mEff_max  0.001
+gfchatham_mEff_max   0.001
+gfother_mEff_max     0.001
 pseineBLF_mEff_max  0.001
 cullPIN_mEff_max    0.001
 ptrawlNSH_mEff_max  0.001
@@ -3638,20 +3638,20 @@ mowMA_mEff_max      0.001
 
 ### Steepness of the effort increase in response to CPUE in the exponential CPUE related effort allocation option (unitless), used in YYY_efformodel =4 and 5
 
-midwcISQ_mEff_a   100
+catchall_mEff_a   100
 midwcLSQ_mEff_a   100
 dredgeSCA1_mEff_a     100
 dredgeSCA2_mEff_a     100
 dredgeSCA3_mEff_a  100
-trapRCB_mEff_a    100
-dtrawlRCB_mEff_a  100
-dtrawlISQ_mEff_a  100
-dtrawlLSQ_mEff_a  100
-dtrawlSHK_mEff_a  100
-dtrawlHAD_mEff_a  100
-dseineSHK_mEff_a  100
-dlineBLF_mEff_a   100
-diveBG_mEff_a     100
+gfgloucester_mEff_a    100
+gfnewbedford_mEff_a  100
+gfpointjudith_mEff_a  100
+gfboston_mEff_a  100
+gfmontauk_mEff_a  100
+gfportland_mEff_a  100
+gfportsmouth_mEff_a  100
+gfchatham_mEff_a   100
+gfother_mEff_a     100
 pseineBLF_mEff_a  100
 cullPIN_mEff_a    100
 ptrawlNSH_mEff_a  100
@@ -3669,20 +3669,20 @@ mowMA_mEff_a      100
 
 ## The effort offset (days day-1) to reduce the effort per box, used in YYY_efformodel=4 and 5
 
-midwcISQ_mEff_offset   100
+catchall_mEff_offset   100
 midwcLSQ_mEff_offset   100
 dredgeSCA1_mEff_offset     100
 dredgeSCA2_mEff_offset     100
 dredgeSCA3_mEff_offset  100
-trapRCB_mEff_offset    100
-dtrawlRCB_mEff_offset  100
-dtrawlISQ_mEff_offset  100
-dtrawlLSQ_mEff_offset  100
-dtrawlSHK_mEff_offset  100
-dtrawlHAD_mEff_offset  100
-dseineSHK_mEff_offset  100
-dlineBLF_mEff_offset   100
-diveBG_mEff_offset     100
+gfgloucester_mEff_offset    100
+gfnewbedford_mEff_offset  100
+gfpointjudith_mEff_offset  100
+gfboston_mEff_offset  100
+gfmontauk_mEff_offset  100
+gfportland_mEff_offset  100
+gfportsmouth_mEff_offset  100
+gfchatham_mEff_offset   100
+gfother_mEff_offset     100
 pseineBLF_mEff_offset  100
 cullPIN_mEff_offset    100
 ptrawlNSH_mEff_offset  100
@@ -3701,20 +3701,20 @@ mowMA_mEff_offset      100
 
 ## A flag indicating whether to use all species caught to define CPUE of a fishery YYY for CPUE based effort models (1=yes) or target species only (0).
 
-midwcISQ_flaguseall   1
+catchall_flaguseall   1
 midwcLSQ_flaguseall   1
 dredgeSCA1_flaguseall     1
 dredgeSCA2_flaguseall     1
 dredgeSCA3_flaguseall  1
-trapRCB_flaguseall    1
-dtrawlRCB_flaguseall  1
-dtrawlISQ_flaguseall  1
-dtrawlLSQ_flaguseall  1
-dtrawlSHK_flaguseall  1
-dtrawlHAD_flaguseall  1
-dseineSHK_flaguseall  1
-dlineBLF_flaguseall   1
-diveBG_flaguseall     1
+gfgloucester_flaguseall    1
+gfnewbedford_flaguseall  1
+gfpointjudith_flaguseall  1
+gfboston_flaguseall  1
+gfmontauk_flaguseall  1
+gfportland_flaguseall  1
+gfportsmouth_flaguseall  1
+gfchatham_flaguseall   1
+gfother_flaguseall     1
 pseineBLF_flaguseall  1
 cullPIN_flaguseall    1
 ptrawlNSH_flaguseall  1
@@ -3733,20 +3733,20 @@ mowMA_flaguseall      1
 
 ## A fishery specific distance scalar used in determining the effort distribution; it heightens or lessens the effects of distance between the optimal box and the ports (unitless)
 
-midwcISQ_mFCscale   1800
+catchall_mFCscale   1800
 midwcLSQ_mFCscale   1800
 dredgeSCA1_mFCscale     1800
 dredgeSCA2_mFCscale     1800
 dredgeSCA3_mFCscale  1800
-trapRCB_mFCscale    1800
-dtrawlRCB_mFCscale  1800
-dtrawlISQ_mFCscale  1800
-dtrawlLSQ_mFCscale  1800
-dtrawlSHK_mFCscale  1800
-dtrawlHAD_mFCscale  1800
-dseineSHK_mFCscale  1800
-dlineBLF_mFCscale   1800
-diveBG_mFCscale     1800
+gfgloucester_mFCscale    1800
+gfnewbedford_mFCscale  1800
+gfpointjudith_mFCscale  1800
+gfboston_mFCscale  1800
+gfmontauk_mFCscale  1800
+gfportland_mFCscale  1800
+gfportsmouth_mFCscale  1800
+gfchatham_mFCscale   1800
+gfother_mFCscale     1800
 pseineBLF_mFCscale  1800
 cullPIN_mFCscale    1800
 ptrawlNSH_mFCscale  1800
@@ -3784,7 +3784,7 @@ ports_end   17
 
 ### A vector giving association of each fishery YYY with each port. It has as many entries as there ports, with a value of 1 indicating that the fishery works from that port and a 0 meaning that fishery does not work from the port.
 
-ports_midwcISQ       17
+ports_catchall       17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 ports_midwcLSQ       17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -3794,23 +3794,23 @@ ports_dredgeSCA2         17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 ports_dredgeSCA3      17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-ports_trapRCB        17
+ports_gfgloucester        17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-ports_dtrawlRCB      17
+ports_gfnewbedford      17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-ports_dtrawlISQ      17
+ports_gfpointjudith      17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-ports_dtrawlLSQ      17
+ports_gfboston      17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-ports_dtrawlSHK      17
+ports_gfmontauk      17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-ports_dtrawlHAD      17
+ports_gfportland      17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-ports_dseineSHK      17
+ports_gfportsmouth      17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-ports_dlineBLF       17
+ports_gfchatham       17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-ports_diveBG         17
+ports_gfother         17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 ports_pseineBLF      17
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -3843,20 +3843,20 @@ ports_mowMA          17
 
 ## A flag indicating whether the effort of fishery YYY in any one box is capped (0 – no, 1 – yes)
 
-midwcISQ_flagcap_peak   0
+catchall_flagcap_peak   0
 midwcLSQ_flagcap_peak   0
 dredgeSCA1_flagcap_peak     0
 dredgeSCA2_flagcap_peak     0
 dredgeSCA3_flagcap_peak  0
-trapRCB_flagcap_peak    0
-dtrawlRCB_flagcap_peak  0
-dtrawlISQ_flagcap_peak  0
-dtrawlLSQ_flagcap_peak  0
-dtrawlSHK_flagcap_peak  0
-dtrawlHAD_flagcap_peak  0
-dseineSHK_flagcap_peak  0
-dlineBLF_flagcap_peak   0
-diveBG_flagcap_peak     0
+gfgloucester_flagcap_peak    0
+gfnewbedford_flagcap_peak  0
+gfpointjudith_flagcap_peak  0
+gfboston_flagcap_peak  0
+gfmontauk_flagcap_peak  0
+gfportland_flagcap_peak  0
+gfportsmouth_flagcap_peak  0
+gfchatham_flagcap_peak   0
+gfother_flagcap_peak     0
 pseineBLF_flagcap_peak  0
 cullPIN_flagcap_peak    0
 ptrawlNSH_flagcap_peak  0
@@ -3874,20 +3874,20 @@ mowMA_flagcap_peak      0
 
 ## If the effort of a fishery YYY is capped ( YYY_flagcap_peak=1), this sets the maximum potential effort in any one box ( days day-1)
 
-midwcISQ_mFCpeak   1
+catchall_mFCpeak   1
 midwcLSQ_mFCpeak   1
 dredgeSCA1_mFCpeak     1
 dredgeSCA2_mFCpeak     1
 dredgeSCA3_mFCpeak  1
-trapRCB_mFCpeak    1
-dtrawlRCB_mFCpeak  1
-dtrawlISQ_mFCpeak  1
-dtrawlLSQ_mFCpeak  1
-dtrawlSHK_mFCpeak  1
-dtrawlHAD_mFCpeak  1
-dseineSHK_mFCpeak  1
-dlineBLF_mFCpeak   1
-diveBG_mFCpeak     1
+gfgloucester_mFCpeak    1
+gfnewbedford_mFCpeak  1
+gfpointjudith_mFCpeak  1
+gfboston_mFCpeak  1
+gfmontauk_mFCpeak  1
+gfportland_mFCpeak  1
+gfportsmouth_mFCpeak  1
+gfchatham_mFCpeak   1
+gfother_mFCpeak     1
 pseineBLF_mFCpeak  1
 cullPIN_mFCpeak    1
 ptrawlNSH_mFCpeak  1
@@ -3909,20 +3909,20 @@ Speed_boat		 	 10
 
 ### Flag indicating whether once per year a fishery YYY will do exploratory fishing in all accessible boxes (within YYY_maxdepth and YYY_mindepth depth ranges). 1 – yes, 0 – no. Exploratory fishing is recommended with all CPUE based effort models
 
-midwcISQ_explore   0
+catchall_explore   0
 midwcLSQ_explore   0
 dredgeSCA1_explore     0
 dredgeSCA2_explore     0
 dredgeSCA3_explore  0
-trapRCB_explore    0
-dtrawlRCB_explore  0
-dtrawlISQ_explore  0
-dtrawlLSQ_explore  0
-dtrawlSHK_explore  0
-dtrawlHAD_explore  0
-dseineSHK_explore  0
-dlineBLF_explore   0
-diveBG_explore     0
+gfgloucester_explore    0
+gfnewbedford_explore  0
+gfpointjudith_explore  0
+gfboston_explore  0
+gfmontauk_explore  0
+gfportland_explore  0
+gfportsmouth_explore  0
+gfchatham_explore   0
+gfother_explore     0
 pseineBLF_explore  0
 cullPIN_explore    0
 ptrawlNSH_explore  0
@@ -3941,20 +3941,20 @@ mowMA_explore      0
 
 ### The exploratory fishing effort (days day-1) to be applied to each box if YYY_exolore is set to 1. Note, this effort is applied in addition to normal fishing
 
-midwcISQ_mEff_testfish   1
+catchall_mEff_testfish   1
 midwcLSQ_mEff_testfish   1
 dredgeSCA1_mEff_testfish     1
 dredgeSCA2_mEff_testfish     1
 dredgeSCA3_mEff_testfish  1
-trapRCB_mEff_testfish    1
-dtrawlRCB_mEff_testfish  1
-dtrawlISQ_mEff_testfish  1
-dtrawlLSQ_mEff_testfish  1
-dtrawlSHK_mEff_testfish  1
-dtrawlHAD_mEff_testfish  1
-dseineSHK_mEff_testfish  1
-dlineBLF_mEff_testfish   1
-diveBG_mEff_testfish     1
+gfgloucester_mEff_testfish    1
+gfnewbedford_mEff_testfish  1
+gfpointjudith_mEff_testfish  1
+gfboston_mEff_testfish  1
+gfmontauk_mEff_testfish  1
+gfportland_mEff_testfish  1
+gfportsmouth_mEff_testfish  1
+gfchatham_mEff_testfish   1
+gfother_mEff_testfish     1
 pseineBLF_mEff_testfish  1
 cullPIN_mEff_testfish    1
 ptrawlNSH_mEff_testfish  1
@@ -3973,20 +3973,20 @@ mowMA_mEff_testfish      1
 
 ### The CPUE threshold (kg day-1) below which the fishery YYY will decrease the effort in YYY_effortmodel=8
 
-midwcISQ_mEff_thresh   0
+catchall_mEff_thresh   0
 midwcLSQ_mEff_thresh   0
 dredgeSCA1_mEff_thresh     0
 dredgeSCA2_mEff_thresh     0
 dredgeSCA3_mEff_thresh  0
-trapRCB_mEff_thresh    0
-dtrawlRCB_mEff_thresh  0
-dtrawlISQ_mEff_thresh  0
-dtrawlLSQ_mEff_thresh  0
-dtrawlSHK_mEff_thresh  0
-dtrawlHAD_mEff_thresh  0
-dseineSHK_mEff_thresh  0
-dlineBLF_mEff_thresh   0
-diveBG_mEff_thresh     0
+gfgloucester_mEff_thresh    0
+gfnewbedford_mEff_thresh  0
+gfpointjudith_mEff_thresh  0
+gfboston_mEff_thresh  0
+gfmontauk_mEff_thresh  0
+gfportland_mEff_thresh  0
+gfportsmouth_mEff_thresh  0
+gfchatham_mEff_thresh   0
+gfother_mEff_thresh     0
 pseineBLF_mEff_thresh  0
 cullPIN_mEff_thresh    0
 ptrawlNSH_mEff_thresh  0
@@ -4004,20 +4004,20 @@ mowMA_mEff_thresh      0
 
 ### The CPUE threshold (kg day-1) above which the fishery YYY will increase the effort in YYY_effortmodel =8
 
-midwcISQ_mEff_thresh_top   0
+catchall_mEff_thresh_top   0
 midwcLSQ_mEff_thresh_top   0
 dredgeSCA1_mEff_thresh_top     0
 dredgeSCA2_mEff_thresh_top     0
 dredgeSCA3_mEff_thresh_top  0
-trapRCB_mEff_thresh_top    0
-dtrawlRCB_mEff_thresh_top  0
-dtrawlISQ_mEff_thresh_top  0
-dtrawlLSQ_mEff_thresh_top  0
-dtrawlSHK_mEff_thresh_top  0
-dtrawlHAD_mEff_thresh_top  0
-dseineSHK_mEff_thresh_top  0
-dlineBLF_mEff_thresh_top   0
-diveBG_mEff_thresh_top     0
+gfgloucester_mEff_thresh_top    0
+gfnewbedford_mEff_thresh_top  0
+gfpointjudith_mEff_thresh_top  0
+gfboston_mEff_thresh_top  0
+gfmontauk_mEff_thresh_top  0
+gfportland_mEff_thresh_top  0
+gfportsmouth_mEff_thresh_top  0
+gfchatham_mEff_thresh_top   0
+gfother_mEff_thresh_top     0
 pseineBLF_mEff_thresh_top  0
 cullPIN_mEff_thresh_top    0
 ptrawlNSH_mEff_thresh_top  0
@@ -4038,20 +4038,20 @@ mowMA_mEff_thresh_top      0
 ### The yearly proportional increase/decrease in effort if CPUE is above or below the threshold levels in YYY_effortmodel =8. The increas/decrease in threshold happens once per week and is decreased by YYY_mEff_shift/52
 
 
-midwcISQ_mEff_shift   1
+catchall_mEff_shift   1
 midwcLSQ_mEff_shift   1
 dredgeSCA1_mEff_shift     1
 dredgeSCA2_mEff_shift     1
 dredgeSCA3_mEff_shift  1
-trapRCB_mEff_shift    1
-dtrawlRCB_mEff_shift  1
-dtrawlISQ_mEff_shift  1
-dtrawlLSQ_mEff_shift  1
-dtrawlSHK_mEff_shift  1
-dtrawlHAD_mEff_shift  1
-dseineSHK_mEff_shift  1
-dlineBLF_mEff_shift   1
-diveBG_mEff_shift     1
+gfgloucester_mEff_shift    1
+gfnewbedford_mEff_shift  1
+gfpointjudith_mEff_shift  1
+gfboston_mEff_shift  1
+gfmontauk_mEff_shift  1
+gfportland_mEff_shift  1
+gfportsmouth_mEff_shift  1
+gfchatham_mEff_shift   1
+gfother_mEff_shift     1
 pseineBLF_mEff_shift  1
 cullPIN_mEff_shift    1
 ptrawlNSH_mEff_shift  1
@@ -4811,20 +4811,20 @@ flaginfringe		 0
 
 ## The level of MPA infringement by fishery YYY (sets the minimum proportion of the box that is accessible, if an MPA is more restrictive than that then infringement occurs)
 
-midwcISQ_infringe   0
+catchall_infringe   0
 midwcLSQ_infringe   0
 dredgeSCA1_infringe     0
 dredgeSCA2_infringe     0
 dredgeSCA3_infringe  0
-trapRCB_infringe    0
-dtrawlRCB_infringe  0
-dtrawlISQ_infringe  0
-dtrawlLSQ_infringe  0
-dtrawlSHK_infringe  0
-dtrawlHAD_infringe  0
-dseineSHK_infringe  0
-dlineBLF_infringe   0
-diveBG_infringe     0
+gfgloucester_infringe    0
+gfnewbedford_infringe  0
+gfpointjudith_infringe  0
+gfboston_infringe  0
+gfmontauk_infringe  0
+gfportland_infringe  0
+gfportsmouth_infringe  0
+gfchatham_infringe   0
+gfother_infringe     0
 pseineBLF_infringe  0
 cullPIN_infringe    0
 ptrawlNSH_infringe  0
@@ -5771,20 +5771,20 @@ flagdisplace		 0
 
 ### If set to 1, the effort will be capped at the maximum level set in YYY_cap
 
-midwcISQ_flagcap   0
+catchall_flagcap   0
 midwcLSQ_flagcap   0
 dredgeSCA1_flagcap     0
 dredgeSCA2_flagcap     0
 dredgeSCA3_flagcap  0
-trapRCB_flagcap    0
-dtrawlRCB_flagcap  0
-dtrawlISQ_flagcap  0
-dtrawlLSQ_flagcap  0
-dtrawlSHK_flagcap  0
-dtrawlHAD_flagcap  0
-dseineSHK_flagcap  0
-dlineBLF_flagcap   0
-diveBG_flagcap     0
+gfgloucester_flagcap    0
+gfnewbedford_flagcap  0
+gfpointjudith_flagcap  0
+gfboston_flagcap  0
+gfmontauk_flagcap  0
+gfportland_flagcap  0
+gfportsmouth_flagcap  0
+gfchatham_flagcap   0
+gfother_flagcap     0
 pseineBLF_flagcap  0
 cullPIN_flagcap    0
 ptrawlNSH_flagcap  0
@@ -5802,20 +5802,20 @@ mowMA_flagcap      0
 
 ## Effort cap of a fishery (maximum number of days per year)
 
-midwcISQ_cap   0        0
+catchall_cap   0        0
 midwcLSQ_cap   0        0
 dredgeSCA1_cap     0        0
 dredgeSCA2_cap     0        0
 dredgeSCA3_cap  0        0
-trapRCB_cap    0        0
-dtrawlRCB_cap  0        0
-dtrawlISQ_cap  0        0
-dtrawlLSQ_cap  0        0
-dtrawlSHK_cap  0        0
-dtrawlHAD_cap  0        0
-dseineSHK_cap  0        0
-dlineBLF_cap   0        0
-diveBG_cap     0        0
+gfgloucester_cap    0        0
+gfnewbedford_cap  0        0
+gfpointjudith_cap  0        0
+gfboston_cap  0        0
+gfmontauk_cap  0        0
+gfportland_cap  0        0
+gfportsmouth_cap  0        0
+gfchatham_cap   0        0
+gfother_cap     0        0
 pseineBLF_cap  0        0
 cullPIN_cap    0        0
 ptrawlNSH_cap  0        0
@@ -5860,7 +5860,7 @@ flagbuffereffort	 0
 k_patches		 	 2
 k_pattern		 	 0
 
-k_covermidwcISQ       30
+k_covercatchall       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 k_covermidwcLSQ       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -5870,23 +5870,23 @@ k_coverdredgeSCA2         30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 k_coverdredgeSCA3      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-k_covertrapRCB        30
+k_covergfgloucester        30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-k_coverdtrawlRCB      30
+k_covergfnewbedford      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-k_coverdtrawlISQ      30
+k_covergfpointjudith      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-k_coverdtrawlLSQ      30
+k_covergfboston      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-k_coverdtrawlSHK      30
+k_covergfmontauk      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-k_coverdtrawlHAD      30
+k_covergfportland      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-k_coverdseineSHK      30
+k_covergfportsmouth      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-k_coverdlineBLF       30
+k_covergfchatham       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-k_coverdiveBG         30
+k_covergfother         30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 k_coverpseineBLF      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -5933,20 +5933,20 @@ flagchangesel		 0
 
 ## The number of se;lectivity changes for each fishery is given in YYY_sel_changes and the start (in days of the model run) of each change is given in SELchange_start_YYY.
 
-midwcISQ_sel_changes   1
+catchall_sel_changes   1
 midwcLSQ_sel_changes   1
 dredgeSCA1_sel_changes     1
 dredgeSCA2_sel_changes     1
 dredgeSCA3_sel_changes  1
-trapRCB_sel_changes    1
-dtrawlRCB_sel_changes  1
-dtrawlISQ_sel_changes  1
-dtrawlLSQ_sel_changes  1
-dtrawlSHK_sel_changes  1
-dtrawlHAD_sel_changes  1
-dseineSHK_sel_changes  1
-dlineBLF_sel_changes   1
-diveBG_sel_changes     1
+gfgloucester_sel_changes    1
+gfnewbedford_sel_changes  1
+gfpointjudith_sel_changes  1
+gfboston_sel_changes  1
+gfmontauk_sel_changes  1
+gfportland_sel_changes  1
+gfportsmouth_sel_changes  1
+gfchatham_sel_changes   1
+gfother_sel_changes     1
 pseineBLF_sel_changes  1
 cullPIN_sel_changes    1
 ptrawlNSH_sel_changes  1
@@ -5963,7 +5963,7 @@ midwcOSH_sel_changes   1
 mowMA_sel_changes      1
 
 
-SELchange_start_midwcISQ       1
+SELchange_start_catchall       1
 0
 SELchange_start_midwcLSQ       1
 0
@@ -5973,23 +5973,23 @@ SELchange_start_dredgeSCA2         1
 0
 SELchange_start_dredgeSCA3      1
 0
-SELchange_start_trapRCB        1
+SELchange_start_gfgloucester        1
 0
-SELchange_start_dtrawlRCB      1
+SELchange_start_gfnewbedford      1
 0
-SELchange_start_dtrawlISQ      1
+SELchange_start_gfpointjudith      1
 0
-SELchange_start_dtrawlLSQ      1
+SELchange_start_gfboston      1
 0
-SELchange_start_dtrawlSHK      1
+SELchange_start_gfmontauk      1
 0
-SELchange_start_dtrawlHAD      1
+SELchange_start_gfportland      1
 0
-SELchange_start_dseineSHK      1
+SELchange_start_gfportsmouth      1
 0
-SELchange_start_dlineBLF       1
+SELchange_start_gfchatham       1
 0
-SELchange_start_diveBG         1
+SELchange_start_gfother         1
 0
 SELchange_start_pseineBLF      1
 0
@@ -6022,7 +6022,7 @@ SELchange_start_mowMA          1
 
 ## The new type of the selectivity is given in SELchange_curve_YYY parameter, which must have as many entries as there are changes 
 
-SELchange_curve_midwcISQ       1
+SELchange_curve_catchall       1
 0
 SELchange_curve_midwcLSQ       1
 0
@@ -6032,23 +6032,23 @@ SELchange_curve_dredgeSCA2         1
 0
 SELchange_curve_dredgeSCA3      1
 0
-SELchange_curve_trapRCB        1
+SELchange_curve_gfgloucester        1
 0
-SELchange_curve_dtrawlRCB      1
+SELchange_curve_gfnewbedford      1
 0
-SELchange_curve_dtrawlISQ      1
+SELchange_curve_gfpointjudith      1
 0
-SELchange_curve_dtrawlLSQ      1
+SELchange_curve_gfboston      1
 0
-SELchange_curve_dtrawlSHK      1
+SELchange_curve_gfmontauk      1
 0
-SELchange_curve_dtrawlHAD      1
+SELchange_curve_gfportland      1
 0
-SELchange_curve_dseineSHK      1
+SELchange_curve_gfportsmouth      1
 0
-SELchange_curve_dlineBLF       1
+SELchange_curve_gfchatham       1
 0
-SELchange_curve_diveBG         1
+SELchange_curve_gfother         1
 0
 SELchange_curve_pseineBLF      1
 0
@@ -6081,7 +6081,7 @@ SELchange_curve_mowMA          1
 
 ## Finally, the change in the selectivity curve is given with SELchange_addlsm_YYY and SELchange_addsigma_YYY
 
-SELchange_addlsm_midwcISQ       1
+SELchange_addlsm_catchall       1
 0
 SELchange_addlsm_midwcLSQ       1
 0
@@ -6091,23 +6091,23 @@ SELchange_addlsm_dredgeSCA2         1
 0
 SELchange_addlsm_dredgeSCA3      1
 0
-SELchange_addlsm_trapRCB        1
+SELchange_addlsm_gfgloucester        1
 0
-SELchange_addlsm_dtrawlRCB      1
+SELchange_addlsm_gfnewbedford      1
 0
-SELchange_addlsm_dtrawlISQ      1
+SELchange_addlsm_gfpointjudith      1
 0
-SELchange_addlsm_dtrawlLSQ      1
+SELchange_addlsm_gfboston      1
 0
-SELchange_addlsm_dtrawlSHK      1
+SELchange_addlsm_gfmontauk      1
 0
-SELchange_addlsm_dtrawlHAD      1
+SELchange_addlsm_gfportland      1
 0
-SELchange_addlsm_dseineSHK      1
+SELchange_addlsm_gfportsmouth      1
 0
-SELchange_addlsm_dlineBLF       1
+SELchange_addlsm_gfchatham       1
 0
-SELchange_addlsm_diveBG         1
+SELchange_addlsm_gfother         1
 0
 SELchange_addlsm_pseineBLF      1
 0
@@ -6138,7 +6138,7 @@ SELchange_addlsm_midwcOSH       1
 SELchange_addlsm_mowMA          1
 0
 
-SELchange_addsigma_midwcISQ       1
+SELchange_addsigma_catchall       1
 0
 SELchange_addsigma_midwcLSQ       1
 0
@@ -6148,23 +6148,23 @@ SELchange_addsigma_dredgeSCA2         1
 0
 SELchange_addsigma_dredgeSCA3      1
 0
-SELchange_addsigma_trapRCB        1
+SELchange_addsigma_gfgloucester        1
 0
-SELchange_addsigma_dtrawlRCB      1
+SELchange_addsigma_gfnewbedford      1
 0
-SELchange_addsigma_dtrawlISQ      1
+SELchange_addsigma_gfpointjudith      1
 0
-SELchange_addsigma_dtrawlLSQ      1
+SELchange_addsigma_gfboston      1
 0
-SELchange_addsigma_dtrawlSHK      1
+SELchange_addsigma_gfmontauk      1
 0
-SELchange_addsigma_dtrawlHAD      1
+SELchange_addsigma_gfportland      1
 0
-SELchange_addsigma_dseineSHK      1
+SELchange_addsigma_gfportsmouth      1
 0
-SELchange_addsigma_dlineBLF       1
+SELchange_addsigma_gfchatham       1
 0
-SELchange_addsigma_diveBG         1
+SELchange_addsigma_gfother         1
 0
 SELchange_addsigma_pseineBLF      1
 0
@@ -6733,20 +6733,20 @@ sel_DRjuv       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 sel_DCjuv       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-midwcISQsel_b   0
+catchallsel_b   0
 midwcLSQsel_b   0
 dredgeSCA1sel_b     0
 dredgeSCA2sel_b     0
 dredgeSCA3sel_b  0
-trapRCBsel_b    0
-dtrawlRCBsel_b  0
-dtrawlISQsel_b  0
-dtrawlLSQsel_b  0
-dtrawlSHKsel_b  0
-dtrawlHADsel_b  0
-dseineSHKsel_b  0
-dlineBLFsel_b   0
-diveBGsel_b     0
+gfgloucestersel_b    0
+gfnewbedfordsel_b  0
+gfpointjudithsel_b  0
+gfbostonsel_b  0
+gfmontauksel_b  0
+gfportlandsel_b  0
+gfportsmouthsel_b  0
+gfchathamsel_b   0
+gfothersel_b     0
 pseineBLFsel_b  0
 cullPINsel_b    0
 ptrawlNSHsel_b  0
@@ -6761,20 +6761,20 @@ netMENsel_b     0
 midwcNSHsel_b   0
 midwcOSHsel_b   0
 mowMAsel_b      0
-midwcISQsel_lsm   0
+catchallsel_lsm   0
 midwcLSQsel_lsm   0
 dredgeSCA1sel_lsm     0
 dredgeSCA2sel_lsm     0
 dredgeSCA3sel_lsm  0
-trapRCBsel_lsm    0
-dtrawlRCBsel_lsm  0
-dtrawlISQsel_lsm  0
-dtrawlLSQsel_lsm  0
-dtrawlSHKsel_lsm  0
-dtrawlHADsel_lsm  0
-dseineSHKsel_lsm  0
-dlineBLFsel_lsm   0
-diveBGsel_lsm     0
+gfgloucestersel_lsm    0
+gfnewbedfordsel_lsm  0
+gfpointjudithsel_lsm  0
+gfbostonsel_lsm  0
+gfmontauksel_lsm  0
+gfportlandsel_lsm  0
+gfportsmouthsel_lsm  0
+gfchathamsel_lsm   0
+gfothersel_lsm     0
 pseineBLFsel_lsm  0
 cullPINsel_lsm    0
 ptrawlNSHsel_lsm  0
@@ -6789,20 +6789,20 @@ netMENsel_lsm     0
 midwcNSHsel_lsm   0
 midwcOSHsel_lsm   0
 mowMAsel_lsm      0
-midwcISQsel_normsigma   0
+catchallsel_normsigma   0
 midwcLSQsel_normsigma   0
 dredgeSCA1sel_normsigma     0
 dredgeSCA2sel_normsigma     0
 dredgeSCA3sel_normsigma  0
-trapRCBsel_normsigma    0
-dtrawlRCBsel_normsigma  0
-dtrawlISQsel_normsigma  0
-dtrawlLSQsel_normsigma  0
-dtrawlSHKsel_normsigma  0
-dtrawlHADsel_normsigma  0
-dseineSHKsel_normsigma  0
-dlineBLFsel_normsigma   0
-diveBGsel_normsigma     0
+gfgloucestersel_normsigma    0
+gfnewbedfordsel_normsigma  0
+gfpointjudithsel_normsigma  0
+gfbostonsel_normsigma  0
+gfmontauksel_normsigma  0
+gfportlandsel_normsigma  0
+gfportsmouthsel_normsigma  0
+gfchathamsel_normsigma   0
+gfothersel_normsigma     0
 pseineBLFsel_normsigma  0
 cullPINsel_normsigma    0
 ptrawlNSHsel_normsigma  0
@@ -6817,20 +6817,20 @@ netMENsel_normsigma     0
 midwcNSHsel_normsigma   0
 midwcOSHsel_normsigma   0
 mowMAsel_normsigma      0
-midwcISQsel_normlsm   0
+catchallsel_normlsm   0
 midwcLSQsel_normlsm   0
 dredgeSCA1sel_normlsm     0
 dredgeSCA2sel_normlsm     0
 dredgeSCA3sel_normlsm  0
-trapRCBsel_normlsm    0
-dtrawlRCBsel_normlsm  0
-dtrawlISQsel_normlsm  0
-dtrawlLSQsel_normlsm  0
-dtrawlSHKsel_normlsm  0
-dtrawlHADsel_normlsm  0
-dseineSHKsel_normlsm  0
-dlineBLFsel_normlsm   0
-diveBGsel_normlsm     0
+gfgloucestersel_normlsm    0
+gfnewbedfordsel_normlsm  0
+gfpointjudithsel_normlsm  0
+gfbostonsel_normlsm  0
+gfmontauksel_normlsm  0
+gfportlandsel_normlsm  0
+gfportsmouthsel_normlsm  0
+gfchathamsel_normlsm   0
+gfothersel_normlsm     0
 pseineBLFsel_normlsm  0
 cullPINsel_normlsm    0
 ptrawlNSHsel_normlsm  0
@@ -6845,20 +6845,20 @@ netMENsel_normlsm     0
 midwcNSHsel_normlsm   0
 midwcOSHsel_normlsm   0
 mowMAsel_normlsm      0
-midwcISQsel_lognormsigma   0
+catchallsel_lognormsigma   0
 midwcLSQsel_lognormsigma   0
 dredgeSCA1sel_lognormsigma     0
 dredgeSCA2sel_lognormsigma     0
 dredgeSCA3sel_lognormsigma  0
-trapRCBsel_lognormsigma    0
-dtrawlRCBsel_lognormsigma  0
-dtrawlISQsel_lognormsigma  0
-dtrawlLSQsel_lognormsigma  0
-dtrawlSHKsel_lognormsigma  0
-dtrawlHADsel_lognormsigma  0
-dseineSHKsel_lognormsigma  0
-dlineBLFsel_lognormsigma   0
-diveBGsel_lognormsigma     0
+gfgloucestersel_lognormsigma    0
+gfnewbedfordsel_lognormsigma  0
+gfpointjudithsel_lognormsigma  0
+gfbostonsel_lognormsigma  0
+gfmontauksel_lognormsigma  0
+gfportlandsel_lognormsigma  0
+gfportsmouthsel_lognormsigma  0
+gfchathamsel_lognormsigma   0
+gfothersel_lognormsigma     0
 pseineBLFsel_lognormsigma  0
 cullPINsel_lognormsigma    0
 ptrawlNSHsel_lognormsigma  0
@@ -6873,20 +6873,20 @@ netMENsel_lognormsigma     0
 midwcNSHsel_lognormsigma   0
 midwcOSHsel_lognormsigma   0
 mowMAsel_lognormsigma      0
-midwcISQsel_gammasigma   0
+catchallsel_gammasigma   0
 midwcLSQsel_gammasigma   0
 dredgeSCA1sel_gammasigma     0
 dredgeSCA2sel_gammasigma     0
 dredgeSCA3sel_gammasigma  0
-trapRCBsel_gammasigma    0
-dtrawlRCBsel_gammasigma  0
-dtrawlISQsel_gammasigma  0
-dtrawlLSQsel_gammasigma  0
-dtrawlSHKsel_gammasigma  0
-dtrawlHADsel_gammasigma  0
-dseineSHKsel_gammasigma  0
-dlineBLFsel_gammasigma   0
-diveBGsel_gammasigma     0
+gfgloucestersel_gammasigma    0
+gfnewbedfordsel_gammasigma  0
+gfpointjudithsel_gammasigma  0
+gfbostonsel_gammasigma  0
+gfmontauksel_gammasigma  0
+gfportlandsel_gammasigma  0
+gfportsmouthsel_gammasigma  0
+gfchathamsel_gammasigma   0
+gfothersel_gammasigma     0
 pseineBLFsel_gammasigma  0
 cullPINsel_gammasigma    0
 ptrawlNSHsel_gammasigma  0
@@ -6901,20 +6901,20 @@ netMENsel_gammasigma     0
 midwcNSHsel_gammasigma   0
 midwcOSHsel_gammasigma   0
 mowMAsel_gammasigma      0
-midwcISQsel_gammalsm   0
+catchallsel_gammalsm   0
 midwcLSQsel_gammalsm   0
 dredgeSCA1sel_gammalsm     0
 dredgeSCA2sel_gammalsm     0
 dredgeSCA3sel_gammalsm  0
-trapRCBsel_gammalsm    0
-dtrawlRCBsel_gammalsm  0
-dtrawlISQsel_gammalsm  0
-dtrawlLSQsel_gammalsm  0
-dtrawlSHKsel_gammalsm  0
-dtrawlHADsel_gammalsm  0
-dseineSHKsel_gammalsm  0
-dlineBLFsel_gammalsm   0
-diveBGsel_gammalsm     0
+gfgloucestersel_gammalsm    0
+gfnewbedfordsel_gammalsm  0
+gfpointjudithsel_gammalsm  0
+gfbostonsel_gammalsm  0
+gfmontauksel_gammalsm  0
+gfportlandsel_gammalsm  0
+gfportsmouthsel_gammalsm  0
+gfchathamsel_gammalsm   0
+gfothersel_gammalsm     0
 pseineBLFsel_gammalsm  0
 cullPINsel_gammalsm    0
 ptrawlNSHsel_gammalsm  0
@@ -6929,20 +6929,20 @@ netMENsel_gammalsm     0
 midwcNSHsel_gammalsm   0
 midwcOSHsel_gammalsm   0
 mowMAsel_gammalsm      0
-midwcISQsel_bisigma   0
+catchallsel_bisigma   0
 midwcLSQsel_bisigma   0
 dredgeSCA1sel_bisigma     0
 dredgeSCA2sel_bisigma     0
 dredgeSCA3sel_bisigma  0
-trapRCBsel_bisigma    0
-dtrawlRCBsel_bisigma  0
-dtrawlISQsel_bisigma  0
-dtrawlLSQsel_bisigma  0
-dtrawlSHKsel_bisigma  0
-dtrawlHADsel_bisigma  0
-dseineSHKsel_bisigma  0
-dlineBLFsel_bisigma   0
-diveBGsel_bisigma     0
+gfgloucestersel_bisigma    0
+gfnewbedfordsel_bisigma  0
+gfpointjudithsel_bisigma  0
+gfbostonsel_bisigma  0
+gfmontauksel_bisigma  0
+gfportlandsel_bisigma  0
+gfportsmouthsel_bisigma  0
+gfchathamsel_bisigma   0
+gfothersel_bisigma     0
 pseineBLFsel_bisigma  0
 cullPINsel_bisigma    0
 ptrawlNSHsel_bisigma  0
@@ -6957,20 +6957,20 @@ netMENsel_bisigma     0
 midwcNSHsel_bisigma   0
 midwcOSHsel_bisigma   0
 mowMAsel_bisigma      0
-midwcISQsel_bilsm1   0
+catchallsel_bilsm1   0
 midwcLSQsel_bilsm1   0
 dredgeSCA1sel_bilsm1     0
 dredgeSCA2sel_bilsm1     0
 dredgeSCA3sel_bilsm1  0
-trapRCBsel_bilsm1    0
-dtrawlRCBsel_bilsm1  0
-dtrawlISQsel_bilsm1  0
-dtrawlLSQsel_bilsm1  0
-dtrawlSHKsel_bilsm1  0
-dtrawlHADsel_bilsm1  0
-dseineSHKsel_bilsm1  0
-dlineBLFsel_bilsm1   0
-diveBGsel_bilsm1     0
+gfgloucestersel_bilsm1    0
+gfnewbedfordsel_bilsm1  0
+gfpointjudithsel_bilsm1  0
+gfbostonsel_bilsm1  0
+gfmontauksel_bilsm1  0
+gfportlandsel_bilsm1  0
+gfportsmouthsel_bilsm1  0
+gfchathamsel_bilsm1   0
+gfothersel_bilsm1     0
 pseineBLFsel_bilsm1  0
 cullPINsel_bilsm1    0
 ptrawlNSHsel_bilsm1  0
@@ -6985,20 +6985,20 @@ netMENsel_bilsm1     0
 midwcNSHsel_bilsm1   0
 midwcOSHsel_bilsm1   0
 mowMAsel_bilsm1      0
-midwcISQsel_bilsm2   0
+catchallsel_bilsm2   0
 midwcLSQsel_bilsm2   0
 dredgeSCA1sel_bilsm2     0
 dredgeSCA2sel_bilsm2     0
 dredgeSCA3sel_bilsm2  0
-trapRCBsel_bilsm2    0
-dtrawlRCBsel_bilsm2  0
-dtrawlISQsel_bilsm2  0
-dtrawlLSQsel_bilsm2  0
-dtrawlSHKsel_bilsm2  0
-dtrawlHADsel_bilsm2  0
-dseineSHKsel_bilsm2  0
-dlineBLFsel_bilsm2   0
-diveBGsel_bilsm2     0
+gfgloucestersel_bilsm2    0
+gfnewbedfordsel_bilsm2  0
+gfpointjudithsel_bilsm2  0
+gfbostonsel_bilsm2  0
+gfmontauksel_bilsm2  0
+gfportlandsel_bilsm2  0
+gfportsmouthsel_bilsm2  0
+gfchathamsel_bilsm2   0
+gfothersel_bilsm2     0
 pseineBLFsel_bilsm2  0
 cullPINsel_bilsm2    0
 ptrawlNSHsel_bilsm2  0
@@ -7014,20 +7014,20 @@ midwcNSHsel_bilsm2   0
 midwcOSHsel_bilsm2   0
 mowMAsel_bilsm2      0
 
-midwcISQsel_lognormlsm   0
+catchallsel_lognormlsm   0
 midwcLSQsel_lognormlsm   0
 dredgeSCA1sel_lognormlsm     0
 dredgeSCA2sel_lognormlsm     0
 dredgeSCA3sel_lognormlsm  0
-trapRCBsel_lognormlsm    0
-dtrawlRCBsel_lognormlsm  0
-dtrawlISQsel_lognormlsm  0
-dtrawlLSQsel_lognormlsm  0
-dtrawlSHKsel_lognormlsm  0
-dtrawlHADsel_lognormlsm  0
-dseineSHKsel_lognormlsm  0
-dlineBLFsel_lognormlsm   0
-diveBGsel_lognormlsm     0
+gfgloucestersel_lognormlsm    0
+gfnewbedfordsel_lognormlsm  0
+gfpointjudithsel_lognormlsm  0
+gfbostonsel_lognormlsm  0
+gfmontauksel_lognormlsm  0
+gfportlandsel_lognormlsm  0
+gfportsmouthsel_lognormlsm  0
+gfchathamsel_lognormlsm   0
+gfothersel_lognormlsm     0
 pseineBLFsel_lognormlsm  0
 cullPINsel_lognormlsm    0
 ptrawlNSHsel_lognormlsm  0
@@ -7042,20 +7042,20 @@ netMENsel_lognormlsm     0
 midwcNSHsel_lognormlsm   0
 midwcOSHsel_lognormlsm   0
 mowMAsel_lognormlsm      0
-midwcISQsel_bisigma2   0
+catchallsel_bisigma2   0
 midwcLSQsel_bisigma2   0
 dredgeSCA1sel_bisigma2     0
 dredgeSCA2sel_bisigma2     0
 dredgeSCA3sel_bisigma2  0
-trapRCBsel_bisigma2    0
-dtrawlRCBsel_bisigma2  0
-dtrawlISQsel_bisigma2  0
-dtrawlLSQsel_bisigma2  0
-dtrawlSHKsel_bisigma2  0
-dtrawlHADsel_bisigma2  0
-dseineSHKsel_bisigma2  0
-dlineBLFsel_bisigma2   0
-diveBGsel_bisigma2     0
+gfgloucestersel_bisigma2    0
+gfnewbedfordsel_bisigma2  0
+gfpointjudithsel_bisigma2  0
+gfbostonsel_bisigma2  0
+gfmontauksel_bisigma2  0
+gfportlandsel_bisigma2  0
+gfportsmouthsel_bisigma2  0
+gfchathamsel_bisigma2   0
+gfothersel_bisigma2     0
 pseineBLFsel_bisigma2  0
 cullPINsel_bisigma2    0
 ptrawlNSHsel_bisigma2  0
@@ -7070,20 +7070,20 @@ netMENsel_bisigma2     0
 midwcNSHsel_bisigma2   0
 midwcOSHsel_bisigma2   0
 mowMAsel_bisigma2      0
-midwcISQsel_ampli   0
+catchallsel_ampli   0
 midwcLSQsel_ampli   0
 dredgeSCA1sel_ampli     0
 dredgeSCA2sel_ampli     0
 dredgeSCA3sel_ampli  0
-trapRCBsel_ampli    0
-dtrawlRCBsel_ampli  0
-dtrawlISQsel_ampli  0
-dtrawlLSQsel_ampli  0
-dtrawlSHKsel_ampli  0
-dtrawlHADsel_ampli  0
-dseineSHKsel_ampli  0
-dlineBLFsel_ampli   0
-diveBGsel_ampli     0
+gfgloucestersel_ampli    0
+gfnewbedfordsel_ampli  0
+gfpointjudithsel_ampli  0
+gfbostonsel_ampli  0
+gfmontauksel_ampli  0
+gfportlandsel_ampli  0
+gfportsmouthsel_ampli  0
+gfchathamsel_ampli   0
+gfothersel_ampli     0
 pseineBLFsel_ampli  0
 cullPINsel_ampli    0
 ptrawlNSHsel_ampli  0
@@ -7102,20 +7102,20 @@ invert_incidmort    0
 
 ## Cant find in the manual
 
-midwcISQ_p_changes   1
+catchall_p_changes   1
 midwcLSQ_p_changes   1
 dredgeSCA1_p_changes     1
 dredgeSCA2_p_changes     1
 dredgeSCA3_p_changes  1
-trapRCB_p_changes    1
-dtrawlRCB_p_changes  1
-dtrawlISQ_p_changes  1
-dtrawlLSQ_p_changes  1
-dtrawlSHK_p_changes  1
-dtrawlHAD_p_changes  1
-dseineSHK_p_changes  1
-dlineBLF_p_changes   1
-diveBG_p_changes     1
+gfgloucester_p_changes    1
+gfnewbedford_p_changes  1
+gfpointjudith_p_changes  1
+gfboston_p_changes  1
+gfmontauk_p_changes  1
+gfportland_p_changes  1
+gfportsmouth_p_changes  1
+gfchatham_p_changes   1
+gfother_p_changes     1
 pseineBLF_p_changes  1
 cullPIN_p_changes    1
 ptrawlNSH_p_changes  1
@@ -7133,7 +7133,7 @@ mowMA_p_changes      1
 
 # CAnt find in manual
 
-Pchange_start_midwcISQ       1
+Pchange_start_catchall       1
 0
 Pchange_start_midwcLSQ       1
 0
@@ -7143,23 +7143,23 @@ Pchange_start_dredgeSCA2         1
 0
 Pchange_start_dredgeSCA3      1
 0
-Pchange_start_trapRCB        1
+Pchange_start_gfgloucester        1
 0
-Pchange_start_dtrawlRCB      1
+Pchange_start_gfnewbedford      1
 0
-Pchange_start_dtrawlISQ      1
+Pchange_start_gfpointjudith      1
 0
-Pchange_start_dtrawlLSQ      1
+Pchange_start_gfboston      1
 0
-Pchange_start_dtrawlSHK      1
+Pchange_start_gfmontauk      1
 0
-Pchange_start_dtrawlHAD      1
+Pchange_start_gfportland      1
 0
-Pchange_start_dseineSHK      1
+Pchange_start_gfportsmouth      1
 0
-Pchange_start_dlineBLF       1
+Pchange_start_gfchatham       1
 0
-Pchange_start_diveBG         1
+Pchange_start_gfother         1
 0
 Pchange_start_pseineBLF      1
 0
@@ -7192,7 +7192,7 @@ Pchange_start_mowMA          1
 
 ## Can't find in manual
 
-Pchange_period_midwcISQ       1
+Pchange_period_catchall       1
 1
 Pchange_period_midwcLSQ       1
 1
@@ -7202,23 +7202,23 @@ Pchange_period_dredgeSCA2         1
 1
 Pchange_period_dredgeSCA3      1
 1
-Pchange_period_trapRCB        1
+Pchange_period_gfgloucester        1
 1
-Pchange_period_dtrawlRCB      1
+Pchange_period_gfnewbedford      1
 1
-Pchange_period_dtrawlISQ      1
+Pchange_period_gfpointjudith      1
 1
-Pchange_period_dtrawlLSQ      1
+Pchange_period_gfboston      1
 1
-Pchange_period_dtrawlSHK      1
+Pchange_period_gfmontauk      1
 1
-Pchange_period_dtrawlHAD      1
+Pchange_period_gfportland      1
 1
-Pchange_period_dseineSHK      1
+Pchange_period_gfportsmouth      1
 1
-Pchange_period_dlineBLF       1
+Pchange_period_gfchatham       1
 1
-Pchange_period_diveBG         1
+Pchange_period_gfother         1
 1
 Pchange_period_pseineBLF      1
 1
@@ -7249,7 +7249,7 @@ Pchange_period_midwcOSH       1
 Pchange_period_mowMA          1
 1
 
-Pchange_mult_midwcISQ       1
+Pchange_mult_catchall       1
 1
 Pchange_mult_midwcLSQ       1
 1
@@ -7259,23 +7259,23 @@ Pchange_mult_dredgeSCA2         1
 1
 Pchange_mult_dredgeSCA3      1
 1
-Pchange_mult_trapRCB        1
+Pchange_mult_gfgloucester        1
 1
-Pchange_mult_dtrawlRCB      1
+Pchange_mult_gfnewbedford      1
 1
-Pchange_mult_dtrawlISQ      1
+Pchange_mult_gfpointjudith      1
 1
-Pchange_mult_dtrawlLSQ      1
+Pchange_mult_gfboston      1
 1
-Pchange_mult_dtrawlSHK      1
+Pchange_mult_gfmontauk      1
 1
-Pchange_mult_dtrawlHAD      1
+Pchange_mult_gfportland      1
 1
-Pchange_mult_dseineSHK      1
+Pchange_mult_gfportsmouth      1
 1
-Pchange_mult_dlineBLF       1
+Pchange_mult_gfchatham       1
 1
-Pchange_mult_diveBG         1
+Pchange_mult_gfother         1
 1
 Pchange_mult_pseineBLF      1
 1
@@ -7315,20 +7315,20 @@ flagchangeswept		 0
 
 ## Changes in swept volume are done by first turning on a global flag flagchangeswept=1 and then indicating which fishery has changes via the YYY_changeSWEPT parameters. The number of changes for each fishery are given in the YYY_swept_changes parameter, the start day of each change for each fishery is given in the SWEPTchange_start_YYY vector. The periods over which each change occurs is given in the SWEPTchange_period_YYY vector and the multiplier used to get the final value at the end of the change period is given by the SWEPTchange_mult_YYY vector.
 
-midwcISQ_swept_changes   1
+catchall_swept_changes   1
 midwcLSQ_swept_changes   1
 dredgeSCA1_swept_changes     1
 dredgeSCA2_swept_changes     1
 dredgeSCA3_swept_changes  1
-trapRCB_swept_changes    1
-dtrawlRCB_swept_changes  1
-dtrawlISQ_swept_changes  1
-dtrawlLSQ_swept_changes  1
-dtrawlSHK_swept_changes  1
-dtrawlHAD_swept_changes  1
-dseineSHK_swept_changes  1
-dlineBLF_swept_changes   1
-diveBG_swept_changes     1
+gfgloucester_swept_changes    1
+gfnewbedford_swept_changes  1
+gfpointjudith_swept_changes  1
+gfboston_swept_changes  1
+gfmontauk_swept_changes  1
+gfportland_swept_changes  1
+gfportsmouth_swept_changes  1
+gfchatham_swept_changes   1
+gfother_swept_changes     1
 pseineBLF_swept_changes  1
 cullPIN_swept_changes    1
 ptrawlNSH_swept_changes  1
@@ -7344,7 +7344,7 @@ midwcNSH_swept_changes   1
 midwcOSH_swept_changes   1
 mowMA_swept_changes      1
 
-SWEPTchange_start_midwcISQ       1
+SWEPTchange_start_catchall       1
 0
 SWEPTchange_start_midwcLSQ       1
 0
@@ -7354,23 +7354,23 @@ SWEPTchange_start_dredgeSCA2         1
 0
 SWEPTchange_start_dredgeSCA3      1
 0
-SWEPTchange_start_trapRCB        1
+SWEPTchange_start_gfgloucester        1
 0
-SWEPTchange_start_dtrawlRCB      1
+SWEPTchange_start_gfnewbedford      1
 0
-SWEPTchange_start_dtrawlISQ      1
+SWEPTchange_start_gfpointjudith      1
 0
-SWEPTchange_start_dtrawlLSQ      1
+SWEPTchange_start_gfboston      1
 0
-SWEPTchange_start_dtrawlSHK      1
+SWEPTchange_start_gfmontauk      1
 0
-SWEPTchange_start_dtrawlHAD      1
+SWEPTchange_start_gfportland      1
 0
-SWEPTchange_start_dseineSHK      1
+SWEPTchange_start_gfportsmouth      1
 0
-SWEPTchange_start_dlineBLF       1
+SWEPTchange_start_gfchatham       1
 0
-SWEPTchange_start_diveBG         1
+SWEPTchange_start_gfother         1
 0
 SWEPTchange_start_pseineBLF      1
 0
@@ -7400,7 +7400,7 @@ SWEPTchange_start_midwcOSH       1
 0
 SWEPTchange_start_mowMA          1
 0
-SWEPTchange_period_midwcISQ       1
+SWEPTchange_period_catchall       1
 1
 SWEPTchange_period_midwcLSQ       1
 1
@@ -7410,23 +7410,23 @@ SWEPTchange_period_dredgeSCA2         1
 1
 SWEPTchange_period_dredgeSCA3      1
 1
-SWEPTchange_period_trapRCB        1
+SWEPTchange_period_gfgloucester        1
 1
-SWEPTchange_period_dtrawlRCB      1
+SWEPTchange_period_gfnewbedford      1
 1
-SWEPTchange_period_dtrawlISQ      1
+SWEPTchange_period_gfpointjudith      1
 1
-SWEPTchange_period_dtrawlLSQ      1
+SWEPTchange_period_gfboston      1
 1
-SWEPTchange_period_dtrawlSHK      1
+SWEPTchange_period_gfmontauk      1
 1
-SWEPTchange_period_dtrawlHAD      1
+SWEPTchange_period_gfportland      1
 1
-SWEPTchange_period_dseineSHK      1
+SWEPTchange_period_gfportsmouth      1
 1
-SWEPTchange_period_dlineBLF       1
+SWEPTchange_period_gfchatham       1
 1
-SWEPTchange_period_diveBG         1
+SWEPTchange_period_gfother         1
 1
 SWEPTchange_period_pseineBLF      1
 1
@@ -7456,7 +7456,7 @@ SWEPTchange_period_midwcOSH       1
 1
 SWEPTchange_period_mowMA          1
 1
-SWEPTchange_mult_midwcISQ       1
+SWEPTchange_mult_catchall       1
 1
 SWEPTchange_mult_midwcLSQ       1
 1
@@ -7466,23 +7466,23 @@ SWEPTchange_mult_dredgeSCA2         1
 1
 SWEPTchange_mult_dredgeSCA3      1
 1
-SWEPTchange_mult_trapRCB        1
+SWEPTchange_mult_gfgloucester        1
 1
-SWEPTchange_mult_dtrawlRCB      1
+SWEPTchange_mult_gfnewbedford      1
 1
-SWEPTchange_mult_dtrawlISQ      1
+SWEPTchange_mult_gfpointjudith      1
 1
-SWEPTchange_mult_dtrawlLSQ      1
+SWEPTchange_mult_gfboston      1
 1
-SWEPTchange_mult_dtrawlSHK      1
+SWEPTchange_mult_gfmontauk      1
 1
-SWEPTchange_mult_dtrawlHAD      1
+SWEPTchange_mult_gfportland      1
 1
-SWEPTchange_mult_dseineSHK      1
+SWEPTchange_mult_gfportsmouth      1
 1
-SWEPTchange_mult_dlineBLF       1
+SWEPTchange_mult_gfchatham       1
 1
-SWEPTchange_mult_diveBG         1
+SWEPTchange_mult_gfother         1
 1
 SWEPTchange_mult_pseineBLF      1
 1
@@ -7516,7 +7516,7 @@ SWEPTchange_mult_mowMA          1
 
 ## A parameter used only for reporting purposes, and does not affect Atlantis calculations (see chapter 15.8.14).
 
-gear_conflict_midwcISQ       28
+gear_conflict_catchall       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 gear_conflict_midwcLSQ       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -7526,23 +7526,23 @@ gear_conflict_dredgeSCA2         28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 gear_conflict_dredgeSCA3      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_trapRCB        28
+gear_conflict_gfgloucester        28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dtrawlRCB      28
+gear_conflict_gfnewbedford      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dtrawlISQ      28
+gear_conflict_gfpointjudith      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dtrawlLSQ      28
+gear_conflict_gfboston      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dtrawlSHK      28
+gear_conflict_gfmontauk      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dtrawlHAD      28
+gear_conflict_gfportland      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dseineSHK      28
+gear_conflict_gfportsmouth      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_dlineBLF       28
+gear_conflict_gfchatham       28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-gear_conflict_diveBG         28
+gear_conflict_gfother         28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 gear_conflict_pseineBLF      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -7575,20 +7575,20 @@ gear_conflict_mowMA          28
 
 ### The selectivity changes are first indicated with the global flag flagchangesel, which when set to 1 tells Atlantis that at least one fishery will undergo selectivity changes. This is then refined with the flag YYY_changeSEL, which sets (if YYY_changeSEL =1) which specific fishery has changes in selectivity
 
-midwcISQ_changeSEL   0
+catchall_changeSEL   0
 midwcLSQ_changeSEL   0
 dredgeSCA1_changeSEL     0
 dredgeSCA2_changeSEL     0
 dredgeSCA3_changeSEL  0
-trapRCB_changeSEL    0
-dtrawlRCB_changeSEL  0
-dtrawlISQ_changeSEL  0
-dtrawlLSQ_changeSEL  0
-dtrawlSHK_changeSEL  0
-dtrawlHAD_changeSEL  0
-dseineSHK_changeSEL  0
-dlineBLF_changeSEL   0
-diveBG_changeSEL     0
+gfgloucester_changeSEL    0
+gfnewbedford_changeSEL  0
+gfpointjudith_changeSEL  0
+gfboston_changeSEL  0
+gfmontauk_changeSEL  0
+gfportland_changeSEL  0
+gfportsmouth_changeSEL  0
+gfchatham_changeSEL   0
+gfother_changeSEL     0
 pseineBLF_changeSEL  0
 cullPIN_changeSEL    0
 ptrawlNSH_changeSEL  0
@@ -7603,20 +7603,20 @@ netMEN_changeSEL     0
 midwcNSH_changeSEL   0
 midwcOSH_changeSEL   0
 mowMA_changeSEL      0
-midwcISQ_changeSWEPT   0
+catchall_changeSWEPT   0
 midwcLSQ_changeSWEPT   0
 dredgeSCA1_changeSWEPT     0
 dredgeSCA2_changeSWEPT     0
 dredgeSCA3_changeSWEPT  0
-trapRCB_changeSWEPT    0
-dtrawlRCB_changeSWEPT  0
-dtrawlISQ_changeSWEPT  0
-dtrawlLSQ_changeSWEPT  0
-dtrawlSHK_changeSWEPT  0
-dtrawlHAD_changeSWEPT  0
-dseineSHK_changeSWEPT  0
-dlineBLF_changeSWEPT   0
-diveBG_changeSWEPT     0
+gfgloucester_changeSWEPT    0
+gfnewbedford_changeSWEPT  0
+gfpointjudith_changeSWEPT  0
+gfboston_changeSWEPT  0
+gfmontauk_changeSWEPT  0
+gfportland_changeSWEPT  0
+gfportsmouth_changeSWEPT  0
+gfchatham_changeSWEPT   0
+gfother_changeSWEPT     0
 pseineBLF_changeSWEPT  0
 cullPIN_changeSWEPT    0
 ptrawlNSH_changeSWEPT  0
@@ -10574,20 +10574,20 @@ flagchangep 		 0
 
 ### Changes in spatial coverage are applied through the habitat overlap
 
-midwcISQ_changeP   0
+catchall_changeP   0
 midwcLSQ_changeP   0
 dredgeSCA1_changeP     0
 dredgeSCA2_changeP     0
 dredgeSCA3_changeP  0
-trapRCB_changeP    0
-dtrawlRCB_changeP  0
-dtrawlISQ_changeP  0
-dtrawlLSQ_changeP  0
-dtrawlSHK_changeP  0
-dtrawlHAD_changeP  0
-dseineSHK_changeP  0
-dlineBLF_changeP   0
-diveBG_changeP     0
+gfgloucester_changeP    0
+gfnewbedford_changeP  0
+gfpointjudith_changeP  0
+gfboston_changeP  0
+gfmontauk_changeP  0
+gfportland_changeP  0
+gfportsmouth_changeP  0
+gfchatham_changeP   0
+gfother_changeP     0
 pseineBLF_changeP  0
 cullPIN_changeP    0
 ptrawlNSH_changeP  0
@@ -10606,20 +10606,20 @@ mowMA_changeP      0
 
 ### Fishing season can be reduced if biomass of fishing stocks or endangered species fall below a threshold level
 
-midwcISQ_changeseason   0
+catchall_changeseason   0
 midwcLSQ_changeseason   0
 dredgeSCA1_changeseason     0
 dredgeSCA2_changeseason     0
 dredgeSCA3_changeseason  0
-trapRCB_changeseason    0
-dtrawlRCB_changeseason  0
-dtrawlISQ_changeseason  0
-dtrawlLSQ_changeseason  0
-dtrawlSHK_changeseason  0
-dtrawlHAD_changeseason  0
-dseineSHK_changeseason  0
-dlineBLF_changeseason   0
-diveBG_changeseason     0
+gfgloucester_changeseason    0
+gfnewbedford_changeseason  0
+gfpointjudith_changeseason  0
+gfboston_changeseason  0
+gfmontauk_changeseason  0
+gfportland_changeseason  0
+gfportsmouth_changeseason  0
+gfchatham_changeseason   0
+gfother_changeseason     0
 pseineBLF_changeseason  0
 cullPIN_changeseason    0
 ptrawlNSH_changeseason  0
@@ -11372,20 +11372,20 @@ Qchange_mult_DC       1
 
 ## Adaptive management. Can force catch then switch to dynamic fishing and apply management action durng this period. If >0, management options will be applied to the fishery YYY and imposed catch may be scaled by a management scalar.
 
-midwcISQ_flagmanage   0
+catchall_flagmanage   0
 midwcLSQ_flagmanage   0
 dredgeSCA1_flagmanage     0
 dredgeSCA2_flagmanage     0
 dredgeSCA3_flagmanage  0
-trapRCB_flagmanage    0
-dtrawlRCB_flagmanage  0
-dtrawlISQ_flagmanage  0
-dtrawlLSQ_flagmanage  0
-dtrawlSHK_flagmanage  0
-dtrawlHAD_flagmanage  0
-dseineSHK_flagmanage  0
-dlineBLF_flagmanage   0
-diveBG_flagmanage     0
+gfgloucester_flagmanage    0
+gfnewbedford_flagmanage  0
+gfpointjudith_flagmanage  0
+gfboston_flagmanage  0
+gfmontauk_flagmanage  0
+gfportland_flagmanage  0
+gfportsmouth_flagmanage  0
+gfchatham_flagmanage   0
+gfother_flagmanage     0
 pseineBLF_flagmanage  0
 cullPIN_flagmanage    0
 ptrawlNSH_flagmanage  0
@@ -11403,20 +11403,20 @@ mowMA_flagmanage      0
 
 ## (at_harvest.prm) Atlantis days that determine when to impose management
 
-midwcISQ_start_manage   0
+catchall_start_manage   0
 midwcLSQ_start_manage   0
 dredgeSCA1_start_manage     0
 dredgeSCA2_start_manage     0
 dredgeSCA3_start_manage  0
-trapRCB_start_manage    0
-dtrawlRCB_start_manage  0
-dtrawlISQ_start_manage  0
-dtrawlLSQ_start_manage  0
-dtrawlSHK_start_manage  0
-dtrawlHAD_start_manage  0
-dseineSHK_start_manage  0
-dlineBLF_start_manage   0
-diveBG_start_manage     0
+gfgloucester_start_manage    0
+gfnewbedford_start_manage  0
+gfpointjudith_start_manage  0
+gfboston_start_manage  0
+gfmontauk_start_manage  0
+gfportland_start_manage  0
+gfportsmouth_start_manage  0
+gfchatham_start_manage   0
+gfother_start_manage     0
 pseineBLF_start_manage  0
 cullPIN_start_manage    0
 ptrawlNSH_start_manage  0
@@ -11431,20 +11431,20 @@ netMEN_start_manage     0
 midwcNSH_start_manage   0
 midwcOSH_start_manage   0
 mowMA_start_manage      0
-midwcISQ_end_manage   1000000000
+catchall_end_manage   1000000000
 midwcLSQ_end_manage   1000000000
 dredgeSCA1_end_manage     1000000000
 dredgeSCA2_end_manage     1000000000
 dredgeSCA3_end_manage  1000000000
-trapRCB_end_manage    1000000000
-dtrawlRCB_end_manage  1000000000
-dtrawlISQ_end_manage  1000000000
-dtrawlLSQ_end_manage  1000000000
-dtrawlSHK_end_manage  1000000000
-dtrawlHAD_end_manage  1000000000
-dseineSHK_end_manage  1000000000
-dlineBLF_end_manage   1000000000
-diveBG_end_manage     1000000000
+gfgloucester_end_manage    1000000000
+gfnewbedford_end_manage  1000000000
+gfpointjudith_end_manage  1000000000
+gfboston_end_manage  1000000000
+gfmontauk_end_manage  1000000000
+gfportland_end_manage  1000000000
+gfportsmouth_end_manage  1000000000
+gfchatham_end_manage   1000000000
+gfother_end_manage     1000000000
 pseineBLF_end_manage  1000000000
 cullPIN_end_manage    1000000000
 ptrawlNSH_end_manage  1000000000
@@ -11464,20 +11464,20 @@ mowMA_end_manage      1000000000
 
 flagmpa 			 0
 
-midwcISQ_flagmpa   0
+catchall_flagmpa   0
 midwcLSQ_flagmpa   0
 dredgeSCA1_flagmpa     0
 dredgeSCA2_flagmpa     0
 dredgeSCA3_flagmpa  0
-trapRCB_flagmpa    0
-dtrawlRCB_flagmpa  0
-dtrawlISQ_flagmpa  0
-dtrawlLSQ_flagmpa  0
-dtrawlSHK_flagmpa  0
-dtrawlHAD_flagmpa  0
-dseineSHK_flagmpa  0
-dlineBLF_flagmpa   0
-diveBG_flagmpa     0
+gfgloucester_flagmpa    0
+gfnewbedford_flagmpa  0
+gfpointjudith_flagmpa  0
+gfboston_flagmpa  0
+gfmontauk_flagmpa  0
+gfportland_flagmpa  0
+gfportsmouth_flagmpa  0
+gfchatham_flagmpa   0
+gfother_flagmpa     0
 pseineBLF_flagmpa  0
 cullPIN_flagmpa    0
 ptrawlNSH_flagmpa  0
@@ -11517,20 +11517,20 @@ flagTradeTACvsMPA	 0
 
 ### If set to 1, a fishery YYY shares its TAC with other fisheries (see chapter 16.2.6. for further details)
 
-flagTACparticipate_midwcISQ 0
+flagTACparticipate_catchall 0
 flagTACparticipate_midwcLSQ 0
 flagTACparticipate_dredgeSCA1 0
 flagTACparticipate_dredgeSCA2 0
 flagTACparticipate_dredgeSCA3 0
-flagTACparticipate_trapRCB 0
-flagTACparticipate_dtrawlRCB 0
-flagTACparticipate_dtrawlISQ 0
-flagTACparticipate_dtrawlLSQ 0
-flagTACparticipate_dtrawlSHK 0
-flagTACparticipate_dtrawlHAD 0
-flagTACparticipate_dseineSHK 0
-flagTACparticipate_dlineBLF 0
-flagTACparticipate_diveBG 0
+flagTACparticipate_gfgloucester 0
+flagTACparticipate_gfnewbedford 0
+flagTACparticipate_gfpointjudith 0
+flagTACparticipate_gfboston 0
+flagTACparticipate_gfmontauk 0
+flagTACparticipate_gfportland 0
+flagTACparticipate_gfportsmouth 0
+flagTACparticipate_gfchatham 0
+flagTACparticipate_gfother 0
 flagTACparticipate_pseineBLF 0
 flagTACparticipate_cullPIN 0
 flagTACparticipate_ptrawlNSH 0
@@ -11548,20 +11548,20 @@ flagTACparticipate_mowMA 0
 
 ## Seasonal closures. To activate seasonal fishing for a given fishery set YYY_flagseasonal =1. Then indicate the day of the year when the fishing season opens and closes (YYY_seasonopen and YYY_seasonclose). Remember that Atlantis counts from 0, so the first day of the calendar year is 0 and the last day is 364.
 
-midwcISQ_flagseasonal   0
+catchall_flagseasonal   0
 midwcLSQ_flagseasonal   0
 dredgeSCA1_flagseasonal     0
 dredgeSCA2_flagseasonal     0
 dredgeSCA3_flagseasonal  0
-trapRCB_flagseasonal    0
-dtrawlRCB_flagseasonal  0
-dtrawlISQ_flagseasonal  0
-dtrawlLSQ_flagseasonal  0
-dtrawlSHK_flagseasonal  0
-dtrawlHAD_flagseasonal  0
-dseineSHK_flagseasonal  0
-dlineBLF_flagseasonal   0
-diveBG_flagseasonal     0
+gfgloucester_flagseasonal    0
+gfnewbedford_flagseasonal  0
+gfpointjudith_flagseasonal  0
+gfboston_flagseasonal  0
+gfmontauk_flagseasonal  0
+gfportland_flagseasonal  0
+gfportsmouth_flagseasonal  0
+gfchatham_flagseasonal   0
+gfother_flagseasonal     0
 pseineBLF_flagseasonal  0
 cullPIN_flagseasonal    0
 ptrawlNSH_flagseasonal  0
@@ -11581,20 +11581,20 @@ mowMA_flagseasonal      0
 ## Some species are managed using biomass thresholds, if biomass is above a specific level then fishing is allowed. To represent that in Atlantis for fishery YYY: 1. Set the species to be a TAC managed in the functional_group.csv file 2. Set YYY_flag_framebased to 1 for the fishery. 
 
 
-midwcISQ_flag_framebased   0
+catchall_flag_framebased   0
 midwcLSQ_flag_framebased   0
 dredgeSCA1_flag_framebased     0
 dredgeSCA2_flag_framebased     0
 dredgeSCA3_flag_framebased  0
-trapRCB_flag_framebased    0
-dtrawlRCB_flag_framebased  0
-dtrawlISQ_flag_framebased  0
-dtrawlLSQ_flag_framebased  0
-dtrawlSHK_flag_framebased  0
-dtrawlHAD_flag_framebased  0
-dseineSHK_flag_framebased  0
-dlineBLF_flag_framebased   0
-diveBG_flag_framebased     0
+gfgloucester_flag_framebased    0
+gfnewbedford_flag_framebased  0
+gfpointjudith_flag_framebased  0
+gfboston_flag_framebased  0
+gfmontauk_flag_framebased  0
+gfportland_flag_framebased  0
+gfportsmouth_flag_framebased  0
+gfchatham_flag_framebased   0
+gfother_flag_framebased     0
 pseineBLF_flag_framebased  0
 cullPIN_flag_framebased    0
 ptrawlNSH_flag_framebased  0
@@ -12160,20 +12160,20 @@ BiTAC_Reg1_DC       6
 
 ## If set to 1, fisheries YYY is not allowed to discard, but must land of catches.
 
-midwcISQ_landallTAC_sp   0
+catchall_landallTAC_sp   0
 midwcLSQ_landallTAC_sp   0
 dredgeSCA1_landallTAC_sp     0
 dredgeSCA2_landallTAC_sp     0
 dredgeSCA3_landallTAC_sp  0
-trapRCB_landallTAC_sp    0
-dtrawlRCB_landallTAC_sp  0
-dtrawlISQ_landallTAC_sp  0
-dtrawlLSQ_landallTAC_sp  0
-dtrawlSHK_landallTAC_sp  0
-dtrawlHAD_landallTAC_sp  0
-dseineSHK_landallTAC_sp  0
-dlineBLF_landallTAC_sp   0
-diveBG_landallTAC_sp     0
+gfgloucester_landallTAC_sp    0
+gfnewbedford_landallTAC_sp  0
+gfpointjudith_landallTAC_sp  0
+gfboston_landallTAC_sp  0
+gfmontauk_landallTAC_sp  0
+gfportland_landallTAC_sp  0
+gfportsmouth_landallTAC_sp  0
+gfchatham_landallTAC_sp   0
+gfother_landallTAC_sp     0
 pseineBLF_landallTAC_sp  0
 cullPIN_landallTAC_sp    0
 ptrawlNSH_landallTAC_sp  0
@@ -12191,20 +12191,20 @@ mowMA_landallTAC_sp      0
 
 ### A maximum number of species a multi-species fishery YYY can exceed it’s TAC for, before it is closed (when simple TACs are applied, see chapter 16)
 
-midwcISQ_max_num_sp   5
+catchall_max_num_sp   5
 midwcLSQ_max_num_sp   5
 dredgeSCA1_max_num_sp     5
 dredgeSCA2_max_num_sp     5
 dredgeSCA3_max_num_sp  5
-trapRCB_max_num_sp    5
-dtrawlRCB_max_num_sp  5
-dtrawlISQ_max_num_sp  5
-dtrawlLSQ_max_num_sp  5
-dtrawlSHK_max_num_sp  5
-dtrawlHAD_max_num_sp  5
-dseineSHK_max_num_sp  5
-dlineBLF_max_num_sp   5
-diveBG_max_num_sp     5
+gfgloucester_max_num_sp    5
+gfnewbedford_max_num_sp  5
+gfpointjudith_max_num_sp  5
+gfboston_max_num_sp  5
+gfmontauk_max_num_sp  5
+gfportland_max_num_sp  5
+gfportsmouth_max_num_sp  5
+gfchatham_max_num_sp   5
+gfother_max_num_sp     5
 pseineBLF_max_num_sp  5
 cullPIN_max_num_sp    5
 ptrawlNSH_max_num_sp  5
@@ -13861,20 +13861,20 @@ RegSeason 1
 0
 
 
-midwcISQ_seasonopen   0
+catchall_seasonopen   0
 midwcLSQ_seasonopen   0
 dredgeSCA1_seasonopen     0
 dredgeSCA2_seasonopen     0
 dredgeSCA3_seasonopen  0
-trapRCB_seasonopen    0
-dtrawlRCB_seasonopen  0
-dtrawlISQ_seasonopen  0
-dtrawlLSQ_seasonopen  0
-dtrawlSHK_seasonopen  0
-dtrawlHAD_seasonopen  0
-dseineSHK_seasonopen  0
-dlineBLF_seasonopen   0
-diveBG_seasonopen     0
+gfgloucester_seasonopen    0
+gfnewbedford_seasonopen  0
+gfpointjudith_seasonopen  0
+gfboston_seasonopen  0
+gfmontauk_seasonopen  0
+gfportland_seasonopen  0
+gfportsmouth_seasonopen  0
+gfchatham_seasonopen   0
+gfother_seasonopen     0
 pseineBLF_seasonopen  0
 cullPIN_seasonopen    0
 ptrawlNSH_seasonopen  0
@@ -13889,20 +13889,20 @@ netMEN_seasonopen     0
 midwcNSH_seasonopen   0
 midwcOSH_seasonopen   0
 mowMA_seasonopen      0
-midwcISQ_seasonclose   364
+catchall_seasonclose   364
 midwcLSQ_seasonclose   364
 dredgeSCA1_seasonclose     364
 dredgeSCA2_seasonclose     364
 dredgeSCA3_seasonclose  364
-trapRCB_seasonclose    364
-dtrawlRCB_seasonclose  364
-dtrawlISQ_seasonclose  364
-dtrawlLSQ_seasonclose  364
-dtrawlSHK_seasonclose  364
-dtrawlHAD_seasonclose  364
-dseineSHK_seasonclose  364
-dlineBLF_seasonclose   364
-diveBG_seasonclose     364
+gfgloucester_seasonclose    364
+gfnewbedford_seasonclose  364
+gfpointjudith_seasonclose  364
+gfboston_seasonclose  364
+gfmontauk_seasonclose  364
+gfportland_seasonclose  364
+gfportsmouth_seasonclose  364
+gfchatham_seasonclose   364
+gfother_seasonclose     364
 pseineBLF_seasonclose  364
 cullPIN_seasonclose    364
 ptrawlNSH_seasonclose  364
@@ -14283,20 +14283,20 @@ FC_high_thresh_DC       28
 
 ## Proportion of effort allowed once restrictions begin
 
-midwcISQ_FC_restrict   0.1
+catchall_FC_restrict   0.1
 midwcLSQ_FC_restrict   0.1
 dredgeSCA1_FC_restrict     0.1
 dredgeSCA2_FC_restrict     0.1
 dredgeSCA3_FC_restrict  0.1
-trapRCB_FC_restrict    0.1
-dtrawlRCB_FC_restrict  0.1
-dtrawlISQ_FC_restrict  0.1
-dtrawlLSQ_FC_restrict  0.1
-dtrawlSHK_FC_restrict  0.1
-dtrawlHAD_FC_restrict  0.1
-dseineSHK_FC_restrict  0.1
-dlineBLF_FC_restrict   0.1
-diveBG_FC_restrict     0.1
+gfgloucester_FC_restrict    0.1
+gfnewbedford_FC_restrict  0.1
+gfpointjudith_FC_restrict  0.1
+gfboston_FC_restrict  0.1
+gfmontauk_FC_restrict  0.1
+gfportland_FC_restrict  0.1
+gfportsmouth_FC_restrict  0.1
+gfchatham_FC_restrict   0.1
+gfother_FC_restrict     0.1
 pseineBLF_FC_restrict  0.1
 cullPIN_FC_restrict    0.1
 ptrawlNSH_FC_restrict  0.1
@@ -14314,20 +14314,20 @@ mowMA_FC_restrict      0.1
 
 ##  Period of time over which effort reduction occurs
 
-midwcISQ_FC_period   730
+catchall_FC_period   730
 midwcLSQ_FC_period   730
 dredgeSCA1_FC_period     730
 dredgeSCA2_FC_period     730
 dredgeSCA3_FC_period  730
-trapRCB_FC_period    730
-dtrawlRCB_FC_period  730
-dtrawlISQ_FC_period  730
-dtrawlLSQ_FC_period  730
-dtrawlSHK_FC_period  730
-dtrawlHAD_FC_period  730
-dseineSHK_FC_period  730
-dlineBLF_FC_period   730
-diveBG_FC_period     730
+gfgloucester_FC_period    730
+gfnewbedford_FC_period  730
+gfpointjudith_FC_period  730
+gfboston_FC_period  730
+gfmontauk_FC_period  730
+gfportland_FC_period  730
+gfportsmouth_FC_period  730
+gfchatham_FC_period   730
+gfother_FC_period     730
 pseineBLF_FC_period  730
 cullPIN_FC_period    730
 ptrawlNSH_FC_period  730
@@ -14345,20 +14345,20 @@ mowMA_FC_period      730
 
 ## Period of time before stock status is re-checked. If the stock has recovered at this time restrictions are removed. If the stock remains depleted the time counter is reset (i.e. the restrictions are triggered afresh).
 
-midwcISQ_FC_period2   1825
+catchall_FC_period2   1825
 midwcLSQ_FC_period2   1825
 dredgeSCA1_FC_period2     1825
 dredgeSCA2_FC_period2     1825
 dredgeSCA3_FC_period2  1825
-trapRCB_FC_period2    1825
-dtrawlRCB_FC_period2  1825
-dtrawlISQ_FC_period2  1825
-dtrawlLSQ_FC_period2  1825
-dtrawlSHK_FC_period2  1825
-dtrawlHAD_FC_period2  1825
-dseineSHK_FC_period2  1825
-dlineBLF_FC_period2   1825
-diveBG_FC_period2     1825
+gfgloucester_FC_period2    1825
+gfnewbedford_FC_period2  1825
+gfpointjudith_FC_period2  1825
+gfboston_FC_period2  1825
+gfmontauk_FC_period2  1825
+gfportland_FC_period2  1825
+gfportsmouth_FC_period2  1825
+gfchatham_FC_period2   1825
+gfother_FC_period2     1825
 pseineBLF_FC_period2  1825
 cullPIN_FC_period2    1825
 ptrawlNSH_FC_period2  1825
@@ -14374,20 +14374,20 @@ midwcNSH_FC_period2   1825
 midwcOSH_FC_period2   1825
 mowMA_FC_period2      1825
 
-midwcISQ_FC_restrict_endangered   0.1
+catchall_FC_restrict_endangered   0.1
 midwcLSQ_FC_restrict_endangered   0.1
 dredgeSCA1_FC_restrict_endangered     0.1
 dredgeSCA2_FC_restrict_endangered     0.1
 dredgeSCA3_FC_restrict_endangered  0.1
-trapRCB_FC_restrict_endangered    0.1
-dtrawlRCB_FC_restrict_endangered  0.1
-dtrawlISQ_FC_restrict_endangered  0.1
-dtrawlLSQ_FC_restrict_endangered  0.1
-dtrawlSHK_FC_restrict_endangered  0.1
-dtrawlHAD_FC_restrict_endangered  0.1
-dseineSHK_FC_restrict_endangered  0.1
-dlineBLF_FC_restrict_endangered   0.1
-diveBG_FC_restrict_endangered     0.1
+gfgloucester_FC_restrict_endangered    0.1
+gfnewbedford_FC_restrict_endangered  0.1
+gfpointjudith_FC_restrict_endangered  0.1
+gfboston_FC_restrict_endangered  0.1
+gfmontauk_FC_restrict_endangered  0.1
+gfportland_FC_restrict_endangered  0.1
+gfportsmouth_FC_restrict_endangered  0.1
+gfchatham_FC_restrict_endangered   0.1
+gfother_FC_restrict_endangered     0.1
 pseineBLF_FC_restrict_endangered  0.1
 cullPIN_FC_restrict_endangered    0.1
 ptrawlNSH_FC_restrict_endangered  0.1
@@ -14404,20 +14404,20 @@ midwcOSH_FC_restrict_endangered   0.1
 mowMA_FC_restrict_endangered      0.1
 
 
-midwcISQ_FC_endanger_period   730
+catchall_FC_endanger_period   730
 midwcLSQ_FC_endanger_period   730
 dredgeSCA1_FC_endanger_period     730
 dredgeSCA2_FC_endanger_period     730
 dredgeSCA3_FC_endanger_period  730
-trapRCB_FC_endanger_period    730
-dtrawlRCB_FC_endanger_period  730
-dtrawlISQ_FC_endanger_period  730
-dtrawlLSQ_FC_endanger_period  730
-dtrawlSHK_FC_endanger_period  730
-dtrawlHAD_FC_endanger_period  730
-dseineSHK_FC_endanger_period  730
-dlineBLF_FC_endanger_period   730
-diveBG_FC_endanger_period     730
+gfgloucester_FC_endanger_period    730
+gfnewbedford_FC_endanger_period  730
+gfpointjudith_FC_endanger_period  730
+gfboston_FC_endanger_period  730
+gfmontauk_FC_endanger_period  730
+gfportland_FC_endanger_period  730
+gfportsmouth_FC_endanger_period  730
+gfchatham_FC_endanger_period   730
+gfother_FC_endanger_period     730
 pseineBLF_FC_endanger_period  730
 cullPIN_FC_endanger_period    730
 ptrawlNSH_FC_endanger_period  730
@@ -14433,20 +14433,20 @@ midwcNSH_FC_endanger_period   730
 midwcOSH_FC_endanger_period   730
 mowMA_FC_endanger_period      730
 
-midwcISQ_num_changes   1
+catchall_num_changes   1
 midwcLSQ_num_changes   1
 dredgeSCA1_num_changes     1
 dredgeSCA2_num_changes     1
 dredgeSCA3_num_changes  1
-trapRCB_num_changes    1
-dtrawlRCB_num_changes  1
-dtrawlISQ_num_changes  1
-dtrawlLSQ_num_changes  1
-dtrawlSHK_num_changes  1
-dtrawlHAD_num_changes  1
-dseineSHK_num_changes  1
-dlineBLF_num_changes   1
-diveBG_num_changes     1
+gfgloucester_num_changes    1
+gfnewbedford_num_changes  1
+gfpointjudith_num_changes  1
+gfboston_num_changes  1
+gfmontauk_num_changes  1
+gfportland_num_changes  1
+gfportsmouth_num_changes  1
+gfchatham_num_changes   1
+gfother_num_changes     1
 pseineBLF_num_changes  1
 cullPIN_num_changes    1
 ptrawlNSH_num_changes  1
@@ -14463,7 +14463,7 @@ midwcOSH_num_changes   1
 mowMA_num_changes      1
 
 
-EffortChange_start_midwcISQ       1
+EffortChange_start_catchall       1
 0
 EffortChange_start_midwcLSQ       1
 0
@@ -14473,23 +14473,23 @@ EffortChange_start_dredgeSCA2         1
 0
 EffortChange_start_dredgeSCA3      1
 0
-EffortChange_start_trapRCB        1
+EffortChange_start_gfgloucester        1
 0
-EffortChange_start_dtrawlRCB      1
+EffortChange_start_gfnewbedford      1
 0
-EffortChange_start_dtrawlISQ      1
+EffortChange_start_gfpointjudith      1
 0
-EffortChange_start_dtrawlLSQ      1
+EffortChange_start_gfboston      1
 0
-EffortChange_start_dtrawlSHK      1
+EffortChange_start_gfmontauk      1
 0
-EffortChange_start_dtrawlHAD      1
+EffortChange_start_gfportland      1
 0
-EffortChange_start_dseineSHK      1
+EffortChange_start_gfportsmouth      1
 0
-EffortChange_start_dlineBLF       1
+EffortChange_start_gfchatham       1
 0
-EffortChange_start_diveBG         1
+EffortChange_start_gfother         1
 0
 EffortChange_start_pseineBLF      1
 0
@@ -14519,7 +14519,7 @@ EffortChange_start_midwcOSH       1
 0
 EffortChange_start_mowMA          1
 0
-EffortChange_period_midwcISQ       1
+EffortChange_period_catchall       1
 1
 EffortChange_period_midwcLSQ       1
 1
@@ -14529,23 +14529,23 @@ EffortChange_period_dredgeSCA2         1
 1
 EffortChange_period_dredgeSCA3      1
 1
-EffortChange_period_trapRCB        1
+EffortChange_period_gfgloucester        1
 1
-EffortChange_period_dtrawlRCB      1
+EffortChange_period_gfnewbedford      1
 1
-EffortChange_period_dtrawlISQ      1
+EffortChange_period_gfpointjudith      1
 1
-EffortChange_period_dtrawlLSQ      1
+EffortChange_period_gfboston      1
 1
-EffortChange_period_dtrawlSHK      1
+EffortChange_period_gfmontauk      1
 1
-EffortChange_period_dtrawlHAD      1
+EffortChange_period_gfportland      1
 1
-EffortChange_period_dseineSHK      1
+EffortChange_period_gfportsmouth      1
 1
-EffortChange_period_dlineBLF       1
+EffortChange_period_gfchatham       1
 1
-EffortChange_period_diveBG         1
+EffortChange_period_gfother         1
 1
 EffortChange_period_pseineBLF      1
 1
@@ -14577,7 +14577,7 @@ EffortChange_period_mowMA          1
 1
 
 
-Effort_mult_midwcISQ       1
+Effort_mult_catchall       1
 1
 Effort_mult_midwcLSQ       1
 1
@@ -14587,23 +14587,23 @@ Effort_mult_dredgeSCA2         1
 1
 Effort_mult_dredgeSCA3      1
 1
-Effort_mult_trapRCB        1
+Effort_mult_gfgloucester        1
 1
-Effort_mult_dtrawlRCB      1
+Effort_mult_gfnewbedford      1
 1
-Effort_mult_dtrawlISQ      1
+Effort_mult_gfpointjudith      1
 1
-Effort_mult_dtrawlLSQ      1
+Effort_mult_gfboston      1
 1
-Effort_mult_dtrawlSHK      1
+Effort_mult_gfmontauk      1
 1
-Effort_mult_dtrawlHAD      1
+Effort_mult_gfportland      1
 1
-Effort_mult_dseineSHK      1
+Effort_mult_gfportsmouth      1
 1
-Effort_mult_dlineBLF       1
+Effort_mult_gfchatham       1
 1
-Effort_mult_diveBG         1
+Effort_mult_gfother         1
 1
 Effort_mult_pseineBLF      1
 1
@@ -14635,7 +14635,7 @@ Effort_mult_mowMA          1
 1
 
 
-flagpulsemidwcISQ       1
+flagpulsecatchall       1
 0
 flagpulsemidwcLSQ       1
 0
@@ -14645,23 +14645,23 @@ flagpulsedredgeSCA2         1
 0
 flagpulsedredgeSCA3      1
 0
-flagpulsetrapRCB        1
+flagpulsegfgloucester        1
 0
-flagpulsedtrawlRCB      1
+flagpulsegfnewbedford      1
 0
-flagpulsedtrawlISQ      1
+flagpulsegfpointjudith      1
 0
-flagpulsedtrawlLSQ      1
+flagpulsegfboston      1
 0
-flagpulsedtrawlSHK      1
+flagpulsegfmontauk      1
 0
-flagpulsedtrawlHAD      1
+flagpulsegfportland      1
 0
-flagpulsedseineSHK      1
+flagpulsegfportsmouth      1
 0
-flagpulsedlineBLF       1
+flagpulsegfchatham       1
 0
-flagpulsediveBG         1
+flagpulsegfother         1
 0
 flagpulsepseineBLF      1
 0
@@ -14693,20 +14693,20 @@ flagpulsemowMA          1
 0
 
 
-midwcISQ_cap_changes   1
+catchall_cap_changes   1
 midwcLSQ_cap_changes   1
 dredgeSCA1_cap_changes     1
 dredgeSCA2_cap_changes     1
 dredgeSCA3_cap_changes  1
-trapRCB_cap_changes    1
-dtrawlRCB_cap_changes  1
-dtrawlISQ_cap_changes  1
-dtrawlLSQ_cap_changes  1
-dtrawlSHK_cap_changes  1
-dtrawlHAD_cap_changes  1
-dseineSHK_cap_changes  1
-dlineBLF_cap_changes   1
-diveBG_cap_changes     1
+gfgloucester_cap_changes    1
+gfnewbedford_cap_changes  1
+gfpointjudith_cap_changes  1
+gfboston_cap_changes  1
+gfmontauk_cap_changes  1
+gfportland_cap_changes  1
+gfportsmouth_cap_changes  1
+gfchatham_cap_changes   1
+gfother_cap_changes     1
 pseineBLF_cap_changes  1
 cullPIN_cap_changes    1
 ptrawlNSH_cap_changes  1
@@ -14722,7 +14722,7 @@ midwcNSH_cap_changes   1
 midwcOSH_cap_changes   1
 mowMA_cap_changes      1
 
-CAPchange_start_midwcISQ       1
+CAPchange_start_catchall       1
 0
 CAPchange_start_midwcLSQ       1
 0
@@ -14732,23 +14732,23 @@ CAPchange_start_dredgeSCA2         1
 0
 CAPchange_start_dredgeSCA3      1
 0
-CAPchange_start_trapRCB        1
+CAPchange_start_gfgloucester        1
 0
-CAPchange_start_dtrawlRCB      1
+CAPchange_start_gfnewbedford      1
 0
-CAPchange_start_dtrawlISQ      1
+CAPchange_start_gfpointjudith      1
 0
-CAPchange_start_dtrawlLSQ      1
+CAPchange_start_gfboston      1
 0
-CAPchange_start_dtrawlSHK      1
+CAPchange_start_gfmontauk      1
 0
-CAPchange_start_dtrawlHAD      1
+CAPchange_start_gfportland      1
 0
-CAPchange_start_dseineSHK      1
+CAPchange_start_gfportsmouth      1
 0
-CAPchange_start_dlineBLF       1
+CAPchange_start_gfchatham       1
 0
-CAPchange_start_diveBG         1
+CAPchange_start_gfother         1
 0
 CAPchange_start_pseineBLF      1
 0
@@ -14778,7 +14778,7 @@ CAPchange_start_midwcOSH       1
 0
 CAPchange_start_mowMA          1
 0
-CAPchange_period_midwcISQ       1
+CAPchange_period_catchall       1
 1
 CAPchange_period_midwcLSQ       1
 1
@@ -14788,23 +14788,23 @@ CAPchange_period_dredgeSCA2         1
 1
 CAPchange_period_dredgeSCA3      1
 1
-CAPchange_period_trapRCB        1
+CAPchange_period_gfgloucester        1
 1
-CAPchange_period_dtrawlRCB      1
+CAPchange_period_gfnewbedford      1
 1
-CAPchange_period_dtrawlISQ      1
+CAPchange_period_gfpointjudith      1
 1
-CAPchange_period_dtrawlLSQ      1
+CAPchange_period_gfboston      1
 1
-CAPchange_period_dtrawlSHK      1
+CAPchange_period_gfmontauk      1
 1
-CAPchange_period_dtrawlHAD      1
+CAPchange_period_gfportland      1
 1
-CAPchange_period_dseineSHK      1
+CAPchange_period_gfportsmouth      1
 1
-CAPchange_period_dlineBLF       1
+CAPchange_period_gfchatham       1
 1
-CAPchange_period_diveBG         1
+CAPchange_period_gfother         1
 1
 CAPchange_period_pseineBLF      1
 1
@@ -14834,7 +14834,7 @@ CAPchange_period_midwcOSH       1
 1
 CAPchange_period_mowMA          1
 1
-CAPchange_mult_midwcISQ       1
+CAPchange_mult_catchall       1
 1
 CAPchange_mult_midwcLSQ       1
 1
@@ -14844,23 +14844,23 @@ CAPchange_mult_dredgeSCA2         1
 1
 CAPchange_mult_dredgeSCA3      1
 1
-CAPchange_mult_trapRCB        1
+CAPchange_mult_gfgloucester        1
 1
-CAPchange_mult_dtrawlRCB      1
+CAPchange_mult_gfnewbedford      1
 1
-CAPchange_mult_dtrawlISQ      1
+CAPchange_mult_gfpointjudith      1
 1
-CAPchange_mult_dtrawlLSQ      1
+CAPchange_mult_gfboston      1
 1
-CAPchange_mult_dtrawlSHK      1
+CAPchange_mult_gfmontauk      1
 1
-CAPchange_mult_dtrawlHAD      1
+CAPchange_mult_gfportland      1
 1
-CAPchange_mult_dseineSHK      1
+CAPchange_mult_gfportsmouth      1
 1
-CAPchange_mult_dlineBLF       1
+CAPchange_mult_gfchatham       1
 1
-CAPchange_mult_diveBG         1
+CAPchange_mult_gfother         1
 1
 CAPchange_mult_pseineBLF      1
 1
@@ -14899,7 +14899,7 @@ tepcoefft       1.0    Coefficient for interactions with TEP groups performance 
 sharkcoefft     1.0    Coefficient for interactions with shark groups performance measure 
 
 
-MPAmidwcISQ       30
+MPAcatchall       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 MPAmidwcLSQ       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -14909,23 +14909,23 @@ MPAdredgeSCA2         30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 MPAdredgeSCA3      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAtrapRCB        30
+MPAgfgloucester        30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAdtrawlRCB      30
+MPAgfnewbedford      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAdtrawlISQ      30
+MPAgfpointjudith      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAdtrawlLSQ      30
+MPAgfboston      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAdtrawlSHK      30
+MPAgfmontauk      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAdtrawlHAD      30
+MPAgfportland      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAdseineSHK      30
+MPAgfportsmouth      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAdlineBLF       30
+MPAgfchatham       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAdiveBG         30
+MPAgfother         30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 MPApseineBLF      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -14956,7 +14956,7 @@ MPAmidwcOSH       30
 MPAmowMA          30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 
-MPAendangeredmidwcISQ       30
+MPAendangeredcatchall       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 MPAendangeredmidwcLSQ       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -14966,23 +14966,23 @@ MPAendangereddredgeSCA2         30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 MPAendangereddredgeSCA3      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAendangeredtrapRCB        30
+MPAendangeredgfgloucester        30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAendangereddtrawlRCB      30
+MPAendangeredgfnewbedford      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAendangereddtrawlISQ      30
+MPAendangeredgfpointjudith      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAendangereddtrawlLSQ      30
+MPAendangeredgfboston      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAendangereddtrawlSHK      30
+MPAendangeredgfmontauk      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAendangereddtrawlHAD      30
+MPAendangeredgfportland      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAendangereddseineSHK      30
+MPAendangeredgfportsmouth      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAendangereddlineBLF       30
+MPAendangeredgfchatham       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-MPAendangereddiveBG         30
+MPAendangeredgfother         30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 MPAendangeredpseineBLF      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -15196,20 +15196,20 @@ MPAoverfishedDC       30
 
 ## Cant find in manual 
 
-midwcISQ_changeEFF   1
+catchall_changeEFF   1
 midwcLSQ_changeEFF   1
 dredgeSCA1_changeEFF     1
 dredgeSCA2_changeEFF     1
 dredgeSCA3_changeEFF  1
-trapRCB_changeEFF    1
-dtrawlRCB_changeEFF  1
-dtrawlISQ_changeEFF  1
-dtrawlLSQ_changeEFF  1
-dtrawlSHK_changeEFF  1
-dtrawlHAD_changeEFF  1
-dseineSHK_changeEFF  1
-dlineBLF_changeEFF   1
-diveBG_changeEFF     1
+gfgloucester_changeEFF    1
+gfnewbedford_changeEFF  1
+gfpointjudith_changeEFF  1
+gfboston_changeEFF  1
+gfmontauk_changeEFF  1
+gfportland_changeEFF  1
+gfportsmouth_changeEFF  1
+gfchatham_changeEFF   1
+gfother_changeEFF     1
 pseineBLF_changeEFF  1
 cullPIN_changeEFF    1
 ptrawlNSH_changeEFF  1
@@ -15227,7 +15227,7 @@ mowMA_changeEFF      1
 
 # Cant find in manual
 
-EffortPenaltymidwcISQ       30
+EffortPenaltycatchall       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 EffortPenaltymidwcLSQ       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -15237,23 +15237,23 @@ EffortPenaltydredgeSCA2         30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 EffortPenaltydredgeSCA3      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-EffortPenaltytrapRCB        30
+EffortPenaltygfgloucester        30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-EffortPenaltydtrawlRCB      30
+EffortPenaltygfnewbedford      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-EffortPenaltydtrawlISQ      30
+EffortPenaltygfpointjudith      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-EffortPenaltydtrawlLSQ      30
+EffortPenaltygfboston      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-EffortPenaltydtrawlSHK      30
+EffortPenaltygfmontauk      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-EffortPenaltydtrawlHAD      30
+EffortPenaltygfportland      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-EffortPenaltydseineSHK      30
+EffortPenaltygfportsmouth      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-EffortPenaltydlineBLF       30
+EffortPenaltygfchatham       30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-EffortPenaltydiveBG         30
+EffortPenaltygfother         30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 EffortPenaltypseineBLF      30
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -15291,20 +15291,20 @@ UseLever 89
 
 # Cant find in manual
 
-midwcISQ_use_min_lever   0
+catchall_use_min_lever   0
 midwcLSQ_use_min_lever   0
 dredgeSCA1_use_min_lever     0
 dredgeSCA2_use_min_lever     0
 dredgeSCA3_use_min_lever  0
-trapRCB_use_min_lever    0
-dtrawlRCB_use_min_lever  0
-dtrawlISQ_use_min_lever  0
-dtrawlLSQ_use_min_lever  0
-dtrawlSHK_use_min_lever  0
-dtrawlHAD_use_min_lever  0
-dseineSHK_use_min_lever  0
-dlineBLF_use_min_lever   0
-diveBG_use_min_lever     0
+gfgloucester_use_min_lever    0
+gfnewbedford_use_min_lever  0
+gfpointjudith_use_min_lever  0
+gfboston_use_min_lever  0
+gfmontauk_use_min_lever  0
+gfportland_use_min_lever  0
+gfportsmouth_use_min_lever  0
+gfchatham_use_min_lever   0
+gfother_use_min_lever     0
 pseineBLF_use_min_lever  0
 cullPIN_use_min_lever    0
 ptrawlNSH_use_min_lever  0
@@ -15322,20 +15322,20 @@ mowMA_use_min_lever      0
 
 # If the CPUE is above a specified threshold CPUEthresh then the effort applied in the fishery is scaled up by CPUEscale, whereas if the annual CPUE is less than CPUEthresh then the effort is reduced by a scalar set to (1.0 – 0.5 * CPUEscale). A check on the divergence on effort is included however, and if the decline has been more rapid than a power law then it is reset to a power law.
 
-midwcISQCPUEthresh   0        0
+catchallCPUEthresh   0        0
 midwcLSQCPUEthresh   0        0
 dredgeSCA1CPUEthresh     0        0
 dredgeSCA2CPUEthresh     0        0
 dredgeSCA3CPUEthresh  0        0
-trapRCBCPUEthresh    0        0
-dtrawlRCBCPUEthresh  0        0
-dtrawlISQCPUEthresh  0        0
-dtrawlLSQCPUEthresh  0        0
-dtrawlSHKCPUEthresh  0        0
-dtrawlHADCPUEthresh  0        0
-dseineSHKCPUEthresh  0        0
-dlineBLFCPUEthresh   0        0
-diveBGCPUEthresh     0        0
+gfgloucesterCPUEthresh    0        0
+gfnewbedfordCPUEthresh  0        0
+gfpointjudithCPUEthresh  0        0
+gfbostonCPUEthresh  0        0
+gfmontaukCPUEthresh  0        0
+gfportlandCPUEthresh  0        0
+gfportsmouthCPUEthresh  0        0
+gfchathamCPUEthresh   0        0
+gfotherCPUEthresh     0        0
 pseineBLFCPUEthresh  0        0
 cullPINCPUEthresh    0        0
 ptrawlNSHCPUEthresh  0        0
@@ -15350,20 +15350,20 @@ netMENCPUEthresh     0        0
 midwcNSHCPUEthresh   0        0
 midwcOSHCPUEthresh   0        0
 mowMACPUEthresh      0        0
-midwcISQCPUEthresh   0        0
+catchallCPUEthresh   0        0
 midwcLSQCPUEthresh   0        0
 dredgeSCA1CPUEthresh     0        0
 dredgeSCA2CPUEthresh     0        0
 dredgeSCA3CPUEthresh  0        0
-trapRCBCPUEthresh    0        0
-dtrawlRCBCPUEthresh  0        0
-dtrawlISQCPUEthresh  0        0
-dtrawlLSQCPUEthresh  0        0
-dtrawlSHKCPUEthresh  0        0
-dtrawlHADCPUEthresh  0        0
-dseineSHKCPUEthresh  0        0
-dlineBLFCPUEthresh   0        0
-diveBGCPUEthresh     0        0
+gfgloucesterCPUEthresh    0        0
+gfnewbedfordCPUEthresh  0        0
+gfpointjudithCPUEthresh  0        0
+gfbostonCPUEthresh  0        0
+gfmontaukCPUEthresh  0        0
+gfportlandCPUEthresh  0        0
+gfportsmouthCPUEthresh  0        0
+gfchathamCPUEthresh   0        0
+gfotherCPUEthresh     0        0
 pseineBLFCPUEthresh  0        0
 cullPINCPUEthresh    0        0
 ptrawlNSHCPUEthresh  0        0
@@ -15379,20 +15379,20 @@ midwcNSHCPUEthresh   0        0
 midwcOSHCPUEthresh   0        0
 mowMACPUEthresh      0        0
 
-midwcISQCPUEscale   0        0
+catchallCPUEscale   0        0
 midwcLSQCPUEscale   0        0
 dredgeSCA1CPUEscale     0        0
 dredgeSCA2CPUEscale     0        0
 dredgeSCA3CPUEscale  0        0
-trapRCBCPUEscale    0        0
-dtrawlRCBCPUEscale  0        0
-dtrawlISQCPUEscale  0        0
-dtrawlLSQCPUEscale  0        0
-dtrawlSHKCPUEscale  0        0
-dtrawlHADCPUEscale  0        0
-dseineSHKCPUEscale  0        0
-dlineBLFCPUEscale   0        0
-diveBGCPUEscale     0        0
+gfgloucesterCPUEscale    0        0
+gfnewbedfordCPUEscale  0        0
+gfpointjudithCPUEscale  0        0
+gfbostonCPUEscale  0        0
+gfmontaukCPUEscale  0        0
+gfportlandCPUEscale  0        0
+gfportsmouthCPUEscale  0        0
+gfchathamCPUEscale   0        0
+gfotherCPUEscale     0        0
 pseineBLFCPUEscale  0        0
 cullPINCPUEscale    0        0
 ptrawlNSHCPUEscale  0        0
@@ -15407,20 +15407,20 @@ netMENCPUEscale     0        0
 midwcNSHCPUEscale   0        0
 midwcOSHCPUEscale   0        0
 mowMACPUEscale      0        0
-midwcISQCPUEscale   0        0
+catchallCPUEscale   0        0
 midwcLSQCPUEscale   0        0
 dredgeSCA1CPUEscale     0        0
 dredgeSCA2CPUEscale     0        0
 dredgeSCA3CPUEscale  0        0
-trapRCBCPUEscale    0        0
-dtrawlRCBCPUEscale  0        0
-dtrawlISQCPUEscale  0        0
-dtrawlLSQCPUEscale  0        0
-dtrawlSHKCPUEscale  0        0
-dtrawlHADCPUEscale  0        0
-dseineSHKCPUEscale  0        0
-dlineBLFCPUEscale   0        0
-diveBGCPUEscale     0        0
+gfgloucesterCPUEscale    0        0
+gfnewbedfordCPUEscale  0        0
+gfpointjudithCPUEscale  0        0
+gfbostonCPUEscale  0        0
+gfmontaukCPUEscale  0        0
+gfportlandCPUEscale  0        0
+gfportsmouthCPUEscale  0        0
+gfchathamCPUEscale   0        0
+gfotherCPUEscale     0        0
 pseineBLFCPUEscale  0        0
 cullPINCPUEscale    0        0
 ptrawlNSHCPUEscale  0        0
@@ -15463,20 +15463,20 @@ UpdateMaxSalePrice   0
 
 ## maximum sale price is specific to each fishery YYY_maxsaleprice. related to salethresh and flagmarketdiscard
 
-midwcISQ_maxsaleprice   1
+catchall_maxsaleprice   1
 midwcLSQ_maxsaleprice   1
 dredgeSCA1_maxsaleprice     1
 dredgeSCA2_maxsaleprice     1
 dredgeSCA3_maxsaleprice  1
-trapRCB_maxsaleprice    1
-dtrawlRCB_maxsaleprice  1
-dtrawlISQ_maxsaleprice  1
-dtrawlLSQ_maxsaleprice  1
-dtrawlSHK_maxsaleprice  1
-dtrawlHAD_maxsaleprice  1
-dseineSHK_maxsaleprice  1
-dlineBLF_maxsaleprice   1
-diveBG_maxsaleprice     1
+gfgloucester_maxsaleprice    1
+gfnewbedford_maxsaleprice  1
+gfpointjudith_maxsaleprice  1
+gfboston_maxsaleprice  1
+gfmontauk_maxsaleprice  1
+gfportland_maxsaleprice  1
+gfportsmouth_maxsaleprice  1
+gfchatham_maxsaleprice   1
+gfother_maxsaleprice     1
 pseineBLF_maxsaleprice  1
 cullPIN_maxsaleprice    1
 ptrawlNSH_maxsaleprice  1
@@ -15679,20 +15679,20 @@ FC_caseDC       28
 
 ## Forced TAC change is implemented in the same way as other parameter change – typical 4 parameter description  Dynamic change in TAC is implemented  when some form of stock assessment is applied (see box in chapter 16.1) As with other harvest and management parameters, the user can allow for temporal changes in TACs. This can be done in a standard forced way (YYY_TACchange=2) or dynamically through the Assessment or pseudoassessment submodel (YYY_TACchange=1)
 
-midwcISQ_TACchange   0
+catchall_TACchange   0
 midwcLSQ_TACchange   0
 dredgeSCA1_TACchange     0
 dredgeSCA2_TACchange     0
 dredgeSCA3_TACchange  0
-trapRCB_TACchange    0
-dtrawlRCB_TACchange  0
-dtrawlISQ_TACchange  0
-dtrawlLSQ_TACchange  0
-dtrawlSHK_TACchange  0
-dtrawlHAD_TACchange  0
-dseineSHK_TACchange  0
-dlineBLF_TACchange   0
-diveBG_TACchange     0
+gfgloucester_TACchange    0
+gfnewbedford_TACchange  0
+gfpointjudith_TACchange  0
+gfboston_TACchange  0
+gfmontauk_TACchange  0
+gfportland_TACchange  0
+gfportsmouth_TACchange  0
+gfchatham_TACchange   0
+gfother_TACchange     0
 pseineBLF_TACchange  0
 cullPIN_TACchange    0
 ptrawlNSH_TACchange  0
@@ -16438,20 +16438,20 @@ dynanyway 0
 
 ## Can't locate in manual
 
-midwcISQ_effortdrop   1
+catchall_effortdrop   1
 midwcLSQ_effortdrop   1
 dredgeSCA1_effortdrop     1
 dredgeSCA2_effortdrop     1
 dredgeSCA3_effortdrop  1
-trapRCB_effortdrop    1
-dtrawlRCB_effortdrop  1
-dtrawlISQ_effortdrop  1
-dtrawlLSQ_effortdrop  1
-dtrawlSHK_effortdrop  1
-dtrawlHAD_effortdrop  1
-dseineSHK_effortdrop  1
-dlineBLF_effortdrop   1
-diveBG_effortdrop     1
+gfgloucester_effortdrop    1
+gfnewbedford_effortdrop  1
+gfpointjudith_effortdrop  1
+gfboston_effortdrop  1
+gfmontauk_effortdrop  1
+gfportland_effortdrop  1
+gfportsmouth_effortdrop  1
+gfchatham_effortdrop   1
+gfother_effortdrop     1
 pseineBLF_effortdrop  1
 cullPIN_effortdrop    1
 ptrawlNSH_effortdrop  1
