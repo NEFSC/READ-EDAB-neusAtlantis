@@ -1,9 +1,9 @@
 Code,Index,Name,IsRec,NumSubFleets
 catchall,0,catch all fleet for forced catch,0,1
-midwcLSQ,1,Scallop dredge,0,1
-dredgeSCA1,2,scallop dregde New Bedford MA,0,1
-dredgeSCA2,3,scallop dredge Cape May NJ,0,1
-dredgeSCA3,4,Scallop dredge NewPort News VA,0,1
+SCAother,1,Scallop Catch all for remaining ports,0,1
+SCAnewbedford,2,scallop dregde New Bedford MA,0,1
+SCAcapemay,3,scallop dredge Cape May NJ,0,1
+SCAnewportnews,4,Scallop dredge NewPort News VA,0,1
 gfgloucester,5,"Groundfish Gloucester, MA",0,1
 gfnewbedford,6,"Groundfish New Bedford, MA",0,1
 gfpointjudith,7,"Groundfish Point Judith, RI",0,1
