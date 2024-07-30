@@ -1,5 +1,5 @@
 Code,Index,Name,IsRec,NumSubFleets
-midwcISQ,0,Midwater trawl on small pelagics,0,1
+catchall,0,catch all fleet for forced catch,0,1
 midwcLSQ,1,Scallop dredge,0,1
 dredgeSCA1,2,scallop dregde New Bedford MA,0,1
 dredgeSCA2,3,scallop dredge Cape May NJ,0,1
