@@ -31,7 +31,7 @@ for(i in 1:length(groundfish.spp)){
 
 #Seasonal Movement
 source(here::here('R','Calibration_Tools','edit_param_seasonal_movement.R'))
-bboxes = atlantistools::get_boundary(load_box(here::here('Geometry','neus_tmerc_RM2.bgm')))
+bboxes = atlantistools::get_boundary(atlantistools::load_box(here::here('Geometry','neus_tmerc_RM2.bgm')))
 
 blank.prop = rep(0,30)
 boxes = 0:29
@@ -78,11 +78,12 @@ for(s in 1:length(groundfish.spp)){
   # sum(fall.prop)
   
   #calculate interpolated summer/winter vector
-  inter.prop = round((spring.prop+spring.prop)/2,3)
+  inter.prop = round((spring.prop+fall.prop)/2,3)
   inter.corr = 1-sum(inter.prop)
   inter.prop[which.max(inter.prop)] = inter.prop[which.max(inter.prop)]+inter.corr
   # sum(inter.prop)
   
+  x= data.frame(x = 0:29,spring.prop,inter.prop,fall.prop)
   #Do winter
   edit_param_seasonal_movement(
     bio.file = here::here('currentVersion','at_biology.prm'),
