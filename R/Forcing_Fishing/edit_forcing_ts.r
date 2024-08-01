@@ -1,32 +1,37 @@
-#' pulls time series for groups of species
+#' Manipulate a forced catch/effort time series
 #'
 #' Manipulates time series (in total_catch.ts or total_effort) of an individual species/fleet
 #'
 #' @param code character vector. The functional group code of the species or the fleet code to scale
 #' @param tstype character. Make the change to the catch or the effort time series (Default = "effort")
-#' @param time character.  (Default = "annual", "weekly", "daily")
+#' @param trange data frame. (n x 2) first column are the time point, second column contains the values to use
+#' @param filename character. The name of the output file (without the extension) (Default = "temp")
+#' @param keep boolean. keep (T) previous filename or just overwrite (F). (Default = T)
 #' 
 #' @Section Info
 #' 
 #' The time series file of forced catch and forced effort reside in the curentVersion/CatchFiles folder. 
+#' The output file will be created in the same location. If the output file is already present it will be
+#' copied in case the change was made in error
 #' 
+#' Currently the scalar is a global scalar applied to all species/fleet codes
 #' @examples
 #' # example code
 #' 
 
-get_forcing_ts <- function(code,tstype="catch",time="daily") {
+edit_forcing_ts <- function(code,tstype="effort",trange,filename="temp",keep=T) {
 
   # input and output files
-  tstype = tolower(tstype)
-  time = tolower(time)
   if(tstype == "effort") {
-    file <- here::here("currentVersion/CatchFiles/total_effort.ts")
+    file <- here::here(paste0("currentVersion/CatchFiles/",filename,".ts"))
   } else if (tstype=="catch") {
-    file <- here::here("currentVersion/CatchFiles/master_total_catch.ts")
-  #  file <- here::here("currentVersion/CatchFiles/total_catch.ts")
+    file <- here::here("currentVersion/CatchFiles/total_catch.ts")
   } else {
     stop("tsfile must be either 'catch' or 'effort'")
   }
+  
+  outFile <- here::here(paste0("currentVersion/CatchFiles/",filename,".ts"))
+  copyFile <- here::here(paste0("currentVersion/CatchFiles/temp/",filename,".tstemp"))
   
   # read in input file
   content <- readLines(con = file)
@@ -47,8 +52,10 @@ get_forcing_ts <- function(code,tstype="catch",time="daily") {
   df <- as.data.frame(df) |> 
     dplyr::mutate(Column = as.integer(Column))
   
-  # check to make sure codes is valid
-  if(!all(code %in% df$Code) ){
+  print(df)
+  # check to make sure code(s) are valid
+  if(length(intersect(code,df$Code)) != length(code)){
+  #if(!(code %in% df$Code) ){
     stop(paste0(code," is not a valid code for ",tstype," file"))
   }
 
@@ -58,32 +65,23 @@ get_forcing_ts <- function(code,tstype="catch",time="daily") {
   # convert body to a numeric data frame
   body <- as.data.frame(stringr::str_split(body,"\\s+",simplify = T))
   abody <- sapply(body,as.numeric,simplify = T)
-  # identify columns to scale
+  # identify columns to manipulate
   index <- df$Column[which(df$Code %in% code)]
   
-  # pull out selected species
-  colnames(abody) <- df$Code
-  ts <- as.data.frame(abody[,c(1,index)])
-  
-  # convert o long format for aggregation
-  ts <- ts |> 
-    tidyr::pivot_longer(cols=-Time,names_to = "Species",values_to = "Value")
-  
-  if (time == "annual") {
-    ts <- ts |>
-      dplyr::mutate(Time = 1+ floor(Time/365)) |>
-      dplyr::group_by(Time,Species) |>
-      dplyr::summarise(Value = sum(Value),
-                       .groups="drop")
-  } else if (time == "weekly") {
-    ts <- ts |>dplyr::mutate(Time = 1+ floor(Time/7)) |>
-      dplyr::group_by(Time,Species) |>
-      dplyr::summarise(Value = sum(Value),
-                       .groups="drop")
-  } else {
+  print(index)
+  # replace time series
+  abody[trange[,1],index] <- trange[,2]
 
+  
+  if(file.exists(outFile) & (keep)) {
+    file.rename(outFile,copyFile)
+    message(paste0("Your previous version of catch ",filename,".ts has been renamed to temp/",filename,".tstemp"))
   }
   
-  return(ts)
 
+  # write new file
+  writeLines(header,con=outFile)
+  write.table(abody, file = outFile, append = TRUE, sep = " ", row.names = FALSE, col.names = FALSE, quote = FALSE )
+  
+  return(abody)
 }

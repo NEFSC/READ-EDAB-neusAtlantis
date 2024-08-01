@@ -13,16 +13,16 @@
 #' Currently the value is a global value applied to all species codes
 #'
 
-create_effort_ts <- function(filename="total_effort", nYrs=57) {
+create_effort_ts <- function(filename="total_effort", nYrs=58) {
   
   # input and output files
   #catchFile <- here::here("currentVersion/CatchFiles/total_effort.ts")
   outFile <- here::here(paste0("currentVersion/CatchFiles/",filename,".ts"))
-  copyFile <- here::here(paste0("currentVersion/CatchFiles/",filename,".tstemp"))
+  copyFile <- here::here(paste0("currentVersion/CatchFiles/temp/",filename,".tstemp"))
   
   if(file.exists(outFile)) {
     file.rename(outFile,copyFile)
-    message(paste0("Your previous version of catch ",filename,".ts has been renamed to ",filename,".tstemp"))
+    message(paste0("Your previous version of catch ",filename,".ts has been renamed to temp/",filename,".tstemp"))
   }
   
   # read in fisheries.csv file 

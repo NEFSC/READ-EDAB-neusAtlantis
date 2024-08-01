@@ -61,7 +61,7 @@ currentVersion/CatchFiles/**/*
 !/currentVersion/CatchFiles/Catch_Forcing_New_Spinup.pdf
 !/currentVersion/CatchFiles/Catch_Forcing_Raw.pdf
 !/currentVersion/old/*
-
+!/currentVersion/CatchFiles/effort_box*.ts
 
 R/desktop.ini
 diagnostics/Obs_Hindcast_Group_Progress.xlsx
