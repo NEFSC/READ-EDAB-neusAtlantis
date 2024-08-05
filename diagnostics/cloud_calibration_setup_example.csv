@@ -52,3 +52,6 @@ Run.ID,Run.Group,Code,Type,Unit,Value
 38,Test1,MAK,max.temp,value,1
 39,Test1,MAK,min.salt,value,1
 40,Test1,MAK,max.salt,value,1
+41,Test1,MAK,enviro.kill,value,0
+42,Test1,MAK,enviro.displace,value,0
+43,Test1,MAK,speed,value,1000
