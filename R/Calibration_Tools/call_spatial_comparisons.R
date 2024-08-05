@@ -28,15 +28,17 @@ ref.data = readRDS(here::here('data','spatial_reference_survdat_2011_2021.rds'))
 init.data = readRDS(here::here('data','spatial_reference_initial_conditions.rds'))%>%
   filter(statistic == 'proportion' & var.name == 'biomass')
 
-# set.prefix = 'GOO_ddepend_4_'
+set.prefix = 'NE_Groundish_Test'
 # run.names = paste0(set.prefix,1:24)
-run.names = c('Dev_6681_20240620')
-run.dirs = paste0(here::here('Atlantis_Runs',run.names))
+run.names = c('Dev_6681_20240620','NE_groundfish_new_movement')
+run.dirs = c('/net/work3/EDAB/atlantis/Shared_Data/Dev_Runs/Dev_6681_20240620/',
+             paste0(here::here('Atlantis_Runs','NE_groundfish_new_movement')))
 
-run.sets = list(1:6,7:12,13:18,19:24)
-j=2
+# run.sets = list(1:6,7:12,13:18,19:24)
+run.sets = 1:2
+j=1
 
-do.processing = F
+do.processing = T
 for(j in 1:length(run.sets)){
   
   run.names.set = run.names[run.sets[[j]]]
@@ -120,7 +122,7 @@ atlantisprocessing::compare_spatial_vars(
   ref.data = ref.data,
   init.data = init.data,
   out.dir = here::here('Figures','/'),
-  out.name = 'test',
+  out.name = 'NE_Groundfish_rescale_20_60',
   param.ls = get_atl_paramfiles(param.dir = here::here('currentVersion'),
                                 atl.dir = run.dirs[1],
                                 run.prefix = 'neus_output',
@@ -128,7 +130,7 @@ atlantisprocessing::compare_spatial_vars(
   ),
   data.type = 'proportion',
   comparison.type = 'difference',
-  ref.years = 2:4,
+  ref.years = 20:60,
   plot =T
 )
 
