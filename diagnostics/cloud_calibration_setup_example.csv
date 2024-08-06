@@ -46,8 +46,8 @@ Run.ID,Run.Group,Code,Type,Unit,Value
 32,Test1,BFT,aMigSurvive,value,0.5
 33,Test1,MAK,InitScalar,scalar,2
 34,Test1,MAK,ddepend,value,1
-35,Test1,MAK,roc.wgt,value,1
-36,Test1,MAK,k.roc.food,value,1
+35,Test1,NA,roc.wgt,value,1
+36,Test1,NA,k.roc.food,value,1
 37,Test1,MAK,min.temp,value,1
 38,Test1,MAK,max.temp,value,1
 39,Test1,MAK,min.salt,value,1
