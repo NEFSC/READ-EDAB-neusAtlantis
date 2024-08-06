@@ -57,34 +57,58 @@ get_init_biomass = function(bio.age.file, groups.file,write.output =F, output.di
 
 
 # edit_param_init_scalar --------------------------------------------------
-
-edit_param_init_scalar = function(run.prm,groups.file,new.init.scalar,overwrite = F, new.file.name){
+# run.prm = here::here('currentVersion','at_run.prm')
+# groups.file = here::here('currentVersion','neus_groups.csv')
+# group.name = 'MAK'
+# unit = 'scalar'
+# value = 2
+# new.file.name = here::here('currentVersion','at_run_test.prm')
+edit_param_init_scalar = function(run.prm,groups.file,group.name,unit,value,overwrite = F, new.file.name){
   
-  library(dplyr)
   #Read in groups file and run.prm
   fgs = read.csv(groups.file,stringsAsFactors = F)
   run.prm.lines = readLines(run.prm)
   
-  #Read in init_scalar .csv (edited)
-  # new.init.scalar = read.csv(init.scalar.file,stringsAsFactors = F)
-  new.init.scalar$init.scalar = sapply(as.numeric(new.init.scalar$init.scalar),function(x){
-    if(x<1){
-      return(signif(x,3))
-    }else{
-      return(round(x,3))
-    }
-  })
-  new.init.scalar$init.scalar = as.character(new.init.scalar$init.scalar)
+  init.scalar.line = grep('init_scalar',run.prm.lines)+1
   
+  init.scalar.orig = run.prm.lines[init.scalar.line]
+  init.scalar.orig =  as.numeric(strsplit(init.scalar.orig,'\t| ')[[1]])
   
-  #Sort by Group Code Index and join with new data
-  init.scalar.edit = fgs %>% 
-    select(Code, Index) %>%
-    arrange(Index) %>%
-    left_join(new.init.scalar, by = c('Code'= 'group'))
+  which.val = which(fgs$Code == group.name)
   
-  #overwrite line
-  run.prm.lines[grep('init_scalar',run.prm.lines)+1] = paste(init.scalar.edit$init.scalar,collapse ='\t')
+  if(unit == 'value'){
+    new.val = value
+  }else{
+    new.val = init.scalar.orig[which.val] * value
+  }
+  
+  init.scalar.new = init.scalar.orig
+  init.scalar.new[which.val] = new.val
+  
+  init.scalar.new.string = paste(init.scalar.new,collapse = '\t')
+  
+  run.prm.lines[init.scalar.line] = init.scalar.new.string
+  
+  # #Read in init_scalar .csv (edited)
+  # # new.init.scalar = read.csv(init.scalar.file,stringsAsFactors = F)
+  # new.init.scalar$init.scalar = sapply(as.numeric(new.init.scalar$init.scalar),function(x){
+  #   if(x<1){
+  #     return(signif(x,3))
+  #   }else{
+  #     return(round(x,3))
+  #   }
+  # })
+  # new.init.scalar$init.scalar = as.character(new.init.scalar$init.scalar)
+  # 
+  # 
+  # #Sort by Group Code Index and join with new data
+  # init.scalar.edit = fgs %>% 
+  #   select(Code, Index) %>%
+  #   arrange(Index) %>%
+  #   left_join(new.init.scalar, by = c('Code'= 'group'))
+  # 
+  # #overwrite line
+  # run.prm.lines[grep('init_scalar',run.prm.lines)+1] = paste(init.scalar.edit$init.scalar,collapse ='\t')
   
   #overwrite or make copy of run file
   if(overwrite){

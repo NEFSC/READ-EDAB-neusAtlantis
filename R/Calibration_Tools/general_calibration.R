@@ -9,8 +9,8 @@
 library(dplyr)
 
 #Read in setup file
-experiment.id = 'cloud_v6681_calib_6'
-setup.df = read.csv(here::here('Setup_Files','cloud_v6681_calib_6.csv'),as.is=T)
+experiment.id = 'ddepend_1'
+setup.df = read.csv(here::here('Setup_Files','cloud_v6681_ddepend_1_setup.csv'),as.is=T)
 # setup.df = read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'))
 proj.dir = '/contrib/Joseph.Caracappa/calibration/'
 
@@ -19,6 +19,8 @@ bio.file.orig = here::here('currentVersion','at_biology.prm')
 run.sh.orig = here::here('currentVersion','RunAtlantis_cloud.sh')
 sbatch.orig = here::here('currentVersion','sbatch_scenario_array_base.sh')
 fgs.file = here::here('currentVersion','neus_groups.csv')
+mig.file.orig = here::here('currentVersion','neus_migrations.csv')
+run.prm.orig = here::here('currentVersion','at_run.prm')
 
 #Read in functional groups and define inverts
 fgs = read.csv(fgs.file,as.is = T)
@@ -63,10 +65,22 @@ if(any(c('E','EPlant','EDR','EDL') %in% setup.df$Type)){
 if(any('FSP' %in% setup.df$Type)){
   source(here::here('R','Calibration_Tools','edit_param_FSP.R'))
 }
-
 if(any('FSPB' %in% setup.df$Type)){
   source(here::here('R','Calibration_Tools','edit_param_FSPB.R'))
   fspb.orig = get_param_FSPB(bio.prm = bio.file.orig)
+}
+if(any(c('aMigSize','jMigSize','aMigSurvive','jMigSurvive') %in% setup.df$Type)){
+  source(here::here('R','Calibration_Tools','edit_param_migration_csv.R'))
+}
+if('InitScalar' %in% setup.df$Type){
+  source(here::here('R','Calibration_Tools','edit_param_init_scalar.R'))
+}
+if(any(c('ddepend','k.roc.food','roc.wgt') %in% setup.df$Type)){
+  source(here::here('R','Calibration_Tools','edit_param_ddepend.R'))
+}
+if(any(c('max.temp','min.temp','max.salt','min.salt') %in% setup.df$Type)){
+  source(here::here('R','Calibration_Tools','edit_param_env_move.R'))
+  
 }
 
 possible.types = unique(read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'),as.is=T)$Type)
@@ -81,8 +95,26 @@ for(i in 1:length(run.id)){
   bio.file.new = here::here('currentVersion',bio.file.short)
   file.copy(bio.file.orig, bio.file.new,overwrite = T)
   
+  if(any(c('aMigSize','jMigSize','aMigSurvive','jMigSurvive')%in% setup.df$Type)){
+    #copy migration.csv with run.id prefix
+    mig.file.short = paste0('neus_migrations_',run.id[i],'.csv')
+    mig.file.new = here::here('currentVersion',mig.file.short)
+    file.copy(mig.file.orig,mig.file.new,overwrite =T)
+  }else{
+    mig.file.short = 'neus_migrations.csv'
+  }
+
+  if('InitScalar' %in% setup.df$Type){
+    #Copy run.prm with run.id prefix
+    run.prm.short = paste0('at_run_',run.id[i],'.prm')
+    run.prm.new = here::here('currentVersion',run.prm.short)
+    file.copy(run.prm.orig,run.prm.new,overwrite =T)
+  }else{
+    run.prm.short = 'at_run.prm'
+  }
+
   #Separate task for run.id
-  setup.run = filter(setup.df, Run.ID == run.id[i])
+  setup.run = dplyr::filter(setup.df, Run.ID == run.id[i])
   
   j=1
   for(j in 1:nrow(setup.run)){
@@ -317,6 +349,73 @@ for(i in 1:length(run.id)){
                       )
     }
     
+    if(setup.run$Type[j] %in% c('aMigSize','jMigSize','aMigSurvive','jMigSurvive') ){
+      
+      VarName = dplyr::case_when(
+        setup.run$Type[j] == 'aMigSize' ~ 'MigPropSizeInc',
+        setup.run$Type[j] == 'jMigSize' ~ 'MigPropSizeInc',
+        setup.run$Type[j] == 'aMigSurvive' ~ 'MigPropSurvive',
+        setup.run$Type[j] == 'jMigSurvive' ~ 'MigPropSurvive',
+      )
+      StartStage = dplyr::case_when(
+        setup.run$Type[j] == 'aMigSize' ~ 1,
+        setup.run$Type[j] == 'jMigSize' ~ 0,
+        setup.run$Type[j] == 'aMigSurvive' ~ 1,
+        setup.run$Type[j] == 'jMigSurvive' ~ 0,
+      )
+      
+      edit_param_mig_csv(mig.file = mig.file.new,
+                         group.name = setup.run$Code[j],
+                         StartStage = StartStage,
+                         VarName = VarName,
+                         unit = setup.run$Unit[j],
+                         value = setup.run$Value[j],
+                         overwrite =T
+                         )
+    }
+    
+    if(setup.run$Type[j] == 'InitScalar'){
+      
+      edit_param_init_scalar(run.prm = run.prm.new,
+                             groups.file = groups.file,
+                             group.name = setup.run$Code[j],
+                             unit = setup.run$Unit[j],
+                             value = setup.run$Value[j],
+                             overwrite = T)
+      
+    }
+    
+    if(setup.run$Type[j] %in% c('ddepend','k.roc.food','roc.wgt')){
+      
+      if(setup.run$Unit[j] == 'scalar'){
+        stop('ddepend parameters only setup for Unit = "value"')
+      }
+      edit_param_ddepend(bio.file = bio.file.new,
+                         var.name = setup.run$Type[j],
+                         value = setup.run$Value[j],
+                         group.name = setup.run$Code[j],
+                         overwrite =T)
+    }
+    
+    if(setup.run$Type[j] %in% c('min.temp','max.temp','min.salt','max.salt')){
+      
+      if(setup.run$Unit[j] == 'scalar'){
+        stop('Environmental Movement parameters only setup for Unit = "value"')
+      }
+      if(setup.run$Type[j]%in% c('min.temp','max.temp')){
+        env.var = 'temperature'
+      }else if(setup.run$Type[j] %in% c('min.salt','max.salt')){
+        env.var = 'salt'
+      }
+      
+      edit_param_env_move(bio.file = bio.file.new,
+                          var.name = env.var,
+                          group.name = setup.run$Code[j],
+                          min.val = ifelse(setup.run$Type[j] %in% c('min.temp','min.salt'),setup.run$Value[j], NA),
+                          max.val = ifelse(setup.run$Type[j] %in% c('max.temp','max.salt'),setup.run$Value[j], NA),
+                          overwrite = T)
+    }
+    
   }
   
   #Write shell script
@@ -327,7 +426,7 @@ for(i in 1:length(run.id)){
   #Edit shell script
   run.sh.new.lines = readLines(run.sh.new)
   run.command.line = grep('atlantisMerged',run.sh.new.lines)
-  run.command.new =  paste0('atlantisMerged -i neus_init.nc 0 -o neus_output.nc -r at_run.prm -f at_force_LINUX.prm -p at_physics.prm -b ',bio.file.short,' -h at_harvest.prm -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -m neus_migrations.csv -t . -d output')
+  run.command.new =  paste0('atlantisMerged -i neus_init.nc 0 -o neus_output.nc -r ',run.prm.short,' -f at_force_LINUX.prm -p at_physics.prm -b ',bio.file.short,' -h at_harvest.prm -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -m ',mig.file.short,' -t . -d output')
   run.sh.new.lines[run.command.line] = run.command.new
   
   writeLines(run.sh.new.lines,con = run.sh.new)
