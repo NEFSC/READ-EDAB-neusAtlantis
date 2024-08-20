@@ -6,9 +6,15 @@
 #' @plot.XXX = whether to plot specific outputs (and processes relevant data)
 
 source(here::here('R','Post_Processing','make_post_process.R'))
+# remotes::install_github('https://github.com/NOAA-EDAB/atlantisprocessing')
 
-run.name = 'v6681_Calib_5'
+library(atlantisprocessing)
+
+
+run.name = 'fleets_example'
 atl.dir = here::here('Atlantis_Runs',run.name,'')
+# atl.dir = '/net/work3/EDAB/atlantis/Andy_Proj/Atlantis_Runs/gfimposezerotsfullsweptarea_1000000/'
+
 # 
 # process.all = T
 # plot.all = T
@@ -64,10 +70,10 @@ make_post_process(
   plot.spatial.biomass=F,
   plot.spatial.biomass.seasonal = F,
   plot.spatial.overlap = F,
-  plot.LTL=F, 
-  plot.catch =F,
+  plot.catch =T,
+  plot.catch.fleet =T,
   plot.mortality=F,
-  plot.max.weight = F,
+  plot.weight = F,
   
   benthic.box = 1,
   benthic.level = 4,
