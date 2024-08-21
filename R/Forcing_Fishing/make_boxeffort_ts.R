@@ -108,7 +108,8 @@ gfCodes <- readRDS(here::here("data-raw/data/groundfishFleetData.rds"))$landings
   dplyr::pull()
 
 # create df to use to sub into catch
+# all groundfish + scallop
 df <- data.frame(t = ((1+(1996-1964)*365):((2022-1964)*365)), value = 0)
-newcatch <- edit_forcing_ts(gfCodes,tstype="catch",trange=df,filename="total_catch2",keep=F)
+newcatch <- edit_forcing_ts(c(gfCodes,"SCA"),tstype="catch",trange=df,filename="total_catch2",keep=F)
 
 
