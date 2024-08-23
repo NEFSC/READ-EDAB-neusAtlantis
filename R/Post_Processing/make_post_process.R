@@ -27,10 +27,10 @@ make_post_process = function(run.name,
                              plot.spatial.biomass=F,
                              plot.spatial.biomass.seasonal = F,
                              plot.spatial.overlap = F,
-                             plot.LTL=F, 
                              plot.catch =F,
+                             plot.catch.fleet = F,
                              plot.mortality=F,
-                             plot.max.weight = F,
+                             plot.weight = F,
                              benthic.box,
                              benthic.level,
                              
@@ -45,9 +45,9 @@ make_post_process = function(run.name,
   library(RNetCDF)
   ##Loads post-processing functions
   
-  source(here::here('R','Post_Processing','get_atl_paramfiles.R'))
-  source(here::here('R','Post_Processing','process_atl_output.R'))
-  source(here::here('R','Post_Processing','make_atlantis_diagnostic_figures.R'))
+  # source(here::here('R','Post_Processing','get_atl_paramfiles.R'))
+  # source(here::here('R','Post_Processing','process_atl_output.R'))
+  # source(here::here('R','Post_Processing','make_atlantis_diagnostic_figures.R'))
   
   dir.create(paste0(atl.dir,'Post_Processed/'))
   dir.create(paste0(atl.dir,'Post_Processed/Data/'))
@@ -56,13 +56,13 @@ make_post_process = function(run.name,
   fig.dir = paste0(atl.dir,'Post_Processed/')
   
   #Run function that retreives parameter files
-  param.ls= get_atl_paramfiles(param.dir = param.dir,
+  param.ls= atlantisprocessing::get_atl_paramfiles(param.dir = param.dir,
                                atl.dir=atl.dir,
                                run.prefix = run.prefix,
                                include_catch=T)
   
   #Run  post-processing function to generate "result" R object. 
-  process_atl_output(
+  atlantisprocessing::process_atl_output(
     param.dir = param.dir,
     atl.dir = atl.dir,
     out.dir = out.dir,
@@ -90,17 +90,18 @@ make_post_process = function(run.name,
     plot.spatial.biomass=plot.spatial.biomass,
     plot.spatial.biomass.seasonal = plot.spatial.biomass.seasonal,
     plot.spatial.overlap = plot.spatial.overlap,
-    plot.LTL=plot.LTL, 
+    # plot.LTL=plot.LTL, 
     plot.catch =plot.catch,
+    plot.catch.fleet = plot.catch.fleet,
     plot.mortality=plot.mortality,
-    plot.max.weight = plot.max.weight
+    plot.weight = plot.weight
   )
   #If result object saved to file or already exists load it into env.
   # load(paste0(out.dir,'neus_output_postprocessed.rdata'))
   # load(paste0(out.dir,'neus_output_postprocessed.Rdata'))
   
   #Run diagnostic figures/tables script. See function document for more detailed description of figures.
-  make_atlantis_diagnostic_figures(
+  atlantisprocessing::make_atlantis_diagnostic_figures(
     atl.dir = atl.dir,
     fig.dir = fig.dir,
     out.dir = out.dir,
@@ -132,10 +133,11 @@ make_post_process = function(run.name,
     plot.consumption= plot.consumption,
     plot.spatial.biomass=plot.spatial.biomass,
     plot.spatial.biomass.seasonal = plot.spatial.biomass.seasonal,
-    plot.LTL=plot.LTL, 
+    # plot.LTL=plot.LTL, 
     plot.catch =plot.catch,
+    # plot.catch.fleet = plot.catch.fleet,
     plot.mortality=plot.mortality,
-    plot.max.weight = plot.max.weight
+    plot.weight = plot.weight
     
   )
   

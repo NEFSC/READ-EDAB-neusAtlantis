@@ -1,9 +1,9 @@
 #' pulls time series for groups of species
 #'
-#' Manipulates time series (in total_catch.ts or total_effort) of an individual species/fleet
+#' Reads time series from ts files of an individual species/fleet
 #'
 #' @param code character vector. The functional group code of the species or the fleet code to scale
-#' @param tstype character. Make the change to the catch or the effort time series (Default = "effort")
+#' @param filenm character. The name of the file to read (without extension)
 #' @param time character.  (Default = "annual", "weekly", "daily")
 #' 
 #' @Section Info
@@ -14,19 +14,20 @@
 #' # example code
 #' 
 
-get_forcing_ts <- function(code,tstype="catch",time="daily") {
+get_forcing_ts <- function(code,filenm ="total_catch_fleets",time="daily") {
 
   # input and output files
-  tstype = tolower(tstype)
+  #tstype = tolower(tstype)
   time = tolower(time)
-  if(tstype == "effort") {
-    file <- here::here("currentVersion/CatchFiles/total_effort.ts")
-  } else if (tstype=="catch") {
-    file <- here::here("currentVersion/CatchFiles/master_total_catch.ts")
-  #  file <- here::here("currentVersion/CatchFiles/total_catch.ts")
-  } else {
-    stop("tsfile must be either 'catch' or 'effort'")
-  }
+  file <- paste0(here::here("currentVersion/CatchFiles/"),filenm,".ts")
+  # if(tstype == "effort") {
+  #   file <- here::here("currentVersion/CatchFiles/total_effort.ts")
+  # } else if (tstype=="catch") {
+  # #  file <- here::here("currentVersion/CatchFiles/master_total_catch.ts")
+  #   file <- here::here("currentVersion/CatchFiles/total_catch_fleets.ts")
+  # } else {
+  #   stop("tsfile must be either 'catch' or 'effort'")
+  # }
   
   # read in input file
   content <- readLines(con = file)
