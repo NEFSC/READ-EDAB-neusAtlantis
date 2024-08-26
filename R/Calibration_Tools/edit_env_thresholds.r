@@ -71,7 +71,7 @@ edit_param_env_thresholds = function(bio.file,spp.names,threshold.dt,group_locat
 # Sample code
 #bio.file  = here::here('currentVersion','at_biology.prm')
 #fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T)
-#threshold.dt <- read.csv(here::here('currentVersion','atlantis_group_thresholds_NRHA.csv'))
-#group_locations.dt <- read.csv(here::here('currentVersion','group_locations.csv'))
+#threshold.dt <- read.csv(here::here('data','atlantis_group_thresholds_NRHA.csv'))
+#group_locations.dt <- read.csv(here::here('data','group_locations.csv'))
 #new.file.name <- here::here('currentVersion','at_biology_env_thresholds.prm')
 #edit_param_env_thresholds(bio.file,fgs$Code[1:86],threshold.dt,group_locations.dt,new.file.name,overwrite=F)
