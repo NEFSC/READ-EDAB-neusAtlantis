@@ -1,0 +1,12 @@
+ID,Fleet,MainPort,State,lat,lon,GearType
+1,NE Groundfish,PORTLAND,ME,43.6573605,-70.2586618,"Bottom Trawl, Sink Gillnet"
+2,NE Groundfish,PORTSMOUTH,NH,43.0702223,-70.7548621,"Bottom Trawl, Sink Gillnet"
+3,NE Groundfish,GLOUCESTER,MA,42.6153595,-70.6624608,"Bottom Trawl, Sink Gillnet"
+4,NE Groundfish,BOSTON,MA,42.3554334,-71.060511,"Bottom Trawl, Sink Gillnet"
+5,NE Groundfish,CHATHAM,MA,41.6820563,-69.9597376,"Bottom Trawl, Sink Gillnet"
+6,NE Groundfish,NEW BEDFORD,MA,41.6362152,-70.934205,"Bottom Trawl, Sink Gillnet"
+7,NE Groundfish,POINT JUDITH,RI,41.3653803,-71.4867226,"Bottom Trawl, Sink Gillnet"
+8,NE Groundfish,MONTAUK,NY,41.0347223,-71.9442623,"Bottom Trawl, Sink Gillnet"
+9,Scallop,NEW BEDFORD,MA,41.6362152,-70.934205,Scallop Gear
+10,Scallop,CAPE MAY,NJ,38.933431,-74.9214226,Scallop Gear
+11,Scallop,NEWPORT NEWS,VA,36.9775016,-76.42977,Scallop Gear
