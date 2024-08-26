@@ -107,7 +107,6 @@
 |BWH|Baleen whales|Baleen whales|NA|NA|NA|NA|TRUE|
 |CLA|Atlantic surf clam|Atlantic surf clam|SPISULA SOLIDISSIMA|403|769|80944|TRUE|
 |COD|Atlantic cod|Atlantic cod|GADUS MORHUA|73|81|164712|TRUE|
-|COD|Atlantic cod|Atlantic cod|GADUS MORHUA|73|82|164712|TRUE|
 |DC|Carrion|Carrion|NA|NA|NA|NA|FALSE|
 |DF|Dinoflagellates|Dinoflagellates|NA|NA|NA|NA|FALSE|
 |DL|Labile detritus|Labile detritus|NA|NA|NA|NA|FALSE|
@@ -221,11 +220,9 @@
 |FLA|Other flatfish|Nk flounders|PLEURONECTIFORMES|NA|126|172702|FALSE|
 |FLA|Other flatfish|Southern flounder|PARALICHTHYS LETHOSTIGMA|NA|130|172738|FALSE|
 |FOU|Fourspot flounder|Fourspot flounder|PARALICHTHYS OBLONGUS|104|127|172739|TRUE|
-|GOO|Goosefish|Goosefish|LOPHIUS AMERICANUS|197|11|164499|TRUE|
 |GOO|Goosefish|Goosefish|LOPHIUS AMERICANUS|197|12|164499|TRUE|
 |GOO|Goosefish|Blackfin goosefish|LOPHIUS GASTROPHYSUS|NA|13|164500|FALSE|
 |HAD|Haddock|Haddock|MELANOGRAMMUS AEGLEFINUS|74|147|164744|TRUE|
-|HAD|Haddock|Haddock|MELANOGRAMMUS AEGLEFINUS|74|148|164744|TRUE|
 |HAL|Atlantic halibut|Atlantic halibut|HIPPOGLOSSUS HIPPOGLOSSUS|101|159|172933|TRUE|
 |HER|Atlantic herring|Atlantic herring|CLUPEA HARENGUS|32|168|161722|TRUE|
 |HER|Atlantic herring|Nk herring|CLUPEIDAE|NA|167|161700|FALSE|
@@ -239,7 +236,7 @@
 |MA|Macroalgae|Rockweed|FUCACEAE|NA|832|11329|FALSE|
 |MAK|Atlantic mackerel|Atlantic mackerel|SCOMBER SCOMBRUS|121|212|172414|TRUE|
 |MB|Microphtybenthos|Microphtybenthos|NA|NA|NA|NA|FALSE|
-|MEN|Atlantic menhaden|Atlantic menhaden|BREVOORTIA|36|221|161731|TRUE|
+|MEN|Atlantic menhaden|Atlantic menhaden|BREVOORTIA|36|221|161732|TRUE|
 |MPF|Migratory mesopelagic fish|Lanternfish|MYCTOPHIDAE|56|655|162575|FALSE|
 |MPF|Migratory mesopelagic fish|Weitzmans pearlsides|NA|229|NA|NA|FALSE|
 |MPF|Migratory mesopelagic fish|Cobia|RACHYCENTRON CANADUM|NA|57|168566|FALSE|
@@ -262,7 +259,6 @@
 |PL|Diatom|Diatom|NA|NA|NA|NA|FALSE|
 |PLA|American plaice|American plaice|HIPPOGLOSSOIDES PLATESSOIDES|102|124|172877|TRUE|
 |POL|Pollock|Pollock|POLLACHIUS VIRENS|75|269|164727|TRUE|
-|POL|Pollock|Pollock|POLLACHIUS VIRENS|75|270|164727|TRUE|
 |POR|Porbeagle shark|Porbeagle shark|LAMNA NASUS|353|481|159911|TRUE|
 |PS|Pico-phytoplankton|Pico-phytoplankton|NA|NA|NA|NA|FALSE|
 |PSH|Other pelagic sharks|Bignose shark|CARCHARHINUS ALTIMUS|929|483|160307|FALSE|
@@ -304,7 +300,7 @@
 |SHK|Silver hake|Silver hake|MERLUCCIUS BILINEARIS|72|509|164791|TRUE|
 |SHK|Silver hake|King whiting|MENTICIRRHUS|NA|197|169273|FALSE|
 |SK|Northeast skate complex|Atlantic stingray|DASYATIDAE|373|286|160946|FALSE|
-|SK|Northeast skate complex|Atlantic torpedo|NA|21|NA|NA|FALSE|
+|SK|Northeast skate complex|Atlantic torpedo|RAJIDAE|21|365|160845|FALSE|
 |SK|Northeast skate complex|Barndoor skate|DIPTURUS LAEVIS|22|368|564139|FALSE|
 |SK|Northeast skate complex|Bluntnose stingray|NA|18|NA|NA|FALSE|
 |SK|Northeast skate complex|Bullnose ray|NA|19|NA|NA|FALSE|
@@ -340,11 +336,10 @@
 |TYL|All tilefish|Sand tilefish|MALACANTHUS PLUMIERI|NA|445|168548|FALSE|
 |WHK|White hake|White hake|UROPHYCIS TENUIS|76|153|164732|TRUE|
 |WHK|White hake|White hake|UROPHYCIS TENUIS|76|154|164732|TRUE|
-|WIF|Winter flounder|Winter flounder|PSEUDOPLEURONECTES AMERICANUS|106|119|172905|TRUE|
 |WIF|Winter flounder|Winter flounder|PSEUDOPLEURONECTES AMERICANUS|106|120|172905|TRUE|
 |WOL|Wolffish|Northern wolffish|ANARHICHAS DENTICULATUS|NA|668|550561|FALSE|
 |WOL|Wolffish|Spotted wolffish|ANARHICHAS MINOR|NA|510|171342|FALSE|
-|WOL|Wolffish|Wolffishes|ANARHICHAS LUPUS|NA|512|171341|FALSE|
+|WOL|Wolffish|Atlantic Wolffish|ANARHICHAS LUPUS|192|512|171341|FALSE|
 |WPF|Windowpane flounder|Windowpane flounder|SCOPHTHALMUS AQUOSUS|108|125|172746|TRUE|
 |WSK|Winter skate|Winter skate|LEUCORAJA OCELLATA|23|367|564145|TRUE|
 |WTF|Witch flounder|Witch flounder|GLYPTOCEPHALUS CYNOGLOSSUS|107|122|172873|TRUE|
