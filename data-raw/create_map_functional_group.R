@@ -102,9 +102,10 @@ create_map_functional_group <- function(channel,writeToFile=F) {
   # cod, goosefish, haddock, pollock, winter flounder
   masterList <- masterList |> 
     dplyr::filter(is.na(NESPP3) | !(NESPP3 %in% c(82,11,148,270,119)) )
+  # remove general wolffishes category. Atlantic wolfish covers this
+  masterList <- masterList |> 
+    dplyr::filter(is.na(NESPP3) | !(is.na(SVSPP) & NESPP3 == 512))
   
-  
-
   write.csv(masterList,here::here("data-raw/data/Atlantis_2_0_groups_svspp_nespp3.csv"))
   
   # format to markdown table. Copy output to wiki
