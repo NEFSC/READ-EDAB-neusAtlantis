@@ -82,18 +82,18 @@ bluefish = readRDS(here::here('data-raw','BLF_asfmc_biomass.rds'))
 
 #Create variance that is based on a CV = 0.3 so sigma = 0.3*mu
 bluefish.var = bluefish %>%
-  mutate(value = (biomass*0.3)^2,
+  dplyr::mutate(value = (biomass*0.3)^2,
          variable = 'tot.bio.var',
          units = 'mt')%>%
-  select(year,variable,units,value)
+  dplyr::select(year,variable,units,value)
   
 bluefish = bluefish %>%
-  rename(value = 'biomass')%>%
-  mutate(variable = 'tot.biomass')%>%
-  bind_rows(bluefish.var)%>%
-  mutate(SVSPP = 135,
+  dplyr::rename(value = 'biomass')%>%
+  dplyr::mutate(variable = 'tot.biomass')%>%
+  dplyr::bind_rows(bluefish.var)%>%
+  dplyr::mutate(SVSPP = 135,
          units = 'mt')%>%
-  rename(YEAR = 'year')
+  dplyr::rename(YEAR = 'year')
 
 ### Menhaden data from ASFMC_2020
 
@@ -101,18 +101,18 @@ menhaden =  readRDS(here::here('data-raw','MEN_asfmc_biomass.rds'))
 
 #Create variance that is based on a CV = 0.3 so sigma = 0.3*mu
 menhaden.var = menhaden %>%
-  mutate(value = (biomass*0.3)^2,
+  dplyr::mutate(value = (biomass*0.3)^2,
          variable = 'tot.bio.var',
          units = 'mt')%>%
-  select(year,variable,units,value)
+  dplyr::select(year,variable,units,value)
 
 menhaden = menhaden %>%
-  rename(value = 'biomass')%>%
-  mutate(variable = 'tot.biomass')%>%
-  bind_rows(menhaden.var)%>%
-  mutate(SVSPP = 36,
+  dplyr::rename(value = 'biomass')%>%
+  dplyr::mutate(variable = 'tot.biomass')%>%
+  dplyr::bind_rows(menhaden.var)%>%
+  dplyr::mutate(SVSPP = 36,
          units = 'mt')%>%
-  rename(YEAR = 'year')
+  dplyr::rename(YEAR = 'year')
 
 ### SummerFlounder data from ASFMC_2020
 
@@ -120,18 +120,18 @@ summer.flounder =  readRDS(here::here('data-raw','SUF_asfmc_biomass.rds'))
 
 #Create variance that is based on a CV = 0.3 so sigma = 0.3*mu
 summer.flounder.var = summer.flounder %>%
-  mutate(value = (biomass*0.3)^2,
+  dplyr::mutate(value = (biomass*0.3)^2,
          variable = 'tot.bio.var',
          units = 'mt')%>%
-  select(year,variable,units,value)
+  dplyr::select(year,variable,units,value)
 
 summer.flounder = summer.flounder %>%
-  rename(value = 'biomass')%>%
-  mutate(variable = 'tot.biomass')%>%
-  bind_rows(summer.flounder.var)%>%
-  mutate(SVSPP = 103,
+  dplyr::rename(value = 'biomass')%>%
+  dplyr::mutate(variable = 'tot.biomass')%>%
+  dplyr::bind_rows(summer.flounder.var)%>%
+  dplyr::mutate(SVSPP = 103,
          units = 'mt')%>%
-  rename(YEAR = 'year')
+  dplyr::rename(YEAR = 'year')
 
 
 ##############################################################################
