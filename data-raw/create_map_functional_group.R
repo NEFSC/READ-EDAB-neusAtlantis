@@ -7,21 +7,21 @@
 
 # list packages and check to see if needed to be installed
 library(magrittr)
-packages <- data.frame(pkgName = c("remotes","dplyr","readr","here","dbutils","utilities","cfdbs","survdat"),
-                       pkgSource = c("remotes","dplyr","readr","here","andybeet/dbutils","andybeet/utilities","andybeet/cfdbs","andybeet/survdat"),
-                       pkgLocation= c("cran","cran","cran","cran","github","github","github","github"))
-
-# install missing packages                       
-for (apack in packages$pkgName) {
-  if (length(apack[!( apack %in% installed.packages()[, "Package"])])) {
-    pkgInfo <- packages %>% dplyr::filter(pkgName==apack)
-    if (pkgInfo$pkgSource == "cran") {
-      install.packages(apack)
-    } else {
-      remotes::install_github(pkgInfo$pkgSource)
-    }
-  }
-}
+# packages <- data.frame(pkgName = c("remotes","dplyr","readr","here","dbutils","utilities","cfdbs","survdat"),
+#                        pkgSource = c("remotes","dplyr","readr","here","andybeet/dbutils","andybeet/utilities","andybeet/cfdbs","andybeet/survdat"),
+#                        pkgLocation= c("cran","cran","cran","cran","github","github","github","github"))
+# 
+# # install missing packages                       
+# for (apack in packages$pkgName) {
+#   if (length(apack[!( apack %in% installed.packages()[, "Package"])])) {
+#     pkgInfo <- packages %>% dplyr::filter(pkgName==apack)
+#     if (pkgInfo$pkgSource == "cran") {
+#       install.packages(apack)
+#     } else {
+#       remotes::install_github(pkgInfo$pkgSource)
+#     }
+#   }
+# }
 
 
 create_map_functional_group <- function(channel,writeToFile=F) {
@@ -93,6 +93,17 @@ create_map_functional_group <- function(channel,writeToFile=F) {
   
   masterList <- dplyr::setdiff(masterList,removedups)
 
+  # edits manual
+  #change menhaden species_itis
+  ind <- masterList$NESPP3 %in% 221 
+  masterList[ind,"Species_Itis"] <- 161732
+  
+  # remove species with 2 nespp3 codes. Remove code deals with bits and pieces
+  # cod, goosefish, haddock, pollock, winter flounder
+  masterList <- masterList |> 
+    dplyr::filter(is.na(NESPP3) | !(NESPP3 %in% c(82,11,148,270,119)) )
+  
+  
 
   write.csv(masterList,here::here("data-raw/data/Atlantis_2_0_groups_svspp_nespp3.csv"))
   
