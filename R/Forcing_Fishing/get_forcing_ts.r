@@ -17,7 +17,7 @@
 
 get_forcing_ts <- function(code=NULL,filenm ="total_catch_fleets",time="daily") {
 
-  message(paste0("Getting info for :",filenm,".ts"))
+  message(paste0("Getting info for: ",filenm,".ts"))
   # input and output files
   time = tolower(time)
   file <- paste0(here::here("currentVersion/CatchFiles",paste0(filenm,".ts")))
