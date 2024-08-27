@@ -52,7 +52,7 @@ create_effort_ts <- function(filename="total_effort", nYrs=58) {
   }
   
   # now add data. just add a matrix of zeros
-  t <- data.frame(t = 1:(365*nYrs))
+  t <- data.frame(t = -1+ (1:(365*nYrs)))
   d <- as.data.frame(matrix(data=0,nrow=nrow(t),ncol=numFisheries))
   abody <- cbind(t,d)
   
