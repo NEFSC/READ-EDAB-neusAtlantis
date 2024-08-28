@@ -92,7 +92,9 @@ for (ibox in boxes) {
       dplyr::left_join(boxPortData, by ="Year") |>
       dplyr::mutate(effort = dplyr::case_when(is.na(effort) ~ 0,
                                               .default = effort)) |>
-      dplyr::mutate(effort = round(effort/365,digits = 5)) 
+      dplyr::mutate(effort = round(effort/365,digits = 8))  |> 
+      dplyr::mutate(t = t-1) |> 
+      dplyr::relocate(t)
     
     ## Edit the ts file
     neweff <- replace_forcing_ts(afleet,tstype="effort",tseries=useEffort$effort,filename=fboxname,keep=F)
