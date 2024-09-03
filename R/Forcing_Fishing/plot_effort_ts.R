@@ -2,6 +2,8 @@
 #'
 #'
 
+source(here::here("R/Forcing_Fishing/get_forcing_ts.r"))
+
 # read in fleet file
 nBoxes <- 30
 a <- list()
@@ -35,6 +37,31 @@ p <- ggplot2::ggplot(df) +
 # this should look the same
 gfFleet <- readRDS(here::here("data-raw/data/groundfishFleetData.rds"))
 
-ggplot2::ggplot(gfFleet$effort) +
+p <- ggplot2::ggplot(gfFleet$effort) +
   ggplot2::geom_line(ggplot2::aes(x=Year,y=effort/365,col = newport)) +
   ggplot2::facet_wrap(~Box)
+
+plotly::ggplotly(p)
+
+
+#plot landings
+boxLandings <- gfFleet$landings |> 
+  dplyr::group_by(Year,Box,newport) |> 
+  dplyr::summarise(landings=sum(landings),
+                   .groups = "drop")
+speciesLandings <- gfFleet$landings |> 
+  dplyr::group_by(Year,Code,newport) |> 
+  dplyr::summarise(landings=sum(landings),
+                   .groups = "drop")
+
+p <- ggplot2::ggplot(boxLandings) +
+  ggplot2::geom_line(ggplot2::aes(x=Year,y=landings,col = newport)) +
+  ggplot2::facet_wrap(~Box)
+
+plotly::ggplotly(p)
+
+p <- ggplot2::ggplot(speciesLandings) +
+  ggplot2::geom_line(ggplot2::aes(x=Year,y=landings,col = newport)) +
+  ggplot2::facet_wrap(~Code) 
+
+  plotly::ggplotly(p)
