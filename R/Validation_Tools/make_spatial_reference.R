@@ -1,6 +1,7 @@
 #Script to create spatial biomass and abundance reference points using
 # A) Survdat data pull over a certain time range
 # B) Initial model conditions
+# C) Catch spatial reference (from comlandr pull)
 library(dplyr)
 library(atlantistools)
 
@@ -15,7 +16,7 @@ fgs.file = here::here('currentVersion','neus_groups.csv')
 fgs = read.csv(fgs.file,as.is = T) %>%
   select(Code,Name,LongName,NumCohorts)
 
-survdat = readRDS(here::here('data','sweptAreaBiomassNEUSBOX.RDS'))
+survdat = readRDS(here::here('data','sweptAreaBiomassNEUSBoxSpringandFall.RDS'))
 
 init.file = here::here('currentVersion','neus_init.nc')
 init.nc = ncdf4::nc_open(init.file)
@@ -48,8 +49,10 @@ blank.ref = data.frame(Code = rep(fgs$Code, each = 30),
 
 survdat.mean = survdat %>%
   filter(YEAR %in% ref.years & variable %in% c('tot.biomass','tot.abundance'))%>%
-  group_by(Code,variable,box)%>%
+  group_by(Code,variable,season,box)%>%
   summarise(mean.value = mean(value,na.rm=T))%>%
+  group_by(Code,variable,box)%>%
+  summarise(mean.value = mean(mean.value,na.rm=T))%>%
   ungroup()
 
 survdat.mean$mean.value[which(survdat.mean$box %in% bboxes)] = NA
@@ -215,10 +218,15 @@ for(i in 1:nrow(fgs)){
 
 init.ref = bind_rows(init.ref.ls) %>%
   tidyr::gather('variable','init.value',-species,-polygon)%>%
+  dplyr::mutate(init.value = ifelse(init.value == 0, NA, init.value))%>%
   tidyr::separate('variable',c('var.name','statistic'))%>%
   left_join(fgs, by = c('species' = 'Name'))%>%
   select(LongName,polygon,var.name,statistic,init.value)%>%
   rename(species = 'LongName')
   
+  
 
 saveRDS(init.ref,here::here('data',paste0('spatial_reference_initial_conditions.rds')))
+
+#Make Catch Reference
+catch.box = readRDS(here::here('data-raw','landings_by_box_species.rds'))
