@@ -7,7 +7,7 @@
 
 source(here::here('R','Post_Processing','make_post_process.R'))
 
-run.name = 'fleets_example'
+run.name = 'gfsca_bgmbox8deph50'
 atl.dir = here::here('Atlantis_Runs',run.name,'/')
 # 
 # process.all = T

@@ -3,7 +3,7 @@ library(dplyr)
 library(ggplot2)
 library(mapdata)
 
-run.name = 'fleets_example'
+run.name = 'gfsca_bgmbox8deph50'
 run.dir = here::here('Atlantis_Runs',run.name)
 figure.dir = paste0(run.dir,'/Post_Processed/')
 
@@ -64,7 +64,7 @@ gf.catch.prop.all =catch.fleet %>%
   mutate(catch.tot = sum(catch,na.rm=T),
          catch.prop = catch/catch.tot,
          polygon = as.factor(polygon),
-         catch.prop = ifelse(catch.prop < 0.01,NA,catch.prop))
+         catch.prop = ifelse(catch.prop ==0,NA,catch.prop))
 
 plot.data.all = boxes %>%
   left_join(gf.catch.prop.all)
@@ -75,3 +75,27 @@ ggplot(plot.data.all, aes( x= long, y = lat, group = polygon, fill = catch.prop)
   annotation_map(neus.map,fill = 'grey80',color = 'black')+
   theme_bw()+
   theme(legend.position = 'bottom')
+
+ggsave(paste0(figure.dir,'groundfish_catch_all.png'),width = 10,height =10,units ='in',dpi =300)
+
+#Make plot of catch by box for grounfish for reference area
+catch.ref =readRDS(here::here('data','spatial_reference_landings_fleet.rds'))%>%
+  filter(grepl('^gf',fleet)& statistic == 'value' & var.name == 'catch_fleet')%>%
+  group_by(polygon)%>%
+  summarise(catch = sum(ref.value,na.rm=T))%>%
+  mutate(catch.tot = sum(catch,na.rm=T),
+         catch.prop = catch/catch.tot,
+         polygon = factor(polygon))%>%
+  mutate(catch.prop = ifelse(as.numeric(polygon) > 23, NA, catch.prop))
+
+plot.ref = boxes %>%
+  left_join(catch.ref)
+  
+ggplot(plot.ref, aes( x= long, y = lat, group = polygon, fill = catch.prop))+
+  geom_polygon( color = 'black')+
+  scale_fill_viridis_c(name = 'Catch Proportion')+
+  annotation_map(neus.map,fill = 'grey80',color = 'black')+
+  theme_bw()+
+  theme(legend.position = 'bottom')
+
+ggsave(paste0(figure.dir,'groundfish_catch_all.png'),width = 10,height =10,units ='in',dpi =300)

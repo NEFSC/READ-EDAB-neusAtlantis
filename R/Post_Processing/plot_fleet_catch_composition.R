@@ -3,7 +3,7 @@ library(dplyr)
 library(ggplot2)
 library(mapdata)
 
-run.name = 'fleets_example'
+run.name = 'gfsca_bgmbox8deph50'
 run.dir = here::here('Atlantis_Runs',run.name)
 figure.dir = paste0(run.dir,'/Post_Processed/')
 
@@ -62,7 +62,7 @@ ggplot(catch.fleet.comp.last10,aes(x = fleet, y = catch.prop, fill = species))+
   ylab('Proportion of Landings')+
   theme(legend.position = 'bottom')
 
-ggsave(paste0(figure.dir,run.name,'_catch_composition_all.png'))
+ggsave(paste0(figure.dir,run.name,'_catch_composition_all.png'),width = 12,height =10, units = 'in',dpi =300)
 
 
 #Do all for reference data

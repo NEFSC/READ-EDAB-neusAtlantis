@@ -3,7 +3,7 @@ library(dplyr)
 library(ggplot2)
 library(mapdata)
 
-run.name = 'fleets_example'
+run.name = 'gfsca_bgmbox8deph50'
 run.dir = here::here('Atlantis_Runs',run.name)
 figure.dir = paste0(run.dir,'/Post_Processed/')
 
