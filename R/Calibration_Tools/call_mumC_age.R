@@ -3,10 +3,10 @@ library(dplyr)
 source(here::here('R','Calibration_Tools','edit_param_mum_age.R'))
 source(here::here('R','Calibration_Tools','edit_param_C_age.R'))
 
-group.names = 'HER'
+group.names = 'WTF'
 
 mum.scale = 1
-C.scale = 0.8
+C.scale = 1.25
 
 bio.prm = here::here('currentVersion','at_biology.prm')
 
