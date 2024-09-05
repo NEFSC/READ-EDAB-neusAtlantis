@@ -9,9 +9,9 @@
 library(dplyr)
 
 #Read in setup file
-experiment.id = 'test'
-# setup.df = read.csv(here::here('Setup_Files','cloud_v6681_calib_6.csv'),as.is=T)
-setup.df = read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'))
+experiment.id = 'ddepend_1'
+setup.df = read.csv(here::here('Setup_Files','cloud_v6681_ddepend_1_setup.csv'),as.is=T)
+# setup.df = read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'))
 proj.dir = '/contrib/Joseph.Caracappa/calibration/'
 
 #Define base files
@@ -75,6 +75,13 @@ if(any(c('aMigSize','jMigSize','aMigSurvive','jMigSurvive') %in% setup.df$Type))
 if('InitScalar' %in% setup.df$Type){
   source(here::here('R','Calibration_Tools','edit_param_init_scalar.R'))
 }
+if(any(c('ddepend','k.roc.food','roc.wgt') %in% setup.df$Type)){
+  source(here::here('R','Calibration_Tools','edit_param_ddepend.R'))
+}
+if(any(c('max.temp','min.temp','max.salt','min.salt') %in% setup.df$Type)){
+  source(here::here('R','Calibration_Tools','edit_param_env_move.R'))
+  
+}
 
 possible.types = unique(read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'),as.is=T)$Type)
 
@@ -88,16 +95,24 @@ for(i in 1:length(run.id)){
   bio.file.new = here::here('currentVersion',bio.file.short)
   file.copy(bio.file.orig, bio.file.new,overwrite = T)
   
-  #copy migration.csv with run.id prefix
-  mig.file.short = paste0('neus_migrations_',run.id[i],'.csv')
-  mig.file.new = here::here('currentVersion',mig.file.short)
-  file.copy(mig.file.orig,mig.file.new,overwrite =T)
-  
-  #Copy run.prm with run.id prefix
-  run.prm.short = paste0('at_run_',run.id[i],'.prm')
-  run.prm.new = here::here('currentversion',run.prm.short)
-  file.copy(run.prm.orig,run.prm.new,overwrite =T)
-  
+  if(any(c('aMigSize','jMigSize','aMigSurvive','jMigSurvive')%in% setup.df$Type)){
+    #copy migration.csv with run.id prefix
+    mig.file.short = paste0('neus_migrations_',run.id[i],'.csv')
+    mig.file.new = here::here('currentVersion',mig.file.short)
+    file.copy(mig.file.orig,mig.file.new,overwrite =T)
+  }else{
+    mig.file.short = 'neus_migrations.csv'
+  }
+
+  if('InitScalar' %in% setup.df$Type){
+    #Copy run.prm with run.id prefix
+    run.prm.short = paste0('at_run_',run.id[i],'.prm')
+    run.prm.new = here::here('currentVersion',run.prm.short)
+    file.copy(run.prm.orig,run.prm.new,overwrite =T)
+  }else{
+    run.prm.short = 'at_run.prm'
+  }
+
   #Separate task for run.id
   setup.run = dplyr::filter(setup.df, Run.ID == run.id[i])
   
@@ -368,6 +383,37 @@ for(i in 1:length(run.id)){
                              value = setup.run$Value[j],
                              overwrite = T)
       
+    }
+    
+    if(setup.run$Type[j] %in% c('ddepend','k.roc.food','roc.wgt')){
+      
+      if(setup.run$Unit[j] == 'scalar'){
+        stop('ddepend parameters only setup for Unit = "value"')
+      }
+      edit_param_ddepend(bio.file = bio.file.new,
+                         var.name = setup.run$Type[j],
+                         value = setup.run$Value[j],
+                         group.name = setup.run$Code[j],
+                         overwrite =T)
+    }
+    
+    if(setup.run$Type[j] %in% c('min.temp','max.temp','min.salt','max.salt')){
+      
+      if(setup.run$Unit[j] == 'scalar'){
+        stop('Environmental Movement parameters only setup for Unit = "value"')
+      }
+      if(setup.run$Type[j]%in% c('min.temp','max.temp')){
+        env.var = 'temperature'
+      }else if(setup.run$Type[j] %in% c('min.salt','max.salt')){
+        env.var = 'salt'
+      }
+      
+      edit_param_env_move(bio.file = bio.file.new,
+                          var.name = env.var,
+                          group.name = setup.run$Code[j],
+                          min.val = ifelse(setup.run$Type[j] %in% c('min.temp','min.salt'),setup.run$Value[j], NA),
+                          max.val = ifelse(setup.run$Type[j] %in% c('max.temp','max.salt'),setup.run$Value[j], NA),
+                          overwrite = T)
     }
     
   }
