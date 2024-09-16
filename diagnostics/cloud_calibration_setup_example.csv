@@ -52,3 +52,12 @@ Run.ID,Run.Group,Code,Type,Unit,Value
 38,Test1,MAK,max.temp,value,1
 39,Test1,MAK,min.salt,value,1
 40,Test1,MAK,max.salt,value,1
+41,Test1,MAK,speed,value,1
+42,Test1,COD:gfgloucester,q,value,2
+43,Test1,COD:gfgloucester,sel,value,3
+44,Test1,gfgloucester,selcurve,value,4
+45,Test1,gfgloucester,tstart,value,5
+46,Test1,gfgloucester,mindepth,value,6
+47,Test1,gfgloucester,maxdepth,value,7
+48,Test1,gfgloucester,sweptarea,value,8
+

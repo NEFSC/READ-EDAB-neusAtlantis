@@ -139,11 +139,14 @@ make_post_process = function(run.name,
     plot.spatial.biomass=plot.spatial.biomass,
     plot.spatial.biomass.seasonal = plot.spatial.biomass.seasonal,
 
+
     # plot.LTL=plot.LTL, 
 
     plot.spatial.catch =plot.spatial.catch,
 
+
     # plot.catch.fleet = plot.catch.fleet,
+
     plot.mortality=plot.mortality,
     plot.weight = plot.weight
     
