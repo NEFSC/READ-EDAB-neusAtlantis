@@ -56,7 +56,9 @@ for (ibox in boxes) {
       dplyr::left_join(boxPortData, by ="Year") |>
       dplyr::mutate(effort = dplyr::case_when(is.na(effort) ~ 0,
                                               .default = effort)) |>
-      dplyr::mutate(effort = round(effort/365,digits = 5)) 
+      dplyr::mutate(effort = round(effort/365,digits = 8)) |> 
+      dplyr::mutate(t = t-1) |> 
+      dplyr::relocate(t)
     
     ## Edit the ts file
     neweff <- replace_forcing_ts(afleet,tstype="effort",tseries=useEffort$effort,filename=fboxname,keep=F)
@@ -90,7 +92,9 @@ for (ibox in boxes) {
       dplyr::left_join(boxPortData, by ="Year") |>
       dplyr::mutate(effort = dplyr::case_when(is.na(effort) ~ 0,
                                               .default = effort)) |>
-      dplyr::mutate(effort = round(effort/365,digits = 5)) 
+      dplyr::mutate(effort = round(effort/365,digits = 8))  |> 
+      dplyr::mutate(t = t-1) |> 
+      dplyr::relocate(t)
     
     ## Edit the ts file
     neweff <- replace_forcing_ts(afleet,tstype="effort",tseries=useEffort$effort,filename=fboxname,keep=F)
@@ -108,7 +112,8 @@ gfCodes <- readRDS(here::here("data-raw/data/groundfishFleetData.rds"))$landings
   dplyr::pull()
 
 # create df to use to sub into catch
+# all groundfish + scallop
 df <- data.frame(t = ((1+(1996-1964)*365):((2022-1964)*365)), value = 0)
-newcatch <- edit_forcing_ts(gfCodes,tstype="catch",trange=df,filename="total_catch2",keep=F)
+newcatch <- edit_forcing_ts(c(gfCodes,"SCA"),tstype="catch",trange=df,filename="total_catch2",keep=F)
 
 

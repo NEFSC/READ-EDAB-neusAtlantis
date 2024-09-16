@@ -4,7 +4,7 @@
 #'
 #' @param code character vector. The functional group code of the species or the fleet code to scale
 #' @param tstype character. Make the change to the catch or the effort time series (Default = "effort")
-#' @param tseries numeric. The time series to use to replace esisting
+#' @param tseries numeric. The time series to use to replace existing
 #' @param filename character. The name of the output file (without the extension) (Default = "temp")
 #' @param keep boolean. keep (T) previous filename or just overwrite (F). (Default = T)
 #' 

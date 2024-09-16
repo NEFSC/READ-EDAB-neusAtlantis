@@ -25,7 +25,8 @@ edit_forcing_ts <- function(code,tstype="effort",trange,filename="temp",keep=T) 
   if(tstype == "effort") {
     file <- here::here(paste0("currentVersion/CatchFiles/",filename,".ts"))
   } else if (tstype=="catch") {
-    file <- here::here("currentVersion/CatchFiles/total_catch.ts")
+    #file <- here::here("currentVersion/CatchFiles/total_catch.ts")
+    file <- here::here("currentVersion/CatchFiles/total_catch_fleets.ts")
   } else {
     stop("tsfile must be either 'catch' or 'effort'")
   }

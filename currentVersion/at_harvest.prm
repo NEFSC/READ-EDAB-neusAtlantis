@@ -1879,13 +1879,13 @@ midwcNSH_effortmodel   0
 midwcOSH_effortmodel   0
 mowMA_effortmodel      0
 
-### Average effort by the fishery YYY across the entire model domain throughout the year (days per day). When applied to recreational fisheries this sets the average effort by one fisher and not by the entire fishery (so the value should be much smaller)
+### Average effort by the fishery YYY across the entire model domain throughout the year (days per day). When applied to recreational fisheries this sets the average effort by one fisher and not by the entire fishery (so the value should be much smaller). Not used in effortmodel = 11 ?
 
 catchall_Effort   0
 SCAother_Effort   0
-SCAnewbedford_Effort 100000
-SCAcapemay_Effort 100000
-SCAnewportnews_Effort 100000
+SCAnewbedford_Effort 0
+SCAcapemay_Effort 0
+SCAnewportnews_Effort 0
 gfgloucester_Effort    0
 gfnewbedford_Effort  0
 gfpointjudith_Effort  0
@@ -2538,19 +2538,19 @@ Effort_vdistribmowMA          4
 ### The swept volume of water by gear of fishery YYY, m3 day-1. This is a volume, but called area to keep in line with the fisheries science usage.
 
 catchall_sweptarea   0
-SCAother_sweptarea   1E13
-SCAnewbedford_sweptarea  1E13
-SCAcapemay_sweptarea  1E13
-SCAnewportnews_sweptarea  1E13
-gfgloucester_sweptarea    1E13
-gfnewbedford_sweptarea  1E13
-gfpointjudith_sweptarea  1E13
-gfboston_sweptarea  1E13
-gfmontauk_sweptarea  1E13
-gfportland_sweptarea  1E13
-gfportsmouth_sweptarea  1E13
-gfchatham_sweptarea   1E13
-gfother_sweptarea     1E13
+SCAother_sweptarea   1.2e+7
+SCAnewbedford_sweptarea  1.2e+7
+SCAcapemay_sweptarea  1.2e+7
+SCAnewportnews_sweptarea  1.2e+7
+gfgloucester_sweptarea    1e+6
+gfnewbedford_sweptarea  1e+6
+gfpointjudith_sweptarea  1e+6
+gfboston_sweptarea  1e+6
+gfmontauk_sweptarea  1e+6
+gfportland_sweptarea  1e+6
+gfportsmouth_sweptarea  1e+6
+gfchatham_sweptarea   1e+6
+gfother_sweptarea     1e+6
 pseineBLF_sweptarea  0
 cullPIN_sweptarea    0
 ptrawlNSH_sweptarea  0
