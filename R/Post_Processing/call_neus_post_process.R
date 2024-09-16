@@ -8,11 +8,8 @@
 source(here::here('R','Post_Processing','make_post_process.R'))
 # remotes::install_github('https://github.com/NOAA-EDAB/atlantisprocessing')
 
-library(atlantisprocessing)
-
-
-run.name = 'fleets_example'
-atl.dir = here::here('Atlantis_Runs',run.name,'')
+run.name = 'gfsca_bgmbox8deph50'
+atl.dir = here::here('Atlantis_Runs',run.name,'/')
 # atl.dir = '/net/work3/EDAB/atlantis/Andy_Proj/Atlantis_Runs/gfimposezerotsfullsweptarea_1000000/'
 
 # 
@@ -70,7 +67,9 @@ make_post_process(
   plot.spatial.biomass=F,
   plot.spatial.biomass.seasonal = F,
   plot.spatial.overlap = F,
+
   plot.catch =T,
+
   plot.catch.fleet =T,
   plot.mortality=F,
   plot.weight = F,
