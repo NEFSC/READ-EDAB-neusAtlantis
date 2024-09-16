@@ -9,9 +9,10 @@
 library(dplyr)
 
 #Read in setup file
-experiment.id = 'test'
-# setup.df = read.csv(here::here('Setup_Files','cloud_v6681_ddepend_1_setup.csv'),as.is=T)
-setup.df = read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'))
+
+experiment.id = 'ddepend_1'
+setup.df = read.csv(here::here('Setup_Files','cloud_v6681_ddepend_1_setup.csv'),as.is=T)
+# setup.df = read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'))
 proj.dir = '/contrib/Joseph.Caracappa/calibration/'
 
 #Define base files
@@ -21,8 +22,7 @@ sbatch.orig = here::here('currentVersion','sbatch_scenario_array_base.sh')
 fgs.file = here::here('currentVersion','neus_groups.csv')
 mig.file.orig = here::here('currentVersion','neus_migrations.csv')
 run.prm.orig = here::here('currentVersion','at_run.prm')
-harvest.file.orig = here::here('currentVersion','at_harvest.prm')
-fleets.file = here::here('currentVersion','neus_fisheries.csv')
+
 
 #Read in functional groups and define inverts
 fgs = read.csv(fgs.file,as.is = T)
@@ -77,20 +77,14 @@ if(any(c('aMigSize','jMigSize','aMigSurvive','jMigSurvive') %in% setup.df$Type))
 if('InitScalar' %in% setup.df$Type){
   source(here::here('R','Calibration_Tools','edit_param_init_scalar.R'))
 }
-if(any(c('ddepend','k.roc.food','roc.wgt','speed') %in% setup.df$Type)){
+
+if(any(c('ddepend','k.roc.food','roc.wgt') %in% setup.df$Type)){
+
   source(here::here('R','Calibration_Tools','edit_param_ddepend.R'))
 }
 if(any(c('max.temp','min.temp','max.salt','min.salt') %in% setup.df$Type)){
   source(here::here('R','Calibration_Tools','edit_param_env_move.R'))
-}
-if(any('q' %in% setup.df$Type)){
-  source(here::here('R','Calibration_Tools','edit_param_q.R'))
-}
-if(any('sel' %in% setup.df$Type)){
-  source(here::here('R','Calibration_Tools','edit_param_sel.R'))
-}
-if(any(c('selcurve','tstart','mindepth','maxdepth','sweptarea') %in% setup.df$Type)){
-  source(here::here('R','Calibration_Tools','edit_param_fleet.R'))
+
 }
 
 possible.types = unique(read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'),as.is=T)$Type)
@@ -122,15 +116,7 @@ for(i in 1:length(run.id)){
   }else{
     run.prm.short = 'at_run.prm'
   }
-  
-  if(any(c('q','sel','selcurve','tstart','mindepth','maxdepth','sweptarea') %in% setup.df$Type)){
-    #copy harvest.prm with run.id prefix
-    harvest.file.short = paste0('at_harvest_',run.id[i],'.prm')
-    harvest.file.new = here::here('currentVersion',harvest.file.short)
-    file.copy(harvest.file.orig,harvest.file.new,overwrite =T)
-  }else{
-    harvest.file.short = 'at_harvest.prm'
-  }
+
 
   #Separate task for run.id
   setup.run = dplyr::filter(setup.df, Run.ID == run.id[i])
@@ -396,7 +382,9 @@ for(i in 1:length(run.id)){
     if(setup.run$Type[j] == 'InitScalar'){
       
       edit_param_init_scalar(run.prm = run.prm.new,
-                             groups.file = fgs.file,
+
+                             groups.file = groups.file,
+
                              group.name = setup.run$Code[j],
                              unit = setup.run$Unit[j],
                              value = setup.run$Value[j],
@@ -404,7 +392,9 @@ for(i in 1:length(run.id)){
       
     }
     
-    if(setup.run$Type[j] %in% c('ddepend','k.roc.food','roc.wgt','speed')){
+
+    if(setup.run$Type[j] %in% c('ddepend','k.roc.food','roc.wgt')){
+
       
       if(setup.run$Unit[j] == 'scalar'){
         stop('ddepend parameters only setup for Unit = "value"')
@@ -424,7 +414,9 @@ for(i in 1:length(run.id)){
       if(setup.run$Type[j]%in% c('min.temp','max.temp')){
         env.var = 'temperature'
       }else if(setup.run$Type[j] %in% c('min.salt','max.salt')){
-        env.var = 'salinity'
+
+        env.var = 'salt'
+
       }
       
       edit_param_env_move(bio.file = bio.file.new,
@@ -435,55 +427,7 @@ for(i in 1:length(run.id)){
                           overwrite = T)
     }
     
-    if(setup.run$Type[j] == 'sel'){
-      
-      if(setup.run$Unit[j] == 'scalar'){
-        stop('Fleet Selectivity only setup for Unit = "value"')
-      }
-    
-      code.split = strsplit(setup.run$Code[j],':')[[1]]
-      edit_param_sel(
-        harvest.file = harvest.file.new,
-        Code = code.split[1],
-        Fleet = code.split[2],
-        fleets.file = fleets.file,
-        Value = setup.run$Value[j],
-        overwrite =T
-      )
-    }
-    
-    if(setup.run$Type[j] == 'q'){
-      
-      if(setup.run$Unit[j] == 'scalar'){
-        stop('Fleet Selectivity only setup for Unit = "value"')
-      }
-      
-      code.split = strsplit(setup.run$Code[j],':')[[1]]
-      edit_param_q(
-        harvest.file = harvest.file.new,
-        Code = code.split[1],
-        Fleet = code.split[2],
-        fleets.file = fleets.file,
-        Value = setup.run$Value[j],
-        overwrite =T
-      )
-    }
-    
-    if(setup.run$Type[j] %in% c('selcurve','tstart','mindepth','maxdepth','sweptarea')){
-      
-      if(setup.run$Unit[j] == 'scalar'){
-        stop('Fleet Selectivity only setup for Unit = "value"')
-      }
-      
-      edit_param_fleet(
-        harvest.file = harvest.file.new,
-        Fleet = setup.run$Code[j],
-        Value = setup.run$Value[j],
-        VarName = setup.run$Type[j],
-        overwrite =T
-      )
-    }
-    
+
   }
   
   #Write shell script
@@ -494,7 +438,9 @@ for(i in 1:length(run.id)){
   #Edit shell script
   run.sh.new.lines = readLines(run.sh.new)
   run.command.line = grep('atlantisMerged',run.sh.new.lines)
-  run.command.new =  paste0('atlantisMerged -i neus_init.nc 0 -o neus_output.nc -r ',run.prm.short,' -f at_force_LINUX.prm -p at_physics.prm -b ',bio.file.short,' -h ',harvest.file.short,' -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -m ',mig.file.short,' -t . -d output')
+
+  run.command.new =  paste0('atlantisMerged -i neus_init.nc 0 -o neus_output.nc -r ',run.prm.short,' -f at_force_LINUX.prm -p at_physics.prm -b ',bio.file.short,' -h at_harvest.prm -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -m ',mig.file.short,' -t . -d output')
+
   run.sh.new.lines[run.command.line] = run.command.new
   
   writeLines(run.sh.new.lines,con = run.sh.new)

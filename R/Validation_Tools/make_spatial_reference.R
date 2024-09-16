@@ -16,7 +16,9 @@ fgs.file = here::here('currentVersion','neus_groups.csv')
 fgs = read.csv(fgs.file,as.is = T) %>%
   select(Code,Name,LongName,NumCohorts)
 
-survdat = readRDS(here::here('data','sweptAreaBiomassNEUSBOX.RDS'))
+
+survdat = readRDS(here::here('data','sweptAreaBiomassNEUSBoxSpringandFall.RDS'))
+
 
 init.file = here::here('currentVersion','neus_init.nc')
 init.nc = ncdf4::nc_open(init.file)
@@ -49,8 +51,12 @@ blank.ref = data.frame(Code = rep(fgs$Code, each = 30),
 
 survdat.mean = survdat %>%
   filter(YEAR %in% ref.years & variable %in% c('tot.biomass','tot.abundance'))%>%
-  group_by(Code,variable,box)%>%
+
+  group_by(Code,variable,season,box)%>%
   summarise(mean.value = mean(value,na.rm=T))%>%
+  group_by(Code,variable,box)%>%
+  summarise(mean.value = mean(mean.value,na.rm=T))%>%
+
   ungroup()
 
 survdat.mean$mean.value[which(survdat.mean$box %in% bboxes)] = NA
@@ -227,156 +233,6 @@ init.ref = bind_rows(init.ref.ls) %>%
 saveRDS(init.ref,here::here('data',paste0('spatial_reference_initial_conditions.rds')))
 
 
-#Make Catch Reference by species only
-catch.box = readRDS(here::here('data-raw','landings_by_box_species.rds'))%>%
-  group_by(Code)%>%
-  mutate(landings.tot = sum(landings,na.rm=T)) %>%
-  ungroup() %>% 
-  mutate(landings.prop = landings/landings.tot) %>% 
-  select(Code,Box,landings,landings.prop)%>%
-  left_join(select(fgs,Code,LongName))%>%
-  rename(species = 'LongName')
+#Make Catch Reference
+catch.box = readRDS(here::here('data-raw','landings_by_box_species.rds'))
 
-spp.names = sort(unique(catch.box$species))
-
-catch.spp.ls = list()
-for(k in 1:length(spp.names)){
-  
-  catch.spp = catch.box %>% filter(species == spp.names[k])
-  
-  prop.df = data.frame(species = catch.spp$species[k],
-                       polygon = 0:29,
-                       var.name = 'catch',
-                       statistic = 'proportion',
-                       ref.value = NA)
-  value.df = data.frame(species = catch.spp$species[k],
-                        polygon = 0:29,
-                        var.name = 'catch',
-                        statistic = 'value',
-                        ref.value = NA)
-  
-  which.box = match(catch.spp$Box, 0:29)
-  
-  prop.df$ref.value[which.box] = catch.spp$landings.prop
-  value.df$ref.value[which.box] = catch.spp$landings
-  
-  catch.spp.ls[[k]] = bind_rows(prop.df,value.df)
-}
-
-catch.box.out = bind_rows(catch.spp.ls)
-
-saveRDS(catch.box.out,here::here('data',paste0('spatial_reference_landings_species.rds')))
-
-#Make Catch Reference by species only
-catch.box = readRDS(here::here('data-raw','landings_by_box_species.rds'))%>%
-  group_by(Code)%>%
-  mutate(landings.tot = sum(landings,na.rm=T)) %>%
-  ungroup() %>% 
-  mutate(landings.prop = landings/landings.tot) %>% 
-  select(Code,Box,landings,landings.prop)%>%
-  left_join(select(fgs,Code,LongName))%>%
-  rename(species = 'LongName')
-
-spp.names = sort(unique(catch.box$species))
-
-catch.spp.ls = list()
-for(k in 1:length(spp.names)){
-  
-  catch.spp = catch.box %>% filter(species == spp.names[k])
-  
-  prop.df = data.frame(species = catch.spp$species[k],
-                       polygon = 0:29,
-                       var.name = 'catch',
-                       statistic = 'proportion',
-                       ref.value = NA)
-  value.df = data.frame(species = catch.spp$species[k],
-                        polygon = 0:29,
-                        var.name = 'catch',
-                        statistic = 'value',
-                        ref.value = NA)
-  
-  which.box = match(catch.spp$Box, 0:29)
-  
-  prop.df$ref.value[which.box] = catch.spp$landings.prop
-  value.df$ref.value[which.box] = catch.spp$landings
-  
-  catch.spp.ls[[k]] = bind_rows(prop.df,value.df)
-}
-
-catch.box.out = bind_rows(catch.spp.ls)
-
-saveRDS(catch.box.out,here::here('data',paste0('spatial_reference_landings_species.rds')))
-
-
-#Make Catch Reference by fleet
-fisheries = read.csv(here::here('currentVersion','neus_fisheries.csv'))
-
-groundfish.catch.box = readRDS(here::here('data-raw','data','groundfishFleetData.rds'))$landings %>%
-  mutate(fleet = 'gf',
-         port = gsub(' ','',tolower(newport)),
-         community.fleet = paste0(fleet,port)
-         )
-
-scallop.catch.box = readRDS(here::here('data-raw','data','scallopFleetData.rds'))$landings%>%
-  mutate(fleet = 'SCA',
-         port = gsub(' ','',tolower(newport)),
-         community.fleet = paste0(fleet,port)
-  )
-
-catch.box.fleet = bind_rows(groundfish.catch.box, scallop.catch.box)%>%
-  filter(Year %in% ref.years) %>%
-  group_by(Code,community.fleet,Box)%>%
-  summarise(landings = mean(landings,na.rm=T))%>%
-  arrange(Code,community.fleet)%>%
-  group_by(Code,community.fleet)%>%
-  mutate(landings.tot = sum(landings,na.rm=T))%>%
-  ungroup()%>%
-  mutate(landings.prop = landings/landings.tot)%>%
-  left_join(select(fgs,Code,LongName))%>%
-  rename(species= 'LongName')
-  # mutate(var.name = 'catch',
-  #        statistic = 'proportion')%>%
-  # rename(ref.value = '')
-
-fleet.combs = catch.box.fleet %>%
-  distinct(species,community.fleet)
-
-k=1
-catch.fleet.ls = list()
-for(k in 1:nrow(fleet.combs)) {
-  data.comb = catch.box.fleet %>%
-    filter(species == fleet.combs$species[k] & community.fleet == fleet.combs$community.fleet[k]) %>% 
-    arrange(Box)
-  
-  prop.df = data.frame(species = fleet.combs$species[k],
-                       fleet = fleet.combs$community.fleet[k], 
-                       polygon = 0:29,
-                        var.name = 'catch_fleet',
-                        statistic = 'proportion',
-                        ref.value = NA)
-  value.df = data.frame(species = fleet.combs$species[k],
-                        fleet = fleet.combs$community.fleet[k],
-                        polygon = 0:29,
-                        var.name = 'catch_fleet',
-                        statistic = 'value',
-                        ref.value = NA)
-  
-  which.box = match(data.comb$Box, 0:29)
-  
-  prop.df$ref.value[which.box] = data.comb$landings.prop
-  value.df$ref.value[which.box] = data.comb$landings
-  
-  catch.fleet.ls[[k]] = bind_rows(prop.df,value.df)
-}
-
-catch.fleet.out = bind_rows(catch.fleet.ls)
-
-catchall = catch.box.out %>%
-  mutate(fleet = 'catchall',
-         var.name = 'catch_fleet')
-
-
-catch.fleet.out = bind_rows(catch.fleet.out,catchall)
-
-
-saveRDS(catch.fleet.out,here::here('data',paste0('spatial_reference_landings_fleet.rds')))

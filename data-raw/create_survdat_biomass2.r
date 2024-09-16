@@ -188,7 +188,7 @@ sweptAreaBiomassEPU <- biomassEPU %>%
   #units::drop_units() %>% 
   tibble::as_tibble()
 
-saveRDS(sweptAreaBiomassEPU,file = here::here("data","sweptAreaBiomassEPU.RDS"))
+#saveRDS(sweptAreaBiomassEPU,file = here::here("data","sweptAreaBiomassEPU.RDS"))
 
 ##############################################################################
 ######################## USE domain from NEUS shape file #####################
@@ -301,7 +301,7 @@ sweptAreaBiomassNEUS <- biomassAllNEUS %>%
   dplyr::inner_join(.,speciesList,by="SVSPP") %>% 
   tibble::as_tibble()
 
-saveRDS(sweptAreaBiomassNEUS,file = here::here("data","sweptAreaBiomassNEUS.RDS"))
+#saveRDS(sweptAreaBiomassNEUS,file = here::here("data","sweptAreaBiomassNEUS.RDS"))
 
         
 # 

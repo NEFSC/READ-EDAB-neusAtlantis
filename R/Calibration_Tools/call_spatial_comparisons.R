@@ -5,10 +5,13 @@ library(dplyr)
 ## Read in and format reference file
 
 
+
 # ref.data = readRDS(here::here('data','spatial_reference_survdat_2011_2021.rds'))%>%
 #   filter(statistic == 'proportion' & var.name == 'biomass')
-ref.data = readRDS(here::here('data','spatial_reference_landings_fleet.rds'))%>%
-  filter(statistic == 'proportion' )
+
+ref.data = readRDS(here::here('data','spatial_reference_survdat_2011_2021.rds'))%>%
+  filter(statistic == 'proportion' & var.name == 'biomass')
+
 
 # ref.data.run = readRDS('/net/work3/EDAB/atlantis/Shared_Data/Dev_Runs/Dev_6681_20240620/Post_Processed/Data/biomass_box.rds')%>%
 #   filter(time>30)%>%
@@ -30,100 +33,112 @@ ref.data = readRDS(here::here('data','spatial_reference_landings_fleet.rds'))%>%
 init.data = readRDS(here::here('data','spatial_reference_initial_conditions.rds'))%>%
   filter(statistic == 'proportion' & var.name == 'biomass')
 
-run.names = 'fleets_example'
-run.dirs = paste0(here::here('Atlantis_Runs',run.names))
-# run.dirs = paste0('/net/work3/EDAB/atlantis/Andy_Proj/Atlantis_Runs/',run.names)
 
+set.prefix = 'NE_Groundish_Test'
+# run.names = paste0(set.prefix,1:24)
+run.names = c('Dev_6681_20240620','NE_groundfish_new_movement')
+run.dirs = c('/net/work3/EDAB/atlantis/Shared_Data/Dev_Runs/Dev_6681_20240620/',
+             paste0(here::here('Atlantis_Runs','NE_groundfish_new_movement')))
 
-do.processing =F
-for(i in 1:length(run.names)){
-  atl.dir = run.dirs[i]
-  # atl.dir = here::here('Atlantis_Runs',run.names[i],'')
-  # param.dir = here::here('currentVersion','/')
-  param.dir = '/net/work3/EDAB/atlantis/Andy_Proj/currentVersion/'
-  run.prefix = 'neus_output'
-  param.ls = atlantisprocessing::get_atl_paramfiles(param.dir,atl.dir ,run.prefix = run.prefix,include_catch = T)
+# run.sets = list(1:6,7:12,13:18,19:24)
+run.sets = 1:2
+j=1
+
+do.processing = T
+for(j in 1:length(run.sets)){
   
-  if(do.processing){
-    atlantisprocessing::process_atl_output(
-      param.dir = param.dir,
-      atl.dir= atl.dirs[i],
-      out.dir = file.path(atl.dir, "/Post_Processed/Data/"),
-      run.prefix = run.prefix,
-      param.ls = param.ls,
-      agg.scale= 'year',
-      large.file = F,
-      system = 'linux',
-      process.all = F,
-      plot.all = F,
-      plot.benthic = F,
-      plot.overall.biomass = F,
-      plot.biomass.timeseries = F,
-      plot.length.age = F,
-      plot.biomass.box = T,
-      plot.c.mum = F,
-      plot.sn.rn = F,
-      plot.recruits = F,
-      plot.numbers.timeseries = F,
-      plot.physics = F,
-      plot.growth.cons = F,
-      plot.cohort = F,
-      plot.diet = F,
-      plot.consumption = F,
-      plot.spatial.biomass = F,
-      plot.spatial.biomass.seasonal = F,
-      plot.catch = F,
-      plot.catch.fleet = T,
-      plot.mortality = F,
-      plot.weight = F,
-      plot.spatial.overlap = F
-    )
-  }
-}
-
-## Run with compare_spatial_vars function from the atlantisprocessing package
+  run.names.set = run.names[run.sets[[j]]]
+  out.name = paste0(set.prefix,run.sets[[j]][1],'-',run.sets[[j]][length(run.sets[[j]])])
   
-atlantisprocessing::compare_spatial_vars(
+  i=1
+  for(i in 1:length(run.names.set)){
+    run.name = run.names.set[i]
+    atl.dir = here::here('Atlantis_Runs',run.name,'')
+    param.dir = here::here('currentVersion','/')
+    run.prefix = 'neus_output'
+    param.ls = get_atl_paramfiles(param.dir,atl.dir,run.prefix = run.prefix,include_catch = T)
     
-    # param.dir = here::here('currentVersion'),
-    param.dir = param.dir,
-    run.dirs = run.dirs,
-    run.names = run.names,
+    if(do.processing){
+      process_atl_output(
+        param.dir = param.dir,
+        atl.dir= atl.dir,
+        out.dir = file.path(atl.dir, "/Post_Processed/Data/"),
+        run.prefix = run.prefix,
+        param.ls = param.ls,
+        agg.scale= 'year',
+        large.file = F,
+        system = 'linux',
+        process.all = F,
+        plot.all = F,
+        plot.benthic = F,
+        plot.overall.biomass = F,
+        plot.biomass.timeseries = F,
+        plot.length.age = F,
+        plot.biomass.box = T,
+        plot.c.mum = F,
+        plot.sn.rn = F,
+        plot.recruits = F,
+        plot.numbers.timeseries = T,
+        plot.physics = F,
+        plot.growth.cons = F,
+        plot.cohort = F,
+        plot.diet = F,
+        plot.consumption = F,
+        plot.spatial.biomass = F,
+        plot.spatial.biomass.seasonal = F,
+        plot.catch = F,
+        plot.mortality = F,
+        plot.weight = F,
+        plot.spatial.overlap = F
+      )
+    }
+  }
+  ## Run with compare_spatial_vars function from the atlantisprocessing package
+  
+  atlantisprocessing::compare_spatial_vars(
+    
+    param.dir = here::here('currentVersion'),
+    run.dirs = run.dirs[run.sets[[j]]],
+    run.names = run.names.set,
     ref.data = ref.data,
     init.data = init.data,
     out.dir = here::here('Figures','/'),
-    out.name = run.names[1],
-    param.ls = get_atl_paramfiles(param.dir = param.dir,
+    out.name = out.name,
+    param.ls = get_atl_paramfiles(param.dir = here::here('currentVersion'),
+
                                   atl.dir = run.dirs[1],
                                   run.prefix = 'neus_output',
                                   include_catch = T
     ),
     data.type = 'proportion',
     comparison.type = 'difference',
-    ref.years = c(30,50),
+    ref.years = 2:4,
+
     plot =T
   )
   
+}
+
+
+
+atlantisprocessing::compare_spatial_vars(
   
+  param.dir = here::here('currentVersion'),
+  run.dirs = run.dirs,
+  run.names = run.names,
+  ref.data = ref.data,
+  init.data = init.data,
+  out.dir = here::here('Figures','/'),
+  out.name = 'NE_Groundfish_rescale_20_60',
+  param.ls = get_atl_paramfiles(param.dir = here::here('currentVersion'),
+                                atl.dir = run.dirs[1],
+                                run.prefix = 'neus_output',
+                                include_catch = T
+  ),
+  data.type = 'proportion',
+  comparison.type = 'difference',
+  ref.years = 20:60,
+  plot =T
+)
 
 
-
-# 
-# atlantisprocessing::compare_spatial_vars(
-#   
-#   param.dir = here::here('currentVersion'),
-#   run.dirs = run.dirs,
-#   run.names = run.names,
-#   ref.data = ref.data.init,
-#   out.dir = here::here('Figures','/'),
-#   param.ls = get_atl_paramfiles(param.dir = here::here('currentVersion'),
-#                                 atl.dir = run.dirs[1],
-#                                 run.prefix = 'neus_output',
-#                                 include_catch = T
-#   ),
-#   data.type = 'proportion',
-#   comparison.type = 'difference',
-#   ref.years = 45:55,
-#   plot =T
-# )
-# 

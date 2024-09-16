@@ -28,6 +28,9 @@ make_post_process = function(run.name,
                              plot.spatial.biomass.seasonal = F,
                              plot.spatial.overlap = F,
                              plot.catch =F,
+
+                             plot.spatial.catch =F,
+
                              plot.catch.fleet = F,
                              plot.mortality=F,
                              plot.weight = F,
@@ -90,7 +93,9 @@ make_post_process = function(run.name,
     plot.spatial.biomass=plot.spatial.biomass,
     plot.spatial.biomass.seasonal = plot.spatial.biomass.seasonal,
     plot.spatial.overlap = plot.spatial.overlap,
+
     # plot.LTL=plot.LTL, 
+
     plot.catch =plot.catch,
     plot.catch.fleet = plot.catch.fleet,
     plot.mortality=plot.mortality,
@@ -113,8 +118,8 @@ make_post_process = function(run.name,
     
     param.ls = param.ls,
     
-    phytopl.history = here::here('R','phytoplankton_timeseries_biomass_tonnes_1998_2016.csv'),
-    zoopl.history = here::here('R','Zooplankton_total_biomass_tonnes_N_20yrs.csv'),
+    # phytopl.history = here::here('R','phytoplankton_timeseries_biomass_tonnes_1998_2016.csv'),
+    # zoopl.history = here::here('R','Zooplankton_total_biomass_tonnes_N_20yrs.csv'),
     
     plot.all = plot.all,
     plot.benthic = plot.benthic,
@@ -133,8 +138,11 @@ make_post_process = function(run.name,
     plot.consumption= plot.consumption,
     plot.spatial.biomass=plot.spatial.biomass,
     plot.spatial.biomass.seasonal = plot.spatial.biomass.seasonal,
+
     # plot.LTL=plot.LTL, 
-    plot.catch =plot.catch,
+
+    plot.spatial.catch =plot.spatial.catch,
+
     # plot.catch.fleet = plot.catch.fleet,
     plot.mortality=plot.mortality,
     plot.weight = plot.weight
