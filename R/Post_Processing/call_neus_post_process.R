@@ -7,8 +7,8 @@
 
 source(here::here('R','Post_Processing','make_post_process.R'))
 
-run.name = 'v6681_Calib_5'
-atl.dir = here::here('Atlantis_Runs',run.name,'')
+run.name = 'rescale_spatial_1'
+atl.dir = here::here('Atlantis_Runs',run.name,'/')
 # 
 # process.all = T
 # plot.all = T
@@ -49,14 +49,14 @@ make_post_process(
   
   plot.benthic =F,
   plot.overall.biomass =F,
-  plot.biomass.timeseries = F,
-  plot.length.age = F,
-  plot.biomass.box=F,
+  plot.biomass.timeseries = T,
+  plot.length.age = T,
+  plot.biomass.box=T,
   plot.c.mum=F,
-  plot.sn.rn=F,
+  plot.sn.rn=T,
   plot.recruits=F,
-  plot.numbers.timeseries=F,
-  plot.physics=F,
+  plot.numbers.timeseries=T,
+  plot.physics=T,
   plot.growth.cons=F,
   plot.cohort=F,
   plot.diet=T,
@@ -64,10 +64,11 @@ make_post_process(
   plot.spatial.biomass=F,
   plot.spatial.biomass.seasonal = F,
   plot.spatial.overlap = F,
-  plot.LTL=F, 
-  plot.catch =F,
-  plot.mortality=F,
-  plot.max.weight = F,
+  plot.catch =T,
+  plot.spatial.catch =T,
+  plot.catch.fleet =T,
+  plot.mortality=T,
+  plot.weight = T,
   
   benthic.box = 1,
   benthic.level = 4,
