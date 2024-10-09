@@ -64,7 +64,7 @@ data.join =neus.survdat.conv %>%
 
 data.join$biomass.prop = round(data.join$biomass.prop/sum(data.join$biomass.prop),2)
 
-new.prop =data.frame(box = sort(as.numeric(boxids)))%>%
+new.prop =data.frame(box = 0:29)%>%
   left_join(data.join)%>%
   mutate(biomass.prop = ifelse(is.na(biomass.prop), 0, biomass.prop))
 
@@ -78,3 +78,4 @@ edit_param_init_dist(
   new.file.name = here::here('currentVersion','neus_init_test.nc'),
   bgm.file = here::here('Geometry','neus_tmerc_RM2.bgm')
 )
+
