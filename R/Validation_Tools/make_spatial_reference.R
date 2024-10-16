@@ -21,6 +21,7 @@ survdat = readRDS(here::here('data','sweptAreaBiomassNEUSBoxSpringandFall.RDS'))
 init.file = here::here('currentVersion','neus_init.nc')
 init.nc = ncdf4::nc_open(init.file)
 
+
 #Get box info
 bgm.file = here::here('Geometry','neus_tmerc_RM2.bgm')
 bgm = rbgm::bgmfile(bgm.file)
@@ -223,7 +224,9 @@ init.ref = bind_rows(init.ref.ls) %>%
   left_join(fgs, by = c('species' = 'Name'))%>%
   select(LongName,polygon,var.name,statistic,init.value)%>%
   rename(species = 'LongName')
-  
+
+
+ncdf4::nc_close(init.nc)
   
 
 saveRDS(init.ref,here::here('data',paste0('spatial_reference_initial_conditions.rds')))

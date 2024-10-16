@@ -7,7 +7,7 @@
 
 source(here::here('R','Post_Processing','make_post_process.R'))
 
-run.name = 'rescale_spatial_1'
+run.name = 'SCA_Dist_1'
 atl.dir = here::here('Atlantis_Runs',run.name,'/')
 # 
 # process.all = T
