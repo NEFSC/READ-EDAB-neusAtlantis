@@ -3,17 +3,31 @@
 library(dplyr)
 library(ggplot2)
 #Specify setup.csv used to generate calibration run set
-experiment.id = 'fleet_calibration_2'
-setup.df = read.csv(here::here('Setup_Files','cloud_fleet_calibration_2.csv'),as.is=T)
+experiment.id = 'fleet_calibration_3'
+setup.df = read.csv(here::here('Setup_Files','cloud_fleet_calibration_3.csv'),as.is=T)
 setup.df$file.ID = 1:nrow(setup.df)
 # experiment.dir = here::here('Atlantis_Runs',experiment.id,'')
-experiment.dir = paste0('/atlantisdisk/fleet_calibration_2/Atlantis_Runs/',experiment.id,'/')
+experiment.dir = paste0('/atlantisdisk/',experiment.id,'/Atlantis_Runs/',experiment.id,'/')
 # figure.dir = here::here('Figures',experiment.id,'')
 figure.dir = paste0('/model/Joseph.Caracappa/Figures/',experiment.id,'/')
 
 if(!dir.exists(figure.dir)){dir.create(figure.dir)}
 
+bio.ref = readRDS(here::here("data","sweptAreaBiomassNEUS.RDS"))%>%
+  filter(variable == 'tot.biomass')%>%
+  group_by(YEAR,Code)%>%
+  summarise(Biomass = sum(value,na.rm=T)/1000)
 
+gf.ref.orig = readRDS(here::here('data-raw','data','groundfishFleetData.rds'))$landings%>%
+  mutate(fleet = paste0('gf',gsub(' ','',tolower(newport))))
+
+gf.catch = gf.ref.orig %>%
+  group_by(Year,Code)%>%
+  summarise(Catch = sum(landings,na.rm=T))
+
+gf.catch.fleet = gf.ref.orig %>%
+  group_by(Year,fleet,Code)%>%
+  summarise(Catch = sum(landings,na.rm=T))
 
 #Read in groups file
 # fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T)%>%
@@ -78,11 +92,15 @@ for(i in 1:length(run.groups)){
     bio.spp = bio.run.group %>%
       filter(Code == spp.code)
     
+    bio.spp.ref = bio.ref %>%
+      filter(Code == spp.code)%>%
+      mutate(Time = ((YEAR-1964)*365))
     
     p =ggplot(bio.spp, aes(x=Time,y = Biomass, color = factor(Run.ID)))+
       geom_line()+
       scale_color_manual(name = paste0('Run ID (',run.groups[i],')'),
                          values = plot.colors[1:length(unique(setup.group$Run.ID))])+
+      geom_line(data = bio.spp.ref,aes(x = Time, y = Biomass),color = 'black')+
       ggtitle(spp.names[s])+
       theme_bw()+
       theme(plot.title = element_text(hjust = 0.5),
@@ -98,11 +116,16 @@ for(i in 1:length(run.groups)){
     catch.spp = catch.run.group %>%
       filter(Code == spp.code)
     
+    catch.spp.ref = gf.catch%>%
+      filter(Code == spp.code)%>%
+      mutate(Time = ((Year-1964)*365))
     
-    p =ggplot(catch.spp, aes(x=Time,y = Catch, color = factor(Run.ID)))+
+    
+    p =ggplot(catch.spp, aes(x=(Time/365)+1964,y = Catch, color = factor(Run.ID)))+
       geom_line()+
       scale_color_manual(name = paste0('Run ID (',run.groups[i],')'),
                          values = plot.colors[1:length(unique(setup.group$Run.ID))])+
+      geom_line(data = catch.spp.ref,aes(x = (Time/365)+1964, y = Catch),color = 'black')+
       ggtitle(spp.names[s])+
       theme_bw()+
       theme(plot.title = element_text(hjust = 0.5),
@@ -110,27 +133,7 @@ for(i in 1:length(run.groups)){
     gridExtra::grid.arrange(p)
   }
   dev.off()
-  
-  pdf(paste0(figure.dir,experiment.id,'_',run.groups[i],'_biomass.pdf'))
-  for(s in 1:length(spp.names)){
-    
-    spp.code = fgs$Code[which(fgs$LongName == spp.names[s])]
-    spp.LongName = fgs$LongName[which(fgs$Code == spp.code)]
-    bio.spp = bio.run.group %>%
-      filter(Code == spp.code)
-    
-    
-    p =ggplot(bio.spp, aes(x=Time,y = Biomass, color = factor(Run.ID)))+
-      geom_line()+
-      scale_color_manual(name = paste0('Run ID (',run.groups[i],')'),
-                         values = plot.colors[1:length(unique(setup.group$Run.ID))])+
-      ggtitle(spp.LongName)+
-      theme_bw()+
-      theme(plot.title = element_text(hjust = 0.5),
-            legend.position = 'bottom')
-    gridExtra::grid.arrange(p)
-  }
-  dev.off()
+
   
   pdf(paste0(figure.dir,experiment.id,'_',run.groups[i],'_CatchFleet.pdf'))
   for(s in 1:length(gf.fleets)){
@@ -153,10 +156,15 @@ for(i in 1:length(run.groups)){
       catch.fleet.spp = catch.fleet %>%
         filter(Code == fleet.spp[f])
       
-      p =ggplot(catch.fleet.spp, aes(x=Time,y = Catch, color = factor(Run.ID)))+
+      catch.fleet.spp.ref = gf.catch.fleet%>%
+        filter(Code == fleet.spp[f] & fleet == gf.fleets[s])%>%
+        mutate(Time = ((Year-1964)*365))
+      
+      p =ggplot(catch.fleet.spp, aes(x=(Time/365)+1964,y = Catch, color = factor(Run.ID)))+
         geom_line()+
         scale_color_manual(name = paste0('Run ID (',run.groups[i],')'),
                            values = plot.colors[1:length(unique(setup.group$Run.ID))])+
+        geom_line(data = catch.fleet.spp.ref,aes(x = (Time/365)+1964, y = Catch),color = 'black')+
         ggtitle(paste0(gf.fleets[s],':',fleet.spp[f]))+
         theme_bw()+
         theme(plot.title = element_text(hjust = 0.5),
