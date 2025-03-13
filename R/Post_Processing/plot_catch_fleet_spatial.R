@@ -3,7 +3,7 @@ library(dplyr)
 library(ggplot2)
 library(mapdata)
 
-run.name = 'gfsca_bgmbox8deph50'
+run.name = 'fleet_calibration_4_q'
 run.dir = here::here('Atlantis_Runs',run.name)
 figure.dir = paste0(run.dir,'/Post_Processed/')
 

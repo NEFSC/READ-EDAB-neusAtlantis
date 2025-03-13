@@ -7,7 +7,7 @@
 
 source(here::here('R','Post_Processing','make_post_process.R'))
 
-run.name = 'gffleets_minsize_ref'
+run.name = 'fleet_calibration_4_q'
 atl.dir = here::here('Atlantis_Runs',run.name,'/')
 # atl.dir = '/net/work3/EDAB/atlantis/Andy_Proj/devplusfleets/'
 # 
@@ -50,7 +50,7 @@ make_post_process(
   
   plot.benthic =F,
   plot.overall.biomass =F,
-  plot.biomass.timeseries = F,
+  plot.biomass.timeseries = T,
   plot.length.age = F,
   plot.biomass.box=F,
   plot.c.mum=F,
@@ -66,7 +66,7 @@ make_post_process(
   plot.spatial.biomass.seasonal = F,
   plot.spatial.overlap = F,
   plot.catch =T,
-  plot.spatial.catch =T,
+  plot.spatial.catch =F,
   plot.catch.fleet =T,
   plot.mortality=F,
   plot.weight = F,
