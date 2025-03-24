@@ -5455,7 +5455,7 @@ INV_max_move_temp 30
 LSQ_max_move_temp 26.7
 ISQ_max_move_temp 25.8
 SCA_max_move_temp 16.32
-LOB_max_move_temp 30
+LOB_max_move_temp 16.85
 QHG_max_move_temp 17.29
 CLA_max_move_temp 22.0
 BFF_max_move_temp 27.22
