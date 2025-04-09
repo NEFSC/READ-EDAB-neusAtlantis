@@ -36,6 +36,7 @@ get_param_recruit_hdistrib = function(bio.prm){
     out.df <- rbind(out.df,df)
   }
   
+  out.df <- tibble::as_tibble(out.df)
   # return the data frame
   return(out.df)
 }

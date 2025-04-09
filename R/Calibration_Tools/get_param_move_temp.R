@@ -35,6 +35,7 @@ get_param_move_temp = function(bio.prm){
     out.df <- rbind(out.df,data.frame(group = group,value = value,limit = lim))
   }
 
+  out.df <- tibble::as_tibble(out.df)
   # return the data frame
   return(out.df)
 }

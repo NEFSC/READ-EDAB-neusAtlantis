@@ -53,7 +53,8 @@ get_param_FXXX_SY = function(bio.prm){
     out.df <- rbind(out.df,cbind(df,polygoni))
     
   }
-
+  out.df <- tibble::as_tibble(out.df)
+  
   # return the data frame
   return(out.df)
 }
