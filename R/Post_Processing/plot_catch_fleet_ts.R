@@ -3,9 +3,11 @@ library(dplyr)
 library(ggplot2)
 library(mapdata)
 
-run.name = 'fleet_calibration_4_q'
+run.name = 'gffleets_minsize_ref'
+# run.name = 'fleet_calibration_4_q'
 run.dir = here::here('Atlantis_Runs',run.name)
 figure.dir = paste0(run.dir,'/Post_Processed/')
+if(!dir.exists(figure.dir)){dir.create(figure.dir)}
 
 fgs = read.csv(here::here('currentVersion','neus_groups.csv'))%>%
   select(LongName,Code)
@@ -74,8 +76,17 @@ catch.fleet.tot.all = catch.fleet.tot %>%
 
 ggplot(data = catch.fleet.tot.all, aes(x= time, y = catch, col = var))+
   geom_line()+
-  facet_wrap(~fleet,scale = 'free_y')
-ggsave(paste0(figure.dir,run.name,'_catch_fleet_total.png'))
+  facet_wrap(~fleet,scale = 'free_y')+
+  theme_bw()
+ggsave(paste0(figure.dir,run.name,'_catch_fleet_total.png'), width = 12,height = 12, dpi = 250)
+
+sweptarea.corr = catch.fleet.tot.all %>%
+  tidyr::spread(var,catch)%>%
+  filter(!is.na(reference) & model>0)%>%
+  mutate(corr.ratio = reference/model)%>%
+  group_by(fleet)%>%
+  summarise(sweptarea.corr = mean(corr.ratio,na.rm=T))
+write.csv(sweptarea.corr,here::here('Setup_Files',paste0(run.name,'_sweptarea_corrections.csv')),row.names =F)
 
 #Plot Catch by species
 catch.spp.all = catch.spp %>%
@@ -83,15 +94,16 @@ catch.spp.all = catch.spp %>%
 
 ggplot(data = catch.spp.all, aes(x= time, y = catch, col = var))+
   geom_line()+
-  facet_wrap(~species,scale = 'free_y')
-ggsave(paste0(figure.dir,run.name,'_catch_species_total.png'))
+  facet_wrap(~species,scale = 'free_y')+
+  theme_bw()
+ggsave(paste0(figure.dir,run.name,'_catch_species_total.png'), width = 12,height = 12, dpi = 250)
 
 #Fleet species Combs
 catch.fleet.spp.all = catch.fleet.spp %>%
   bind_rows(catch.ref.fleep.spp)
 fleet.names = sort(unique(catch.fleet.spp.all$fleet))
-
-pdf(paste0(figure.dir,run.name,'_catch_fleet_species.pdf'))
+catch.corr.ls = list()
+pdf(paste0(figure.dir,run.name,'_catch_fleet_species.pdf'), width = 12,height = 12)
 for(i in 1:length(fleet.names)){
   
   this.catch = catch.fleet.spp.all %>%
@@ -100,7 +112,19 @@ for(i in 1:length(fleet.names)){
   p = ggplot(data = this.catch, aes(x= time, y = catch, col = var))+
     geom_line()+
     facet_wrap(~species,scale = 'free_y')+
-    ggtitle(fleet.names[i])
+    ggtitle(fleet.names[i])+
+    theme_bw()
   gridExtra::grid.arrange(p)
+  
+  catch.corr.ls[[i]] = this.catch %>%
+    tidyr::spread(var,catch)%>%
+    filter(!is.na(reference) & model>0)%>%
+    mutate(corr = reference/model)%>%
+    group_by(fleet,species)%>%
+    summarise(corr.mean = median(corr,na.rm=T))
 }
 dev.off()
+
+catch.corr.df = bind_rows(catch.corr.ls)
+
+write.csv(catch.corr.df, here::here('Setup_Files',paste0(run.name,'_q_corrections.csv')),row.names =F)
