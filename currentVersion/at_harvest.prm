@@ -2542,15 +2542,15 @@ SCAother_sweptarea   1.2e+7
 SCAnewbedford_sweptarea  1.2e+7
 SCAcapemay_sweptarea  1.2e+7
 SCAnewportnews_sweptarea  1.2e+7
-gfgloucester_sweptarea 1360361513.35116
-gfnewbedford_sweptarea 637171025.75423
-gfpointjudith_sweptarea 1016245339.64955
-gfboston_sweptarea 2876681616.36808
-gfmontauk_sweptarea 808621315.810736
-gfportland_sweptarea 325046782.759569
-gfportsmouth_sweptarea 123646855.212807
-gfchatham_sweptarea 659213275.583052
-gfother_sweptarea 395154492.599237
+gfgloucester_sweptarea 1E6
+gfnewbedford_sweptarea 1E6
+gfpointjudith_sweptarea 1E6
+gfboston_sweptarea 1E6
+gfmontauk_sweptarea 1E6
+gfportland_sweptarea 1E6
+gfportsmouth_sweptarea 1E6
+gfchatham_sweptarea 1E6
+gfother_sweptarea 1E6
 pseineBLF_sweptarea  0
 cullPIN_sweptarea    0
 ptrawlNSH_sweptarea  0
@@ -10002,7 +10002,7 @@ FCthreshli_MAK      28
 FCthreshli_HER      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_WHK      28
-0 0 0 0 0 20 20 20 20 20 20 20 20 20 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_BLF      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_WPF      28
@@ -10010,15 +10010,15 @@ FCthreshli_WPF      28
 FCthreshli_SUF      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_WIF      28
-0 0 0 0 0 29 29 29 29 29 29 29 29 29 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_WTF      28
-0 0 0 0 0 2 2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_FOU      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_HAL      28
-0 0 0 0 0 102 102 102 102 102 102 102 102 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_PLA      28
-0 0 0 0 0 10 10 10 10 10 10 10 10 10 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_FLA      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_BFT      28
@@ -10042,13 +10042,13 @@ FCthreshli_MEN      28
 FCthreshli_FDE      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_COD      28
-0 0 0 0 0 45 45 45 45 45 45 45 45 45 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_SHK      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_OHK      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_POL      28
-0 0 0 0 0 42 42 42 42 42 42 42 42 42 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_RHK      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_BSB      28
@@ -10058,7 +10058,7 @@ FCthreshli_SCU      28
 FCthreshli_TYL      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_RED      28
-0 0 0 0 0 7 7 7 7 7 7 7 7 7 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_OPT      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_SAL      28
@@ -10076,7 +10076,7 @@ FCthreshli_SDF      28
 FCthreshli_FDF      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_HAD      28
-0 0 0 0 0 35 35 35 35 35 35 35 35 35 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_YTF      28
 0 0 0 0 0 3 3 3 3 3 3 3 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 FCthreshli_DOG      28
