@@ -3,9 +3,10 @@ library(dplyr)
 library(ggplot2)
 library(mapdata)
 
-run.name = 'gffleets_minsize_ref'
-# run.name = 'fleet_calibration_4_q'
+run.name = 'fleet_calibration_7'
+
 run.dir = here::here('Atlantis_Runs',run.name)
+ref.years = c(20,60)
 figure.dir = paste0(run.dir,'/Post_Processed/')
 if(!dir.exists(figure.dir)){dir.create(figure.dir)}
 
@@ -15,7 +16,18 @@ fgs = read.csv(here::here('currentVersion','neus_groups.csv'))%>%
 neus.map = map_data('worldHires',region = c('USA','Canada'))
 
 catch.fleet.model = readRDS(paste0(run.dir,'/Post_Processed/Data/catch_fleet.rds'))%>%
-  mutate(time = (time*365))
+  # filter(species == 'Atlantic halibut')%>%
+  # group_by(fleet)%>%
+  # summarise(catch = sum(atoutput,na.rm=T))
+
+  rename(year = 'time')%>%
+  mutate(time = (year*365))%>%
+  filter(year >= ref.years[1] & year <= ref.years[2])
+
+#   
+# ggplot(catch.fleet.model,aes(x=time, y = catch))+geom_line()
+
+  
 
 catch.fleet.tot = catch.fleet.model %>%
   group_by(time, fleet)%>%
@@ -23,9 +35,13 @@ catch.fleet.tot = catch.fleet.model %>%
   mutate(var = 'model')
 
 catch.fleet.spp = catch.fleet.model %>%
+  # filter(fleet == 'gfboston' & species == 'Atlantic halibut')%>%
   group_by(time,fleet,species)%>%
   summarise(catch = sum(atoutput,na.rm=T)) %>% 
   mutate(var = 'model')
+  # filter(species == 'Atlantic halibut')%>%
+  # group_by(fleet)%>%
+  # summarise(catch = sum(catch))
 
 catch.spp = catch.fleet.model %>%
   group_by(time,species)%>%
@@ -34,16 +50,19 @@ catch.spp = catch.fleet.model %>%
 
 catch.ref.gf =readRDS(here::here('data-raw','data','groundfishFleetData.rds'))$landings%>%
   mutate(fleet = paste0('gf',gsub(' ','',tolower(newport))))%>%
+  filter(Year>= (1964+ref.years[1]) & Year <= (1964+ref.years[2])&Box %in% 1:22)%>%
   select(Year,Box,fleet,Code,landings)%>%
   group_by(Year,fleet,Code)%>%
   summarise(catch = sum(landings,na.rm=T))
+
 catch.ref.sca = readRDS(here::here('data-raw','data','scallopFleetData.rds'))$landings%>%
   mutate(fleet = paste0('SCA',gsub(' ','',tolower(newport))))%>%
   select(Year,Box,fleet,Code,landings)%>%
+  filter(Year >= (1964+ref.years[1]) & Year <= (1964+ref.years[2])&Box %in% 1:22)%>%
   group_by(Year,fleet,Code)%>%
   summarise(catch = sum(landings,na.rm=T))
 catch.ref.ts = readRDS(here::here('data','neusCatchData.rds'))%>% 
-  filter(!(Code %in% c(unique(catch.ref.gf$Code),'SCA')))%>%
+  filter(!(Code %in% c(unique(catch.ref.gf$Code),'SCA')) & YEAR >= (1964+ref.years[1]) & YEAR <= (1964+ref.years[2]))%>%
   rename(Year = 'YEAR',
          catch = 'value')%>%
   mutate(fleet = 'catchall')
@@ -107,7 +126,9 @@ pdf(paste0(figure.dir,run.name,'_catch_fleet_species.pdf'), width = 12,height = 
 for(i in 1:length(fleet.names)){
   
   this.catch = catch.fleet.spp.all %>%
-    filter(fleet == fleet.names[i])
+    # filter(species == 'Atlantic halibut') %>%
+    filter(fleet == fleet.names[i])%>%
+    mutate(time = time/365)
 
   p = ggplot(data = this.catch, aes(x= time, y = catch, col = var))+
     geom_line()+
@@ -118,13 +139,23 @@ for(i in 1:length(fleet.names)){
   
   catch.corr.ls[[i]] = this.catch %>%
     tidyr::spread(var,catch)%>%
-    filter(!is.na(reference) & model>0)%>%
-    mutate(corr = reference/model)%>%
+    # filter(!is.na(reference) & model>0)%>%
     group_by(fleet,species)%>%
-    summarise(corr.mean = median(corr,na.rm=T))
+    summarise(model.mean = mean(model,na.rm=T),
+              model.max = max(model,na.rm=T),
+              ref.mean = mean(reference,na.rm=T),
+              ref.max = max(reference,na.rm=T)) %>%
+    mutate(corr.mean = ref.mean/model.mean,
+           corr.max = ref.max/model.max)
 }
 dev.off()
-
 catch.corr.df = bind_rows(catch.corr.ls)
 
 write.csv(catch.corr.df, here::here('Setup_Files',paste0(run.name,'_q_corrections.csv')),row.names =F)
+
+# x = catch.fleet.spp.all %>%
+#   filter(species == 'Atlantic halibut') %>%
+#   mutate(year = floor(time/365))%>%
+#   group_by(fleet,year)%>%
+#   summarise(catch = sum(catch,na.rm=T))
+# ggplot(x, aes(x = year, y= catch))+geom_line()+facet_wrap(~fleet)
