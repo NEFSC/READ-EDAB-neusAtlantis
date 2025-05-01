@@ -2614,7 +2614,7 @@ flagescapement_MEN      28
 flagescapement_FDE      28
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 flagescapement_COD      28
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 flagescapement_SHK      28
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 flagescapement_OHK      28
@@ -6738,15 +6738,15 @@ SCAothersel_b   0
 SCAnewbedfordsel_b     0
 SCAcapemaysel_b     0
 SCAnewportnewssel_b  0
-gfgloucestersel_b    0.1441718
-gfnewbedfordsel_b  0.1441718
-gfpointjudithsel_b  0.1441718
-gfbostonsel_b  0.1441718
-gfmontauksel_b  0.1441718
-gfportlandsel_b  0.1441718
-gfportsmouthsel_b  0.1441718
-gfchathamsel_b   0.1441718
-gfothersel_b     0.1441718
+gfgloucester_sel_b 0.042
+gfnewbedford_sel_b 0.042
+gfpointjudith_sel_b 0.042
+gfboston_sel_b 0.042
+gfmontauk_sel_b 0.042
+gfportland_sel_b 0.042
+gfportsmouth_sel_b 0.042
+gfchatham_sel_b 0.042
+gfother_sel_b 0.042
 pseineBLFsel_b  0
 cullPINsel_b    0
 ptrawlNSHsel_b  0
@@ -6766,15 +6766,15 @@ SCAothersel_lsm   0
 SCAnewbedfordsel_lsm     0
 SCAcapemaysel_lsm     0
 SCAnewportnewssel_lsm  0
-gfgloucestersel_lsm    32.6211107
-gfnewbedfordsel_lsm  32.6211107
-gfpointjudithsel_lsm  32.6211107
-gfbostonsel_lsm  32.6211107
-gfmontauksel_lsm  32.6211107
-gfportlandsel_lsm  32.6211107
-gfportsmouthsel_lsm  32.6211107
-gfchathamsel_lsm   32.6211107
-gfothersel_lsm     32.6211107
+gfgloucester_sel_lsm 800
+gfnewbedford_sel_lsm 800
+gfpointjudith_sel_lsm 800
+gfboston_sel_lsm 800
+gfmontauk_sel_lsm 800
+gfportland_sel_lsm 800
+gfportsmouth_sel_lsm 800
+gfchatham_sel_lsm 800
+gfother_sel_lsm 800
 pseineBLFsel_lsm  0
 cullPINsel_lsm    0
 ptrawlNSHsel_lsm  0
