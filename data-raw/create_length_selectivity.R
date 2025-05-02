@@ -43,9 +43,11 @@ for(f in 1:length(gf.fleets)){
 #2) Define age-based escapement for the others to mirror their empirical selectivity curves
 
 source(here::here('R','Calibration_Tools','edit_param_escape.R'))
+source(here::here('R','Calibration_Tools','edit_param_q.R'))
 
 fgs = read.csv(here::here('currentVersion','neus_groups.csv'))
 s=1
+esc.df = data.frame(Code = gf.spp, m = NA, b =NA)
 for(s in 1:length(gf.spp)){
   
   
@@ -61,7 +63,52 @@ for(s in 1:length(gf.spp)){
   #Fit lm to length selectivity
   len.spp.ref = len.ref  %>%
     filter(Code == gf.spp[s])%>%
-    select(Code,LENGTH)
+    select(Code,LENGTH)%>%
+    arrange(LENGTH)%>%
+    mutate(prob = (1:dplyr::n())/dplyr::n())%>%
+    dplyr::group_by(LENGTH) |>
+    dplyr::summarise(n = dplyr::n()) |>
+    dplyr::mutate(p = n/sum(n),
+                  cump=cumsum(p))
+  
+  
+  spp.lm = lm(cump~LENGTH,len.spp.ref)
+  spp.min = min(len.spp.ref$LENGTH)
+  spp.max = max(len.spp.ref$LENGTH)
+  
+  spp.m = signif(1/(spp.max-spp.min),2)
+  spp.b = signif((1-(spp.m*spp.max)),2)
+  
+  esc.df$m[s] = spp.m
+  esc.df$b[s] = spp.b
+  
+  # plot(cump~LENGTH,len.spp.ref)
+  # curve(coef(spp.lm)[2]*x+coef(spp.lm)[1],0,120,add=T)
+  # curve(spp.m*x+spp.b,0,120,add=T,col =2)
+  
+  edit_param_escape(harvest.file = here::here('currentVersion','at_harvest.prm'),  
+                    Code = gf.spp[s],
+                    Fleet = gf.fleets,
+                    fleets.file = here::here('currentVersion','neus_fisheries.csv'),
+                    VarName = 'Ka_escape',
+                    Value = spp.m,
+                    overwrite =T)
+  
+  edit_param_escape(harvest.file = here::here('currentVersion','at_harvest.prm'),  
+                    Code = gf.spp[s],
+                    Fleet = gf.fleets,
+                    fleets.file = here::here('currentVersion','neus_fisheries.csv'),
+                    VarName = 'Kb_escape',
+                    Value = spp.b,
+                    overwrite =T)
+  
+  edit_param_escape(harvest.file = here::here('currentVersion','at_harvest.prm'),  
+                    Code = gf.spp[s],
+                    Fleet = gf.fleets,
+                    fleets.file = here::here('currentVersion','neus_fisheries.csv'),
+                    VarName = 'q',
+                    Value = 1,
+                    overwrite =T)
   
 }
 
