@@ -26,14 +26,14 @@ for(f in 1:length(gf.fleets)){
   edit_param_fleet(harvest.file = here::here('currentVersion','at_harvest.prm'),  
                    Fleet = gf.fleets[f],
                    VarName = 'sel_b',
-                   Value = fit.smallest$b[1],
+                   Value = signif(fit.smallest$b[1],2),
                    Unit = 'Value',
                    overwrite =T
   )
   edit_param_fleet(harvest.file = here::here('currentVersion','at_harvest.prm'),  
                    Fleet = gf.fleets[f],
                    VarName = 'sel_lsm',
-                   Value = fit.smallest$lsm[1],
+                   Value = signif(fit.smallest$lsm[1],2),
                    Unit = 'Value',
                    overwrite =T
   )
