@@ -69,22 +69,23 @@ for(s in 1:length(gf.spp)){
     dplyr::group_by(LENGTH) |>
     dplyr::summarise(n = dplyr::n()) |>
     dplyr::mutate(p = n/sum(n),
-                  cump=cumsum(p))
+                  cump=(1-cumsum(p)))
   
   
   spp.lm = lm(cump~LENGTH,len.spp.ref)
   spp.min = min(len.spp.ref$LENGTH)
   spp.max = max(len.spp.ref$LENGTH)
   
-  spp.m = signif(1/(spp.max-spp.min),2)
-  spp.b = signif((1-(spp.m*spp.max)),2)
+  spp.m = signif(-1/(spp.max-spp.min),2)
+  spp.b = signif((1-(spp.m*spp.min)),2)
+  # spp.b = ifelse(spp.b<0,0,spp.b)
   
   esc.df$m[s] = spp.m
   esc.df$b[s] = spp.b
   
-  # plot(cump~LENGTH,len.spp.ref)
-  # curve(coef(spp.lm)[2]*x+coef(spp.lm)[1],0,120,add=T)
-  # curve(spp.m*x+spp.b,0,120,add=T,col =2)
+  plot(cump~LENGTH,len.spp.ref)
+  curve(coef(spp.lm)[2]*x+coef(spp.lm)[1],0,120,add=T)
+  curve(spp.m*x+spp.b,0,120,add=T,col =2)
   
   edit_param_escape(harvest.file = here::here('currentVersion','at_harvest.prm'),  
                     Code = gf.spp[s],

@@ -3,7 +3,7 @@ library(dplyr)
 library(ggplot2)
 library(mapdata)
 
-run.name = 'fleet_calibration_7'
+run.name = 'fleet_calibration_8_revesc'
 
 run.dir = here::here('Atlantis_Runs',run.name)
 ref.years = c(20,60)
