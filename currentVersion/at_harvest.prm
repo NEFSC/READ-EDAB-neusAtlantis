@@ -2538,19 +2538,19 @@ Effort_vdistribmowMA          4
 ### The swept volume of water by gear of fishery YYY, m3 day-1. This is a volume, but called area to keep in line with the fisheries science usage.
 
 catchall_sweptarea   0
-SCAother_sweptarea   1.2e+7
-SCAnewbedford_sweptarea  1.2e+7
-SCAcapemay_sweptarea  1.2e+7
-SCAnewportnews_sweptarea  1.2e+7
-gfgloucester_sweptarea 2E6
-gfnewbedford_sweptarea 2E6
-gfpointjudith_sweptarea 2E6
-gfboston_sweptarea 2E6
-gfmontauk_sweptarea 2E6
-gfportland_sweptarea 2E6
-gfportsmouth_sweptarea 2E6
-gfchatham_sweptarea 2E6
-gfother_sweptarea 2E6
+SCAother_sweptarea 2646000
+SCAnewbedford_sweptarea 7.84e+06
+SCAcapemay_sweptarea 4323000
+SCAnewportnews_sweptarea 5935600
+gfgloucester_sweptarea 7.4e+08
+gfnewbedford_sweptarea 1e+09
+gfpointjudith_sweptarea 1.2e+09
+gfboston_sweptarea 7.9e+08
+gfmontauk_sweptarea 2.2e+08
+gfportland_sweptarea 4.3e+08
+gfportsmouth_sweptarea 2.2e+08
+gfchatham_sweptarea 2e+08
+gfother_sweptarea 1.9e+08
 pseineBLF_sweptarea  0
 cullPIN_sweptarea    0
 ptrawlNSH_sweptarea  0
