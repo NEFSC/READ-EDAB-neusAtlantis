@@ -4,7 +4,7 @@ library(dplyr)
 library(ggplot2)
 library(mapdata)
 
-run.name = 'fleet_calibration_8_sacorr'
+run.name = 'fleet_calibration_14sacorr'
 run.dir = here::here('Atlantis_Runs',run.name)
 figure.dir = paste0(run.dir,'/Post_Processed/')
 
@@ -19,10 +19,11 @@ fleets = read.csv(here::here('currentVersion','neus_fisheries.csv'))%>%
   mutate(Index = Index+1)
 
 q.corr = read.csv(here::here('Setup_Files',paste0(run.name,'_q_corrections.csv'))) %>%
-  filter(!(fleet %in% c('catchall','SCAcapemay','SCAnewbedford','SCAnewportnews','SCAother')))%>%
+  filter(!(fleet %in% c('catchall')))%>%
   left_join(fgs)%>%
-  left_join(fleets)%>%
-  mutate(corr.max = ifelse(corr.max>1|!is.finite(corr.max),1,corr.max))
+  left_join(fleets)
+  # mutate(corr.mean = ifelse(corr.mean>1|!is.finite(corr.mean),1,corr.mean),
+  #        corr.max = ifelse(corr.max>1|!is.finite(corr.max),1,corr.max))
   
 for(i in 1:nrow(q.corr)){
   
@@ -30,7 +31,8 @@ for(i in 1:nrow(q.corr)){
                Code = q.corr$Code[i],
                Fleet = q.corr$fleet[i],
                fleets.file = here::here('currentVersion','neus_fisheries.csv'),
-               Value = signif(q.corr$corr.max[i],2),
+               Type= 'scalar',
+               Value =signif(q.corr$corr.mean[i],2) ,
                overwrite = T
               )
 }

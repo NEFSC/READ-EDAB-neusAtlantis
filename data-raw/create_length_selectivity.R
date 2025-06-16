@@ -47,6 +47,7 @@ source(here::here('R','Calibration_Tools','edit_param_q.R'))
 
 fgs = read.csv(here::here('currentVersion','neus_groups.csv'))
 s=1
+gf.spp = gf.spp[which(gf.spp != smallest.spp)]
 esc.df = data.frame(Code = gf.spp, m = NA, b =NA)
 for(s in 1:length(gf.spp)){
   

@@ -4,7 +4,7 @@ library(dplyr)
 library(ggplot2)
 library(mapdata)
 
-run.name = 'fleet_calibration_8_revesc'
+run.name = 'fleet_calibration_14'
 run.dir = here::here('Atlantis_Runs',run.name)
 figure.dir = paste0(run.dir,'/Post_Processed/')
 
@@ -16,7 +16,8 @@ fleets = read.csv(here::here('currentVersion','neus_fisheries.csv'))%>%
   mutate(Index = Index+1)
 
 area.corr.sa = read.csv(here::here('Setup_Files',paste0(run.name,'_sweptarea_corrections.csv'))) %>%
-  filter(!(fleet %in% c('catchall','SCAcapemay','SCAnewbedford','SCAnewportnews','SCAother')))%>%
+  # filter(!(fleet %in% c('catchall','SCAcapemay','SCAnewbedford','SCAnewportnews','SCAother')))%>%
+  filter(!(fleet %in% c('catchall')))%>%
   left_join(fleets)
   
 area.corr.q = read.csv(here::here('Setup_Files',paste0(run.name,'_q_corrections.csv'))) %>%
@@ -26,23 +27,23 @@ area.corr.q = read.csv(here::here('Setup_Files',paste0(run.name,'_q_corrections.
   group_by(fleet)%>%
   summarise(sweptarea.corr = quantile(corr.mean,0.9,na.rm=T))
 
-file.copy(here::here('currentVersion','at_harvest.prm'),here::here('currentVersion','at_harvest_8_sacorr.prm'))
-file.copy(here::here('currentVersion','at_harvest.prm'),here::here('currentVersion','at_harvest_8_qcorr.prm'))
+file.copy(here::here('currentVersion','at_harvest.prm'),here::here('currentVersion','at_harvest_10_sacorr.prm'),overwrite = T)
+file.copy(here::here('currentVersion','at_harvest.prm'),here::here('currentVersion','at_harvest_10_qcorr.prm'),overwrite =T)
 
 for(i in 1:nrow(area.corr.sa)){
   
-  edit_param_fleet(harvest.file = here::here('currentVersion','at_harvest_8_sacorr.prm'),
+  edit_param_fleet(harvest.file = here::here('currentVersion','at_harvest.prm'),
                    VarName = 'sweptarea',
                    Fleet = area.corr.sa$fleet[i],
                    Unit = 'scalar',
-                   Value = area.corr.sa$sweptarea.corr[i],
+                   Value = area.corr.sa$sweptarea.corr.mean[i],
                    overwrite = T
   )
 }
 
 for(i in 1:nrow(area.corr.q)){
   
-  edit_param_fleet(harvest.file = here::here('currentVersion','at_harvest_8_qcorr.prm'),
+  edit_param_fleet(harvest.file = here::here('currentVersion','at_harvest.prm'),
                    VarName = 'sweptarea',
                    Fleet = area.corr.q$fleet[i],
                    Unit = 'scalar',

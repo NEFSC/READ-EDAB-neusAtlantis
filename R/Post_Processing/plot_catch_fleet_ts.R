@@ -3,7 +3,7 @@ library(dplyr)
 library(ggplot2)
 library(mapdata)
 
-run.name = 'fleet_calibration_8_sacorr'
+run.name = 'fleet_calibration_14sacorr'
 
 run.dir = here::here('Atlantis_Runs',run.name)
 ref.years = c(20,60)
@@ -91,9 +91,12 @@ catch.ref.spp = catch.ref %>%
 
 #Plot Catch by Fleet
 catch.fleet.tot.all = catch.fleet.tot %>%
-  bind_rows(catch.ref.fleet.tot)
+  bind_rows(catch.ref.fleet.tot)%>%
+  mutate(year = floor(time/365))%>%
+  group_by(year,fleet,var)%>%
+  summarise(catch =sum(catch,na.rm=T))
 
-ggplot(data = catch.fleet.tot.all, aes(x= time, y = catch, col = var))+
+ggplot(data = catch.fleet.tot.all, aes(x= year, y = catch, col = var))+
   geom_line()+
   facet_wrap(~fleet,scale = 'free_y')+
   theme_bw()
@@ -104,18 +107,35 @@ sweptarea.corr = catch.fleet.tot.all %>%
   filter(!is.na(reference) & model>0)%>%
   mutate(corr.ratio = reference/model)%>%
   group_by(fleet)%>%
-  summarise(sweptarea.corr = mean(corr.ratio,na.rm=T))
+  summarise(sweptarea.corr.mean = mean(corr.ratio,na.rm=T),
+            sweptarea.corr.max = max(corr.ratio,na.rm=T),
+            sweptarea.corr.min = min(corr.ratio,na.rm=T))
 write.csv(sweptarea.corr,here::here('Setup_Files',paste0(run.name,'_sweptarea_corrections.csv')),row.names =F)
 
 #Plot Catch by species
 catch.spp.all = catch.spp %>%
   bind_rows(catch.ref.spp)
 
-ggplot(data = catch.spp.all, aes(x= time, y = catch, col = var))+
+catch.spp.allyr = catch.spp.all %>%
+  mutate(year = floor(time/365 ))%>%
+  group_by(year,species,var)%>%
+  summarise(catch = sum(catch,na.rm=T))
+
+ggplot(data = catch.spp.allyr, aes(x= year, y = catch, col = var))+
   geom_line()+
   facet_wrap(~species,scale = 'free_y')+
   theme_bw()
-ggsave(paste0(figure.dir,run.name,'_catch_species_total.png'), width = 12,height = 12, dpi = 250)
+ggsave(paste0(figure.dir,run.name,'_catch_species_total.png'), width = 24,height = 24, dpi = 250)
+
+catch.whole.model =catch.spp.allyr %>%
+  group_by(year,var)%>%
+  summarise(catch = sum(catch,na.rm=T))
+ggplot(data = catch.whole.model, aes(x= year, y = catch, col = var))+
+  geom_line()+
+  theme_bw()+
+  ggtitle('All Catch')
+ggsave(paste0(figure.dir,run.name,'_catch_total.png'), width = 8,height = 5, dpi = 250)
+
 
 #Fleet species Combs
 catch.fleet.spp.all = catch.fleet.spp %>%
@@ -128,9 +148,12 @@ for(i in 1:length(fleet.names)){
   this.catch = catch.fleet.spp.all %>%
     # filter(species == 'Atlantic halibut') %>%
     filter(fleet == fleet.names[i])%>%
-    mutate(time = time/365)
+    mutate(time = time/365)%>%
+    mutate(year = floor(time))%>%
+    group_by(year,fleet,species,var)%>%
+    summarise(catch = sum(catch,na.rm=T))
 
-  p = ggplot(data = this.catch, aes(x= time, y = catch, col = var))+
+  p = ggplot(data = this.catch, aes(x= year, y = catch, col = var))+
     geom_line()+
     facet_wrap(~species,scale = 'free_y')+
     ggtitle(fleet.names[i])+
@@ -139,14 +162,14 @@ for(i in 1:length(fleet.names)){
   
   catch.corr.ls[[i]] = this.catch %>%
     tidyr::spread(var,catch)%>%
-    # filter(!is.na(reference) & model>0)%>%
+    filter(!is.na(reference) & model>0)%>%
     group_by(fleet,species)%>%
     summarise(model.mean = mean(model,na.rm=T),
               model.max = max(model,na.rm=T),
               ref.mean = mean(reference,na.rm=T),
               ref.max = max(reference,na.rm=T)) %>%
-    mutate(corr.mean = ref.mean/model.mean,
-           corr.max = ref.max/model.max)
+    mutate(corr.mean = ifelse(model.mean == 0,1,ref.mean/model.mean),
+           corr.max = ifelse(model.max == 0, 1,ref.max/model.max))
 }
 dev.off()
 catch.corr.df = bind_rows(catch.corr.ls)

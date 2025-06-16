@@ -8,7 +8,7 @@
 # new.file.name = here::here('currentVersion','at_harvest_test.prm')
 # Value = 2
 
-edit_param_q = function(harvest.file, Code, Fleet,fleets.file,Value,overwrite,new.file.name){
+edit_param_q = function(harvest.file, Code, Fleet,fleets.file,Type,Value,overwrite,new.file.name){
   
   fisheries = read.csv(fleets.file,as.is =T)
   
@@ -22,7 +22,17 @@ edit_param_q = function(harvest.file, Code, Fleet,fleets.file,Value,overwrite,ne
   orig.vals = strsplit(harvest.lines[which.q+1],' |\t')[[1]]
   
   new.vals = orig.vals
-  new.vals[which.fleet] = Value
+  
+  if(Type == 'scalar'){
+    new.vals[which.fleet] = Value * as.numeric(new.vals[which.fleet])
+  }else{
+    new.vals[which.fleet] = Value
+  }
+  vals.1 = which(new.vals>1)
+  if(length(vals.1)>0){
+    new.vals[vals.1] = 1
+  }
+  
   new.vals=paste(new.vals,collapse = ' ')
   
   harvest.lines[which.q+1] = new.vals
