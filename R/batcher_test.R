@@ -5,7 +5,7 @@ library(dplyr)
 proj.dir = '/contrib/fishing_sensitivity/neus-atlantis/'
 # proj.dir = here::here('/')
 
-batch.prefix = 'batcher_test1'
+batch.prefix = 'sca_newdist_1'
 dir.create(paste0(proj.dir,'Atlantis_Runs/',batch.prefix,'/'))
 dir.create(paste0(proj.dir,'Setup_Files/'))
 
