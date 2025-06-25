@@ -21,10 +21,10 @@ edit_param_q = function(harvest.file, Code, Fleet,fleets.file,Type,Value,overwri
   
   orig.vals = strsplit(harvest.lines[which.q+1],' |\t')[[1]]
   
-  new.vals = orig.vals
+  new.vals = as.numeric(orig.vals)
   
   if(Type == 'scalar'){
-    new.vals[which.fleet] = Value * as.numeric(new.vals[which.fleet])
+    new.vals[which.fleet] = Value * new.vals[which.fleet]
   }else{
     new.vals[which.fleet] = Value
   }
