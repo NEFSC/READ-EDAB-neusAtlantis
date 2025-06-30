@@ -28,7 +28,9 @@ make_post_process = function(run.name,
                              plot.spatial.biomass.seasonal = F,
                              plot.spatial.overlap = F,
                              plot.catch =F,
+
                              plot.spatial.catch =F,
+
                              plot.catch.fleet = F,
                              plot.mortality=F,
                              plot.weight = F,
@@ -57,13 +59,13 @@ make_post_process = function(run.name,
   fig.dir = paste0(atl.dir,'Post_Processed/')
   
   #Run function that retreives parameter files
-  param.ls= atlantisprocessing::get_atl_paramfiles(param.dir = param.dir,
+  param.ls= atlantisdiagnostics::get_atl_paramfiles(param.dir = param.dir,
                                atl.dir=atl.dir,
                                run.prefix = run.prefix,
                                include_catch=T)
   
   #Run  post-processing function to generate "result" R object. 
-  atlantisprocessing::process_atl_output(
+  atlantisdiagnostics::process_atl_output(
     param.dir = param.dir,
     atl.dir = atl.dir,
     out.dir = out.dir,
@@ -91,6 +93,9 @@ make_post_process = function(run.name,
     plot.spatial.biomass=plot.spatial.biomass,
     plot.spatial.biomass.seasonal = plot.spatial.biomass.seasonal,
     plot.spatial.overlap = plot.spatial.overlap,
+
+    # plot.LTL=plot.LTL, 
+
     plot.catch =plot.catch,
     plot.catch.fleet = plot.catch.fleet,
     plot.mortality=plot.mortality,
@@ -101,7 +106,7 @@ make_post_process = function(run.name,
   # load(paste0(out.dir,'neus_output_postprocessed.Rdata'))
   
   #Run diagnostic figures/tables script. See function document for more detailed description of figures.
-  atlantisprocessing::make_atlantis_diagnostic_figures(
+  atlantisdiagnostics::make_atlantis_diagnostic_figures(
     atl.dir = atl.dir,
     fig.dir = fig.dir,
     out.dir = out.dir,
@@ -133,9 +138,16 @@ make_post_process = function(run.name,
     plot.consumption= plot.consumption,
     plot.spatial.biomass=plot.spatial.biomass,
     plot.spatial.biomass.seasonal = plot.spatial.biomass.seasonal,
-    plot.catch =plot.catch,
+
+
+    # plot.LTL=plot.LTL, 
+
     plot.spatial.catch =plot.spatial.catch,
+
+
     # plot.catch.fleet = plot.catch.fleet,
+    plot.catch = plot.catch,
+
     plot.mortality=plot.mortality,
     plot.weight = plot.weight
     

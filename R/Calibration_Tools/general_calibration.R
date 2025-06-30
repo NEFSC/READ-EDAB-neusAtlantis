@@ -9,11 +9,11 @@
 library(dplyr)
 
 #Read in setup file
-experiment.id = 'test'
+experiment.id = 'fleet_calibration_2'
 # setup.df = read.csv(here::here('Setup_Files','cloud_v6681_ddepend_1_setup.csv'),as.is=T)
-setup.df = read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'))
+setup.df = read.csv(here::here('Setup_Files','cloud_fleet_calibration_2.csv'))
 model.dir = here::here('')
-output.dir = '/atlantisdisk/test1/'
+output.dir = paste0('/atlantisdisk/',experiment.id,'/')
 
 #Define base files
 bio.file.orig = here::here('currentVersion','at_biology.prm')
@@ -473,15 +473,12 @@ for(i in 1:length(run.id)){
     
     if(setup.run$Type[j] %in% c('selcurve','tstart','mindepth','maxdepth','sweptarea')){
       
-      if(setup.run$Unit[j] == 'scalar'){
-        stop('Fleet Selectivity only setup for Unit = "value"')
-      }
-      
       edit_param_fleet(
         harvest.file = harvest.file.new,
         Fleet = setup.run$Code[j],
         Value = setup.run$Value[j],
         VarName = setup.run$Type[j],
+        Unit = setup.run$Unit[j],
         overwrite =T
       )
     }
