@@ -19,7 +19,7 @@
 #' # example code
 #' 
 
-scale_forcing_ts <- function(code,tstype="effort",value=1,operation="multiply",filename="temp") {
+scale_forcing_ts <- function(code,tstype="effort",value=1,operation="multiply",filename="temp", overwrite =T) {
 
   # input and output files
   if(tstype == "effort") {
@@ -29,6 +29,7 @@ scale_forcing_ts <- function(code,tstype="effort",value=1,operation="multiply",f
   } else {
     stop("tsfile must be either 'catch' or 'effort'")
   }
+  
   
   outFile <- here::here(paste0("currentVersion/CatchFiles/",filename,".ts"))
   copyFile <- here::here(paste0("currentVersion/CatchFiles/",filename,".tstemp"))
@@ -53,7 +54,7 @@ scale_forcing_ts <- function(code,tstype="effort",value=1,operation="multiply",f
     dplyr::mutate(Column = as.integer(Column))
   
   # check to make sure code is valid
-  if(!(code %in% df$Code) ){
+  if(all(!(code %in% df$Code) )){
     stop(paste0(code," is not a valid code for ",tstype," file"))
   }
 
@@ -102,7 +103,7 @@ scale_forcing_ts <- function(code,tstype="effort",value=1,operation="multiply",f
   }
   
   
-  if(file.exists(outFile)) {
+  if(file.exists(outFile) & overwrite == F) {
     file.rename(outFile,copyFile)
     message(paste0("Your previous version of catch ",filename,".ts has been renamed to ",filename,".tstemp"))
   }
