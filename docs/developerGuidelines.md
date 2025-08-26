@@ -333,19 +333,19 @@ Using Google Drive to store output
                     "neus_fisheries.csv")
 
     # push input files to Google drive
-    atlantisdrive::push_to_drive(localPath = here::here("currentVersion"),
+    # atlantisdrive::push_to_drive(localPath = here::here("currentVersion"),
                   fileList=inputFiles,
                   googledriveFolder = "Testing/OutForSarah",
                   overwrite=T
                   )
     # push all output files to Google drive
-    atlantisdrive::push_to_drive(localPath = here::here("output"),
+    #atlantisdrive::push_to_drive(localPath = here::here("output"),
                                  fileList=NULL,
                                  googledriveFolder = "Testing/OutForSarah",
                                  overwrite = T)
 
     # pull all files from google drive
-    atlantisdrive::pull_from_drive(localPath = here::here("outputFolder"),
+    # atlantisdrive::pull_from_drive(localPath = here::here("outputFolder"),
                                  fileList=NULL,
                                  googledriveFolder = "Testing/OutForSarah"
                                  )

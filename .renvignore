@@ -1,0 +1,9 @@
+data-raw
+diagnostiscs
+docs
+RM
+R/ECCO
+R/ROMS_COBALT
+R/Physical_Forcing
+*.Rmd
+*.md

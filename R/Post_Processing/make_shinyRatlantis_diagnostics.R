@@ -4,8 +4,8 @@ library('dplyr')
 library('DT')
 library('ncdf4')
 library('stringr')
-library('shinyrAtlantis')
-library('ReactiveAtlantis')
+#library('shinyrAtlantis')
+#library('ReactiveAtlantis')
 
 ###Define output and parameter directory
 out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Atlantis_Runs/CheckPersist_1/'

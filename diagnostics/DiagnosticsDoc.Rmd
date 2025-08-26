@@ -54,13 +54,13 @@ We use these R libraries, with non-CRAN package installation instructions in com
 #remotes::install_github(\"noaa-edab/ecotrend\",build_vignettes=TRUE)
 #remotes::install_github("andybeet/atlantisdrive")
 
-library(ecodata)
-library(ecotrend)
-library(tidyverse)
-library(atlantisom)
-library(here)
-library(googledrive)
-library(atlantisdrive)
+# library(ecodata)
+# library(ecotrend)
+# library(tidyverse)
+# library(atlantisom)
+# library(here)
+# library(googledrive)
+#library(atlantisdrive)
 
 source("shift_legend.R")
 

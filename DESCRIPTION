@@ -41,7 +41,6 @@ Imports:
     readr,
     readxl,
     reshape2,
-    rgdal,
     RNetCDF,
     sf,
     sp,
@@ -51,4 +50,5 @@ Imports:
     visNetwork,
     zoo
 Remotes:
-    andybeet/atlantistools
+    Atlantis-Ecosystem-Model/atlantistools,
+    Atlantis-Ecosystem-Model/ReactiveAtlantis
