@@ -538,7 +538,7 @@
     },
     "NEFSCspatial": {
       "Package": "NEFSCspatial",
-      "Version": "0.1.0",
+      "Version": "0.1.1",
       "Source": "GitHub",
       "Title": "Spatial data package for regions in the northeast atlantic",
       "Authors@R": "c(person(\"Andy\", \"Beet\", email = \"andrew.beet@noaa.gov\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-8270-7090\")), person(\"Joshua\", \"Hatch\", email = \"joshua.hatch@noaa.gov\", role = \"aut\"), person(\"Kimberly\", \"Bastille\", email = \"kimberly.bastille@noaa.gov\", role = \"aut\"))",
@@ -577,16 +577,14 @@
       "LazyData": "true",
       "LazyDataCompression": "bzip2",
       "VignetteBuilder": "knitr",
+      "Author": "Andy Beet [aut, cre] (<https://orcid.org/0000-0001-8270-7090>), Joshua Hatch [aut], Kimberly Bastille [aut]",
+      "Maintainer": "Andy Beet <andrew.beet@noaa.gov>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemotePackage": "NEFSCspatial",
-      "RemoteRepo": "NEFSC-Spatial",
       "RemoteUsername": "NEFSC",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "e8c9b6bd4651de0f61956001f67bb541e4e728bb",
-      "NeedsCompilation": "no",
-      "Author": "Andy Beet [aut, cre] (<https://orcid.org/0000-0001-8270-7090>), Joshua Hatch [aut], Kimberly Bastille [aut]",
-      "Maintainer": "Andy Beet <andrew.beet@noaa.gov>"
+      "RemoteRepo": "NEFSC-Spatial",
+      "RemoteRef": "main",
+      "RemoteSha": "f5ff3018edd3d24e568678fa941ba0245669ce2d"
     },
     "NetIndices": {
       "Package": "NetIndices",
@@ -1088,15 +1086,14 @@
         "doParallel",
         "doRNG"
       ],
+      "Author": "Andy Beet [aut, cre] (<https://orcid.org/0000-0001-8270-7090>)",
+      "Maintainer": "Andy Beet <andrew.beet@noaa.gov>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "arfit",
       "RemoteUsername": "NOAA-EDAB",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "efbeed49fef062f1f63869dd4523452fbfab3d29",
-      "NeedsCompilation": "no",
-      "Author": "Andy Beet [aut, cre] (<https://orcid.org/0000-0001-8270-7090>)",
-      "Maintainer": "Andy Beet <andrew.beet@noaa.gov>"
+      "RemoteRepo": "arfit",
+      "RemoteRef": "main",
+      "RemoteSha": "efbeed49fef062f1f63869dd4523452fbfab3d29"
     },
     "askpass": {
       "Package": "askpass",
@@ -1134,6 +1131,7 @@
       "URL": "https://github.com/NOAA-EDAB/atlantisdiagnostics,https://noaa-edab.github.io/atlantisdiagnostics/",
       "BugReports": "https://github.com/NOAA-EDAB/atlantisdiagnostics/issues",
       "Encoding": "UTF-8",
+      "LazyData": "true",
       "Imports": [
         "dplyr",
         "ggplot2",
@@ -1158,7 +1156,6 @@
         "ggpubr",
         "tibble"
       ],
-      "Remotes": "Atlantis-Ecosystem-Model/atlantistools, r4atlantis/atlantisom",
       "Roxygen": "list(markdown = TRUE)",
       "RoxygenNote": "7.3.2",
       "Suggests": [
@@ -1166,20 +1163,20 @@
         "rmarkdown"
       ],
       "VignetteBuilder": "knitr",
+      "Author": "Sarah Gaichas [aut], Andy Beet [aut, cre] (<https://orcid.org/0000-0001-8270-7090>), Joeseph Caracappa [aut], Robert Gamble [aut], Ryan Morse [aut] (YOUR-ORCID-ID)",
+      "Maintainer": "Andy Beet <andrew.beet@noaa.gov>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "atlantisdiagnostics",
       "RemoteUsername": "NOAA-EDAB",
-      "RemoteRef": "HEAD",
+      "RemoteRepo": "atlantisdiagnostics",
+      "RemoteRef": "main",
       "RemoteSha": "f825cf914e1d3dd23a5b039e6f24c9a84dd080b6",
-      "NeedsCompilation": "no",
-      "Author": "Sarah Gaichas [aut], Andy Beet [aut, cre] (<https://orcid.org/0000-0001-8270-7090>), Joeseph Caracappa [aut], Robert Gamble [aut], Ryan Morse [aut] (YOUR-ORCID-ID)",
-      "Maintainer": "Andy Beet <andrew.beet@noaa.gov>"
+      "Remotes": "Atlantis-Ecosystem-Model/atlantistools, r4atlantis/atlantisom"
     },
     "atlantiseof": {
       "Package": "atlantiseof",
       "Version": "0.0.0.9000",
-      "Source": "unknown",
+      "Source": "GitHub",
       "Title": "Explores Regional Ecosystem Overfishing Indices using Atlantis Ecosystem Model",
       "Authors@R": "person(given = \"Andy\",family = \"Beet\", role = c(\"aut\", \"cre\"), email = \"andrew.beet@noaa.gov\", comment = c(ORCID = \"0000-0001-8270-7090\"))",
       "Description": "Using the the NEUS Atlantis Ecosystem model we explore regional ecosystem overfishing indices and compare to global estimates.",
@@ -1206,6 +1203,14 @@
         "stocksmart",
         "NEFSCspatial"
       ],
+      "Remotes": "NOAA-EDAB/atlantisdiagnostics, NOAA-EDAB/stocksmart, r4atlantis/atlantisom, Atlantis-Ecosystem-Model/atlantistools, NOAA-EDAB/ecodata, NEFSCspatial=NEFSC/NEFSC-Spatial",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "atlantiseof",
+      "RemoteUsername": "NOAA-EDAB",
+      "RemoteRef": "dev",
+      "RemoteSha": "abc3600d173c3a44a635a0ee63fe3bb7309f88ae",
+      "NeedsCompilation": "no",
       "Author": "Andy Beet [aut, cre] (<https://orcid.org/0000-0001-8270-7090>)",
       "Maintainer": "Andy Beet <andrew.beet@noaa.gov>"
     },
@@ -1220,6 +1225,7 @@
       "Description": "The atlantisom package develops data sets for use in other modelling frameworks from an Atlantis scenario. Functions located within the package may be helpful for users of Atlantis wishing to look at model output as well.",
       "Encoding": "UTF-8",
       "License": "What license is it under?",
+      "LazyData": "TRUE",
       "Imports": [
         "RNetCDF",
         "stringr",
@@ -1243,18 +1249,14 @@
       ],
       "VignetteBuilder": "knitr",
       "RoxygenNote": "7.2.1",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "atlantisom",
-      "RemoteUsername": "r4atlantis",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "1e5d32854b417a0d1650d45a4a4f41041f08594c",
-      "NeedsCompilation": "no",
       "Author": "Gavin Fay [aut], Sarah Gaichas [aut], Beth Fulton [aut], Allan Hicks [aut], Emma Hodgson [aut], Kelli Johnson [aut, cre], Isaac Kaplan [aut], Alexander Keth [aut], Sean Lucey [aut], Matteo Sinerchia [aut], Howard Townsend [aut]",
       "Maintainer": "Kelli Johnson <kellifayejohnson@gmail.com>",
-      "Depends": [
-        "R (>= 3.5.0)"
-      ]
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "r4atlantis",
+      "RemoteRepo": "atlantisom",
+      "RemoteRef": "master",
+      "RemoteSha": "1e5d32854b417a0d1650d45a4a4f41041f08594c"
     },
     "atlantisprocessing": {
       "Package": "atlantisprocessing",
@@ -1288,16 +1290,15 @@
         "gtable",
         "ggpubr"
       ],
-      "Remotes": "Atlantis-Ecosystem-Model/atlantistools, r4atlantis/atlantisom",
+      "Author": "Joseph Caracappa [aut] (YOUR-ORCID-ID), Andy Beet [aut, cre] (<https://orcid.org/0000-0001-8270-7090>), Ryan Morse [aut] (YOUR-ORCID-ID)",
+      "Maintainer": "Andy Beet <andrew.beet@noaa.gov>",
       "RemoteType": "github",
+      "Remotes": "Atlantis-Ecosystem-Model/atlantistools, r4atlantis/atlantisom",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "atlantisprocessing",
       "RemoteUsername": "NOAA-EDAB",
       "RemoteRef": "HEAD",
-      "RemoteSha": "358f80683cfdcfad5880a7fd70d50daa5b38991c",
-      "NeedsCompilation": "no",
-      "Author": "Joseph Caracappa [aut] (YOUR-ORCID-ID), Andy Beet [aut, cre] (<https://orcid.org/0000-0001-8270-7090>), Ryan Morse [aut] (YOUR-ORCID-ID)",
-      "Maintainer": "Andy Beet <andrew.beet@noaa.gov>"
+      "RemoteSha": "358f80683cfdcfad5880a7fd70d50daa5b38991c"
     },
     "atlantistools": {
       "Package": "atlantistools",
@@ -3437,21 +3438,20 @@
         "rlang"
       ],
       "URL": "https://noaa-edab.github.io/ecodata/,https://github.com/NOAA-EDAB/ecodata",
-      "Remotes": "NOAA-EDAB/arfit",
       "VignetteBuilder": "knitr",
       "RoxygenNote": "7.3.2",
       "Depends": [
         "R (>= 3.5)"
       ],
+      "Author": "Brandon Beltz [cre, aut], Andy Beet [aut] (<https://orcid.org/0000-0001-8270-7090>), Kimberly Bastille [aut], Sean Hardison [aut]",
+      "Maintainer": "Brandon Beltz <brandon.beltz@noaa.gov>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "ecodata",
       "RemoteUsername": "NOAA-EDAB",
-      "RemoteRef": "HEAD",
+      "RemoteRepo": "ecodata",
+      "RemoteRef": "master",
       "RemoteSha": "ae74262c465ef0a8478ba34fdcb7c98763f052a9",
-      "NeedsCompilation": "no",
-      "Author": "Brandon Beltz [cre, aut], Andy Beet [aut] (<https://orcid.org/0000-0001-8270-7090>), Kimberly Bastille [aut], Sean Hardison [aut]",
-      "Maintainer": "Brandon Beltz <brandon.beltz@noaa.gov>"
+      "Remotes": "NOAA-EDAB/arfit"
     },
     "ellipsis": {
       "Package": "ellipsis",
@@ -9235,7 +9235,7 @@
     },
     "stocksmart": {
       "Package": "stocksmart",
-      "Version": "0.6.47",
+      "Version": "0.6.48",
       "Source": "GitHub",
       "Title": "Provides access to NOAAs stock SMART data",
       "Authors@R": "person(given = \"Andy\",family = \"Beet\", role = c(\"aut\", \"cre\"), email = \"andrew.beet@noaa.gov\", comment = c(ORCID = \"0000-0001-8270-7090\"))",
@@ -9271,7 +9271,7 @@
       "RemoteRepo": "stocksmart",
       "RemoteUsername": "NOAA-EDAB",
       "RemoteRef": "HEAD",
-      "RemoteSha": "ba6f54f3da15aa08ea169438939b6068a730a318",
+      "RemoteSha": "0a779a72a225ae72520698d3c3bdff7db10af850",
       "NeedsCompilation": "no",
       "Author": "Andy Beet [aut, cre] (<https://orcid.org/0000-0001-8270-7090>)",
       "Maintainer": "Andy Beet <andrew.beet@noaa.gov>"

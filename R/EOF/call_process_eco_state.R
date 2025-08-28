@@ -18,6 +18,10 @@ if(!dir.exists(output.dir)){
 run.dirs = paste0('/atlantisdisk/',experiment.id,'/',experiment.id,'_',setup.df$run,'/')
 #Convert detailed diet for each run
 
+survdat.url = "https://github.com/NOAA-EDAB/atlantiseof/raw/refs/heads/dev/data-raw/survey_lenagewgt.rds"
+temp_file = tempfile(fileext = '.rds')
+download.file(survdat.url, destfile = temp_file, mode = 'wb')
+survdat.data = readRDS(temp_file)
 
 i=1
 for(i in 1:length(run.dirs)){
@@ -28,7 +32,8 @@ for(i in 1:length(run.dirs)){
                                    fgs.file = here::here('currentVersion','neus_groups.csv'),
                                    dietSource = 'detdiet',
                                    timeRange = 1:5,
-                                   cloud = T
+                                   cloud = T,
+                                   survdat.data =survdat.data
                                    )
   
   run.ind.mean = atlantiseof::make_eco_indicators(param.dir = here::here('currentVersion'),
@@ -72,7 +77,7 @@ for(i in 1:length(run.dirs)){
   ppc = atlantiseof::get_ppc(param.dir = here::here('currentVersion',''),
                              atl.dir = run.dirs[i],
                              fgs = here::here('currentVersion','neus_groups.csv'),
-                             dietSource = 'realized',
+                             dietSource = 'detDiet',
                              timeRange = 1:5)
   
   #Write to atlantisarchive for download
