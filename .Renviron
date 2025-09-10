@@ -1,0 +1,2 @@
+LD_LIBRARY_PATH=/usr/local/lib:/usr/lib64
+GIT_SSL_NO_VERIFY=TRUE

@@ -1,0 +1,90 @@
+Code,Name,LongName,GroupType,Pelagic,Predator
+RED,Redfish,Acadian redfish,FISH,0,1
+TYL,Tilefish,All tilefish,FISH,0,0
+PLA,Plaice,American plaice,FISH,0,0
+ANC,Anchovies,Anchovies,FISH,1,0
+BFT,BluefinTuna,Atlantic bluefin tuna,FISH,1,1
+COD,Cod,Atlantic cod,FISH,0,1
+HAL,Halibut,Atlantic halibut,FISH,0,1
+HER,Herring,Atlantic herring,FISH,1,0
+MAK,Mackerel,Atlantic mackerel,FISH,1,0
+MEN,Menhaden,Atlantic menhaden,FISH,1,0
+SAL,Atlantic_Salmon,Atlantic salmon,FISH,1,1
+SDF,Atlantic_States_Demersals,Atlantic states demersal fish,FISH,0,0
+CLA,Surf_Clam,Atlantic surf clam,SED_EP_FF,0,0
+BWH,Baleen_Whale,Baleen whales,MAMMAL,1,0
+BC,Benthic_Carniv,Benthic Carnivore,MOB_EP_OTHER,0,1
+BG,Benthic_grazer,Benthic grazer,SED_EP_OTHER,0,0
+BIL,Billfish,Billfish,FISH,1,1
+BSB,Black_Sea_Bass,Black sea bass,FISH,0,0
+BLS,Blue_Shark,Blue shark,SHARK,1,1
+BLF,Bluefish,Bluefish,FISH,1,1
+BUT,Butterfish,Butterfish,FISH,1,0
+ZL,Carniv_Zoo,Carnivorous zooplankton,LG_ZOO,0,0
+DC,Carrion,Carrion,CARRION,0,0
+BD,Deposit_Feeder,Deposit Feeder,LG_INF,0,0
+PL,Diatom,Diatom,LG_PHY,0,0
+DF,DinoFlag,Dinoflagellates,DINOFLAG,0,0
+DRM,Drums_Croakers,Drums and croakers,FISH,0,0
+FOU,Fourspotflounder,Fourspot flounder,FISH,0,1
+ZG,Gelat_Zoo,Gelatinous zooplankton,LG_ZOO,0,0
+GOO,Monkfish,Goosefish,FISH,0,1
+HAD,Haddock,Haddock,FISH,0,0
+ISQ,Illex_Squid,Illex squid,CEP,1,0
+INV,Invasive_Species,Invasive vertebrate species,FISH,1,0
+DL,Lab_Det,Labile detritus,LAB_DET,0,0
+LSK,Little_Skate,Little skate,SHARK,0,1
+LOB,Lobster,Lobster,MOB_EP_OTHER,0,0
+LSQ,Loligo_Squid,Loligo squid,CEP,1,0
+MA,Macroalgae,Macroalgae,PHYTOBEN,0,0
+REP,Turtle,Marine turtles,FISH,1,1
+BO,Meiobenth,Meiobenthos,SM_INF,0,0
+ZM,Zoo,Mesozooplankton,MED_ZOO,1,0
+MB,MicroPB,Microphtybenthos,MICROPHTYBENTHOS,0,0
+ZS,MicroZoo,Microzooplankton,SM_ZOO,1,0
+MPF,Mesopelagic_Mig_Fish,Migratory mesopelagic fish,FISH,1,0
+FDF,Misc_Demersal_Fish,Miscellaneous demersal fish,FISH,0,0
+SK,Skate,Northeast skate complex,SHARK,0,1
+NSH,Northern_Shrimp,Northern shrimp other pandalids,PWN,0,0
+OPT,Ocean_Pout,Ocean pout,FISH,0,0
+QHG,Quahog,Ocean quahog,SED_EP_FF,0,0
+OHK,Offshore_Hake,Offshore hake,FISH,0,1
+BFF,Filter_Other,Other benthic filter feeder,SED_EP_FF,0,0
+BPF,Benthopelagic_Fish,Other benthopelagic fish,FISH,1,0
+DSH,Demersal_Shark,Other demersal sharks,SHARK,1,1
+FLA,Other_Flatfish,Other flatfish,FISH,0,1
+PSH,Pelagic_Shark,Other pelagic sharks,SHARK,1,1
+OSH,Other_Shrimp,Other shrimps,PWN,0,0
+TUN,Tunas,Other tunas,FISH,1,1
+PB,Pelag_Bact,Pelagic Bacteria,PL_BACT,1,0
+PS,PicoPhytopl,Pico-phytoplankton,SM_PHY,0,0
+PIN,Pinniped,Pinnipeds,MAMMAL,1,1
+POL,Pollock,Pollock,FISH,0,1
+POR,Porbeagle_Shark,Porbeagle shark,SHARK,1,1
+RCB,Red_Crab,Red deep-sea crab,MOB_EP_OTHER,0,0
+RHK,Red_Hake,Red hake,FISH,0,1
+DR,Ref_Det,Refractory detritus,REF_DET,0,0
+RWH,Right_Whale,Right whales,MAMMAL,1,1
+SSH,Sandbar_Shark,Sandbar shark,SHARK,1,1
+SCU,Scup,Scup,FISH,0,0
+SCA,Scallop,Sea scallop,SED_EP_FF,0,0
+SB,Seabird,Seabirds,BIRD,1,1
+SG,Seagrass,Seagrass,SEAGRASS,0,0
+BB,Sed_Bact,Sediment Bacteria,SED_BACT,0,0
+FDE,Shallow_Demersal_Fish,Shallow demersal fish,FISH,0,0
+BMS,Macrobenth_Shallow,Shallow macrozoobenthos,MOB_EP_OTHER,0,0
+SHK,Silver_Hake,Silver hake,FISH,0,1
+SWH,Small_Whale,Small toothed whales,MAMMAL,1,1
+SMO,Smooth_Dogfish,Smooth dogfish,SHARK,1,1
+DOG,Spiny_Dogfish,Spiny dogfish,SHARK,1,1
+STB,Striped_Bass,Striped bass,FISH,1,1
+SUF,Summerflounder,Summer flounder,FISH,0,1
+TAU,Tautog,Tautog,FISH,0,0
+TWH,Tooth_Whale,Toothed whales,MAMMAL,1,1
+WHK,White_Hake,White hake,FISH,0,1
+WPF,Windowpane,Windowpane flounder,FISH,0,1
+WIF,Winterflounder,Winter flounder,FISH,0,0
+WSK,Winter_Skate,Winter skate,SHARK,0,1
+WTF,Witchflounder,Witch flounder,FISH,0,0
+WOL,Wolffish,Wolffish,FISH,0,1
+YTF,Yellowtail_Flounder,Yellowtail flounder,FISH,0,0

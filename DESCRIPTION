@@ -51,4 +51,6 @@ Imports:
     zoo
 Remotes:
     Atlantis-Ecosystem-Model/atlantistools,
-    Atlantis-Ecosystem-Model/ReactiveAtlantis
+    Atlantis-Ecosystem-Model/ReactiveAtlantis,
+    NOAA-EDAB/atlantiseof@dev,
+    r-lib/gert
