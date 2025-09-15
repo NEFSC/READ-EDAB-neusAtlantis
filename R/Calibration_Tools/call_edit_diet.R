@@ -1,5 +1,5 @@
 library(dplyr)
-source(here::here('R','edit_param_pprey.R'))
+source(here::here('R','Calibration_Tools/edit_param_pprey.R'))
 
 # new.pprey = read.csv('C:/Users/joseph.caracappa/Documents/Atlantis/Obs_Hindcast/Diagnostic_Data/Diet/DOG_cannibal.csv',as.is = T)
 
@@ -12,7 +12,7 @@ diet.change = read.csv(here::here('Setup_Files','HER_LOB_diet.csv'))
 X=get_pprey_vals(atl.dir = atl.dir,
                biol.file = here::here('currentVersion','at_biology.prm'),
                fgs.file = here::here('currentVersion','neus_groups.csv'),
-               spp.names = 'MAK',
+               spp.names = 'SCA',
                is.pred = F,
                remove.zero = T)
 write.csv(X, here::here('Setup_Files','MAK_fix_2.csv'),row.names = F)

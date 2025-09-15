@@ -138,7 +138,7 @@ flagtempchange   0         Mean temperature changes: 0 = no,  1 = yes           
 flagsaltchange   0         Mean salinity changes: 0 = no,  1 = yes                             0
 flagstarve       1         Give starvation notices: 0 = no, 1 = yes                            0  
 flagdegrade      0         Degrade coastal habitats (effects growth of MA, SG and BFS)         0
-flagroc          0         Density dependent drop off option: 0 = none, 1 = ratio drop off, 2 = exponential decline   0
+flagroc          1         Density dependent drop off option: 0 = none, 1 = ratio drop off, 2 = exponential decline   0
 # gfay @nmfs 17 July 2014, following entry should probably change for base.
 flaghomog_sp     0         Body condition homogenised across the entire area: 0 = no, 1 = yes  0
 flagagestruct    1         Age structure option: 0 = homogeneous cohorts, 1 = track cohorts    0
@@ -1344,7 +1344,7 @@ flagO2depend    0
 
 # Vertebrate density dependent movement related flags 0=prescribed quartlerly, 1=sedentary, 2=density dependent + prescribed, 3=sticky, 4=no explicit mvmt
 MAK_ddepend_move 0
-HER_ddepend_move 0
+HER_ddepend_move 2
 WHK_ddepend_move 0
 BLF_ddepend_move 0
 WPF_ddepend_move 0
@@ -2869,7 +2869,7 @@ Box_degraded      30
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 
 ## Vertebrate movement options changed 20181004 RM from defaults on right
-roc_wgt          100.0   Wgt factor for density dependent fish move                            10000.0
+roc_wgt          100   Wgt factor for density dependent fish move                            10000.0
 k_roc_food       1.5       Percent of body mass needed as food before disperse (ddepend move on) 0.5
 
 #GAV GOT TO HERE
@@ -3062,8 +3062,8 @@ FLSQ_S1 30
 FISQ_S1 30
 0 0.083 0.083 0.083 0.083 0.083 0.095 0.083 0.083 0.11 0.03 0.03 0.03 0.03 0.03 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0.008 0 0 0 0 0 0 0
  
-#FSCA_S1 NA
-#NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+FSCA_S1 30
+0 3.050899e-07 9.703583e-02 1.265235e-01 1.832619e-03 2.106774e-01 5.358109e-02 1.392733e-01 1.428331e-01 3.359334e-02 0 0 6.630955e-02 1.273940e-02 4.899588e-02 1.414981e-01 0 0 0 0 0 8.265977e-02 0 0 0 0 0 0 0 0
  
 #FQHG_S1 NA
 #NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA
@@ -3292,6 +3292,9 @@ FNSH_S2 30
 FOSH_S2 30
 0	.055	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	0	0	0	0	0	0	0	 
 
+FSCA_S2 30
+0 3.050899e-07 9.703583e-02 1.265235e-01 1.832619e-03 2.106774e-01 5.358109e-02 1.392733e-01 1.428331e-01 3.359334e-02 0 0 6.630955e-02 1.273940e-02 4.899588e-02 1.414981e-01 0 0 0 0 0 8.265977e-02 0 0 0 0 0 0 0 0
+
 FZL_S2 30
 0	0.0278	0.0278	0.0278	0.0282	0.0278	0.0278	0.0278	0.0249	0.0243	0.0874	0.0871	0.0243	0.0243	0.0243	0.0243	0.0871	0.0871	0.0871	0.0871	0.0243	0.0243	0.0871	0	0	0	0	0	0	0
 
@@ -3495,6 +3498,9 @@ FNSH_S3 30
 FOSH_S3 30
 0	.055	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	.045	0	0	0	0	0	0	0	 
 
+FSCA_S3 30
+0 3.050899e-07 9.703583e-02 1.265235e-01 1.832619e-03 2.106774e-01 5.358109e-02 1.392733e-01 1.428331e-01 3.359334e-02 0 0 6.630955e-02 1.273940e-02 4.899588e-02 1.414981e-01 0 0 0 0 0 8.265977e-02 0 0 0 0 0 0 0 0
+
 FZL_S3 30
 0	0.0278	0.0278	0.0278	0.0282	0.0278	0.0278	0.0278	0.0249	0.0243	0.0874	0.0871	0.0243	0.0243	0.0243	0.0243	0.0871	0.0871	0.0871	0.0871	0.0243	0.0243	0.0871	0	0	0	0	0	0	0
   
@@ -3689,6 +3695,9 @@ FISQ_S4 30
 FLOB_S4 30
 0 0.003532725 0.005330915 0.093108003 0.028866504 0.033926895 0.06164765 0.054629939 0.053643322 0.086010725 0.035088557 0.015403956 0.037905189 0.069636066 0.100030235 0.058831018 0.012332713 0.046609697 0.058353623 0.014114989 0.041008259 0.066262472 0.023726548 0 0 0 0 0 0 0
  
+FSCA_S4 30
+0 3.050899e-07 9.703583e-02 1.265235e-01 1.832619e-03 2.106774e-01 5.358109e-02 1.392733e-01 1.428331e-01 3.359334e-02 0 0 6.630955e-02 1.273940e-02 4.899588e-02 1.414981e-01 0 0 0 0 0 8.265977e-02 0 0 0 0 0 0 0 0
+
 FNSH_S4 30
 0 0.000300752 0.000451128 0.000902256 0 0.001052632 0.000451128 0.000451128 0.003759398 0.000902256 0.202255638 0.071578947 0.012330827 0.000451128 0.001203008 0.00075188 0.514887216 0.048571429 0.076691729 0.028721805 0.022857143 0.005714286 0.005714286 0 0 0 0 0 0 0
  
@@ -5311,7 +5320,7 @@ Speed_INV 10000
 
 # Minimum and maximum tolerated temperatures
 MAK_min_move_temp 1.0
-HER_min_move_temp 0.7
+HER_min_move_temp 0
 WHK_min_move_temp 1.6
 BLF_min_move_temp 3.0
 WPF_min_move_temp 0
@@ -5371,7 +5380,7 @@ TWH_min_move_temp 0
 INV_min_move_temp 0
 LSQ_min_move_temp 0.6
 ISQ_min_move_temp 0.6
-SCA_min_move_temp 1.44
+SCA_min_move_temp 0
 LOB_min_move_temp 0
 QHG_min_move_temp 4.91
 CLA_min_move_temp 3.9
@@ -5398,7 +5407,7 @@ PB_min_move_temp 0
 BB_min_move_temp 0
 
 MAK_max_move_temp 19.49
-HER_max_move_temp 17.1
+HER_max_move_temp 40
 WHK_max_move_temp 13.4
 BLF_max_move_temp 26.19
 WPF_max_move_temp 22.2
@@ -5458,7 +5467,7 @@ TWH_max_move_temp 30
 INV_max_move_temp 30
 LSQ_max_move_temp 26.7
 ISQ_max_move_temp 25.8
-SCA_max_move_temp 16.32
+SCA_max_move_temp 30
 LOB_max_move_temp 16.85
 QHG_max_move_temp 17.29
 CLA_max_move_temp 22.0

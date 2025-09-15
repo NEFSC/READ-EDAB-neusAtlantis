@@ -7,7 +7,7 @@
 
 source(here::here('R','Post_Processing','make_post_process.R'))
 
-run.name = 'fleet_calibration_15'
+run.name = 'SCA_redist_init_move_2'
 atl.dir = here::here('Atlantis_Runs',run.name,'/')
 # atl.dir = '/net/work3/EDAB/atlantis/Andy_Proj/devplusfleets/'
 # 
@@ -43,8 +43,8 @@ make_post_process(
   run.name = run.name,
   atl.dir = atl.dir,
   
-  process.all = F,
-  plot.all = F,
+  process.all = T,
+  plot.all = T,
   
   large.file = F,
   
@@ -52,7 +52,7 @@ make_post_process(
   plot.overall.biomass =F,
   plot.biomass.timeseries = T,
   plot.length.age = F,
-  plot.biomass.box=F,
+  plot.biomass.box=T,
   plot.c.mum=F,
   plot.sn.rn=F,
   plot.recruits=F,
@@ -62,7 +62,7 @@ make_post_process(
   plot.cohort=F,
   plot.diet=F,
   plot.consumption= F,
-  plot.spatial.biomass=F,
+  plot.spatial.biomass=T,
   plot.spatial.biomass.seasonal = F,
   plot.spatial.overlap = F,
   plot.catch =T,
