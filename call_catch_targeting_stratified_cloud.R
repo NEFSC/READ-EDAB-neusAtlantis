@@ -82,7 +82,7 @@ for(i in 1:nrow(scenario_params)){
   #### Define Scenario scaling factors
   
   # Get parameters for the current iteration
-  current_dominant_group <- scenario_params$dominant_group[i]
+  current_dominant_group <- as.character(scenario_params$dominant_group[i])
   current_factor <- scenario_params$dominance_factor[i]
   current_thresh <- scenario_params$eof_threshold[i]
   
