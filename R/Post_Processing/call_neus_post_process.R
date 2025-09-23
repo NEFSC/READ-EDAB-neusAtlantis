@@ -7,7 +7,7 @@
 
 source(here::here('R','Post_Processing','make_post_process.R'))
 
-run.name = 'fleet_calibration_15'
+run.name = 'GF_gloucester_scale_2'
 atl.dir = here::here('Atlantis_Runs',run.name,'/')
 # atl.dir = '/net/work3/EDAB/atlantis/Andy_Proj/devplusfleets/'
 # 

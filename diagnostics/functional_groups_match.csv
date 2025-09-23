@@ -1,90 +1,90 @@
-Code,Index,Name,LongName,NumCohorts,AtlantisGroup,FuncGroup,Guild
-BFT,12,BluefinTuna,Atlantic bluefin tuna,10,FISH,Apex Predator,Apex_Predator
-BIL,14,Billfish,Billfish,10,FISH,Apex Predator,Apex_Predator
-TUN,13,Tunas,Other tunas,10,FISH,Apex Predator,Apex_Predator
-BB,84,Sed_Bact,Sediment Bacteria,1,SED_BACT,Sediment Bacteria,Bacteria
-PB,83,Pelag_Bact,Pelagic Bacteria,1,PL_BACT,Pelagic Bacteria,Bacteria
-BSB,27,Black_Sea_Bass,Black sea bass,10,FISH,Benthivore,Benthivore
-HAD,39,Haddock,Haddock,10,FISH,Benthivore,Benthivore
-LOB,66,Lobster,Lobster,1,MOB_EP_OTHER,Benthivore,Benthos
-OPT,31,Ocean_Pout,Ocean pout,10,FISH,Benthivore,Benthivore
-PLA,10,Plaice,American plaice,10,FISH,Benthivore,Benthivore
-RCB,67,Red_Crab,Red deep-sea crab,1,MOB_EP_OTHER,Benthivore,Benthos
-SCU,28,Scup,Scup,10,FISH,Benthivore,Benthivore
-SMO,42,Smooth_Dogfish,Smooth dogfish,10,SHARK,Benthivore,Benthivore
-TAU,35,Tautog,Tautog,10,FISH,Benthivore,Benthivore
-TYL,29,Tilefish,All tilefish,10,FISH,Benthivore,Benthivore
-WIF,6,Winterflounder,Winter flounder,10,FISH,Benthivore,Benthivore
-WTF,7,Witchflounder,Witch flounder,10,FISH,Benthivore,Benthivore
-YTF,40,Yellowtail_Flounder,Yellowtail flounder,10,FISH,Benthivore,Benthivore
-BC,76,Benthic_Carniv,Benthic Carnivore,1,MOB_EP_OTHER,Benthos,Benthos
-BD,72,Deposit_Feeder,Deposit Feeder,1,LG_INF,Benthos,Benthos
-BFF,64,Filter_Other,Other benthic filter feeder,1,SED_EP_FF,Benthos,Benthos
-BG,65,Benthic_grazer,Benthic grazer,1,SED_EP_OTHER,Benthos,Benthos
-BMS,68,Macrobenth_Shallow,Shallow macrozoobenthos,1,MOB_EP_OTHER,Benthos,Benthos
-BO,85,Meiobenth,Meiobenthos,1,SM_INF,Benthos,Benthos
-CLA,63,Surf_Clam,Atlantic surf clam,1,SED_EP_FF,Benthos,Benthos
-QHG,62,Quahog,Ocean quahog,1,SED_EP_FF,Benthos,Benthos
-SCA,61,Scallop,Sea scallop,1,SED_EP_FF,Benthos,Benthos
-BWH,55,Baleen_Whale,Baleen whales,10,MAMMAL,Mammals,Mammals
-PIN,52,Pinniped,Pinnipeds,10,MAMMAL,Mammals,Mammals
-RWH,54,Right_Whale,Right whales,10,MAMMAL,Mammals,Mammals
-SWH,56,Small_Whale,Small toothed whales,10,MAMMAL,Mammals,Mammals
-TWH,57,Tooth_Whale,Toothed whales,10,MAMMAL,Mammals,Mammals
-BLS,45,Blue_Shark,Blue shark,10,SHARK,Other,Apex_Predator
-BPF,17,Benthopelagic_Fish,Other benthopelagic fish,10,FISH,Other,Planktivore
-DC,88,Carrion,Carrion,1,CARRION,Other,Other
-DL,86,Lab_Det,Labile detritus,1,LAB_DET,Other,Other
-DR,87,Ref_Det,Refractory detritus,1,REF_DET,Other,Other
-DRM,33,Drums_Croakers,Drums and croakers,10,FISH,Other,Benthivore
-DSH,44,Demersal_Shark,Other demersal sharks,10,SHARK,Other,Benthivore
-FDF,38,Misc_Demersal_Fish,Miscellaneous demersal fish,10,FISH,Other,Benthivore
-FLA,11,Other_Flatfish,Other flatfish,10,FISH,Other,Benthivore
-INV,58,Invasive_Species,Invasive vertebrate species,10,FISH,Other,Other
-MA,73,Macroalgae,Macroalgae,1,PHYTOBEN,Other,Other
-MB,74,MicroPB,Microphtybenthos,1,MICROPHTYBENTHOS,Other,Other
-MPF,15,Mesopelagic_Mig_Fish,Migratory mesopelagic fish,10,FISH,Other,Benthivore
-NSH,69,Northern_Shrimp,Northern shrimp other pandalids,2,PWN,Shrimp,Shrimp
-POR,46,Porbeagle_Shark,Porbeagle shark,10,SHARK,Other,Apex_Predator
-REP,53,Turtle,Marine turtles,10,FISH,Other,Other
-SAL,32,Atlantic_Salmon,Atlantic salmon,10,FISH,Other,Piscivore
-SB,51,Seabird,Seabirds,10,BIRD,Other,Apex_Predator
-SDF,37,Atlantic_States_Demersals,Atlantic states demersal fish,10,FISH,Other,Benthivore
-SG,75,Seagrass,Seagrass,1,SEAGRASS,Other,Other
-SSH,43,Sandbar_Shark,Sandbar shark,10,SHARK,Other,Apex_Predator
-WOL,36,Wolffish,Wolffish,10,FISH,Other,Benthivore
-DF,79,DinoFlag,Dinoflagellates,1,DINOFLAG,Dinoflagellates,Phytoplankton
-PL,78,Diatom,Diatom,1,LG_PHY,Diatoms,Phytoplankton
-PS,80,PicoPhytopl,Pico-phytoplankton,1,SM_PHY,Pico-Phytoplankton,Phytoplankton
-BLF,3,Bluefish,Bluefish,10,FISH,Piscivore,Piscivore
-COD,22,Cod,Atlantic cod,10,FISH,Piscivore,Piscivore
-DOG,41,Spiny_Dogfish,Spiny dogfish,10,SHARK,Piscivore,Piscivore
-FOU,8,Fourspotflounder,Fourspot flounder,10,FISH,Piscivore,Benthivore
-GOO,19,Monkfish,Goosefish,10,FISH,Piscivore,Piscivore
-HAL,9,Halibut,Atlantic halibut,10,FISH,Piscivore,Piscivore
-LSK,49,Little_Skate,Little skate,10,SHARK,Piscivore,Benthivore
-OHK,24,Offshore_Hake,Offshore hake,10,FISH,Piscivore,Piscivore
-POL,25,Pollock,Pollock,10,FISH,Piscivore,Piscivore
-RED,30,Redfish,Acadian redfish,10,FISH,Piscivore,Piscivore
-RHK,26,Red_Hake,Red hake,10,FISH,Piscivore,Piscivore
-SHK,23,Silver_Hake,Silver hake,10,FISH,Piscivore,Piscivore
-SK,50,Skate,Northeast skate complex,10,SHARK,Piscivore,Benthivore
-STB,34,Striped_Bass,Striped bass,10,FISH,Piscivore,Piscivore
-SUF,5,Summerflounder,Summer flounder,10,FISH,Piscivore,Benthivore
-WHK,2,White_Hake,White hake,10,FISH,Piscivore,Piscivore
-WPF,4,Windowpane,Windowpane flounder,10,FISH,Piscivore,Benthivore
-WSK,48,Winter_Skate,Winter skate,10,SHARK,Piscivore,Benthivore
-ANC,18,Anchovies,Anchovies,10,FISH,Planktivore,Planktivore
-BUT,16,Butterfish,Butterfish,10,FISH,Planktivore,Planktivore
-FDE,21,Shallow_Demersal_Fish,Shallow demersal fish,10,FISH,Planktivore,Planktivore
-HER,1,Herring,Atlantic herring,10,FISH,Planktivore,Planktivore
-ISQ,60,Illex_Squid,Illex squid,2,CEP,Planktivore,Planktivore
-LSQ,59,Loligo_Squid,Loligo squid,2,CEP,Planktivore,Planktivore
-MAK,0,Mackerel,Mackerel,10,FISH,Planktivore,Planktivore
-MEN,20,Menhaden,Atlantic menhaden,10,FISH,Planktivore,Planktivore
-OSH,70,Other_Shrimp,Other shrimps,2,PWN,Shrimp,Shrimp
-PSH,47,Pelagic_Shark,Other pelagic sharks,10,SHARK,Benthivore,Apex_Predator
-ZG,77,Gelat_Zoo,Gelatinous zooplankton,1,LG_ZOO,Gelatinous Zooplankton,Zooplankton
-ZL,71,Carniv_Zoo,Carnivorous zooplankton,1,LG_ZOO,Macro-Zooplankton,Zooplankton
-ZM,81,Zoo,Mesozooplankton,1,MED_ZOO,Meso-Zooplankton,Zooplankton
-ZS,82,MicroZoo,Microzooplankton,1,SM_ZOO,Micro-Zooplankton,Zooplankton
+Code,Index,Name,LongName,NumCohorts,AtlantisGroup,FuncGroup,Guild,FisheryComplex
+BFT,12,BluefinTuna,Atlantic bluefin tuna,10,FISH,Apex Predator,Apex_Predator,Apex
+BIL,14,Billfish,Billfish,10,FISH,Apex Predator,Apex_Predator,Apex
+TUN,13,Tunas,Other tunas,10,FISH,Apex Predator,Apex_Predator,Apex
+BB,84,Sed_Bact,Sediment Bacteria,1,SED_BACT,Sediment Bacteria,Bacteria,Other
+PB,83,Pelag_Bact,Pelagic Bacteria,1,PL_BACT,Pelagic Bacteria,Bacteria,Other
+BSB,27,Black_Sea_Bass,Black sea bass,10,FISH,Benthivore,Benthivore,Demersal
+HAD,39,Haddock,Haddock,10,FISH,Benthivore,Benthivore,Groundfish
+LOB,66,Lobster,Lobster,1,MOB_EP_OTHER,Benthivore,Benthos,Shellfish
+OPT,31,Ocean_Pout,Ocean pout,10,FISH,Benthivore,Benthivore,Demersal
+PLA,10,Plaice,American plaice,10,FISH,Benthivore,Benthivore,Groundfish
+RCB,67,Red_Crab,Red deep-sea crab,1,MOB_EP_OTHER,Benthivore,Benthos,Shellfish
+SCU,28,Scup,Scup,10,FISH,Benthivore,Benthivore,Demersal
+SMO,42,Smooth_Dogfish,Smooth dogfish,10,SHARK,Benthivore,Benthivore,Apex
+TAU,35,Tautog,Tautog,10,FISH,Benthivore,Benthivore,Demersal
+TYL,29,Tilefish,All tilefish,10,FISH,Benthivore,Benthivore,Demersal
+WIF,6,Winterflounder,Winter flounder,10,FISH,Benthivore,Benthivore,Groundfish
+WTF,7,Witchflounder,Witch flounder,10,FISH,Benthivore,Benthivore,Groundfish
+YTF,40,Yellowtail_Flounder,Yellowtail flounder,10,FISH,Benthivore,Benthivore,Groundfish
+BC,76,Benthic_Carniv,Benthic Carnivore,1,MOB_EP_OTHER,Benthos,Benthos,Other
+BD,72,Deposit_Feeder,Deposit Feeder,1,LG_INF,Benthos,Benthos,Other
+BFF,64,Filter_Other,Other benthic filter feeder,1,SED_EP_FF,Benthos,Benthos,Other
+BG,65,Benthic_grazer,Benthic grazer,1,SED_EP_OTHER,Benthos,Benthos,Other
+BMS,68,Macrobenth_Shallow,Shallow macrozoobenthos,1,MOB_EP_OTHER,Benthos,Benthos,Other
+BO,85,Meiobenth,Meiobenthos,1,SM_INF,Benthos,Benthos,Other
+CLA,63,Surf_Clam,Atlantic surf clam,1,SED_EP_FF,Benthos,Benthos,Shellfish
+QHG,62,Quahog,Ocean quahog,1,SED_EP_FF,Benthos,Benthos,Shellfish
+SCA,61,Scallop,Sea scallop,1,SED_EP_FF,Benthos,Benthos,Shellfish
+BWH,55,Baleen_Whale,Baleen whales,10,MAMMAL,Mammals,Mammals,Other
+PIN,52,Pinniped,Pinnipeds,10,MAMMAL,Mammals,Mammals,Apex
+RWH,54,Right_Whale,Right whales,10,MAMMAL,Mammals,Mammals,Apex
+SWH,56,Small_Whale,Small toothed whales,10,MAMMAL,Mammals,Mammals,Apex
+TWH,57,Tooth_Whale,Toothed whales,10,MAMMAL,Mammals,Mammals,Apex
+BLS,45,Blue_Shark,Blue shark,10,SHARK,Other,Apex_Predator,Apex
+BPF,17,Benthopelagic_Fish,Other benthopelagic fish,10,FISH,Other,Planktivore,Forage
+DC,88,Carrion,Carrion,1,CARRION,Other,Other,Other
+DL,86,Lab_Det,Labile detritus,1,LAB_DET,Other,Other,Other
+DR,87,Ref_Det,Refractory detritus,1,REF_DET,Other,Other,Other
+DRM,33,Drums_Croakers,Drums and croakers,10,FISH,Other,Benthivore,Demersal
+DSH,44,Demersal_Shark,Other demersal sharks,10,SHARK,Other,Benthivore,Apex
+FDF,38,Misc_Demersal_Fish,Miscellaneous demersal fish,10,FISH,Other,Benthivore,Demersal
+FLA,11,Other_Flatfish,Other flatfish,10,FISH,Other,Benthivore,Groundfish
+INV,58,Invasive_Species,Invasive vertebrate species,10,FISH,Other,Other,Other
+MA,73,Macroalgae,Macroalgae,1,PHYTOBEN,Other,Other,Other
+MB,74,MicroPB,Microphtybenthos,1,MICROPHTYBENTHOS,Other,Other,Other
+MPF,15,Mesopelagic_Mig_Fish,Migratory mesopelagic fish,10,FISH,Other,Benthivore,Demersal
+NSH,69,Northern_Shrimp,Northern shrimp other pandalids,2,PWN,Shrimp,Shrimp,Shellfish
+POR,46,Porbeagle_Shark,Porbeagle shark,10,SHARK,Other,Apex_Predator,Apex
+REP,53,Turtle,Marine turtles,10,FISH,Other,Other,Other
+SAL,32,Atlantic_Salmon,Atlantic salmon,10,FISH,Other,Piscivore,Pelagic
+SB,51,Seabird,Seabirds,10,BIRD,Other,Apex_Predator,Other
+SDF,37,Atlantic_States_Demersals,Atlantic states demersal fish,10,FISH,Other,Benthivore,Demersal
+SG,75,Seagrass,Seagrass,1,SEAGRASS,Other,Other,Other
+SSH,43,Sandbar_Shark,Sandbar shark,10,SHARK,Other,Apex_Predator,Apex
+WOL,36,Wolffish,Wolffish,10,FISH,Other,Benthivore,Demersal
+DF,79,DinoFlag,Dinoflagellates,1,DINOFLAG,Dinoflagellates,Phytoplankton,Other
+PL,78,Diatom,Diatom,1,LG_PHY,Diatoms,Phytoplankton,Other
+PS,80,PicoPhytopl,Pico-phytoplankton,1,SM_PHY,Pico-Phytoplankton,Phytoplankton,Other
+BLF,3,Bluefish,Bluefish,10,FISH,Piscivore,Piscivore,Pelagic
+COD,22,Cod,Atlantic cod,10,FISH,Piscivore,Piscivore,Groundfish
+DOG,41,Spiny_Dogfish,Spiny dogfish,10,SHARK,Piscivore,Piscivore,Apex
+FOU,8,Fourspotflounder,Fourspot flounder,10,FISH,Piscivore,Benthivore,Groundfish
+GOO,19,Monkfish,Goosefish,10,FISH,Piscivore,Piscivore,Demersal
+HAL,9,Halibut,Atlantic halibut,10,FISH,Piscivore,Piscivore,Groundfish
+LSK,49,Little_Skate,Little skate,10,SHARK,Piscivore,Benthivore,Apex
+OHK,24,Offshore_Hake,Offshore hake,10,FISH,Piscivore,Piscivore,Groundfish
+POL,25,Pollock,Pollock,10,FISH,Piscivore,Piscivore,Groundfish
+RED,30,Redfish,Acadian redfish,10,FISH,Piscivore,Piscivore,Groundfish
+RHK,26,Red_Hake,Red hake,10,FISH,Piscivore,Piscivore,Groundfish
+SHK,23,Silver_Hake,Silver hake,10,FISH,Piscivore,Piscivore,Groundfish
+SK,50,Skate,Northeast skate complex,10,SHARK,Piscivore,Benthivore,Apex
+STB,34,Striped_Bass,Striped bass,10,FISH,Piscivore,Piscivore,Pelagic
+SUF,5,Summerflounder,Summer flounder,10,FISH,Piscivore,Benthivore,Groundfish
+WHK,2,White_Hake,White hake,10,FISH,Piscivore,Piscivore,Groundfish
+WPF,4,Windowpane,Windowpane flounder,10,FISH,Piscivore,Benthivore,Groundfish
+WSK,48,Winter_Skate,Winter skate,10,SHARK,Piscivore,Benthivore,Apex
+ANC,18,Anchovies,Anchovies,10,FISH,Planktivore,Planktivore,Forage
+BUT,16,Butterfish,Butterfish,10,FISH,Planktivore,Planktivore,Forage
+FDE,21,Shallow_Demersal_Fish,Shallow demersal fish,10,FISH,Planktivore,Planktivore,Forage
+HER,1,Herring,Atlantic herring,10,FISH,Planktivore,Planktivore,Forage
+ISQ,60,Illex_Squid,Illex squid,2,CEP,Planktivore,Planktivore,Forage
+LSQ,59,Loligo_Squid,Loligo squid,2,CEP,Planktivore,Planktivore,Forage
+MAK,0,Mackerel,Mackerel,10,FISH,Planktivore,Planktivore,Forage
+MEN,20,Menhaden,Atlantic menhaden,10,FISH,Planktivore,Planktivore,Forage
+OSH,70,Other_Shrimp,Other shrimps,2,PWN,Shrimp,Shrimp,Shellfish
+PSH,47,Pelagic_Shark,Other pelagic sharks,10,SHARK,Benthivore,Apex_Predator,Apex
+ZG,77,Gelat_Zoo,Gelatinous zooplankton,1,LG_ZOO,Gelatinous Zooplankton,Zooplankton,Other
+ZL,71,Carniv_Zoo,Carnivorous zooplankton,1,LG_ZOO,Macro-Zooplankton,Zooplankton,Other
+ZM,81,Zoo,Mesozooplankton,1,MED_ZOO,Meso-Zooplankton,Zooplankton,Other
+ZS,82,MicroZoo,Microzooplankton,1,SM_ZOO,Micro-Zooplankton,Zooplankton,Other
