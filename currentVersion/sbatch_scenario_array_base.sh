@@ -1,6 +1,7 @@
 #!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --array=1-5
+#SBATCH --partition=compute
 
 sudo mkdir -p /contrib/$USER/slurm_array2/out$SLURM_ARRAY_TASK_ID
 

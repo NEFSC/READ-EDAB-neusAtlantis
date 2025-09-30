@@ -13,20 +13,29 @@ library(atlantisdiagnostics)
 # --- Get the array task ID from command-line arguments ---
 args = commandArgs(trailingOnly = TRUE)
 if (length(args) == 0) {
-  stop("Error: No array task ID provided. Please run this script with an argument (e.g., Rscript process_run.R 1)")
+  message("Error: No array task ID provided. Please run this script with an argument (e.g., Rscript process_run.R 1)")
+  array_task_id = 1
+  experiment.id = 'eof_targeting_1'
+  run.dir = paste0('/atlantisoutput/',experiment.id,'/',experiment.id,'_',array_task_id,'/')
+}else{
+  
+  array_task_id = as.integer(args[1])
+  experiment.id = args[2]
+  run.dir = args[3]
+  
+  print(args)
 }
 
 
-array_task_id = as.integer(args[1])
 
 run_index = array_task_id # Using 1-based indexing directly from SLURM_ARRAY_TASK_ID
 
 # --- Setup file and experiment ID ---
 project.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
 message('project.dir exists? ',dir.exists(project.dir))
-experiment.id = 'catch_thresholds_eof_3'
-setup.df = read.csv(paste0(project.dir,'Setup_Files/catch_thresholds_eof_setup.csv'))
+# experiment.id = 'catch_thresholds_eof_3'
 
+setup.df = read.csv(paste0(project.dir,'Setup_Files/',experiment.id,'_setup.csv'))
 message(paste0("Processing run for array task ID: ", array_task_id))
 message(paste0("Corresponding R run index: ", run_index))
 
@@ -43,27 +52,26 @@ if(!dir.exists(output.dir)){
 message('Output dir exists? ',dir.exists(output.dir))
 
 # Get the specific run directory for this task
-run.dir = paste0('/atlantisarchive/Joseph.Caracappa/',experiment.id,'/',experiment.id,'_',setup.df$run[run_index],'/')
+# run.dir = paste0('/atlantisarchive/Joseph.Caracappa/',experiment.id,'/',experiment.id,'_',setup.df$run[run_index],'/')
 print(list.files(run.dir))
 message(paste0("Run ", run_index,": ",dir.exists(run.dir)))
 message(paste0("Processing run directory: ", run.dir))
 
-print(list.files('/'))
+# print(list.files('/'))
 # --- Perform calculations for the specific run ---
 tic(paste0("Processing run ", run_index))
 
 # Create data subdirectory within the run directory and set permissions
-data.dir = paste0(run.dir,'data') # Corrected: use run.dir
+data.dir = paste0(run.dir,'/data') # Corrected: use run.dir
 if(!dir.exists(data.dir)){
   dir.create(data.dir, recursive = TRUE)
 }
+message('Using run directory ',run.dir)
 message('Finished making output directories for processed run:',run_index)
 
 
 survdat.data = readRDS(paste0(project.dir,'data-raw/surdat_lenagewgt.rds'))
 group.index.file = paste0(project.dir,'data-raw/group_index.rds')
-
-message('Finished make_eco_indicators_time for run:',run_index)
 
 message('Making output directories for processed run:',run_index)
 param.ls = atlantisdiagnostics::get_atl_paramfiles(param.dir =paste0(project.dir,'currentVersion/'),
@@ -75,26 +83,44 @@ param.ls = atlantisdiagnostics::get_atl_paramfiles(param.dir =paste0(project.dir
 
 # Process Atlantis output
 message('Running process_atl_output for run:',run_index)
-if (length(list.files(run.dir, pattern = 'Catch.txt'))==0) {
-  atlantisdiagnostics::process_atl_output(param.dir = paste0(project.dir,'currentVersion/'),
-                                          atl.dir = run.dir, # Corrected: use run.dir
-                                          out.dir = data.dir,
-                                          run.prefix = 'neus_output',
-                                          param.ls = param.ls,
-                                          plot.length.age = TRUE,
-                                          plot.biomass.timeseries = TRUE,
-                                          plot.numbers.timeseries = TRUE,
-                                          plot.catch = FALSE)
+run.files = list.files(run.dir)
+data.files = list.files(data.dir)
+
+
+
+if (sum(grepl('Catch.txt',run.files))==0) {
+  expected.data.files = c('biomass_age_invert.rds', 'biomass_age.rds', 'biomass.rds', 
+                           'data_age_mat.rds', 'dz.rds', 'length_age.rds', 'nominal_dz.rds', 'numbers_age.rds',
+                           'numbers_box.rds', 'numbers.rds', 'RN_age_mean.rds', 'RN_age.rds', 'SN_age_mean.rds',
+                           'SN_age.rds', 'volume.rds')
+  if(!all(expected.data.files %in% data.files)){
+    atlantisdiagnostics::process_atl_output(param.dir = paste0(project.dir,'currentVersion/'),
+                                            atl.dir = run.dir, # Corrected: use run.dir
+                                            out.dir = data.dir,
+                                            run.prefix = 'neus_output',
+                                            param.ls = param.ls,
+                                            plot.length.age = TRUE,
+                                            plot.biomass.timeseries = TRUE,
+                                            plot.numbers.timeseries = TRUE,
+                                            plot.catch = FALSE)
+  }
 } else {
-  atlantisdiagnostics::process_atl_output(param.dir = paste0(project.dir,'currentVersion/'),
-                                          atl.dir = run.dir, # Corrected: use run.dir
-                                          out.dir = data.dir,
-                                          run.prefix = 'neus_output',
-                                          param.ls = param.ls,
-                                          plot.length.age = TRUE,
-                                          plot.biomass.timeseries = TRUE,
-                                          plot.numbers.timeseries = TRUE,
-                                          plot.catch = TRUE)
+  expected.data.files = c('biomass_age_invert.rds', 'biomass_age.rds', 'biomass.rds', 'catch.rds', 'catchmt.rds',
+                          'data_age_mat.rds', 'dz.rds', 'length_age.rds', 'nominal_dz.rds', 'numbers_age.rds',
+                          'numbers_box.rds', 'numbers.rds', 'RN_age_mean.rds', 'RN_age.rds', 'SN_age_mean.rds',
+                          'SN_age.rds', 'totcatch.rds', 'volume.rds')
+  if(!all(expected.data.files %in% data.files)){
+    
+    atlantisdiagnostics::process_atl_output(param.dir = paste0(project.dir,'currentVersion/'),
+                                            atl.dir = run.dir, # Corrected: use run.dir
+                                            out.dir = data.dir,
+                                            run.prefix = 'neus_output',
+                                            param.ls = param.ls,
+                                            plot.length.age = TRUE,
+                                            plot.biomass.timeseries = TRUE,
+                                            plot.numbers.timeseries = TRUE,
+                                            plot.catch = TRUE)
+  }
 }
 message('Finished process_atl_output for run:',run_index)
 
@@ -107,7 +133,8 @@ run.ind.t = atlantiseof::make_eco_indicators_time(param.dir = paste0(project.dir
                                                   dietSource = 'detdiet',
                                                   timeRange = 1:100,
                                                   survdat.data = survdat.data,
-                                                  cloud = TRUE
+                                                  cloud = TRUE,
+                                                  debug = TRUE
 )
 message('Finished make_eco_indicators_time for run:',run_index)
 

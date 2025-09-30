@@ -1,15 +1,16 @@
 #!/bin/bash
 #SBATCH --job-name=R_array_job
-#SBATCH --array=59,60,63,65,67,69,71,76,79,84,99
+#SBATCH --array=1-600
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
+##SBATCH --cpus-per-task=1
+#SBATCH --partition=computelow
 ##SBATCH -o "/atlantisarchive/Joseph.Caracappa/catch_thresholds_eof_3/out/R_job_%A_%a.out"
 ##SBATCH -e "/atlantisarchive/Joseph.Caracappa/catch_thresholds_eof_3/err/R_job_%A_%a.err"
 
 # Define variables for clarity and reusability
-EXPERIMENT_NAME="catch_thresholds_eof_3"
+EXPERIMENT_NAME="eof_targeting_1"
 PROJECT_DIR='/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
-OUTPUT_BASE_DIR="/atlantisarchive/$EXPERIMENT_NAME"
+OUTPUT_BASE_DIR="/atlantisoutput/$EXPERIMENT_NAME"
 
 OUT_DIR="$OUTPUT_BASE_DIR/out"
 ERR_DIR="$OUTPUT_BASE_DIR/err"
@@ -28,7 +29,7 @@ echo "Directories created successfully." # This will only print if mkdir succeed
 echo "Continuing with rest of script."
 
 # Wait for the necessary input file to be created.
-RUN_DIR_TO_CHECK="/atlantisarchive/Joseph.Caracappa/catch_thresholds_eof_3/catch_thresholds_eof_3_${SLURM_ARRAY_TASK_ID}"
+RUN_DIR_TO_CHECK="/atlantisoutput/${EXPERIMENT_NAME}/${EXPERIMENT_NAME}_${SLURM_ARRAY_TASK_ID}/"
 # echo "Waiting for directory: $RUN_DIR_TO_CHECK"
 
 # while [ ! -d "$RUN_DIR_TO_CHECK" ]; do
@@ -40,4 +41,4 @@ RUN_DIR_TO_CHECK="/atlantisarchive/Joseph.Caracappa/catch_thresholds_eof_3/catch
 # ls -l "$RUN_DIR_TO_CHECK"
 
 cd "$PROJECT_DIR"
-Rscript R/EOF/call_process_eco_state.R "$SLURM_ARRAY_TASK_ID"
+Rscript R/EOF/call_process_eco_state.R "$SLURM_ARRAY_TASK_ID" "$EXPERIMENT_NAME" "$RUN_DIR_TO_CHECK"
