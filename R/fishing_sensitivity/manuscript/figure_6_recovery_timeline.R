@@ -6,8 +6,8 @@ library(gridExtra)
 
 experiment.id = 'fspike_combined'
 
-data.dir = paste0('/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/data/',experiment.id,'/')
-figure.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/'
+data.dir = paste0('Z:/Shared_Data/fishing_sensitivity_manuscript/data/',experiment.id,'/')
+figure.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/'
 
 setup.df = read.csv(here::here('diagnostics','scenario_db',paste0(experiment.id,'_setup.csv')),as.is = T)
 master.dat = read.csv(here::here('diagnostics','scenario_db','scenario_db_master.csv'),as.is = T) %>%
@@ -17,7 +17,7 @@ fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T) %>%
   filter(IsTurnedOn == T)%>%
   select(Code, LongName)
 
-biomass.baseline = read.table('/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/neus_outputBiomIndx.txt',header = T)%>%
+biomass.baseline = read.table('Z:/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/neus_outputBiomIndx.txt',header = T)%>%
   select(Time, all_of(fgs$Code))%>%
   mutate(Time = floor(Time/365))%>%
   tidyr::gather('Code','Biomass',-Time)%>%
@@ -58,13 +58,13 @@ t0 = master.dat$event_start_d[1]/365
 t1 = master.dat$event_end_d[1]/365
 t5 = t1 + 5
 t10 = t1 + 9
-t20 = t1 + 15
+t15 = t1 + 15
 biomass.recover = biomass %>%
   filter(Time > t0 & Time <t5 & scalar == 10)
 
 tmin =biomass.recover$Time[which(biomass.recover$Biomass == min(biomass.recover$Biomass))]
 
-point.df = data.frame(xend = c(t0,t1,tmin,t5,t20),yend =NA)
+point.df = data.frame(xend = c(t0,t1,tmin,t5,t15),yend =NA)
 
 for(i in 1:nrow(point.df)){point.df$yend[i] = biomass$Biomass.rel[which(biomass$Time == point.df$xend[i] & biomass$scalar == 25)]}
 

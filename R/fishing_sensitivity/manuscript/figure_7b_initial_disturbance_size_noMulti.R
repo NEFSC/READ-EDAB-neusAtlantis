@@ -1,7 +1,7 @@
 #Figure 7: Impact after disturbance by species
 
-data.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/data/fspike_combined/'
-figure.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/'
+data.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/data/fspike_combined/'
+figure.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/'
 
 guild2spp = read.csv(here::here('diagnostics','functional_groups_match.csv'),as.is = T) %>% select(Code, Guild)
 guild.colors = RColorBrewer::brewer.pal(11,'Paired')
@@ -16,7 +16,7 @@ bio.run.stats = readRDS(paste0(data.dir,'recovery_stats_fspike_combined.rds')) %
   left_join(guild2spp)%>%
   left_join(fgs)%>%
   left_join(multi.spp)%>%
-  filter(!is.na(recovery.20) & IsMulti == 0)%>%
+  filter(!is.na(recovery.15) & IsMulti == 0)%>%
   filter(scalar %in% c(2,5,10,50,100))%>%
   arrange(LongName)
 

@@ -1,5 +1,5 @@
-data.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/data/fspike_combined/'
-table.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/tables/'
+data.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/data/fspike_combined/'
+table.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/tables/'
 
 guild2spp = read.csv(here::here('diagnostics','functional_groups_match.csv'),as.is = T) %>% select(Code, Guild)
 guild.colors = RColorBrewer::brewer.pal(11,'Paired')
@@ -14,14 +14,14 @@ bio.run.stats = readRDS(paste0(data.dir,'recovery_stats_fspike_combined.rds'))%>
   mutate(db.tmin = signif(db.tmin,2),
          db.t5 = signif(db.t5,2),
          db.t10 = signif(db.t10,2),
-         db.t20 = signif(db.t20,2))%>%
+         db.t20 = signif(db.t15,2))%>%
   mutate(is.zero = db.tmin == 0)%>%
   group_by(LongName,is.zero)%>%
   mutate(is.min = scalar == min(scalar))%>%
   ungroup()%>%
   mutate(remove  = is.zero == T & is.min == F)%>%
   filter(remove == F)%>%
-  select(LongName,scalar,db.tmin,db.t5,db.t20)
+  select(LongName,scalar,db.tmin,db.t5,db.t15)
 
 write.csv(bio.run.stats, paste0(table.dir,'table_2_recovery_stats.csv'),row.names= F)
 

@@ -6,14 +6,14 @@ library(scales)
 library(gridExtra)
 library(ggrepel)
 
-data.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/data/fscale_combined/'
-figure.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/figures/fscale_combined/'
+data.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/data/fscale_combined/'
+figure.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/figures/fscale_combined/'
 
 #make some fake data based on the run.index
 experiment.id = 'fscale_combined'
 
 
-ref.run.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/'
+ref.run.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/'
 data.ref = readRDS(paste0(ref.run.dir,'Post_Processed/Data/ref_run_summary_20805_28105.rds'))
 proj.start = 20805
 
@@ -26,7 +26,7 @@ fgs = read.csv(fgs.file,as.is =T) %>%select(Code,LongName,IsTurnedOn)
 setup.df = read.csv(here::here('diagnostics','scenario_db',paste0(experiment.id,'_setup.csv')),as.is = T)
 
 # setup.df$target.species = sapply(setup.df$Run,function(x) return(strsplit(x,split=paste0(experiment.id,'|_'))[[1]][3]),USE.NAMES = F)
-mig.groups = read.csv(here::here('currentVersion','neus_migrations_orig.csv'),as.is=T)$GroupCode
+mig.groups = read.csv(here::here('currentVersion','neus_migrations_test.csv'),as.is=T)$GroupCode
 
 setup.df = setup.df %>% select(run.id,scalar,target.species)
 
@@ -121,7 +121,7 @@ for(i in 1:length(spp.names)){
   if(class(num.model.3) != 'try-error'){data.model.comp$num.3.AIC[i]=AIC(num.model.3)}
 }
 
-write.csv(data.model.comp, '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/tables/catch_scalar_model_comparisons.csv',row.names =F)
+write.csv(data.model.comp, 'Z:/Shared_Data/fishing_sensitivity_manuscript/tables/catch_scalar_model_comparisons.csv',row.names =F)
 
 data.model.comp2 =data.model.comp %>%
   tidyr::gather(dum,AIC,-Code)%>%
@@ -132,7 +132,7 @@ data.model.comp2 =data.model.comp %>%
   filter(is.min == T)%>%
   arrange(Code,variable)
 
-write.csv(data.model.comp2, '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/tables/catch_scalar_model_selected.csv',row.names =F)
+write.csv(data.model.comp2, 'Z:/Shared_Data/fishing_sensitivity_manuscript/tables/catch_scalar_model_selected.csv',row.names =F)
 
 data.model.comp2 %>%
   select(Code,variable,model,is.min)%>%

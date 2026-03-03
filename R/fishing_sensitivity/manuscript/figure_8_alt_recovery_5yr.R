@@ -2,8 +2,8 @@
 library(dplyr)
 library(ggplot2)
 
-data.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/data/fspike_combined/'
-figure.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/'
+data.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/data/fspike_combined/'
+figure.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/'
 
 guild2spp = read.csv(here::here('diagnostics','functional_groups_match.csv'),as.is = T) %>% select(Code, Guild)
 guild.colors = RColorBrewer::brewer.pal(11,'Paired')
@@ -94,10 +94,10 @@ ggsave(paste0(figure.dir,'Figure_8_alt_Recovery_Prop_5yr.png'),width = 7, height
 # ggplot(bio.run.stats2, aes(color= factor(scalar),
 #                            y  = reorder(LongName,plot.order.t20),
 #                            yend =  reorder(LongName,plot.order.t20),
-#                            x = db.t20,xend = 1))+
+#                            x = db.t15,xend = 1))+
 #   geom_segment(color = 'grey70')+
 #   # geom_point(size = 4,shape = 108,alpha = 0.6)+
-#   geom_errorbar(aes(ymin = plot.order.t20-.4,ymax = plot.order.t20+.4, x = db.t20),linewidth = 1)+
+#   geom_errorbar(aes(ymin = plot.order.t20-.4,ymax = plot.order.t20+.4, x = db.t15),linewidth = 1)+
 #   # scale_y_discrete(limits=rev)+
 #   scale_color_manual(name = 'Disturbance Scalar',values = RColorBrewer::brewer.pal(5,'Set1'))+
 #   geom_hline(yintercept = c(6.5,27.5,33.5,45.5,53.5),lty = 3,color = 'grey30')+

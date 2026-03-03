@@ -2,11 +2,11 @@
 library(ggplot2)
 library(dplyr)
 
-fished.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/data/fspike_combined/'
-unfished.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/data/fspike_UnfishedRecovery/'
+fished.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/data/fspike_combined/'
+unfished.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/data/fspike_UnfishedRecovery/'
 
-out.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/data/fspike_combined/'
-figure.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/'
+out.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/data/fspike_combined/'
+figure.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/'
 
 guild2spp = read.csv(here::here('diagnostics','functional_groups_match.csv'),as.is = T) %>% select(Code, Guild)
 guild.colors = RColorBrewer::brewer.pal(11,'Paired')

@@ -47,7 +47,7 @@ island.df = data.frame(x1 = c(-67,-67),
                        label = rep('Islands',2))
 
 neus = maps::map('worldHires',xlim = c(-78,-62),ylim = c(34,46.5),plot = F)
-plot.file = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_1_model_domain.png'
+plot.file = 'Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_1_model_domain.png'
 
 plot.cols = c(rgb(230,159,0,maxColorValue = 255),rgb(86,180,233, maxColorValue = 255),rgb(0,158,115, maxColorValue = 255))
 
@@ -74,7 +74,7 @@ ggsave(plot.file,width = 8, height = 8, units = 'in',dpi = 500)
 m_png <- image_border(image_trim(image_read(plot.file)), "white", "30x30")
 image_write(m_png,plot.file)
 
-plot.file = here::here('Manuscript','Figures','Final','Fig_1_NEUS_Box_EPU_Simplified.png')
+plot.file = 'Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Fig_1_NEUS_Box_EPU_Simplified.png'
 plot.cols = c(rgb(230,159,0,maxColorValue = 255),rgb(86,180,233, maxColorValue = 255),rgb(0,158,115, maxColorValue = 255))
 ggplot()+ 
   annotation_map(map_data('worldHires'),fill = 'grey50',alpha = 0.8)+
@@ -96,7 +96,7 @@ ggplot()+
     plot.title = element_text(hjust=0.5),
     plot.margin = grid::unit(c(0,0,0,0),'mm')
     
-  )+
+  )
   ggsave(plot.file,width = 4, height = 8, units = 'in',dpi = 300)
 
 m_png <- image_border(image_trim(image_read(plot.file)), "white", "30x30")

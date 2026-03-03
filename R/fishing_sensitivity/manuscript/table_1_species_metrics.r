@@ -17,7 +17,7 @@ num_priority_plots <- nrow(high_priority_group_table)
 high_priority_groups <- high_priority_group_table$Code
 all_groups <- priority_data$Code
 
-base.run.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/'
+base.run.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/'
 biomind <- paste0(base.run.dir,'neus_outputBiomIndx.txt')
 fgs <- paste0(here::here(),"/currentVersion/neus_groups.csv")
 
@@ -124,6 +124,6 @@ diagnostic_table$Average_Biomass=sapply(diagnostic_table$Average_Biomass,functio
 diagnostic_table$Average_Catch=sapply(diagnostic_table$Average_Catch,function(x) return(ifelse(x<0.01,'<0.01',x)))
 diagnostic_table$F_rate=sapply(diagnostic_table$F_rate,function(x) return(ifelse(x<0.01,'<0.01',x)))
 
-out.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/tables/'
+out.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/tables/'
 outFile <- paste0(out.dir,"table_1_species_metrics.csv")
 write.csv(diagnostic_table, file=outFile, row.names=FALSE)

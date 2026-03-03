@@ -1,7 +1,7 @@
 #Figure 8b: Recovered amount by species as a function of disturbance size after 20yrs
-
-data.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/data/fspike_combined/'
-figure.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/'
+library(dplyr)
+data.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/data/fspike_combined/'
+figure.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/'
 
 guild2spp = read.csv(here::here('diagnostics','functional_groups_match.csv'),as.is = T) %>% select(Code, Guild)
 guild.colors = RColorBrewer::brewer.pal(11,'Paired')
@@ -9,20 +9,18 @@ names(guild.colors) = sort(unique(guild2spp$Guild))
 guild.color.df = data.frame(Guild = sort(unique(guild2spp$Guild)),plot.color = guild.colors)
 
 fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T)%>% select(Code,LongName)
-multi.spp = read.csv(here::here('diagnostics','multigroup_index.csv'),as.is =T)
 
 bio.run.stats = readRDS(paste0(data.dir,'recovery_stats_fspike_combined.rds')) %>%
   filter(scalar != 0)%>%
   left_join(guild2spp)%>%
   left_join(fgs)%>%
-  left_join(multi.spp)%>%
-  filter(!is.na(recovery.20)& IsMulti ==0)%>%
+  filter(!is.na(recovery.15))%>%
   filter(scalar %in% c(2,5,10,50,100))%>%
   arrange(LongName)
 
 spp.min = bio.run.stats %>%
-  select(Code,LongName,scalar,db.t20)%>%
-  mutate(is.zero = ifelse(db.t20 == 0,T,F))%>%
+  select(Code,LongName,scalar,db.t15)%>%
+  mutate(is.zero = ifelse(db.t15 == 0,T,F))%>%
   group_by(Code,is.zero)%>%
   mutate(count = n())%>%
   ungroup()%>%
@@ -44,13 +42,13 @@ bio.run.stats2 =  bio.run.stats %>%
   filter(scalar <= max.scalar)
 
 bio.run.sort = bio.run.stats2 %>%
-  select(Code,LongName,Guild,scalar,db.t20)%>%
+  select(Code,LongName,Guild,scalar,db.t15)%>%
   group_by(Code)%>%
-  mutate(min.prop = db.t20 == min(db.t20))%>%
+  mutate(min.prop = db.t15 == min(db.t15))%>%
   filter(min.prop == T)%>%
   ungroup()%>%
-  distinct(Code,db.t20,.keep_all = T)%>%
-  arrange(Guild,db.t20)%>%
+  distinct(Code,db.t15,.keep_all = T)%>%
+  arrange(Guild,db.t15)%>%
   mutate(plot.order = 1:n())%>%
   select(Code,plot.order)
 
@@ -65,17 +63,17 @@ name.col = bio.run.stats2 %>%
 ggplot(bio.run.stats2, aes(color= factor(scalar),
                            y  = reorder(LongName,plot.order),
                            yend =  reorder(LongName,plot.order),
-                           x = db.t20,xend = 1))+
+                           x = db.t15,xend = 1))+
   geom_segment(color = 'grey70')+
   # geom_point(size = 4,shape = 108,alpha = 0.6)+
-  geom_errorbar(aes(ymin = plot.order-.4,ymax = plot.order+.4, x = db.t20),linewidth = 1)+
+  geom_errorbar(aes(ymin = plot.order-.4,ymax = plot.order+.4, x = db.t15),linewidth = 1)+
   # scale_y_discrete(limits=rev)+
   scale_color_manual(name = 'Disturbance Scalar',values = RColorBrewer::brewer.pal(5,'Set1'))+
   geom_hline(yintercept = c(6.5,27.5,33.5,45.5,53.5),lty = 3,color = 'grey50',linewidth = 0.25)+
-  xlab('Recoved proportion after 20 years')+
+  xlab('Recoved proportion after 15 years')+
   ylab('')+
   theme_bw()+
   theme(panel.grid.minor =element_blank(),
         legend.position = 'bottom',
         axis.text.y = element_text(color = name.col$plot.color ))
-ggsave(paste0(figure.dir,'Figure_8b_alt_Recovery_Prop_20yr.png'),width = 7, height = 8, units = 'in',dpi = 300)
+ggsave(paste0(figure.dir,'Figure_6b_Recovery_Prop_15yr.png'),width = 7, height = 8, units = 'in',dpi = 300)

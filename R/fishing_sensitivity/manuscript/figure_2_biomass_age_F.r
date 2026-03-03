@@ -36,13 +36,13 @@ source(paste0(here::here(), '/R/Post_Processing/process_atl_output.R'))
 source(paste0(here::here(), '/R/Post_Processing/make_atlantis_diagnostic_figures.R'))
 
 # Reading other files
-ref.run.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/'
+ref.run.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/'
 ssb_data <- readRDS(paste0(ref.run.dir, 'Post_Processed/Data/ref_run_SSB_catch.rds'))
 adult_age_data <- read.csv(here::here('diagnostics','group_mature_age.csv'))
 
 param.dir = here::here('currentVersion')
 out.dir = paste0(ref.run.dir,'Post_Processed/Data/')
-fig.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/'
+fig.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/'
 
 reasonability_data <- read.csv(here::here('data', 'output_diag_reasonability.csv'))
 priority_data <- read.csv(here::here('diagnostics','neus_atlantis_group_priority.csv'))%>%
@@ -68,8 +68,8 @@ reasonability_data <- full_join(reasonability_data,group.index, by="Code")
 
 # Biomass Timeseries ------------------------------------------------------
 
-out.dir <- '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/Post_Processed/Data/'
-catchfile <-'/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/neus_outputCatch.txt'
+out.dir <- 'Z:/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/Post_Processed/Data/'
+catchfile <-'Z:/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/neus_outputCatch.txt'
 
 #Make biomass timeseries plots
 biomass = readRDS(paste0(out.dir,'biomass.rds'))
@@ -241,7 +241,7 @@ for(p.group in 1:nrow(plot.index.df)){
 }
 
 
-png(paste0(here::here(), '/currentVersion/output/Post_Processed/Data/catch_priority.png'),width=1000,height=1000)
+png(paste0(fig.dir, 'Fig_2_biomass_age.png'),width=1000,height=1000)
 par(mfrow=c(7,4))
 for (g in 1:num_plots) {
   groupName <- groupNames[g]
@@ -307,7 +307,7 @@ for (g in 1:num_plots) {
     axis(4, at = c(0,y_limit), labels=F)
     F_rate <- 0
     if (groupCode %in% colnames(catch)) {
-      groupCatch <- select(catch, c("Time", groupCode))
+      groupCatch <- select(catch, c("Time", all_of(groupCode)))
       groupCatch <- groupCatch[1:num_times,] 
       groupCatch[,2] <- groupCatch[,2] / 100000
       
@@ -320,6 +320,6 @@ for (g in 1:num_plots) {
     }
   }
 }
-graphics.off()
+dev.off()
 
 
