@@ -8,7 +8,9 @@ guild.colors = RColorBrewer::brewer.pal(11,'Paired')
 names(guild.colors) = sort(unique(guild2spp$Guild))
 guild.color.df = data.frame(Guild = sort(unique(guild2spp$Guild)),plot.color = guild.colors)
 
-fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T)%>% select(Code,LongName)
+fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T)%>% 
+  filter(IsTurnedOn ==T) |> 
+  select(Code,LongName)
 
 bio.run.stats = readRDS(paste0(data.dir,'recovery_stats_fspike_combined.rds')) %>%
   filter(scalar != 0)%>%

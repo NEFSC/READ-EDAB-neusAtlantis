@@ -1,0 +1,46 @@
+---
+title: "fishing_sensitivity_manuscript_supp"
+output: html_document
+date: "2026-03-04"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r calib-tab, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Summary of calibration status of NEUSv2 functional groups."}
+  fgs = read.csv(here::here('currentVersion','neus_groups.csv')) |> 
+  dplyr::select(Code,LongName)
+  stats= read.csv(paste0(tab.dir,'table_1_species_metrics.csv')) |> 
+    dplyr::left_join(fgs) |> 
+    dplyr::select(Code,LongName, Stable, Reasonable, Relative_Change, Min_Target_q, Max_Target_q,Average_Biomass,Average_Catch,F_rate)|> 
+    dplyr::mutate(Min_Target_q = signif(Min_Target_q,2),
+                  Max_Target_q = signif(Max_Target_q,2),
+                  Stable = ifelse(Stable == T,"T","F"),
+                  Reasonable = ifelse(Reasonable == T,"T","F")) |> 
+    dplyr::rename(
+    `Species.Name` = LongName,
+    `Species.Code` = Code,
+    `Relative.Change` = Relative_Change,
+    `Target.Min` = Min_Target_q,
+    `Target.Max` = Max_Target_q,
+    `Average.Biomass` = Average_Biomass,
+    `Average.Catch` = Average_Catch,
+    `F.Rate` = F_rate
+  ) |> 
+    dplyr::arrange(desc(Species.Code))
+    
+  stats |> 
+    flextable::flextable() |> 
+    flextable::colformat_double(digits = 2) |> 
+    flextable::separate_header(split = "\\.") |>
+    flextable::align(align = "center", part = "all") |> 
+    flextable::valign(valign = "bottom", part = "header") |>
+    flextable::padding(padding = 1, part = "all") |>  
+    flextable::fontsize(size = 9, part = "all") |>  
+    flextable::autofit() |> 
+    flextable::set_table_properties(layout = "autofit", width = 1)
+```
+
+
