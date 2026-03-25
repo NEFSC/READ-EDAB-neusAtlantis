@@ -3,7 +3,9 @@ library(dplyr)
 
 experiment.id = 'catch_thresholds_eof_2'
 
-proj.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
+write.out =F
+
+# proj.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
 proj.dir = here::here('','')
 
 #utitlity scripts & packages
@@ -51,10 +53,13 @@ for(i in 1:length(thresh.v)){
   #Create new catch TS files
   new.catch.ts = paste0('total_catch_',i)
   setup.df$catch.force[i] = new.catch.ts
-  temp.scaled = scale_forcing_ts(code = unique(base.catch$Variable),
-                                 tstype = 'catch',
-                                 value = catch.scale,
-                                 operation = 'multiply',filename = new.catch.ts,overwrite =T)
+  
+  if(write.out){
+    temp.scaled = scale_forcing_ts(code = unique(base.catch$Variable),
+                                   tstype = 'catch',
+                                   value = catch.scale,
+                                   operation = 'multiply',filename = new.catch.ts,overwrite =T)
+  
 
   #update at_force.prm
   force.file.new.short = paste0('at_force_LINUX_',i,'.prm')
@@ -80,6 +85,7 @@ for(i in 1:length(thresh.v)){
   run.file.new.lines[run.command.line] = run.command.new
     
   writeLines(run.file.new.lines,con = run.file.new)
+  }
   print(i)
 }
   

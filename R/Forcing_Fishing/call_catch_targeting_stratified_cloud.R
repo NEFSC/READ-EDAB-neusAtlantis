@@ -1,9 +1,10 @@
 #Script creates Atlantis forcing scenarios where catch.ts is manipulated to target certain fishing complexes
 library(dplyr)
 
-run.forcing = F
-# proj.dir = here::here('','')
-proj.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
+run.forcing = T
+write.ts = F
+proj.dir = here::here('','')
+# proj.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
 
 experiment.id = 'eof_targeting_1'
 
@@ -78,6 +79,7 @@ ref_weights = base.catch.y |>
 
 #Loop through scenario params
 i=1
+scenario_config.ls = list()
 for(i in 1:nrow(scenario_params)){
 # for(i in 1:2){
 
@@ -101,7 +103,7 @@ for(i in 1:nrow(scenario_params)){
       ref_sub_weights = ref_weights,
       rounding_digits = 4
     )
-    
+  
     ###Setup catch scaling
     
     #set scaling factor
@@ -117,9 +119,13 @@ for(i in 1:nrow(scenario_params)){
     new.catch = base.catch.y.tot |> 
       dplyr::left_join(scenario_output, by = c('Time.y' = 'Time')) |> 
       dplyr::mutate(catch.new = catch.annual * subgroup_weight * catch.scale,
+                    catch.scale = catch.scale,
                     Time.d = Time.y * 365) |>
       dplyr::left_join(base.catch.y, by = c('Time.y',"SubGroup" = "Variable"))
    
+    scenario_config.ls[[i]] = new.catch |> 
+      dplyr::mutate(run.id = scenario_params$run.id[i]) |> 
+      dplyr::left_join(scenario_params)
     #test that scalar applied overall and stop if fails
     new.catch.test = new.catch |>
       dplyr::group_by(Time.y,Group) |>
@@ -149,44 +155,46 @@ for(i in 1:nrow(scenario_params)){
       dplyr::mutate(Time.y = floor(Time.d/365)) |> 
       dplyr::left_join(new.catch, by = c('Time.y', 'Variable' = 'SubGroup')) |> 
       dplyr::select(Time.d, Variable, catch.new)
-    
-    
-    catch.file.new = paste0(experiment.dir,'/total_catch_',i,'.ts')
-    catch.file.new.short = paste0('total_catch_',i,'.ts')
-    edit_forcing_ts_df(input_file = catch.file.orig,
-                       output_file = catch.file.new,
-                       changes_df = new.catch.d,
-                       time_col = 'Time.d',
-                       code_col = 'Variable',
-                       value_col = 'catch.new'
-    )
-    
+
     #Format other files for initialization
   
-    #update at_force.prm
-    force.file.new.short = paste0('at_force_LINUX_',i,'.prm')
-    force.file.new = paste0(proj.dir,'currentVersion/',force.file.new.short)
-    
-    file.copy(force.file.orig, force.file.new,overwrite = T)
-    
-    force.file.new.lines = readLines(force.file.new)
-    catch.file.line.new = paste0('Catchts0.data ',experiment.id,'/',catch.file.new.short)
-    
-    force.file.new.lines[catch.file.line] = catch.file.line.new
-    
-    writeLines(force.file.new.lines, con = force.file.new )
-    
-    #Do run.sh duplication
-    run.file.new = paste0(proj.dir,'currentVersion/',paste0('runAtlantis_',i,'.sh'))
-    
-    file.copy(run.sh.orig, run.file.new,overwrite=T)
-    
-    
-    run.file.new.lines = readLines(run.file.new)
-    run.command.new =  paste0('atlantisMerged -i neus_init.nc 0 -o neus_output.nc -r at_run.prm -f ',force.file.new.short,' -p at_physics.prm -b at_biology.prm -m neus_migrations.csv -h at_harvest.prm -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -t . -d output')
-    run.file.new.lines[run.command.line] = run.command.new
-    
-    writeLines(run.file.new.lines,con = run.file.new)
+    if(write.ts){
+      
+      catch.file.new = paste0(experiment.dir,'/total_catch_',i,'.ts')
+      catch.file.new.short = paste0('total_catch_',i,'.ts')
+      edit_forcing_ts_df(input_file = catch.file.orig,
+                         output_file = catch.file.new,
+                         changes_df = new.catch.d,
+                         time_col = 'Time.d',
+                         code_col = 'Variable',
+                         value_col = 'catch.new'
+      )
+                         
+      #update at_force.prm
+      force.file.new.short = paste0('at_force_LINUX_',i,'.prm')
+      force.file.new = paste0(proj.dir,'currentVersion/',force.file.new.short)
+      
+      file.copy(force.file.orig, force.file.new,overwrite = T)
+      
+      force.file.new.lines = readLines(force.file.new)
+      catch.file.line.new = paste0('Catchts0.data ',experiment.id,'/',catch.file.new.short)
+      
+      force.file.new.lines[catch.file.line] = catch.file.line.new
+      
+      writeLines(force.file.new.lines, con = force.file.new )
+      
+      #Do run.sh duplication
+      run.file.new = paste0(proj.dir,'currentVersion/',paste0('runAtlantis_',i,'.sh'))
+      
+      file.copy(run.sh.orig, run.file.new,overwrite=T)
+      
+      
+      run.file.new.lines = readLines(run.file.new)
+      run.command.new =  paste0('atlantisMerged -i neus_init.nc 0 -o neus_output.nc -r at_run.prm -f ',force.file.new.short,' -p at_physics.prm -b at_biology.prm -m neus_migrations.csv -h at_harvest.prm -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -t . -d output')
+      run.file.new.lines[run.command.line] = run.command.new
+      
+      writeLines(run.file.new.lines,con = run.file.new)
+    }
   }
   
   #Print progress percent
@@ -199,6 +207,17 @@ system('sudo chmod -R 775 *')
 
 write.csv(scenario_params, paste0(proj.dir,'Setup_Files/',experiment.id,'_setup.csv'),row.names = F)
 
+#isolate species level scalars
+spp.dat = dplyr::bind_rows(scenario_config.ls)
+spp.dat.scalars = spp.dat |> 
+  dplyr::select(Time.d, run.id,SubGroup, subgroup_weight) |> 
+  dplyr::rename(Code = 'SubGroup') |>
+  dplyr::left_join(scenario_params) |> 
+  dplyr::mutate(input.scalar = catch.scalar * subgroup_weight) |> 
+  dplyr::select(run.id, Time.d,Code,input.scalar) |> 
+  tidyr::pivot_wider(names_from = 'Code', values_from = 'input.scalar')
+
+write.csv(spp.dat.scalars, paste0(proj.dir,'Setup_Files/',experiment.id,'_species_scalars.csv'),row.names = F)
 
 base.sbatch.array = paste0(proj.dir,'currentVersion/sbatch_scenario_array_base.sh')
 new.sbatch.array =  paste0(proj.dir,'currentVersion/sbatch_',experiment.id,'.sh')
