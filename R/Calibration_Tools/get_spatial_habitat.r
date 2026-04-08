@@ -2,6 +2,20 @@ library(dplyr)
 library(here)
 library(atlantisdiagnostics)
 
+get_minmax_thresh <- function(sppname) {
+
+#  biofile <- here::here('currentVersion', '/at_biology.prm')
+  threshold_file <- here::here('data', '/NRHA_Thresholds.csv')
+  threshold_df <- read.table(threshold.dir, sep = ",", header = TRUE, stringsAsFactors = FALSE)
+
+  spp_threshold_info <- filter(threshold_df,Code == sppname)
+  spp_min_temp <- spp_threshold_info$min_bottom_temp
+  spp_max_temp <- spp_threshold_info$max_bottom_temp
+  minmax_temp <- c(spp_min_temp, spp_max_temp)
+  return(minmax_temp)
+}
+
+
 sppname <- c("COD")
 sppnames <- c("COD")
 reference.dir <- here::here('Atlantis_Runs', 'dev_7_22_25','/neus_outputBoxBiomass.txt')
@@ -42,6 +56,7 @@ col_names <- c("Box", "Min", "Max")
 minmaxtemp_df <- data.frame(matrix(NA, nrow = num_rows, ncol = num_cols))
 colnames(minmaxtemp_df) <- col_names
 
+spp_minmaxtemp_df <- inner_join(minmaxtemp_df,summary_ref_df, by = c('Box'))
 overallMin <- 100
 overallMax <- -100
 for (p in 1:22) {
@@ -57,12 +72,10 @@ for (p in 1:22) {
   }
 }
 
-threshold.dir <- '/home/rgamble/Neus-Atlantis/DisMAP/envThresh/thresholds/atlantis_group_thresholds_survdat.csv'
-threshold_df <- read.table(threshold.dir, sep = ",", header = TRUE, stringsAsFactors = FALSE)
+minmax_vector <- get_minmax_thresh(sppname)
+final_output <- df %>%
 
-spp_threshold_info <- filter(threshold_df,Code == sppname)
-spp_min_temp <- spp_threshold_info$min_bottom_temp
-spp_max_temp <- spp_threshold_info$max_bottom_temp
+  dplyr::mutate(period = "baseline")
 
 ############### END END END END ##########################
 
