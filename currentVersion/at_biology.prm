@@ -5338,7 +5338,7 @@ SCU_min_move_temp 3.4
 TYL_min_move_temp 7.9
 RED_min_move_temp 1.5
 OPT_min_move_temp 0.1
-SAL_min_move_temp 3.7
+SAL_min_move_temp 0
 DRM_min_move_temp 0.2
 STB_min_move_temp -0.4
 TAU_min_move_temp -0.5
@@ -5425,7 +5425,7 @@ SCU_max_move_temp 28.5
 TYL_max_move_temp 18.0
 RED_max_move_temp 24.8
 OPT_max_move_temp 20.2
-SAL_max_move_temp 8.4
+SAL_max_move_temp 30.0
 DRM_max_move_temp 39.8
 STB_max_move_temp 34.4
 TAU_max_move_temp 30.6
