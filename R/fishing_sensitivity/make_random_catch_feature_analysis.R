@@ -4,33 +4,9 @@ library(tidyr)
 library(ranger)
 library(ggplot2)
 
-#' Prepare Wide Predictor Matrix
-#' 
-#' @param metrics_df The long dataframe output from calculate_all_catch_metrics()
-#' @return A wide dataframe where each row is an experiment and columns are predictors.
-prep_wide_predictors <- function(metrics_df) {
-  
-  wide_df <- metrics_df %>%
-    # 1. Drop species that have exactly 0 total catch (avoids NAs)
-    filter(Total_Catch > 0) %>%
-    # 2. Keep only the columns we want as predictors
-    select(Experiment, Species, Center_Of_Mass, T50, T90, Peak_Time) %>%
-    # 3. Pivot wider to create columns like "Aggregate_T50" or "COD_Center_Of_Mass"
-    pivot_wider(
-      names_from = Species,
-      values_from = c(Center_Of_Mass, T50, T90, Peak_Time),
-      names_glue = "{Species}_{.value}"
-    )
-  
-  # Ensure Experiment is a character for safe merging later
-  wide_df$Experiment <- as.character(wide_df$Experiment)
-  
-  return(wide_df)
-}
-
 #' Identify Top Drivers for a Single Target Species
 #'
-#' @param wide_predictors Output from prep_wide_predictors()
+#' @param wide_predictors Output from prep_wide_predictors() (or cleaned wide .rds)
 #' @param target_outcomes A dataframe with columns 'Experiment' and the target variable
 #' @param target_col Character; the name of the column containing the target variable (e.g., "rel_distance")
 #' @param n_top Integer; how many top drivers to return and plot
@@ -168,16 +144,18 @@ analyze_all_target_drivers <- function(wide_predictors, target_outcomes_full, ta
 # ==============================================================================
 # EXAMPLE USAGE:
 # ==============================================================================
-# 1. Prep your wide predictors
-all_metrics <-  readRDS('Z:/fishing_sensitivity_manuscript/data/random_catch_combined/random_catch_combined_catch_weight_metrics.rds')
-wide_preds <- prep_wide_predictors(all_metrics)
+
+# 1. Load your ALREADY CLEANED AND WIDE predictors from the previous script
+# We bypass prep_wide_predictors() entirely because the data is already prepped!
+wide_preds <- readRDS('Z:/fishing_sensitivity_manuscript/data/random_catch_combined/clean_wide_catch_metrics.rds')
 
 # 2. Run the batch analysis for ALL species in your dataframe
-df_contrasts = readRDS('Z:/fishing_sensitivity_manuscript/data/random_catch_combined/random_catch_combined_contrasts.rds') |> 
+df_contrasts <- readRDS('Z:/fishing_sensitivity_manuscript/data/random_catch_combined/random_catch_combined_contrasts.rds') |> 
   rename(Experiment = 'ID')
+
 batch_results <- analyze_all_target_drivers(
-  wide_predictors = wide_preds,
-  target_outcomes_full = df_contrasts, # Your dataframe with Code, Experiment, rel_distance, etc.
+  wide_predictors = wide_preds, # Pass the loaded dataframe directly!
+  target_outcomes_full = df_contrasts, 
   target_col = "rel_distance",
   n_top = 10
 )
@@ -193,10 +171,46 @@ pdf(here::here('Manuscript','Figures',"All_Species_Drivers.pdf"), width = 8, hei
 invisible(lapply(batch_results$plots, print))
 dev.off()
 
-# 5. View results
-df_contrasts |> 
-  group_by(Code) |> 
-  summarise(rel_distance = mean(rel_distance)) |> 
-  print(n = 90)
-  
+drivers.df = batch_results$top_1_summary |> 
+  tidyr::separate(Predictor, c('Predictor_Species','Metric'),sep ='_',remove = F) |> 
+  mutate(Self_Driver = ifelse(Predictor_Species == Target_Species, "Yes", "No")) 
+
+drivers.df |> 
+  select(Target_Species, Self_Driver) |> 
+  arrange(desc(Self_Driver))
+
+drivers.df |> 
+  group_by(Predictor) |> 
+  summarise(count = n()) |> 
+  arrange(desc(count))
+
+drivers.df |> 
+  group_by(Metric) |> 
+  summarise(count = n()) |> 
+  arrange(desc(count))
+
+##Plot rel_distance as a function of LOB_T50
+
+df.combined = wide_preds |> 
+  filter(Experiment != 'Original') |> 
+  mutate(Experiment = as.numeric(Experiment)) |> 
+  left_join(df_contrasts)
+
+ggplot(df.combined, aes(x = LOB_T50, y = rel_distance)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  facet_wrap(~Code, scale = 'free_y') +
+  theme_minimal() +
+  labs(title = "Relationship between LOB_T50 and Relative Distance",
+       x = "LOB_T50",
+       y = "Relative Distance")
+
+ggplot(df.combined, aes(x = Aggregate_T50, y = rel_distance)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  facet_wrap(~Code, scale = 'free_y') +
+  theme_minimal() +
+  labs(title = "Relationship between LOB_T50 and Relative Distance",
+       x = "LOB_T50",
+       y = "Relative Distance")
 

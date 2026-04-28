@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.27)  28 APR 2026 11:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.27)  28 APR 2026 11:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**fishing_sensitivity_manuscript_v1.tex
-(./fishing_sensitivity_manuscript_v1.tex
+**fishing_sensitivity_manuscript_v2.tex
+(./fishing_sensitivity_manuscript_v2.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (c:/Users/joseph.caracappa/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
@@ -368,8 +368,8 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (c:/Users/joseph.caracappa/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count323
-) (./fishing_sensitivity_manuscript_v1.aux)
-\openout1 = `fishing_sensitivity_manuscript_v1.aux'.
+) (./fishing_sensitivity_manuscript_v2.aux)
+\openout1 = `fishing_sensitivity_manuscript_v2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
 LaTeX Font Info:    ... okay on input line 117.
@@ -482,125 +482,57 @@ LaTeX Warning: Reference `fig:path-deviation`' on page 5 undefined on input line
 
 LaTeX Warning: Reference `(' on page 5 undefined on input line 225.
 
-[5{c:/Users/joseph.caracappa/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+[5{c:/Users/joseph.caracappa/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [6] [7] [8] [9
 
-LaTeX Warning: Citation `ref-bracis2020' on page 6 undefined on input line 237.
-
-
-LaTeX Warning: Citation `ref-ortega-cisneros2017' on page 6 undefined on input line 237.
-
-
-LaTeX Warning: Citation `ref-lopezdegamiz-zearra2024' on page 6 undefined on input line 237.
-
-
-LaTeX Warning: Citation `ref-sturludottir2018' on page 6 undefined on input line 237.
-
-
-LaTeX Warning: Citation `ref-hansen2019' on page 6 undefined on input line 237.
-
-
-LaTeX Warning: Citation `ref-mas2017' on page 6 undefined on input line 237.
-
-
-LaTeX Warning: Citation `ref-shin2004' on page 6 undefined on input line 237.
-
-
-LaTeX Warning: Citation `ref-hansen2019' on page 6 undefined on input line 237.
-
-
-LaTeX Warning: Citation `ref-bracis2020' on page 6 undefined on input line 237.
-
-
-LaTeX Warning: Citation `ref-ortega-cisneros2017' on page 6 undefined on input line 237.
-
-
-LaTeX Warning: Citation `ref-sturludottir2018' on page 6 undefined on input line 237.
-
-
-LaTeX Warning: Citation `ref-smith2014' on page 6 undefined on input line 237.
-
-
-LaTeX Warning: Citation `ref-smith2015' on page 6 undefined on input line 237.
-
-
-LaTeX Warning: Citation `ref-masi2017' on page 6 undefined on input line 237.
-
-
-LaTeX Warning: Citation `ref-libralato2006' on page 6 undefined on input line 237.
-
-
-LaTeX Warning: Citation `ref-Ito2023' on page 6 undefined on input line 241.
-
-
-LaTeX Warning: Citation `ref-Bracis2020' on page 6 undefined on input line 241.
-
-[6]
-
-LaTeX Warning: Citation `ref-sissenwine1987' on page 7 undefined on input line 243.
-
-
-LaTeX Warning: Citation `ref-thorson2024' on page 7 undefined on input line 247.
-
-
-LaTeX Warning: Citation `ref-tuljapurkar2006' on page 7 undefined on input line 249.
-
-
-LaTeX Warning: Citation `ref-essington2015' on page 7 undefined on input line 249.
-
-
-LaTeX Warning: Citation `ref-fulton2021' on page 7 undefined on input line 249.
-
-[7] [8] [9
-
-]
-<Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_1_model_domain.png, id=150, 526.41467pt x 586.8324pt>
+] [10]
+<Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_1_model_domain.png, id=211, 526.41467pt x 586.8324pt>
 File: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_1_model_domain.png Graphic file (type png)
 <use Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_1_model_domain.png>
-Package pdftex.def Info: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_1_model_domain.png  used on input line 317.
+Package pdftex.def Info: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_1_model_domain.png  used on input line 365.
 (pdftex.def)             Requested size: 187.89914pt x 209.45967pt.
-<Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_4_Constant_Catch_Sensitivity.png, id=151, 578.16pt x 433.62pt>
+<Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_4_Constant_Catch_Sensitivity.png, id=212, 578.16pt x 433.62pt>
 File: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_4_Constant_Catch_Sensitivity.png Graphic file (type png)
 <use Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_4_Constant_Catch_Sensitivity.png>
-Package pdftex.def Info: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_4_Constant_Catch_Sensitivity.png  used on input line 322.
+Package pdftex.def Info: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_4_Constant_Catch_Sensitivity.png  used on input line 370.
 (pdftex.def)             Requested size: 578.15858pt x 433.61894pt.
-<Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_5_Biomass_Sensitivity_Exploitation.png, id=152, 578.16pt x 433.62pt>
+<Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_5_Biomass_Sensitivity_Exploitation.png, id=213, 578.16pt x 433.62pt>
 File: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_5_Biomass_Sensitivity_Exploitation.png Graphic file (type png)
 <use Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_5_Biomass_Sensitivity_Exploitation.png>
-Package pdftex.def Info: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_5_Biomass_Sensitivity_Exploitation.png  used on input line 328.
+Package pdftex.def Info: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_5_Biomass_Sensitivity_Exploitation.png  used on input line 376.
 (pdftex.def)             Requested size: 578.15858pt x 433.61894pt.
-<Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_5b_Abundance_Sensitivity_Exploitation.png, id=153, 578.16pt x 433.62pt>
+<Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_5b_Abundance_Sensitivity_Exploitation.png, id=214, 578.16pt x 433.62pt>
 File: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_5b_Abundance_Sensitivity_Exploitation.png Graphic file (type png)
 <use Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_5b_Abundance_Sensitivity_Exploitation.png>
-Package pdftex.def Info: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_5b_Abundance_Sensitivity_Exploitation.png  used on input line 334.
+Package pdftex.def Info: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_5b_Abundance_Sensitivity_Exploitation.png  used on input line 382.
 (pdftex.def)             Requested size: 578.15858pt x 433.61894pt.
-<Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/figure_6_recovery_example.png, id=154, 650.43pt x 361.35pt>
+<Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/figure_6_recovery_example.png, id=215, 650.43pt x 361.35pt>
 File: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/figure_6_recovery_example.png Graphic file (type png)
 <use Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/figure_6_recovery_example.png>
-Package pdftex.def Info: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/figure_6_recovery_example.png  used on input line 340.
+Package pdftex.def Info: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/figure_6_recovery_example.png  used on input line 388.
 (pdftex.def)             Requested size: 650.4284pt x 361.34912pt.
-<Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_7_Initial_Disturbance_Size.png, id=155, 505.89pt x 578.16pt>
+<Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_7_Initial_Disturbance_Size.png, id=216, 505.89pt x 578.16pt>
 File: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_7_Initial_Disturbance_Size.png Graphic file (type png)
 <use Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_7_Initial_Disturbance_Size.png>
-Package pdftex.def Info: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_7_Initial_Disturbance_Size.png  used on input line 346.
+Package pdftex.def Info: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_7_Initial_Disturbance_Size.png  used on input line 394.
 (pdftex.def)             Requested size: 505.88875pt x 578.15858pt.
-<Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_8c_alt_Recovery_Prop_15yr.png, id=156, 505.89pt x 578.16pt>
+<Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_8c_alt_Recovery_Prop_15yr.png, id=217, 505.89pt x 578.16pt>
 File: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_8c_alt_Recovery_Prop_15yr.png Graphic file (type png)
 <use Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_8c_alt_Recovery_Prop_15yr.png>
-Package pdftex.def Info: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_8c_alt_Recovery_Prop_15yr.png  used on input line 352.
+Package pdftex.def Info: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_8c_alt_Recovery_Prop_15yr.png  used on input line 400.
 (pdftex.def)             Requested size: 505.88875pt x 578.15858pt.
-<Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_9_deviation_from_mean_subset.png, id=157, 578.16pt x 433.62pt>
+<Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_9_deviation_from_mean_subset.png, id=218, 578.16pt x 433.62pt>
 File: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_9_deviation_from_mean_subset.png Graphic file (type png)
 <use Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_9_deviation_from_mean_subset.png>
-Package pdftex.def Info: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_9_deviation_from_mean_subset.png  used on input line 358.
+Package pdftex.def Info: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_9_deviation_from_mean_subset.png  used on input line 406.
 (pdftex.def)             Requested size: 578.15858pt x 433.61894pt.
-<Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_10_Top_Drivers_By_Species.png, id=158, 505.89pt x 578.16pt>
+<Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_10_Top_Drivers_By_Species.png, id=219, 505.89pt x 578.16pt>
 File: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_10_Top_Drivers_By_Species.png Graphic file (type png)
 <use Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_10_Top_Drivers_By_Species.png>
-Package pdftex.def Info: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_10_Top_Drivers_By_Species.png  used on input line 364.
+Package pdftex.def Info: Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_10_Top_Drivers_By_Species.png  used on input line 412.
 (pdftex.def)             Requested size: 505.88875pt x 578.15858pt.
-[10
+[11
 
- <z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_1_model_domain.png>] [11 <z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_4_Constant_Catch_Sensitivity.png>] [12 <z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_5_Biomass_Sensitivity_Exploitation.png>] [13 <z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_5b_Abundance_Sensitivity_Exploitation.png>] [14 <z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/figure_6_recovery_example.png>] [15 <z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_7_Initial_Disturbance_Size.png>] [16 <z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_8c_alt_Recovery_Prop_15yr.png>] [17 <z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_9_deviation_from_mean_subset.png>] [18 <z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_10_Top_Drivers_By_Species.png>] (./fishing_sensitivity_manuscript_v1.aux)
+ <z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_1_model_domain.png>] [12 <z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_4_Constant_Catch_Sensitivity.png>] [13 <z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_5_Biomass_Sensitivity_Exploitation.png>] [14 <z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_5b_Abundance_Sensitivity_Exploitation.png>] [15 <z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/figure_6_recovery_example.png>] [16 <z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_7_Initial_Disturbance_Size.png>] [17 <z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_8c_alt_Recovery_Prop_15yr.png>] [18 <z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_9_deviation_from_mean_subset.png>] [19 <z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_10_Top_Drivers_By_Species.png>] (./fishing_sensitivity_manuscript_v2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -610,18 +542,18 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 11633 strings out of 469515
- 188024 string characters out of 5467202
- 604416 words of memory out of 5000000
- 40035 multiletter control sequences out of 15000+600000
+ 11666 strings out of 469515
+ 188661 string characters out of 5467202
+ 607027 words of memory out of 5000000
+ 40051 multiletter control sequences out of 15000+600000
  684370 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 89i,6n,93p,2056b,454s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,6n,93p,2053b,527s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/joseph.caracappa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/joseph.caracappa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/joseph.caracappa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/Users/joseph.caracappa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/Users/joseph.caracappa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/joseph.caracappa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/joseph.caracappa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/joseph.caracappa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/joseph.caracappa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/joseph.caracappa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/joseph.caracappa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb>
-Output written on fishing_sensitivity_manuscript_v1.pdf (18 pages, 2412922 bytes).
+Output written on fishing_sensitivity_manuscript_v2.pdf (19 pages, 2419151 bytes).
 PDF statistics:
- 333 PDF objects out of 1000 (max. 8388607)
- 277 compressed objects within 3 object streams
- 69 named destinations out of 1000 (max. 500000)
+ 400 PDF objects out of 1000 (max. 8388607)
+ 342 compressed objects within 4 object streams
+ 86 named destinations out of 1000 (max. 500000)
  206 words of extra memory for PDF output out of 10000 (max. 10000000)
 

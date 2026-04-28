@@ -4,8 +4,8 @@ library(gridExtra)
 
 experiment.id = 'random_catch_combined'
 
-data.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/data/'
-figure.dir = '/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/figures/'
+data.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/data/'
+figure.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/figures/'
 
 fgs = read.csv(here::here('currentVersion','neus_groups.csv'),as.is = T) %>%
   select(Code, LongName)
@@ -16,7 +16,7 @@ spp2guild = read.csv(here::here('diagnostics','functional_groups_match.csv'),as.
 start.time = 20805/365
 stop.time = start.time + 5
 
-ref.data = readRDS('/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/Post_Processed/Data/biomass.rds')%>%
+ref.data = readRDS('Z:/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/Post_Processed/Data/biomass.rds')%>%
   mutate(time = floor(time))%>%
   filter(time >= start.time & time <=stop.time)%>%
   left_join(fgs,by = c('species' = 'LongName'))%>%
@@ -28,7 +28,7 @@ ref.data = readRDS('/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_man
 # plot(atoutput~time,ref.data,type = 'l')
 # abline(v = c(start.time,stop.time))
 
-ref.F = readRDS('/net/work3/EDAB/atlantis/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/Post_Processed/Data/ref_run_summary.rds')%>%
+ref.F = readRDS('Z:/Shared_Data/fishing_sensitivity_manuscript/reference_run/fishing_sensitivity_baseline/Post_Processed/Data/ref_run_summary.rds')%>%
   select(Code,exploit.prop)%>%
   left_join(fgs)
 
@@ -86,9 +86,9 @@ out.stats.df = out.df %>%
   mutate(outside = Biomass.ref <rand.p2_5 | Biomass.ref > rand.p97_5)%>%
   filter(!is.na(Biomass.ref))%>%
   left_join(spp2guild)%>%
-  mutate(rand.mean = ifelse(rand.mean == 0, NA, rand.mean),
+  mutate(rand.med = ifelse(rand.med == 0, NA, rand.med),
          rand.sd = ifelse(rand.sd == 0, NA, rand.sd),
-         deviation = abs(Biomass.ref - rand.mean)/rand.sd,
+         deviation = abs(Biomass.ref - rand.med)/rand.sd,
          deviation.log = log10(deviation))%>%
   group_by(Guild)%>%
   mutate(deviation.max = max(deviation.log,na.rm=T))
@@ -108,4 +108,4 @@ ggplot(out.stats.df, aes(x = reorder(Guild,-deviation.max),y = deviation.log))+
   xlab('Guild')+
   ylab('Deviation from mean (#stdev) - log transformed')+
   theme_bw()
-ggsave(paste0(figure.dir,experiment.id,'/',experiment.id,'_deviation_from_mean.png'),width = 8,height =6, units = 'in',dpi =300)
+ggsave(paste0(figure.dir,experiment.id,'/',experiment.id,'_deviation_from_median.png'),width = 8,height =6, units = 'in',dpi =300)
