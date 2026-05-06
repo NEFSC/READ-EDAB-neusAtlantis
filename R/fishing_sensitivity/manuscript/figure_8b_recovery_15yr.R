@@ -72,7 +72,7 @@ ggplot(bio.run.stats2, aes(color= factor(scalar),
   # scale_y_discrete(limits=rev)+
   scale_color_manual(name = 'Disturbance Scalar',values = RColorBrewer::brewer.pal(5,'Set1'))+
   geom_hline(yintercept = c(6.5,27.5,33.5,45.5,53.5),lty = 3,color = 'grey50',linewidth = 0.25)+
-  xlab('Recoved proportion after 15 years')+
+  xlab('Recovered proportion after 15 years')+
   ylab('')+
   theme_bw()+
   theme(panel.grid.minor =element_blank(),

@@ -1,0 +1,412 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\usepackage{amsmath}
+\usepackage[section]{placeins}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Capturing the Regional Signature: Calibration, Sensitivity, and Path Dependence in the NEUSv2 Atlantis Model},
+  pdfauthor={Joseph C Caracappa, Andrew Beet, Robert Gamble, Scott Large},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Capturing the Regional Signature: Calibration, Sensitivity, and Path Dependence in the NEUSv2 Atlantis Model}
+\author{Joseph C Caracappa, Andrew Beet, Robert Gamble, Scott Large}
+\date{2026-04-30}
+
+\begin{document}
+\maketitle
+
+\section{Abstract}\label{abstract}
+
+TBD
+
+\section{Introduction}\label{introduction}
+
+As regions strive to implement ecosystem approaches to marine resource management, the need for systematic and interdisciplinary tools for addressing present and future concerns is apparent. These approaches seek to untangle the interactions between fisheries management, environmental conditions, changes to habitat, and other stakeholder actions. End-to-end ecosystem models can improve understanding of these interconnections by simulating regional biological, environmental, and socioeconomic processes and investigating how perturbations in one aspect of the system lead to changes in another (\citeproc{ref-fulton2010}{Fulton, 2010}; \citeproc{ref-rose2010}{Rose et al., 2010}). A critical step in building this capacity is developing and calibrating a model such that it replicates key processes and responds sensibly to perturbations and reflects regional properties.
+
+Atlantis (\citeproc{ref-fulton2004}{Fulton E. A., 2004}) is an end-to-end marine ecosystem model that simulates biogeochemistry, food webs, population dynamics, and human socioeconomic systems on regional scales (\citeproc{ref-fulton2011}{Fulton et al., 2011}) . Atlantis models have been used globally to investigate strategic management questions involving human and environmental perturbations including fishing effort (\citeproc{ref-fay2019}{Fay et al., 2019}), spatial management (\citeproc{ref-kaplan2012}{Kaplan et al., 2012}), distributional shifts (\citeproc{ref-liu2025}{Liu et al., 2025}), and climate impacts (\citeproc{ref-fay2017}{Fay et al., 2017}; \citeproc{ref-rovellini2025}{Rovellini et al., 2025}). Although Atlantis models are tailored to regional needs, they generally operate on coarse spatial scales (100s to 1000s km2) but are calibrated using a wide range of available data (regional oceanographic models, fisheries-dependent data, surveys, stock assessments, and literature reviews). Recommendations of calibration criteria for Atlantis models have been suggested (\citeproc{ref-kaplan2016}{Kaplan and Marshall, 2016}; \citeproc{ref-olsen2016}{Olsen et al., 2016}), but there is not a rigid protocol for determining whether biological processes are sufficiently realistic to address regional strategic management concerns especially given uncertainty and gaps in available data.
+
+The Northeast United States Atlantis model was developed in 2010 (\citeproc{ref-link2010}{Link et al., 2010}) and has been used to investigate the impacts of climate change (\citeproc{ref-fay2017}{Fay et al., 2017}) and alternative management actions (\citeproc{ref-link2010}{Link et al., 2010}) in the northeast U.S. shelf. Since then it has undergone a significant change in model structure and underlying code base leading to an updated designation NEUSv2 (\citeproc{ref-caracappa2022}{Caracappa et al., 2022}). These changes included a more geometrically consistent polygon structure, redefinition of broad,functional groups into individually managed species, and large non-backwards compatible change to the underlying Atlantis code base. One main objective of this updated model is to inform fisheries management through model projections under alternative management scenarios. In order to improve confidence in these projections, it is necessary to calibrate the biological sub model such that NEUSv2 reproduces a suitably skillful hindcast while responding sensibly to fishery drivers. Thus, the objectives of this study were to (1) evaluate the skillfulness of the NEUSv2 hindcast with respect to predefined calibration criteria, and to quantify NEUSv2's sensitivity to (2a) changes in sustained catch, (2b) fishing-induced disturbances, and (3) evaluate whether the model state is a necessary outcome of the regional catch history (path dependency).
+
+\section{Methods}\label{methods}
+
+\subsection{Model Structure \& Description}\label{model-structure-description}
+
+NEUSv2 is a spatial model divided by 30 spatial polygons (i.e.~boxes) that span the continental shelf from Cape Hatteras through the Gulf of Maine (Figure \ref{fig:model-domain}), and up to four vertical layers exist in each box. The model defines 89 different functional groups representing vertebrates (59), macro invertebrates (21), zooplankton (3), phytoplankton (3), and detritus (3). Of these, 47 are single species groups, encompassing all federally managed species in the region. The complete set of model parameters used can be found in the supplemental materials. A similar approach to the original NEUS Atlantis was used for biological parameterization (Link et al., 2011). For marine mammals and elasmobranchs, pupping recruitment was used, while a Beverton-Holt parameterization was used for the other vertebrate groups. All species used prescribed seasonal movement distributions based on regional habitat assessments and the NEFSC trawl survey database.
+
+NEUSv2 physical processes (temperature, salinity, and currents) were derived from the GLORY12V1 physical reanalysis (1993-2021; Jean-Michel et al. (\citeproc{ref-jean-michel2021}{2021})), and size-fractionated phytoplankton biomass was forced using a regional satellite chlorophyll product (\citeproc{ref-turner2021}{Turner et al., 2021}). The model is initialized in 1964 and spins up with repeated climatological forcing until 1993. Both forced variables translate to NEUSv2 accurately despite its coarse and irregular spatial structure (\citeproc{ref-caracappa2022}{Caracappa et al., 2022}). Functional groups were harvested using a forced-catch time series method (1985-2021), where annual commercial landings were converted to a daily rate for each species. We use a constant 10th percentile historical harvest rate for the first 20 model years to allow the age structure of populations to stabilize. Some groups included recreational landings or discards if data was obtainable. An age-based selectivity was used such that older fish were preferred, leading to a more realistic catch-at-age distribution after a model spin-up period.
+
+\subsection{Calibration Criteria}\label{calibration-criteria}
+
+Three main calibration criteria were used to evaluate whether individual functional groups' simulated populations were being adequately represented in NEUSv2 (Objective 1). The first, persistence, was successfully met if the functional group's domain-wide biomass never dropped below 10\% of initial conditions. The persistence criteria was required for all functional groups for the hindcast to be considered calibrated, and it is commonly used as a minimum performance standard in Atlantis models (\citeproc{ref-kaplan2016}{Kaplan and Marshall, 2016}) as it ensures that no species go extinct within the historical period. The second criteria, stability, requires functional groups to maintain a relativized rate of biomass change under 5\% yr-1. This threshold was chosen based on an analysis of NOAA's Northeast Fishery Science Center's (NEFSC) bottom trawl survey data and stock assessment spawning stock biomass estimates, and it seeks to reduce the amount of extreme population growth in functional groups stemming from improper parameterization or disequilibrium. However, this assumes a system at equilibrium, and since the NEUSv2 hindcast simulates a fished system, equilibrium in all species is not expected. The third criteria, reasonability, is met if functional group biomass in the last 20 years of the simulation (2001-2021) lies within the historical range of catchability-corrected population biomass estimates from the NEFSC trawl survey database. The reasonability criteria ensures that the mean state of the population is within the observed range. Since the catchability of the NEFSC bottom trawl survey is low for some species (planktivores, benthos, large pelagic fish, mammals, etc.), the stability and reasonability criteria were not necessarily required of all species for NEUSv2 to be considered calibrated.
+
+\subsection{Sustained Fishing Experiment}\label{sustained-fishing-experiment}
+
+To address Objective 2a, simulation experiments were performed that evaluated how sensitive each fished functional group in NEUSv2 was to sustained changes in fishing pressure. This was performed by running the full hindcast simulation (1998-2021) then projecting for 20 years at different multiplicative scalars of contemporary catch (S = 2, 5, 10, 50, and 100). The mean of the last 10 hindcast years (2011-2021) were used as the baseline catch, representing status quo management. The scalars were not intended to provide realistic fishing conditions but to systematically drive each species to extinction to model their response to fishing pressure. Sustained fishing experiments were performed for each single-species functional group that was exploited in NEUSv2 (N = 40) for each catch scalar level (M = 5) resulting in 200 simulations. Only single-species functional groups were chosen due to incomplete information on multi-species functional groups and no calibration expectations on depletion rates or response to fishing pressure.
+
+Two sensitivity metrics were used to characterize each species' response to sustained changes in fishing pressure. The first was a measure of additional scope for exploitation and defined by the maximum scalar of contemporary catch that allowed the persistence criteria to be met. The second was a measure of responsiveness defined by the steepness coefficient R. R is estimated by fitting the following functional form using non-linear least-squares regression:
+
+\begin{equation}
+  A_{rel} \text{ or } B_{rel} = (a + RS^{c})^{-1} + d
+  \label{eq:responsiveness}
+\end{equation}
+
+where \(B_{rel}\) or \(A_{rel}\) are the biomass (or abundance) relative to the unperturbed scenario, \(a^{-1}\) is the upper bound, c is a concavity coefficient, d is the lower asymptote, and R is a steepness coefficient. This form was a better representation of the depletion behavior seen in experiment results and resulted in a lower AIC than a simple exponential decay function (see supplement). To ensure that R described similar sensitivities for each response variable, all species' \(R_{biomass}\) and \(R_{abundance}\) were compared with a linear regression. It was hypothesized that more exploited species would be more sensitive to changes in fishing pressure, so a linear regression between \(R_{biomass}\) (and \(R_{abundance}\)) and contemporary exploitation \(F_0\) was performed, where \(F_{0} = \bar{B}_{0} / \bar{C}_{0}\) and \(B_0\) and \(C_0\) are the biomass and catch over the last 5 hindcast years.
+
+\subsection{Disturbance-Recovery Experiment}\label{disturbance-recovery-experiment}
+
+To address Objective 2b, a second set of simulation experiments were performed that explored each functional groups' response to fishing-induced disturbances and the following recovery period. This was performed by simulating the full hindcast period (1998-2021), followed by a 2 year shift in catch (\(t_0\) to \(t_1\)), then a 15 year recovery period (\(t_15\)). A 2 year disturbance period was chosen to allow for all species to have at least one recruitment event following the start of the disturbance. For each species, the same catch scalars on contemporary catch were used (S = 2, 5, 10, 50, 100) as in the sustained fishing experiment (Figure \ref{fig:initial-disturbance}), but after the disturbance ended, fishing was resumed at contemporary catch levels (Fig. \ref{fig:recovery15}). This experiment was performed for all exploited single-species functional groups (N=5) for each disturbance scalar (M=5), resulting in 200 simulations.
+
+For all disturbance-recovery scenarios, the impact (I) at time t and disturbance magnitude (s) was calculated as
+
+\begin{equation}
+  I_{s,t} = \frac{B_{s,t}}{B_{t}'}
+  \label{eq:impact}
+\end{equation}
+
+where \(B_{s,t}\) is the scenario biomass, and \(B_{t}'\) is the biomass in the unperturbed scenario. The disturbance impact was calculated at the end of the 2 year disturbance \(I_{s,t1}\) as well as 15 years post-disturbance \(I_{s,t15}\). Then the proportional recovery \(P_{s,t15}\) normalized to initial disturbance was calculated at \(t_{15}\) as
+
+\begin{equation}
+  P_{s,t15} = \frac{I_{s,t15} - I_{s,t1}}{I_{s,t1}}
+  \label{eq:recovery-prop}
+\end{equation}
+
+\subsection{Path Dependence Experiment}\label{path-dependence-experiment}
+
+Objective 3 addresses a possibility that similar NEUSv2 hindcast results could be obtained with any catch forcing with a similar mean and variance. However, if NEUSv2 were highly sensitive to the order of historical events, it would improve confidence that the NEUSv2 hindcast was capturing a specific regional signature (i.e.~path dependence). Alternative catch forcing scenarios were constructed to determine whether the final model state was sensitive to the ordering of historical events. These scenarios simulated the model unaltered for the first 20 years to allow the model to spin up, then generating a new catch forcing by sampling without replacement the annual catch forcing for the remaining years (1985-2021), followed by a 5 year projection at contemporary catch levels. This allowed each NEUSv2 scenario to experience an alternative ordering of historical fishing with a common 5-year period over which to compare. By permuting the catch history instead of sampling with replacement, we ensure that the total harvest from the ecosystem remains constant between scenarios. A total of 750 permutation scenarios were performed. Then the mean biomass (\(B_{i,s}\)) for each species (s) was calculated over the last 5 years for each permutation scenario (i). Then the 95\% credible interval was calculated for all \(B_{i,s}\). If the historical simulation biomass for that species (\(B_{s}'\)) lies outside that interval, we considered species \(s\) to be strongly path dependent. For those cases where \(B_{i,s}\) did not lie outside the randomized interval, a bootstrapped (n = 10,000) confidence interval of the median of \(B_{i,s}\) to test if \(B_{s}'\) was significantly different than the median of the permutation scenarios. If \(B_{s}'\) was outside this confidence interval, we considered species \(s\) to be weakly path dependent.
+
+To quantify the degree of path dependence two distance metrics were used. The first, \(D1_s\), measures the absolute deviation of the historical simulation relative to the median of permutation scenarios:
+
+\begin{equation}
+  D1_s = abs(B_{s}' - median(B_{i,s}))/sd(B_{i,s})
+  (\#eq:dist1_dev)
+\end{equation}
+
+The second, \(D2_s\), measures the deviation of individual permutation scenarios' \(B_{i,s}\) relative to the historical simulation \(B_{S}'\):
+
+\begin{equation}
+  D2_s = abs((B_{i,s} - B_{s}')/B_{s}')
+  (\#eq:dist2_rel)
+\end{equation}
+
+In these cases \(D1_s\) serves as a measure of a species in the \emph{historical simulation's} path dependency (i.e.~how different it was than the permutation simulations), and \(D2_s\) is a measure of how different a species in a given \emph{permutation scenario} is different than the historical simulation.
+
+Additionally, the time step where 50\% of the cumulative catch of the randomization period \(T50_{s,i}\) was calculated for each species in each permutation scenario. The same metric was also calculated for the aggregate catch across all species within a permutation scenario \(T50_{tot,i}\). These metrics are indicators of where the majority of the fishing pressure occurs in the randomized forcing, as it was hypothesized that potential path dependency would be driven by whether the majority of the catch occurred early or late in the simulation. To evaluate whether the timing of catch was driving path dependency, a Spearman Rank Correlation was performed between \(T50_{s,i}\) and \(D2_{s,i}\) for each species across all permutation scenarios. Significant positive or negative correlations suggest that differences between the permutation scenarios and the historical simulation were driven by where the majority of the catch was located in the randomized time series. To adjust for the high number of comparisons, a Bonferroni correction was applied to p-values.
+
+All statistical analysis were performed in R.
+
+\section{Results}\label{results}
+
+\subsection{Model Calibration Status}\label{model-calibration-status}
+
+Of all functional groups in NEUSv2, 100\% met persistence criteria, 84\% met stability criteria, and 72\% met reasonability criteria (Table S1). A summary of biomass, fishing mortality, and age structure can be found in Figure S1. Most groups show overall positive population growth rates, and of the groups that failed stability criteria, the mean relative growth rate was 21\% yr-1. While not a quantitative calibration criteria, it was desired to have a stable long-term age-structure in all vertebrate functional groups. Most species maintained a relatively flat juvenile-to-adult ratio throughout the hindcast, with the exception of periods with high fishing mortality. Of the groups that failed reasonability criteria, most were multi-species functional groups with non-comprehensive reference data. Of the single-species functional groups that fail reasonability, all have population biomasses above the upper observation bound, and include Atlantic mackerel (x1.4), black sea bass (x1.2), Atlantic salmon (x59.8), and Atlantic halibut (x1.26).All of these groups have low catchability in the NEFSC bottom trawl survey.
+
+\subsection{Sustained Fishing Experiment}\label{sustained-fishing-experiment-1}
+
+For all species, the relative biomass (N = 57) or abundance (N=45) as a function of fishing scalar was modeled by asymptotic decay (Eq.1) or a linear regression. Most species (75\% by biomass; 80 by abundance) were better represented by the asymptotic decal model based on AIC. The species that were better modeled by linear regressions did not experience sufficient catch to cause depletion. Sensitivity metrics (\(R_{biomass}\) and \(R_{abundance}\)) were in agreement, with a slope of 1.00 ± 0.03 (p \textless\textless{} 0.01; Figure \ref{fig:sensitivity-bio-abund}). Sandbar Sharks were removed from this analysis as it was a major outlier due to its extremely low catch, as it is part of a sparsly permitted fishery for research purposes only.
+
+It was hypothesized that more exploited species (higher \(F_0\)) in the baseline simulation would experience higher sensitivity to changes in fishing pressure. Since \(F_0\) is a measure of the realized exploitation rate for simulated populations, it is not necessarily equal to true fishing mortality. A linear regression showed that \(R_{biomass}\) (Figure \ref{fig:bio-sensitivity-exploitation}) and \(R_{abundance}\) (Figure \ref{fig:abund-sensitivity-exploitation}) were both positively correlated with F0 (biomass: \(R^2\) = 0.87, p \textless\textless{} 0.01; abundance: \(R^2\) = 0.67, p \textless\textless0.01). Generally, apex predators and planktivores exhibited low \(F_0\) and low R, while piscivore and benthivore species were more variable.
+
+\subsection{Disturbance-Recovery Experiment}\label{disturbance-recovery-experiment-1}
+
+An initial disturbance magnitude (\(I_{t1}\)) was seen after a 2 year disturbance (Figure \ref{fig:recovery-example}) in all species except for both squid groups (Figure \ref{fig:initial-disturbance}). Most other groups showed detectible initial disturbances with \(I_{t1}\) significantly less than 1 at all disturbances sizes. Those that were generally insensitive to disturbances had low \(F_0\) in baseline simulations such that increased scalars of catch resulted in minor overall removals. Two species (Acadian redfish and tautog) exhibited \(I_{t1}\) \textgreater{} 1, indicating positive population growth after recovery. Bluefish, haddock, and black sea bass were the most sensitive to disturbances, where S = 5 scenarios completely depleting each population.
+
+After the 15 year recovery period (Figure \ref{fig:recovery15}), most species show positive recoveries when \(S < 10\). With a larger \(S\), most species do not show positive recovery or are extinct. This general pattern indicates a window of disturbance size where species can recover, disturbances up to a limit were largely unrecoverable. This pattern is not seen in species that were initially insensitive to disturbances. Some benthic invertebrates (LOB and SCA) decline at all disturbance scalars.
+
+\subsection{Path Dependence Experiment}\label{path-dependence-experiment-1}
+
+To evaluate a path-dependent signature, the baseline biomass (\(B’_s\)) of each species was compared to the credible interval of the biomass distribution generated by resampled catch inputs (\(B_{s,i}\)). Of fished-species, 80\% of species showed path-dependency, with 80\% of all species. All apex-predators, benthos, mammals, and shrimp, 75\% of benthivores, and 61\% of piscivores, and 44\% of planktivores were path-dependent with regards to catch history (Figure \ref{fig:path-deviation}). All guilds showed significant deviation from the mean of their respective \(B_s\), with most species 1 to 10 standard deviations from the mean. For species that did not fall outside this interval, all but one species (Monkfish) had their \$B'\_\{s\} outside the bootstrapped confidence interval of the median, suggesting weak path dependence.
+
+The results from the Spearman Rank Correlation analysis of functional group between \(T50\) and \(D1_s\) (Figure \ref{fig:path-drivers}) demonstrate the aggregate T50 was not a significant driver for \(D1_s\) in many cases. However, Lobster T50 was the most significantly correlated factor with \(D1_s\) for 26 of the 83 functional groups that were active in this experiment. In fact, only three functional groups were not significantly correlated to the T50 of at least one other species (Mesozooplankton, Yellowtail Flounder, and Monkfish). This suggests that in the historical simulation, there is a high degree of path-dependency driven in part by the timing associated with the majority of the catch of at least one other species. Based on these analyses, we concluded that the NEUSv2 historical simulation is a unique product of the regional catch history and are unlikely to be produced by alternative configurations of historical catch.
+
+\section{Discussion}\label{discussion}
+
+\subsection{Model Calibration}\label{model-calibration}
+
+The simulated functional groups in NEUSv2 generally meet the defined calibration criteria. However, since some species are not well represented by the NEFSC trawl survey, the biomass reference points used in the reasonability and stability criteria possess varying degrees of uncertainty.These poorly sampled species include: benthic species, endangered species, mammals, small pelagic fish, and highly migratory species. All NEUSv2 species that did not meet the reasonability criteria fell into either one of these groups or a multi-species functional group, with the exception of BSB and HAL. HAL are a relatively rare species with low abundance resulting in a similar situation as SAL where maintaining such low biomass is not always feasible in a coarse model like NEUSv2 without causing extinction. For instance, Atlantic salmon are an endangered anadromous fish who's life cycle is not well represented by Atlantis models and who are not well-sampled by the NEFSC bottom trawl survey resulting in a very low target biomass \textless1 mT, which is not feasible to sustain in an Atlantis model without resulting in extinction. Even with x59.8 the target biomass, the Atlatnic Salmon population in the baseline run was less than 0.1 mT providing negligibly impact to the rest of the modeled ecosystem. Such species are still important to include in an ecosystem model due to their functional role in the system, human interactions, or resource management objectives. These cases speak more to the inherent challenge in defining model reference points in the absence of reliable data rather than question their inclusion in NEUSv2.
+
+NEUSv2 was also calibrated using a simple global forced-catch fishery, where catch is removed from the populations in equal proportions to their spatial distribution. This method still allows for catch selectivity by constraining fishing to certain age-classes. In reality, fishing footprints do not always mirror the population distribution. Catch is also applied as a daily rate derived from an annual total harvest, so seasonal patterns in fishing effort are not captured. Despite these inaccuracies in fishery processes, forcing catch directly does allow for exact manipulation of total harvest in a way that isn't possible if using a fishing mortality or effort-based harvest routine. Further development of NEUSv2 seeks to improve these fisheries processes by simulating more dynamic fleet behavior and specificity.
+
+\subsection{Fishing Sensitivity}\label{fishing-sensitivity}
+
+Performing sensitivity analysis of ecosystem models is a common practice for Atlantis (\citeproc{ref-bracis2020}{Bracis et al., 2020}; \citeproc{ref-hansen2019}{Hansen et al., 2019}; \citeproc{ref-lopezdegamiz-zearra2024}{Lopez De Gamiz-Zearra et al., 2024}; \citeproc{ref-ortega-cisneros2017}{Ortega-Cisneros et al., 2017}; \citeproc{ref-sturludottir2018}{Sturludottir et al., 2018}), Ecopath with Ecosim (\citeproc{ref-masi2017}{Masi et al., 2017}), and OSMOSE (\citeproc{ref-shin2004}{Shin and Cury, 2004}). For Atlantis models, specifically, these sensitivity analysis generally focus on calibrated model parameters (\citeproc{ref-bracis2020}{Bracis et al., 2020}; \citeproc{ref-hansen2019}{Hansen et al., 2019}) or specific functional group processes (\citeproc{ref-ortega-cisneros2017}{Ortega-Cisneros et al., 2017}; \citeproc{ref-sturludottir2018}{Sturludottir et al., 2018}). In other cases, Atlantis models have been used to evaluate the socioeconomic and ecological impacts of global changes in fishing pressure (\citeproc{ref-fay2019}{Fay et al., 2019}; \citeproc{ref-masi2017}{Masi et al., 2017}; \citeproc{ref-smith2015}{Smith et al., 2015}; \citeproc{ref-smith2014}{Smith et al., 2014}). This study presents a departure from those analysis by systematically assessing the model's sensitivity to changes in sustained and acute changes in harvest rates for each targeted functional group. Such comprehensive scenario testing has been conducted for EwE models as part of Mixed Trophic Impact analyses (\citeproc{ref-libralato2006}{Libralato et al., 2006}) to evaluate the sensitivity of the system to particular functional groups (i.e.~keystoneness). Recent advancements in cloud-based parallel computing have now made Such analysis more feasible within an Atlantis framework, whereas they have previously been computationally prohibitive.
+
+Most species respond nonlinearly to increases in exploitation in NEUSv2. For these species, biomass and abundance begin to decline linearly with increases in catch, but since the selectivity of very young fish is low to zero, biomass and abundance stabilize at a low value even at high catch scalars. Generally, the realized exploitation rates that populations can sustain in NEUSv2 is much higher than what they experience in the real system, likely due to a higher simulated biomass. However, some species with the apex predator and planktivore guilds have very low exploitation rates partially driving this insensitivity to scalars of contemporary fishing pressure. In the case of both squid groups, high growth rates and low exploitation rates made them particularly insensitive to even the largest exploitation scenario. The species that exhibited the highest sensitivity to fishing pressure (bluefish, haddock, and black sea bass), each had high baseline exploitation rates with \(F>0.1\).
+
+A high tolerance for increased fishing pressure has been documented in other Atlantis models (\citeproc{ref-bracis2020}{Bracis et al., 2020}; \citeproc{ref-ito2023}{Ito et al., 2023}). However, the positive correlation between exploitation and population biomass is expected. The novel sensitivity metric defined here performs similarly whether using biomass or abundance. In the few exceptions, species with linear declines in catch possess high simulated biomass and low catch, resulting in their populations not experiencing depletion even at high catch scalars. We hypothesized that more exploited stocks would be more sensitive to increases in fishing pressure, and this was confirmed by this sensitivity metric. The goal of this study was to understand the limits of exploitation NEUSv2 species could sustain in order to model the response behavior not to recommend particular harvest levels that could be realistically achieved. In the future, it may be useful to revisit such metrics over harvest levels and perturbations more relevant to fisheries management measures, especially as fishing behavior is refined.
+
+In the disturbance-recovery experiment, nearly all NEUSv2 functional groups are able to recover from temporary increases in catch. This behavior is indicative of inherent stability and elasticity in the simulated species, such that moderate perturbations in species biomass do not result in systemic collapse. Two species (Black Sea Bass and Lobster) did not recover after the smallest tested disturbance magnitude. In the case of Black Sea Bass, the simulation population skewed young, such that the temporary catch increase depleted nearly all the adult spawners resulting in an inability to recover once status-quo fishing was resumed. The cause of lobster declines post-disturbance is not clear, but given the unfished scenario also declines during the projected period, this may be have been an accelartion of the existing population trajectory. While a moderately stable model is necessary to test alternative environmental and human impacts, an ecosystem model that is too stable may not be able to reproduce alternative stable states (e.g.~regime shifts).This overstability has been documented in other end-to-end ecosystem models and limits their utility to explore novel conditions or external drivers. Most species in NEUSv2 respond with mild to moderate catch perturbations by converging to the unperturbed baseline simulation within twenty years. However, some species show signs of a tipping point (notably demersal species), whereby disturbances over some threshold are unrecoverable. This suggests that NEUSv2 is responsive enough to explore large-scale fisheries management implications, though it might not be sensitive enough for tactical management applications. These tipping points in NEUSv2 are a result of recruitment overfishing (\citeproc{ref-sissenwine1987}{Sissenwine and Shepherd, 1987}), where adult removals are high enough to prevent recovery via recruitment. We also observe some species (Atlantic Herring, Smooth Dogfish, Striped Bass, and Witch Flounder) recovering and stabilizing at a different population biomass than the baseline simulation. These results suggest NEUSv2 might be used to explore regime shifts and tipping point dynamics in the future.
+
+\subsection{Path Dependency}\label{path-dependency}
+
+The path dependency method used in this experiment is a novel application for an Atlantis model and serves as a useful test for ensuring that the model is calibrated specifically to the order of historical events (e.g.~fisheries management decision, environmental changes, market drivers, etc.) and is not merely representing some mean system state. When assessing the factors driving this deviation between the permutation scenarios and the historical simulation, it is clear that species were responding to the timing of catch of particular species rather than the system-wide harvest levels. Lobster catch history was decidedly the most prominent driver of other species. In calibrating NEUSv2 it was observed that LOB were a very sensitive species to both their own parameter changes, but also other species. They don't have a high number of trophic interactions relative to other species, but they may be operating as a bottleneck in the energy flow between benthic and pelagic species. While this study is not designed to assess whether this is true in the real ecosystem, it suggests the presence of complex trophic interactions in NEUSv2 that are sensitive to not just the magnitude but timing of predator and prey populations. This analysis focused on assessing the top driver of each functional group, but many species' \(T50\) could be similarly correlated. Despite the fact that nearly all functional groups were sensitive to the timing of at least one other species' catch, this analysis does not address the mechanisms driving this sensitivity. Future work could look to expand this path dependency analysis with dynamic structural equation modeling (\citeproc{ref-thorson2024}{Thorson et al., 2024}) to test particular hypotheses about mechanisms.
+
+Path dependence has been documented in single-species population models (\citeproc{ref-tuljapurkar2006}{Tuljapurkar and Haridas, 2006}) and there is evidence that the timing of pulses of fishing pressure can drive population dynamics (\citeproc{ref-essington2015}{Essington et al., 2015}). However, while cumulative impacts and non-stationary drivers are documented in Atlantis models (\citeproc{ref-fulton2011}{Fulton et al., 2011}), path dependence has mainly been discussed as a function of human behavior and resource management (\citeproc{ref-fulton2021}{Fulton, 2021}). The systematic randomization of catch forcing as a metric to evaluate path dependency is an end-to-end ecosystem model is a novel method While this study's aims were to assess the sensitivity of the NEUSv2 model to different aspects of fishing pressure, more comprehensive analyses on mechanisms driving path dependency in complex models are needed. Such analyses may help attribute simulation outcomes to specific historical fisheries management decisions, which is currently not possible given the dynamic, complex, and simultaneous processes occurring within an end-to-end model simulation. However, given the strong evidence of path dependency in NEUSv2 it is likely that that the ordering of historical events contained within the catch history is imparting some aspect of these historical events on the model output as a whole. Furthermore, recent advancements in parallel computing capacity have made such randomization test more accessible and can be explored for other forcing variables (e.g.~primary production, temperature, etc.). This will help ensure that Atlantis model hindcasts and projections are sufficiently responsive to the timing of changes in their environments.
+
+\section{Conclusion}\label{conclusion}
+
+The Northeast U.S. Atlantis ecosystem model (NEUSv2) was designed to improve understanding of ecological and socioeconomic interactions as well as create projections under alternative management actions and climate change scenarios. Given this broad focus, it is important that NEUSv2 preserves key ecological and fisheries processes while also being adequately calibrated. However, model assumptions and implications inherent in the Atlantis modeling framework and regional application can limit model skill.
+
+The current iteration of NEUSv2 meets these baseline calibration criteria for the simulated hindcast. Furthermore, the sensitivity analyses presented here indicate that the NEUSv2 simulated functional groups are respond nonlinearly to changes in harvest levels, can recover from mild to moderate disturbances, and their contemporary biomass is contingent on the ordering of historical fishing pressure. Ecosystem models that lack path dependent process pose the risk of simulating a plausible variation of the system that does not contain the ecological memory of the real ecosystem. Subsequent work will be done to explore these path dependent processes more thoroughly, as this appears to be lacking in the ecosystem modelling literature. As ecosystem models are sought to inform pressing resource management problems, it is important that they are adequately evaluated for their process sensitivity not just in parameter choices. This is particularly important when simulating the bio-economic interations between fisheries adaptation strategies, changing resources, and broader environmental change.
+
+\clearpage
+\FloatBarrier
+
+\section{References}\label{references}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-bracis2020}
+Bracis, C., Lehuta, S., Savina-Rolland, M., Travers-Trolet, M., Girardin, R., 2020. Improving confidence in complex ecosystem models: {The} sensitivity analysis of an {Atlantis} ecosystem model. Ecological Modelling 431, 109133. \url{https://doi.org/10.1016/j.ecolmodel.2020.109133}
+
+\bibitem[\citeproctext]{ref-caracappa2022}
+Caracappa, J.C., Beet, A., Gaichas, S., Gamble, R.J., Hyde, K.J.W., Large, S.I., Morse, R.E., Stock, C.A., Saba, V.S., 2022. A northeast {United States Atlantis} marine ecosystem model with ocean reanalysis and ocean color forcing. Ecological Modelling 471, 110038. \url{https://doi.org/10.1016/j.ecolmodel.2022.110038}
+
+\bibitem[\citeproctext]{ref-essington2015}
+Essington, T.E., Moriarty, P.E., Froehlich, H.E., Hodgson, E.E., Koehn, L.E., Oken, K.L., Siple, M.C., Stawitz, C.C., 2015. Fishing amplifies forage fish population collapses. Proceedings of the National Academy of Sciences 112, 6648--6652. \url{https://doi.org/10.1073/pnas.1422020112}
+
+\bibitem[\citeproctext]{ref-fay2019}
+Fay, G., DePiper, G., Steinback, S., Gamble, R.J., Link, J.S., 2019. Economic and {Ecosystem Effects} of {Fishing} on the {Northeast US Shelf}. Frontiers in Marine Science 6, 133. \url{https://doi.org/10.3389/fmars.2019.00133}
+
+\bibitem[\citeproctext]{ref-fay2017}
+Fay, G., Link, J.S., Hare, J.A., 2017. Assessing the effects of ocean acidification in the {Northeast US} using an end-to-end marine ecosystem model. Ecological Modelling 347, 1--10. \url{https://doi.org/10.1016/j.ecolmodel.2016.12.016}
+
+\bibitem[\citeproctext]{ref-fulton2004}
+Fulton E. A., 2004. Ecological indicators of the ecosystem effects of fishing: Final report. CSIRO ; Australian Fisheries Management Authority, Hobart, Canberra.
+
+\bibitem[\citeproctext]{ref-fulton2021}
+Fulton, E.A., 2021. Opportunities to improve ecosystem-based fisheries management by recognizing and overcoming path dependency and cognitive bias. Fish and Fisheries 22, 428--448. \url{https://doi.org/10.1111/faf.12537}
+
+\bibitem[\citeproctext]{ref-fulton2010}
+Fulton, E.A., 2010. Approaches to end-to-end ecosystem models. Journal of Marine Systems 81, 171--183. \url{https://doi.org/10.1016/j.jmarsys.2009.12.012}
+
+\bibitem[\citeproctext]{ref-fulton2011}
+Fulton, E.A., Link, J.S., Kaplan, I.C., Savina-Rolland, M., Johnson, P., Ainsworth, C., Horne, P., Gorton, R., Gamble, R.J., Smith, A.D.M., Smith, D.C., 2011. Lessons in modelling and management of marine ecosystems: The {Atlantis} experience. Fish and Fisheries 12, 171--188. \url{https://doi.org/10.1111/j.1467-2979.2011.00412.x}
+
+\bibitem[\citeproctext]{ref-hansen2019}
+Hansen, C., Drinkwater, K.F., Jähkel, A., Fulton, E.A., Gorton, R., Skern-Mauritzen, M., 2019. Sensitivity of the {Norwegian} and {Barents Sea Atlantis} end-to-end ecosystem model to parameter perturbations of key species. PLOS ONE 14, e0210419. \url{https://doi.org/10.1371/journal.pone.0210419}
+
+\bibitem[\citeproctext]{ref-ito2023}
+Ito, M., Halouani, G., Cresson, P., Giraldo, C., Girardin, R., 2023. Detection of fishing pressure using ecological network indicators derived from ecosystem models. Ecological Indicators 147, 110011. \url{https://doi.org/10.1016/j.ecolind.2023.110011}
+
+\bibitem[\citeproctext]{ref-jean-michel2021}
+Jean-Michel, L., Eric, G., Romain, B.-B., Gilles, G., Angélique, M., Marie, D., Clément, B., Mathieu, H., Olivier, L.G., Charly, R., Tony, C., Charles-Emmanuel, T., Florent, G., Giovanni, R., Mounir, B., Yann, D., Pierre-Yves, L.T., 2021. The {Copernicus Global} 1/12{\(^\circ\)} {Oceanic} and {Sea Ice GLORYS12 Reanalysis}. Frontiers in Earth Science 9, 698876. \url{https://doi.org/10.3389/feart.2021.698876}
+
+\bibitem[\citeproctext]{ref-kaplan2012}
+Kaplan, I.C., Horne, P.J., Levin, P.S., 2012. Screening {California Current} fishery management scenarios using the {Atlantis} end-to-end ecosystem model. Progress in Oceanography 102, 5--18. \url{https://doi.org/10.1016/j.pocean.2012.03.009}
+
+\bibitem[\citeproctext]{ref-kaplan2016}
+Kaplan, I.C., Marshall, K.N., 2016. A guinea pig's tale: Learning to review end-to-end marine ecosystem models for management applications. ICES Journal of Marine Science 73, 1715--1724. \url{https://doi.org/10.1093/icesjms/fsw047}
+
+\bibitem[\citeproctext]{ref-libralato2006}
+Libralato, S., Christensen, V., Pauly, D., 2006. A method for identifying keystone species in food web models. Ecological Modelling 195, 153--171. \url{https://doi.org/10.1016/j.ecolmodel.2005.11.029}
+
+\bibitem[\citeproctext]{ref-link2010}
+Link, J.S., Fulton, E.A., Gamble, R.J., 2010. The northeast {US} application of {ATLANTIS}: {A} full system model exploring marine ecosystem dynamics in a living marine resource management context. Progress in Oceanography 87, 214--234. \url{https://doi.org/10.1016/j.pocean.2010.09.020}
+
+\bibitem[\citeproctext]{ref-liu2025}
+Liu, O.R., Kaplan, I.C., Hernvann, P.-Y., Fulton, E.A., Haltuch, M.A., Harvey, C.J., Marshall, K.N., Muhling, B., Norman, K., Pozo Buil, M., Rovellini, A., Samhouri, J.F., 2025. Climate {Change Influences} via {Species Distribution Shifts} and {Century}-{Scale Warming} in an {End}-{To}-{End California Current Ecosystem Model}. Global Change Biology 31, e70021. \url{https://doi.org/10.1111/gcb.70021}
+
+\bibitem[\citeproctext]{ref-lopezdegamiz-zearra2024}
+Lopez De Gamiz-Zearra, A., Hansen, C., Corrales, X., Andonegi, E., 2024. Increasing the reliability of the {Bay} of {Biscay Atlantis} model: {A} sensitivity analysis to parameters perturbations using a {Morris} screening approach. Ecological Modelling 488, 110599. \url{https://doi.org/10.1016/j.ecolmodel.2023.110599}
+
+\bibitem[\citeproctext]{ref-masi2017}
+Masi, M.D., Ainsworth, C.H., Jones, D.L., 2017. Using a {Gulf} of {Mexico Atlantis} model to evaluate ecological indicators for sensitivity to fishing mortality and robustness to observation error. Ecological Indicators 74, 516--525. \url{https://doi.org/10.1016/j.ecolind.2016.11.008}
+
+\bibitem[\citeproctext]{ref-olsen2016}
+Olsen, E., Fay, G., Gaichas, S., Gamble, R., Lucey, S., Link, J.S., 2016. Ecosystem {Model Skill Assessment}. {Yes We Can}! PLOS ONE 11, e0146467. \url{https://doi.org/10.1371/journal.pone.0146467}
+
+\bibitem[\citeproctext]{ref-ortega-cisneros2017}
+Ortega-Cisneros, K., Cochrane, K., Fulton, E.A., 2017. An {Atlantis} model of the southern {Benguela} upwelling system: {Validation}, sensitivity analysis and insights into ecosystem functioning. Ecological Modelling 355, 49--63. \url{https://doi.org/10.1016/j.ecolmodel.2017.04.009}
+
+\bibitem[\citeproctext]{ref-rose2010}
+Rose, K.A., Allen, J.I., Artioli, Y., Barange, M., Blackford, J., Carlotti, F., Cropp, R., Daewel, U., Edwards, K., Flynn, K., Hill, S.L., HilleRisLambers, R., Huse, G., Mackinson, S., Megrey, B., Moll, A., Rivkin, R., Salihoglu, B., Schrum, C., Shannon, L., Shin, Y.-J., Smith, S.L., Smith, C., Solidoro, C., St. John, M., Zhou, M., 2010. End-{To-End Models} for the {Analysis} of {Marine Ecosystems}: {Challenges}, {Issues}, and {Next Steps}. Marine and Coastal Fisheries 2, 115--130. \url{https://doi.org/10.1577/C09-059.1}
+
+\bibitem[\citeproctext]{ref-rovellini2025}
+Rovellini, A., Punt, A.E., Bryan, M.D., Kaplan, I.C., Dorn, M.W., Aydin, K., Fulton, E.A., Alglave, B., Baker, M.R., Carroll, G., Ferriss, B.E., Haltuch, M.A., Hayes, A.L., Hermann, A.J., Hernvann, P.-Y., Holsman, K.K., Liu, O.R., McHuron, E., Morzaria-Luna, H.N., Moss, J., Surma, S., Weise, M.T., 2025. Linking climate stressors to ecological processes in ecosystem models, with a case study from the {Gulf} of {Alaska}. ICES Journal of Marine Science 82, fsae002. \url{https://doi.org/10.1093/icesjms/fsae002}
+
+\bibitem[\citeproctext]{ref-shin2004}
+Shin, Y.-J., Cury, P., 2004. Using an individual-based model of fish assemblages to study the response of size spectra to changes in fishing. Canadian Journal of Fisheries and Aquatic Sciences 61, 414--431. \url{https://doi.org/10.1139/f03-154}
+
+\bibitem[\citeproctext]{ref-sissenwine1987}
+Sissenwine, M.P., Shepherd, J.G., 1987. An {Alternative Perspective} on {Recruitment Overfishing} and {Biological Reference Points}. Canadian Journal of Fisheries and Aquatic Sciences 44, 913--918. \url{https://doi.org/10.1139/f87-110}
+
+\bibitem[\citeproctext]{ref-smith2014}
+Smith, M.D., Fulton, E.A., Day, R.W., 2014. An investigation into fisheries interaction effects using {Atlantis}. ICES Journal of Marine Science 72, 275--283. \url{https://doi.org/10.1093/icesjms/fsu114}
+
+\bibitem[\citeproctext]{ref-smith2015}
+Smith, M., Fulton, E., Day, R., Shannon, L., Shin, Y.-J., 2015. Ecosystem modelling in the southern {Benguela}: Comparisons of {Atlantis}, {Ecopath} with {Ecosim}, and {OSMOSE} under fishing scenarios. African Journal of Marine Science 37, 65--78. \url{https://doi.org/10.2989/1814232X.2015.1013501}
+
+\bibitem[\citeproctext]{ref-sturludottir2018}
+Sturludottir, E., Desjardins, C., Elvarsson, B., Fulton, E.A., Gorton, R., Logemann, K., Stefansson, G., 2018. End-to-end model of {Icelandic} waters using the {Atlantis} framework: {Exploring} system dynamics and model reliability. Fisheries Research 207, 9--24. \url{https://doi.org/10.1016/j.fishres.2018.05.026}
+
+\bibitem[\citeproctext]{ref-thorson2024}
+Thorson, J.T., Andrews, A.G., Essington, T.E., Large, S.I., 2024. Dynamic structural equation models synthesize ecosystem dynamics constrained by ecological mechanisms. Methods in Ecology and Evolution 15, 744--755. \url{https://doi.org/10.1111/2041-210X.14289}
+
+\bibitem[\citeproctext]{ref-tuljapurkar2006}
+Tuljapurkar, S., Haridas, C.V., 2006. Temporal autocorrelation and stochastic population growth. Ecology Letters 9, 327--337. \url{https://doi.org/10.1111/j.1461-0248.2006.00881.x}
+
+\bibitem[\citeproctext]{ref-turner2021}
+Turner, K.J., Mouw, C.B., Hyde, K.J.W., Morse, R., Ciochetto, A.B., 2021. Optimization and assessment of phytoplankton size class algorithms for ocean color data on the {Northeast U}.{S}. Continental shelf. Remote Sensing of Environment 267, 112729. \url{https://doi.org/10.1016/j.rse.2021.112729}
+
+\end{CSLReferences}
+
+\clearpage
+\FloatBarrier
+
+\section{Including Figures}\label{including-figures}
+
+\begin{figure}
+\includegraphics[width=0.4\linewidth]{Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_1_model_domain} \caption{NEUSv2 domain and regional subdivisions (colors).}\label{fig:model-domain}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_4_Constant_Catch_Sensitivity.png}}
+\caption{\label{fig:sensitivity-bio-abund}Comparisons of sensitivity metrics for biomass (\(R_{biomass}\)) and abundance (\(R_{abundance}\)) as defined in eq ef:responsiveness: Individual species are marked by their shorthand code and guild assignment (colors).}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_5_Biomass_Sensitivity_Exploitation.png}}
+\caption{\label{fig:bio-sensitivity-exploitation}Regression of contemporary exploitation rate in the baseline simulation and biomass sensitivity. Individual species are marked (points) as well as their guild (colors) with a linear regression (black line) and 95\% confidence interval (grey area).}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_5b_Abundance_Sensitivity_Exploitation.png}}
+\caption{\label{fig:abund-sensitivity-exploitation}Regression of contemporary exploitation rate in the baseline simulation and abundance sensitivity. Individual species are marked (points) as well as their guild (colors) with a linear regression (black line) and 95\% confidence interval (grey area).}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/figure_6_recovery_example.png}}
+\caption{\label{fig:recovery-example} An example schematic of the disturbance-recovery scenario definitions. All scenarios have the same output through year 57. At ``event start'' different fishing forcing is applied at different magnitudes (colored lines). The ``event end'' occurs after 2 years. Then recovery is assessed 5 and 15 years after the event end.}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_7_Initial_Disturbance_Size.png}}
+\caption{\label{fig:initial-disturbance}Measurements of initial disturbance magnitude (vertical lines) relative to the event start time at various disturbance scalars (colors). Species are grouped according to their guild (text color).}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_8c_alt_Recovery_Prop_15yr.png}}
+\caption{\label{fig:recovery15}Recovered proportion of event start biomass (vertical lines) for different disturbance scalars (bar colors). Species are grouped by guild (text colors).}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_9_deviation_from_mean_subset.png}}
+\caption{\label{fig:path-deviation}Box plots show the deviation of biomass in the baseline run from the distribution of randomized catch runs in terms of standard deviations from the mean across species within a guild. A deviation of zero indicates that the mean biomass of the randomized runs is identical to the baseline run.}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{Z:/Shared_Data/fishing_sensitivity_manuscript/figures/manuscript/Figure_10_Top_Drivers_By_Species.png}}
+\caption{\label{fig:path-drivers}Bars show the number of NEUSv2 functional groups that had a significant Spearman Rank Correlation between the relative distance from the historal simulation and the T50 with the corresponding y-axis species' catch time series. Bar colors denote whether the correlation coefficient was large (green), medium (orange), or small (blue).}
+\end{figure}
+
+\end{document}

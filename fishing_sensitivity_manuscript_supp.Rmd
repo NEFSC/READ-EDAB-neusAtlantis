@@ -1,11 +1,23 @@
 ---
-title: "fishing_sensitivity_manuscript_supp"
-output: html_document
-date: "2026-03-04"
+title: "Supplement: Capturing the Regional Signature: Calibration, Sensitivity, and Path Dependence in the NEUSv2 Atlantis Model"
+author: "Joseph C Caracappa, Andrew Beet, Robert Gamble, Scott Large"
+date: "`r Sys.Date()`"
+output: 
+  bookdown::word_document2:
+    toc: no
+    number_sections: yes
+    reference_docx: null # Optional: see below
+# header-includes: 
+#   - \usepackage{amsmath} 
+#   - \usepackage[section]{placeins} 
+bibliography: fishing_sensitivity_refs.bib
+csl: ecological-modelling.csl 
+link-citations: yes
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+tab.dir = 'Z:/Shared_Data/fishing_sensitivity_manuscript/tables/'
 ```
 
 
@@ -29,7 +41,7 @@ knitr::opts_chunk$set(echo = TRUE)
     `Average.Catch` = Average_Catch,
     `F.Rate` = F_rate
   ) |> 
-    dplyr::arrange(desc(Species.Code))
+    dplyr::arrange(Species.Code)
     
   stats |> 
     flextable::flextable() |> 

@@ -1,0 +1,674 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{amsmath}
+\usepackage[section]{placeins}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{colortbl}
+\usepackage{hhline}
+\newlength\Oldarrayrulewidth
+\newlength\Oldtabcolsep
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Supplement: Capturing the Regional Signature: Calibration, Sensitivity, and Path Dependence in the NEUSv2 Atlantis Model},
+  pdfauthor={Joseph C Caracappa, Andrew Beet, Robert Gamble, Scott Large},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Supplement: Capturing the Regional Signature: Calibration, Sensitivity, and Path Dependence in the NEUSv2 Atlantis Model}
+\author{Joseph C Caracappa, Andrew Beet, Robert Gamble, Scott Large}
+\date{2026-04-30}
+
+\begin{document}
+\maketitle
+
+\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}
+
+\global\setlength{\Oldtabcolsep}{\tabcolsep}
+
+\setlength{\tabcolsep}{2pt}
+
+\renewcommand*{\arraystretch}{1.5}
+
+
+
+\providecommand{\ascline}[3]{\noalign{\global\arrayrulewidth #1}\arrayrulecolor[HTML]{#2}\cline{#3}}
+
+\begin{longtable}[c]{cccccccccc}
+
+
+
+\ascline{1.5pt}{666666}{1-10}
+
+\multicolumn{2}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Species}}} & \multicolumn{1}{>{}c}{} & \multicolumn{1}{>{}c}{} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Relative}}} & \multicolumn{2}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Target}}} & \multicolumn{2}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Average}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Code}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Name}}} & \multicolumn{1}{>{}c}{\multirow[b]{-2}{*}{\parbox{0.49in}{\centering \textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Stable}}}}} & \multicolumn{1}{>{}c}{\multirow[b]{-2}{*}{\parbox{0.8in}{\centering \textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Reasonable}}}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Change}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Min}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Max}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Biomass}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Catch}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Rate}}} \\
+
+\ascline{1.5pt}{666666}{1-10}\endfirsthead 
+
+\ascline{1.5pt}{666666}{1-10}
+
+\multicolumn{2}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Species}}} & \multicolumn{1}{>{}c}{} & \multicolumn{1}{>{}c}{} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Relative}}} & \multicolumn{2}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Target}}} & \multicolumn{2}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Average}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Code}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Name}}} & \multicolumn{1}{>{}c}{\multirow[b]{-2}{*}{\parbox{0.49in}{\centering \textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Stable}}}}} & \multicolumn{1}{>{}c}{\multirow[b]{-2}{*}{\parbox{0.8in}{\centering \textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Reasonable}}}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Change}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Min}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Max}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Biomass}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Catch}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Rate}}} \\
+
+\ascline{1.5pt}{666666}{1-10}\endhead
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{ANC}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Anchovies}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{75.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{4.39}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{BB}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Sediment\ Bacteria}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.63}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{BC}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Benthic\ Carnivore}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.21}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{64.65}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{BD}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Deposit\ Feeder}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{42.35}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{BFF}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Other\ benthic\ filter\ feeder}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.03}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{131.76}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{BFT}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Atlantic\ bluefin\ tuna}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.24}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{BG}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Benthic\ grazer}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{60.59}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{BIL}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Billfish}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.14}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{2.03}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{BLF}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Bluefish}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.02}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.42}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{22.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.78}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.22}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.12}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{BLS}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Blue\ shark}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.03}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{BMS}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Shallow\ macrozoobenthos}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.04}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{8.10}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{71.64}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.36}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{BO}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Meiobenthos}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{961.94}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{BPF}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Other\ benthopelagic\ fish}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{34.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{2.44}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{BSB}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Black\ sea\ bass}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.42}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.5}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.07}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.14}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{BUT}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Butterfish}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{23.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.8}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.03}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.04}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{BWH}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Baleen\ whales}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.19}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{2.53}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{CLA}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Atlantic\ surf\ clam}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{19.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{220.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{57.27}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.17}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{COD}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Atlantic\ cod}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.16}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{16.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{5.14}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.03}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{DC}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Carrion}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{DF}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Dinoflagellates}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{9.14}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{DL}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Labile\ detritus}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.22}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{DOG}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Spiny\ dogfish}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.04}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{73.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.83}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.16}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.09}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{DR}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Refractory\ detritus}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{33.77}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{DRM}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Drums\ and\ croakers}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{67.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{4.07}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.03}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{DSH}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Other\ demersal\ sharks}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.03}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{11.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{4.84}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{FDE}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Shallow\ demersal\ fish}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.02}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{5.50}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.13}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{FDF}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Miscellaneous\ demersal\ fish}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{11.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{160.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{2.69}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.04}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.02}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{FLA}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Other\ flatfish}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.11}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.03}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{FOU}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Fourspot\ flounder}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.74}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.11}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{GOO}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Goosefish}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.02}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.06}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{3.30}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{2.12}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.12}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.06}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{HAD}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Haddock}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.03}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{62.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.66}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.2}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.12}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{HAL}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Atlantic\ halibut}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.50}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.63}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{HER}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Atlantic\ herring}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{35.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1,500.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{15.89}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.61}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.04}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{INV}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Invasive\ vertebrate\ species}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{ISQ}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Illex\ squid}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{21.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.08}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{LOB}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Lobster}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.02}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{7.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{3.44}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.31}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.09}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{LSK}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Little\ skate}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{14.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{2.48}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.1}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.04}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{LSQ}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Loligo\ squid}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{12.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.33}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{MA}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Macroalgae}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{MAK}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Atlantic\ mackerel}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{5.50}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{7.77}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.16}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.02}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{MB}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Microphtybenthos}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{MEN}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Atlantic\ menhaden}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{28.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{2,600.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{51.48}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.76}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{MPF}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Migratory\ mesopelagic\ fish}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.57}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.02}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{NSH}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Northern\ shrimp\ other\ pandalids}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.02}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{11.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.3}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{OHK}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Offshore\ hake}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.67}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.09}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{OPT}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Ocean\ pout}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.04}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.5}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{OSH}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Other\ shrimps}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.12}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.56}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{PB}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Pelagic\ Bacteria}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.41}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{PIN}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Pinnipeds}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.02}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{PL}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Diatom}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{44.13}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{PLA}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{American\ plaice}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.04}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.40}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.57}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.02}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{POL}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Pollock}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{22.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.76}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.08}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.04}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{POR}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Porbeagle\ shark}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.10}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.06}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{PS}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Pico-phytoplankton}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{39.71}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{PSH}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Other\ pelagic\ sharks}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{3.80}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.55}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{QHG}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Ocean\ quahog}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{120.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{300.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{37.95}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.14}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{RED}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Acadian\ redfish}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.06}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{27.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.26}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.04}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.14}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{RHK}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Red\ hake}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{4.60}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.52}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.02}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{RWH}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Right\ whales}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.17}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.04}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{SAL}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Atlantic\ salmon}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.06}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{SB}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Seabirds}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.07}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{SCA}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Sea\ scallop}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.71}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.70}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{21.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{7.28}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.22}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.03}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{SCU}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Scup}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.04}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{7.10}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.25}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.16}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.13}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{SDF}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Atlantic\ states\ demersal\ fish}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{15.14}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{SG}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Seagrass}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{SHK}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Silver\ hake}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{34.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{13.66}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.07}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{SK}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Northeast\ skate\ complex}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{7.80}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{120.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{2.09}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.12}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.08}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{SMO}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Smooth\ dogfish}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.05}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{3.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.38}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{SSH}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Sandbar\ shark}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{2.50}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.17}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{STB}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Striped\ bass}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.21}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{36.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.77}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{SUF}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Summer\ flounder}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.09}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{10.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{4.08}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.12}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.03}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{SWH}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Small\ toothed\ whales}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.02}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.06}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{TAU}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Tautog}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.08}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.13}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.04}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.02}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{TUN}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Other\ tunas}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.03}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{7.04}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{TWH}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Toothed\ whales}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.02}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.03}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{TYL}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{All\ tilefish}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.09}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.15}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.22}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.03}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{WHK}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{White\ hake}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.02}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.39}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{5.60}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.32}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.03}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.02}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{WIF}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Winter\ flounder}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.60}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.48}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.02}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{WOL}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Wolffish}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.02}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.22}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{WPF}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Windowpane\ flounder}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.10}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.98}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.43}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.02}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{WSK}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Winter\ skate}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.04}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{21.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.48}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.12}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.08}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{WTF}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Witch\ flounder}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.05}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.77}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.62}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{YTF}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Yellowtail\ flounder}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{4.10}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.62}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.02}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{ZG}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Gelatinous\ zooplankton}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{-0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{1.65}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{ZL}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Carnivorous\ zooplankton}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{F}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.20}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{3.74}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{ZM}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Mesozooplankton}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{30.57}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+
+
+
+
+\multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{ZS}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{Microzooplankton}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{T}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{0.00}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{30.1}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} & \multicolumn{1}{>{}c}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{<0.01}}} \\
+
+\ascline{1.5pt}{666666}{1-10}
+
+
+
+\end{longtable}
+
+
+
+\arrayrulecolor[HTML]{000000}
+
+\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}
+
+\global\setlength{\tabcolsep}{\Oldtabcolsep}
+
+\renewcommand*{\arraystretch}{1}
+
+\end{document}
