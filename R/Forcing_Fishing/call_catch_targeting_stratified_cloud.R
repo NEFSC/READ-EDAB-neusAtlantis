@@ -3,11 +3,13 @@ library(dplyr)
 
 run.forcing = T
 write.ts = F
+existing.setup = T
 proj.dir = here::here('','')
 # proj.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
 
 experiment.id = 'eof_targeting_1'
 
+existing.setup.file = here::here('Setup_Files',paste0(experiment.id,'_setup.csv'))
 #Species mappings
 fgs = read.csv(paste0(proj.dir,'/currentVersion/neus_groups.csv'))
 group_map = read.csv(paste0(proj.dir,'/diagnostics/functional_groups_match.csv')) |> 
@@ -43,14 +45,20 @@ groups_to_test  <- group.names[which(group.names != 'Other')]
 factors_to_test  <- exp(seq(log(1E-2),log(20),length.out = 10))
 eof.thresh = exp(seq(log(1E4),log(4E6),length.out = 10))
 
-scenario_params <- expand.grid(
-  dominant_group = groups_to_test,
-  dominance_factor = factors_to_test,
-  eof_threshold = eof.thresh
-)
-scenario_params$catch.scalar = NA
-scenario_params$run.id = NA
-nrow(scenario_params)
+
+if(existing.setup == T){
+  scenario_params = read.csv(existing.setup.file)
+}else{
+  scenario_params <- expand.grid(
+    dominant_group = groups_to_test,
+    dominance_factor = factors_to_test,
+    eof_threshold = eof.thresh
+  )
+  scenario_params$catch.scalar = NA
+  scenario_params$run.id = NA
+  nrow(scenario_params)
+}
+
 
 ## For each Time calculate the proportion of Value for each Variable
 
@@ -77,6 +85,7 @@ ref_weights = base.catch.y |>
   select(SubGroup, Time, Weight) |> 
   filter(!is.na(Weight))
 
+
 #Loop through scenario params
 i=1
 scenario_config.ls = list()
@@ -96,7 +105,7 @@ for(i in 1:nrow(scenario_params)){
                 i, current_dominant_group, current_factor))
     
     # Run the function
-    scenario_output <- atlantiseof::generate_dominant_scenario(
+    scenario_output <- atlantiseof:::generate_dominant_scenario(
       dominant_group_name = current_dominant_group,
       dominance_factor = current_factor,
       group.mapping = group_map,
@@ -108,11 +117,13 @@ for(i in 1:nrow(scenario_params)){
     
     #set scaling factor
     if(current_thresh == 0){
-      catch.scale = 0
-    } else {
-      a = current_thresh/base.catch.y$catch.orig
-      catch.scale = mean(a[is.finite(a)],na.rm=T)
-    }
+        catch.scale = 0
+      } else {
+        a = current_thresh/base.catch.y$catch.orig
+        catch.scale = mean(a[is.finite(a)],na.rm=T)
+      }
+    
+
     scenario_params$catch.scalar[i] = catch.scale
     
     #multiple by new scalars from scenario_output
