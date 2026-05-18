@@ -1,8 +1,9 @@
 #Script creates Atlantis forcing scenarios where catch.ts is manipulated to target certain fishing complexes
 library(dplyr)
+library(tidyr)
 
 run.forcing = T
-write.ts = F
+write.ts = T # CHANGED to T so files are actually written
 existing.setup = T
 proj.dir = here::here('','')
 # proj.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
@@ -62,8 +63,8 @@ if(existing.setup == T){
 
 ## For each Time calculate the proportion of Value for each Variable
 
-##aggregate by year
-base.catch.d = get_forcing_ts(code = NULL, filenm = 'total_catch',time = 'day') |> 
+##aggregate by year - UPDATED to use new file_path argument
+base.catch.d = get_forcing_ts(file_path = catch.file.orig, code = NULL, time = 'day') |> 
   dplyr::rename(catch.orig = 'Value',
                 Time.d = 'Time')
 
@@ -90,7 +91,6 @@ ref_weights = base.catch.y |>
 i=1
 scenario_config.ls = list()
 for(i in 1:nrow(scenario_params)){
-# for(i in 1:2){
 
   scenario_params$run.id[i] = i
   #### Define Scenario scaling factors
@@ -112,36 +112,36 @@ for(i in 1:nrow(scenario_params)){
       ref_sub_weights = ref_weights,
       rounding_digits = 4
     )
-  
+    
     ###Setup catch scaling
     
-    #set scaling factor
+    #set scaling factor (FIXED: Scaling against TOTAL catch, not subgroup catch)
     if(current_thresh == 0){
-        catch.scale = 0
-      } else {
-        a = current_thresh/base.catch.y$catch.orig
-        catch.scale = mean(a[is.finite(a)],na.rm=T)
-      }
+      catch.scale = 0
+    } else {
+      a = current_thresh / base.catch.y.tot$catch.annual 
+      catch.scale = mean(a[is.finite(a)],na.rm=T)
+    }
     
-
     scenario_params$catch.scalar[i] = catch.scale
     
-    #multiple by new scalars from scenario_output
+    #multiple by new scalars from scenario_output (FIXED: Divided by 365 for daily rate)
     new.catch = base.catch.y.tot |> 
       dplyr::left_join(scenario_output, by = c('Time.y' = 'Time')) |> 
-      dplyr::mutate(catch.new = catch.annual * subgroup_weight * catch.scale,
+      dplyr::mutate(catch.new = (catch.annual * subgroup_weight * catch.scale) / 365,
                     catch.scale = catch.scale,
                     Time.d = Time.y * 365) |>
       dplyr::left_join(base.catch.y, by = c('Time.y',"SubGroup" = "Variable"))
-   
+    
     scenario_config.ls[[i]] = new.catch |> 
       dplyr::mutate(run.id = scenario_params$run.id[i]) |> 
       dplyr::left_join(scenario_params)
+    
     #test that scalar applied overall and stop if fails
     new.catch.test = new.catch |>
       dplyr::group_by(Time.y,Group) |>
       dplyr::summarise(group.Total = sum(catch.orig, na.rm = T),
-                       group.NewTotal = sum(catch.new,na.rm=T),
+                       group.NewTotal = sum(catch.new * 365,na.rm=T), # Need *365 here to test against annual total
                        group_weight = mean(group_weight)) |>
       dplyr::group_by(Time.y) |>
       dplyr::mutate(Total = sum(group.Total,na.rm=T),
@@ -166,13 +166,14 @@ for(i in 1:nrow(scenario_params)){
       dplyr::mutate(Time.y = floor(Time.d/365)) |> 
       dplyr::left_join(new.catch, by = c('Time.y', 'Variable' = 'SubGroup')) |> 
       dplyr::select(Time.d, Variable, catch.new)
-
+    
     #Format other files for initialization
-  
+    
     if(write.ts){
       
       catch.file.new = paste0(experiment.dir,'/total_catch_',i,'.ts')
       catch.file.new.short = paste0('total_catch_',i,'.ts')
+      
       edit_forcing_ts_df(input_file = catch.file.orig,
                          output_file = catch.file.new,
                          changes_df = new.catch.d,
@@ -180,7 +181,32 @@ for(i in 1:nrow(scenario_params)){
                          code_col = 'Variable',
                          value_col = 'catch.new'
       )
-                         
+      
+      # --- START OF VALIDATION CHECK ---
+      message(sprintf("Validating generated TS file for scenario %d...", i))
+      
+      # Read the newly written file using the updated get_forcing_ts function
+      test_data <- get_forcing_ts(file_path = catch.file.new, code = NULL, time = 'day') |> 
+        dplyr::rename(catch.written = 'Value',
+                      Time.d = 'Time')
+      
+      # Join with our expected values and calculate the difference
+      validation_df <- test_data |> 
+        dplyr::inner_join(new.catch.d, by = c("Time.d", "Variable")) |>
+        # Calculate relative difference, handling 0s gracefully
+        dplyr::mutate(diff = abs(catch.written - catch.new),
+                      rel_diff = ifelse(catch.new == 0, diff, diff / catch.new))
+      
+      # Determine the maximum difference
+      max_diff <- max(validation_df$rel_diff, na.rm = TRUE)
+      
+      if (max_diff > 1e-4) {
+        stop(sprintf("ERROR: Validation failed for Scenario %d! Max relative difference is %f. The written .ts file does not match the expected scalars.", i, max_diff))
+      } else {
+        message(sprintf("Success: Scenario %d TS file passed validation (Max diff: %e).", i, max_diff))
+      }
+      # --- END OF VALIDATION CHECK ---
+      
       #update at_force.prm
       force.file.new.short = paste0('at_force_LINUX_',i,'.prm')
       force.file.new = paste0(proj.dir,'currentVersion/',force.file.new.short)
@@ -199,7 +225,6 @@ for(i in 1:nrow(scenario_params)){
       
       file.copy(run.sh.orig, run.file.new,overwrite=T)
       
-      
       run.file.new.lines = readLines(run.file.new)
       run.command.new =  paste0('atlantisMerged -i neus_init.nc 0 -o neus_output.nc -r at_run.prm -f ',force.file.new.short,' -p at_physics.prm -b at_biology.prm -m neus_migrations.csv -h at_harvest.prm -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -t . -d output')
       run.file.new.lines[run.command.line] = run.command.new
@@ -210,7 +235,7 @@ for(i in 1:nrow(scenario_params)){
   
   #Print progress percent
   print(paste0(round(i/nrow(scenario_params)*100,2),'% complete'))
- 
+  
 }
 
 
@@ -255,5 +280,3 @@ writeLines(sbatch.lines,new.sbatch.array)
 # system("find . -name "*.sh" -exec chmod +x {} \;")
 batch.string = paste0("sbatch ",new.sbatch.array)
 system(batch.string)
-
-

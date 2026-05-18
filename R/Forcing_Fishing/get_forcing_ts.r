@@ -2,28 +2,23 @@
 #'
 #' Reads time series from ts files of an individual species/fleet
 #'
+#' @param file_path character. The full or relative path to the .ts file to read.
 #' @param code character vector. The functional group code of the species or the fleet code to read (Default = NULL, all codes)
-#' @param filenm character. The name of the file to read (without extension)
 #' @param time character.  (Default = "annual", "weekly", "daily")
-#' 
-#' @Section Info
-#' 
-#' The time series file of forced catch and forced effort reside in the curentVersion/CatchFiles folder. 
-#' It is assumed you are running this from inside your atlantis project
 #' 
 #' @examples
 #' # example code
 #' 
 
-get_forcing_ts <- function(code=NULL,filenm ="total_catch_fleets",time="daily") {
-
-  message(paste0("Getting info for: ",filenm,".ts"))
-  # input and output files
+get_forcing_ts <- function(file_path, code=NULL, time="daily") {
+  
+  message(paste0("Getting info for: ", basename(file_path)))
+  
+  # Ensure time is lowercase
   time = tolower(time)
-  file <- paste0(here::here("currentVersion/CatchFiles",paste0(filenm,".ts")))
-
-  # read in input file
-  content <- readLines(con = file)
+  
+  # read in input file directly from the provided path
+  content <- readLines(con = file_path)
   
   # find species names and the column in file they represent
   df <- NULL
@@ -45,17 +40,17 @@ get_forcing_ts <- function(code=NULL,filenm ="total_catch_fleets",time="daily") 
   if(!is.null(code)) {
     if(!all(code %in% df$Code) ){
       message(paste0("Valid codes are: ",paste0(tail(df$Code,-1),collapse = ",")))
-      stop(paste0(code," is not a valid code for ",filenm," file"))
+      stop(paste0(code," is not a valid code for the ", basename(file_path), " file"))
     }
   }
-
+  
   # separate header from data
   header <- content[which(grepl("^#",content))]
   body <- content[which(grepl("^[^#]",content))] 
   # convert body to a numeric data frame
   body <- as.data.frame(stringr::str_split(body,"\\s+",simplify = T))
   abody <- sapply(body,as.numeric,simplify = T)
-
+  
   if (is.null(code)) {
     colnames(abody) <- df$Code
     ts <- as.data.frame(abody)
@@ -67,7 +62,7 @@ get_forcing_ts <- function(code=NULL,filenm ="total_catch_fleets",time="daily") 
     ts <- as.data.frame(abody[,c(1,index)])
   }
   
-  # convert o long format for aggregation
+  # convert to long format for aggregation
   ts <- ts |> 
     tidyr::pivot_longer(cols=-Time,names_to = "Variable",values_to = "Value")
   
@@ -83,9 +78,9 @@ get_forcing_ts <- function(code=NULL,filenm ="total_catch_fleets",time="daily") 
       dplyr::summarise(Value = sum(Value)/7,
                        .groups="drop")
   } else {
-
+    # Keep as daily (or original time step) if neither annual nor weekly
   }
   
   return(ts)
-
+  
 }
