@@ -119,8 +119,8 @@ for(i in 1:nrow(scenario_params)){
     if(current_thresh == 0){
       catch.scale = 0
     } else {
-      a = current_thresh / base.catch.y.tot$catch.annual 
-      catch.scale = mean(a[is.finite(a)],na.rm=T)
+      historical_mean_catch <- mean(base.catch.y.tot$catch.annual, na.rm=T)
+      catch.scale = current_thresh / historical_mean_catch
     }
     
     scenario_params$catch.scalar[i] = catch.scale
