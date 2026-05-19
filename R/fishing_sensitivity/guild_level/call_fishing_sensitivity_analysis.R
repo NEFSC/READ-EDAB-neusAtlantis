@@ -116,7 +116,7 @@ plot_fishing_sensitivity_age_distribution(data.dir = here::here('data','fishing_
                                           filter.type = 'all',
                                           ref.years = 20,
                                           guild.match = here::here('diagnostics','functional_groups_match.csv'),
-                                          fgs.file = fgs.file = here::here('currentVersion','neus_groups.csv')
+                                          fgs.file = here::here('currentVersion','neus_groups.csv')
 )
 
 #plot guild composition by speciess

@@ -118,7 +118,7 @@ get_init_spatial_dist = function(init.file,fgs.file,run.file,bgm.file, group.nam
   # curve( (13.4-127*(x+1))/-0.75 - 463, 0, 2.65)
 }
 
-edit_init_spatial_dist = function(init.file,fgs.file,)
+edit_init_spatial_dist = function(init.file,fgs.file)
 
 get_init_spatial_dist(
   group.name = 'SCA',

@@ -5,5 +5,6 @@ RM
 R/ECCO
 R/ROMS_COBALT
 R/Physical_Forcing
+terra
 *.Rmd
 *.md

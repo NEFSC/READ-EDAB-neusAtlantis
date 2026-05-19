@@ -29,7 +29,7 @@ for(i in 1:length(run.dirs)){
                                    group.index =  url('https://raw.githubusercontent.com/NOAA-EDAB/atlantiseof/refs/heads/joe_branch/data-raw/neus_species_index.csv'),
                                    fgs.file = here::here('currentVersion','neus_groups.csv'),
                                    dietSource = 'detdiet',
-                                   survdat.data = survdat.data
+                                   survdat.data = survdat.data,
                                    timeRange = 1:100,
                                    cloud = T
                                    )
@@ -43,7 +43,7 @@ for(i in 1:length(run.dirs)){
                                                   cloud = T
   )
   
-  # param.ls = atlantisprocessing::get_atl_paramfiles(param.dir = here::here('currentVersion'),
+  # param.ls = atlantisdiagnostics::get_atl_paramfiles(param.dir = here::here('currentVersion'),
   #                                        atl.dir = run.dirs[i],
   #                                        run.prefix  = 'neus_output',
   #                                        include_catch = T
@@ -53,7 +53,7 @@ for(i in 1:length(run.dirs)){
   # system(paste0('sudo mkdir ',run.dirs[i],'data'))
   # system(paste0('sudo chmod -R 777 ',run.dirs[i],'data'))
   # if(run.ind.mean$catch.tot == 0){
-  #   atlantisprocessing::process_atl_output(param.dir = here::here('currentVersion'),
+  #   atlantisdiagnostics::process_atl_output(param.dir = here::here('currentVersion'),
   #                                          atl.dir = run.dirs[i],
   #                                          out.dir = paste0(run.dirs[i],'data'),
   #                                          run.prefix = 'neus_output',
@@ -62,7 +62,7 @@ for(i in 1:length(run.dirs)){
   #                                          survdat.data = survdat.data,
   #                                          plot.biomass.timeseries = T,plot.numbers.timeseries = T,plot.catch = F)
   # }else{
-  #   atlantisprocessing::process_atl_output(param.dir = here::here('currentVersion'),
+  #   atlantisdiagnostics::process_atl_output(param.dir = here::here('currentVersion'),
   #                                          atl.dir = run.dirs[i],
   #                                          out.dir = paste0(run.dirs[i],'data'),
   #                                          run.prefix = 'neus_output',
