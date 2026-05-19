@@ -20,9 +20,12 @@ args = commandArgs(trailingOnly = TRUE)
 if (length(args) == 0) {
   # stop("Error: No array task ID provided. Please run this script with an argument (e.g., Rscript process_run.R 1)")
   # args = run.dirs
-  experiment.id = 'catch_thresholds_eof_3'
+  experiment.id = 'eof_targeting_1'
   setup.df = read.csv(here::here('Setup_Files','catch_thresholds_eof_setup.csv'))
-  run.dirs = paste0('/atlantisdisk2/',experiment.id,'/',experiment.id,'_',setup.df$run,'/')
+  run.dirs = paste0('/atlantisoutput/',experiment.id,'/',experiment.id,'_',setup.df$run,'/')
+  redo = T
+  
+  
 }else{
   
   array_task_id = as.integer(args[1])
@@ -30,9 +33,16 @@ if (length(args) == 0) {
 i=1
 # --- Setup file and experiment ID ---
 project.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
-experiment.id = 'catch_thresholds_eof_3'
-setup.df = read.csv(paste0(project.dir,'Setup_Files/catch_thresholds_eof_setup.csv'))
-
+experiment.id = 'eof_targeting_1'
+setup.df = read.csv(paste0(project.dir,'Setup_Files/',experiment.id,'_setup.csv'))
+run.dir.index = setup.df$run.id
+if(redo == T){
+  output.dirs = list.files(paste0('/atlantisarchive/Joseph.Caracappa/',experiment.id,'/analysis/'),include.dirs = T)
+  complete.names = paste0(experiment.id,'_',setup.df$run)
+  which.missing = which(!(complete.names %in% output.dirs))
+  run.dirs = paste0('/atlantisoutput/',experiment.id,'/',experiment.id,'_',which.missing,'/')
+  run.dir.index = which.missing
+}
 for(i in 1:length(run.dirs)){
     
   array_task_id = run.dirs[i]
@@ -53,7 +63,7 @@ for(i in 1:length(run.dirs)){
   # --- Define output directories ---
   # Output directory for overall analysis (might be created by the submit script or manually)
   # Note: 'sudo' commands are typically not used within Slurm jobs by users.
-  # Ensure appropriate permissions are set for '/atlantisdisk2' or use a user-writable path.
+  # Ensure appropriate permissions are set for '/atlantisoutput' or use a user-writable path.
   output.dir = paste0('/atlantisarchive/',experiment.id,'/analysis/')
   # It's better to ensure this top-level directory exists before submitting jobs,
   # or handle it carefully with user permissions.
@@ -63,7 +73,7 @@ for(i in 1:length(run.dirs)){
   
   # Get the specific run directory for this task
   
-  run.dir = paste0('/atlantisdisk2/',experiment.id,'/',experiment.id,'_',setup.df$run[run_index],'/')
+  run.dir = paste0('/atlantisoutput/',experiment.id,'/',experiment.id,'_',run.dir.index[i],'/')
   message(paste0("Processing run directory: ", run.dir))
   
   # --- Perform calculations for the specific run ---
@@ -79,6 +89,7 @@ for(i in 1:length(run.dirs)){
   group.index.file = paste0(project.dir,'data-raw/group_index.rds')
   
   # make_eco_indicators_time
+  message(paste0("Processing eco indicators time: ", run.dir))
   run.ind.t = atlantiseof::make_eco_indicators_time(param.dir = paste0(project.dir,'currentVersion/'),
                                                     atl.dir = run.dirs[i],
                                                     group.index = group.index.file,
@@ -90,6 +101,7 @@ for(i in 1:length(run.dirs)){
   )
   
   # make_eco_indicators
+  message(paste0("Processing eco indicators: ", run.dir))
   run.ind.mean = atlantiseof::make_eco_indicators(param.dir = paste0(project.dir,'currentVersion/'),
                                                   atl.dir = run.dirs[i],
                                                   group.index = group.index.file,
@@ -108,36 +120,38 @@ for(i in 1:length(run.dirs)){
   # Create data subdirectory within the run directory and set permissions
   # Again, avoid 'sudo' in job scripts. Ensure your user has write permissions to run.dirs[i]
   # data.dir = paste0(run.dirs[i],'data')
-  # if(!dir.exists(data.dir)){
-  #   dir.create(data.dir, recursive = TRUE)
-  #   # system(paste0('sudo chmod -R 777 ',data.dir)) # This might not work on all systems.
-  #   # Better to configure umask or group permissions for the directory.
-  # }
-  # 
-  # # Process Atlantis output
-  # if (run.ind.mean$catch.tot == 0) {
-  #   atlantisdiagnostics::process_atl_output(param.dir = paste0(project.dir,'currentVersion/'),
-  #                                          atl.dir = run.dirs[i],
-  #                                          out.dir = data.dir,
-  #                                          run.prefix = 'neus_output',
-  #                                          param.ls = param.ls,
-  #                                          plot.length.age = TRUE,
-  #                                          plot.biomass.timeseries = TRUE,
-  #                                          plot.numbers.timeseries = TRUE,
-  #                                          plot.catch = FALSE)
-  # } else {
-  #   atlantisdiagnostics::process_atl_output(param.dir = paste0(project.dir,'currentVersion/'),
-  #                                          atl.dir = run.dirs[i],
-  #                                          out.dir = data.dir,
-  #                                          run.prefix = 'neus_output',
-  #                                          param.ls = param.ls,
-  #                                          plot.length.age = TRUE,
-  #                                          plot.biomass.timeseries = TRUE,
-  #                                          plot.numbers.timeseries = TRUE,
-  #                                          plot.catch = TRUE)
-  # }
+  if(!dir.exists(data.dir)){
+    dir.create(data.dir, recursive = TRUE)
+    # system(paste0('sudo chmod -R 777 ',data.dir)) # This might not work on all systems.
+    # Better to configure umask or group permissions for the directory.
+  }
+
+  message(paste0("Normal Post Processing: ", run.dir))
+  # Process Atlantis output
+  if (run.ind.mean$catch.tot == 0) {
+    atlantisdiagnostics::process_atl_output(param.dir = paste0(project.dir,'currentVersion/'),
+                                           atl.dir = run.dirs[i],
+                                           out.dir = data.dir,
+                                           run.prefix = 'neus_output',
+                                           param.ls = param.ls,
+                                           plot.length.age = TRUE,
+                                           plot.biomass.timeseries = TRUE,
+                                           plot.numbers.timeseries = TRUE,
+                                           plot.catch = FALSE)
+  } else {
+    atlantisdiagnostics::process_atl_output(param.dir = paste0(project.dir,'currentVersion/'),
+                                           atl.dir = run.dirs[i],
+                                           out.dir = data.dir,
+                                           run.prefix = 'neus_output',
+                                           param.ls = param.ls,
+                                           plot.length.age = TRUE,
+                                           plot.biomass.timeseries = TRUE,
+                                           plot.numbers.timeseries = TRUE,
+                                           plot.catch = TRUE)
+  }
   
   # Calculate PPR and PPC
+  message(paste0("Processing PPC: ", run.dir))
   ppc = atlantiseof::get_ppc(param.dir =paste0(project.dir,'currentVersion/'),
                              atl.dir = run.dirs[i],
                              fgs = paste0(project.dir,'currentVersion/neus_groups.csv'),
@@ -148,11 +162,11 @@ for(i in 1:length(run.dirs)){
   # Create export directory
   # Note: 'sudo' commands are typically not used within Slurm jobs.
   # Ensure /atlantisarchive has appropriate permissions or use a user-writable path.
-  export.dir = paste0('/atlantisarchive/Joseph.Caracappa/',experiment.id,'/',experiment.id,'_',run_index,'/')
-  # if(!dir.exists(export.dir)){
-  #   dir.create(export.dir, recursive = TRUE)
-  #   # system(paste0('sudo chmod 777 -R ',export.dir)) # This might not work on all systems.
-  # }
+  export.dir = paste0('/atlantisarchive/Joseph.Caracappa/',experiment.id,'/analysis/',experiment.id,'_',run.dir.index[i],'/')
+  if(!dir.exists(export.dir)){
+    dir.create(export.dir, recursive = TRUE)
+    # system(paste0('sudo chmod 777 -R ',export.dir)) # This might not work on all systems.
+  }
   # 
   # # Copy processed files
   # files.export = c('biomass.rds','biomass_age.rds','length_age.rds','numbers_age.rds','catch.rds')
