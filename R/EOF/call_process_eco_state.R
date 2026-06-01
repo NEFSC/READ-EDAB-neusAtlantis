@@ -2,7 +2,7 @@
 # This script processes a single Atlantis run based on the provided array task ID.
 
 # Load necessary libraries
-library(tictoc)
+# library(tictoc)
 library(dplyr)
 library(here)
 library(atlantiseof)
@@ -15,8 +15,8 @@ args = commandArgs(trailingOnly = TRUE)
 if (length(args) == 0) {
   message("Error: No array task ID provided. Please run this script with an argument (e.g., Rscript process_run.R 1)")
   array_task_id = 1
-  experiment.id = 'eof_targeting_1'
-  run.dir = paste0('/atlantisoutput/',experiment.id,'/',experiment.id,'_',array_task_id,'/')
+  experiment.id = 'eof_targeting_3'
+  run.dir = paste0('/atlantisdisk2/',experiment.id,'/',experiment.id,'_',array_task_id,'/')
 }else{
   
   array_task_id = as.integer(args[1])
@@ -59,7 +59,7 @@ message(paste0("Processing run directory: ", run.dir))
 
 # print(list.files('/'))
 # --- Perform calculations for the specific run ---
-tic(paste0("Processing run ", run_index))
+print(paste0("Processing run ", run_index))
 
 # Create data subdirectory within the run directory and set permissions
 data.dir = paste0(run.dir,'/data') # Corrected: use run.dir
@@ -87,7 +87,7 @@ run.files = list.files(run.dir)
 data.files = list.files(data.dir)
 
 
-
+include.catch = setup.df$catch.scalar[setup.df$run.id == array_task_id] != 0
 if (sum(grepl('Catch.txt',run.files))==0) {
   expected.data.files = c('biomass_age_invert.rds', 'biomass_age.rds', 'biomass.rds', 
                            'data_age_mat.rds', 'dz.rds', 'length_age.rds', 'nominal_dz.rds', 'numbers_age.rds',
@@ -102,7 +102,7 @@ if (sum(grepl('Catch.txt',run.files))==0) {
                                             plot.length.age = TRUE,
                                             plot.biomass.timeseries = TRUE,
                                             plot.numbers.timeseries = TRUE,
-                                            plot.catch = FALSE)
+                                            plot.catch = include.catch)
   }
 } else {
   expected.data.files = c('biomass_age_invert.rds', 'biomass_age.rds', 'biomass.rds', 'catch.rds', 'catchmt.rds',
@@ -119,7 +119,7 @@ if (sum(grepl('Catch.txt',run.files))==0) {
                                             plot.length.age = TRUE,
                                             plot.biomass.timeseries = TRUE,
                                             plot.numbers.timeseries = TRUE,
-                                            plot.catch = TRUE)
+                                            plot.catch = include.catch)
   }
 }
 message('Finished process_atl_output for run:',run_index)
@@ -177,5 +177,5 @@ saveRDS(run.ind.t, paste0(export.dir, 'eco_indicators_ts.rds'))
 saveRDS(run.ind.mean, paste0(export.dir,'eco_indicators_mean.rds'))
 saveRDS(ppc, paste0(export.dir,'ppc.rds'))
 
-toc()
+# toc()
 message(paste0("Finished processing run ", run_index))

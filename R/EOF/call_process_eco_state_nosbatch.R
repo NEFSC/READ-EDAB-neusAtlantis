@@ -20,9 +20,9 @@ args = commandArgs(trailingOnly = TRUE)
 if (length(args) == 0) {
   # stop("Error: No array task ID provided. Please run this script with an argument (e.g., Rscript process_run.R 1)")
   # args = run.dirs
-  experiment.id = 'eof_targeting_1'
+  experiment.id = 'eof_targeting_3'
   setup.df = read.csv(here::here('Setup_Files','catch_thresholds_eof_setup.csv'))
-  run.dirs = paste0('/atlantisoutput/',experiment.id,'/',experiment.id,'_',setup.df$run,'/')
+  run.dirs = paste0('/atlantisdisk2/',experiment.id,'/',experiment.id,'_',setup.df$run,'/')
   redo = T
   
   
@@ -33,14 +33,14 @@ if (length(args) == 0) {
 i=1
 # --- Setup file and experiment ID ---
 project.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
-experiment.id = 'eof_targeting_1'
+experiment.id = 'eof_targeting_3'
 setup.df = read.csv(paste0(project.dir,'Setup_Files/',experiment.id,'_setup.csv'))
 run.dir.index = setup.df$run.id
 if(redo == T){
   output.dirs = list.files(paste0('/atlantisarchive/Joseph.Caracappa/',experiment.id,'/analysis/'),include.dirs = T)
   complete.names = paste0(experiment.id,'_',setup.df$run)
   which.missing = which(!(complete.names %in% output.dirs))
-  run.dirs = paste0('/atlantisoutput/',experiment.id,'/',experiment.id,'_',which.missing,'/')
+  run.dirs = paste0('/atlantisdisk2/',experiment.id,'/',experiment.id,'_',which.missing,'/')
   run.dir.index = which.missing
 }
 for(i in 1:length(run.dirs)){
@@ -63,7 +63,7 @@ for(i in 1:length(run.dirs)){
   # --- Define output directories ---
   # Output directory for overall analysis (might be created by the submit script or manually)
   # Note: 'sudo' commands are typically not used within Slurm jobs by users.
-  # Ensure appropriate permissions are set for '/atlantisoutput' or use a user-writable path.
+  # Ensure appropriate permissions are set for '/atlantisdisk2' or use a user-writable path.
   output.dir = paste0('/atlantisarchive/',experiment.id,'/analysis/')
   # It's better to ensure this top-level directory exists before submitting jobs,
   # or handle it carefully with user permissions.
@@ -73,7 +73,7 @@ for(i in 1:length(run.dirs)){
   
   # Get the specific run directory for this task
   
-  run.dir = paste0('/atlantisoutput/',experiment.id,'/',experiment.id,'_',run.dir.index[i],'/')
+  run.dir = paste0('/atlantisdisk2/',experiment.id,'/',experiment.id,'_',run.dir.index[i],'/')
   message(paste0("Processing run directory: ", run.dir))
   
   # --- Perform calculations for the specific run ---
@@ -127,6 +127,7 @@ for(i in 1:length(run.dirs)){
   }
 
   message(paste0("Normal Post Processing: ", run.dir))
+  include.catch = setup.df$catch.scalar[setup.df$run.id == array_task_id] != 0
   # Process Atlantis output
   if (run.ind.mean$catch.tot == 0) {
     atlantisdiagnostics::process_atl_output(param.dir = paste0(project.dir,'currentVersion/'),
@@ -137,7 +138,7 @@ for(i in 1:length(run.dirs)){
                                            plot.length.age = TRUE,
                                            plot.biomass.timeseries = TRUE,
                                            plot.numbers.timeseries = TRUE,
-                                           plot.catch = FALSE)
+                                           plot.catch = include.catch)
   } else {
     atlantisdiagnostics::process_atl_output(param.dir = paste0(project.dir,'currentVersion/'),
                                            atl.dir = run.dirs[i],
@@ -147,7 +148,7 @@ for(i in 1:length(run.dirs)){
                                            plot.length.age = TRUE,
                                            plot.biomass.timeseries = TRUE,
                                            plot.numbers.timeseries = TRUE,
-                                           plot.catch = TRUE)
+                                           plot.catch = include.catch)
   }
   
   # Calculate PPR and PPC

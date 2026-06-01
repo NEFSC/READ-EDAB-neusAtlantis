@@ -2,13 +2,14 @@
 library(dplyr)
 library(tidyr)
 
-run.forcing = T
-write.ts = T # CHANGED to T so files are actually written
+run.forcing = F
+write.ts = F # CHANGED to T so files are actually written
 existing.setup = T
-proj.dir = here::here('','')
-# proj.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
+do.run = T
+# proj.dir = here::here('','')
+proj.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
 
-experiment.id = 'eof_targeting_1'
+experiment.id = 'eof_targeting_3'
 
 existing.setup.file = here::here('Setup_Files',paste0(experiment.id,'_setup.csv'))
 #Species mappings
@@ -39,13 +40,57 @@ force.file.orig = paste0(proj.dir,'currentVersion/at_force_LINUX.prm')
 force.lines = readLines(force.file.orig)
 catch.file.line = grep('Catchts0.data',force.lines)
 
+## For each Time calculate the proportion of Value for each Variable
+
+mt_yr_2_mgn_yr =1E9/(20 * 5.7 )
+mt_yr_2_mgn_s = mt_yr_2_mgn_yr/(365 * 86400)
+
+
+##aggregate by year - UPDATED to use new file_path argument
+base.catch.d = get_forcing_ts(file_path = catch.file.orig, code = NULL, time = 'day') |> 
+  dplyr::rename(catch.orig.mgN.s = 'Value',
+                Time.d = 'Time') %>% 
+  dplyr::mutate(catch.orig.mT.d = 86400*catch.orig.mgN.s/mt_yr_2_mgn_yr)
+
+# a = filter(base.catch.d, Variable == 'BLF')
+# plot(catch.orig.mT.d~Time.d,a,type = 'l')
+
+base.catch.y = base.catch.d |> 
+  dplyr::mutate(Time.y = floor(Time.d/ 365)) |> 
+  dplyr::group_by(Time.y,Variable) |> 
+  dplyr::summarise(catch.orig.mgN.s = sum(catch.orig.mgN.s,na.rm=T),
+                   catch.orig.mT.y = sum(catch.orig.mT.d,na.rm=T))
+
+# b = filter(base.catch.y, Variable == 'BLF')
+# plot(catch.orig.mT.d~Time.y,b,type = 'l')
+
+base.catch.y.tot = base.catch.y |> 
+  dplyr::group_by(Time.y) |> 
+  dplyr::summarise(catch.annual.mgN.s = sum(catch.orig.mgN.s,na.rm=T),
+                   catch.annual.mT.y = sum(catch.orig.mT.y,na.rm=T))
+
+historical_mean_catch <- mean(base.catch.y.tot$catch.annual.mT.y, na.rm=T)
+
+ref_weights = base.catch.y |> 
+  group_by(Time.y) |> 
+  mutate(Weight = catch.orig.mgN.s / sum(catch.orig.mgN.s, na.rm = TRUE)) |> 
+  ungroup() |> 
+  rename(SubGroup = 'Variable',
+         Time = 'Time.y') |> 
+  select(SubGroup, Time, Weight) |> 
+  filter(!is.na(Weight))
+
+
 #Get info on fishing complexes
 group.names = sort(unique(group_map$Group))
 
 groups_to_test  <- group.names[which(group.names != 'Other')]
-factors_to_test  <- exp(seq(log(1E-2),log(20),length.out = 10))
-eof.thresh = exp(seq(log(1E4),log(4E6),length.out = 10))
+# factors_to_test  <- round(exp(seq(log(1E-2),log(20),length.out = 10)),2)
+factors_to_test = c(0.01, 0.02, 0.05, 0.1, 0.3, 0.6, 1, 4, 8, 20)
+# eof.thresh = c(0,round(exp(seq(log(1E4),log(1E7),length.out = 10)),-4))
+eof.thresh = c(0, 1E4, 1E5, 5E5, 8E5, 9E5, 1E6, 2E6, 4E6, 6E6, 8E6)
 
+eof.thresh/ historical_mean_catch
 
 if(existing.setup == T){
   scenario_params = read.csv(existing.setup.file)
@@ -53,39 +98,15 @@ if(existing.setup == T){
   scenario_params <- expand.grid(
     dominant_group = groups_to_test,
     dominance_factor = factors_to_test,
-    eof_threshold = eof.thresh
+    eof_threshold_mT = eof.thresh
+    
   )
-  scenario_params$catch.scalar = NA
+  scenario_params$eof_threshold_mgN = scenario_params$eof_threshold_mT * mt_yr_2_mgn_s
+  scenario_params$catch.scalar = scenario_params$eof_threshold_mT/historical_mean_catch
   scenario_params$run.id = NA
+  
   nrow(scenario_params)
 }
-
-
-## For each Time calculate the proportion of Value for each Variable
-
-##aggregate by year - UPDATED to use new file_path argument
-base.catch.d = get_forcing_ts(file_path = catch.file.orig, code = NULL, time = 'day') |> 
-  dplyr::rename(catch.orig = 'Value',
-                Time.d = 'Time')
-
-base.catch.y = base.catch.d |> 
-  dplyr::mutate(Time.y = floor(Time.d/ 365)) |> 
-  dplyr::group_by(Time.y,Variable) |> 
-  dplyr::summarise(catch.orig = sum(catch.orig,na.rm=T))
-
-base.catch.y.tot = base.catch.y |> 
-  dplyr::group_by(Time.y) |> 
-  dplyr::summarise(catch.annual = sum(catch.orig,na.rm=T))
-
-ref_weights = base.catch.y |> 
-  group_by(Time.y) |> 
-  mutate(Weight = catch.orig / sum(catch.orig, na.rm = TRUE)) |> 
-  ungroup() |> 
-  rename(SubGroup = 'Variable',
-         Time = 'Time.y') |> 
-  select(SubGroup, Time, Weight) |> 
-  filter(!is.na(Weight))
-
 
 #Loop through scenario params
 i=1
@@ -99,6 +120,7 @@ for(i in 1:nrow(scenario_params)){
   current_dominant_group <- as.character(scenario_params$dominant_group[i])
   current_factor <- scenario_params$dominance_factor[i]
   current_thresh <- scenario_params$eof_threshold[i]
+  current_scale <- scenario_params$catch.scalar[i]
   
   if(run.forcing){
     cat(sprintf("Running Scenario %d: Dominant Group = %s, Factor = %.1f\n", 
@@ -116,20 +138,20 @@ for(i in 1:nrow(scenario_params)){
     ###Setup catch scaling
     
     #set scaling factor (FIXED: Scaling against TOTAL catch, not subgroup catch)
-    if(current_thresh == 0){
-      catch.scale = 0
-    } else {
-      historical_mean_catch <- mean(base.catch.y.tot$catch.annual, na.rm=T)
-      catch.scale = current_thresh / historical_mean_catch
-    }
-    
-    scenario_params$catch.scalar[i] = catch.scale
+    # if(current_thresh == 0){
+    #   catch.scale = 0
+    # } else {
+    #   historical_mean_catch <- mean(base.catch.y.tot$catch.annual, na.rm=T)
+    #   catch.scale = current_thresh / historical_mean_catch
+    # }
+    # 
+    # scenario_params$catch.scalar[i] = catch.scale
     
     #multiple by new scalars from scenario_output (FIXED: Divided by 365 for daily rate)
     new.catch = base.catch.y.tot |> 
       dplyr::left_join(scenario_output, by = c('Time.y' = 'Time')) |> 
-      dplyr::mutate(catch.new = (catch.annual * subgroup_weight * catch.scale) / 365,
-                    catch.scale = catch.scale,
+      dplyr::mutate(catch.new = (catch.annual.mgN.s * subgroup_weight * current_scale) / 365,
+                    catch.scale = current_scale,
                     Time.d = Time.y * 365) |>
       dplyr::left_join(base.catch.y, by = c('Time.y',"SubGroup" = "Variable"))
     
@@ -140,14 +162,14 @@ for(i in 1:nrow(scenario_params)){
     #test that scalar applied overall and stop if fails
     new.catch.test = new.catch |>
       dplyr::group_by(Time.y,Group) |>
-      dplyr::summarise(group.Total = sum(catch.orig, na.rm = T),
+      dplyr::summarise(group.Total = sum(catch.orig.mgN.s, na.rm = T),
                        group.NewTotal = sum(catch.new * 365,na.rm=T), # Need *365 here to test against annual total
                        group_weight = mean(group_weight)) |>
       dplyr::group_by(Time.y) |>
       dplyr::mutate(Total = sum(group.Total,na.rm=T),
                     NewTotal = sum(group.NewTotal,na.rm=T)) |>
       dplyr::mutate(old.group_weight = group.Total/Total,
-                    desiredTotal = Total * catch.scale * group_weight,
+                    desiredTotal = Total * current_scale * group_weight,
                     diff.tot = (desiredTotal - group.NewTotal)/desiredTotal,
                     diff.weight = group_weight - old.group_weight)
     
@@ -238,45 +260,54 @@ for(i in 1:nrow(scenario_params)){
   
 }
 
+if(existing.setup){
+  scenario_params =read.csv(paste0(proj.dir,'Setup_Files/',experiment.id,'_setup.csv'))
+}else{
+  write.csv(scenario_params, paste0(proj.dir,'Setup_Files/',experiment.id,'_setup.csv'),row.names = F)  
+  
+  #isolate species level scalars
+  spp.dat = dplyr::bind_rows(scenario_config.ls)
+  spp.dat.scalars = spp.dat |> 
+    dplyr::select(Time.d, run.id,SubGroup, subgroup_weight) |> 
+    dplyr::rename(Code = 'SubGroup') |>
+    dplyr::left_join(scenario_params) |> 
+    dplyr::mutate(input.scalar = catch.scalar * subgroup_weight) |> 
+    dplyr::select(run.id, Time.d,Code,input.scalar) |> 
+    tidyr::pivot_wider(names_from = 'Code', values_from = 'input.scalar')
+  
+  write.csv(spp.dat.scalars, paste0(proj.dir,'Setup_Files/',experiment.id,'_species_scalars.csv'),row.names = F)
+  
+}
 
-system('sudo chmod -R 775 *')
 
-write.csv(scenario_params, paste0(proj.dir,'Setup_Files/',experiment.id,'_setup.csv'),row.names = F)
+if(do.run){
+  system('sudo chmod -R 775 *')
+  system('sudo chmod -R 775 /atlantisdisk2/')
+  
 
-#isolate species level scalars
-spp.dat = dplyr::bind_rows(scenario_config.ls)
-spp.dat.scalars = spp.dat |> 
-  dplyr::select(Time.d, run.id,SubGroup, subgroup_weight) |> 
-  dplyr::rename(Code = 'SubGroup') |>
-  dplyr::left_join(scenario_params) |> 
-  dplyr::mutate(input.scalar = catch.scalar * subgroup_weight) |> 
-  dplyr::select(run.id, Time.d,Code,input.scalar) |> 
-  tidyr::pivot_wider(names_from = 'Code', values_from = 'input.scalar')
-
-write.csv(spp.dat.scalars, paste0(proj.dir,'Setup_Files/',experiment.id,'_species_scalars.csv'),row.names = F)
-
-base.sbatch.array = paste0(proj.dir,'currentVersion/sbatch_scenario_array_base.sh')
-new.sbatch.array =  paste0(proj.dir,'currentVersion/sbatch_',experiment.id,'.sh')
-file.copy(base.sbatch.array,new.sbatch.array,overwrite = T)
-
-#replace max array number
-sbatch.lines = readLines(new.sbatch.array)
-new.nodes.line = paste0('#SBATCH --nodes=',ceiling(nrow(scenario_params)/120))
-# new.nodes.line = paste0('#SBATCH --nodes=1')
-new.array.line = paste0('#SBATCH --array=1-',nrow(scenario_params))
-# new.array.line = paste0('#SBATCH --array=1-2')
-sbatch.lines[grep('--array',sbatch.lines)] = new.array.line
-sbatch.lines[grep('--nodes',sbatch.lines)] = new.nodes.line
-
-#replace directories
-new.mkdir = paste0("sudo mkdir -p /atlantisdisk/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID")
-sbatch.lines[grep('mkdir',sbatch.lines)] = new.mkdir
-
-new.singularity = paste0( "sudo singularity exec --bind ",proj.dir,"currentVersion:/app/model,/atlantisdisk/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID:/app/model/output /model/atlantisCode/atlantis6681.sif /app/model/runAtlantis_$SLURM_ARRAY_TASK_ID.sh")
-sbatch.lines[grep('singularity',sbatch.lines)] = new.singularity
-
-writeLines(sbatch.lines,new.sbatch.array)
-
-# system("find . -name "*.sh" -exec chmod +x {} \;")
-batch.string = paste0("sbatch ",new.sbatch.array)
-system(batch.string)
+  base.sbatch.array = paste0(proj.dir,'currentVersion/sbatch_scenario_array_base.sh')
+  new.sbatch.array =  paste0(proj.dir,'currentVersion/sbatch_',experiment.id,'.sh')
+  file.copy(base.sbatch.array,new.sbatch.array,overwrite = T)
+  
+  #replace max array number
+  sbatch.lines = readLines(new.sbatch.array)
+  # new.nodes.line = paste0('#SBATCH --nodes=',ceiling(nrow(scenario_params)/64))
+  new.nodes.line = paste0('#SBATCH --nodes=1')
+  new.array.line = paste0('#SBATCH --array=1-',nrow(scenario_params))
+  # new.array.line = paste0('#SBATCH --array=1-2')
+  sbatch.lines[grep('--array',sbatch.lines)] = new.array.line
+  sbatch.lines[grep('--nodes',sbatch.lines)] = new.nodes.line
+  
+  #replace directories
+  new.mkdir = paste0("mkdir -p /atlantisdisk2/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID")
+  sbatch.lines[grep('mkdir',sbatch.lines)] = new.mkdir
+  
+  new.singularity = paste0( "singularity exec --bind ",proj.dir,"currentVersion:/app/model,/atlantisdisk2/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID:/app/model/output /model/atlantisCode/atlantis6681.sif /app/model/runAtlantis_$SLURM_ARRAY_TASK_ID.sh")
+  sbatch.lines[grep('singularity',sbatch.lines)] = new.singularity
+  
+  writeLines(sbatch.lines,new.sbatch.array)
+  
+  # system("find . -name "*.sh" -exec chmod +x {} \;")
+  batch.string = paste0("sbatch ",new.sbatch.array)
+  system(batch.string)
+}
