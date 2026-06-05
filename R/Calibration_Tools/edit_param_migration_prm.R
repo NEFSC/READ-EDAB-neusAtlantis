@@ -238,7 +238,7 @@ edit_param_migration = function(bio.file,
    
    #read in change files
    new.mig.df = read.csv(mig.table,as.is =T)
-   new.mig.io.box.df = read.csv(mig.box.io.table,as.is =T)
+   new.mig.io.box.df = read.csv(mig.io.box.table,as.is =T)
    
    #read.in existing tables
    current.params = get_param_migration(bio.file,spp.names,write.output = F)
