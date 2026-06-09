@@ -80,7 +80,11 @@ if(any(c('ddepend','k.roc.food','roc.wgt') %in% setup.df$Type)){
 }
 if(any(c('max.temp','min.temp','max.salt','min.salt') %in% setup.df$Type)){
   source(here::here('R','Calibration_Tools','edit_param_env_move.R'))
-  
+
+}
+if(any(c('k.temp.const') %in% setup.df$Type)){
+  source(here::here('R','Calibration_Tools','edit_param_K_temp_const.R'))
+  k.temp.const = get_param_K_temp_const(bio.prm = bio.file.orig)
 }
 
 possible.types = unique(read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'),as.is=T)$Type)
@@ -89,12 +93,12 @@ possible.types = unique(read.csv(here::here('diagnostics','cloud_calibration_set
 i=1
 out.df = list()
 for(i in 1:length(run.id)){
-  
+
   #copy biology.prm with run.id prefix
   bio.file.short = paste0('at_biology_',run.id[i],'.prm')
   bio.file.new = here::here('currentVersion',bio.file.short)
   file.copy(bio.file.orig, bio.file.new,overwrite = T)
-  
+
   if(any(c('aMigSize','jMigSize','aMigSurvive','jMigSurvive')%in% setup.df$Type)){
     #copy migration.csv with run.id prefix
     mig.file.short = paste0('neus_migrations_',run.id[i],'.csv')
@@ -115,27 +119,27 @@ for(i in 1:length(run.id)){
 
   #Separate task for run.id
   setup.run = dplyr::filter(setup.df, Run.ID == run.id[i])
-  
+
   j=1
   for(j in 1:nrow(setup.run)){
-    
+
     if(!(setup.run$Type[j] %in% possible.types)){
       stop(paste0("Type: ", setup.run$Type[j]," Run.ID: ",setup.run$Run.ID[j]," is not compatible with this script"))
     }
-    
+
     is.invert = setup.run$Code[j] %in% invert.groups
-    
+
     #Do mQ or mL tasks
     if(setup.run$Type[j] %in% c('mQa','mQj','mLa','mLj','mL','mQ')){
 
       if(is.invert){
-        
+
         if(setup.run$Type[j] %in% c('mLa','mLj','mL')){
           mort.group.old = mort.invert.orig$mL[which(mort.invert.orig$group == setup.run$Code[j])]
         }else{
-          mort.group.old = mort.invert.orig$mQ[which(mort.invert.orig$group == setup.run$Code[j])] 
+          mort.group.old = mort.invert.orig$mQ[which(mort.invert.orig$group == setup.run$Code[j])]
         }
-        
+
         if(setup.run$Type[j] == 'value'){
           mort.group.new = setup.run$Value[j]
         }else{
@@ -146,12 +150,12 @@ for(i in 1:length(run.id)){
                                type = setup.run$Type[j],
                                value = mort.group.new,
                                new.file = F)
-      
+
       }else{
-        
+
         group.age = substr(setup.run$Type[j],nchar(setup.run$Type[j]),nchar(setup.run$Type[j]))
         group.type = substr(setup.run$Type[j],1,2)
-        
+
         if(group.type == 'mL'){
           mort.group.old = mort.age.orig %>%
                   filter(group == setup.run$Code[j])%>%
@@ -163,19 +167,19 @@ for(i in 1:length(run.id)){
                 select(mQ.j,mQ.a)%>%
                 as.numeric()
         }
-        
+
         if(group.age == 'j'){
           mort.group.old = mort.group.old[1]
         }else{
           mort.group.old = mort.group.old[2]
         }
-        
+
         if(setup.run$Unit[j] == 'value'){
           group.value =  setup.run$Value[j]
         }else{
           group.value = mort.group.old * setup.run$Value[j]
         }
-        
+
         edit_param_mort_age(bio.prm = bio.file.new,
                             group.name = setup.run$Code[j],
                             age = group.age,
@@ -185,44 +189,44 @@ for(i in 1:length(run.id)){
         )
       }
     }
-  
+
     #Do mum/C tasks
     if(setup.run$Type[j] %in% c('mum','C')){
-      
+
       #invert mum/c
       if(is.invert == T){
-        
+
         mum.c.invert.match = which(mum.c.invert.orig$Code == setup.run$Code[j])
         old.c.val = as.numeric(mum.c.invert.orig$c[mum.c.invert.match])
         old.mum.val = as.numeric(mum.c.invert.orig$mum[mum.c.invert.match])
-        
+
         if(setup.run$Type[j] == 'mum'){
           new.mum.val = ifelse(setup.run$Unit[j] == 'scalar', old.mum.val * setup.run$Value[j], setup.run$Value[j])
-          
+
           edit_param_invert_c_mum(bio.file = bio.file.new,
                                   group =setup.run$Code[j],
                                   type = 'mum',
                                   value = new.mum.val,
                                   new.file = F)
-          
+
         }else{
           new.c.val = ifelse(setup.run$Unit[j] == 'scalar', old.c.val * setup.run$Value[j], setup.run$Value[j])
-          
+
           edit_param_invert_c_mum(bio.file = bio.file.new,
                                   group =setup.run$Code[j],
                                   type = 'C',
                                   value = new.c.val,
                                   new.file = F)
-          
+
         }
-      #age mum/c                       
+      #age mum/c
       }else{
-        
+
         mum.age.match = which(mum.age.orig$group == setup.run$Code[j])
         c.age.match  = which(c.age.orig$group == setup.run$Code[j])
-        
+
         if(setup.run$Type[j] == 'mum'){
-          
+
           if(setup.run$Unit[j] == 'scalar'){
             new.mum.val = as.numeric(mum.age.orig[mum.age.match,2:11]) * setup.run$Value[j]
           }else{
@@ -247,18 +251,18 @@ for(i in 1:length(run.id)){
                              group.name = setup.run$Code[j]
           )
         }
-        
+
       }
-      
+
     }
-    
+
     #Do BH alpha/beta tasks
     if(setup.run$Type[j] %in% c('BHalpha','BHbeta')){
-      
+
       bh.match = which(bh.orig$group == setup.run$Code[j])
       old.alpha.val = as.numeric(bh.orig$alpha[bh.match])
       old.beta.val = as.numeric(bh.orig$beta[bh.match])
-      
+
       if(setup.run$Type[j] == 'BHalpha'){
         new.alpha.val = ifelse(setup.run$Unit[j]=='scalar',old.alpha.val * setup.run$Value[j], setup.run$Value[j])
         new.beta.val = NA
@@ -273,10 +277,10 @@ for(i in 1:length(run.id)){
                     overwrite = T
                     )
     }
-    
+
     #Do KDENR tasks
     if(setup.run$Type[j] == 'KDENR'){
-      
+
       kdenr.match = which(kdenr.orig$group == setup.run$Code[j])
       old.kdenr = as.numeric(kdenr.orig$KDENR[kdenr.match])
       new.kdenr = ifelse(setup.run$Unit == 'scalar', old.kdenr * setup.run$Value[j], setup.run$Value[j])
@@ -285,10 +289,10 @@ for(i in 1:length(run.id)){
                        KDENR = new.kdenr,
                        overwrite = T)
     }
-    
+
     #Do Diet tasks
     if(setup.run$Type[j] == 'diet'){
-      
+
       group.string = strsplit(setup.run$Code[j],split = ':')[[1]]
       pred.name = group.string[1]
       prey.name = group.string[2]
@@ -296,7 +300,7 @@ for(i in 1:length(run.id)){
       prey.match = which(prey.names == prey.name)
       old.pprey = as.numeric(diet.orig[pred.match,prey.match+1])
       new.pprey = ifelse(setup.run$Unit[j] == 'scalar', old.pprey * setup.run$Value[j], setup.run$Value[j])
-      
+
       edit_param_pprey(atl.dir = here::here('currentVersion','/'),
                        biol.file = bio.file.new,
                        fgs.file = fgs.file,
@@ -306,10 +310,10 @@ for(i in 1:length(run.id)){
                        overwrite = T
                       )
     }
-    
+
     #Do Assimilation Efficiency
     if(setup.run$Type[j] %in% c('E','EPlant','EDR','EDL')){
-  
+
       edit_param_assim_eff(bio.file = bio.file.new,
                            spp.names = setup.run$Code[j],
                            type = setup.run$Type[j],
@@ -317,40 +321,51 @@ for(i in 1:length(run.id)){
                            value = setup.run$Value[j],
                            overwrite = T)
     }
-    
+
+    # Do k_temp_const tasks
+
+    if(setup.run$Type[j] %in% c('k.temp.const')){
+
+        edit_param_K_temp_const(bio.prm = bio.file.new,
+                           group.name = setup.run$Code[j],
+                           unit = setup.run$Unit[j],
+                           value = setup.run$Value[j],
+                           overwrite = T)
+    }
+
     #Do FSP
     if(setup.run$Type[j] == 'FSP'){
-      
+
       edit_param_FSP(bio.prm = bio.file.new,
                      group.name = setup.run$Code[j],
                      unit = setup.run$Unit[j],
                      value = setup.run$Value[j],
                      overwrite = T
                      )
-      
+
     }
-    
+
     if(setup.run$Type[j] == 'FSPB'){
-      
+
       fspb.old = as.numeric(fspb.orig[which(fspb.orig$group == setup.run$Code[j]),][-1])
       fspb.old = fspb.old[!is.na(fspb.old)]
-      
+
       if(setup.run$Unit[j] == 'scalar'){
-        
+
         fspb.new = fspb.old * setup.run$Value[j]
       }else{
         stop("Only type 'scalar' works for FSPB changes")
       }
-      
+
       edit_param_FSPB(bio.prm = bio.file.new,
                       group.name = setup.run$Code[j],
                       FSPB = fspb.new,
                       overwrite =T
                       )
     }
-    
+
     if(setup.run$Type[j] %in% c('aMigSize','jMigSize','aMigSurvive','jMigSurvive') ){
-      
+
       VarName = dplyr::case_when(
         setup.run$Type[j] == 'aMigSize' ~ 'MigPropSizeInc',
         setup.run$Type[j] == 'jMigSize' ~ 'MigPropSizeInc',
@@ -363,7 +378,7 @@ for(i in 1:length(run.id)){
         setup.run$Type[j] == 'aMigSurvive' ~ 1,
         setup.run$Type[j] == 'jMigSurvive' ~ 0,
       )
-      
+
       edit_param_mig_csv(mig.file = mig.file.new,
                          group.name = setup.run$Code[j],
                          StartStage = StartStage,
@@ -373,20 +388,20 @@ for(i in 1:length(run.id)){
                          overwrite =T
                          )
     }
-    
+
     if(setup.run$Type[j] == 'InitScalar'){
-      
+
       edit_param_init_scalar(run.prm = run.prm.new,
                              groups.file = groups.file,
                              group.name = setup.run$Code[j],
                              unit = setup.run$Unit[j],
                              value = setup.run$Value[j],
                              overwrite = T)
-      
+
     }
-    
+
     if(setup.run$Type[j] %in% c('ddepend','k.roc.food','roc.wgt')){
-      
+
       if(setup.run$Unit[j] == 'scalar'){
         stop('ddepend parameters only setup for Unit = "value"')
       }
@@ -396,9 +411,9 @@ for(i in 1:length(run.id)){
                          group.name = setup.run$Code[j],
                          overwrite =T)
     }
-    
+
     if(setup.run$Type[j] %in% c('min.temp','max.temp','min.salt','max.salt')){
-      
+
       if(setup.run$Unit[j] == 'scalar'){
         stop('Environmental Movement parameters only setup for Unit = "value"')
       }
@@ -407,7 +422,7 @@ for(i in 1:length(run.id)){
       }else if(setup.run$Type[j] %in% c('min.salt','max.salt')){
         env.var = 'salt'
       }
-      
+
       edit_param_env_move(bio.file = bio.file.new,
                           var.name = env.var,
                           group.name = setup.run$Code[j],
@@ -415,26 +430,26 @@ for(i in 1:length(run.id)){
                           max.val = ifelse(setup.run$Type[j] %in% c('max.temp','max.salt'),setup.run$Value[j], NA),
                           overwrite = T)
     }
-    
+
   }
-  
+
   #Write shell script
   run.sh.short = paste0('RunAtlantis_',run.id[i],'.sh')
   run.sh.new = here::here('currentVersion',run.sh.short)
   file.copy(run.sh.orig,run.sh.new)
-  
+
   #Edit shell script
   run.sh.new.lines = readLines(run.sh.new)
   run.command.line = grep('atlantisMerged',run.sh.new.lines)
   run.command.new =  paste0('atlantisMerged -i neus_init.nc 0 -o neus_output.nc -r ',run.prm.short,' -f at_force_LINUX.prm -p at_physics.prm -b ',bio.file.short,' -h at_harvest.prm -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -m ',mig.file.short,' -t . -d output')
   run.sh.new.lines[run.command.line] = run.command.new
-  
+
   writeLines(run.sh.new.lines,con = run.sh.new)
-  
-  #Track new param files 
+
+  #Track new param files
   setup.run$bio.file = bio.file.short
   setup.run$run.sh.file = run.sh.short
-  
+
   out.df[[i]] = setup.run
 }
 system('sudo chmod -R 775 *')
@@ -459,6 +474,11 @@ sbatch.lines[grep('mkdir',sbatch.lines)] = new.mkdir
 new.singularity = paste0( "sudo singularity exec --bind ",proj.dir,"currentVersion:/app/model,",proj.dir,"Atlantis_Runs/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID:/app/model/output /contrib/atlantisCode/atlantis6681.sif /app/model/RunAtlantis_$SLURM_ARRAY_TASK_ID.sh")
 sbatch.lines[grep('singularity',sbatch.lines)] = new.singularity
 
+writeLines(sbatch.lines,new.sbatch.array)
+
+# system("find . -name "*.sh" -exec chmod +x {} \;")
+batch.string = paste0("sbatch ",new.sbatch.array)
+#system(batch.string)
 writeLines(sbatch.lines,new.sbatch.array)
 
 # system("find . -name "*.sh" -exec chmod +x {} \;")
