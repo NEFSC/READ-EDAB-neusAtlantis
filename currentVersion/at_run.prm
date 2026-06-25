@@ -131,3 +131,7 @@ flag_mig_in_bioindx 1
 
 #6698
 flag_replicated_old_PPmort 0
+
+#3_6722
+trackWind 0
+trackpH 0
