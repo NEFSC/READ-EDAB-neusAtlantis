@@ -2,14 +2,14 @@
 library(dplyr)
 library(tidyr)
 
-run.forcing = F
-write.ts = F # CHANGED to T so files are actually written
-existing.setup = T
-do.run = T
+run.forcing =T
+write.ts = T # CHANGED to T so files are actually written
+existing.setup = F
+do.run = F
 # proj.dir = here::here('','')
 proj.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
 
-experiment.id = 'eof_targeting_3'
+experiment.id = 'eof_targeting_4'
 
 existing.setup.file = here::here('Setup_Files',paste0(experiment.id,'_setup.csv'))
 #Species mappings
@@ -150,7 +150,7 @@ for(i in 1:nrow(scenario_params)){
     #multiple by new scalars from scenario_output (FIXED: Divided by 365 for daily rate)
     new.catch = base.catch.y.tot |> 
       dplyr::left_join(scenario_output, by = c('Time.y' = 'Time')) |> 
-      dplyr::mutate(catch.new = (catch.annual.mgN.s * subgroup_weight * current_scale) / 365,
+      dplyr::mutate(catch.new = (catch.annual.mgN.s * subgroup_weight * current_scale),
                     catch.scale = current_scale,
                     Time.d = Time.y * 365) |>
       dplyr::left_join(base.catch.y, by = c('Time.y',"SubGroup" = "Variable"))
@@ -163,7 +163,7 @@ for(i in 1:nrow(scenario_params)){
     new.catch.test = new.catch |>
       dplyr::group_by(Time.y,Group) |>
       dplyr::summarise(group.Total = sum(catch.orig.mgN.s, na.rm = T),
-                       group.NewTotal = sum(catch.new * 365,na.rm=T), # Need *365 here to test against annual total
+                       group.NewTotal = sum(catch.new,na.rm=T), # Need *365 here to test against annual total
                        group_weight = mean(group_weight)) |>
       dplyr::group_by(Time.y) |>
       dplyr::mutate(Total = sum(group.Total,na.rm=T),
@@ -179,6 +179,20 @@ for(i in 1:nrow(scenario_params)){
       stop('Stopping script')
     }
     
+    #Test if new catch is correct scalar of original catch
+    real.scalar.test = new.catch %>% 
+      dplyr::group_by(Time.y) %>%
+      dplyr::summarise(new.total = sum(catch.new,na.rm=T),
+                       old.total = sum(catch.orig.mgN.s,na.rm=T)) %>% 
+      dplyr::mutate(real.scalar = new.total/old.total,
+                    scalar.diff = real.scalar - current_scale)
+    
+    if(real.scalar.test$scalar.diff |> abs() |> max(na.rm=T) > 0.01){
+      message('Warning: Total catch by group does not match expected total')
+      message(paste0('Stopped at scenario ',i))
+      stop('Stopping script')
+    }
+      
     new.catch = new.catch |> 
       dplyr::select(Time.y,SubGroup,catch.new)
     
@@ -188,6 +202,13 @@ for(i in 1:nrow(scenario_params)){
       dplyr::mutate(Time.y = floor(Time.d/365)) |> 
       dplyr::left_join(new.catch, by = c('Time.y', 'Variable' = 'SubGroup')) |> 
       dplyr::select(Time.d, Variable, catch.new)
+    
+    real.catch.d.test = base.catch.d %>% 
+      dplyr::left_join(new.catch.d) %>% 
+      dplyr::group_by(Time.d) %>% 
+      dplyr::summarise(old.catch = sum(catch.orig.mgN.s,na.rm=T),
+                      new.catch =sum(catch.new,na.rm=T)) %>% 
+      dplyr::mutate(real.scalar = new.catch/old.catch)
     
     #Format other files for initialization
     

@@ -1,7 +1,7 @@
 #script to generate catch forcing by a scalar of the base ts file and run the output
 library(dplyr)
 
-experiment.id = 'catch_thresholds_eof_uniform_standard'
+experiment.id = 'catch_thresholds_eof_uniform_standard_2'
 
 write.out =T
 
@@ -15,7 +15,7 @@ source(paste0(proj.dir,'R/Forcing_Fishing/scale_forcing_ts.r'))
 #Define threshold range
 # thresh.v = seq(0,1e7,1E5)
 targeting_setup = read.csv(here::here('Setup_Files','eof_targeting_3_setup.csv'))
-thresh.v = sort(unique(targeting_setup$catch.scalar))
+thresh.v = sort(unique(targeting_setup$eof_threshold_mT))
 
 #Get base catch
 base.catch.file = here::here('currentVersion','CatchFiles','total_catch.ts')
