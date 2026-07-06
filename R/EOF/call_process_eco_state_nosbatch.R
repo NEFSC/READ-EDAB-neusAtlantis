@@ -21,14 +21,16 @@ if (length(args) == 0) {
   # stop("Error: No array task ID provided. Please run this script with an argument (e.g., Rscript process_run.R 1)")
   # args = run.dirs
   experiment.id = 'eof_targeting_3'
-  setup.df = read.csv(here::here('Setup_Files','catch_thresholds_eof_setup.csv'))
+  setup.df = read.csv(here::here('Setup_Files','eof_targeting_3_setup.csv'))
   run.dirs = paste0('/atlantisdisk2/',experiment.id,'/',experiment.id,'_',setup.df$run,'/')
-  redo = T
+  redo = F
+  missing.files = T
   
   
 }else{
   
   array_task_id = as.integer(args[1])
+  missing.files = F
 }
 i=1
 # --- Setup file and experiment ID ---
@@ -37,12 +39,22 @@ experiment.id = 'eof_targeting_3'
 setup.df = read.csv(paste0(project.dir,'Setup_Files/',experiment.id,'_setup.csv'))
 run.dir.index = setup.df$run.id
 if(redo == T){
-  output.dirs = list.files(paste0('/atlantisarchive/Joseph.Caracappa/',experiment.id,'/analysis/'),include.dirs = T)
+  output.dirs = list.files(paste0('/atlantisarchive/Joseph.Caracappa/',experiment.id,'/'),include.dirs = T)
   complete.names = paste0(experiment.id,'_',setup.df$run)
   which.missing = which(!(complete.names %in% output.dirs))
   run.dirs = paste0('/atlantisdisk2/',experiment.id,'/',experiment.id,'_',which.missing,'/')
   run.dir.index = which.missing
 }
+
+rerun.out.check = function(file.name){
+  this.exists = file.exists(file.name)
+  this.nonzero = file.size(file.name) ==0
+  need.rerun = this.exists == F| this.nonzero == T
+  return(need.rerun)
+}
+
+expect.post.process = c('biomass.rds','biomass_age.rds','catch.rds','length_age.rds','numbers_age.rds')
+
 for(i in 1:length(run.dirs)){
     
   array_task_id = run.dirs[i]
@@ -54,6 +66,11 @@ for(i in 1:length(run.dirs)){
   message(paste0("Processing run for array task ID: ", array_task_id))
   message(paste0("Corresponding R run index: ", run_index))
   
+  export.dir = paste0('/atlantisarchive/Joseph.Caracappa/',experiment.id,'/',experiment.id,'_',run.dir.index[i],'/data/')
+  if(!dir.exists(export.dir)){
+    dir.create(export.dir, recursive = TRUE)
+    # system(paste0('sudo chmod 777 -R ',export.dir)) # This might not work on all systems.
+  }
 
   # Check if the run_index is valid
   # if (run_index > nrow(setup.df) || run_index < 1) {
@@ -90,27 +107,49 @@ for(i in 1:length(run.dirs)){
   
   # make_eco_indicators_time
   message(paste0("Processing eco indicators time: ", run.dir))
-  run.ind.t = atlantiseof::make_eco_indicators_time(param.dir = paste0(project.dir,'currentVersion/'),
-                                                    atl.dir = run.dirs[i],
-                                                    group.index = group.index.file,
-                                                    fgs.file = paste0(project.dir,'currentVersion/neus_groups.csv'),
-                                                    dietSource = 'detdiet',
-                                                    timeRange = 1:100,
-                                                    survdat.data = survdat.data,
-                                                    cloud = TRUE
-  )
+  if(missing.files){
+    check.eco.time = rerun.out.check(paste0(export.dir, 'eco_indicators_ts.rds'))
+    if(check.eco.time){message(paste0('ReRunning Eco Time: ',run.dir))}
+  }else{
+    check.eco.time = T
+  }
   
+  if(check.eco.time){
+    run.ind.t = atlantiseof::make_eco_indicators_time(param.dir = paste0(project.dir,'currentVersion/'),
+                                                      atl.dir = run.dirs[i],
+                                                      group.index = group.index.file,
+                                                      fgs.file = paste0(project.dir,'currentVersion/neus_groups.csv'),
+                                                      dietSource = 'detdiet',
+                                                      timeRange = 1:100,
+                                                      survdat.data = survdat.data,
+                                                      cloud = TRUE
+    )
+    saveRDS(run.ind.t, paste0(export.dir, 'eco_indicators_ts.rds'))
+    
+  }
+ 
   # make_eco_indicators
   message(paste0("Processing eco indicators: ", run.dir))
-  run.ind.mean = atlantiseof::make_eco_indicators(param.dir = paste0(project.dir,'currentVersion/'),
-                                                  atl.dir = run.dirs[i],
-                                                  group.index = group.index.file,
-                                                  fgs.file =paste0(project.dir,'currentVersion/neus_groups.csv'),
-                                                  dietSource = 'detdiet',
-                                                  timeRange = 1:100,
-                                                  cloud = TRUE
-  )
   
+  if(missing.files){
+    check.eco.mean = rerun.out.check(paste0(export.dir,'eco_indicators_mean.rds'))
+    if(check.eco.mean){message(paste0('ReRunning Eco Mean: ',run.dir))}
+  }else{
+    check.eco.mean = T
+  }
+  
+  if(check.eco.time){
+    run.ind.mean = atlantiseof::make_eco_indicators(param.dir = paste0(project.dir,'currentVersion/'),
+                                                    atl.dir = run.dirs[i],
+                                                    group.index = group.index.file,
+                                                    fgs.file =paste0(project.dir,'currentVersion/neus_groups.csv'),
+                                                    dietSource = 'detdiet',
+                                                    timeRange = 1:100,
+                                                    cloud = TRUE
+    )
+    saveRDS(run.ind.mean, paste0(export.dir,'eco_indicators_mean.rds'))
+  }
+
   param.ls = atlantisdiagnostics::get_atl_paramfiles(param.dir =paste0(project.dir,'currentVersion/'),
                                                     atl.dir = run.dirs[i],
                                                     run.prefix = 'neus_output',
@@ -119,7 +158,7 @@ for(i in 1:length(run.dirs)){
   
   # Create data subdirectory within the run directory and set permissions
   # Again, avoid 'sudo' in job scripts. Ensure your user has write permissions to run.dirs[i]
-  # data.dir = paste0(run.dirs[i],'data')
+  data.dir = paste0(run.dirs[i],'data')
   if(!dir.exists(data.dir)){
     dir.create(data.dir, recursive = TRUE)
     # system(paste0('sudo chmod -R 777 ',data.dir)) # This might not work on all systems.
@@ -127,47 +166,59 @@ for(i in 1:length(run.dirs)){
   }
 
   message(paste0("Normal Post Processing: ", run.dir))
-  include.catch = setup.df$catch.scalar[setup.df$run.id == array_task_id] != 0
-  # Process Atlantis output
-  if (run.ind.mean$catch.tot == 0) {
-    atlantisdiagnostics::process_atl_output(param.dir = paste0(project.dir,'currentVersion/'),
-                                           atl.dir = run.dirs[i],
-                                           out.dir = data.dir,
-                                           run.prefix = 'neus_output',
-                                           param.ls = param.ls,
-                                           plot.length.age = TRUE,
-                                           plot.biomass.timeseries = TRUE,
-                                           plot.numbers.timeseries = TRUE,
-                                           plot.catch = include.catch)
-  } else {
-    atlantisdiagnostics::process_atl_output(param.dir = paste0(project.dir,'currentVersion/'),
-                                           atl.dir = run.dirs[i],
-                                           out.dir = data.dir,
-                                           run.prefix = 'neus_output',
-                                           param.ls = param.ls,
-                                           plot.length.age = TRUE,
-                                           plot.biomass.timeseries = TRUE,
-                                           plot.numbers.timeseries = TRUE,
-                                           plot.catch = include.catch)
+  this.run = run.dir.index[which(run.dirs == array_task_id)]
+  include.catch = setup.df$catch.scalar[this.run] != 0
+  
+  if(missing.files){
+    
+    if(include.catch){
+      check.post.process = any(sapply(file.path(data.dir,expect.post.process),rerun.out.check))  
+    }else{
+      check.post.process = any(sapply(file.path(data.dir,expect.post.process[-which(expect.post.process == 'catch.rds')]),rerun.out.check))
+    }
+    if(check.post.process){message(paste0('ReRunning Main Post Processing: ',run.dir))}
+    
+  }else{
+    check.post.process = T
   }
+  # Process Atlantis output
+  if(check.post.process){
+        atlantisdiagnostics::process_atl_output(param.dir = paste0(project.dir,'currentVersion/'),
+                                              atl.dir = run.dirs[i],
+                                              out.dir = data.dir,
+                                              run.prefix = 'neus_output',
+                                              param.ls = param.ls,
+                                              plot.length.age = TRUE,
+                                              plot.biomass.timeseries = TRUE,
+                                              plot.numbers.timeseries = TRUE,
+                                              plot.catch = include.catch)
+  }
+  
   
   # Calculate PPR and PPC
   message(paste0("Processing PPC: ", run.dir))
-  ppc = atlantiseof::get_ppc(param.dir =paste0(project.dir,'currentVersion/'),
-                             atl.dir = run.dirs[i],
-                             fgs = paste0(project.dir,'currentVersion/neus_groups.csv'),
-                             dietSource = 'realized',
-                             timeRange = 1:100)
+  if(missing.files){
+    check.ppc = rerun.out.check(paste0(export.dir,'ppc.rds'))
+    if(check.ppc){message(paste0('ReRunning PPC: ',run.dir))}
+  }else{
+    check.ppc = T
+  }
+  
+  if(check.ppc){
+    ppc = atlantiseof::get_ppc(param.dir =paste0(project.dir,'currentVersion/'),
+                               atl.dir = run.dirs[i],
+                               fgs = paste0(project.dir,'currentVersion/neus_groups.csv'),
+                               dietSource = 'realized',
+                               timeRange = 1:100)
+    saveRDS(ppc, paste0(export.dir,'ppc.rds'))
+  }
+
   
   # --- Export results to atlantisarchive ---
   # Create export directory
   # Note: 'sudo' commands are typically not used within Slurm jobs.
   # Ensure /atlantisarchive has appropriate permissions or use a user-writable path.
-  export.dir = paste0('/atlantisarchive/Joseph.Caracappa/',experiment.id,'/analysis/',experiment.id,'_',run.dir.index[i],'/')
-  if(!dir.exists(export.dir)){
-    dir.create(export.dir, recursive = TRUE)
-    # system(paste0('sudo chmod 777 -R ',export.dir)) # This might not work on all systems.
-  }
+
   # 
   # # Copy processed files
   # files.export = c('biomass.rds','biomass_age.rds','length_age.rds','numbers_age.rds','catch.rds')
@@ -176,10 +227,6 @@ for(i in 1:length(run.dirs)){
   # # Copy detdiet processed file
   # file.copy(from = paste0(run.dirs[i],'neus_outputDetDiet_processed.gz'), to = paste0(export.dir,'neus_outputDetDiet_processed.gz'), overwrite = TRUE)
   # 
-  # Save R objects
-  saveRDS(run.ind.t, paste0(export.dir, 'eco_indicators_ts.rds'))
-  saveRDS(run.ind.mean, paste0(export.dir,'eco_indicators_mean.rds'))
-  saveRDS(ppc, paste0(export.dir,'ppc.rds'))
   
   toc() # End timing for this run
   message(paste0("Finished processing run ", run_index))

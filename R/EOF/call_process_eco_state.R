@@ -14,9 +14,9 @@ library(atlantisdiagnostics)
 args = commandArgs(trailingOnly = TRUE)
 if (length(args) == 0) {
   message("Error: No array task ID provided. Please run this script with an argument (e.g., Rscript process_run.R 1)")
-  array_task_id = 1
-  experiment.id = 'eof_targeting_3'
-  run.dir = paste0('/atlantisdisk2/',experiment.id,'/',experiment.id,'_',array_task_id,'/')
+  array_task_id = 2
+  experiment.id = 'catch_thresholds_eof_uniform_standard'
+  run.dir = paste0('/atlantisarchive/Joseph.Caracappa/',experiment.id,'/',experiment.id,'_',array_task_id,'/')
 }else{
   
   array_task_id = as.integer(args[1])
@@ -87,9 +87,9 @@ run.files = list.files(run.dir)
 data.files = list.files(data.dir)
 
 
-include.catch = setup.df$catch.scalar[setup.df$run.id == array_task_id] != 0
+include.catch = setup.df$catch.scalar[setup.df$run == array_task_id] != 0
 if (sum(grepl('Catch.txt',run.files))==0) {
-  expected.data.files = c('biomass_age_invert.rds', 'biomass_age.rds', 'biomass.rds', 
+  expected.data.files = c('biomass_age_invert.rds', 'biomass_age.rds', 'biomass.rds', 'biomass_box.rds','biomass_box_invert.rds',
                            'data_age_mat.rds', 'dz.rds', 'length_age.rds', 'nominal_dz.rds', 'numbers_age.rds',
                            'numbers_box.rds', 'numbers.rds', 'RN_age_mean.rds', 'RN_age.rds', 'SN_age_mean.rds',
                            'SN_age.rds', 'volume.rds')
@@ -102,13 +102,15 @@ if (sum(grepl('Catch.txt',run.files))==0) {
                                             plot.length.age = TRUE,
                                             plot.biomass.timeseries = TRUE,
                                             plot.numbers.timeseries = TRUE,
+                                            plot.biomass.box = TRUE,
+                                            plot.spatial.biomass.seasonal = T,
                                             plot.catch = include.catch)
   }
 } else {
   expected.data.files = c('biomass_age_invert.rds', 'biomass_age.rds', 'biomass.rds', 'catch.rds', 'catchmt.rds',
                           'data_age_mat.rds', 'dz.rds', 'length_age.rds', 'nominal_dz.rds', 'numbers_age.rds',
                           'numbers_box.rds', 'numbers.rds', 'RN_age_mean.rds', 'RN_age.rds', 'SN_age_mean.rds',
-                          'SN_age.rds', 'totcatch.rds', 'volume.rds')
+                          'SN_age.rds', 'totcatch.rds', 'volume.rds','biomass_box.rds','biomass_box_invert.rds')
   if(!all(expected.data.files %in% data.files)){
     
     atlantisdiagnostics::process_atl_output(param.dir = paste0(project.dir,'currentVersion/'),
@@ -119,10 +121,13 @@ if (sum(grepl('Catch.txt',run.files))==0) {
                                             plot.length.age = TRUE,
                                             plot.biomass.timeseries = TRUE,
                                             plot.numbers.timeseries = TRUE,
+                                            plot.biomass.box = TRUE,
+                                            plot.spatial.biomass.seasonal = TRUE,
                                             plot.catch = include.catch)
   }
 }
 message('Finished process_atl_output for run:',run_index)
+message('Current PostProcessed Output:',paste0(list.files(data.dir),collapse = ', '))
 
 # make_eco_indicators_time
 message('Running make_eco_indicators_time for run:',run_index)
@@ -160,7 +165,8 @@ message('Finished get_ppcs for run:',run_index)
 
 message('Exporting results for run:',run_index)
 # --- Export results to atlantisarchive ---
-export.dir = paste0('/atlantisarchive/Joseph.Caracappa/',experiment.id,'/analysis/',experiment.id,'_',run_index,'/')
+# export.dir = paste0('/atlantisarchive/Joseph.Caracappa/',experiment.id,'/analysis/',experiment.id,'_',run_index,'/')
+export.dir = paste0(run.dir,'data/')
 if(!dir.exists(export.dir)){
   dir.create(export.dir, recursive = TRUE)
 }

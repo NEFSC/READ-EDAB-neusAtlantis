@@ -1,9 +1,9 @@
 #script to generate catch forcing by a scalar of the base ts file and run the output
 library(dplyr)
 
-experiment.id = 'catch_thresholds_eof_2'
+experiment.id = 'catch_thresholds_eof_uniform_standard'
 
-write.out =F
+write.out =T
 
 # proj.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
 proj.dir = here::here('','')
@@ -13,10 +13,13 @@ source(paste0(proj.dir,'R/Forcing_Fishing/get_forcing_ts.r'))
 source(paste0(proj.dir,'R/Forcing_Fishing/scale_forcing_ts.r'))
 
 #Define threshold range
-thresh.v = seq(0,1e7,1E5)
+# thresh.v = seq(0,1e7,1E5)
+targeting_setup = read.csv(here::here('Setup_Files','eof_targeting_3_setup.csv'))
+thresh.v = sort(unique(targeting_setup$catch.scalar))
 
 #Get base catch
-base.catch = get_forcing_ts(code = NULL, filenm = 'total_catch',time = 'annual')
+base.catch.file = here::here('currentVersion','CatchFiles','total_catch.ts')
+base.catch = get_forcing_ts(code = NULL, file_path = base.catch.file,time = 'annual')
 ##aggregate by year
 base.catch.yr = base.catch %>%
   group_by(Time) %>%
@@ -101,14 +104,18 @@ file.copy(base.sbatch.array,new.sbatch.array,overwrite = T)
 
 #replace max array number
 sbatch.lines = readLines(new.sbatch.array)
+
+new.partition.line = '#SBATCH --partition=computelow'
+sbatch.lines[grep('--partition',sbatch.lines)] = new.partition.line
+
 new.array.line = paste0('#SBATCH --array=1-',nrow(setup.df))
 sbatch.lines[grep('--array',sbatch.lines)] = new.array.line
 
 #replace directories
-new.mkdir = paste0("sudo mkdir -p /atlantisdisk/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID")
+new.mkdir = paste0("sudo mkdir -p /atlantisdisksmall/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID")
 sbatch.lines[grep('mkdir',sbatch.lines)] = new.mkdir
 
-new.singularity = paste0( "sudo singularity exec --bind ",proj.dir,"currentVersion:/app/model,/atlantisdisk/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID:/app/model/output /model/atlantisCode/atlantis6681.sif /app/model/runAtlantis_$SLURM_ARRAY_TASK_ID.sh")
+new.singularity = paste0( "sudo singularity exec --bind ",proj.dir,"currentVersion:/app/model,/atlantisdisksmall/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID:/app/model/output /model/atlantisCode/atlantis6681.sif /app/model/runAtlantis_$SLURM_ARRAY_TASK_ID.sh")
 sbatch.lines[grep('singularity',sbatch.lines)] = new.singularity
 
 writeLines(sbatch.lines,new.sbatch.array)
