@@ -7,12 +7,23 @@
 #'Unit: supplied value type: value or scalar
 #'Value: Value to be written to biology.prm
 library(dplyr)
+##################################
+###### SETUP: USER DEFINED #######
+##################################
 
-#Read in setup file
+#Name of Experiment/Batch Run
 experiment.id = 'ddepend_1'
+#Name of Setup File
 setup.df = read.csv(here::here('Setup_Files','cloud_v6681_ddepend_1_setup.csv'),as.is=T)
-# setup.df = read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'))
-proj.dir = '/contrib/Joseph.Caracappa/calibration/'
+#Name of where R github project is located
+proj.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
+#Name of template sbatch file
+base.sbatch.array = paste0(proj.dir,'currentVersion/sbatch_scenario_array_base.sh')
+#Name of where run output should be written
+out.dir = paste0('/atlantidisk2/',experiment.id,'/')
+
+##################################
+##################################
 
 #Define base files
 bio.file.orig = here::here('currentVersion','at_biology.prm')
@@ -443,7 +454,6 @@ out.df = bind_rows(out.df)
 write.csv(out.df, paste0(proj.dir,'Setup_Files/',experiment.id,'_setup.csv'),row.names = F)
 
 
-base.sbatch.array = paste0(proj.dir,'currentVersion/sbatch_scenario_array_base.sh')
 new.sbatch.array =  paste0(proj.dir,'currentVersion/sbatch_',experiment.id,'.sh')
 file.copy(base.sbatch.array,new.sbatch.array,overwrite = T)
 
@@ -453,10 +463,10 @@ new.array.line = paste0('#SBATCH --array=1-',length(run.id))
 sbatch.lines[grep('--array',sbatch.lines)] = new.array.line
 
 #replace directories
-new.mkdir = paste0("sudo mkdir -p ",proj.dir,"Atlantis_Runs/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID")
+new.mkdir = paste0("sudo mkdir -p ",out.dir,experiment.id,"_$SLURM_ARRAY_TASK_ID")
 sbatch.lines[grep('mkdir',sbatch.lines)] = new.mkdir
 
-new.singularity = paste0( "sudo singularity exec --bind ",proj.dir,"currentVersion:/app/model,",proj.dir,"Atlantis_Runs/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID:/app/model/output /contrib/atlantisCode/atlantis6681.sif /app/model/RunAtlantis_$SLURM_ARRAY_TASK_ID.sh")
+new.singularity = paste0( "sudo singularity exec --bind ",proj.dir,"currentVersion:/app/model,",out.dir,experiment.id,"_$SLURM_ARRAY_TASK_ID:/app/model/output /contrib/atlantisCode/atlantis6681.sif /app/model/RunAtlantis_$SLURM_ARRAY_TASK_ID.sh")
 sbatch.lines[grep('singularity',sbatch.lines)] = new.singularity
 
 writeLines(sbatch.lines,new.sbatch.array)
