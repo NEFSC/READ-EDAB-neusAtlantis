@@ -1,14 +1,14 @@
 #!/bin/bash
 #SBATCH --job-name=R_array_job
-#SBATCH --array=1-11
+#SBATCH --array=1-660
 #SBATCH --ntasks=1
 ##SBATCH --cpus-per-task=1
 #SBATCH --partition=computelow
-##SBATCH -o "/atlantisarchive/Joseph.Caracappa/eof_targeting_3/out/R_job_%A_%a.out"
-##SBATCH -e "/atlantisarchive/Joseph.Caracappa/eof_targeting_3/err/R_job_%A_%a.err"
+##SBATCH -o "/atlantisarchive/Joseph.Caracappa/eof_targeting_4/out/R_job_%A_%a.out"
+##SBATCH -e "/atlantisarchive/Joseph.Caracappa/eof_targeting_4/err/R_job_%A_%a.err"
 
 # Define variables for clarity and reusability
-EXPERIMENT_NAME="catch_thresholds_eof_uniform_standard"
+EXPERIMENT_NAME="eof_targeting_4"
 PROJECT_DIR='/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
 OUTPUT_BASE_DIR="/atlantisarchive/Joseph.Caracappa/$EXPERIMENT_NAME"
 

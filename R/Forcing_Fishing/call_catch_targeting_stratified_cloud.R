@@ -2,10 +2,10 @@
 library(dplyr)
 library(tidyr)
 
-run.forcing =T
-write.ts = T # CHANGED to T so files are actually written
-existing.setup = F
-do.run = F
+run.forcing =F
+write.ts = F # CHANGED to T so files are actually written
+existing.setup = T
+do.run = T
 # proj.dir = here::here('','')
 proj.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
 
@@ -52,13 +52,25 @@ base.catch.d = get_forcing_ts(file_path = catch.file.orig, code = NULL, time = '
                 Time.d = 'Time') %>% 
   dplyr::mutate(catch.orig.mT.d = 86400*catch.orig.mgN.s/mt_yr_2_mgn_yr)
 
+# 1. Identify constant years in the original data by checking the daily range
+constant_flags <- base.catch.d |>
+  dplyr::mutate(Time.y = floor(Time.d / 365)) |>
+  dplyr::group_by(Time.y, Variable) |>
+  dplyr::summarise(
+    catch_max = max(catch.orig.mgN.s, na.rm = TRUE),
+    catch_min = min(catch.orig.mgN.s, na.rm = TRUE),
+    # Use a small tolerance (1e-6) instead of '==' to handle floating-point quirks
+    is_constant = (catch_max - catch_min) < 1e-6, 
+    .groups = 'drop'
+  )
+
 # a = filter(base.catch.d, Variable == 'BLF')
 # plot(catch.orig.mT.d~Time.d,a,type = 'l')
 
 base.catch.y = base.catch.d |> 
   dplyr::mutate(Time.y = floor(Time.d/ 365)) |> 
   dplyr::group_by(Time.y,Variable) |> 
-  dplyr::summarise(catch.orig.mgN.s = sum(catch.orig.mgN.s,na.rm=T),
+  dplyr::summarise(catch.orig.mgN.s = mean(catch.orig.mgN.s,na.rm=T), #MEAN not sum
                    catch.orig.mT.y = sum(catch.orig.mT.d,na.rm=T))
 
 # b = filter(base.catch.y, Variable == 'BLF')
@@ -192,15 +204,15 @@ for(i in 1:nrow(scenario_params)){
       message(paste0('Stopped at scenario ',i))
       stop('Stopping script')
     }
-      
-    new.catch = new.catch |> 
-      dplyr::select(Time.y,SubGroup,catch.new)
+    #   
+    # new.catch = new.catch |> 
+    #   dplyr::select(Time.y,SubGroup,catch.new)
     
     #### Apply new catch forcing file and write out
     #Create new catch TS files
     new.catch.d = base.catch.d |>  
       dplyr::mutate(Time.y = floor(Time.d/365)) |> 
-      dplyr::left_join(new.catch, by = c('Time.y', 'Variable' = 'SubGroup')) |> 
+      dplyr::left_join(dplyr::select(new.catch,Time.y,SubGroup,catch.new), by = c('Time.y', 'Variable' = 'SubGroup')) |> 
       dplyr::select(Time.d, Variable, catch.new)
     
     real.catch.d.test = base.catch.d %>% 
@@ -208,7 +220,29 @@ for(i in 1:nrow(scenario_params)){
       dplyr::group_by(Time.d) %>% 
       dplyr::summarise(old.catch = sum(catch.orig.mgN.s,na.rm=T),
                       new.catch =sum(catch.new,na.rm=T)) %>% 
-      dplyr::mutate(real.scalar = new.catch/old.catch)
+      dplyr::mutate(real.scalar = new.catch/old.catch,
+                    scalar.diff = real.scalar - current_scale)
+    
+    # 2. Join, filter, and calculate differences
+    validation_df <- test_data |> 
+      dplyr::inner_join(new.catch.d, by = c("Time.d", "Variable")) |>
+      dplyr::mutate(Time.y = floor(Time.d / 365)) |>
+      # Bring in our flags
+      dplyr::left_join(constant_flags, by = c("Time.y", "Variable")) |>
+      # Exclude transition years where catch is not constant!
+      dplyr::filter(is_constant == TRUE) |> 
+      # Calculate relative difference
+      dplyr::mutate(diff = abs(catch.written - catch.new),
+                    rel_diff = ifelse(catch.new == 0, diff, diff / catch.new))
+    
+    # Determine the maximum difference ONLY on the constant years
+    max_diff <- max(validation_df$rel_diff, na.rm = TRUE)
+    
+    if (max_diff > 1e-4) {
+      stop(sprintf("ERROR: Validation failed for Scenario %d! Max relative difference is %f. The written .ts file does not match the expected scalars.", i, max_diff))
+    } else {
+      message(sprintf("Success: Scenario %d TS file passed validation (Max diff: %e).", i, max_diff))
+    }
     
     #Format other files for initialization
     

@@ -20,9 +20,9 @@ args = commandArgs(trailingOnly = TRUE)
 if (length(args) == 0) {
   # stop("Error: No array task ID provided. Please run this script with an argument (e.g., Rscript process_run.R 1)")
   # args = run.dirs
-  experiment.id = 'eof_targeting_3'
-  setup.df = read.csv(here::here('Setup_Files','eof_targeting_3_setup.csv'))
-  run.dirs = paste0('/atlantisdisk2/',experiment.id,'/',experiment.id,'_',setup.df$run,'/')
+  experiment.id = 'eof_targeting_4'
+  setup.df = read.csv(here::here('Setup_Files','eof_targeting_4_setup.csv'))
+  run.dirs = paste0('/atlantisarchive/Joseph.Caracappa/',experiment.id,'/',experiment.id,'_',setup.df$run,'/')
   redo = F
   missing.files = T
   
@@ -35,14 +35,14 @@ if (length(args) == 0) {
 i=1
 # --- Setup file and experiment ID ---
 project.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
-experiment.id = 'eof_targeting_3'
+experiment.id = 'eof_targeting_4'
 setup.df = read.csv(paste0(project.dir,'Setup_Files/',experiment.id,'_setup.csv'))
 run.dir.index = setup.df$run.id
 if(redo == T){
   output.dirs = list.files(paste0('/atlantisarchive/Joseph.Caracappa/',experiment.id,'/'),include.dirs = T)
   complete.names = paste0(experiment.id,'_',setup.df$run)
   which.missing = which(!(complete.names %in% output.dirs))
-  run.dirs = paste0('/atlantisdisk2/',experiment.id,'/',experiment.id,'_',which.missing,'/')
+  run.dirs = paste0('/atlantisarchive/Joseph.Caracappa/',experiment.id,'/',experiment.id,'_',which.missing,'/')
   run.dir.index = which.missing
 }
 
@@ -90,7 +90,7 @@ for(i in 1:length(run.dirs)){
   
   # Get the specific run directory for this task
   
-  run.dir = paste0('/atlantisdisk2/',experiment.id,'/',experiment.id,'_',run.dir.index[i],'/')
+  run.dir = paste0('/atlantisarchive/Joseph.Caracappa/',experiment.id,'/',experiment.id,'_',run.dir.index[i],'/')
   message(paste0("Processing run directory: ", run.dir))
   
   # --- Perform calculations for the specific run ---

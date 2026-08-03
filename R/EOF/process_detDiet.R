@@ -14,21 +14,23 @@ library(doParallel)  # Parallel backend
 
 # --- Setup variables and paths ---
 project.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
-experiment.id = 'catch_thresholds_eof_uniform_standard'
+experiment.id = 'eof_targeting_4'
 setup.df = read.csv(paste0(project.dir, 'Setup_Files/', experiment.id, '_setup.csv'))
+partition.name = 'atlantisarchive/Joseph.Caracappa'
 run.dir.index = setup.df$run
 redo = FALSE
 
-system('sudo chmod 777 -R /atlantisdisksmall/')
+
+system(paste0('sudo chmod 777 -R /',partition.name,'/'))
 
 if(redo == TRUE){
   output.dirs = list.files(paste0('/atlantisarchive/Joseph.Caracappa/', experiment.id, '/analysis/'), include.dirs = T)
   complete.names = paste0(experiment.id, '_', setup.df$run)
   which.missing = which(!(complete.names %in% output.dirs))
-  run.dirs = paste0('/atlantisdisksmall/', experiment.id, '/', experiment.id, '_', which.missing, '/')
+  run.dirs = paste0('/',partition.name,'/', experiment.id, '/', experiment.id, '_', which.missing, '/')
   run.dir.index = which.missing
 } else {
-  run.dirs = paste0('/atlantisdisksmall/', experiment.id, '/', experiment.id, '_', setup.df$run, '/')
+  run.dirs = paste0('/',partition.name,'/', experiment.id, '/', experiment.id, '_', setup.df$run, '/')
 }
 
 # --- Initialize Parallel Backend (Forking) ---
@@ -45,7 +47,7 @@ tic() # Start timer
 parallel_results <- foreach(i = 1:length(run.dirs)) %dopar% {
   
   run_index = run.dir.index[i]
-  run.dir = paste0('/atlantisdisksmall/', experiment.id, '/', experiment.id, '_', run_index, '/')
+  run.dir = paste0('/',partition.name,'/', experiment.id, '/', experiment.id, '_', run_index, '/')
   
   # Print progress directly to the console
   cat(sprintf("[%s] STARTING: run directory %s\n", Sys.time(), run.dir), file = stderr())

@@ -15,7 +15,7 @@ args = commandArgs(trailingOnly = TRUE)
 if (length(args) == 0) {
   message("Error: No array task ID provided. Please run this script with an argument (e.g., Rscript process_run.R 1)")
   array_task_id = 2
-  experiment.id = 'catch_thresholds_eof_uniform_standard'
+  experiment.id = 'eof_targeting_4'
   run.dir = paste0('/atlantisarchive/Joseph.Caracappa/',experiment.id,'/',experiment.id,'_',array_task_id,'/')
 }else{
   
