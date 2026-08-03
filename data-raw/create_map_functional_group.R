@@ -107,7 +107,7 @@ create_map_functional_group <- function(channel,writeToFile=F) {
     dplyr::filter(is.na(NESPP3) | !(is.na(SVSPP) & NESPP3 == 512))
   
   write.csv(masterList,here::here("data-raw/data/Atlantis_2_0_groups_svspp_nespp3.csv"))
-  
+
   # format to markdown table. Copy output to wiki
   # open file and write
   outputFile <- here::here("data","functionalGroupNames.txt")
@@ -118,7 +118,7 @@ create_map_functional_group <- function(channel,writeToFile=F) {
   spacer <- paste0("|",paste0(rep("---",ncol(masterList)),collapse = "|"),"|")
   cat(spacer,file=fileConn,append=T)
   cat("\n",file=fileConn,append=T)
-  
+
   for (irow in 1:nrow(masterList)) {
     rowData <- paste0("|",paste0(masterList[irow,],collapse = "|"),"|")
     cat(rowData,file=fileConn,append=T)
@@ -126,6 +126,15 @@ create_map_functional_group <- function(channel,writeToFile=F) {
   }
   
   close(fileConn)
+  
+  # remove species with 2 nespp3 codes. Remove code deals with bits and pieces
+  # cod, goosefish, haddock, pollock, winter flounder
+  masterList <- masterList |> 
+    dplyr::filter(is.na(NESPP3) | !(NESPP3 %in% c(82,11,148,270,119)) )
+  
+  
+  # readr::write_csv(masterList,here::here("data/masterList.csv"))
+  
   
   if(writeToFile){
     readr::write_csv(masterList,here::here("data","functionalGroupNames.csv"))

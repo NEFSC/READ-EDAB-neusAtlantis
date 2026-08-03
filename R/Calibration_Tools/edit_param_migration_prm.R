@@ -238,7 +238,7 @@ edit_param_migration = function(bio.file,
    
    #read in change files
    new.mig.df = read.csv(mig.table,as.is =T)
-   new.mig.io.box.df = read.csv(mig.box.io.table,as.is =T)
+   new.mig.io.box.df = read.csv(mig.io.box.table,as.is =T)
    
    #read.in existing tables
    current.params = get_param_migration(bio.file,spp.names,write.output = F)
@@ -306,11 +306,11 @@ edit_param_migration = function(bio.file,
 
 #Test function
 ##with specified spp names
- get_param_migration(bio.file = here::here('currentVersion','at_biology.prm'),
-                    spp.names = c('BFT','TUN'),
-                    write.output = T,
-                    out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/',
-                    out.prefix = 'Tuna_Test'
-)
- 
+#  get_param_migration(bio.file = here::here('currentVersion','at_biology.prm'),
+#                     spp.names = c('BFT','TUN'),
+#                     write.output = T,
+#                     out.dir = 'C:/Users/joseph.caracappa/Documents/Atlantis/',
+#                     out.prefix = 'Tuna_Test'
+# )
+#  
 

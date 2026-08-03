@@ -1,12 +1,13 @@
 #' Generates Timeseries of Catch.txt for two Atlantis runs
 #' 
-#' @model1.dir string. path to the first model output files
-#' @model2.dir string. path to the second model output files. Convention is that model2 is most recent
-#' @plot.raw logical. Do you want to plot timeseries of the raw data (catch)?
-#' @plot.diff logical. Do you want to plot only the difference between 2 models?
-#' @plot.out string. path where output plots are saved
-#' @table.out logical. Do you want to export raw data?
-#' @groups character vector. Default is all functional groups. Otherwise specify a vector of 3-letter group codes.
+#' @param model.dirs string vector. paths to model output files
+#' @param model.names string vector. names associated with each run. these will be used in plot legend
+#' @param plot.raw logical. Do you want to plot timeseries of the raw data (catch)?
+#' @param plot.diff logical. Do you want to plot only the difference between 2 models?
+#' @param plot.out string. path where output plots are saved
+#' @param table.out logical. Do you want to export raw data?
+#' @param groups character vector. Default is all functional groups. Otherwise specify a vector of 3-letter group codes.
+#' @param remove.init boolean
 #' 
 #' @return up to 2 pdfs with each page being timeseries of a given functional group. Also can output raw data if selected
 #' 
@@ -26,8 +27,7 @@
 
 plot_run_catch_comparisons = function(model.dirs,model.names,plot.raw = T,
                                 plot.diff = T, plot.out, table.out = F, groups = NULL,remove.init = F){
-  `%>%` = dplyr::`%>%`
-  
+
   model.files =lapply(model.dirs,function(x) {return(sort(list.files(x,'*.nc')))})
   
   model.prefix = lapply(model.files,function(x) {return(strsplit(x[1],'\\.')[[1]][1])})
@@ -58,11 +58,11 @@ plot_run_catch_comparisons = function(model.dirs,model.names,plot.raw = T,
   
   for(i in 1:length(catch.long)){ catch.long[[i]]$Real.Time = as.Date(catch.long[[i]]$Time, origin = t.start[[i]])}
   
-  catch.all = dplyr::bind_rows(catch.long) %>%
+  catch.all = dplyr::bind_rows(catch.long) |> 
     dplyr::mutate(Model = factor(Model,levels= model.names))
   
   if(remove.init){
-    catch.all = catch.all %>% dplyr::filter(Time != 0)
+    catch.all = catch.all |>  dplyr::filter(Time != 0)
   }
   
   if(is.null(groups)){
@@ -78,9 +78,9 @@ plot_run_catch_comparisons = function(model.dirs,model.names,plot.raw = T,
     if(all.equal(unlist(t.start),rep(unlist(t.start)[1],length(unlist(t.start))))){
       print('Error: models do not have the same start date. Difference function not applicable')
     } else{
-      catch.diff = catch.all %>% dplyr::ungroup() %>%
-        dplyr::group_by(Time,Real.Time,Group) %>% 
-        dplyr::arrange(Group,Time,Model) %>%
+      catch.diff = catch.all %>% dplyr::ungroup() |> 
+        dplyr::group_by(Time,Real.Time,Group) |> 
+        dplyr::arrange(Group,Time,Model) |> 
         dplyr::summarize(catch.diff = Catch[1]-Catch[2])
       # bio.diff$Real.Time = as.Date(bio.diff$Time,origin = t.start1)
       
