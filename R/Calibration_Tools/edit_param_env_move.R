@@ -24,13 +24,13 @@ edit_param_env_move = function(bio.file, group.name,min.val = NA, max.val = NA, 
     if(!is.na(min.val)){
       #change min.salt
       which.min.salt = grep(paste0(group.name,'_min_move_salt'),bio.lines)
-      bio.lines[which.min.temp] = paste0(group.name,'_min_move_salt ',min.val)  
+      bio.lines[which.min.salt] = paste0(group.name,'_min_move_salt ',min.val)  
     }
     
     if(!is.na(max.val)){
       #change max.salt
       which.max.salt = grep(paste0(group.name,'_max_move_salt'),bio.lines)
-      bio.lines[which.max.temp] = paste0(group.name,'_max_move_salt ',max.val)  
+      bio.lines[which.max.salt] = paste0(group.name,'_max_move_salt ',max.val)  
     }
   
   }else{

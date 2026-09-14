@@ -5,6 +5,7 @@
 |BB|Sediment Bacteria|Sediment Bacteria|NA|NA|NA|NA|FALSE|
 |BC|Benthic Carnivore|Common octopus|NA|511|NA|NA|FALSE|
 |BC|Benthic Carnivore|Octopus unclassified|OCTOPODIDAE|510|786|82590|FALSE|
+|BC|Benthic Carnivore|Common octopus|NA|511|NA|NA|FALSE|
 |BC|Benthic Carnivore|Spoonarm octopus|NA|512|NA|NA|FALSE|
 |BC|Benthic Carnivore|Starfish|ASTEROIDEA|NA|828|156862|FALSE|
 |BC|Benthic Carnivore|Unicorn octopus|NA|513|NA|NA|FALSE|
@@ -34,16 +35,14 @@
 |BIL|Billfish|Marlin|ISTIOPHORIDAE|NA|218|172486|FALSE|
 |BLF|Bluefish|Bluefish|POMATOMUS SALTATRIX|135|23|168559|TRUE|
 |BLS|Blue shark|Blue shark|PRIONACE GLAUCA|17|493|160424|TRUE|
-|BMS|Shallow macrozoobenthos|Atantic rock crab|CANCER IRRORATUS|313|712|98679|FALSE|
+|BMS|Shallow macrozoobenthos|Knobbed whelk|BUSYCON CARICA|337|777|74071|FALSE|
 |BMS|Shallow macrozoobenthos|Blue crab|CALLINECTES SAPIDUS|314|700|98696|FALSE|
 |BMS|Shallow macrozoobenthos|Cancer crab|CANCER|311|714|98671|FALSE|
-|BMS|Shallow macrozoobenthos|Green crab|CARCINUS MAENAS|327|708|98734|FALSE|
-|BMS|Shallow macrozoobenthos|Hermit crab|PAGURUS|NA|702|97775|FALSE|
-|BMS|Shallow macrozoobenthos|Horseshoe crab|LIMULUS POLYPHEMUS|318|724|82703|FALSE|
 |BMS|Shallow macrozoobenthos|Jonah crab|CANCER BOREALIS|312|711|98678|FALSE|
 |BMS|Shallow macrozoobenthos|Knobbed whelk|BUSYCON CARICA|337|777|74071|FALSE|
 |BMS|Shallow macrozoobenthos|Lady crab|OVALIPES OCELLATUS|322|701|98714|FALSE|
 |BMS|Shallow macrozoobenthos|Snow crab|CHIONOECETES OPILIO|325|718|98428|FALSE|
+|BMS|Shallow macrozoobenthos|Horseshoe crab|LIMULUS POLYPHEMUS|318|724|82703|FALSE|
 |BMS|Shallow macrozoobenthos|Spider crab|MAJIDAE|317|715|98417|FALSE|
 |BMS|Shallow macrozoobenthos|Channeled whelk|BUSYCOTYPUS CANALICULATUS|NA|776|74096|FALSE|
 |BMS|Shallow macrozoobenthos|Conchs|STROMBIDAE|NA|775|72554|FALSE|
@@ -107,6 +106,7 @@
 |BWH|Baleen whales|Baleen whales|NA|NA|NA|NA|TRUE|
 |CLA|Atlantic surf clam|Atlantic surf clam|SPISULA SOLIDISSIMA|403|769|80944|TRUE|
 |COD|Atlantic cod|Atlantic cod|GADUS MORHUA|73|81|164712|TRUE|
+|COD|Atlantic cod|Atlantic cod|GADUS MORHUA|73|82|164712|TRUE|
 |DC|Carrion|Carrion|NA|NA|NA|NA|FALSE|
 |DF|Dinoflagellates|Dinoflagellates|NA|NA|NA|NA|FALSE|
 |DL|Labile detritus|Labile detritus|NA|NA|NA|NA|FALSE|
@@ -220,9 +220,11 @@
 |FLA|Other flatfish|Nk flounders|PLEURONECTIFORMES|NA|126|172702|FALSE|
 |FLA|Other flatfish|Southern flounder|PARALICHTHYS LETHOSTIGMA|NA|130|172738|FALSE|
 |FOU|Fourspot flounder|Fourspot flounder|PARALICHTHYS OBLONGUS|104|127|172739|TRUE|
+|GOO|Goosefish|Goosefish|LOPHIUS AMERICANUS|197|11|164499|TRUE|
 |GOO|Goosefish|Goosefish|LOPHIUS AMERICANUS|197|12|164499|TRUE|
 |GOO|Goosefish|Blackfin goosefish|LOPHIUS GASTROPHYSUS|NA|13|164500|FALSE|
 |HAD|Haddock|Haddock|MELANOGRAMMUS AEGLEFINUS|74|147|164744|TRUE|
+|HAD|Haddock|Haddock|MELANOGRAMMUS AEGLEFINUS|74|148|164744|TRUE|
 |HAL|Atlantic halibut|Atlantic halibut|HIPPOGLOSSUS HIPPOGLOSSUS|101|159|172933|TRUE|
 |HER|Atlantic herring|Atlantic herring|CLUPEA HARENGUS|32|168|161722|TRUE|
 |HER|Atlantic herring|Nk herring|CLUPEIDAE|NA|167|161700|FALSE|
@@ -259,6 +261,7 @@
 |PL|Diatom|Diatom|NA|NA|NA|NA|FALSE|
 |PLA|American plaice|American plaice|HIPPOGLOSSOIDES PLATESSOIDES|102|124|172877|TRUE|
 |POL|Pollock|Pollock|POLLACHIUS VIRENS|75|269|164727|TRUE|
+|POL|Pollock|Pollock|POLLACHIUS VIRENS|75|270|164727|TRUE|
 |POR|Porbeagle shark|Porbeagle shark|LAMNA NASUS|353|481|159911|TRUE|
 |PS|Pico-phytoplankton|Pico-phytoplankton|NA|NA|NA|NA|FALSE|
 |PSH|Other pelagic sharks|Bignose shark|CARCHARHINUS ALTIMUS|929|483|160307|FALSE|
@@ -281,11 +284,11 @@
 |QHG|Ocean quahog|Ocean quahog|ARCTICA ISLANDICA|409|754|81343|TRUE|
 |RCB|Red deep-sea crab|Red deep-sea crab|CHACEON QUINQUEDENS|310|710|620992|TRUE|
 |RED|Acadian redfish|Acadian redfish|SEBASTES FASCIATUS|155|240|166774|TRUE|
+|REP|Marine turtles|Loggerhead seaturtle|CARETTA CARETTA|950|813|173830|FALSE|
 |REP|Marine turtles|Green seaturtle|CHELONIA MYDAS|951|809|173833|FALSE|
+|REP|Marine turtles|Leatherback seaturtle|DERMOCHELYS CORIACEA|952|812|173843|FALSE|
 |REP|Marine turtles|Hawksbill seaturtle|ERETMOCHELYS IMBRICATA|953|814|173836|FALSE|
 |REP|Marine turtles|Kemp’s Ridley seaturtle|LEPIDOCHELYS KEMPI|954|810|551770|FALSE|
-|REP|Marine turtles|Leatherback seaturtle|DERMOCHELYS CORIACEA|952|812|173843|FALSE|
-|REP|Marine turtles|Loggerhead seaturtle|CARETTA CARETTA|950|813|173830|FALSE|
 |REP|Marine turtles|Olive Ridley seaturtle|LEPIDOCHELYS OLIVACEA|NA|818|173840|FALSE|
 |REP|Marine turtles|Turtles unclassified|TESTUDINES|NA|816|173749|FALSE|
 |REP|Marine turtles|Snapper turtle|CHELYDRA SERPENTINA|NA|815|173752|FALSE|
@@ -318,9 +321,6 @@
 |SUF|Summer flounder|Summer flounder|PARALICHTHYS DENTATUS|103|121|172735|TRUE|
 |SWH|Small toothed whales|Small toothed whales|NA|NA|NA|NA|TRUE|
 |TAU|Tautog|Tautog|TAUTOGA ONITIS|177|438|170479|TRUE|
-|TUN|Other tunas|Albacore|THUNNUS ALALUNGA|703|470|172419|FALSE|
-|TUN|Other tunas|Bigeye tuna|THUNNUS OBESUS|706|469|172428|FALSE|
-|TUN|Other tunas|Blackfin tuna|THUNNUS ATLANTICUS|705|464|172427|FALSE|
 |TUN|Other tunas|Little tunny|EUTHYNNUS ALLETTERATUS|743|468|172402|FALSE|
 |TUN|Other tunas|Bonito|SARDA SARDA|NA|33|172409|FALSE|
 |TUN|Other tunas|Dolphinfish|CORYPHAENA HIPPURUS|NA|105|168791|FALSE|
@@ -336,8 +336,10 @@
 |TYL|All tilefish|Sand tilefish|MALACANTHUS PLUMIERI|NA|445|168548|FALSE|
 |WHK|White hake|White hake|UROPHYCIS TENUIS|76|153|164732|TRUE|
 |WHK|White hake|White hake|UROPHYCIS TENUIS|76|154|164732|TRUE|
+|WIF|Winter flounder|Winter flounder|PSEUDOPLEURONECTES AMERICANUS|106|119|172905|TRUE|
 |WIF|Winter flounder|Winter flounder|PSEUDOPLEURONECTES AMERICANUS|106|120|172905|TRUE|
 |WOL|Wolffish|Northern wolffish|ANARHICHAS DENTICULATUS|NA|668|550561|FALSE|
+|WOL|Wolffish|Atlantic Wolffish|ANARHICHAS LUPUS|192|512|171341|FALSE|
 |WOL|Wolffish|Spotted wolffish|ANARHICHAS MINOR|NA|510|171342|FALSE|
 |WOL|Wolffish|Atlantic Wolffish|ANARHICHAS LUPUS|192|512|171341|FALSE|
 |WPF|Windowpane flounder|Windowpane flounder|SCOPHTHALMUS AQUOSUS|108|125|172746|TRUE|

@@ -16,10 +16,13 @@ fgs.file = here::here('currentVersion','neus_groups.csv')
 fgs = read.csv(fgs.file,as.is = T) %>%
   select(Code,Name,LongName,NumCohorts)
 
+
 survdat = readRDS(here::here('data','sweptAreaBiomassNEUSBoxSpringandFall.RDS'))
+
 
 init.file = here::here('currentVersion','neus_init.nc')
 init.nc = ncdf4::nc_open(init.file)
+
 
 #Get box info
 bgm.file = here::here('Geometry','neus_tmerc_RM2.bgm')
@@ -49,10 +52,12 @@ blank.ref = data.frame(Code = rep(fgs$Code, each = 30),
 
 survdat.mean = survdat %>%
   filter(YEAR %in% ref.years & variable %in% c('tot.biomass','tot.abundance'))%>%
+
   group_by(Code,variable,season,box)%>%
   summarise(mean.value = mean(value,na.rm=T))%>%
   group_by(Code,variable,box)%>%
   summarise(mean.value = mean(mean.value,na.rm=T))%>%
+
   ungroup()
 
 survdat.mean$mean.value[which(survdat.mean$box %in% bboxes)] = NA
@@ -223,10 +228,14 @@ init.ref = bind_rows(init.ref.ls) %>%
   left_join(fgs, by = c('species' = 'Name'))%>%
   select(LongName,polygon,var.name,statistic,init.value)%>%
   rename(species = 'LongName')
-  
+
+
+ncdf4::nc_close(init.nc)
   
 
 saveRDS(init.ref,here::here('data',paste0('spatial_reference_initial_conditions.rds')))
 
+
 #Make Catch Reference
 catch.box = readRDS(here::here('data-raw','landings_by_box_species.rds'))
+
