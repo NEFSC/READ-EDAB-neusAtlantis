@@ -40,7 +40,7 @@ rand.data = readRDS(paste0(data.dir,experiment.id,'/',experiment.id,'_mean_5yr_p
 
 spp.names = sort(unique(rand.data$LongName))  
 plot.ls = list()
-out.df = data.frame(LongName = spp.names, rand.p2_5 =NA, rand.p97_5 =NA , rand.med = NA, rand.mean = NA, rand.sd = NA)
+out.df = data.frame(LongName = spp.names, rand.p2_5 =NA, rand.p97_5 =NA , rand.med = NA, rand.mean = NA, rand.sd = NA, ref.bs = NA)
 i = 1
 for(i in 1:length(spp.names)){
   
@@ -51,6 +51,36 @@ for(i in 1:length(spp.names)){
     filter(LongName ==spp.names[i])
   
   F.spp = signif(ref.F$exploit.prop[which(ref.F$LongName == spp.names[i])],2)
+  
+  # if(nrow(ref.spp!= 0)){
+  #   rand.ecdf = ecdf(rand.spp$Biomass)
+  # }else{
+  #   rand.ecdf = NA
+  # }
+  
+  #Bootstap Median
+  if(nrow(ref.spp) == 0){
+    out.df$ref.bs[i] = NA
+  }else{
+    set.seed(123) # For reproducibility
+    n_reps <- 10000
+    ref_value <- ref.spp$Biomass.ref # Replace with your value
+      
+      # Create 10,000 versions of the median
+      boot_distribution <- replicate(n_reps, {
+        resample <- sample(rand.spp$Biomass, replace = TRUE)
+        median(resample)
+      })
+    
+    # Get the 95% Interval
+    ci <- quantile(boot_distribution, probs = c(0.025, 0.975))
+    
+    # Check if ref_value is "significantly different"
+    is_different <- ref_value < ci[1] | ref_value > ci[2]
+    
+    out.df$ref.bs[i] = ifelse(is_different,T,F)
+  }
+  #end bootstrap
   
   pct.95 = quantile(rand.spp$Biomass,probs = c(0.025,0.975),na.rm=T)
   bio.med = median(rand.spp$Biomass,na.rm=T)
@@ -95,9 +125,14 @@ out.stats.df = out.df %>%
 
 saveRDS(out.stats.df,paste0(data.dir,experiment.id,'/',experiment.id,'_path_dependence.rds'))
 
-sum(out.df$outside)/nrow(out.df)
+sum(out.stats.df$outside)/nrow(out.stats.df)
+sum(out.stats.df$ref.bs)/nrow(out.stats.df)
 
-out.df2 =out.df %>%
+#which species not outside random distribution (not path dependent)
+no.pd = filter(out.stats.df,outside != T)
+no.pd$LongName
+
+out.df2 =out.stats.df %>%
   group_by(Guild)%>%
   summarise(N = n(),
             outside.N = sum(outside,na.rm=T))%>%
