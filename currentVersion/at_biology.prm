@@ -138,7 +138,7 @@ flagtempchange   0         Mean temperature changes: 0 = no,  1 = yes           
 flagsaltchange   0         Mean salinity changes: 0 = no,  1 = yes                             0
 flagstarve       1         Give starvation notices: 0 = no, 1 = yes                            0  
 flagdegrade      0         Degrade coastal habitats (effects growth of MA, SG and BFS)         0
-flagroc          1         Density dependent drop off option: 0 = none, 1 = ratio drop off, 2 = exponential decline   0
+flagroc          0         Density dependent drop off option: 0 = none, 1 = ratio drop off, 2 = exponential decline   0
 # gfay @nmfs 17 July 2014, following entry should probably change for base.
 flaghomog_sp     0         Body condition homogenised across the entire area: 0 = no, 1 = yes  0
 flagagestruct    1         Age structure option: 0 = homogeneous cohorts, 1 = track cohorts    0
@@ -1344,7 +1344,7 @@ flagO2depend    0
 
 # Vertebrate density dependent movement related flags 0=prescribed quartlerly, 1=sedentary, 2=density dependent + prescribed, 3=sticky, 4=no explicit mvmt
 MAK_ddepend_move 0
-HER_ddepend_move 2
+HER_ddepend_move 0
 WHK_ddepend_move 0
 BLF_ddepend_move 0
 WPF_ddepend_move 0
