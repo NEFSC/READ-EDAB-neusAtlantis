@@ -3,7 +3,7 @@ library(dplyr)
 library(ggplot2)
 library(mapdata)
 
-run.name = 'fleet_calibration_4_q'
+run.name = 'SCA_redist_init_3'
 run.dir = here::here('Atlantis_Runs',run.name)
 figure.dir = paste0(run.dir,'/Post_Processed/')
 
@@ -55,6 +55,7 @@ for(i in 1:length(fleet.names)){
 }
 dev.off()
 
+#Combined groundfish map
 gf.catch.prop.all =catch.fleet %>%
   filter(time > 30 & grepl('^gf',fleet) & fleet != 'gfother')%>%
   group_by(fleet,species,polygon)%>%
@@ -66,10 +67,10 @@ gf.catch.prop.all =catch.fleet %>%
          polygon = as.factor(polygon),
          catch.prop = ifelse(catch.prop ==0,NA,catch.prop))
 
-plot.data.all = boxes %>%
+gf.plot.data.all = boxes %>%
   left_join(gf.catch.prop.all)
 
-ggplot(plot.data.all, aes( x= long, y = lat, group = polygon, fill = catch.prop))+
+ggplot(gf.plot.data.all, aes( x= long, y = lat, group = polygon, fill = catch.prop))+
   geom_polygon( color = 'black')+
   scale_fill_viridis_c(name = 'Catch Proportion')+
   annotation_map(neus.map,fill = 'grey80',color = 'black')+
@@ -78,8 +79,32 @@ ggplot(plot.data.all, aes( x= long, y = lat, group = polygon, fill = catch.prop)
 
 ggsave(paste0(figure.dir,'groundfish_catch_all.png'),width = 10,height =10,units ='in',dpi =300)
 
+#Combined scallop map
+sca.catch.prop.all =catch.fleet %>%
+  filter(time > 30 & grepl('^SCA',fleet) & fleet != 'SCAother')%>%
+  group_by(fleet,species,polygon)%>%
+  summarise(catch = mean(atoutput,na.rm=T))%>%
+  group_by(polygon)%>%
+  summarise(catch = sum(catch,na.rm=T))%>%
+  mutate(catch.tot = sum(catch,na.rm=T),
+         catch.prop = catch/catch.tot,
+         polygon = as.factor(polygon),
+         catch.prop = ifelse(catch.prop ==0,NA,catch.prop))
+
+sca.plot.data.all = boxes %>%
+  left_join(sca.catch.prop.all)
+
+ggplot(sca.plot.data.all, aes( x= long, y = lat, group = polygon, fill = catch.prop))+
+  geom_polygon( color = 'black')+
+  scale_fill_viridis_c(name = 'Catch Proportion')+
+  annotation_map(neus.map,fill = 'grey80',color = 'black')+
+  theme_bw()+
+  theme(legend.position = 'bottom')
+
+ggsave(paste0(figure.dir,'scallop_catch_all.png'),width = 10,height =10,units ='in',dpi =300)
+
 #Make plot of catch by box for grounfish for reference area
-catch.ref =readRDS(here::here('data','spatial_reference_landings_fleet.rds'))%>%
+gf.catch.ref =readRDS(here::here('data','spatial_reference_landings_fleet.rds'))%>%
   filter(grepl('^gf',fleet)& statistic == 'value' & var.name == 'catch_fleet')%>%
   group_by(polygon)%>%
   summarise(catch = sum(ref.value,na.rm=T))%>%
@@ -88,14 +113,57 @@ catch.ref =readRDS(here::here('data','spatial_reference_landings_fleet.rds'))%>%
          polygon = factor(polygon))%>%
   mutate(catch.prop = ifelse(as.numeric(polygon) > 23, NA, catch.prop))
 
-plot.ref = boxes %>%
-  left_join(catch.ref)
+plot.gf.ref = boxes %>%
+  left_join(gf.catch.ref)
   
-ggplot(plot.ref, aes( x= long, y = lat, group = polygon, fill = catch.prop))+
+ggplot(plot.gf.ref, aes( x= long, y = lat, group = polygon, fill = catch.prop))+
   geom_polygon( color = 'black')+
   scale_fill_viridis_c(name = 'Catch Proportion')+
   annotation_map(neus.map,fill = 'grey80',color = 'black')+
   theme_bw()+
   theme(legend.position = 'bottom')
 
-ggsave(paste0(figure.dir,'groundfish_catch_all.png'),width = 10,height =10,units ='in',dpi =300)
+ggsave(paste0(figure.dir,'groundfish_catch_ref.png'),width = 10,height =10,units ='in',dpi =300)
+
+#Make plot of catch by box for scallop for reference area
+sca.catch.ref =readRDS(here::here('data-raw','data','scallopFleetData.rds'))$landings %>% 
+  group_by(Box)%>%
+  summarise(catch = sum(landings,na.rm=T))%>%
+  mutate(catch.tot = sum(catch,na.rm=T),
+         catch.prop = catch/catch.tot,
+         Box = factor(Box))%>%
+  mutate(catch.prop = ifelse(as.numeric(Box) > 23, NA, catch.prop))
+
+plot.sca.ref = boxes %>%
+  left_join(sca.catch.ref, by = c('polygon' ='Box'))
+
+ggplot(plot.sca.ref, aes( x= long, y = lat, group = polygon, fill = catch.prop))+
+  geom_polygon( color = 'black')+
+  scale_fill_viridis_c(name = 'Catch Proportion')+
+  annotation_map(neus.map,fill = 'grey80',color = 'black')+
+  theme_bw()+
+  theme(legend.position = 'bottom')
+
+ggsave(paste0(figure.dir,'scallop_catch_ref.png'),width = 10,height =10,units ='in',dpi =300)
+
+#Make plot of effort by box for scallop effort for reference area
+sca.effort.ref =readRDS(here::here('data-raw','data','scallopFleetData.rds'))$effort %>% 
+  group_by(Box)%>%
+  summarise(effort = sum(effort,na.rm=T))%>%
+  mutate(effort.tot = sum(effort,na.rm=T),
+         effort.prop = effort/effort.tot,
+         Box = factor(Box))%>%
+  mutate(catch.prop = ifelse(as.numeric(Box) > 23, NA, effort.prop))
+
+plot.sca.eff.ref = boxes %>%
+  left_join(sca.effort.ref, by = c('polygon' ='Box'))
+
+ggplot(plot.sca.eff.ref, aes( x= long, y = lat, group = polygon, fill = catch.prop))+
+  geom_polygon( color = 'black')+
+  scale_fill_viridis_c(name = 'Catch Proportion')+
+  annotation_map(neus.map,fill = 'grey80',color = 'black')+
+  theme_bw()+
+  theme(legend.position = 'bottom')
+
+ggsave(paste0(figure.dir,'scallop_effort_ref.png'),width = 10,height =10,units ='in',dpi =300)
+
