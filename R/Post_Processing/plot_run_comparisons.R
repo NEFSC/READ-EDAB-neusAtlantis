@@ -153,7 +153,7 @@ plot_run_comparisons = function(model.dirs,model.names,plot.rel = T,
   
   if(table.out){
     if(plot.rel){
-      write.csv(bio.all,file=paste0(plot.out,'Biomass_realtive_Data.csv'),row.names = F)
+      write.csv(bio.all,file=paste0(plot.out,'Biomass_relative_Data.csv'),row.names = F)
     }else{
       
     }
