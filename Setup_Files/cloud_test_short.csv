@@ -1,0 +1,13 @@
+Run.ID,Run.Group,Code,Type,Unit,Value
+1,GOO_2_10,GOO,ddepend,value,2
+1,GOO_2_10,GOO,max.temp,value,10
+1,GOO_2_10,GOO,k.roc.food,value,0.001
+1,GOO_3_10,GOO,roc.wgt,value,0.001
+2,GOO_3_10,GOO,ddepend,value,3
+2,GOO_3_10,GOO,max.temp,value,10
+2,GOO_2_12,GOO,k.roc.food,value,0.001
+2,GOO_2_12,GOO,roc.wgt,value,0.001
+3,GOO_2_12,GOO,ddepend,value,2
+3,GOO_3_12,GOO,max.temp,value,12
+3,GOO_3_12,GOO,k.roc.food,value,0.001
+3,GOO_3_12,GOO,roc.wgt,value,0.001
