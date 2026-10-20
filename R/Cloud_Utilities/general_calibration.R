@@ -12,15 +12,15 @@ library(dplyr)
 ##################################
 
 #Name of Experiment/Batch Run
-experiment.id = 'ddepend_1'
+experiment.id = 'cloud_sca_fleet_revised_1'
 #Name of Setup File
-setup.df = read.csv(here::here('Setup_Files','cloud_v6681_ddepend_1_setup.csv'),as.is=T)
+setup.df = read.csv(here::here('Setup_Files','cloud_sca_fleet_revised_1.csv'),as.is=T)
 #Name of where R github project is located
 proj.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
 #Name of template sbatch file
 base.sbatch.array = paste0(proj.dir,'currentVersion/sbatch_scenario_array_base.sh')
 #Name of where run output should be written
-out.dir = paste0('/atlantidisk2/',experiment.id,'/')
+out.dir = paste0('/atlantisdisk/',experiment.id,'/')
 
 ##################################
 ##################################
@@ -466,7 +466,7 @@ sbatch.lines[grep('--array',sbatch.lines)] = new.array.line
 new.mkdir = paste0("sudo mkdir -p ",out.dir,experiment.id,"_$SLURM_ARRAY_TASK_ID")
 sbatch.lines[grep('mkdir',sbatch.lines)] = new.mkdir
 
-new.singularity = paste0( "sudo singularity exec --bind ",proj.dir,"currentVersion:/app/model,",out.dir,experiment.id,"_$SLURM_ARRAY_TASK_ID:/app/model/output /contrib/atlantisCode/atlantis6681.sif /app/model/RunAtlantis_$SLURM_ARRAY_TASK_ID.sh")
+new.singularity = paste0( "sudo singularity exec --bind ",proj.dir,"currentVersion:/app/model,",out.dir,experiment.id,"_$SLURM_ARRAY_TASK_ID:/app/model/output /model/atlantisCode/atlantis6681_debug.sif /app/model/RunAtlantis_$SLURM_ARRAY_TASK_ID.sh")
 sbatch.lines[grep('singularity',sbatch.lines)] = new.singularity
 
 writeLines(sbatch.lines,new.sbatch.array)
