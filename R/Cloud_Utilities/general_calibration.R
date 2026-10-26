@@ -12,9 +12,10 @@ library(dplyr)
 ##################################
 
 #Name of Experiment/Batch Run
-experiment.id = 'cloud_sca_fleet_revised_1'
+experiment.id = 'cloud_sca_fleet_revised_3'
 #Name of Setup File
-setup.df = read.csv(here::here('Setup_Files','cloud_sca_fleet_revised_1.csv'),as.is=T)
+setup.df = read.csv(here::here('Setup_Files','cloud_sca_fleet_revised_1.csv'),as.is=T) %>% 
+  dplyr::filter(Run.ID <109)
 #Name of where R github project is located
 proj.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
 #Name of template sbatch file

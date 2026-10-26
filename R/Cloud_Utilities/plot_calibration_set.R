@@ -3,8 +3,8 @@
 library(dplyr)
 library(ggplot2)
 #Specify setup.csv used to generate calibration run set
-experiment.id = 'cloud_sca_fleet_revised_1'
-setup.df = read.csv(here::here('Setup_Files','cloud_sca_fleet_revised_1.csv'),as.is=T)
+experiment.id = 'cloud_sca_fleet_revised_2'
+setup.df = read.csv(here::here('Setup_Files','cloud_sca_fleet_revised_2.csv'),as.is=T)
 setup.df$file.ID = 1:nrow(setup.df)
 # experiment.dir = here::here('Atlantis_Runs',experiment.id,'')
 experiment.dir = paste0('/atlantisdisk/',experiment.id,'/')
