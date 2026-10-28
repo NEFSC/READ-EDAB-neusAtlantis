@@ -2,11 +2,13 @@
 source(here::here('R','Post_Processing','plot_run_comparisons.R'))
 source(here::here('R','Post_Processing','plot_run_catch_comparisons.R'))
 
-run.set.names = c('SCA_redist_init_4','SCA_redist_init_3')
-dev = 'Dev_6681_20240905'
-
+run.set.names = c('sca_fleets_gfmum')
+dev = 'dev_07152025'
+# dev.andy = 'dev_test'
 # dev.dir = '/net/work3/EDAB/atlantis/Shared_Data/Dev_Runs/Dev_6681_20240905/'
 dev.dir = here::here("Atlantis_Runs","dev_07152025",'')
+# dev.andy.dir = '/home/jcaracappa/NEUS-Atlantis/Andy_Proj/Atlantis_Runs/test/'
+
 run.set.dirs =paste0('Atlantis_Runs/',run.set.names,'/')
 # master = '/net/work3/EDAB/atlantis/Andy_Proj/Atlantis_Runs/master_2_2_0/'
 
@@ -20,7 +22,7 @@ plot_run_comparisons(
   model.names = c(dev,run.set.names),
   plot.rel = T,
   plot.diff = F,
-  plot.out = paste(figure.dir,'SCA_redist_init_4'), 
+  plot.out = paste(figure.dir,'sca_fleets_gfmum'), 
   table.out = F,
   groups = NULL,
   remove.init = F
@@ -31,7 +33,7 @@ plot_run_catch_comparisons(
   model.dirs = c(dev.dir,run.set.dirs),
   model.names = c(dev,run.set.names),
   plot.diff = F,
-  plot.out = paste(figure.dir,'fleet_calibration_2'),
+  plot.out = paste(figure.dir,'sca_fleets_gfmum'),
   table.out = F,
   groups = NULL,
   remove.init = F

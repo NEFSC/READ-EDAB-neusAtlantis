@@ -7,7 +7,7 @@
 
 source(here::here('R','Post_Processing','make_post_process.R'))
 
-run.name = 'sca_fleets_revised'
+run.name = 'sca_fleets_gfmum'
 atl.dir = here::here('Atlantis_Runs',run.name,'/')
 # atl.dir = '/net/work3/EDAB/atlantis/Andy_Proj/devplusfleets/'
 # 
