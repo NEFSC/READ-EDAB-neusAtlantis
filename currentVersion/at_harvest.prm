@@ -2223,7 +2223,7 @@ q_FOU      28
 q_HAL      28
 0 0 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 q_PLA      28
-0 0 0 0 0 0.071853012 0.19089096 0.5893 0.077849343 1 0.338184 0.0699076224 0.45276 0.675 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0.1 0.19089096 0.5893 0.1 1 0.338184 0.0699076224 0.45276 0.675 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 q_FLA      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 q_BFT      28
@@ -2281,7 +2281,7 @@ q_SDF      28
 q_FDF      28
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 q_HAD      28
-0 0 0 0 0 0.006266304 0.0029555526 0.0019444131 0.00340956 0.0050336 0.00748 0.0030761874 0.008107776 0.0061236 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0.1 0.0029555526 0.0019444131 0.8 0.0050336 0.00748 0.0030761874 0.008107776 0.0061236 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 q_YTF      28
 0 0 0 0 0 0.000768768 0.009052 0.013728 0.0008613 0.13209 0.0004193728 0.00075411 0.0070389 0.0078033 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 q_DOG      28
@@ -2538,10 +2538,10 @@ Effort_vdistribmowMA          4
 ### The swept volume of water by gear of fishery YYY, m3 day-1. This is a volume, but called area to keep in line with the fisheries science usage.
 
 catchall_sweptarea   0
-SCAother_sweptarea 910000
-SCAnewbedford_sweptarea 4200000
-SCAcapemay_sweptarea 5400000
-SCAnewportnews_sweptarea 1800000
+SCAother_sweptarea 1820000
+SCAnewbedford_sweptarea 8400000
+SCAcapemay_sweptarea 16200000
+SCAnewportnews_sweptarea 5400000
 gfgloucester_sweptarea 7.2e+08
 gfnewbedford_sweptarea 8.4e+08
 gfpointjudith_sweptarea 6.8e+08

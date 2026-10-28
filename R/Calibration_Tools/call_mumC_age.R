@@ -3,18 +3,18 @@ library(dplyr)
 source(here::here('R','Calibration_Tools','edit_param_mum_age.R'))
 source(here::here('R','Calibration_Tools','edit_param_C_age.R'))
 
-group.names = 'WTF'
+group.names = 'TYL'
 
-mum.scale = 1
-C.scale = 1.25
+mum.scale = 1.9
+C.scale = 1
 
 bio.prm = here::here('currentVersion','at_biology.prm')
 
-mum.base.age = get_param_mum_age(bio.prm) %>%
-  filter(group %in% group.names)%>%
+mum.base.age = get_param_mum_age(bio.prm) |>
+  filter(group %in% group.names)|>
   mutate_at(vars(mum1:mum10),funs(as.numeric))
-c.base.age = get_param_C_age(bio.prm)%>%
-  filter(group %in% group.names)%>%
+c.base.age = get_param_C_age(bio.prm)|>
+  filter(group %in% group.names)|>
   mutate_at(vars(C1:C10),funs(as.numeric))
 
 group.id = which(group.names == mum.base.age[,1])
