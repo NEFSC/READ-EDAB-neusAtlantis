@@ -17267,3 +17267,24 @@ max_co_sp_ZS 0
 max_co_sp_PB 0
 max_co_sp_BB 0
 max_co_sp_BO 0
+
+#3_6722
+flagSSBforHCR 0                     #  1 = use SBB for HCR, 0 = use total B for HCR
+maxF_aggregate 0                    # this flag sets whether want maxF as sum over mFC (set to 1) or max of mFC  (set to 0)
+use_time_avg_biom 0                 # this flag is relevant for the system_cap_calc, if using N not B in calculating expected catch, this flag is whether use average of min, max weight stored over the year (set to 0) or rolling_wgt  (set to 1)
+use_time_avg_wgt  0                 # this flag is relevant for the system_cap_calc, if using B not N in calculating expected catch, this flag is whether use the average of min, max B stored over the year (set to 0) or rolling_B (set to 1)
+syst_cap_calc_method 0              # this flag sets whether the biomass used to estimate expected catch is via bumbers and the Baranov catch equation (set to 0) or just average Biomass as calculated dynamically in Atlantis (set to 1)
+M_est_method 1                      # this flag sets which option is used to calculate M – read in from prm file (set to 0), using Z – F (set to 1), dynamically calculated in Atlantis (set to 2) or estimated in the assessment routine (set to 3)
+Ecosystm_Cap_tonnes 999999999999999 # Value of ecosystem catch cap in tonnes
+K_cap_rolling_period 0              # Period in years of the period used in calculating rollign average weight and biomass
+targ_refE 0.50                      # Target reference point - tier 14
+forage_refE 0.50                    # Forage target reference point - tier14
+FrefLim     89 #Fishing rate (F) that equates with BrefA (i.e.F to apply if B > Bref)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+## Parameters related to ecosystem caps
+FlagSystCapSP 89 # a vector with one entry for every group with the individual entries set to 1 if included in the system cap, 0 if not.
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+SystCapSPpref 89 # vector with one entry for every group, these are the weightings used inr escalaing if sum(ABC) > system cap.
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FixedAssessMort 89 # vector with one entry for every group, this is gthe fixed assessment M assumed for use in calculating the System Cap associated expected catches - overwritten with the assess_nat_mort vector values if assess.prm included in the run command
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
