@@ -8,7 +8,7 @@ for(i in 1:nrow(q.corr)){
                Code = q.corr$Code[i],
                Fleet = q.corr$Fleet[i],
                fleets.file = here::here('currentVersion','neus_fisheries.csv'),
-               Type= 'scalar',
+               Type= 'value',
                Value =q.corr$Value[i] ,
                overwrite = T
   )
