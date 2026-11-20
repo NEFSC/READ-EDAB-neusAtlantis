@@ -53,13 +53,13 @@ for(s in 1:length(gf.spp)){
   
   
   #Set flagescapement to 2 for all groundfish fleets
-  edit_param_escape(harvest.file = here::here('currentVersion','at_harvest.prm'),  
-                    Code = gf.spp[s],
-                   Fleet = gf.fleets,
-                   fleets.file = here::here('currentVersion','neus_fisheries.csv'),
-                   VarName = 'flagescapement',
-                   Value = 2,
-                   overwrite =T)
+  # edit_param_escape(harvest.file = here::here('currentVersion','at_harvest.prm'),  
+  #                   Code = gf.spp[s],
+  #                  Fleet = gf.fleets,
+  #                  fleets.file = here::here('currentVersion','neus_fisheries.csv'),
+  #                  VarName = 'flagescapement',
+  #                  Value = 2,
+  #                  overwrite =T)
   
   #Fit lm to length selectivity
   len.spp.ref = len.ref  %>%
@@ -85,32 +85,33 @@ for(s in 1:length(gf.spp)){
   esc.df$b[s] = spp.b
   
   plot(cump~LENGTH,len.spp.ref)
-  curve(coef(spp.lm)[2]*x+coef(spp.lm)[1],0,120,add=T)
-  curve(spp.m*x+spp.b,0,120,add=T,col =2)
+  curve(coef(spp.lm)[2]*x+coef(spp.lm)[1],0,max(len.spp.ref$LENGTH),add=T)
+  curve(spp.m*x+spp.b,0,max(len.spp.ref$LENGTH),add=T,col =2)
   
-  edit_param_escape(harvest.file = here::here('currentVersion','at_harvest.prm'),  
-                    Code = gf.spp[s],
-                    Fleet = gf.fleets,
-                    fleets.file = here::here('currentVersion','neus_fisheries.csv'),
-                    VarName = 'Ka_escape',
-                    Value = spp.m,
-                    overwrite =T)
-  
-  edit_param_escape(harvest.file = here::here('currentVersion','at_harvest.prm'),  
-                    Code = gf.spp[s],
-                    Fleet = gf.fleets,
-                    fleets.file = here::here('currentVersion','neus_fisheries.csv'),
-                    VarName = 'Kb_escape',
-                    Value = spp.b,
-                    overwrite =T)
-  
-  edit_param_escape(harvest.file = here::here('currentVersion','at_harvest.prm'),  
-                    Code = gf.spp[s],
-                    Fleet = gf.fleets,
-                    fleets.file = here::here('currentVersion','neus_fisheries.csv'),
-                    VarName = 'q',
-                    Value = 1,
-                    overwrite =T)
+  message(gf.spp[s],': ka=',spp.m,', kb =',spp.b)
+  # edit_param_escape(harvest.file = here::here('currentVersion','at_harvest.prm'),  
+  #                   Code = gf.spp[s],
+  #                   Fleet = gf.fleets,
+  #                   fleets.file = here::here('currentVersion','neus_fisheries.csv'),
+  #                   VarName = 'Ka_escape',
+  #                   Value = spp.m,
+  #                   overwrite =T)
+  # 
+  # edit_param_escape(harvest.file = here::here('currentVersion','at_harvest.prm'),  
+  #                   Code = gf.spp[s],
+  #                   Fleet = gf.fleets,
+  #                   fleets.file = here::here('currentVersion','neus_fisheries.csv'),
+  #                   VarName = 'Kb_escape',
+  #                   Value = spp.b,
+  #                   overwrite =T)
+  # 
+  # edit_param_escape(harvest.file = here::here('currentVersion','at_harvest.prm'),  
+  #                   Code = gf.spp[s],
+  #                   Fleet = gf.fleets,
+  #                   fleets.file = here::here('currentVersion','neus_fisheries.csv'),
+  #                   VarName = 'q',
+  #                   Value = 1,
+  #                   overwrite =T)
   
 }
 

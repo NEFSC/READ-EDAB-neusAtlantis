@@ -7,23 +7,13 @@
 #'Unit: supplied value type: value or scalar
 #'Value: Value to be written to biology.prm
 library(dplyr)
-##################################
-###### SETUP: USER DEFINED #######
-##################################
 
-#Name of Experiment/Batch Run
-experiment.id = 'ddepend_1'
-#Name of Setup File
-setup.df = read.csv(here::here('Setup_Files','cloud_v6681_ddepend_1_setup.csv'),as.is=T)
-#Name of where R github project is located
-proj.dir = '/model/Joseph.Caracappa/READ-EDAB-neusAtlantis/'
-#Name of template sbatch file
-base.sbatch.array = paste0(proj.dir,'currentVersion/sbatch_scenario_array_base.sh')
-#Name of where run output should be written
-out.dir = paste0('/atlantidisk2/',experiment.id,'/')
-
-##################################
-##################################
+#Read in setup file
+experiment.id = 'fleet_calibration_2'
+# setup.df = read.csv(here::here('Setup_Files','cloud_v6681_ddepend_1_setup.csv'),as.is=T)
+setup.df = read.csv(here::here('Setup_Files','cloud_fleet_calibration_2.csv'))
+model.dir = here::here('')
+output.dir = paste0('/atlantisdisk/',experiment.id,'/')
 
 #Define base files
 bio.file.orig = here::here('currentVersion','at_biology.prm')
@@ -32,6 +22,8 @@ sbatch.orig = here::here('currentVersion','sbatch_scenario_array_base.sh')
 fgs.file = here::here('currentVersion','neus_groups.csv')
 mig.file.orig = here::here('currentVersion','neus_migrations.csv')
 run.prm.orig = here::here('currentVersion','at_run.prm')
+harvest.file.orig = here::here('currentVersion','at_harvest.prm')
+fleets.file = here::here('currentVersion','neus_fisheries.csv')
 
 #Read in functional groups and define inverts
 fgs = read.csv(fgs.file,as.is = T)
@@ -86,12 +78,20 @@ if(any(c('aMigSize','jMigSize','aMigSurvive','jMigSurvive') %in% setup.df$Type))
 if('InitScalar' %in% setup.df$Type){
   source(here::here('R','Calibration_Tools','edit_param_init_scalar.R'))
 }
-if(any(c('ddepend','k.roc.food','roc.wgt') %in% setup.df$Type)){
+if(any(c('ddepend','k.roc.food','roc.wgt','speed') %in% setup.df$Type)){
   source(here::here('R','Calibration_Tools','edit_param_ddepend.R'))
 }
 if(any(c('max.temp','min.temp','max.salt','min.salt') %in% setup.df$Type)){
   source(here::here('R','Calibration_Tools','edit_param_env_move.R'))
-  
+}
+if(any('q' %in% setup.df$Type)){
+  source(here::here('R','Calibration_Tools','edit_param_q.R'))
+}
+if(any('sel' %in% setup.df$Type)){
+  source(here::here('R','Calibration_Tools','edit_param_sel.R'))
+}
+if(any(c('selcurve','tstart','mindepth','maxdepth','sweptarea') %in% setup.df$Type)){
+  source(here::here('R','Calibration_Tools','edit_param_fleet.R'))
 }
 
 possible.types = unique(read.csv(here::here('diagnostics','cloud_calibration_setup_example.csv'),as.is=T)$Type)
@@ -99,6 +99,7 @@ possible.types = unique(read.csv(here::here('diagnostics','cloud_calibration_set
 #Loop through run id's
 i=1
 out.df = list()
+# for(i in 1:length(run.id)){
 for(i in 1:length(run.id)){
   
   #copy biology.prm with run.id prefix
@@ -114,7 +115,7 @@ for(i in 1:length(run.id)){
   }else{
     mig.file.short = 'neus_migrations.csv'
   }
-
+  
   if('InitScalar' %in% setup.df$Type){
     #Copy run.prm with run.id prefix
     run.prm.short = paste0('at_run_',run.id[i],'.prm')
@@ -123,7 +124,16 @@ for(i in 1:length(run.id)){
   }else{
     run.prm.short = 'at_run.prm'
   }
-
+  
+  if(any(c('q','sel','selcurve','tstart','mindepth','maxdepth','sweptarea') %in% setup.df$Type)){
+    #copy harvest.prm with run.id prefix
+    harvest.file.short = paste0('at_harvest_',run.id[i],'.prm')
+    harvest.file.new = here::here('currentVersion',harvest.file.short)
+    file.copy(harvest.file.orig,harvest.file.new,overwrite =T)
+  }else{
+    harvest.file.short = 'at_harvest.prm'
+  }
+  
   #Separate task for run.id
   setup.run = dplyr::filter(setup.df, Run.ID == run.id[i])
   
@@ -138,7 +148,7 @@ for(i in 1:length(run.id)){
     
     #Do mQ or mL tasks
     if(setup.run$Type[j] %in% c('mQa','mQj','mLa','mLj','mL','mQ')){
-
+      
       if(is.invert){
         
         if(setup.run$Type[j] %in% c('mLa','mLj','mL')){
@@ -157,7 +167,7 @@ for(i in 1:length(run.id)){
                                type = setup.run$Type[j],
                                value = mort.group.new,
                                new.file = F)
-      
+        
       }else{
         
         group.age = substr(setup.run$Type[j],nchar(setup.run$Type[j]),nchar(setup.run$Type[j]))
@@ -165,14 +175,14 @@ for(i in 1:length(run.id)){
         
         if(group.type == 'mL'){
           mort.group.old = mort.age.orig %>%
-                  filter(group == setup.run$Code[j])%>%
-                  select(mL.j,mL.a)%>%
-                  as.numeric()
+            filter(group == setup.run$Code[j])%>%
+            select(mL.j,mL.a)%>%
+            as.numeric()
         }else{
-              mort.group.old = mort.age.orig %>%
-                filter(group == setup.run$Code[j])%>%
-                select(mQ.j,mQ.a)%>%
-                as.numeric()
+          mort.group.old = mort.age.orig %>%
+            filter(group == setup.run$Code[j])%>%
+            select(mQ.j,mQ.a)%>%
+            as.numeric()
         }
         
         if(group.age == 'j'){
@@ -196,7 +206,7 @@ for(i in 1:length(run.id)){
         )
       }
     }
-  
+    
     #Do mum/C tasks
     if(setup.run$Type[j] %in% c('mum','C')){
       
@@ -226,7 +236,7 @@ for(i in 1:length(run.id)){
                                   new.file = F)
           
         }
-      #age mum/c                       
+        #age mum/c                       
       }else{
         
         mum.age.match = which(mum.age.orig$group == setup.run$Code[j])
@@ -237,14 +247,14 @@ for(i in 1:length(run.id)){
           if(setup.run$Unit[j] == 'scalar'){
             new.mum.val = as.numeric(mum.age.orig[mum.age.match,2:11]) * setup.run$Value[j]
           }else{
-              stop("workflow doesn't support values for mum/C")
+            stop("workflow doesn't support values for mum/C")
           }
           edit_param_mum_age(bio.prm = bio.file.new,
                              new.mum = new.mum.val,
                              overwrite = T,
                              single.group =T,
                              group.name = setup.run$Code[j]
-                            )
+          )
         }else{
           if(setup.run$Unit[j] == 'scalar'){
             new.c.val = as.numeric(c.age.orig[c.age.match,2:11]) * setup.run$Value[j]
@@ -252,10 +262,10 @@ for(i in 1:length(run.id)){
             stop("workflow doesn't support values for mum/C")
           }
           edit_param_C_age(bio.prm = bio.file.new,
-                             new.C = new.c.val,
-                             overwrite = T,
-                             single.group =T,
-                             group.name = setup.run$Code[j]
+                           new.C = new.c.val,
+                           overwrite = T,
+                           single.group =T,
+                           group.name = setup.run$Code[j]
           )
         }
         
@@ -282,7 +292,7 @@ for(i in 1:length(run.id)){
                     alpha = new.alpha.val,
                     beta = new.beta.val,
                     overwrite = T
-                    )
+      )
     }
     
     #Do KDENR tasks
@@ -315,12 +325,12 @@ for(i in 1:length(run.id)){
                        prey.list = prey.name,
                        pprey.vals = new.pprey,
                        overwrite = T
-                      )
+      )
     }
     
     #Do Assimilation Efficiency
     if(setup.run$Type[j] %in% c('E','EPlant','EDR','EDL')){
-  
+      
       edit_param_assim_eff(bio.file = bio.file.new,
                            spp.names = setup.run$Code[j],
                            type = setup.run$Type[j],
@@ -337,7 +347,7 @@ for(i in 1:length(run.id)){
                      unit = setup.run$Unit[j],
                      value = setup.run$Value[j],
                      overwrite = T
-                     )
+      )
       
     }
     
@@ -357,7 +367,7 @@ for(i in 1:length(run.id)){
                       group.name = setup.run$Code[j],
                       FSPB = fspb.new,
                       overwrite =T
-                      )
+      )
     }
     
     if(setup.run$Type[j] %in% c('aMigSize','jMigSize','aMigSurvive','jMigSurvive') ){
@@ -382,13 +392,13 @@ for(i in 1:length(run.id)){
                          unit = setup.run$Unit[j],
                          value = setup.run$Value[j],
                          overwrite =T
-                         )
+      )
     }
     
     if(setup.run$Type[j] == 'InitScalar'){
       
       edit_param_init_scalar(run.prm = run.prm.new,
-                             groups.file = groups.file,
+                             groups.file = fgs.file,
                              group.name = setup.run$Code[j],
                              unit = setup.run$Unit[j],
                              value = setup.run$Value[j],
@@ -396,7 +406,7 @@ for(i in 1:length(run.id)){
       
     }
     
-    if(setup.run$Type[j] %in% c('ddepend','k.roc.food','roc.wgt')){
+    if(setup.run$Type[j] %in% c('ddepend','k.roc.food','roc.wgt','speed')){
       
       if(setup.run$Unit[j] == 'scalar'){
         stop('ddepend parameters only setup for Unit = "value"')
@@ -416,7 +426,7 @@ for(i in 1:length(run.id)){
       if(setup.run$Type[j]%in% c('min.temp','max.temp')){
         env.var = 'temperature'
       }else if(setup.run$Type[j] %in% c('min.salt','max.salt')){
-        env.var = 'salt'
+        env.var = 'salinity'
       }
       
       edit_param_env_move(bio.file = bio.file.new,
@@ -425,6 +435,52 @@ for(i in 1:length(run.id)){
                           min.val = ifelse(setup.run$Type[j] %in% c('min.temp','min.salt'),setup.run$Value[j], NA),
                           max.val = ifelse(setup.run$Type[j] %in% c('max.temp','max.salt'),setup.run$Value[j], NA),
                           overwrite = T)
+    }
+    
+    if(setup.run$Type[j] == 'sel'){
+      
+      if(setup.run$Unit[j] == 'scalar'){
+        stop('Fleet Selectivity only setup for Unit = "value"')
+      }
+      
+      code.split = strsplit(setup.run$Code[j],':')[[1]]
+      edit_param_sel(
+        harvest.file = harvest.file.new,
+        Code = code.split[1],
+        Fleet = code.split[2],
+        fleets.file = fleets.file,
+        Value = setup.run$Value[j],
+        overwrite =T
+      )
+    }
+    
+    if(setup.run$Type[j] == 'q'){
+      
+      if(setup.run$Unit[j] == 'scalar'){
+        stop('Fleet Selectivity only setup for Unit = "value"')
+      }
+      
+      code.split = strsplit(setup.run$Code[j],':')[[1]]
+      edit_param_q(
+        harvest.file = harvest.file.new,
+        Code = code.split[1],
+        Fleet = code.split[2],
+        fleets.file = fleets.file,
+        Value = setup.run$Value[j],
+        overwrite =T
+      )
+    }
+    
+    if(setup.run$Type[j] %in% c('selcurve','tstart','mindepth','maxdepth','sweptarea')){
+      
+      edit_param_fleet(
+        harvest.file = harvest.file.new,
+        Fleet = setup.run$Code[j],
+        Value = setup.run$Value[j],
+        VarName = setup.run$Type[j],
+        Unit = setup.run$Unit[j],
+        overwrite =T
+      )
     }
     
   }
@@ -437,7 +493,7 @@ for(i in 1:length(run.id)){
   #Edit shell script
   run.sh.new.lines = readLines(run.sh.new)
   run.command.line = grep('atlantisMerged',run.sh.new.lines)
-  run.command.new =  paste0('atlantisMerged -i neus_init.nc 0 -o neus_output.nc -r ',run.prm.short,' -f at_force_LINUX.prm -p at_physics.prm -b ',bio.file.short,' -h at_harvest.prm -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -m ',mig.file.short,' -t . -d output')
+  run.command.new =  paste0('atlantisMerged -i neus_init.nc 0 -o neus_output.nc -r ',run.prm.short,' -f at_force_LINUX.prm -p at_physics.prm -b ',bio.file.short,' -h ',harvest.file.short,' -e at_economics.prm -s neus_groups.csv -q neus_fisheries.csv -m ',mig.file.short,' -t . -d output')
   run.sh.new.lines[run.command.line] = run.command.new
   
   writeLines(run.sh.new.lines,con = run.sh.new)
@@ -451,10 +507,11 @@ for(i in 1:length(run.id)){
 system('sudo chmod -R 775 *')
 
 out.df = bind_rows(out.df)
-write.csv(out.df, paste0(proj.dir,'Setup_Files/',experiment.id,'_setup.csv'),row.names = F)
+write.csv(out.df, paste0(model.dir,'Setup_Files/',experiment.id,'_setup.csv'),row.names = F)
 
 
-new.sbatch.array =  paste0(proj.dir,'currentVersion/sbatch_',experiment.id,'.sh')
+base.sbatch.array = paste0(model.dir,'currentVersion/sbatch_scenario_array_base.sh')
+new.sbatch.array =  paste0(model.dir,'currentVersion/sbatch_',experiment.id,'.sh')
 file.copy(base.sbatch.array,new.sbatch.array,overwrite = T)
 
 #replace max array number
@@ -463,10 +520,10 @@ new.array.line = paste0('#SBATCH --array=1-',length(run.id))
 sbatch.lines[grep('--array',sbatch.lines)] = new.array.line
 
 #replace directories
-new.mkdir = paste0("sudo mkdir -p ",out.dir,experiment.id,"_$SLURM_ARRAY_TASK_ID")
+new.mkdir = paste0("sudo mkdir -p ",output.dir,"Atlantis_Runs/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID")
 sbatch.lines[grep('mkdir',sbatch.lines)] = new.mkdir
 
-new.singularity = paste0( "sudo singularity exec --bind ",proj.dir,"currentVersion:/app/model,",out.dir,experiment.id,"_$SLURM_ARRAY_TASK_ID:/app/model/output /contrib/atlantisCode/atlantis6681.sif /app/model/RunAtlantis_$SLURM_ARRAY_TASK_ID.sh")
+new.singularity = paste0( "sudo singularity exec --bind ",model.dir,"currentVersion:/app/model,",output.dir,"Atlantis_Runs/",experiment.id,"/",experiment.id,"_$SLURM_ARRAY_TASK_ID:/app/model/output /model/atlantisCode/atlantis6681.sif /app/model/RunAtlantis_$SLURM_ARRAY_TASK_ID.sh")
 sbatch.lines[grep('singularity',sbatch.lines)] = new.singularity
 
 writeLines(sbatch.lines,new.sbatch.array)

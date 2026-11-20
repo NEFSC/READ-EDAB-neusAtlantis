@@ -17,7 +17,7 @@ rm_param_files = function(dir.name, prm.prefix){
 }
 
 rm_slurm_files('/home/Joseph.Caracappa/',slurm.id = 1)
-rm_slurm_files(here::here,1981)
+rm_slurm_files(here::here(),3963)
 
 rm_gz_files('/atlantisdisk2/eof_targeting_3/')
 

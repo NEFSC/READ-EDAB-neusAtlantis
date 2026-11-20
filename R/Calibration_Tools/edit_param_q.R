@@ -44,3 +44,26 @@ edit_param_q = function(harvest.file, Code, Fleet,fleets.file,Type,Value,overwri
     writeLines(harvest.lines,new.file.name)
   }
 }
+
+get_param_q = function(harvest.file,fleets.file, fgs.file ){
+
+  fleets = read.csv(fleets.file)  
+  fgs = read.csv(fgs.file)
+  
+  harvest.lines = readLines(harvest.file)
+  
+  fleet.names = fleets$Code
+  
+  out.ls = list()
+  for(i in 1:length(fgs$Code)){
+  
+    q.line = harvest.lines[grep(paste0('^q_',fgs$Code[i]),harvest.lines)+1]
+    q.vals = strsplit(q.line,split = ' |\t')[[1]] |> as.numeric()
+    
+    out.ls[[i]] = data.frame(Code = fgs$Code[i],fleet = fleet.names, q  = q.vals)
+    
+  }
+  
+  return(dplyr::bind_rows(out.ls))
+  
+}
